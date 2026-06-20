@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Jun 2026 13:52:36 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jun 2026 19:20:23 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sat, Jun 20] Bilingual Balance in Motion</title>
-      <link>https://koto.org/event/bilingual-balance-in-motion/2026-06-20/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-06-20</guid>
-      <pubDate>Sat, 20 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Jun 20] 90s Movie Matinee: Space Jam</title>
       <link>https://telluridelibrary.libcal.com/event/15536159?hs=a</link>
@@ -192,6 +179,19 @@ The Jauntee is an electrifying and genre-blending musical ensemble that has capt
       <media:content url="https://ucarecdn.com/1885a7f2-416e-4cb2-a4e8-f91c7c656895/-/crop/3663x1830/0,126/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jun 26] The play &quot;12 Incompetent Jurors&quot; presented by the Norwood Community Players</title>
+      <link>https://koto.org/event/the-play-12-incompetent-jurors-presented-by-the-norwood-community-players/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20play%2012%20incompetent%7C2026-06-26</guid>
+      <pubDate>Fri, 26 Jun 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/WSAC-12IJ-Poster.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 The Livery Norwood
+
+Wide Sky Arts Collective and the Norwood Community Players present "12 Incompetent Jurors" &#8230; a parody by Ian McWethey and directed by local Claire Jacobs. Shows are at The Livery on June 25th, 26th, and 27th, doors at 6:30, show at 7, cash bar. The link for discounted advance tickets is at www.norwoodparkandrec.org .]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/WSAC-12IJ-Poster.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>
