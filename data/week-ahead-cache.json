@@ -1,18 +1,18 @@
 {
-  "hash": "1ae3ecb00a3022383ce49c048d6473b63ef6591b",
-  "lede": "The week's most consequential item is Monday's joint HARC and P&Z special session, where the two commissions will hammer out Land Use Code and Design Guidelines amendments to bring Telluride into compliance with the Colorado Wildfire Resiliency Code — whatever they recommend goes straight to Town Council. Also worth watching: the Telluride Hospital District board meets Thursday for a substantive discussion on mill levy considerations tied to the push for a new facility, and the Open Space Commission takes up the Perimeter Trail NEPA process and future goals for the San Juan Skyway Corridor on Sunday.",
+  "hash": "3a8e8f3b3aa953ad8ab78b36a66ca55ae13d9f48",
+  "lede": "The biggest thing on the civic calendar this week is a joint HARC and P&Z special session Monday that will shape how Telluride's Land Use Code and Design Guidelines get rewritten to meet Colorado's Wildfire Resiliency Code — whatever language they land on goes straight to Town Council. Also worth watching: the Telluride Hospital District board meets Thursday to dig into mill levy considerations tied to the long-running push for a new facility, and the Open Space Commission takes up the Perimeter Trail NEPA process and Keystone Gorge signage on Sunday.",
   "notable": [
     {
       "id": 1,
-      "stake": "Commissioners shape wildfire code amendments before Town Council votes."
+      "stake": "Commission recommendations on wildfire code changes go directly to Town Council."
     },
     {
       "id": 4,
-      "stake": "Mill levy discussion could affect your tax bill and the new hospital timeline."
+      "stake": "Mill levy discussion could shape how the hospital district funds a new facility."
     },
     {
       "id": 0,
-      "stake": "NEPA update on Perimeter Trail may determine project scope and public access."
+      "stake": "NEPA update and trail decisions affect public land access and open space priorities."
     }
   ]
 }

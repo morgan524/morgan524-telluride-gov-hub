@@ -2412,17 +2412,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Elks Lodge #692 Bluegrass Pancake Breakfast",
-    link: "https://koto.org/event/telluride-elks-lodge-692-bluegrass-pancake-breakfast/2026-06-21/",
-    description: "Telluride Elks Lodge 472 West Pacific Street, Telluride Saturday June 20 and Sunday June 21 Breakfast Served 8am to noon Adults $15 | Kids 12 and Under $10 | Cash Bar Pancakes, Scrambled Eggs, Hash Browns, Biscuits & Gravy, Bacon, Sausage, Coffee and Juice",
-    pubDate: "2026-06-21T14:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Elks Lodge BPOE 692, TELLURIDE",
-    imageUrl: ""
-  },
-  {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/",
     description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
