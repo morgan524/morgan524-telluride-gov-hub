@@ -173,6 +173,12 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "county|2026-07-08|Board of County Commissioners Special":
+    {"sv":2},
+
+  "fire|2026-07-21|Board of Directors Meeting":
+    {"sv":2},
+
+  "telluride|2026-07-21|Town Council - Jul 21 2026":
     {"sv":2}
 };
 
@@ -325,13 +331,13 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 HARC agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -349,7 +355,13 @@ const MANUAL_SUMMARIES = {
     "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Special":
-    "The July 8 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
+    "The July 8 BOCC Special Meeting agenda hasn't been posted yet.",
+
+  "fire|2026-07-21|Board of Directors Meeting":
+    "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-07-21|Town Council - Jul 21 2026":
+    "The July 21, 2026 Town Council agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1295,42 +1307,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "All-league soccer honors arrive",
-    source: "Telluride Times",
-    date: "June 7, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "community",
-    copy: "Three Telluride High soccer players earned First Team All-League honors despite the team finishing with five straight losses. Goalkeeper Gretchen Vidal, midfielder Kimberly Magana, and defender Bree Gowdy were recognized for their strong play in what coach Justin Chandler called a competitive season against larger schools. The senior class leaves behind a foundation that should help the younger players build for future seasons.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_de6fac43-6a99-4c78-88c8-577bb32f650c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/5a/65a7ce6b-4a17-4d54-9a3c-47e242e70ad2/6a2113e9e6029.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Look up: San Miguel County’s chance to protect the night",
-    source: "Telluride Times",
-    date: "June 7, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "recreation",
-    copy: "San Miguel County is pursuing a Dark Sky Reserve designation that would make it the first in the nation to include an entire county as the protective periphery around the Thunder Trails core area. The designation requires community support, a lighting inventory, and property owner cooperation to protect the area's exceptionally dark skies that support wildlife, offer spiritual connection to the cosmos, and could boost shoulder-season tourism.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_6e75af49-a87a-455f-becb-26c944329655.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e1/1e112b20-7fb8-49e6-a134-29942159a88f/6a2128866742b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Passages in Time’",
-    source: "Telluride Times",
-    date: "June 7, 2026",
-    firstSeen: "2026-06-07",
-    newsTopic: "arts-culture",
-    copy: "Artist Micheline Klagsbrun is showing new resin sculptures and paper works at Fringe Gallery alongside longtime neighbor Nancy B. Frank's \"Earth Gems\" paintings. Klagsbrun's pieces incorporate local elements like elk bone found in the San Juans, while Frank has shifted from her well-known equine work to close-up geological abstractions inspired by photo trips to places like the Grand Canyon and even a Montrose cornfield.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_d5b298e8-0cb0-4ced-9e4b-d4285cb1d866.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fb26672-2620-4ecd-9e2d-704686ff34dd/6a21164bcea3c.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Summer air service includes new LA flights",
     source: "Telluride Times",
     date: "June 9, 2026",
@@ -1368,15 +1344,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
-  },
-  {
-    title: "Telluride Marshal’s Department Arrests Individual for Failure to Register as a Sex Offender",
-    source: "Town of Telluride",
-    date: "May 22, 2026",
-    newsTopic: "public-safety",
-    copy: "Content Notice: This communication contains information related to sexual violence/child abuse. Reader discretion is advised.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=393",
-    img: ""
   },
   {
     title: "Commissioners Finalize Deed Restriction Reversion Process",
@@ -1462,7 +1429,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 20, 2026",
+    date: "June 21, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1473,7 +1440,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 20, 2026",
+    date: "June 21, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1517,7 +1484,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 20, 2026",
+    date: "June 21, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1528,7 +1495,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 20, 2026",
+    date: "June 21, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2926,6 +2893,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Lone Cone Library Norwood",
     imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-07-03/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-07-03T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-07-03/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-07-03T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-03/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-07-03T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
