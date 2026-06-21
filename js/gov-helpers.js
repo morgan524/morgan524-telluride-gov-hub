@@ -331,7 +331,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -343,7 +343,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The June 30, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
@@ -355,7 +355,7 @@ const MANUAL_SUMMARIES = {
     "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Special":
-    "The July 8 BOCC Special Meeting agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Special meeting agenda hasn't been posted yet.",
 
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -408,6 +408,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Court ruling will protect open space in Butcher Creek",
+    source: "Telluride Times",
+    date: "June 21, 2026",
+    firstSeen: "2026-06-21",
+    newsTopic: "land-use",
+    copy: "Colorado's Supreme Court unanimously ruled that the Butcher Creek PUD agreement can't be amended through a ballot initiative, keeping Lot A as common open space. The court found Brighton's proposal attempted to bypass the town's required administrative review process. The 37-acre hillside parcel carries steep slopes, geologic hazards, and bedrock — factors that demanded specialized municipal oversight.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_a35ab12e-3137-49bf-80e7-278cc26eda89.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/11/2112bc34-deea-4afa-b03b-c1ef73ab051f/6a3566c709038.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Rico Trails Alliance receives grant for bridge project",
     source: "Telluride Times",
@@ -2931,15 +2943,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "90s Movie Matinee: Space Jam",
-    link: "https://telluridelibrary.libcal.com/event/15536159?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-06-20T20:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536436?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-06-21T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_29_37.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop In Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/16986218?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
+    pubDate: "2026-06-21T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970379?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-06-21T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567830?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-06-21T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -3213,7 +3258,7 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/"
   },
   {
-    title: "The Copper Children - Telluride Mushroom Fest",
+    title: "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     description: "The Copper Children are a diverse blend of styles and influences that span from ...",
     pubDate: "2026-08-13",
@@ -3225,9 +3270,9 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/"
   },
   {
-    title: "Codestar X Jasper - Telluride Mushroom Fest",
+    title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3237,11 +3282,11 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/"
   },
   {
-    title: "Thom LaFond, DROS + Alexander Karvelas",
+    title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
-    time: "9:30 PM",
+    time: "9:00 PM",
     source: "alibi",
     sourceLabel: "The Alibi",
     category: "Live Music",
@@ -3514,6 +3559,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   },
   {
+    title: "First Friday Art Walk",
+    link: "www.ridgwayfuse.org/firstfridays ",
+    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
+    pubDate: "2026-05-01T12:00:00.000Z",
+    endDate: "2026-12-04",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ridgway, CO",
+    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
+  },
+  {
     title: "Yoga in the Park- Wednesday evenings",
     link: "www.beetrueyou.com",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
@@ -3656,90 +3713,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Blue Lakes Trailhead",
     imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
-  },
-  {
-    title: "3rd Annual Golf Scramble",
-    link: "https://secure.anedot.com/ouray-county-republican-central-committee/faad1068-b55b-433f-9239-4260f4ad824f?utm_source=anedot&utm_medium=qr_code&utm_campaign=golf-tournament",
-    description: "The Ouray County Republican Central Committee invites you to celebrate Amerca's 250 Birthday! Enjoy our 3rd Annual golf scramble at Cobble Creek gof Course. We will have prizes, auctions and candidates. Check-ins start at 7:30 AM. Contact Harry Pritchett for more info: 303-903-1088",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Cobble Creek Golf Course",
-    imageUrl: "https://localist-images.azureedge.net/photos/53002167095509/huge/6af9fa2510a2a027652df3439901bb4612dd83ea.jpg"
-  },
-  {
-    title: "Ouray Elks The Danny Wesseling Memorial Golf Tournament",
-    link: "https://events.ourayridgwayevents.com/event/ouray-elks-the-danny-wesseling-memorial-golf-tournament",
-    description: "Fundraiser for trade school scholarships. Saturday June 20th, Tee Time: 9am Sharp 4 Person Team Scramble Entry Fee $125 per Person (includes lunch) Tournament limited to 15 teams! For more information please call Joe Trainer 970-596-1937 or Julie Wesseling 970-729-2079",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Divide Ranch Golf Club",
-    imageUrl: "https://localist-images.azureedge.net/photos/53178907862671/huge/8cba47626e643786ed2c6ab0d69f49c5a1afa066.jpg"
-  },
-  {
-    title: "Bullseye Beginners: Kids Archery Adventure - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "This clinic provides children with the unique opportunity to learn archery skills. The program emphasizes range safety, proper form, and the mental focus required to hit the bullseye, all within the beautiful, natural setting of the park.",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53161312696206/huge/f7959814e02e96a2a0379cbe5991a3df19bceb4d.jpg"
-  },
-  {
-    title: "Geology Tour",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/346?onlineSiteId=0&from_original_cui=true",
-    description: "Step back in time and explore the geology that shaped the San Juan Mountains! Join a local geologist for a guided tour through Ouray’s dramatic landscapes and uncover the ancient volcanic activity, towering cliffs, and unique rock formations that make this region unique. June 20 | 9 AM-Noon Meet at the Ouray Visitor Center Free REGISTER: tinyurl.com/ourayactivities",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Visitors Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53082043569103/huge/e08612c4bc7a6a249a359d763236be59ba2522ab.jpg"
-  },
-  {
-    title: "Dementia 101",
-    link: "https://www.ridgwaycolibrary.org/2026-06-20-dementia-101",
-    description: "Dementia 101: An informational presentation and discussion with Darlene Sprague, RN June 20th, 10AM to Noon in the Ridgway Library Meeting Rooms. Darlene will share her extensive training and experience working with dementia patients in home health and long-term care settings. Questions that will be addressed include: What are current treatments? How is dementia diagnosed? Is dementia the same as Alzheimer's? What are symptoms of dementia? Please sign-up at library circ desk or by calling 970-626-5252",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53137198264125/huge/b96ae3b72bfd495ec79f9d21a77216458140c0ef.jpg"
-  },
-  {
-    title: "Exploration of Native Plants: Pollinator Benefits - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Join passionate plant expert Zoe Debenedette for an eye-opening evening exploring the incredible native flora of the San Juan region and the vital pollinators they support. You will learn how local wildflowers, shrubs, and trees have evolved alongside our pollinators. Discover ways you can use these hardy plants to invite colorful wildlife right into your own backyard.",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53161338198111/huge/e7e7ee50f5d85056e1ef3d86e59eaad48b8121fb.jpg"
-  },
-  {
-    title: "Pride Game Night",
-    link: "https://events.ourayridgwayevents.com/event/pride-game-night",
-    description: "Join us for Gay Game Night at Floating Lotus Brewery on June 20 from 6–9 PM. Whether you’re part of the LGBTQ+ community or a supportive ally, everyone is welcome for an evening of games, community, and good company. Bring your favorite board game or jump into one that’s already underway. Plus, Floating Lotus is donating $1 from every pint sold to support Ouray County Pride. Come make new friends, reconnect with old ones, and help us raise a glass (and funds) for Pride. 🌈🎲🍻",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "undefined",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53192190014847/huge/99cdc0458f0bcd179baafa816306078d664bca40.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4112,6 +4085,90 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
+  },
+  {
+    title: "RIDGWAY WRECKING CREW",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Show Opening: Silverton, Interpreted  - Ridgway First Friday",
+    link: "www.ridgwayfuse.org",
+    description: "Join us for the opening reception of Silverton Interpreted. This traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. Part of Ridgway's First Friday Art Walk",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047134482853/huge/ade622a01d29b435d00b2f7201368e70e8a824bf.jpg"
+  },
+  {
+    title: "Neon Sky Band",
+    link: "https://events.ourayridgwayevents.com/event/neon-sky-band",
+    description: "Start making plans for the biggest summer holiday celebration!! Join us in Ouray, CO July 3rd and 4th!! Southern rock to the rescue! Country music to sooth the soul and sing along. July 3rd - 6-10:30 pm in Fellin Park",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53055035817748/huge/dddd6148831e8d2649d60b1e881859ecc4ea323e.jpg"
+  },
+  {
+    title: "Hoofbeats & Brushstrokes - Ridgway State Park Summer Program Series",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Discover the intersection of fine art and equine beauty! Join us at the Ridgway State Park Visitors Center for an evening with renowned local artist Alice Billings. Known for her incredible ability to capture the spirit, power, and movement of horses, Alice will share the techniques and stories behind her celebrated work.",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53169382297247/huge/90c8516d4f798c06d78d5d4768e32e810fcfd7c3.jpg"
+  },
+  {
+    title: "Ouray Weird Trivia Night @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Ouray Weird Trivia Night @ the Wright WHEN? Friday, July 3 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Ouray Weird Trivia Night returns to the Wright for an evening of strange facts, useless knowledge, unexpected questions, and community-powered chaos. From local lore and pop culture to history, movies, science, and wonderfully obscure nonsense, teams will compete for bragging rights in a trivia night designed for both serious competitors and people who just enjoy laughing with friends. Locals, tourists, fringe personalities, and mainstream minds are all welcome! Free to Attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52931510224219/huge/bc7122ef6b232e543532628c54c9b91bf49b16f5.jpg"
+  },
+  {
+    title: "Ouray's 4th of July Celebration",
+    link: "https://cms5.revize.com/revize/cityofourayco/news_detail_T2_R585.php",
+    description: "We have a fun-packed day full of something for everyone! Below is a list of the main events. Please feel free to check out local restaurants and retail stores for other events or specials throughout the holiday as well. Our Visit Ouray website has a comprehensive listing of all the wonderful places to check out while here. Celebrate responsibly, remember your sunscreen, stay hydrated, and please have a designated driver if traveling. 7:30 AM - Ourayce 10K Starts at City Hall, Registration opens at 7 am 10 AM - Parade West side = wet side 11 AM - Kids Games Fellin Park 2 PM - Water Fights 6th & Main Street 9:15ish (dusk) - Fireworks Weather Permitting",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "ouray, colorado",
+    imageUrl: "https://localist-images.azureedge.net/photos/53055005519669/huge/908d40629803a11a75965b3341e740a4c20372bf.jpg"
+  },
+  {
+    title: "Ourayce 10K Fun Run",
+    link: "https://hometrustoc.org/event/43rd-annual-ourayce-10k-fun-run/",
+    description: "10K Fun Run to kick off the 4th of July in Ouray. All proceeds benefit the Home Trust of Ouray County. Teams, costumes, and other positive ways to have a fun time for a good cause are encouraged. Pre-registration: $35/entry which includes Official Race T-shirt! $40 after July 2nd.",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    endDate: "2027-07-04",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52799047964496/huge/aa0e3974def4b41e5c52e23f113a307c37cedb5b.jpg"
   }
 ];
 
@@ -4119,7 +4176,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "The Town of Norwood Planning and Zoning Commission will hold a public meeting to review development proposals, zoning applications, and land use matters affecting the community. This government meeting provides an opportunity for public input on planning decisions within Norwood's jurisdiction.",
     pubDate: "2026-06-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4130,7 +4187,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4141,7 +4198,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4152,7 +4209,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4163,7 +4220,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regularly scheduled public meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to observe or participate in district business.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4174,7 +4231,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4185,7 +4242,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4196,7 +4253,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4207,7 +4264,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4939,7 +4996,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     endDate: "undefined",
     source: "telluride-com",
