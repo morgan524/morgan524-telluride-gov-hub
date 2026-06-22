@@ -4099,7 +4099,6 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://hometrustoc.org/event/43rd-annual-ourayce-10k-fun-run/",
     description: "10K Fun Run to kick off the 4th of July in Ouray. All proceeds benefit the Home Trust of Ouray County. Teams, costumes, and other positive ways to have a fun time for a good cause are encouraged. Pre-registration: $35/entry which includes Official Race T-shirt! $40 after July 2nd.",
     pubDate: "2026-07-04T12:00:00.000Z",
-    endDate: "2027-07-04",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4165,7 +4164,7 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Norwood Sanitation District Meeting Meeting",
+    title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
     description: "A regularly scheduled public meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to observe or participate in district business.",
     pubDate: "2026-07-09T12:00:00.000Z",
@@ -7293,14 +7292,6 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "June 23, 2026",
     title: "Special Meeting - HARC and P&Z",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8285",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
-  {
-    date: "June 23, 2026",
-    title: "Special Meeting - P&Z and HARC",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8286",
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
