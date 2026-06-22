@@ -3032,7 +3032,7 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
 
         const serialized = isObject
           ? serializeObject(varName, newValue)
-          : serializeArray(varName, newValue);
+          : serializeArray(varName, sanitizeRecords(newValue));
 
         return source.slice(0, start) + serialized + source.slice(end);
       }
@@ -3089,6 +3089,73 @@ function serializeArray(varName, arr) {
     return `  {\n${props.join(',\n')}\n  }`;
   });
   return `const ${varName} = [\n${items.join(',\n')}\n];`;
+}
+
+// Defensive normalization applied to EVERY array right before it's written to
+// the data file (via replaceJsValue → serializeArray). Fixes recurring
+// upstream-source data quirks at the single write funnel so they self-heal on
+// each refresh instead of needing manual edits the next scrape would revert.
+// Surfaced by the daily content review (docs/content-review.md). All three
+// rules are field-gated, so non-event/meeting arrays pass through untouched.
+function sanitizeRecords(arr) {
+  if (!Array.isArray(arr)) return arr;
+  const tokenKey = (t) => String(t).toLowerCase()
+    .replace(/&[a-z]+;|&#\d+;/g, ' ').replace(/[^a-z0-9]+/g, ' ')
+    .trim().split(' ').filter(Boolean).sort().join(' ');
+  const norm = (t) => String(t).toLowerCase().replace(/\s+/g, ' ').trim();
+  const dateIso = (o) => {
+    const d = o.date || o.pubDate || o.startDate;
+    if (!d) return '';
+    const m = String(d).match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+    const p = Date.parse(String(d));
+    return isNaN(p) ? '' : new Date(p).toISOString().slice(0, 10);
+  };
+  const firstTitleByKey = new Map();
+  const out = [];
+  for (const item of arr) {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) { out.push(item); continue; }
+    const o = { ...item };
+
+    // (1) Collapse an immediately-repeated noise word in titles, e.g. the
+    //     Norwood feed's "…District Meeting Meeting" → "…District Meeting".
+    //     Scoped to a known word set so legit doublings (Walla Walla) survive.
+    if (typeof o.title === 'string') {
+      o.title = o.title
+        .replace(/\b(Meeting|Event|Concert|Workshop|Festival|Show|Session|Class|Gathering|Service|Market|Forum)\s+\1\b/gi, '$1')
+        .replace(/\s{2,}/g, ' ').trim();
+    }
+
+    // (2) Drop an endDate that's clearly a wrong-year scrape (same month+day,
+    //     later year — e.g. start 2026-07-04, end "2027-07-04") or that lands
+    //     before the start. serializeArray omits undefined, so deleting is safe.
+    if (o.endDate) {
+      const s = dateIso(o);
+      const eM = String(o.endDate).match(/^(\d{4})-(\d{2})-(\d{2})/);
+      if (s && eM) {
+        const eIso = `${eM[1]}-${eM[2]}-${eM[3]}`;
+        if ((eIso.slice(5) === s.slice(5) && eIso.slice(0, 4) > s.slice(0, 4)) || eIso < s) {
+          delete o.endDate;
+        }
+      }
+    }
+
+    // (3) Collapse same-date title REORDERINGS — CivicWeb lists a joint meeting
+    //     once per body ("Special Meeting - HARC and P&Z" vs "… - P&Z and HARC")
+    //     with different agenda URLs. Same date + same word-set but a DIFFERENT
+    //     original title → drop the later one. Identical titles (same words, same
+    //     order) are left alone, so legit multi-session same-day events (KOTO
+    //     "…/1/", "…/2/") are preserved. See memory: weekly-email-dedup-joint-meetings.
+    if (o.title) {
+      const k = dateIso(o) + '|' + tokenKey(o.title);
+      const first = firstTitleByKey.get(k);
+      if (first === undefined) firstTitleByKey.set(k, norm(o.title));
+      else if (first !== norm(o.title)) continue;
+    }
+
+    out.push(o);
+  }
+  return out;
 }
 
 /**

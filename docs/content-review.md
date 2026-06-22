@@ -6,12 +6,21 @@ Complements, does not replace: `weekly-review.yml` (infra/security/liveness) and
 `maintenance.js` (cleanup + link sampling).
 
 - **Script:** `scripts/content-review.js`
-- **Workflow:** `.github/workflows/content-review.yml` — daily **14:00 UTC**
-  (~8am Mountain), after the 12:00 content-refresh + maintenance, plus
+- **Workflow:** `.github/workflows/content-review.yml` — **4×/day at
+  01/07/13/19 UTC**, i.e. 1 hour after each 6-hour content-refresh
+  (00/06/12/18 UTC), so every refresh's output is reviewed. Plus
   `workflow_dispatch`.
-- **Output:** one auto-managed GitHub issue titled **🧭 Daily content review
-  findings** — refreshed each run, auto-closed on the first clean run (same
-  pattern as maintenance's "🔎 Daily website review findings").
+- **Output:**
+  - one auto-managed GitHub issue titled **🧭 Daily content review findings**
+    — refreshed every run, auto-closed on a clean run (same pattern as
+    maintenance's "🔎 Daily website review findings");
+  - a **once-a-day email digest** to `info@livabletelluride.org` on the **13:00
+    UTC (morning) run** (and on any manual dispatch). Reuses the
+    `PREVIEW_SMTP_USER`/`PREVIEW_SMTP_PASS` secrets from weekly-preview via
+    `dawidd6/action-send-mail`. Sends an "all clear" heartbeat when clean, or
+    the findings list when not. The other three daily runs only refresh the
+    issue — so exactly one email/day. If the SMTP secret is unset, the email is
+    skipped and the issue remains the channel.
 
 ## What it checks
 
@@ -51,6 +60,21 @@ AI semantic pass (optional, needs `ANTHROPIC_API_KEY`; model
   re-introduced on the next refresh. Real fixes belong at the source (the
   relevant scraper/dedup/parse step). The issue gives precise locations + line
   numbers + suggested fixes so a human or a Claude session can act.
+- **Durable source-side fixes go through `sanitizeRecords()` in
+  `content-refresh.js`** — a normalization pass applied to every array at the
+  single write funnel (`replaceJsValue` → `serializeArray`). It currently:
+  omits `undefined` field values (the `endDate:"undefined"` bug); collapses an
+  immediately-repeated noise word in titles (Norwood's "Meeting Meeting");
+  drops a wrong-year `endDate` (same month+day, later year) or an end-before-
+  start; and collapses same-date title *reorderings* (CivicWeb's joint-meeting
+  double-listing, e.g. "HARC and P&Z" vs "P&Z and HARC") while preserving
+  identical-title multi-session events (KOTO "…/1/", "…/2/"). Add new
+  source-quirk fixes here so they self-heal on every refresh.
+  - **Not handled here:** cross-source *different-date* conflicts (e.g.
+    Mountain Village publishing a Town Talk one day off from KOTO). Those are
+    upstream-source errors (see memory: `mv-calendar-wrong-dates`); the review
+    flags them, but resolving needs a source-trust rule, not a write-time
+    normalization.
 - **Auto-discovery.** Data arrays are discovered by evaluating
   `js/gov-data.js` + `js/gov-helpers.js` in a sandbox and keeping every
   array-of-objects, so **new event sources are reviewed automatically** with no

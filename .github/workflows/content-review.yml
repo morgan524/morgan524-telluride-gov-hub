@@ -8,9 +8,15 @@ name: Daily Content Review
 # js/gov-helpers.js every 6h, so fixes belong at the source). Findings are
 # turned into ONE auto-refreshing GitHub issue that auto-closes on a clean run,
 # mirroring the maintenance.yml / content-refresh.yml issue pattern.
+#
+# Runs 1 hour after EACH 6-hour content-refresh (which runs at 0,6,12,18 UTC
+# and completes in ~6-9 min) so every refresh's output gets reviewed, not just
+# the morning's. A once-daily email digest goes to info@ on the 13:00 (morning)
+# run so the owner gets one reliable summary each morning without watching
+# GitHub; the other three runs just keep the issue current.
 on:
   schedule:
-    - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain) — just past the 12:00 UTC morning content-refresh (runs ~6-9 min) so it reviews the freshly-refreshed data
+    - cron: '0 1,7,13,19 * * *'   # 1h after each content-refresh (00/06/12/18 UTC); 13:00 = morning email run
   workflow_dispatch:
 
 permissions:
@@ -20,6 +26,10 @@ permissions:
 jobs:
   content-review:
     runs-on: ubuntu-latest
+    env:
+      # Morning email digest (reuses the weekly-preview SMTP secrets). If unset,
+      # the email is skipped and the GitHub issue remains the channel.
+      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -64,6 +74,53 @@ jobs:
             fi
           fi
           exit 0
+
+      # Build a morning email digest ONCE a day — on the 13:00 UTC scheduled run
+      # (the morning slot) or any manual dispatch. The other three daily runs
+      # only refresh the GitHub issue, so the owner gets exactly one email/day.
+      - name: Prepare morning email
+        id: email
+        if: always()
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          HOUR=$(date -u +%H)
+          if [ "$HOUR" != "13" ] && [ "$EVENT_NAME" != "workflow_dispatch" ]; then
+            echo "send=false" >> "$GITHUB_OUTPUT"; echo "Not the morning run ($HOUR:00 UTC) — issue refreshed, email skipped."; exit 0
+          fi
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -s content-review-findings.log ]; then
+            SUMMARY=$(sed -n '2p' content-review-findings.log)
+            echo "subject=🧭 Livable Telluride content review — ${SUMMARY}" >> "$GITHUB_OUTPUT"
+            {
+              printf '<p>The daily content review found issues as of %s. Full detail (with line numbers + suggested fixes) is in the auto-managed GitHub issue.</p>' "$NOW"
+              printf '<pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
+              sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-findings.log
+              printf '</pre><p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+            } > content-review-email.html
+          else
+            echo "subject=✅ Livable Telluride content review — all clear $(date -u +%F)" >> "$GITHUB_OUTPUT"
+            printf '<p>The daily content review found <b>no content issues</b> as of %s. ✅</p><p>This is your once-a-day all-clear heartbeat; the review also runs after each of the other three daily content refreshes and keeps a GitHub issue current if anything appears.</p>' "$NOW" > content-review-email.html
+          fi
+          echo "send=true" >> "$GITHUB_OUTPUT"
+
+      - name: Email morning digest to info@
+        if: steps.email.outputs.send == 'true' && env.PREVIEW_SMTP_PASS != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.email.outputs.subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://content-review-email.html
+
+      - name: Note when email isn't configured
+        if: steps.email.outputs.send == 'true' && env.PREVIEW_SMTP_PASS == ''
+        run: echo "::warning::PREVIEW_SMTP_PASS not set — skipped the morning email. The GitHub issue still has the findings."
 
       - name: Upload run logs
         if: always()
