@@ -51,6 +51,12 @@ const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 const FINDINGS_LOG = path.join(REPO_ROOT, 'content-review-findings.log');
 const FINDINGS_JSON = path.join(REPO_ROOT, 'content-review-findings.json');
+// Only the findings that need a human (Critical/High/Medium). Written when any
+// exist; the workflow emails the owner only when this file is non-empty, so
+// advisory-only (Low) days stay silent. Auto-fixable categories (exact dups,
+// scheme-less links, MV wrong-dates) are handled at the source by
+// content-refresh.js and won't appear here once that runs.
+const FINDINGS_ACTIONABLE = path.join(REPO_ROOT, 'content-review-actionable.log');
 
 // AI pass config. Floating Sonnet alias to match content-refresh.js; see
 // memory/claude-model-inventory.md (this file is now a model-ID site).
@@ -254,9 +260,11 @@ function checkDuplicates(ctx) {
         (lines.length ? ` Near lines ${lines.join(', ')}.` : ''),
         { array: r.array, autofixClass: 'exact-dup' });
     } else {
-      add('Medium', 'Possible duplicate event',
+      // Different links/times → usually legitimate (multi-session events, or two
+      // distinct articles sharing a headline). Advisory only, not an action email.
+      add('Low', 'Possible duplicate event',
         `${group.length}× "${r.title}" in ${r.array} on ${iso}`,
-        `${group.length} entries share a title + date in ${r.array} but have different links/times — likely separate sessions of one event. Verify they're genuinely distinct; if not, merge.` +
+        `${group.length} entries share a title + date in ${r.array} but have different links/times — likely separate sessions of one event. Verify only if it looks wrong.` +
         (lines.length ? ` Near lines ${lines.join(', ')}.` : ''));
     }
   }
@@ -607,6 +615,19 @@ function renderLog() {
   return head + body + '\n';
 }
 
+// Render only the findings that need a human (non-Low). Used for the
+// exception-only email.
+function renderActionable(list) {
+  if (!list.length) return '';
+  const head = `Content review — action needed — ${TODAY} (America/Denver)\n` +
+    `${list.length} item(s) need your judgment (auto-fixable issues are handled by the bot and not listed):\n` +
+    '─'.repeat(64) + '\n';
+  const body = list.map((f, i) =>
+    `${i + 1}. [${f.severity}] ${f.category}\n   ${f.title}\n   ${String(f.detail).replace(/\n/g, '\n   ')}`
+  ).join('\n\n');
+  return head + body + '\n';
+}
+
 async function main() {
   console.log(`Content review starting — today is ${TODAY} (America/Denver)`);
   const { arrays, captured, localDate, isBadSummary } = loadData();
@@ -629,15 +650,20 @@ async function main() {
   }
 
   const log = renderLog();
+  const actionable = findings.filter(f => f.severity !== 'Low');
   if (log) {
     fs.writeFileSync(FINDINGS_LOG, log);
     fs.writeFileSync(FINDINGS_JSON, JSON.stringify({ date: TODAY, findings }, null, 2));
+    if (actionable.length) fs.writeFileSync(FINDINGS_ACTIONABLE, renderActionable(actionable));
+    else if (fs.existsSync(FINDINGS_ACTIONABLE)) fs.unlinkSync(FINDINGS_ACTIONABLE);
     console.log(`\n${findings.length} finding(s) written to content-review-findings.log`);
+    console.log(`ACTIONABLE=${actionable.length}`);
     console.log('─'.repeat(64));
     console.log(log);
   } else {
-    // remove any stale log from a previous run so the workflow closes the issue
-    for (const f of [FINDINGS_LOG, FINDINGS_JSON]) if (fs.existsSync(f)) fs.unlinkSync(f);
+    // remove any stale logs from a previous run so the workflow closes the issue
+    for (const f of [FINDINGS_LOG, FINDINGS_JSON, FINDINGS_ACTIONABLE]) if (fs.existsSync(f)) fs.unlinkSync(f);
+    console.log('ACTIONABLE=0');
     console.log('✓ No content issues found — clean run.');
   }
 }

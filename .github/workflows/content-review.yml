@@ -11,9 +11,11 @@ name: Daily Content Review
 #
 # Runs 1 hour after EACH 6-hour content-refresh (which runs at 0,6,12,18 UTC
 # and completes in ~6-9 min) so every refresh's output gets reviewed, not just
-# the morning's. A once-daily email digest goes to info@ on the 13:00 (morning)
-# run so the owner gets one reliable summary each morning without watching
-# GitHub; the other three runs just keep the issue current.
+# the morning's. EXCEPTION-ONLY email: the owner is emailed (info@) only when a
+# finding needs a human decision, evaluated once a day on the 13:00 run — plus a
+# light Monday weekly digest as a paper trail. Auto-fixable issues never become
+# email; content-refresh.js fixes them at the source (sanitizeRecords +
+# filterMvConflicts). The other three runs just keep the GitHub issue current.
 on:
   schedule:
     - cron: '0 1,7,13,19 * * *'   # 1h after each content-refresh (00/06/12/18 UTC); 13:00 = morning email run
@@ -75,36 +77,54 @@ jobs:
           fi
           exit 0
 
-      # Build a morning email digest ONCE a day — on the 13:00 UTC scheduled run
-      # (the morning slot) or any manual dispatch. The other three daily runs
-      # only refresh the GitHub issue, so the owner gets exactly one email/day.
-      - name: Prepare morning email
+      # EXCEPTION-ONLY email policy. The owner is emailed only when something
+      # needs them. Decision (evaluated once a day, on the 13:00 UTC run or a
+      # manual dispatch — the other three runs just refresh the issue):
+      #   • action items present (content-review-actionable.log non-empty)
+      #       → send an "action needed" email.
+      #   • else if Monday → send a light weekly digest (status + paper trail).
+      #   • else → send NOTHING (silent on normal/advisory-only days).
+      # Auto-fixable issues (exact dups, scheme-less links, MV wrong-dates) are
+      # fixed at the source by content-refresh.js, so they never become email.
+      - name: Decide + build email
         id: email
         if: always()
         env:
           EVENT_NAME: ${{ github.event_name }}
         run: |
-          HOUR=$(date -u +%H)
+          HOUR=$(date -u +%H); DOW=$(date -u +%u); NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          echo "send=false" >> "$GITHUB_OUTPUT"
           if [ "$HOUR" != "13" ] && [ "$EVENT_NAME" != "workflow_dispatch" ]; then
-            echo "send=false" >> "$GITHUB_OUTPUT"; echo "Not the morning run ($HOUR:00 UTC) — issue refreshed, email skipped."; exit 0
+            echo "Not the 13:00 decision run ($HOUR:00 UTC) — issue refreshed, no email."; exit 0
           fi
-          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
-          if [ -s content-review-findings.log ]; then
-            SUMMARY=$(sed -n '2p' content-review-findings.log)
-            echo "subject=🧭 Livable Telluride content review — ${SUMMARY}" >> "$GITHUB_OUTPUT"
+          ISSUE_LINK=$(printf '<p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY")
+          if [ -s content-review-actionable.log ]; then
+            N=$(sed -n '2p' content-review-actionable.log | grep -oE '^[0-9]+' || echo '')
+            echo "subject=🔧 Livable Telluride — content review needs you${N:+ ($N)}" >> "$GITHUB_OUTPUT"
             {
-              printf '<p>The daily content review found issues as of %s. Full detail (with line numbers + suggested fixes) is in the auto-managed GitHub issue.</p>' "$NOW"
+              printf '<p>The content review found item(s) that need your judgment as of %s. The rest were either auto-fixed by the bot or are low-priority advisories (see the GitHub issue).</p>' "$NOW"
               printf '<pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
-              sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-findings.log
-              printf '</pre><p><a href="%s/%s/issues?q=is%%3Aissue+is%%3Aopen+content+review">Open the findings issue →</a></p>' "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY"
+              sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-actionable.log
+              printf '</pre>%s' "$ISSUE_LINK"
             } > content-review-email.html
+            echo "send=true" >> "$GITHUB_OUTPUT"
+          elif [ "$DOW" = "1" ] || [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "subject=🗓️ Livable Telluride — weekly content review digest (no action needed)" >> "$GITHUB_OUTPUT"
+            {
+              printf '<p><b>Nothing needs you</b> as of %s. ✅ This is your weekly paper trail.</p>' "$NOW"
+              printf '<p>The bot reviews content 4×/day and auto-fixes duplicate events, scheme-less links, wrong-year dates, joint-meeting double-listings, and Mountain Village wrong-date copies. You only get an email when something needs a human decision.</p>'
+              if [ -s content-review-findings.log ]; then
+                printf '<p>Current low-priority advisories (FYI only — no action required):</p><pre style="font:13px/1.5 ui-monospace,monospace;white-space:pre-wrap;background:#f6f8fa;padding:14px;border-radius:8px;border:1px solid #e1e4e8">'
+                sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g' content-review-findings.log
+                printf '</pre>%s' "$ISSUE_LINK"
+              fi
+            } > content-review-email.html
+            echo "send=true" >> "$GITHUB_OUTPUT"
           else
-            echo "subject=✅ Livable Telluride content review — all clear $(date -u +%F)" >> "$GITHUB_OUTPUT"
-            printf '<p>The daily content review found <b>no content issues</b> as of %s. ✅</p><p>This is your once-a-day all-clear heartbeat; the review also runs after each of the other three daily content refreshes and keeps a GitHub issue current if anything appears.</p>' "$NOW" > content-review-email.html
+            echo "No action items and not Monday — staying silent. ✅"
           fi
-          echo "send=true" >> "$GITHUB_OUTPUT"
 
-      - name: Email morning digest to info@
+      - name: Email to info@
         if: steps.email.outputs.send == 'true' && env.PREVIEW_SMTP_PASS != ''
         uses: dawidd6/action-send-mail@v3
         with:
@@ -131,6 +151,7 @@ jobs:
             /tmp/content-review.log
             content-review-findings.log
             content-review-findings.json
+            content-review-actionable.log
           retention-days: 14
           if-no-files-found: ignore
 
