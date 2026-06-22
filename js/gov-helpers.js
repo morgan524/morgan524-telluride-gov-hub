@@ -110,7 +110,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    {"sv":2},
+    {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/oQIoNRzgRC-zUdrPFaFzpQ","meetingId":"843 9146 6771","passcode":"793419.","phone":"719) 359-4580"},
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
     {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg","meetingId":"846 6324 0731","passcode":"769982","phone":"301-715-8592"},
@@ -283,7 +283,7 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "The June 30, 2026 Town Council agenda hasn't been posted yet.",
+    "A full agenda for June 30. The most consequential item is first reading of Land Use Code amendments ahead of Colorado Wildfire Resiliency Code implementation — the kind of code change that will set the baseline for how development and fire risk interact in the box canyon for years to come. Council also takes up second readings on two property sales (907 East Colorado Avenue and Longwill 16 Unit B3), a tap fee waiver IGA with the Telluride School District, and a renewal of the Black Hills Energy gas franchise. An emergency ordinance banning open fires and fireworks rounds out the public hearing docket — not unusual for late June. A work session on the Telluride Energy Mitigation Program looks at updates to energy use offset calculations and fees. Community survey results get a work session too.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
@@ -340,7 +340,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -2414,7 +2414,7 @@ const KOTO_COMMUNITY_EVENTS = [
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Innovation Center",
+    location: "Telluride Conference Center, Mountain Village",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-2.png"
   },
   {
@@ -2616,6 +2616,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "San Miguel County Democrats Book Club",
+    link: "https://koto.org/event/san-miguel-county-democrats-book-club/2026-06-28/1/",
+    description: "The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, discussing Dan Rather's book \"What Unites Us.\" They will meet at noon at the Wilkinson Public Library in the Telluride Room, and 4:30pm at the Oliver House in Norwood, 1555 Summit St. For more information, please contact Cindy at mtnmama70@gmail.com .",
+    pubDate: "2026-06-28T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-28/",
     description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
@@ -2636,6 +2647,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "San Miguel County Democrats Book Club",
+    link: "https://koto.org/event/san-miguel-county-democrats-book-club/2026-06-28/2/",
+    description: "The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, discussing Dan Rather's book \"What Unites Us.\" They will meet at noon at the Wilkinson Public Library in the Telluride Room, and 4:30pm at the Oliver House in Norwood, 1555 Summit St. For more information, please contact Cindy at mtnmama70@gmail.com .",
+    pubDate: "2026-06-28T22:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   },
   {
     title: "Telluride Medical Center Foundation Classic",
@@ -2878,28 +2900,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "6th Annual Alpine Cookout",
-    link: "https://koto.org/event/6th-annual-alpine-cookout/",
-    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
-    pubDate: "2026-07-03T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Reflection Plaza Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
-    pubDate: "2026-07-04T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
   }
 ];
 
@@ -4158,17 +4158,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Planning And Zoning Commission Meeting",
-    link: "https://www.norwoodtown.com/2026-06-15-planning-and-zoning-commission-meeting",
-    description: "",
-    pubDate: "2026-06-15T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
     description: "",
@@ -4566,6 +4555,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-07-22T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
@@ -5221,14 +5221,14 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Science of Cocktails",
     link: "https://www.telluride.com/event/science-of-cocktails/",
-    description: "It’s that time of year – when intriguing experiments with density, sublimation, acoustic integration, and even …",
+    description: "A crowd pleaser for more than 15 years attracting those from near and far, the Science of Cocktails is Pinhead’s …",
     pubDate: "2026-07-08",
     endDate: "undefined",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/53794/screenshot_2025-05-30_at_12_21_36_pm.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/53794/soc2026_v1_0_instagram45.800x533.webp"
   },
   {
     title: "SoDown",
@@ -7382,7 +7382,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "June 30, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8039",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
