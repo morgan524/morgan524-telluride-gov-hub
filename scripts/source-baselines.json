@@ -1,0 +1,239 @@
+{
+  "sources": {
+    "COUNTY_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 16
+      }
+    },
+    "SMART_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 7
+      }
+    },
+    "MV_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "SCHOOL_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 9
+      }
+    },
+    "FIRE_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 5
+      }
+    },
+    "MED_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "NORWOOD_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 13
+      }
+    },
+    "OPHIR_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 10
+      }
+    },
+    "RIDGWAY_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 4
+      }
+    },
+    "TELLURIDE_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "AIRPORT_CACHED_DATA": {
+      "dailyMax": {
+        "2026-06-22": 4
+      }
+    },
+    "SUMMARY_REJECT_PATTERNS": {
+      "dailyMax": {
+        "2026-06-22": 15
+      }
+    },
+    "WHY_THIS_MATTERS": {
+      "dailyMax": {
+        "2026-06-22": 14
+      }
+    },
+    "DEEP_DIVE_PAGES": {
+      "dailyMax": {
+        "2026-06-22": 1
+      }
+    },
+    "KEY_ISSUE_TIERS": {
+      "dailyMax": {
+        "2026-06-22": 5
+      }
+    },
+    "SKIP_PATTERNS": {
+      "dailyMax": {
+        "2026-06-22": 10
+      }
+    },
+    "TELLURIDE_FESTIVALS": {
+      "dailyMax": {
+        "2026-06-22": 14
+      }
+    },
+    "QR_OPTIONS": {
+      "dailyMax": {
+        "2026-06-22": 5
+      }
+    },
+    "LOCAL_ORGS": {
+      "dailyMax": {
+        "2026-06-22": 57
+      }
+    },
+    "TJC_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 3
+      }
+    },
+    "MEETING_RECAPS": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "TELLURIDE_TIMES_ARTICLES": {
+      "dailyMax": {
+        "2026-06-22": 97
+      }
+    },
+    "KOTO_NEWSCASTS": {
+      "dailyMax": {
+        "2026-06-22": 6
+      }
+    },
+    "ROTARY_NEWS": {
+      "dailyMax": {
+        "2026-06-22": 5
+      }
+    },
+    "SMB_FORUM_ARTICLES": {
+      "dailyMax": {
+        "2026-06-22": 25
+      }
+    },
+    "LOCAL_NEWS_FEATURED": {
+      "dailyMax": {
+        "2026-06-22": 1
+      }
+    },
+    "BLOG_POSTS": {
+      "dailyMax": {
+        "2026-06-22": 15
+      }
+    },
+    "COMMUNITY_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 2
+      }
+    },
+    "MUSIC_ON_THE_GREEN": {
+      "dailyMax": {
+        "2026-06-22": 16
+      }
+    },
+    "TELLURIDE_FARMERS_MARKET": {
+      "dailyMax": {
+        "2026-06-22": 35
+      }
+    },
+    "TELLURIDE_SCIENCE_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 9
+      }
+    },
+    "TELLURIDE_ROTARY_MEETINGS": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "KOTO_COMMUNITY_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 46
+      }
+    },
+    "WILKINSON_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 6
+      }
+    },
+    "ALIBI_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 25
+      }
+    },
+    "SHERIDAN_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 3
+      }
+    },
+    "BEACON_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "CHAMBER_MUSIC_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 12
+      }
+    },
+    "TELLURIDE_FOUNDATION_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 3
+      }
+    },
+    "OURAY_COUNTY_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 3
+      }
+    },
+    "OURAY_RIDGWAY_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 59
+      }
+    },
+    "NORWOOD_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 8
+      }
+    },
+    "MOUNTAIN_VILLAGE_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 29
+      }
+    },
+    "TELLURIDE_COM_EVENTS": {
+      "dailyMax": {
+        "2026-06-22": 92
+      }
+    },
+    "LEGAL_NOTICES": {
+      "dailyMax": {
+        "2026-06-22": 26
+      }
+    },
+    "HOUSING_LISTINGS": {
+      "dailyMax": {
+        "2026-06-22": 7
+      }
+    },
+    "TELLURIDE_BOARD_MEETINGS": {
+      "dailyMax": {
+        "2026-06-22": 14
+      }
+    }
+  }
+}

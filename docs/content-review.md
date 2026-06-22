@@ -31,6 +31,13 @@ Auto-fixable categories don't reach email at all — they're fixed at the source
 ## What it checks
 
 Deterministic (no API):
+- **Silent scraper failure** — a source whose item count collapsed (0 now, but
+  ≥3 recently) → `High`; a sharp partial drop (<20% of a ≥15 baseline) →
+  `Medium`. This is the highest-value reliability check: it catches a source
+  changing its HTML/feed and the scraper silently going stale. Powered by a
+  rolling 14-day baseline (`scripts/source-baselines.json`) that
+  `content-refresh.js` maintains via `scripts/source-health.js`; the review
+  reads it. See **Source health** below.
 - **Duplicate events** — *within* an array, same title + date + **link** →
   `High` (true redundancy). Same title + date but **different link/time** →
   `Medium` "possible duplicate" (often legitimate multi-session events, e.g.
@@ -101,6 +108,27 @@ AI semantic pass (optional, needs `ANTHROPIC_API_KEY`; model
 - **Severity calibration is deliberate** to avoid alarm fatigue: `High` =
   high-confidence real error; `Medium` = needs human judgment; `Low` =
   hygiene/spot-check. Retune in the relevant check, not the workflow.
+
+## Source health (silent-scraper-failure detection)
+
+The biggest reliability risk is a scraper silently breaking: a source changes
+its HTML/feed, the selector matches nothing, the sync returns empty, and that
+section goes stale for days with nobody noticing.
+
+- **`scripts/source-health.js`** — run by `content-refresh.yml` after each
+  refresh (it has git-write access). It records every data array's item count
+  into a rolling **14-day baseline**, `scripts/source-baselines.json` (committed;
+  stores only per-source `dailyMax` keyed by date, pruned to 14 days, so it
+  doesn't churn). It exports `detectAnomalies()` / `readBaseline()` as a module.
+- **`content-review.js`** requires that module and runs `checkSourceHealth` as
+  its first check — so a collapsed source becomes a `High` finding and flows
+  into the same issue + exception email. Alerting lives where the owner already
+  looks; baseline-writing lives where there's commit access.
+- **Thresholds:** 0 items when the 14-day max was ≥3 → `High`; current < 20% of
+  a ≥15 baseline → `Medium`. `LEGAL_NOTICES` and `SMC_ALERTS` are excluded
+  (legitimately sporadic). New sources auto-enroll once they first return data.
+- **Shared loader:** both scripts evaluate the data files via
+  `scripts/lib/load-data.js` (one copy of the eval-and-capture logic).
 
 ## Running locally
 

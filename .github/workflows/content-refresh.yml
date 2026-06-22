@@ -91,6 +91,12 @@ jobs:
           set -o pipefail
           node scripts/deep-dive-refresh.js 2>&1 | tee /tmp/deep-dive.log
 
+      # Update the rolling source-count baseline (scripts/source-baselines.json,
+      # committed below). The daily content review reads it and alerts if a
+      # scraper silently dropped to zero. Never fails the run (best-effort).
+      - name: Update source-health baseline
+        run: node scripts/source-health.js 2>&1 | tee /tmp/source-health.log || true
+
       - name: Check for changes
         id: changes
         run: |

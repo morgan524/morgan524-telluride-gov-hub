@@ -584,10 +584,25 @@ async function checkAI(ctx) {
   }
 }
 
+// Silent-scraper-failure detection. Reads the rolling baseline that
+// content-refresh maintains (scripts/source-baselines.json) and flags any
+// source whose item count collapsed — a High finding, so it flows into the
+// exception email. See scripts/source-health.js + docs/content-review.md.
+const sourceHealth = require('./source-health.js');
+function checkSourceHealth(ctx) {
+  let baseline;
+  try { baseline = sourceHealth.readBaseline(REPO_ROOT); } catch { return; }
+  if (!baseline || !baseline.sources || !Object.keys(baseline.sources).length) return;
+  for (const a of sourceHealth.detectAnomalies(ctx.arrays, baseline)) {
+    add(a.severity, 'Source may be broken', a.name, a.message);
+  }
+}
+
 // ════════════════════════════════════════════════════════════════
 // 5. CHECK REGISTRY + RUNNER
 // ════════════════════════════════════════════════════════════════
 const CHECKS = [
+  checkSourceHealth,
   checkDuplicates,
   checkCrossSourceDateConflict,
   checkDates,
