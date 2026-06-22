@@ -334,10 +334,10 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
     "The July 15, 2026 HARC agenda hasn't been posted yet.",
@@ -349,7 +349,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    "The June 30, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
+    "A short one for this session. The Telluride Housing Authority meets June 30 to approve minutes from May and handle two organizational items: appointing members to a newly forming Resident Advisory Committee, then conducting a random drawing to stagger member terms. The advisory committee structure is worth watching — resident voice in housing decisions has been a recurring tension in the valley.",
 
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
@@ -1385,6 +1385,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
+    title: "Black Bear Road (CR K69) Closure for Roadwork June 25, 2026 from 6:00 am to 5:00 pm",
+    source: "San Miguel County",
+    date: "June 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "PUBLIC NOTICE – ROAD CLOSURE Black Bear Road (CR K69) Closure for Roadwork",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=531",
+    img: ""
+  },
+  {
     title: "Stage 1 Fire Restrictions in effect for all unincorporated, privately owned land in the county, effective Thursday, June 18th at midnight",
     source: "San Miguel County",
     date: "June 17, 2026",
@@ -2272,7 +2281,7 @@ const TELLURIDE_SCIENCE_EVENTS = [
     sourceLabel: "Telluride Science"
   },
   {
-    title: "Breakthroughs in RNA Science: From Basic Research to Medicine",
+    title: "Breakthroughs in RNA Science: From Pond Scum to Life-Saving Medicine",
     date: "2026-07-14",
     time: "6:30 PM – 7:30 PM",
     location: "Telluride Conference Center, Telluride",
@@ -2384,17 +2393,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-22T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-23/",
@@ -3086,6 +3084,18 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/587eca13-bf75-4c6c-a808-93088ae7164f/-/crop/2624x1311/0,680/-/preview/"
   },
   {
+    title: "B-Side Players",
+    link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    pubDate: "2026-07-08",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/3bac837e-cc78-4024-a064-b06fa2834a6d/-/crop/2589x1295/0,133/-/preview/"
+  },
+  {
     title: "River Spell w/ Moonbeem",
     link: "https://www.alibitelluride.com/calendar#eca-event=river-spell",
     description: "River Spell is a Colorado-based jam band that delivers heartfelt songwriting and...",
@@ -3256,7 +3266,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3268,7 +3278,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3292,18 +3302,6 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "Telluride Bluegrass Festival",
-    link: "https://sheridanoperahouse.com/events/telluride-bluegrass-festival/",
-    description: "The Telluride Bluegrass Festival presents a concert at the historic Sheridan Opera House. This performance is part of the renowned annual festival celebrating bluegrass music in Telluride.",
-    pubDate: "2026-06-18",
-    endDate: "2026-06-21",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/1c655920d1ecdae9a49423b83fb3755f.jpg"
-  },
-  {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
     description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
@@ -3326,6 +3324,18 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/48278-gala25-2-thundertix-min.jpg"
+  },
+  {
+    title: "23rd Annual Telluride Plein Air",
+    link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air/",
+    description: "The 23rd Annual Telluride Plein Air is a longstanding celebration of outdoor painting bringing together artists who create works on location throughout the Telluride area. The event is held at the Sheridan Opera House, serving as a hub for this established regional arts tradition.",
+    pubDate: "2026-06-29",
+    endDate: "2026-06-30",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/Vios-Richie-Rainy-Day-in-Telluride-90-mins.-QuickDraw-8x10-Watercolor-800.webp"
   }
 ];
 
@@ -3569,14 +3579,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Creative Space: Artist Salon Series",
     link: "www.ridgwayfuse.org",
-    description: "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the DEcker Room. Stay and socialize with creatives afterward! Please bring some food/drinks to share! All are welcome! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
+    description: "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the Decker Room. Stay and socialize with creatives afterward! Please bring some food/drinks to share! All are welcome! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
     pubDate: "2026-05-21T12:00:00.000Z",
     endDate: "2026-12-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52825557353036/huge/7861b466056014e154076f3a6dbee14f8ba4cdff.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -4160,7 +4170,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4171,7 +4181,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4182,7 +4192,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4193,7 +4203,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regularly scheduled public meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to observe or participate in district business.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4204,7 +4214,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4215,7 +4225,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4226,7 +4236,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4237,7 +4247,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4859,18 +4869,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp"
   },
   {
-    title: "Telluride Bluegrass Festival",
-    link: "https://www.telluride.com/event/telluride-bluegrass-festival/",
-    description: "Every June, Festivarians make the annual pilgrimage to Telluride for the Telluride Bluegrass Festival. Nestled in the …",
-    pubDate: "2026-06-18",
-    endDate: "2026-06-22",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28887/tbf-20190622-1138tev.800x533.webp"
-  },
-  {
     title: "Bombargo",
     link: "https://www.telluride.com/event/bombargo/",
     description: "Bombargo is a Canadian based international touring band that drops a vibrant splash of soul over their distinctive …",
@@ -4969,7 +4967,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     endDate: "undefined",
     source: "telluride-com",
@@ -5049,6 +5047,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45978/telluride-festival-plein-air-artists-2015-home-1.800x533.webp"
+  },
+  {
+    title: "The Mountain Ark: A Ken Bailey Film",
+    link: "https://www.telluride.com/event/the-mountain-ark-a-ken-bailey-film/",
+    description: "Lissa Margetts, one of Telluride’s most beloved characters and quintessential figures, connects with animals on a …",
+    pubDate: "2026-06-29",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62927/the-mountain-ark-a-ken-bailey-film.800x533.webp"
   },
   {
     title: "Federal Judge Roy Altman on Why the Israel Debate Matters",
@@ -5325,6 +5335,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62762/clay_mauritson__photo_credit_king_lawrence.800x533.webp"
+  },
+  {
+    title: "AVID Dance: The Wolff & Other Works",
+    link: "https://www.telluride.com/event/palm-arts-presents-avid-dance-the-wolff-other-works/",
+    description: "Artistic Ventures in Dance (AVID) invites you to join us for \"The Wolff & Other Works”, an unforgettable evening …",
+    pubDate: "2026-07-11",
+    endDate: "undefined",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62925/telluride_tour_poster_1.800x533.webp"
   },
   {
     title: "Liver Down the River",
@@ -7374,7 +7396,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "June 30, 2026",
     title: "Telluride Housing Authority",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8283",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },

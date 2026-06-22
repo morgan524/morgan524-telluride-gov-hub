@@ -1,22 +1,22 @@
 {
-  "hash": "9b767dbfbbaf14e4255f897d8b9b87f6e62036f5",
-  "lede": "The most consequential thing on the calendar this week happens Monday when a joint session of HARC and P&Z takes up proposed changes to Telluride's Land Use Code and Design Guidelines to bring the town into compliance with the Colorado Wildfire Resiliency Code — whatever language they settle on goes straight to Town Council. The Telluride Hospital District board also meets Thursday to dig into mill levy considerations, a real pressure point as the hospital presses forward on a new facility. Elsewhere, the Open Space Commission works through trail and park projects Monday, and P&Z holds an early feedback session on the Shandoka redevelopment at 860 Black Bear Road.",
+  "hash": "c805c9e360847c6d0df388ffb56e5d6b18a05913",
+  "lede": "The biggest item this week is Monday's joint HARC and P&Z special session on wildfire resiliency code amendments — proposed changes to Telluride's Land Use Code and Design Guidelines that will shape how the town builds and retrofits going forward, with Town Council getting the final vote. Thursday brings the Telluride Hospital District board's mill levy discussion, a perennial pressure point as the hospital pushes toward a new facility. The week also has the Shandoka Lot redevelopment getting its first real P&Z look, and the Open Space Commission working through the Perimeter Trail NEPA process and other active projects.",
   "notable": [
     {
       "id": 1,
-      "stake": "Wildfire code amendments to Town's Land Use Code head to Council after this."
+      "stake": "Wildfire code amendments to Town Land Use Code head toward Council vote."
     },
     {
       "id": 4,
-      "stake": "Mill levy discussion could shape how the hospital district is funded going forward."
-    },
-    {
-      "id": 0,
-      "stake": "NEPA update and trail project decisions affecting public open space access."
+      "stake": "Hospital District discusses mill levy — the tax mechanism funding operations and new facility."
     },
     {
       "id": 5,
-      "stake": "Early public shaping of major Town-owned redevelopment at 860 Black Bear Road."
+      "stake": "Major Town-owned Shandoka redevelopment gets first P&Z feedback before formal review."
+    },
+    {
+      "id": 0,
+      "stake": "NEPA update and Perimeter Trail progress — public land decisions moving forward."
     }
   ]
 }
