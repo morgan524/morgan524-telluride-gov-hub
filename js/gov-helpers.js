@@ -331,10 +331,10 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC Chair meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
     "The July 15, 2026 HARC agenda hasn't been posted yet.",
@@ -408,6 +408,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Wyndham Clark avoids record collapse and holds on to win the US Open",
+    source: "Telluride Times",
+    date: "June 22, 2026",
+    firstSeen: "2026-06-22",
+    newsTopic: "community",
+    copy: "Wyndham Clark won his second U.S. Open title at Shinnecock Hills, finishing at 4-under after a final-round 73, holding off a late charge by Sam Burns. He led wire-to-wire, the first player to do so at the U.S. Open since 2014. His father flew overnight from Denver to watch him win for the first time.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_2dfa6045-3d42-50d3-8d67-378ce6f4ffdb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5f/85ff96ce-ec9b-566b-9232-80f9c06de7c0/6a386d86ea740.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Wyndham Clark wins his second U.S. Open title with wire-to-wire victory at Shinnecock Hills",
+    source: "Telluride Times",
+    date: "June 21, 2026",
+    firstSeen: "2026-06-22",
+    newsTopic: "community",
+    copy: "The article text appears to be a mix of unrelated items, but the most locally relevant item is the Colorado Supreme Court ruling. Here's the summary focused on that:\n\n---\n\nThe Colorado Supreme Court ruled June 15 in favor of the Town of Telluride, deciding that planned unit development (PUD) agreements are administrative matters — not legislative ones — and can't be changed through citizen ballot initiatives.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_741c8fd1-5de3-5dac-aec3-248d0ce3eb06.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "True North, Juvenile Diversion programs team up for youth",
+    source: "Telluride Times",
+    date: "June 21, 2026",
+    firstSeen: "2026-06-22",
+    newsTopic: "education",
+    copy: "True North and San Miguel County's juvenile diversion program joined forces this spring for a first-ever multi-day college tour, taking students from Telluride, Norwood, and Nucla to visit four schools and two national parks across southern Colorado. The trip was funded through an opioid prevention grant and a Colorado Department of Human Services program. Both organizations hope to make the extended overnight format an annual tradition.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_d6449172-ab41-482d-b4d5-c74c1415f80c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/dd/5ddbec01-609b-4606-b58e-a3643c3d7351/6a31b91e9d10d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Court ruling will protect open space in Butcher Creek",
     source: "Telluride Times",
@@ -1247,78 +1283,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘Art doesn’t have rules’",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "arts-culture",
-    copy: "Ashley Shupp grew up in Ridgway, went to Telluride High School, studied art in Pennsylvania, and returned in 2015 to raise her kids here. After learning to sew from a local seamstress in trade for horseback riding lessons, she's built a business creating one-of-a-kind quilted clothing and custom bathing suits from upcycled materials. Her work has been featured in TAB fashion shows for three years running, and she emphasizes sustainability and local craftsmanship as alternatives to fast fashion.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_e1e2c626-bbfc-4951-bc6e-a15050714801.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/34/b343974b-19ba-4c8b-bfbb-a4b7b87c8351/6a2309dc993b8.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Engineering the weather: Can we? Should we?",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "public-safety",
-    copy: "NASA scientist Derek Posselt will discuss weather modification through cloud seeding at the next Telluride Science Town Talk, exploring how microscopic particles in the atmosphere can be manipulated to trigger precipitation. While some countries actively seed clouds to increase rainfall, Posselt will cover the complex and often unpredictable consequences of interfering with atmospheric systems.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_bac13c80-0c38-476f-9388-c25175c6ea83.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/97/297812b1-fc13-4f49-a123-b619b6e0015d/6a212c6857b30.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Alexander Patrick Stanger",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "education",
-    copy: "Alexander Patrick Stanger passed away, leaving behind his parents, brother Aidon Peter Stanger, grandmother Jennifer Weed, and extended family including aunts, uncles and cousins. He loved travel, music, theater, hiking and cooking, and was remembered as kind, generous and funny by his many friends here and abroad.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_9976cc7a-167f-47c7-9142-d701d609ebf4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/eb/2eb921d2-f1e2-46d1-971a-ce5616824ad9/6a26e7eabd339.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Star light, star bright",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "arts-culture",
-    copy: "Mountain Village is moving its free outdoor movie nights from Reflection Plaza to the Conference Center Plaza this summer, adding real grass instead of astroturf and more space to spread out. They're also starting a family happy hour from 6:30-8 PM before each screening with lawn games and kids' activities, plus nearby food and drink options. The Saturday night movies begin at dusk and wrap up around 10:30, with \"The Sandlot\" playing July 4th as their annual Independence Day tradition.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_861d183a-1113-4971-8823-c67e52cbb30c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/dc/8dc77d1d-b7b9-442a-9b42-870b232ad477/6a23527656816.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Housing Authority launches tenant advisory committee",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "housing",
-    copy: "The Housing Authority is setting up a tenant advisory committee with seven residents from town-managed properties like Shandoka, Sunnyside, and Virginia Placer to give renters a formal voice in housing decisions. Committee members will get quarterly rent credits and meet at least four times a year in public sessions, with applications due June 17. It's a step toward more structured communication between residents and town hall after years of housing tensions bubbling up at council meetings.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_278f5e0f-f1d4-480c-a1c8-087a763b8de7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "AI workshop helps professionals develop exceptional marketing talent",
-    source: "Telluride Times",
-    date: "June 8, 2026",
-    firstSeen: "2026-06-08",
-    newsTopic: "community",
-    copy: "The Telluride Foundation is hosting an AI workshop for local business owners, nonprofits and community leaders to learn practical applications like creating marketing content, logos, videos and websites. Fort Lewis College's AI Institute director will lead hands-on sessions teaching folks how to choose useful AI tools while keeping their own voice and brand intact.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_99d6ff83-0286-4434-ab90-1642b9ee0001.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/7b/57b30499-f5cc-43ce-bc24-03ca39ef4d21/6a261580225f9.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Summer air service includes new LA flights",
     source: "Telluride Times",
     date: "June 9, 2026",
@@ -1441,7 +1405,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 21, 2026",
+    date: "June 22, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1452,7 +1416,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 21, 2026",
+    date: "June 22, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1496,7 +1460,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 21, 2026",
+    date: "June 22, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1507,7 +1471,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 21, 2026",
+    date: "June 22, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2412,28 +2376,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-21/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-21T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-06-21/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-06-21T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-22/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2927,6 +2869,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "6th Annual Alpine Cookout",
+    link: "https://koto.org/event/6th-annual-alpine-cookout/",
+    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
+    pubDate: "2026-07-03T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Reflection Plaza Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Foundation Rundola: Run for Good",
+    link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
+    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
+    pubDate: "2026-07-04T13:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
   }
 ];
 
@@ -4264,17 +4228,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
   {
     title: "Girl Scout Cookie Booth",
     link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
@@ -5665,6 +5618,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
+  },
+  {
+    title: "Burlesque Buffet",
+    link: "https://www.telluride.com/event/burlesque-buffet/",
+    description: "Presented by Telluride Theatre's Professional Burlesque Troupe: THE HOUSE OF SHIMMY SHAKE! HOSS returns for a …",
+    pubDate: "2026-08-21",
+    endDate: "2026-08-23",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62743/1_burlesque_buffet_visit_telluride_placeholder.800x533.webp"
   }
 ];
 
