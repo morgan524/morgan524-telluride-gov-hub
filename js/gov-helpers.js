@@ -179,6 +179,9 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-21|Town Council - Jul 21 2026":
+    {"sv":2},
+
+  "county|2026-07-22|Board of County Commissioners Special Meeting":
     {"sv":2}
 };
 
@@ -334,10 +337,10 @@ const MANUAL_SUMMARIES = {
     "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 HARC Chair meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 HARC agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -361,7 +364,10 @@ const MANUAL_SUMMARIES = {
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Town Council - Jul 21 2026":
-    "The July 21, 2026 Town Council agenda hasn't been posted yet."
+    "The July 21, 2026 Town Council agenda hasn't been posted yet.",
+
+  "county|2026-07-22|Board of County Commissioners Special Meeting":
+    "The July 22 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -408,6 +414,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘Threads of sound’",
+    source: "Telluride Times",
+    date: "June 22, 2026",
+    firstSeen: "2026-06-22",
+    newsTopic: "arts-culture",
+    copy: "Telluride Chamber Music returns to the Mai residence barn for three evening concerts June 28–July 5, featuring an accomplished ensemble of violinists, cellist, and pianist, plus guest clarinetist Alan Kay from Juilliard. Programs include works by Brahms, Mozart, Debussy, Gershwin, and Copland. A Local Artists' Night is also scheduled June 30.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_ce72d8c6-e7f3-46f2-846a-529ca94e23f4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/a5/ba56e910-dc41-4628-afeb-b4f75e839c5e/6a391393f2918.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Wyndham Clark avoids record collapse and holds on to win the US Open",
     source: "Telluride Times",
@@ -1382,15 +1400,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "The Clerk's Office will have shortened office hours the weeks of June 15-18 and June 29-July second. The office hours will be 9:00 am - 5:00 pm Monday through Thursday.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=530",
-    img: ""
-  },
-  {
-    title: "Bluegrass Barricade In Effect",
-    source: "Town of Telluride",
-    date: "June 18, 2026",
-    newsTopic: "land-use",
-    copy: "All vehicles entering Town or parked on Town property during the barricade period, including those with Town parking permits, must display San Miguel County Seal Sticker, 2026 Barricade Pass, or a 3-hour temporary access pass.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=66",
     img: ""
   },
   {
@@ -2896,48 +2905,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536436?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-06-21T17:00:00.000Z",
+    title: "French Café",
+    link: "https://telluridelibrary.libcal.com/event/16782545?hs=a",
+    description: "9:00 AM – 10:00 AM · Pratiquez votre fran&ccedil;ais avec d'autres francophones dans une ambiance d&eacute;tendue. Croissants gratuits ! Tous les niveaux sont les bienvenus. Inscription pr&eacute;alable recommand&eacute;e. Practice your French with other French speakers in a relaxed atmosphere. Free croissants! All levels welcome. Advance registration recommended.",
+    pubDate: "2026-06-22T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    location: "Coffee Cowboy General Store",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_34_07.jpg"
   },
   {
-    title: "Drop In Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/16986218?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
-    pubDate: "2026-06-21T19:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568417?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-06-22T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970379?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-06-21T19:00:00.000Z",
+    title: "Savvy Seniors-AI Intro",
+    link: "https://telluridelibrary.libcal.com/event/16667574?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. Are you curious about AI? How does it apply to everyday life? What applications could be beneficial to you?",
+    pubDate: "2026-06-22T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_14_08_43.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567830?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-06-21T20:30:00.000Z",
+    title: "Hobby Hopping",
+    link: "https://telluridelibrary.libcal.com/event/17065341?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby each week on Monday afternoons.  June 1: Perler Beads June 8: Friendship Bracelets June 15: Slime! June 22: Tie Dye June 29: Clay Studio",
+    pubDate: "2026-06-22T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_18_25.png"
+  },
+  {
+    title: "An Absolute Beginner&#039;s Guide to Music Theory",
+    link: "https://telluridelibrary.libcal.com/event/16952204?hs=a",
+    description: "6:00 PM – 7:00 PM · In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
+    pubDate: "2026-06-23T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_17_55.jpg"
+  },
+  {
+    title: "Cardio Dance (Baile Cardio) with Kelsey",
+    link: "https://telluridelibrary.libcal.com/event/16548370?hs=a",
+    description: "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-06-23T00:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
   }
 ];
 
@@ -3620,18 +3651,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
   },
   {
-    title: "Ouray International Film Festival",
-    link: "https://www.ourayfilmfestival.com/",
-    description: "Film festivals were founded with a specific purpose in mind: to support the success of film and filmmakers from beyond the mainstream. Some of the most beloved movies of all time got their start at film festivals. Without the infrastructure, support, and community of film festivals, these movies might never have become a part of our collective artistic culture. Our festival stands in this legacy of support. We bring in films from around the United States and across the globe to expose audiences to material they’re unlikely to see on streaming platforms or in theaters. Our filmmakers are established artists in the industry and new voices making their first films; regardless, the movies we screen come from independent spaces that sometimes challenge our conventional notions of what a movie is or can be. At OIFF, we celebrate that independence through films that challenge and inspire. …",
-    pubDate: "2026-06-18T12:00:00.000Z",
-    endDate: "2026-06-21",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092563418852/huge/6b966623135c4503564229a4b8f584add6755426.jpg"
-  },
-  {
     title: "Functional Fitness - Strength & Mobility Training For Women",
     link: "https://www.signupgenius.com/go/10C044DAAA82DA7FAC70-60167874-functional#/",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility What To Bring: yoga mat, water, no shoes preferred - If you need to wear shoes they must be clean indoor shoes only. No mud, dirt, snow, etc. Every Tuesday & Thursday 8:15-9 am / Advance sign up required! …",
@@ -3654,18 +3673,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "STEPS TAVERN",
     imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
-  },
-  {
-    title: "2-Day Trail Stewardship Trip: Blue Lakes Trail to Upper Lakes",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join OTG for a two-day stewardship trip to Blue Lakes Trail to Upper Lakes. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. Feel free to join us for one or both days. There's no cost, but please register.https://tinyurl.com/OTGsummer2026",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "2026-06-21",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Blue Lakes Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932450369902/huge/9367aba3bb18c48b7da043ad4209431d66d6e66c.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4122,6 +4129,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center ",
     imageUrl: "https://localist-images.azureedge.net/photos/52799047964496/huge/aa0e3974def4b41e5c52e23f113a307c37cedb5b.jpg"
+  },
+  {
+    title: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright",
+    link: "wrightoperahouse.org",
+    description: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright WHEN? Saturday, July 4 Tavern Open: 11:00 am – 9:00 pm (Opens after the parade • Closes after the fireworks or drone show) WHERE? Wright Opera House Tavern 472 Main St. Ouray, Colorado ABOUT THE EVENT Step into the Wright Tavern this Fourth of July and meet a few of the forgotten friends, colorful characters, and questionable legends woven into the history of the Wright Opera House. Throughout the day, guests can join Drunk History Tours led by none other than Letitia Wright or Alewife Addie, two spirited guides with a talent for storytelling and perhaps a flexible relationship with historical restraint. These lively tours shine a lantern on the strange, true, and unexpectedly entertaining stories hidden within the walls of one of Ouray’s most historic buildings. …",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52931651916712/huge/bf90b207aa8421d1e362931dc586e1ec3146c45b.jpg"
+  },
+  {
+    title: "4th of July Courtyard Celebration",
+    link: "https://beaumonthotel.com/celebrate-the-4th-of-july-at-the-beaumont-hotel-garden-courtyard/",
+    description: "Looking for the perfect way to spend your Independence Day in Ouray? Join us on Saturday, July 4th, from Noon to 4:00 PM for an afternoon of live music, great food, refreshing drinks, and unforgettable mountain-town atmosphere at the Beaumont Hotel’s beautiful Garden Courtyard. This special 4th of July celebration will feature live music from Jack Haight and his full band, bringing an energetic mix of music to help make your holiday weekend memorable. Whether you’re a local resident or visiting the San Juan Mountains for the holiday, the Garden Courtyard offers the perfect place to relax, connect with friends, and enjoy the summer season. Guests can also purchase food and beverages while enjoying the festivities. Surrounded by the historic elegance of the Beaumont Hotel and the stunning scenery of downtown Ouray, this event combines the best of Colorado mountain living with classic Independence Day fun. …",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    endDate: "undefined",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53171340326261/huge/16a6724455125724b02cad6f8eb6d278ce193b90.jpg"
   }
 ];
 

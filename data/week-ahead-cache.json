@@ -1,18 +1,22 @@
 {
-  "hash": "c74680ec5b28dd9de41a6c8b4b2d045808c1993f",
-  "lede": "The most consequential meeting this week is Monday's joint HARC and P&Z session on amendments to the Town's Land Use Code and Design Guidelines — changes required to bring Telluride into compliance with the Colorado Wildfire Resiliency Code, with whatever they recommend heading straight to Town Council. Also worth watching: the Telluride Hospital District board takes up mill levy considerations on Thursday, and the Shandoka Lot redevelopment at 860 Black Bear Rd gets its first real P&Z work session. On the lighter side, the Sunset Concert Series, Market on the Plaza, and the Oak Street Park SummerSHOW Series kick off what's shaping up to be a full week in the valley.",
+  "hash": "9b767dbfbbaf14e4255f897d8b9b87f6e62036f5",
+  "lede": "The most consequential thing on the calendar this week happens Monday when a joint session of HARC and P&Z takes up proposed changes to Telluride's Land Use Code and Design Guidelines to bring the town into compliance with the Colorado Wildfire Resiliency Code — whatever language they settle on goes straight to Town Council. The Telluride Hospital District board also meets Thursday to dig into mill levy considerations, a real pressure point as the hospital presses forward on a new facility. Elsewhere, the Open Space Commission works through trail and park projects Monday, and P&Z holds an early feedback session on the Shandoka redevelopment at 860 Black Bear Road.",
   "notable": [
     {
       "id": 1,
-      "stake": "Recommended wildfire code changes to Land Use Code head next to Town Council."
+      "stake": "Wildfire code amendments to Town's Land Use Code head to Council after this."
     },
     {
       "id": 4,
-      "stake": "Hospital District board discusses mill levy — directly affects your property tax bill."
+      "stake": "Mill levy discussion could shape how the hospital district is funded going forward."
+    },
+    {
+      "id": 0,
+      "stake": "NEPA update and trail project decisions affecting public open space access."
     },
     {
       "id": 5,
-      "stake": "Early public shaping of major Town-owned redevelopment at 860 Black Bear Rd."
+      "stake": "Early public shaping of major Town-owned redevelopment at 860 Black Bear Road."
     }
   ]
 }
