@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: '0 14 * * 6'   # Saturday 14:00 UTC (~8am Mountain)
   workflow_dispatch:
+    inputs:
+      week_start:
+        description: 'Week start date YYYY-MM-DD (override "next Monday" auto-detect). Use e.g. 2026-06-22 to re-render THIS week''s email after Saturday''s auto-send already advanced to next week.'
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -36,11 +41,22 @@ jobs:
 
       - name: Render weekly email (preview + paste-ready) from live data
         id: render
+        env:
+          WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
         run: |
           set -o pipefail
           curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
           curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
-          WS=$(date -u -d "next monday" +%F)
+          # Honour the workflow_dispatch input when one is provided, otherwise
+          # use the cron-default "next Monday". This lets a manual re-render
+          # target THIS week (the one that's actually about to send) after
+          # the Saturday auto-send has already advanced the default to the
+          # following Monday.
+          if [ -n "$WEEK_START_INPUT" ]; then
+            WS="$WEEK_START_INPUT"
+          else
+            WS=$(date -u -d "next monday" +%F)
+          fi
           LABEL="$(date -u -d "$WS" '+%B %-d') – $(date -u -d "$WS +6 days" '+%B %-d, %Y')"
           echo "Week start: $WS  ·  Label: $LABEL"
           WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
