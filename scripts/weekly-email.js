@@ -298,6 +298,30 @@ const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(
 
 // ── Render ──
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
+// Render summary text supporting [text](url) markdown-style hyperlinks.
+// Splits on the link pattern, escapes prose with esc(), and emits styled
+// <a> tags for each link (http(s) only — anything else falls back to
+// literal escaped text to avoid e.g. javascript: smuggling). Used to let
+// MANUAL_SUMMARIES entries embed links like "read more about this
+// project [here](https://livabletelluride.org/...)" without exposing raw
+// HTML in the data file.
+function renderSummary(s) {
+  if (!s) return '';
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let out = '', lastIndex = 0, m;
+  while ((m = re.exec(s)) !== null) {
+    out += esc(s.slice(lastIndex, m.index));
+    const url = m[2].trim();
+    if (/^https?:\/\//i.test(url)) {
+      out += `<a href="${esc(url)}" style="color:#2f7a5f;text-decoration:underline;">${esc(m[1])}</a>`;
+    } else {
+      out += esc(m[0]);
+    }
+    lastIndex = m.index + m[0].length;
+  }
+  out += esc(s.slice(lastIndex));
+  return out;
+}
 const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Denver' });
 const prettyDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
 const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.srcKey))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
@@ -311,7 +335,7 @@ const mh = meetings.map((m) => {
     : '';
   const sep = commentBtn ? ' &nbsp;&nbsp; ' : '';
   // Comment button first, then the Meeting-info / View-agenda link.
-  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(m.summary)}</div>${commentBtn}${sep}${link}</td></tr>`;
+  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${commentBtn}${sep}${link}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
