@@ -1,0 +1,111 @@
+name: Daily Content Review
+
+# Content-correctness review of the live data (events, meetings, news, notices,
+# housing): duplicate events, wrong/past/conflicting dates, broken/malformed
+# links, garbled text, low-quality summaries, plus an optional AI semantic pass.
+#
+# REPORT-ONLY — never edits site content (content-refresh.js rewrites
+# js/gov-helpers.js every 6h, so fixes belong at the source). Findings are
+# turned into ONE auto-refreshing GitHub issue that auto-closes on a clean run,
+# mirroring the maintenance.yml / content-refresh.yml issue pattern.
+on:
+  schedule:
+    - cron: '0 14 * * *'   # daily 14:00 UTC (~8am Mountain) — after the 12:00 content-refresh + maintenance
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  content-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run content review
+        env:
+          # Enables the AI semantic pass. Same key the content-refresh bot uses
+          # for meeting summaries. If absent, the deterministic checks still run
+          # and the AI pass is skipped.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/content-review.js 2>&1 | tee /tmp/content-review.log
+
+      # Turn content-review-findings.log into a single, auto-managed issue.
+      # Opens/refreshes when there are findings; closes on the first clean run.
+      - name: Findings issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🧭 Daily content review findings'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -s content-review-findings.log ]; then
+            BODY=$(printf 'The daily content review found issues as of %s:\n\n```\n%s\n```\nRun: %s\n\nThese are content-correctness checks (duplicate events, wrong/past/conflicting dates, broken/malformed links, garbled text, summary quality) plus an optional AI pass. **Report-only** — fixes are applied by a human/Claude at the source. This issue refreshes each run and auto-closes on the first clean run. See docs/content-review.md.' "$NOW" "$(cat content-review-findings.log)" "$RUN_URL")
+            if [ -n "$NUM" ]; then
+              gh issue edit "$NUM" --body "$BODY"
+            else
+              gh issue create --title "$ISSUE_TITLE" --body "$BODY"
+            fi
+          else
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "✅ Content review clean as of $NOW. Closing."
+            fi
+          fi
+          exit 0
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-review-logs-${{ github.run_id }}
+          path: |
+            /tmp/content-review.log
+            content-review-findings.log
+            content-review-findings.json
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: Open or update CI Health issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Daily Content Review workflow is failing'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "Another failure at $NOW. Run: $RUN_URL"
+          else
+            gh issue create \
+              --title "$ISSUE_TITLE" \
+              --body "$(printf 'The scheduled Daily Content Review workflow failed (the script itself crashed, not merely findings).\n\nFirst observed: %s\nRun: %s\n\nLogs are attached to the run as an artifact. This issue auto-closes when the next run succeeds.' "$NOW" "$RUN_URL")"
+          fi
+          exit 0
+
+      - name: Close CI Health issue on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Daily Content Review workflow is failing'
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "✅ Workflow recovered at $(date -u +'%Y-%m-%d %H:%M UTC'). Closing."
+            gh issue close "$NUM"
+          fi
+          exit 0

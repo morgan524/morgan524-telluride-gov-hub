@@ -44,3 +44,7 @@ govhub-summary-backend/functions/.env
 
 # Daily review findings — transient, read by maintenance.yml issue step, never committed
 review-findings.log
+
+# Daily content review findings — transient, read by content-review.yml issue step, never committed
+content-review-findings.log
+content-review-findings.json
