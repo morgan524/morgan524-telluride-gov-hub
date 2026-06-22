@@ -334,13 +334,13 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 HARC agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -414,6 +414,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Munchie Mansion is a new eatery in Placerville",
+    source: "Telluride Times",
+    date: "June 22, 2026",
+    firstSeen: "2026-06-22",
+    newsTopic: "community",
+    copy: "Munchie Mansion, a food trailer at 260 Front St. in Placerville, opened in March run by Jenni Watkins and her daughter Aspen. It serves handmade sandwiches, sides, and espresso using Telluride Coffee Roasters beans, Monday–Friday, 10am–4pm. Dinner service is planned for later this summer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_9d05a760-b3f2-4345-947d-02c7bf92ff3a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/e5/8e553ba1-8595-4d5c-8b98-84b7caf90acf/6a31b60d0bdce.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Threads of sound’",
     source: "Telluride Times",
@@ -3491,18 +3503,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
-    title: "Community Meditation",
-    link: "www.ridgwayfuse.org",
-    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
-    pubDate: "2026-03-24T12:00:00.000Z",
-    endDate: "2026-12-22",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
-  },
-  {
     title: "Zumba Fitness with Tamra",
     link: "https://zumba.com/p/zumbafitnesswithTamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
@@ -3516,7 +3516,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "www.FloatingLotusBrewery.com",
+    link: "https://www.FloatingLotusBrewery.com",
     description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
     pubDate: "2026-04-08T12:00:00.000Z",
     endDate: "2027-04-07",
@@ -3528,7 +3528,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "www.FloatingLotusBrewery.com",
+    link: "https://www.FloatingLotusBrewery.com",
     description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week",
     pubDate: "2026-04-09T12:00:00.000Z",
     endDate: "2027-04-08",
@@ -3552,7 +3552,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "First Friday Art Walk",
-    link: "www.ridgwayfuse.org/firstfridays ",
+    link: "https://www.ridgwayfuse.org/firstfridays",
     description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
     pubDate: "2026-05-01T12:00:00.000Z",
     endDate: "2026-12-04",
@@ -3564,7 +3564,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Yoga in the Park- Wednesday evenings",
-    link: "www.beetrueyou.com",
+    link: "https://www.beetrueyou.com",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
     pubDate: "2026-05-13T12:00:00.000Z",
     endDate: "2026-09-16",
@@ -3576,7 +3576,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Creative Space: Artist Salon Series",
-    link: "www.ridgwayfuse.org",
+    link: "https://www.ridgwayfuse.org",
     description: "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the Decker Room. Stay and socialize with creatives afterward! Please bring some food/drinks to share! All are welcome! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
     pubDate: "2026-05-21T12:00:00.000Z",
     endDate: "2026-12-23",
@@ -3588,7 +3588,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ridgway Farmers Market",
-    link: "www.ridgwayfarmersmarket.com",
+    link: "https://www.ridgwayfarmersmarket.com",
     description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here.",
     pubDate: "2026-05-22T12:00:00.000Z",
     endDate: "2026-10-16",
@@ -3600,7 +3600,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray Mountain Air Music Series",
-    link: "www.ouraymusicseries.com",
+    link: "https://www.ouraymusicseries.com",
     description: "June 4th: AJ Fullerton and Grant Sabin June 11th: Nik Parr & The Selfless Lovers with You Knew Me When June 18th: The Sweet Lizzy Project with Sara Jean Kelley June 25th: Cruz Contreras & The Black Lillies and Griffin William Sherry Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. …",
     pubDate: "2026-06-04T12:00:00.000Z",
     endDate: "2026-06-25",
@@ -3624,7 +3624,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ongoing - Colorado Stories - Susan Clark & Alex Mendard Art Exhibition",
-    link: "susanclarkart.com",
+    link: "https://susanclarkart.com",
     description: "Susan Clark's oil pastel and Alex Menard's watercolor work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through June. Artist Bios: Alex Menard: Retired Landscape Designer/ Installer, now watercolorist and linocut printmaker. Artist profile here Susan Clark With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. …",
     pubDate: "2026-06-08T12:00:00.000Z",
     endDate: "2026-06-30",
@@ -3684,7 +3684,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray Open Air Market",
-    link: "www.ouray-events.com/open-air",
+    link: "https://www.ouray-events.com/open-air",
     description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
     pubDate: "2026-06-21T12:00:00.000Z",
     endDate: "2026-09-06",
@@ -3696,7 +3696,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Breathe Together",
-    link: "www.cristinagafta.com",
+    link: "https://www.cristinagafta.com",
     description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required.",
     pubDate: "2026-06-22T12:00:00.000Z",
     endDate: "2026-09-28",
@@ -3718,7 +3718,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52993369881829/huge/94195afe1cfd161fd9cb6b8aedcc4a8e0365000c.jpg"
   },
   {
-    title: "BANJO  JOE & DANIELLE",
+    title: "BANJO JOE & DANIELLE",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-06-23T12:00:00.000Z",
@@ -3775,7 +3775,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray County Baseball - 13u Baseball vs. Ignacio",
-    link: "ouraycountybaseball.com",
+    link: "https://ouraycountybaseball.com",
     description: "Ouray County Baseball - 13u Baseball vs. Ignacio",
     pubDate: "2026-06-24T12:00:00.000Z",
     source: "oray",
@@ -3852,7 +3852,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray: Echoes in the Canyon — Premiere Screening @ the Wright",
-    link: "Wrightoperahouse.org",
+    link: "https://Wrightoperahouse.org",
     description: "Echoes in the Canyon: Premiere Screening: Movie Night @ the Wright WHEN? Friday, June 26 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado Tickets $5 ABOUT THE FILM Ouray: Echoes in the Canyon premieres at the Wright Opera House for a special hometown screening event with filmmaker Hank Braxtan in attendance. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call “The Gem of the Rockies.” Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. …",
     pubDate: "2026-06-26T12:00:00.000Z",
     source: "oray",
@@ -3907,7 +3907,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray County Ranch History Museum's 20th Anniversary Day",
-    link: "ocrhm.org",
+    link: "https://ocrhm.org",
     description: "Enjoy a fun-filled day of interactive activities & games, celebrating OC Ranch Museum's 20th Anniversary! Tour the acreage and see sites for future museum buildings, There will be mule rides, livestock, Rocking W Ice Cream truck from Webb Dairy, Sliders from Brittany at Uncompahgre Farm, 4-H youth showcasing their fair projects, CSU Extension offerings, zeroscape learning/plantings, Minerva West dress-up Trunk Show recognizing homesteader locals, Ridgway Community Apiary, Mighty Mini Horse Therapy, and more!",
     pubDate: "2026-06-27T12:00:00.000Z",
     source: "oray",
@@ -3918,7 +3918,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Tavern & Tours: Ouray History Day @ the Wright",
-    link: "wrightoperahouse.org",
+    link: "https://wrightoperahouse.org",
     description: "Tavern & Tours: Ouray History Day @ the Wright WHEN? Saturday, June 27 Doors open: 11:00 am – 4:00 pm TOUR SCHEDULE Tour 1: 11:30 am – 12:30 pm Tour 2: 12:30 pm – 1:30 pm Tour 3: 1:30 pm – 2:30 pm Tour 4: 2:30 pm – 3:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Step inside one of Ouray’s most historic buildings for an afternoon of stories, cocktails, and local history at the Wright Opera House. Tavern & Tours: Ouray History Day invites guests to explore the fascinating past of the Wright through guided tours highlighting the building’s colorful frontier origins, theatrical legacy, hidden corners, and the larger history of Ouray itself. …",
     pubDate: "2026-06-27T12:00:00.000Z",
     source: "oray",
@@ -3940,7 +3940,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Null and Void - Live at the Floating Lotus - FREE show",
-    link: "FloatingLotusBrewery.com",
+    link: "https://FloatingLotusBrewery.com",
     description: "Null and Void is a rock duo from Denver, CO. Just guitar and drums, Null and void plays covers and originals. Inspired by bands like the Black Keys, Green Day, Smashing Pumpkins, The White Stripes, The Presidents of the United States of America, and Superchunk, their sets are on fire from start to finish. Null and Void has played Larimer Lounge, Lost Lake, Globe Hall, the Trailside Saloon, Goosetown, the Black Buzzard, Moe’s BBQ, and outdoor events and festivals like Run the Rocks (2022-2024) and Ridgway Rocks. Null and Void have shared the stage with the City of Sound, the Dirty Turkeys, Cinema Stereo, The Losers Club, Stray the Course, LOG, Hot Like Wasabi, 2 Seconds to Denver, Bicycle Day, and many more... Free Show All Ages Welcome Outdoor Stage",
     pubDate: "2026-06-27T12:00:00.000Z",
     source: "oray",
@@ -3961,7 +3961,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
   },
   {
-    title: "CORAL  SKYE",
+    title: "CORAL SKYE",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-06-30T12:00:00.000Z",
@@ -3984,7 +3984,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "True Grit: CO-150 Film Festival @ the Wright",
-    link: "wrightoperahouse.org",
+    link: "https://wrightoperahouse.org",
     description: "True Grit: CO-150 Film Festival @ the Wright WHEN? Wednesday, July 1 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 8min RATING: G ROTTEN TOMATOES SCORE: 89% ABOUT THE FILM True Grit (1969) stars John Wayne in his Academy Award-winning role as the tough and hard-drinking U.S. Marshal Rooster Cogburn, hired by a determined young girl to help track down her father’s killer through dangerous frontier territory. Blending rugged western action with humor, heart, and unforgettable performances, the film became a defining classic of the American West and one of the most beloved westerns ever made. A timeless frontier adventure about justice, courage, and the stubborn grit it takes to do what’s right. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
     pubDate: "2026-07-01T12:00:00.000Z",
     source: "oray",
@@ -4018,7 +4018,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "On Display: Silverton, Interpreted",
-    link: "www.ridgwayfuse.org",
+    link: "https://www.ridgwayfuse.org",
     description: "We are excited to host a group show during the month of July from our neighbors in Silverton! Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker.",
     pubDate: "2026-07-03T12:00:00.000Z",
     endDate: "2026-07-30",
@@ -4040,8 +4040,8 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "Show Opening: Silverton, Interpreted  - Ridgway First Friday",
-    link: "www.ridgwayfuse.org",
+    title: "Show Opening: Silverton, Interpreted - Ridgway First Friday",
+    link: "https://www.ridgwayfuse.org",
     description: "Join us for the opening reception of Silverton Interpreted. This traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. Part of Ridgway's First Friday Art Walk",
     pubDate: "2026-07-03T12:00:00.000Z",
     source: "oray",
@@ -4074,7 +4074,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Ouray Weird Trivia Night @ the Wright",
-    link: "wrightoperahouse.org",
+    link: "https://wrightoperahouse.org",
     description: "Ouray Weird Trivia Night @ the Wright WHEN? Friday, July 3 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Ouray Weird Trivia Night returns to the Wright for an evening of strange facts, useless knowledge, unexpected questions, and community-powered chaos. From local lore and pop culture to history, movies, science, and wonderfully obscure nonsense, teams will compete for bragging rights in a trivia night designed for both serious competitors and people who just enjoy laughing with friends. Locals, tourists, fringe personalities, and mainstream minds are all welcome! Free to Attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
     pubDate: "2026-07-03T12:00:00.000Z",
     source: "oray",
@@ -4107,7 +4107,7 @@ const OURAY_RIDGWAY_EVENTS = [
   },
   {
     title: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright",
-    link: "wrightoperahouse.org",
+    link: "https://wrightoperahouse.org",
     description: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright WHEN? Saturday, July 4 Tavern Open: 11:00 am – 9:00 pm (Opens after the parade • Closes after the fireworks or drone show) WHERE? Wright Opera House Tavern 472 Main St. Ouray, Colorado ABOUT THE EVENT Step into the Wright Tavern this Fourth of July and meet a few of the forgotten friends, colorful characters, and questionable legends woven into the history of the Wright Opera House. Throughout the day, guests can join Drunk History Tours led by none other than Letitia Wright or Alewife Addie, two spirited guides with a talent for storytelling and perhaps a flexible relationship with historical restraint. These lively tours shine a lantern on the strange, true, and unexpectedly entertaining stories hidden within the walls of one of Ouray’s most historic buildings. …",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "oray",
@@ -4166,7 +4166,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regularly scheduled public meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to observe or participate in district business.",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4244,17 +4244,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
-    title: "Town Talk: Small Molecules at the Origins of Life",
-    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-small-molecules-at-the-origins-of-life/",
-    description: "This town talk will be presented by David Lancy, University of Buffalo. How did the atoms in the universe come together to form life?",
-    pubDate: "2026-06-23T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48903/tt_logo_1048x802_a.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -4319,17 +4308,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48944/mv_calendar_-_muleskinners_ball_2.png"
-  },
-  {
-    title: "Town Talk: Tau",
-    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-tau/",
-    description: "This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally",
-    pubDate: "2026-06-30T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48905/tt_logo_1048x802_a.png"
   },
   {
     title: "Market on the Plaza",
