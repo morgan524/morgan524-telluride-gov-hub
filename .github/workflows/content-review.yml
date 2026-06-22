@@ -10,7 +10,7 @@ name: Daily Content Review
 # mirroring the maintenance.yml / content-refresh.yml issue pattern.
 on:
   schedule:
-    - cron: '0 14 * * *'   # daily 14:00 UTC (~8am Mountain) — after the 12:00 content-refresh + maintenance
+    - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain) — just past the 12:00 UTC morning content-refresh (runs ~6-9 min) so it reviews the freshly-refreshed data
   workflow_dispatch:
 
 permissions:

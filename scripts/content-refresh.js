@@ -3067,7 +3067,13 @@ function serializeArray(varName, arr) {
   // apostrophes, backslashes, newlines, and control chars are safe.
   const safeKey = (k) => /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
   const items = arr.map(item => {
-    const props = Object.entries(item).map(([k, v]) => {
+    // Omit keys whose value is undefined. Writers intentionally set optional
+    // fields to undefined (e.g. `endDate: endDay !== startDay ? endDay : undefined`)
+    // to mean "leave it out". Without this filter the fallback below ran
+    // JSON.stringify(String(undefined)) → the literal string "undefined", which
+    // is TRUTHY at render time (events.html), breaking date ranges and
+    // misclassifying single-day events as weekly. See docs/content-review.md.
+    const props = Object.entries(item).filter(([, v]) => v !== undefined).map(([k, v]) => {
       if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
         const inner = Object.entries(v).map(([ik, iv]) => `${safeKey(ik)}: ${JSON.stringify(String(iv))}`).join(', ');
         return `    ${safeKey(k)}: { ${inner} }`;
