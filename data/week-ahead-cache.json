@@ -1,22 +1,18 @@
 {
-  "hash": "c805c9e360847c6d0df388ffb56e5d6b18a05913",
-  "lede": "The biggest item this week is Monday's joint HARC and P&Z special session on wildfire resiliency code amendments — proposed changes to Telluride's Land Use Code and Design Guidelines that will shape how the town builds and retrofits going forward, with Town Council getting the final vote. Thursday brings the Telluride Hospital District board's mill levy discussion, a perennial pressure point as the hospital pushes toward a new facility. The week also has the Shandoka Lot redevelopment getting its first real P&Z look, and the Open Space Commission working through the Perimeter Trail NEPA process and other active projects.",
+  "hash": "905be0b9ef645d72486d9f97bd49a9ffdeef372c",
+  "lede": "The most consequential thing on the calendar this week is Tuesday's joint P&Z and HARC special meeting, where the two commissions will hash out Land Use Code and Design Guideline amendments required to bring Telluride into compliance with the Colorado Wildfire Resiliency Code — language that then goes straight to Town Council for a final vote. Thursday brings two more substantive meetings: the Telluride Hospital District board takes up mill levy considerations tied to the push for a new facility, and P&Z holds a work session on the Shandoka Lot Redevelopment Project, the major Town-owned site that's been generating real conversation. Plenty of summer programming fills out the week, from the Yoga Festival to the Oak Street Park SummerSHOW Series kicking off Thursday.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Wildfire code amendments to Town Land Use Code head toward Council vote."
+      "id": 0,
+      "stake": "Commission recommends Land Use Code changes for wildfire compliance; Council decides next."
+    },
+    {
+      "id": 3,
+      "stake": "Board discusses mill levy — the tax mechanism funding the hospital and new facility push."
     },
     {
       "id": 4,
-      "stake": "Hospital District discusses mill levy — the tax mechanism funding operations and new facility."
-    },
-    {
-      "id": 5,
-      "stake": "Major Town-owned Shandoka redevelopment gets first P&Z feedback before formal review."
-    },
-    {
-      "id": 0,
-      "stake": "NEPA update and Perimeter Trail progress — public land decisions moving forward."
+      "stake": "Early public shaping of Shandoka Lot redevelopment before formal Land Use Code review begins."
     }
   ]
 }

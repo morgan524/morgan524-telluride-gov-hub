@@ -182,6 +182,15 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
+    {"sv":2},
+
+  "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
+    {"sv":2},
+
+  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
+    {"sv":2},
+
+  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026 - Cancelled":
     {"sv":2}
 };
 
@@ -334,13 +343,13 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -367,7 +376,16 @@ const MANUAL_SUMMARIES = {
     "The July 21, 2026 Town Council agenda hasn't been posted yet.",
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
-    "The July 22 Board of County Commissioners Special Meeting agenda hasn't been posted yet."
+    "The July 22 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
+    "The July 23, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
+    "The July 23, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026 - Cancelled":
+    "The June 25, 2026 Planning & Zoning Commission Chair meeting has been cancelled."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1277,54 +1295,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Sweet Sounds among the stacks",
-    source: "Telluride Times",
-    date: "June 9, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "arts-culture",
-    copy: "The library has launched several new monthly music series including Sweet Sounds concerts on the terrace (first Wednesdays with free popsicles), Strings in the Stacks violin performances (first Mondays), and Piano on the Patio sessions. Local musicians are stepping up to perform everything from bluegrass to classical, with library staff leading the charge and drawing in passersby who wouldn't normally attend concerts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7d9947a8-8ab3-48b8-a836-88957c5584f5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/ae/bae021a6-01e3-439c-91b1-8061c6f4f049/6a23d86f6d489.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Opioid settlement dollars are saving lives in our region",
-    source: "Telluride Times",
-    date: "June 9, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "community",
-    copy: "WCAHEC has installed 14 naloxone dispensers around the region since February and handed out over 5,600 boxes of the overdose-reversing medication, funded by $60,000 in opioid settlement money. The dispensers are showing up in libraries, parks, and health facilities, with training helping locals recognize overdoses and respond quickly. Staff at one local business already used their training and dispenser to save someone's life in a restroom.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_3c72f726-b536-4e2d-a537-282124011cc3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/df/8df9a3b3-328a-424d-a9cf-f14e4ba60364/6a2129e2366d6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Summer air service includes new LA flights",
-    source: "Telluride Times",
-    date: "June 9, 2026",
-    firstSeen: "2026-06-12",
-    newsTopic: "community",
-    copy: "Colorado Flights Alliance announced expanded air service between Montrose Regional Airport (MTJ) and Los Angeles International Airport (LAX) for the summer 2026 travel season.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_3e628215-2a5a-425f-8152-87b39e99b29b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Summer air service includes new LA flights",
-    source: "Telluride Times",
-    date: "June 9, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "community",
-    copy: "Montrose airport is adding new LA flights this summer along with more frequent service from Chicago and Houston, though Phoenix flights to Telluride got cut back to twice weekly after last winter's ski patrol strike hurt bookings. Overall summer air capacity is projected up about 5% from last year, with strong advance reservations despite concerns about fuel costs from global conflicts affecting travel planning.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_3e628215-2a5a-425f-8152-87b39e99b29b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/74/674c1a2c-a27f-45d3-a156-aa89f61bdc2d/6a282609628ba.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Implements Stage 1 Fire Restrictions",
     source: "Town of Telluride",
     date: "June 18, 2026",
@@ -1435,7 +1405,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 22, 2026",
+    date: "June 23, 2026",
     firstSeen: "2026-06-09",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1446,7 +1416,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 22, 2026",
+    date: "June 23, 2026",
     firstSeen: "2026-06-18",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1477,20 +1447,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Finding of the Town Manager Enacting Town Wide Fire Ban",
-    source: "Town of Ridgway",
-    date: "June 9, 2026",
-    firstSeen: "2026-06-09",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/POST-Town-Wide-Fire-Ban---Stage-1-Restrictions---June-9%2C-2026---signed_0.pdf",
-    img: ""
-  },
-  {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 22, 2026",
+    date: "June 23, 2026",
     firstSeen: "2026-06-04",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1501,7 +1460,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 22, 2026",
+    date: "June 23, 2026",
     firstSeen: "2026-05-16",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1557,6 +1516,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 6-22-26",
+    source: "KOTO Community Radio",
+    date: "June 23, 2026",
+    newsTopic: "recreation",
+    copy: "First Responders See Busy Weekend; Mountain Village Considers Ethics Code Changes",
+    href: "https://koto.org/news/newscast-6-22-26/"
+  },
+  {
     title: "Newscast 6-17-26",
     source: "KOTO Community Radio",
     date: "June 18, 2026",
@@ -1595,14 +1562,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "health",
     copy: "Telluride Releases Investigation Report; Adventure Race for Mental Health; Bird Song on the San Miguel",
     href: "https://koto.org/news/newscast-6-10-26/"
-  },
-  {
-    title: "Newscast 6-8-26",
-    source: "KOTO Community Radio",
-    date: "June 9, 2026",
-    newsTopic: "community",
-    copy: "Coming Up Next, Telluride; Telluride Dance Collective Moves the Masses",
-    href: "https://koto.org/news/newscast-6-8-26/"
   }
 ];
 
@@ -2343,12 +2302,12 @@ const TELLURIDE_SCIENCE_EVENTS = [
     sourceLabel: "Telluride Science"
   },
   {
-    title: "Exploring Earth’s Most Unusual Microbiology for Solutions to Humanity’s Most Pressing Challenges",
+    title: "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
     date: "2026-08-25",
     time: "6:30 PM – 7:30 PM",
     location: "Telluride Innovation Center, Telluride",
     description: " \r\n\r\n\r\nThis special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center.  \r\nFrom hydrothermal vents and volcanic seeps to alpine soils and mine drainage right here in Telluride, Earth’s most unusual ecosystems are home to microscopic life with extraordinary abilities. In this talk, Tierney will  share stories from the field and the lab through their team at the Two Frontiers Project. They explore the planet’s microbial diversity in search of “microbial superpowers” that could help tackle pollution, support agriculture, protect ecosystems, and improve human health. With an emphasis on projects ongoing in Colorado, we’ll explore how these invisible ecosystems work, why they matter for everyday life, and how citizen scientists and students can help map this hidden world.\r\nThanks to our title sponsor Alpine Bank.",
-    link: "https://telluridescience.org/event/exploring-earths-most-unusual-microbiology-for-solutions-to-humanitys-most-pressing-challenges/",
+    link: "https://telluridescience.org/event/talk-unusual-microbes/",
     imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     sourceLabel: "Telluride Science"
   },
@@ -2910,6 +2869,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "6th Annual Alpine Cookout",
+    link: "https://koto.org/event/6th-annual-alpine-cookout/",
+    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
+    pubDate: "2026-07-03T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Reflection Plaza Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Foundation Rundola: Run for Good",
+    link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
+    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
+    pubDate: "2026-07-04T13:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-07-04/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-07-04T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -2988,7 +2980,20 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-186",
+    name: "Roman",
+    species: "Dog",
+    breed: "Bulldog, French",
+    ageGroup: "Young Dog",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/d41da3a87655b31d6984c022c69835b0/22b7f37d16d281de87282d9cfb67b365.jpeg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/213885538",
+    summary: "Young Dog • Bulldog, French • Male",
+    firstSeen: "2026-06-23",
+    revealDate: "2026-06-23",
+    lastSeen: "2026-06-23"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3098,7 +3103,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    description: "The B-Side Players make music without borders or boundar...",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3278,7 +3283,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3290,7 +3295,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4133,7 +4138,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
+    description: "",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4144,7 +4149,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4155,7 +4160,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4166,7 +4171,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4177,7 +4182,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4188,7 +4193,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4199,7 +4204,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4210,7 +4215,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4221,28 +4226,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Girl Scout Cookie Booth",
-    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    pubDate: "2026-06-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    title: "Sunday Rehab: Apres Edition",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    pubDate: "2026-06-21T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
   {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
@@ -4786,18 +4769,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62769/sunday-rehab-event-image-2200x1237.800x533.webp"
   },
   {
-    title: "Ethan Hale",
-    link: "https://www.telluride.com/event/ethan-hale/",
-    description: "Solo acoustic guitar rock and roll with Ethan Hale at the Sheridan Historic Bar.",
-    pubDate: "2026-06-14",
-    endDate: "2026-06-21",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62804/ethan_hale_2.800x533.webp"
-  },
-  {
     title: "Weird Wine Wednesdays at The National",
     link: "https://www.telluride.com/event/weird-wine-wednesdays-at-the-national/",
     description: "Elevate your evening on the rooftop at The National with Weird Wine Wednesdays, a laid-back, weekly tasting experience …",
@@ -4904,7 +4875,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
+    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -5581,6 +5552,28 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62743/1_burlesque_buffet_visit_telluride_placeholder.800x533.webp"
+  },
+  {
+    title: "Telluride Mountain Run",
+    link: "https://www.telluride.com/event/telluride-mountain-run/",
+    description: "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
+    pubDate: "2026-08-22",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp"
+  },
+  {
+    title: "Wax Monkey",
+    link: "https://www.telluride.com/event/wax-monkey/",
+    description: "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birmingham, Alabama. The members first …",
+    pubDate: "2026-08-22",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62312/screenshot_2026-04-29_at_2_59_37_pm.800x533.webp"
   }
 ];
 

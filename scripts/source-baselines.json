@@ -162,7 +162,7 @@
     },
     "KOTO_COMMUNITY_EVENTS": {
       "dailyMax": {
-        "2026-06-22": 46
+        "2026-06-22": 49
       }
     },
     "WILKINSON_EVENTS": {
@@ -217,7 +217,7 @@
     },
     "TELLURIDE_COM_EVENTS": {
       "dailyMax": {
-        "2026-06-22": 92
+        "2026-06-22": 93
       }
     },
     "LEGAL_NOTICES": {
@@ -233,6 +233,11 @@
     "TELLURIDE_BOARD_MEETINGS": {
       "dailyMax": {
         "2026-06-22": 14
+      }
+    },
+    "HUMANE_SOCIETY_ANIMALS": {
+      "dailyMax": {
+        "2026-06-22": 1
       }
     }
   }
