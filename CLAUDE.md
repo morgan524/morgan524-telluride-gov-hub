@@ -55,6 +55,7 @@ provider changes, a script is restructured), update it in the same commit.
 | Firestore rules, Hub-Bub auth, admin-email check | `docs/firestore-auth.md` |
 | Daily content-correctness review — duplicate events, wrong/past/conflicting dates, broken links, AI semantic pass, "the content-review issue flagged X" | `docs/content-review.md` |
 | Weekly infra/security/liveness review (dead-code guard, feed freshness, secret scan, Lighthouse) | `docs/weekly-review/PROTOCOL.md` |
+| Planned migration of bot data from JS-source-rewriting to JSON files (phased, not started) | `docs/json-data-migration-plan.md` |
 | Manual ops cheat sheet, other workflows, liveness checks, Cloudflare account, email addresses, domain note, loose ends | `docs/operations.md` |
 
 Also in `~/.claude` memory (cross-session, auto-loaded): the Dropbox
