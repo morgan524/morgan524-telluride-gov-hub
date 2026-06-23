@@ -3031,9 +3031,23 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
         while (end < source.length && source[end] !== ';') end++;
         if (source[end] === ';') end++;
 
-        const serialized = isObject
-          ? serializeObject(varName, newValue)
-          : serializeArray(varName, sanitizeRecords(newValue));
+        let serialized;
+        if (isObject) {
+          serialized = serializeObject(varName, newValue);
+        } else {
+          // Funnel: normalize (sanitize) → validate (quarantine broken records)
+          // → serialize. Quarantines are logged, not silent. A whole source
+          // going malformed shrinks the array and trips source-health.
+          const sane = sanitizeRecords(newValue);
+          const { kept, quarantined } = validateRecords(sane);
+          if (quarantined.length) {
+            console.warn(`  ⚠ ${varName}: quarantined ${quarantined.length} malformed record(s) before write:`);
+            for (const q of quarantined.slice(0, 10)) {
+              console.warn(`      ${q.reason} — ${JSON.stringify(q.record).slice(0, 120)}`);
+            }
+          }
+          serialized = serializeArray(varName, kept);
+        }
 
         return source.slice(0, start) + serialized + source.slice(end);
       }
@@ -3047,6 +3061,7 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
 // the Mountain Village reconcile (Task 21b) below.
 const { serializeObject, serializeArray } = require('./lib/serialize.js');
 const { sanitizeRecords, filterMvConflicts } = require('./lib/sanitize.js');
+const { validateRecords } = require('./lib/validate.js');
 
 /**
  * Replace a simple const string value like: const FOO = '2026-04-22';

@@ -89,6 +89,14 @@ AI semantic pass (optional, needs `ANTHROPIC_API_KEY`; model
     Telluride.com, Telluride Science) lists the same event within ±3 days on a
     *different* date. The event still shows (from the trusted source); only the
     wrong-date duplicate is suppressed. See memory: `mv-calendar-wrong-dates`.
+  - **`validateRecords()`** (`lib/validate.js`, write-time **quarantine**) — at
+    the same funnel, *after* sanitize and *before* serialize, it drops records
+    that are unambiguously broken: a present-but-unparseable date, or a dated
+    entry with no title/name AND no content (a blank junk fragment). Deliberately
+    conservative — a dated record that has a title OR any description is KEPT
+    (the review flags a missing title; a human decides). Quarantines are logged,
+    not silent; a whole source going malformed shrinks the array and trips
+    source-health. Verified to quarantine 0 of the current ~780 live records.
   - **Eventual consistency:** `sanitizeRecords` runs when an array is (re)written,
     i.e. when that source's scrape changes — which for active event feeds is
     most refreshes. A static, already-clean array isn't needlessly rewritten.
