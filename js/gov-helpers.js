@@ -343,7 +343,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -367,7 +367,7 @@ const MANUAL_SUMMARIES = {
     "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Special":
-    "The July 8 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Special meeting agenda hasn't been posted yet.",
 
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -432,6 +432,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "All things wellness",
+    source: "Telluride Times",
+    date: "June 23, 2026",
+    firstSeen: "2026-06-23",
+    newsTopic: "community",
+    copy: "The Telluride Yoga Festival runs June 25–28 across Mountain Village and Telluride, marking its 18th season with a record 1,200 passholders, 50 presenters, and 150+ offerings. Free daily events include yoga in Elms Park, live music, fireside chats, and more. About 26% of attendees are local residents; the rest come from all 50 states and beyond.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_119bdb3b-96a7-4823-9921-f3ce090d1538.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4d/34df2b7b-ebe5-4835-bd30-9c75b7f87713/6a3ac6382ce06.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Bluegrass Festival astounds",
+    source: "Telluride Times",
+    date: "June 23, 2026",
+    firstSeen: "2026-06-23",
+    newsTopic: "arts-culture",
+    copy: "Sam Bush anchored this year's Telluride Bluegrass Festival across multiple sets — with Tedeschi Trucks Band, Larkin Poe, Jake Shimabukuro, Leftover Salmon, and Greensky Bluegrass. Renée Fleming singing \"Ave Maria\" accompanied only by Béla Fleck's banjo stood out as a quiet highlight. Sierra Hull, Shimabukuro, and first-timers Dallahan and Alash rounded out a notably wide-ranging lineup.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_c2d45aa1-2ba5-49cb-b903-fcf3608376bf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/0e/c0e8308a-eb16-4314-b6e6-5e0ebdf76089/6a3a57dd9d203.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Housing and the environment",
     source: "Telluride Times",
@@ -1377,6 +1401,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
+  },
+  {
+    title: "Imogene Pass is Open",
+    source: "San Miguel County",
+    date: "June 23, 2026",
+    newsTopic: "community",
+    copy: "Imogene Pass is now open on the San Miguel County side. Please check with Ouray County for up-to-date conditions on their side of the pass.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=532",
+    img: ""
   },
   {
     title: "Black Bear Road (CR K69) Closure for Roadwork June 25, 2026 from 6:00 am to 5:00 pm",
@@ -2729,6 +2762,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-3.png"
   },
   {
+    title: "Baby Bop",
+    link: "https://koto.org/event/baby-bop/",
+    description: "Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, diseñada para que cuidadores y pequeños se muevan juntos mediante rutinas fáciles de seguir. Te espera música alegre, coreografías sencillas y un ambiente de apoyo centrado en el vínculo, el movimiento y la alegría; ¡no se requiere experiencia previa en baile!",
+    pubDate: "2026-07-01T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-01/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2784,6 +2828,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://koto.org/event/yin-yang-yoga-with-miriah/",
+    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.",
+    pubDate: "2026-07-02T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MIRIAH-2.png"
+  },
+  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2817,6 +2872,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
   },
   {
+    title: "French Happy Hour at the Alibi",
+    link: "https://koto.org/event/french-happy-hour-at-the-alibi-2/",
+    description: "Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
+    pubDate: "2026-07-02T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/French-Happy-Hour-9.png"
+  },
+  {
     title: "Mountain Village Red, White & Blues Celebration",
     link: "https://koto.org/event/mountain-village-red-white-blues-celebration/",
     description: "Mountain Village's beloved Red, White &Blues Celebration returns July 3-4, 2026, bringing two days of FREE family activities, live music, arts and cultural programming, and community festivities to Mountain Village. Presented by the Telluride Mountain Village Owners Association (TMVOA), the annual Independence Day celebration invites residents and visitors alike to gather in the heart of the San Juan Mountains for a weekend filled with live entertainment, interactive activities, merchant specials, and fun for all ages. This year's celebration carries special significance as the nation commemorates the250thanniversary of the United States and Colorado celebrates its 150th anniversary of statehood. New programming includes a special Drone Show, a performance by '90s alt-rock legends Better Than Ezra, Telluride Arts' This is Colorado (In One Square Foot) Sesquicentennial exhibition, Telluride Theatre Sesquisemiquincentennial performances, and a new Family Happy Hour with Movies Under the Stars on Saturday evening. Festivities begin at 1 p.m. …",
@@ -2826,6 +2892,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Mountain Village Plazas",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
+  },
+  {
+    title: "Yoga For All with Jay and Jane",
+    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-03/",
+    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-07-03T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -2870,50 +2947,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
     imageUrl: ""
-  },
-  {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-03/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-07-03T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "6th Annual Alpine Cookout",
-    link: "https://koto.org/event/6th-annual-alpine-cookout/",
-    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
-    pubDate: "2026-07-03T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Reflection Plaza Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
-    pubDate: "2026-07-04T13:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
-  },
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-07-04/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-07-04T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -2954,7 +2987,7 @@ const WILKINSON_EVENTS = [
   {
     title: "I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16574858?hs=a",
-    description: "A library event called I Heart Art, held outdoors on the Lower Terrace at Wilkinson Public Library. This afternoon program is a creative gathering celebrating art in the Telluride community.",
+    description: "2:30 PM – 3:30 PM",
     pubDate: "2026-06-23T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3115,7 +3148,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    description: "The B-Side Players make music without borders or boundar...",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3269,6 +3302,18 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/2340e518-38e2-471f-802f-0183b7f67cbb/-/crop/1069x1068/235,0/-/preview/"
   },
   {
+    title: "Max & Heather Stalling",
+    link: "https://www.alibitelluride.com/calendar#eca-event=max-and-heather-stalling",
+    description: "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
+    pubDate: "2026-08-11",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/2f8a6c97-33f7-43f4-a134-b385a801631a/-/crop/5464x2727/0,1365/-/preview/"
+  },
+  {
     title: "Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival",
     link: "https://www.alibitelluride.com/calendar#eca-event=banshee-tree-w-quattlebaum-telluride-mushroom-festival",
     description: "Set against the electric backdrop of the Telluride Mushroom Festival—a legendary...",
@@ -3295,7 +3340,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3307,7 +3352,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3518,18 +3563,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center, San Juan Room",
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
-  },
-  {
-    title: "Zumba Fitness with Tamra",
-    link: "https://zumba.com/p/zumbafitnesswithTamra",
-    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
-    pubDate: "2026-04-01T12:00:00.000Z",
-    endDate: "2026-12-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/2b6c13a5ecf839308a6e07162c2bf31ca79210c3.jpg"
   },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -4154,6 +4187,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Twin Peaks Lodge and Hot Springs",
     imageUrl: "https://localist-images.azureedge.net/photos/53055048338026/huge/1972c7c294d4aeea7ec59595611ab9d6216447d5.jpg"
+  },
+  {
+    title: "Ridgway Rocks",
+    link: "https://www.instagram.com/ridgwayrocksfest/",
+    description: "Live Music in Town Park 6-10 PM. Damon Robinson, Null & Void, Flannel Feedback.",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52745922632341/huge/0250190a0bcc6088f63749a38406222953357e3e.jpg"
+  },
+  {
+    title: "A Geological Odyssey: Ouray County - Ridgway State Park Summer Program Series",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Join us for a fascinating journey through time with expert John Mitchell. From ancient volcanic eruptions to the glacial forces that shaped our modern landscape, he will unravel the epic story written in the rocks of Ouray County.",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53161788541140/huge/43e5cbd69d31cef897cd453db90b4a55db1e9c83.jpg"
   }
 ];
 
@@ -4161,7 +4216,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
+    description: "",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4172,7 +4227,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4183,7 +4238,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4194,7 +4249,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4205,7 +4260,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4216,7 +4271,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4227,7 +4282,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4238,7 +4293,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4898,7 +4953,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
+    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
