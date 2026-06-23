@@ -41,7 +41,7 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 // Week-Ahead lede generation. The Claude preflight in
 // scripts/content-refresh.js (which runs first in the same workflow)
 // will fail the run before this script executes if the model is rejected.
-const CLAUDE_MODEL = 'claude-sonnet-4-6';
+const CLAUDE_MODEL = require('./lib/claude-model.js').SONNET;
 const WEEK_AHEAD_CACHE = path.join(REPO_ROOT, 'data', 'week-ahead-cache.json');
 
 // ── Per-topic event feeds (pilot, 2026-06) ──

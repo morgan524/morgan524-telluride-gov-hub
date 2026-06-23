@@ -26,7 +26,7 @@ const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..')
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const CLAUDE_MODEL      = 'claude-haiku-4-5-20251001'; // fast + cheap for triage
+const CLAUDE_MODEL      = require('./lib/claude-model.js').HAIKU; // fast + cheap for triage
 const USER_AGENT        = 'LivableTelluride-Bot/1.0 (+https://livabletelluride.org)';
 
 // ── Deep Dive topic keyword map ───────────────────────────────────────────────

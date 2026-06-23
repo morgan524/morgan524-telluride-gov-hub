@@ -61,7 +61,7 @@ const FINDINGS_ACTIONABLE = path.join(REPO_ROOT, 'content-review-actionable.log'
 // AI pass config. Floating Sonnet alias to match content-refresh.js; see
 // memory/claude-model-inventory.md (this file is now a model-ID site).
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
-const REVIEW_MODEL = process.env.CONTENT_REVIEW_MODEL || 'claude-sonnet-4-6';
+const REVIEW_MODEL = process.env.CONTENT_REVIEW_MODEL || require('./lib/claude-model.js').SONNET;
 
 const LINK_CHECK_CAP = 45;      // max distinct links probed per run
 const LINK_TIMEOUT_MS = 12000;

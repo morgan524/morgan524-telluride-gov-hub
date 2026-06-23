@@ -39,11 +39,12 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 // regenerated. Use the current Sonnet alias so a model retirement doesn't
 // silently break summaries again — Anthropic auto-points the alias at the
 // latest stable Sonnet release.
-const CLAUDE_MODEL = 'claude-sonnet-4-6';
-// Mirror of CLAUDE_MODEL in scripts/deep-dive-refresh.js. Deep-dive runs
-// later in the same workflow and would silently break on a Haiku retirement
-// without the preflight below. Bump in lockstep with the deep-dive constant.
-const HAIKU_MODEL = 'claude-haiku-4-5-20251001';
+const { SONNET, HAIKU } = require('./lib/claude-model.js');
+const CLAUDE_MODEL = SONNET;
+// HAIKU_MODEL mirrors deep-dive-refresh.js's model so the preflight below also
+// covers Haiku (both run in this workflow). Both now resolve from
+// lib/claude-model.js — a retirement bump happens once, there.
+const HAIKU_MODEL = HAIKU;
 
 // ── Smart truncation for event/meeting card descriptions ──
 // Caps text at maxLen, cutting at the nearest sentence boundary (or word
@@ -3041,189 +3042,11 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
   return source;
 }
 
-function serializeObject(varName, obj) {
-  // Use JSON.stringify so keys and values are always safely quoted as JS
-  // string literals — handles apostrophes, backslashes, newlines, control
-  // chars, and unicode without manual escaping.  The keys produced are valid
-  // ECMAScript object property names because every JSON-stringified string is
-  // a valid JS string literal.
-  //
-  // Values get JSON.stringify(v) directly (NOT JSON.stringify(String(v)))
-  // — String({...}) coerces nested objects to the literal "[object Object]"
-  // before JSON sees them, producing useless garbage in the output. With
-  // raw JSON.stringify, string values land as quoted strings and nested
-  // objects land as valid inline JSON ({"zoomUrl":"…","meetingId":"…"}).
-  // (For MEETING_AGENDA_META, which has object values.)
-  const entries = Object.entries(obj).map(([k, v]) => {
-    return `  ${JSON.stringify(String(k))}:\n    ${JSON.stringify(v)}`;
-  });
-  return `const ${varName} = {\n${entries.join(',\n\n')}\n};`;
-}
-
-function serializeArray(varName, arr) {
-  // JS object property names without quotes must be valid identifiers; if
-  // they aren't (e.g. contain special chars), fall back to JSON.stringify so
-  // the key gets quoted.  All string values flow through JSON.stringify so
-  // apostrophes, backslashes, newlines, and control chars are safe.
-  const safeKey = (k) => /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
-  const items = arr.map(item => {
-    // Omit keys whose value is undefined. Writers intentionally set optional
-    // fields to undefined (e.g. `endDate: endDay !== startDay ? endDay : undefined`)
-    // to mean "leave it out". Without this filter the fallback below ran
-    // JSON.stringify(String(undefined)) → the literal string "undefined", which
-    // is TRUTHY at render time (events.html), breaking date ranges and
-    // misclassifying single-day events as weekly. See docs/content-review.md.
-    const props = Object.entries(item).filter(([, v]) => v !== undefined).map(([k, v]) => {
-      if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-        const inner = Object.entries(v).map(([ik, iv]) => `${safeKey(ik)}: ${JSON.stringify(String(iv))}`).join(', ');
-        return `    ${safeKey(k)}: { ${inner} }`;
-      }
-      if (Array.isArray(v)) {
-        return `    ${safeKey(k)}: [${v.map(i => JSON.stringify(String(i))).join(', ')}]`;
-      }
-      if (typeof v === 'boolean' || typeof v === 'number') {
-        return `    ${safeKey(k)}: ${v}`;
-      }
-      return `    ${safeKey(k)}: ${JSON.stringify(String(v))}`;
-    });
-    return `  {\n${props.join(',\n')}\n  }`;
-  });
-  return `const ${varName} = [\n${items.join(',\n')}\n];`;
-}
-
-// Defensive normalization applied to EVERY array right before it's written to
-// the data file (via replaceJsValue → serializeArray). Fixes recurring
-// upstream-source data quirks at the single write funnel so they self-heal on
-// each refresh instead of needing manual edits the next scrape would revert.
-// Surfaced by the daily content review (docs/content-review.md). All three
-// rules are field-gated, so non-event/meeting arrays pass through untouched.
-function sanitizeRecords(arr) {
-  if (!Array.isArray(arr)) return arr;
-  const tokenKey = (t) => String(t).toLowerCase()
-    .replace(/&[a-z]+;|&#\d+;/g, ' ').replace(/[^a-z0-9]+/g, ' ')
-    .trim().split(' ').filter(Boolean).sort().join(' ');
-  const norm = (t) => String(t).toLowerCase().replace(/\s+/g, ' ').trim();
-  const dateIso = (o) => {
-    const d = o.date || o.pubDate || o.startDate;
-    if (!d) return '';
-    const m = String(d).match(/^(\d{4})-(\d{2})-(\d{2})/);
-    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
-    const p = Date.parse(String(d));
-    return isNaN(p) ? '' : new Date(p).toISOString().slice(0, 10);
-  };
-  const firstTitleByKey = new Map();
-  const exactSeen = new Set();
-  const out = [];
-  for (const item of arr) {
-    if (!item || typeof item !== 'object' || Array.isArray(item)) { out.push(item); continue; }
-    const o = { ...item };
-
-    // (1) Collapse an immediately-repeated noise word in titles, e.g. the
-    //     Norwood feed's "…District Meeting Meeting" → "…District Meeting".
-    //     Scoped to a known word set so legit doublings (Walla Walla) survive.
-    if (typeof o.title === 'string') {
-      o.title = o.title
-        .replace(/\b(Meeting|Event|Concert|Workshop|Festival|Show|Session|Class|Gathering|Service|Market|Forum)\s+\1\b/gi, '$1')
-        .replace(/\s{2,}/g, ' ').trim();
-    }
-
-    // (1b) Repair scheme-less links — some scrapers store "www.x.org" or
-    //      "ocrhm.org", which render as broken relative links on our domain.
-    //      Prepend https:// when the value looks like a bare domain.
-    for (const f of ['link', 'href', 'url']) {
-      if (typeof o[f] === 'string' && o[f] &&
-          !/^https?:\/\//i.test(o[f]) && !/^(mailto|tel):/i.test(o[f]) &&
-          /^([a-z0-9-]+\.)+[a-z]{2,}([/?#]|$)/i.test(o[f].trim())) {
-        o[f] = 'https://' + o[f].trim();
-      }
-    }
-
-    // (2) Drop an endDate that's clearly a wrong-year scrape (same month+day,
-    //     later year — e.g. start 2026-07-04, end "2027-07-04") or that lands
-    //     before the start. serializeArray omits undefined, so deleting is safe.
-    if (o.endDate) {
-      const s = dateIso(o);
-      const eM = String(o.endDate).match(/^(\d{4})-(\d{2})-(\d{2})/);
-      if (s && eM) {
-        const eIso = `${eM[1]}-${eM[2]}-${eM[3]}`;
-        if ((eIso.slice(5) === s.slice(5) && eIso.slice(0, 4) > s.slice(0, 4)) || eIso < s) {
-          delete o.endDate;
-        }
-      }
-    }
-
-    if (o.title) {
-      const dk = dateIso(o);
-      const link = String(o.link || o.href || o.url || '');
-
-      // (3a) Exact duplicate — identical date + title + link → drop the
-      //      redundant copy. Requiring the link to match keeps legitimately
-      //      distinct same-title items (two letters-to-editor with different
-      //      URLs; KOTO "…/1/" vs "…/2/" sessions) intact.
-      const exactK = dk + '|' + norm(o.title) + '|' + link;
-      if (exactSeen.has(exactK)) continue;
-      exactSeen.add(exactK);
-
-      // (3b) Same-date title REORDERING — CivicWeb lists a joint meeting once
-      //      per body ("HARC and P&Z" vs "P&Z and HARC") with different agenda
-      //      URLs. Same date + same word-set but a DIFFERENT original title →
-      //      drop the later one. Identical titles are left to (3a). See memory:
-      //      weekly-email-dedup-joint-meetings.
-      const rk = dk + '|' + tokenKey(o.title);
-      const first = firstTitleByKey.get(rk);
-      if (first === undefined) firstTitleByKey.set(rk, norm(o.title));
-      else if (first !== norm(o.title)) continue;
-    }
-
-    out.push(o);
-  }
-  return out;
-}
-
-// Tier-2 cross-source reconciliation: Mountain Village's calendar is a known
-// source of WRONG dates (it mirrors events a day off). When a TRUSTED source
-// (KOTO, Sheridan, Telluride.com, Telluride Science) lists the same event
-// within a few days on a DIFFERENT date, drop the Mountain Village copy — the
-// event still shows (from the trusted source on its correct date); only the
-// wrong-date duplicate is suppressed. Same-date overlaps are left for the
-// render-time dedup. See memory: mv-calendar-wrong-dates / docs/content-review.md.
-function filterMvConflicts(mvArr, trustedArrs) {
-  const tokenKey = (t) => String(t).toLowerCase()
-    .replace(/&[a-z]+;|&#\d+;/g, ' ').replace(/[^a-z0-9]+/g, ' ')
-    .trim().split(' ').filter(Boolean).sort().join(' ');
-  const iso = (o) => {
-    const d = o && (o.date || o.pubDate || o.startDate);
-    if (!d) return null;
-    const m = String(d).match(/^(\d{4})-(\d{2})-(\d{2})/);
-    if (m) return `${m[1]}-${m[2]}-${m[3]}`;
-    const p = Date.parse(String(d));
-    return isNaN(p) ? null : new Date(p).toISOString().slice(0, 10);
-  };
-  const trusted = new Map();   // tokenKey → Set(isoDate)
-  for (const arr of trustedArrs) for (const o of (arr || [])) {
-    const i = iso(o);
-    if (!o || !o.title || !i) continue;
-    const k = tokenKey(o.title);
-    if (k.length < 6) continue;
-    if (!trusted.has(k)) trusted.set(k, new Set());
-    trusted.get(k).add(i);
-  }
-  const dropped = [];
-  const kept = (mvArr || []).filter(o => {
-    const i = iso(o);
-    if (!o || !o.title || !i) return true;
-    const k = tokenKey(o.title);
-    if (k.length < 6) return true;
-    const dates = trusted.get(k);
-    if (!dates || dates.has(i)) return true;   // unknown to trusted, or same date → keep
-    for (const td of dates) {
-      const diff = Math.abs((Date.parse(td) - Date.parse(i)) / 86400000);
-      if (diff >= 1 && diff <= 3) { dropped.push({ title: o.title, mvDate: i, trustedDate: td }); return false; }
-    }
-    return true;
-  });
-  return { kept, dropped };
-}
+// Serialization + data sanitization live in unit-tested lib modules now
+// (scripts/test/*.test.js). Imported here; used by replaceJsValue() above and
+// the Mountain Village reconcile (Task 21b) below.
+const { serializeObject, serializeArray } = require('./lib/serialize.js');
+const { sanitizeRecords, filterMvConflicts } = require('./lib/sanitize.js');
 
 /**
  * Replace a simple const string value like: const FOO = '2026-04-22';
