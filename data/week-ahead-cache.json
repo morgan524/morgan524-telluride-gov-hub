@@ -1,18 +1,18 @@
 {
-  "hash": "905be0b9ef645d72486d9f97bd49a9ffdeef372c",
-  "lede": "The most consequential thing on the calendar this week is Tuesday's joint P&Z and HARC special meeting, where the two commissions will hash out Land Use Code and Design Guideline amendments required to bring Telluride into compliance with the Colorado Wildfire Resiliency Code — language that then goes straight to Town Council for a final vote. Thursday brings two more substantive meetings: the Telluride Hospital District board takes up mill levy considerations tied to the push for a new facility, and P&Z holds a work session on the Shandoka Lot Redevelopment Project, the major Town-owned site that's been generating real conversation. Plenty of summer programming fills out the week, from the Yoga Festival to the Oak Street Park SummerSHOW Series kicking off Thursday.",
+  "hash": "42bb56055113756a2529d708b908ce2a78d00282",
+  "lede": "The biggest thing on the calendar this week is a joint HARC and P&Z special meeting Monday to work through Land Use Code and Design Guideline amendments required for Telluride's compliance with the Colorado Wildfire Resiliency Code — whatever they recommend goes straight to Town Council for the final call, so this is a real step forward on something that's been coming for a while. Thursday, the Telluride Hospital District board takes up mill levy considerations, and P&Z holds a work session on the Shandoka Lot redevelopment. Plenty happening around town too, from the Yoga Festival to the Oak Street Park SummerSHOW series kicking off Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission recommends Land Use Code changes for wildfire compliance; Council decides next."
+      "stake": "Recommended Land Use Code changes for wildfire code compliance head to Town Council."
     },
     {
       "id": 3,
-      "stake": "Board discusses mill levy — the tax mechanism funding the hospital and new facility push."
+      "stake": "Mill levy discussion directly affects how the hospital district is funded by taxpayers."
     },
     {
       "id": 4,
-      "stake": "Early public shaping of Shandoka Lot redevelopment before formal Land Use Code review begins."
+      "stake": "Major Town-owned redevelopment project gets its first substantive commission review."
     }
   ]
 }

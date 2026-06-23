@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 23 Jun 2026 02:46:09 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2026 09:34:28 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>⚡ [Meeting] Special Meeting - HARC and P&amp;Z - Jun 23 2026 — 2026-06-23</title>
@@ -17,7 +17,7 @@
 
 A joint subset of HARC and P&Z meets for one hour to work through proposed amendments to the Town's Land Use Code and Design Guidelines — changes needed to bring Telluride into alignment with the Colorado Wildfire Resiliency Code. Whatever language they recommend goes to Town Council for the final call. Wildfire code compliance has been working its way through mountain communities across the state; this is Telluride's turn to reconcile state requirements with local historic and architectural standards — two frameworks that don't always sit comfortably together.
 
-⚡ Why it matters: Commission recommends Land Use Code changes for wildfire compliance; Council decides next.]]></description>
+⚡ Why it matters: Recommended Land Use Code changes for wildfire code compliance head to Town Council.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -43,6 +43,58 @@ A joint special session of P&Z and HARC — one hour, one item. The two commissi
 Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 23] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/16772760?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 23] Online Author Talks with Sana Javeri Kadri and Asha Loupy</title>
+      <link>https://telluridelibrary.libcal.com/event/16953301?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/online%20author%20talks%20with%7C2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_08_31.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+12:00 PM – 1:00 PM · Join us LIVE for a chance to win a copy of The Diaspora Spice Co. Cookbook ! The giveaway link will be in the Resources area under the broadcast screen during the live event. Please ensure you are watching on your library&#39;s webpage for the chance to participate. Join us as we chat with Sana Javeri Kadri and Asha Loupy about The Diaspora Spice Co. Cookbook , which celebrates beautiful, simple, and seasonal cooking with 85 recipes adapted from India and Sri Lanka's best family spice farms. Diaspora Spice Co. sources the most flavorful, fresh spices in the world from 150 regenerative farms across South Asia—from elders, indigenous communities, young changemakers, and brilliant multi-generational farming families across India and Sri Lanka who are leading the way in sustainable and climate change–resistant agriculture. Filled with culinary storytelling, The Diaspora Spice Co. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_08_31.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 23] Teen Cook</title>
+      <link>https://telluridelibrary.libcal.com/event/16935712?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20cook%7C2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Jun 23] Women&amp;#039;s Empowerment Group</title>
+      <link>https://telluridelibrary.libcal.com/event/16270084?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/women%20and%20039%20s%7C2026-06-23</guid>
+      <pubDate>Tue, 23 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #6 - large
+
+5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-06-24</title>
@@ -88,7 +140,7 @@ Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 
 
 The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.
 
-⚡ Why it matters: Board discusses mill levy — the tax mechanism funding the hospital and new facility push.]]></description>
+⚡ Why it matters: Mill levy discussion directly affects how the hospital district is funded by taxpayers.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
@@ -101,7 +153,7 @@ The Telluride Hospital District board meets June 25 with a full slate of interna
 
 The commission holds a work session on the Shandoka Lot Redevelopment Project— the major Town-owned redevelopment proposal brought forward by Design Workshop. The commission gives feedback to staff and the applicant before formal Land Use Code review begins. You can read more about this project [here](https://livabletelluride.org/deep-dive-carhenge.html).
 
-⚡ Why it matters: Early public shaping of Shandoka Lot redevelopment before formal Land Use Code review begins.]]></description>
+⚡ Why it matters: Major Town-owned redevelopment project gets its first substantive commission review.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -136,31 +188,6 @@ The June 25, 2026 Planning & Zoning Commission Chair meeting has been cancelled.
 📍 Telluride Racquet Club, Mountain Village
 
 Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 26] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-06-26/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 26] Up-off Gymnastics, Dance, and Spanish</title>
-      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-26/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Lone Cone Library Norwood
-
-We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
