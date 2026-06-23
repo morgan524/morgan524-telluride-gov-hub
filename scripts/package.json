@@ -8,7 +8,7 @@
     "housing-refresh": "node housing-refresh.js",
     "maintenance": "node maintenance.js",
     "citation-audit": "node citation-audit.js",
-    "test": "node --test test/"
+    "test": "node --test test/*.test.js"
   },
   "dependencies": {
     "xml2js": "^0.6.2",
