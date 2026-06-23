@@ -2948,60 +2948,9 @@ function readJsFile(filePath) {
  * Extract a JS object literal assigned to `const NAME = { ... };`
  * Returns the parsed object or null.
  */
-function extractJsObject(source, varName) {
-  // Match from "const VARNAME = {" to the closing "};" at the same nesting level
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\{`);
-  const match = startRe.exec(source);
-  if (!match) return null;
-
-  let depth = 0;
-  let start = match.index + match[0].length - 1; // position of opening {
-  for (let i = start; i < source.length; i++) {
-    if (source[i] === '{') depth++;
-    else if (source[i] === '}') {
-      depth--;
-      if (depth === 0) {
-        const objStr = source.slice(start, i + 1);
-        try {
-          // Use Function to evaluate as JS (handles single-quoted strings, template literals, etc.)
-          return new Function(`return (${objStr})`)();
-        } catch (e) {
-          console.warn(`  Could not parse ${varName}: ${e.message}`);
-          return null;
-        }
-      }
-    }
-  }
-  return null;
-}
-
-/**
- * Extract a JS array assigned to `const NAME = [ ... ];`
- */
-function extractJsArray(source, varName) {
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
-  const match = startRe.exec(source);
-  if (!match) return null;
-
-  let depth = 0;
-  let start = match.index + match[0].length - 1;
-  for (let i = start; i < source.length; i++) {
-    if (source[i] === '[') depth++;
-    else if (source[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        const arrStr = source.slice(start, i + 1);
-        try {
-          return new Function(`return (${arrStr})`)();
-        } catch (e) {
-          console.warn(`  Could not parse ${varName}: ${e.message}`);
-          return null;
-        }
-      }
-    }
-  }
-  return null;
-}
+// extractJsArray / extractJsObject live in a unit-tested lib now
+// (scripts/lib/extract.js, scripts/test/extract.test.js).
+const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 
 /**
  * Replace a const declaration's value in the source string.
