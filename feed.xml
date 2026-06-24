@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 14:23:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 19:39:25 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jun 24–30</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-24</guid>
-      <pubDate>Wed, 24 Jun 2026 14:23:43 GMT</pubDate>
-      <description><![CDATA[The biggest item this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code will set the terms for how development and fire risk coexist in this canyon going forward — worth your attention. The Telluride Hospital District board also meets June 25 to dig into mill levy considerations, a recurring pressure point as the hospital pushes toward a new facility. Meanwhile, P&Z holds a work session Thursday on the Shandoka Lot Redevelopment Project, the major Town-owned site proposal that's been generating plenty of conversation.]]></description>
+      <pubDate>Wed, 24 Jun 2026 19:39:25 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the civic calendar this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code will set the terms for how development and fire risk are managed in this box canyon going forward — worth showing up for. Also on June 25, the Hospital District board digs into mill levy considerations as the push for a new facility continues, and P&Z holds a work session on the Shandoka Lot redevelopment, the major Town-owned site Design Workshop has been planning.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -88,6 +88,18 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
 
 11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose. "We're supposed to be entertaining and educating kids," the Colorado-based singer-songwriter enthuses. "I am sincere about the music I write. If it's not coming from the heart or isn't fun, I won't write it."]]></description>
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_50.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 24] Steve Weeks</title>
+      <link>https://telluridelibrary.libcal.com/event/17100684?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/steve%20weeks%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 Wilkinson Public Library
+📍 Program Room
+
+Steve Weeks is scheduled to appear at the Wilkinson Public Library's Program Room as part of the library's event programming. The event runs from 11:00 AM to 12:00 PM.]]></description>
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
     </item>
@@ -213,7 +225,7 @@ The Telluride Hospital District board meets June 25 with a full slate of interna
 
 The commission holds a work session on the Shandoka Lot Redevelopment Project— the major Town-owned redevelopment proposal brought forward by Design Workshop. The commission gives feedback to staff and the applicant before formal Land Use Code review begins. You can read more about this project [here](https://livabletelluride.org/deep-dive-carhenge.html).
 
-⚡ Why it matters: Early shaping of a major Town-owned redevelopment before formal Land Use Code review.]]></description>
+⚡ Why it matters: Early feedback shapes the Town's biggest redevelopment project before formal review.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -267,19 +279,6 @@ Organtic is 5 piece band playing high energy instrumental funk, reggae, latin, j
       <category>The Alibi</category>
     </item>
     <item>
-      <title>[Thu, Jun 25] Telluride Yoga Festival</title>
-      <link>https://www.telluride.com/event/telluride-yoga-festival/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20yoga%20festival%7C2026-06-25</guid>
-      <pubDate>Thu, 25 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/28883/190827_001.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The longest running yoga festival in the country, the Telluride Yoga Festival is a four-day yoga and wellness gathering …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/28883/190827_001.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>[Thu, Jun 25] Oak Street Park SummerSHOW Series</title>
       <link>https://www.telluride.com/event/oak-street-park-summershow-series/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/oak%20street%20park%20summershow%7C2026-06-25</guid>
@@ -291,6 +290,19 @@ The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows
       <media:content url="https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jun 25] Telluride Yoga Festival</title>
+      <link>https://koto.org/event/telluride-yoga-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20yoga%20festival%7C2026-06-25</guid>
+      <pubDate>Thu, 25 Jun 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/TYF-2026-Social-Post-1080-x-1080-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Mountain Village
+
+Experience an unforgettable weekend of connection and inspiration at the 18th annual Telluride Yoga Festival nestled in the rugged mountains of Telluride, June 25-28, 2026. The Telluride Yoga Festival is a 4-day yoga & wellness gathering including yoga, meditation, hiking, wellness workshops, dining, concerts, and outdoor adventures. Join more than 50 teachers who are presenting over 150 classes and offerings throughout the weekend for the longest running yoga festival in the country. It's a perfect opportunity to celebrate yoga, nature, spirit, & connection. Visit www.tellurideyogafestival.com to learn more & purchase your pass!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/TYF-2026-Social-Post-1080-x-1080-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Thu, Jun 25] Youth Tennis &amp; Pickleball Camp</title>
@@ -381,19 +393,6 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Fri, Jun 26] Up-off Gymnastics, Dance, and Spanish</title>
-      <link>https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-06-26/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/up%20off%20gymnastics%20dance%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Lone Cone Library Norwood
-
-We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Town Council - Jun 30 2026 — 2026-06-30</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-30%7CTown%20Council%20-%20Jun%2030%202026</guid>
@@ -402,7 +401,7 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
 
 A full agenda for June 30. The most consequential item is first reading of Land Use Code amendments ahead of Colorado Wildfire Resiliency Code implementation — the kind of code change that will set the baseline for how development and fire risk interact in the box canyon for years to come. Council also takes up second readings on two property sales (907 East Colorado Avenue and Longwill 16 Unit B3), a tap fee waiver IGA with the Telluride School District, and a renewal of the Black Hills Energy gas franchise. An emergency ordinance banning open fires and fireworks rounds out the public hearing docket — not unusual for late June. A work session on the Telluride Energy Mitigation Program looks at updates to energy use offset calculations and fees. Community survey results get a work session too.
 
-⚡ Why it matters: First reading of wildfire code amendments will govern development and fire risk for years.]]></description>
+⚡ Why it matters: Wildfire code amendments and two property sales get council votes.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
