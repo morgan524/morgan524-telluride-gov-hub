@@ -343,7 +343,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -432,6 +432,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Art in action",
+    source: "Telluride Times",
+    date: "June 24, 2026",
+    firstSeen: "2026-06-24",
+    newsTopic: "arts-culture",
+    copy: "Telluride Plein Air runs June 29–July 5, with invited painters working at easels along Main Street and nearby scenic spots. The Quick Draw competition on July 2 challenges artists to finish a piece in 90 minutes; exhibitions and sales run July 3–5 in Oak Street and Elms parks. Paintings can be purchased wet off the easel.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_4fcd4e03-8616-4b12-a68f-439b35cf921f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8b/c8b7c334-f80f-4d54-bada-1626a191875a/6a3a4e35bdf48.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Grand Mesa Writers’ Symposium features local wordsmiths",
+    source: "Telluride Times",
+    date: "June 24, 2026",
+    firstSeen: "2026-06-24",
+    newsTopic: "community",
+    copy: "The second annual Grand Mesa Writers’ Symposium is set for Sept. 11-13, and this year’s ambitious event will feature four talented individuals with deep Colorado connections. The three-day event is intended to inspire writers, readers, and book lovers.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_8af44439-d60b-4d7a-a140-ae8bcb66f298.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/8d/e8da4f89-97f9-4069-ad21-1e20a4ae773f/6a3ac1b1511e7.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Olympian skier Bode Miller pleads not guilty to Idaho misdemeanor drug charges",
     source: "Telluride Times",
@@ -544,11 +568,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "All things wellness",
     source: "Telluride Times",
     date: "June 23, 2026",
-    firstSeen: "2026-06-23",
+    firstSeen: "2026-06-24",
     newsTopic: "community",
-    copy: "The Telluride Yoga Festival runs June 25–28 across Mountain Village and Telluride, marking its 18th season with a record 1,200 passholders, 50 presenters, and 150+ offerings. Free daily events include yoga in Elms Park, live music, fireside chats, and more. About 26% of attendees are local residents; the rest come from all 50 states and beyond.",
+    copy: "The Telluride Yoga Festival returns June 25–28 across Mountain Village and Telluride for its 18th season — its biggest yet, with 1,200 passholders, 50 presenters, and 150+ offerings including yoga, breathwork, meditation, hiking, and equine therapy. About 26% of attendees are local residents; the rest come from all 50 states and beyond. Many free public events run daily throughout the festival.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_119bdb3b-96a7-4823-9921-f3ce090d1538.html",
+    href: "https://www.telluridenews.com/sports/article_119bdb3b-96a7-4823-9921-f3ce090d1538.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4d/34df2b7b-ebe5-4835-bd30-9c75b7f87713/6a3ac6382ce06.image.jpg",
     imgHiRes: true
   },
@@ -1011,6 +1035,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_25ae29a6-e2a9-4b47-8c6d-5528fec8a9fb.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fb/8fba0e1a-9241-458d-a6b7-30cd3d3bee4a/6a30f60f61b4f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "All things wellness",
+    source: "Telluride Times",
+    date: "June 23, 2026",
+    firstSeen: "2026-06-23",
+    newsTopic: "community",
+    copy: "The Telluride Yoga Festival runs June 25–28 across Mountain Village and Telluride, marking its 18th season with a record 1,200 passholders, 50 presenters, and 150+ offerings. Free daily events include yoga in Elms Park, live music, fireside chats, and more. About 26% of attendees are local residents; the rest come from all 50 states and beyond.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_119bdb3b-96a7-4823-9921-f3ce090d1538.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4d/34df2b7b-ebe5-4835-bd30-9c75b7f87713/6a3ac6382ce06.image.jpg",
     imgHiRes: true
   },
   {
@@ -2841,70 +2877,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772760?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-23T16:30:00.000Z",
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610073?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-06-24T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+  },
+  {
+    title: "Mountain Village Farmers Marketshow: Steve Weeks Music",
+    link: "https://telluridelibrary.libcal.com/event/15564454?hs=a",
+    description: "11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose.  \"We're supposed to be entertaining and educating kids,\" the Colorado-based singer-songwriter enthuses. \"I am sincere about the music I write.  If it's not coming from the heart or isn't fun, I won't write it.\"",
+    pubDate: "2026-06-24T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Mountain Village Market",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_50.png"
+  },
+  {
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/16958284?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-06-24T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_36_58.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767654?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-06-24T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "Online Author Talks with Sana Javeri Kadri and Asha Loupy",
-    link: "https://telluridelibrary.libcal.com/event/16953301?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us LIVE for a chance to win a copy of The Diaspora Spice Co. Cookbook ! The giveaway link will be in the Resources area under the broadcast screen during the live event. Please ensure you are watching on your library&#39;s webpage for the chance to participate. Join us as we chat with Sana Javeri Kadri and Asha Loupy about The Diaspora Spice Co. Cookbook , which celebrates beautiful, simple, and seasonal cooking with 85 recipes adapted from India and Sri Lanka's best family spice farms. Diaspora Spice Co. sources the most flavorful, fresh spices in the world from 150 regenerative farms across South Asia—from elders, indigenous communities, young changemakers, and brilliant multi-generational farming families across India and Sri Lanka who are leading the way in sustainable and climate change–resistant agriculture. Filled with culinary storytelling, The Diaspora Spice Co. …",
-    pubDate: "2026-06-23T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_17_08_31.jpg"
-  },
-  {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935712?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-06-23T20:00:00.000Z",
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935732?hs=a",
+    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-06-24T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16574858?hs=a",
-    description: "2:30 PM – 3:30 PM",
-    pubDate: "2026-06-23T20:30:00.000Z",
+    title: "Plant Party! Dirt-Bar and Plant Care",
+    link: "https://telluridelibrary.libcal.com/event/16593899?hs=a",
+    description: "5:30 PM – 7:00 PM ·   Discover the power of dirt at Dirt Bar Plant Care! Learn the fundamentals of healthy houseplants, from soil and lighting to watering and general plant maintenance. BYOP — Bring Your Own Plant for any re-potting needs-f you want!— if you'd like advice on your plant's specific care needs or troubleshooting tips. We will have bags for taking home soil for different types of plants, so much fun in one evening.",
+    pubDate: "2026-06-24T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_48_40.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_07_55.jpg"
   },
   {
-    title: "Summer Sketchbook Club with Annie",
-    link: "https://telluridelibrary.libcal.com/event/16759139?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
-    pubDate: "2026-06-23T23:30:00.000Z",
+    title: "Romance with Rachel",
+    link: "https://telluridelibrary.libcal.com/event/16590831?hs=a",
+    description: "5:30 PM – 7:00 PM · If you haven&#39;t been paying attention.... Romance is IN! Welcome to Wilkinson&#39;s newest book club celebrating the sales-sweeping genre on love and all its glory—Romance with Rachel. Each month, join Rachel in reading a romance novel from a new subgenre and then engage the group in discussion about all the nitty gritty details. At the end of the event, our ravenous romance readers will collaboratively choose the novel for the next month. We will meet either at the library or offsite the fourth Wednesday of each month. June&#39;s selection is The Duke: A Novel by Anna Cowan. Five copies will be first come, first serve for registrees. Reach out to Rachel at rbrand@telluridelibrary.org if you have trouble acquiring a copy. Description below: A sapphic regency romance about the duke who fears nothing... …",
+    pubDate: "2026-06-24T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_12_50_58.png"
-  },
-  {
-    title: "Women&#039;s Empowerment Group",
-    link: "https://telluridelibrary.libcal.com/event/16270084?hs=a",
-    description: "5:30 PM – 7:00 PM · Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women's empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/ RLxaexLJar4Vpnhp7 Kaity Swick, LPCC - Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
-    pubDate: "2026-06-23T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_23_14_44_28.jpg"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_29_13_35_46.png"
   }
 ];
 
@@ -2938,18 +2985,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Bombargo",
-    link: "https://www.alibitelluride.com/calendar#eca-event=bombargo",
-    description: "Bombargo is a Canadian based international touring band that drops a vibrant spl...",
-    pubDate: "2026-06-23",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/2812d2a2-8ee2-4e35-9f6c-8aeaa74ad435/-/crop/3300x1320/0,0/-/preview/"
-  },
   {
     title: "Organtic",
     link: "https://www.alibitelluride.com/calendar#eca-event=organtic",
@@ -3061,7 +3096,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3253,7 +3288,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3265,7 +3300,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3273,6 +3308,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/"
+  },
+  {
+    title: "Wax Monkey",
+    link: "https://www.alibitelluride.com/calendar#eca-event=wax-monkey",
+    description: "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
+    pubDate: "2026-08-22",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/"
   }
 ];
 
@@ -3454,16 +3501,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
-    title: "Tourism Advisory Committee",
-    link: "https://cityofouray.com/city_offices/committees___boards/tourism_advisory_committee.php",
-    description: "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor experience. We gather input, plan, prioritize, measure, and advise the City of Ouray on the best actions to take related to the tourism industry in our community.",
-    pubDate: "2026-02-24T12:00:00.000Z",
-    endDate: "2030-04-23",
+    title: "Monthly Karate in Ouray County",
+    link: "https://weehawkenarts.org/karate-2/",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-03-02T12:00:00.000Z",
+    endDate: "2026-12-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
     title: "Beautification Committee (OBC)",
@@ -3694,28 +3741,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
-    title: "Ouray Youth Summer Programs: Ouray Via Ferrata",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/338?onlineSiteId=0&from_original_cui=true",
-    description: "Participants will take part in a guided trip on the Ouray Via Ferrata. Please come prepared with sturdy hiking footwear and a small backpack containing a rain jacket, sun protection, water, and snacks. This adventure includes exposure to heights and uneven terrain. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
-    pubDate: "2026-06-23T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Via Ferrata",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993369881829/huge/94195afe1cfd161fd9cb6b8aedcc4a8e0365000c.jpg"
-  },
-  {
-    title: "BANJO JOE & DANIELLE",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-23T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
     title: "Ridgway Independent Film Festival Screening Series",
     link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-festival-screening-series",
     description: "You decide! Help us to pre-screen short films for this year's festival. You will screen films (many brand new, never before seen) that are in consideration for our November festival, and discuss and review them afterwards! A different genre each night! Be a part of our community-based film selection process! Questions? New to this and want to learn more? Email arielle@sherbinotheater.com",
@@ -3726,17 +3751,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53196545955120/huge/47f14d971b58902d369831d085a3fa5a7b0437bd.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Coral Skye",
-    link: "https://sherbino.org/event/coral-skye-courtyard-at-610-ridgway-june-23/",
-    description: "Gates open at 7pm (behind the 610 Gallery and Sherbino) || Show: 7:30 || $10 – Advance / $15 – Day of Show || General Admission Seating || Limited Bar The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. There’s something special about hearing a musician in the setting they were meant for — not over the noise of a crowded bar or restaurant, but up close, under the blue Ridgway sky, where every lyric and guitar line has room to breathe. Join us for an intimate evening with Coral Skye, a Montrose-based singer-songwriter whose soulful acoustic-pop style and warm stage presence have made her a favorite across the Western Slope. …",
-    pubDate: "2026-06-23T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53103963612010/huge/28a16641d26bb6b74c4ac5782d7ab3c20c18a8d9.jpg"
   },
   {
     title: "Help Keep Our Rivers Clean Youth Art & Poetry Contest (Submission Deadline)",
@@ -4124,6 +4138,40 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Twin Peaks Lodge and Hot Springs",
     imageUrl: "https://localist-images.azureedge.net/photos/53055048338026/huge/1972c7c294d4aeea7ec59595611ab9d6216447d5.jpg"
+  },
+  {
+    title: "Ridgway Rocks",
+    link: "https://www.instagram.com/ridgwayrocksfest/",
+    description: "Live Music in Town Park 6-10 PM. Damon Robinson, Null & Void, Flannel Feedback.",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52745922632341/huge/0250190a0bcc6088f63749a38406222953357e3e.jpg"
+  },
+  {
+    title: "A Geological Odyssey: Ouray County - Ridgway State Park Summer Program Series",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Join us for a fascinating journey through time with expert John Mitchell. From ancient volcanic eruptions to the glacial forces that shaped our modern landscape, he will unravel the epic story written in the rocks of Ouray County.",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53161788541140/huge/43e5cbd69d31cef897cd453db90b4a55db1e9c83.jpg"
+  },
+  {
+    title: "Soussical The Musical - Summer Youth Theatre Program",
+    link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
+    description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
+    pubDate: "2026-07-06T12:00:00.000Z",
+    endDate: "2026-07-24",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
   }
 ];
 
@@ -4131,7 +4179,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4142,7 +4190,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4153,7 +4201,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4164,7 +4212,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4175,7 +4223,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4186,7 +4234,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4197,7 +4245,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4208,7 +4256,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4240,6 +4288,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "\"This Is Colorado (In One Square Foot)\" Community Art Project Exhibition",
+    link: "https://townofmountainvillage.com/explore/events/all-events/this-is-colorado-in-one-square-foot-community-art-project-exhibition/",
+    description: "A community art exhibition presenting the \"This Is Colorado (In One Square Foot)\" project, on display in Mountain Village. The show invites the public to explore locally contributed artwork centered on the theme of Colorado identity, each piece interpreting the concept within a single square foot.",
+    pubDate: "2026-06-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49173/this_is_co_art_exhibit_1800x900_smaller.jpeg"
   },
   {
     title: "Music on the Green Presents LVDY",
@@ -4868,7 +4927,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",

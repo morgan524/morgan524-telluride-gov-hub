@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 24 Jun 2026 02:50:49 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2026 09:03:28 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jun 24–30</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-24</guid>
-      <pubDate>Wed, 24 Jun 2026 02:50:49 GMT</pubDate>
-      <description><![CDATA[The biggest thing to track this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code goes on the table — rules that will shape how development and fire risk are managed in this canyon for a long time. That same night, the Telluride Housing Authority meets on some organizational groundwork worth keeping an eye on. Before that, Thursday's P&Z work session kicks off the formal feedback process on the Shandoka Lot Redevelopment Project, and the Hospital District board sits down for a substantive mill levy discussion.]]></description>
+      <pubDate>Wed, 24 Jun 2026 09:03:28 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code will set the terms for how development and fire risk coexist in this canyon going forward — worth your attention. The Telluride Hospital District board also meets June 25 to dig into mill levy considerations, a recurring pressure point as the hospital pushes toward a new facility. Meanwhile, P&Z holds a work session Thursday on the Shandoka Lot Redevelopment Project, the major Town-owned site proposal that's been generating plenty of conversation.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -54,6 +54,19 @@ The National in Telluride is thrilled to welcome Chef Barclay Dodge of Aspen’s
       <category>Telluride.com</category>
     </item>
     <item>
+      <title>[Wed, Jun 24] Baby Bop</title>
+      <link>https://telluridelibrary.libcal.com/event/16610073?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/baby%20bop%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Wed, Jun 24] Youth Tennis &amp; Pickleball Camp</title>
       <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-06-24/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-06-24</guid>
@@ -64,6 +77,19 @@ The National in Telluride is thrilled to welcome Chef Barclay Dodge of Aspen’s
 Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 24] Mountain Village Farmers Marketshow: Steve Weeks Music</title>
+      <link>https://telluridelibrary.libcal.com/event/15564454?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mountain%20village%20farmers%20marketshow%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_50.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Mountain Village Market
+
+11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose. "We're supposed to be entertaining and educating kids," the Colorado-based singer-songwriter enthuses. "I am sincere about the music I write. If it's not coming from the heart or isn't fun, I won't write it."]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_50.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Jun 24] Market on the Plaza</title>
@@ -78,17 +104,43 @@ Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Jun 24] Radio Biblioteca</title>
+      <link>https://telluridelibrary.libcal.com/event/16958284?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/radio%20biblioteca%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_36_58.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 KOTO Radio Station
+
+12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_36_58.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Wed, Jun 24] Mahjongg for Independent Players</title>
-      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-06-24/</link>
+      <link>https://telluridelibrary.libcal.com/event/16767654?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-06-24</guid>
       <pubDate>Wed, 24 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
 
-Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 24] Teen Movie and Ice Cream Club</title>
+      <link>https://telluridelibrary.libcal.com/event/16935732?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20movie%20and%20ice%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Jun 24] This Is Colorado (In One Square Foot) Progressive Opening Reception</title>
@@ -114,6 +166,32 @@ Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point 
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Jun 24] Plant Party! Dirt-Bar and Plant Care</title>
+      <link>https://telluridelibrary.libcal.com/event/16593899?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/plant%20party%20dirt%20bar%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_07_55.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+5:30 PM – 7:00 PM · Discover the power of dirt at Dirt Bar Plant Care! Learn the fundamentals of healthy houseplants, from soil and lighting to watering and general plant maintenance. BYOP — Bring Your Own Plant for any re-potting needs-f you want!— if you'd like advice on your plant's specific care needs or troubleshooting tips. We will have bags for taking home soil for different types of plants, so much fun in one evening.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_07_55.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Jun 24] Romance with Rachel</title>
+      <link>https://telluridelibrary.libcal.com/event/16590831?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/romance%20with%20rachel%7C2026-06-24</guid>
+      <pubDate>Wed, 24 Jun 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_29_13_35_46.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Room
+
+5:30 PM – 7:00 PM · If you haven&#39;t been paying attention.... Romance is IN! Welcome to Wilkinson&#39;s newest book club celebrating the sales-sweeping genre on love and all its glory—Romance with Rachel. Each month, join Rachel in reading a romance novel from a new subgenre and then engage the group in discussion about all the nitty gritty details. At the end of the event, our ravenous romance readers will collaboratively choose the novel for the next month. We will meet either at the library or offsite the fourth Wednesday of each month. June&#39;s selection is The Duke: A Novel by Anna Cowan. Five copies will be first come, first serve for registrees. Reach out to Rachel at rbrand@telluridelibrary.org if you have trouble acquiring a copy. Description below: A sapphic regency romance about the duke who fears nothing... …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_29_13_35_46.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>⚡ [Meeting] Regular Board Meeting — 2026-06-25</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/med%7C2026-06-25%7CRegular%20Board%20Meeting</guid>
@@ -122,7 +200,7 @@ Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point 
 
 The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.
 
-⚡ Why it matters: Mill levy discussion could affect how the hospital district is funded long-term.]]></description>
+⚡ Why it matters: Mill levy discussion directly affects how the hospital district is funded.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
@@ -135,7 +213,7 @@ The Telluride Hospital District board meets June 25 with a full slate of interna
 
 The commission holds a work session on the Shandoka Lot Redevelopment Project— the major Town-owned redevelopment proposal brought forward by Design Workshop. The commission gives feedback to staff and the applicant before formal Land Use Code review begins. You can read more about this project [here](https://livabletelluride.org/deep-dive-carhenge.html).
 
-⚡ Why it matters: Early public shaping of the major Town-owned Shandoka redevelopment before formal review.]]></description>
+⚡ Why it matters: Early shaping of a major Town-owned redevelopment before formal Land Use Code review.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -316,82 +394,6 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Fri, Jun 26] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-06-26/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 26] Telluride Farmer&apos;s Market</title>
-      <link>https://koto.org/event/telluride-farmers-market/2026-06-26/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmer%20s%20market%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Oak Street Plaza, Telluride
-
-We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jun 26] Free Youth Tennis &amp; Pickleball Program</title>
-      <link>https://koto.org/event/free-youth-tennis-pickleball-program/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20youth%20tennis%20and%7C2026-06-26</guid>
-      <pubDate>Fri, 26 Jun 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 27] Telluride Theatre Muleskinner&apos;s Ball Fundraiser</title>
-      <link>https://sheridanoperahouse.com/events/telluride-theatre-muleskinners-ball-fundraiser/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20theatre%20muleskinner%20s%7C2026-06-27</guid>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/03/48278-gala25-2-thundertix-min.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-
-Telluride Theatre hosts its Muleskinner's Ball fundraiser at the historic Sheridan Opera House, bringing together music and community to support the local theater organization. The event blends a lively ball-style atmosphere with fundraising for Telluride Theatre's programs and productions.]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/03/48278-gala25-2-thundertix-min.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 27] BLAKEGETBACKHERE (DJ Set)</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=blakegetbackhere-dj-set</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/blakegetbackhere%20dj%20set%7C2026-06-27</guid>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/fa2be521-9bdb-42f6-a121-13a81fc12966/-/crop/1294x1295/0,0/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Blake Get Back Here – North Carolina native and current Aspen resident, Blake Ge...]]></description>
-      <media:content url="https://ucarecdn.com/fa2be521-9bdb-42f6-a121-13a81fc12966/-/crop/1294x1295/0,0/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 27] Telluride Theatre Muleskinner&amp;#039;s Ball Fundraiser</title>
-      <link>https://www.telluride.com/event/telluride-theatre-muleskinners-ball-fundraiser/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20theatre%20muleskinner%20and%7C2026-06-27</guid>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/47975/muleskinners_ball_hero_1920x1080_hero.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Get ready for the one-night/one-of-a-kind Telluride Theatre GALA! A blast from the past - the biggest party of the …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/47975/muleskinners_ball_hero_1920x1080_hero.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Town Council - Jun 30 2026 — 2026-06-30</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-30%7CTown%20Council%20-%20Jun%2030%202026</guid>
@@ -400,7 +402,7 @@ Get ready for the one-night/one-of-a-kind Telluride Theatre GALA! A blast from t
 
 A full agenda for June 30. The most consequential item is first reading of Land Use Code amendments ahead of Colorado Wildfire Resiliency Code implementation — the kind of code change that will set the baseline for how development and fire risk interact in the box canyon for years to come. Council also takes up second readings on two property sales (907 East Colorado Avenue and Longwill 16 Unit B3), a tap fee waiver IGA with the Telluride School District, and a renewal of the Black Hills Energy gas franchise. An emergency ordinance banning open fires and fireworks rounds out the public hearing docket — not unusual for late June. A work session on the Telluride Energy Mitigation Program looks at updates to energy use offset calculations and fees. Community survey results get a work session too.
 
-⚡ Why it matters: First reading of wildfire resiliency land use code changes affecting all future development.]]></description>
+⚡ Why it matters: First reading of wildfire code amendments will govern development and fire risk for years.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
