@@ -207,7 +207,7 @@
     "ALIBI_EVENTS": {
       "dailyMax": {
         "2026-06-22": 25,
-        "2026-06-23": 26
+        "2026-06-23": 28
       }
     },
     "SHERIDAN_EVENTS": {
@@ -261,7 +261,7 @@
     "TELLURIDE_COM_EVENTS": {
       "dailyMax": {
         "2026-06-22": 93,
-        "2026-06-23": 93
+        "2026-06-23": 95
       }
     },
     "LEGAL_NOTICES": {

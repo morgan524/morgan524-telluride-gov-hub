@@ -1,18 +1,18 @@
 {
-  "hash": "42bb56055113756a2529d708b908ce2a78d00282",
-  "lede": "The biggest thing on the calendar this week is a joint HARC and P&Z special meeting Monday to work through Land Use Code and Design Guideline amendments required for Telluride's compliance with the Colorado Wildfire Resiliency Code — whatever they recommend goes straight to Town Council for the final call, so this is a real step forward on something that's been coming for a while. Thursday, the Telluride Hospital District board takes up mill levy considerations, and P&Z holds a work session on the Shandoka Lot redevelopment. Plenty happening around town too, from the Yoga Festival to the Oak Street Park SummerSHOW series kicking off Thursday.",
+  "hash": "ac37b81aa9c120218dda4a36ae55d5a1d9f4d52b",
+  "lede": "The biggest thing to track this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code goes on the table — rules that will shape how development and fire risk are managed in this canyon for a long time. That same night, the Telluride Housing Authority meets on some organizational groundwork worth keeping an eye on. Before that, Thursday's P&Z work session kicks off the formal feedback process on the Shandoka Lot Redevelopment Project, and the Hospital District board sits down for a substantive mill levy discussion.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Recommended Land Use Code changes for wildfire code compliance head to Town Council."
+      "id": 1,
+      "stake": "Mill levy discussion could affect how the hospital district is funded long-term."
     },
     {
-      "id": 3,
-      "stake": "Mill levy discussion directly affects how the hospital district is funded by taxpayers."
+      "id": 2,
+      "stake": "Early public shaping of the major Town-owned Shandoka redevelopment before formal review."
     },
     {
-      "id": 4,
-      "stake": "Major Town-owned redevelopment project gets its first substantive commission review."
+      "id": 5,
+      "stake": "First reading of wildfire resiliency land use code changes affecting all future development."
     }
   ]
 }
