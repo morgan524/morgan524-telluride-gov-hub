@@ -1,8 +1,3 @@
-Maintenance Issues — 2026-06-13T14:11:34.224Z
+Maintenance Issues — 2026-06-24T14:43:13.813Z
 
-Dead link: https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special%20Planning%20Commission%20Meeting%20Packet%20-%20September%2022%2C%202022.pdf (403)
-Dead link: https://koto.org/news/newscast-6-1-26/ (403)
-Dead link: https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-1-Fire-Restrictions-Press-Release-2026-06-09-acc.pdf (403)
-Dead link: https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-28/ (403)
-Dead link: https://koto.org/news/newscast-6-11-26/ (403)
-No RSS-driven Mailchimp campaigns have EVER been sent. The daily / weekly digest campaigns may not be configured. Set them up at https://us15.admin.mailchimp.com/ → Campaigns → Create → RSS-driven email.
+No "Telluride Times" articles in TELLURIDE_TIMES_ARTICLES — the TT scrape may be failing (TT_AUTH_COOKIE expired, or the TT feed/host changed). Check the latest content-refresh "[feed] Telluride Times HTTP …" log line; refresh the TT_AUTH_COOKIE secret if it's 401/empty.
