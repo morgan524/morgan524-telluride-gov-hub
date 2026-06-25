@@ -1,0 +1,65 @@
+name: Meeting Recaps
+
+# Auto-generates the "Past Meeting Summaries" recap cards (MEETING_RECAPS in
+# js/gov-helpers.js), which were previously hand-written and went stale.
+# Lists each gov YouTube channel's recent meeting uploads, pulls the transcript
+# (yt-dlp auto-captions), and has Claude write a ~100-word "Rick"-voice recap of
+# what happened. Idempotent (dedups by video + body/date), so safe to run daily.
+#
+# Scheduled at 15:00 UTC (≈9am MT) — offset from Content Refresh (0/6/12/18) to
+# avoid a push race on gov-helpers.js; it touches only MEETING_RECAPS, which no
+# other job writes, so a rebase is clean even if the file changed elsewhere.
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: meeting-recaps
+  cancel-in-progress: false
+
+jobs:
+  recaps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install yt-dlp
+        run: pip install --upgrade yt-dlp
+
+      - name: Generate meeting recaps
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/meeting-recaps.js 2>&1 | tee /tmp/meeting-recaps.log
+
+      - name: Commit & push new recaps
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          if [ -n "$(git status --porcelain js/gov-helpers.js)" ]; then
+            git add js/gov-helpers.js
+            git commit -m "📝 Auto meeting recaps $(date -u +%Y-%m-%d)"
+            # Rebase onto any commits the content bot pushed meanwhile, then push.
+            # Only MEETING_RECAPS changes here, so the rebase is conflict-free.
+            git pull --rebase origin main
+            git push
+          else
+            echo "No new recaps."
+          fi
