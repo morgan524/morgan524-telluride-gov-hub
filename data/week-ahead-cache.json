@@ -1,18 +1,18 @@
 {
-  "hash": "bacb843aff2f1b50c08d7b96dc0d273a68f530bd",
-  "lede": "The biggest thing on the docket this week is Town Council's June 30 first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code — a change that will shape how development and fire risk are managed in this canyon for a long time. Also on June 30, the Telluride Housing Authority takes up the structure of its new Resident Advisory Committee. On the 25th, the Hospital District board digs into mill levy considerations while the Planning and Zoning Commission holds a work session on the Shandoka Lot redevelopment.",
+  "hash": "4446d3efb28abb77740925cf327bce9230077050",
+  "lede": "The biggest item this week is Town Council's June 30 first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code — language that will shape how development and fire risk get handled in this box canyon for a long time to come. The Hospital District also meets June 25 to dig into mill levy considerations as the push for a new facility continues, and Planning and Zoning holds a work session on the Shandoka Lot Redevelopment Project, the major Town-owned redevelopment proposal that's worth keeping an eye on.",
   "notable": [
     {
-      "id": 4,
+      "id": 5,
       "stake": "First reading of wildfire code amendments sets lasting development and fire-risk rules."
     },
     {
       "id": 0,
-      "stake": "Mill levy discussion could affect how the hospital district is funded by taxpayers."
+      "stake": "Mill levy discussion could shape how the hospital district funds a new facility."
     },
     {
       "id": 1,
-      "stake": "Commission feedback on Shandoka redevelopment shapes a major Town-owned project's direction."
+      "stake": "Commission feedback on Shandoka redevelopment shapes the project before formal review begins."
     }
   ]
 }
