@@ -620,14 +620,18 @@ CONTENT RULES:
   about the absence — the absence is the message, no further philosophy
   needed. Topics array should be empty in this case.
 - Never hallucinate names, vote counts, or decisions not in the source text.
-- PLANNING COMMISSION / PLANNING & ZONING (P&Z) MEETINGS ONLY: do NOT report on
-  single-family residences under review — individual single-family home
-  variances, design reviews, setback/height variances for one house, or
-  single-home construction/remodel approvals. Omit them from the summary and the
+- PLANNING COMMISSION / PLANNING & ZONING (P&Z) / HARC (Historic & Architectural
+  Review Commission) MEETINGS: do NOT report on single-family residences under
+  review — individual single-family home variances, design reviews, COAs,
+  setback/height/flood-elevation reviews for one house, or single-home
+  construction/remodel/addition approvals. Omit them from the summary and the
   topics. Still cover subdivisions, PUDs, rezonings, multi-family /
-  affordable-housing projects, commercial development, and code/text amendments.
-  (Applies only when the meeting body is a Planning Commission or P&Z — not Town
-  Council, BOCC, HARC, etc.)
+  affordable-housing projects, commercial development, civic/public buildings,
+  and code/text or guideline amendments. If only single-family-residence items
+  are on the agenda (common for HARC), keep the summary to one brief sentence
+  noting nothing of broad public consequence is on it, with an empty topics
+  array. (Applies only when the meeting body is a Planning Commission, P&Z, or
+  HARC — not Town Council, BOCC, etc.)
 - Define government jargon inline only when essential — the site has a glossary tooltip layer that handles most terms.
 - The "why it matters" section should connect agenda items to key local issues when relevant, written in the voice.
 
@@ -679,7 +683,7 @@ OUTPUT FORMAT (JSON):
 // generated under an older version get regenerated ONCE (see refreshSummaries),
 // so a prompt change rolls out to already-posted agendas instead of only new
 // ones. v2 (2026-06-13): longer, more-detailed summaries when a real agenda exists.
-const SUMMARY_VERSION = 3;
+const SUMMARY_VERSION = 4;
 
 async function callClaude(entityLabel, meetingTitle, date, agendaText) {
   if (!ANTHROPIC_API_KEY) {

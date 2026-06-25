@@ -421,14 +421,6 @@ const MEETING_RECAPS = [
   {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
-    date: "2026-06-17",
-    title: "HARC Regular Meeting — Jun 17, 2026",
-    recap: "The board took up two flood-plane-related CA amendment requests requiring historic structures to be raised to meet the town's flood protection elevation — a requirement staff attributed to a corrected internal interpretation of existing code calculations. For 239 North Aspen, the board voted 4-1 to continue the item to the July 15 meeting, directing staff to provide a detailed written explanation of what specifically changed in how the flood protection elevation is calculated. For 566 West Columbia, the board approved raising the primary structure an additional 3.25 inches (on top of 11.25 inches previously approved), passing 4-1. For the preliminary large-scale new construction at 208 South Fir, the board approved the application with modified conditions — striking width and deck-reduction requirements, revising the roof-material citation, and adding a condition for changes in wall planes and entrance articulation along the alley — passing 4-1. Two items, continuances for a project at 238 North Pine, were approved to the August 19 meeting after recusal corrections were sorted out.",
-    videoUrl: "https://www.youtube.com/watch?v=3naByhxnyjE"
-  },
-  {
-    sourceKey: "telluride",
-    sourceLabel: "Town of Telluride",
     date: "2026-06-09",
     title: "Town Council — Jun 9, 2026",
     videoUrl: "https://www.youtube.com/watch?v=vxrKceCqXaM",

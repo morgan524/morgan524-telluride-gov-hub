@@ -140,13 +140,38 @@ WHAT TO WRITE — the recap is about what ACTUALLY HAPPENED:
 - Lead with the consequential outcomes: votes taken (and the tally if stated, e.g. "4-2"), ordinances/readings passed, applications approved/denied/tabled/continued, money allocated, appointments made.
 - Note split votes and who dissented if the transcript makes it clear; note notable absences if stated.
 - Skip procedural filler (roll call, minutes approval) unless nothing else happened.
-- PLANNING COMMISSION / PLANNING & ZONING (P&Z) MEETINGS ONLY: do NOT report on
+- HARC (Historic & Architectural Review Commission) MEETINGS: HARC's routine
+  docket is the design review of INDIVIDUAL PROPERTIES, and per policy these are
+  NOT reported. OMIT every item that is the review of a specific property or
+  address — Certificates of Appropriateness (COAs), flood-elevation raises,
+  additions, remodels, demolitions, height/setback/material reviews, and
+  new-construction design review for a single building or home. Concretely:
+  if an item is identified by a street address (e.g. "239 North Aspen",
+  "566 West Columbia", "208 South Fir"), DROP it entirely — do not name the
+  address, the applicant, the vote, or the outcome. The ONLY HARC items worth
+  reporting are town-wide matters: Design Guideline or code/text amendments, and
+  genuinely major NON-residential projects (a hotel, a civic/public building, a
+  large commercial development). A typical HARC meeting is entirely
+  individual-property reviews and therefore has NOTHING to report.
+  Close the loopholes: (a) flood-elevation / floodplain-variance raises of
+  individual structures ARE individual-property reviews — OMIT them even when
+  staff frame them as a code-interpretation or calculation change; only a
+  formally ADOPTED Design Guideline or code-TEXT amendment counts as reportable
+  policy, never its application to specific structures. (b) When you are unsure
+  whether an individual-address item is residential or commercial, OMIT it.
+  Continuances/tablings of individual-property items are also omitted.
+- PLANNING COMMISSION / PLANNING & ZONING (P&Z) MEETINGS: do NOT report on
   single-family residences under review — individual single-family home
-  variances, design reviews, setback/height variances for one house, or
-  single-home construction/remodel approvals. Omit them entirely. Still report
-  subdivisions, PUDs, rezonings, multi-family / affordable-housing projects,
-  commercial development, and code/text amendments. (This applies only when the
-  body is a Planning Commission or P&Z — not Town Council, BOCC, HARC, etc.)
+  variances, design reviews, setback/height/flood-elevation reviews for one
+  house, or single-home construction/remodel/addition approvals. Omit them
+  entirely. STILL report subdivisions, PUDs, rezonings, multi-family /
+  affordable-housing projects, commercial development, and code/text amendments.
+- (Both rules above apply ONLY to HARC / Planning Commission / P&Z — never to
+  Town Council, BOCC, etc.)
+- IF, after applying these rules, NOTHING substantive remains (the common case
+  for HARC), return an EMPTY recap — {"title": "<body — date>", "recap": ""}.
+  An empty recap means the meeting correctly gets NO card; do NOT pad it with the
+  very items you were told to omit.
 - Around 100 words. One paragraph. No headers, no lists, no markdown.
 
 HARD RULES:
