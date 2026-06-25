@@ -1083,13 +1083,24 @@
       const upcomingHeading = document.getElementById('upcomingHeading');
       let recaps = [];
       if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
-        // Show the TWO most recent public-meeting recaps (two cards = one row
-        // on desktop). Respects the active entity filter.
-        recaps = MEETING_RECAPS.filter(r => {
+        // Show up to FOUR recaps (two rows on desktop) so multiple recent
+        // meetings can sit side by side. Town of Telluride and San Miguel
+        // County get priority — they fill slots first (newest within each),
+        // and smaller entities (e.g. Rico) only appear if slots remain.
+        // Respects the active entity filter.
+        const RECAP_PRIORITY = new Set(['telluride', 'county']);
+        const pool = MEETING_RECAPS.filter(r => {
           if (!r || !r.date) return false;
           if (activeFilter !== 'all' && (r.sourceKey || '').toLowerCase() !== activeFilter) return false;
           return true;
-        }).sort((a, b) => b.date.localeCompare(a.date)).slice(0, 2);
+        }).sort((a, b) => {
+          const pa = RECAP_PRIORITY.has((a.sourceKey || '').toLowerCase()) ? 0 : 1;
+          const pb = RECAP_PRIORITY.has((b.sourceKey || '').toLowerCase()) ? 0 : 1;
+          if (pa !== pb) return pa - pb;               // priority entities first
+          return b.date.localeCompare(a.date);          // then newest first
+        });
+        // Pick 4 (priority-weighted), then show them newest-first.
+        recaps = pool.slice(0, 4).sort((a, b) => b.date.localeCompare(a.date));
       }
       if (recapGrid) recapGrid.innerHTML = recaps.map(recapCard).join('');
       if (recapSection) recapSection.style.display = recaps.length ? '' : 'none';
