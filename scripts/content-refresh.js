@@ -620,6 +620,14 @@ CONTENT RULES:
   about the absence — the absence is the message, no further philosophy
   needed. Topics array should be empty in this case.
 - Never hallucinate names, vote counts, or decisions not in the source text.
+- PLANNING COMMISSION / PLANNING & ZONING (P&Z) MEETINGS ONLY: do NOT report on
+  single-family residences under review — individual single-family home
+  variances, design reviews, setback/height variances for one house, or
+  single-home construction/remodel approvals. Omit them from the summary and the
+  topics. Still cover subdivisions, PUDs, rezonings, multi-family /
+  affordable-housing projects, commercial development, and code/text amendments.
+  (Applies only when the meeting body is a Planning Commission or P&Z — not Town
+  Council, BOCC, HARC, etc.)
 - Define government jargon inline only when essential — the site has a glossary tooltip layer that handles most terms.
 - The "why it matters" section should connect agenda items to key local issues when relevant, written in the voice.
 
@@ -671,7 +679,7 @@ OUTPUT FORMAT (JSON):
 // generated under an older version get regenerated ONCE (see refreshSummaries),
 // so a prompt change rolls out to already-posted agendas instead of only new
 // ones. v2 (2026-06-13): longer, more-detailed summaries when a real agenda exists.
-const SUMMARY_VERSION = 2;
+const SUMMARY_VERSION = 3;
 
 async function callClaude(entityLabel, meetingTitle, date, agendaText) {
   if (!ANTHROPIC_API_KEY) {

@@ -140,6 +140,13 @@ WHAT TO WRITE — the recap is about what ACTUALLY HAPPENED:
 - Lead with the consequential outcomes: votes taken (and the tally if stated, e.g. "4-2"), ordinances/readings passed, applications approved/denied/tabled/continued, money allocated, appointments made.
 - Note split votes and who dissented if the transcript makes it clear; note notable absences if stated.
 - Skip procedural filler (roll call, minutes approval) unless nothing else happened.
+- PLANNING COMMISSION / PLANNING & ZONING (P&Z) MEETINGS ONLY: do NOT report on
+  single-family residences under review — individual single-family home
+  variances, design reviews, setback/height variances for one house, or
+  single-home construction/remodel approvals. Omit them entirely. Still report
+  subdivisions, PUDs, rezonings, multi-family / affordable-housing projects,
+  commercial development, and code/text amendments. (This applies only when the
+  body is a Planning Commission or P&Z — not Town Council, BOCC, HARC, etc.)
 - Around 100 words. One paragraph. No headers, no lists, no markdown.
 
 HARD RULES:
