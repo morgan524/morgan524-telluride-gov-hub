@@ -1,18 +1,18 @@
 {
-  "hash": "8b439f05838ef26147f2d4439d75a2fc5711c970",
-  "lede": "The biggest thing on the civic calendar this week is Town Council's June 30 meeting, where first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code will set the terms for how development and fire risk are managed in this box canyon going forward — worth showing up for. Also on June 25, the Hospital District board digs into mill levy considerations as the push for a new facility continues, and P&Z holds a work session on the Shandoka Lot redevelopment, the major Town-owned site Design Workshop has been planning.",
+  "hash": "8bd9709d400afa2f3722a057fe11587b70870252",
+  "lede": "The biggest item this week is Town Council's June 30 first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code — language that will shape how development and fire risk are managed in this box canyon for a long time. That same night the Hospital District board sits down June 25 to dig into mill levy considerations for the new facility, and Planning & Zoning takes an early look at the Shandoka Lot redevelopment proposal. Plenty of summer life filling the gaps: the Oak Street Park SummerSHOW kicks off Thursday, farmers markets Friday, and the Telluride Theatre Muleskinner's Ball fundraiser Saturday at the Sheridan.",
   "notable": [
     {
+      "id": 4,
+      "stake": "First reading of wildfire code amendments sets long-term development and fire-risk rules."
+    },
+    {
+      "id": 0,
+      "stake": "Mill levy discussion directly affects how the hospital district is funded by taxpayers."
+    },
+    {
       "id": 1,
-      "stake": "Mill levy discussion directly affects how the hospital district is funded."
-    },
-    {
-      "id": 2,
-      "stake": "Early feedback shapes the Town's biggest redevelopment project before formal review."
-    },
-    {
-      "id": 5,
-      "stake": "Wildfire code amendments and two property sales get council votes."
+      "stake": "Early feedback shapes the major Town-owned Shandoka Lot redevelopment before formal review."
     }
   ]
 }
