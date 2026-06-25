@@ -400,38 +400,86 @@ const MANUAL_SUMMARIES = {
    Schema: { sourceKey, sourceLabel, date (YYYY-MM-DD), title, recap,
              videoUrl }                                                    */
 const MEETING_RECAPS = [
-  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-06-09',
-    title:'Town Council — Jun 9, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=vxrKceCqXaM',
-    recap:"A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise. The fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board. The one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed. Fee was absent." },
-  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-06-03',
-    title:'Board of County Commissioners — Jun 3, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=3nSAqRc0Cpk',
-    recap:"A land-and-housing day for the BOCC. They approved an additional $100,000 to the Telluride Foundation's Housing Opportunity Fund and renamed their new fast-track development rule from 'Accelerated' to 'Prioritized' Housing Review. A bouldering gym in Illium received a PUD amendment, accessory-dwelling-unit sizing was clarified, and new on-site wastewater regulations were adopted. All votes passed 3-0." },
-  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-27',
-    title:'Board of County Commissioners — May 27, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=CkFxc1DpoNM',
-    recap:"The commissioners approved two Ophir septic setback variances, released a 2024 deed-restriction settlement on a Lawson Hill lot, and accepted a state (DOLA) housing-planning grant. All votes were unanimous. An earlier Placerville session that day was a work session with no votes." },
-  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-20',
-    title:'Board of County Commissioners — May 20, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=xDE7B7x2C5U',
-    recap:"The commissioners approved the consent agenda and appointed two residents to community boards — Jackie Kenik to the Lone Tree Cemetery board and Marcus Kirkwood to the San Miguel Basin Fairboard. They updated the County's drug-and-alcohol policy and approved a conduit-and-fiber exchange with Clear Networks. Two land-use hearings followed: a lot-line vacation near Sawpit and a multi-year logging and wildfire-mitigation permit on Wilson Mesa. They also adopted the state's septic Regulation 43 Appendix A, keeping variance authority at the county level. All votes were 3-0." },
-  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-14',
-    title:'Planning Commission — May 14, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=R9nnXLvOGCY',
-    recap:"The two contested public hearings — the Garlock and Crockett applications on the Mesas — were tabled and withdrawn. The Commission recommended approval of a PUD amendment for a climbing gym in the former Illium tire shop and a code amendment defining 'footprint' and clarifying ADU maximum size. It also recommended adopting an accelerated review process for affordable housing to keep San Miguel eligible for Prop 123 funding. All recommendations go to the BOCC." },
-  { sourceKey:'county', sourceLabel:'San Miguel County', date:'2026-05-13',
-    title:'Board of County Commissioners — May 13, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=Q6xLvyjwDgs',
-    recap:"A special session focused on presentations and public comment. The board heard from a Rights Mesa resident about an HOA and code-enforcement dispute, reviewed the parks and open space work plan, and discussed housing funding with the Telluride Association of Realtors, including a proposed state vacancy tax that failed at the Legislature. The formal votes were unanimous: green grants, a letter of support for a street-safety grant, and gift cards for spring-cleanup volunteers." },
-  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-05-19',
-    title:'Town Council — May 19, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=U3QyzfSWDlE',
-    recap:"Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040. They authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission. They also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. Meehan Fee was absent; all votes were 6-0." },
-  { sourceKey:'telluride', sourceLabel:'Town of Telluride', date:'2026-04-28',
-    title:'Town Council — Apr 28, 2026',
-    videoUrl:'https://www.youtube.com/watch?v=vWaP0Ba4GYY',
-    recap:"A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request. Council reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners. Sitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies. Meehan Fee was absent." }
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-06-17",
+    title: "HARC Regular Meeting — Jun 17, 2026",
+    recap: "The board took up two flood-plane-related CA amendment requests requiring historic structures to be raised to meet the town's flood protection elevation — a requirement staff attributed to a corrected internal interpretation of existing code calculations. For 239 North Aspen, the board voted 4-1 to continue the item to the July 15 meeting, directing staff to provide a detailed written explanation of what specifically changed in how the flood protection elevation is calculated. For 566 West Columbia, the board approved raising the primary structure an additional 3.25 inches (on top of 11.25 inches previously approved), passing 4-1. For the preliminary large-scale new construction at 208 South Fir, the board approved the application with modified conditions — striking width and deck-reduction requirements, revising the roof-material citation, and adding a condition for changes in wall planes and entrance articulation along the alley — passing 4-1. Two items, continuances for a project at 238 North Pine, were approved to the August 19 meeting after recusal corrections were sorted out.",
+    videoUrl: "https://www.youtube.com/watch?v=3naByhxnyjE"
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-06-09",
+    title: "Town Council — Jun 9, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=vxrKceCqXaM",
+    recap: "A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise. The fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board. The one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed. Fee was absent."
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-06-03",
+    title: "Board of County Commissioners — Jun 3, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=3nSAqRc0Cpk",
+    recap: "A land-and-housing day for the BOCC. They approved an additional $100,000 to the Telluride Foundation's Housing Opportunity Fund and renamed their new fast-track development rule from 'Accelerated' to 'Prioritized' Housing Review. A bouldering gym in Illium received a PUD amendment, accessory-dwelling-unit sizing was clarified, and new on-site wastewater regulations were adopted. All votes passed 3-0."
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-05-28",
+    title: "Planning & Zoning Commission — May 28, 2026",
+    recap: "The commission took action on two public hearing items and one work session. On the minor subdivision application for 238 North Pine Street — which would split a 7,500-square-foot corner lot into two 25-foot lots — the commission voted unanimously to continue the hearing to June 25, directing staff to analyze grounds for a potential denial motion and to examine setback and height implications. On the Carhenge lot conceptual PUD (700 West Pacific Avenue, proposing roughly 220–230 affordable units with height and site-coverage variations), the commission voted unanimously to continue to July 23, directing the applicant to consider reductions in height, maximum floor area, and site coverage, and to provide preliminary flood-plain and traffic studies. The Shandoka lot work session was continued without discussion to June 25.",
+    videoUrl: "https://www.youtube.com/watch?v=ies_4xRTogs"
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-05-27",
+    title: "Board of County Commissioners — May 27, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=CkFxc1DpoNM",
+    recap: "The commissioners approved two Ophir septic setback variances, released a 2024 deed-restriction settlement on a Lawson Hill lot, and accepted a state (DOLA) housing-planning grant. All votes were unanimous. An earlier Placerville session that day was a work session with no votes."
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-05-20",
+    title: "Board of County Commissioners — May 20, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=xDE7B7x2C5U",
+    recap: "The commissioners approved the consent agenda and appointed two residents to community boards — Jackie Kenik to the Lone Tree Cemetery board and Marcus Kirkwood to the San Miguel Basin Fairboard. They updated the County's drug-and-alcohol policy and approved a conduit-and-fiber exchange with Clear Networks. Two land-use hearings followed: a lot-line vacation near Sawpit and a multi-year logging and wildfire-mitigation permit on Wilson Mesa. They also adopted the state's septic Regulation 43 Appendix A, keeping variance authority at the county level. All votes were 3-0."
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-05-19",
+    title: "Town Council — May 19, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=U3QyzfSWDlE",
+    recap: "Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040. They authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission. They also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. Meehan Fee was absent; all votes were 6-0."
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-05-14",
+    title: "Planning Commission — May 14, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=R9nnXLvOGCY",
+    recap: "The two contested public hearings — the Garlock and Crockett applications on the Mesas — were tabled and withdrawn. The Commission recommended approval of a PUD amendment for a climbing gym in the former Illium tire shop and a code amendment defining 'footprint' and clarifying ADU maximum size. It also recommended adopting an accelerated review process for affordable housing to keep San Miguel eligible for Prop 123 funding. All recommendations go to the BOCC."
+  },
+  {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-05-13",
+    title: "Board of County Commissioners — May 13, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=Q6xLvyjwDgs",
+    recap: "A special session focused on presentations and public comment. The board heard from a Rights Mesa resident about an HOA and code-enforcement dispute, reviewed the parks and open space work plan, and discussed housing funding with the Telluride Association of Realtors, including a proposed state vacancy tax that failed at the Legislature. The formal votes were unanimous: green grants, a letter of support for a street-safety grant, and gift cards for spring-cleanup volunteers."
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
+    date: "2026-04-28",
+    title: "Town Council — Apr 28, 2026",
+    videoUrl: "https://www.youtube.com/watch?v=vWaP0Ba4GYY",
+    recap: "A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request. Council reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners. Sitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies. Meehan Fee was absent."
+  }
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
