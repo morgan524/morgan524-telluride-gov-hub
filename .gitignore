@@ -50,3 +50,6 @@ content-review-findings.log
 content-review-findings.json
 content-review-actionable.log
 content-review-email.html
+
+# Editorial layer — regenerated triage output
+scripts/editorial/triage-report.json
