@@ -343,7 +343,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -367,7 +367,7 @@ const MANUAL_SUMMARIES = {
     "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "county|2026-07-08|Board of County Commissioners Special":
-    "The July 8 Board of County Commissioners Special meeting agenda hasn't been posted yet.",
+    "The July 8 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
 
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -435,6 +435,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Legals and Public Notices for June 25-July 1, 2026",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-25",
+    newsTopic: "community",
+    copy: "San Miguel County will hold a public hearing July 15 on a lot line vacation at Lawson Hill to allow employee housing tied to the county jail. Separately, a foreclosure sale is proceeding on a San Miguel County property originally mortgaged in 2009. Creditor claims against the estate of Todd Kunkel are due by October 18, 2026.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
   {
     title: "Community movie night honors Lissa Margetts",
     source: "Telluride Times",
@@ -804,7 +816,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Wyndham Clark, the 2022 U.S. Open champion, rode calmer late-day winds at Shinnecock Hills to reach 6-under through 16 holes, leading by four shots. Morning players battled 30-mph gusts while afternoon starters found far easier conditions. Clark returns Friday to finish his round before the second begins.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_794045f7-c36a-5ceb-9f06-600ac299f284.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c6/5c6fa879-d4aa-5fee-8d9e-a4b998252ab5/6a34a41ec6208.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/c6/5c6fa879-d4aa-5fee-8d9e-a4b998252ab5/6a34a41ec6208.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Five years after a Navajo elder vanished, the man who robbed her was released from prison",
@@ -815,7 +828,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Five years after Navajo elder Bessie Begay vanished from Sweetwater, the man convicted of robbing her was quietly released early from federal prison — news her family only learned by chance. Her body has never been found, and the case remains unsolved.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_23648ead-b435-52f6-a7f3-835255a06ac5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/78/b78c743a-5325-5878-8598-1344be3031c5/6a348139ac276.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/78/b78c743a-5325-5878-8598-1344be3031c5/6a348139ac276.image.jpg",
+    imgHiRes: true
   },
   {
     title: "A trip to Bluegrass changed her life",
@@ -826,7 +840,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Denver-based artist Dwan attended Telluride Bluegrass at 22, and the landscape and festival energy pushed her to leave graphic design and pursue painting full-time. Her acrylic work depicting the festival's iconic flowerboxes — with musicians woven into the botanicals — was selected as the official 2026 Telluride Bluegrass poster. She reached out to Planet Bluegrass directly with her story, and they picked her.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_eba393de-e081-4012-a78b-5a57112acd53.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7f/a7ff0fff-37f9-49ff-8061-e9d07dfc7463/6a2cd53e748c5.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7f/a7ff0fff-37f9-49ff-8061-e9d07dfc7463/6a2cd53e748c5.image.jpg",
+    imgHiRes: true
   },
   {
     title: "The cathedral tree",
@@ -837,7 +852,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A massive blue spruce near Sawpit was named 2014 Colorado State Champion Blue Spruce after local arborist Dave Schultz and his crew measured it at 154 feet tall with a 13-foot trunk circumference, scoring 315 points. It's visible from the road, growing in a sheltered ravine with deep soil and perennial moisture — conditions that likely helped it survive for centuries. It has since lost the state title to a Utah tree, but it's still standing.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_8672b2da-93d9-4466-afba-a1005703e790.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f776b1-3109-4dbc-ae78-adad8e103e3f/6a318fec1cda3.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f776b1-3109-4dbc-ae78-adad8e103e3f/6a318fec1cda3.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
@@ -848,7 +864,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The federal Education Department is shifting civil rights enforcement for disabled students to the Justice Department and special education oversight to Health and Human Services. Meanwhile, the agencies handling these cases have shrunk dramatically — civil rights staff down 40%, special ed offices down a third — leaving a growing backlog of unresolved complaints. Some states, including Colorado, are stepping in to fill the gap.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_725d3ce6-9ce1-5dac-aeb9-8b16fa147e13.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Bluegrass brothers",
@@ -859,7 +876,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Bassist Edgar Meyer is returning to the Telluride Bluegrass Festival — his 40-plus-year home — performing Thursday with the House Band and Sunday in a classical trio with violinist Tessa Lark and cellist Joshua Roman. The Sunday noon set features newly composed and '80s-era Meyer works, several produced by Béla Fleck. Meyer's presence has long helped shape the festival's boundary-crossing musical identity.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_4542a375-f6aa-430a-8303-89dc325a685f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8f/f8f9939d-0ea1-42b7-8441-09455f348758/6a3100e01b44c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8f/f8f9939d-0ea1-42b7-8441-09455f348758/6a3100e01b44c.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Towns, County implement stage 1 fire restrictions",
@@ -870,7 +888,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Stage 1 fire restrictions are now in effect across San Miguel County, the Town of Telluride, Mountain Village, and federal lands including San Juan National Forest and BLM parcels. Open fires, charcoal grills, smoking on trails and open space, and personal fireworks are among the prohibited activities. Violations are a misdemeanor and can carry fines and wildfire liability.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_70e341d7-cf81-451c-8943-d2f4b1ba555a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/2a/b2a92ba2-985f-4e30-9ee4-5e5fd767450d/6a341b719b62c.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/2a/b2a92ba2-985f-4e30-9ee4-5e5fd767450d/6a341b719b62c.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Legals and Public Notices for June 18-24, 2026",
@@ -878,10 +897,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 18, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
-    copy: "Legals and Public Notices for June 18-24, 2026.",
-    claudeSummary: false,
+    copy: "A property at 122 43ZS Road in Norwood is headed to public auction July 16, 2026, at 10 a.m. at 305 W. Colorado Ave. in Telluride following foreclosure proceedings on a 2009 Wells Fargo deed of trust, now held by Shellpoint Mortgage Servicing. Outstanding balance is roughly $115,000.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
   },
   {
     title: "Masterful, ‘heartburn-inducing’ performances on an intimate stage",
@@ -892,7 +912,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Elms Park at Telluride Bluegrass seats about 400 and offers intimate, often free performances billed as \"workshops\" — though they're really conversations, stories, and collaborations with top-tier artists. This year's lineup includes David Grier, Sierra Hull, Béla Fleck, and Fleck's surprise pairing with Tuvan throat-singing ensemble Alash. For the first time, Planet Bluegrass has published all 20 daily sets in advance at bluegrass.com.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_b4f48345-93f7-4c80-91b0-6f4da8b5fd31.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7f/47fe6efd-9e14-43f8-8461-0d4bb7dd39c8/6a2e06f1afbbb.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7f/47fe6efd-9e14-43f8-8461-0d4bb7dd39c8/6a2e06f1afbbb.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Small molecules at the origins of life",
@@ -903,7 +924,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A University at Buffalo chemistry professor will speak June 23 as part of Telluride Science Town Talks, presenting research on how metals in ancient seafloor minerals may have sparked the origin of life. He'll also cover the search for life on other planets and Mars as a cautionary tale. Free and open to the public, 6:30 p.m.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_76f13598-181c-4cdd-8ff3-cbb2fbe9fe82.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/60/360b6020-f959-4635-a821-e8dbbef75ede/6a318b7745711.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/60/360b6020-f959-4635-a821-e8dbbef75ede/6a318b7745711.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Summer fun with your best friend",
@@ -914,7 +936,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Before hitting the trail with your dog this summer, check in with your vet, confirm vaccinations are current, and know the leash and waste rules for wherever you're headed. Pack extra food, water, and a basic first-aid kit. The Animal Resource Center / Second Chance Humane Society in Ridgway also has adoptable dogs open daily 11–5:30.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_5052f986-1380-444b-a0ef-057e89e4188b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b58ac41-299f-43f6-99d4-6dfbd28ad731/6a32d15c11f2e.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b58ac41-299f-43f6-99d4-6dfbd28ad731/6a32d15c11f2e.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Federal judge, bestselling author Roy Altman to speak in Telluride",
@@ -925,7 +948,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Federal judge, bestselling author Roy Altman to speak in Telluride.",
     claudeSummary: false,
     href: "https://www.telluridenews.com/news_release/article_55be3fc5-6ac0-4b3c-8c6e-a21c3edb8a48.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
   },
   {
     title: "Yonder, Szwarc elected to SMPA board",
@@ -936,7 +960,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Joanna Yonder unseated incumbent David Alexander in SMPA's District 3 board race, 228–178. In District 6, incumbent Valentine Szwarc held on, 179–171 over challenger Tricia Savage. SMPA board members serve four-year terms, elected by co-op members across seven districts.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_58cf11c3-ad10-4dbe-9d9f-d0578f392b0d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4b/04b1908d-1923-476d-ba0c-d6fe504c3bcb/6a32c995d6167.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4b/04b1908d-1923-476d-ba0c-d6fe504c3bcb/6a32c995d6167.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Play It Forward pickleball tournament fundraises for SMRC",
@@ -947,7 +972,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "SMRC, one of San Miguel County's oldest nonprofits serving survivors of domestic violence and sexual assault, is facing losses in federal funding. A pickleball fundraiser — Play It Forward — runs June 28 at Telluride Racquet Club, with all proceeds supporting SMRC. Registration at smrcco.org/events.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_135741c3-c073-4c37-b9e8-505682e27bcd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0d/b0d269cd-ce31-4dc6-bc21-b63d61102e16/6a32ca6a38d34.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0d/b0d269cd-ce31-4dc6-bc21-b63d61102e16/6a32ca6a38d34.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Telluride deserves better",
@@ -1001,10 +1027,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "education",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "Joanna Yonder has won the SMPA District 3 board seat, succeeding Dave Alexander who served 16 years. She thanked voters and volunteers, noting the campaign was built on community effort. She acknowledged the Western Slope faces complicated energy decisions ahead and committed to representing all of District 3 over the next four years.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d1d75e38-ec22-4340-bc9c-f94cb6a69bf4.html",
-    img: ""
+    img: "",
+    letterAuthor: "Joanna Yonder"
   },
   {
     title: "With gratitude to SMPA District 3",
@@ -2622,92 +2649,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610073?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-06-24T15:00:00.000Z",
+    title: "Coffee and Climate Conversation",
+    link: "https://telluridelibrary.libcal.com/event/15835907?hs=a",
+    description: "8:30 AM – 9:30 AM · Coffee & Climate Conversations: Intersectional Environmentalism Join EcoAction Partners, Sheep Mountain Alliance and Wilkinson Public Library for our June Coffee & Climate Conversation on Intersectional Environmentalism in celebration of Pride and Immigrant Heritage month. Together, we'll reflect on how our different identities shape the way we experience environmentalism, activism, climate impacts, and our connection to the natural world. Through open discussion, we'll explore the unique strengths and perspectives each of us brings to local climate solutions, while turning to nature for inspiration and examining what ecosystems can teach us. We'll acknowledge who has historically been left out of these discussions and actions and how building a more inclusive climate movement can strengthen our entire community. We hope you'll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. …",
+    pubDate: "2026-06-25T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_01_11_23_20.png"
   },
   {
-    title: "Mountain Village Farmers Marketshow: Steve Weeks Music",
-    link: "https://telluridelibrary.libcal.com/event/15564454?hs=a",
-    description: "11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose.  \"We're supposed to be entertaining and educating kids,\" the Colorado-based singer-songwriter enthuses. \"I am sincere about the music I write.  If it's not coming from the heart or isn't fun, I won't write it.\"",
-    pubDate: "2026-06-24T17:00:00.000Z",
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801137?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-06-25T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_27_50.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
   },
   {
-    title: "Steve Weeks",
-    link: "https://telluridelibrary.libcal.com/event/17100684?hs=a",
-    description: "11:00 AM – 12:00 PM",
-    pubDate: "2026-06-24T17:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772761?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-25T16:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+  },
+  {
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536277?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-06-25T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: ""
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
   },
   {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/16958284?hs=a",
-    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
-    pubDate: "2026-06-24T18:00:00.000Z",
+    title: "Bugs and Buds Discovery Club",
+    link: "https://telluridelibrary.libcal.com/event/17012451?hs=a",
+    description: "1:00 PM – 3:00 PM · How can we tell if an ecosystem is healthy? Let's explore bioindicators of a healthy ecosystem through hands-on data collection, observations, insect and plant relationships, creativity and role play! Join EcoAction Partners and the Telluride Institue for these two special summer programs and learn about our watershed and how we can take care of it!   Please meet us in the Wilkinson Public Library lobby by 1 pm.  This program is for ages 8-12.  Please register online and sign waiver.     LIABILITY WAIVER",
+    pubDate: "2026-06-25T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_10_36_58.png"
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_16_56_14.png"
   },
   {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767654?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-06-24T19:00:00.000Z",
+    title: "Native Plant Walk with Yvette Henson",
+    link: "https://telluridelibrary.libcal.com/event/17081005?hs=a",
+    description: "3:00 PM – 5:00 PM · Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant  and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet in the library lobby; we will walk up Bear Creek.  Adults and teens only please!",
+    pubDate: "2026-06-25T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_18_09_55_20.jpg"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935732?hs=a",
-    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-06-24T22:00:00.000Z",
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960349?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-06-25T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
   },
   {
-    title: "Plant Party! Dirt-Bar and Plant Care",
-    link: "https://telluridelibrary.libcal.com/event/16593899?hs=a",
-    description: "5:30 PM – 7:00 PM ·   Discover the power of dirt at Dirt Bar Plant Care! Learn the fundamentals of healthy houseplants, from soil and lighting to watering and general plant maintenance. BYOP — Bring Your Own Plant for any re-potting needs-f you want!— if you'd like advice on your plant's specific care needs or troubleshooting tips. We will have bags for taking home soil for different types of plants, so much fun in one evening.",
-    pubDate: "2026-06-24T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_14_07_55.jpg"
-  },
-  {
-    title: "Romance with Rachel",
-    link: "https://telluridelibrary.libcal.com/event/16590831?hs=a",
-    description: "5:30 PM – 7:00 PM · If you haven&#39;t been paying attention.... Romance is IN! Welcome to Wilkinson&#39;s newest book club celebrating the sales-sweeping genre on love and all its glory—Romance with Rachel. Each month, join Rachel in reading a romance novel from a new subgenre and then engage the group in discussion about all the nitty gritty details. At the end of the event, our ravenous romance readers will collaboratively choose the novel for the next month. We will meet either at the library or offsite the fourth Wednesday of each month. June&#39;s selection is The Duke: A Novel by Anna Cowan. Five copies will be first come, first serve for registrees. Reach out to Rachel at rbrand@telluridelibrary.org if you have trouble acquiring a copy. Description below: A sapphic regency romance about the duke who fears nothing... …",
-    pubDate: "2026-06-24T23:30:00.000Z",
+    title: "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
+    link: "https://telluridelibrary.libcal.com/event/16962659?hs=a",
+    description: "5:30 PM – 6:30 PM · Join us for a free, welcoming community workshop designed to help participants prepare for the USCIS citizenship interview and civics test. Together, we will practice civics questions, build confidence, and support one another on the path toward U.S. citizenship. All levels are welcome. &Uacute;nase a este taller comunitario gratuito y acogedor dise&ntilde;ado para ayudar a las personas a prepararse para la entrevista y el examen c&iacute;vico de ciudadan&iacute;a de USCIS. Juntos practicaremos las preguntas c&iacute;vicas, fortaleceremos la confianza y nos apoyaremos mutuamente en el camino hacia la ciudadan&iacute;a estadounidense. Todos los niveles son bienvenidos",
+    pubDate: "2026-06-25T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_29_13_35_46.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_27_10_45_01.png"
   }
 ];
 
@@ -3094,7 +3121,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
+    description: "",
     pubDate: "2026-06-25",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3105,7 +3132,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Theatre Muleskinner's Ball Fundraiser",
     link: "https://sheridanoperahouse.com/events/telluride-theatre-muleskinners-ball-fundraiser/",
-    description: "Telluride Theatre hosts its Muleskinner's Ball fundraiser at the historic Sheridan Opera House, bringing together music and community to support the local theater organization. The event blends a lively ball-style atmosphere with fundraising for Telluride Theatre's programs and productions.",
+    description: "",
     pubDate: "2026-06-27",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3116,7 +3143,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "23rd Annual Telluride Plein Air",
     link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air/",
-    description: "The 23rd Annual Telluride Plein Air is a longstanding celebration of outdoor painting bringing together artists who create works on location throughout the Telluride area. The event is held at the Sheridan Opera House, serving as a hub for this established regional arts tradition.",
+    description: "",
     pubDate: "2026-06-29",
     endDate: "2026-06-30",
     source: "sheridan",
@@ -3257,6 +3284,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
   },
   {
+    title: "Monthly Karate in Ouray County",
+    link: "https://weehawkenarts.org/karate-2/",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-03-02T12:00:00.000Z",
+    endDate: "2026-12-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
     title: "Beautification Committee (OBC)",
     link: "https://www.cityofouray.com/city_offices/committees___boards/beautification_committee_(obc).php",
     description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
@@ -3267,18 +3306,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center, San Juan Room",
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
-  },
-  {
-    title: "Zumba Fitness with Tamra",
-    link: "https://zumba.com/p/zumbafitnesswithTamra",
-    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
-    pubDate: "2026-04-01T12:00:00.000Z",
-    endDate: "2026-12-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/e3b37a55dafe3e5ac88f6f7359fdef186311fd9b.jpg"
   },
   {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -3329,6 +3356,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
   },
   {
+    title: "Parks and Recreation Committee (PARC)",
+    link: "https://cityofouray.com/city_offices/committees___boards/parks_and_recreation_committee.php",
+    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
+    pubDate: "2026-05-05T12:00:00.000Z",
+    endDate: "2027-04-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+  },
+  {
     title: "Yoga in the Park- Wednesday evenings",
     link: "https://www.beetrueyou.com",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
@@ -3339,18 +3378,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
     imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
-  },
-  {
-    title: "Creative Space: Artist Salon Series",
-    link: "https://www.ridgwayfuse.org",
-    description: "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the Decker Room. Stay and socialize with creatives afterward! Please bring some food/drinks to share! All are welcome! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Bring something to eat or drink to share! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484",
-    pubDate: "2026-05-21T12:00:00.000Z",
-    endDate: "2026-12-23",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -3495,61 +3522,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53196545955120/huge/47f14d971b58902d369831d085a3fa5a7b0437bd.jpg"
-  },
-  {
-    title: "Help Keep Our Rivers Clean Youth Art & Poetry Contest (Submission Deadline)",
-    link: "https://www.uncompahgrewatershed.org/uwp-2026-youth-art-poetry-contest/",
-    description: "THEME: All of Us Can Help Keep Rivers Clean: Let’s prevent nonpoint source pollution! ORGANIZED BY: The Uncompahgre Watershed Partnership with support from the Environmental Protection Agency and Colorado Department of Public Health and Environment. OVERVEW: Nonpoint source pollution (NSP), or water pollution that does not originate from a single, distinct source, such as a pipe, is an ongoing threat to water quality in the state of Colorado. The Art & Poetry Contest is designed for ages 4 to 20, and is aimed at educating the community about the challenges faced by our waterways and opportunities to reduce the impacts of harmful nonpoint source pollutants such as sediment, chemicals, bacteria, recreation, post-wildfire runoff. PRIZES: Winners in each age category will receive: 1st Place = $200, 2nd Place = $100, 3rd Place = $50. Plus, one person will win $150 plus the People’s Choice Award. …",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53180866539942/huge/a62f9f776e77b4e1668b5df6a9c609601e287648.jpg"
-  },
-  {
-    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz : “Early Season Wildflowers in Ouray County”",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here Please check your email the evening before class for any unexpected cancellations or weather-related updates. …",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "location disclosed via email right before class",
-    imageUrl: "https://localist-images.azureedge.net/photos/53073652493992/huge/202160a6bd8ae2c028c7969e3e4ea812bda5bc4a.jpg"
-  },
-  {
-    title: "Ouray County Baseball - 13u Baseball vs. Ignacio",
-    link: "https://ouraycountybaseball.com",
-    description: "Ouray County Baseball - 13u Baseball vs. Ignacio",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52118491920073/huge/05139b66e9f6daf3db0bec61ea6da7641d58cf5a.jpg"
-  },
-  {
-    title: "Live Music- Easy Jim(Grateful Dead Cover Band)",
-    link: "https://www.stelmohotel.com/summer-sound/easyjim",
-    description: "Join us on Wednesday, June 24th as we welcome Easy Jim, Western Colorado’s premier Grateful Dead cover band. Known for their improvisational spirit and free-flowing energy, Easy Jim brings the timeless sound of the Dead to life. From classic jams to deep cuts, they capture the true essence of the Grateful Dead experience, loose, alive, and completely in the moment. Come ready to dance, wander, and let the music take you where it will.",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53126161919270/huge/531d9c39aeb8057b46d1879464e57f32c94ad915.jpg"
-  },
-  {
-    title: "The Hateful Eight: CO-150 Film Festival @ the Wright",
-    link: "https://colorado150film.com/",
-    description: "The Hateful Eight: CO-150 Film Festival @ the Wright WHEN? Wednesday, June 24 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 3h 7min RATING: R ROTTEN TOMATOES SCORE: 74% ABOUT THE FILM The Hateful Eight (2015) follows a group of strangers stranded together during a brutal Wyoming blizzard shortly after the Civil War. As tensions rise inside a remote stagecoach lodge, secrets emerge and loyalties unravel in classic Quentin Tarantino fashion. Featuring sharp dialogue, striking cinematography, and a slow-burning atmosphere of paranoia and violence, the film blends mystery, western grit, and dark humor into a tense cinematic experience. A suspenseful modern western filled with unforgettable characters, uneasy alliances, and explosive confrontations. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52887290127542/huge/51507f28e4bbf5865ad30a8cf4958f9f758bc259.jpg"
   },
   {
     title: "Spanish Storytime",
@@ -3950,6 +3922,40 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
+  },
+  {
+    title: "Ouray Youth Summer Programs: Rock Climbing",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/340?onlineSiteId=0&from_original_cui=true",
+    description: "Participants will learn to rock climb or get to experience more challenging rock climbs with instruction from a local guide service. The guide service will provide all technical equipment including helmets, harnesses, and shoes. Please bring appropriate clothes for the day, sun protection, water, and snacks. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
+    pubDate: "2026-07-07T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52994950182035/huge/cd7de10752ab32dcb54e1001e4d01b26ce8b716a.jpg"
+  },
+  {
+    title: "Summer Reading Program Camp",
+    link: "https://ouray.colibraries.org/lib-cal/",
+    description: "Join us every Tuesday in July to learn, make new friends, play games, prevent the Summer Slide, and have fun! Theme: Unearth a Story featuring dinosaurs, archaeology, and paleontology Ages; Entering Kindergarten through 5th Grade Deadline to sign up: June 23rd, 2026 Email programsouraypl@gmail.com for more information or for the sign up sheets.",
+    pubDate: "2026-07-07T12:00:00.000Z",
+    endDate: "2026-07-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53012557028201/huge/4f4fa3f438fd0250f44547c8de21030bede87654.jpg"
+  },
+  {
+    title: "JACK HAIGHT",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-07T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
@@ -5976,6 +5982,60 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
     address: "San Miguel County, Colorado (countywide land use code)",
     noticeKey: "luc-amendment-5-31-natural-medicine"
+  },
+  {
+    title: "Notice to Creditors -- Estate of Michael Kiball (COL-000175)",
+    entity: "Estate of Michael Kiball",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "This is a notice to creditors of the estate of Michael Kiball, handled by Bo James Nerlin of Devor & Pluhoff, LLC in Montrose, Colorado. All persons with claims against the estate must present them to the personal representative or the District Court of San Miguel County. The notice was published June 25, July 2, and July 9.",
+    deadline: "2026-10-18",
+    expires: "2026-10-18",
+    dates: "6/25",
+    papers: ["ttimes_0625"],
+    url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
+    address: "District Court of San Miguel County, Colorado",
+    noticeKey: "creditors-kiball-COL-000175"
+  },
+  {
+    title: "Public Hearing -- Lot Line Vacation & PUD Amendment, Lawson Hill (COL-000176)",
+    entity: "San Miguel County Board of County Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "San Miguel County is considering an application by Drea Araiza on behalf of San Miguel County to vacate the lot line between Lots 425-1 and 425-2 in the Lawson Hill PUD (Parcels #456531201019 and #456531201020), in order to build employee housing as an accessory use to the county jail. The Board of County Commissioners will hold a public hearing on July 15, 2026 at 9:30 AM at 333 West Colorado Avenue, Telluride. Written comments of more than one page must be received by July 7, 2026 to receive full consideration.",
+    deadline: "2026-07-15",
+    expires: "2026-07-15",
+    dates: "6/25",
+    papers: ["ttimes_0625"],
+    url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
+    address: "Lots 425-1 and 425-2, Lawson Hill PUD, Parcels #456531201019 and #456531201020, San Miguel County, CO",
+    noticeKey: "lot-line-vacation-lawson-hill-COL-000176"
+  },
+  {
+    title: "Property Tax Exemption -- Senior Citizens, Disabled Veterans & Gold Star Spouses",
+    entity: "San Miguel County Assessor's Office",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "San Miguel County is notifying qualifying senior citizens, veterans with a 100% service-connected disability rating (or individual unemployability status starting tax year 2025), and gold star veteran spouses that they may be eligible for a property tax exemption exempting 50% of the first $200,000 in actual value of their primary residence. Qualifying seniors must be at least 65, have owned and occupied the property as their primary residence for at least 10 consecutive years prior to January 1 of the application year. Applications must be submitted to the San Miguel County Assessor's office by July 15, with late applications accepted until August 15; contact the assessor at 970-728-3174.",
+    deadline: "2026-07-15",
+    expires: "2026-08-15",
+    dates: "6/25",
+    papers: ["ttimes_0625"],
+    url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
+    address: "San Miguel County, Colorado",
+    noticeKey: "property-tax-exemption-senior-veteran-2026"
   }
 ];
 
