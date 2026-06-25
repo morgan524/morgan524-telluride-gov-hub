@@ -847,6 +847,13 @@ async function handleArticleCreate(request, env) {
   const id = String(draft.id || draft.slug || "").trim();
   if (!id) return json({ ok: false, msg: "missing id/slug" }, 400);
 
+  // Idempotent: the loop calls this every run, so if a draft for this meeting
+  // already exists (ANY status — including denied), don't re-create or re-email.
+  try {
+    const existing = await firestoreGet(env, ART_COLL + "/" + id);
+    if (existing) return json({ ok: true, id, skipped: "exists", status: existing.status || "pending" });
+  } catch (e) { /* fall through and attempt create */ }
+
   const now = new Date().toISOString();
   const doc = Object.assign({}, draft, { status: "pending", createdAt: now });
   delete doc.id;
@@ -914,6 +921,71 @@ async function handleArticleDecide(request, env) {
   return json({ ok: true, status: patch.status });
 }
 
+// Firestore structured query (status == value). Used by the publish job to
+// pull approved drafts. Returns docs with `.id` attached.
+async function firestoreQuery(env, collection, field, value) {
+  const sa = getServiceAccount(env);
+  const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
+  const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
+    "/databases/(default)/documents:runQuery";
+  const body = { structuredQuery: {
+    from: [{ collectionId: collection }],
+    where: { fieldFilter: { field: { fieldPath: field }, op: "EQUAL", value: toFsValue(value) } },
+    limit: 50,
+  } };
+  const r = await fetch(url, { method: "POST", headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error("firestore query " + r.status + " " + (await r.text().catch(() => "")).slice(0, 160));
+  const rows = await r.json();
+  const out = [];
+  for (const row of rows || []) {
+    if (row.document) { const doc = fromFsFields(row.document.fields || {}); doc.id = row.document.name.split("/").pop(); out.push(doc); }
+  }
+  return out;
+}
+
+const editSecretOk = (env, given) => {
+  const secret = env.EDITORIAL_SECRET || env.MAIL_RELAY_SECRET || "";
+  return secret && given === secret;
+};
+
+// GET /article-exists?id=&secret=  — cheap dedup check for the loop (so it
+// skips scoring/drafting a meeting already drafted). → { ok, exists, status }
+async function handleArticleExists(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const id = url.searchParams.get("id") || "";
+  if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { const doc = await firestoreGet(env, ART_COLL + "/" + id);
+    return json({ ok: true, exists: !!doc, status: doc ? (doc.status || "pending") : null }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 140) }, 502); }
+}
+
+// GET /article-pending-publish?secret=  — approved-but-not-yet-published drafts,
+// for the pull-model publish job. → { ok, drafts: [...] }
+async function handleArticlePendingPublish(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  try { return json({ ok: true, drafts: await firestoreQuery(env, ART_COLL, "status", "approved") }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 160) }, 502); }
+}
+
+// POST /article-published  {secret, id}  — mark a draft published after the
+// publish job has generated + committed its page.
+async function handleArticlePublished(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false }, 400); }
+  if (!editSecretOk(env, d.secret || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  const id = String(d.id || ""); if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { await firestorePatch(env, ART_COLL + "/" + id, { status: "published", publishedAt: new Date().toISOString() }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 140) }, 502); }
+  return json({ ok: true });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -943,6 +1015,15 @@ export default {
     }
     if (url.pathname === "/article-decide") {
       return handleArticleDecide(request, env);
+    }
+    if (url.pathname === "/article-exists") {
+      return handleArticleExists(request, env);
+    }
+    if (url.pathname === "/article-pending-publish") {
+      return handleArticlePendingPublish(request, env);
+    }
+    if (url.pathname === "/article-published") {
+      return handleArticlePublished(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });

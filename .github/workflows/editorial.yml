@@ -1,0 +1,42 @@
+name: Editorial Loop
+
+# Triages the freshly-refreshed meeting summaries and drafts an article for any
+# that score newsworthy (>=4). Drafts go to Firestore via the Worker, which
+# emails info@ a tokenized review link. NOTHING publishes here — that's gated by
+# your approval and the separate Editorial Publish workflow.
+#
+# Runs right after Content Refresh finishes (so summaries are current), plus
+# manual dispatch. Needs two secrets: ANTHROPIC_API_KEY (already used by
+# content-refresh) and EDITORIAL_SECRET (shared with the Worker's
+# EDITORIAL_SECRET / MAIL_RELAY_SECRET so /article-create authenticates).
+
+on:
+  workflow_run:
+    workflows: ["Content Refresh"]
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  editorial:
+    runs-on: ubuntu-latest
+    # Only run after a successful refresh (or a manual trigger).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run editorial loop (triage + draft + email review links)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: |
+          set -o pipefail
+          node scripts/editorial/run-editorial.js 2>&1 | tee /tmp/editorial.log
