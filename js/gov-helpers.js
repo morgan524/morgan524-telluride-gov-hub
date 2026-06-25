@@ -414,7 +414,7 @@ const MEETING_RECAPS = [
     date: "2026-06-09",
     title: "Town Council — Jun 9, 2026",
     videoUrl: "https://www.youtube.com/watch?v=vxrKceCqXaM",
-    recap: "A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise. The fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board. The one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed. Fee was absent."
+    recap: "A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise. The fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board. The one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed. Meehan Fee has resigned from the council."
   },
   {
     sourceKey: "county",
@@ -454,7 +454,7 @@ const MEETING_RECAPS = [
     date: "2026-05-19",
     title: "Town Council — May 19, 2026",
     videoUrl: "https://www.youtube.com/watch?v=U3QyzfSWDlE",
-    recap: "Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040. They authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission. They also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. Meehan Fee was absent; all votes were 6-0."
+    recap: "Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040. They authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission. They also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. With Meehan Fee resigned from the council, all votes were 6-0."
   },
   {
     sourceKey: "county",
@@ -478,7 +478,7 @@ const MEETING_RECAPS = [
     date: "2026-04-28",
     title: "Town Council — Apr 28, 2026",
     videoUrl: "https://www.youtube.com/watch?v=vWaP0Ba4GYY",
-    recap: "A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request. Council reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners. Sitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies. Meehan Fee was absent."
+    recap: "A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request. Council reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners. Sitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies. Meehan Fee has resigned from the council."
   }
 ];
 
