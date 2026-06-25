@@ -484,6 +484,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "The ins and outs of e-bikes",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-25",
+    newsTopic: "recreation",
+    copy: "San Miguel County, the towns of Telluride and Mountain Village, the ski resort, and federal land managers all have different e-bike rules. Most popular local trails are off-limits, including Jud Wiebe, Bear Creek, and the East End trails. County-allowed routes are limited to Whiskey Charlie and the M59 River Trail.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_143bdae7-71b8-4b5a-b4b5-17ac56b1ca76.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1c/b1c03ed9-49d5-46d0-96c9-d14d148890bc/6a3addd597b51.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of June 25-July 1",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-25",
+    newsTopic: "government",
+    copy: "The Chalkboard for June 25–July 1 lists local birthdays and recurring community meetings and events in the Norwood and Nucla-Naturita area. Weekly and monthly programs include the Norwood Farmers Market, senior meals, food pantry, pickleball, AA meetings, and free legal aid. Town board, school board, and chamber meetings also follow regular monthly schedules.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_18d0ee98-9560-4b52-ab87-ab0df895e2e9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/49/84978b61-651d-4ad9-9545-6337dcfc9316/6a3ac47be664c.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Legals and Public Notices for June 25-July 1, 2026",
     source: "Telluride Times",
     date: "June 25, 2026",
@@ -993,8 +1017,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
-    copy: "Federal judge, bestselling author Roy Altman to speak in Telluride.",
-    claudeSummary: false,
+    copy: "Federal judge and Yale Law grad Roy Altman speaks in Telluride on June 30 at 5:30 p.m., presenting his book *Israel on Trial*, which applies legal analysis to contested claims about Israel. Tickets are $10 and include a copy of the book. Location shared with ticket holders only; advance purchase at royaltman.eventbrite.com.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_55be3fc5-6ac0-4b3c-8c6e-a21c3edb8a48.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -1032,8 +1056,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Residents across Telluride — workers, commuters, seniors, longtime locals — say they're largely unaware of major proposals moving through town, from Shandoka development and 250-plus new housing units to paving the Town Park Oval. Common concerns: 10 a.m. meetings workers can't attend, tax bills doubling, and questions about whether existing housing systems function before expanding them.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_e8370c3d-bc39-4acd-ac85-0854d3916528.html",
-    img: "",
-    letterAuthor: "Madelaine WhiteU"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Madelaine WhiteU",
+    imgHiRes: true
   },
   {
     title: "Is Telluride Paradise?",
@@ -1044,8 +1069,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride sits at the dead end of a box canyon with one paved evacuation route — Highway 145. Two major housing projects proposed for the canyon's southwest throat would add density near that single exit, with no public wildfire egress analysis completed. April snowpack in the region hit 9% of its 30-year median, and the state is under a drought emergency.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_0a47afcd-25ba-46c5-b953-131783c38019.html",
-    img: "",
-    letterAuthor: "Kate FedacU"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Kate FedacU",
+    imgHiRes: true
   },
   {
     title: "CHALKBOARD Week of June 18-24",
@@ -1053,10 +1079,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 17, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "government",
-    copy: "To ensure that your birthday is listed, email utetrailclub@yahoo.com. For other events, email mia.rupani@telluridetimes.com.",
-    claudeSummary: false,
+    copy: "Local birthdays, recurring community meetings, and weekly services for the week of June 18–24 in the Norwood/Nucla-Naturita area. Regulars include the Farmers Market Thursdays 2–6 p.m., Sunday Food Pantry 3–6 p.m., Senior Meals Mondays and Thursdays, and free Legal Aid the second Wednesday monthly.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_d557e234-3f27-4790-9574-34267075077a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/58/b5804c72-d95d-45cf-a165-549035b858c1/6a32c8e79d4c3.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/58/b5804c72-d95d-45cf-a165-549035b858c1/6a32c8e79d4c3.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Vote for Marya Stark",
@@ -1067,7 +1094,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
     claudeSummary: false,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4723ca4f-db9e-4228-9168-b09c27162ec1.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
   },
   {
     title: "With gratitude to SMPA District 3",
@@ -1078,8 +1106,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Joanna Yonder has won the SMPA District 3 board seat, succeeding Dave Alexander who served 16 years. She thanked voters and volunteers, noting the campaign was built on community effort. She acknowledged the Western Slope faces complicated energy decisions ahead and committed to representing all of District 3 over the next four years.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d1d75e38-ec22-4340-bc9c-f94cb6a69bf4.html",
-    img: "",
-    letterAuthor: "Joanna Yonder"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Joanna Yonder",
+    imgHiRes: true
   },
   {
     title: "With gratitude to SMPA District 3",
@@ -1091,7 +1120,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1090ef24-041f-45d1-8b55-ca2dd118b475.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f9/8f939b57-1ce4-4bf3-89e3-efa596231507/6a32c73611113.image.jpg",
-    letterAuthor: "Joanna Yonder"
+    letterAuthor: "Joanna Yonder",
+    imgHiRes: true
   },
   {
     title: "Rico’s Fireweed has a new owner",
@@ -1102,7 +1132,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Rico's Fireweed coffee shop has a new owner — Emily Thorn, who moved from Silverton and was drawn to the spot's community feel and focus on local, organic food. She bought it from the founding owners after hearing they might sell, and reopened in April with plans to keep the menu largely the same while bringing breakfast burrito production in-house.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_f7697606-40d0-41ec-9f80-ad2ddf7a6f48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/5e/c5edd619-4823-4736-aba7-d0b2005fb4c0/6a30e744a0f94.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/5e/c5edd619-4823-4736-aba7-d0b2005fb4c0/6a30e744a0f94.image.jpg",
+    imgHiRes: true
   },
   {
     title: "The family forged by theater",
@@ -1113,7 +1144,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A longtime Telluride theater director reflects on building Young People's Theater over decades, working with roughly 1,000 kids, then leaving to sail the world with her family. Years later, those former students are woven into her daily life — as friends, collaborators, and neighbors on Main Street.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_b0a15262-fe8d-43db-a2cc-339a9cde4826.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/88/688fd068-0afb-4bab-8f61-c0a7d2589729/6a2b4d6d50fb9.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/88/688fd068-0afb-4bab-8f61-c0a7d2589729/6a2b4d6d50fb9.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
@@ -1124,7 +1156,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Charles Dalton is running for Telluride Town Council, bringing eight years on Planning and Zoning and a 35-year real estate career focused on housing market analysis. He backs a modest second-home tax differential, more regional housing with reliable bus service, and rebuilding the town's relationship with Telski.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
@@ -3304,17 +3337,6 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "Employee Summer Picnic",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3653",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3653",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Pa-Co-Chu-Puk - Ridgway CO 81432",
-    imageUrl: ""
   }
 ];
 
@@ -4428,6 +4450,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48855/jon_stickley_trio_1800x900px.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-07-25T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   }
 ];
 
