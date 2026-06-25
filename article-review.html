@@ -109,7 +109,12 @@
     const params = new URLSearchParams(location.search);
     const ID = params.get('id');
     const TOKEN = params.get('t') || '';
-    const DEMO = params.get('demo') === '1' || (!ID && !TOKEN);
+    // ?sample=1 is a DEV-ONLY affordance: render scripts/editorial/draft-sample.json
+    // (the output of draft-meeting.js) in this real page. Harmless in prod —
+    // the file isn't deployed, so it just errors gracefully.
+    const SAMPLE = params.get('sample') === '1';
+    const DEMO = params.get('demo') === '1' || (!ID && !TOKEN && !SAMPLE);
+    const SIMULATED = DEMO || SAMPLE;
 
     const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
     const safeUrl = u => /^https?:\/\//i.test(u || '') ? u : '';
@@ -229,7 +234,7 @@
 
     function render() {
       let h = '<div class="card"><div class="card-body">';
-      if (DEMO) h += '<div class="demo-banner">Demo preview — this is a sample draft. Approve/Deny/Edit are simulated locally; no data is written.</div>';
+      if (SIMULATED) h += '<div class="demo-banner">' + (SAMPLE ? 'Sample preview — a real generated draft (draft-sample.json). Approve/Deny/Edit are simulated; no data is written.' : 'Demo preview — this is a sample draft. Approve/Deny/Edit are simulated locally; no data is written.') + '</div>';
       h += triageHtml(draft.triage);
       h += editing ? editHtml(draft) : articleHtml(draft);
       h += actionsHtml();
@@ -262,7 +267,7 @@
 
     // POST a decision to the Worker (live mode). Returns a promise.
     function postDecision(payload) {
-      if (DEMO) return Promise.resolve({ ok: true, demo: true });
+      if (SIMULATED) return Promise.resolve({ ok: true, demo: true });
       return fetch(WORKER + '/article-decide', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.assign({ id: ID, t: TOKEN }, payload))
@@ -311,7 +316,12 @@
     }
 
     // ── Boot ──
-    if (DEMO) {
+    if (SAMPLE) {
+      fetch('scripts/editorial/draft-sample.json')
+        .then(r => { if (!r.ok) throw new Error('no draft-sample.json — run draft-meeting.js first'); return r.json(); })
+        .then(d => { draft = d; render(); })
+        .catch(e => { root.innerHTML = '<div class="panel"><h3>No sample draft</h3><p>' + esc(e.message || String(e)) + '</p></div>'; });
+    } else if (DEMO) {
       draft = JSON.parse(JSON.stringify(DEMO_DRAFT));
       render();
     } else {

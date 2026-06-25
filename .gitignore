@@ -53,3 +53,4 @@ content-review-email.html
 
 # Editorial layer — regenerated triage output
 scripts/editorial/triage-report.json
+scripts/editorial/draft-sample.json
