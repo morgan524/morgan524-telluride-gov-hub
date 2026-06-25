@@ -10,9 +10,15 @@ name: Meeting Recaps
 # avoid a push race on gov-helpers.js; it touches only MEETING_RECAPS, which no
 # other job writes, so a rebase is clean even if the file changed elsewhere.
 
+# ⚠️ DISABLED on a schedule on purpose. YouTube blocks caption/transcript
+# downloads from GitHub runner datacenter IPs (a run succeeds but gets 0-char
+# transcripts — verified 2026-06-25). This pipeline therefore runs on a
+# residential IP via a Mac launchd job (scripts/run-meeting-recaps-local.sh +
+# ~/Library/LaunchAgents/com.livabletelluride.meeting-recaps.plist). This
+# workflow is kept for manual dispatch only — and even that won't produce
+# transcripts from the cloud; re-enable the cron only if YouTube ever stops
+# blocking runner IPs.
 on:
-  schedule:
-    - cron: '0 15 * * *'
   workflow_dispatch:
 
 permissions:
