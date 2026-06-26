@@ -182,6 +182,33 @@ HARD RULES:
 OUTPUT — return ONLY valid JSON, no prose, no code fence:
 { "title": "Body — Mon D, YYYY  (e.g. \\"Town Council — Jun 9, 2026\\")", "recap": "~100 words, one paragraph" }`;
 
+// Parse the model's JSON tolerantly. A long bodyHtml/recap can contain an
+// unescaped straight quote (e.g. the phrase "above reproach") that breaks strict
+// JSON.parse; when it does, fall back to greedily extracting the known fields.
+function parseLoose(txt) {
+  try { return JSON.parse(txt); } catch (e) { /* fall through */ }
+  const un = (s) => s == null ? s : s.replace(/\\n/g, '\n').replace(/\\t/g, ' ').replace(/\\"/g, '"').replace(/\\\\/g, '\\').trim();
+  const strict = (k) => { const m = txt.match(new RegExp('"' + k + '"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"')); return m ? un(m[1]) : undefined; };
+  // Index-based grab for the long last-field (recap or bodyHtml): take everything
+  // from after its opening quote to the object's final closing "} — so unescaped
+  // straight quotes inside the prose are kept rather than ending the value early.
+  // Works even if the response was truncated (no closing "}): grabs to the end.
+  const greedy = (k) => {
+    let i = txt.indexOf('"' + k + '"'); if (i < 0) return undefined;
+    const colon = txt.indexOf(':', i + k.length + 2); if (colon < 0) return undefined;
+    const open = txt.indexOf('"', colon + 1); if (open < 0) return undefined;
+    let end = txt.lastIndexOf('"}'); if (end <= open) end = txt.lastIndexOf('"'); if (end <= open) end = txt.length;
+    return un(txt.slice(open + 1, end));
+  };
+  const out = {};
+  const t = strict('title'); if (t != null) out.title = t;
+  const dek = strict('dek'); if (dek != null) out.dek = dek;
+  const body = greedy('bodyHtml'); if (body != null) out.bodyHtml = body;
+  const recap = greedy('recap'); if (recap != null) out.recap = recap;
+  if (!Object.keys(out).length) throw new Error('could not parse model JSON');
+  return out;
+}
+
 function callClaude(body) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify(body);
@@ -195,7 +222,7 @@ function callClaude(body) {
         const j = JSON.parse(d);
         if (j.error) return reject(new Error(`${j.error.type}: ${j.error.message}`));
         let txt = j.content?.[0]?.text || ''; const f = txt.match(/```(?:json)?\s*([\s\S]*?)```/); if (f) txt = f[1];
-        resolve(JSON.parse(txt.trim()));
+        resolve(parseLoose(txt.trim()));
       } catch (e) { reject(e); } });
     });
     req.on('error', reject);
@@ -234,20 +261,23 @@ const summaryDraftId = (sourceKey, date, title) => 'fullsum-' + sourceKey + '-' 
 
 const FULL_SUMMARY_SYSTEM_PROMPT = `You are "Rick", the single named voice behind Livable Telluride (a Telluride, Colorado civic site). "Rick" is an internal persona only — NEVER name or sign it. You are writing a FULL SUMMARY of a government meeting from its video transcript — a thorough but readable account for residents who want the detail behind the short recap card.
 
-VOICE — knowing, not cynical; plainspoken; short sentences are fine; never flowery, never a press release; critical of processes/patterns, never of named individuals; not advocacy.
+VOICE — Rick's voice: knowing, not cynical; plainspoken and clear; short sentences are fine; never flowery, never a press release; critical of processes/patterns, never of named individuals; not advocacy.
+NOT TOO FOLKSY — this is a longer, detailed document, so lean PROFESSIONAL and informative: straight, readable reporting first. Use Rick's long view sparingly (at most a single light touch). AVOID folksy colloquialisms, dialect, and lived-in idioms ("the box canyon," "anyone who's been here long enough," "here we go again") and any affected local color — those belong on the short recap card, not here.
 
 WHAT TO WRITE:
 - A complete walk-through of what the body actually did: each substantive agenda item, the key discussion, the vote and tally (e.g. "4-2"), and the outcome (approved/denied/tabled/continued), plus money allocated and appointments.
-- Organize by item, most consequential first. 350-600 words. Plain HTML <p> paragraphs ONLY — no headings, lists, or markdown.
+- Organize by item, most consequential first. Be thorough but disciplined: roughly 400-800 words, and never exceed ~900. For an unusually packed agenda, give the consequential items their due and compress the minor ones to a sentence or two each rather than running long. Keep the prose tight — no padding or repetition. Plain HTML <p> paragraphs ONLY — no headings, lists, or markdown.
 - Ground EVERY fact in the transcript. Do NOT invent vote tallies, names, numbers, or outcomes. Auto-captions misspell names — only name a person if you're confident; otherwise "a councilmember" / "a commissioner".
 - PLANNING COMMISSION / P&Z / HARC: do NOT report individual single-family-residence reviews (COAs, flood-elevation raises, single-home design/variances/additions). Cover subdivisions, PUDs, rezonings, multi-family/affordable housing, commercial, civic buildings, and code/guideline amendments.
 
-OUTPUT — ONLY valid JSON, no prose, no code fence:
-{"title":"Body — Mon D, YYYY","dek":"one-sentence standfirst, ~25-40 words","bodyHtml":"<p>…</p><p>…</p>"}`;
+In all prose (dek and bodyHtml) use typographic curly quotes (“ ”) and apostrophes (’), NEVER straight double-quotes — a straight " inside a value breaks the JSON.
+
+OUTPUT — ONLY valid JSON, no prose, no code fence (title uses the MONTH name, not a weekday):
+{"title":"Body — Mon. D, YYYY (e.g. Town Council — Jun 9, 2026)","dek":"one-sentence standfirst, ~25-40 words","bodyHtml":"<p>…</p><p>…</p>"}`;
 
 async function fullSummaryFromTranscript(ch, isoDate, videoTitle, transcript) {
   const userPrompt = `ENTITY: ${ch.sourceLabel}\nVIDEO TITLE: ${videoTitle}\nMEETING DATE: ${isoDate}\n\nTRANSCRIPT (auto-captions):\n"""\n${transcript.slice(0, 600000)}\n"""\n\nWrite the full summary. Return ONLY the JSON object.`;
-  return callClaude({ model: MODEL, max_tokens: 2000, system: FULL_SUMMARY_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
+  return callClaude({ model: MODEL, max_tokens: 4000, system: FULL_SUMMARY_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
 }
 
 async function main() {
