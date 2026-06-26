@@ -90,8 +90,15 @@ Important behaviors:
   transparently. Hosts NOT in the set fetch direct. Implemented
   2026-05-01 — before that the script fetched directly and TT scraping
   silently returned 0 articles every run.
-- **Telluride Times feed:**
-  `https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*&l=25&s=start_time&sd=desc`
+- **Telluride Times feed** (`TELLURIDE_TIMES_RSS` in `scripts/content-refresh.js`):
+  `https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*,gallery,gallery/*&l=50&s=start_time&sd=desc`
+  The `c=` list is the source of truth for which TT sections reach Local
+  News — if a section is missing here, its articles silently never appear,
+  even though `t=article` would otherwise match them. `gallery,gallery/*`
+  was added 2026-06-26: TT files some real news stories (photo-led community
+  coverage, e.g. "Pride bike ride on Sunday") under `/gallery/news/` as
+  `article` assets, and they were being dropped. When a TT story is visibly
+  missing from Local News, check whether its URL section is in this list.
 - **KOTO feeds (split, not the catch-all `/feed/`):** the catch-all
   `https://koto.org/feed/` returns 0 items most of the time; the script
   uses two category-specific feeds via constants `KOTO_NEWSCASTS_RSS` and
