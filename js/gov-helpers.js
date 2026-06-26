@@ -364,7 +364,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -518,18 +518,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Mountain Village moves forward with accelerated housing review",
-    source: "Telluride Times",
-    date: "June 25, 2026",
-    firstSeen: "2026-06-26",
-    newsTopic: "land-use",
-    copy: "Mountain Village council approved an expedited review process for affordable housing projects — a step required to stay eligible for Colorado's Proposition 123 funds. Projects where at least half the units are affordable can now move through a faster approval track. The move also positions the town for up to $45,000 in additional grant funding if adopted before July 2026.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8c40ad7e-1a8a-43fa-9a8f-db59ce5a5d0a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66bb1f2-ebae-45fd-a67f-ab084607de68/6a3d859147699.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Towns, County announce stage 2 fire restrictions",
     source: "Telluride Times",
     date: "June 25, 2026",
@@ -539,18 +527,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_1ee452dd-dff5-43ac-9077-15181bf7b98c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6b/46b7ec9d-e334-4944-94e0-33175696b1bf/6a3d8ea2ea92a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "New chapter for ‘oldest continuously owned business in Telluride’",
-    source: "Telluride Times",
-    date: "June 25, 2026",
-    firstSeen: "2026-06-25",
-    newsTopic: "community",
-    copy: "Elinoff Gallery at 204 W. Colorado Ave. — Telluride's oldest continuously owned business at 34 years — is in transition as founder Neal Elinoff, 71, looks to retire and sell or transfer the store before winter. The gallery carries original works by Picasso, Renoir, Warhol, and others, alongside jewelry and repair services. A trunk show featuring Roman and Jules jewelry runs July 1–3.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d73f9f18-47da-4440-9ab2-c08c1c87f03b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/31/7318e12d-8355-4640-9509-296acd873093/6a3917c90eb40.image.jpg",
     imgHiRes: true
   },
   {
@@ -1118,6 +1094,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Mountain Village moves forward with accelerated housing review",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "land-use",
+    copy: "Mountain Village council approved an expedited review process for affordable housing projects — a step required to stay eligible for Colorado's Proposition 123 funds. Projects where at least half the units are affordable can now move through a faster approval track. The move also positions the town for up to $45,000 in additional grant funding if adopted before July 2026.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8c40ad7e-1a8a-43fa-9a8f-db59ce5a5d0a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66bb1f2-ebae-45fd-a67f-ab084607de68/6a3d859147699.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "New chapter for ‘oldest continuously owned business in Telluride’",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-25",
+    newsTopic: "community",
+    copy: "Elinoff Gallery at 204 W. Colorado Ave. — Telluride's oldest continuously owned business at 34 years — is in transition as founder Neal Elinoff, 71, looks to retire and sell or transfer the store before winter. The gallery carries original works by Picasso, Renoir, Warhol, and others, alongside jewelry and repair services. A trunk show featuring Roman and Jules jewelry runs July 1–3.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d73f9f18-47da-4440-9ab2-c08c1c87f03b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/31/7318e12d-8355-4640-9509-296acd873093/6a3917c90eb40.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Telluride deserves better",
     source: "Telluride Times",
     date: "June 17, 2026",
@@ -1320,12 +1320,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
-    title: "Stage 2 Fire Restrictions in effect for all unincorporated, privately owned land in the County",
+    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
     source: "San Miguel County",
-    date: "June 25, 2026",
-    newsTopic: "public-safety",
-    copy: "Expanded: Stage One Fire Restrictions will be in place for all unincorporated, privately owned land in San Miguel County, effective Friday, 6/18/26 at 12:01 a.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=525",
+    date: "June 24, 2026",
+    newsTopic: "housing",
+    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
     img: ""
   },
   {
@@ -1411,47 +1411,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Notice and Call of Special Meeting of the Ridgway Town Council",
+    title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 16, 2026",
-    firstSeen: "2026-06-24",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Special-Meeting-Notice.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Special Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "June 16, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/June-16-special-meeting-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Planning Commission Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "land-use",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-2026.06.17-%28PC-Agenda%29.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---June-18%2C-2026.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
     img: ""
   }
 ];
@@ -2835,92 +2802,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Coffee and Climate Conversation",
-    link: "https://telluridelibrary.libcal.com/event/15835907?hs=a",
-    description: "8:30 AM – 9:30 AM · Coffee & Climate Conversations: Intersectional Environmentalism Join EcoAction Partners, Sheep Mountain Alliance and Wilkinson Public Library for our June Coffee & Climate Conversation on Intersectional Environmentalism in celebration of Pride and Immigrant Heritage month. Together, we'll reflect on how our different identities shape the way we experience environmentalism, activism, climate impacts, and our connection to the natural world. Through open discussion, we'll explore the unique strengths and perspectives each of us brings to local climate solutions, while turning to nature for inspiration and examining what ecosystems can teach us. We'll acknowledge who has historically been left out of these discussions and actions and how building a more inclusive climate movement can strengthen our entire community. We hope you'll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. …",
-    pubDate: "2026-06-25T14:30:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803445?hs=a",
+    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-06-26T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_01_11_23_20.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801137?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-06-25T15:00:00.000Z",
+    title: "CANCELLED: Coffee, Croissants and Cribbage",
+    link: "https://telluridelibrary.libcal.com/event/16914642?hs=a",
+    description: "10:00 AM – 11:30 AM · Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
+    pubDate: "2026-06-26T16:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_11_30.jpg"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772761?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-25T16:30:00.000Z",
+    title: "Telluride Farmers Marketshow: Steve Weeks Music",
+    link: "https://telluridelibrary.libcal.com/event/15564469?hs=a",
+    description: "11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose.  \"We're supposed to be entertaining and educating kids,\" the Colorado-based singer-songwriter enthuses. \"I am sincere about the music I write.  If it's not coming from the heart or isn't fun, I won't write it.\"",
+    pubDate: "2026-06-26T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_28_17.png"
   },
   {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536277?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-06-25T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Bugs and Buds Discovery Club",
-    link: "https://telluridelibrary.libcal.com/event/17012451?hs=a",
-    description: "1:00 PM – 3:00 PM · How can we tell if an ecosystem is healthy? Let's explore bioindicators of a healthy ecosystem through hands-on data collection, observations, insect and plant relationships, creativity and role play! Join EcoAction Partners and the Telluride Institue for these two special summer programs and learn about our watershed and how we can take care of it!   Please meet us in the Wilkinson Public Library lobby by 1 pm.  This program is for ages 8-12.  Please register online and sign waiver.     LIABILITY WAIVER",
-    pubDate: "2026-06-25T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_16_56_14.png"
-  },
-  {
-    title: "Native Plant Walk with Yvette Henson",
-    link: "https://telluridelibrary.libcal.com/event/17081005?hs=a",
-    description: "3:00 PM – 5:00 PM · Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant  and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet in the library lobby; we will walk up Bear Creek.  Adults and teens only please!",
-    pubDate: "2026-06-25T21:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_18_09_55_20.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960349?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-06-25T21:30:00.000Z",
+    title: "Ladies Night In!",
+    link: "https://telluridelibrary.libcal.com/event/16914617?hs=a",
+    description: "6:00 PM – 8:00 PM · Join us at the library for an evening of pampering, snacks, and great company. We'll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polish by Mooncat. You&#39;ll also have the chance to win prizes from local businesses including Studio G, Aveda Telluride Spa, and Two Skirts. Cozy attire and blankets are encouraged. This event is for adults only. Advance registration is encouraged so we know how many self-care supplies to provide :) Gather your girlfriends or come solo for our very first Ladies Night In!",
+    pubDate: "2026-06-27T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
-    link: "https://telluridelibrary.libcal.com/event/16962659?hs=a",
-    description: "5:30 PM – 6:30 PM · Join us for a free, welcoming community workshop designed to help participants prepare for the USCIS citizenship interview and civics test. Together, we will practice civics questions, build confidence, and support one another on the path toward U.S. citizenship. All levels are welcome. &Uacute;nase a este taller comunitario gratuito y acogedor dise&ntilde;ado para ayudar a las personas a prepararse para la entrevista y el examen c&iacute;vico de ciudadan&iacute;a de USCIS. Juntos practicaremos las preguntas c&iacute;vicas, fortaleceremos la confianza y nos apoyaremos mutuamente en el camino hacia la ciudadan&iacute;a estadounidense. Todos los niveles son bienvenidos",
-    pubDate: "2026-06-25T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_27_10_45_01.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_05_25.jpg"
   }
 ];
 
@@ -2954,18 +2877,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Organtic",
-    link: "https://www.alibitelluride.com/calendar#eca-event=organtic",
-    description: "Organtic is 5 piece band playing high energy instrumental funk, reggae, latin, j...",
-    pubDate: "2026-06-25",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/2eff19a1-011d-4309-a6bc-4be23eff0592/-/crop/2598x1300/0,748/-/preview/"
-  },
   {
     title: "The Jauntee w/ San Leandro",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-jauntee",
@@ -3483,6 +3394,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-04-01T12:00:00.000Z",
+    endDate: "2026-12-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/e3b37a55dafe3e5ac88f6f7359fdef186311fd9b.jpg"
+  },
+  {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     link: "https://www.FloatingLotusBrewery.com",
     description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
@@ -3567,18 +3490,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
-    title: "Ouray Mountain Air Music Series",
-    link: "https://www.ouraymusicseries.com",
-    description: "June 4th: AJ Fullerton and Grant Sabin June 11th: Nik Parr & The Selfless Lovers with You Knew Me When June 18th: The Sweet Lizzy Project with Sara Jean Kelley June 25th: Cruz Contreras & The Black Lillies and Griffin William Sherry Set in the heart of Ouray, the Mountain Air Music Series has become a signature summer tradition, offering a welcoming space for families, friends, and visitors of all ages to gather and unwind. Surrounded by breathtaking mountain views, the series creates an atmosphere that is equal parts relaxing and energizing—where laughter, community spirit, and live music blend seamlessly in one unforgettable outdoor experience. What makes the series truly special is the lineup of talented bands who bring both heart and authenticity to the stage. Each group shares a deep passion for music and a genuine appreciation for performing in small communities like Ouray. …",
-    pubDate: "2026-06-04T12:00:00.000Z",
-    endDate: "2026-06-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52951532621249/huge/45a880540db97b7292e967c6f16b980532044c29.jpg"
-  },
-  {
     title: "True Grit Historic Walking Tours",
     link: "https://truegrittours.org/true-grit-tours ",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -3601,18 +3512,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Space to Create ",
     imageUrl: "https://localist-images.azureedge.net/photos/53170905602603/huge/89412c5d44050148024816c075b55e79851a67c1.jpg"
-  },
-  {
-    title: "Ongoing: Painting Evolution Of Moments With Wild Horses 1999-2026- Artist Karen Keene Day",
-    link: "https://events.ourayridgwayevents.com/event/painting-evolution-of-moments-with-wild-horses-1999-2026-artist-karen-keene-day",
-    description: "Enjoy nearly 3 decades or work from local painter, Karen Keene Day. Info decker@ridgwayfuse.org",
-    pubDate: "2026-06-08T12:00:00.000Z",
-    endDate: "2026-06-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52709642938173/huge/e2c21f0b2c1fb10c06c021e9b9d55a9ea535bccc.jpg"
   },
   {
     title: "Evenings of History 2026 @ the Wright",
@@ -3697,17 +3596,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53196545955120/huge/47f14d971b58902d369831d085a3fa5a7b0437bd.jpg"
-  },
-  {
-    title: "Spanish Storytime",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us at Ouray Library to have a Spanish Storytime! This will be the first of (hopefully) many this year. This will last from 11:00 a.m. to around 11:45 a.m.",
-    pubDate: "2026-06-25T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53136204077030/huge/73a73457770aa7ffe32d86c159c84b8eb038df21.jpg"
   },
   {
     title: "OLD MAN POLLY",
@@ -4131,6 +4019,39 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Covenhoven - Live at The Courtyard at 610",
+    link: "https://sherbino.org/event/covenhoven-courtyard-at-610-july-7-ridgway/",
+    description: "Doors: 7 || Show: 7:30 || $20 advance / $24 day of || General Admission Seating || Limited Bar onsite || enter via the alleyway behind the Sherbino and the 610 Arts Collective Gallery Covenhoven is the internationally recognized indie-folk project of Colorado singer-songwriter Joel Van Horne, whose layered acoustic arrangements, rich harmonies, reedy baritone, and soaring falsetto have captivated audiences and critics alike since 2013. Through five full-length albums and two EPs, Covenhoven has crafted a signature sound that blends intimate folk songwriting with sweeping orchestral textures and atmospheric Americana. His songs balance hard-won wisdom with the beauty and hope found in the natural world — drawing inspiration from the landscapes of Colorado, Big Sur, and the American West. Covenhoven’s newest release, The Color of the Dark (2025), has already received widespread acclaim. …",
+    pubDate: "2026-07-07T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993910590740/huge/ee591be41df7dce6d2bdb9e84e37d1b1ae810587.jpg"
+  },
+  {
+    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz : “Exploring Lower Black Bear Pass”",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here Please check your email the evening before class for any unexpected cancellations or weather-related updates. …",
+    pubDate: "2026-07-08T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Location Disclosed after Registration ",
+    imageUrl: "https://localist-images.azureedge.net/photos/53073706225439/huge/7ca2ac43b5dfe7097ca5e25b50578698e2badcb0.jpg"
+  },
+  {
+    title: "July Film Club: Faces Places",
+    link: "https://ouray.colibraries.org/lib-cal/",
+    description: "Join our July Film Club! We will be watching and discussing \"Faces Places\" (2017), starting at 5:30 pm on Wednesday, July 8th. Please email programsouraypl@gmail.com for more information and for the location.",
+    pubDate: "2026-07-08T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53197072496149/huge/61d58f7a04d45b6160d170ddafbfba45141454d8.jpg"
   }
 ];
 

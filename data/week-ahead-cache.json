@@ -1,22 +1,22 @@
 {
-  "hash": "e5d3fcf66b4a8d73492d561167d5c3a8c97d7c75",
-  "lede": "The biggest thing on the calendar this week is the June 30th Town Council meeting, where council takes up first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — rules that directly shape how buildings go up in this box canyon, and worth showing up for. Council also holds a second work session on the Telluride Energy plan that same night. On the housing side, the Telluride Housing Authority meets June 30th to seat its new Resident Advisory Committee, drawing from fifteen tenant applicants across Town properties.",
+  "hash": "5c17ef79479cf38fd6687f0f334e448674805b7b",
+  "lede": "The biggest thing on the calendar this week is Town Council's June 30th first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — real changes to how buildings get built in a box canyon that knows fire. Council also holds a second work session on Telluride's Energy Mitigation program that same evening, while the Housing Authority meets to seat its new Resident Advisory Committee and conduct a tenant drawing across five properties.",
   "notable": [
     {
       "id": 1,
-      "stake": "First reading: wildfire code changes could reshape how every building here gets built."
+      "stake": "First reading: wildfire code changes that affect how all buildings are built here."
     },
     {
       "id": 2,
-      "stake": "THA appoints new Resident Advisory Committee — tenant voice in housing decisions starts here."
+      "stake": "THA appoints new Resident Advisory Committee; tenant drawing affects housing placements."
     },
     {
       "id": 7,
-      "stake": "BOCC interviews Planning Commission alternate; Forest Service presents on high-country road policy."
+      "stake": "County interviews Planning Commission applicant; High Country Road access policy discussed."
     },
     {
       "id": 8,
-      "stake": "Ouray County rewriting Land Use Code definitions — terms that determine what triggers review."
+      "stake": "Land Use Code definition changes that shape what triggers zoning review in Ouray County."
     }
   ]
 }
