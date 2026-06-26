@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Community Events — Livable Telluride</title>
+  <meta name="description" content="Find community events, classes, meetings, and festivals across the Telluride, Colorado region — Telluride, Mountain Village, Norwood, Ridgway, Ouray and the West End.">
+  <meta property="og:title" content="Community Events — Livable Telluride">
+  <meta property="og:description" content="Find community events, classes, meetings, and festivals across the Telluride, Colorado region.">
+  <meta property="og:type" content="website">
   <!--
     ┌─────────────────────────────────────────────────────────────────────┐
     │ Standalone Events page — wired to real data via js/gov-helpers.js     │
@@ -195,7 +199,7 @@
     .festival-sidebar-head { text-align: center; margin: 0 0 12px; }
     .festival-sidebar-eyebrow {
       display: block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
+      text-transform: uppercase; color: #4a5e57; margin-bottom: 4px;
     }
     .festival-sidebar-head h3 {
       margin: 0; font-family: var(--font-heading, Georgia, serif);
@@ -1102,8 +1106,7 @@
         town: "telluride",
         summary: "Explore local galleries and artist studios during this monthly self-guided walk. Meet artists, see new work, and enjoy art in unexpected places around town.",
         source: "Telluride Arts District",
-        href: "https://example.com/gallery-walk",
-        img: "https://images.unsplash.com/photo-1577083552431-6e5fd75a9160?w=800&h=600&fit=crop"
+        href: "https://example.com/gallery-walk"
       },
       {
         title: "Spring Fundraiser Dinner",
@@ -1142,8 +1145,7 @@
         town: "ridgway",
         summary: "Local first responders lead demonstrations on home defensible space, evacuation planning, and emergency communications. Free to attend.",
         source: "Ouray County",
-        href: "https://ouraycountyco.gov/Calendar.aspx?EID=3636",
-        img: "https://images.unsplash.com/photo-1602523498291-43cffe8ee9e1?w=800&h=600&fit=crop"
+        href: "https://ouraycountyco.gov/Calendar.aspx?EID=3636"
       },
       {
         title: "Ouray History Walking Tour",
@@ -1231,7 +1233,8 @@
       // primary "go look at this" affordance. Falls back to '#' if no
       // href so we never render a broken empty href.
       const _href = (e.href && e.href !== '#') ? e.href : '';
-      const _imgTag = `<img src="${e.img || getFallbackImg(e)}" alt="${e.title}" loading="lazy" onload="handlePortrait(this)" onerror="this.src=getFallbackImg(e)">`;
+      const _fb = getFallbackImg(e);
+      const _imgTag = `<img src="${e.img || _fb}" alt="${e.title}" loading="lazy" onload="handlePortrait(this)" onerror="this.onerror=null;this.src='${_fb}'">`;
       const _imgLinked = _href
         ? `<a href="${_href}" target="_blank" rel="noopener" class="img-link" aria-label="View source for ${e.title}">${_imgTag}</a>`
         : _imgTag;
@@ -2337,40 +2340,40 @@
     <form id="eventSubmitForm" style="display:grid;gap:16px;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Title *</label>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-title">Event Title *</label>
           <input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Date *</label>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-date">Date *</label>
           <input id="ef-date" type="date" required
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
         <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Time</label>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-time">Time</label>
           <input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Location</label>
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-location">Location</label>
           <input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
       </div>
       <div>
-        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Description *</label>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-desc">Description *</label>
         <textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about…"
           style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);resize:vertical;box-sizing:border-box;"></textarea>
       </div>
       <div>
-        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event URL / More Info</label>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-url">Event URL / More Info</label>
         <input id="ef-url" type="text" inputmode="url" placeholder="livabletelluride.org or https://…"
           style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
       </div>
       <div>
-        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Event Flyer or Logo (optional)</label>
+        <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-image">Event Flyer or Logo (optional)</label>
         <input id="ef-image" type="file" accept="image/png,image/jpeg,image/gif,image/webp"
           style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.92rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         <div id="ef-image-preview" style="display:none;align-items:center;gap:12px;margin-top:10px;">
