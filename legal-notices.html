@@ -18,7 +18,7 @@
       --text-muted: #5f7169;
       --border-soft: rgba(33, 68, 60, 0.12);
       --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
-      --warn-amber: #b27a14;
+      --warn-amber: #8c5e0e;
       --warn-amber-bg: rgba(178, 122, 20, 0.10);
       --font-heading: 'Georgia', 'Times New Roman', serif;
       --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -732,6 +732,7 @@
           + '<div class="location-address">' + escapeHtml(notice.address) + '</div>'
           + '<div class="map-thumb">'
           +   '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" '
+          +     'title="Map of ' + escapeHtml(notice.address) + '" '
           +     'src="https://maps.google.com/maps?q=' + addrEnc + '&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>'
           + '</div>'
           + '<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=' + addrEnc + '" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>'

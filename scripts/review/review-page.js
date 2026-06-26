@@ -91,7 +91,9 @@ async function gather(url, browser) {
       const imgs = [...document.querySelectorAll('img')];
       return { title: document.title || '', description: g('meta[name="description"]', 'content'),
         lang: document.documentElement.getAttribute('lang') || '', h1Count: document.querySelectorAll('h1').length,
-        imgCount: imgs.length, imgsNoAlt: imgs.filter((i) => !i.getAttribute('alt')).length,
+        // Only a MISSING alt attribute is a defect; alt="" is the correct marking
+      // for decorative images (axe passes it), so don't count it.
+      imgCount: imgs.length, imgsNoAlt: imgs.filter((i) => i.getAttribute('alt') === null).length,
         bodyChars: (document.body.innerText || '').trim().length };
     }).catch(() => ({}));
 
