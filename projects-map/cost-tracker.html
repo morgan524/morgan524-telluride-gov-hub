@@ -346,15 +346,15 @@ body.is-completed .calc-summary-row    { display: none; }
          Switches which version of Annual Debt Service / Balloon Payment /
          Total Cost / Subsidy gets displayed in the six summary cards below. -->
     <div class="debtModeToggle" role="tablist" aria-label="Debt structure">
-      <button type="button" class="debtModeBtn" data-mode="amortized" aria-selected="true" id="debtModeAmortized">Fully Amortized</button>
-      <button type="button" class="debtModeBtn" data-mode="balloon"   aria-selected="false" id="debtModeBalloon">Unamortized with Balloon Payment</button>
+      <button type="button" role="tab" class="debtModeBtn" data-mode="amortized" aria-selected="true" id="debtModeAmortized">Fully Amortized</button>
+      <button type="button" role="tab" class="debtModeBtn" data-mode="balloon"   aria-selected="false" id="debtModeBalloon">Unamortized with Balloon Payment</button>
     </div>
     <!-- Rent-structure toggle: Rent vs Rent + Free Market. Only visible
          for projects that ship rentModes:['rent','rentFreemarket']
          (currently Diamond Ridge). -->
     <div class="debtModeToggle rentModeToggle" role="tablist" aria-label="Rent structure" style="display:none">
-      <button type="button" class="debtModeBtn rentModeBtn" data-mode="rent" aria-selected="true">Renting Only</button>
-      <button type="button" class="debtModeBtn rentModeBtn" data-mode="rentFreemarket" aria-selected="false">Rent + Free Market</button>
+      <button type="button" role="tab" class="debtModeBtn rentModeBtn" data-mode="rent" aria-selected="true">Renting Only</button>
+      <button type="button" role="tab" class="debtModeBtn rentModeBtn" data-mode="rentFreemarket" aria-selected="false">Rent + Free Market</button>
     </div>
     <div class="summaryList">
       <!-- 1. Total Cost of Project -->
@@ -404,7 +404,7 @@ body.is-completed .calc-summary-row    { display: none; }
       <h2>Project assumptions</h2>
       <div class="group">
         <div class="label">Project</div>
-        <select id="projectSelect"></select>
+        <select id="projectSelect" aria-label="Project"></select>
       </div>
       <!-- Vacancy rate — visible for ALL projects (including Completed),
            because it's a forward-looking assumption the user controls.
@@ -415,7 +415,7 @@ body.is-completed .calc-summary-row    { display: none; }
       <div class="group" id="vacancyRateGroup">
         <div class="label">Vacancy rate (%)</div>
         <div class="slider-group vacancy-highlight">
-          <input id="vacancyRate" type="range" value="25" min="0" max="100" step="1">
+          <input id="vacancyRate" aria-label="Vacancy rate (%)" type="range" value="25" min="0" max="100" step="1">
           <output for="vacancyRate" id="vacancyRateLabel">25%</output>
         </div>
         <p class="legend-note">Reduces modeled rent income across the project. Default 25% approximates current Telluride affordable-housing vacancy — drag to 0% to model a fully occupied building, or higher to stress-test slower lease-up.</p>
@@ -428,7 +428,7 @@ body.is-completed .calc-summary-row    { display: none; }
       <div class="group" id="freeMarketPctGroup" style="display:none">
         <div class="label">Free market % of project</div>
         <div class="slider-group">
-          <input id="freeMarketPct" type="range" value="50" min="0" max="100" step="1">
+          <input id="freeMarketPct" aria-label="Free market percent of project" type="range" value="50" min="0" max="100" step="1">
           <output for="freeMarketPct" id="freeMarketPctLabel">50%</output>
         </div>
         <p class="legend-note">Share of total units sold at market rate. The remaining (100% − this) is rented to households at the AMI mix below. Drag lower to shrink the market-rate share — the Required Sale Price per market unit rises because fewer units must cover the same project gap.</p>
@@ -449,34 +449,34 @@ body.is-completed .calc-summary-row    { display: none; }
       -->
       <div class="group editable-assumption">
         <div class="label">Construction cost / sf</div>
-        <input id="costPerSf" type="number" value="1000" step="50">
+        <input id="costPerSf" aria-label="Construction cost per square foot" type="number" value="1000" step="50">
       </div>
       <div class="group editable-assumption" id="unitsInputGroup">
         <div class="label">Housing units</div>
-        <input id="unitsInput" type="number" value="225" min="1" step="1">
+        <input id="unitsInput" aria-label="Housing units" type="number" value="225" min="1" step="1">
         <p id="sfPerUnitNote" class="legend-note" style="display:none">Fixed at <span id="sfPerUnitValue">—</span> sf per home; total residential sf scales with this unit count.</p>
       </div>
       <div class="group editable-assumption">
         <div class="label">Interest rate</div>
-        <input id="interest" type="number" value="6" step="0.25">
+        <input id="interest" aria-label="Interest rate (%)" type="number" value="6" step="0.25">
       </div>
       <div class="group editable-assumption">
         <div class="label">Term, years</div>
-        <input id="term" type="number" value="30" step="1">
+        <input id="term" aria-label="Term in years" type="number" value="30" step="1">
       </div>
       <div class="group editable-assumption" id="balloonPaymentGroup">
         <div class="label">User-added balloon payment due at end of loan</div>
-        <input id="balloonPayment" type="text" value="0" inputmode="numeric">
+        <input id="balloonPayment" aria-label="User-added balloon payment due at end of loan" type="text" value="0" inputmode="numeric">
         <p class="legend-note">Balloon method used here: the non-balloon principal is amortized annually; the balloon principal pays interest each year and remains due at maturity. This lowers annual debt service only modestly because interest still accrues on the balloon amount.</p>
       </div>
       <div class="group editable-assumption">
         <div class="label">Project AMI mix</div>
-        <div class="inputRow" data-ami="50"><span>50% AMI</span><input id="draftMix50" type="number" value="17" step="1"></div>
-        <div class="inputRow" data-ami="75"><span>75% AMI</span><input id="draftMix75" type="number" value="17" step="1"></div>
-        <div class="inputRow" data-ami="100"><span>100% AMI</span><input id="draftMix100" type="number" value="17" step="1"></div>
-        <div class="inputRow" data-ami="125"><span>125% AMI</span><input id="draftMix125" type="number" value="17" step="1"></div>
-        <div class="inputRow" data-ami="150"><span>150% AMI</span><input id="draftMix150" type="number" value="16" step="1"></div>
-        <div class="inputRow" data-ami="175"><span>175% AMI</span><input id="draftMix175" type="number" value="16" step="1"></div>
+        <div class="inputRow" data-ami="50"><span>50% AMI</span><input id="draftMix50" aria-label="Units at 50% AMI" type="number" value="17" step="1"></div>
+        <div class="inputRow" data-ami="75"><span>75% AMI</span><input id="draftMix75" aria-label="Units at 75% AMI" type="number" value="17" step="1"></div>
+        <div class="inputRow" data-ami="100"><span>100% AMI</span><input id="draftMix100" aria-label="Units at 100% AMI" type="number" value="17" step="1"></div>
+        <div class="inputRow" data-ami="125"><span>125% AMI</span><input id="draftMix125" aria-label="Units at 125% AMI" type="number" value="17" step="1"></div>
+        <div class="inputRow" data-ami="150"><span>150% AMI</span><input id="draftMix150" aria-label="Units at 150% AMI" type="number" value="16" step="1"></div>
+        <div class="inputRow" data-ami="175"><span>175% AMI</span><input id="draftMix175" aria-label="Units at 175% AMI" type="number" value="16" step="1"></div>
         <div class="inputRow" data-ami="200" style="display:none"><span>200% AMI</span><input id="draftMix200" type="number" value="0" step="1"></div>
         <div class="mixWarning" id="mixWarning">AMI mix must total 100% before changes can be applied. Current draft total: <span id="mixTotal">—</span>%.</div>
         <div class="mixActions">
