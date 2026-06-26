@@ -134,7 +134,13 @@ const NEWS_FEEDS = [
 ];
 
 // ── Telluride Times scrape config ──
-const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*&l=50&s=start_time&sd=desc';
+// NOTE: keep `gallery,gallery/*` in the category list. TT files some real
+// news stories (photo-led community coverage) under /gallery/news/ as
+// `article` assets; without these categories the search RSS silently drops
+// them. Verified 2026-06-26: "Pride bike ride on Sunday" lived at
+// /gallery/news/ and never reached the feed. Gallery volume is tiny (~1 item
+// per 50) and the local-news.html relevance filters still apply downstream.
+const TELLURIDE_TIMES_RSS = 'https://www.telluridenews.com/search/?f=rss&t=article&c=news,news/*,news_release,news_release/*,business,business/*,sports,sports/*,opinion,opinion/*,obituaries,norwood_post,norwood_post/*,the_norwood_post,the_norwood_post/*,arts_and_entertainment,arts_and_entertainment/*,gallery,gallery/*&l=50&s=start_time&sd=desc';
 // KOTO uses two category-specific feeds; the catch-all /feed/ misses some posts.
 const KOTO_NEWSCASTS_RSS = 'https://koto.org/news-category/newscasts/feed/';
 const KOTO_FEATURED_RSS = 'https://koto.org/news-category/featured-stories/feed/';
