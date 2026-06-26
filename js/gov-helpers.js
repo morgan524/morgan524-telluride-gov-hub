@@ -203,6 +203,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
+    {"sv":4},
+
+  "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
     {"sv":4}
 };
 
@@ -385,7 +388,7 @@ const MANUAL_SUMMARIES = {
     "The July 21, 2026 Town Council agenda hasn't been posted yet.",
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
-    "The July 22 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
+    "The July 22 San Miguel County Board of County Commissioners Special Meeting has been posted, but no agenda detail has been released beyond the meeting type itself. Special meetings are called for specific business outside the regular cycle — what that business is here isn't yet public.",
 
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
     "The July 23, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
@@ -406,7 +409,10 @@ const MANUAL_SUMMARIES = {
     "The July 8 Special BOCC meeting in Norwood at the Sheriff Annex has been posted, but no agenda items have been listed beyond the meeting title itself. Nothing to summarize yet.",
 
   "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
-    "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda."
+    "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.",
+
+  "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
+    "The July 8, 2026 Ecology Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -493,6 +499,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Elevated fare, lively scene",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "community",
+    copy: "Kenny Rosen and Michael Goller — the team behind Uno, Dos, Tres, the Tunnel, and the Cornerhouse — opened Cuatro, Cinco, Seis on West Pacific in June. The Mexican restaurant aims for a middle price point with an elevated, chef-driven menu and a cocktail program drawing early notice. Breakfast, lunch, and dinner served; patio is open.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_84f92a95-eaa0-4b07-805a-6208792f13d1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/47/f47f9cf1-3ca7-4aef-8334-6d85a8ecc5cb/6a3d896e8530e.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘I just wanted to create’",
     source: "Telluride Times",
@@ -4476,6 +4494,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Girl Scout Cookie Booth",
+    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
+    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    pubDate: "2026-07-26T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
+  },
+  {
+    title: "Sunday Rehab: Apres Edition",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
+    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    pubDate: "2026-07-26T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   }
 ];
 
