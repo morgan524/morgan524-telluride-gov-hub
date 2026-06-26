@@ -508,6 +508,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: 'Pride bike ride on Sunday',
+    source: 'Telluride Times',
+    date: 'June 25, 2026',
+    firstSeen: '2026-06-26',
+    newsTopic: 'community',
+    copy: 'A community Pride Month bike ride rolls out Sunday, June 28 at 3:30 p.m. from Town Park, heading west on Pacific Avenue with stops to dance at Lift 7 and the La Cocina patio. Organizers welcome riders of "all ages, all wheels, allies."',
+    claudeSummary: true,
+    href: 'https://www.telluridenews.com/gallery/news/article_5eac6236-2641-4037-891c-5bcf2673674f.html',
+    img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/41/b4101119-ceec-40a0-a546-273c5b5851cb/6a3d905776e2b.image.jpg',
+    imgHiRes: true
+  },
+  {
     title: 'Elevated fare, lively scene',
     source: 'Telluride Times',
     date: 'June 26, 2026',
@@ -1891,8 +1903,7 @@ const LOCAL_NEWS_FEATURED = [
     img: "/images/blog/telluride-paradise-fire.jpg",
     category: "Opinion",
     isLetter: true,
-    letterAuthor: "Kate Fedack",
-    featured: true
+    letterAuthor: "Kate Fedack"
   }
 ];
 
