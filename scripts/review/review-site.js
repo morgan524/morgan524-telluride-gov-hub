@@ -30,12 +30,14 @@ const MODEL = process.env.REVIEW_MODEL || SONNET;
 const SITE = process.env.REVIEW_SITE || 'https://livabletelluride.org';
 const OUT = path.join(__dirname, 'site-review.json');
 const REPO_ROOT = path.resolve(__dirname, '..', '..');
+const REPO = process.env.REVIEW_REPO || 'morgan524/morgan524-telluride-gov-hub';
 
 const args = process.argv.slice(2);
 const flag = (f) => args.includes(f);
 const valOf = (f, d) => { const i = args.indexOf(f); return i >= 0 && args[i + 1] ? args[i + 1] : d; };
 const LIMIT = parseInt(valOf('--limit', '0'), 10);
 const CONC = parseInt(valOf('--concurrency', '4'), 10);
+const ISSUE_TITLE = valOf('--issue-title', null);
 const NO_AI = flag('--no-ai');
 const NO_VERIFY = flag('--no-verify');
 const NO_ISSUE = flag('--no-issue');
@@ -86,6 +88,7 @@ function buildIssueBody(pages, siteWide, summary) {
   const counts = all.reduce((m, f) => ((m[f.severity] = (m[f.severity] || 0) + 1), m), {});
   const tag = { critical: '🟥', high: '🟧', medium: '🟨', low: '⬜' };
   let md = '';
+  md += `_Updated ${new Date().toUTCString()}_\n\n`;
   if (summary) md += `${summary}\n\n`;
   md += `**${ok.length} pages reviewed** · ${all.length} findings: `
     + ['critical', 'high', 'medium', 'low'].map((s) => `${counts[s] || 0} ${s}`).join(' · ')
@@ -169,9 +172,24 @@ async function pool(items, n, fn) {
   console.log(`  Report: ${path.relative(REPO_ROOT, OUT)}`);
 
   if (NO_ISSUE) { console.log(`  (--no-issue) Issue body written to ${bodyFile}\n`); return; }
+  // Rolling issue: with --issue-title, update the open issue of that exact title
+  // (no daily spam); otherwise open a fresh dated issue (manual one-off runs).
   const date = new Date().toISOString().slice(0, 10);
+  const title = ISSUE_TITLE || `🔎 Full-site review — ${date}`;
   try {
-    const url = execFileSync('gh', ['issue', 'create', '--repo', 'morgan524/morgan524-telluride-gov-hub', '--title', `🔎 Full-site review — ${date}`, '--body-file', bodyFile], { encoding: 'utf8' }).trim();
-    console.log(`  ✓ Opened issue: ${url}\n`);
-  } catch (e) { console.log(`  ✗ Could not open issue (${String(e.message || e).slice(0, 80)}). Body at ${bodyFile}\n`); }
+    let num = null;
+    if (ISSUE_TITLE) {
+      try {
+        const list = JSON.parse(execFileSync('gh', ['issue', 'list', '--repo', REPO, '--state', 'open', '--search', 'in:title ' + ISSUE_TITLE, '--json', 'number,title'], { encoding: 'utf8' }));
+        const m = list.find((i) => i.title === ISSUE_TITLE); if (m) num = m.number;
+      } catch (e) { /* fall through to create */ }
+    }
+    if (num) {
+      execFileSync('gh', ['issue', 'edit', String(num), '--repo', REPO, '--body-file', bodyFile], { encoding: 'utf8' });
+      console.log(`  ✓ Updated issue #${num}: ${title}\n`);
+    } else {
+      const url = execFileSync('gh', ['issue', 'create', '--repo', REPO, '--title', title, '--body-file', bodyFile], { encoding: 'utf8' }).trim();
+      console.log(`  ✓ Opened issue: ${url}\n`);
+    }
+  } catch (e) { console.log(`  ✗ Could not write issue (${String(e.message || e).slice(0, 100)}). Body at ${bodyFile}\n`); }
 })().catch((e) => { console.error(e); process.exit(1); });
