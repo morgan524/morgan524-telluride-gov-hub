@@ -209,8 +209,32 @@ async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
   return callClaude({ model: MODEL, max_tokens: 700, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
 }
 
+// ── Email-approval mode (--approval) ──
+// Instead of publishing recaps straight to MEETING_RECAPS, POST each to the
+// editorial Worker as a kind:"recap" draft. The Worker stores it + emails a
+// Review link (Approve / Edit / Deny). An approved recap is later published to
+// MEETING_RECAPS by publish-approved-recaps.js. Reuses the editorial backend.
+const WORKER = process.env.EDITORIAL_WORKER || 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev';
+const EDITORIAL_SECRET = process.env.EDITORIAL_SECRET || '';
+const APPROVAL = args.includes('--approval');
+
+function httpJson(method, url, body) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const data = body ? JSON.stringify(body) : null;
+    const req = https.request({ hostname: u.hostname, path: u.pathname + u.search, method,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, data ? { 'Content-Length': Buffer.byteLength(data) } : {}), timeout: 30000 },
+      (res) => { let d = ''; res.on('data', (c) => { d += c; }); res.on('end', () => { try { resolve({ status: res.statusCode, json: JSON.parse(d || '{}') }); } catch (e) { resolve({ status: res.statusCode, json: {} }); } }); });
+    req.on('error', reject); req.on('timeout', () => { req.destroy(); reject(new Error('worker timeout')); });
+    if (data) req.write(data); req.end();
+  });
+}
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const recapDraftId = (sourceKey, date, title) => 'recap-' + sourceKey + '-' + date + '-' + bodyToken(title).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY && !DRY) { console.error('  ✗ ANTHROPIC_API_KEY not set'); process.exit(1); }
+  if (APPROVAL && !EDITORIAL_SECRET) { console.error('  ✗ --approval needs EDITORIAL_SECRET'); process.exit(1); }
 
   let src = fs.readFileSync(GOV_HELPERS, 'utf8');
   const existing = extractJsArray(src, 'MEETING_RECAPS') || [];
@@ -232,6 +256,15 @@ async function main() {
       if (!FORCE && (age > DAYS || age < 0)) continue;
       const meetKey = `${ch.sourceKey}|${date}|${bodyToken(v.title)}`;
       if (!FORCE && (seenVideo.has(videoUrl) || seenMeeting.has(meetKey))) continue;
+      const draftId = recapDraftId(ch.sourceKey, date, v.title);
+      // Approval mode: also skip meetings already sent for approval / decided
+      // (pending, approved, denied) so we don't re-email the same meeting.
+      if (APPROVAL && !FORCE) {
+        try {
+          const ex = await httpJson('GET', `${WORKER}/article-exists?id=${encodeURIComponent(draftId)}&secret=${encodeURIComponent(EDITORIAL_SECRET)}`);
+          if (ex.json && ex.json.exists) { console.log(`  · already sent (${ex.json.status})  ${date}  ${v.title}`); continue; }
+        } catch (e) { /* if the check fails, /article-create dedups anyway */ }
+      }
       if (added.length >= LIMIT) { console.log(`  (reached --limit ${LIMIT})`); break; }
 
       console.log(`  ★ ${ch.sourceKey}  ${date}  ${v.title}`);
@@ -245,9 +278,24 @@ async function main() {
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
       if (!out || !out.recap) { console.log('      ✗ empty recap'); continue; }
 
-      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), videoUrl });
+      const title = (out.title || v.title).trim();
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
-      console.log(`      ✓ ${out.title}`);
+      if (APPROVAL) {
+        // Send the recap to the Worker as a kind:"recap" draft → emails a Review link.
+        const draft = { id: draftId, slug: draftId, kind: 'recap', title,
+          bodyHtml: '<p>' + esc(out.recap.trim()) + '</p>',
+          meetingKey: `${ch.sourceKey}|${date}|${v.title}`,
+          source: ch.sourceKey, sourceLabel: ch.sourceLabel, bodyLabel: ch.sourceLabel,
+          meetingDate: date, videoUrl, dek: '' };
+        try {
+          const res = await httpJson('POST', `${WORKER}/article-create`, { secret: EDITORIAL_SECRET, draft });
+          if (res.json && res.json.ok) { added.push({ draftId }); console.log(`      ✉ ${res.json.skipped ? 'already pending' : 'emailed for approval'}: ${title}`); }
+          else console.log(`      ✗ create failed: ${(res.json && res.json.msg) || res.status}`);
+        } catch (e) { console.log(`      ✗ create error: ${e.message}`); }
+        continue;
+      }
+      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title, recap: out.recap.trim(), videoUrl });
+      console.log(`      ✓ ${title}`);
     }
     if (added.length >= LIMIT) break;
   }
@@ -255,6 +303,7 @@ async function main() {
   console.log('  ' + '─'.repeat(64));
   if (!added.length) { console.log('  No new recaps.'); return; }
   if (DRY) { console.log(`  ${added.length} candidate(s) (dry run — nothing written).`); return; }
+  if (APPROVAL) { console.log(`  ✉ ${added.length} recap(s) sent for email approval — nothing published until you approve.`); return; }
 
   // Prepend, dedup by videoUrl (new wins), newest-first, cap length.
   const merged = [...added, ...existing];

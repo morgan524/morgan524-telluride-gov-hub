@@ -7,7 +7,9 @@
 # from GitHub runner datacenter IPs (verified — runs succeed but get 0-char
 # transcripts). A residential IP (this Mac) works. So recaps run here.
 #
-# Does: pull main → generate recaps (yt-dlp + Claude) → commit + push, if any.
+# Does: pull main → generate recaps (yt-dlp + Claude) → EMAIL each for approval
+# via the editorial Worker (--approval). Nothing is published here; an approved
+# recap is written to MEETING_RECAPS by the Recap Publish workflow (cloud).
 # Idempotent and safe to run daily; a no-op when there are no new meetings.
 # ════════════════════════════════════════════════════════════════════
 set -uo pipefail
@@ -33,26 +35,15 @@ cd "$REPO" || { log "FATAL: cannot cd $REPO"; exit 1; }
 
 log "Starting. repo=$REPO"
 
-# Discard any leftover uncommitted recap edits (regenerable) so the pull is clean.
+# Editorial secret — authenticates this job to the Worker for the email-approval
+# flow (handled like the API key: a small file in $HOME, never in the repo).
+if [ ! -f "$HOME/.editorial_secret" ]; then log "FATAL: ~/.editorial_secret missing"; exit 1; fi
+export EDITORIAL_SECRET="$(cat "$HOME/.editorial_secret")"
+
+# Pull so dedup sees the latest published recaps. We don't commit here — drafting
+# only emails for approval; publishing is the cloud Recap Publish workflow's job.
 git checkout -- js/gov-helpers.js 2>/dev/null || true
-if ! git pull --ff-only origin main; then log "FATAL: git pull --ff-only failed"; exit 1; fi
+git pull --ff-only origin main 2>/dev/null || log "pull failed (continuing; dedup may be slightly stale)"
 
-if ! node scripts/meeting-recaps.js; then log "recap script exited non-zero"; exit 1; fi
-
-if [ -z "$(git status --porcelain js/gov-helpers.js)" ]; then
-  log "No new recaps — nothing to commit."
-  exit 0
-fi
-
-git add js/gov-helpers.js
-git -c user.name="Gov Hub Bot" -c user.email="bot@livabletelluride.org" \
-  commit -m "📝 Auto meeting recaps $(date +%F)" || { log "commit failed"; exit 1; }
-
-# The content bot pushes to main on its own schedule; rebase our single
-# MEETING_RECAPS change on top (conflict-free since nothing else writes it).
-if ! git pull --rebase origin main; then
-  log "rebase failed — aborting and bailing"; git rebase --abort 2>/dev/null || true; exit 1;
-fi
-if ! git push origin main; then log "push failed"; exit 1; fi
-
-log "Pushed new recaps."
+if ! node scripts/meeting-recaps.js --approval; then log "recap script exited non-zero"; exit 1; fi
+log "Done — new recaps (if any) were emailed for approval."

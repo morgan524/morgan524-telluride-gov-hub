@@ -1,0 +1,53 @@
+name: Recap Publish
+
+# Publish side of the recap email-approval gate. Every 15 minutes, asks the
+# editorial Worker for recaps you've APPROVED, writes them into MEETING_RECAPS,
+# commits, then marks them published. Cheap when idle (no approved recaps → no
+# changes → commit skipped). No YouTube/Playwright needed — runs in the cloud.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recap-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Write approved recaps into MEETING_RECAPS
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: |
+          set -o pipefail
+          node scripts/publish-approved-recaps.js 2>&1 | tee /tmp/recap-publish.log
+      - name: Commit & push
+        id: commit
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          if [ -n "$(git status --porcelain js/gov-helpers.js)" ]; then
+            git add js/gov-helpers.js
+            git commit -m "📝 Publish approved meeting recap(s)"
+            git pull --rebase origin main
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No approved recaps to publish."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Mark recaps published (only after the commit landed)
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: node scripts/publish-approved-recaps.js --mark
