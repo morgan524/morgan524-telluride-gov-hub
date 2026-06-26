@@ -191,6 +191,16 @@
       border: 0;
       display: block;
     }
+    .house-img-wrap .house-map-ph {
+      width: 100%; height: 100%; border: 0; cursor: pointer;
+      -webkit-appearance: none; appearance: none; font: inherit;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+      background: var(--bg-hero, #efe9dc); color: var(--forest, #21443c);
+      font-weight: 700; font-size: 0.88rem;
+    }
+    .house-img-wrap .house-map-ph:hover { background: #e6dfce; }
+    .house-img-wrap .house-map-ph:focus-visible { outline: 2px solid var(--forest, #21443c); outline-offset: -3px; }
+    .house-map-ph-pin { font-size: 1.7rem; line-height: 1; }
     .type-pill {
       position: absolute;
       top: 12px;
@@ -649,8 +659,15 @@
         const bbox = (l.lng - 0.008) + ',' + (l.lat - 0.005) + ',' + (l.lng + 0.008) + ',' + (l.lat + 0.005);
         const mapSrc = 'https://www.openstreetmap.org/export/embed.html?bbox=' + bbox
           + '&layer=mapnik&marker=' + l.lat + ',' + l.lng;
-        visualHtml = '<iframe class="house-map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" '
-          + 'src="' + mapSrc + '" title="Map: ' + (l.title || '') + '"></iframe>';
+        // Click-to-load: many OpenStreetMap embed iframes loading at once get
+        // rate-limited by OSM (→ blank maps). Load each iframe only on demand.
+        const mapAttr = mapSrc.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+        const mapTitle = (l.title || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+        visualHtml = '<button type="button" class="house-map house-map-ph" '
+          + 'data-mapsrc="' + mapAttr + '" data-maptitle="' + mapTitle + '" '
+          + 'aria-label="Show map for ' + mapTitle + '">'
+          + '<span class="house-map-ph-pin" aria-hidden="true">📍</span>'
+          + '<span class="house-map-ph-label">Show map</span></button>';
       } else if (l.img) {
         visualHtml = '<img src="' + l.img + '" alt="' + (l.title || '') + '" onerror="this.style.display=\'none\'">';
       }
@@ -718,6 +735,20 @@
       grid.innerHTML = filtered.length
         ? filtered.map(houseCard).join('')
         : '<div class="empty">No listings match this filter.</div>';
+
+      // Load each OpenStreetMap embed only when its placeholder is clicked —
+      // one request at a time instead of many at once (avoids OSM rate-limiting).
+      grid.querySelectorAll('.house-map-ph').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const ifr = document.createElement('iframe');
+          ifr.className = 'house-map';
+          ifr.loading = 'lazy';
+          ifr.referrerPolicy = 'no-referrer-when-downgrade';
+          ifr.src = btn.getAttribute('data-mapsrc');
+          ifr.title = 'Map: ' + (btn.getAttribute('data-maptitle') || '');
+          btn.replaceWith(ifr);
+        });
+      });
 
       document.querySelectorAll('.filter-opt[data-filter]').forEach(btn => {
         btn.addEventListener('click', () => {
