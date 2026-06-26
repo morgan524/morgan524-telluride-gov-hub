@@ -427,6 +427,14 @@ const MEETING_RECAPS = [
   {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
+    date: "2026-06-17",
+    title: "HARC — Jun 17, 2026",
+    recap: "HARC voted to continue the flood-elevation raise request for 239 North Aspen (5-1) to the July 15 meeting, directing staff to provide a detailed written explanation of which flood-plain code interpretation changed to require the structure to be lifted. For 566 West Columbia, HARC approved a certificate-of-appropriateness amendment allowing the contributing primary structure to be raised an additional 3¼ inches to meet the flood-protection elevation (4-1). For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials. Two individual-property items were continued to the August 19 meeting.",
+    videoUrl: "https://www.youtube.com/watch?v=3naByhxnyjE"
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
     date: "2026-06-09",
     title: "Town Council — Jun 9, 2026",
     videoUrl: "https://www.youtube.com/watch?v=vxrKceCqXaM",
