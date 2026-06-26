@@ -95,22 +95,22 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    {"sv":2},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/oQIoNRzgRC-zUdrPFaFzpQ","meetingId":"843 9146 6771","passcode":"793419.","phone":"719) 359-4580"},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/oQIoNRzgRC-zUdrPFaFzpQ","meetingId":"843 9146 6771","passcode":"793419.","phone":"719) 359-4580"},
 
   "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026":
     {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg","meetingId":"846 6324 0731","passcode":"769982","phone":"301-715-8592"},
@@ -128,7 +128,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    {"sv":2},
+    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg","meetingId":"828 4833 4181","passcode":"562164","phone":"719-359-4580"},
 
   "county|2026-07-08|Board of County Commissioners Work Session":
     {"sv":2},
@@ -140,22 +140,22 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/webinar/register/WN_XDMlJEPIRy6V3a5BeMEfCQ","phone":"970-369-6429","sv":2},
 
   "county|2026-07-14|Historical Commission":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
-    {"sv":2},
+    {"sv":4},
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    {"sv":2},
+    {"sv":4},
 
   "med|2026-06-25|Regular Board Meeting":
     {"zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558","sv":2},
@@ -170,7 +170,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    {"sv":2},
+    {"sv":4},
 
   "county|2026-07-08|Board of County Commissioners Special":
     {"sv":2},
@@ -179,31 +179,31 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-21|Town Council - Jul 21 2026":
-    {"sv":2},
+    {"sv":4},
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
-    {"sv":2},
+    {"sv":4},
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026 - Cancelled":
     {"sv":2},
 
   "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
-    {"zoomUrl":"https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1","meetingId":"861 6939 9856","passcode":"690306","phone":"970-728-3844","sv":2},
+    {"zoomUrl":"https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1","meetingId":"861 6939 9856","passcode":"690306","phone":"970-728-3844","sv":4},
 
   "county|2026-06-29|San Miguel Basin Fair Board":
-    {"sv":2},
+    {"sv":4},
 
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
-    {"sv":2},
+    {"sv":4},
 
   "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
-    {"sv":2}
+    {"sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -301,7 +301,7 @@ const MANUAL_SUMMARIES = {
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "A full agenda for June 30. The most consequential item is first reading of Land Use Code amendments ahead of Colorado Wildfire Resiliency Code implementation — the kind of code change that will set the baseline for how development and fire risk interact in the box canyon for years to come. Council also takes up second readings on two property sales (907 East Colorado Avenue and Longwill 16 Unit B3), a tap fee waiver IGA with the Telluride School District, and a renewal of the Black Hills Energy gas franchise. An emergency ordinance banning open fires and fireworks rounds out the public hearing docket — not unusual for late June. A work session on the Telluride Energy Mitigation Program looks at updates to energy use offset calculations and fees. Community survey results get a work session too.",
+    "A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.",
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
@@ -313,10 +313,10 @@ const MANUAL_SUMMARIES = {
     "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The July 1, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "The Liquor Licensing Authority takes up 14 special event permit requests at its July 1 meeting — a busy slate that tracks the canyon's summer season in full swing. Applicants include Palm Arts Inc. (AVID Dance Performance, Camp Alderwild), Telluride Mountain Club (Mountain Run, Telluride Reserve), Telluride Medical Center Foundation (Telluride Table across multiple venues), San Miguel Mentoring (Top Chef & Taste of Telluride), Tri-County Health Network (Noche de Luz), Telluride Chamber Music Association (New York Philharmonic Brass Quintet), Telluride Society for Jazz (Jazz Festival), Telluride Film Festival, and Telluride Bluegrass Beer Booth Inc. (Camp Alderwild). Events span July through early September 2026. The board will also approve minutes from the May 21 meeting.",
 
   "county|2026-07-01|Board of County Commissioners Meeting":
-    "The July 1, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "A relatively routine July BOCC meeting, though a few items are worth tracking. The board will interview an applicant for an alternate seat on the Planning Commission — a slot that matters whenever land-use decisions get close. There's a 40-minute presentation on the Road and Bridge High Country Road opening policy, with the Forest Service at the table, which touches on access to the county's backcountry roads every season. The board will also take up an ADA policy update, a tax abatement denial, and board appointments to the Behavioral Health Solutions Panel. The attorney's agenda includes an executive session on a code enforcement matter — no details given, as is typical.",
 
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     "The county's Board of Review and Planning Commission will hear a presentation on Colorado's new Low Energy and Carbon Code — building standards that could reshape how structures get approved in the box canyon.",
@@ -364,10 +364,10 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    "A short one for this session. The Telluride Housing Authority meets June 30 to approve minutes from May and handle two organizational items: appointing members to a newly forming Resident Advisory Committee, then conducting a random drawing to stagger member terms. The advisory committee structure is worth watching — resident voice in housing decisions has been a recurring tension in the valley.",
+    "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
 
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
@@ -397,16 +397,16 @@ const MANUAL_SUMMARIES = {
     "The June 25, 2026 Planning & Zoning Commission Chair meeting has been cancelled.",
 
   "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The Planning Commission and BOCC are sitting down together on July 9 for a joint work session — no votes, just the kind of structured conversation that shapes what comes next. On the table: proposed Land Use Code amendments touching forestry practices, oil and gas operations, and deep geothermal — three extraction-adjacent categories that rarely share an agenda line. The session also covers proposed changes to condominium plat rules and the PUD and subdivision sections of the code. Work sessions like this are where the language gets negotiated before it ever reaches a public hearing.",
+    "The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.",
 
   "county|2026-06-29|San Miguel Basin Fair Board":
-    "The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda is a skeleton — call to order, minutes from June 8th, and a catch-all new/old business block with no items listed. Whatever the board actually intends to discuss hasn't made it onto the public agenda yet.",
+    "The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda is a shell — minutes approval and generic \"new/old business\" placeholders, with no specific items listed. There's no detail on what the board actually plans to discuss.",
 
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
-    "The July 8 BOCC Special Meeting agenda hasn't been posted yet.",
+    "The July 8 Special BOCC meeting in Norwood at the Sheriff Annex has been posted, but no agenda items have been listed beyond the meeting title itself. Nothing to summarize yet.",
 
   "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
-    "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions of the Ouray County Land Use Code. Definitions work sessions like this one are often where the real shaping happens — how terms get defined in a land use code sets the boundaries for nearly every permit decision and zoning dispute that follows. No votes are expected; this is a review and discussion session, with packet materials attached to the agenda."
+    "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -493,6 +493,54 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘I just wanted to create’",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "arts-culture",
+    copy: "Ridgway-based artist Brittany Miller — who spent 25 years coaching skating in Telluride and has shown work at Slate Gray and other local venues — was recently tapped by Telluride Arts to lead a Creative Exchange on how life's mistakes shaped her path. She opened Fine Art and Framing in Ridgway in 2020 and still teaches at Ah Haa.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_048ca257-ae6b-4c9e-8f24-340f82d86ff3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b9/ab99ad6e-a264-4e03-b48e-812b612a79b9/6a3ad8a8c2753.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Brothers are accused of mishandling remains of two dozen people at Colorado funeral home",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "public-safety",
+    copy: "Two brothers who owned Davis Mortuary in Pueblo were arrested after inspectors found remains of roughly two dozen people stored in deeply improper conditions, including possible false ashes given to families. The case triggered under Colorado's new 2024 funeral home inspection rules, adopted after years of weak industry oversight statewide.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_91985d3f-af2a-53cf-b832-965c5f237d75.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/a8/5a873b17-7247-5c9e-9319-d34888cd243e/6a3dbe2d7007a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village moves forward with accelerated housing review",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "land-use",
+    copy: "Mountain Village council approved an expedited review process for affordable housing projects — a step required to stay eligible for Colorado's Proposition 123 funds. Projects where at least half the units are affordable can now move through a faster approval track. The move also positions the town for up to $45,000 in additional grant funding if adopted before July 2026.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8c40ad7e-1a8a-43fa-9a8f-db59ce5a5d0a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66bb1f2-ebae-45fd-a67f-ab084607de68/6a3d859147699.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Towns, County announce stage 2 fire restrictions",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "public-safety",
+    copy: "Stage 2 fire restrictions are now in effect for the Town of Telluride, its open spaces and roads, and all unincorporated San Miguel County land. Restrictions ban open fires, most grilling, smoking outdoors, fireworks, and combustion engines without spark arrestors. National forest lands nearby remain under the less-restrictive Stage 1.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1ee452dd-dff5-43ac-9077-15181bf7b98c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6b/46b7ec9d-e334-4944-94e0-33175696b1bf/6a3d8ea2ea92a.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "New chapter for ‘oldest continuously owned business in Telluride’",
     source: "Telluride Times",
@@ -1290,15 +1338,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Black Bear Road (CR K69) Closure for Roadwork June 25, 2026 from 6:00 am to 5:00 pm",
-    source: "San Miguel County",
-    date: "June 22, 2026",
-    newsTopic: "infrastructure",
-    copy: "PUBLIC NOTICE – ROAD CLOSURE Black Bear Road (CR K69) Closure for Roadwork",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=531",
-    img: ""
-  },
-  {
     title: "Clerk's Office Shortened Office hours June 15-18 and June 29-July 2",
     source: "San Miguel County",
     date: "June 15, 2026",
@@ -1319,7 +1358,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 25, 2026",
+    date: "June 26, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1330,7 +1369,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 25, 2026",
+    date: "June 26, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1352,7 +1391,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 25, 2026",
+    date: "June 26, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1363,7 +1402,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 25, 2026",
+    date: "June 26, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1419,6 +1458,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 6-25-26",
+    source: "KOTO Community Radio",
+    date: "June 26, 2026",
+    newsTopic: "recreation",
+    copy: "West End Roundup with the San Miguel Basin Forum; Lions in the Mountains; Dwayne Romero Vies for Congress",
+    href: "https://koto.org/news/newscast-6-25-26/"
+  },
+  {
     title: "Newscast 6-24-26",
     source: "KOTO Community Radio",
     date: "June 25, 2026",
@@ -1457,14 +1504,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "On this week's Regional Roundup, we hear about a jazz festival in northern New Mexico that celebrates Indigenous jazz music. Then, we head to the Roaring Fork Valley on Colorado's Western Slope to hear about efforts to create safe passages for wildlife crossing highways. After that we head to Wyoming to hear how goats are being used for fire mitiga",
     href: "https://koto.org/news/newscast-6-12-26/"
-  },
-  {
-    title: "Newscast 6-11-26",
-    source: "KOTO Community Radio",
-    date: "June 12, 2026",
-    newsTopic: "public-safety",
-    copy: "Beehive Fire Burns Over 300 Acres; West End Roundup with the San Miguel Basin Forum; Music Comes to the Mesa",
-    href: "https://koto.org/news/newscast-6-11-26/"
   }
 ];
 
@@ -2276,17 +2315,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/TYF-2026-Social-Post-1080-x-1080-1.jpg"
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-25/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-25T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "The play \"12 Incompetent Jurors\" presented by the Norwood Community Players",
     link: "https://koto.org/event/the-play-12-incompetent-jurors-presented-by-the-norwood-community-players/",
     description: "Wide Sky Arts Collective and the Norwood Community Players present \"12 Incompetent Jurors\" &#8230; a parody by Ian McWethey and directed by local Claire Jacobs. Shows are at The Livery on June 25th, 26th, and 27th, doors at 6:30, show at 7, cash bar. The link for discounted advance tickets is at www.norwoodparkandrec.org .",
@@ -2736,6 +2764,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-03/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-07-03T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-07-03/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-07-03T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-07-03/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-07-03T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-03/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-07-03T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "6th Annual Alpine Cookout",
+    link: "https://koto.org/event/6th-annual-alpine-cookout/",
+    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
+    pubDate: "2026-07-03T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Reflection Plaza Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Foundation Rundola: Run for Good",
+    link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
+    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
+    pubDate: "2026-07-04T13:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
   }
 ];
 
@@ -2848,7 +2942,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-25"
+    lastSeen: "2026-06-26"
   }
 ];
 
@@ -2971,7 +3065,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    description: "The B-Side Players make music without borders or boundar...",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3163,7 +3257,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3175,7 +3269,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4044,7 +4138,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
+    description: "",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4055,7 +4149,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4066,7 +4160,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4077,7 +4171,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4088,7 +4182,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4099,7 +4193,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4110,7 +4204,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4121,7 +4215,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4132,17 +4226,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-06-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
   {
     title: "Music on the Green Presents LVDY",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-lvdy-2/",
@@ -4765,17 +4848,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
   },
   {
-    title: "Bosq x The National: A Colorado Culinary Homecoming",
-    link: "https://www.telluride.com/event/bosq-x-the-national-a-colorado-culinary-homecoming/",
-    description: "The National in Telluride is thrilled to welcome Chef Barclay Dodge of Aspen’s Michelin-starred Bosq for a …",
-    pubDate: "2026-06-24",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62503/bosq_x_the_national_collab.800x533.webp"
-  },
-  {
     title: "Telluride Yoga Festival",
     link: "https://www.telluride.com/event/telluride-yoga-festival/",
     description: "The longest running yoga festival in the country, the Telluride Yoga Festival is a four-day yoga and wellness gathering …",
@@ -4836,7 +4908,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
+    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -5085,7 +5157,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Fourth of July Drone Show",
     link: "https://www.telluride.com/event/fourth-of-july-drone-show/",
-    description: "A community drone show hosted by the Town of Telluride takes place at dusk on the Fourth of July. The aerial display marks Independence Day in Telluride.",
+    description: "Join the Town of Telluride for a Drone Show on the Fourth of July at dusk.",
     pubDate: "2026-07-04",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -7319,14 +7391,6 @@ function getTownAgendaLink(title, eventDate) {
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
   {
-    date: "June 25, 2026",
-    title: "Planning & Zoning Commission",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8098",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
-  {
     date: "June 30, 2026",
     title: "Telluride Housing Authority",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8283",
@@ -7426,6 +7490,14 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "September 22, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: ""
+  },
+  {
+    date: "September 24, 2026",
+    title: "Planning & Zoning Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""

@@ -1,18 +1,22 @@
 {
-  "hash": "4446d3efb28abb77740925cf327bce9230077050",
-  "lede": "The biggest item this week is Town Council's June 30 first reading of Land Use Code amendments tied to Colorado's Wildfire Resiliency Code — language that will shape how development and fire risk get handled in this box canyon for a long time to come. The Hospital District also meets June 25 to dig into mill levy considerations as the push for a new facility continues, and Planning and Zoning holds a work session on the Shandoka Lot Redevelopment Project, the major Town-owned redevelopment proposal that's worth keeping an eye on.",
+  "hash": "e5d3fcf66b4a8d73492d561167d5c3a8c97d7c75",
+  "lede": "The biggest thing on the calendar this week is the June 30th Town Council meeting, where council takes up first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — rules that directly shape how buildings go up in this box canyon, and worth showing up for. Council also holds a second work session on the Telluride Energy plan that same night. On the housing side, the Telluride Housing Authority meets June 30th to seat its new Resident Advisory Committee, drawing from fifteen tenant applicants across Town properties.",
   "notable": [
     {
-      "id": 5,
-      "stake": "First reading of wildfire code amendments sets lasting development and fire-risk rules."
-    },
-    {
-      "id": 0,
-      "stake": "Mill levy discussion could shape how the hospital district funds a new facility."
-    },
-    {
       "id": 1,
-      "stake": "Commission feedback on Shandoka redevelopment shapes the project before formal review begins."
+      "stake": "First reading: wildfire code changes could reshape how every building here gets built."
+    },
+    {
+      "id": 2,
+      "stake": "THA appoints new Resident Advisory Committee — tenant voice in housing decisions starts here."
+    },
+    {
+      "id": 7,
+      "stake": "BOCC interviews Planning Commission alternate; Forest Service presents on high-country road policy."
+    },
+    {
+      "id": 8,
+      "stake": "Ouray County rewriting Land Use Code definitions — terms that determine what triggers review."
     }
   ]
 }
