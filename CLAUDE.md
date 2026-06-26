@@ -121,12 +121,14 @@ clone of the same GitHub repo (only contains `index.html` from an early
 single-file phase). Don't conflate the two; commits go to the actual repo
 on GitHub, not into `repo/`.
 
-**Canonical local path (2026-06-20):** the working copy lives in Dropbox at
-`/Users/morgansmith/Dropbox (Personal)/Claude/Projects/Livable-Telluride2`
-(quote the path — it has a space + parens). Its `.git/` and `node_modules/`
+**Canonical local path (2026-06-26):** the working copy lives in Dropbox at
+`/Volumes/External/Dropbox (Personal)/Claude/Projects/Livable-Telluride2`
+(quote the path — it has a space + parens). Its `.git/` and `scripts/node_modules/`
 are marked `xattr -w com.dropbox.ignored 1` so Dropbox doesn't corrupt the
-repo. The old `~/Documents/Claude/Projects/Livable-Telluride2` copy is
-stale — don't edit it. See the `claude-files-dropbox-location` memory note.
+repo — keep that flag set on any new `node_modules`/`.git` here. The old
+`~/Documents/Claude/...` workspace was **retired 2026-06-26** (the whole
+`~/Documents/Claude` folder is being renamed/removed); don't look for it.
+See the `work-in-dropbox-copy` memory note.
 
 ## CRITICAL: maintenance.js parity sync is one-way (index.html canonical)
 
