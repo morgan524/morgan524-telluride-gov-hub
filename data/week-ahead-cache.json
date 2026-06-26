@@ -1,22 +1,22 @@
 {
-  "hash": "5c17ef79479cf38fd6687f0f334e448674805b7b",
-  "lede": "The biggest thing on the calendar this week is Town Council's June 30th first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — real changes to how buildings get built in a box canyon that knows fire. Council also holds a second work session on Telluride's Energy Mitigation program that same evening, while the Housing Authority meets to seat its new Resident Advisory Committee and conduct a tenant drawing across five properties.",
+  "hash": "0f52d8b5280d923e578495afc93a069dc503dd8c",
+  "lede": "The biggest thing on the calendar this week is Monday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's new wildfire resilience requirements goes in front of elected officials — in a box canyon surrounded by fire country, that's not a routine item. Council will also hold a second work session on the Telluride Energy Mitigation program, and the Housing Authority meets the same evening to seat its new Resident Advisory Committee and fill positions by random drawing from tenant applicants across five properties.",
   "notable": [
     {
       "id": 1,
-      "stake": "First reading: wildfire code changes that affect how all buildings are built here."
+      "stake": "First reading: wildfire resilience building-code changes affect how anything gets built here."
     },
     {
       "id": 2,
-      "stake": "THA appoints new Resident Advisory Committee; tenant drawing affects housing placements."
+      "stake": "THA seats new Resident Advisory Committee; tenant-drawn slots decided by lottery."
     },
     {
       "id": 7,
-      "stake": "County interviews Planning Commission applicant; High Country Road access policy discussed."
+      "stake": "BOCC interviews Planning Commission alternate; High Country Road access policy discussed with Forest Service."
     },
     {
       "id": 8,
-      "stake": "Land Use Code definition changes that shape what triggers zoning review in Ouray County."
+      "stake": "Ouray County rewriting land-use definitions — foundational language that shapes all future zoning decisions."
     }
   ]
 }
