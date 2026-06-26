@@ -51,3 +51,4 @@ content-review-findings.json
 content-review-actionable.log
 content-review-email.html
 scripts/review/last-review.json
+scripts/review/site-review.json
