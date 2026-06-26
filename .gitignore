@@ -52,3 +52,6 @@ content-review-actionable.log
 content-review-email.html
 scripts/review/last-review.json
 scripts/review/site-review.json
+scripts/editorial/.just-published.json
+scripts/editorial/draft-sample.json
+scripts/editorial/triage-report.json

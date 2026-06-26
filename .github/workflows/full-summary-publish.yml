@@ -1,0 +1,54 @@
+name: Full Summary Publish
+
+# Publish side of the Full Summary email-approval gate. Every 15 minutes, asks
+# the editorial Worker for full summaries you've APPROVED, renders each as a
+# /meetings/<slug>/ page, updates data/published-articles.json (which drives the
+# "Full Summary →" arrow under the meeting), commits, then marks them published.
+# Cheap when idle. No YouTube/Playwright — runs in the cloud.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: full-summary-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Render approved full summaries
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: |
+          set -o pipefail
+          node scripts/editorial/publish-approved.js 2>&1 | tee /tmp/full-summary-publish.log
+      - name: Commit & push
+        id: commit
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          if [ -n "$(git status --porcelain meetings data/published-articles.json)" ]; then
+            git add meetings data/published-articles.json
+            git commit -m "📄 Publish approved full meeting summary(ies)"
+            git pull --rebase origin main
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No approved full summaries."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Mark published (only after the commit landed)
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: node scripts/editorial/publish-approved.js --mark

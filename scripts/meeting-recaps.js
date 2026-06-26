@@ -209,8 +209,50 @@ async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
   return callClaude({ model: MODEL, max_tokens: 700, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
 }
 
+// ── FULL SUMMARY (--full-summaries) ──
+// Alongside the auto-published short recap, generate a LONGER transcript-based
+// write-up and POST it to the editorial Worker as a kind:"full-summary" draft,
+// which emails it for Approve/Edit/Deny. On approval it publishes a
+// /meetings/<slug> page and a "Full Summary →" arrow under the meeting's recap.
+// Only runs for meetings whose short recap succeeded (so SFR-suppressed
+// meetings get neither).
+const WORKER = process.env.EDITORIAL_WORKER || 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev';
+const EDITORIAL_SECRET = process.env.EDITORIAL_SECRET || '';
+const FULL_SUMMARIES = has('--full-summaries');
+function httpJson(method, url, body) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const data = body ? JSON.stringify(body) : null;
+    const req = https.request({ hostname: u.hostname, path: u.pathname + u.search, method,
+      headers: Object.assign({ 'Content-Type': 'application/json' }, data ? { 'Content-Length': Buffer.byteLength(data) } : {}), timeout: 30000 },
+      (res) => { let d = ''; res.on('data', (c) => { d += c; }); res.on('end', () => { try { resolve({ status: res.statusCode, json: JSON.parse(d || '{}') }); } catch (e) { resolve({ status: res.statusCode, json: {} }); } }); });
+    req.on('error', reject); req.on('timeout', () => { req.destroy(); reject(new Error('worker timeout')); });
+    if (data) req.write(data); req.end();
+  });
+}
+const summaryDraftId = (sourceKey, date, title) => 'fullsum-' + sourceKey + '-' + date + '-' + bodyToken(title).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+const FULL_SUMMARY_SYSTEM_PROMPT = `You are "Rick", the single named voice behind Livable Telluride (a Telluride, Colorado civic site). "Rick" is an internal persona only — NEVER name or sign it. You are writing a FULL SUMMARY of a government meeting from its video transcript — a thorough but readable account for residents who want the detail behind the short recap card.
+
+VOICE — knowing, not cynical; plainspoken; short sentences are fine; never flowery, never a press release; critical of processes/patterns, never of named individuals; not advocacy.
+
+WHAT TO WRITE:
+- A complete walk-through of what the body actually did: each substantive agenda item, the key discussion, the vote and tally (e.g. "4-2"), and the outcome (approved/denied/tabled/continued), plus money allocated and appointments.
+- Organize by item, most consequential first. 350-600 words. Plain HTML <p> paragraphs ONLY — no headings, lists, or markdown.
+- Ground EVERY fact in the transcript. Do NOT invent vote tallies, names, numbers, or outcomes. Auto-captions misspell names — only name a person if you're confident; otherwise "a councilmember" / "a commissioner".
+- PLANNING COMMISSION / P&Z / HARC: do NOT report individual single-family-residence reviews (COAs, flood-elevation raises, single-home design/variances/additions). Cover subdivisions, PUDs, rezonings, multi-family/affordable housing, commercial, civic buildings, and code/guideline amendments.
+
+OUTPUT — ONLY valid JSON, no prose, no code fence:
+{"title":"Body — Mon D, YYYY","dek":"one-sentence standfirst, ~25-40 words","bodyHtml":"<p>…</p><p>…</p>"}`;
+
+async function fullSummaryFromTranscript(ch, isoDate, videoTitle, transcript) {
+  const userPrompt = `ENTITY: ${ch.sourceLabel}\nVIDEO TITLE: ${videoTitle}\nMEETING DATE: ${isoDate}\n\nTRANSCRIPT (auto-captions):\n"""\n${transcript.slice(0, 600000)}\n"""\n\nWrite the full summary. Return ONLY the JSON object.`;
+  return callClaude({ model: MODEL, max_tokens: 2000, system: FULL_SUMMARY_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
+}
+
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY && !DRY) { console.error('  ✗ ANTHROPIC_API_KEY not set'); process.exit(1); }
+  if (FULL_SUMMARIES && !EDITORIAL_SECRET) { console.error('  ✗ --full-summaries needs EDITORIAL_SECRET'); process.exit(1); }
 
   let src = fs.readFileSync(GOV_HELPERS, 'utf8');
   const existing = extractJsArray(src, 'MEETING_RECAPS') || [];
@@ -248,6 +290,28 @@ async function main() {
       added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
       console.log(`      ✓ ${out.title}`);
+
+      // Full Summary: longer write-up from the same transcript, emailed for approval.
+      if (FULL_SUMMARIES && EDITORIAL_SECRET) {
+        const sumId = summaryDraftId(ch.sourceKey, date, v.title);
+        let exists = false;
+        try { const ex = await httpJson('GET', `${WORKER}/article-exists?id=${encodeURIComponent(sumId)}&secret=${encodeURIComponent(EDITORIAL_SECRET)}`); exists = !!(ex.json && ex.json.exists); } catch (e) {}
+        if (exists) { console.log('      · full summary already sent'); continue; }
+        let sum;
+        try { sum = await fullSummaryFromTranscript(ch, date, v.title, transcript); }
+        catch (e) { console.log(`      ✗ full-summary failed: ${e.message}`); continue; }
+        if (!sum || !sum.bodyHtml) { console.log('      ✗ empty full summary'); continue; }
+        const draft = { id: sumId, slug: sumId, kind: 'full-summary',
+          title: (sum.title || out.title || v.title).trim(), dek: (sum.dek || '').trim(), bodyHtml: sum.bodyHtml,
+          meetingKey: `${ch.sourceKey}|${date}|${v.title}`,
+          source: ch.sourceKey, sourceLabel: ch.sourceLabel, bodyLabel: ch.sourceLabel,
+          meetingDate: date, videoUrl };
+        try {
+          const res = await httpJson('POST', `${WORKER}/article-create`, { secret: EDITORIAL_SECRET, draft });
+          if (res.json && res.json.ok) console.log(`      ✉ full summary ${res.json.skipped ? 'already pending' : 'emailed for approval'}`);
+          else console.log(`      ✗ full-summary create failed: ${(res.json && res.json.msg) || res.status}`);
+        } catch (e) { console.log(`      ✗ full-summary create error: ${e.message}`); }
+      }
     }
     if (added.length >= LIMIT) break;
   }

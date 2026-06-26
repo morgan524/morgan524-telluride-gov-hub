@@ -26,6 +26,15 @@ log() { echo "[$(date '+%Y-%m-%d %H:%M:%S')] $*"; }
 if [ ! -f "$HOME/.anthropic_key" ]; then log "FATAL: ~/.anthropic_key missing"; exit 1; fi
 export ANTHROPIC_API_KEY="$(cat "$HOME/.anthropic_key")"
 
+# Optional: editorial secret enables the Full Summary email-approval flow. When
+# present, the run also drafts a longer summary per meeting and emails it for
+# approval (the short recap still auto-publishes below). Absent → recaps only.
+FULL_SUMMARY_FLAG=""
+if [ -f "$HOME/.editorial_secret" ]; then
+  export EDITORIAL_SECRET="$(cat "$HOME/.editorial_secret")"
+  FULL_SUMMARY_FLAG="--full-summaries"
+fi
+
 command -v yt-dlp >/dev/null 2>&1 || { log "FATAL: yt-dlp not on PATH ($YTDLP_BIN)"; exit 1; }
 command -v node   >/dev/null 2>&1 || { log "FATAL: node not on PATH"; exit 1; }
 
@@ -37,7 +46,7 @@ log "Starting. repo=$REPO"
 git checkout -- js/gov-helpers.js 2>/dev/null || true
 if ! git pull --ff-only origin main; then log "FATAL: git pull --ff-only failed"; exit 1; fi
 
-if ! node scripts/meeting-recaps.js; then log "recap script exited non-zero"; exit 1; fi
+if ! node scripts/meeting-recaps.js $FULL_SUMMARY_FLAG; then log "recap script exited non-zero"; exit 1; fi
 
 if [ -z "$(git status --porcelain js/gov-helpers.js)" ]; then
   log "No new recaps — nothing to commit."
