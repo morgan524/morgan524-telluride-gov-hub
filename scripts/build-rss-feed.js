@@ -27,6 +27,7 @@ const crypto = require('crypto');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
+const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
 const FEED_OUT = path.join(REPO_ROOT, 'feed.xml');
 const BLOG_FEED_OUT = path.join(REPO_ROOT, 'feed-blog.xml');
 
@@ -250,11 +251,113 @@ function buildMeetingItems(summaries) {
       description: `${sourceLabel} • ${dateStr}\n\n${summary || '(see meeting page for details)'}`,
       categories: ['Meeting', sourceLabel].filter(Boolean),
       guid: `${SITE_URL}/meeting/${encodeURIComponent(`${source}|${dateStr}|${title.slice(0, 80)}`)}`,
+      _source: source, _dateStr: dateStr, _title: title,   // for cross-source dedup in main()
     });
   }
   // Earliest upcoming first
   items.sort((a, b) => a.pubDate - b.pubDate);
   return items.slice(0, MAX_MEETINGS);
+}
+
+// ──────────────────────────────────────────────────────────────
+// Full meeting list from the canonical get*Meetings() functions.
+//
+// MANUAL_SUMMARIES (above) only carries summaries the content-refresh
+// scraper writes — Telluride (CivicWeb) + San Miguel/Ouray county
+// (CivicClerk) + a few. It has NO Rico/Ridgway keys and barely any
+// Mountain Village, so those towns' meetings never reached the digest.
+// The complete, canonical meeting list (the same one the website and the
+// weekly review draft use) lives in the get*Meetings() functions in
+// gov-helpers.js, which read the *_CACHED_DATA arrays in gov-data.js.
+// We eval both files (same sandbox trick as scripts/weekly-email.js) and
+// pull every upcoming meeting from those functions, so Rico, Mountain
+// Village, Ridgway, Norwood, Ophir, Fire, Med, School, SMART, and Airport
+// all appear — not just the scraped Telluride/County set. Fail-soft: any
+// load error → we fall back to the MANUAL_SUMMARIES-only list.
+//
+// Ouray has no get*Meetings() function (it's scraped straight into
+// MANUAL_SUMMARIES), so it keeps coming from buildMeetingItems() above —
+// which is exactly why main() MERGES the two lists instead of replacing.
+
+// Load gov-data.js + gov-helpers.js into an eval sandbox and return a
+// getter for any top-level name. Returns null on any failure.
+function loadGovSandbox() {
+  try {
+    const govData = fs.readFileSync(GOV_DATA_JS, 'utf8');
+    const govHelpers = fs.readFileSync(GOV_HELPERS_JS, 'utf8');
+    global.window = global.window || {};
+    global.document = global.document || { createElement: () => ({ set innerHTML(v) { this._v = v; }, get value() { return String(this._v == null ? '' : this._v).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#0?39;|&apos;/g, "'").replace(/&quot;/g, '"'); } }) };
+    global.AI_SUMMARIES = global.AI_SUMMARIES || {};
+    return (0, eval)(govData + '\n' + govHelpers + '\n;({get:(n)=>{try{return eval(n)}catch(e){return undefined}}})');
+  } catch (e) {
+    console.warn(`  ⚠ Could not eval gov-data/gov-helpers for full meeting list (${e.message}) — meetings from MANUAL_SUMMARIES only`);
+    return null;
+  }
+}
+
+const MEETING_FNS = [
+  'getTellurideMeetings', 'getCountyCachedMeetings', 'getMVMeetings',
+  'getSchoolMeetings', 'getFireMeetings', 'getMedMeetings',
+  'getRidgwayMeetings', 'getNorwoodMeetings', 'getOphirMeetings',
+  'getSmartMeetings', 'getAirportMeetings', 'getRicoMeetings',
+];
+
+function buildMeetingItemsFromFns(sandbox) {
+  const G = (n) => sandbox.get(n);
+  const getMeetingSummary = G('getMeetingSummary');
+  const isBad = G('isBadSummary');
+  const pad = (n) => String(n).padStart(2, '0');
+  const items = [];
+  for (const fn of MEETING_FNS) {
+    const f = G(fn);
+    if (typeof f !== 'function') continue;
+    let arr = [];
+    try { arr = f() || []; } catch (e) { continue; }
+    for (const m of arr) {
+      if (!m || !(m.eventDate instanceof Date) || isNaN(m.eventDate.getTime())) continue;
+      if (m.canceled) continue;
+      // Format from UTC components so the day matches withinRollingWindow()
+      // (gov-helpers' localDate() builds local-midnight Dates; on the UTC CI
+      // runner local === UTC, so getUTC* yields the intended calendar date).
+      const dateStr = `${m.eventDate.getUTCFullYear()}-${pad(m.eventDate.getUTCMonth() + 1)}-${pad(m.eventDate.getUTCDate())}`;
+      const meetingDate = parseDate(dateStr);
+      if (!withinRollingWindow(meetingDate, 0, MAX_FUTURE_DAYS)) continue;
+      const name = String(m.title || '').replace(/\s*--?\s*CANCELED$/i, '').trim();
+      if (!name) continue;
+      const source = m.source || '';
+      const sourceLabel = m.sourceLabel || MEETING_SOURCE_LABELS[source] || source;
+      let summary = '';
+      try { summary = (getMeetingSummary && getMeetingSummary(m)) || ''; } catch (e) { /* no summary */ }
+      summary = summary || m.description || '';
+      if (!summary || (isBad && isBad(summary))) {
+        summary = `Upcoming ${sourceLabel} meeting — the agenda posts closer to the date on the Gov-Hub.`;
+      }
+      items.push({
+        title: `[Meeting] ${name} — ${dateStr}`,
+        link: m.agendaLink || m.link || `${SITE_URL}/gov-hub.html`,
+        pubDate: meetingDate,
+        description: `${sourceLabel} • ${dateStr}\n\n${summary}`,
+        categories: ['Meeting', sourceLabel].filter(Boolean),
+        guid: `${SITE_URL}/meeting/${encodeURIComponent(`${source}|${dateStr}|${name.slice(0, 80)}`)}`,
+        _source: source, _dateStr: dateStr, _title: name,
+      });
+    }
+  }
+  return items;
+}
+
+// Cross-source dedup key for a meeting. Prefer the canonical board token
+// (collapses "Town Council - Jun 30 2026" ↔ "Town Council") and fall back to
+// a letters-only normalized title for bodies with no token (e.g. "Board of
+// County Commissioners Meeting"), so the same meeting from MANUAL_SUMMARIES
+// and from get*Meetings() doesn't appear twice.
+function meetingDedupKey(item, tokenFn) {
+  const tok = (tokenFn && tokenFn(item._title)) || '';
+  const norm = tok || String(item._title || '')
+    .toLowerCase()
+    .replace(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/g, ' ')
+    .replace(/[^a-z]+/g, ' ').trim().replace(/\s+/g, ' ');
+  return `${item._source}|${item._dateStr}|${norm}`;
 }
 
 /**
@@ -678,7 +781,33 @@ async function main() {
 
   // Build meetings + events separately so the per-topic feeds below can
   // reuse them (civic = meetings; arts/family/outdoors = classified events).
-  const meetingItems = buildMeetingItems(summaries);
+  //
+  // Meetings come from TWO sources, merged: (1) MANUAL_SUMMARIES — the
+  // scraped Telluride/County/Ouray summaries; (2) the canonical
+  // get*Meetings() functions — which add the towns the scraper never wrote
+  // summaries for (Rico, Mountain Village, Ridgway, Norwood, Ophir, Fire,
+  // Med, School, SMART, Airport). Without (2) those jurisdictions silently
+  // dropped out of the weekly digest.
+  const manualMeetingItems = buildMeetingItems(summaries);
+  let meetingItems = manualMeetingItems.slice();
+  const sandbox = loadGovSandbox();
+  if (sandbox) {
+    const tokenFn = sandbox.get('meetingBoardToken');
+    const seen = new Set(manualMeetingItems.map((it) => meetingDedupKey(it, tokenFn)));
+    let added = 0;
+    for (const it of buildMeetingItemsFromFns(sandbox)) {
+      const k = meetingDedupKey(it, tokenFn);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      meetingItems.push(it);
+      added++;
+    }
+    meetingItems.sort((a, b) => a.pubDate - b.pubDate);
+    meetingItems = meetingItems.slice(0, MAX_MEETINGS);
+    console.log(`  Meetings: ${manualMeetingItems.length} from MANUAL_SUMMARIES + ${added} from get*Meetings() (de-duped) = ${meetingItems.length}`);
+  } else {
+    console.log(`  Meetings: ${manualMeetingItems.length} from MANUAL_SUMMARIES (get*Meetings() unavailable)`);
+  }
   // Event arrays in PRIORITY ORDER — Wilkinson (0) before KOTO (1)
   // before venues (2) before Music on the Green (3) before hand-curated
   // / email (3) before telluride.com aggregator (4). When the dedup
