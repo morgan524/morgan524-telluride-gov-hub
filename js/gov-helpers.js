@@ -58,9 +58,6 @@ function isBadSummary(text) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    {"zoomUrl":"https://us02web.zoom.us/meeting/register/Tg73_6Q9SouIp8dXx71sfg","meetingId":"886 0088 9761","passcode":"042834","phone":"719-359-4580"},
-
   "county|2026-06-11|Planning Commission Meeting":
     {"zoomUrl":"https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1","meetingId":"893 1709 0915","passcode":"670854","phone":"970-728-3844"},
 
@@ -206,6 +203,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
+    {"sv":4},
+
+  "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
     {"sv":4}
 };
 
@@ -284,9 +284,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-05-28|Planning & Zoning Commission - May 28 2026":
     "No specific agenda items available",
-
-  "county|2026-05-27|Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm":
-    "The commissioners will handle two septic system variances in Ophir, consider ending a deed restriction on Society Drive, and hold a work session with Placerville residents about corridor beautification and Fire District expansion plans.",
 
   "med|2026-06-25|Regular Board Meeting":
     "The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.",
@@ -412,7 +409,10 @@ const MANUAL_SUMMARIES = {
     "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.",
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
-    "The July 8, 2026 Ecology Commission agenda hasn't been posted yet."
+    "The July 8, 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
+    "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -508,15 +508,27 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "As Massachusetts ballot initiatives multiply, critics want to limit them",
+    title: "Mountain Village moves forward with accelerated housing review",
     source: "Telluride Times",
-    date: "June 26, 2026",
+    date: "June 25, 2026",
     firstSeen: "2026-06-26",
-    newsTopic: "government",
-    copy: "Massachusetts lawmakers, including House Speaker Ron Mariano, are pushing to reform or restrict the state's ballot initiative process, calling it \"fraught with peril.\" Twenty-three states allow some form of citizen initiative, a tool dating to the Progressive Era. Direct democracy advocates argue it's a necessary check when legislators won't act.",
+    newsTopic: "land-use",
+    copy: "Mountain Village council approved an expedited review process for affordable housing projects — a step required to stay eligible for Colorado's Proposition 123 funds. Projects where at least half the units are affordable can now move through a faster approval track. The move also positions the town for up to $45,000 in additional grant funding if adopted before July 2026.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_977062db-12f7-5a40-9d9f-4eb543d5ace4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/12/312e8f3c-16dd-5ad1-8ec2-29083ad767df/6a3ec0477ef8c.image.jpg",
+    href: "https://www.telluridenews.com/news/article_8c40ad7e-1a8a-43fa-9a8f-db59ce5a5d0a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66bb1f2-ebae-45fd-a67f-ab084607de68/6a3d859147699.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Polygamous sect leader convicted of abuse charges after girls found in trailer on Arizona highway",
+    source: "Telluride Times",
+    date: "June 27, 2026",
+    firstSeen: "2026-06-27",
+    newsTopic: "public-safety",
+    copy: "A polygamous sect leader with ties to Colorado was convicted on all three counts of child abuse after girls were found locked in a hot, unventilated cargo trailer on an Arizona highway. He faces 4–8 years mandatory per count, with sentencing August 25. He'd previously been convicted in federal court on coercion and kidnapping charges.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_506fcc50-5b59-5590-a179-6723ee238102.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/54/054d6e04-4baf-5cae-8ca7-286bad50d954/6a3f13dbc3846.image.jpg",
     imgHiRes: true
   },
   {
@@ -529,6 +541,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_1af5dc85-1524-5904-bfaa-1887e6d450da.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/18/e18e507a-eb43-5d4f-a72f-ee385dc2d66a/6a3ebbb06dac8.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Polygamous sect leader is convicted of child abuse charges after girls found in enclosed trailer on an Arizona highway",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-27",
+    newsTopic: "recreation",
+    copy: "The Colorado Supreme Court ruled June 15 that Telluride's PUD agreements are administrative rather than legislative, meaning they can't be altered through citizen ballot initiatives. That's a significant clarification of how much direct say residents have over certain land-use decisions in town.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_ca211695-7677-5096-9532-9efe5e99146b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Election Day Tuesday",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-27",
+    newsTopic: "government",
+    copy: "Tuesday, June 30 is Election Day in San Miguel County, with Town of Telluride voters also choosing two Town Council seats. Ballots were mailed earlier this month; in-person voting runs through Tuesday, 7 a.m.–7 p.m. Details at sanmiguelcountyco.gov/164/Elections.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_96e5c402-24eb-450d-be36-c051700ea081.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ba/cbaf1e30-8c3e-47ca-9375-c5ab1653228d/6a3ee75e8bae4.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "As Massachusetts ballot initiatives multiply, critics want to limit them",
+    source: "Telluride Times",
+    date: "June 26, 2026",
+    firstSeen: "2026-06-26",
+    newsTopic: "government",
+    copy: "Massachusetts lawmakers, including House Speaker Ron Mariano, are pushing to reform or restrict the state's ballot initiative process, calling it \"fraught with peril.\" Twenty-three states allow some form of citizen initiative, a tool dating to the Progressive Era. Direct democracy advocates argue it's a necessary check when legislators won't act.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_977062db-12f7-5a40-9d9f-4eb543d5ace4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/12/312e8f3c-16dd-5ad1-8ec2-29083ad767df/6a3ec0477ef8c.image.jpg",
     imgHiRes: true
   },
   {
@@ -1180,18 +1228,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Mountain Village moves forward with accelerated housing review",
-    source: "Telluride Times",
-    date: "June 25, 2026",
-    firstSeen: "2026-06-26",
-    newsTopic: "land-use",
-    copy: "Mountain Village council approved an expedited review process for affordable housing projects — a step required to stay eligible for Colorado's Proposition 123 funds. Projects where at least half the units are affordable can now move through a faster approval track. The move also positions the town for up to $45,000 in additional grant funding if adopted before July 2026.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8c40ad7e-1a8a-43fa-9a8f-db59ce5a5d0a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66bb1f2-ebae-45fd-a67f-ab084607de68/6a3d859147699.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Telluride deserves better",
     source: "Telluride Times",
     date: "June 17, 2026",
@@ -1349,6 +1385,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
   },
   {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "June 27, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14337"
+  },
+  {
+    title: "Natural Resources Land Use Code Amendments",
+    source: "San Miguel County",
+    date: "June 26, 2026",
+    newsTopic: "land-use",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1402",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14335"
+  },
+  {
     title: "Commissioners Finalize Deed Restriction Reversion Process",
     source: "San Miguel County",
     date: "June 18, 2026",
@@ -1394,15 +1448,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Imogene Pass is Open",
-    source: "San Miguel County",
-    date: "June 23, 2026",
-    newsTopic: "community",
-    copy: "Imogene Pass is now open on the San Miguel County side. Please check with Ouray County for up-to-date conditions on their side of the pass.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=532",
-    img: ""
-  },
-  {
     title: "Clerk's Office Shortened Office hours June 15-18 and June 29-July 2",
     source: "San Miguel County",
     date: "June 15, 2026",
@@ -1423,7 +1468,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Click here for details.",
     source: "Town of Ridgway",
-    date: "June 26, 2026",
+    date: "June 27, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1434,7 +1479,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 26, 2026",
+    date: "June 27, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1456,7 +1501,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 26, 2026",
+    date: "June 27, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1467,7 +1512,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 26, 2026",
+    date: "June 27, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1478,7 +1523,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 26, 2026",
+    date: "June 27, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1489,6 +1534,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-26-26",
+    source: "KOTO Community Radio",
+    date: "June 27, 2026",
+    newsTopic: "land-use",
+    copy: "On this week's Regional Roundup, we bring you voices from Pride celebrations across the Rocky Mountain West. We also hear about a new app that connects LGBTQIA+ community members with volunteer opportunities in Utah and beyond. As drought conditions persist across the region, Trout Unlimited is urging anglers to give stressed fish a break by reduci",
+    href: "https://koto.org/news/newscast-6-26-26/"
+  },
   {
     title: "Newscast 6-25-26",
     source: "KOTO Community Radio",
@@ -1528,14 +1581,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "government",
     copy: "Telluride Discusses Town Council Ethics Code; The Photography of Humanity and Climate Change",
     href: "https://koto.org/news/newscast-6-15-26/"
-  },
-  {
-    title: "Newscast 6-12-26",
-    source: "KOTO Community Radio",
-    date: "June 13, 2026",
-    newsTopic: "public-safety",
-    copy: "On this week's Regional Roundup, we hear about a jazz festival in northern New Mexico that celebrates Indigenous jazz music. Then, we head to the Roaring Fork Valley on Colorado's Western Slope to hear about efforts to create safe passages for wildlife crossing highways. After that we head to Wyoming to hear how goats are being used for fire mitiga",
-    href: "https://koto.org/news/newscast-6-12-26/"
   }
 ];
 
@@ -2335,28 +2380,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Yoga Festival",
-    link: "https://koto.org/event/telluride-yoga-festival/",
-    description: "Experience an unforgettable weekend of connection and inspiration at the 18th annual Telluride Yoga Festival nestled in the rugged mountains of Telluride, June 25-28, 2026. The Telluride Yoga Festival is a 4-day yoga & wellness gathering including yoga, meditation, hiking, wellness workshops, dining, concerts, and outdoor adventures. Join more than 50 teachers who are presenting over 150 classes and offerings throughout the weekend for the longest running yoga festival in the country. It's a perfect opportunity to celebrate yoga, nature, spirit, & connection. Visit www.tellurideyogafestival.com to learn more & purchase your pass!",
-    pubDate: "2026-06-25T06:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/TYF-2026-Social-Post-1080-x-1080-1.jpg"
-  },
-  {
-    title: "The play \"12 Incompetent Jurors\" presented by the Norwood Community Players",
-    link: "https://koto.org/event/the-play-12-incompetent-jurors-presented-by-the-norwood-community-players/",
-    description: "Wide Sky Arts Collective and the Norwood Community Players present \"12 Incompetent Jurors\" &#8230; a parody by Ian McWethey and directed by local Claire Jacobs. Shows are at The Livery on June 25th, 26th, and 27th, doors at 6:30, show at 7, cash bar. The link for discounted advance tickets is at www.norwoodparkandrec.org .",
-    pubDate: "2026-06-26T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Livery Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/WSAC-12IJ-Poster.jpg"
-  },
-  {
     title: "Trick Dog Takeover at Timber Room",
     link: "https://koto.org/event/trick-dog-takeover-at-timber-room/",
     description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences for two nights only. Named Best U.S. Cocktail Bar 2025, the celebrated team takes over Timber Room with a menu showcasing the creativity, craftsmanship, and playful spirit that have made it one of the country's most sought-after bar programs. June 26 | Happy Hour on the Terrace The weekend begins on the Timber Room terrace, where mountain views, signature cocktails, and Trick Dog favorites set the tone for a memorable evening. Settle in with drinks, light bites, and good company as the sun dips behind the peaks. June 27 | An Evening in Timber Room Join Trick Dog inside Timber Room for an immersive evening highlighting the bar's acclaimed cocktail program, alongside a curated selection of non-alcoholic offerings and Timber Room's dinner menu. …",
@@ -2366,50 +2389,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/trick-dog.png"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-26/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-26T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-06-26/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-06-26T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-06-26/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-06-26T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-06-26T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
   },
   {
     title: "Jennifer Thurston Memorial",
@@ -2850,6 +2829,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg"
+  },
+  {
+    title: "Telluride 4th of July Parade",
+    link: "https://koto.org/event/telluride-4th-of-july-parade/",
+    description: "Parade Info The Parade starts at 11 a.m. and runs eastward down Main Street. There will be a fighter jet fly by. It is usually at 11 a.m. but last year it was at noon. Time is to be determined by the jet people. We LOVE water guns and super soakers but please NO water balloons Nothing that creates trash. This goes for floats and spectators. If participating in water activities – do not spray babies, older folks, classic cars and anyone with a camera. It is best to only engage with other people with water. Please make sure children stay behind the white line for their safety. Parade Registration All are welcome to participate in the parade! Register at tridejuly4parade.org before 5 p.m. on Friday July 3rd. Late entries are welcome but not eligible for judging. Please make sure to use patriotic decorations. …",
+    pubDate: "2026-07-04T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-07-04/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-07-05T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "Pickleball Open Play",
+    link: "https://koto.org/event/pickleball-open-play/2026-07-05/",
+    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
+    pubDate: "2026-07-05T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "5th of July picnic with the San Miguel County Democrats in Telluride Town Park",
+    link: "https://koto.org/event/5th-of-july-picnic-with-the-san-miguel-county-democrats-in-telluride-town-park/",
+    description: "The San Miguel County Democrats invite the public to a picnic on July 5 from 10:30-2 at Telluride Town Park to celebrate and defend 250 years of America's democracy. Food and drinks provided.",
+    pubDate: "2026-07-05T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   }
 ];
 
@@ -2918,7 +2941,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-26"
+    lastSeen: "2026-06-27"
   }
 ];
 
@@ -3730,7 +3753,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "18th Annual Ridgway RiverFest",
     link: "https://ridgwayriverfest.org/",
-    description: "The Ridgway RiverFest is a family-friendly celebration of the Uncompahgre River, our watershed and river recreation with all-age river races, live music, local food and drink, kids’ activities, watershed educational and cultural programs. RiverFest is produced by the Uncompahgre Watershed Partnership, a Ouray County nonprofit watershed group dedicated to helping protect the economic, natural, and scenic values of the Upper Uncompahgre River Watershed. The highlight of the day is the infamous “Junk of the Unc” race in which boaters maneuver their craft, constructed from scrap materials not intended for river travel, through whitewater rapids and others’ junk, trying to keep it all intact until the finish line. The 2026 Ridgway RiverFest kicks off with the river races at 11am this year. This includes paddle boards, kayaks, duckies, and more! This event will go until 12pm and the main festivities will begin at 3pm. …",
+    description: "The Ridgway RiverFest is a family-friendly celebration of the Uncompahgre River, our watershed and river recreation with all-age river races, live music, local food and drink, kids’ activities, watershed educational and cultural programs. RiverFest is produced by the Uncompahgre Watershed Partnership, a Ouray County nonprofit watershed group dedicated to helping protect the economic, natural, and scenic values of the Upper Uncompahgre River Watershed. The highlight of the day is the infamous “Junk of the Unc” race in which boaters maneuver their craft, constructed from scrap materials not intended for river travel, through whitewater rapids and others’ junk, trying to keep it all intact until the finish line. New schedule The river races will be at noon to 1pm. The Uncompaghre River and its flow determine which equipment to bring this year. More info. The main festival will be from 3 to 7 p.m. …",
     pubDate: "2026-06-27T12:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3796,7 +3819,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
     link: "https://www.ridgwayfete.com/",
-    description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. 15+ Musical Acts | Many Simultaneous Outdoor Stages + An Indoor Stage at the Sherbino From the vibrant rhythms of Mariachi San Jose to regional favorites like David Nunn, Heather & Doug, and Donny Morales, there’s something for every musical taste. Wander Clinton and Cora Streets, the Courtyard at 610, The Sherbino and Hartwell Park to enjoy an incredible lineup of performances across multiple stages! …",
+    description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. Music will be happening throughout downtown, including: 🎵 Hartwell Park 🎵 The Sherbino (air conditioning + bar!) 🎵 The Courtyard at 610 🎵 Clinton Street near the Decker Room 🎵 Cora Street near Thai Paradise & The Annex on Cora 🎵 Kate's Place Courtyard 🎵 The Old Firehouse Patio (Pat's Place Patio) 🎵 The Alley next to Ridgway Pilates With performances happening simultaneously, no two festival experiences are exactly alike! …",
     pubDate: "2026-06-28T12:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -3895,15 +3918,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "Roots & Rhythms: Opening Night with Live Music & Steam Bending Demo",
+    title: "Roots & Rhythms: Opening Night with Live Music & Steam Bending Demo @ First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
     description: "Join us for the opening reception of Roots & Rhythms, a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation. Enjoy an evening of live music, a live steam-bending demonstration, refreshments, and the opportunity to meet both artists during Ridgway's First Friday Art Walk.",
     pubDate: "2026-07-03T12:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/98bc632de8c4f6718cff56474d402ff386640196.jpg"
+    location: "Space to Create",
+    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
   },
   {
     title: "Show Opening: Silverton, Interpreted - Ridgway First Friday",
@@ -4320,17 +4343,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49151/tmv-eventgraphicbtesmall.jpg"
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     title: "Telluride Foundation Rundola: Run for Good",
@@ -6139,23 +6151,6 @@ const LEGAL_NOTICES = [
     address: "NE SW Section 8, Township 41 North, Range 9 West, NMPM",
     noticeKey: "26cw3028",
     caseNumber: "26CW3028"
-  },
-  {
-    title: "Request for Proposal -- Town of Telluride Housing Common Spaces Cleaning Services",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: Town of Telluride Housing Common Spaces Cleaning Services.",
-    deadline: "Closes 6/26/2026",
-    expires: "2026-06-26",
-    dates: "6/11",
-    url: "https://www.telluride.gov/bids.aspx?bidID=130",
-    address: "",
-    totBidID: "130"
   },
   {
     title: "Probate Notice -- Claims Against Estate (Case No. 26PR30006)",
