@@ -427,6 +427,14 @@ const MEETING_RECAPS = [
   {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
+    date: "2026-06-25",
+    title: "Planning & Zoning — Jun 25, 2026",
+    recap: "The commission continued the 238 North Pine Street minor subdivision application to its July 23 meeting without discussion. The bulk of the meeting was a work session on the Shandoka Lot redevelopment project — a town-owned 4-acre parcel at 860 Black Bear Road proposed for a large-scale PUD that would include roughly 50–60 housing units (mostly affordable, with a limited free-market share), approximately 300 net new public parking spaces within a structured garage, neighborhood-serving commercial uses (daycare, food bank, restaurant, retail, fitness), and a transit center. No votes were taken on the project; commissioners raised extensive questions about parking demand calculations, water-table and flood-zone risks for below-grade construction, traffic impacts, green space adequacy, building massing and solar access along the river trail, and EV charging. The commission also voted to recommend that Town Council adopt land use code amendments to Section 3-505 (tree removal/maintenance) to align with the Colorado Wildfire Resiliency Code, with several wording revisions directed by the commission; the ordinance is scheduled for council consideration June 30.",
+    videoUrl: "https://www.youtube.com/watch?v=m0qjXC2TCfo"
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
     date: "2026-06-17",
     title: "HARC — Jun 17, 2026",
     recap: "HARC voted to continue the flood-elevation raise request for 239 North Aspen (5-1) to the July 15 meeting, directing staff to provide a detailed written explanation of which flood-plain code interpretation changed to require the structure to be lifted. For 566 West Columbia, HARC approved a certificate-of-appropriateness amendment allowing the contributing primary structure to be raised an additional 3¼ inches to meet the flood-protection elevation (4-1). For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials. Two individual-property items were continued to the August 19 meeting.",
