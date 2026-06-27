@@ -520,6 +520,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "A win-win for artists and audiences",
+    source: "Telluride Times",
+    date: "June 27, 2026",
+    firstSeen: "2026-06-27",
+    newsTopic: "arts-culture",
+    copy: "Augment Music Project, a Telluride nonprofit founded in 2020, pays local musicians to perform at free public events — the Farmers' Market Fridays, Elms Park concerts, and the library's Sweet Sounds series. They also offer annual grants to help musicians cover gear or studio costs. The goal is keeping talented players here rather than losing them to bigger markets.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_140be4e3-7455-49cc-89b3-13d8b341c61b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/03/8037a17d-d689-4eaf-a3e8-cb40757464fe/6a3d8c9fddf39.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mountain Village moves forward with accelerated housing review",
     source: "Telluride Times",
     date: "June 25, 2026",
@@ -3397,17 +3409,6 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
     imageUrl: ""
-  },
-  {
-    title: "18th Annual Ridgway RiverFest",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3644",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3644",
-    pubDate: "2026-06-27T09:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Rollans Park - 257 Sherman St. Ridgway CO 81432",
-    imageUrl: ""
   }
 ];
 
@@ -4191,17 +4192,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Music on the Green Presents LVDY",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-lvdy-2/",
-    description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present LVDY on Friday, June 26, from 5 to 7 p.m.,",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48851/ldvy_1800x900px_1.png"
-  },
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
