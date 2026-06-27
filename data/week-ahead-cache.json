@@ -1,26 +1,26 @@
 {
-  "hash": "04d2d1c0f70d39ded22a797712d2ce4788a532e8",
-  "lede": "The week's most consequential item lands Tuesday, June 30, when Town Council takes up first reading of Land Use Code amendments tied to Colorado's new wildfire resilience requirements — building rules that hit close to home for anyone living at the bottom of a box canyon. The same night, the Telluride Housing Authority appoints members to its new Resident Advisory Committee, drawing from fifteen tenant applications across Town properties. Out on the Valley Floor Monday afternoon, the Open Space Commission walks Reach 1 to weigh actual river trail alignments on the ground.",
+  "hash": "d4301184591edf79652af85b51dc254374823135",
+  "lede": "The biggest item this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements puts real building rules on the table — something that hits close to home for anyone living in this box canyon. Council will also hold a second work session on the Telluride Energy Mitigation program the same night. Meanwhile, the Housing Authority meets Monday to seat its new Resident Advisory Committee, drawing from fifteen tenant applicants across Town properties, and the Open Space Commission walks the Valley Floor on Monday to scope out where a river trail in Reach 1 might actually go.",
   "notable": [
     {
       "id": 2,
-      "stake": "First reading of wildfire resilience building-code changes affecting all Town construction."
+      "stake": "First reading: wildfire resilience Land Use Code changes affecting how buildings are built here."
     },
     {
       "id": 3,
-      "stake": "THA appoints new Resident Advisory Committee members from Town rental properties."
+      "stake": "THA appoints members to new Resident Advisory Committee from Town rental properties."
     },
     {
       "id": 1,
-      "stake": "Commissioners walk and evaluate real trail alignment options on Valley Floor open space."
-    },
-    {
-      "id": 9,
-      "stake": "Ouray County redefining land-use terms that shape what triggers permitting and review."
+      "stake": "Commissioners walk the ground to shape future Valley Floor river trail alignment."
     },
     {
       "id": 8,
-      "stake": "BOCC interviews Planning Commission applicant; High Country Road access policy discussed."
+      "stake": "BOCC interviews Planning Commission alternate; High Country Road access policy discussed with Forest Service."
+    },
+    {
+      "id": 9,
+      "stake": "Ouray County land-use definitions review could reshape what triggers development review."
     }
   ]
 }

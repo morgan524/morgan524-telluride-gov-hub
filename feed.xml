@@ -6,28 +6,15 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jun 2026 02:43:57 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 27 Jun 2026 08:35:46 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jun 27–3</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-25</guid>
-      <pubDate>Sat, 27 Jun 2026 02:43:57 GMT</pubDate>
-      <description><![CDATA[The week's most consequential item lands Tuesday, June 30, when Town Council takes up first reading of Land Use Code amendments tied to Colorado's new wildfire resilience requirements — building rules that hit close to home for anyone living at the bottom of a box canyon. The same night, the Telluride Housing Authority appoints members to its new Resident Advisory Committee, drawing from fifteen tenant applications across Town properties. Out on the Valley Floor Monday afternoon, the Open Space Commission walks Reach 1 to weigh actual river trail alignments on the ground.]]></description>
+      <pubDate>Sat, 27 Jun 2026 08:35:46 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements puts real building rules on the table — something that hits close to home for anyone living in this box canyon. Council will also hold a second work session on the Telluride Energy Mitigation program the same night. Meanwhile, the Housing Authority meets Monday to seat its new Resident Advisory Committee, drawing from fifteen tenant applicants across Town properties, and the Open Space Commission walks the Valley Floor on Monday to scope out where a river trail in Reach 1 might actually go.]]></description>
       <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>[Sat, Jun 27] Ladies Night In!</title>
-      <link>https://telluridelibrary.libcal.com/event/16914617?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ladies%20night%20in%7C2026-06-27</guid>
-      <pubDate>Sat, 27 Jun 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_05_25.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-6:00 PM – 8:00 PM · Join us at the library for an evening of pampering, snacks, and great company. We'll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polish by Mooncat. You&#39;ll also have the chance to win prizes from local businesses including Studio G, Aveda Telluride Spa, and Two Skirts. Cozy attire and blankets are encouraged. This event is for adults only. Advance registration is encouraged so we know how many self-care supplies to provide :) Gather your girlfriends or come solo for our very first Ladies Night In!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_05_25.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sat, Jun 27] Telluride Theatre Muleskinner&apos;s Ball Fundraiser</title>
@@ -94,6 +81,19 @@ Join us at a memorial for long time local and former KOTO newscaster, Jennifer T
       <media:content url="https://koto.org/wp-content/uploads/2026/06/Jennifer-Thurston-1.png" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Jun 27] Community Fiesta</title>
+      <link>https://telluridelibrary.libcal.com/event/16721579?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/community%20fiesta%7C2026-06-27</guid>
+      <pubDate>Sat, 27 Jun 2026 19:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_15_58_29.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Telluride Town Park
+
+1:30 PM – 4:30 PM · Junio es el mes de la herencia inmigrante y cada a&ntilde;o CAFI organiza la Community Fiesta. &Uacute;nase a nosotros para celebrar junio y nuestra comunidad diversa. Este evento es gratuito y abierto al p&uacute;blico. Comida gratis, equipo gratis para actividades al aire libre, m&uacute;sica y mucho m&aacute;s. June is immigrant heritage month and every year CAFI host the Community Fiesta. Join us in celebrating June and our diverse community. This event is free abnd open to the public. Free food, free outdoor gear, music and lots more.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_15_58_29.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Jun 28] Telluride Chamber Music: MusicFest</title>
@@ -265,7 +265,7 @@ The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda
 
 The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.
 
-⚡ Why it matters: Commissioners walk and evaluate real trail alignment options on Valley Floor open space.]]></description>
+⚡ Why it matters: Commissioners walk the ground to shape future Valley Floor river trail alignment.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -355,7 +355,7 @@ The Mountain Ark: A Ken Bailey Film Lissa Margetts, one of Telluride’s most be
 
 A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.
 
-⚡ Why it matters: First reading of wildfire resilience building-code changes affecting all Town construction.]]></description>
+⚡ Why it matters: First reading: wildfire resilience Land Use Code changes affecting how buildings are built here.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -368,7 +368,7 @@ A full agenda for the last day of June. The most consequential item: first readi
 
 The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.
 
-⚡ Why it matters: THA appoints new Resident Advisory Committee members from Town rental properties.]]></description>
+⚡ Why it matters: THA appoints members to new Resident Advisory Committee from Town rental properties.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -439,7 +439,7 @@ The Liquor Licensing Authority takes up 14 special event permit requests at its 
 
 A relatively routine July BOCC meeting, though a few items are worth tracking. The board will interview an applicant for an alternate seat on the Planning Commission — a slot that matters whenever land-use decisions get close. There's a 40-minute presentation on the Road and Bridge High Country Road opening policy, with the Forest Service at the table, which touches on access to the county's backcountry roads every season. The board will also take up an ADA policy update, a tax abatement denial, and board appointments to the Behavioral Health Solutions Panel. The attorney's agenda includes an executive session on a code enforcement matter — no details given, as is typical.
 
-⚡ Why it matters: BOCC interviews Planning Commission applicant; High Country Road access policy discussed.]]></description>
+⚡ Why it matters: BOCC interviews Planning Commission alternate; High Country Road access policy discussed with Forest Service.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -452,7 +452,7 @@ A relatively routine July BOCC meeting, though a few items are worth tracking. T
 
 Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.
 
-⚡ Why it matters: Ouray County redefining land-use terms that shape what triggers permitting and review.]]></description>
+⚡ Why it matters: Ouray County land-use definitions review could reshape what triggers development review.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>

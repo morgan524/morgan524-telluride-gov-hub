@@ -508,6 +508,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Dangerous weather hampers firefighters and leads to fireworks bans in western US",
+    source: "Telluride Times",
+    date: "June 27, 2026",
+    firstSeen: "2026-06-27",
+    newsTopic: "public-safety",
+    copy: "The Cottonwood Fire in southern Utah has grown to over 112 square miles, with 45 mph winds and single-digit humidity grounding air tankers Friday. Red flag warnings stretch from Idaho to Arizona, and Rocky Mountain Power has issued safety shutoff watches across parts of Utah. Smoke from the fire was visible as far as Colorado.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_91a3a403-ca93-5b4b-b51d-b43ca29a9039.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e38c486-0ff5-5582-bf12-448f34b30dad/6a3f09339e344.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Mountain Village moves forward with accelerated housing review",
     source: "Telluride Times",
     date: "June 25, 2026",
@@ -2878,48 +2890,15 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803445?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-06-26T14:30:00.000Z",
+    title: "Community Fiesta",
+    link: "https://telluridelibrary.libcal.com/event/16721579?hs=a",
+    description: "1:30 PM – 4:30 PM · Junio es el mes de la herencia inmigrante y cada a&ntilde;o CAFI organiza la Community Fiesta. &Uacute;nase a nosotros para celebrar junio y nuestra comunidad diversa. Este evento es gratuito y abierto al p&uacute;blico. Comida gratis, equipo gratis para actividades al aire libre, m&uacute;sica y mucho m&aacute;s. June is immigrant heritage month and every year CAFI host the Community Fiesta.  Join us in celebrating June and our diverse community.  This event is free abnd open to the public. Free food, free outdoor gear, music and lots more.",
+    pubDate: "2026-06-27T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "CANCELLED: Coffee, Croissants and Cribbage",
-    link: "https://telluridelibrary.libcal.com/event/16914642?hs=a",
-    description: "10:00 AM – 11:30 AM · Coffee, croissants and cribbage is back! Come by the library Magazine Room 10-11:30am for friendly competition, free coffee and pastries, and community connection. May the nibs be with you.",
-    pubDate: "2026-06-26T16:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_11_30.jpg"
-  },
-  {
-    title: "Telluride Farmers Marketshow: Steve Weeks Music",
-    link: "https://telluridelibrary.libcal.com/event/15564469?hs=a",
-    description: "11:00 AM – 12:00 PM · Steve Weeks performs with both a boisterous sense of humor and a deep sense of purpose.  \"We're supposed to be entertaining and educating kids,\" the Colorado-based singer-songwriter enthuses. \"I am sincere about the music I write.  If it's not coming from the heart or isn't fun, I won't write it.\"",
-    pubDate: "2026-06-26T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Gondola Plaza - Telluride",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_28_17.png"
-  },
-  {
-    title: "Ladies Night In!",
-    link: "https://telluridelibrary.libcal.com/event/16914617?hs=a",
-    description: "6:00 PM – 8:00 PM · Join us at the library for an evening of pampering, snacks, and great company. We'll be screening a surprise classic chick flick while enjoying fresh popcorn, chocolate, hot tea, face masks, eye patches, and unique nail polish by Mooncat. You&#39;ll also have the chance to win prizes from local businesses including Studio G, Aveda Telluride Spa, and Two Skirts. Cozy attire and blankets are encouraged. This event is for adults only. Advance registration is encouraged so we know how many self-care supplies to provide :) Gather your girlfriends or come solo for our very first Ladies Night In!",
-    pubDate: "2026-06-27T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_12_05_25.jpg"
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_15_58_29.png"
   }
 ];
 
@@ -2953,18 +2932,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Jauntee w/ San Leandro",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-jauntee",
-    description: "The Jauntee is an electrifying and genre-blending musical ensemble that has capt...",
-    pubDate: "2026-06-26",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/1885a7f2-416e-4cb2-a4e8-f91c7c656895/-/crop/3663x1830/0,126/-/preview/"
-  },
   {
     title: "BLAKEGETBACKHERE (DJ Set)",
     link: "https://www.alibitelluride.com/calendar#eca-event=blakegetbackhere-dj-set",
@@ -3482,6 +3449,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
+    title: "Zumba Fitness with Tamra",
+    link: "https://zumba.com/p/zumbafitnesswithTamra",
+    description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
+    pubDate: "2026-04-01T12:00:00.000Z",
+    endDate: "2026-12-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52277881680293/huge/e3b37a55dafe3e5ac88f6f7359fdef186311fd9b.jpg"
+  },
+  {
     title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
     link: "https://www.FloatingLotusBrewery.com",
     description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd!",
@@ -3672,50 +3651,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53196545955120/huge/47f14d971b58902d369831d085a3fa5a7b0437bd.jpg"
-  },
-  {
-    title: "OLD MAN POLLY",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Final Friday: Tea Party",
-    link: "https://www.voyageryouth.org/hubb-teen-events",
-    description: "AN OPPORTUNITY TO WEAR A WHIMSICAL WARDROBE! For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Erin Latta from the Artisan Bakery & Cafe will be joining us. If you've ever been interested in learning how to make scones, Erin will be showing us how to make two different favors of sweet scones. TO RSVP STEP 1: Once a year, make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. …",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53047439328205/huge/285e8175b5195c6e4eb0f8c6b8e30f8735ea212a.jpg"
-  },
-  {
-    title: "An Evening Avian Adventure - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Grab your binoculars and join local birding expert Mike Campbell. From majestic bald eagles cruising the shoreline to brilliant mountain bluebirds nesting along the trails, you will unlock expert secrets to identify local species by sight and sound.",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53161598821007/huge/9b37979e0045291708375bbf7b44d3da63e6c121.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon — Premiere Screening @ the Wright",
-    link: "https://Wrightoperahouse.org",
-    description: "Echoes in the Canyon: Premiere Screening: Movie Night @ the Wright WHEN? Friday, June 26 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado Tickets $5 ABOUT THE FILM Ouray: Echoes in the Canyon premieres at the Wright Opera House for a special hometown screening event with filmmaker Hank Braxtan in attendance. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call “The Gem of the Rockies.” Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. …",
-    pubDate: "2026-06-26T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53011656318052/huge/6cf2b8cc4168eefd5dcea2ff77191ad96b77bd76.jpg"
   },
   {
     title: "Trail Town Tenth Annual 10-mile and 5-mile Run/Walk",
@@ -4139,6 +4074,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53197072496149/huge/61d58f7a04d45b6160d170ddafbfba45141454d8.jpg"
+  },
+  {
+    title: "BlacKkKlansman: CO-150 Film Festival @ the Wright",
+    link: "https://wrightoperahouse.org",
+    description: "BlacKkKlansman: CO-150 Film Festival @ the Wright WHEN? Wednesday, July 8 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 15min RATING: R ROTTEN TOMATOES SCORE: 96% ABOUT THE FILM BlacKkKlansman (2018) tells the remarkable true story of Ron Stallworth, the first Black detective in the Colorado Springs Police Department, who infiltrates the Ku Klux Klan with the help of a fellow officer posing as him in person. Directed by Spike Lee, the film blends sharp humor, suspense, and social commentary while exploring racism, identity, and the enduring relevance of America’s past and present struggles. A bold and thought-provoking crime drama that balances tension, satire, and powerful historical reflection. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
+    pubDate: "2026-07-08T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52931777161068/huge/6e18b842e960f4345690c291aa60d3caea7ecac4.jpg"
+  },
+  {
+    title: "Live Music- Dave Jordan",
+    link: "https://www.stelmohotel.com/summer-sound/dave-jordan",
+    description: "Join us on Wednesday, July 8th as we welcome Dave Jordan. A New Orleans rooted singer-songwriter and bandleader with nearly three decades of American highways under his belt, Dave brings a sound that has been described as a swampy lovechild of Tom Petty, Dr. John, and John Prine. His music weaves rock, blues, funk, and Americana into a rich, soulful tapestry, all anchored by that unmistakable South Louisiana rhythm. An award-winning storyteller, his songs cover the full spectrum of human emotion with warmth, wit, and plenty of groove.",
+    pubDate: "2026-07-08T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53126308954360/huge/dc39d236acf1a73124e22fdae0143e571ac34d55.jpg"
   }
 ];
 
