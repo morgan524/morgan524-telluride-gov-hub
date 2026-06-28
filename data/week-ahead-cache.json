@@ -1,30 +1,26 @@
 {
-  "hash": "b36ed2a55dfeac22e5bd30750d9f70ab4a12dda0",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements comes before the full council — in a box canyon that knows exactly what fire country means, that's not a routine item. Council will also hold a second work session on the Telluride Energy Mitigation program, and the Housing Authority meets the same day to appoint members to its new Resident Advisory Committee, drawing from fifteen tenant applications across Town properties.",
+  "hash": "c1d203099a4fcd0303d2ba7d7e60dce32dbc66b8",
+  "lede": "The biggest item this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements goes on the table — changes to how buildings get built in a box canyon that knows fire. The same evening, the Telluride Housing Authority appoints members to its new Resident Advisory Committee, drawing from fifteen tenant applications across Town properties. The Open Space Commission walks Reach 1 of the Valley Floor Monday afternoon to eyeball real trail alignments along the river.",
   "notable": [
     {
       "id": 2,
-      "stake": "First reading of wildfire resilience building-code changes affects how all structures are built here."
+      "stake": "First reading of wildfire-resilience Land Use Code changes affects how all buildings are built here."
     },
     {
       "id": 3,
-      "stake": "THA appoints first-ever Resident Advisory Committee members from Town rental properties."
+      "stake": "THA appoints new Resident Advisory Committee members from Town rental properties."
     },
     {
-      "id": 5,
-      "stake": "Commission votes on expanding an approved Colorado Ave. street closure for September event."
-    },
-    {
-      "id": 7,
-      "stake": "Fourteen special-event liquor permits up for approval covering major summer events."
-    },
-    {
-      "id": 8,
-      "stake": "BOCC interviews Planning Commission alternate — a seat that shapes close land-use votes."
+      "id": 1,
+      "stake": "Commissioners walk Valley Floor to assess where a public river trail could actually go."
     },
     {
       "id": 9,
-      "stake": "Ouray County rewriting Land Use Code definitions, which control what triggers development review."
+      "stake": "Ouray County redefining land-use terms shapes what triggers review on future projects."
+    },
+    {
+      "id": 8,
+      "stake": "BOCC interviews Planning Commission applicant whose vote could tip close land-use decisions."
     }
   ]
 }
