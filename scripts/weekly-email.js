@@ -114,11 +114,22 @@ const tkey = (t) => {
     .filter(w => w.length >= 4 && !TKEY_STOPWORDS.has(w));
   return tokens.sort().join('-');
 };
+// Hand-pinned features: force a specific event as a given day's "What to Attend"
+// pick, overriding the featuredScore auto-pick. Matched by title regex against
+// that day's events; optional `link` replaces the event's URL with the canonical
+// page. Pinning lives HERE (not in the event data) because the event arrays are
+// bot-refreshed every 6h. Drop an entry once its date has passed.
+const FEATURED_OVERRIDES = {
+  '2026-07-04': { match: /rundola/i, link: 'https://telluridefoundation.org/rundola/' },  // Telluride Foundation Rundola — Run for Good
+};
 for (const day of days) {
   const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
   // One DISTINCT event per day: skip an event whose title already ran earlier
   // this week (e.g. a multi-day festival) and take the next-best instead.
-  const pick = list.find((e) => !usedTitles.has(tkey(e.title))) || list[0];
+  const ov = FEATURED_OVERRIDES[day];
+  let pick = ov ? list.find((e) => ov.match.test(e.title) && !usedTitles.has(tkey(e.title))) : null;
+  if (pick && ov.link) pick = Object.assign({}, pick, { href: ov.link });
+  if (!pick) pick = list.find((e) => !usedTitles.has(tkey(e.title))) || list[0];
   if (pick) { chosen.push(pick); usedTitles.add(tkey(pick.title)); }
 }
 
