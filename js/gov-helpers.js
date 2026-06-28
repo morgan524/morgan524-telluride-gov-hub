@@ -45,8 +45,13 @@ function localDate(str) {
 function isBadSummary(text) {
   if (!text) return false;
   if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
-  // Long single-sentence text about the agenda itself (not topic list)
-  if (text.length > 120 && !text.includes(' · ') && /\b(agenda|page|text|content|appears|navigation)\b/i.test(text)) return true;
+  // Catch scraped-page artifacts that slip past SUMMARY_REJECT_PATTERNS — text
+  // describing the agenda DOCUMENT/PAGE itself, not the meeting's substance.
+  // Do NOT trip on the bare word "agenda": it appears in many real summaries
+  // ("A full agenda for the last day of June…") and was silently suppressing
+  // them (Town Council, BOCC, MV Council, etc.).
+  if (text.length > 120 && !text.includes(' · ') &&
+      /\b(agenda|meeting) (page|pdf|document|text|content)\b|\bpage (navigation|content|text)\b|\b(skip to|main content|click here)\b/i.test(text)) return true;
   return false;
 }
 
@@ -7020,7 +7025,7 @@ const RICO_AGENDA_MAP = {
 };
 
 function getCountyCachedMeetings() {
-  return COUNTY_CACHED_DATA.map(m => {
+  const out = COUNTY_CACHED_DATA.map(m => {
     const eventDate = localDate(m.date);
     // Explicit agendaUrl override (used for entities not on CivicClerk, e.g.
     // the SSR Housing Code Update meetings whose packets are in DocumentCenter).
@@ -7052,6 +7057,51 @@ function getCountyCachedMeetings() {
         : (m.civicClerkId ? COUNTY_CIVICCLERK_BASE + m.civicClerkId + '/files' : null)
     };
   });
+
+  // The static COUNTY_CACHED_DATA list can fall behind the bot's agenda scraper
+  // (which keeps MANUAL_SUMMARIES current). Surface any FUTURE San Miguel County
+  // meeting that already has a generated summary but isn't in the cached list —
+  // so freshly-scraped BOCC / Planning / commission meetings appear even before
+  // the cache is regenerated. Dedup against the cache by date + board type.
+  if (typeof MANUAL_SUMMARIES !== 'undefined' && MANUAL_SUMMARIES) {
+    const todayMT = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+    const ctok = (t) => /planning/i.test(t) ? 'pc'
+      : /board of county commissioners|commissioners|bocc/i.test(t) ? 'bocc'
+      : /open space/i.test(t) ? 'openspace'
+      : /historic/i.test(t) ? 'historical'
+      : (meetingBoardToken(t) || 'gen');
+    const seen = {};
+    out.forEach(m => { if (m.eventDate) seen[m.eventDate.toLocaleDateString('en-CA', { timeZone: 'America/Denver' }) + '|' + ctok(m.title)] = 1; });
+    for (const key of Object.keys(MANUAL_SUMMARIES)) {
+      if (key.slice(0, 7).toLowerCase() !== 'county|') continue;
+      const parts = key.split('|');
+      const date = parts[1];
+      if (!date || date < todayMT) continue;                 // future meetings only
+      const eventDate = localDate(date);
+      if (!eventDate || isNaN(eventDate.getTime())) continue;
+      const rawTitle = (parts.slice(2).join('|') || 'County Meeting')
+        .replace(/\s*-\s*[A-Z][a-z]{2}\s+\d{1,2}\s+\d{4}\s*$/, '').trim() || 'County Meeting';
+      const dk = date + '|' + ctok(rawTitle);
+      if (seen[dk]) continue; seen[dk] = 1;
+      out.push({
+        title: rawTitle,
+        link: COUNTY_CIVICCLERK_FALLBACK,
+        description: MANUAL_SUMMARIES[key] || '',
+        eventDate,
+        eventDates: '',
+        eventTimes: '',
+        location: '',
+        source: 'county',
+        sourceLabel: 'San Miguel County',
+        category: /planning/i.test(rawTitle) ? 'Planning Commission' : /board/i.test(rawTitle) ? 'Board Meeting' : 'Meeting',
+        canceled: false,
+        hasAgenda: false,
+        agendaLink: COUNTY_CIVICCLERK_FALLBACK
+      });
+    }
+  }
+
+  return out;
 }
 
 function getMVMeetings() {
