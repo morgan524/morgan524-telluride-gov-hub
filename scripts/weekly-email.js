@@ -184,7 +184,7 @@ const topicSections = (SHOW_TOPIC_SECTIONS ? TOPIC_DEFS : []).map((td) => {
   .filter((td) => activeTopicGroups instanceof Set && activeTopicGroups.has(td.group));
 
 // ── Collect meetings (with real agenda links) ──
-const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings'];
+const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings'];
 const getMeetingSummary = G('getMeetingSummary');
 function bodyDesc(name, src) {
   const n = (name + ' ' + src).toLowerCase();
@@ -234,6 +234,11 @@ const trunc = (s, n) => {
 // (BOCC), the Planning Commissions / P&Z boards, and HARC. Everything else
 // (fire, general assemblies, transit, school, trustees, subcommittees) is dropped.
 const KEEP_BODY = /\b(town council|board of county commissioners|bocc|planning commission|planning (and|&) zoning|p&z|historic (and|&) architectural|harc)\b/i;
+// Small towns + counties whose boards we ALWAYS keep regardless of body title.
+// Their meeting names don't always match KEEP_BODY (e.g. "Rico Board of
+// Trustees" — a board, not a "town council"), but these communities' decisions
+// still matter to the region, so include every meeting from these sources.
+const SMALL_TOWN_KEEP = new Set(['rico', 'ridgway', 'norwood', 'ophir', 'ouray']);
 const meetSeen = new Set(); const meetings = [];
 for (const fn of MEETING_FNS) {
   const f = G(fn); if (typeof f !== 'function') continue;
@@ -245,7 +250,7 @@ for (const fn of MEETING_FNS) {
     if (!inWeek(date)) continue;
     const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
     const src = m.sourceLabel || m.source || '';
-    if (!KEEP_BODY.test(name + ' ' + src)) continue;       // only TC / BOCC / PC / HARC
+    if (!KEEP_BODY.test(name + ' ' + src) && !SMALL_TOWN_KEEP.has((m.source || '').toLowerCase())) continue;   // TC/BOCC/PC/HARC + all small-town/county boards
     // Dedup key: alphabetise the title's word tokens before joining so word-order
     // anagrams collapse to the same key. Joint meetings show up in CivicWeb
     // under each commission's roster (e.g. "Special Meeting - HARC and P&Z" and

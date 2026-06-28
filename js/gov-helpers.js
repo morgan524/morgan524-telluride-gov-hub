@@ -7445,6 +7445,50 @@ function getRicoMeetings() {
   return out;
 }
 
+// Ouray County meetings (Board of County Commissioners + Planning Commission).
+// content-refresh.js scrapes Ouray County's CivicPlus AgendaCenter RSS into
+// MANUAL_SUMMARIES under the 'ouray|<date>|<agenda text>' source, but there's
+// no OURAY_CACHED_DATA array or getter — so Ouray meetings never surfaced on
+// the site or in the weekly digest. We surface upcoming meetings straight from
+// those summary keys (the bot keeps them fresh): the board is inferred from the
+// agenda text and the generated summary rides along as the description.
+function getOurayMeetings() {
+  if (typeof MANUAL_SUMMARIES === 'undefined' || !MANUAL_SUMMARIES) return [];
+  const out = [];
+  const seen = {};
+  for (const key of Object.keys(MANUAL_SUMMARIES)) {
+    if (key.slice(0, 6).toLowerCase() !== 'ouray|') continue;
+    const parts = key.split('|');
+    const date = parts[1];
+    const raw = (parts.slice(2).join('|') || '').toLowerCase();
+    const eventDate = localDate(date);
+    if (!eventDate || isNaN(eventDate.getTime())) continue;
+    const isPC = /planning commission/.test(raw);
+    const isBOCC = /board of county commissioners|\bcommissioners\b|\bbocc\b/.test(raw);
+    // Board-only title; the "Ouray County" entity rides on sourceLabel (consumers
+    // that build a heading prefix it with the source — e.g. weekly-email.js).
+    const title = isPC ? 'Planning Commission' : isBOCC ? 'Board of County Commissioners' : 'Meeting';
+    const dk = date + '|' + title;
+    if (seen[dk]) continue; seen[dk] = 1;
+    out.push({
+      title,
+      link: 'https://ouraycountyco.gov/AgendaCenter',
+      description: MANUAL_SUMMARIES[key] || '',
+      eventDate,
+      eventDates: '',
+      eventTimes: '',
+      location: 'Ouray County, CO',
+      source: 'ouray',
+      sourceLabel: 'Ouray County',
+      category: isPC ? 'Planning Commission' : 'Board of County Commissioners',
+      canceled: false,
+      hasAgenda: false,
+      packetUrl: null
+    });
+  }
+  return out;
+}
+
 function getTownAgendaLink(title, eventDate) {
   if (!eventDate) return TOWN_CIVICWEB_FALLBACK;
   const dateKey = eventDate.toISOString().slice(0, 10);
