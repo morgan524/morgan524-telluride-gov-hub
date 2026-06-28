@@ -101,7 +101,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
@@ -219,9 +219,6 @@ const MANUAL_SUMMARIES = {
   "fire|2026-06-16|Board of Directors Meeting":
     "The fire district's monthly board meeting covers their 2025 audit results, master planning updates, and wildfire assignments as summer approaches. Station 3 construction gets an update, along with the usual reports from chiefs and coordinators across the district's operations.",
 
-  "med|2026-05-28|Regular Board Meeting":
-    "A regular Telluride Hospital District board meeting. Past the consent agenda and the April draft financials, the substance is in Board Matters — updates on the new facility, partnership talks, and early mill levy considerations. The mill levy is the one to watch; that's the property-tax lever that funds the district. CEO and Foundation/campaign reports round it out. In person at 333 W. Colorado Ave. or by Zoom.",
-
   "school|2026-06-09|Telluride Board of Education Work Session":
     "Agenda not yet available",
 
@@ -285,9 +282,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
     "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
 
-  "telluride|2026-05-28|Planning & Zoning Commission - May 28 2026":
-    "No specific agenda items available",
-
   "med|2026-06-25|Regular Board Meeting":
     "The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.",
 
@@ -296,9 +290,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The Chair was scheduled to take up the 238 N Pine Street minor subdivision (a request to split a 7,500 sq ft Historic Residential lot into two), but the applicant has asked for it to be continued again — to the July 23 P&Z meeting. No substantive action is expected at this meeting. 4:00 PM at Rebekah Hall.",
-
-  "telluride|2026-05-28|Planning & Zoning Commission Chair - May 28 2026":
-    "The May 28 Planning & Zoning Commission Chair meeting agenda hasn't been posted yet.",
 
   "ouray|2026-06-03|The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda)":
     "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
@@ -313,7 +304,7 @@ const MANUAL_SUMMARIES = {
     "A routine CCAASE meeting with two items worth noting. RASR Productions LLC is asking to extend the Telluride Autumn Classic street closure on September 25, 2026 — adding the westbound lane of Colorado Ave. between Willow and Alder to an already-approved closure from Aspen to Willow. No objections came back from emergency services or affected residents. The commission will also take up a 2027 calendar date request from TMVOA for Red, White & Blues on July 3–4, which overlaps with MusicFest, Plein Air, and the 4th of July Celebration already on the books. A work session reviews draft 2027 grant materials.",
 
   "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "The July 1, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+    "Two worksession items — no formal votes today. First, the subcommittee takes up nonconventional lending under Guideline §110.2, which currently restricts borrowers to conventional or government-guaranteed fixed-rate mortgages. The discussion centers on whether that framework fits mixed-use structures, where Fannie Mae and Freddie Mac's \"warrantable condominium\" standards can block financing entirely. Second, a thornier policy question: how to count children of split-custody households toward minimum bedroom requirements. Current language defines primary residence as a \"sole and exclusive place of residence,\" which leaves staff using tax-dependent status and custody percentages to determine eligibility — a framework that, applied consistently, means a child may qualify for a bedroom in only one parent's unit. Staff has laid out the scenarios and is asking the subcommittee whether existing appeal and exception pathways are sufficient, or whether the Guidelines and Policies need revision.",
 
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     "The Liquor Licensing Authority takes up 14 special event permit requests at its July 1 meeting — a busy slate that tracks the canyon's summer season in full swing. Applicants include Palm Arts Inc. (AVID Dance Performance, Camp Alderwild), Telluride Mountain Club (Mountain Run, Telluride Reserve), Telluride Medical Center Foundation (Telluride Table across multiple venues), San Miguel Mentoring (Top Chef & Taste of Telluride), Tri-County Health Network (Noche de Luz), Telluride Chamber Music Association (New York Philharmonic Brass Quintet), Telluride Society for Jazz (Jazz Festival), Telluride Film Festival, and Telluride Bluegrass Beer Booth Inc. (Camp Alderwild). Events span July through early September 2026. The board will also approve minutes from the May 21 meeting.",
@@ -367,7 +358,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -531,6 +522,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_91a3a403-ca93-5b4b-b51d-b43ca29a9039.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/e3/2e38c486-0ff5-5582-bf12-448f34b30dad/6a3f09339e344.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Perpetually perplexed by parking policies",
+    source: "Telluride Times",
+    date: "June 27, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "recreation",
+    copy: "Telluride's new license plate reader system is drawing public pushback, mainly because tickets are mailed days or weeks after violations instead of placed on windshields. Residents, business owners, and all three town council candidates agree that real-time, physical citations are needed. The town manager will address parking briefly at the June 30 council meeting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5e8fb307-bb6a-4b88-81c6-b376b8828dab.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ea/9ea5844f-9d6e-4106-bbe3-55e708b3a2da/6a3f6ad86a845.image.png",
     imgHiRes: true
   },
   {
@@ -1504,20 +1507,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Click here for details.",
-    source: "Town of Ridgway",
-    date: "June 27, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-1-Fire-Restrictions-Press-Release-2026-06-09-acc.pdf",
-    img: ""
-  },
-  {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 27, 2026",
+    date: "June 28, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1539,7 +1531,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 27, 2026",
+    date: "June 28, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1550,7 +1542,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 27, 2026",
+    date: "June 28, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1561,7 +1553,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 27, 2026",
+    date: "June 28, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2418,28 +2410,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Trick Dog Takeover at Timber Room",
-    link: "https://koto.org/event/trick-dog-takeover-at-timber-room/",
-    description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences for two nights only. Named Best U.S. Cocktail Bar 2025, the celebrated team takes over Timber Room with a menu showcasing the creativity, craftsmanship, and playful spirit that have made it one of the country's most sought-after bar programs. June 26 | Happy Hour on the Terrace The weekend begins on the Timber Room terrace, where mountain views, signature cocktails, and Trick Dog favorites set the tone for a memorable evening. Settle in with drinks, light bites, and good company as the sun dips behind the peaks. June 27 | An Evening in Timber Room Join Trick Dog inside Timber Room for an immersive evening highlighting the bar's acclaimed cocktail program, alongside a curated selection of non-alcoholic offerings and Timber Room's dinner menu. …",
-    pubDate: "2026-06-26T06:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/trick-dog.png"
-  },
-  {
-    title: "Jennifer Thurston Memorial",
-    link: "https://koto.org/event/jennifer-thurston-memorial/",
-    description: "Join us at a memorial for long time local and former KOTO newscaster, Jennifer Thurston. Saturday, June 27th from 1pm – 4pm at he Placerville Schoolhouse. Friends and Family will be sharing stories and food – all are welcome!",
-    pubDate: "2026-06-27T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Placerville Schoolhouse",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Jennifer-Thurston-1.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://koto.org/event/movies-under-the-stars/2026-06-27/",
     description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
@@ -2911,6 +2881,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord-2/2026-07-05/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-07-05T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-05/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-07-05T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-07-05/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-07-05T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-06/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-06T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Savvy Seniors",
+    link: "https://koto.org/event/savvy-seniors/",
+    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you’re looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-07-06T19:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Birding with Katie Triest at Patagonia Telluride , July 6 and 7",
+    link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-06/",
+    description: "On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.",
+    pubDate: "2026-07-06T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: ""
   }
 ];
 
@@ -2946,7 +2982,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-27"
+    lastSeen: "2026-06-28"
   }
 ];
 
@@ -2961,7 +2997,7 @@ const ALIBI_EVENTS = [
   {
     title: "DYNAMIC DJ SET",
     link: "https://www.alibitelluride.com/calendar#eca-event=blakegetbackhere-dj-set",
-    description: "A DJ set at The Alibi in Telluride, featuring Yak and Flowmatic. Expect an energetic night of music in one of Telluride's favorite local bars.",
+    description: "Yak & Flowmatic",
     pubDate: "2026-06-27",
     time: "9:00 PM",
     source: "alibi",
@@ -3045,7 +3081,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    description: "The B-Side Players make music without borders or boundar...",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3249,7 +3285,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3261,7 +3297,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4118,7 +4154,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
+    description: "",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4129,7 +4165,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4140,7 +4176,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4151,7 +4187,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4162,7 +4198,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4173,7 +4209,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4184,7 +4220,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4195,7 +4231,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4907,17 +4943,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
   },
   {
-    title: "The Jauntee",
-    link: "https://www.telluride.com/event/the-jauntee/",
-    description: "The Jauntee is an electrifying and genre-blending musical ensemble that has captivated audiences with their unique and …",
-    pubDate: "2026-06-26",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62170/screenshot_2026-04-09_at_2_02_00_pm.800x533.webp"
-  },
-  {
     title: "Trick Dog Takeover at Timber Room",
     link: "https://www.telluride.com/event/trick-dog-takeover-at-timber-room/",
     description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences …",
@@ -4943,7 +4968,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
+    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -5192,7 +5217,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Fourth of July Drone Show",
     link: "https://www.telluride.com/event/fourth-of-july-drone-show/",
-    description: "A community drone show hosted by the Town of Telluride takes place at dusk on the Fourth of July. The aerial display marks Independence Day in Telluride.",
+    description: "Join the Town of Telluride for a Drone Show on the Fourth of July at dusk.",
     pubDate: "2026-07-04",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -7428,7 +7453,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "July 1, 2026",
     title: "Telluride Housing Authority Subcommittee",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8161",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
