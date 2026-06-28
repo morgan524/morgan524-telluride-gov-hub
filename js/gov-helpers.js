@@ -346,19 +346,19 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 HARC agenda hasn't been posted yet.",
+    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -409,7 +409,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet."
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -513,6 +513,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "NASA races to save Swift telescope from falling back to Earth with daring rescue mission",
+    source: "Telluride Times",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "public-safety",
+    copy: "NASA hired startup Katalyst Space Technologies to boost the aging Swift Observatory to a higher orbit before it falls back to Earth, with liftoff as early as Tuesday aboard a Pegasus rocket. A small autonomous spacecraft called Link will spend roughly three months catching and repositioning Swift from 224 to 373 miles up. Hubble faces a similar fate and could be next in line for this kind of robotic rescue.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d7e4086c-85cd-5b1e-8db8-a9642945934e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/4b/c4b2c0d7-1838-5df1-8cfd-d7dd192e78e8/6a4111f77745a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Dry, windy conditions fuel explosive wildfire growth across western US",
     source: "Telluride Times",
     date: "June 28, 2026",
@@ -522,6 +534,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ae2d65ba-16e2-566a-8769-e292b774e752.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d6/ad61ec39-0c6c-537e-ab49-0d4477843304/6a405e4511644.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "3 firefighters killed, 2 injured while tackling wildfires on the Colorado-Utah border, U.S. Wildland Fire Service says",
+    source: "Telluride Times",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "public-safety",
+    copy: "Three firefighters were killed and two injured fighting wildfires along the Colorado-Utah border, according to the U.S. Wildland Fire Service. This region knows fire season well — losing crews is a hard reminder of what's at stake out there.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_6252f903-83d2-534d-a819-c1bbebca95df.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Sacred Sundays at Grace Reins",
+    source: "Telluride Times",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "community",
+    copy: "Grace Reins, a Placerville facility cofounded by Erin Cain and Joe Crilly, works with eight rescued mustangs and one horse in therapeutic sessions for individuals, couples, groups, and students. A new bimonthly series called Sacred Sundays runs 3–5 p.m. through October 18, pairing conversations with local guests, time with the herd, and a sound bath.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_851f94d0-fc20-4708-bf13-cc7607c6a3a6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/06/7060b43b-d069-4648-bee6-185456a0a1f8/6a3e256be27a3.image.jpg",
     imgHiRes: true
   },
   {
@@ -717,18 +753,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "The ins and outs of e-bikes",
-    source: "Telluride Times",
-    date: "June 25, 2026",
-    firstSeen: "2026-06-25",
-    newsTopic: "recreation",
-    copy: "San Miguel County, the towns of Telluride and Mountain Village, the ski resort, and federal land managers all have different e-bike rules. Most popular local trails are off-limits, including Jud Wiebe, Bear Creek, and the East End trails. County-allowed routes are limited to Whiskey Charlie and the M59 River Trail.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_143bdae7-71b8-4b5a-b4b5-17ac56b1ca76.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1c/b1c03ed9-49d5-46d0-96c9-d14d148890bc/6a3addd597b51.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "CHALKBOARD Week of June 25-July 1",
     source: "Telluride Times",
     date: "June 25, 2026",
@@ -738,6 +762,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_18d0ee98-9560-4b52-ab87-ab0df895e2e9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/49/84978b61-651d-4ad9-9545-6337dcfc9316/6a3ac47be664c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The ins and outs of e-bikes",
+    source: "Telluride Times",
+    date: "June 25, 2026",
+    firstSeen: "2026-06-25",
+    newsTopic: "recreation",
+    copy: "San Miguel County, the towns of Telluride and Mountain Village, the ski resort, and federal land managers all have different e-bike rules. Most popular local trails are off-limits, including Jud Wiebe, Bear Creek, and the East End trails. County-allowed routes are limited to Whiskey Charlie and the M59 River Trail.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_143bdae7-71b8-4b5a-b4b5-17ac56b1ca76.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1c/b1c03ed9-49d5-46d0-96c9-d14d148890bc/6a3addd597b51.image.jpg",
     imgHiRes: true
   },
   {
@@ -3125,7 +3161,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3329,7 +3365,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3341,7 +3377,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3736,6 +3772,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
+    title: "Some events in Ouray may be closed due to the Gold Mountain Wildfire; Road closure",
+    link: "https://events.ourayridgwayevents.com/event/some-events-in-ouray-may-be-closed-due-to-the-gold-mountain-wildfire-road-closure",
+    description: "Please go to https://ouraycountyco.gov/ for more information about the wildfire or the Ouray County Sheriff's Facebook page: https://www.facebook.com/ouraycountysheriff. The wildfire information hot line is 970-626-5484. ALERT: Hwy 550 between Ouray and Whispering Pines is CLOSED. Ouray County Sheriff: June 27 @ 9:30PM Hwy 550 is being closed due to the Gold Mountain Fire located north of the City of Ouray. Traffic is being detoured over the Whispering Pines Bridge, via County Road 17 / Oak Street and 7th Ave in Ouray. Please use extreme caution as traffic will be utilizing this route both south and north. _________________ Oficina del Sheriff del Condado de Ouray: 27 de junio a las 9:30 p. m. La carretera 550 se cerrará debido al incendio Gold Mountain, situado al norte de la ciudad de Ouray. …",
+    pubDate: "2026-06-28T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53283591954667/huge/b56a8f466811f46be46e8625b3727017b23c10c1.jpg"
+  },
+  {
     title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
     link: "https://www.ridgwayfete.com/",
     description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. Music will be happening throughout downtown, including: 🎵 Hartwell Park 🎵 The Sherbino (air conditioning + bar!) 🎵 The Courtyard at 610 🎵 Clinton Street near the Decker Room 🎵 Cora Street near Thai Paradise & The Annex on Cora 🎵 Kate's Place Courtyard 🎵 The Old Firehouse Patio (Pat's Place Patio) 🎵 The Alley next to Ridgway Pilates With performances happening simultaneously, no two festival experiences are exactly alike! …",
@@ -4114,17 +4161,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52462631678331/huge/6cbdbfeb9edb95cd3ecb5d6d0dbe4af31c20a08b.jpg"
-  },
-  {
-    title: "Ridgway Bird Walks & Talks with Mike Campbell: “Riparian Habitat Birding”",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "location disclosed shortly before class start date (after registration).",
-    imageUrl: "https://localist-images.azureedge.net/photos/53073815786547/huge/8387acbab2071461ef1077e1f731fcbe4010dbb0.jpg"
   }
 ];
 
@@ -4132,7 +4168,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4143,7 +4179,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4154,7 +4190,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4165,7 +4201,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4176,7 +4212,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4187,7 +4223,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4198,7 +4234,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4209,11 +4245,22 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Town Closure",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Norwood Pioneer Days And Car Show",
+    link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    pubDate: "2026-09-26T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
     location: "Norwood, CO",
     imageUrl: ""
   }
@@ -4615,6 +4662,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "Town Talk: The Dual Challenge - Climate and Energy",
+    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-the-dual-challenge-climate-and-energy/",
+    description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine",
+    pubDate: "2026-07-28T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48907/0728-tt_320_x_212-tf.jpg"
   }
 ];
 
@@ -4957,7 +5015,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Dinner and a Magic Show With Ty Gallenbeck",
     link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
+    description: "Enjoy a three-course wine-paired dinner followed by a VIP magic show featuring performer Ty Gallenbeck in Telluride. This community event combines fine dining with live entertainment for an evening of food and magic.",
     pubDate: "2026-06-27",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
@@ -5206,7 +5264,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Fourth of July Drone Show",
     link: "https://www.telluride.com/event/fourth-of-july-drone-show/",
-    description: "Join the Town of Telluride for a Drone Show on the Fourth of July at dusk.",
+    description: "A community drone show hosted by the Town of Telluride takes place at dusk on the Fourth of July. The aerial display marks Independence Day in Telluride.",
     pubDate: "2026-07-04",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
