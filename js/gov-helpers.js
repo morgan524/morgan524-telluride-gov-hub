@@ -346,7 +346,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -512,6 +512,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Dry, windy conditions fuel explosive wildfire growth across western US",
+    source: "Telluride Times",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "public-safety",
+    copy: "Wildfire conditions across the West are severe this season — low humidity, warm temps, and gusty winds pushing fires fast across steep, hard-to-reach terrain. Utah declared an emergency, banned fireworks ahead of July 4th, and cut power in some areas to reduce risk. Nearly 3 million acres have burned nationally, already above the 10-year average.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_ae2d65ba-16e2-566a-8769-e292b774e752.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d6/ad61ec39-0c6c-537e-ab49-0d4477843304/6a405e4511644.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Dangerous weather hampers firefighters and leads to fireworks bans in western US",
     source: "Telluride Times",
@@ -1507,6 +1519,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
+    source: "Town of Ridgway",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-28",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/News-Release_-Gold-Mountain-Fire---Google-Docs.pdf",
+    img: ""
+  },
+  {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
     date: "June 28, 2026",
@@ -2410,17 +2433,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://koto.org/event/movies-under-the-stars/2026-06-27/",
-    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    pubDate: "2026-06-28T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Conference Center Plaza Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
     title: "Play It Forward – Pickleball for a Purpose!",
     link: "https://koto.org/event/play-it-forward-pickleball-for-a-purpose/",
     description: "Hey Telluride – grab your paddle! The San Miguel Resource Center is hosting Play It Forward! Pickleball for a Purpose on Sunday, June 28th at the Telluride Racquet Club. All skill levels welcome – and every point you play supports MSRC's 24/7 crisis hotline and youth prevention programs right here in our community. All levels of play are welcome, and if you don't have a racquet and balls, don't worry. We'll supply that for you! Advanced play will begin at 9:30 a.m., and Beginner & Intermediate play at 12 p.m. (noon). Register now at smrcco.org/events. Play it forward, Telluride!",
@@ -2952,15 +2964,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Community Fiesta",
-    link: "https://telluridelibrary.libcal.com/event/16721579?hs=a",
-    description: "1:30 PM – 4:30 PM · Junio es el mes de la herencia inmigrante y cada a&ntilde;o CAFI organiza la Community Fiesta. &Uacute;nase a nosotros para celebrar junio y nuestra comunidad diversa. Este evento es gratuito y abierto al p&uacute;blico. Comida gratis, equipo gratis para actividades al aire libre, m&uacute;sica y mucho m&aacute;s. June is immigrant heritage month and every year CAFI host the Community Fiesta.  Join us in celebrating June and our diverse community.  This event is free abnd open to the public. Free food, free outdoor gear, music and lots more.",
-    pubDate: "2026-06-27T19:30:00.000Z",
+    title: "CANCELLED Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536437?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-06-28T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_15_58_29.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "CANCELLED - Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970380?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-06-28T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "CANCELLED: Holding Space/Espacio de Espera con Daniel Kanow",
+    link: "https://telluridelibrary.libcal.com/event/16958648?hs=a",
+    description: "1:00 PM – 3:00 PM · SORRY THIS PROGRAM HAS BEEN CANCELLED. This two-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. This program is not therapy, but it is facilitated with care, respect, and an understanding that grief and trauma affect everyone differently. All materials are provided, and sessions are structured to prioritize emotional safety, choice, and mutual respect. …",
+    pubDate: "2026-06-28T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_27.jpg"
+  },
+  {
+    title: "Drop In Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/16986219?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
+    pubDate: "2026-06-28T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+  },
+  {
+    title: "CANCELLED Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567831?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-06-28T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -2994,18 +3050,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "DYNAMIC DJ SET",
-    link: "https://www.alibitelluride.com/calendar#eca-event=blakegetbackhere-dj-set",
-    description: "Yak & Flowmatic",
-    pubDate: "2026-06-27",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/28cb2c81-662e-4b68-8bfc-8180ad0e0a60/-/crop/1080x1081/0,0/-/preview/"
-  },
   {
     title: "Alibi Bday Celebration w/ Horse Bitch",
     link: "https://www.alibitelluride.com/calendar#eca-event=alibi-bday-celebration-w-horse-bitch",
@@ -3500,6 +3544,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
+    pubDate: "2026-03-12T12:00:00.000Z",
+    endDate: "2027-02-11",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
     title: "Zumba Fitness with Tamra",
     link: "https://zumba.com/p/zumbafitnesswithTamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com. For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra.",
@@ -3656,18 +3712,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
-    title: "Saturday Yoga",
-    link: "https://studioouray.com",
-    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00.",
-    pubDate: "2026-06-20T12:00:00.000Z",
-    endDate: "2026-09-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
-  },
-  {
     title: "Ouray Open Air Market",
     link: "https://www.ouray-events.com/open-air",
     description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
@@ -3690,117 +3734,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
-    title: "Ridgway Independent Film Festival Screening Series",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-independent-film-festival-screening-series",
-    description: "You decide! Help us to pre-screen short films for this year's festival. You will screen films (many brand new, never before seen) that are in consideration for our November festival, and discuss and review them afterwards! A different genre each night! Be a part of our community-based film selection process! Questions? New to this and want to learn more? Email arielle@sherbinotheater.com",
-    pubDate: "2026-06-23T12:00:00.000Z",
-    endDate: "2026-06-27",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53196545955120/huge/47f14d971b58902d369831d085a3fa5a7b0437bd.jpg"
-  },
-  {
-    title: "Trail Town Tenth Annual 10-mile and 5-mile Run/Walk",
-    link: "https://www.sanjuanmountainrunners.com/trailtownten",
-    description: "This event highlights everything there is to love about the Ridgway area. The 10-mile race is run on a lollipop course with magnificent views of the San Juan Mountains. The 5-mile fun-run / walk is an out-and-back on the first 2.5 miles of the 10-mile course and offers something for everyone. The event is coordinated with the Ridgway RiverFest and that means food and beverages and plenty of activities along the Uncompahgre River later the same day. Race proceeds will benefit the Uncompahgre Watershed Partnership.",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Palomino Trail in Ridgway",
-    imageUrl: "https://localist-images.azureedge.net/photos/53196585688300/huge/19b8513846ef05c51f75290f87dfb7a9e0d533f4.jpg"
-  },
-  {
-    title: "Back To The Future Festival",
-    link: "https://events.ourayridgwayevents.com/event/back-to-the-future-festival",
-    description: "Fundraiser to support Sharing Ministries Food Bank. Food, Entertainment, Music, Museum Tours, and Vintage Photos. For more information, call 970-240-8385. Sharing Ministries provides supplemental food assistance and services to residents of Ouray, Montrose, Delta, San Miguel and Gunnison Counties.",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Museum of the Mountain West",
-    imageUrl: "https://localist-images.azureedge.net/photos/53056662722867/huge/f871fb72be98c25f0ffba65779b0681f719415ea.jpg"
-  },
-  {
-    title: "Ouray History Day",
-    link: "https://www.visitouray.com/150",
-    description: "Step back in time and experience the rich history of Ouray. Historic Walking Tour 10 AM–2:30 PM | Centennial Park next to the Ouray Elks Lodge, 421 Main St. (Tour leaves at 10:15) Discover the stories that shaped Ouray through guided tours of historic buildings and live portrayals of some of the town’s most prominent historical figures. Local actors will bring history to life as they share the experiences, memories, and personalities of early Ouray residents. Photo: Ouray County Historical Society Ute Creation Story 8 PM | Fellin Park Listen to the Ute Creation Story as told by Larry Cesspooch, and deepen your understanding of the people, cultures, and stories that have shaped the Ouray area for generations.",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993991365940/huge/293df0610b27e785b906c11f81085da47aadb892.jpg"
-  },
-  {
-    title: "18th Annual Ridgway RiverFest",
-    link: "https://ridgwayriverfest.org/",
-    description: "The Ridgway RiverFest is a family-friendly celebration of the Uncompahgre River, our watershed and river recreation with all-age river races, live music, local food and drink, kids’ activities, watershed educational and cultural programs. RiverFest is produced by the Uncompahgre Watershed Partnership, a Ouray County nonprofit watershed group dedicated to helping protect the economic, natural, and scenic values of the Upper Uncompahgre River Watershed. The highlight of the day is the infamous “Junk of the Unc” race in which boaters maneuver their craft, constructed from scrap materials not intended for river travel, through whitewater rapids and others’ junk, trying to keep it all intact until the finish line. New schedule The river races will be at noon to 1pm. The Uncompaghre River and its flow determine which equipment to bring this year. More info. The main festival will be from 3 to 7 p.m. …",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52183972236736/huge/02f92530b9be036db720bee9d880832b463f5802.jpg"
-  },
-  {
-    title: "Ouray County Ranch History Museum's 20th Anniversary Day",
-    link: "https://ocrhm.org",
-    description: "Enjoy a fun-filled day of interactive activities & games, celebrating OC Ranch Museum's 20th Anniversary! Tour the acreage and see sites for future museum buildings, There will be mule rides, livestock, Rocking W Ice Cream truck from Webb Dairy, Sliders from Brittany at Uncompahgre Farm, 4-H youth showcasing their fair projects, CSU Extension offerings, zeroscape learning/plantings, Minerva West dress-up Trunk Show recognizing homesteader locals, Ridgway Community Apiary, Mighty Mini Horse Therapy, and more!",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53130955512768/huge/e51310a22a0fd90b349a2434edb7a63e61e96854.jpg"
-  },
-  {
-    title: "Tavern & Tours: Ouray History Day @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "Tavern & Tours: Ouray History Day @ the Wright WHEN? Saturday, June 27 Doors open: 11:00 am – 4:00 pm TOUR SCHEDULE Tour 1: 11:30 am – 12:30 pm Tour 2: 12:30 pm – 1:30 pm Tour 3: 1:30 pm – 2:30 pm Tour 4: 2:30 pm – 3:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Step inside one of Ouray’s most historic buildings for an afternoon of stories, cocktails, and local history at the Wright Opera House. Tavern & Tours: Ouray History Day invites guests to explore the fascinating past of the Wright through guided tours highlighting the building’s colorful frontier origins, theatrical legacy, hidden corners, and the larger history of Ouray itself. …",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53011860959808/huge/18d2c8168b9b4eb4feda6c306a6a74312794c185.jpg"
-  },
-  {
-    title: "Exhibit of Help Keep Our Rivers Clean Contest Youth Art & Poetry",
-    link: "https://www.uncompahgrewatershed.org/uwp-2026-youth-art-poetry-contest/",
-    description: "Come to Rollans Park in Ridgway during Ridgway RiverFest to view the art and poetry created by youth from around the Uncompahgre River Watershed. Festivalgoers will have a chance to vote on a People's Choice Award for one youth artist or poet! THEME: All of Us Can Help Keep Rivers Clean: Let’s prevent nonpoint source pollution! ORGANIZED BY: The Uncompahgre Watershed Partnership with support from the Environmental Protection Agency and Colorado Department of Public Health and Environment. OVERVEW: Nonpoint source pollution (NSP), or water pollution that does not originate from a single, distinct source, such as a pipe, is an ongoing threat to water quality in the state of Colorado. …",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53195810024826/huge/772295e1bfbc1a68b9f84735fa06b8abd1fbcac1.jpg"
-  },
-  {
-    title: "Cousin Curtis at Ridgway Riverfest",
-    link: "https://ridgwayriverfest.org/events/",
-    description: "OCPAG is proud to sponsor Cousin Curtiss as the 2026 Riverfest band! Performance at 5:00 p.m. The event schedule will be published on the Ridgway Riverfest website, follow this link! Cousin Curtiss Band www.cousincurtiss.com Past events have included: Boat Races, Rubber Ducky Race, Live Music, Ute Culture, Watershed Education, River Rat Marketplace, & More on the banks of the Uncompahgre River. Come to Rollans Park in Ridgway, 257 Sherman St., to celebrate the Uncompahgre Watershed!",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53249778876162/huge/9b0f8ce46d5494e5f5fcca2bf51ec2b1cba4fc30.jpg"
-  },
-  {
-    title: "Null and Void - Live at the Floating Lotus - FREE show",
-    link: "https://FloatingLotusBrewery.com",
-    description: "Null and Void is a rock duo from Denver, CO. Just guitar and drums, Null and void plays covers and originals. Inspired by bands like the Black Keys, Green Day, Smashing Pumpkins, The White Stripes, The Presidents of the United States of America, and Superchunk, their sets are on fire from start to finish. Null and Void has played Larimer Lounge, Lost Lake, Globe Hall, the Trailside Saloon, Goosetown, the Black Buzzard, Moe’s BBQ, and outdoor events and festivals like Run the Rocks (2022-2024) and Ridgway Rocks. Null and Void have shared the stage with the City of Sound, the Dirty Turkeys, Cinema Stereo, The Losers Club, Stray the Course, LOG, Hot Like Wasabi, 2 Seconds to Denver, Bicycle Day, and many more... Free Show All Ages Welcome Outdoor Stage",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53028364541359/huge/a175a92f468964f585613b57a9d781045075cb33.jpg"
   },
   {
     title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
@@ -4147,6 +4080,51 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53126308954360/huge/dc39d236acf1a73124e22fdae0143e571ac34d55.jpg"
+  },
+  {
+    title: "2026 Hardrock Hundred",
+    link: "https://www.hardrock100.com/index.php",
+    description: "The run starts and ends in Silverton, Colorado and travels through the towns of Telluride, Ouray, and the ghost town of Sherman, crossing thirteen major passes in the 12,000' to 13,000' range. Entrants must travel above 12,000 feet (3,700 m) of elevation a total of 13 times, with the highest point on the course being the 14,048' summit of Handies Peak. The run has been held in early July of each year beginning in 1992, except for 1995 (too much snow), 2002 (nearby forest fires), 2019 (too much snow), and 2020 (COVID-19 pandemic). Each year's run is run in the opposite direction of the previous year's event (2025 was run in the counter-clockwise direction, 2026 will be clockwise). …",
+    pubDate: "2026-07-10T12:00:00.000Z",
+    endDate: "2026-07-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Silverton Highschool Gymnasium",
+    imageUrl: "https://localist-images.azureedge.net/photos/51703557553146/huge/050175424246fd0205882d49e66a2c725b26b916.jpg"
+  },
+  {
+    title: "RIDGWAY WRECKING CREW",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-10T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Historic Walking Tour",
+    link: "http://www.ouraycountyhistoricalsociety.org/",
+    description: "Historic Ouray Main Street Walking Touor including the Elks Lodge, The Beaumont Hotel, The Wright Operal House, and Mesker Fronts. Tour led by Jenny Hart",
+    pubDate: "2026-07-10T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462631678331/huge/6cbdbfeb9edb95cd3ecb5d6d0dbe4af31c20a08b.jpg"
+  },
+  {
+    title: "Ridgway Bird Walks & Talks with Mike Campbell: “Riparian Habitat Birding”",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "location disclosed shortly before class start date (after registration).",
+    imageUrl: "https://localist-images.azureedge.net/photos/53073815786547/huge/8387acbab2071461ef1077e1f731fcbe4010dbb0.jpg"
   }
 ];
 
@@ -4242,6 +4220,17 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-06-27T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",

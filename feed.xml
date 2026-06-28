@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2026 02:57:27 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 28 Jun 2026 08:50:27 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jun 28–4</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-25</guid>
-      <pubDate>Sun, 28 Jun 2026 02:57:27 GMT</pubDate>
-      <description><![CDATA[The biggest item on the civic calendar this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements goes before the dais — rules that directly shape how structures get built in a box canyon that knows what fire country means. Council also continues its work session on the Telluride Energy Mitigation program the same night, while the Housing Authority appoints members to its new Resident Advisory Committee and the Open Space Commission walks the ground on Valley Floor trail alignments.]]></description>
+      <pubDate>Sun, 28 Jun 2026 08:50:27 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the calendar this week is Tuesday's Town Council meeting, where first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements comes before the full council — in a box canyon that knows exactly what fire country means, that's not a routine item. Council will also hold a second work session on the Telluride Energy Mitigation program, and the Housing Authority meets the same day to appoint members to its new Resident Advisory Committee, drawing from fifteen tenant applications across Town properties.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -69,19 +69,6 @@ Join TelluPride for the 2026 Pride Ride on Sunday, June 28! Riders will meet und
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>[Sun, Jun 28] Movies Under the Stars</title>
-      <link>https://koto.org/event/movies-under-the-stars/2026-06-27/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/movies%20under%20the%20stars%7C2026-06-28</guid>
-      <pubDate>Sun, 28 Jun 2026 00:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Conference Center Plaza Mountain Village
-
-Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Sun, Jun 28] Play It Forward – Pickleball for a Purpose!</title>
       <link>https://koto.org/event/play-it-forward-pickleball-for-a-purpose/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/play%20it%20forward%20pickleball%7C2026-06-28</guid>
@@ -103,6 +90,19 @@ Hey Telluride – grab your paddle! The San Miguel Resource Center is hosting Pl
 Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 28] CANCELLED Gentle Yoga with Kristen Milord</title>
+      <link>https://telluridelibrary.libcal.com/event/16536437?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelled%20gentle%20yoga%20with%7C2026-06-28</guid>
+      <pubDate>Sun, 28 Jun 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Jun 28] Telluride Rotary Hikeathon Closing Ceremony</title>
@@ -129,6 +129,45 @@ The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, di
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Sun, Jun 28] CANCELLED - Drop-In Tech Time with Oliver</title>
+      <link>https://telluridelibrary.libcal.com/event/15970380?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelled%20drop%20in%20tech%7C2026-06-28</guid>
+      <pubDate>Sun, 28 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 28] CANCELLED: Holding Space/Espacio de Espera con Daniel Kanow</title>
+      <link>https://telluridelibrary.libcal.com/event/16958648?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelled%20holding%20space%20espacio%7C2026-06-28</guid>
+      <pubDate>Sun, 28 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_27.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+1:00 PM – 3:00 PM · SORRY THIS PROGRAM HAS BEEN CANCELLED. This two-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. This program is not therapy, but it is facilitated with care, respect, and an understanding that grief and trauma affect everyone differently. All materials are provided, and sessions are structured to prioritize emotional safety, choice, and mutual respect. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_27.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 28] Drop In Ping Pong</title>
+      <link>https://telluridelibrary.libcal.com/event/16986219?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20ping%20pong%7C2026-06-28</guid>
+      <pubDate>Sun, 28 Jun 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Sun, Jun 28] Drop In Tech Time with Oliver</title>
       <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-28/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-06-28</guid>
@@ -139,6 +178,19 @@ The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, di
 Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Jun 28] CANCELLED Tea and Tarot</title>
+      <link>https://telluridelibrary.libcal.com/event/16567831?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelled%20tea%20and%20tarot%7C2026-06-28</guid>
+      <pubDate>Sun, 28 Jun 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Jun 28] Tea and Tarot</title>
@@ -178,15 +230,13 @@ The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda
       <category>San Miguel County</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Open Space Commission Site Walk - Jun 29 2026 — 2026-06-29</title>
+      <title>[Meeting] Open Space Commission Site Walk - Jun 29 2026 — 2026-06-29</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-06-29%7COpen%20Space%20Commission%20Site%20Walk%20-%20Jun%2029%202026</guid>
       <pubDate>Mon, 29 Jun 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-06-29
 
-The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.
-
-⚡ Why it matters: Commissioners walk potential trail alignments that will shape Valley Floor public access.]]></description>
+The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -276,7 +326,7 @@ The Mountain Ark: A Ken Bailey Film Lissa Margetts, one of Telluride’s most be
 
 A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.
 
-⚡ Why it matters: First reading of wildfire resilience building-code changes affects every property owner.]]></description>
+⚡ Why it matters: First reading of wildfire resilience building-code changes affects how all structures are built here.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -289,7 +339,7 @@ A full agenda for the last day of June. The most consequential item: first readi
 
 The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.
 
-⚡ Why it matters: THA appoints Resident Advisory Committee members and holds a lottery from tenant applications.]]></description>
+⚡ Why it matters: THA appoints first-ever Resident Advisory Committee members from Town rental properties.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -331,18 +381,6 @@ In collaboration with Patagonia Telluride, Colorado native plant expert, Al Schn
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Tue, Jun 30] Federal Judge Roy Altman on The Battle for Truth: Why the Israel Debate Matters to Everyone</title>
-      <link>https://koto.org/event/federal-judge-roy-altman-on-the-battle-for-truth-why-the-israel-debate-matters-to-everyone/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/federal%20judge%20roy%20altman%7C2026-06-30</guid>
-      <pubDate>Tue, 30 Jun 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Roy-Altman-Event-QR.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-Drawing from his bestselling book Israel on Trial, federal judge Roy Altman explores how the debate over Israel illuminates broader questions of truth, history, democracy, and civic responsibility in an age of competing narratives. This will be an inclusive conversation.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/Roy-Altman-Event-QR.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Meeting] Ecology Commission - Jul 01 2026 — 2026-07-01</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-01%7CEcology%20Commission%20-%20Jul%2001%202026</guid>
@@ -354,13 +392,15 @@ The July 1, 2026 Ecology Commission agenda hasn't been posted yet.]]></descripti
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Jul 01 2026 — 2026-07-01</title>
+      <title>⚡ [Meeting] Commission for Community Assistance, Arts &amp; Special Events - Jul 01 2026 — 2026-07-01</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-01%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Jul%2001%202026</guid>
       <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-01
 
-A routine CCAASE meeting with two items worth noting. RASR Productions LLC is asking to extend the Telluride Autumn Classic street closure on September 25, 2026 — adding the westbound lane of Colorado Ave. between Willow and Alder to an already-approved closure from Aspen to Willow. No objections came back from emergency services or affected residents. The commission will also take up a 2027 calendar date request from TMVOA for Red, White & Blues on July 3–4, which overlaps with MusicFest, Plein Air, and the 4th of July Celebration already on the books. A work session reviews draft 2027 grant materials.]]></description>
+A routine CCAASE meeting with two items worth noting. RASR Productions LLC is asking to extend the Telluride Autumn Classic street closure on September 25, 2026 — adding the westbound lane of Colorado Ave. between Willow and Alder to an already-approved closure from Aspen to Willow. No objections came back from emergency services or affected residents. The commission will also take up a 2027 calendar date request from TMVOA for Red, White & Blues on July 3–4, which overlaps with MusicFest, Plein Air, and the 4th of July Celebration already on the books. A work session reviews draft 2027 grant materials.
+
+⚡ Why it matters: Commission votes on expanding an approved Colorado Ave. street closure for September event.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -376,13 +416,15 @@ Two worksession items — no formal votes today. First, the subcommittee takes u
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Liquor Licensing Authority - Jul 01 2026 — 2026-07-01</title>
+      <title>⚡ [Meeting] Liquor Licensing Authority - Jul 01 2026 — 2026-07-01</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-01%7CLiquor%20Licensing%20Authority%20-%20Jul%2001%202026</guid>
       <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-01
 
-The Liquor Licensing Authority takes up 14 special event permit requests at its July 1 meeting — a busy slate that tracks the canyon's summer season in full swing. Applicants include Palm Arts Inc. (AVID Dance Performance, Camp Alderwild), Telluride Mountain Club (Mountain Run, Telluride Reserve), Telluride Medical Center Foundation (Telluride Table across multiple venues), San Miguel Mentoring (Top Chef & Taste of Telluride), Tri-County Health Network (Noche de Luz), Telluride Chamber Music Association (New York Philharmonic Brass Quintet), Telluride Society for Jazz (Jazz Festival), Telluride Film Festival, and Telluride Bluegrass Beer Booth Inc. (Camp Alderwild). Events span July through early September 2026. The board will also approve minutes from the May 21 meeting.]]></description>
+The Liquor Licensing Authority takes up 14 special event permit requests at its July 1 meeting — a busy slate that tracks the canyon's summer season in full swing. Applicants include Palm Arts Inc. (AVID Dance Performance, Camp Alderwild), Telluride Mountain Club (Mountain Run, Telluride Reserve), Telluride Medical Center Foundation (Telluride Table across multiple venues), San Miguel Mentoring (Top Chef & Taste of Telluride), Tri-County Health Network (Noche de Luz), Telluride Chamber Music Association (New York Philharmonic Brass Quintet), Telluride Society for Jazz (Jazz Festival), Telluride Film Festival, and Telluride Bluegrass Beer Booth Inc. (Camp Alderwild). Events span July through early September 2026. The board will also approve minutes from the May 21 meeting.
+
+⚡ Why it matters: Fourteen special-event liquor permits up for approval covering major summer events.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -395,7 +437,7 @@ The Liquor Licensing Authority takes up 14 special event permit requests at its 
 
 A relatively routine July BOCC meeting, though a few items are worth tracking. The board will interview an applicant for an alternate seat on the Planning Commission — a slot that matters whenever land-use decisions get close. There's a 40-minute presentation on the Road and Bridge High Country Road opening policy, with the Forest Service at the table, which touches on access to the county's backcountry roads every season. The board will also take up an ADA policy update, a tax abatement denial, and board appointments to the Behavioral Health Solutions Panel. The attorney's agenda includes an executive session on a code enforcement matter — no details given, as is typical.
 
-⚡ Why it matters: BOCC interviews Planning Commission alternate; High Country Road policy discussed with Forest Service.]]></description>
+⚡ Why it matters: BOCC interviews Planning Commission alternate — a seat that shapes close land-use votes.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -408,49 +450,9 @@ A relatively routine July BOCC meeting, though a few items are worth tracking. T
 
 Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.
 
-⚡ Why it matters: Land Use Code definition changes in Ouray County can reshape what triggers permitting review.]]></description>
+⚡ Why it matters: Ouray County rewriting Land Use Code definitions, which control what triggers development review.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
-    </item>
-    <item>
-      <title>[Wed, Jul 1] Wim Tapley &amp; the Cannons w/ Waxpool</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=wim-tapley-and-the-cannons</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/wim%20tapley%20and%20the%7C2026-07-01</guid>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/d29aea7b-9b02-4f7c-a2c2-183af167024d/-/crop/4036x2019/0,94/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Based in Athens, Georgia, Wim Tapley came of age playing shows in Washington D.C...]]></description>
-      <media:content url="https://ucarecdn.com/d29aea7b-9b02-4f7c-a2c2-183af167024d/-/crop/4036x2019/0,94/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Wed, Jul 1] Trunk Show</title>
-      <link>https://www.telluride.com/event/trunk-show-elinoff-gallery/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/trunk%20show%7C2026-07-01</guid>
-      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62621/300x300_c.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Elinoff Gallery is excited to have one of their favorite makers join them for the holiday week and bring some …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62621/300x300_c.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Wed, Jul 1] Town Talk: Tau</title>
-      <link>https://koto.org/event/town-talk-tau/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/town%20talk%20tau%7C2026-07-01</guid>
-      <pubDate>Wed, 01 Jul 2026 00:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-3.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Innovation Center
-
-This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally helps support their internal structure. In more than 25 brain diseases, including Alzheimer’s, tau can misfold and clump together into harmful fibers. Recent advances in imaging have shown that these tau clumps can take on many different shapes depending on the disease, but it is still unclear how the same protein can form such a wide variety of structures. In this talk, I will describe how we are using both experiments and computational methods to understand the basic rules that guide how tau changes shape and forms these toxic aggregates. By uncovering these rules, we hope to develop better ways to detect specific forms of tau early and design targeted treatments that can stop or prevent these diseases.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-3.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
   </channel>
 </rss>
