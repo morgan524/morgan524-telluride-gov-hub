@@ -1,7 +1,9 @@
 # Livable Telluride — Codebase & Automation Overhaul Plan
 
-**Status:** APPROVED IN PRINCIPLE (2026-06-28). Strangler approach agreed; a total
-from-scratch rewrite was explicitly ruled out. Phase 0 (audit) in progress.
+**Status:** IN PROGRESS. Strangler approach agreed (no from-scratch rewrite).
+**Phase 0 (audit) COMPLETE** → `docs/overhaul/phase-0-audit.md`. **P0 quick-wins
+all shipped** (2026-06-28/29) — see that doc's P0 section. **Phase 1 PLANNED** →
+`docs/overhaul/phase-1-plan.md` (schemas + parity harness + golden tests).
 
 **Goal:** end the recurring "holes" — silent breakage, stale data, decoupled
 pipelines, drifted logic — by moving to a structured, validated, observable

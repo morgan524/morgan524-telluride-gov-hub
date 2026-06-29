@@ -63,25 +63,41 @@ Full registers (with file:line evidence) are in the audit run; key points:
 
 ## Backlog
 
-### P0 — quick wins (small, safe, high-value; close holes now)
-1. **Fix the editorial approval email** — in `worker.js` `/article-create`, send
-   `kind:"moderation"` and gate `emailed` on `rj.ok` (mirror the IG path).
-   *Unstalls the full-summary pipeline.* (Risk 1)
-2. **Add a staleness/orphan alert to `source-health`** — flag each `*_CACHE_DATE`
-   and each list's latest meeting date when older than N days; flag any
-   `MANUAL_SUMMARIES`/`AI_SUMMARIES` key with no matching list row. (Risks 2,4)
-3. **Central `mtDateKey()` fix** for the `toISOString` date-key bug across the 6
-   getters + build-rss. (Risk 3)
-4. **Add `git pull --rebase` (or stagger crons)** to maintenance / housing /
-   festival / smc-watch push steps. (Risk 5)
-5. **Set `MODERATION_SECRET`** as an explicit Worker secret. (Risk 6)
-6. **Add a host allow-list to `/og`.** (Risk 7)
-7. **Guard object writes** — parse-check + reject `"[object Object]"`/`"undefined"`
-   before splicing in `replaceJsValue`. (Risk 8)
-8. **Retire dead automation** — delete the Customer.io test/lookup/migration
-   workflows + scripts (keep one ESP), remove `monthly-citation-audit`
-   (BriefLink), drop the redundant `weekly-website-review` task, confirm/delete
-   `weekly-preview.js`, fix the weekly doc drift. (Risk 10)
+### P0 — quick wins ✅ COMPLETE (2026-06-28/29)
+1. ✅ **Editorial approval email** — `worker.js` `/article-create` now sends
+   `kind:"moderation"` and gates `emailed` on the relay response. Deployed
+   (Worker v1.1.0). Unstalls `full-summary-publish.yml`. (Risk 1)
+2. ✅ **Staleness/orphan detector** — `detectStaleData()` in `source-health.js`
+   (cache-date age + future summaries with no list row), wired into
+   `content-review.js`'s issue/email path. Commit `2191970`. On live data it
+   flags 11 stale lists + 16 orphan future summaries. (Risks 2,4)
+3. ✅ **MT-anchored date keys** — `localDateKey()` replaces `toISOString()` at the
+   4 getter lookup sites in `gov-helpers.js`. Commit `308ac00`. Golden-checked:
+   0/91 key changes (zero regression). (Risk 3)
+4. ✅ **Rebase-before-push** added to maintenance / housing / festival / smc-watch.
+   Commit `bc43a6c`. (Risk 5)
+5. ✅ **`MODERATION_SECRET`** set as an explicit Worker secret (HMAC decoupled from
+   `ANTHROPIC_API_KEY`). (Risk 6)
+6. ✅ **`/og` SSRF guard** — `ogBlockedHost()` rejects private/loopback/link-local/
+   metadata hosts + non-web ports (real previews still work). Deployed
+   (v21897b53); verified 403 vs 200. (Risk 7)
+7. ✅ **Corrupt-write guard** — `assertSerializedSafe()` rejects `[object Object]`
+   and parse-checks the fragment before splicing in `replaceJsValue`. Commit
+   `f4de54b`. (Risk 8)
+8. ✅ **Retired dead automation** — deleted 4 Customer.io scaffolds + the BriefLink
+   `monthly-citation-audit` + dead `weekly-preview.js`. Commit `33fc183`.
+   (Kept `customerio-send-test`/`customerio-weekly`; the `weekly-website-review`
+   scheduled task is MCP-managed, not a repo file — drop separately.) (Risk 10)
+
+**Pending follow-up (not blocking):** reconcile `worker.js` into `main` — the live
+Worker is ahead (Instagram funnel + fixes #1/#5/#6). Blocked on adding GitHub repo
+secrets `INSTAGRAM_SECRET` / `PUBLER_API_KEY` / `PUBLER_WORKSPACE_ID` /
+`PUBLER_IG_ACCOUNT_ID` so `deploy-worker.yml`'s secret push can't blank live
+values; then commit `worker.js` → `main` and let auto-deploy own it.
+
+**Deferred (same class, lower urgency):** the 3 remaining `toISOString().slice`
+date-key sites in `gov-helpers.js` (`:2359`, `:7126/7131` — list/dedup, not getter
+lookups) → fold into the Phase 3 shared date lib. See `docs/overhaul/phase-1-plan.md`.
 
 ### P1 — structural (the strangler phases)
 - **Phase 1:** schemas for meeting/event/summary records; a **parity harness**
