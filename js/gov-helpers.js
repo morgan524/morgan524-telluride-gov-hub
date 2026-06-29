@@ -369,7 +369,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -381,7 +381,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -432,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
@@ -538,6 +538,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "AP Decision Notes: What to expect in Colorado's state primary",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-29",
+    newsTopic: "government",
+    copy: "Colorado's June primary features a Democratic governor's race between Sen. Michael Bennet and AG Phil Weiser, with Bennet vowing to name his own Senate replacement — someone under 50 — if elected. On the Republican side, Victor Marx leads in fundraising. Sen. Hickenlooper also faces a primary challenge from state Sen. Julie Gonzales.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_34b59166-5bd5-5e02-be97-b9df3e6d5eac.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/40/1400a5b7-ed9e-535b-adbc-f9fc9d9d34cd/6a4258c3c87ef.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "MV Town Council considers recommendations on strengthening ethics code",
     source: "Telluride Times",
@@ -4299,28 +4311,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
-    title: "The Muleskinner&#039;s Ball (GALA Fundraiser for Telluride Theatre)",
-    link: "https://townofmountainvillage.com/explore/events/all-events/the-muleskinners-ball-gala-fundraiser-for-telluride-theatre/",
-    description: "Get ready for the Telluride Theatre GALA! Back by popular demand, Telluride Theatre is reprising last year's Muleskinner's Ball for another rowdy evening of",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48944/mv_calendar_-_muleskinners_ball_2.png"
-  },
-  {
-    title: "Play It Forward! Pickleball for a Purpose",
-    link: "https://townofmountainvillage.com/explore/events/all-events/play-it-forward-pickleball-for-a-purpose/",
-    description: "Play It Forward! brings together the Telluride community for a day of pickleball, friendly competition, and meaningful fundraising --",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49097/play_it_forward_3_1.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -4660,6 +4650,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48907/0728-tt_320_x_212-tf.jpg"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-07-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
