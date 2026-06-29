@@ -2971,6 +2971,26 @@ function readJsFile(filePath) {
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 
 /**
+ * Guard the JS-as-data write path. Object writes (MANUAL_SUMMARIES, agenda meta)
+ * skip the array sanitize/validate funnel, and a single corrupt splice silently
+ * breaks every const declared below it. Before writing, confirm the serialized
+ * fragment carries no toString-coercion marker and parses as valid JS in
+ * isolation (catches unbalanced brackets — the "dropped const nukes the rest of
+ * the file" class). Throws on failure so the caller can keep the prior value.
+ */
+function assertSerializedSafe(varName, serialized) {
+  if (/\[object Object\]/.test(serialized)) {
+    throw new Error(`${varName}: serialization contains "[object Object]" (a value was coerced via toString)`);
+  }
+  try {
+    // eslint-disable-next-line no-new-func
+    new Function(serialized + '\n;return typeof ' + varName + ';');
+  } catch (e) {
+    throw new Error(`${varName}: serialized fragment does not parse — ${e.message}`);
+  }
+}
+
+/**
  * Replace a const declaration's value in the source string.
  * Works for both objects and arrays.
  */
@@ -3016,6 +3036,12 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
           serialized = serializeArray(varName, kept);
         }
 
+        try {
+          assertSerializedSafe(varName, serialized);
+        } catch (e) {
+          console.error(`  ✖ ${e.message} — ABORTING write of ${varName}, keeping previous value.`);
+          return source;
+        }
         return source.slice(0, start) + serialized + source.slice(end);
       }
     }
