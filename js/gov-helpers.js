@@ -351,7 +351,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
@@ -363,7 +363,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -414,7 +414,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet."
+    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -527,6 +527,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_ae2d65ba-16e2-566a-8769-e292b774e752.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d6/ad61ec39-0c6c-537e-ab49-0d4477843304/6a405e4511644.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Livable Telluride aims to help residents stay informed",
+    source: "Telluride Times",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-29",
+    newsTopic: "land-use",
+    copy: "Livable Telluride is a new website pulling together government meetings, agendas, development projects, and community resources for the Telluride region — covering the towns, county, and special districts in one place. The site includes a projects map, deep-dive explainers, and a message board, with AI handling most of the data gathering automatically.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_7b89e05e-4bf6-4d82-9a32-fbec9c2a5fde.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/84/4849e313-a51b-4162-88a4-8c26532fb1d8/6a3fd61eae1ca.image.jpg",
     imgHiRes: true
   },
   {
@@ -1560,9 +1572,31 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
+    title: "Stage 2 Fire Restrictions Implemented in Ridgway",
     source: "Town of Ridgway",
     date: "June 28, 2026",
+    firstSeen: "2026-06-29",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-2-Fire-Restrictions-press-release-2026-06-28.pdf",
+    img: ""
+  },
+  {
+    title: "Finding of the Town Manager Enacting Town Wide Fire Ban",
+    source: "Town of Ridgway",
+    date: "June 28, 2026",
+    firstSeen: "2026-06-29",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Wide-Fire-Ban---Stage-2-Restrictions---June-28%2C-2026---signed.pdf",
+    img: ""
+  },
+  {
+    title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
+    source: "Town of Ridgway",
+    date: "June 29, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1573,7 +1607,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "June 28, 2026",
+    date: "June 29, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1584,7 +1618,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 28, 2026",
+    date: "June 29, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1593,20 +1627,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway receives Local IMPACT Accelerator Award",
-    source: "Town of Ridgway",
-    date: "June 15, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Local-IMPACT-Accelerator-Grant-PR-2026-06-15.pdf",
-    img: ""
-  },
-  {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 28, 2026",
+    date: "June 29, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1617,7 +1640,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 28, 2026",
+    date: "June 29, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1628,7 +1651,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 28, 2026",
+    date: "June 29, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2485,72 +2508,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "San Miguel County Democrats Book Club",
-    link: "https://koto.org/event/san-miguel-county-democrats-book-club/2026-06-28/1/",
-    description: "The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, discussing Dan Rather's book \"What Unites Us.\" They will meet at noon at the Wilkinson Public Library in the Telluride Room, and 4:30pm at the Oliver House in Norwood, 1555 Summit St. For more information, please contact Cindy at mtnmama70@gmail.com .",
-    pubDate: "2026-06-28T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-06-28/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-06-28T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-06-28/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-06-28T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "2026 Pride Ride",
-    link: "https://koto.org/event/2026-pride-ride/",
-    description: "Join TelluPride for the 2026 Pride Ride celebrating the local LGBTQ+ community this Sunday, June 28! We’ll meet under the bra in Telluride Town Park at 3p, we ride at 3:30. Wear your favorite pride attire – we’ll bring extra glitter! All wheels, ages, and allies welcome. Happy pride! 🌈💕",
-    pubDate: "2026-06-28T21:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Pride-Ride-2026-Poster-Instagram-Post-45.png"
-  },
-  {
-    title: "San Miguel County Democrats Book Club",
-    link: "https://koto.org/event/san-miguel-county-democrats-book-club/2026-06-28/2/",
-    description: "The San Miguel County Democrats are hosting a Book Club on Sunday, June 28th, discussing Dan Rather's book \"What Unites Us.\" They will meet at noon at the Wilkinson Public Library in the Telluride Room, and 4:30pm at the Oliver House in Norwood, 1555 Summit St. For more information, please contact Cindy at mtnmama70@gmail.com .",
-    pubDate: "2026-06-28T22:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Medical Center Foundation Classic",
-    link: "https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-28/",
-    description: "Register Now! Join us for our reimagined and elevated Telluride Medical Center Foundation golf tournament! Sunday, June 28: Calcutta & Cocktails Monday, June 29: Breakfast, Golf, Lunch & Awards",
-    pubDate: "2026-06-29T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Golf Club",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Registration-is-Live.png"
-  },
-  {
     title: "Telluride Medical Center Foundation Classic",
     link: "https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-29/",
     description: "Register Now! Join us for our reimagined and elevated Telluride Medical Center Foundation golf tournament! Sunday, June 28: Calcutta & Cocktails Monday, June 29: Breakfast, Golf, Lunch & Awards",
@@ -2978,6 +2935,28 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Patagonia Telluride, Telluride Retail",
     imageUrl: ""
+  },
+  {
+    title: "Pie Contest",
+    link: "https://koto.org/event/pie-contest/",
+    description: "Our beloved tradition returns! Calling all pie enthusiasts! The Wilkinson Public Library is hosting its annual Pie Contest on Monday, July 6th! This delicious competition is open to bakers of all ages. Show off your skills and vie for bragging rights and a litany of prizes! Our panel of esteemed judges will decide the fate of your flaky masterpiece, based on appearance, creativity, and of course, taste. Register in advance",
+    pubDate: "2026-07-07T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Pie-Contest-4.png"
+  },
+  {
+    title: "Birding with Katie Triest at Patagonia Telluride , July 6 and 7",
+    link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-07/",
+    description: "On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.",
+    pubDate: "2026-07-07T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: ""
   }
 ];
 
@@ -3057,7 +3036,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-28"
+    lastSeen: "2026-06-29"
   }
 ];
 
@@ -4251,28 +4230,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-06-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Girl Scout Cookie Booth",
     link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
     description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
@@ -4983,28 +4940,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62758/trick_dog.800x533.webp"
-  },
-  {
-    title: "Telluride Theatre Muleskinner&#039;s Ball Fundraiser",
-    link: "https://www.telluride.com/event/telluride-theatre-muleskinners-ball-fundraiser/",
-    description: "Get ready for the one-night/one-of-a-kind Telluride Theatre GALA! A blast from the past - the biggest party of the …",
-    pubDate: "2026-06-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/47975/muleskinners_ball_hero_1920x1080_hero.800x533.webp"
-  },
-  {
-    title: "Dinner and a Magic Show With Ty Gallenbeck",
-    link: "https://www.telluride.com/event/dinner-and-a-magic-show-with-ty-gallenbeck/",
-    description: "A 3-course wine paired dinner followed by a VIP Magic show with Ty Gallenbeck.",
-    pubDate: "2026-06-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62888/1000009408.800x533.webp"
   },
   {
     title: "Telluride Chamber Music: MusicFest",
@@ -5741,6 +5676,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62312/screenshot_2026-04-29_at_2_59_37_pm.800x533.webp"
+  },
+  {
+    title: "Camp Alderwild",
+    link: "https://www.telluride.com/event/camp-alderwild/",
+    description: "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
+    pubDate: "2026-08-28",
+    endDate: "2026-08-30",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/57622/of_the_trees_by_frankie_zarantonello.800x533.webp"
   }
 ];
 

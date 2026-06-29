@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2026 19:15:52 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jun 2026 02:57:33 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sun, Jun 28] Drop In Ping Pong</title>
-      <link>https://telluridelibrary.libcal.com/event/16986219?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20ping%20pong%7C2026-06-28</guid>
-      <pubDate>Sun, 28 Jun 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Meeting] San Miguel Basin Fair Board — 2026-06-29</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -41,7 +28,7 @@ The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda
 
 The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.
 
-⚡ Why it matters: Commissioners walk Valley Floor to assess where a public river trail could actually go.]]></description>
+⚡ Why it matters: Commissioners walk the ground to evaluate real trail alignment options on the Valley Floor.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -79,7 +66,7 @@ The Mountain Ark: A Ken Bailey Film Lissa Margetts, one of Telluride’s most be
 
 A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.
 
-⚡ Why it matters: First reading of wildfire-resilience Land Use Code changes affects how all buildings are built here.]]></description>
+⚡ Why it matters: First reading: wildfire building-code changes could reshape how structures are built here.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -92,7 +79,7 @@ A full agenda for the last day of June. The most consequential item: first readi
 
 The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.
 
-⚡ Why it matters: THA appoints new Resident Advisory Committee members from Town rental properties.]]></description>
+⚡ Why it matters: THA appoints new Resident Advisory Committee members from tenant applicants across Town properties.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -161,7 +148,7 @@ The Liquor Licensing Authority takes up 14 special event permit requests at its 
 
 A relatively routine July BOCC meeting, though a few items are worth tracking. The board will interview an applicant for an alternate seat on the Planning Commission — a slot that matters whenever land-use decisions get close. There's a 40-minute presentation on the Road and Bridge High Country Road opening policy, with the Forest Service at the table, which touches on access to the county's backcountry roads every season. The board will also take up an ADA policy update, a tax abatement denial, and board appointments to the Behavioral Health Solutions Panel. The attorney's agenda includes an executive session on a code enforcement matter — no details given, as is typical.
 
-⚡ Why it matters: BOCC interviews Planning Commission applicant whose vote could tip close land-use decisions.]]></description>
+⚡ Why it matters: BOCC interviews Planning Commission alternate; road-access policy discussed with Forest Service.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -174,9 +161,57 @@ A relatively routine July BOCC meeting, though a few items are worth tracking. T
 
 Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.
 
-⚡ Why it matters: Ouray County redefining land-use terms shapes what triggers review on future projects.]]></description>
+⚡ Why it matters: Rewriting land-use definitions shapes what triggers review in Ouray County going forward.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 1] Baby Bop</title>
+      <link>https://koto.org/event/baby-bop/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/baby%20bop%7C2026-07-01</guid>
+      <pubDate>Wed, 01 Jul 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, diseñada para que cuidadores y pequeños se muevan juntos mediante rutinas fáciles de seguir. Te espera música alegre, coreografías sencillas y un ambiente de apoyo centrado en el vínculo, el movimiento y la alegría; ¡no se requiere experiencia previa en baile!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 1] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-01/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-01</guid>
+      <pubDate>Wed, 01 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 1] Market on the Plaza</title>
+      <link>https://koto.org/event/market-on-the-plaza/2026-07-01/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-07-01</guid>
+      <pubDate>Wed, 01 Jul 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Heritage Plaza, Mountain Village
+
+Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 2] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-02</guid>
+      <pubDate>Thu, 02 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
   </channel>
 </rss>
