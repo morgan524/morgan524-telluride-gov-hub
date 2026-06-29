@@ -596,6 +596,12 @@ function checkSourceHealth(ctx) {
   for (const a of sourceHealth.detectAnomalies(ctx.arrays, baseline)) {
     add(a.severity, 'Source may be broken', a.name, a.message);
   }
+  // Staleness/orphan checks don't need the baseline — a frozen cached meeting
+  // list or an orphaned future summary won't trip the count-based anomaly check.
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(new Date());
+  for (const a of sourceHealth.detectStaleData(ctx.captured, ctx.localDate, today)) {
+    add(a.severity, 'Stale data / orphan summary', a.name, a.message);
+  }
 }
 
 // ════════════════════════════════════════════════════════════════
