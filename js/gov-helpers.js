@@ -42,6 +42,21 @@ function localDate(str) {
   return new Date(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
 }
 
+// Calendar-date key (YYYY-MM-DD) for a Date built by localDate(). Those Dates
+// are local-midnight on the intended calendar day, so the day lives in the
+// Date's LOCAL components. Deriving the key via toISOString() (UTC) silently
+// shifts the day for evening/timestamped dates or runtimes east of UTC —
+// breaking summary / agenda / zoom lookups. Read the local components instead.
+// (For date-only meetings in a west-of-UTC browser this is identical to the old
+// toISOString().slice(0,10), so it's a zero-regression correctness fix.)
+function localDateKey(d) {
+  if (!d || isNaN(d)) return '';
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${y}-${m}-${day}`;
+}
+
 function isBadSummary(text) {
   if (!text) return false;
   if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
@@ -7475,7 +7490,7 @@ function getOurayMeetings() {
 
 function getTownAgendaLink(title, eventDate) {
   if (!eventDate) return TOWN_CIVICWEB_FALLBACK;
-  const dateKey = eventDate.toISOString().slice(0, 10);
+  const dateKey = localDateKey(eventDate);
   // Try exact title match first
   const exactKey = title + '|' + dateKey;
   let meetingId = TOWN_CIVICWEB_IDS[exactKey];
@@ -7697,7 +7712,7 @@ function meetingBoardToken(title) {
 
 function getMeetingSummary(item) {
   if (!item.eventDate) return '';
-  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  const dateKey = localDateKey(item.eventDate);
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
 
@@ -7757,7 +7772,7 @@ function getMeetingZoomLink(item) {
   if (!item.eventDate) return '';
   // School district always uses the same link
   if (item.source === 'school') return SCHOOL_ZOOM_LINK;
-  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  const dateKey = localDateKey(item.eventDate);
   const exactKey = item.source + '|' + dateKey + '|' + item.title.replace(/ -- CANCELED$/, '').replace(/ -- Special Meeting$/, '');
   if (MEETING_ZOOM_LINKS[exactKey]) return MEETING_ZOOM_LINKS[exactKey];
   // Try partial match
@@ -7780,7 +7795,7 @@ function getMeetingPasscode(item) {
     return pwdMatch ? { id: '865 8512 4120', passcode: pwdMatch[1], phone: '' } : null;
   }
 
-  const dateKey = item.eventDate.toISOString().slice(0, 10);
+  const dateKey = localDateKey(item.eventDate);
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '').replace(/ -- Special Meeting$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
 
