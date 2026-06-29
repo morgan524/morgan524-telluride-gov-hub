@@ -41,6 +41,7 @@ jobs:
           git commit -m "🏠 Housing refresh $(date -u +'%Y-%m-%d')
 
           Automated: expired listing cleanup and SMRHA check"
+          git pull --rebase origin main
           git push
 
       - name: Upload run logs

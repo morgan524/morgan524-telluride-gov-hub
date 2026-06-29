@@ -44,6 +44,7 @@ jobs:
           fi
           git add assets/ssr
           git commit -m "🛰 SMC Housing Code Update mirror $(date -u +%F\ %H:%MZ)"
+          git pull --rebase origin main
           git push origin HEAD
 
       - name: Upload run logs

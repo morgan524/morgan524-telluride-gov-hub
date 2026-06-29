@@ -49,6 +49,7 @@ jobs:
           git commit -m "🧹 Daily maintenance $(date -u +'%Y-%m-%d')
 
           Automated: expired notice cleanup, stale news removal, link check, file parity"
+          git pull --rebase origin main
           git push
 
       - name: Report issues

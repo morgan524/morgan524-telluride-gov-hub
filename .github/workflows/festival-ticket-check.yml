@@ -41,6 +41,7 @@ jobs:
           git commit -m "🎟️ Festival ticket status update $(date -u +'%Y-%m-%d')
 
           Automated weekly check: updated ticketStatus/promo for changed festivals"
+          git pull --rebase origin main
           git push
 
       - name: Upload run logs
