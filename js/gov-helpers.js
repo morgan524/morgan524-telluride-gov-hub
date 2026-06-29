@@ -229,6 +229,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-27|Open Space Commission Meeting":
+    {"sv":4},
+
+  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     {"sv":4}
 };
 
@@ -378,7 +381,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -429,7 +432,10 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet."
+    "The July 27 San Miguel County Open Space Commission Meeting agenda hasn't been posted yet.",
+
+  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
+    "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -532,6 +538,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "MV Town Council considers recommendations on strengthening ethics code",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-29",
+    newsTopic: "government",
+    copy: "Mountain Village Town Council met with lead investigator Nick Boeving on June 17 to review ethics reform recommendations following last winter's procurement controversy. Council members pushed back on most suggestions, including adding \"appearance of impropriety\" language to the ethics code. Disclosure and recusal requirements drew the most support.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_73013665-e958-4674-9a72-571d5d48f074.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b5/fb5bc5b4-b6d7-4092-95d0-3c822ed0284c/6a3fe0b95f574.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Dry, windy conditions fuel explosive wildfire growth across western US",
     source: "Telluride Times",
@@ -2977,59 +2995,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLED Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536437?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-06-28T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "CANCELLED - Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970380?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-06-28T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "CANCELLED: Holding Space/Espacio de Espera con Daniel Kanow",
-    link: "https://telluridelibrary.libcal.com/event/16958648?hs=a",
-    description: "1:00 PM – 3:00 PM · SORRY THIS PROGRAM HAS BEEN CANCELLED. This two-week creative series offers a gentle, supportive space to explore grief and life transitions through art-making. Each session invites participants to engage in guided, low-pressure creative activities designed to support reflection, grounding, and self-expression. No art experience is needed. Participants are free to observe, modify activities, or step away as needed. Sharing is optional, and personal stories are never required. The focus is on healing the process of creative expression and the potential creation of meaningful heartfelt artworks. This program is not therapy, but it is facilitated with care, respect, and an understanding that grief and trauma affect everyone differently. All materials are provided, and sessions are structured to prioritize emotional safety, choice, and mutual respect. …",
-    pubDate: "2026-06-28T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_01_27.jpg"
-  },
-  {
-    title: "Drop In Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/16986219?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
-    pubDate: "2026-06-28T19:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568418?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-06-29T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "CANCELLED Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567831?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-06-28T20:30:00.000Z",
+    title: "Desserts & Documentary: Mountain Joy Documentary",
+    link: "https://telluridelibrary.libcal.com/event/16667368?hs=a",
+    description: "1:30 PM – 3:00 PM · Mountain Joy- Documentary -Cindy Farny will be here in person for discussion and some desserts. In the 1960s, a charismatic outdoorsman named Dave Farny launched a Colorado mountaineering school with his wife Sherry that would inspire over 1,000 adventurers to seek out their limits. The Farnys took young students on challenging outings over five-week periods, fostering some of the best mountaineers, skiers and climbers of the era. Ultimately, the Farny family ended up learning — as much as the boys did — about the mountain joy to be found through camaraderie, hard work and adventure in the Rockies.\\ Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! …",
+    pubDate: "2026-06-29T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_11_47_29.png"
+  },
+  {
+    title: "Hobby Hopping",
+    link: "https://telluridelibrary.libcal.com/event/17065342?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby each week on Monday afternoons.  June 1: Perler Beads June 8: Friendship Bracelets June 15: Slime! June 22: Tie Dye June 29: Clay Studio",
+    pubDate: "2026-06-29T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_18_25.png"
+  },
+  {
+    title: "Rhythms for the Healing Arts – a Frame Drum Workshop with Yousif Sheronick",
+    link: "https://telluridelibrary.libcal.com/event/15210636?hs=a",
+    description: "5:30 PM – 7:00 PM · Telluride Chamber Music&#39; s program at the library is free and open to the public, but drums are limited so please email to reserve one! telluridechambermusic@gmail.com Join world-renowned percussionist Yousif Sheronick for a one-hour hands-on workshop exploring the ancient and transformative art of the frame drum. Based on his online course \"Rhythms for the Healing Arts,\" this session introduces participants to basic strokes and then guides them through rhythm sequences inspired by Egyptian gods, bodies of water, earth, and plant life. This workshop is open to all levels—beginners are welcome! Drums are provided, but you're encouraged to bring your own if you have one. For ages 16 and up. ABOUT YOUSIF: Hailed by the New York Times for his \"dazzling improvisations\" and his \"wizardry on a range of humble frame drums\" Yousif Sheronick enjoys an active career as percussionist, composer, producer and educator. …",
+    pubDate: "2026-06-29T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_22_48_22.jpg"
   }
 ];
 
@@ -3641,6 +3648,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
   },
   {
+    title: "Dallas Park Cemetery Tour",
+    link: "https://www.ouraycountyhistoricalsociety.org",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    pubDate: "2026-05-09T12:00:00.000Z",
+    endDate: "2026-10-10",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Dallas Park Cemetery ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
+  },
+  {
     title: "Yoga in the Park- Wednesday evenings",
     link: "https://www.beetrueyou.com",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person.",
@@ -3725,6 +3744,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
+    title: "Saturday Yoga",
+    link: "https://studioouray.com",
+    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00.",
+    pubDate: "2026-06-20T12:00:00.000Z",
+    endDate: "2026-09-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
+  },
+  {
     title: "Ouray Open Air Market",
     link: "https://www.ouray-events.com/open-air",
     description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM.",
@@ -3747,39 +3778,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
-    title: "Some events in Ouray may be closed due to the Gold Mountain Wildfire; Road closure",
-    link: "https://events.ourayridgwayevents.com/event/some-events-in-ouray-may-be-closed-due-to-the-gold-mountain-wildfire-road-closure",
-    description: "Please go to https://ouraycountyco.gov/ for more information about the wildfire or the Ouray County Sheriff's Facebook page: https://www.facebook.com/ouraycountysheriff. The wildfire information hot line is 970-626-5484. ALERT: Hwy 550 between Ouray and Whispering Pines is CLOSED. Ouray County Sheriff: June 27 @ 9:30PM Hwy 550 is being closed due to the Gold Mountain Fire located north of the City of Ouray. Traffic is being detoured over the Whispering Pines Bridge, via County Road 17 / Oak Street and 7th Ave in Ouray. Please use extreme caution as traffic will be utilizing this route both south and north. _________________ Oficina del Sheriff del Condado de Ouray: 27 de junio a las 9:30 p. m. La carretera 550 se cerrará debido al incendio Gold Mountain, situado al norte de la ciudad de Ouray. …",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53283591954667/huge/b56a8f466811f46be46e8625b3727017b23c10c1.jpg"
-  },
-  {
-    title: "Ridgway Fête de la Musique presented by Citizens State Bank, The Sherbino & Weehawken Creative Arts",
-    link: "https://www.ridgwayfete.com/",
-    description: "4 pm – Dark || Downtown Ridgway on Clinton & Cora + Hartwell Park, the Sherbino & The Courtyard at 610 Setting: Walking, Standing, Dancing Join us for one of Ridgway’s most joyful traditions — the Ridgway Fête de la Musique, an outdoor celebration of live music, community, and summer vibes! Presented by Citizen’s State Bank, Weehawken Creative Arts, and The Sherbino, this FREE event transforms downtown Ridgway into a bustling open-air festival filled with the sound of music. Music will be happening throughout downtown, including: 🎵 Hartwell Park 🎵 The Sherbino (air conditioning + bar!) 🎵 The Courtyard at 610 🎵 Clinton Street near the Decker Room 🎵 Cora Street near Thai Paradise & The Annex on Cora 🎵 Kate's Place Courtyard 🎵 The Old Firehouse Patio (Pat's Place Patio) 🎵 The Alley next to Ridgway Pilates With performances happening simultaneously, no two festival experiences are exactly alike! …",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52590090771453/huge/5f8f06133edd0a9151fe5e6e785bc44ecfc34e48.jpg"
-  },
-  {
-    title: "Mariachi San Jose for Fête de la Musique!",
-    link: "https://www.ridgwayfete.com/",
-    description: "Fête de la Musique is a day to celebrate community, music, and the summer solstice! Live music will be offered by local and regional musicians from all genres and ages throughout Ridgway. The event is free to attend and will feature beverage stations and food trucks. Tips are MOST welcome for ALL the performers. Food trucks and beverage stands will be spread throughout downtown. Fete FUN!",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Cora St near Thai Paradise",
-    imageUrl: "https://localist-images.azureedge.net/photos/53249823162733/huge/6e2f52f462d0025f1c84d0cfb171eee65d6a259d.jpg"
   },
   {
     title: "CORAL SKYE",
@@ -4138,6 +4136,40 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52462631678331/huge/6cbdbfeb9edb95cd3ecb5d6d0dbe4af31c20a08b.jpg"
+  },
+  {
+    title: "Ridgway Bird Walks & Talks with Mike Campbell: “Riparian Habitat Birding”",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "location disclosed shortly before class start date (after registration).",
+    imageUrl: "https://localist-images.azureedge.net/photos/53073815786547/huge/8387acbab2071461ef1077e1f731fcbe4010dbb0.jpg"
+  },
+  {
+    title: "2-Day Trail Stewardship Trip: Courthouse to South Stealey Jct",
+    link: "https://ouraytrails.org/volunteers",
+    description: "Join Ouray Trail Group Crew Leader Kevin for a two-day stewardship trip from. Courthouse to South Stealey Junction . Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. Feel free to join us for one or both days. There's no cost, but please register.https://tinyurl.com/OTGsummer2026",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    endDate: "2026-07-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Courthouse Trailhead",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932478605706/huge/594f0611d04b8cac902b2db3b64ffb53ae543a95.jpg"
+  },
+  {
+    title: "Wildflower Walk with Mary Menz",
+    link: "https://lp.constantcontactpages.com/ev/reg/6gbhr9f",
+    description: "Experience the scenic vistas of the San Juan Mountains in Ouray from an entirely new perspective during this wildflower walk. 🌼 Join landowner Charlie Parker for a scenic three-mile hike across his private property while local botany expert Mary Menz helps identify the colorful wildflowers and alpine plants found along the trail. This event is in partnership with Colorado West Land Trust. 🕘 July 11 | 8:30 AM-1 PM 📍 Meet at the Ouray KOA, 225 Co Rd 23, Ridgway, CO 81432 💲 Free REGISTER: https://lp.constantcontactpages.com/ev/reg/6gbhr9f",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray KOA",
+    imageUrl: "https://localist-images.azureedge.net/photos/53082388585996/huge/8f84b01bd22d47aca2573a9e1e048373c5a20130.jpg"
   }
 ];
 
