@@ -82,6 +82,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
     <div style="margin-top:14px"><button class="btn sec tiny" id="reset">↺ Reset to generated</button></div>
     <label style="margin-top:18px">Send a test to</label>
     <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
+    <button class="btn sec" id="fulltest" style="margin-top:8px">▶ Send full test (real broadcast → your test list)</button>
     <button class="btn primary" id="approve">✓ Approve &amp; Post via Customer.io</button>
     <div class="status" id="status"></div>
     <div class="note">Edit the <b>intro</b> here (most common change) and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. When it looks right, <b>Send test</b>, then <b>Approve &amp; Post</b>.</div>
@@ -222,6 +223,17 @@ $("test").onclick=async()=>{
     if(r.ok) showStatus("✓ Test sent to "+to+" — check inbox + spam."); else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
   }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
   finally{ $("test").disabled=false; }
+};
+$("fulltest").onclick=async()=>{
+  const d=state[cur];
+  if(!confirm('Send a FULL test of "'+d.subject+'" through the real broadcast path to your Customer.io test list (just you)?')) return;
+  showStatus('<span class="spin"></span> Firing test broadcast…'); $("fulltest").disabled=true;
+  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, testBroadcast:true });
+    if(r.ok) showStatus("✓ Test broadcast fired — it'll land at your test-list address shortly (check inbox + spam).");
+    else if(r.pending) showStatus("⏳ "+r.error,true);
+    else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("fulltest").disabled=false; }
 };
 $("approve").onclick=async()=>{
   const d=state[cur];

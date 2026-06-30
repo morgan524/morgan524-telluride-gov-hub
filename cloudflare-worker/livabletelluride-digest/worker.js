@@ -112,6 +112,23 @@ async function send(body, env) {
     return r.ok ? { ok: true, mode: "test", to } : { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
   }
 
+  // Full-process test → fire the TEST broadcast. It's bound in Customer.io to a
+  // one-person test segment, so this exercises the real broadcast path (render +
+  // send via the news@ domain) but can NEVER reach the real Weekly Update list.
+  if (body.testBroadcast) {
+    const tbid = (env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim();
+    if (!tbid) {
+      return { pending: true, error: "No test broadcast configured yet. Create an API-triggered test broadcast pointed at a one-person test segment, then set CUSTOMERIO_TEST_BROADCAST_ID." };
+    }
+    const r = await fetch("https://api.customer.io/v1/campaigns/" + tbid + "/triggers", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + appKey, "Content-Type": "application/json" },
+      body: JSON.stringify({ data: { subject, body: html } }),
+    });
+    const t = await r.text();
+    return r.ok ? { ok: true, mode: "test-broadcast" } : { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+  }
+
   // Approve & Send → API-triggered broadcast to the segment.
   const bid = (env.CUSTOMERIO_BROADCAST_ID || "").trim();
   if (!bid) {
@@ -135,7 +152,7 @@ export default {
     const url = new URL(request.url);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origin) });
     if (url.pathname === "/health") {
-      return json({ ok: true, broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim() }, 200, origin);
+      return json({ ok: true, broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim(), testBroadcast: !!(env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim() }, 200, origin);
     }
     if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
 
