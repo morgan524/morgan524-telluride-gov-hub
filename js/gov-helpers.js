@@ -551,6 +551,54 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Arkansas will move forward with a ban on using SNAP for candy and soda despite recent court ruling",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "arts-culture",
+    copy: "Arkansas is moving ahead with its ban on using SNAP benefits to buy candy and soda, even after a federal judge vacated similar waivers in five other states on procedural grounds. Grocers will carry the enforcement burden, with the state providing a banned-items list and a consumer app to help shoppers navigate the changes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_6dd706fc-b56e-5909-8648-20c00aa17a90.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/82/68294f25-d97e-5bd1-baac-0054d024a087/6a42f39b271b6.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Echoes of deadly Arizona wildfire with 3 firefighters killed in Colorado-Utah blaze",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "public-safety",
+    copy: "Three firefighters on a Helitack crew were killed and two injured Saturday in a wildfire west of Grand Junction that has burned 44 square miles. They deployed fire shelters — last-resort heat-resistant tents — when flames overtook them, mirroring the 2013 Yarnell Hill tragedy in Arizona. Investigations like these often take months and rarely produce clear answers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_577a5477-85e4-5731-913a-e6725143ec4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22e691da-f0b3-5be8-a368-74d042eeda40/6a42df867f724.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Colorado court rejects November ballot initiatives aimed at redrawing congressional districts",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "government",
+    copy: "Colorado's Supreme Court threw out ballot initiatives that would have allowed mid-decade congressional redistricting, ruling both Democratic- and Republican-backed versions violated the state's multi-subject rule. Colorado's delegation currently sits at an even 4-4 split under maps drawn by the independent redistricting commission after 2020. That commission — created by voters in 2018 — remains intact.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_0d1a8d00-3442-582f-8656-1684af6654d7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/e1/ae1348ac-011e-5012-8696-6d5e86ee7336/6a42ec993cccc.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Uncontained wildfires continue to ravage the Western Slope",
+    source: "Telluride Times",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "public-safety",
+    copy: "Three firefighters from the Rifle Helitac crew were killed and two injured in a burnover on the Knowles Fire near Grand Junction, where merged fires have burned nearly 30,000 acres with zero containment. The Gold Mountain Fire north of Ouray topped 4,000 acres, prompting a disaster declaration and closing Highway 550; Norwood and Telluride fire crews are on scene. San Miguel County is under a smoke advisory and Stage 2 fire restrictions, though no active fires were burning there as of Monday.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_77b644e3-1bc0-4799-b0ca-1289b8078e53.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7b/e7b914ee-2087-4175-99f1-951c90a56f46/6a42d1776ce10.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Three firefighters who died in wildfires on Utah-Colorado border were from Alabama, Arizona and Michigan, officials say",
     source: "Telluride Times",
     date: "June 29, 2026",
@@ -1491,30 +1539,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "The family forged by theater",
-    source: "Telluride Times",
-    date: "June 16, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "A longtime Telluride theater director reflects on building Young People's Theater over decades, working with roughly 1,000 kids, then leaving to sail the world with her family. Years later, those former students are woven into her daily life — as friends, collaborators, and neighbors on Main Street.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_b0a15262-fe8d-43db-a2cc-339a9cde4826.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/88/688fd068-0afb-4bab-8f61-c0a7d2589729/6a2b4d6d50fb9.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Steward for an uncertain future: Telluride Town Council candidate Charles Dalton",
-    source: "Telluride Times",
-    date: "June 16, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "Charles Dalton is running for Telluride Town Council, bringing eight years on Planning and Zoning and a 35-year real estate career focused on housing market analysis. He backs a modest second-home tax differential, more regional housing with reliable bus service, and rebuilding the town's relationship with Telski.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d1f22fd4-022a-49f6-a26d-2d556533adf8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/e4/0e411176-7121-4f5b-8b1c-3efdf057083a/6a30fd9376842.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
     source: "Town of Telluride",
     date: "June 24, 2026",
@@ -1632,12 +1656,32 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Gold Mountain Fire",
+    source: "Town of Telluride",
+    date: "June 29, 2026",
+    newsTopic: "housing",
+    copy: "The Town is aware of the Gold Mountain Fire currently burning in Ouray County, north of the City of Ouray. We want to assure residents and visitors that the Gold Mountain Fire does not pose a direct threat to the Town of Telluride at this time.",
+    href: "http://ouraycountyco.gov",
+    img: ""
+  },
+  {
     title: "Stage 2 Fire Restrictions In Effect",
     source: "Town of Telluride",
     date: "June 26, 2026",
     newsTopic: "public-safety",
     copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    img: ""
+  },
+  {
+    title: "Gold Mountain Fire Update",
+    source: "Town of Ridgway",
+    date: "June 29, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Gold-Mtn-Fire-Update-2026-06-29.pdf",
     img: ""
   },
   {
@@ -1665,7 +1709,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
     source: "Town of Ridgway",
-    date: "June 29, 2026",
+    date: "June 30, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1676,7 +1720,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "June 29, 2026",
+    date: "June 30, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1685,20 +1729,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
-    source: "Town of Ridgway",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "infrastructure",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
-    img: ""
-  },
-  {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 29, 2026",
+    date: "June 30, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1707,9 +1740,20 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
+    source: "Town of Ridgway",
+    date: "June 30, 2026",
+    firstSeen: "2026-06-24",
+    newsTopic: "infrastructure",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
+    img: ""
+  },
+  {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 29, 2026",
+    date: "June 30, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1720,7 +1764,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 29, 2026",
+    date: "June 30, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1731,6 +1775,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 6-29-26",
+    source: "KOTO Community Radio",
+    date: "June 30, 2026",
+    newsTopic: "public-safety",
+    copy: "A Gold Mountain Fire Update; Coming Up Next, Telluride",
+    href: "https://koto.org/news/newscast-6-29-26/"
+  },
   {
     title: "Newscast 6-26-26",
     source: "KOTO Community Radio",
@@ -1770,14 +1822,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "education",
     copy: "On this week's Regional Roundup, we hear about a poetry festival that took place recently in the Four Corners. Then, we hear from our rural climate reporter on how the Colorado River is at a tipping point due to severe drought, over allocation, and climate change. These issues were discussed at a conference at the law school at CU Boulder. Then, we",
     href: "https://koto.org/news/newscast-6-17-26/"
-  },
-  {
-    title: "Newscast 6-15-26",
-    source: "KOTO Community Radio",
-    date: "June 16, 2026",
-    newsTopic: "government",
-    copy: "Telluride Discusses Town Council Ethics Code; The Photography of Humanity and Climate Change",
-    href: "https://koto.org/news/newscast-6-15-26/"
   }
 ];
 
@@ -1828,6 +1872,17 @@ const KOTO_FEATURED_STORIES = [
 // copy, href, img }. Rendered on Local News via local-news.html loadLiveData.
 const ROTARY_NEWS = [
   {
+    title: "Thank You Donors & Hikers for a Successful Hikeathon",
+    source: "Telluride Rotary",
+    sourceKey: "rotary",
+    date: "June 30, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "community",
+    copy: "During four weeks in June, Telluride Rotary held the second-annual Hikeathon to raise funds for Telluride Rotary as well as for other nonprofits. We also aimed to motivate people to hike! The Hikeathon grossed just over $22,000. We gave back the nonprofit teams 60% of the funding they raised, totali",
+    href: "https://portal.clubrunner.ca/3291/Stories/thank-you-donors-amp-hikers-for-a-successful-hikeathon",
+    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/group.jpeg"
+  },
+  {
     title: "Upcoming meetings",
     source: "Telluride Rotary",
     sourceKey: "rotary",
@@ -1837,17 +1892,6 @@ const ROTARY_NEWS = [
     copy: "Normally we meet the 1st and 3rd Wednesdays of the month. Meetings feature member updates, club news, and speakers. We are not meeting the first Wednesday in July due the holiday that week. Join us Wednesday, July 15, 6pm at our new town meeting place, MountainFilm's office at 122 S Oak Street. Emai",
     href: "https://portal.clubrunner.ca/3291/Stories/upcoming-meetings-1",
     img: ""
-  },
-  {
-    title: "The Second Annual Hikeathon Is Happening In June, Register Now!",
-    source: "Telluride Rotary",
-    sourceKey: "rotary",
-    date: "June 2, 2026",
-    firstSeen: "2026-06-02",
-    newsTopic: "arts-culture",
-    copy: "Help us make the Hikeathon a success! Telluride Rotary is back with its signature community event to promote health and camaraderie while also raising much-needed funds for Telluride Rotary and other nonprofits. Sign up here to participate, or visit the site to make a donation: https://go.dojiggy.io",
-    href: "https://portal.clubrunner.ca/3291/Stories/the-second-annual-hikeathon-is-happening-in-june-register-now",
-    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/Hikathon-simplified-logo-SMALL.png"
   },
   {
     title: "Rotary Youth Exchange: Info for Students and Potential Host Families",
@@ -1880,7 +1924,18 @@ const ROTARY_NEWS = [
     newsTopic: "education",
     copy: "Telluride Rotary Club takes pride in making several grants, giving scholarships to high school seniors, and participating in community service projects. Below are highlights since of our club's actions to make a positive difference: gave $23,000 in May of 2026 in scholarships to high school seniors ",
     href: "https://portal.clubrunner.ca/3291/Stories/recent-grants-and-service-by-telluride-rotary-club",
-    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/1000015658_20250103-032420.jpeg"
+    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/Sarah-Laurie-Suzanne-at-2026-community-fiesta.jpeg"
+  },
+  {
+    title: "The Second Annual Hikeathon Is Happening In June, Register Now!",
+    source: "Telluride Rotary",
+    sourceKey: "rotary",
+    date: "June 2, 2026",
+    firstSeen: "2026-06-02",
+    newsTopic: "arts-culture",
+    copy: "Help us make the Hikeathon a success! Telluride Rotary is back with its signature community event to promote health and camaraderie while also raising much-needed funds for Telluride Rotary and other nonprofits. Sign up here to participate, or visit the site to make a donation: https://go.dojiggy.io",
+    href: "https://portal.clubrunner.ca/3291/Stories/the-second-annual-hikeathon-is-happening-in-june-register-now",
+    img: "https://clubrunner.blob.core.windows.net/00000003291/Images/Hikathon-simplified-logo-SMALL.png"
   }
 ];
 
@@ -2589,50 +2644,6 @@ const KOTO_COMMUNITY_EVENTS = [
   },
   {
     title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-29/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-29T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Frame Drum Workshop",
-    link: "https://koto.org/event/frame-drum-workshop-2/",
-    description: "Join world-renowned percussionist Yousif Sheronick for a one-hour hands-on workshop exploring the ancient and transformative art of the frame drum. This session introduces participants to basic strokes and then guides them through rhythm sequences inspired by Egyptian gods, bodies of water, earth, and plant life. This workshop is open to all levels—beginners are welcome. Age 16+. Tickets are free but drums are limited so please email to reserve one! telluridechambermusic@gmail.com",
-    pubDate: "2026-06-29T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Frame-drum-1-scaled.jpeg"
-  },
-  {
-    title: "The Mountain Ark: A Ken Bailey Film",
-    link: "https://koto.org/event/the-mountain-ark-a-ken-bailey-film/",
-    description: "The Mountain Ark: A Ken Bailey Film Lissa Margetts, one of Telluride’s most beloved characters and quintessential figures, connects with animals on a deep level. She is resilient, independent and not to be contained, just like the animals she works with. From childhood she shared a strong connection with animals and her community. After starting the workforce in the defense industry, Margetts decided to return to her mountain community where she founded the Rocky Mountain Ark Wildlife Rehabilitation Center. The Ark was an internationally known institution that sheltered and rehabilitated injured animals on a 14 acre preserve. Her educational outreach program reached over 100,000 school children. The documentary follows Margetts on a day filled with surprise, grief, death and human interactions which leaves the audience in laughter, tears and astonishment. This screening is brought to the community by the PSA Project. …",
-    pubDate: "2026-06-29T23:45:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/THE-MOUNTAIN-ARK-A-Ken-Bailey-Film.png"
-  },
-  {
-    title: "THE MOUNTAIN ARK: A KEN BAILEY FILM",
-    link: "https://koto.org/event/the-mountain-ark-a-ken-bailey-film-2/",
-    description: "Palm Arts presents a special free community screening of The Mountain Ark, Ken Bailey's moving new documentary that premiered in Mountainfilm 2026 Wild Shorts program and returns by popular demand in its full 60-minute version. The Mountain Ark follows one of Telluride's most beloved figures, Lissa Margetts, through a day at her wildlife rehabilitation sanctuary. Fiercely independent and deeply connected to animals, she navigates moments of rescue, loss, and unexpected joy, revealing a life devoted to healing, community, and the fragile bond between humans and the wild. The evening will also feature a curated collection of Ken Bailey's films celebrating unforgettable Telluride characters, public safety and educational films produced through his nonprofit, The lisA Project, and some of his most iconic footage capturing the power, beauty, and drama of avalanches. Admission is free and open to the community. Voluntary contributions to The PSA Project are appreciated but not expected.",
-    pubDate: "2026-06-29T23:45:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-30/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
     pubDate: "2026-06-30T15:30:00.000Z",
@@ -3026,6 +3037,105 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Patagonia Telluride, Telluride Retail",
     imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-07/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-07T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pup Meet Up- Gondola Plaza",
+    link: "https://koto.org/event/pup-meet-up-gondola-plaza/",
+    description: "Get ready to unleash the fun at our Pup Meetup! 🐶 Join us at the Gondola Plaza by the Coffee Cowboy Cart for a tail-wagging good time that’s sure to leave both you and your furry friend feeling pawsitively delighted. Make sure to stick around for the raffle with prizes from local pet stores and free pup cups from the Coffee Cowboy! Marney Prince with My Pup's Remedy will be there with free treats for your furry friend as well! With the Wilkinson Public Library, anything is PAW-sible. Who knows&#8230;you may even make some new FUR-ever friends!",
+    pubDate: "2026-07-07T17:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Gondola Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Bardic Trails Online Poetry Night",
+    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-07-07/",
+    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
+    pubDate: "2026-07-08T01:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-08/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-08T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-07-08/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-07-08T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Lite Lunch- Go Gentle",
+    link: "https://koto.org/event/lite-lunch-go-gentle/",
+    description: "The New York Times bestselling author of Where'd You Go, Bernadette returns to form in her most exuberant and life-affirming novel yet with the story of one woman’s cheerful determination to live a life of the mind only to have the heart force its way in. Adora Hazzard has it all figured out. A Stoic philosopher and divorcée, she lives a contented life on New York City’s Upper West Side. Having discovered that the secret to happiness is to desire only what you have, she’s applied this insight to blissful effect: relishing her teenage daughter, the freedom of being solo, and her job as a moral tutor for the twin boys of an old-money family. She’s even assembled a \"coven\"—like-minded women who live on the same floor in the legendary Ansonia—and is making active efforts to grow its membership. …",
+    pubDate: "2026-07-08T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-08/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-07-08T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-07-08/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-07-08T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-08/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-07-08T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3094,7 +3204,35 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-29"
+    lastSeen: "2026-06-30"
+  },
+  {
+    id: "TEL-A-187",
+    name: "Fiona",
+    species: "Dog",
+    breed: "Shepherd, Australian / Mixed Breed (Medium)",
+    ageGroup: "Young Puppy",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/d84c7d9306831b3acb6d9b0faae38e2b/baaaeabe29e06b01a189a39c3f9d27d5.JPG",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214011294",
+    summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
+    firstSeen: "2026-06-30",
+    revealDate: "2026-06-30",
+    lastSeen: "2026-06-30"
+  },
+  {
+    id: "TEL-A-188",
+    name: "Finn",
+    species: "Dog",
+    breed: "Shepherd, Australian / Mixed Breed (Medium)",
+    ageGroup: "Young Puppy",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/27651cd4d2f9c15e0b5c451fed8c55f7/230bf3c52dc454018bf998e8710e5ae1.JPG",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214011314",
+    summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Male",
+    firstSeen: "2026-06-30",
+    revealDate: "2026-07-02",
+    lastSeen: "2026-06-30"
   }
 ];
 
@@ -4312,28 +4450,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Girl Scout Cookie Booth",
-    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    title: "Sunday Rehab: Apres Edition",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    pubDate: "2026-06-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -4977,6 +5093,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
   },
   {
+    title: "\"This Is Colorado (In One Square Foot)\" Community Art Project Exhibition",
+    link: "https://www.telluride.com/event/this-is-colorado-in-one-square-foot-community-art-project-exhibition/",
+    description: "\"This Is Colorado (In One Square Foot)\" is a Community Art Project on display in Telluride and Mountain Village between …",
+    pubDate: "2026-06-24",
+    endDate: "2026-08-02",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62946/this_is_co_art_exhibit_2200x1237.800x533.webp"
+  },
+  {
     title: "Telluride Yoga Festival",
     link: "https://www.telluride.com/event/telluride-yoga-festival/",
     description: "The longest running yoga festival in the country, the Telluride Yoga Festival is a four-day yoga and wellness gathering …",
@@ -5001,18 +5129,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
   },
   {
-    title: "Trick Dog Takeover at Timber Room",
-    link: "https://www.telluride.com/event/trick-dog-takeover-at-timber-room/",
-    description: "San Francisco's acclaimed Trick Dog brings its inventive approach to cocktails to The Madeline Hotel & Residences …",
-    pubDate: "2026-06-26",
-    endDate: "2026-06-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62758/trick_dog.800x533.webp"
-  },
-  {
     title: "Telluride Chamber Music: MusicFest",
     link: "https://www.telluride.com/event/musicfest/",
     description: "Come and celebrate MusicFest 2026! Telluride Chamber Music is eagerly anticipating this event coming June and July. …",
@@ -5035,39 +5151,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62506/telluride_com.800x533.webp"
-  },
-  {
-    title: "Play It Forward! Pickleball for a Purpose",
-    link: "https://www.telluride.com/event/play-it-forward-pickleball-for-a-purpose/",
-    description: "Play It Forward! brings together the Telluride Community for a day of pickleball, friendly competition, and meaningful …",
-    pubDate: "2026-06-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62799/play_it_forward_3_1.800x533.webp"
-  },
-  {
-    title: "The National Summer School: Premium Pours for the BBQ",
-    link: "https://www.telluride.com/event/the-national-summer-school-premium-pours-for-the-bbq/",
-    description: "Elevate your approach to casual summer dining. This engaging session explores the unexpected harmony between classic …",
-    pubDate: "2026-06-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62824/the_national_wine.800x533.webp"
-  },
-  {
-    title: "Pride Ride",
-    link: "https://www.telluride.com/event/pride-ride/",
-    description: "Join TelluPride for the 2026 Pride Ride on Sunday, June 28! Riders will meet under the bra in Telluride Town Park at 3 …",
-    pubDate: "2026-06-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62911/screenshot_2026-06-16_at_11_17_56_am.800x533.webp"
   },
   {
     title: "Telluride Plein Air",
