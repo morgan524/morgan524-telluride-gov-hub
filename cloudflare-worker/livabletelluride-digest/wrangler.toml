@@ -1,0 +1,10 @@
+name = "livabletelluride-digest"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+account_id = "8f020e73de4e9956f0e3ad7dce070ef4"
+
+# Backend for the Digest Review Desk (digest-review.html).
+# Deployed by .github/workflows/deploy-digest-worker.yml, which also uploads the
+# Worker secrets (ANTHROPIC_API_KEY, CUSTOMERIO_APP_API_KEY,
+# CUSTOMERIO_BROADCAST_ID, DIGEST_KEY) from the same-named GitHub Actions secrets.
+# URL after deploy: https://livabletelluride-digest.morgan-8f0.workers.dev

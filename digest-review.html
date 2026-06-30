@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Digest Review Desk · Livable Telluride</title>
+<style>
+:root{--forest:#21443c;--forest2:#2f7a5f;--gold:#b58a2c;--cream:#f0ece3;--ink:#1a2e29;--muted:#7a8a85;--line:#ddd6c8;--rust:#a0531f;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);}
+.topbar{background:var(--forest);color:#fff;padding:14px 22px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:5;}
+.topbar h1{font-family:Georgia,serif;font-size:18px;margin:0;font-weight:700;}
+.topbar .sub{font-size:11px;color:#a8c4b8;letter-spacing:.14em;text-transform:uppercase;}
+.pill{margin-left:auto;font-size:11px;font-weight:700;padding:4px 11px;border-radius:999px;background:rgba(255,255,255,.12);color:#e3c87a;}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c98a2c;margin-right:6px;vertical-align:middle;}
+.dot.ok{background:#7ad19a;}
+.wrap{max-width:1120px;margin:0 auto;padding:20px;display:grid;grid-template-columns:380px 1fr;gap:20px;align-items:start;}
+@media(max-width:880px){.wrap{grid-template-columns:1fr}}
+.panel{background:#fdfbf6;border:1px solid var(--line);border-radius:10px;padding:18px;}
+.seg{display:flex;gap:6px;background:#eef1ee;padding:5px;border-radius:10px;margin-bottom:16px;}
+.seg button{flex:1;border:0;background:transparent;padding:9px 8px;border-radius:7px;font-weight:700;font-size:13px;color:var(--muted);cursor:pointer;font-family:inherit;}
+.seg button.active{background:var(--forest);color:#fff;}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:14px 0 6px;}
+input[type=text],input[type=password],textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;color:var(--ink);background:#fff;}
+.meta{font-size:13px;color:var(--muted);line-height:1.7;}.meta b{color:var(--ink);}
+.btn{display:block;width:100%;border:0;border-radius:999px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:10px;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}
+.btn.primary{background:var(--gold);color:#fff;}.btn.ghost{background:#fff;border:1px solid var(--forest);color:var(--forest);}.btn.sec{background:var(--forest2);color:#fff;}
+.btn.tiny{width:auto;margin:0;padding:8px 14px;font-size:12px;}
+.row{display:flex;gap:8px;align-items:center;}.row input{flex:1;}
+.status{margin-top:14px;font-size:13px;line-height:1.5;padding:11px 13px;border-radius:8px;background:#f1ece1;border-left:3px solid var(--gold);color:#2c3b35;display:none;}
+.status.show{display:block;}.status.err{border-left-color:#b3402a;background:#f7e9e4;}
+.preview-head{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.preview-head .subj{font-family:Georgia,serif;font-weight:700;font-size:15px;}
+.frame{width:100%;height:780px;border:1px solid var(--line);border-radius:10px;background:#fff;}
+.note{font-size:12px;color:var(--muted);margin-top:14px;line-height:1.6;}
+.ai{grid-column:1 / -1;}
+.ai-head{display:flex;align-items:center;gap:9px;margin-bottom:4px;flex-wrap:wrap;}
+.ai-head .t{font-family:Georgia,serif;font-weight:700;font-size:16px;}
+.ai-log{margin:12px 0;max-height:320px;overflow:auto;display:flex;flex-direction:column;gap:10px;}
+.msg{max-width:80%;padding:10px 13px;border-radius:12px;font-size:14px;line-height:1.5;white-space:pre-wrap;}
+.msg.you{align-self:flex-end;background:var(--forest);color:#fff;border-bottom-right-radius:3px;}
+.msg.ai{align-self:flex-start;background:#eef1ee;color:var(--ink);border-bottom-left-radius:3px;}
+.msg.sys{align-self:center;background:transparent;color:var(--muted);font-size:12px;font-style:italic;padding:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--forest);cursor:pointer;}
+.gate{position:fixed;inset:0;background:var(--forest);display:flex;align-items:center;justify-content:center;z-index:50;}
+.gate .card{background:#fdfbf6;border-radius:14px;padding:30px;width:340px;max-width:90vw;text-align:center;}
+.gate h2{font-family:Georgia,serif;margin:0 0 4px;}
+.gate p{font-size:13px;color:var(--muted);margin:0 0 18px;}
+.gate .err{color:#b3402a;font-size:13px;min-height:18px;margin-top:8px;}
+.spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:s .7s linear infinite;vertical-align:middle;}
+@keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="gate" id="gate">
+  <div class="card">
+    <h2>Digest Review Desk</h2>
+    <p>Enter the review passphrase to continue.</p>
+    <input type="password" id="gatekey" placeholder="Passphrase" autocomplete="current-password">
+    <button class="btn primary" id="gatebtn" style="margin-top:14px">Enter</button>
+    <div class="err" id="gateerr"></div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div><h1>Digest Review Desk</h1><div class="sub">Livable Telluride</div></div>
+  <span class="pill" id="cioPill"><span class="dot"></span>Customer.io — checking…</span>
+</div>
+
+<div class="wrap" id="app" style="display:none">
+  <div class="panel">
+    <div class="seg" id="seg"></div>
+    <div class="meta" id="meta"></div>
+    <label>Subject line</label>
+    <input type="text" id="subject">
+    <div style="margin-top:14px"><button class="btn sec tiny" id="reset">↺ Reset to generated</button></div>
+    <label style="margin-top:18px">Send a test to</label>
+    <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
+    <button class="btn primary" id="approve">✓ Approve &amp; Post via Customer.io</button>
+    <div class="status" id="status"></div>
+    <div class="note">Content edits go through <b>Ask Claude</b> below and update the preview live. When it looks right, <b>Send test</b> to yourself, then <b>Approve &amp; Post</b>.</div>
+  </div>
+
+  <div class="panel">
+    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span></div>
+    <iframe class="frame" id="frame"></iframe>
+  </div>
+
+  <div class="panel ai">
+    <div class="ai-head"><span class="dot ok"></span><span class="t">Ask Claude</span><span class="note" style="margin:0">add / remove / rewrite events, tweak the intro, or ask a question — edits update the preview live</span></div>
+    <div class="chips" id="chips"></div>
+    <div class="ai-log" id="ailog"></div>
+    <div class="row"><input type="text" id="aiin" placeholder="e.g. drop the Ouray Weird Trivia card, or shorten the intro…"><button class="btn primary tiny" id="aisend">Send</button></div>
+  </div>
+</div>
+
+<script>
+const WORKER = "https://livabletelluride-digest.morgan-8f0.workers.dev";
+const CHIPS = ["Remove an event…","Add an event…","Rewrite a card…","Make the intro shorter","Why is this listed?"];
+const $ = (id) => document.getElementById(id);
+let KEY = sessionStorage.getItem("digestKey") || "";
+let manifest = null, cur = "weekend";
+const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
+
+// ---- auth gate ----
+function showGate(msg){ $("gate").style.display="flex"; $("gateerr").textContent=msg||""; $("gatekey").focus(); }
+function hideGate(){ $("gate").style.display="none"; }
+$("gatebtn").onclick = () => { const v=$("gatekey").value.trim(); if(!v){showGate("Enter the passphrase.");return;} KEY=v; sessionStorage.setItem("digestKey",v); boot(); };
+$("gatekey").addEventListener("keydown",e=>{ if(e.key==="Enter") $("gatebtn").click(); });
+
+async function api(path, payload){
+  const r = await fetch(WORKER+path, { method:"POST", headers:{ "Content-Type":"application/json", "x-digest-key":KEY }, body:JSON.stringify(payload) });
+  if(r.status===401){ sessionStorage.removeItem("digestKey"); KEY=""; showGate("Wrong passphrase — try again."); throw new Error("unauthorized"); }
+  return r.json();
+}
+
+// ---- boot ----
+async function boot(){
+  try{
+    // health (no auth) → CIO pill; also a cheap liveness check
+    const h = await fetch(WORKER+"/health").then(r=>r.json()).catch(()=>({ok:false}));
+    setPill(h);
+    // load digests (same-origin static files)
+    manifest = await fetch("digest/manifest.json",{cache:"no-store"}).then(r=>r.json());
+    for(const k of Object.keys(manifest.digests)){
+      const d = manifest.digests[k];
+      const html = await fetch(d.file+"?t="+Date.now()).then(r=>r.text());
+      state[k] = { name:d.name, subject:d.subject, covers:d.covers, audience:d.audience, baseHtml:html, html:html, history:[] };
+    }
+    hideGate(); $("app").style.display="grid";
+    buildSeg(); buildChips(); load("weekend");
+  }catch(e){ if(e.message!=="unauthorized") showGate("Couldn't load — "+e.message); }
+}
+function setPill(h){
+  const p=$("cioPill");
+  if(h && h.ok && h.broadcast){ p.innerHTML='<span class="dot ok"></span>Customer.io — live'; }
+  else if(h && h.ok){ p.innerHTML='<span class="dot"></span>Customer.io — test only (broadcast pending)'; }
+  else { p.innerHTML='<span class="dot"></span>Worker offline'; }
+}
+function buildSeg(){
+  const seg=$("seg"); seg.innerHTML="";
+  for(const k of Object.keys(state)){
+    const b=document.createElement("button"); b.textContent=state[k].name; b.dataset.k=k;
+    b.onclick=()=>load(k); seg.appendChild(b);
+  }
+}
+function buildChips(){
+  const c=$("chips"); c.innerHTML="";
+  CHIPS.forEach(t=>{ const s=document.createElement("span"); s.className="chip"; s.textContent=t;
+    s.onclick=()=>{ $("aiin").value=t.replace(/…$/," "); $("aiin").focus(); }; c.appendChild(s); });
+}
+
+function load(k){
+  cur=k; const d=state[k];
+  document.querySelectorAll("#seg button").forEach(b=>b.classList.toggle("active",b.dataset.k===k));
+  $("meta").innerHTML="<b>Audience:</b> "+d.audience+" segment<br><b>Covers:</b> "+d.covers;
+  $("subject").value=d.subject; $("psubj").textContent=d.subject; $("frame").srcdoc=d.html;
+  renderLog(); hideStatus();
+}
+function renderPreview(){ $("frame").srcdoc=state[cur].html; $("psubj").textContent=state[cur].subject; }
+function showStatus(msg,isErr){ const s=$("status"); s.innerHTML=msg; s.className="status show"+(isErr?" err":""); }
+function hideStatus(){ $("status").className="status"; }
+
+// ---- Ask Claude ----
+function renderLog(){
+  const log=$("ailog"); log.innerHTML="";
+  const h=state[cur].history;
+  if(!h.length) addMsgEl("ai","I'm looking at the "+state[cur].name+". Ask me to add, remove, or rewrite an event, tweak the intro, or anything about this digest.");
+  h.forEach(m=>addMsgEl(m.role==="user"?"you":(m.role==="sys"?"sys":"ai"), m.text));
+}
+function addMsgEl(who,txt){ const log=$("ailog"); const d=document.createElement("div"); d.className="msg "+who; d.textContent=txt; log.appendChild(d); log.scrollTop=log.scrollHeight; return d; }
+function pushHist(role,text){ state[cur].history.push({role,text}); }
+
+async function aiSend(text){
+  text=(text||"").trim(); if(!text) return;
+  pushHist("user",text); addMsgEl("you",text); $("aiin").value="";
+  const thinking=addMsgEl("ai","…"); $("aisend").disabled=true;
+  try{
+    const d=state[cur];
+    const res = await api("/chat", { emailHtml:d.html, subject:d.subject, message:text,
+      history:d.history.filter(m=>m.role!=="sys").slice(0,-1) });
+    thinking.remove();
+    if(res.error){ addMsgEl("ai","⚠ "+res.error); pushHist("assistant","⚠ "+res.error); return; }
+    if(res.changed && res.html){ d.html=res.html; if(res.subject) d.subject=res.subject; renderPreview();
+      addMsgEl("sys","✎ preview updated"); state[cur].history.push({role:"sys",text:"✎ preview updated"}); }
+    addMsgEl("ai",res.reply||"(done)"); pushHist("assistant",res.reply||"(done)");
+  }catch(e){ thinking.remove(); if(e.message!=="unauthorized") addMsgEl("ai","⚠ "+e.message); }
+  finally{ $("aisend").disabled=false; }
+}
+$("aisend").onclick=()=>aiSend($("aiin").value);
+$("aiin").addEventListener("keydown",e=>{ if(e.key==="Enter") aiSend($("aiin").value); });
+
+// ---- subject edit, reset ----
+$("subject").addEventListener("input",e=>{ state[cur].subject=e.target.value; $("psubj").textContent=e.target.value; });
+$("reset").onclick=()=>{ const d=state[cur]; d.html=d.baseHtml; d.subject=manifest.digests[cur].subject; d.history=[]; load(cur); };
+
+// ---- send ----
+$("test").onclick=async()=>{
+  const to=$("testto").value.trim(); if(!to.includes("@")){ showStatus("Enter a valid test email.",true); return; }
+  showStatus('<span class="spin"></span> Sending test to '+to+'…'); $("test").disabled=true;
+  try{ const r=await api("/send",{ emailHtml:state[cur].html, subject:state[cur].subject, test:true, to });
+    if(r.ok) showStatus("✓ Test sent to "+to+" — check inbox + spam."); else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("test").disabled=false; }
+};
+$("approve").onclick=async()=>{
+  const d=state[cur];
+  if(!confirm('Approve and POST "'+d.subject+'" to the '+d.audience+' segment?')) return;
+  showStatus('<span class="spin"></span> Posting via Customer.io…'); $("approve").disabled=true;
+  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, test:false });
+    if(r.ok) showStatus("✓ Posted to the "+d.audience+" segment via Customer.io.");
+    else if(r.pending) showStatus("⏳ "+r.error,true);
+    else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("approve").disabled=false; }
+};
+
+// ---- start ----
+if(KEY) boot(); else showGate();
+</script>
+</body>
+</html>

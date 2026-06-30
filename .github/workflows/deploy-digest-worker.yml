@@ -1,0 +1,39 @@
+name: Deploy Digest Worker
+
+# Deploys the Digest Review Desk backend (cloudflare-worker/livabletelluride-digest)
+# and uploads its secrets from the same-named GitHub Actions secrets. Auto-runs
+# whenever the Worker source changes on main; also dispatchable.
+#
+# Required GitHub secrets: ANTHROPIC_API_KEY, CUSTOMERIO_APP_API_KEY, DIGEST_KEY,
+# and CLOUDFLARE_WORKER (or the legacy CLOUDFLAIR_WORKER) for the CF API token.
+# CUSTOMERIO_BROADCAST_ID is optional — until it's set the "Approve & Send"
+# action stays inert and reports that Customer.io isn't finalized yet.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'cloudflare-worker/livabletelluride-digest/worker.js'
+      - 'cloudflare-worker/livabletelluride-digest/wrangler.toml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy digest Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
+          accountId: 8f020e73de4e9956f0e3ad7dce070ef4
+          workingDirectory: cloudflare-worker/livabletelluride-digest
+          secrets: |
+            ANTHROPIC_API_KEY
+            CUSTOMERIO_APP_API_KEY
+            CUSTOMERIO_BROADCAST_ID
+            DIGEST_KEY
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CUSTOMERIO_BROADCAST_ID: ${{ secrets.CUSTOMERIO_BROADCAST_ID }}
+          DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
