@@ -76,12 +76,15 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
     <div class="meta" id="meta"></div>
     <label>Subject line</label>
     <input type="text" id="subject">
+    <label>Intro (lede)</label>
+    <textarea id="lede" style="min-height:104px;resize:vertical"></textarea>
+    <div style="margin-top:8px"><button class="btn sec tiny" id="applyLede">Apply intro to preview</button></div>
     <div style="margin-top:14px"><button class="btn sec tiny" id="reset">↺ Reset to generated</button></div>
     <label style="margin-top:18px">Send a test to</label>
     <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
     <button class="btn primary" id="approve">✓ Approve &amp; Post via Customer.io</button>
     <div class="status" id="status"></div>
-    <div class="note">Content edits go through <b>Ask Claude</b> below and update the preview live. When it looks right, <b>Send test</b> to yourself, then <b>Approve &amp; Post</b>.</div>
+    <div class="note">Edit the <b>intro</b> here (most common change) and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. When it looks right, <b>Send test</b>, then <b>Approve &amp; Post</b>.</div>
   </div>
 
   <div class="panel">
@@ -158,6 +161,7 @@ function load(k){
   document.querySelectorAll("#seg button").forEach(b=>b.classList.toggle("active",b.dataset.k===k));
   $("meta").innerHTML="<b>Audience:</b> "+d.audience+" segment<br><b>Covers:</b> "+d.covers;
   $("subject").value=d.subject; $("psubj").textContent=d.subject; $("frame").srcdoc=d.html;
+  $("lede").value=currentLede(d.html);
   renderLog(); hideStatus();
 }
 function renderPreview(){ $("frame").srcdoc=state[cur].html; $("psubj").textContent=state[cur].subject; }
@@ -185,6 +189,7 @@ async function aiSend(text){
     thinking.remove();
     if(res.error){ addMsgEl("ai","⚠ "+res.error); pushHist("assistant","⚠ "+res.error); return; }
     if(res.changed && res.html){ d.html=res.html; if(res.subject) d.subject=res.subject; renderPreview();
+      $("subject").value=d.subject; $("lede").value=currentLede(d.html);
       addMsgEl("sys","✎ preview updated"); state[cur].history.push({role:"sys",text:"✎ preview updated"}); }
     addMsgEl("ai",res.reply||"(done)"); pushHist("assistant",res.reply||"(done)");
   }catch(e){ thinking.remove(); if(e.message!=="unauthorized") addMsgEl("ai","⚠ "+e.message); }
@@ -192,6 +197,18 @@ async function aiSend(text){
 }
 $("aisend").onclick=()=>aiSend($("aiin").value);
 $("aiin").addEventListener("keydown",e=>{ if(e.key==="Enter") aiSend($("aiin").value); });
+
+// ---- intro (lede) edit ----
+// The intro is the one <p> with this exact style in the rendered email.
+const LEDE_RE=/(<p style="margin:11px 0 0;font-size:15\.5px;line-height:1\.65;color:#2c3b35;">)([\s\S]*?)(<\/p>)/;
+function decodeEntities(s){ const t=document.createElement("textarea"); t.innerHTML=s; return t.value; }
+function currentLede(html){ const m=(html||"").match(LEDE_RE); return m?decodeEntities(m[2]):""; }
+// Match the email's pure-ASCII encoding: escape <,>,& then numeric-entity the rest.
+function encodeLede(s){ s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); return Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join(""); }
+function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro paragraph to update.",true); return; }
+  const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,(m,a,b,c)=>a+encodeLede(txt)+c); renderPreview(); showStatus("Intro updated in the preview."); }
+$("applyLede").onclick=applyLede;
+$("lede").addEventListener("blur",applyLede);
 
 // ---- subject edit, reset ----
 $("subject").addEventListener("input",e=>{ state[cur].subject=e.target.value; $("psubj").textContent=e.target.value; });
