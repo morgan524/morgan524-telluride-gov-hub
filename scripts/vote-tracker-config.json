@@ -1,0 +1,104 @@
+{
+  "_comment": "Per-entity config for scripts/extract-votes.mjs. Each entity has a rosters[] array with date-ranged member lists (end:null means current). The id strings MUST match the IDs used in v2/vote-tracker.html *_ALL_MEMBERS arrays.",
+
+  "tomv": {
+    "label": "Mountain Village Town Council",
+    "meetingPrefix": "Mountain Village Town Council",
+    "idPrefix": "mv",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2025-07-16",
+        "members": ["prohaska", "pearson", "magid", "mogenson", "duprey", "gomez", "gilbride"],
+        "_note": "Prohaska Mayor, Pearson Mayor Pro Tem; Gilbride seat replaced by Arguelles at Jul 17 2025 sworn-in."
+      },
+      {
+        "start": "2025-07-17",
+        "end":   "2026-01-27",
+        "members": ["prohaska", "pearson", "magid", "mogenson", "duprey", "gomez", "arguelles"],
+        "_note": "Arguelles sworn in Jul 17, 2025 (replacing Gilbride)."
+      },
+      {
+        "start": "2026-01-28",
+        "end":   "2026-02-18",
+        "members": ["pearson", "magid", "mogenson", "duprey", "gomez", "arguelles"],
+        "_note": "Prohaska resigned late Jan 2026; Pearson became Mayor, Magid Mayor Pro Tem. 6 voting members until Jansen appointed."
+      },
+      {
+        "start": "2026-02-19",
+        "end":   null,
+        "members": ["pearson", "magid", "mogenson", "duprey", "gomez", "arguelles", "jansen"],
+        "_note": "Jansen appointed Feb 19, 2026 to fill vacancy."
+      }
+    ],
+    "urlTemplate": "https://townofmountainvillage.com/site/assets/files/{ASSET_ID}/{SLUG}.pdf",
+    "insertionAnchorRe": "/\\* ── [A-Z][a-z]+ \\d+, \\d{4}.*?── \\*/",
+    "_insertionNotes": "Entries are inserted in date order. The script finds the chronologically-next /* ── DATE ── */ block after the target date and inserts BEFORE it. Caller is expected to verify."
+  },
+
+  "drb": {
+    "label": "Mountain Village Design Review Board",
+    "meetingPrefix": "MV Design Review Board",
+    "idPrefix": "drb",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2024-04-24",
+        "members": ["brown", "miller", "caton", "eckman", "bennett", "kramer", "craige", "austin", "garner"],
+        "_note": "Pre-reappointment 2024 roster: Liz Caton held the seat later taken by Newton. Confirmed across Jan 4 / Feb 1 / Mar 7 / Apr 4 minutes."
+      },
+      {
+        "start": "2024-04-25",
+        "end":   null,
+        "members": ["brown", "miller", "newton", "eckman", "bennett", "kramer", "craige", "austin", "garner"],
+        "_note": "9-member board. Reappointment terms started Apr 25 2024. Newton replaced Caton (confirmed at May 2, 2024 meeting). Roster confirmed stable across Jan 8 / Feb 5 / Mar 5 / Apr 2 2026 meetings."
+      }
+    ],
+    "urlTemplate": "https://townofmountainvillage.com/site/assets/files/{ASSET_ID}/{SLUG}.pdf",
+    "_insertionNotes": "DRB entries inserted between TOMV and BOCC sections; entity-scoped insertion in insert-votes.mjs handles the rest."
+  },
+
+  "bocc": {
+    "label": "San Miguel County Board of County Commissioners",
+    "meetingPrefix": "SMC BOCC",
+    "idPrefix": "bocc",
+    "rosters": [
+      {
+        "start": "2025-01-01",
+        "end":   null,
+        "members": ["caton", "schillaci", "craighead"],
+        "_note": "Standard 3-commissioner board. Adjust if a seat changed mid-term."
+      }
+    ],
+    "_warning": "Roster is a placeholder — verify against the actual *_ALL_MEMBERS array in vote-tracker.html before relying on it for backfill."
+  },
+
+  "pc": {
+    "label": "San Miguel County Planning Commission",
+    "meetingPrefix": "SMC Planning Commission",
+    "idPrefix": "pc",
+    "rosters": [],
+    "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using."
+  },
+
+  "rico": {
+    "label": "Town of Rico Board of Trustees",
+    "meetingPrefix": "Rico Board of Trustees",
+    "idPrefix": "rico",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2025-11-19",
+        "members": ["fallon", "hibbard", "willis", "poston", "vernadakis", "dillsworth", "condon"],
+        "_note": "EARLY roster, through the Nov 19 2025 pre-swearing-in vote. Mayor Fallon, Mayor Pro Tem Hibbard. Condon resigned eff. Oct 16 2025 (often absent before that); Dillsworth frequently absent. Tag those votes era:'EARLY'."
+      },
+      {
+        "start": "2025-11-19",
+        "end":   null,
+        "members": ["fallon", "hibbard", "willis", "poston", "vernadakis", "clark", "anderson"],
+        "_note": "LATE roster. Clark & Anderson sworn in Nov 19 2025 (replacing Dillsworth & Condon). Tag 2025 votes era:'LATE', 2026 votes era:'2026'."
+      }
+    ],
+    "_note": "Rico meets the 3rd Wednesday monthly at 7 PM. Minutes are PDFs linked from https://townofrico.colorado.gov/government/board-of-trustees with clean roll-call votes. IMPORTANT: each RICO_VOTE_ITEMS entry must carry an `era` field ('EARLY'|'LATE'|'2026') — renderRicoHeatmap() filters by era, not date, because the Nov 19 2025 meeting spans the board turnover."
+  }
+}

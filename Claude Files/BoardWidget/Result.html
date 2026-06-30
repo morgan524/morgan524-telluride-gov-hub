@@ -1,0 +1,72 @@
+<!--
+  Result.html — final result email (HtmlService.createTemplateFromFile('Result') via sendResult_).
+  The full PDF record is also attached to this email. Vars: orgName, title, summary,
+  motionText, matterId, movedBy, movedAt, secondedBy, secondedAt, yes, no, abstain,
+  result, passed, rows (array {name,vote}), pdfUrl, docUrl. ASCII-only, table-based.
+-->
+<div style="margin:0;padding:0;background:#f3f4f6;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f3f4f6;padding:24px 0;">
+<tr><td align="center">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;background:#fff;border-radius:12px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+
+    <tr><td style="background:#2D4A3E;padding:20px 28px;">
+      <div style="color:#fff;font-size:18px;font-weight:700;"><?= orgName ?></div>
+      <div style="color:#bcd3c8;font-size:12px;margin-top:2px;">Board Vote - final result</div>
+    </td></tr>
+
+    <? var rl = String(result).toLowerCase();
+       var isPassed = passed || rl.indexOf('passed') === 0;
+       var isFailed = rl.indexOf('failed') === 0;
+       var bg = isPassed ? '#e7f5ee' : (isFailed ? '#fdeceb' : '#fff7e6');
+       var fg = isPassed ? '#1f7a4d' : (isFailed ? '#a4231c' : '#92600a');
+       var word = isPassed ? 'PASSED' : (isFailed ? 'FAILED' : 'FINAL');
+    ?>
+    <tr><td style="padding:22px 28px 6px;">
+      <div style="background:<?= bg ?>;color:<?= fg ?>;text-align:center;font-size:18px;font-weight:800;letter-spacing:.5px;padding:14px;border-radius:10px;"><?= word ?> - <?= yes ?> Yes / <?= no ?> No / <?= abstain ?> Abstained</div>
+    </td></tr>
+
+    <tr><td style="padding:16px 28px 4px;">
+      <div style="font-size:17px;font-weight:700;color:#111827;margin-bottom:8px;"><?= title ?></div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0f5f2;border-left:3px solid #2D4A3E;border-radius:6px;">
+        <tr><td style="padding:12px 16px;font-size:14px;color:#1f2937;line-height:1.55;"><?= summary ?></td></tr>
+      </table>
+    </td></tr>
+
+    <tr><td style="padding:14px 28px 4px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#2D4A3E;margin-bottom:6px;">Procedure</div>
+      <div style="font-size:13px;color:#4b5563;line-height:1.6;">
+        Moved by <b><?= movedBy ?></b><? if (movedAt) { ?> (<?= movedAt ?>)<? } ?><br>
+        Seconded by <b><?= secondedBy ?></b><? if (secondedAt) { ?> (<?= secondedAt ?>)<? } ?>
+      </div>
+    </td></tr>
+
+    <tr><td style="padding:14px 28px 8px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#2D4A3E;margin-bottom:8px;">How each member voted</div>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border:1px solid #eef0f2;border-radius:8px;overflow:hidden;">
+        <? for (var i = 0; i < rows.length; i++) {
+             var v = String(rows[i].vote || 'No vote'); var vl = v.toLowerCase();
+             var vc = vl === 'yes' ? '#1f7a4d' : (vl === 'no' ? '#a4231c' : '#6b7280');
+        ?>
+        <tr style="background:<?= (i % 2 ? '#fff' : '#fafbfb') ?>;">
+          <td style="padding:9px 16px;font-size:14px;color:#374151;border-top:<?= (i ? '1px solid #f1f3f5' : '0') ?>;"><?= rows[i].name ?></td>
+          <td align="right" style="padding:9px 16px;font-size:14px;font-weight:700;color:<?= vc ?>;border-top:<?= (i ? '1px solid #f1f3f5' : '0') ?>;"><?= v ?></td>
+        </tr>
+        <? } ?>
+      </table>
+    </td></tr>
+
+    <? if (pdfUrl) { ?>
+    <tr><td style="padding:6px 28px 4px;">
+      <a href="<?= pdfUrl ?>" target="_blank" style="display:block;text-align:center;background:#1d6fb8;color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:12px 0;border-radius:9px;">View the official PDF record</a>
+      <div style="font-size:12px;color:#9ca3af;text-align:center;margin-top:6px;">The same record is attached to this email.</div>
+    </td></tr>
+    <? } ?>
+
+    <tr><td style="background:#f9fafb;border-top:1px solid #eef0f2;padding:14px 28px;">
+      <div style="font-size:11px;color:#9ca3af;">Matter ID: <?= matterId ?> - recorded automatically by <?= orgName ?> Board Votes.</div>
+    </td></tr>
+
+  </table>
+</td></tr>
+</table>
+</div>

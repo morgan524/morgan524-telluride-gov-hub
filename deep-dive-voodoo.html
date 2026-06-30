@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VooDoo — Livable Telluride Deep Dive</title>
+  <meta name="description" content="A Livable Telluride Deep Dive on the VooDoo housing project — its $20M debt stack, the $23M balloon due in 2032, and the rent-vs.-debt-service shortfall.">
+  <style>
+    :root{
+      --lt-green:#2f5f46;
+      --lt-green-dark:#1f3f30;
+      --lt-sage:#dfe8dc;
+      --lt-cream:#f7f3e8;
+      --lt-paper:#fffaf0;
+      --lt-ink:#263028;
+      --lt-muted:#667266;
+      --lt-line:#cfd8cc;
+      --lt-gold:#b98239;
+      --lt-red:#8d3d2f;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      color:var(--lt-ink);
+      background:var(--lt-cream);
+      line-height:1.55;
+    }
+    a{color:var(--lt-green-dark); text-decoration-thickness:1px; text-underline-offset:3px}
+
+    /* ── Canonical site topnav (matches every other page — link set,
+       font-size 0.76rem, gap 14px, CTA "Log In" → /hub-bub.html#login). ── */
+    .topnav { background:#fff; border-bottom:1px solid rgba(33,68,60,.12); padding:14px 0; position:sticky; top:0; z-index:50; }
+    .topnav-inner { max-width:1280px; margin:0 auto; padding:0 32px; display:flex; align-items:center; gap:24px; }
+    .topnav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; color:#21443c; font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:1.15rem; line-height:1.1; }
+    .topnav-logo img { height:80px; width:auto; object-fit:contain; }
+    .topnav-links { display:flex; gap:14px; margin-left:16px; flex:1; }
+    .topnav-links a { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#1a2e29; text-decoration:none; font-weight:600; font-size: 0.85rem; white-space:nowrap; padding:6px 2px; border-bottom:2px solid transparent; transition:color .15s, border-color .15s; }
+    .topnav-links a:hover { color:#21443c; }
+    .topnav-links a.active { color:#21443c; border-bottom-color:#21443c; }
+    .topnav-cta { white-space: nowrap; display:inline-block; background:#21443c; color:#fff; text-decoration:none; padding:8px 14px; border-radius:999px; font-weight:600; font-size:0.9rem; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    @media (max-width:950px) { .topnav-links { display:none; } }
+
+    .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+    .back{
+      display:inline-block;
+      margin:24px 0 14px;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-weight:700;
+      color:var(--lt-green-dark);
+      text-decoration:none;
+    }
+    .hero{
+      background:linear-gradient(135deg, rgba(47,95,70,.95), rgba(31,63,48,.94)), var(--lt-green);
+      color:white;
+      border-radius:20px;
+      overflow:hidden;
+      position:relative;
+      border:1px solid rgba(255,255,255,.25);
+      box-shadow:0 20px 45px rgba(31,63,48,.18);
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      inset:auto -80px -90px auto;
+      width:360px;height:260px;
+      background:radial-gradient(circle at center, rgba(255,255,255,.11), rgba(255,255,255,0) 65%);
+      transform:rotate(-8deg);
+    }
+    .hero-inner{padding:42px 44px;position:relative;z-index:1}
+    .eyebrow{
+      display:inline-block;
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.25);
+      padding:6px 10px;
+      border-radius:999px;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    h1{
+      margin:18px 0 8px;
+      font-size:clamp(38px,6vw,68px);
+      line-height:.96;
+      letter-spacing:-.04em;
+    }
+    .dek{
+      max-width:820px;
+      font-size:21px;
+      color:#f1f6ef;
+      margin:18px 0 0;
+    }
+    .status-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin:18px 0 0;
+      max-width:920px;
+    }
+    .status{
+      background:rgba(220,240,225,.22);
+      border:1px solid rgba(220,240,225,.38);
+      border-radius:14px;
+      padding:13px 14px;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .status b{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:#e8f2e6}
+    .status span{display:block;margin-top:5px;font-size:16px;color:#fff}
+
+    /* ── Source-figure section (page 2 of the April 2026 Debt Analysis) ── */
+    .plan-section { margin:24px 0 0; }
+    .plan-figure { margin:0; background:var(--lt-paper); border:1px solid var(--lt-line); border-radius:18px; overflow:hidden; box-shadow:0 10px 24px rgba(31,63,48,.06); }
+    .plan-figure img { display:block; width:100%; height:auto; }
+    .plan-figure figcaption { padding:14px 22px; font-size:14px; color:var(--lt-muted); font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.5; }
+
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0,2fr) minmax(280px,1fr);
+      gap:26px;
+      margin:28px 0 56px;
+    }
+    .panel{
+      background:var(--lt-paper);
+      border:1px solid var(--lt-line);
+      border-radius:18px;
+      padding:26px 28px;
+      box-shadow:0 10px 24px rgba(31,63,48,.06);
+      margin-bottom:20px;
+    }
+    h2{
+      margin:0 0 12px;
+      color:var(--lt-green-dark);
+      font-size:30px;
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+    h3{
+      margin:24px 0 8px;
+      color:var(--lt-green-dark);
+      font-size:22px;
+    }
+    .lead{
+      font-size:19px;
+      color:#324236;
+      margin-top:0;
+    }
+    .callout{
+      border-left:5px solid var(--lt-gold);
+      background:#fbf0dc;
+      padding:16px 18px;
+      border-radius:0 12px 12px 0;
+      margin:18px 0;
+    }
+    .concern{
+      border-left-color:var(--lt-red);
+      background:#f8e8e3;
+    }
+    ul{padding-left:22px}
+    li{margin:7px 0}
+    .timeline{
+      border-left:3px solid var(--lt-green);
+      padding-left:18px;
+      margin-top:18px;
+    }
+    .titem{position:relative;margin:0 0 20px}
+    .titem:before{
+      content:"";
+      position:absolute;
+      left:-27px;top:6px;
+      width:13px;height:13px;
+      border-radius:50%;
+      background:var(--lt-paper);
+      border:3px solid var(--lt-green);
+    }
+    .titem b{color:var(--lt-green-dark)}
+    .side .panel{padding:22px}
+    .tag{
+      display:inline-block;
+      margin:0 6px 8px 0;
+      padding:5px 9px;
+      border-radius:999px;
+      background:var(--lt-sage);
+      color:var(--lt-green-dark);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:13px;
+      font-weight:700;
+    }
+    .doclink{
+      display:block;
+      padding:12px 0;
+      border-top:1px solid var(--lt-line);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-weight:700;
+    }
+    .doclink:first-of-type{border-top:0}
+    .button{
+      display:inline-block;
+      background:var(--lt-green);
+      color:white;
+      padding:12px 16px;
+      border-radius:10px;
+      text-decoration:none;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-weight:800;
+      margin-top:10px;
+    }
+    .small{
+      color:var(--lt-muted);
+      font-size:14px;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    /* ── Numbers table for the financial breakdown ── */
+    .num-table { width:100%; border-collapse:collapse; margin:14px 0 4px; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-size:15px; }
+    .num-table th, .num-table td { padding:9px 12px; border-bottom:1px solid var(--lt-line); text-align:left; }
+    .num-table th { background:var(--lt-sage); color:var(--lt-green-dark); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+    .num-table td.num { text-align:right; font-variant-numeric:tabular-nums; }
+    .num-table tr.total td { border-top:2px solid var(--lt-green-dark); font-weight:700; background:#f5f0e0; }
+    .num-table tr.gap   td { color:var(--lt-red); font-weight:700; }
+
+    .source-note{
+      font-size:13px;
+      color:var(--lt-muted);
+      border-top:1px solid var(--lt-line);
+      padding-top:14px;
+      margin-top:22px;
+    }
+    @media(max-width:850px){
+      .grid,.status-row{grid-template-columns:1fr}
+      .hero-inner{padding:30px 24px}
+      .num-table { font-size:14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+        <img src="/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html" class="active">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/projects-map/">Projects Map</a>
+        <a href="/about.html">About</a>
+        <a href="/donate.html">Donate</a>
+      </nav>
+      <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <a class="back" href="/deep-dives.html">← Back to Deep Dives</a>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Affordable Housing · THA Debt · Balloon Risk</span>
+        <h1>VooDoo</h1>
+        <p class="dek">VooDoo is 27 deed-restricted units and the Coffee Cowboy commercial space, completed in 2024 by the Telluride Housing Authority. It is also the largest and most financially exposed of the THA's five projects: $20 million in interest-only revenue bonds, a single $23 million balloon coming due in December 2032, rent that covers about two-thirds of annual debt service, and no sinking fund identified in the Town budget to absorb the balloon.</p>
+        <div class="status-row">
+          <div class="status"><b>Bonded principal</b><span>$20.07M (3 series, NBH Bank)</span></div>
+          <div class="status"><b>2032 balloon</b><span>$23,045,864 · December 2032</span></div>
+          <div class="status"><b>Debt-service coverage</b><span>0.73× (0.66× vac-adj.)</span></div>
+          <div class="status"><b>Required annual subsidy</b><span>~$541K (2026 budget)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article>
+        <section class="panel">
+          <h2>Why this matters</h2>
+          <p class="lead">VooDoo is the cleanest case study for how Telluride Housing Authority debt is structured — what it costs, who pays for the gap, and what's queued up to come due. The numbers are not in dispute; they come straight out of the Town's own 2025 Budget Book and 2026 Enterprise Fund budget, the Colorado Sun's April 2026 reporting, and the project's bond payment schedules.</p>
+          <div class="callout concern">
+            <strong>Livable Telluride angle:</strong> Three quiet facts compound. First, every existing THA project — VooDoo included — costs more to run and service than it collects in rent. Second, the $23M VooDoo balloon coming due in 2032 has no reserve. Third, none of THA's $72M-plus in bonds went to a public vote. Whether any of those is a problem is a judgment call. That they are facts isn't.
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>What VooDoo is</h2>
+          <ul>
+            <li><strong>27 deed-restricted residential units</strong> plus the <strong>Coffee Cowboy</strong> commercial space.</li>
+            <li><strong>Owner / borrower:</strong> the Town of Telluride, via the Telluride Housing Authority.</li>
+            <li><strong>Completed:</strong> 2024.</li>
+            <li><strong>All-in public cost per unit:</strong> approximately <strong>$955K</strong> — the highest of the THA's five projects. The figure includes three bond series, roughly <strong>$4.7M in cash subsidies from the Affordable Housing Fund</strong>, and about <strong>$1M in waived tap fees</strong>.</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>The debt — $20.07M, three series, all due Dec 2032</h2>
+          <p>VooDoo is financed with three series of interest-only revenue bonds placed with NBH Bank. Total authorized principal is about <strong>$20.065 million</strong>. All three mature simultaneously in December 2032.</p>
+          <table class="num-table">
+            <thead><tr><th>Bond series</th><th>Rate</th><th class="num">Principal at maturity</th></tr></thead>
+            <tbody>
+              <tr><td>Series 2022A</td><td>4.69%</td><td class="num">$6,234,290</td></tr>
+              <tr><td>Series 2022B</td><td>5.86%</td><td class="num">$14,472,068</td></tr>
+              <tr><td>Series 2023</td><td>5.86%</td><td class="num">$2,339,506</td></tr>
+              <tr class="total"><td>Combined balloon (Dec 2032)</td><td></td><td class="num">$23,045,864</td></tr>
+            </tbody>
+          </table>
+          <p class="small">Source: 2025 Budget Book debt schedule, pp. 259–261 (cited in the April 2026 Debt Analysis).</p>
+          <p>The Town's annual cash outlay between now and 2032 is <strong>$1,190,240</strong> in interest-only coupon payments — about $12 million over the life of the bonds. Then the principal comes due as a single payment. By that point the Town will owe roughly $2 million more than it originally borrowed, against a ten-year-old building.</p>
+        </section>
+
+        <section class="panel">
+          <h2>The rent does not cover the debt</h2>
+          <p>Per the FY2025 numbers reported by the <em>Colorado Sun</em> and the Town's 2026 Enterprise Fund budget:</p>
+          <table class="num-table">
+            <thead><tr><th>FY2025 line</th><th class="num">Amount</th></tr></thead>
+            <tbody>
+              <tr><td>Rental revenue (Colorado Sun)</td><td class="num">$872,000</td></tr>
+              <tr><td>Vacancy-adjusted rent</td><td class="num">$788,898</td></tr>
+              <tr><td>Operating expenses</td><td class="num">$140,803</td></tr>
+              <tr><td>Annual debt service</td><td class="num">$1,190,240</td></tr>
+              <tr><td>Total annual cost (DS + OpEx)</td><td class="num">$1,330,240</td></tr>
+              <tr class="gap"><td>Required annual subsidy</td><td class="num">~$541,342</td></tr>
+            </tbody>
+          </table>
+          <p>The debt-service coverage ratio comes in at <strong>0.73× on reported rent</strong> and <strong>0.66× once vacancy is folded in</strong>. (1.00× is the minimum any commercial lender would accept; conventional underwriting expects 1.20×–1.25×.) The Town's 2025 budget identifies <strong>$219,000 as a "moral obligation" subsidy line for VooDoo</strong>; about <strong>$54,431</strong> of what the Enterprise Fund reports as VooDoo "revenue" is itself a transfer from public funds.</p>
+          <p>The April 2026 analysis identifies roughly <strong>5 units currently vacant</strong>, costing about $140K/year in foregone rent. The companion blog post notes that "no one has signed up for next year" — a soft-demand signal worth watching as another renewal cycle approaches.</p>
+        </section>
+
+        <section class="panel">
+          <h2>The 2032 balloon — $23M, no reserve</h2>
+          <p>All three NBH Bank series come due in December 2032 as a single combined payment of <strong>$23,045,864</strong>. To save the balloon over the six years remaining would require putting aside roughly <strong>$3.84 million per year</strong> — about three times what the project currently collects in rent.</p>
+          <div class="callout concern">
+            <strong>What the budget book does not show:</strong> the April 2026 analysis reports that "neither the 2025 Budget Book nor the 2026 Enterprise Fund budget references a sinking fund or reserve for the VooDoo balloon." The plan, as best can be read from the public documents, is to refinance in 2032 — which means the math at that point depends on the prevailing interest-rate environment, the project's then-occupancy, and lender willingness to write a new note at scale on a building that has not been able to cover its own debt service.
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Where this fits in the bigger picture</h2>
+          <p>VooDoo is the most exposed of five THA projects, but the structural pattern repeats across the portfolio:</p>
+          <ul>
+            <li><strong>Total THA bonded debt:</strong> $72.4M across Shandoka, Virginia Placer, VooDoo, and CanyonLands (Sunnyside excluded from the analysis).</li>
+            <li><strong>Known balloon exposure:</strong> $26.2M+ (the $23M VooDoo balloon in 2032 plus $3.1M for Virginia Placer in 2036; CanyonLands and the Shandoka COPs have additional unscheduled exposure).</li>
+            <li><strong>Portfolio debt-service coverage ratio:</strong> 0.50× on a vacancy-adjusted basis.</li>
+            <li><strong>Vacancy:</strong> 49 of 201 units (April 2026).</li>
+            <li><strong>Cross-subsidy:</strong> the Shandoka surplus that historically covered other projects is gone — Shandoka itself now runs a $66K deficit at budget occupancy, $437K with vacancy folded in, because COP 2024 + COP 2025 roughly tripled its debt service.</li>
+            <li><strong>Annual gap across the portfolio:</strong> about $2.13M between cost and vacancy-adjusted rent.</li>
+          </ul>
+        </section>
+
+        <section class="panel">
+          <h2>Timeline</h2>
+          <div class="timeline">
+            <div class="titem"><b>December 2032</b><br>All three bond series mature simultaneously. Combined $23,045,864 balloon due. No sinking fund identified in the Town's published budget documents.</div>
+            <div class="titem"><b>April 2026</b><br>Independent <em>Telluride Debt Analysis</em> circulated. ~5 units vacant; companion reporting notes no lease renewals signed for the next year. Town's 2025 Budget identifies $219K as a "moral obligation" VooDoo subsidy line.</div>
+            <div class="titem"><b>FY2025</b><br>Rental revenue reported at $872,000 against $1,190,240 in debt service — DSCR 0.73× before vacancy.</div>
+            <div class="titem"><b>2024</b><br>Project completed. Approximately $4.7M in Affordable Housing Fund cash subsidies and ~$1M in waived tap fees were applied, putting all-in public cost per unit at ~$955K.</div>
+            <div class="titem"><b>2023</b><br>Series 2023 (5.86%) bond issued, bringing total authorized principal to $20.065M.</div>
+            <div class="titem"><b>2022</b><br>Series 2022A (4.69%) and Series 2022B (5.86%) revenue bonds issued through NBH Bank.</div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Where things stand now</h2>
+          <p>The project is operating. The Town's 2026 Enterprise Fund budget continues to carry the VooDoo line items; rent collection continues; the bonds remain current on their interest-only coupons. The questions ahead are what the refinancing or repayment plan for the 2032 balloon looks like, whether a sinking fund will be established and at what level, and what THA does as the Shandoka cross-subsidy disappears.</p>
+          <div class="callout">
+            <strong>Watch item:</strong> the FY2026 and FY2027 Enterprise Fund budgets are the first places these questions will surface in print. Specifically: a line item creating a VooDoo balloon reserve, a line item growing the "moral obligation" subsidy beyond $219K, or a refinancing memo from staff. Any of those would tell you what the actual plan is.
+          </div>
+        </section>
+      </article>
+
+      <aside class="side">
+        <section class="panel">
+          <h2>At a glance</h2>
+          <span class="tag">THA</span>
+          <span class="tag">Affordable Housing</span>
+          <span class="tag">Bonds &amp; Debt</span>
+          <span class="tag">Balloon 2032</span>
+          <p><strong>Owner / borrower:</strong><br>Town of Telluride via the Telluride Housing Authority</p>
+          <p><strong>Units:</strong><br>27 deed-restricted residential + Coffee Cowboy commercial</p>
+          <p><strong>Completed:</strong><br>2024</p>
+          <p><strong>Lender:</strong><br>NBH Bank (three bond series)</p>
+        </section>
+
+        <section class="panel">
+          <h2>By the numbers</h2>
+          <p><strong>All-in public cost per unit:</strong> ~$955,000 (highest of 5 THA projects)</p>
+          <p><strong>Bonded principal:</strong> $20.065M (3 series)</p>
+          <p><strong>2032 balloon:</strong> $23,045,864</p>
+          <p><strong>Annual debt service:</strong> $1,190,240</p>
+          <p><strong>FY2025 rent (Colorado Sun):</strong> $872,000</p>
+          <p><strong>DSCR:</strong> 0.73× (0.66× vac-adj.)</p>
+          <p><strong>Required annual subsidy:</strong> ~$541,342</p>
+        </section>
+
+        <section class="panel">
+          <h2>Source documents</h2>
+          <a class="doclink" href="/Blog%20Posts/saturday-shot-of-finance-if-voodoo-were-a-private-development-would-it-already-be-bankrupt/">"If VooDoo were a private development, would it already be bankrupt?" — Livable Telluride blog</a>
+          <a class="doclink" href="/Blog%20Posts/the-growing-weight-of-tellurides-debt/">"The Growing Weight of Telluride's Debt" — Livable Telluride blog</a>
+          <a class="doclink" href="https://telluride.gov/122/Budget-Financial-Statements">Town of Telluride — Budget &amp; Financial Statements (2025 Budget Book; 2026 Enterprise Fund)</a>
+          <a class="doclink" href="https://telluride-co.civicweb.net/">THA board documents — CivicWeb</a>
+          <a class="button" href="/Blog%20Posts/the-growing-weight-of-tellurides-debt/">Read the long-form debt tracker →</a>
+        </section>
+
+        <section class="panel">
+          <h2>Public comment focus</h2>
+          <ul>
+            <li>Ask Town staff for the written refinancing or balloon-repayment plan for VooDoo's December 2032 maturity.</li>
+            <li>Ask whether a sinking-fund reserve will be created — and at what annual contribution.</li>
+            <li>Ask how the "moral obligation" subsidy line is expected to evolve as Shandoka's cross-subsidy capacity disappears.</li>
+            <li>Ask whether THA will publicly report monthly occupancy and lease-renewal data for VooDoo.</li>
+          </ul>
+        </section>
+      </aside>
+    </section>
+
+    <p class="source-note">Source base: Town of Telluride 2025 Budget Book and 2026 Enterprise Fund Budget; bond payment schedules (2025 Budget Book pp. 257, 259–261); the <em>Colorado Sun</em>, April 19, 2026; the independent <em>Telluride Debt Analysis</em> (April 2026); and the two Livable Telluride blog posts cited above. Where the budget book's fund summary pages and the debt schedule pages disagree, the debt schedule is treated as primary. All figures here are as reported in those documents — nothing has been forecast or modeled beyond what the cited sources show.</p>
+  <!-- CORRECTION FOOTER -->
+  <footer style="max-width:760px;margin:56px auto 72px;padding:32px 28px;text-align:center;background:var(--bg-paper,#fffdf9);border:1px solid var(--border-soft,rgba(33,68,60,0.12));border-radius:14px;">
+    <h3 style="font-family:var(--font-heading,Georgia,'Times New Roman',serif);font-size:1.3rem;color:var(--text-primary,#1a2e29);margin:0 0 8px;">See anything wrong with this report?</h3>
+    <p style="font-size:0.95rem;color:var(--text-secondary,#4a5e57);line-height:1.6;max-width:520px;margin:0 auto 20px;">We want every Deep Dive to be accurate. If a number or fact looks off, let us know and we&#39;ll take a look.</p>
+    <a id="ddCorrectionBtn" href="mailto:info@livabletelluride.org?subject=Deep%20Dive%20correction" style="display:inline-block;background:var(--forest,#21443c);color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;padding:12px 26px;border-radius:999px;">Let us know &rarr;</a>
+  <p style="margin:24px 0 0;padding-top:16px;border-top:1px solid var(--border-soft,rgba(33,68,60,0.12));font-size:0.78rem;color:var(--text-muted,#7a8a83);line-height:1.5;">© 2025–2026 Livable Telluride. All rights reserved. Original content, design, and code are the property of Livable Telluride; news, logos, photos, public records, and user submissions remain the property of their respective owners.</p>
+  </footer>
+  <script>
+    (function(){
+      var b = document.getElementById('ddCorrectionBtn');
+      if (!b) return;
+      var subj = 'Deep Dive correction: ' + document.title;
+      var body = 'Page: ' + location.href + '\n\nWhat looks wrong:\n';
+      b.href = 'mailto:info@livabletelluride.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+    })();
+  </script>
+  </main>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

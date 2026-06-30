@@ -1,0 +1,46 @@
+name: Deploy Cloudflare Worker
+
+on:
+  workflow_dispatch:
+  # Auto-deploy whenever the Worker's source changes on main. This closes
+  # the drift window that previously bricked content-refresh: editing
+  # ALLOWED_HOSTS in worker.js (to match a new PROXY_HOSTS entry) used to
+  # require a SEPARATE manual deploy, and any content-refresh run that
+  # fired in between failed its fatal preflight drift check — taking down
+  # ALL summaries/news/events, not just the new source. Now the redeploy
+  # happens on the same push that edits the allow-list, in lockstep.
+  push:
+    branches: [main]
+    paths:
+      - 'cloudflare-worker/livabletelluride-rss-proxy/worker.js'
+      - 'cloudflare-worker/livabletelluride-rss-proxy/wrangler.toml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Deploy RSS proxy Worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          # Prefer CLOUDFLARE_WORKER (correct spelling); fall back to the
+          # historical CLOUDFLAIR_WORKER while the GitHub secret is being
+          # renamed in repo Settings → Secrets and variables → Actions.
+          apiToken: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
+          # Explicit accountId so the deploy isn't dependent on
+          # wrangler.toml still hardcoding it.
+          accountId: 8f020e73de4e9956f0e3ad7dce070ef4
+          workingDirectory: cloudflare-worker/livabletelluride-rss-proxy
+          # Push the Customer.io Track-API credentials as Worker secrets so the
+          # /update-profile dual-write can identify people in Customer.io. Only
+          # these two are managed here; the other Worker secrets (MAILCHIMP_API_KEY,
+          # ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT, MAIL_RELAY_URL) were set
+          # manually and persist across deploys. Uploading secrets still runs the
+          # default `deploy` command afterward.
+          secrets: |
+            CUSTOMERIO_SITE_ID
+            CUSTOMERIO_TRACK_API_KEY
+        env:
+          CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
+          CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}

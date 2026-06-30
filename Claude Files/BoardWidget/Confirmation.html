@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+  Confirmation.html — the live status / action page served by doGet via page_().
+  Shows the right control for the current stage (Move -> Second -> Vote) and the
+  running tally. All actions are plain <a href> links (no google.script.run), so
+  they work for anonymous/external board members. Template vars are listed in
+  page_() in Code.gs. ASCII-only.
+-->
+<html>
+<head>
+<base target="_top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; margin:0; background:#f3f4f6; color:#1f2937; }
+  .wrap { max-width:560px; margin:0 auto; padding:34px 18px; }
+  .card { background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 2px 14px rgba(0,0,0,.07); }
+  .hd { background:#2D4A3E; color:#fff; padding:18px 24px; }
+  .hd .org { font-size:16px; font-weight:700; } .hd .sub { font-size:12px; color:#bcd3c8; margin-top:2px; }
+  .bd { padding:22px 24px 26px; }
+  .notice { background:#ecfdf5; border:1px solid #a7f3d0; color:#065f46; border-radius:9px; padding:11px 14px; font-size:13px; margin-bottom:16px; }
+  .youract { background:#e7f5ee; border:1px solid #a7d8bf; color:#1f5f43; border-radius:9px; padding:12px 14px; font-size:14px; margin-bottom:16px; }
+  .youract b { color:#14492f; }
+  .youract .tick { color:#1f7a4d; font-weight:800; margin-right:6px; }
+  .errbox { background:#fef2f2; border:1px solid #fecaca; color:#991b1b; border-radius:9px; padding:14px; font-size:14px; }
+  h1 { font-size:19px; margin:0 0 8px; }
+  .label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.6px; color:#2D4A3E; margin:18px 0 5px; }
+  .summary { font-size:14px; line-height:1.55; color:#374151; background:#f0f5f2; border-left:3px solid #2D4A3E; border-radius:6px; padding:11px 14px; }
+  .motion { font-size:13px; line-height:1.55; color:#4b5563; white-space:pre-wrap; }
+  .docbtn { display:inline-block; margin-top:8px; font-size:13px; font-weight:600; color:#1d6fb8; text-decoration:underline; }
+  .status { font-size:14px; font-weight:700; text-align:center; padding:12px; border-radius:10px; margin:18px 0 6px; }
+  .st-wait { background:#fff7e6; color:#92600a; } .st-open { background:#eef6ff; color:#1d4ed8; }
+  .st-passed { background:#e7f5ee; color:#1f7a4d; } .st-failed { background:#fdeceb; color:#a4231c; }
+  .proc { font-size:13px; color:#4b5563; line-height:1.6; }
+  .btn { display:block; text-align:center; text-decoration:none; font-size:15px; font-weight:700; padding:14px 0; border-radius:10px; margin-top:10px; }
+  .btn-move { background:#2D4A3E; color:#fff; } .btn-second { background:#1d6fb8; color:#fff; }
+  .vote-row { display:flex; gap:8px; margin-top:10px; }
+  .vote-row a { flex:1; text-align:center; text-decoration:none; font-size:15px; font-weight:700; padding:13px 0; border-radius:9px; color:#fff; }
+  .v-yes { background:#2e7d52; } .v-no { background:#b3261e; } .v-abs { background:#6b7280; }
+  .mine { box-shadow:0 0 0 3px #11182733 inset; outline:2px solid #111827; }
+  .yourvote { text-align:center; font-size:13px; color:#374151; margin-top:10px; }
+  .tally { display:flex; gap:10px; margin-top:16px; }
+  .tbox { flex:1; text-align:center; border:1px solid #eef0f2; border-radius:10px; padding:10px 0; }
+  .tbox .n { font-size:22px; font-weight:800; } .tbox .t { font-size:11px; text-transform:uppercase; letter-spacing:.5px; color:#6b7280; }
+  .pdf { display:block; text-align:center; margin-top:16px; font-size:14px; font-weight:700; color:#1d6fb8; text-decoration:underline; }
+  .hint { font-size:12px; color:#6b7280; text-align:center; margin-top:8px; }
+  .foot { text-align:center; font-size:12px; color:#9ca3af; margin-top:16px; }
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+  <div class="hd"><div class="org"><?= orgName ?></div><div class="sub">Board Vote</div></div>
+
+  <? if (error) { ?>
+    <div class="bd"><div class="errbox"><?= error ?></div></div>
+  <? } else {
+       var rl = String(result).toLowerCase();
+       var passed = rl.indexOf('passed') === 0, failed = rl.indexOf('failed') === 0, decided = passed || failed;
+  ?>
+    <div class="bd">
+      <? if (notice) { ?><div class="notice"><?= notice ?></div><? } ?>
+
+      <? if (!notice && (isMover || isSeconder || myVote)) { ?>
+        <div class="youract"><span class="tick">&#10003;</span>
+          <? if (isMover) { ?>You already <b>moved this matter to approve</b>.<? } else if (isSeconder) { ?>You already <b>seconded this motion</b>.<? } ?>
+          <? if (myVote) { ?> Your vote is recorded as <b><?= myVote ?></b><? if (stage === 'voting') { ?> &mdash; click another option below to change it<? } ?>.<? } ?>
+        </div>
+      <? } ?>
+
+      <h1><?= title ?></h1>
+      <div class="label">Summary</div>
+      <div class="summary"><?= summary ?></div>
+
+      <? if (motionText && motionText !== summary) { ?>
+        <div class="label">Motion text</div>
+        <div class="motion"><?= motionText ?></div>
+      <? } ?>
+      <? if (docUrl) { ?><a class="docbtn" href="<?= docUrl ?>" target="_blank">Open the document to review</a><? } ?>
+
+      <!-- status banner -->
+      <? if (stage === 'awaiting_motion') { ?>
+        <div class="status st-wait">Awaiting a motion</div>
+      <? } else if (stage === 'awaiting_second') { ?>
+        <div class="status st-wait">Moved by <?= movedBy ?> - awaiting a second</div>
+      <? } else if (decided) { ?>
+        <div class="status <?= passed ? 'st-passed' : 'st-failed' ?>"><?= result ?></div>
+      <? } else { ?>
+        <div class="status st-open">Voting is open</div>
+      <? } ?>
+
+      <!-- procedure -->
+      <? if (movedBy) { ?>
+        <div class="proc">Moved by <b><?= movedBy ?></b><? if (movedAt) { ?> (<?= movedAt ?>)<? } ?>
+        <? if (secondedBy) { ?><br>Seconded by <b><?= secondedBy ?></b><? if (secondedAt) { ?> (<?= secondedAt ?>)<? } ?><? } ?></div>
+      <? } ?>
+
+      <!-- action area -->
+      <? if (stage === 'awaiting_motion') { ?>
+        <a class="btn btn-move" href="<?= moveUrl ?>">Move to Approve</a>
+        <div class="hint">Moving opens the matter and records your vote as Yes. It still needs a second from another member before voting opens.</div>
+      <? } else if (stage === 'awaiting_second') { ?>
+        <? if (isMover) { ?>
+          <div class="hint">You moved this matter. It is now waiting for another member to second it before voting opens.</div>
+        <? } else { ?>
+          <a class="btn btn-second" href="<?= secondUrl ?>">Second this motion</a>
+          <div class="hint">Seconding opens voting for everyone and records your vote as Yes.</div>
+        <? } ?>
+      <? } else { ?>
+        <div class="vote-row">
+          <a class="v-yes <?= myVote === 'Yes' ? 'mine' : '' ?>" href="<?= yesUrl ?>">Yes</a>
+          <a class="v-no <?= myVote === 'No' ? 'mine' : '' ?>" href="<?= noUrl ?>">No</a>
+          <a class="v-abs <?= myVote === 'Abstained' ? 'mine' : '' ?>" href="<?= abstainUrl ?>">Abstain</a>
+        </div>
+        <? if (myVote) { ?><div class="yourvote">Your current vote: <b><?= myVote ?></b> - click another option to change it.</div><? } ?>
+      <? } ?>
+
+      <!-- tally (once a motion exists) -->
+      <? if (stage !== 'awaiting_motion') { ?>
+        <div class="tally">
+          <div class="tbox"><div class="n"><?= yes ?></div><div class="t">Yes</div></div>
+          <div class="tbox"><div class="n"><?= no ?></div><div class="t">No</div></div>
+          <div class="tbox"><div class="n"><?= abstain ?></div><div class="t">Abstained</div></div>
+        </div>
+        <div class="hint">Majority to pass: <?= majority ?>.</div>
+      <? } ?>
+
+      <? if (pdfUrl) { ?><a class="pdf" href="<?= pdfUrl ?>" target="_blank">Download the official record (PDF)</a><? } ?>
+    </div>
+  <? } ?>
+</div>
+<div class="foot">Livable Telluride Board Votes - this link is unique to you; please do not forward it.</div>
+</div>
+</body>
+</html>

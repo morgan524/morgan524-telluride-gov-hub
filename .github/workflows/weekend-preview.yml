@@ -1,0 +1,89 @@
+name: Weekend Email Preview
+
+# Renders the Thursday "Weekend Ahead" events email via scripts/weekly-email.js
+# in WEEKEND mode (from the live gov-data.js + gov-helpers.js — curated
+# best-of-the-weekend events, no meetings) and emails a review copy to info@
+# every THURSDAY morning. The run also saves the paste-ready HTML
+# (weekend-mailchimp.html) as an artifact to send after approval.
+# Edit the intro in data/weekend-ahead-lede.json before the send.
+on:
+  schedule:
+    - cron: '0 14 * * 4'   # Thursday 14:00 UTC (~8am Mountain)
+  workflow_dispatch:
+    inputs:
+      week_start:
+        description: 'Weekend start date YYYY-MM-DD — the Thursday the email covers (override the auto-detected upcoming Thursday).'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    env:
+      # Email send is skipped (just renders + uploads an artifact) until these
+      # secrets are added. PREVIEW_SMTP_USER = a Gmail/Workspace address;
+      # PREVIEW_SMTP_PASS = an app password for it. (Already set for the weekly.)
+      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Render weekend email (preview + paste-ready) from live data
+        id: render
+        env:
+          WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
+        run: |
+          set -o pipefail
+          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
+          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          # Honour the workflow_dispatch input when one is provided, otherwise
+          # use the upcoming Thursday. `date -d thursday` returns today when run
+          # on a Thursday (the cron day), so the scheduled run targets the same
+          # day's Thu–Sun weekend.
+          if [ -n "$WEEK_START_INPUT" ]; then
+            WS="$WEEK_START_INPUT"
+          else
+            WS=$(date -u -d "thursday" +%F)
+          fi
+          LABEL="$(date -u -d "$WS" '+%B %-d') - $(date -u -d "$WS +3 days" '+%B %-d, %Y')"
+          echo "Weekend start: $WS  ·  Label: $LABEL"
+          WEEKEND=1 WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-preview.html 2>&1 | tee /tmp/wp.log
+          WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-mailchimp.html
+          echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
+
+      - name: Email preview to info@livabletelluride.org
+        if: env.PREVIEW_SMTP_PASS != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.render.outputs.subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://weekend-preview.html
+
+      - name: Note when email isn't configured
+        if: env.PREVIEW_SMTP_PASS == ''
+        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekend-preview.html (see artifact) but did not email."
+
+      - name: Upload preview artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekend-preview
+          path: |
+            weekend-preview.html
+            weekend-mailchimp.html
+          retention-days: 14
+          if-no-files-found: ignore

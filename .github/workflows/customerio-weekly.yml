@@ -1,0 +1,51 @@
+name: Customer.io — Weekly Personalized Broadcast
+
+# Trial pipeline (parallel to Mailchimp). Builds the per-topic message_data
+# from the live site data, then triggers the API-triggered Customer.io broadcast
+# that renders the personalized Liquid template per-person. Manual for now.
+#
+# Prereqs: secrets CUSTOMERIO_APP_API_KEY (set) + CUSTOMERIO_BROADCAST_ID
+# (set once you create the broadcast in the Customer.io UI).
+
+on:
+  workflow_dispatch:
+    inputs:
+      week_start:
+        description: 'Monday of the target week (YYYY-MM-DD)'
+        required: true
+        default: '2026-06-15'
+      label:
+        description: 'Human date label shown in the email header'
+        required: true
+        default: 'June 15–21, 2026'
+      dry_run:
+        description: 'Build message_data only, do NOT trigger the send'
+        required: false
+        default: 'false'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build per-topic message_data
+        env:
+          CUSTOMERIO: '1'
+        run: |
+          node scripts/weekly-email.js js/gov-data.js js/gov-helpers.js \
+            "${{ github.event.inputs.week_start }}" "${{ github.event.inputs.label }}" \
+            message_data.json
+          echo '----- message_data.json -----'
+          cat message_data.json
+
+      - name: Trigger Customer.io broadcast
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CUSTOMERIO_BROADCAST_ID: ${{ secrets.CUSTOMERIO_BROADCAST_ID }}
+          CIO_DATA: message_data.json
+        run: node scripts/customerio-broadcast.js

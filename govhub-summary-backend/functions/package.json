@@ -1,0 +1,18 @@
+{
+  "name": "govhub-summary-functions",
+  "description": "Firebase Cloud Functions for Telluride Gov Hub AI-powered meeting summaries",
+  "engines": { "node": "20" },
+  "main": "index.js",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "cheerio": "^1.0.0",
+    "firebase-admin": "^12.0.0",
+    "firebase-functions": "^5.0.0",
+    "node-fetch": "^2.7.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

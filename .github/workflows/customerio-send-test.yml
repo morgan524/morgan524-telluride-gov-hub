@@ -1,0 +1,38 @@
+name: Customer.io — Send Test Weekly Email
+
+# Manual-only. Builds the weekly "Week Ahead" email and sends ONE copy to a
+# recipient you control, via the Customer.io App API (Transactional). Trial
+# only — does not touch Mailchimp. Keys stay as GitHub Actions secrets.
+on:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: Recipient email (an address you control / a test profile)
+        required: true
+        default: info@livabletelluride.org
+      week_start:
+        description: Week-start Monday (YYYY-MM-DD)
+        required: true
+        default: '2026-06-15'
+      label:
+        description: Date label shown in the email
+        required: true
+        default: 'June 15–21, 2026'
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build weekly email HTML
+        run: node scripts/weekly-email.js js/gov-data.js js/gov-helpers.js "${{ github.event.inputs.week_start }}" "${{ github.event.inputs.label }}" weekly-email.html
+      - name: Send via Customer.io
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CIO_TEST_TO: ${{ github.event.inputs.to }}
+          CIO_HTML: weekly-email.html
+          CIO_SUBJECT: "The Week Ahead — ${{ github.event.inputs.label }} (Customer.io test)"
+        run: node scripts/customerio-send-test.js

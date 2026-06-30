@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gov Hub Summary Admin</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6f7; color: #1a1a2e; padding: 20px; }
+    h1 { font-size: 1.4rem; margin-bottom: 8px; color: #21443c; }
+    .subtitle { color: #666; font-size: 0.85rem; margin-bottom: 20px; }
+    .config-bar {
+      background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08); display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    }
+    .config-bar label { font-size: 0.8rem; font-weight: 600; color: #555; }
+    .config-bar input { padding: 6px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; }
+    #functionsUrl { width: 420px; }
+    #adminKey { width: 240px; }
+    .actions { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+    button {
+      padding: 8px 16px; border: none; border-radius: 8px; cursor: pointer;
+      font-size: 0.82rem; font-weight: 600; transition: 0.15s;
+    }
+    .btn-primary { background: #21443c; color: #fff; }
+    .btn-primary:hover { background: #2d5e53; }
+    .btn-secondary { background: #e8eceb; color: #21443c; }
+    .btn-secondary:hover { background: #d4dbd9; }
+    .btn-danger { background: #dc3545; color: #fff; }
+    .btn-danger:hover { background: #c82333; }
+
+    .status-bar { padding: 10px 14px; border-radius: 8px; margin-bottom: 16px; font-size: 0.82rem; display: none; }
+    .status-bar.info { background: #e8f4f8; color: #0c5460; display: block; }
+    .status-bar.success { background: #d4edda; color: #155724; display: block; }
+    .status-bar.error { background: #f8d7da; color: #721c24; display: block; }
+
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    thead th {
+      background: #21443c; color: #fff; padding: 10px 12px; text-align: left;
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    tbody td { padding: 8px 12px; border-bottom: 1px solid #f0f0f0; font-size: 0.8rem; }
+    tbody tr:hover { background: #f9fafb; }
+    .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600; }
+    .badge-ok { background: #d4edda; color: #155724; }
+    .badge-error { background: #f8d7da; color: #721c24; }
+    .badge-empty { background: #fff3cd; color: #856404; }
+    .badge-ai { background: #e8f4f8; color: #0c5460; }
+
+    .refresh-btn { padding: 3px 8px; font-size: 0.7rem; border-radius: 4px; background: #21443c; color: #fff; border: none; cursor: pointer; }
+    .refresh-btn:hover { background: #2d5e53; }
+
+    .log { background: #1a1a2e; color: #8be9fd; border-radius: 10px; padding: 14px; margin-top: 20px; font-family: 'Fira Code', monospace; font-size: 0.75rem; max-height: 300px; overflow-y: auto; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Gov Hub Summary Admin</h1>
+  <p class="subtitle">Manage Claude-powered meeting summaries. View cache status, force refresh individual summaries, or refresh all upcoming.</p>
+
+  <div class="config-bar">
+    <div>
+      <label>Cloud Functions URL</label><br>
+      <input id="functionsUrl" type="text" placeholder="https://us-central1-telluride-gov-hub.cloudfunctions.net" value="https://us-central1-telluride-gov-hub.cloudfunctions.net">
+    </div>
+    <div>
+      <label>Admin Key</label><br>
+      <input id="adminKey" type="password" placeholder="your-admin-secret">
+    </div>
+    <button class="btn-secondary" onclick="loadStatus()">Connect</button>
+  </div>
+
+  <div class="actions">
+    <button class="btn-primary" onclick="loadStatus()">Refresh Table</button>
+    <button class="btn-secondary" onclick="refreshUpcoming(30)">Refresh All (Next 30 Days)</button>
+    <button class="btn-secondary" onclick="refreshUpcoming(7)">Refresh Next 7 Days</button>
+  </div>
+
+  <div id="statusBar" class="status-bar"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Date</th>
+        <th>Meeting</th>
+        <th>Status</th>
+        <th>Topics</th>
+        <th>Generated</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <tr><td colspan="7" style="text-align:center;padding:40px;color:#999;">Enter your Cloud Functions URL and admin key, then click Connect.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="log" id="log">Admin log ready...</div>
+
+<script>
+  function getConfig() {
+    return {
+      base: document.getElementById('functionsUrl').value.replace(/\/$/, ''),
+      key: document.getElementById('adminKey').value
+    };
+  }
+
+  function showStatus(msg, type) {
+    const el = document.getElementById('statusBar');
+    el.textContent = msg;
+    el.className = 'status-bar ' + type;
+  }
+
+  function log(msg) {
+    const el = document.getElementById('log');
+    const time = new Date().toLocaleTimeString();
+    el.textContent += '\n[' + time + '] ' + msg;
+    el.scrollTop = el.scrollHeight;
+  }
+
+  async function loadStatus() {
+    const { base, key } = getConfig();
+    if (!base || !key) { showStatus('Please enter both the Functions URL and Admin Key.', 'error'); return; }
+
+    showStatus('Loading summary status...', 'info');
+    log('Fetching admin status from ' + base + '/adminStatus');
+
+    try {
+      const resp = await fetch(base + '/adminStatus', {
+        headers: { 'x-govhub-admin-key': key }
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status + ' — check admin key');
+      const data = await resp.json();
+
+      renderTable(data.records);
+      showStatus('Loaded ' + data.total + ' summary records.', 'success');
+      log('Loaded ' + data.total + ' records');
+    } catch (err) {
+      showStatus('Failed: ' + err.message, 'error');
+      log('ERROR: ' + err.message);
+    }
+  }
+
+  function renderTable(records) {
+    const tbody = document.getElementById('tableBody');
+    if (!records || records.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:40px;color:#999;">No summary records found.</td></tr>';
+      return;
+    }
+
+    let html = '';
+    records.forEach(r => {
+      const statusBadge = r.error
+        ? '<span class="badge badge-error">Error</span>'
+        : r.hasContent
+          ? '<span class="badge badge-ok">Cached</span>'
+          : '<span class="badge badge-empty">Empty</span>';
+
+      const age = r.generatedAt ? timeSince(new Date(r.generatedAt)) : '—';
+
+      html += '<tr>' +
+        '<td><strong>' + r.source + '</strong></td>' +
+        '<td>' + r.date + '</td>' +
+        '<td>' + (r.meetingTitle || '—') + '</td>' +
+        '<td>' + statusBadge + (r.error ? '<br><small style="color:#721c24;">' + r.error.slice(0, 60) + '</small>' : '') + '</td>' +
+        '<td>' + r.topicCount + ' bullets' + (r.hasWhyItMatters ? ' + context' : '') + '</td>' +
+        '<td><small>' + age + '</small></td>' +
+        '<td><button class="refresh-btn" onclick="refreshOne(\'' + encodeURIComponent(r.source) + '\',\'' + encodeURIComponent(r.date) + '\',\'' + encodeURIComponent(r.meetingTitle) + '\',\'' + encodeURIComponent(r.agendaUrl || '') + '\')">Refresh</button></td>' +
+      '</tr>';
+    });
+
+    tbody.innerHTML = html;
+  }
+
+  function timeSince(date) {
+    const seconds = Math.floor((new Date() - date) / 1000);
+    if (seconds < 60) return seconds + 's ago';
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return minutes + 'm ago';
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return hours + 'h ago';
+    const days = Math.floor(hours / 24);
+    return days + 'd ago';
+  }
+
+  async function refreshOne(source, date, title, agendaUrl) {
+    const { base, key } = getConfig();
+    source = decodeURIComponent(source);
+    date = decodeURIComponent(date);
+    title = decodeURIComponent(title);
+    agendaUrl = decodeURIComponent(agendaUrl);
+
+    showStatus('Refreshing: ' + source + ' | ' + date + ' | ' + title + '...', 'info');
+    log('Refreshing summary for ' + source + ' ' + date + ' "' + title + '"');
+
+    try {
+      const resp = await fetch(base + '/refreshSummary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-govhub-admin-key': key },
+        body: JSON.stringify({ source, date, title, agendaUrl })
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+
+      if (data.error) {
+        showStatus('Summary generated with error: ' + data.error, 'error');
+        log('ERROR: ' + data.error);
+      } else {
+        showStatus('Summary refreshed! Short: "' + (data.shortSummary || '').slice(0, 80) + '..."', 'success');
+        log('OK — ' + (data.topics?.length || 0) + ' topics generated');
+      }
+
+      loadStatus(); // reload table
+    } catch (err) {
+      showStatus('Refresh failed: ' + err.message, 'error');
+      log('ERROR: ' + err.message);
+    }
+  }
+
+  async function refreshUpcoming(days) {
+    const { base, key } = getConfig();
+    showStatus('Refreshing all meetings in next ' + days + ' days... (this may take a minute)', 'info');
+    log('Bulk refresh: next ' + days + ' days');
+
+    // We need to send meeting data — fetch current summaries to get the list
+    try {
+      const statusResp = await fetch(base + '/adminStatus', {
+        headers: { 'x-govhub-admin-key': key }
+      });
+      if (!statusResp.ok) throw new Error('HTTP ' + statusResp.status);
+      const statusData = await statusResp.json();
+
+      const meetings = statusData.records.map(r => ({
+        source: r.source,
+        date: r.date,
+        title: r.meetingTitle,
+        agendaUrl: r.agendaUrl || ''
+      }));
+
+      const resp = await fetch(base + '/refreshUpcoming', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-govhub-admin-key': key },
+        body: JSON.stringify({ meetings, days })
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+
+      showStatus('Refreshed ' + data.refreshed + ' summaries.', 'success');
+      log('Bulk refresh complete: ' + data.refreshed + ' processed');
+      data.results?.forEach(r => {
+        log('  ' + r.docId + ' → ' + r.status + (r.error ? ' (' + r.error + ')' : ''));
+      });
+
+      loadStatus();
+    } catch (err) {
+      showStatus('Bulk refresh failed: ' + err.message, 'error');
+      log('ERROR: ' + err.message);
+    }
+  }
+</script>
+</body>
+</html>

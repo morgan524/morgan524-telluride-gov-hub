@@ -1,0 +1,106 @@
+<!--
+  ════════════════════════════════════════════════════════════════════════
+  Livable Telluride — Weekly "Week Ahead" — Customer.io PERSONALIZED template
+  ════════════════════════════════════════════════════════════════════════
+  DRAFT 2026-06-14. Paste this into a Customer.io email (Broadcast or
+  Transactional) using the HTML/code editor.
+
+  HOW PERSONALIZATION WORKS
+  - Person attributes (set on each subscriber via the Track API / signup /
+    profile): {{ customer.first_name }}, {{ customer.region }},
+    {{ customer.topic_gov_meetings }}, {{ customer.topic_music_arts }},
+    {{ customer.topic_family_kids }}, {{ customer.topic_outdoors_rec }}.
+  - The WEEK'S CONTENT is passed in at send time as message_data, rendered by
+    the GitHub Action (an enhanced scripts/weekly-email.js that emits each
+    section separately instead of one blob). The Action must supply:
+        message_data.label          → e.g. "June 15–21, 2026"  (header date)
+        message_data.lede           → the intro paragraph text
+        message_data.meetings_html  → the full <tr>…</tr> "Public Meetings" section
+        message_data.events_html    → general one-event-per-day section (fallback)
+        message_data.arts_html      → <tr>…</tr> "Music & Arts This Week" section
+        message_data.family_html    → <tr>…</tr> "Family & Kids This Week" section
+        message_data.outdoors_html  → <tr>…</tr> "Outdoors & Recreation" section
+    Each *_html value is a complete section (the section()/evRow output the
+    generator already produces). Liquid just drops them in based on the
+    person's topics.
+
+  NAMESPACE NOTE
+  - This uses {{ message_data.X }} (the Transactional API path we tested).
+    If you send via an API-triggered BROADCAST instead, Customer.io exposes
+    trigger data as {{ trigger.X }} — swap "message_data." → "trigger." then.
+  - Person attributes are always {{ customer.X }}.
+
+  DELIVERY LOGIC
+  - Subscribed to Weekly Update but chose NO topics → gets the general digest
+    (meetings + one-event-per-day), so no one receives an empty email.
+  - Chose one or more topics → gets meetings ONLY if they picked Government
+    Meetings, plus a section for each event topic they picked.
+  - {{ unsubscribe_url }} is Customer.io's built-in unsubscribe link (required).
+  ════════════════════════════════════════════════════════════════════════
+-->
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
+@media only screen and (max-width:480px){
+  .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;}
+  .ev-img-cell img{width:160px !important;height:160px !important;}
+  .ev-text-cell{display:block !important;width:100% !important;}
+  .callout-wrap{padding-left:14px !important;padding-right:14px !important;}
+  .callout-card{border-left:0 !important;padding:16px 16px !important;}
+  .sec-pad{padding-left:16px !important;padding-right:16px !important;}
+}
+</style></head>
+<body style="margin:0;background:#f0ece3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0ece3;"><tr><td align="center" style="padding:24px 10px 40px;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#fdfbf6;border-radius:6px;overflow:hidden;">
+
+  <!-- ── Header ── -->
+  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
+      <td valign="middle" style="vertical-align:middle;">
+        <div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride &middot; Weekly Update</div>
+        <div style="font-family:Georgia,serif;font-size:25px;font-weight:700;color:#fff;margin-top:4px;">The Week Ahead</div>
+        <div style="font-family:Georgia,serif;font-size:14px;color:#a8c4b8;margin-top:3px;">{{ message_data.label }}</div>
+      </td>
+      <td width="74" valign="middle" align="right" style="vertical-align:middle;">
+        <table role="presentation" cellpadding="0" cellspacing="0" align="right"><tr><td style="background:#fff;border-radius:8px;padding:5px;">
+          <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" width="58" height="58" alt="Livable Telluride" style="display:block;width:58px;height:58px;border:0;">
+        </td></tr></table>
+      </td>
+    </tr></table></td></tr>
+
+  <!-- ── Greeting + lede ── -->
+  <tr><td class="sec-pad" style="padding:22px 34px 4px;">
+    <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
+    <p style="margin:11px 0 2px;font-size:15.5px;line-height:1.65;color:#2c3b35;">Hi {{ customer.first_name | default: "neighbor" }},</p>
+    <p style="margin:0;font-size:15.5px;line-height:1.65;color:#2c3b35;">{{ message_data.lede }}{% if customer.region %} <span style="color:#7a8a85;">(Your area: {{ customer.region }}.)</span>{% endif %}</p>
+  </td></tr>
+
+  <!-- ── Body: assembled per-person from their chosen topics ── -->
+  {# Customer.io stores boolean attributes as STRINGS ("true"/"false"). In Liquid
+     the string "false" is truthy, so every topic check must compare == "true"
+     explicitly — a bare {% if customer.topic_x %} is true even when "false". #}
+  {% assign has_topic = false %}
+  {% if customer.topic_gov_meetings == "true" or customer.topic_music_arts == "true" or customer.topic_family_kids == "true" or customer.topic_outdoors_rec == "true" %}{% assign has_topic = true %}{% endif %}
+
+  {% if has_topic == false %}
+    {{ message_data.meetings_html }}
+    {{ message_data.events_html }}
+  {% else %}
+    {% if customer.topic_gov_meetings == "true" %}{{ message_data.meetings_html }}{% endif %}
+    {% if customer.topic_music_arts == "true" %}{{ message_data.arts_html }}{% endif %}
+    {% if customer.topic_family_kids == "true" %}{{ message_data.family_html }}{% endif %}
+    {% if customer.topic_outdoors_rec == "true" %}{{ message_data.outdoors_html }}{% endif %}
+  {% endif %}
+
+  <!-- ── Why Showing Up Matters ── -->
+  <tr><td class="callout-wrap" style="padding:28px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #21443c;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">Why Showing Up Matters</div><p style="margin:0;font-size:14.5px;line-height:1.7;color:#2c3b35;">The decisions shaping this valley rarely arrive with a drumroll — they get made while most people are looking the other way. The fix is simple: keep showing up. None of it is too small. A community that keeps paying attention to itself, in the big ways and the little ones, is one that stays livable.</p></td></tr></table></td></tr>
+
+  <!-- ── Donate ── -->
+  <tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is an independent, reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall, free to everyone in the valley. If this weekly note is useful to you, please consider chipping in. A gift of any size genuinely makes a difference.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>
+
+  <!-- ── Footer ── -->
+  <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
+    <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
+    <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
+    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;&middot;&nbsp; <a href="https://livabletelluride.org/profile.html" style="color:#7a8a85;">Update your topics</a> &nbsp;&middot;&nbsp; <a href="{{ unsubscribe_url }}" style="color:#7a8a85;">Unsubscribe</a></div></td></tr>
+
+</table></td></tr></table></body></html>

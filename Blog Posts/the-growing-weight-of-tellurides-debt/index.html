@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Telluride's Money Goes — A Spending Tracker</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --bg: #faf9f6;
+    --text: #1a1a1a;
+    --text-secondary: #666;
+    --text-tertiary: #999;
+    --border: #e0ddd8;
+    --border-light: #edeae5;
+    --accent: #d35400;
+    --accent-light: #fdf2e9;
+    --positive: #27ae60;
+    --negative: #c0392b;
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+
+    /* Fund colors - muted palette */
+    --c-general: #2c5f8a;
+    --c-housing: #c0392b;
+    --c-wastewater: #5b7065;
+    --c-capital: #8e6f3e;
+    --c-water: #3498db;
+    --c-openspace: #27ae60;
+    --c-streets: #7f8c8d;
+    --c-shandoka: #d35400;
+    --c-airline: #8e44ad;
+    --c-transport: #16a085;
+    --c-lodgers: #c77dba;
+    --c-parking: #6c7a89;
+    --c-sunnyside: #e67e22;
+    --c-virginia: #d4a76a;
+    --c-child: #e74c9f;
+    --c-energy: #2ecc71;
+    --c-other: #95a5a6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* === HEADER === */
+  .masthead {
+    text-align: center;
+    padding: 3rem 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .masthead .label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+  .masthead h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    max-width: 720px;
+    margin: 0 auto 0.75rem;
+    letter-spacing: -0.02em;
+  }
+  .masthead .deck {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 1rem;
+    font-weight: 500;
+  }
+  .masthead .byline {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    letter-spacing: 0.04em;
+  }
+
+  /* === BIG NUMBERS === */
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2.5rem 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-stat {
+    text-align: center;
+    flex: 1;
+    min-width: 180px;
+  }
+  .hero-stat .number {
+    font-family: var(--serif);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .hero-stat .unit {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.4rem;
+  }
+  .hero-stat .context {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin-top: 0.25rem;
+  }
+
+  .divider {
+    width: 80px;
+    height: 1px;
+    background: var(--border);
+    margin: 0 auto;
+  }
+
+  /* === CONTROLS === */
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .toggle-btn {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.5rem 1.2rem;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: white;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .toggle-btn:hover {
+    border-color: var(--text-secondary);
+    color: var(--text);
+  }
+  .toggle-btn.active {
+    background: var(--text);
+    color: white;
+    border-color: var(--text);
+  }
+
+  /* === MAIN CONTENT === */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .section-label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .section-intro {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* === EXECUTIVE SUMMARY === */
+  .exec-summary {
+    padding-top: 2.5rem;
+    text-align: center;
+  }
+  .exec-summary .section-title {
+    margin-bottom: 1rem;
+  }
+  .exec-summary p {
+    font-size: 1.02rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin: 0 auto 1rem;
+  }
+  .exec-summary p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* === TREEMAP === */
+  .treemap-section {
+    padding: 2rem 0 3rem;
+  }
+  .treemap-container {
+    width: 100%;
+    aspect-ratio: 2.2 / 1;
+    min-height: 350px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .treemap-cell {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.15s;
+    overflow: hidden;
+    border: 1.5px solid rgba(255,255,255,0.5);
+  }
+  .treemap-cell:hover {
+    opacity: 0.88;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .treemap-cell .cell-name {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    line-height: 1.2;
+    margin-bottom: 2px;
+  }
+  .treemap-cell .cell-value {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+  .treemap-cell .cell-pct {
+    font-size: 0.65rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 1px;
+  }
+  .treemap-cell.small .cell-name { font-size: 0.6rem; }
+  .treemap-cell.small .cell-value { font-size: 0.8rem; }
+  .treemap-cell.tiny .cell-name { font-size: 0.5rem; }
+  .treemap-cell.tiny .cell-value { display: none; }
+  .treemap-cell.tiny .cell-pct { display: none; }
+
+  /* === FUND CARDS === */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+  .fund-card {
+    background: white;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: background 0.15s;
+    position: relative;
+  }
+  .fund-card:hover {
+    background: #fcfbf9;
+  }
+  .fund-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .fund-card .color-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .fund-card .card-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    flex: 1;
+  }
+  .fund-card .card-pct {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+  .fund-card .card-amount {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+  }
+  .fund-card .card-percapita {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  /* sparkline */
+  .sparkline-container {
+    height: 40px;
+    position: relative;
+  }
+  .sparkline-container svg {
+    width: 100%;
+    height: 100%;
+  }
+  .spark-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    color: var(--text-tertiary);
+    margin-top: 2px;
+  }
+  .fund-card .yoy-change {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+  }
+  .yoy-change.up {
+    color: var(--negative);
+    background: #fde8e8;
+  }
+  .yoy-change.down {
+    color: var(--positive);
+    background: #e8f8ef;
+  }
+
+  /* === GENERAL FUND DEPARTMENT BREAKDOWN === */
+  .dept-section {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .bar-chart {
+    margin-top: 1.5rem;
+  }
+  .bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    gap: 0.8rem;
+  }
+  .bar-label {
+    font-size: 0.75rem;
+    width: 190px;
+    text-align: right;
+    flex-shrink: 0;
+    color: var(--text-secondary);
+  }
+  .bar-track {
+    flex: 1;
+    height: 22px;
+    background: var(--border-light);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.6s ease;
+    position: relative;
+  }
+  .bar-value {
+    font-size: 0.72rem;
+    font-weight: 600;
+    width: 85px;
+    flex-shrink: 0;
+    color: var(--text);
+  }
+  .bar-percapita {
+    font-size: 0.68rem;
+    color: var(--text-tertiary);
+    width: 65px;
+    flex-shrink: 0;
+  }
+
+  /* === TOOLTIP === */
+  .tooltip {
+    position: fixed;
+    background: rgba(26,26,26,0.95);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 280px;
+    display: none;
+    line-height: 1.5;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  }
+  .tooltip .tt-name {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .tooltip .tt-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .tooltip .tt-label { color: rgba(255,255,255,0.65); }
+  .tooltip .tt-val { font-weight: 600; text-align: right; }
+
+  /* === DEBT SECTION === */
+  .debt-section {
+    padding: 2rem 0 3rem;
+    border-top: 1px solid var(--border);
+  }
+  .debt-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 1.5rem 0 2rem;
+  }
+  .debt-stat {
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1.2rem 1.5rem;
+    flex: 1;
+    min-width: 140px;
+    max-width: 200px;
+  }
+  .debt-stat .ds-number {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--negative);
+  }
+  .debt-stat .ds-number.warning { color: var(--accent); }
+  .debt-stat .ds-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.3rem;
+  }
+
+  /* === TOTAL SUBSIDY BOX === */
+  .subsidy-box {
+    margin-top: 1.75rem;
+    border: 2px solid var(--negative);
+    border-radius: 12px;
+    background: var(--accent-light);
+    padding: 1.5rem 1.75rem;
+    text-align: center;
+  }
+  .subsidy-box .subsidy-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+  }
+  .subsidy-box .subsidy-number {
+    font-family: var(--serif, Georgia, serif);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--negative);
+    line-height: 1.1;
+    margin: 0.4rem 0 0.4rem;
+  }
+  .subsidy-box .subsidy-pct {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--negative);
+    margin: 0 0 0.6rem;
+  }
+  .subsidy-box .subsidy-pct span {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-top: 0.15rem;
+  }
+  .subsidy-box .subsidy-sub {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .subsidy-calc {
+    margin-top: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1.25rem 1.5rem;
+  }
+  .subsidy-calc-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 0.6rem;
+  }
+  .subsidy-calc-eq {
+    font-family: var(--serif, Georgia, serif);
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+  .subsidy-calc-eq strong { color: var(--negative); white-space: nowrap; }
+  .subsidy-calc-note {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  .subsidy-calc-note strong { color: var(--negative); }
+  .debt-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.5rem 0; }
+  .debt-table {
+    width: 100%;
+    min-width: 880px;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+  .debt-table thead th {
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    padding: 0.6rem 0.8rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .debt-table thead th:not(:first-child) { text-align: right; }
+  .debt-table tbody td {
+    padding: 0.7rem 0.8rem;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+  }
+  .debt-table tbody td:not(:first-child) {
+    text-align: right;
+    font-family: var(--serif);
+    font-weight: 500;
+  }
+  .debt-table tbody tr:hover { background: #fcfbf9; }
+  .debt-table .project-name {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .debt-table .project-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .debt-table .coverage-bad {
+    color: var(--negative);
+    font-weight: 700;
+  }
+  .debt-table .coverage-ok {
+    color: var(--positive);
+    font-weight: 600;
+  }
+  .debt-table tfoot td {
+    font-weight: 700;
+    border-top: 2px solid var(--border);
+    padding: 0.7rem 0.8rem;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .debt-table tfoot td:not(:first-child) {
+    text-align: right;
+    font-family: var(--serif);
+  }
+  .debt-table tfoot td sup { font-weight: 600; }
+
+  /* Balloon timeline */
+  .balloon-timeline {
+    position: relative;
+    margin: 2rem 0;
+    padding-left: 60px;
+  }
+  .balloon-timeline::before {
+    content: '';
+    position: absolute;
+    left: 55px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .balloon-event {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 30px;
+  }
+  .balloon-event .be-year {
+    position: absolute;
+    left: -55px;
+    top: 4px;
+    font-family: var(--serif);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    width: 45px;
+    text-align: right;
+  }
+  .balloon-event .be-dot {
+    position: absolute;
+    left: -8px;
+    top: 7px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 0 0 2px var(--negative);
+    background: var(--negative);
+  }
+  .balloon-event .be-bar {
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+  }
+  .balloon-event .be-label {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-top: 3px;
+  }
+
+  /* Coverage ratio visual */
+  .coverage-visual {
+    display: flex;
+    gap: 1px;
+    margin: 1.5rem 0;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 240px;
+  }
+  .cov-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    padding: 8px 4px;
+    background: white;
+    border: 1px solid var(--border-light);
+    position: relative;
+  }
+  .cov-bar .cov-fill {
+    width: 70%;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+  }
+  .cov-bar .cov-ratio {
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  .cov-bar .cov-name {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-top: 6px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* === FORENSIC SECTION === */
+  .forensic-banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    border-top: 4px solid #d35400;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .forensic-banner .banner-label {
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #d35400;
+    margin-bottom: 0.75rem;
+  }
+  .forensic-banner h2 {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .forensic-banner p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 640px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .risk-card {
+    background: white;
+    border-radius: 6px;
+    padding: 1.5rem;
+    border-left: 3px solid var(--border);
+    position: relative;
+  }
+  .risk-card .risk-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .risk-badge.critical {
+    background: #8b0000;
+    color: #ff6b6b;
+  }
+  .risk-badge.high {
+    background: #fff3cd;
+    color: #d35400;
+  }
+  .risk-badge.medium {
+    background: #fff3cd;
+    color: #e67e22;
+  }
+  .risk-card.critical {
+    border-left-color: #c0392b;
+    background: #fef5f5;
+  }
+  .risk-card.high {
+    border-left-color: #d35400;
+    background: #fffaf0;
+  }
+  .risk-card.medium {
+    border-left-color: #f39c12;
+    background: #fffaf0;
+  }
+  .risk-card h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
+    padding-right: 80px;
+  }
+  .risk-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* TABOR Tests Grid */
+  .tabor-tests {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .tabor-test {
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .tabor-test .test-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    margin-bottom: 1rem;
+  }
+  .tabor-test h3 {
+    font-family: var(--serif);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .tabor-test .test-row {
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .tabor-test .test-row:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .tabor-test .test-label-inner {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  .tabor-test .test-value {
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .tabor-test .test-result {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--negative);
+    margin-top: 0.5rem;
+  }
+
+  /* Cascade Flow */
+  .cascade-flow {
+    position: relative;
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
+  .cascade-step {
+    position: relative;
+    margin-bottom: 2.5rem;
+    padding-left: 60px;
+  }
+  .cascade-step::before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: 30px;
+    width: 2px;
+    height: calc(100% + 30px);
+    background: var(--border);
+  }
+  .cascade-step:last-child::before {
+    display: none;
+  }
+  .cascade-step .cascade-circle {
+    position: absolute;
+    left: -18px;
+    top: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #d35400;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    font-family: var(--serif);
+  }
+  .cascade-step h3 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .cascade-step .cascade-statute {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .cascade-step p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* Cost Escalation Bars */
+  .cost-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    margin: 2rem 0;
+    height: 300px;
+    padding: 2rem 1rem 1rem;
+    background: white;
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+  }
+  .cost-bar-item {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+  .cost-bar-track {
+    flex: 1 1 auto;
+    width: 62%;
+    min-height: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+  .cost-bar-value {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--serif);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .cost-bar-fill {
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: relative;
+    min-height: 4px;
+  }
+  .cost-bar-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+  .cost-bar-year {
+    font-size: 0.65rem;
+    color: var(--text-tertiary);
+  }
+
+  /* Vacancy Bar */
+  .vacancy-bar {
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .vacancy-occupied {
+    flex: 171;
+    background: #27ae60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .vacancy-vacant {
+    flex: 41;
+    background: #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  /* Governance Timeline */
+  .gov-timeline {
+    margin: 2rem 0;
+  }
+  .timeline-event {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .timeline-event:last-child {
+    border-bottom: none;
+  }
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* === FOOTER === */
+  .footer {
+    text-align: center;
+    padding: 2rem 1.5rem 3rem;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+  }
+  .footer p {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  .footer a {
+    color: var(--text-secondary);
+  }
+
+  /* === ANNOTATION === */
+  .annotation {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 0.82rem;
+    color: #7d4e24;
+    border-radius: 0 4px 4px 0;
+    line-height: 1.5;
+  }
+  .annotation strong { font-weight: 600; }
+  .annotation.legal {
+    background: #f0f0f0;
+    border-left-color: #666;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 700px) {
+    .hero-stats { gap: 1rem; }
+    .hero-stat .number { font-size: 2rem; }
+    .bar-label { width: 110px; font-size: 0.68rem; }
+    .bar-percapita { display: none; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .treemap-container { aspect-ratio: 1 / 1; }
+    .risk-grid { grid-template-columns: 1fr; }
+    .tabor-tests { grid-template-columns: 1fr; }
+    .cost-bars { flex-direction: column; height: auto; align-items: stretch; gap: 1.75rem; }
+    .cost-bar-item { flex: 0 0 auto; height: 150px; }
+    .cost-bar-track { width: 100%; }
+  }
+
+  /* === SITE TOP NAV (canonical, matches deep-dive pages) === */
+  .topnav { background:#fff; border-bottom:1px solid rgba(33,68,60,0.12); padding:14px 0; position:sticky; top:0; z-index:50; }
+  .topnav-inner { max-width:1280px; margin:0 auto; padding:0 32px; display:flex; align-items:center; gap:20px; }
+  .topnav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+  .topnav-logo img { height:80px; width:auto; object-fit:contain; }
+  .topnav-links { display:flex; gap:14px; margin-left:20px; flex:1; flex-wrap:wrap; }
+  .topnav-links a { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; color:#1a2e29; text-decoration:none; font-weight:600; font-size: 0.85rem; white-space:nowrap; padding:6px 2px; border-bottom:2px solid transparent; transition:color .15s,border-color .15s; }
+  .topnav-links a:hover { color:#21443c; }
+  .topnav-links a.active { color:#21443c; border-bottom-color:#21443c; }
+  .topnav-cta { display:inline-block; background:#21443c; color:#fff; text-decoration:none; padding:8px 16px; border-radius:999px; font-weight:600; font-size:0.9rem; white-space:nowrap; }
+  .topnav-hamburger { display:none; background:none; border:none; cursor:pointer; font-size:1.5rem; line-height:1; padding:4px 8px; color:#2d4a3e; }
+  .topnav-hamburger:focus { outline:2px solid #2d4a3e; outline-offset:2px; }
+  @media (max-width:860px) {
+    .topnav-inner { position:relative; flex-wrap:nowrap; }
+    .topnav-links { display:none !important; position:absolute; top:calc(100% + 1px); left:0; right:0; background:#fff; flex-direction:column !important; gap:0 !important; padding:8px 0; margin:0 !important; border-top:1px solid #d4dad0; box-shadow:0 4px 16px rgba(0,0,0,0.08); z-index:60; }
+    .topnav-links.open { display:flex !important; }
+    .topnav-links a { padding:14px 24px !important; border-bottom:1px solid #f0f0ec !important; font-size:1rem !important; }
+    .topnav-links a:last-child { border-bottom:none !important; }
+    .topnav-hamburger { display:block; }
+    .topnav-cta { white-space: nowrap; display:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SITE TOP NAV -->
+<header class="topnav">
+  <div class="topnav-inner">
+    <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+      <img src="/logo/Livable Telluride Logo.png" alt="Livable Telluride">
+    </a>
+    <nav class="topnav-links">
+      <a href="/local-news.html">Local News</a>
+      <a href="/gov-hub.html">Gov-Hub</a>
+      <a href="/deep-dives.html" class="active">Deep Dives</a>
+      <a href="/events.html">Events</a>
+      <a href="/hub-bub.html">Hub-Bub</a>
+      <a href="/local-orgs.html">Local Orgs</a>
+      <a href="/projects-map/">Projects Map</a>
+      <a href="/about.html">About</a>
+        <a href="/donate.html">Donate</a>
+    </nav>
+    <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
+    <div id="lvLangWidget" aria-hidden="true"></div>
+    <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
+    <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
+  </div>
+</header>
+
+<div class="tooltip" id="tooltip"></div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="label">Town of Telluride Budget Tracker</div>
+  <h1>Where Telluride's Money Goes</h1>
+  <div class="deck">Tracking how a small mountain town allocates $103.3 million across housing, infrastructure, water, and more.</div>
+  <div class="byline">2024 Budget Data &middot; Source: Town of Telluride Budget Book</div>
+</header>
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="container">
+  <section class="exec-summary">
+    <div class="section-title">Executive Summary</div>
+    <p>Over the past decade, Telluride has pursued an ambitious affordable housing strategy financed through a combination of dedicated tax revenues and long-term debt. While these efforts have produced valuable housing assets, they have also created a growing portfolio of financial obligations that deserve careful public review.</p>
+    <p>The Town's total budget has increased from approximately $32 million in 2017 to more than $103 million in 2025. During that same period, the Affordable Housing Fund grew from roughly $1.5 million to over $11 million annually. Housing-related debt now exceeds $81 million, with roughly $36 million in future balloon payments due between 2032 and 2040 — the largest a $23 million lump sum on the VooDoo project in December 2032.</p>
+    <p>The central question is not whether affordable housing is important. It is whether the Town's current financing model remains sustainable under changing economic conditions.</p>
+  </section>
+</div>
+
+<!-- HERO STATS -->
+<div class="hero-stats">
+  <div class="hero-stat">
+    <div class="number">$103.3M</div>
+    <div class="unit">Total Budget</div>
+    <div class="context">All funds combined, 2025</div>
+  </div>
+  <div class="hero-stat">
+    <div class="number" style="color: var(--accent);">$42,700</div>
+    <div class="unit">Per Resident</div>
+    <div class="context">~2,417 residents (est. 2026)</div>
+  </div>
+  <div class="hero-stat">
+    <div class="number">19</div>
+    <div class="unit">Distinct Funds</div>
+    <div class="context">From General Fund to Child Development</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- VIEW TOGGLE -->
+<div class="controls">
+  <button class="toggle-btn active" onclick="setView('total')">Total Dollars</button>
+  <button class="toggle-btn" onclick="setView('percapita')">Per Capita</button>
+</div>
+
+<!-- TREEMAP -->
+<div class="container">
+  <section class="treemap-section">
+    <div class="section-label">Overview</div>
+    <div class="section-title">The Big Picture</div>
+    <div class="section-intro">Each rectangle is sized by its share of total spending. Hover for details.</div>
+    <div class="treemap-container" id="treemap"></div>
+  </section>
+</div>
+
+<!-- ANNOTATIONS -->
+<div class="container">
+  <div class="annotation">
+    <strong>Housing dominates:</strong> Affordable Housing spending ($19.8M) eclipses every other fund — reflecting Telluride's aggressive push to build workforce housing in one of Colorado's most expensive markets. At $8,200 per resident, it's a staggering commitment for a town of ~2,400 people.
+  </div>
+  <div class="annotation">
+    <strong>Wastewater surge:</strong> The Wastewater Fund budget nearly tripled from $2.8M (2022) to $16.3M (2024), driven by a major treatment plant overhaul projected at $23M+ in 2025 alone.
+  </div>
+</div>
+
+
+<!-- GENERAL FUND DEPARTMENT BREAKDOWN -->
+<div class="container">
+  <section class="dept-section">
+    <div class="section-label">General Fund Deep Dive</div>
+    <div class="section-title">Where Does the $18.6M General Fund Go?</div>
+    <div class="section-intro">The General Fund covers day-to-day operations — from law enforcement to parks maintenance. Here's how it breaks down by department.</div>
+    <div class="bar-chart" id="deptBars"></div>
+  </section>
+</div>
+
+<!-- DEBT PORTFOLIO -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Housing Debt Portfolio</div>
+    <div class="section-title">$81M+ in Bonded Debt — and ~$36M in Balloon Payments</div>
+    <div class="section-intro">The Telluride Housing Authority has accumulated more than $81 million in bonded debt across five projects — none approved by public vote. Most projects cannot cover their own debt service from rental income alone.</div>
+
+    <div class="debt-hero-stats">
+      <div class="debt-stat">
+        <div class="ds-number">$81M+</div>
+        <div class="ds-label">Total Bonded Debt</div>
+      </div>
+      <div class="debt-stat">
+        <div class="ds-number">~$36M</div>
+        <div class="ds-label">Balloon Payments Due</div>
+      </div>
+    </div>
+
+    <div class="debt-table-wrap">
+    <table class="debt-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Bond Year</th>
+          <th>Principal</th>
+          <th>Annual Debt Service</th>
+          <th title="Adjusted revenue: tenant rent minus cash operating expenses — the cash actually available to service debt.">Net Op. Income</th>
+          <th title="The annual subsidy each project requires: annual debt service minus net operating income — the cost the Town must cover beyond what rent and operations provide.">Net Subsidized Cost</th>
+          <th>NOI DSCR <sup>⁴</sup></th>
+          <th>Balloon Payment</th>
+          <th>Balloon Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="project-name"><span class="project-dot" style="background:#2c5f8a"></span>Shandoka</span></td>
+          <td>2021–25</td>
+          <td>$12,464,000 <span title="Includes the 2021 series ($3,990,000) and COP Series 2025 ($8,474,000, Building F Phase 2). COP Series 2024 (Building F Phase 1) added further debt (annual service $213,569), but its principal is not separately published — so the portfolio total is a floor. Together these raised Shandoka's annual debt service from $401,464 to $966,958.">¹</span></td>
+          <td>$966,958</td>
+          <td>$901,385</td>
+          <td>$65,573</td>
+          <td><span class="coverage-bad">0.93x</span></td>
+          <td>$3,620,000</td>
+          <td>~2040</td>
+        </tr>
+        <tr>
+          <td><span class="project-name"><span class="project-dot" style="background:#c0392b"></span>Virginia Placer</span></td>
+          <td>2017</td>
+          <td>$8,602,000</td>
+          <td>$518,151</td>
+          <td>$455,486</td>
+          <td>$62,665</td>
+          <td><span class="coverage-bad">0.88x</span></td>
+          <td>$3,040,000</td>
+          <td>2036</td>
+        </tr>
+        <tr>
+          <td><span class="project-name"><span class="project-dot" style="background:#e67e22"></span>Sunnyside</span></td>
+          <td>2021</td>
+          <td>$11,965,000</td>
+          <td>$591,800</td>
+          <td>—<span title="No operating-cost figure was published for Sunnyside in the May 2026 review, so its net operating income cannot be derived.">²</span></td>
+          <td>—<span title="No operating-cost figure was published for Sunnyside, so its net subsidized cost cannot be derived. The review confirms a $377,000 annual moral-obligation subsidy.">²</span></td>
+          <td><span class="coverage-bad">0.50x</span><span title="Sunnyside was not re-analyzed in the May 2026 primary-source review; figures are prior estimates.">²</span></td>
+          <td>$6,170,000</td>
+          <td>2040</td>
+        </tr>
+        <tr>
+          <td><span class="project-name"><span class="project-dot" style="background:#8e44ad"></span>VooDoo</span></td>
+          <td>2022-23</td>
+          <td>$22,065,000 <span title="Signed bond certificates (Series 2022A $6.07M @ 4.690%, 2022B $2.245M @ 5.860%, 2023 $13.75M @ 5.520%, all maturing Dec. 1, 2032) total $22,065,000. The Town's budget book debt schedule shows $21,370,000; the report treats the certificates as authoritative.">¹</span></td>
+          <td>$1,190,240</td>
+          <td>$737,902</td>
+          <td>$452,338</td>
+          <td><span class="coverage-bad">0.62x</span></td>
+          <td>$23,045,864</td>
+          <td>2032</td>
+        </tr>
+        <tr>
+          <td><span class="project-name"><span class="project-dot" style="background:#16a085"></span>CanyonLands (Est.)</span></td>
+          <td>2024</td>
+          <td>$26,575,000</td>
+          <td>~$994,500 <span title="Estimate. Debt service assumes the Town's stated $10M for-sale buydown reduces principal to $16.575M at 6%. The report finds AMI-capped for-sale proceeds are likely closer to $6.6M, which would leave ~$19.9M outstanding and raise debt service to ~$1.2M/yr.">¹</span></td>
+          <td>~$467,448 <span title="Estimate. Projected rent ~$767,448 minus estimated cash operating expenses of ~$300,000.">¹</span></td>
+          <td>~$527,052 <span title="Estimate. Annual debt service (~$994,500) minus net operating income (~$467,448).">¹</span></td>
+          <td><span class="coverage-bad">~0.47x</span></td>
+          <td>TBD</td>
+          <td>TBD</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td>$81,671,000&nbsp;<sup title="Floor — excludes COP Series 2024 principal, which is not separately published.">¹</sup></td>
+          <td>~$4,261,649</td>
+          <td>~$2,562,221&nbsp;<sup title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</sup></td>
+          <td>~$1,107,628&nbsp;<sup title="Four analyzed projects; Sunnyside excluded (no operating-cost data).">³</sup></td>
+          <td></td>
+          <td>$35,875,864</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+    </div>
+
+    <div class="subsidy-box">
+      <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Non-amortized</span> Estimated Subsidies Required by the Town <sup>⁵</sup></div>
+      <div class="subsidy-number">~$1.1 Million / year</div>
+      <div class="subsidy-pct">≈ 20% <span>of total annual cost ($5.64M) not covered by rent</span></div>
+    </div>
+
+    <div class="subsidy-box">
+      <div class="subsidy-label">Total Annual <span style="font-size:1.18em;font-weight:800;">Amortized</span> Estimated Subsidies Required by the Town <sup>⁶</sup></div>
+      <div class="subsidy-number">~$5.95 Million / year</div>
+      <div class="subsidy-pct">≈ 57% <span>of total annual cost ($10.48M) not covered by rent</span></div>
+    </div>
+
+    <div class="subsidy-calc">
+      <div class="subsidy-calc-title">Net Operating Income Debt Service Coverage Ratio (Portfolio)</div>
+      <div class="subsidy-calc-eq">$2,562,221 net operating income &divide; $3,669,849 annual debt service = <strong>0.70&times; (70%)</strong></div>
+      <div class="subsidy-calc-note">Across the four analyzed THA projects, net operating income covers only about <strong>70%</strong> of annual debt service. The remaining <strong>~30% ($1,107,628 / year)</strong> is the required annual subsidy by the Town.</div>
+    </div>
+  </section>
+</div>
+
+<!-- BALLOON PAYMENTS -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Balloon Payment Timeline</div>
+    <div class="section-title">~$36 Million in Balloon Payments with No Reserve</div>
+    <div class="section-intro">Four projects carry balloon payments — lump sums due at maturity that must be refinanced or paid in full. They cluster between 2032 and 2040. The largest — VooDoo's $23M, due in 2032 — exceeds the project's total expected rental income over its remaining bond life.</div>
+
+    <div class="balloon-timeline" id="balloonTimeline"></div>
+
+    <div class="annotation">
+      <strong>Refinancing risk:</strong> If interest rates remain elevated at refinancing time, the Town's annual obligations could increase substantially. In a recession scenario (15% revenue decline), annual shortfalls could exceed $1 million for several consecutive years.
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <div class="section-label" style="margin-bottom: 0.5rem;">Net Operating Income vs. Debt Service by Project</div>
+      <div class="coverage-visual" id="coverageVisual"></div>
+    </div>
+  </section>
+</div>
+
+<!-- TOTAL BONDED DEBT -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Total Bonded Debt by Project</div>
+    <div class="section-title">~$82 Million in Total Bonded Debt</div>
+    <div class="section-intro">The full bonded principal the Telluride Housing Authority carries across all five projects — none of it approved by public vote. CanyonLands ($26.6M) and VooDoo ($22.1M) alone account for more than half of the ~$81.7M total.</div>
+
+    <div class="balloon-timeline" id="bondedDebtTimeline"></div>
+
+    <div class="annotation">
+      <strong>A floor, not a ceiling:</strong> The ~$81.7M shown reflects documented principal, including Shandoka's COP Series 2025 ($8.47M). It excludes the COP Series 2024 principal (its dollar amount was never separately published — only its $213,569 annual debt service), so the true total is somewhat higher.
+    </div>
+  </section>
+</div>
+
+<!-- FORENSIC RED FLAGS SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="forensic-banner">
+      <div class="banner-label">Forensic Screening Findings</div>
+      <h2>What the Numbers Can't Hide</h2>
+      <p>A preliminary screening of publicly available budget documents, bond records, and THA financial statements raises questions about potential structural legal and financial risks that may go beyond normal budget concerns. The issues identified below warrant closer examination.</p>
+    </div>
+
+    <div class="risk-grid">
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>$81M+ in Bonds Without Voter Approval</h3>
+        <p>None of the five THA bond issuances were submitted to voters. The Town Charter states all public debt must be voter-approved. Conduit structures — including routing CanyonLands through a Wisconsin authority — could raise serious questions about whether TABOR and local charter requirements were circumvented.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>TABOR Enterprise Status Potentially Unsupported</h3>
+        <p>THA claims enterprise status to avoid voter approval, but 52% of revenue appears to come from government sources — potentially 5.2x the 10% threshold under the Nicholl test. If accurate, this could mean THA fails all three prongs of the enterprise test, posing significant legal risk.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>Potential Housing Law Issues (C.R.S. §29-4-229)</h3>
+        <p>Colorado law requires housing projects to be self-sustaining from project revenues. Four of five THA projects appear to have pre-structured, permanent revenue deficits that were known at bond inception — raising questions about possible noncompliance with this statute.</p>
+      </div>
+
+      <div class="risk-card critical">
+        <span class="risk-badge critical">CRITICAL</span>
+        <h3>Structural Revenue Deficits May Violate §29-4-214</h3>
+        <p>Colorado law prohibits housing authority bonds from being "payable out of any funds other than those of the authority." Town tax-revenue subsidies of ~$1.1M/year and the $11.1M Shandoka Fund may violate this prohibition in substance — a question that poses real legal and financial risk if challenged.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>VooDoo: $23M Bullet Payment, Dec 2032</h3>
+        <p>All three VooDoo bond series (2022A at 4.69%, 2022B at 5.86%, 2023 at 5.52%) mature simultaneously in December 2032. The $23.05M balloon appears to exceed total expected rental income over the bond's remaining life. No public refinancing plan has been identified, which could create significant exposure for taxpayers.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>Per-Unit Cost Escalation: +133%</h3>
+        <p>All-in public cost per housing unit has risen from $410K (Virginia Placer, 2017) to $955K (VooDoo, 2022). VooDoo received $4.7M in cash subsidies plus $1M in waived tap fees on top of $22.1M in bonds. Construction cost inflation alone may not fully explain this trajectory, raising questions about cost controls.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>~$1.1M True Annual Subsidy Required</h3>
+        <p>Net operating income covers only ~70% of debt service, so the Town must inject roughly $1.1M/year (debt service plus operating costs, minus tenant rent) across the four analyzed projects. The 2025 budget explicitly books only part of this as "moral obligation" line items ($219K for VooDoo, $218K for Virginia Placer, $377K for Sunnyside), even as the Finance Director's October 2024 memo states enterprise funds should be "entirely or predominately self-supporting" — an apparent tension that could undermine the legal basis for THA's enterprise status.</p>
+      </div>
+
+      <div class="risk-card high">
+        <span class="risk-badge high">HIGH</span>
+        <h3>CanyonLands: $26.6M Through Wisconsin Conduit</h3>
+        <p>A $26.575M bond routed through the Wisconsin Public Finance Authority, held by a special-purpose LLC (Servitas-Telluride Housing I) where THA owns just 0.1%. The Town advanced $1.5M in pre-development costs. NOI coverage: 0.48x pre-buydown — the project does not reach 1.0x in any modeled scenario, including the Town's own best-case $10M for-sale buydown (0.77x). A Replenishment Resolution may create a political obligation to backstop the debt — a structure that could pose real risk to taxpayers if revenues fall short.</p>
+      </div>
+
+      <div class="risk-card medium">
+        <span class="risk-badge medium">MEDIUM</span>
+        <h3>19.3% Vacancy Rate — Potentially Policy-Induced</h3>
+        <p>41 of 212 deed-restricted units are reported vacant as of February 2026, which may be largely attributable to January 2025 policy changes that tripled turnover. The 240-household waitlist is described as "very stale." VooDoo alone may be losing ~$140K/year in rent from empty units — potentially widening the gap that taxpayers would need to fill.</p>
+      </div>
+
+      <div class="risk-card medium">
+        <span class="risk-badge medium">MEDIUM</span>
+        <h3>Budget Tripled in 8 Years (+222%)</h3>
+        <p>Total budget grew from $32.1M (2017) to $103.3M (2025), far outpacing inflation and population growth. The Affordable Housing Fund alone grew 517% to over $11M. The Shandoka Fund surged from $1.5M to $11.1M after absorbing VooDoo's obligations — a rate of growth that raises questions about fiscal sustainability.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TABOR ENTERPRISE TEST SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">TABOR Compliance Analysis</div>
+    <div class="section-title">THA Fails All Three TABOR Enterprise Tests</div>
+
+    <div class="tabor-tests">
+      <div class="tabor-test">
+        <div class="test-label">Test 1</div>
+        <h3>Government Revenue</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">&lt; 10%</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">52%</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS (5.2x over)</div>
+        </div>
+      </div>
+
+      <div class="tabor-test">
+        <div class="test-label">Test 2</div>
+        <h3>Self-Sustaining</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">Yes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">~$1.1M subsidy/yr</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS</div>
+        </div>
+      </div>
+
+      <div class="tabor-test">
+        <div class="test-label">Test 3</div>
+        <h3>No Tax Backing</h3>
+        <div class="test-row">
+          <div class="test-label-inner">Threshold</div>
+          <div class="test-value">No dedicated taxes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Actual</div>
+          <div class="test-value">3 dedicated taxes</div>
+        </div>
+        <div class="test-row">
+          <div class="test-label-inner">Result</div>
+          <div class="test-result">FAILS</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="annotation legal">
+      <strong>Legal implications if THA loses enterprise status:</strong> (a) all future debt requires voter approval; (b) any taxpayer may sue for restitution at 10% annual interest for 4 prior fiscal years under C.R.S. §29-4-207; (c) bond covenants requiring enterprise status could trigger technical default; and (d) the Town's own Charter mandate that "all public debt must be voter approved" would retroactively apply to all $81M+ in outstanding bonds.
+    </div>
+  </section>
+</div>
+
+<!-- THE LEGAL CASCADE SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Statutory Violations</div>
+    <div class="section-title">How One Violation Triggers the Next</div>
+    <div class="section-intro">The legal analyses reveal a chain reaction where each statutory violation reinforces the next, creating compounding legal exposure.</div>
+
+    <div class="cascade-flow">
+      <div class="cascade-step">
+        <div class="cascade-circle">1</div>
+        <h3>Revenue Insufficiency</h3>
+        <div class="cascade-statute">C.R.S. §29-4-229</div>
+        <p>Projects structured with pre-known deficits — rental income covers only 35-66% of debt service on four of five projects.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">2</div>
+        <h3>Reliance on Town Subsidies</h3>
+        <div class="cascade-statute">C.R.S. §29-4-214</div>
+        <p>Since projects can't self-fund, the Town fills the gap with tax revenues. But the statute says bonds "shall not be payable out of any funds other than those of the authority."</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">3</div>
+        <h3>Enterprise Status Collapses</h3>
+        <div class="cascade-statute">TABOR Art. X, §20(2)(d)</div>
+        <p>Government subsidies push THA's government revenue share to 52% — five times the 10% enterprise threshold. All three Nicholl test prongs fail.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">4</div>
+        <h3>Annual Appropriation Defense Fails</h3>
+        <div class="cascade-statute">In re Interrogatories on H.B. 99-1325</div>
+        <p>Non-appropriation would trigger default on $81M in bonds and loss of public housing. The Colorado Supreme Court requires courts to examine the "entire obligation as a whole" — economic compulsion is not genuine discretion.</p>
+      </div>
+
+      <div class="cascade-step">
+        <div class="cascade-circle">5</div>
+        <h3>All $81M+ Bonds Issued Without Required Voter Approval</h3>
+        <div class="cascade-statute">Colo. Const. art. X, §20</div>
+        <p>TABOR's voter-approval mandate applies. No THA bond has ever received a public vote. The Town Charter independently requires voter approval for all public debt.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PER-UNIT COST ESCALATION SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Cost Analysis</div>
+    <div class="section-title">The Cost Per Housing Unit Has More Than Doubled</div>
+
+    <div class="cost-bars">
+      <div class="cost-bar-item">
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 43%; background: #c0392b;">
+            <div class="cost-bar-value">$410K</div>
+          </div>
+        </div>
+        <div class="cost-bar-label">Virginia Placer</div>
+        <div class="cost-bar-year">2017</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 59%; background: #e67e22;">
+            <div class="cost-bar-value">$567K</div>
+          </div>
+        </div>
+        <div class="cost-bar-label">Sunnyside</div>
+        <div class="cost-bar-year">2021</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 71%; background: #16a085;">
+            <div class="cost-bar-value">$681K</div>
+          </div>
+        </div>
+        <div class="cost-bar-label">CanyonLands</div>
+        <div class="cost-bar-year">2024</div>
+      </div>
+      <div class="cost-bar-item">
+        <div class="cost-bar-track">
+          <div class="cost-bar-fill" style="height: 100%; background: #8e44ad;">
+            <div class="cost-bar-value">$955K</div>
+          </div>
+        </div>
+        <div class="cost-bar-label">VooDoo</div>
+        <div class="cost-bar-year">2022</div>
+      </div>
+    </div>
+
+    <div class="annotation">
+      <strong>VooDoo's all-in cost</strong> includes $22.1M in bonds (3 series), $4.7M in cash subsidies from the Affordable Housing Fund, and ~$1M in waived tap fees. For comparison, the national median for multifamily construction is $150K-$250K per unit.
+    </div>
+  </section>
+</div>
+
+<!-- HOUSING VACANCY CRISIS SECTION -->
+<div class="container">
+  <section class="debt-section">
+    <div class="section-label">Occupancy Crisis</div>
+    <div class="section-title">41 of 212 Units Sit Empty</div>
+
+    <div class="vacancy-bar">
+      <div class="vacancy-occupied">171 occupied (80.7%)</div>
+      <div class="vacancy-vacant">41 vacant (19.3%)</div>
+    </div>
+
+    <div style="text-align: center; margin: 1rem 0; font-size: 0.9rem; color: var(--text-secondary);">
+      <strong>Healthy vacancy: 5-8%</strong> &middot; <strong>Current: 19.3%</strong>
+    </div>
+
+    <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin: 1.5rem 0;">
+      Policy changes effective January 1, 2025 — raising minimum employment hours and changing household income calculations — tripled the turnover rate compared to 2024. Units are turning over faster than replacement tenants can qualify. The 240-household waitlist has been described as "very stale" with many applicants no longer in the area, no longer qualifying, or unreachable.
+    </p>
+
+    <div class="annotation">
+      <strong>Revenue impact:</strong> Every vacant unit is lost revenue against bonds that still require full debt service payments. At VooDoo, an estimated 5 vacant units cost ~$140K/year in foregone rent — directly widening the coverage gap that Town taxpayers must fill.
+    </div>
+  </section>
+</div>
+
+<!-- NOTES & SOURCES -->
+<div class="container">
+  <section class="debt-section" style="margin-bottom:2rem;">
+    <div class="section-label">Notes &amp; Sources</div>
+    <div style="font-size:0.82rem;color:var(--text-secondary);line-height:1.65;max-width:820px;">
+      <p style="margin:0 0 0.6rem;"><strong>¹ Where these numbers come from.</strong> Everything here comes from the Town's own records, pulled together in a May 2026 review. VooDoo's loan total of $22,065,000 is taken from its <a href="/source-document.html?doc=voodoo-bond-certificates.pdf" target="_blank" rel="noopener">signed bond certificates</a>; the <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a> lists $21,370,000, but the signed bonds are the official figure. Shandoka's $12,464,000 adds its 2021 bond ($3,990,000) and a 2025 "COP" loan ($8,474,000) from that same budget book. A third Shandoka loan (a 2024 COP) added still more debt, but the Town never published its dollar amount — so the ~$81.7M total is really a floor, meaning the true number is a bit higher. CanyonLands' figures are estimates, because the building isn't finished and has no audited books yet; its loan payment assumes the Town's hoped-for $10M pay-down from condo sales, which the review thinks is optimistic.</p>
+      <p style="margin:0 0 0.6rem;"><strong>² Sunnyside wasn't re-checked.</strong> The May 2026 review didn't recalculate Sunnyside, and the Town never published what it costs to run — so its net operating income and net subsidized cost are left blank here. The <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a> does show the Town budgets a $377,000-a-year "moral obligation" payment (a promise to help with the loan) for Sunnyside.</p>
+      <p style="margin:0 0 0.6rem;"><strong>³ The totals leave Sunnyside out.</strong> Because Sunnyside's operating costs aren't public (see note ²), it isn't counted in the net-operating-income or net-subsidized-cost totals. The "0.70× coverage" figure compares the four studied projects' combined net operating income (about $2.56M) with their combined yearly loan payment (about $3.67M).</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁴ "NOI DSCR" — does the rent cover the loan?</strong> The letters stand for Net Operating Income Debt Service Coverage Ratio. In plain English: take a building's rent, subtract what it costs to run, and see whether what's left covers the yearly loan payment. A score below 1.0× means it doesn't, so the Town has to make up the difference. All four studied projects score below 1.0× (figures from the <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a> and the <a href="/source-document.html?doc=2025-10-09-town-council-budget-packet.pdf" target="_blank" rel="noopener">Oct. 9, 2025 budget packet</a>). Added up, that yearly shortfall is about $1.1M — roughly $452K for VooDoo, $527K for CanyonLands (estimated), $66K for Shandoka, and $63K for Virginia Placer.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁵ The "non-amortized" subsidy (~$1.1M a year).</strong> This is the yearly gap between the rent tenants pay and what each building costs to run plus the interest on its loans, added across the four studied projects. "Non-amortized" means it does <em>not</em> yet include saving up to pay back the loans themselves — only the interest and the running costs. Figures come from the <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a> and the <a href="/source-document.html?doc=2025-10-09-town-council-budget-packet.pdf" target="_blank" rel="noopener">Oct. 9, 2025 budget packet</a>.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁶ The "amortized" subsidy (~$5.95M a year).</strong> A "balloon payment" is one big lump sum due at the very end of a loan. This figure adds the money the Town would need to save each year to cover those balloons when they come due, on top of the ~$1.1M operating gap. Estimated yearly set-asides: VooDoo $23.0M ÷ 6 years ≈ $3.84M; Virginia Placer $3.04M ÷ 10 ≈ $304K; Shandoka $3.62M ÷ 14 ≈ $259K; Sunnyside $6.17M ÷ 14 ≈ $441K. The balloon amounts and due dates are from the <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a> debt schedule, and the Town's careful wording about whether it will actually pay them is in <a href="/source-document.html?doc=voodoo-moral-obligation-resolution-23-2022.pdf" target="_blank" rel="noopener">Resolution No. 23 (2022)</a>.</p>
+      <p style="margin:0 0 0.6rem;"><strong>⁷ How the 70% / 30% is figured.</strong> $2,562,221 in net operating income ÷ $3,669,849 in yearly loan payments = 0.70, or 70%. So across the four studied projects, rent (after running costs) covers about 70% of the loan payments; the Town must cover the other ~30%, about $1,107,628 a year. Figures from the <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">2025 Budget Book</a>.</p>
+      <p style="margin:0;"><strong>Sources:</strong> <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank" rel="noopener">Town of Telluride 2025 Budget Book</a> and the <a href="/source-document.html?doc=2025-10-09-town-council-budget-packet.pdf" target="_blank" rel="noopener">Oct. 9, 2025 Town Council budget packet</a>; signed <a href="/source-document.html?doc=voodoo-bond-certificates.pdf" target="_blank" rel="noopener">VooDoo bond certificates</a> (Series 2022A, 2022B, 2023); <a href="/source-document.html?doc=voodoo-moral-obligation-resolution-23-2022.pdf" target="_blank" rel="noopener">Town Council Resolution No. 23 (2022)</a> (VooDoo moral obligation); the Nov. 19, 2024 <a href="/source-document.html?doc=canyonlands-bond.pdf" target="_blank" rel="noopener">CanyonLands / Tower House bond document</a>; THA audited financial statements (<a href="https://www.telluride.gov/DocumentCenter/View/14568" target="_blank" rel="noopener">FY2023</a>, <a href="https://www.telluride.gov/DocumentCenter/View/15268" target="_blank" rel="noopener">FY2024</a>); and actual FY2025 VooDoo rental income reported by <a href="https://coloradosun.com" target="_blank" rel="noopener"><em>The Colorado Sun</em></a> (April 19, 2026).</p>
+    </div>
+  </section>
+</div>
+
+<!-- CORRECTION CTA -->
+<div class="container">
+  <div style="max-width:760px;margin:1rem auto 2.5rem;padding:2rem 1.75rem;text-align:center;background:#fff;border:1px solid var(--border,#e0ddd8);border-radius:14px;">
+    <h3 style="font-family:var(--serif,Georgia,serif);font-size:1.3rem;font-weight:700;color:var(--text,#1a1a1a);margin:0 0 0.5rem;">See anything wrong with this report?</h3>
+    <p style="font-size:0.95rem;color:var(--text-secondary,#666);line-height:1.6;max-width:520px;margin:0 auto 1.25rem;">We want every Deep Dive to be accurate. If a number or fact looks off, let us know and we&#39;ll take a look.</p>
+    <a id="ddCorrectionBtn" href="mailto:info@livabletelluride.org?subject=Deep%20Dive%20correction" style="display:inline-block;background:#21443c;color:#fff;text-decoration:none;font-weight:600;font-size:0.95rem;padding:12px 26px;border-radius:999px;">Let us know &rarr;</a>
+  </div>
+</div>
+<script>
+  (function(){
+    var b = document.getElementById('ddCorrectionBtn');
+    if (!b) return;
+    var subj = 'Deep Dive correction: ' + document.title;
+    var body = 'Page: ' + location.href + '\n\nWhat looks wrong:\n';
+    b.href = 'mailto:info@livabletelluride.org?subject=' + encodeURIComponent(subj) + '&body=' + encodeURIComponent(body);
+  })();
+</script>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Budget data from the Town of Telluride 2024 Budget Request and Town Council Budget Meeting materials (October 2023). Debt data from THA Financial Statements, bond documents, and Livable Telluride Debt Analysis (March 2026). Forensic screening data from THA Financial Statements, bond documents, Livable Telluride Debt Analysis (March 2026), and Colorado Revised Statutes. Population estimate: ~2,417 (World Population Review, 2026). Per-capita figures are approximate. For the full budget book, visit <a href="https://www.telluride.gov/122/Budget-Financial-Statements" target="_blank">telluride.gov</a>.</p>
+</footer>
+
+<script>
+const POP = 2417;
+let currentView = 'total';
+
+// ===== FUND DATA =====
+const funds = [
+  { name: "Affordable Housing", expenditures: 19836341, color: "var(--c-housing)",
+    years: [13583099, 14004904, 13594117, 19836341],
+    desc: "Development & preservation of workforce housing, including Shandoka and Virginia Placer projects" },
+  { name: "General Fund", expenditures: 18628066, color: "var(--c-general)",
+    years: [17912897, 17590622, 17184887, 18628066],
+    desc: "Day-to-day town operations: law enforcement, parks, admin, planning, public works" },
+  { name: "Wastewater", expenditures: 16325413, color: "var(--c-wastewater)",
+    years: [2776121, 13807627, 5471561, 16325413],
+    desc: "Sewer system operations and major treatment plant overhaul ($23M+ in 2025)" },
+  { name: "Capital Improvement", expenditures: 15650483, color: "var(--c-capital)",
+    years: [6757058, 12332208, 8410093, 15650483],
+    desc: "Parks projects, fleet, buildings, Voo Doo, municipal facilities, and transfers to other funds" },
+  { name: "Water", expenditures: 5240423, color: "var(--c-water)",
+    years: [3535548, 7193700, 6612044, 5240423],
+    desc: "Drinking water treatment, distribution, and capital improvements (Bridal Veil, Pandora)" },
+  { name: "Open Space", expenditures: 4593124, color: "var(--c-openspace)",
+    years: [8027666, 10595772, 6478688, 4593124],
+    desc: "Acquisition and maintenance of open space, including Valley Floor debt service" },
+  { name: "Streets, Bridge & Alley", expenditures: 3970000, color: "var(--c-streets)",
+    years: [853179, 1875000, 1875000, 2800000],
+    desc: "Road maintenance, snow removal, bridge replacements (Mahoney, Pacific), surface repairs" },
+  { name: "Airline Guarantee", expenditures: 2263391, color: "var(--c-airline)",
+    years: [2507913, 1932387, 2382517, 2263391],
+    desc: "Supports airline service to Telluride & Montrose airports via 2% excise tax on food/lodging" },
+  { name: "Shandoka", expenditures: 1990536, color: "var(--c-shandoka)",
+    years: [1772745, 2057197, 1757558, 1990536],
+    desc: "Operations of the Shandoka affordable housing complex" },
+  { name: "Transportation", expenditures: 1210338, color: "var(--c-transport)",
+    years: [960822, 1198384, 1093946, 1210338],
+    desc: "Galloping Goose transit system operations and driver salaries" },
+  { name: "Town Lodgers Tax", expenditures: 1142737, color: "var(--c-lodgers)",
+    years: [595000, 878000, 878000, 1142737],
+    desc: "2% lodgers tax for tourism marketing and community investment" },
+  { name: "Parking", expenditures: 989075, color: "var(--c-parking)",
+    years: [642125, 1004719, 774319, 989075],
+    desc: "Parking system operations, debt service, and facility maintenance" },
+  { name: "Sunnyside", expenditures: 739076, color: "var(--c-sunnyside)",
+    years: [279694, 720990, 735361, 739076],
+    desc: "Operations of Sunnyside affordable housing" },
+  { name: "Virginia Placer", expenditures: 728907, color: "var(--c-virginia)",
+    years: [674812, 745736, 653793, 728907],
+    desc: "Operations of Virginia Placer affordable housing" },
+  { name: "Child Development", expenditures: 349099, color: "var(--c-child)",
+    years: [0, 0, 0, 349099],
+    desc: "Elaine's Place childcare — new fund in 2024, $85k General Fund subsidy" },
+  { name: "Energy Mitigation", expenditures: 270750, color: "var(--c-energy)",
+    years: [535730, 290000, 395482, 270750],
+    desc: "Green building fees fund energy conservation projects and green grants" },
+  { name: "Restricted Fund", expenditures: 65800, color: "var(--c-other)",
+    years: [91981, 40900, 48090, 65800],
+    desc: "Restricted donations: paper bag fees, dog surcharge, tree fees, P&R donations" },
+  { name: "Debt Service", expenditures: 50060, color: "var(--c-other)",
+    years: [25500, 30519, 30519, 50060],
+    desc: "Marshals building COP and Voo Doo commercial bond payments" },
+  { name: "Conservation Trust", expenditures: 33000, color: "var(--c-other)",
+    years: [23325, 34529, 34529, 33000],
+    desc: "State lottery funds for parks and recreation capital investment" },
+];
+
+const totalExpend = funds.reduce((s, f) => s + f.expenditures, 0);
+
+// General Fund departments
+const departments = [
+  { name: "Law Enforcement", amount: 2564965 },
+  { name: "PW — Road & Utility", amount: 1658153 },
+  { name: "Parks & Rec — Recreation", amount: 1464590 },
+  { name: "General Services", amount: 1143944 },
+  { name: "Parks & Rec — Maintenance", amount: 1086260 },
+  { name: "PW — Engineering", amount: 982666 },
+  { name: "IT", amount: 860235 },
+  { name: "Finance", amount: 799740 },
+  { name: "Town Manager", amount: 654571 },
+  { name: "Town Clerk", amount: 535378 },
+  { name: "Town Attorney", amount: 505278 },
+  { name: "CCAASE — Community", amount: 414305 },
+  { name: "Admin Services", amount: 419297 },
+  { name: "Marketing Telluride", amount: 408937 },
+  { name: "Historic Preservation", amount: 375822 },
+  { name: "Planning", amount: 359530 },
+  { name: "Council & Commissions", amount: 357075 },
+  { name: "Planning — Building", amount: 340569 },
+  { name: "Miscellaneous", amount: 304979 },
+  { name: "Misc Ops & Maintenance", amount: 289204 },
+  { name: "CCAASE — Arts & Events", amount: 271975 },
+  { name: "Transfers", amount: 2623916 },
+].sort((a, b) => b.amount - a.amount);
+
+// Debt / Balloon data
+const balloons = [
+  { project: "VooDoo", amount: 23045864, year: 2032, color: "#8e44ad" },
+  { project: "Virginia Placer", amount: 3040000, year: 2036, color: "#c0392b" },
+  { project: "Shandoka Lot E", amount: 3620000, year: 2040, color: "#2c5f8a" },
+  { project: "Sunnyside", amount: 6170000, year: 2040, color: "#e67e22" },
+];
+
+// Total bonded principal by project (documented; Shandoka incl. COP 2025,
+// excl. unpublished COP 2024 principal). Sorted largest first.
+const bondedDebt = [
+  { project: "CanyonLands", amount: 26575000, year: 2024, color: "#16a085" },
+  { project: "VooDoo", amount: 22065000, year: "2022-23", color: "#8e44ad" },
+  { project: "Shandoka", amount: 12464000, year: "2021-25", color: "#2c5f8a" },
+  { project: "Sunnyside", amount: 11965000, year: 2021, color: "#e67e22" },
+  { project: "Virginia Placer", amount: 8602000, year: 2017, color: "#c0392b" },
+];
+
+// "revenue" here is Net Operating Income (tenant rent minus cash operating costs);
+// ratio is NOI DSCR = NOI / debtService. Figures per May 2026 primary-source review.
+// Sunnyside was not re-analyzed; it retains prior estimates.
+const coverageData = [
+  { name: "Shandoka", revenue: 901385, debtService: 966958, color: "#2c5f8a", ratio: 0.93 },
+  { name: "Virginia\nPlacer", revenue: 455486, debtService: 518151, color: "#c0392b", ratio: 0.88 },
+  { name: "Sunnyside", revenue: 685000, debtService: 591800, color: "#e67e22", ratio: 0.50 },
+  { name: "VooDoo", revenue: 737902, debtService: 1190240, color: "#8e44ad", ratio: 0.62 },
+  { name: "Canyon-\nLands", revenue: 467448, debtService: 994500, color: "#16a085", ratio: 0.47 },
+];
+
+// ===== FORMAT HELPERS =====
+function fmt(n) {
+  if (n >= 1000000) return '$' + (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return '$' + (n / 1000).toFixed(0) + 'K';
+  return '$' + n.toLocaleString();
+}
+function fmtFull(n) { return '$' + n.toLocaleString(); }
+function fmtPct(n) { return (n * 100).toFixed(1) + '%'; }
+function perCap(n) { return '$' + Math.round(n / POP).toLocaleString(); }
+
+// ===== TREEMAP LAYOUT =====
+function squarify(data, x, y, w, h) {
+  const total = data.reduce((s, d) => s + d.value, 0);
+  const rects = [];
+  let items = data.map(d => ({ ...d, area: (d.value / total) * w * h }));
+
+  function layoutRow(row, x, y, w, h, horizontal) {
+    const rowArea = row.reduce((s, r) => s + r.area, 0);
+    let offset = 0;
+    row.forEach(item => {
+      const ratio = item.area / rowArea;
+      if (horizontal) {
+        const itemH = h * ratio;
+        rects.push({ ...item, x, y: y + offset, w: rowArea / h, h: itemH });
+        offset += itemH;
+      } else {
+        const itemW = w * ratio;
+        rects.push({ ...item, x: x + offset, y, w: itemW, h: rowArea / w });
+        offset += itemW;
+      }
+    });
+    if (horizontal) return { x: x + rowArea / h, y, w: w - rowArea / h, h };
+    return { x, y: y + rowArea / w, w, h: h - rowArea / w };
+  }
+
+  function worst(row, sideLen) {
+    const s = row.reduce((a, r) => a + r.area, 0);
+    const maxA = Math.max(...row.map(r => r.area));
+    const minA = Math.min(...row.map(r => r.area));
+    return Math.max(
+      (sideLen * sideLen * maxA) / (s * s),
+      (s * s) / (sideLen * sideLen * minA)
+    );
+  }
+
+  let remaining = { x, y, w, h };
+  let sorted = [...items].sort((a, b) => b.area - a.area);
+
+  while (sorted.length > 0) {
+    const horizontal = remaining.w < remaining.h;
+    const sideLen = horizontal ? remaining.h : remaining.w;
+    let row = [sorted[0]];
+    sorted.splice(0, 1);
+
+    while (sorted.length > 0) {
+      const candidate = [...row, sorted[0]];
+      if (worst(candidate, sideLen) <= worst(row, sideLen)) {
+        row.push(sorted[0]);
+        sorted.splice(0, 1);
+      } else break;
+    }
+    remaining = layoutRow(row, remaining.x, remaining.y, remaining.w, remaining.h, horizontal);
+  }
+  return rects;
+}
+
+function renderTreemap() {
+  const container = document.getElementById('treemap');
+  const W = container.offsetWidth;
+  const H = container.offsetHeight;
+
+  const data = funds.map(f => ({
+    name: f.name,
+    value: currentView === 'percapita' ? f.expenditures / POP : f.expenditures,
+    raw: f.expenditures,
+    color: f.color,
+    desc: f.desc,
+    pct: f.expenditures / totalExpend
+  }));
+
+  const rects = squarify(data, 0, 0, W, H);
+  container.innerHTML = '';
+
+  rects.forEach(r => {
+    const div = document.createElement('div');
+    div.className = 'treemap-cell';
+    if (r.w < 90 || r.h < 65) div.className += ' small';
+    if (r.w < 60 || r.h < 45) div.className += ' tiny';
+
+    div.style.left = r.x + 'px';
+    div.style.top = r.y + 'px';
+    div.style.width = r.w + 'px';
+    div.style.height = r.h + 'px';
+    div.style.background = r.color;
+
+    const val = currentView === 'percapita' ? perCap(r.raw) : fmt(r.raw);
+
+    div.innerHTML = `
+      <span class="cell-name">${r.name}</span>
+      <span class="cell-value">${val}</span>
+      <span class="cell-pct">${fmtPct(r.pct)}</span>
+    `;
+
+    div.addEventListener('mouseenter', e => showTooltip(e, r));
+    div.addEventListener('mousemove', e => moveTooltip(e));
+    div.addEventListener('mouseleave', hideTooltip);
+
+    container.appendChild(div);
+  });
+}
+
+// ===== FUND CARDS =====
+function renderCards() {
+  const grid = document.getElementById('cardsGrid');
+  grid.innerHTML = '';
+
+  funds.slice(0, 14).forEach(f => {
+    const pct = f.expenditures / totalExpend;
+    const yoy = f.years[2] > 0 ? ((f.expenditures - f.years[2]) / f.years[2]) : null;
+    const val = currentView === 'percapita' ? perCap(f.expenditures) : fmt(f.expenditures);
+
+    // Sparkline SVG
+    const maxY = Math.max(...f.years);
+    const points = f.years.map((v, i) => {
+      const x = (i / 3) * 100;
+      const y = maxY > 0 ? 38 - (v / maxY) * 34 : 38;
+      return `${x},${y}`;
+    }).join(' ');
+
+    const areaPoints = points + ` 100,38 0,38`;
+
+    let yoyHtml = '';
+    if (yoy !== null) {
+      const cls = yoy > 0 ? 'up' : 'down';
+      const sign = yoy > 0 ? '+' : '';
+      yoyHtml = `<span class="yoy-change ${cls}">${sign}${(yoy * 100).toFixed(0)}% YoY</span>`;
+    }
+
+    const card = document.createElement('div');
+    card.className = 'fund-card';
+    card.innerHTML = `
+      ${yoyHtml}
+      <div class="card-header">
+        <span class="color-dot" style="background:${f.color}"></span>
+        <span class="card-name">${f.name}</span>
+        <span class="card-pct">${fmtPct(pct)}</span>
+      </div>
+      <div class="card-amount">${val}</div>
+      <div class="card-percapita">${currentView === 'percapita' ? fmtFull(f.expenditures) + ' total' : perCap(f.expenditures) + ' per resident'}</div>
+      <div class="sparkline-container">
+        <svg viewBox="0 0 100 40" preserveAspectRatio="none">
+          <polygon points="${areaPoints}" fill="${f.color}" opacity="0.1"/>
+          <polyline points="${points}" fill="none" stroke="${f.color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          ${f.years.map((v, i) => `<circle cx="${(i/3)*100}" cy="${maxY > 0 ? 38-(v/maxY)*34 : 38}" r="2" fill="${f.color}"/>`).join('')}
+        </svg>
+        <div class="spark-labels"><span>2022</span><span>2023</span><span>2023 proj</span><span>2024</span></div>
+      </div>
+    `;
+
+    card.addEventListener('mouseenter', e => showTooltip(e, {
+      name: f.name, raw: f.expenditures, pct, desc: f.desc
+    }));
+    card.addEventListener('mousemove', moveTooltip);
+    card.addEventListener('mouseleave', hideTooltip);
+
+    grid.appendChild(card);
+  });
+}
+
+// ===== DEPARTMENT BARS =====
+function renderDeptBars() {
+  const container = document.getElementById('deptBars');
+  container.innerHTML = '';
+  const maxAmt = departments[0].amount;
+
+  departments.forEach(d => {
+    if (d.name === 'Transfers') return; // skip transfers for clarity
+    const pctWidth = (d.amount / maxAmt) * 100;
+    const val = currentView === 'percapita' ? perCap(d.amount) : fmt(d.amount);
+
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    row.innerHTML = `
+      <span class="bar-label">${d.name}</span>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${pctWidth}%; background: var(--c-general);"></div>
+      </div>
+      <span class="bar-value">${val}</span>
+      <span class="bar-percapita">${currentView === 'percapita' ? fmt(d.amount) : perCap(d.amount)}</span>
+    `;
+    container.appendChild(row);
+  });
+}
+
+// ===== BALLOON TIMELINE =====
+function renderBalloons() {
+  const container = document.getElementById('balloonTimeline');
+  container.innerHTML = '';
+  const maxAmt = Math.max(...balloons.map(b => b.amount));
+
+  balloons.forEach(b => {
+    const widthPct = (b.amount / maxAmt) * 100;
+    const val = currentView === 'percapita' ? perCap(b.amount) : fmt(b.amount);
+    const ev = document.createElement('div');
+    ev.className = 'balloon-event';
+    ev.innerHTML = `
+      <span class="be-year">${b.year}</span>
+      <span class="be-dot"></span>
+      <div class="be-bar" style="width:${Math.max(widthPct, 18)}%; background:${b.color}">
+        ${val}
+      </div>
+      <div class="be-label">${b.project} — ${currentView === 'percapita' ? fmtFull(b.amount) + ' total' : perCap(b.amount) + ' per resident'}</div>
+    `;
+    container.appendChild(ev);
+  });
+}
+
+// ===== TOTAL BONDED DEBT TIMELINE =====
+function renderBondedDebt() {
+  const container = document.getElementById('bondedDebtTimeline');
+  if (!container) return;
+  container.innerHTML = '';
+  const maxAmt = Math.max(...bondedDebt.map(b => b.amount));
+
+  bondedDebt.forEach(b => {
+    const widthPct = (b.amount / maxAmt) * 100;
+    const val = currentView === 'percapita' ? perCap(b.amount) : fmt(b.amount);
+    const ev = document.createElement('div');
+    ev.className = 'balloon-event';
+    ev.innerHTML = `
+      <span class="be-year">${b.year}</span>
+      <span class="be-dot"></span>
+      <div class="be-bar" style="width:${Math.max(widthPct, 18)}%; background:${b.color}">
+        ${val}
+      </div>
+      <div class="be-label">${b.project} — ${currentView === 'percapita' ? fmtFull(b.amount) + ' total' : perCap(b.amount) + ' per resident'}</div>
+    `;
+    container.appendChild(ev);
+  });
+}
+
+// ===== COVERAGE VISUAL =====
+function renderCoverage() {
+  const container = document.getElementById('coverageVisual');
+  container.innerHTML = '';
+  const maxVal = Math.max(...coverageData.map(d => Math.max(d.revenue, d.debtService)));
+
+  coverageData.forEach(d => {
+    const revH = (d.revenue / maxVal) * 150;
+    const dsH = (d.debtService / maxVal) * 150;
+    const ratioColor = d.ratio >= 1.0 ? 'var(--positive)' : 'var(--negative)';
+
+    const bar = document.createElement('div');
+    bar.className = 'cov-bar';
+    bar.innerHTML = `
+      <div style="display:flex; gap:4px; align-items:flex-end; width:100%; justify-content:center; flex:1;">
+        <div style="width:35%; position:relative;">
+          <div class="cov-fill" style="height:${revH}px; background:${d.color}; opacity:0.3; width:100%;"></div>
+        </div>
+        <div style="width:35%; position:relative;">
+          <div class="cov-fill" style="height:${dsH}px; background:${d.color}; width:100%;">
+            <span class="cov-ratio" style="color:${ratioColor}">${d.ratio}x</span>
+          </div>
+        </div>
+      </div>
+      <div class="cov-name">${d.name.replace('\n','<br>')}</div>
+    `;
+    container.appendChild(bar);
+  });
+
+  // legend
+  const legend = document.createElement('div');
+  legend.style.cssText = 'display:flex;gap:1.5rem;justify-content:center;margin-top:0.5rem;font-size:0.68rem;color:var(--text-tertiary);';
+  legend.innerHTML = '<span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;opacity:0.3;border-radius:2px;display:inline-block"></span> Net op. income</span><span style="display:flex;align-items:center;gap:4px"><span style="width:10px;height:10px;background:#aaa;border-radius:2px;display:inline-block"></span> Debt Service</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--positive);font-weight:700">1.0x+</span> Self-funding</span><span style="display:flex;align-items:center;gap:4px"><span style="color:var(--negative);font-weight:700">&lt;1.0x</span> Needs subsidy</span>';
+  container.parentElement.appendChild(legend);
+}
+
+// ===== TOOLTIP =====
+function showTooltip(e, data) {
+  const tt = document.getElementById('tooltip');
+  tt.innerHTML = `
+    <div class="tt-name">${data.name}</div>
+    <div class="tt-row"><span class="tt-label">Budget</span><span class="tt-val">${fmtFull(data.raw)}</span></div>
+    <div class="tt-row"><span class="tt-label">Per resident</span><span class="tt-val">${perCap(data.raw)}</span></div>
+    <div class="tt-row"><span class="tt-label">Share of total</span><span class="tt-val">${fmtPct(data.pct)}</span></div>
+    ${data.desc ? `<div style="margin-top:6px;font-size:0.72rem;color:rgba(255,255,255,0.7)">${data.desc}</div>` : ''}
+  `;
+  tt.style.display = 'block';
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const tt = document.getElementById('tooltip');
+  const x = e.clientX + 16;
+  const y = e.clientY - 10;
+  tt.style.left = Math.min(x, window.innerWidth - 300) + 'px';
+  tt.style.top = Math.min(y, window.innerHeight - 180) + 'px';
+}
+function hideTooltip() {
+  document.getElementById('tooltip').style.display = 'none';
+}
+
+// ===== VIEW TOGGLE =====
+function setView(view) {
+  currentView = view;
+  document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  renderAll();
+}
+
+function renderAll() {
+  renderTreemap();
+  renderDeptBars();
+  renderBalloons();
+  renderBondedDebt();
+  renderCoverage();
+}
+
+// ===== INIT =====
+window.addEventListener('load', renderAll);
+window.addEventListener('resize', () => { renderTreemap(); });
+</script>
+
+<!-- SITE TOP NAV: EN/ES toggle + mobile hamburger (same as deep-dive pages) -->
+<script>
+// EN/ES language toggle — Google Translate is the engine; we hide its UI
+// chrome and expose a single binary pill. Cookie: googtrans=/en/<lang>.
+function lvCurrentLang() {
+  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+  return m ? m[1] : 'en';
+}
+function lvSetTransCookie(value) {
+  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  var domains = ['', '.' + location.hostname, location.hostname];
+  domains.forEach(function(d){
+    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
+    if (d) c += '; domain=' + d;
+    document.cookie = c;
+  });
+}
+function lvToggleLang() {
+  var cur = lvCurrentLang();
+  lvSetTransCookie(cur === 'es' ? '' : 'es');
+  location.reload();
+}
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'es',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'lvLangWidget');
+}
+(function(){
+  var hideCss = document.createElement('style');
+  hideCss.textContent = [
+    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
+    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
+    '.goog-te-banner-frame { display: none !important; }',
+    '.goog-te-gadget { display: none !important; }',
+    'body { top: 0 !important; }',
+    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
+    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
+    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
+    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
+  ].join('\n');
+  document.head.appendChild(hideCss);
+  function setLabel() {
+    var btn = document.getElementById('lvLangToggle');
+    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setLabel);
+  } else { setLabel(); }
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async = true;
+  document.head.appendChild(s);
+})();
+(function(){
+  function init(){
+    var btn = document.getElementById('topnavHamburger');
+    if (!btn) return;
+    var links = document.querySelector('.topnav-links');
+    if (!links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '✕' : '☰';
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+</script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

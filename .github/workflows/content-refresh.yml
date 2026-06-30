@@ -1,0 +1,163 @@
+name: Content Refresh
+
+on:
+  schedule:
+    # Every 6 hours: midnight, 6am, noon, 6pm UTC
+    - cron: '0 0,6,12,18 * * *'
+  workflow_dispatch: # Allow manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  issues: write   # for the failure-tracker step to create/close the CI Health issue
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        # `npm install` (no args) reads scripts/package.json — previously
+        # this step did `npm install xml2js` which silently ignored the
+        # other deps listed there. The 2026-05-25 BOCC PDF extractor work
+        # added playwright + pdfjs-dist; both need to land here.
+        run: |
+          cd scripts
+          npm install
+
+      # Cache the Playwright Chromium binary across runs. The cache key is
+      # pinned to the installed playwright version so a version bump
+      # invalidates the cache and triggers a fresh download.
+      - name: Get installed Playwright version
+        id: pw-version
+        run: |
+          v=$(node -p "require('./scripts/node_modules/playwright/package.json').version")
+          echo "version=$v" >> $GITHUB_OUTPUT
+
+      - name: Cache Playwright browsers
+        id: pw-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.pw-version.outputs.version }}
+
+      - name: Install Playwright Chromium (cache miss — download binary + deps)
+        if: steps.pw-cache.outputs.cache-hit != 'true'
+        run: |
+          cd scripts
+          npx playwright install chromium --with-deps
+
+      - name: Install Playwright Chromium OS deps only (cache hit)
+        if: steps.pw-cache.outputs.cache-hit == 'true'
+        run: |
+          cd scripts
+          npx playwright install-deps chromium
+
+      # No `continue-on-error` below: per-task RSS / API failures are already
+      # isolated via try/catch inside each script, so transient feed errors
+      # don't crash the run. A non-zero exit here means a true fatal error
+      # (programming bug, missing secret, etc.) and SHOULD fail the workflow
+      # so the failure-tracker step opens a CI Health issue.
+      - name: Run content refresh
+        id: refresh
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
+          TT_AUTH_COOKIE: ${{ secrets.TT_AUTH_COOKIE }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/content-refresh.js 2>&1 | tee /tmp/content-refresh.log
+
+      - name: Build RSS feed (feed.xml) for Mailchimp
+        env:
+          # Powers the "Week Ahead" AI lede + notable-meeting flags in
+          # build-rss-feed.js. Absent key → feed still builds, just without them.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/build-rss-feed.js 2>&1 | tee /tmp/build-rss-feed.log
+
+      - name: Run Deep Dive topic update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/deep-dive-refresh.js 2>&1 | tee /tmp/deep-dive.log
+
+      # Update the rolling source-count baseline (scripts/source-baselines.json,
+      # committed below). The daily content review reads it and alerts if a
+      # scraper silently dropped to zero. Never fails the run (best-effort).
+      - name: Update source-health baseline
+        run: node scripts/source-health.js 2>&1 | tee /tmp/source-health.log || true
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -A
+          git commit -m "🔄 Content refresh $(date -u +'%Y-%m-%d %H:%M UTC')
+
+          Automated update: meeting summaries, news, community pulse, legal notices, events, deep dive topics"
+          git pull --rebase origin main
+          git push
+
+      # Always upload logs so we can debug after the fact (GH only retains
+      # raw run logs for 90 days; artifacts give us our own retention window).
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: content-refresh-logs-${{ github.run_id }}
+          path: '/tmp/*.log'
+          retention-days: 14
+          if-no-files-found: ignore
+
+      # Failure tracker — opens one CI Health issue per workflow on first
+      # failure, adds a comment on every subsequent failure (no spam from
+      # duplicate issues), and auto-closes when the workflow recovers.
+      - name: Open or update CI Health issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Content Refresh workflow is failing'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          # Find an existing open tracker issue with this title.
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "Another failure at $NOW. Run: $RUN_URL"
+          else
+            gh issue create \
+              --title "$ISSUE_TITLE" \
+              --body "$(printf 'The scheduled Content Refresh workflow failed.\n\nFirst observed: %s\nRun: %s\n\nLogs are attached to the run as an artifact. This issue auto-closes when the next run succeeds.' "$NOW" "$RUN_URL")"
+          fi
+          exit 0  # never let the tracker step itself fail the workflow
+
+      - name: Close CI Health issue on success
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🚨 Content Refresh workflow is failing'
+        run: |
+          set +e
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "✅ Workflow recovered at $(date -u +'%Y-%m-%d %H:%M UTC'). Closing."
+            gh issue close "$NUM"
+          fi
+          exit 0

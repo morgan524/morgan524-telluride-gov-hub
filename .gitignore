@@ -1,0 +1,54 @@
+# Workflow stdout logs — each .yml under .github/workflows/ pipes its
+# script output to <name>.log via `tee`, then uploads them as build
+# artifacts (see "Upload run logs" step). The `git add -A` commit step
+# that follows would otherwise sweep these into the commit. Keep them
+# out of the repo; the artifact upload preserves them for 14-30 days.
+build-rss-feed.log
+citation-audit.log
+content-refresh.log
+deep-dive.log
+festival-ticket-check.log
+housing-refresh.log
+maintenance.log
+smc-watch.log
+
+# NOTE: `maintenance-issues.log` is intentionally NOT ignored — it's
+# written by scripts/maintenance.js as a human-readable snapshot of
+# issues found during the daily run, and the workflow commits it so
+# the latest snapshot is browsable in the repo. Different intent than
+# the stdout logs above.
+
+# OS / editor scratch
+.DS_Store
+*.swp
+
+# Sibling project — the Valley Project Map is a separate GitHub repo
+# (morgan524/livable-telluride-valley-map) with its own GitHub Pages
+# deploy. It's cloned alongside this repo as a working directory:
+#   cd <project-root> && git clone https://github.com/morgan524/livable-telluride-valley-map.git valley-map
+# That nested checkout would otherwise show as untracked in gov-hub; this
+# rule excludes it from gov-hub's index.
+/valley-map/
+
+# Node modules — pulled in by `npm install` from scripts/package.json
+# during GH Actions runs and during local dev. Never commit.
+scripts/node_modules/
+node_modules/
+
+# Firebase Cloud Function env file — contains live ANTHROPIC_API_KEY and
+# ADMIN_SECRET, loaded by govhub-summary-backend/functions at deploy time.
+# Never commit. Use `firebase functions:config:set` for production secrets,
+# or distribute via secure channel (1Password etc.) for redeploy.
+govhub-summary-backend/functions/.env
+**/.env
+
+# Daily review findings — transient, read by maintenance.yml issue step, never committed
+review-findings.log
+
+# Daily content review findings — transient, read by content-review.yml issue step, never committed
+content-review-findings.log
+content-review-findings.json
+content-review-actionable.log
+content-review-email.html
+scripts/review/last-review.json
+scripts/review/site-review.json

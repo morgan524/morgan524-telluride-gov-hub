@@ -1,0 +1,93 @@
+name: Weekly Email Preview
+
+# Renders the upcoming weekly email via scripts/weekly-email.js (from the live
+# gov-data.js + gov-helpers.js — real agenda links, curated events, topic
+# sections) and emails a review copy to info@ every SATURDAY — running after
+# Friday means agendas posted Friday are picked up. The run also saves the
+# paste-ready Mailchimp HTML (weekly-mailchimp.html) as an artifact.
+# Edit the "Week Ahead" lede before the send in the LEDE const of
+# scripts/weekly-email.js.
+on:
+  schedule:
+    - cron: '0 14 * * 6'   # Saturday 14:00 UTC (~8am Mountain)
+  workflow_dispatch:
+    inputs:
+      week_start:
+        description: 'Week start date YYYY-MM-DD (override "next Monday" auto-detect). Use e.g. 2026-06-22 to re-render THIS week''s email after Saturday''s auto-send already advanced to next week.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    env:
+      # Email send is skipped (just renders + uploads an artifact) until these
+      # secrets are added. PREVIEW_SMTP_USER = a Gmail/Workspace address;
+      # PREVIEW_SMTP_PASS = an app password for it.
+      PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
+      # Lets the renderer hide topic sections whose Event Topics group has no subscribers yet.
+      MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY_NEW }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Render weekly email (preview + paste-ready) from live data
+        id: render
+        env:
+          WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
+        run: |
+          set -o pipefail
+          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
+          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          # Honour the workflow_dispatch input when one is provided, otherwise
+          # use the cron-default "next Monday". This lets a manual re-render
+          # target THIS week (the one that's actually about to send) after
+          # the Saturday auto-send has already advanced the default to the
+          # following Monday.
+          if [ -n "$WEEK_START_INPUT" ]; then
+            WS="$WEEK_START_INPUT"
+          else
+            WS=$(date -u -d "next monday" +%F)
+          fi
+          LABEL="$(date -u -d "$WS" '+%B %-d') – $(date -u -d "$WS +6 days" '+%B %-d, %Y')"
+          echo "Week start: $WS  ·  Label: $LABEL"
+          WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-preview.html 2>&1 | tee /tmp/wp.log
+          node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekly-mailchimp.html
+          echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
+
+      - name: Email preview to info@livabletelluride.org
+        if: env.PREVIEW_SMTP_PASS != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.PREVIEW_SMTP_USER }}
+          password: ${{ secrets.PREVIEW_SMTP_PASS }}
+          subject: ${{ steps.render.outputs.subject }}
+          to: info@livabletelluride.org
+          from: Livable Telluride <${{ secrets.PREVIEW_SMTP_USER }}>
+          html_body: file://weekly-preview.html
+
+      - name: Note when email isn't configured
+        if: env.PREVIEW_SMTP_PASS == ''
+        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Saturday email."
+
+      - name: Upload preview artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-preview
+          path: |
+            weekly-preview.html
+            weekly-mailchimp.html
+          retention-days: 14
+          if-no-files-found: ignore
