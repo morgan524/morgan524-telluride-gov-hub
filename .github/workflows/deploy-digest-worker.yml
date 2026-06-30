@@ -6,8 +6,9 @@ name: Deploy Digest Worker
 #
 # Required GitHub secrets: ANTHROPIC_API_KEY, CUSTOMERIO_APP_API_KEY, DIGEST_KEY,
 # and CLOUDFLARE_WORKER (or the legacy CLOUDFLAIR_WORKER) for the CF API token.
-# CUSTOMERIO_BROADCAST_ID is optional — until it's set the "Approve & Send"
-# action stays inert and reports that Customer.io isn't finalized yet.
+# When Customer.io is finalized: `gh secret set CUSTOMERIO_BROADCAST_ID`, then
+# add it back to the secrets: list + env: block below and redeploy. Until then
+# the Worker treats it as unset and "Approve & Send" reports CIO isn't ready.
 on:
   workflow_dispatch:
   push:
@@ -30,10 +31,8 @@ jobs:
           secrets: |
             ANTHROPIC_API_KEY
             CUSTOMERIO_APP_API_KEY
-            CUSTOMERIO_BROADCAST_ID
             DIGEST_KEY
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
-          CUSTOMERIO_BROADCAST_ID: ${{ secrets.CUSTOMERIO_BROADCAST_ID }}
           DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
