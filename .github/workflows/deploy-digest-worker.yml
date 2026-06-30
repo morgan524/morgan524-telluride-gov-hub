@@ -31,8 +31,10 @@ jobs:
           secrets: |
             ANTHROPIC_API_KEY
             CUSTOMERIO_APP_API_KEY
+            CUSTOMERIO_BROADCAST_ID
             DIGEST_KEY
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CUSTOMERIO_BROADCAST_ID: ${{ secrets.CUSTOMERIO_BROADCAST_ID }}
           DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
