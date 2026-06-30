@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Email Studio · Livable Telluride</title>
+<style>
+:root{--forest:#21443c;--forest2:#2f7a5f;--gold:#b58a2c;--cream:#f0ece3;--ink:#1a2e29;--muted:#7a8a85;--line:#ddd6c8;}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);}
+.topbar{background:var(--forest);color:#fff;padding:14px 22px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:5;}
+.topbar h1{font-family:Georgia,serif;font-size:18px;margin:0;font-weight:700;}
+.topbar .sub{font-size:11px;color:#a8c4b8;letter-spacing:.14em;text-transform:uppercase;}
+.pill{margin-left:auto;font-size:11px;font-weight:700;padding:4px 11px;border-radius:999px;background:rgba(255,255,255,.12);color:#e3c87a;}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c98a2c;margin-right:6px;vertical-align:middle;}.dot.ok{background:#7ad19a;}
+.wrap{max-width:1320px;margin:0 auto;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start;}
+@media(max-width:980px){.wrap{grid-template-columns:1fr}}
+.panel{background:#fdfbf6;border:1px solid var(--line);border-radius:10px;padding:16px;}
+.phead{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
+.phead .t{font-family:Georgia,serif;font-weight:700;font-size:15px;}
+.phead .sp{margin-left:auto;display:flex;gap:8px;}
+label{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 6px;}
+input[type=text],input[type=password]{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-family:inherit;font-size:14px;color:var(--ink);background:#fff;}
+#code{width:100%;height:720px;border:1px solid var(--line);border-radius:8px;padding:12px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;line-height:1.5;color:#22332e;background:#fbfaf6;resize:vertical;white-space:pre;overflow:auto;tab-size:2;}
+.frame{width:100%;height:720px;border:1px solid var(--line);border-radius:8px;background:#fff;}
+.btn{border:0;border-radius:999px;font-weight:700;cursor:pointer;font-family:inherit;}
+.btn:disabled{opacity:.5;cursor:not-allowed;}
+.btn.tiny{padding:8px 14px;font-size:12px;}
+.btn.primary{background:var(--gold);color:#fff;}.btn.ghost{background:#fff;border:1px solid var(--forest);color:var(--forest);}.btn.sec{background:var(--forest2);color:#fff;}
+.row{display:flex;gap:8px;align-items:center;}.row input{flex:1;}
+.status{margin-top:12px;font-size:13px;line-height:1.5;padding:10px 12px;border-radius:8px;background:#f1ece1;border-left:3px solid var(--gold);color:#2c3b35;display:none;}
+.status.show{display:block;}.status.err{border-left-color:#b3402a;background:#f7e9e4;}
+.note{font-size:12px;color:var(--muted);margin-top:12px;line-height:1.6;}
+.ai{grid-column:1 / -1;}
+.ai-head{display:flex;align-items:center;gap:9px;margin-bottom:4px;flex-wrap:wrap;}.ai-head .t{font-family:Georgia,serif;font-weight:700;font-size:16px;}
+.ai-log{margin:12px 0;max-height:300px;overflow:auto;display:flex;flex-direction:column;gap:10px;}
+.msg{max-width:80%;padding:10px 13px;border-radius:12px;font-size:14px;line-height:1.5;white-space:pre-wrap;}
+.msg.you{align-self:flex-end;background:var(--forest);color:#fff;border-bottom-right-radius:3px;}
+.msg.ai{align-self:flex-start;background:#eef1ee;color:var(--ink);border-bottom-left-radius:3px;}
+.msg.sys{align-self:center;background:transparent;color:var(--muted);font-size:12px;font-style:italic;padding:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.chip{font-size:12px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--forest);cursor:pointer;}
+.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:14px;}
+.gate{position:fixed;inset:0;background:var(--forest);display:flex;align-items:center;justify-content:center;z-index:50;}
+.gate .card{background:#fdfbf6;border-radius:14px;padding:30px;width:340px;max-width:90vw;text-align:center;}
+.gate h2{font-family:Georgia,serif;margin:0 0 4px;}.gate p{font-size:13px;color:var(--muted);margin:0 0 18px;}
+.gate .err{color:#b3402a;font-size:13px;min-height:18px;margin-top:8px;}
+.spin{display:inline-block;width:13px;height:13px;border:2px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:s .7s linear infinite;vertical-align:middle;}@keyframes s{to{transform:rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="gate" id="gate">
+  <div class="card">
+    <h2>Email Studio</h2>
+    <p>Enter the review passphrase to continue.</p>
+    <input type="password" id="gatekey" placeholder="Passphrase" autocomplete="current-password">
+    <button class="btn primary" id="gatebtn" style="margin-top:14px;width:100%;padding:12px">Enter</button>
+    <div class="err" id="gateerr"></div>
+  </div>
+</div>
+
+<div class="topbar">
+  <div><h1>Email Studio</h1><div class="sub">Livable Telluride · paste &amp; refine newsletter HTML</div></div>
+  <span class="pill" id="pill"><span class="dot"></span>checking…</span>
+</div>
+
+<div class="wrap" id="app" style="display:none">
+  <div class="panel">
+    <div class="phead"><span class="dot ok"></span><span class="t">HTML</span>
+      <span class="sp">
+        <button class="btn ghost tiny" id="copy">Copy HTML</button>
+        <button class="btn sec tiny" id="clear">Clear</button>
+      </span>
+    </div>
+    <textarea id="code" spellcheck="false" placeholder="Paste your newsletter HTML here…"></textarea>
+    <div class="note">Paste the HTML you'd put into Mailchimp. The preview updates as you type. Edit here or ask Claude below; then <b>Copy HTML</b> back into Mailchimp.</div>
+  </div>
+
+  <div class="panel">
+    <div class="phead"><span class="dot ok"></span><span class="t">Preview</span>
+      <span class="sp">
+        <input type="text" id="testto" value="info@livabletelluride.org" style="width:190px;padding:7px 10px">
+        <button class="btn ghost tiny" id="test">Send test</button>
+      </span>
+    </div>
+    <iframe class="frame" id="frame"></iframe>
+    <div class="row" style="margin-top:10px"><input type="text" id="subject" placeholder="Subject line (for test send)"></div>
+    <div class="status" id="status"></div>
+  </div>
+
+  <div class="panel ai">
+    <div class="ai-head"><span class="dot ok"></span><span class="t">Ask Claude</span><span class="note" style="margin:0">describe a change — restructure, fix a color, rewrite a section, tighten copy — edits land in the HTML and preview</span></div>
+    <div class="chips" id="chips"></div>
+    <div class="ai-log" id="ailog"></div>
+    <div class="row"><input type="text" id="aiin" placeholder="e.g. make the header green, shorten the intro, add a donate button at the bottom…"><button class="btn primary tiny" id="aisend">Send</button></div>
+  </div>
+</div>
+
+<script>
+const WORKER = "https://livabletelluride-digest.morgan-8f0.workers.dev";
+const CHIPS = ["Tighten the copy","Fix mobile layout","Change a color…","Add a section…","Make the buttons bigger"];
+const $ = (id)=>document.getElementById(id);
+let KEY = sessionStorage.getItem("digestKey") || "";
+let history = [];
+
+// ---- gate ----
+function showGate(m){ $("gate").style.display="flex"; $("gateerr").textContent=m||""; $("gatekey").focus(); }
+function hideGate(){ $("gate").style.display="none"; }
+$("gatebtn").onclick=()=>{ const v=$("gatekey").value.trim(); if(!v){showGate("Enter the passphrase.");return;} KEY=v; sessionStorage.setItem("digestKey",v); boot(); };
+$("gatekey").addEventListener("keydown",e=>{ if(e.key==="Enter") $("gatebtn").click(); });
+
+async function api(path,payload){
+  const r = await fetch(WORKER+path,{ method:"POST", headers:{ "Content-Type":"application/json","x-digest-key":KEY }, body:JSON.stringify(payload) });
+  if(r.status===401){ sessionStorage.removeItem("digestKey"); KEY=""; showGate("Wrong passphrase — try again."); throw new Error("unauthorized"); }
+  return r.json();
+}
+
+async function boot(){
+  const h = await fetch(WORKER+"/health").then(r=>r.json()).catch(()=>({ok:false}));
+  $("pill").innerHTML = (h&&h.ok) ? '<span class="dot ok"></span>Claude connected' : '<span class="dot"></span>Worker offline';
+  if(!(h&&h.ok)){ /* still allow editing/preview; only Claude/test need the worker */ }
+  hideGate(); $("app").style.display="grid"; buildChips(); render(); $("code").focus();
+}
+function buildChips(){ const c=$("chips"); c.innerHTML=""; CHIPS.forEach(t=>{ const s=document.createElement("span"); s.className="chip"; s.textContent=t; s.onclick=()=>{ $("aiin").value=t.replace(/…$/," "); $("aiin").focus(); }; c.appendChild(s); }); }
+
+// ---- code <-> preview ----
+let rt=null;
+function render(){ $("frame").srcdoc = $("code").value; }
+$("code").addEventListener("input",()=>{ clearTimeout(rt); rt=setTimeout(render,300); });
+$("clear").onclick=()=>{ if($("code").value && !confirm("Clear the HTML?")) return; $("code").value=""; history=[]; renderLog(); render(); hideStatus(); };
+$("copy").onclick=async()=>{ try{ await navigator.clipboard.writeText($("code").value); showStatus("HTML copied to clipboard."); }catch(e){ $("code").select(); showStatus("Press Cmd/Ctrl+C to copy (selection ready).",true); } };
+
+function showStatus(m,err){ const s=$("status"); s.innerHTML=m; s.className="status show"+(err?" err":""); }
+function hideStatus(){ $("status").className="status"; }
+
+// ---- Ask Claude ----
+function renderLog(){ const log=$("ailog"); log.innerHTML=""; if(!history.length){ addMsgEl("ai","Paste your HTML on the left, then tell me what to change — layout, colors, copy, sections, anything. I edit the HTML and the preview updates."); } history.forEach(m=>addMsgEl(m.role==="user"?"you":(m.role==="sys"?"sys":"ai"),m.text)); }
+function addMsgEl(who,txt){ const log=$("ailog"); const d=document.createElement("div"); d.className="msg "+who; d.textContent=txt; log.appendChild(d); log.scrollTop=log.scrollHeight; return d; }
+
+async function aiSend(text){
+  text=(text||"").trim(); if(!text) return;
+  if(!$("code").value.trim()){ showStatus("Paste some HTML first, then ask for changes.",true); return; }
+  history.push({role:"user",text}); addMsgEl("you",text); $("aiin").value="";
+  const thinking=addMsgEl("ai","…"); $("aisend").disabled=true;
+  try{
+    const res = await api("/chat",{ emailHtml:$("code").value, subject:$("subject").value, message:text, history:history.filter(m=>m.role!=="sys").slice(0,-1) });
+    thinking.remove();
+    if(res.error){ addMsgEl("ai","⚠ "+res.error); history.push({role:"assistant",text:"⚠ "+res.error}); return; }
+    if(res.changed && res.html){ $("code").value=res.html; if(res.subject) $("subject").value=res.subject; render();
+      addMsgEl("sys","✎ HTML + preview updated"); history.push({role:"sys",text:"✎ HTML + preview updated"}); }
+    addMsgEl("ai",res.reply||"(done)"); history.push({role:"assistant",text:res.reply||"(done)"});
+  }catch(e){ thinking.remove(); if(e.message!=="unauthorized") addMsgEl("ai","⚠ "+e.message); }
+  finally{ $("aisend").disabled=false; }
+}
+$("aisend").onclick=()=>aiSend($("aiin").value);
+$("aiin").addEventListener("keydown",e=>{ if(e.key==="Enter") aiSend($("aiin").value); });
+
+// ---- send test ----
+$("test").onclick=async()=>{
+  const to=$("testto").value.trim(); if(!to.includes("@")){ showStatus("Enter a valid test email.",true); return; }
+  if(!$("code").value.trim()){ showStatus("Nothing to send — paste HTML first.",true); return; }
+  showStatus('<span class="spin"></span> Sending test to '+to+'…'); $("test").disabled=true;
+  try{ const r=await api("/send",{ emailHtml:$("code").value, subject:($("subject").value||"Livable Telluride"), test:true, to });
+    if(r.ok) showStatus("✓ Test sent to "+to+" — check inbox + spam."); else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("test").disabled=false; }
+};
+
+// ---- start ----
+renderLog();
+if(KEY) boot(); else showGate();
+</script>
+</body>
+</html>
