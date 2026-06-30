@@ -1,4 +1,5 @@
 {
   "_comment": "The 'Weekend Outlook' intro for the Thursday events email. Edit this file — no code change needed. Each key is the weekend-start date (the FRIDAY the weekend begins, YYYY-MM-DD; the email sends Thursday and covers Fri-Sun); the workflow computes that automatically. Add a new dated entry before each weekend's send. If a weekend has no entry, the email uses 'default'.",
-  "default": "A few of the best things happening around the box canyon this weekend — concerts, markets, and gatherings worth getting out for. Pick one and go."
+  "default": "A few of the best things happening around the box canyon this weekend — concerts, markets, and gatherings worth getting out for. Pick one and go.",
+  "2026-07-03": "It's Fourth of July weekend, and the whole region leans in. Telluride runs its parade and sends the Rundola up the mountain, Mountain Village throws Red, White & Blues with Better Than Ezra and a drone show, and the smaller towns mark the day their own way — Norwood's Star Spangled Saturday parade, Ouray's all-day celebration and 10K. Pick a town, find a curb, and make a day of it."
 }
