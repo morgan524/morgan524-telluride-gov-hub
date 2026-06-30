@@ -24,22 +24,37 @@ const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
 const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
+// WEEKEND mode (WEEKEND=1): render the Thursday "Weekend Ahead" events email
+// instead of the Monday "Week Ahead". Same data/render machinery, but a shorter
+// 4-day window (Thu–Sun), NO meetings section, and a curated best-of-the-weekend
+// events list (top events by featuredScore, not one-per-day). WEEK_START is the
+// Thursday the email covers. Everything below is unchanged for the weekly path.
+const WEEKEND = !!process.env.WEEKEND;
+const WINDOW_DAYS = WEEKEND ? 4 : 7;
+const EMAIL_TITLE = WEEKEND ? 'The Weekend Ahead' : 'The Week Ahead';
+const KICKER = WEEKEND ? 'Livable Telluride · Weekend Events' : 'Livable Telluride · Weekly Update';
+const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
 
 // ── Week Ahead lede — edit data/week-ahead-lede.json (no code change needed).
 // That file is a map keyed by week-start (the Monday the email covers,
 // YYYY-MM-DD), with a "default" fallback. WEEK_START is computed by the Saturday
 // workflow. If the file is missing/unreadable, fall back to a built-in string.
-const FALLBACK_LEDE = "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
+const FALLBACK_LEDE = WEEKEND
+  ? "A few of the best things happening around the box canyon this weekend — pick one and get out there."
+  : "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
 let LEDE = FALLBACK_LEDE;
 try {
-  const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'week-ahead-lede.json'), 'utf8'));
+  const ledeFile = WEEKEND ? 'weekend-ahead-lede.json' : 'week-ahead-lede.json';
+  const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', ledeFile), 'utf8'));
   LEDE = ledeMap[WEEK_START] || ledeMap.default || FALLBACK_LEDE;
-} catch (e) { console.error('week-ahead-lede.json not read (' + e.message + ') — using fallback lede'); }
+} catch (e) { console.error('lede json not read (' + e.message + ') — using fallback lede'); }
 
-// 7-day window [WEEK_START, WEEK_START+6]
+// Window [WEEK_START, WEEK_START + WINDOW_DAYS-1]: 7 days for the weekly,
+// 4 days (Thu–Sun) for the weekend email.
 const startD = new Date(WEEK_START + 'T00:00:00');
-const days = []; for (let i = 0; i < 7; i++) { const d = new Date(startD); d.setDate(d.getDate() + i); days.push(d.toISOString().slice(0, 10)); }
-const inWeek = (iso) => iso >= days[0] && iso <= days[6];
+const days = []; for (let i = 0; i < WINDOW_DAYS; i++) { const d = new Date(startD); d.setDate(d.getDate() + i); days.push(d.toISOString().slice(0, 10)); }
+const dEnd = days[days.length - 1];
+const inWeek = (iso) => iso >= days[0] && iso <= dEnd;
 
 // ── Load the live data files into this context ──
 global.window = {}; global.document = { createElement: () => ({ set innerHTML(v) { this._v = v; }, get value() { return String(this._v == null ? '' : this._v).replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&#0?39;|&apos;/g, "'").replace(/&quot;/g, '"'); } }) };
@@ -97,7 +112,7 @@ for (const name of EVENT_ARRAYS) {
 // One per day: top featuredScore (tie → earlier start). Skip days with nothing.
 const byDay = {};
 for (const e of evts) { (byDay[e.date] = byDay[e.date] || []).push(e); }
-const chosen = []; const usedTitles = new Set();
+let chosen = []; const usedTitles = new Set();
 // Cross-day dedup key: alphabetise the distinctive 4+-char tokens of the title
 // after dropping common stopwords. This is intentionally fuzzy so the same
 // event listed under varying titles across sources collapses to one card.
@@ -122,15 +137,29 @@ const tkey = (t) => {
 const FEATURED_OVERRIDES = {
   '2026-07-04': { match: /rundola/i, link: 'https://telluridefoundation.org/rundola/' },  // Telluride Foundation Rundola — Run for Good
 };
-for (const day of days) {
-  const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
-  // One DISTINCT event per day: skip an event whose title already ran earlier
-  // this week (e.g. a multi-day festival) and take the next-best instead.
-  const ov = FEATURED_OVERRIDES[day];
-  let pick = ov ? list.find((e) => ov.match.test(e.title) && !usedTitles.has(tkey(e.title))) : null;
-  if (pick && ov.link) pick = Object.assign({}, pick, { href: ov.link });
-  if (!pick) pick = list.find((e) => !usedTitles.has(tkey(e.title))) || list[0];
-  if (pick) { chosen.push(pick); usedTitles.add(tkey(pick.title)); }
+if (WEEKEND) {
+  // Weekend Ahead: a curated "best of the weekend" list — the top events across
+  // the whole 4-day window by featuredScore (deduped by tkey), capped, then
+  // ordered by date for display. Not one-per-day, so a packed Saturday can
+  // surface more than one strong pick.
+  const seen = new Set();
+  chosen = evts
+    .filter((e) => inWeek(e.date))
+    .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
+    .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+    .slice(0, 8)
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
+} else {
+  for (const day of days) {
+    const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
+    // One DISTINCT event per day: skip an event whose title already ran earlier
+    // this week (e.g. a multi-day festival) and take the next-best instead.
+    const ov = FEATURED_OVERRIDES[day];
+    let pick = ov ? list.find((e) => ov.match.test(e.title) && !usedTitles.has(tkey(e.title))) : null;
+    if (pick && ov.link) pick = Object.assign({}, pick, { href: ov.link });
+    if (!pick) pick = list.find((e) => !usedTitles.has(tkey(e.title))) || list[0];
+    if (pick) { chosen.push(pick); usedTitles.add(tkey(pick.title)); }
+  }
 }
 
 // ── Topic extras: events NOT already in the universal one-per-day list, grouped
@@ -439,7 +468,7 @@ const festISO = (f) => { const em = (f.endMonth != null ? f.endMonth : f.month);
 const festLabel = (f) => { const em = (f.endMonth != null ? f.endMonth : f.month); const right = (em === f.month) ? `${f.dayEnd}` : `${MONTHS_F[em]} ${f.dayEnd}`; return `${MONTHS_F[f.month]} ${f.dayStart}–${right}, ${fYear}`; };
 const festivalsThisWeek = (G('TELLURIDE_FESTIVALS') || [])
   .filter((f) => MAJOR_FEST_RE.test(f.name))
-  .filter((f) => { const r = festISO(f); return r.start <= days[6] && r.end >= days[0]; });
+  .filter((f) => { const r = festISO(f); return r.start <= dEnd && r.end >= days[0]; });
 const festCard = (f) => {
   const link = f.ticketUrl || f.url || (SITE + '/events.html');
   const cta = f.ticketLabel || 'Festival Details';
@@ -471,16 +500,16 @@ if (process.env.CUSTOMERIO) {
   const md = {
     label:         LABEL,
     lede:          LEDE,
-    meetings_html: section('Public Meetings This Week', mh),
-    events_html:   festivalHero + section('What to Attend', eh),
-    arts_html:     topicBlock('arts', 'Music & Arts This Week'),
-    family_html:   topicBlock('family', 'Family & Kids This Week'),
-    outdoors_html: topicBlock('outdoors', 'Outdoors & Recreation This Week'),
+    meetings_html: WEEKEND ? '' : section('Public Meetings This Week', mh),
+    events_html:   festivalHero + section(EVENTS_HEADING, eh),
+    arts_html:     WEEKEND ? '' : topicBlock('arts', 'Music & Arts This Week'),
+    family_html:   WEEKEND ? '' : topicBlock('family', 'Family & Kids This Week'),
+    outdoors_html: WEEKEND ? '' : topicBlock('outdoors', 'Outdoors & Recreation This Week'),
   };
   for (const k of Object.keys(md)) md[k] = ascii(md[k]);
   fs.writeFileSync(OUT, JSON.stringify(md, null, 2));
   console.log('message_data → ' + OUT + ': ' + Object.entries(md).map(([k, v]) => `${k}(${v.length})`).join(' '));
-  console.log('SUBJECT=The Week Ahead — ' + LABEL);
+  console.log('SUBJECT=' + EMAIL_TITLE + ' — ' + LABEL);
   process.exit(0);
 }
 
@@ -508,8 +537,8 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
       <td valign="middle" style="vertical-align:middle;">
-        <div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">Livable Telluride · Weekly Update</div>
-        <div style="font-family:Georgia,serif;font-size:25px;font-weight:700;color:#fff;margin-top:4px;">The Week Ahead</div>
+        <div style="font-family:Georgia,serif;font-size:11px;color:#b58a2c;letter-spacing:.18em;text-transform:uppercase;">${esc(KICKER)}</div>
+        <div style="font-family:Georgia,serif;font-size:25px;font-weight:700;color:#fff;margin-top:4px;">${esc(EMAIL_TITLE)}</div>
         <div style="font-family:Georgia,serif;font-size:14px;color:#a8c4b8;margin-top:3px;">${esc(LABEL)}</div>
       </td>
       <td width="74" valign="middle" align="right" style="vertical-align:middle;">
@@ -519,11 +548,11 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
       </td>
     </tr></table></td></tr>
   <tr><td class="sec-pad" style="padding:22px 34px 4px;">
-    <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 The Week Ahead</span>
+    <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#2f7a5f;background:rgba(47,122,95,.1);padding:3px 10px;border-radius:999px;">📅 ${esc(EMAIL_TITLE)}</span>
     <p style="margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;">${esc(LEDE)}</p></td></tr>
-  ${section('Public Meetings This Week', mh)}
+  ${WEEKEND ? '' : section('Public Meetings This Week', mh)}
   ${festivalHero}
-  ${section('What to Attend', eh)}${topicHtml}
+  ${section(EVENTS_HEADING, eh)}${WEEKEND ? '' : topicHtml}
   ${whatsReadingBox}
   ${donateBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
@@ -537,7 +566,9 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
 // Mailchimp merge tags neutralised so the footer/links aren't left broken.
 let out = html;
 if (PREVIEW) {
-  const banner = `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">To change the intro, just reply to this email with the new text (week-key ${WEEK_START}).</span></td></tr>\n`;
+  const banner = WEEKEND
+    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Ahead" events email. Look it over, then approve to send.<br><span style="font-weight:400;">To change the intro, edit data/weekend-ahead-lede.json (key ${WEEK_START}) and re-run the workflow.</span></td></tr>\n`
+    : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">To change the intro, just reply to this email with the new text (week-key ${WEEK_START}).</span></td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
@@ -549,7 +580,7 @@ if (PREVIEW) {
 // entities (&amp;, &#39;) are already ASCII and pass through untouched.
 out = Array.from(out).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
 fs.writeFileSync(OUT, out);
-const SUBJECT = `The Week Ahead — ${LABEL}`;
+const SUBJECT = `${EMAIL_TITLE} — ${LABEL}`;
 console.log('SUBJECT=' + SUBJECT);
 console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}${PREVIEW ? ' [preview]' : ''}`);
 console.log(`  conditional topic blocks: ${topicSections.map(t=>`${t.group} (${t.events.length})`).join(', ') || 'none this week'}`);
