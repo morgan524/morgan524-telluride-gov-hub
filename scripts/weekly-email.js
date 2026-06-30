@@ -176,15 +176,26 @@ if (WEEKEND) {
     if (/telluride/.test(src)) return 'telluride';
     return 'other';
   };
+  // Always-include "pins": marquee Telluride 4th-of-July happenings readers
+  // expect — the Parade and the Rundola — guaranteed in regardless of the
+  // per-town diversity cap. The best-scored (usually photo-bearing) match for
+  // each is taken; the fill then skips ALL pin-matching events so a second
+  // parade/rundola feed can't double up. Dormant outside early July (no match).
+  const PINS = [
+    /\btelluride\b.*\bparade\b|telluride.*(?:fourth|4th|july).*parade/i,
+    /\brundola\b/i,
+  ];
+  const isPinned = (e) => PINS.some((re) => re.test(e.title || ''));
   const seen = new Set();
   const uniq = evts
     .filter((e) => inWeek(e.date) && featuredScore(e) >= 0)   // drop penalized classes/clinics
     .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
     .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  for (const re of PINS) { const hit = uniq.find((e) => re.test(e.title) && !chosen.includes(e)); if (hit) chosen.push(hit); }
   const fillToCap = (maxPerTown) => {
     const perTown = {}; chosen.forEach((e) => { const t = evTown(e); perTown[t] = (perTown[t] || 0) + 1; });
     for (const e of uniq) {
-      if (chosen.includes(e)) continue;
+      if (chosen.includes(e) || isPinned(e)) continue;   // pinned events (and their near-dupes) already represented
       const t = evTown(e); if ((perTown[t] || 0) >= maxPerTown) continue;
       perTown[t] = (perTown[t] || 0) + 1; chosen.push(e);
       if (chosen.length >= CAP) return;
