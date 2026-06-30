@@ -381,7 +381,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -538,6 +538,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Plan to convert the Town Park oval into a concrete space sees pushback",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "recreation",
+    copy: "The Town Park oval is set to be paved into a concrete multi-use surface — including sports courts — with site prep starting this fall and concrete work in spring 2027, at a phase-two cost of $1.33M. The plan has been in design documents since 2020 and cleared HARC review and council approval, with the Town citing year-round usability and drainage fixes. Muscatel Flats neighbors are pushing back, circulating a petition with 200+ signatures over lost green gathering space and pickleball noise concerns.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b989f2dd-f756-4e51-b0f2-f8c897136e43.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/17/7176ca8b-edea-48f4-b9ca-4538be741ffc/6a42d31a450c5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Colorado Democrats choose between insurgent progressives and veteran incumbents",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "government",
+    copy: "Colorado's June Democratic primaries pit progressive insurgents against veteran incumbents in several key races — including a 30-year Denver congresswoman challenged by a Bernie Sanders-backed first-timer, and a Senate primary where Hickenlooper faces an \"insurgent progressive.\" The swing-district House seat could factor into national control.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d46744ac-3411-5bd7-97b9-2e30e434f7f0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ae/caeecd6d-45ec-51b9-900c-b69d37e7b6d9/6a43435cc8de2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "3 firefighters killed in Western wildfire were trying to shield themselves from flames",
     source: "Telluride Times",
@@ -3141,48 +3165,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568418?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-06-29T16:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772762?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-06-30T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Desserts & Documentary: Mountain Joy Documentary",
-    link: "https://telluridelibrary.libcal.com/event/16667368?hs=a",
-    description: "1:30 PM – 3:00 PM · Mountain Joy- Documentary -Cindy Farny will be here in person for discussion and some desserts. In the 1960s, a charismatic outdoorsman named Dave Farny launched a Colorado mountaineering school with his wife Sherry that would inspire over 1,000 adventurers to seek out their limits. The Farnys took young students on challenging outings over five-week periods, fostering some of the best mountaineers, skiers and climbers of the era. Ultimately, the Farny family ended up learning — as much as the boys did — about the mountain joy to be found through camaraderie, hard work and adventure in the Rockies.\\ Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! …",
-    pubDate: "2026-06-29T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_12_11_47_29.png"
-  },
-  {
-    title: "Hobby Hopping",
-    link: "https://telluridelibrary.libcal.com/event/17065342?hs=a",
-    description: "2:00 PM – 3:00 PM · Learn a new hobby each week on Monday afternoons.  June 1: Perler Beads June 8: Friendship Bracelets June 15: Slime! June 22: Tie Dye June 29: Clay Studio",
-    pubDate: "2026-06-29T20:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935713?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-06-30T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_18_25.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
   },
   {
-    title: "Rhythms for the Healing Arts – a Frame Drum Workshop with Yousif Sheronick",
-    link: "https://telluridelibrary.libcal.com/event/15210636?hs=a",
-    description: "5:30 PM – 7:00 PM · Telluride Chamber Music&#39; s program at the library is free and open to the public, but drums are limited so please email to reserve one! telluridechambermusic@gmail.com Join world-renowned percussionist Yousif Sheronick for a one-hour hands-on workshop exploring the ancient and transformative art of the frame drum. Based on his online course \"Rhythms for the Healing Arts,\" this session introduces participants to basic strokes and then guides them through rhythm sequences inspired by Egyptian gods, bodies of water, earth, and plant life. This workshop is open to all levels—beginners are welcome! Drums are provided, but you're encouraged to bring your own if you have one. For ages 16 and up. ABOUT YOUSIF: Hailed by the New York Times for his \"dazzling improvisations\" and his \"wizardry on a range of humble frame drums\" Yousif Sheronick enjoys an active career as percussionist, composer, producer and educator. …",
-    pubDate: "2026-06-29T23:30:00.000Z",
+    title: "Poderosa Grupo de Lectura",
+    link: "https://telluridelibrary.libcal.com/event/16361741?hs=a",
+    description: "5:00 PM – 6:00 PM · Vamos a discutir el libro (Theo de Golden) y compartir nuestros pensamientos. Este es un grupo de lectura y necesitas recoger su libro con Claudia. Por favor de registrarse con Claudia",
+    pubDate: "2026-06-30T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_22_48_22.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_13_38_20.jpg"
+  },
+  {
+    title: "Punk Science with Pinhead",
+    link: "https://telluridelibrary.libcal.com/event/16297532?hs=a",
+    description: "A Wilkinson Public Library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. This library event runs approximately 45 minutes and is likely geared toward younger audiences, blending science and entertainment in a lively, unconventional format.",
+    pubDate: "2026-06-30T23:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_25_09_49_26.jpg"
   }
 ];
 
@@ -3319,7 +3343,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3523,7 +3547,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3535,7 +3559,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3571,28 +3595,6 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "FREE Oak Street Park SummerSHOW Series: Elder Grown",
-    link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series/",
-    description: "The FREE Oak Street Park SummerSHOW Series presents Elder Grown at the Sheridan Opera House in Telluride. This concert is part of the free summer performance series offering live entertainment to the community.",
-    pubDate: "2026-06-25",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
-  },
-  {
-    title: "Telluride Theatre Muleskinner's Ball Fundraiser",
-    link: "https://sheridanoperahouse.com/events/telluride-theatre-muleskinners-ball-fundraiser/",
-    description: "Telluride Theatre hosts its Muleskinner's Ball fundraiser at the historic Sheridan Opera House, bringing together music and community to support the local theater organization. The event blends a lively ball-style atmosphere with fundraising for Telluride Theatre's programs and productions.",
-    pubDate: "2026-06-27",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/48278-gala25-2-thundertix-min.jpg"
-  },
-  {
     title: "23rd Annual Telluride Plein Air",
     link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air/",
     description: "The 23rd Annual Telluride Plein Air is a longstanding celebration of outdoor painting bringing together artists who create works on location throughout the Telluride area. The event is held at the Sheridan Opera House, serving as a hub for this established regional arts tradition.",
@@ -3603,6 +3605,29 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/Vios-Richie-Rainy-Day-in-Telluride-90-mins.-QuickDraw-8x10-Watercolor-800.webp"
+  },
+  {
+    title: "23rd Annual Telluride Plein Air",
+    link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air-2/",
+    description: "The 23rd Annual Telluride Plein Air is a longstanding outdoor painting event held in and around Telluride, bringing together artists who work directly from observation in the landscape. The Sheridan Opera House serves as a hub for the event, which celebrates the tradition of painting en plein air in the scenic mountain setting of Telluride.",
+    pubDate: "2026-07-01",
+    endDate: "2026-07-05",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/Vios-Richie-Rainy-Day-in-Telluride-90-mins.-QuickDraw-8x10-Watercolor-800.webp"
+  },
+  {
+    title: "Telluride Venture Network's Pitch Day",
+    link: "https://sheridanoperahouse.com/events/telluride-venture-networks-pitch-day/",
+    description: "Telluride Venture Network's Pitch Day is a startup pitch competition event held at the Sheridan Opera House, bringing together entrepreneurs and investors in the Telluride community. Local and regional founders present their business concepts to a panel in a live, public forum setting.",
+    pubDate: "2026-07-01",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Telluride-Venture-Network-.png"
   }
 ];
 
@@ -3786,6 +3811,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   },
   {
+    title: "Happy Little Trees: Classes @ the Wright",
+    link: "https://www.zeffy.com/en-US/ticketing/emma-kalf-bob-ross-painting-classes",
+    description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
+    pubDate: "2026-04-11T12:00:00.000Z",
+    endDate: "2026-12-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg"
+  },
+  {
     title: "Pilates Mat",
     link: "https://ridgwaypilates.punchpass.com/catalogs/300",
     description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal.",
@@ -3820,6 +3857,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+  },
+  {
+    title: "Dallas Park Cemetery Tour",
+    link: "https://www.ouraycountyhistoricalsociety.org",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
+    pubDate: "2026-05-09T12:00:00.000Z",
+    endDate: "2026-10-10",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Dallas Park Cemetery ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
   },
   {
     title: "Yoga in the Park- Wednesday evenings",
@@ -4350,7 +4399,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4361,7 +4410,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4372,7 +4421,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4383,7 +4432,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4394,7 +4443,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4405,7 +4454,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4416,7 +4465,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4427,7 +4476,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4438,7 +4487,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5348,7 +5397,7 @@ const TELLURIDE_COM_EVENTS = [
   {
     title: "Fourth of July Drone Show",
     link: "https://www.telluride.com/event/fourth-of-july-drone-show/",
-    description: "Join the Town of Telluride for a Drone Show on the Fourth of July at dusk.",
+    description: "A community drone show hosted by the Town of Telluride takes place at dusk on the Fourth of July. The aerial display marks Independence Day in Telluride.",
     pubDate: "2026-07-04",
     source: "telluride-com",
     sourceLabel: "Telluride.com",

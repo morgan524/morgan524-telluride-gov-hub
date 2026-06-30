@@ -1,30 +1,26 @@
 {
-  "hash": "d154169fdede7ba4d66b140785547407e643bbd8",
-  "lede": "The biggest item this week is Town Council's first reading on Tuesday of Land Use Code amendments tied to Colorado's wildfire resilience requirements — real changes to how buildings get built in a box canyon that knows fire risk firsthand. Council will also hold a second work session on the Telluride Energy initiative, and the Housing Authority meets the same day to seat its new Resident Advisory Committee from a pool of fifteen tenant applicants. Across town, the week fills out with the Liquor Licensing Authority handling fourteen summer event permits, the BOCC weighing in on high-country road access with the Forest Service, and Ouray County's Planning Commission quietly working through land-use definitions that shape everything downstream.",
+  "hash": "1e2efe37d3b89f7c69704e5249f845b3d399d27e",
+  "lede": "The big one this week is Tuesday's Town Council meeting, where a first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements is on the table — rules that directly shape how buildings go up in this box canyon, and worth paying close attention to. Council will also hold a second work session on the Telluride Energy initiative, and the Housing Authority meets the same evening to seat the new Resident Advisory Committee and conduct a lottery drawing from tenant applicants across five Town properties. The rest of the week brings the BOCC, a liquor licensing slate heavy with summer events, and Ouray County quietly reworking its land-use definitions — the kind of foundational language that shapes everything downstream.",
   "notable": [
     {
       "id": 0,
-      "stake": "First reading of wildfire building-code changes affects every property in town."
+      "stake": "First reading of wildfire-driven Land Use Code changes affecting how buildings are built here."
     },
     {
       "id": 1,
-      "stake": "THA seats new Resident Advisory Committee; random drawing determines tenant representation."
+      "stake": "THA seats new Resident Advisory Committee and holds lottery drawing for housing applicants."
     },
     {
       "id": 3,
-      "stake": "Commission votes on expanded Colorado Ave. street closure for September event."
-    },
-    {
-      "id": 5,
-      "stake": "Fourteen special-event liquor permits up for approval across summer season."
+      "stake": "Vote on expanded Colorado Ave. street closure for September Autumn Classic event."
     },
     {
       "id": 6,
-      "stake": "BOCC interviews Planning Commission applicant whose vote shapes future land-use decisions."
+      "stake": "BOCC interviews Planning Commission applicant; Forest Service road-access policy discussed."
     },
     {
       "id": 7,
-      "stake": "Ouray land-use definitions under revision — how terms are set determines what gets built."
+      "stake": "Ouray County rewriting land-use definitions — foundational language that shapes future zoning decisions."
     }
   ]
 }
