@@ -86,6 +86,17 @@ const isGovMeetingTitle = (t) => /\b(town council|board of (county )?commissione
 // picks so it doesn't double up with the hero.
 const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushroom festival|telluride film festival|autumn classic|original thinkers|horror show/i;
 
+// Image fallbacks: some sources publish no photo (e.g. Norwood's town calendar),
+// which leaves a text-only card next to ones with images. When an event has no
+// image, the first matching entry here supplies one. Use freely-licensed /
+// public-domain art we host ourselves so it never breaks or carries usage
+// strings. (Norwood "Star Spangled Saturday Parade" → a public-domain c.1886
+// small-town July 4th parade painting, Howland, hosted at /img/email/.)
+const IMG_FALLBACKS = [
+  { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: 'https://livabletelluride.org/img/email/fourth-of-july-parade.jpg' },
+];
+const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test(title || '')) return f.img; return ''; };
+
 // ── Collect events from the source arrays ──
 const EVENT_ARRAYS = ['WILKINSON_EVENTS','SHERIDAN_EVENTS','ALIBI_EVENTS','SHERBINO_EVENTS','COMMUNITY_EVENTS','MUSIC_ON_THE_GREEN','TELLURIDE_FARMERS_MARKET','BEACON_EVENTS','CHAMBER_MUSIC_EVENTS','TELLURIDE_SCIENCE_EVENTS','TELLURIDE_FOUNDATION_EVENTS','TF_FOUNDATION_EVENTS','TELLURIDE_VENTURE_EVENTS','OURAY_COUNTY_EVENTS','NORWOOD_EVENTS','MOUNTAIN_VILLAGE_EVENTS','TELLURIDE_COM_EVENTS','KOTO_COMMUNITY_EVENTS','OURAY_RIDGWAY_EVENTS','SHERIDAN_OPERA_EVENTS'];
 const SITE = 'https://livabletelluride.org';
@@ -104,7 +115,7 @@ for (const name of EVENT_ARRAYS) {
       title: e.title, date,
       href: e.link || e.href || e.url || '',
       summary: (e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim(),
-      time: e.time || '', location: e.location || '', img: e.img || e.imageUrl || '',
+      time: e.time || '', location: e.location || '', img: e.img || e.imageUrl || imgFallback(e.title),
       isFestival: !!e.isFestival, source: e.sourceLabel || e.source || name,
     });
   }
