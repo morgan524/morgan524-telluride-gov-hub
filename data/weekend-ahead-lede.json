@@ -1,4 +1,4 @@
 {
-  "_comment": "The 'Weekend Ahead' intro for the Thursday events email. Edit this file — no code change needed. Each key is the week-start date (the THURSDAY the email covers, YYYY-MM-DD); the Thursday workflow computes that automatically. Add a new dated entry before each weekend's send. If a weekend has no entry, the email uses 'default'.",
+  "_comment": "The 'Weekend Outlook' intro for the Thursday events email. Edit this file — no code change needed. Each key is the weekend-start date (the FRIDAY the weekend begins, YYYY-MM-DD; the email sends Thursday and covers Fri-Sun); the workflow computes that automatically. Add a new dated entry before each weekend's send. If a weekend has no entry, the email uses 'default'.",
   "default": "A few of the best things happening around the box canyon this weekend — concerts, markets, and gatherings worth getting out for. Pick one and go."
 }

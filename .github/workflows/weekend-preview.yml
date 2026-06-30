@@ -1,6 +1,6 @@
 name: Weekend Email Preview
 
-# Renders the Thursday "Weekend Ahead" events email via scripts/weekly-email.js
+# Renders the Thursday "Weekend Outlook" events email via scripts/weekly-email.js
 # in WEEKEND mode (from the live gov-data.js + gov-helpers.js — curated
 # best-of-the-weekend events, no meetings) and emails a review copy to info@
 # every THURSDAY morning. The run also saves the paste-ready HTML
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       week_start:
-        description: 'Weekend start date YYYY-MM-DD — the Thursday the email covers (override the auto-detected upcoming Thursday).'
+        description: 'Weekend start date YYYY-MM-DD — the FRIDAY the weekend begins (override the auto-detected upcoming Friday). The email sends Thursday and covers Fri–Sun.'
         required: false
         default: ''
 
@@ -45,15 +45,14 @@ jobs:
           curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
           curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
           # Honour the workflow_dispatch input when one is provided, otherwise
-          # use the upcoming Thursday. `date -d thursday` returns today when run
-          # on a Thursday (the cron day), so the scheduled run targets the same
-          # day's Thu–Sun weekend.
+          # use the upcoming Friday — the email sends Thursday (cron day) and
+          # covers Fri–Sun, so `date -d friday` from Thursday gives tomorrow.
           if [ -n "$WEEK_START_INPUT" ]; then
             WS="$WEEK_START_INPUT"
           else
-            WS=$(date -u -d "thursday" +%F)
+            WS=$(date -u -d "friday" +%F)
           fi
-          LABEL="$(date -u -d "$WS" '+%B %-d') - $(date -u -d "$WS +3 days" '+%B %-d, %Y')"
+          LABEL="$(date -u -d "$WS" '+%B %-d') - $(date -u -d "$WS +2 days" '+%B %-d, %Y')"
           echo "Weekend start: $WS  ·  Label: $LABEL"
           WEEKEND=1 WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-preview.html 2>&1 | tee /tmp/wp.log
           WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-mailchimp.html

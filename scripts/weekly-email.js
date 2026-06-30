@@ -26,11 +26,11 @@ const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
 // WEEKEND mode (WEEKEND=1): render the Thursday "Weekend Ahead" events email
 // instead of the Monday "Week Ahead". Same data/render machinery, but a shorter
-// 4-day window (Thu–Sun), NO meetings section, and a curated best-of-the-weekend
+// 3-day window (Fri–Sun; Thursday excluded), NO meetings section, and a curated best-of-the-weekend
 // events list (top events by featuredScore, not one-per-day). WEEK_START is the
 // Thursday the email covers. Everything below is unchanged for the weekly path.
 const WEEKEND = !!process.env.WEEKEND;
-const WINDOW_DAYS = WEEKEND ? 4 : 7;
+const WINDOW_DAYS = WEEKEND ? 3 : 7;   // weekend email covers Fri–Sun (sent Thursday)
 const EMAIL_TITLE = WEEKEND ? 'The Weekend Outlook' : 'The Week Ahead';
 const KICKER = WEEKEND ? 'Livable Telluride · Weekend Outlook' : 'Livable Telluride · Weekly Update';
 const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
@@ -138,17 +138,50 @@ const FEATURED_OVERRIDES = {
   '2026-07-04': { match: /rundola/i, link: 'https://telluridefoundation.org/rundola/' },  // Telluride Foundation Rundola — Run for Good
 };
 if (WEEKEND) {
-  // Weekend Ahead: a curated "best of the weekend" list — the top events across
-  // the whole 4-day window by featuredScore (deduped by tkey), capped, then
-  // ordered by date for display. Not one-per-day, so a packed Saturday can
-  // surface more than one strong pick.
+  // Weekend Outlook: a curated "best of the weekend" list across the Fri–Sun
+  // window. Two goals: quality (rank by featuredScore; drop the penalized
+  // drop-in/class/clinic items) and GEOGRAPHIC SPREAD — a regional roundup
+  // shouldn't be a dozen Telluride events. So we fill town-diverse first (≤2
+  // per town, by score, which guarantees the smaller towns' happenings — e.g.
+  // a Norwood or Ouray 4th-of-July event — surface), then top up to the cap
+  // allowing event-rich towns more.
+  const CAP = 12;
+  // Lightweight town bucket for diversity only (display still uses townLabel).
+  // Prefer location/title; the OURAY_RIDGWAY source name carries both towns, so
+  // never infer town from it — fall through to the per-source names below.
+  const evTown = (e) => {
+    const lt = ((e.location || '') + ' ' + (e.title || '')).toLowerCase();
+    if (/mountain village/.test(lt)) return 'mountain village';
+    if (/norwood/.test(lt)) return 'norwood';
+    if (/ridgway/.test(lt)) return 'ridgway';
+    if (/ouray/.test(lt)) return 'ouray';
+    if (/nucla|naturita/.test(lt)) return 'nucla';
+    if (/\brico\b/.test(lt)) return 'rico';
+    if (/ophir/.test(lt)) return 'ophir';
+    if (/telluride/.test(lt)) return 'telluride';
+    const src = (e.source || '').toLowerCase();
+    if (/mountain village/.test(src)) return 'mountain village';
+    if (/norwood/.test(src)) return 'norwood';
+    if (/telluride/.test(src)) return 'telluride';
+    return 'other';
+  };
   const seen = new Set();
-  chosen = evts
-    .filter((e) => inWeek(e.date))
+  const uniq = evts
+    .filter((e) => inWeek(e.date) && featuredScore(e) >= 0)   // drop penalized classes/clinics
     .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
-    .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
-    .slice(0, 8)
-    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
+    .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+  const fillToCap = (maxPerTown) => {
+    const perTown = {}; chosen.forEach((e) => { const t = evTown(e); perTown[t] = (perTown[t] || 0) + 1; });
+    for (const e of uniq) {
+      if (chosen.includes(e)) continue;
+      const t = evTown(e); if ((perTown[t] || 0) >= maxPerTown) continue;
+      perTown[t] = (perTown[t] || 0) + 1; chosen.push(e);
+      if (chosen.length >= CAP) return;
+    }
+  };
+  fillToCap(2);   // pass 1: ≤2 per town → smaller towns' events surface
+  fillToCap(5);   // pass 2: top up to the cap, allowing event-rich towns more
+  chosen.sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
 } else {
   for (const day of days) {
     const list = (byDay[day] || []).sort((a, b) => (featuredScore(b) - featuredScore(a)) || ((featuredStartHour(a.time) || 99) - (featuredStartHour(b.time) || 99)));
