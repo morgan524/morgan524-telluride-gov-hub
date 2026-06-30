@@ -1,0 +1,53 @@
+name: Digest Refresh
+
+# Regenerates the Digest Review Desk's content from live site data and commits
+# it, so digest-review.html always shows the UPCOMING sends:
+#   - weekend = the coming Fri–Sun (the Thursday "Weekend Outlook")
+#   - weekly  = the coming Mon–Sun (the Monday "Week Ahead")
+# Runs daily; also dispatchable. Commits only when the rendered output changes.
+on:
+  schedule:
+    - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Render digests + manifest from live data
+        run: |
+          set -eo pipefail
+          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
+          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          WE=$(date -u -d "friday" +%F)     # coming Friday (today if Fri)
+          WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
+          WE_LABEL="$(date -u -d "$WE" '+%B %-d') - $(date -u -d "$WE +2 days" '+%B %-d, %Y')"
+          WK_LABEL="$(date -u -d "$WK" '+%B %-d') - $(date -u -d "$WK +6 days" '+%B %-d, %Y')"
+          WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WE" "$WE_LABEL" digest/weekend.html
+          node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
+          export WE_SUBJ="The Weekend Outlook - $WE_LABEL"
+          export WK_SUBJ="The Week Ahead - $WK_LABEL"
+          export WE_COV="Fri $(date -u -d "$WE" '+%b %-d') to Sun $(date -u -d "$WE +2 days" '+%b %-d, %Y')"
+          export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
+          export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
+          python3 - <<'PY'
+          import json, os
+          m={"generated":os.environ["GEN"],"digests":{
+            "weekend":{"name":"Weekend Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"audience":"Weekly Update","file":"digest/weekend.html"},
+            "weekly":{"name":"Week Ahead","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"audience":"Weekly Update","file":"digest/week.html"}}}
+          open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
+          print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
+          PY
+      - name: Commit if changed
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add digest/
+          if git diff --cached --quiet; then echo "no digest changes"; else git commit -m "Digest refresh $(date -u +%F)" && git push; fi
