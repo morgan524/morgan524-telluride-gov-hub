@@ -31,8 +31,8 @@ const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft 
 // Thursday the email covers. Everything below is unchanged for the weekly path.
 const WEEKEND = !!process.env.WEEKEND;
 const WINDOW_DAYS = WEEKEND ? 4 : 7;
-const EMAIL_TITLE = WEEKEND ? 'The Weekend Ahead' : 'The Week Ahead';
-const KICKER = WEEKEND ? 'Livable Telluride · Weekend Events' : 'Livable Telluride · Weekly Update';
+const EMAIL_TITLE = WEEKEND ? 'The Weekend Outlook' : 'The Week Ahead';
+const KICKER = WEEKEND ? 'Livable Telluride · Weekend Outlook' : 'Livable Telluride · Weekly Update';
 const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
 
 // ── Week Ahead lede — edit data/week-ahead-lede.json (no code change needed).
@@ -567,7 +567,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
 let out = html;
 if (PREVIEW) {
   const banner = WEEKEND
-    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Ahead" events email. Look it over, then approve to send.<br><span style="font-weight:400;">To change the intro, edit data/weekend-ahead-lede.json (key ${WEEK_START}) and re-run the workflow.</span></td></tr>\n`
+    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">To change the intro, edit data/weekend-ahead-lede.json (key ${WEEK_START}) and re-run the workflow.</span></td></tr>\n`
     : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">To change the intro, just reply to this email with the new text (week-key ${WEEK_START}).</span></td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
