@@ -381,7 +381,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -432,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
@@ -551,13 +551,25 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Stark, Dalton stake early lead for Telluride Town Council",
+    title: "Melat Kiros wins Democratic nomination for U.S. House in Colorado's 1st Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Melat Kiros has won the Democratic nomination for U.S. House in Colorado's 1st Congressional District. The 1st District covers the Denver metro area, well removed from the Telluride region, but it's part of the broader Colorado political landscape locals follow.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_da646672-16a3-5d5a-a515-847b88d164b8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Stark wins council seat; Dalton and Uihlein remain close",
     source: "Telluride Times",
     date: "July 1, 2026",
     firstSeen: "2026-07-01",
     newsTopic: "government",
-    copy: "A surge of in-person voting on Election Day slowed the process of counting the votes in San Miguel County, but County Clerk Michael Wyszynski posted preliminary results within an hour of the polls closing, with the local race for Telluride…",
-    claudeSummary: false,
+    copy: "Christian Stark secured a Telluride Town Council seat, while the second seat remained tight between Dalton and Uihlein on election night. Both contested seats will be filled at the July 21 monthly council meeting. The special election was triggered by a mid-term resignation and a charter-required public vote on an appointed seat.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_dde69f5d-8cae-4bd7-a7f8-c993964bb25b.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e5ec96-0503-4b3a-b54e-b0b54bfb0ce2/6a4477a9cec0c.image.png",
     imgHiRes: true
@@ -604,8 +616,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 1, 2026",
     firstSeen: "2026-07-01",
     newsTopic: "education",
-    copy: "Kelley Dennison wins Republican nomination for U.S. House in Colorado's 2nd Congressional District.",
-    claudeSummary: false,
+    copy: "The article text here is mostly site navigation and unrelated content fragments — the actual story on Dennison's nomination doesn't include substantive detail beyond the headline. Kelley Dennison won the Republican nomination for Colorado's 2nd Congressional District U.S. House seat. The 2nd District covers the western slope, including the Telluride area.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_81aa76af-e062-5bea-8e3b-75d565c5e369.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -628,8 +640,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 1, 2026",
     firstSeen: "2026-07-01",
     newsTopic: "education",
-    copy: "Manny Rutinel wins Democratic nomination for U.S. House in Colorado's 8th Congressional District.",
-    claudeSummary: false,
+    copy: "Manny Rutinel has won the Democratic nomination for Colorado's 8th Congressional District U.S. House seat. The 8th District covers the northern Front Range corridor, well east of the Western Slope.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_00aac81e-43a7-5e27-bb8d-c01435a45f13.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
@@ -739,7 +751,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Salida poet Lawton Eddy headlines the Talking Gourds Bardic Trails virtual series on July 7. She's been performing since 2005, co-founded the Sparrows Poetry Festival, and published her debut collection in 2021. The free monthly event is hosted by the Telluride Institute — check tellurideinstitute.org for the Zoom link.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_b3bd6c35-6ee0-4878-8a7f-ea758f77a62c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/26/9265a43c-22e7-4195-9d96-9109f7e864bf/6a443530476f2.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/26/9265a43c-22e7-4195-9d96-9109f7e864bf/6a443530476f2.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Science of Cocktails, with a twist",
@@ -750,7 +763,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Pinhead Institute's Science of Cocktails event pairs local mixologists with science — attendees sample clever drinks while judges award prizes based on taste and the chemistry behind each recipe. Proceeds support Pinhead's free STEM programs, which reach over 5,000 students across rural southwestern Colorado. Tickets at pinheadinstitute.org.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_644ff9a0-00ad-4553-8188-cabaa336957d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c3/ac34666e-1877-4477-86a0-f225c5c27b11/6a443643643d6.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c3/ac34666e-1877-4477-86a0-f225c5c27b11/6a443643643d6.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Holding one another up",
@@ -758,10 +772,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 30, 2026",
     firstSeen: "2026-07-01",
     newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "A Telluride community member named Julie Garel writes about losing her friend Sid to a shooting at a Montana bar. She reflects on grief, the limits of self-protective beliefs, and finding unexpected comfort — from a flight attendant, from Sid's friends holding each other at his memorial.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1a9ad931-4b4a-414e-96d4-64afc133dfa3.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Julie Garel",
+    imgHiRes: true
   },
   {
     title: "Grateful for Road and Bridge",
@@ -772,8 +788,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "San Miguel County Road and Bridge recently graded a rough mountain road and applied magnesium chloride for dust after a resident reached out with concerns. The work made a real difference for daily drivers, though speeds have crept up since the improvements. The road is still dangerous — 15 mph, low gear.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_67f8709f-5b97-464a-93dd-be56a24c067b.html",
-    img: "",
-    letterAuthor: "Sue Hill"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Sue Hill",
+    imgHiRes: true
   },
   {
     title: "Thank you, PI Fund",
@@ -781,10 +798,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "June 30, 2026",
     firstSeen: "2026-07-01",
     newsTopic: "community",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
+    copy: "A 17-year-old local skier attended Silverton Avalanche School with support from the PI Fund, gaining hands-on training in avalanche awareness, rescue techniques, and backcountry risk management. The course included snow pits, rescue gear practice, and a live survival simulation.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4de1569b-6321-4a14-b3c3-435941f56b0a.html",
-    img: ""
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Owen Stewart",
+    imgHiRes: true
   },
   {
     title: "And more PI Fund gratitude",
@@ -795,8 +814,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "A local writer shares gratitude for receiving support from the Peter Inglis Avalanche Education Fund, which covered their Rec Level 1 avalanche course with Mountain Trip. The three-day course blended classroom and field time, with guides helping students understand backcountry risk without discouraging participation. The fund continues to make this kind of hands-on safety education accessible to community members.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_aca236c5-262a-40c0-92a0-5ca6da97764a.html",
-    img: "",
-    letterAuthor: "Your"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Your",
+    imgHiRes: true
   },
   {
     title: "Telluride AIDS Benefit announces historic giving year",
@@ -807,7 +827,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Telluride AIDS Benefit had a record-breaking fundraising year in 2026, with proceeds going to local, regional, and international partners providing HIV prevention, treatment, housing, and care. National HIV Testing Day falls June 27. A fundraising cookout is set for July 3 at the Madeline Hotel.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_72969d70-5592-4bf4-9c54-4a42daa8ecbf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/57/357b17a2-9558-4e0f-9cf9-588495ad7e48/6a44344097ac7.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/57/357b17a2-9558-4e0f-9cf9-588495ad7e48/6a44344097ac7.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Don't replace our sense of place",
@@ -818,8 +839,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Telluride's character — the scale, the streets, the views — didn't happen by accident. It was shaped over generations through deliberate decisions, restraint, and trade-offs by people who understood that not every opportunity is worth taking. The question now is whether that stewardship continues.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_5edf3551-b84c-440f-ab67-f27b07af37f9.html",
-    img: "",
-    letterAuthor: "Michael Saftler"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Michael Saftler",
+    imgHiRes: true
   },
   {
     title: "Pickleballers need space",
@@ -830,8 +852,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Pickleball has grown from painted lines on existing courts to a regular fixture in the park, with free reserved drop-in times three days a week. Now there's a call to dedicate the planned oval paving project to pickleball rather than basketball. Tennis players pay per reservation; pickleball players don't.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_34ab697b-0660-4085-ab3a-3d0068fd8da9.html",
-    img: "",
-    letterAuthor: "Eliot Brown"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Eliot Brown",
+    imgHiRes: true
   },
   {
     title: "Toxic plants for cats",
@@ -842,7 +865,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Lilies and daylilies are the most dangerous plants for cats — even small amounts can cause fatal kidney failure within 48 hours. Tulips, daffodils, sago palms, and common houseplants like aloe and azaleas can also sicken cats. The ASPCA's toxic plant database is a good resource before bringing a new cat home.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_54ce034f-4de6-4d19-861a-e1f403f14173.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/0a/a0ab000e-8b45-47a2-a486-ff75d39e3329/6a44314665cd3.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/0a/a0ab000e-8b45-47a2-a486-ff75d39e3329/6a44314665cd3.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Game of cones",
@@ -853,7 +877,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Chef Gavin has been running 221 South Oak since 2000 and added a second spot, Liz, two years ago at 200 West Colorado Avenue. Liz focuses on affordable, healthy rice bowls, breakfast options, and quality meats with no added sugar. This summer, Liz is adding scooped ice cream.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_3c8d5f3f-d2df-4469-b121-8a7692ae7e41.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4eea3128-d385-40a6-9b04-af1aaffa6269/6a418cdd585d3.image.jpg"
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4eea3128-d385-40a6-9b04-af1aaffa6269/6a418cdd585d3.image.jpg",
+    imgHiRes: true
   },
   {
     title: "Plan to convert the Town Park oval into a concrete space sees pushback",
@@ -3370,48 +3395,59 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772762?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-06-30T16:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935713?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-06-30T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
-  },
-  {
-    title: "Poderosa Grupo de Lectura",
-    link: "https://telluridelibrary.libcal.com/event/16361741?hs=a",
-    description: "5:00 PM – 6:00 PM · Vamos a discutir el libro (Theo de Golden) y compartir nuestros pensamientos. Este es un grupo de lectura y necesitas recoger su libro con Claudia. Por favor de registrarse con Claudia",
-    pubDate: "2026-06-30T23:00:00.000Z",
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610074?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-07-01T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_13_38_20.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
   },
   {
-    title: "Punk Science with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/16297532?hs=a",
-    description: "5:15 PM – 6:00 PM",
-    pubDate: "2026-06-30T23:15:00.000Z",
+    title: "Mountain Village Farmers Marketshow: Gerald Robinson Magic",
+    link: "https://telluridelibrary.libcal.com/event/15564455?hs=a",
+    description: "11:00 AM – 12:00 PM · Gerald Robinson is a professional magician from Denver, Colorado. He has been learning and performing magic since he was 8 years old. Now at 25, he has performed all over the world including Germany, UK, and Canada. Most notably he is known for street performing on the Pearl Street Mall in Boulder, CO, and the resident magician at the former Enigma Bazaar. Most recently Gerald was one of the house magicians at the world famous Casa Bonita, in Denver, CO.",
+    pubDate: "2026-07-01T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Mountain Village Market",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_28_47.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767655?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-07-01T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Sweet Sounds - Live Music and Sweet Treats! Aubrey Mable",
+    link: "https://telluridelibrary.libcal.com/event/16604746?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us on the library patio for Sweet Sounds , an afternoon of live local music and sweet treats! This free, all-ages program invites you to relax, connect, and enjoy the sounds of our community. Tasty treats will be available while supplies last. Stay for the full performance or drop in for a bit and soak up the atmosphere. This program was made possible by the Augment Music Project.  Summer Schedule: June 3rd: Grassblasters Bluegrass (Tom Nading on Guitar, Sam Burgess on Bass, and Danny D&#39;Alessandro on Banjo) July 1st: Aubrey Mable of LVDY August 5th: Speakeasy Jazz Trio (Donavan Dailey on Guitar, Danny D&#39;Alessandro on Sax, John Brown on Bass)",
+    pubDate: "2026-07-01T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_25_09_49_26.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_08_52.jpg"
+  },
+  {
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935733?hs=a",
+    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-07-01T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_51_58.png"
   }
 ];
 
@@ -3473,18 +3509,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Alibi Bday Celebration w/ Horse Bitch",
-    link: "https://www.alibitelluride.com/calendar#eca-event=alibi-bday-celebration-w-horse-bitch",
-    description: "Portion of ticket sales will be donated to KOTO Horse Bitch is a genre-defyin...",
-    pubDate: "2026-06-30",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/af4d0323-57c7-40e5-9fc4-43e5fb557081/-/crop/5475x2735/0,345/-/preview/"
-  },
   {
     title: "Wim Tapley & the Cannons w/ Waxpool",
     link: "https://www.alibitelluride.com/calendar#eca-event=wim-tapley-and-the-cannons",
@@ -4100,6 +4124,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
+    title: "Swimming Classes for Kids",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
+    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
+    pubDate: "2026-06-01T12:00:00.000Z",
+    endDate: "2026-07-27",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
+  },
+  {
     title: "True Grit Historic Walking Tours",
     link: "https://truegrittours.org/true-grit-tours ",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -4110,18 +4146,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "Ongoing - Colorado Stories - Susan Clark & Alex Mendard Art Exhibition",
-    link: "https://susanclarkart.com",
-    description: "Susan Clark's oil pastel and Alex Menard's watercolor work will be on display in the Space to Create gallery - located in the lobby of the building near Kate's Place - through June. Artist Bios: Alex Menard: Retired Landscape Designer/ Installer, now watercolorist and linocut printmaker. Artist profile here Susan Clark With my art, I capture the spectacular interplay of color, light, and image and then distill it down, while still maintaining the original awe. I like to present the viewer with a different way of seeing images while evoking a sense of enjoyment and creating a smile. My “joie de vivre” is exploring with harmonious color & disappearing for hours to create whimsical and colorful expressive paintings. I paint the Colorado mountains and aspen trees, which surround me and provide a quiet escape. …",
-    pubDate: "2026-06-08T12:00:00.000Z",
-    endDate: "2026-06-30",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create ",
-    imageUrl: "https://localist-images.azureedge.net/photos/53170905602603/huge/89412c5d44050148024816c075b55e79851a67c1.jpg"
   },
   {
     title: "Evenings of History 2026 @ the Wright",
@@ -4194,17 +4218,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
-    title: "CORAL SKYE",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-06-30T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "Live Music- Bright Light Social Hour",

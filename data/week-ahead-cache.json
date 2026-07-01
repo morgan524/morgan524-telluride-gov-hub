@@ -1,18 +1,18 @@
 {
-  "hash": "93f1fbda8bdd3c43636301981706e7637086b785",
-  "lede": "The most consequential thing happening this week isn't a concert or a cookout — it's a quiet worksession at the Telluride Housing Authority Subcommittee on Wednesday, where staff will dig into whether the town's lending guidelines actually work for mixed-use housing structures, a question that directly affects who can buy into deed-restricted units here. Wednesday also brings the Board of County Commissioners, where a Planning Commission alternate seat gets filled and the Forest Service joins a conversation about high-country road access policy. Ouray County's Planning Commission is meanwhile reopening its Land Use Code definitions — the kind of foundational language that shapes every zoning call that follows.",
+  "hash": "551edb1c6622c10985fe7136c3d0451df559ed15",
+  "lede": "The Housing Authority subcommittee meets Wednesday to wrestle with whether the town's lending guidelines — currently locked to conventional fixed-rate mortgages — actually work for mixed-use properties, a question that could matter a lot for who gets to buy into local housing. The Liquor Licensing Authority is also handling 14 special-event permits that same day, tracking a summer calendar that's clearly in full swing, and Ouray County's Planning Commission opens a work session on land-use code definitions that may sound dry but quietly sets the rules for what gets built and where.",
   "notable": [
     {
       "id": 2,
-      "stake": "Lending rule changes could expand or restrict who qualifies for local deed-restricted housing."
+      "stake": "Lending rule change could expand or restrict who qualifies for workforce housing."
     },
     {
-      "id": 4,
-      "stake": "Planning Commission seat filled; road access policy with Forest Service could set precedent."
+      "id": 3,
+      "stake": "14 special-event liquor permits up for approval, shaping summer event access."
     },
     {
       "id": 5,
-      "stake": "Land use definition changes shape what triggers county review for years to come."
+      "stake": "Definition changes to Ouray Land Use Code could reshape what triggers development review."
     }
   ]
 }
