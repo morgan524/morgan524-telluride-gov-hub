@@ -381,7 +381,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -432,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
@@ -539,18 +539,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Plan to convert the Town Park oval into a concrete space sees pushback",
-    source: "Telluride Times",
-    date: "June 30, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "recreation",
-    copy: "The Town Park oval is set to be paved into a concrete multi-use surface — including sports courts — with site prep starting this fall and concrete work in spring 2027, at a phase-two cost of $1.33M. The plan has been in design documents since 2020 and cleared HARC review and council approval, with the Town citing year-round usability and drainage fixes. Muscatel Flats neighbors are pushing back, circulating a petition with 200+ signatures over lost green gathering space and pickleball noise concerns.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_b989f2dd-f756-4e51-b0f2-f8c897136e43.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/17/7176ca8b-edea-48f4-b9ca-4538be741ffc/6a42d31a450c5.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Colorado Democrats choose between insurgent progressives and veteran incumbents",
     source: "Telluride Times",
     date: "June 30, 2026",
@@ -560,6 +548,323 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_d46744ac-3411-5bd7-97b9-2e30e434f7f0.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ae/caeecd6d-45ec-51b9-900c-b69d37e7b6d9/6a43435cc8de2.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Stark, Dalton stake early lead for Telluride Town Council",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "government",
+    copy: "A surge of in-person voting on Election Day slowed the process of counting the votes in San Miguel County, but County Clerk Michael Wyszynski posted preliminary results within an hour of the polls closing, with the local race for Telluride…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_dde69f5d-8cae-4bd7-a7f8-c993964bb25b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e5ec96-0503-4b3a-b54e-b0b54bfb0ce2/6a4477a9cec0c.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Dwayne Romero wins Democratic nomination for U.S. House in Colorado's 3rd Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Dwayne Romero has won the Democratic nomination for U.S. House in Colorado's 3rd Congressional District. That's the seat covering this region, so it's worth keeping an eye on as the general election takes shape.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_9934cc04-fb71-53d1-99bb-4dc55a357486.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Phil Weiser wins Democratic nomination for governor in Colorado",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Phil Weiser won the Democratic nomination for governor of Colorado. He'll face the Republican nominee in the general election for the state's top office.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_284f0737-7f3d-54d9-a0ad-deb2423ba68a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Michael Allen wins Republican nomination for attorney general in Colorado",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "The article text here is mostly navigation noise and unrelated snippets — there isn't enough substantive content about Michael Allen's Republican nomination for attorney general to summarize accurately. Only the headline and a single line confirm the result.\n\nMichael Allen has won the Republican nomination for Colorado attorney general. That's the extent of what the article actually establishes — no primary date, margin, or opponent details are included in the provided text.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_47e6d1ad-e489-5a7b-af91-95d73fb4dbe5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Kelley Dennison wins Republican nomination for U.S. House in Colorado's 2nd Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Kelley Dennison wins Republican nomination for U.S. House in Colorado's 2nd Congressional District.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_81aa76af-e062-5bea-8e3b-75d565c5e369.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Jessica Killin wins Democratic nomination for U.S. House in Colorado's 5th Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Jessica Killin has won the Democratic nomination for U.S. House in Colorado's 5th Congressional District. The 5th has long leaned heavily Republican, so this sets up a general election contest worth watching as the fall campaign takes shape.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_21c60642-616e-56db-b31c-a7e21f439974.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Manny Rutinel wins Democratic nomination for U.S. House in Colorado's 8th Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Manny Rutinel wins Democratic nomination for U.S. House in Colorado's 8th Congressional District.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_00aac81e-43a7-5e27-bb8d-c01435a45f13.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "John Hickenlooper wins Democratic nomination for U.S. Senate in Colorado",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "John Hickenlooper has won the Democratic nomination for U.S. Senate in Colorado. The race now moves to the general election.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d5fe6584-23a7-5f4a-9641-c9d530043638.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Jeff Hurd wins Republican nomination for U.S. House in Colorado's 3rd Congressional District",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "education",
+    copy: "Jeff Hurd has won the Republican nomination for U.S. House in Colorado's 3rd Congressional District, which covers this region. That sets him up as the GOP candidate heading into the general election for the seat that represents Western Colorado.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_059d9514-60de-5d74-8edc-a1af2c836925.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Jena Griswold wins Democratic nomination for attorney general in Colorado",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "The article text provided doesn't contain enough actual reporting on the Griswold story to summarize meaningfully — it's mostly site boilerplate and unrelated headlines mixed together. Only the headline itself carries any real information.\n\nHere's a summary based solely on what's confirmed in the text:\n\nJena Griswold has won the Democratic nomination for Colorado attorney general. No further details about the race, margin, or opponents were included in the available article text.\n\n---\n\n**Want me to write the card once you have the full article text?** I can turn it around quickly.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_70a8a5ff-fe7c-585d-9a10-3432695e1bf3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Amanda Gonzalez wins Democratic nomination for secretary of state in Colorado",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "The article text here is mostly site boilerplate and navigation clutter — the actual story is thin. What's clear: Amanda Gonzalez won the Democratic nomination for Colorado Secretary of State. That's the whole of it, straight from the AP wire.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_923cf464-2af0-59cb-89b2-47f452a83136.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Hurt dance",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "A writer bikes to Secret Lake on a steep, rocky dirt road in the summer heat — tougher than remembered. The ride mixes physical struggle with a fond memory of stumbling onto a Basque sheepherder's camp years back. Quiet, honest writing about this country and what it does to you.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_fecc9745-e7bc-4d2f-a7d3-8eb939a3165b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/13/013ba86d-2271-48b4-8ba7-ccde638dd66f/6a4453ff602dc.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A monumental superbloom",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "health",
+    copy: "Monument plant is having a superbloom across the San Juans this summer, triggered by the unusually wet July and August of 2022 — exactly four years ago, which matches researcher Dr. David Inouye's long-term findings on what cues the plant to begin forming a flower stalk. These monocarpic plants spend decades storing energy before producing one towering bloom, then dying, with some documented as old as 46 years before they ever flowered.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_213717d7-2629-45a1-a6ba-16dfae0e8eb4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ed/aed2f81e-d2a1-4702-a065-c65299ec9c3e/6a444094216d6.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Celebrate America 250 and Colorado 150 in Norwood",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Norwood Parks and Rec has a $5 Bucket List card tied to America's 250th and Colorado's 150th, with 20 local activities — hiking, fishing, the farmers market, even sitting in the new Town Park gazebo. Rack up points for prize drawings held Aug. 8 at Music on the Mesa. Cards available July 4 at Star Spangled Saturday and Wednesdays at The Livery.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/local/article_126335a5-be8b-4290-a374-899280ca4b26.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d0/cd0b507e-90af-4e41-9682-e45c36510d0e/6a44393c7e0bb.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Madeline to host 6th annual Alpine Cookout",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "The Madeline Hotel in Mountain Village is hosting its 6th annual Alpine Cookout over July 4th weekend, with a Chef's Table dinner July 2, the main outdoor cookout July 3 (4–7 p.m., $85 adults/$25 kids), and the Independence Day parade July 4. This year's chefs include James Beard winners Dean Fearing and Mark Kiffin, Iron Chef winner Viet Pham, and others. A portion of proceeds benefits the Telluride AIDS Benefit.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_390ec011-df03-4da2-b07c-f078ab6607ab.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/c9/cc9aafc0-c2cc-425c-be9b-9548dcc32224/6a443808cdd23.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Lawton Eddy of Salida features at Bardic Trails on July 7",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "recreation",
+    copy: "Salida poet Lawton Eddy headlines the Talking Gourds Bardic Trails virtual series on July 7. She's been performing since 2005, co-founded the Sparrows Poetry Festival, and published her debut collection in 2021. The free monthly event is hosted by the Telluride Institute — check tellurideinstitute.org for the Zoom link.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_b3bd6c35-6ee0-4878-8a7f-ea758f77a62c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/26/9265a43c-22e7-4195-9d96-9109f7e864bf/6a443530476f2.image.jpg"
+  },
+  {
+    title: "Science of Cocktails, with a twist",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Pinhead Institute's Science of Cocktails event pairs local mixologists with science — attendees sample clever drinks while judges award prizes based on taste and the chemistry behind each recipe. Proceeds support Pinhead's free STEM programs, which reach over 5,000 students across rural southwestern Colorado. Tickets at pinheadinstitute.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_644ff9a0-00ad-4553-8188-cabaa336957d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/c3/ac34666e-1877-4477-86a0-f225c5c27b11/6a443643643d6.image.jpg"
+  },
+  {
+    title: "Holding one another up",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1a9ad931-4b4a-414e-96d4-64afc133dfa3.html",
+    img: ""
+  },
+  {
+    title: "Grateful for Road and Bridge",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "infrastructure",
+    copy: "San Miguel County Road and Bridge recently graded a rough mountain road and applied magnesium chloride for dust after a resident reached out with concerns. The work made a real difference for daily drivers, though speeds have crept up since the improvements. The road is still dangerous — 15 mph, low gear.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_67f8709f-5b97-464a-93dd-be56a24c067b.html",
+    img: "",
+    letterAuthor: "Sue Hill"
+  },
+  {
+    title: "Thank you, PI Fund",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4de1569b-6321-4a14-b3c3-435941f56b0a.html",
+    img: ""
+  },
+  {
+    title: "And more PI Fund gratitude",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "A local writer shares gratitude for receiving support from the Peter Inglis Avalanche Education Fund, which covered their Rec Level 1 avalanche course with Mountain Trip. The three-day course blended classroom and field time, with guides helping students understand backcountry risk without discouraging participation. The fund continues to make this kind of hands-on safety education accessible to community members.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_aca236c5-262a-40c0-92a0-5ca6da97764a.html",
+    img: "",
+    letterAuthor: "Your"
+  },
+  {
+    title: "Telluride AIDS Benefit announces historic giving year",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "land-use",
+    copy: "The Telluride AIDS Benefit had a record-breaking fundraising year in 2026, with proceeds going to local, regional, and international partners providing HIV prevention, treatment, housing, and care. National HIV Testing Day falls June 27. A fundraising cookout is set for July 3 at the Madeline Hotel.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_72969d70-5592-4bf4-9c54-4a42daa8ecbf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/57/357b17a2-9558-4e0f-9cf9-588495ad7e48/6a44344097ac7.image.jpg"
+  },
+  {
+    title: "Don't replace our sense of place",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Telluride's character — the scale, the streets, the views — didn't happen by accident. It was shaped over generations through deliberate decisions, restraint, and trade-offs by people who understood that not every opportunity is worth taking. The question now is whether that stewardship continues.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_5edf3551-b84c-440f-ab67-f27b07af37f9.html",
+    img: "",
+    letterAuthor: "Michael Saftler"
+  },
+  {
+    title: "Pickleballers need space",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Pickleball has grown from painted lines on existing courts to a regular fixture in the park, with free reserved drop-in times three days a week. Now there's a call to dedicate the planned oval paving project to pickleball rather than basketball. Tennis players pay per reservation; pickleball players don't.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_34ab697b-0660-4085-ab3a-3d0068fd8da9.html",
+    img: "",
+    letterAuthor: "Eliot Brown"
+  },
+  {
+    title: "Toxic plants for cats",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Lilies and daylilies are the most dangerous plants for cats — even small amounts can cause fatal kidney failure within 48 hours. Tulips, daffodils, sago palms, and common houseplants like aloe and azaleas can also sicken cats. The ASPCA's toxic plant database is a good resource before bringing a new cat home.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_54ce034f-4de6-4d19-861a-e1f403f14173.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/0a/a0ab000e-8b45-47a2-a486-ff75d39e3329/6a44314665cd3.image.jpg"
+  },
+  {
+    title: "Game of cones",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Chef Gavin has been running 221 South Oak since 2000 and added a second spot, Liz, two years ago at 200 West Colorado Avenue. Liz focuses on affordable, healthy rice bowls, breakfast options, and quality meats with no added sugar. This summer, Liz is adding scooped ice cream.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_3c8d5f3f-d2df-4469-b121-8a7692ae7e41.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ee/4eea3128-d385-40a6-9b04-af1aaffa6269/6a418cdd585d3.image.jpg"
+  },
+  {
+    title: "Plan to convert the Town Park oval into a concrete space sees pushback",
+    source: "Telluride Times",
+    date: "June 30, 2026",
+    firstSeen: "2026-06-30",
+    newsTopic: "recreation",
+    copy: "The Town Park oval is set to be paved into a concrete multi-use surface — including sports courts — with site prep starting this fall and concrete work in spring 2027, at a phase-two cost of $1.33M. The plan has been in design documents since 2020 and cleared HARC review and council approval, with the Town citing year-round usability and drainage fixes. Muscatel Flats neighbors are pushing back, circulating a petition with 200+ signatures over lost green gathering space and pickleball noise concerns.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b989f2dd-f756-4e51-b0f2-f8c897136e43.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/17/7176ca8b-edea-48f4-b9ca-4538be741ffc/6a42d31a450c5.image.jpg",
     imgHiRes: true
   },
   {
@@ -1403,164 +1708,13 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Masterful, ‘heartburn-inducing’ performances on an intimate stage",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Elms Park at Telluride Bluegrass seats about 400 and offers intimate, often free performances billed as \"workshops\" — though they're really conversations, stories, and collaborations with top-tier artists. This year's lineup includes David Grier, Sierra Hull, Béla Fleck, and Fleck's surprise pairing with Tuvan throat-singing ensemble Alash. For the first time, Planet Bluegrass has published all 20 daily sets in advance at bluegrass.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_b4f48345-93f7-4c80-91b0-6f4da8b5fd31.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7f/47fe6efd-9e14-43f8-8461-0d4bb7dd39c8/6a2e06f1afbbb.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Small molecules at the origins of life",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "A University at Buffalo chemistry professor will speak June 23 as part of Telluride Science Town Talks, presenting research on how metals in ancient seafloor minerals may have sparked the origin of life. He'll also cover the search for life on other planets and Mars as a cautionary tale. Free and open to the public, 6:30 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_76f13598-181c-4cdd-8ff3-cbb2fbe9fe82.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/60/360b6020-f959-4635-a821-e8dbbef75ede/6a318b7745711.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Summer fun with your best friend",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Before hitting the trail with your dog this summer, check in with your vet, confirm vaccinations are current, and know the leash and waste rules for wherever you're headed. Pack extra food, water, and a basic first-aid kit. The Animal Resource Center / Second Chance Humane Society in Ridgway also has adoptable dogs open daily 11–5:30.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_5052f986-1380-444b-a0ef-057e89e4188b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b5/6b58ac41-299f-43f6-99d4-6dfbd28ad731/6a32d15c11f2e.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Federal judge, bestselling author Roy Altman to speak in Telluride",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Federal judge and Yale Law grad Roy Altman speaks in Telluride on June 30 at 5:30 p.m., presenting his book *Israel on Trial*, which applies legal analysis to contested claims about Israel. Tickets are $10 and include a copy of the book. Location shared with ticket holders only; advance purchase at royaltman.eventbrite.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_55be3fc5-6ac0-4b3c-8c6e-a21c3edb8a48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Yonder, Szwarc elected to SMPA board",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "Joanna Yonder unseated incumbent David Alexander in SMPA's District 3 board race, 228–178. In District 6, incumbent Valentine Szwarc held on, 179–171 over challenger Tricia Savage. SMPA board members serve four-year terms, elected by co-op members across seven districts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_58cf11c3-ad10-4dbe-9d9f-d0578f392b0d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/4b/04b1908d-1923-476d-ba0c-d6fe504c3bcb/6a32c995d6167.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Play It Forward pickleball tournament fundraises for SMRC",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "SMRC, one of San Miguel County's oldest nonprofits serving survivors of domestic violence and sexual assault, is facing losses in federal funding. A pickleball fundraiser — Play It Forward — runs June 28 at Telluride Racquet Club, with all proceeds supporting SMRC. Registration at smrcco.org/events.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_135741c3-c073-4c37-b9e8-505682e27bcd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0d/b0d269cd-ce31-4dc6-bc21-b63d61102e16/6a32ca6a38d34.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride deserves better",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Residents across Telluride — workers, commuters, seniors, longtime locals — say they're largely unaware of major proposals moving through town, from Shandoka development and 250-plus new housing units to paving the Town Park Oval. Common concerns: 10 a.m. meetings workers can't attend, tax bills doubling, and questions about whether existing housing systems function before expanding them.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_e8370c3d-bc39-4acd-ac85-0854d3916528.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Madelaine WhiteU",
-    imgHiRes: true
-  },
-  {
-    title: "Is Telluride Paradise?",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Telluride sits at the dead end of a box canyon with one paved evacuation route — Highway 145. Two major housing projects proposed for the canyon's southwest throat would add density near that single exit, with no public wildfire egress analysis completed. April snowpack in the region hit 9% of its 30-year median, and the state is under a drought emergency.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_0a47afcd-25ba-46c5-b953-131783c38019.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Kate FedacU",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of June 18-24",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "Local birthdays, recurring community meetings, and weekly services for the week of June 18–24 in the Norwood/Nucla-Naturita area. Regulars include the Farmers Market Thursdays 2–6 p.m., Sunday Food Pantry 3–6 p.m., Senior Meals Mondays and Thursdays, and free Legal Aid the second Wednesday monthly.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_d557e234-3f27-4790-9574-34267075077a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/58/b5804c72-d95d-45cf-a165-549035b858c1/6a32c8e79d4c3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Vote for Marya Stark",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "government",
-    copy: "A letter to the editor published in the Telluride Times. Select \"Read more\" for the full letter.",
-    claudeSummary: false,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_4723ca4f-db9e-4228-9168-b09c27162ec1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "With gratitude to SMPA District 3",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "education",
-    copy: "Joanna Yonder has won the SMPA District 3 board seat, succeeding Dave Alexander who served 16 years. She thanked voters and volunteers, noting the campaign was built on community effort. She acknowledged the Western Slope faces complicated energy decisions ahead and committed to representing all of District 3 over the next four years.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_d1d75e38-ec22-4340-bc9c-f94cb6a69bf4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Joanna Yonder",
-    imgHiRes: true
-  },
-  {
-    title: "With gratitude to SMPA District 3",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "education",
-    copy: "Joanna Yonder won the SMPA District 3 board seat in the June 4 election, succeeding Dave Alexander, who served 16 years as director. She thanked voters and volunteers, and acknowledged the Western Slope is entering a complicated period for energy. She'll serve a four-year term.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1090ef24-041f-45d1-8b55-ca2dd118b475.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/f9/8f939b57-1ce4-4bf3-89e3-efa596231507/6a32c73611113.image.jpg",
-    letterAuthor: "Joanna Yonder",
-    imgHiRes: true
-  },
-  {
-    title: "Rico’s Fireweed has a new owner",
-    source: "Telluride Times",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "public-safety",
-    copy: "Rico's Fireweed coffee shop has a new owner — Emily Thorn, who moved from Silverton and was drawn to the spot's community feel and focus on local, organic food. She bought it from the founding owners after hearing they might sell, and reopened in April with plans to keep the menu largely the same while bringing breakfast burrito production in-house.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_f7697606-40d0-41ec-9f80-ad2ddf7a6f48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/5e/c5edd619-4823-4736-aba7-d0b2005fb4c0/6a30e744a0f94.image.jpg",
-    imgHiRes: true
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
   },
   {
     title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
@@ -1764,7 +1918,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1775,7 +1929,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1786,7 +1940,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1797,7 +1951,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1808,7 +1962,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1817,9 +1971,20 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Notice of Public Hearing - Application for Resubdivision - Hyde Subdivision Lots 1, 2, 3, 4 of Block 14 (847 and 845 Hyde Street)",
+    source: "Town of Ridgway",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
+    img: ""
+  },
+  {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "June 30, 2026",
+    date: "July 1, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2696,61 +2861,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Medical Center Foundation Classic",
-    link: "https://koto.org/event/telluride-medical-center-foundation-classic/2026-06-29/",
-    description: "Register Now! Join us for our reimagined and elevated Telluride Medical Center Foundation golf tournament! Sunday, June 28: Calcutta & Cocktails Monday, June 29: Breakfast, Golf, Lunch & Awards",
-    pubDate: "2026-06-29T15:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Golf Club",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/Registration-is-Live.png"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-06-30/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-06-30T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Wildflower Hike with Native Plant expert, Al Schneider, East Fork Trail, Just South of Lizard head Pass, June 30, 9:30am-2pm",
-    link: "https://koto.org/event/wildflower-hike-with-native-plant-expert-al-schneider-east-fork-trail-just-south-of-lizard-head-pass-june-30-930am-2pm/",
-    description: "In collaboration with Patagonia Telluride, Colorado native plant expert, Al Schneider will lead us on a wildflower identification walk on Tuesday, June 30 at 9:30 am -2pm on the East Fork Trail just south of Lizard head pass. We will learn how to identify local plants. Please bring a lunch, sturdy walking shoes, a hat, water, sunscreen. We will provide a hand lens if you don't have one. Please sign up on Patagonia's Instagram page, at the Patagonia store, or scan the QR code on one of our flyers posted around town. Limited to 12 participants.",
-    pubDate: "2026-06-30T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Federal Judge Roy Altman on The Battle for Truth: Why the Israel Debate Matters to Everyone",
-    link: "https://koto.org/event/federal-judge-roy-altman-on-the-battle-for-truth-why-the-israel-debate-matters-to-everyone/",
-    description: "Drawing from his bestselling book Israel on Trial, federal judge Roy Altman explores how the debate over Israel illuminates broader questions of truth, history, democracy, and civic responsibility in an age of competing narratives. This will be an inclusive conversation.",
-    pubDate: "2026-06-30T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Roy-Altman-Event-QR.jpg"
-  },
-  {
-    title: "Town Talk: Tau",
-    link: "https://koto.org/event/town-talk-tau/",
-    description: "This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally helps support their internal structure. In more than 25 brain diseases, including Alzheimer’s, tau can misfold and clump together into harmful fibers. Recent advances in imaging have shown that these tau clumps can take on many different shapes depending on the disease, but it is still unclear how the same protein can form such a wide variety of structures. In this talk, I will describe how we are using both experiments and computational methods to understand the basic rules that guide how tau changes shape and forms these toxic aggregates. By uncovering these rules, we hope to develop better ways to detect specific forms of tau early and design targeted treatments that can stop or prevent these diseases.",
-    pubDate: "2026-07-01T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Innovation Center",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-3.png"
-  },
-  {
     title: "Baby Bop",
     link: "https://koto.org/event/baby-bop/",
     description: "Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, diseñada para que cuidadores y pequeños se muevan juntos mediante rutinas fáciles de seguir. Te espera música alegre, coreografías sencillas y un ambiente de apoyo centrado en el vínculo, el movimiento y la alegría; ¡no se requiere experiencia previa en baile!",
@@ -3200,6 +3310,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Science of Cocktails",
+    link: "https://koto.org/event/science-of-cocktails/",
+    description: "A crowd pleaser for more than 15 years attracting those from near and far, the Science of Cocktails is Pinhead’s not-to-be-missed annual fundraiser. Tthe event combines intriguing experiments with density, sublimation, acoustic integration, and even comestible colloids with the finest in Telluride’s craft mixology scene. July 8, 5-8pm at The Telluride Science & Innovation Center Adults 21+",
+    pubDate: "2026-07-08T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/SOC2026_V1.0_Instagram45-1.png"
+  },
+  {
+    title: "Sound Bath with Danielle & Ian",
+    link: "https://koto.org/event/sound-bath-with-danielle-ian/",
+    description: "Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 – 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives.",
+    pubDate: "2026-07-08T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Yoga with Miriah",
+    link: "https://koto.org/event/yoga-with-miriah/",
+    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.",
+    pubDate: "2026-07-09T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Community Support w/TCHN",
+    link: "https://koto.org/event/community-support-w-tchn/",
+    description: "Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm. Advance registration is encouraged. ¿Necesita ayuda para solicitar programas de asistencia pública? Ruth, de Tri-County Health Network, brindará orientación para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y también puede apoyarle para conectarse con otros recursos comunitarios. Se llevará a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipación. Por favor, envíe un correo electrónico a tosborne@telluridelibrary.org si necesita servicios de traducción.",
+    pubDate: "2026-07-09T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-09/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-09T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3268,7 +3433,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-06-23",
     revealDate: "2026-06-23",
-    lastSeen: "2026-06-30"
+    lastSeen: "2026-07-01"
   },
   {
     id: "TEL-A-187",
@@ -3282,7 +3447,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     firstSeen: "2026-06-30",
     revealDate: "2026-06-30",
-    lastSeen: "2026-06-30"
+    lastSeen: "2026-07-01"
   },
   {
     id: "TEL-A-188",
@@ -3296,7 +3461,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Male",
     firstSeen: "2026-06-30",
     revealDate: "2026-07-02",
-    lastSeen: "2026-06-30"
+    lastSeen: "2026-07-01"
   }
 ];
 
@@ -4538,6 +4703,17 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
+    title: "Town Talk: Tau",
+    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-tau/",
+    description: "This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally",
+    pubDate: "2026-06-30T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48905/tt_logo_1048x802_a.png"
+  },
+  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5193,18 +5369,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62946/this_is_co_art_exhibit_2200x1237.800x533.webp"
   },
   {
-    title: "Telluride Yoga Festival",
-    link: "https://www.telluride.com/event/telluride-yoga-festival/",
-    description: "The longest running yoga festival in the country, the Telluride Yoga Festival is a four-day yoga and wellness gathering …",
-    pubDate: "2026-06-25",
-    endDate: "2026-06-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/28883/190827_001.800x533.webp"
-  },
-  {
     title: "Oak Street Park SummerSHOW Series",
     link: "https://www.telluride.com/event/oak-street-park-summershow-series/",
     description: "The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows to keep the arts accessible to all. …",
@@ -5251,17 +5415,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45978/telluride-festival-plein-air-artists-2015-home-1.800x533.webp"
-  },
-  {
-    title: "The Mountain Ark: A Ken Bailey Film",
-    link: "https://www.telluride.com/event/the-mountain-ark-a-ken-bailey-film/",
-    description: "Lissa Margetts, one of Telluride’s most beloved characters and quintessential figures, connects with animals on a …",
-    pubDate: "2026-06-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62927/the-mountain-ark-a-ken-bailey-film.800x533.webp"
   },
   {
     title: "Federal Judge Roy Altman on Why the Israel Debate Matters",
@@ -7775,22 +7928,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "June 30, 2026",
-    title: "Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8283",
-    hasAgenda: true,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
-  {
-    date: "June 30, 2026",
-    title: "Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8039",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
   {
     date: "July 1, 2026",
     title: "Telluride Housing Authority Subcommittee",

@@ -1,26 +1,18 @@
 {
-  "hash": "1e2efe37d3b89f7c69704e5249f845b3d399d27e",
-  "lede": "The big one this week is Tuesday's Town Council meeting, where a first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements is on the table — rules that directly shape how buildings go up in this box canyon, and worth paying close attention to. Council will also hold a second work session on the Telluride Energy initiative, and the Housing Authority meets the same evening to seat the new Resident Advisory Committee and conduct a lottery drawing from tenant applicants across five Town properties. The rest of the week brings the BOCC, a liquor licensing slate heavy with summer events, and Ouray County quietly reworking its land-use definitions — the kind of foundational language that shapes everything downstream.",
+  "hash": "93f1fbda8bdd3c43636301981706e7637086b785",
+  "lede": "The most consequential thing happening this week isn't a concert or a cookout — it's a quiet worksession at the Telluride Housing Authority Subcommittee on Wednesday, where staff will dig into whether the town's lending guidelines actually work for mixed-use housing structures, a question that directly affects who can buy into deed-restricted units here. Wednesday also brings the Board of County Commissioners, where a Planning Commission alternate seat gets filled and the Forest Service joins a conversation about high-country road access policy. Ouray County's Planning Commission is meanwhile reopening its Land Use Code definitions — the kind of foundational language that shapes every zoning call that follows.",
   "notable": [
     {
-      "id": 0,
-      "stake": "First reading of wildfire-driven Land Use Code changes affecting how buildings are built here."
+      "id": 2,
+      "stake": "Lending rule changes could expand or restrict who qualifies for local deed-restricted housing."
     },
     {
-      "id": 1,
-      "stake": "THA seats new Resident Advisory Committee and holds lottery drawing for housing applicants."
+      "id": 4,
+      "stake": "Planning Commission seat filled; road access policy with Forest Service could set precedent."
     },
     {
-      "id": 3,
-      "stake": "Vote on expanded Colorado Ave. street closure for September Autumn Classic event."
-    },
-    {
-      "id": 6,
-      "stake": "BOCC interviews Planning Commission applicant; Forest Service road-access policy discussed."
-    },
-    {
-      "id": 7,
-      "stake": "Ouray County rewriting land-use definitions — foundational language that shapes future zoning decisions."
+      "id": 5,
+      "stake": "Land use definition changes shape what triggers county review for years to come."
     }
   ]
 }
