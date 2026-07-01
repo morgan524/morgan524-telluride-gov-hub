@@ -652,9 +652,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: 'July 1, 2026',
     firstSeen: '2026-07-01',
     newsTopic: 'community',
-    copy: 'The article text here is mostly navigation noise and unrelated snippets — there isn\'t enough substantive content about Michael Allen\'s Republican nomination for attorney general to summarize accurately. Only the headline and a single line confirm the result.
-
-Michael Allen has won the Republican nomination for Colorado attorney general. That\'s the extent of what the article actually establishes — no primary date, margin, or opponent details are included in the provided text.',
+    copy: 'The article text here is mostly navigation noise and unrelated snippets — there isn\'t enough substantive content about Michael Allen\'s Republican nomination for attorney general to summarize accurately. Only the headline and a single line confirm the result. Michael Allen has won the Republican nomination for Colorado attorney general. That\'s the extent of what the article actually establishes — no primary date, margin, or opponent details are included in the provided text.',
     claudeSummary: true,
     href: 'https://www.telluridenews.com/news/state/article_47e6d1ad-e489-5a7b-af91-95d73fb4dbe5.html',
     img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
@@ -726,15 +724,7 @@ Michael Allen has won the Republican nomination for Colorado attorney general. T
     date: 'July 1, 2026',
     firstSeen: '2026-07-01',
     newsTopic: 'community',
-    copy: 'The article text provided doesn\'t contain enough actual reporting on the Griswold story to summarize meaningfully — it\'s mostly site boilerplate and unrelated headlines mixed together. Only the headline itself carries any real information.
-
-Here\'s a summary based solely on what\'s confirmed in the text:
-
-Jena Griswold has won the Democratic nomination for Colorado attorney general. No further details about the race, margin, or opponents were included in the available article text.
-
----
-
-**Want me to write the card once you have the full article text?** I can turn it around quickly.',
+    copy: 'The article text provided doesn\'t contain enough actual reporting on the Griswold story to summarize meaningfully — it\'s mostly site boilerplate and unrelated headlines mixed together. Only the headline itself carries any real information. Here\'s a summary based solely on what\'s confirmed in the text: Jena Griswold has won the Democratic nomination for Colorado attorney general. No further details about the race, margin, or opponents were included in the available article text. --- **Want me to write the card once you have the full article text?** I can turn it around quickly.',
     claudeSummary: true,
     href: 'https://www.telluridenews.com/news/state/article_70a8a5ff-fe7c-585d-9a10-3432695e1bf3.html',
     img: 'https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg',
