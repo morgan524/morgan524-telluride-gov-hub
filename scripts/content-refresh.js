@@ -1932,6 +1932,15 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           claudeSummary = false;
         }
 
+        // Collapse whitespace/newlines in the summary to a single line. The RSS
+        // copy paths above already do this, but a Claude summary
+        // (summarizeTTArticle) can contain paragraph breaks — and these article
+        // objects are serialized as SINGLE-quoted JS strings, where a raw
+        // newline is a syntax error that breaks the whole gov-helpers.js file
+        // (took down BLOG_POSTS + all dynamic content 2026-07-01). Keep copy
+        // single-line so no writer can emit an unterminated string.
+        if (typeof copy === 'string') copy = copy.replace(/\s+/g, ' ').trim();
+
         articles.push({
           title: (item.title || '').trim(),
           source: 'Telluride Times',
@@ -6680,6 +6689,20 @@ async function main() {
       for (const d of dropped) console.log(`    - "${d.title}" ${d.mvDate} vs trusted ${d.trustedDate}`);
     }
   }
+
+  // ── Guard: never ship a data file that won't parse ──
+  // A single unterminated string (e.g. a bot summary with a raw newline) would
+  // take the whole file — and every page that loads it — offline (happened
+  // 2026-07-01: BLOG_POSTS + all dynamic content went dark). new Function()
+  // COMPILES the source (top-level const/function are valid function-body
+  // statements) WITHOUT executing it; a SyntaxError aborts the run before any
+  // write, so the last good file stays in place and the workflow commits nothing.
+  const assertParses = (label, src) => {
+    try { new Function(src); }
+    catch (e) { throw new Error(`${label} would be INVALID JS (${e.message}) — aborting write so a broken file is never shipped.`); }
+  };
+  if (changed) { assertParses('gov-helpers.js', govHubSrc); assertParses('community-pulse.js', pulseSrc); }
+  if (govDataChanged) assertParses('gov-data.js', govDataSrc);
 
   // ── Write files ──
   if (changed) {
