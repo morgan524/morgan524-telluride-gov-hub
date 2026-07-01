@@ -2391,8 +2391,8 @@
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
-          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;">Your Email</label>
-          <input id="ef-email" type="email" placeholder="you@example.com"
+          <label style="display:block;font-size:0.85rem;font-weight:600;color:var(--forest);margin-bottom:4px;" for="ef-email">Your Email *</label>
+          <input id="ef-email" type="email" required placeholder="you@example.com"
             style="width:100%;padding:10px 14px;border:1px solid var(--border-soft);border-radius:10px;font-size:0.95rem;background:var(--bg-hero);color:var(--text-dark);box-sizing:border-box;">
         </div>
         <div>
@@ -2499,9 +2499,14 @@
       // and approved events appear on this page automatically.
       form.addEventListener('submit', function (e) {
         e.preventDefault();
-        if (!v('ef-title') || !v('ef-date') || !v('ef-desc')) {
+        if (!v('ef-title') || !v('ef-date') || !v('ef-desc') || !v('ef-email')) {
           statusEl.style.color = '#a33';
-          statusEl.textContent = 'Please fill in the event title, date, and description.';
+          statusEl.textContent = 'Please fill in the event title, date, description, and your email.';
+          return;
+        }
+        if (!/^\S+@\S+\.\S+$/.test(v('ef-email'))) {
+          statusEl.style.color = '#a33';
+          statusEl.textContent = 'Please enter a valid email address.';
           return;
         }
         submitBtn.disabled = true;
