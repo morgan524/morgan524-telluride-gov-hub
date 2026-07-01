@@ -628,6 +628,16 @@ if (PREVIEW) {
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
 }
+// Tag INTERNAL (livabletelluride.org) links with UTM params so newsletter-driven
+// visits are attributable in Cloudflare Web Analytics (shows the ?utm_ pages) and
+// any future analytics. External links (event sources, agenda hosts, Stripe) are
+// left untouched. Anchors (#…) are preserved; existing query strings get "&amp;".
+const utmCampaign = WEEKEND ? 'weekend-outlook' : 'week-ahead';
+out = out.replace(/href="(https:\/\/livabletelluride\.org[^"]*)"/g, (m, url) => {
+  const h = url.indexOf('#'); const base = h >= 0 ? url.slice(0, h) : url; const frag = h >= 0 ? url.slice(h) : '';
+  const sep = base.includes('?') ? '&amp;' : '?';
+  return 'href="' + base + sep + 'utm_source=newsletter&amp;utm_medium=email&amp;utm_campaign=' + utmCampaign + frag + '"';
+});
 // Encode every non-ASCII character as a numeric HTML entity so the output is
 // pure ASCII — immune to charset/encoding mismatches when the HTML is pasted
 // into Mailchimp or rendered by a mail client (fixes the "Telluride,Aos" /
