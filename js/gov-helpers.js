@@ -432,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
@@ -538,6 +538,54 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Celebrate America 250 and Colorado 150 in Norwood",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "Norwood Parks and Rec has put together a $5 Bucket List card tied to America's 250th and Colorado's 150th, with 20 local activities ranging from fishing Miramonte to sitting in the Town Park gazebo. Complete enough to hit 150 or 250 points and you're entered to win prizes at the Aug. 8 Music on the Mesa drawing.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_66edcd96-ac5f-4ceb-b006-3f2791f564c7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/be/cbe8a1fc-da39-4218-a216-052bffcd6f76/6a4450dd58b34.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "West End Renaissance",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "community",
+    copy: "The West End has weathered cattle, mining, timber, coal, and COVID — the usual boom-bust pattern. Now broadband, airport upgrades, remote work, and the West End Vision Project are pointing toward a more diversified local economy. WEEDC is searching for a new executive director at what looks like a pivotal moment.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_64d52a82-dfcd-41c1-8ad7-17356b158ae9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/49/249a2e22-e7f8-4e77-842d-ef742134e68b/6a4451d589a77.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Grand Mesa and Uncompahgre National Forests enter Stage 1 fire restrictions",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "public-safety",
+    copy: "Grand Mesa and Uncompahgre National Forests have entered Stage 1 fire restrictions amid severe drought across most of San Miguel County. Beetle outbreaks are killing trees near Busted Arm Draw, where timber removal projects are planned for next year to reduce wildfire risk where forest meets homes.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_2d39aea1-17f7-4251-9383-1364826377f9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7a/e7afb52b-6148-4787-901e-f023dd92e37e/6a444ff1046d3.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    newsTopic: "government",
+    copy: "The Chalkboard lists local birthdays for the week of July 2–7 and recurring community meeting schedules for Norwood and Nucla-Naturita area boards. Regular services include the Norwood Farmers Market Thursdays 2–6 p.m., weekly senior meals, Sunday food pantry, and pickleball sessions. AA meetings, free legal aid, and public health contacts are also noted.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_894e1c0c-5cb0-4604-ba04-88f713eb4805.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/3f/03f5379e-7873-4f42-8ea8-9af53a181d10/6a44526274f1b.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Colorado Democrats choose between insurgent progressives and veteran incumbents",
     source: "Telluride Times",
@@ -4716,17 +4764,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Town Talk: Tau",
-    link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-tau/",
-    description: "This town talk will be presented by Lukasz Joachimiak, Associate Professor, UT Southwestern Medical Center. Tau is a protein in brain cells that normally",
-    pubDate: "2026-06-30T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48905/tt_logo_1048x802_a.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5077,6 +5114,39 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "New York Philharmonic Brass Quintet",
+    link: "https://townofmountainvillage.com/explore/events/all-events/new-york-philharmonic-brass-quintet-1/",
+    description: "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players in the country in what promises to be a",
+    pubDate: "2026-07-31T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48609/nyp_brass.jpg"
+  },
+  {
+    title: "The Brass Family",
+    link: "https://townofmountainvillage.com/explore/events/all-events/the-brass-family/",
+    description: "“The Brass Family” – with the New York Philharmonic Principal Brass Quintet Learn all about brass instruments in this fun and interactive show with the",
+    pubDate: "2026-07-31T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48614/nyp_education.jpg"
+  },
+  {
+    title: "Music on the Green Presents South Austin Moonlighters",
+    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-south-austin-moonlighters-2/",
+    description: "Beyond The Groove and TMVOA (tmvoa.org) present South Austin Moonlighters at Reflection Plaza in Mountain Village. The Friday shows are free,",
+    pubDate: "2026-07-31T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48857/south_austin_moonlighters_1800x900_px_1740x870.jpeg"
   }
 ];
 
