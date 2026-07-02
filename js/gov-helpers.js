@@ -378,7 +378,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -429,7 +429,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
@@ -536,6 +536,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Trump and Republicans return to communist attacks against Democrats ahead of the midterm elections",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "government",
+    copy: "Republicans are ramping up \"communist\" attacks on Democrats ahead of the midterms, spurred by democratic socialist primary wins in New York City and Denver. Democrats are divided between centrists and a growing left wing. Both parties are maneuvering ahead of November with slim GOP majorities in play.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_204b6353-51fc-5ab6-8da9-b5a2f26015a5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6c/46cbd91d-c8da-5616-a33e-7d5904a0e4a3/6a464307452af.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Go Fourth",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "community",
+    copy: "Stage 2 fire restrictions canceled the traditional fireworks, but Telluride is filling the gap with drone shows, a laser party, and live music on both July 3 and 4. The July 4 parade rolls at 11 a.m. — a beloved, anything-goes spectacle with an F-16 flyover expected. Arrive early for a good spot.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_e7854f8b-1993-4501-8a59-396815c37898.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ce/5cea32c5-b93e-4224-a32c-5d57a587f7f3/6a40b35117934.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "What to know about fireworks and the risk of wildfires this July 4th",
     source: "Telluride Times",
     date: "July 1, 2026",
@@ -545,6 +569,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_2fb29e6f-8164-586a-8eb6-433f9d493108.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/6b/e6bf2806-8b34-5dff-9a10-9d3632cd660e/6a45a02e480c0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Julie Beth Flatt Parker",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "recreation",
+    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
     imgHiRes: true
   },
   {
@@ -569,18 +605,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Julie Beth Flatt Parker",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "recreation",
-    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
     imgHiRes: true
   },
   {
@@ -2563,6 +2587,15 @@ const LOCAL_NEWS_FEATURED = [
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "Weekend Update July 2",
+    date: "Jul 2, 2026",
+    href: "https://mailchi.mp/8bef8f98c535/weekend-update-july-2",
+    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
+    excerpt: "Livable Telluride &#183; Weekend Outlook The Weekend Outlook July 3 - July 5, 2026 &#128197; The Weekend Outlook \"It's Fourth of July weekend and many communities in the region will be offering free family fun. Wherever you land, please check in with the local jurisdiction for the latest fire restrictions. Telluride will kick off Saturday morning with the Rundola first thing followed by the longes",
+    category: "Newsletter",
+    source: "mailchimp"
+  },
   {
     title: "When the Town Judges Its Own Projects",
     date: "Jun 30, 2026",
@@ -4796,17 +4829,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    title: "Telluride Venture Network Pitch Day",
-    link: "https://townofmountainvillage.com/explore/events/all-events/tvn-pitch-day/",
-    description: "TVN's Climate Solutions Investment Bootcamp culminates in a high-energy Pitch Day. Come listen to some of the most cutting-",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49028/tvn_pitch_day.png"
-  },
-  {
     title: "6th Annual Alpine Cookout",
     link: "https://townofmountainvillage.com/explore/events/all-events/6th-annual-alpine-cookout/",
     description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music,",
@@ -5179,6 +5201,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48857/south_austin_moonlighters_1800x900_px_1740x870.jpeg"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-08-01T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-08-01T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
