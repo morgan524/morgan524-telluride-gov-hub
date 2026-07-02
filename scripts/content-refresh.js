@@ -1726,99 +1726,6 @@ async function pullSmbForum(existingSmbArticles = []) {
   return out;
 }
 
-// ── Telluride Rotary news (portal.clubrunner.ca/3291) ──────────────────────
-// ClubRunner has no RSS, so we scrape the "Telluride Rotary News" story cards
-// from the club home page. Same firstSeen date model as SMBF (the stories
-// carry no machine-readable publish date). Wider 90-day window because Rotary
-// posts infrequently. Fetched directly (not via the proxy — ClubRunner does
-// not block GH runners); on any error we preserve the existing list.
-const ROTARY_NEWS_URL = 'https://portal.clubrunner.ca/3291';
-const ROTARY_MAX_AGE_DAYS = 90;
-async function pullRotaryNews(existing = []) {
-  console.log('\n🛞 Telluride Rotary: scraping ClubRunner stories...');
-  const cutoff = new Date(Date.now() - ROTARY_MAX_AGE_DAYS * 86400000);
-  const existingByHref = new Map(existing.map(a => [a.href, a]));
-  const BASE = 'https://portal.clubrunner.ca/3291/';
-
-  let html;
-  try {
-    const resp = await fetch(ROTARY_NEWS_URL);
-    if (resp.status !== 200) {
-      console.warn(`  Rotary page HTTP ${resp.status} — preserving existing list`);
-      return existing;
-    }
-    html = resp.text;
-  } catch (e) {
-    console.warn(`  Rotary fetch error: ${e.message} — preserving existing list`);
-    return existing;
-  }
-
-  const decode = (s) => s
-    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
-    .replace(/&amp;/g, '&').replace(/&quot;|&ldquo;|&rdquo;/g, '"')
-    .replace(/&#39;|&rsquo;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&nbsp;/g, ' ');
-  const strip = (s) => decode(s.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
-
-  // Each story is an <article class="storyItem...">. Headline lives in
-  // .storyHeader > a[href="Stories/<slug>"] > span; body text follows.
-  const blocks = html.split(/<article[^>]*class="[^"]*storyItem[^"]*"/i).slice(1);
-  const items = [];
-  const seen = new Set();
-  for (const b of blocks) {
-    const hrefM = b.match(/href="(Stories\/[^"#?]+)"/i);
-    if (!hrefM) continue;
-    const href = BASE + hrefM[1];
-    if (seen.has(href)) continue;
-    const hM = b.match(/storyHeader[\s\S]*?<a[^>]*href="Stories[^"]*"[\s\S]*?<span>([\s\S]*?)<\/span>/i);
-    const title = hM ? strip(hM[1]) : '';
-    if (!title) continue;
-    seen.add(href);
-    const imgM = b.match(/<img[^>]+src="([^"]+)"/i);
-    let img = imgM ? imgM[1] : '';
-    if (img && img.startsWith('/')) img = 'https://portal.clubrunner.ca' + img;
-    let body = strip(b);
-    const ti = body.indexOf(title);
-    if (ti >= 0) body = body.slice(ti + title.length).trim();
-    items.push({ href, title, summary: body.slice(0, 300), img });
-  }
-
-  const todayIso = new Date().toISOString().slice(0, 10);
-  const todayHuman = formatDate(new Date());
-  const out = [];
-  let newCount = 0;
-  for (const it of items) {
-    const cached = existingByHref.get(it.href);
-    out.push({
-      title: it.title,
-      source: 'Telluride Rotary',
-      sourceKey: 'rotary',
-      date: cached ? (cached.date || todayHuman) : todayHuman,
-      firstSeen: cached ? (cached.firstSeen || todayIso) : todayIso,
-      newsTopic: classifyNewsTopic(it.title, it.summary),
-      copy: (it.summary || (cached && cached.copy) || '').slice(0, 300),
-      href: it.href,
-      img: it.img || (cached && cached.img) || '',
-    });
-    if (!cached) newCount++;
-  }
-  // Carry forward stories that rolled off the page but are within the window.
-  const scraped = new Set(out.map(a => a.href));
-  for (const [href, art] of existingByHref) {
-    if (scraped.has(href)) continue;
-    const seenAt = art.firstSeen ? new Date(art.firstSeen + 'T00:00:00Z') : null;
-    if (seenAt && !isNaN(seenAt) && seenAt >= cutoff) out.push(art);
-  }
-  out.sort((a, b) => {
-    const da = a.firstSeen ? new Date(a.firstSeen + 'T00:00:00Z').getTime() : 0;
-    const db = b.firstSeen ? new Date(b.firstSeen + 'T00:00:00Z').getTime() : 0;
-    return db - da;
-  });
-
-  console.log(`  Rotary: ${out.length} story/ies tracked (${newCount} new today)`);
-  return out;
-}
 
 function classifyNewsTopic(title, desc) {
   const text = `${title} ${desc}`.toLowerCase();
@@ -6346,14 +6253,6 @@ async function main() {
     changed = true;
   }
 
-  // Telluride Rotary news — scraped from ClubRunner (no RSS). Own array,
-  // isolated from the other news sources so a TT/SMBF change can't drop it.
-  const existingRotaryNews = extractJsArray(govHubSrc, 'ROTARY_NEWS') || [];
-  const rotaryNews = await pullRotaryNews(existingRotaryNews);
-  if (JSON.stringify(rotaryNews) !== JSON.stringify(existingRotaryNews)) {
-    govHubSrc = replaceJsValue(govHubSrc, 'ROTARY_NEWS', rotaryNews, false);
-    changed = true;
-  }
 
 
   // ── 2b. Regional News ──
