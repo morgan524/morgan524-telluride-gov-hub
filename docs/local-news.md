@@ -11,9 +11,25 @@ Storage: `SMB_FORUM_ARTICLES` in `js/gov-helpers.js`. Renderer:
 **SMBF uses Creative Circle CMS** (same publishing platform as
 Telluride Times) BUT has the `/search/?f=rss` RSS endpoint DISABLED —
 returns HTTP 403 from Varnish. So instead of TT's RSS pattern, the
-refresh scrapes the `/news/` landing page HTML and pairs each
+refresh scrapes the `/stories/` landing page HTML and pairs each
 `<div class="landing-story row">` block with its `<h3 class="heading-3">`
 headline, `<div class="lead">` summary, and `<img class="photo">`.
+
+**Landing-page URL moved `/news/` → `/stories/` (~late June 2026).** The
+old `/news/` URL still returns 200 but serves a **frozen** copy of the
+stories that were live at cutover — so the scraper silently stalled
+(`SMBF: N tracked (0 new)`) for ~3 weeks while real stories piled up under
+`/stories/`. Markup is identical; only `SMBF_NEWS_URL` changed. Story hrefs
+are now `/stories/<slug>,<id>`. If SMBF ever appears frozen again, re-check
+the live landing-page URL first (fixed 2026-07-02, commit updates
+`SMBF_NEWS_URL`).
+
+**Spanish-translation twins are skipped.** SMBF now publishes every story
+twice — English + a Spanish translation, each its own landing card. Local
+News is English-only, so `pullSmbForum` drops the Spanish cards via
+`isSpanishTitle()` (counts high-signal Spanish function words; an English
+headline never reaches the ≥3 threshold — the blocks carry no `lang`
+attribute to key off).
 
 **Date model — print-first publishing convention (2026-05-26).**
 SMBF is a print-first weekly. Stories appear in the print edition
@@ -40,7 +56,7 @@ following weeks, the bot adds them with today's `firstSeen` and the
 sentinel entries gradually fall out of relevance.
 
 Knobs in `scripts/content-refresh.js`:
-- `SMBF_NEWS_URL` — the landing page to scrape.
+- `SMBF_NEWS_URL` — the landing page to scrape (now `/stories/`).
 - `SMBF_MAX_AGE_DAYS = 35` — articles whose `firstSeen` is older than
   this AND that have rolled off the landing page get dropped. The
   35-day window is wider than the 14-day default because SMBF only

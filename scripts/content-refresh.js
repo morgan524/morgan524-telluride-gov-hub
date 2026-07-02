@@ -1552,13 +1552,40 @@ Write a plain-text preview of 50 words or less describing the key issues or agen
 // firstSeen='2025-01-01' get hidden without being deleted (used to
 // suppress the initial-deployment flood: see the 23 ancient-dated
 // seed entries in js/gov-helpers.js).
-const SMBF_NEWS_URL = 'https://www.sanmiguelbasinforum.com/news/';
+// SMBF moved its landing page from /news/ to /stories/ (~late June 2026).
+// The old /news/ URL still resolves but serves a FROZEN copy of the stories
+// that were live at cutover, so scraping it silently stalled the feed for
+// ~3 weeks. The /stories/ page uses the identical Creative Circle markup
+// (landing-story / heading-3 / lead / img.photo) — only the URL changed.
+// Story hrefs are now /stories/<slug>,<id>.
+const SMBF_NEWS_URL = 'https://www.sanmiguelbasinforum.com/stories/';
 // SMBF publishes weekly (≈ 1 story per week). The default 14-day news
 // window would leave at most 1-2 visible at a time, which would feel
 // like the source had been dropped again whenever there was a gap.
 // 35 days keeps ~4-5 stories visible — closer to the SMBF homepage
 // itself, which shows the same 5-or-so most-recent stories all week.
 const SMBF_MAX_AGE_DAYS = 35;
+
+// High-signal Spanish function words. None of these occurs as a standalone
+// word in an English news headline, so counting them is a cheap, false-
+// positive-resistant language sniff for the SMBF English/Spanish twin cards.
+const SPANISH_STOPWORDS = new Set([
+  'de', 'el', 'la', 'los', 'las', 'del', 'para', 'por', 'una', 'uno', 'un',
+  'con', 'es', 'en', 'su', 'sus', 'que', 'se', 'al', 'ano', 'anos', 'mas',
+  'como', 'esta', 'este', 'esto', 'segun', 'hora', 'ni', 'pero', 'sobre',
+  'entre', 'desde', 'hasta', 'muy', 'ya', 'son', 'fue', 'ser',
+]);
+
+function isSpanishTitle(title) {
+  // Strip accents so 'año' -> 'ano' etc. match the ASCII stopword set.
+  const norm = String(title).toLowerCase()
+    .normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const words = norm.split(/[^a-z]+/).filter(Boolean);
+  if (!words.length) return false;
+  let hits = 0;
+  for (const w of words) if (SPANISH_STOPWORDS.has(w)) hits++;
+  return hits >= 3;
+}
 
 async function pullSmbForum(existingSmbArticles = []) {
   console.log('\n🌄 San Miguel Basin Forum: scraping landing page...');
@@ -1604,6 +1631,12 @@ async function pullSmbForum(existingSmbArticles = []) {
     seenHrefs.add(fullHref);
     const title = decode(h3[2].replace(/<[^>]+>/g, '').trim());
     if (!title) continue;
+    // SMBF now publishes each story TWICE — once in English and once as a
+    // Spanish translation, each as its own landing card. Local News serves an
+    // English-reading audience, so skip the Spanish duplicates. Detected by
+    // counting high-signal Spanish function words; an English headline
+    // essentially never reaches 3 (see isSpanishTitle).
+    if (isSpanishTitle(title)) continue;
     const leadM = /<div\s+class=['"]lead['"][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
     const lead = leadM
       ? decode(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
