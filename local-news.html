@@ -995,6 +995,18 @@
       'Loading latest news…</div>';
     document.getElementById('cardGrid').innerHTML = '';
 
+    // Shared failure UI so the page never sits on "Loading latest news…" — used
+    // for a network error, a broken/undefined data file, and a render exception.
+    function showNewsError() {
+      const fc = document.getElementById('featuredCard');
+      if (fc) fc.innerHTML =
+        '<div style="padding:40px 20px;text-align:center;color:#b44;">' +
+        "We couldn't load the latest news right now. " +
+        '<a href="" style="color:#21443c;">Reload</a></div>';
+      const cg = document.getElementById('cardGrid');
+      if (cg) cg.innerHTML = '';
+    }
+
         function loadLiveData() {
       // Use a daily cache buster so browsers always pick up today's bot commit.
       // 10-minute cache buster — matches GitHub Pages CDN TTL so bot commits appear within 10 min
@@ -1006,7 +1018,11 @@
       dataScript.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
       dataScript.onload = () => {
         try {
-            if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') return;
+            // A syntactically-broken gov-helpers.js still fires onload (only a
+            // network failure hits onerror), so if the expected global is missing
+            // the data file failed to define it — show an error instead of
+            // leaving "Loading latest news…" spinning forever.
+            if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') { showNewsError(); return; }
 
             // ── Redundancy filters (port of live site behavior) ──
             //
@@ -1256,13 +1272,11 @@
               if (auto) auto.featured = true;
             }
             render();
-        } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
+        } catch (err) { console.warn('loadLiveData filter pass failed:', err); showNewsError(); }
       };
       dataScript.onerror = () => {
         console.warn('Could not load gov-helpers.js');
-        document.getElementById('featuredCard').innerHTML =
-          '<div style="padding:40px 20px;text-align:center;color:#b44;">' +
-          'Could not load news data. <a href="" style="color:#21443c;">Reload</a></div>';
+        showNewsError();
       };
       document.head.appendChild(dataScript);
     }

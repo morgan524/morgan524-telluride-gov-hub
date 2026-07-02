@@ -308,6 +308,11 @@ const trunc = (s, n) => {
   // Drop a source-supplied trailing truncation marker ("…" or "..") so it can't
   // masquerade as a real sentence end and leave a cut word like "the mus...".
   s = String(s || '').replace(/\s+/g, ' ').trim().replace(/\s*(?:\.{2,}|…)+$/, '').trim();
+  // Fits entirely — return as-is. The sentence-boundary/ellipsis backoff below
+  // is ONLY for strings we actually cut; running it on a complete string clipped
+  // its last word and appended "…" (e.g. venue labels: "Sheridan Opera House" →
+  // "Sheridan Opera…", town "Telluride" → "Telluride…").
+  if (s.length <= n) return s;
   let out = s;
   if (s.length > n) {
     const w = s.slice(0, n);
