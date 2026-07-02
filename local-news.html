@@ -1104,7 +1104,14 @@
             if (typeof LOCAL_NEWS_FEATURED !== 'undefined' && Array.isArray(LOCAL_NEWS_FEATURED)) {
               LOCAL_NEWS_FEATURED.forEach(a => live.push(Object.assign({}, a)));
             }
-            TELLURIDE_TIMES_ARTICLES.slice(0, 30).forEach(a => live.push({
+            // Filter with shouldKeep BEFORE capping. The cap used to run on
+            // the raw array (slice(0,30)), so a burst of soon-to-be-filtered
+            // content — e.g. the June 2026 primary dumped ~15 statewide
+            // "X wins nomination" results, plus legals/obituaries/venue
+            // listings — consumed the whole window and starved the page of
+            // local Telluride news (only ~14 of the top 30 survived shouldKeep).
+            // Filtering first guarantees the cap counts real local articles.
+            TELLURIDE_TIMES_ARTICLES.filter(shouldKeep).slice(0, 45).forEach(a => live.push({
               title: a.title, source: a.source, sourceKey: 'ttimes',
               date: a.date, summary: a.copy, href: a.href, img: a.img,
               newsTopic: a.newsTopic || ''
