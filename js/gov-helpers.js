@@ -163,7 +163,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     {"sv":4},
@@ -302,9 +302,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
     "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
-  "telluride|2026-06-01|Open Space Commission - Jun 01 2026":
-    "Meeting scheduled for first Monday of the month · Commission reviews open space acquisitions and management · Advises Town Council on comprehensive plan elements",
-
   "med|2026-06-25|Regular Board Meeting":
     "The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.",
 
@@ -369,19 +366,19 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission agenda hasn't been posted yet.",
+    "The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2, and E3 on Lots 34 and 34B of Backman Village, all new construction outside the Telluride Historic Landmark District in an Accommodations 2 zone, with Design Workshop as applicant and the Town itself as owner. A work session on the Shandoka Lot redevelopment at 860 Black Bear Rd — another Town-owned Accommodations 2 parcel — follows. Also on the hearing docket is a continued amendment to a prior Certificate of Appropriateness for 239 N Aspen, inside the THLD, elevated by the HARC Chair back in May.",
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -538,6 +535,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "What to know about fireworks and the risk of wildfires this July 4th",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "public-safety",
+    copy: "Record dry conditions across the West have pushed wildfire risk unusually high heading into the Fourth of July. Nearly 85% of wildfires are human-caused, and ignitions spike sharply on July 4th. Experts and local officials are urging people to skip backyard fireworks and attend professional displays instead.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_2fb29e6f-8164-586a-8eb6-433f9d493108.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/6b/e6bf2806-8b34-5dff-9a10-9d3632cd660e/6a45a02e480c0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Outdoor adventuring with conservation at the core",
+    source: "Telluride Times",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "recreation",
+    copy: "Telluride Outside has been running guided outdoor trips here since 1984 — fly fishing, rafting, 4x4 tours, snowmobiling — and leases 12 miles of private water through its Telluride Angler shop. The outfit has raised over $9 million for Valley Floor riparian restoration and uses cleaner vehicles and four-stroke snowmobiles to cut emissions. Low snowfall is pushing schedule adjustments, with fishing trips moving to cooler morning hours.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_afaa6b38-4e93-4ea0-9c53-7976ce972ca2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/f9/ef9ac980-529b-426b-95cb-b81024b96cd0/6a4194c89458c.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "The Pac-12 basketball tournament is returning to Las Vegas as 7 new members join",
     source: "Telluride Times",
@@ -1709,90 +1730,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Five years after a Navajo elder vanished, the man who robbed her was released from prison",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "infrastructure",
-    copy: "Five years after Navajo elder Bessie Begay vanished from Sweetwater, the man convicted of robbing her was quietly released early from federal prison — news her family only learned by chance. Her body has never been found, and the case remains unsolved.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_23648ead-b435-52f6-a7f3-835255a06ac5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/78/b78c743a-5325-5878-8598-1344be3031c5/6a348139ac276.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A trip to Bluegrass changed her life",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Denver-based artist Dwan attended Telluride Bluegrass at 22, and the landscape and festival energy pushed her to leave graphic design and pursue painting full-time. Her acrylic work depicting the festival's iconic flowerboxes — with musicians woven into the botanicals — was selected as the official 2026 Telluride Bluegrass poster. She reached out to Planet Bluegrass directly with her story, and they picked her.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_eba393de-e081-4012-a78b-5a57112acd53.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7f/a7ff0fff-37f9-49ff-8061-e9d07dfc7463/6a2cd53e748c5.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The cathedral tree",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "infrastructure",
-    copy: "A massive blue spruce near Sawpit was named 2014 Colorado State Champion Blue Spruce after local arborist Dave Schultz and his crew measured it at 154 feet tall with a 13-foot trunk circumference, scoring 315 points. It's visible from the road, growing in a sheltered ravine with deep soil and perennial moisture — conditions that likely helped it survive for centuries. It has since lost the state title to a Utah tree, but it's still standing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_8672b2da-93d9-4466-afba-a1005703e790.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/0f/70f776b1-3109-4dbc-ae78-adad8e103e3f/6a318fec1cda3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Families of kids with disabilities warn Education Department changes could break a flawed system",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "housing",
-    copy: "The federal Education Department is shifting civil rights enforcement for disabled students to the Justice Department and special education oversight to Health and Human Services. Meanwhile, the agencies handling these cases have shrunk dramatically — civil rights staff down 40%, special ed offices down a third — leaving a growing backlog of unresolved complaints. Some states, including Colorado, are stepping in to fill the gap.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_725d3ce6-9ce1-5dac-aeb9-8b16fa147e13.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/68/a6858de1-2983-5f12-867f-0a64df83e7f5/6a33729ab42b8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Bluegrass brothers",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Bassist Edgar Meyer is returning to the Telluride Bluegrass Festival — his 40-plus-year home — performing Thursday with the House Band and Sunday in a classical trio with violinist Tessa Lark and cellist Joshua Roman. The Sunday noon set features newly composed and '80s-era Meyer works, several produced by Béla Fleck. Meyer's presence has long helped shape the festival's boundary-crossing musical identity.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_4542a375-f6aa-430a-8303-89dc325a685f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/8f/f8f9939d-0ea1-42b7-8441-09455f348758/6a3100e01b44c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Towns, County implement stage 1 fire restrictions",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "public-safety",
-    copy: "Stage 1 fire restrictions are now in effect across San Miguel County, the Town of Telluride, Mountain Village, and federal lands including San Juan National Forest and BLM parcels. Open fires, charcoal grills, smoking on trails and open space, and personal fireworks are among the prohibited activities. Violations are a misdemeanor and can carry fines and wildfire liability.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_70e341d7-cf81-451c-8943-d2f4b1ba555a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/2a/b2a92ba2-985f-4e30-9ee4-5e5fd767450d/6a341b719b62c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for June 18-24, 2026",
-    source: "Telluride Times",
-    date: "June 18, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "A property at 122 43ZS Road in Norwood is headed to public auction July 16, 2026, at 10 a.m. at 305 W. Colorado Ave. in Telluride following foreclosure proceedings on a 2009 Wells Fargo deed of trust, now held by Shellpoint Mortgage Servicing. Outstanding balance is roughly $115,000.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -1946,6 +1883,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
+    source: "Town of Ridgway",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
+    img: ""
+  },
+  {
     title: "Gold Mountain Fire Update",
     source: "Town of Ridgway",
     date: "July 1, 2026",
@@ -2025,7 +1973,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2036,7 +1984,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2047,7 +1995,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2058,7 +2006,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2069,7 +2017,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2091,7 +2039,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "July 1, 2026",
+    date: "July 2, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2102,6 +2050,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 7-1-26",
+    source: "KOTO Community Radio",
+    date: "July 2, 2026",
+    newsTopic: "public-safety",
+    copy: "A Gold Mountain Fire Update; Town Council Election Still in Flux; Telluride Community Survey Shows Areas for Improvement",
+    href: "https://koto.org/news/newscast-7-1-26/"
+  },
   {
     title: "Newscast 6-29-26",
     source: "KOTO Community Radio",
@@ -2141,14 +2097,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "recreation",
     copy: "First Responders See Busy Weekend; Mountain Village Considers Ethics Code Changes",
     href: "https://koto.org/news/newscast-6-22-26/"
-  },
-  {
-    title: "Newscast 6-17-26",
-    source: "KOTO Community Radio",
-    date: "June 18, 2026",
-    newsTopic: "education",
-    copy: "On this week's Regional Roundup, we hear about a poetry festival that took place recently in the Four Corners. Then, we hear from our rural climate reporter on how the Colorado River is at a tipping point due to severe drought, over allocation, and climate change. These issues were discussed at a conference at the law school at CU Boulder. Then, we",
-    href: "https://koto.org/news/newscast-6-17-26/"
   }
 ];
 
@@ -2968,61 +2916,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-01/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-01T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-07-01/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-07-01T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-01/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-01T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
-    title: "Telluride Venture Network's Pitch Day",
-    link: "https://koto.org/event/telluride-venture-networks-pitch-day/",
-    description: "TVN's Climate Solutions Investment Bootcamp culminates in a high-energy Pitch Day. Come listen to some of the most cutting-edge startups from across the Four Corners region present and learn how they are solving the most pressing climate issues. The hour goes by quickly, so stick around at the Show Bar to mingle with the cohort afterward.",
-    pubDate: "2026-07-01T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Town-of-Mountain-Village-Events-1800x900-1.png"
-  },
-  {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-01/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-07-01T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Yin Yang Yoga with Miriah",
     link: "https://koto.org/event/yin-yang-yoga-with-miriah/",
     description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.",
@@ -3461,6 +3354,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-09/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-09T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Booze and Books at Liz",
+    link: "https://koto.org/event/booze-and-books-at-liz/",
+    description: "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. Meet at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
+    pubDate: "2026-07-09T23:15:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Liz, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "The Creative Exchange at Telluride Arts HQ",
+    link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-07-09/",
+    description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
+    pubDate: "2026-07-09T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    title: "Yoga For All with Jay and Jane",
+    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-10/",
+    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-07-10T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
   }
 ];
 
@@ -4187,7 +4124,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53188965998095/huge/55f592a5e84d7486827ccac53e3cf97ff5f937db.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
@@ -4273,7 +4210,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ridgway Concert Series",
     link: "https://pickinproductions.com/upcomingshows",
-    description: "The Town of Ridgway & Pickin’ Productions Present THE 19TH ANNUAL 2026 RIDGWAY CONCERT SERIES JULY 2 LEVI PLATERO Shelby Means JULY 9 BLACK UHURU Psylo JULY 16 SAM GRISMAN PROJECT Tanasi JULY 23 DOGS IN A PILE Felix Y Los Gatos JULY 30 THE RUMBLE Ft. Chief Joseph Boudreaux Jr. Handmade Moments FREE SHOW 6PM FOOD - VENDORS - BEER WINE & MARGARITAS No Dogs or Outside Alcohol Permitted HARTWELL PARK Ridgway – Colorado SPONSORS Ridgway Real Estate – Alpine Bank – Chipeta Lodge Resort & Space- Orvis Hot Springs – Julie & Dave Duff – Bennett Forgeworks- OAK – Billings Artwork – Todd W. Hoffman Foundation- The Market at Ridgway – Fiddlers Green – KVNF Public Radio – Alpine Edge Engineering - Alt Space Coworking- Vacation Rental Collective For More Information, Please Visit: www.pickinproductions.com",
+    description: "The Town of Ridgway & Pickin’ Productions Present THE 19TH ANNUAL 2026 RIDGWAY CONCERT SERIES FOOD - VENDORS - BEER - WINE & MARGARITAS JULY 2 LEVI PLATERO Shelby Means JULY 9 BLACK UHURU Psylo JULY 16 SAM GRISMAN PROJECT Tanasi JULY 23 DOGS IN A PILE Felix Y Los Gatos JULY 30 THE RUMBLE Ft. Chief Joseph Boudreaux Jr. Handmade Moments No Dogs or Outside Alcohol Permitted SPONSORS Ridgway Real Estate – Alpine Bank – Chipeta Lodge Resort & Space- Orvis Hot Springs – Julie & Dave Duff – Bennett Forgeworks- OAK – Billings Artwork – Todd W. Hoffman Foundation- The Market at Ridgway – Fiddlers Green – KVNF Public Radio – Alpine Edge Engineering - Alt Space Coworking- Vacation Rental Collective For More Information, Please Visit: www.pickinproductions.com",
     pubDate: "2026-07-02T12:00:00.000Z",
     endDate: "2026-07-30",
     source: "oray",
@@ -4294,6 +4231,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Colorado Girl- First Friday",
+    link: "https://events.ourayridgwayevents.com/event/colorado-girl-first-friday",
+    description: "This Friday, July 3rd is \"First Friday,\" and the Colorado Grill will be open so come visit us, enjoy our new small plate menu, new drinks, and the artwork of Gary Radcliffe. Other artist include Kris Batchelder and Susan Clark.",
+    pubDate: "2026-07-03T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53314365156136/huge/ba6d72f47daf73d21c6af8968c6919c75dd36a1d.jpg"
+  },
+  {
     title: "First Friday at Rootwings Art",
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
@@ -4308,7 +4256,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Roots & Rhythms: Opening Night with Live Music & Steam Bending Demo @ First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Join us for the opening reception of Roots & Rhythms, a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation. Enjoy an evening of live music, a live steam-bending demonstration, refreshments, and the opportunity to meet both artists during Ridgway's First Friday Art Walk.",
+    description: "Join us for the opening reception of Roots & Rhythms, a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. Celebrate the opening during Ridgway's First Friday Art Walk on July 3 from 5–8 p.m. Enjoy live music by TBone, a live steam-bending demonstration, refreshments, and the opportunity to meet both artists. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
     pubDate: "2026-07-03T12:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4350,6 +4298,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52931510224219/huge/bc7122ef6b232e543532628c54c9b91bf49b16f5.jpg"
   },
   {
+    title: "Ouray Elks #492 Bloody Mary Bar",
+    link: "https://events.ourayridgwayevents.com/event/ouray-elks-492-bloody-mary-bar",
+    description: "Come join us for our famous annual Bloody Mary Bar! Cost is $15 for the Bloody Mary and other drinks will be available. OPEN TO THE PUBLIC!",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312647689044/huge/046d1fcd91c6004a723578f64cbea2f7db87bf2b.jpg"
+  },
+  {
     title: "Ouray's 4th of July Celebration",
     link: "https://cms5.revize.com/revize/cityofourayco/news_detail_T2_R585.php",
     description: "We have a fun-packed day full of something for everyone! Below is a list of the main events. Please feel free to check out local restaurants and retail stores for other events or specials throughout the holiday as well. Our Visit Ouray website has a comprehensive listing of all the wonderful places to check out while here. Celebrate responsibly, remember your sunscreen, stay hydrated, and please have a designated driver if traveling. 7:30 AM - Ourayce 10K Starts at City Hall, Registration opens at 7 am 10 AM - Parade West side = wet side 11 AM - Kids Games Fellin Park 2 PM - Water Fights 6th & Main Street 9:15ish (dusk) - Fireworks Weather Permitting",
@@ -4370,6 +4329,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center ",
     imageUrl: "https://localist-images.azureedge.net/photos/52799047964496/huge/aa0e3974def4b41e5c52e23f113a307c37cedb5b.jpg"
+  },
+  {
+    title: "Ouray Elks #492 BBQ",
+    link: "https://events.ourayridgwayevents.com/event/ouray-elks-492-bbq",
+    description: "Come and grab your BBQ plate on 4th of July! Includes pulled pork sandwich and sides for $15. This will be available outside in front of the lodge starting around 10:30am!",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312694813185/huge/1e4e38037b91768ebc225c5c6540f4d8d5332ed8.jpg"
   },
   {
     title: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright",
@@ -4414,6 +4384,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52745922632341/huge/0250190a0bcc6088f63749a38406222953357e3e.jpg"
+  },
+  {
+    title: "4th of July Karaoke 7:00pm",
+    link: "https://events.ourayridgwayevents.com/event/4th-of-july-karaoke-700pm",
+    description: "OPEN TO THE PUBLIC Every 4th of July we invite the community to join us for a free karaoke night. Singing starts at 7:00, but the bar is open much earlier!",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312742009387/huge/e1825f1fc05b2829c70dc8011622c5e1195b4fa2.jpg"
   },
   {
     title: "A Geological Odyssey: Ouray County - Ridgway State Park Summer Program Series",
@@ -4641,26 +4622,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52932388838595/huge/3d53a3b85d29b20688afb793e034dfc642d33f6a.jpg"
   },
   {
-    title: "Sacred Fire-Santana Tribute Band",
+    title: "Benefit Concert for Fire Fighters and OCEMS - Sacred Fire-Santana Tribute Band",
     link: "https://www.ocpag.org/sacredfire",
-    description: "Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. Contreras teaches at Swallow Hill Music in Denver and has found it to be the perfect place to educate folks about the power and spirituality of music. He loves the outdoors, especially the Colorado, New Mexico, Arizona and Utah wilderness. ​ See more about Sacred Fire on Facebook: https://www.facebook.com/profile.php?id=61573928094882# ​ and Instagram: https://www.instagram.com/sacredfire57/",
+    description: "We will be doing this as a benefit concert for all volunteer fire departments in our county and OCEMS. Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. Contreras teaches at Swallow Hill Music in Denver and has found it to be the perfect place to educate folks about the power and spirituality of music. …",
     pubDate: "2026-07-11T12:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "Ouray County 4H Event Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Sweet T & Lady V",
-    link: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
-    description: "July 12 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $14 Advance / $18 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Join us for an intimate evening with Grand Junction duo Sweet T & Lady V! With masterful mandolin, guitar, and rich vocal harmonies, these two create a beautifully woven wall of sound that’s both captivating and unforgettable. Come enjoy an evening of heartfelt music in an intimate setting—you won’t want to miss it! …",
-    pubDate: "2026-07-12T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53306472560017/huge/aff5c9b2f459a2dc668c6dbb64c16f4677ee6924.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
   }
 ];
 
@@ -4887,6 +4857,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49160/soc2026_v1_0_instagram45_copy.png"
+  },
+  {
+    title: "Public Art Commission Meeting",
+    link: "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
+    description: "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone through this link.",
+    pubDate: "2026-07-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/screenshot_2026-07-01_at_1_45_30_pm.png"
   },
   {
     title: "Movies Under the Stars",
@@ -5480,18 +5461,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/46727/mf_artists_26.800x533.webp"
   },
   {
-    title: "Telluride Medical Center Foundation Classic",
-    link: "https://www.telluride.com/event/telluride-medical-center-foundation-classic/",
-    description: "The Telluride Medical Center Foundation Classic is an elevated community golf fundraiser benefiting the Telluride …",
-    pubDate: "2026-06-28",
-    endDate: "2026-06-30",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62506/telluride_com.800x533.webp"
-  },
-  {
     title: "Telluride Plein Air",
     link: "https://www.telluride.com/event/telluride-plein-air/",
     description: "The Telluride Plein Air Festival is an essential fundraiser for the Sheridan Arts Foundation, a 501 (c) (3) …",
@@ -5502,17 +5471,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/45978/telluride-festival-plein-air-artists-2015-home-1.800x533.webp"
-  },
-  {
-    title: "Federal Judge Roy Altman on Why the Israel Debate Matters",
-    link: "https://www.telluride.com/event/federal-judge-roy-altman-on-why-the-israel-debate-matters/",
-    description: "Drawing from his bestselling book Israel on Trial, federal judge Roy Altman explores how the debate over Israel …",
-    pubDate: "2026-06-30",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62810/roy_altman_event_qr_1.800x533.webp"
   },
   {
     title: "Wim Tapley & the Cannons",
@@ -5628,6 +5586,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62891/bte_show_poster.800x533.webp"
+  },
+  {
+    title: "Fourth of July Drone Show",
+    link: "https://www.telluride.com/event/fourth-of-july-drone-show-mountain-village/",
+    description: "Head to Mountain Village for a Fourth of July drone show! The 2026 edition will take place after Better Than Ezra.",
+    pubDate: "2026-07-03",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62993/dsc05106--1--2100x1400-66fb62fd-2190-48b7-ba10-131d268becc2_1.800x533.webp"
   },
   {
     title: "Telluride Fourth of July Parade",
@@ -8050,14 +8019,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "July 1, 2026",
-    title: "Telluride Housing Authority Subcommittee",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8161",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
   {
     date: "July 21, 2026",
     title: "Town Council",
