@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 14:44:30 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 19:22:45 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 2–8</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-26</guid>
-      <pubDate>Thu, 02 Jul 2026 14:44:30 GMT</pubDate>
-      <description><![CDATA[The Fourth of July weekend is the main event this week, with Better Than Ezra, the Red White and Blues celebration in Mountain Village, a drone show, and a full slate of music and community happenings running through the holiday. On the government side, the county has three meetings scheduled for July 8 — including two special sessions and a work session — but none have posted agendas yet, and the Town's Open Space and Ecology commissions are in the same boat.]]></description>
+      <pubDate>Thu, 02 Jul 2026 19:22:45 GMT</pubDate>
+      <description><![CDATA[The Fourth of July weekend dominates this week, with Better Than Ezra, the Red White and Blues celebration, a drone show, and a full run of events stretching across both Telluride and Mountain Village. Once the holiday settles down, the Board of County Commissioners has multiple meetings scheduled for July 8 — including a special session out in Norwood at the Sheriff Annex — and both the Open Space and Ecology Commissions convene, though none of those agendas have been posted yet.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -81,19 +81,6 @@ New York-based goldsmith Nanci Modica is returning to Telluride with an all new 
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 2] Yin Yang Yoga with Miriah</title>
-      <link>https://koto.org/event/yin-yang-yoga-with-miriah/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yin%20yang%20yoga%20with%7C2026-07-02</guid>
-      <pubDate>Thu, 02 Jul 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/MIRIAH-2.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/MIRIAH-2.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Thu, Jul 2] Youth Tennis &amp; Pickleball Camp</title>
@@ -336,6 +323,18 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
 📍 Hartwell Park Ridgway
 
 The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 3] Telluride Farmer&apos;s Market</title>
+      <link>https://koto.org/event/telluride-farmers-market/2026-07-03/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmer%20s%20market%7C2026-07-03</guid>
+      <pubDate>Fri, 03 Jul 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Oak Street Plaza, Telluride
+
+We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>

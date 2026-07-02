@@ -160,7 +160,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592"},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
@@ -217,7 +217,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/tThmDYw9REKbs5_LM8bpog","meetingId":"832 9649 4938","passcode":"425135","phone":"719-359-4580"},
 
   "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
     {"sv":4},
@@ -232,6 +232,12 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
+    {"sv":4},
+
+  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
+    {"sv":4},
+
+  "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     {"sv":4}
 };
 
@@ -369,7 +375,7 @@ const MANUAL_SUMMARIES = {
     "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "The July 15, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
     "The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2, and E3 on Lots 34 and 34B of Backman Village, all new construction outside the Telluride Historic Landmark District in an Accommodations 2 zone, with Design Workshop as applicant and the Town itself as owner. A work session on the Shandoka Lot redevelopment at 860 Black Bear Rd — another Town-owned Accommodations 2 parcel — follows. Also on the hearing docket is a continued amendment to a prior Certificate of Appropriateness for 239 N Aspen, inside the THLD, elevated by the HARC Chair back in May.",
@@ -432,7 +438,13 @@ const MANUAL_SUMMARIES = {
     "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet."
+    "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet.",
+
+  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
+    "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -543,6 +555,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Fire shelters are a key defense for firefighters. But they don't guarantee survival",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "public-safety",
+    copy: "Fire shelters — layered aluminum, silica, and fiberglass wraps carried by wildland crews — have saved lives but aren't guaranteed protection. Escape routes and safety zones come first; the shelter is a last resort. Deployments have been rare recently, with only four recorded between 2021 and 2025.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_cecfb0ba-edd0-567a-8bf0-ca3a01ad9698.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/0d/80d00ef3-db70-56cd-8f14-70bdd66584e0/6a469ef7c213a.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Trump and Republicans return to communist attacks against Democrats ahead of the midterm elections",
     source: "Telluride Times",
@@ -2728,17 +2752,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://koto.org/event/yin-yang-yoga-with-miriah/",
-    description: "Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.",
-    pubDate: "2026-07-02T15:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MIRIAH-2.png"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-02/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3902,18 +3915,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
-    title: "Swimming Classes for Kids",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
-    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
-    pubDate: "2026-06-01T12:00:00.000Z",
-    endDate: "2026-07-27",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
-  },
-  {
     title: "True Grit Historic Walking Tours",
     link: "https://truegrittours.org/true-grit-tours ",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -3998,6 +3999,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://sherbino.org/event/opening-reception-for-the-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips/",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-07-01T12:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
+  },
+  {
     title: "Ouray Youth Summer Programs: Fly Fishing",
     link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/339?onlineSiteId=0&from_original_cui=true",
     description: "Participants will learn the basics of fly fishing techniques with instruction and equipment provided by Ridgway State Park staff. Please meet at the Pa-Co-Chu-Puk area of Ridgway State Park and bring snacks, water, weather-appropriate clothing, and sunglasses for eye protection while fishing. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
@@ -4053,17 +4066,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
-  },
-  {
-    title: "Roots & Rhythms: Opening Night with Live Music & Steam Bending Demo @ First Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Join us for the opening reception of Roots & Rhythms, a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. Celebrate the opening during Ridgway's First Friday Art Walk on July 3 from 5–8 p.m. Enjoy live music by TBone, a live steam-bending demonstration, refreshments, and the opportunity to meet both artists. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
   },
   {
     title: "Neon Sky Band",
@@ -4221,6 +4223,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg"
   },
   {
+    title: "On Display: Roots & Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
+    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
+    pubDate: "2026-07-06T12:00:00.000Z",
+    endDate: "2026-08-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create",
+    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
+  },
+  {
     title: "Soussical The Musical - Summer Youth Theatre Program",
     link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
     description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
@@ -4242,18 +4256,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52994950182035/huge/cd7de10752ab32dcb54e1001e4d01b26ce8b716a.jpg"
-  },
-  {
-    title: "Summer Reading Program Camp",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join us every Tuesday in July to learn, make new friends, play games, prevent the Summer Slide, and have fun! Theme: Unearth a Story featuring dinosaurs, archaeology, and paleontology Ages; Entering Kindergarten through 5th Grade Deadline to sign up: June 23rd, 2026 Email programsouraypl@gmail.com for more information or for the sign up sheets.",
-    pubDate: "2026-07-07T12:00:00.000Z",
-    endDate: "2026-07-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53012557028201/huge/4f4fa3f438fd0250f44547c8de21030bede87654.jpg"
   },
   {
     title: "RED MOUNTAIN REVIVAL",
@@ -4410,39 +4412,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52931877221087/huge/c922252dd282798a2a91ee39c35282c81910f49e.jpg"
-  },
-  {
-    title: "Deep Relaxation Sound Bath with Brian Dickinson: Live Music @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "Deep Relaxation Sound Bath with Brian Dickinson: Live Music @ the Wright WHEN? Saturday, July 11 Doors at 6:00 pm • Event at 6:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Join us for a special Deep Relaxation Sound Bath with Brian Dickinson, designed to help relax, balance, and restore energy throughout the body. Brian will intuitively guide participants through a sound immersion journey using a rich collection of instruments including gongs, singing bowls, handpan, bells, flutes, ancient whistles, chimes, and more. As guests settle into a cosmic ocean of sound, these layered vibrations create a deeply immersive experience that gently massages the body and calms the nervous system. The harmonic resonance of gong tones allows participants to naturally drop into a peaceful state of deep relaxation, creating space for rest, restoration, and healing. …",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932388838595/huge/3d53a3b85d29b20688afb793e034dfc642d33f6a.jpg"
-  },
-  {
-    title: "Benefit Concert for Fire Fighters and OCEMS - Sacred Fire-Santana Tribute Band",
-    link: "https://www.ocpag.org/sacredfire",
-    description: "We will be doing this as a benefit concert for all volunteer fire departments in our county and OCEMS. Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. Contreras teaches at Swallow Hill Music in Denver and has found it to be the perfect place to educate folks about the power and spirituality of music. …",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
-  },
-  {
-    title: "The Courtyard at 610 Presents: Sweet T & Lady V",
-    link: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
-    description: "July 12 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $14 Advance / $18 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Join us for an intimate evening with Grand Junction duo Sweet T & Lady V! With masterful mandolin, guitar, and rich vocal harmonies, these two create a beautifully woven wall of sound that’s both captivating and unforgettable. Come enjoy an evening of heartfelt music in an intimate setting—you won’t want to miss it! …",
-    pubDate: "2026-07-12T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53306472560017/huge/aff5c9b2f459a2dc668c6dbb64c16f4677ee6924.jpg"
   }
 ];
 
@@ -5077,7 +5046,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36708/download_2.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/36708/artwalk-2200x1237.800x533.webp"
   },
   {
     title: "Rooftop Pop-Up Local Artist Market",
