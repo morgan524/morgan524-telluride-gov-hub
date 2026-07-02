@@ -6,21 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 02:50:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 08:53:52 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sat, Jul 4] Telluride Fourth of July Parade</title>
-      <link>https://www.telluride.com/event/telluride-4th-of-july-parade/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20fourth%20of%20july%7C2026-07-04</guid>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44403/img_2267-2100x1400-717e96b7-57a1-4fb1-8082-d7ef66424a4e.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Telluride 4th of July Parade is the longest running event in the Town's history. The parade celebrates our …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44403/img_2267-2100x1400-717e96b7-57a1-4fb1-8082-d7ef66424a4e.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
     <item>
       <title>[Meeting] Open Space Commission - Jul 06 2026 — 2026-07-06</title>
       <link>https://livabletelluride.org/gov-hub.html</link>

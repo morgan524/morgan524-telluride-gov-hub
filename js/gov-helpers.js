@@ -378,7 +378,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -545,6 +545,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_2fb29e6f-8164-586a-8eb6-433f9d493108.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/6b/e6bf2806-8b34-5dff-9a10-9d3632cd660e/6a45a02e480c0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Ann Grundy",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "community",
+    copy: "Ann Grundy, a longtime Telluride seasonal resident, passed away at her home on Lake Carroll. She and her late husband Dr. Laurence Grundy discovered Telluride in 1978, returning for decades of summers and winters. She is remembered for her stained-glass art, adventurous spirit, and quiet kindness.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_16eec0ce-93d5-4deb-acf4-501d346d9d50.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/99/e99f664b-854a-4df3-831a-3ffa0da6191f/6a45272a54c25.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for July 2-9, 2026",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "infrastructure",
+    copy: "San Miguel County's Board of Equalization is sitting July 1–August 5, 2026, to hear property valuation appeals. Deadlines are July 15 for real property and July 20 for personal property. Separately, Telluride School District is seeking bids for year-round custodial services at its three school buildings.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Julie Beth Flatt Parker",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "recreation",
+    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
     imgHiRes: true
   },
   {
@@ -3403,59 +3439,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610074?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-07-01T15:00:00.000Z",
+    title: "CANCELLED - Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801138?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-07-02T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
   },
   {
-    title: "Mountain Village Farmers Marketshow: Gerald Robinson Magic",
-    link: "https://telluridelibrary.libcal.com/event/15564455?hs=a",
-    description: "11:00 AM – 12:00 PM · Gerald Robinson is a professional magician from Denver, Colorado. He has been learning and performing magic since he was 8 years old. Now at 25, he has performed all over the world including Germany, UK, and Canada. Most notably he is known for street performing on the Pearl Street Mall in Boulder, CO, and the resident magician at the former Enigma Bazaar. Most recently Gerald was one of the house magicians at the world famous Casa Bonita, in Denver, CO.",
-    pubDate: "2026-07-01T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_28_47.png"
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767655?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-01T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
-  },
-  {
-    title: "Sweet Sounds - Live Music and Sweet Treats! Aubrey Mable",
-    link: "https://telluridelibrary.libcal.com/event/16604746?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us on the library patio for Sweet Sounds , an afternoon of live local music and sweet treats! This free, all-ages program invites you to relax, connect, and enjoy the sounds of our community. Tasty treats will be available while supplies last. Stay for the full performance or drop in for a bit and soak up the atmosphere. This program was made possible by the Augment Music Project.  Summer Schedule: June 3rd: Grassblasters Bluegrass (Tom Nading on Guitar, Sam Burgess on Bass, and Danny D&#39;Alessandro on Banjo) July 1st: Aubrey Mable of LVDY August 5th: Speakeasy Jazz Trio (Donavan Dailey on Guitar, Danny D&#39;Alessandro on Sax, John Brown on Bass)",
-    pubDate: "2026-07-01T21:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772763?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-07-02T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_08_52.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935733?hs=a",
-    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-07-01T22:00:00.000Z",
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536278?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-02T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_51_58.png"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
+  },
+  {
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960350?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-07-02T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "French Happy Hour",
+    link: "https://telluridelibrary.libcal.com/event/15970653?hs=a",
+    description: "5:00 PM – 6:00 PM · Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
+    pubDate: "2026-07-02T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "The Alibi",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1747415393.jpg"
+  },
+  {
+    title: "Tarde de Piscina",
+    link: "https://telluridelibrary.libcal.com/event/16773025?hs=a",
+    description: "5:00 PM – 6:30 PM · El tiempo de verano est&aacute; aqu&iacute;, pero &iquest;sab&iacute;as que hay una piscina en el parque del pueblo? Ven a nadar y visita la piscina! Todas las edades son bienvenidas.",
+    pubDate: "2026-07-02T23:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_28_11_22_18.png"
   }
 ];
 
@@ -3476,18 +3523,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Wim Tapley & the Cannons w/ Waxpool",
-    link: "https://www.alibitelluride.com/calendar#eca-event=wim-tapley-and-the-cannons",
-    description: "Based in Athens, Georgia, Wim Tapley came of age playing shows in Washington D.C...",
-    pubDate: "2026-07-01",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/d29aea7b-9b02-4f7c-a2c2-183af167024d/-/crop/4036x2019/0,94/-/preview/"
-  },
   {
     title: "The Bright Light Social Hour Night 1",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-bright-light-social-hour-night-1",
@@ -3775,6 +3810,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/"
+  },
+  {
+    title: "Big Blitz",
+    link: "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
+    description: "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
+    pubDate: "2026-08-30",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/d2998c5f-69ce-4db7-bee5-9c0a3e1ded0c/-/crop/2048x1024/0,158/-/preview/"
   }
 ];
 
@@ -3947,18 +3994,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
-    title: "Beautification Committee (OBC)",
-    link: "https://www.cityofouray.com/city_offices/committees___boards/beautification_committee_(obc).php",
-    description: "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have also worked hard over the years to acquire many historic mining pieces and equipment that are displayed throughout the community to recognize Ouray's mining heritage. The committee has also provided direction on signage, light poles, and benches on the public rights of way. The Beautification Committee also plays an important role in developing and implementing master plans for the City’s park system. The committee makes recommendations to the City Council on these many beautification projects as well as the use of dollars from the Beautification Fund. This fund is supported by a portion of the Lodging Occupation Tax and is used exclusively for projects that help beautify the community. …",
-    pubDate: "2026-03-04T12:00:00.000Z",
-    endDate: "2027-02-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center, San Juan Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
-  },
-  {
     title: "Ouray Economic Development Committee",
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
     description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
@@ -4091,6 +4126,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
+    title: "Swimming Classes for Kids",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
+    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
+    pubDate: "2026-06-01T12:00:00.000Z",
+    endDate: "2026-07-27",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
+  },
+  {
     title: "True Grit Historic Walking Tours",
     link: "https://truegrittours.org/true-grit-tours ",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -4173,28 +4220,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
-  },
-  {
-    title: "Live Music- Bright Light Social Hour",
-    link: "https://www.stelmohotel.com/summer-sound/bright-light-social-hour",
-    description: "Join us on Wednesday, July 1st as we welcome Bright Light Social Hour to the St. Elmo Tavern Patio! This Austin, Texas-based rock band is known for their explosive blend of psychedelic rock, funk, and soul. Drawing comparisons to classic acts like Cream and The Doors while maintaining a sound that is entirely their own, TBLSH delivers a high-energy, groove-heavy live experience that is hard to shake. Their music pulses with driving rhythms, swirling guitars, and a raw, electrifying energy that fills whatever room or patio they play. This is a ticketed show. Tickets can be purchased here: https://booking.whollyticket.com/84948 Show starts at 7pm. We look forward to seeing you there!",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53126268448586/huge/551649ade610d753640b4916bd308fa22ba0932e.jpg"
-  },
-  {
-    title: "True Grit: CO-150 Film Festival @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "True Grit: CO-150 Film Festival @ the Wright WHEN? Wednesday, July 1 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 8min RATING: G ROTTEN TOMATOES SCORE: 89% ABOUT THE FILM True Grit (1969) stars John Wayne in his Academy Award-winning role as the tough and hard-drinking U.S. Marshal Rooster Cogburn, hired by a determined young girl to help track down her father’s killer through dangerous frontier territory. Blending rugged western action with humor, heart, and unforgettable performances, the film became a defining classic of the American West and one of the most beloved westerns ever made. A timeless frontier adventure about justice, courage, and the stubborn grit it takes to do what’s right. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
-    pubDate: "2026-07-01T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52931213000303/huge/4a35e556e3be8d09715931691264a9a9467bcf3a.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Fly Fishing",
@@ -4455,7 +4480,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53012557028201/huge/4f4fa3f438fd0250f44547c8de21030bede87654.jpg"
   },
   {
-    title: "JACK HAIGHT",
+    title: "RED MOUNTAIN REVIVAL",
     link: "https://coloradoboydepot.com/calendar/",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/",
     pubDate: "2026-07-07T12:00:00.000Z",
@@ -4631,6 +4656,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Sweet T & Lady V",
+    link: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
+    description: "July 12 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $14 Advance / $18 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Join us for an intimate evening with Grand Junction duo Sweet T & Lady V! With masterful mandolin, guitar, and rich vocal harmonies, these two create a beautifully woven wall of sound that’s both captivating and unforgettable. Come enjoy an evening of heartfelt music in an intimate setting—you won’t want to miss it! …",
+    pubDate: "2026-07-12T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53306472560017/huge/aff5c9b2f459a2dc668c6dbb64c16f4677ee6924.jpg"
   }
 ];
 
@@ -6762,6 +6798,116 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
     address: "San Miguel County, Colorado",
     noticeKey: "property-tax-exemption-senior-veteran-2026"
+  },
+  {
+    title: "Public Notice -- San Miguel County Board of Equalization (CBOE) Session 2026",
+    entity: "San Miguel County Board of Equalization",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Board of Commissioners will sit as the Board of Equalization (CBOE) from July 1 through August 5, 2026, to hear taxpayer appeals of Assessor property valuation and classification decisions. Independent hearing officers will conduct hearings and submit recommendations; only taxpayers who previously filed objections with the Assessor may petition. Filing deadlines are July 15, 2026 for real property and July 20, 2026 for personal property.",
+    deadline: "2026-07-20",
+    expires: "2026-08-05",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "Miramonte Building, 2nd Floor, Room 201, 333 West Colorado Avenue, Telluride, Colorado",
+    noticeKey: "COL-000178-cboe-2026"
+  },
+  {
+    title: "RFP -- Custodial Services for Telluride School District R-1",
+    entity: "Telluride School District R-1",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Telluride School District R-1 is requesting proposals from vendors to provide year-round custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. Services include trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; vendors may bid on all or part of the contract. Requests for full specifications must be received by 4:00 PM on July 14, 2026, and complete proposals are due by 4:00 PM on July 21, 2026.",
+    deadline: "2026-07-21",
+    expires: "2026-07-21",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, Colorado",
+    noticeKey: "COL-000180-tsd-custodial-rfp"
+  },
+  {
+    title: "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
+    entity: "Estate of Gerald D. Wilson",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Notice is given that the estate of Gerald D. Wilson, also known as Gerald Dean Nelson, is being administered in San Miguel County District Court under Case No. 26PR30005. All persons with claims against the estate must present them to Personal Representative Michael Kimball or to the District Court on or before October 25, 2026, or claims may be forever barred.",
+    deadline: "2026-10-25",
+    expires: "2026-10-25",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "District Court of San Miguel County, Colorado",
+    noticeKey: "COL-000183-estate-wilson-26PR30005",
+    caseNumber: "26PR30005"
+  },
+  {
+    title: "Public Notice -- Replacement of Lost Share Certificate #887, Farmers' Water Development Company",
+    entity: "Farmers' Water Development Company",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original permanently cancelled.",
+    deadline: "2026-07-30",
+    expires: "2026-07-30",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
+    noticeKey: "COL-000181-fwdc-share-cert-887"
+  },
+  {
+    title: "Public Hearing -- San Miguel County Planning Commission & BOCC Joint Work Session (July 9, 2026)",
+    entity: "San Miguel County Planning Commission / Board of County Commissioners",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The San Miguel County Planning Commission and Board of County Commissioners will hold a joint work session on July 9, 2026 at 9:30 AM to discuss proposed Land Use Code amendments, including sections on Forestry Practices, Oil & Gas Operations, Deep Geothermal Operations, Condominium Plats, and Planned Unit Development & Subdivisions. The meeting is open to the public in person at 333 West Colorado Ave., Telluride, or via Zoom.",
+    deadline: "2026-07-09",
+    expires: "2026-07-09",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    noticeKey: "COL-000184-pc-bocc-worksession-2026-07-09"
+  },
+  {
+    title: "Foreclosure Sale Notice -- Lot 166AR2, Telluride Mountain Village (Sale No. 202604)",
+    entity: "Federal Holding Realty / Two Stonegate LLC",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The San Miguel County Public Trustee has recorded a Notice of Election and Demand for foreclosure on a Deed of Trust dated April 22, 2022, involving original grantor Two Stonegate LLC and beneficiary Federal Holding Realty, with an outstanding principal balance of $500,000. The property subject to foreclosure is Lot 166AR2, Telluride Mountain Village, located on Stonegate Drive, Mountain Village, CO 81435. The foreclosure is proceeding under CRS §38-38-103, and the lien foreclosed may not be a first lien.",
+    deadline: "",
+    expires: "2026-10-01",
+    dates: "7/2",
+    papers: ["ttimes_0702"],
+    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
+    address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
+    noticeKey: "foreclosure-sale-202604-lot166ar2-mountain-village",
+    caseNumber: "202604"
   }
 ];
 

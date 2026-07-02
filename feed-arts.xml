@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 02:50:41 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 08:53:52 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Thu, Jul 2] The Bright Light Social Hour Night 1</title>
@@ -34,6 +34,19 @@ Visit the Telluride Arts HQ Gallery to view "The Color of Summer" from July 2 - 
       <media:content url="https://www.telluride.com/site/assets/files/62906/telluride_arts_color_of_summer_tot_2200_x_1237_px.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 2] CANCELLED - Yin Yang Yoga with Miriah</title>
+      <link>https://telluridelibrary.libcal.com/event/16801138?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cancelled%20yin%20yang%20yoga%7C2026-07-02</guid>
+      <pubDate>Thu, 02 Jul 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome. Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Thu, Jul 2] Art Walk Telluride</title>
@@ -85,32 +98,6 @@ Friday evening's live music lineup begins with acclaimed singer-songwriter and l
 The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 3] 6th Annual Alpine Cookout</title>
-      <link>https://koto.org/event/6th-annual-alpine-cookout/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/6th%20annual%20alpine%20cookout%7C2026-07-03</guid>
-      <pubDate>Fri, 03 Jul 2026 22:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Reflection Plaza Mountain Village
-
-The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Jul 4] MINDCHATTER DJ SET</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=mindchatter-dj-set</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mindchatter%20dj%20set%7C2026-07-04</guid>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Singer, songwriter, and multi-instrumentalist Bryce Connolly, better known as M...]]></description>
-      <media:content url="https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
     </item>
     <item>
       <title>[Meeting] Open Space Commission - Jul 06 2026 — 2026-07-06</title>
