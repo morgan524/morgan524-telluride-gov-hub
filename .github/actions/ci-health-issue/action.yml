@@ -2,23 +2,25 @@ name: CI Health Issue
 description: >
   Open one CI-Health issue on failure, comment on repeat failures (no duplicate
   issues), and auto-close it when the workflow recovers. Call once at the end of a
-  job with `if: always()` and pass `status: ${{ job.status }}`. Factored out of the
+  job with if:always() and pass the job status input. Factored out of the
   copy-pasted failure-tracker blocks so scheduled workflows that commit or send
-  email don't fail silently. Requires `permissions: issues: write` on the caller
+  email don't fail silently. Requires permissions issues:write on the caller
   and a prior actions/checkout (this is a local composite action).
+  NOTE: do not put GitHub expression syntax in these description strings — the
+  manifest loader evaluates it and job/secrets contexts aren't available here.
 
 inputs:
   title:
     description: Issue title (unique per workflow, e.g. "🚨 Digest Refresh workflow is failing")
     required: true
   status:
-    description: The job status — pass ${{ job.status }}
+    description: The job status — pass the job.status context from the caller
     required: true
   run-url:
     description: URL of the failing run
     required: true
   github-token:
-    description: Token with issues:write (pass ${{ secrets.GITHUB_TOKEN }})
+    description: Token with issues write scope (pass the GITHUB_TOKEN secret)
     required: true
 
 runs:
