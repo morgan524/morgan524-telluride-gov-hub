@@ -2538,6 +2538,17 @@ const SMB_FORUM_ARTICLES = [
 // treatment (byline + logo) while still using a custom `img` as the hero.
 const LOCAL_NEWS_FEATURED = [
   {
+    title: "West End Renaissance",
+    source: "Telluride Times",
+    sourceKey: "ttimes",
+    date: "July 1, 2026",
+    summary: "The West End has weathered cattle, mining, timber, coal, and COVID -- the usual boom-bust pattern. Now broadband, airport upgrades, remote work, and the West End Vision Project are pointing toward a more diversified local economy. WEEDC is searching for a new executive director at what looks like a pivotal moment.",
+    href: "https://www.telluridenews.com/norwood_post/article_64d52a82-dfcd-41c1-8ad7-17356b158ae9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/49/249a2e22-e7f8-4e77-842d-ef742134e68b/6a4451d589a77.image.jpg",
+    category: "Community",
+    featured: true
+  },
+  {
     title: "Is Telluride Paradise?",
     source: "Letter to the Editor",
     sourceKey: "letter",

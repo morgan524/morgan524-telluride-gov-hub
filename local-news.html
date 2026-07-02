@@ -833,6 +833,14 @@
     function isLetterToEditor(a) {
       return !!(a && (a.isLetter === true || (a.href && /\/letters_to_editor\//i.test(a.href))));
     }
+    // Editorial rule (permanent): never let an obituary be the featured story.
+    // Match on structured fields (URL section / category / topic) — not the
+    // headline/summary — so a normal story that merely mentions a death isn't
+    // wrongly excluded.
+    function isObituary(a) {
+      if (!a) return false;
+      return /obituar/i.test((a.href || '') + ' ' + (a.category || '') + ' ' + (a.newsTopic || ''));
+    }
     function imgFor(a) {
       // Our own letters (LOCAL_NEWS_FEATURED, isLetter:true) use their supplied
       // photo as the hero. Telluride Times letters only carry a masthead
@@ -950,7 +958,7 @@
         ? ARTICLES
         : ARTICLES.filter(a => a.category === activeCategory);
 
-      const featured = filtered.find(a => a.featured) || filtered[0];
+      const featured = filtered.find(a => a.featured) || filtered.find(a => !isObituary(a)) || filtered[0];
       const rest = filtered.filter(a => a !== featured);
 
       document.getElementById('featuredCard').innerHTML = featured ? featuredHtml(featured) : '';
@@ -1239,7 +1247,11 @@
             filtered.forEach(a => ARTICLES.push(a));
             // Honor a hand-pinned featured item (LOCAL_NEWS_FEATURED); otherwise
             // feature the newest-dated article.
-            if (!ARTICLES.some(a => a.featured) && ARTICLES[0]) ARTICLES[0].featured = true;
+            if (!ARTICLES.some(a => a.featured)) {
+              // Auto-feature the newest article, but NEVER an obituary (rule).
+              const auto = ARTICLES.find(a => !isObituary(a)) || ARTICLES[0];
+              if (auto) auto.featured = true;
+            }
             render();
         } catch (err) { console.warn('loadLiveData filter pass failed:', err); }
       };
