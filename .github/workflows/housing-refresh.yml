@@ -2,8 +2,11 @@ name: Housing Refresh
 
 on:
   schedule:
-    # Monday and Thursday at 12:00 UTC (6am Mountain)
-    - cron: '0 12 * * 1,4'
+    # Monday and Thursday at 12:45 UTC (6:45am Mountain). Offset past both
+    # content-refresh (12:00) and maintenance (12:30) so the three don't rewrite
+    # gov-helpers.js at the same minute (a concurrent whole-array rewrite can't
+    # rebase-merge, so a colliding push would silently drop this run's work).
+    - cron: '45 12 * * 1,4'
   workflow_dispatch:
 
 permissions:

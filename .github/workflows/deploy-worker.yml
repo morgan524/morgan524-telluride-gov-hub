@@ -15,6 +15,10 @@ on:
       - 'cloudflare-worker/livabletelluride-rss-proxy/worker.js'
       - 'cloudflare-worker/livabletelluride-rss-proxy/wrangler.toml'
 
+permissions:
+  contents: read
+  issues: write   # ci-health-issue failure tracker
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -44,3 +48,12 @@ jobs:
         env:
           CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
           CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Deploy Cloudflare Worker workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

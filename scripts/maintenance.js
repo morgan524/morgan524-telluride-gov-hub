@@ -308,8 +308,9 @@ const FEED_STALE_HOURS = 12;
 const EVENTS_CONFIG_FILE = path.join(REPO_ROOT, 'email-events-config.json');
 // The subscriber email is currently a MANUAL weekly REGULAR campaign (pasted from
 // scripts/weekly-email.js), not an RSS-driven daily digest — so check for any
-// recently-SENT campaign on a weekly cadence (9 days = 1 week + 2 days grace).
-const MAILCHIMP_STALE_HOURS = 216;
+// recently-SENT campaign on a weekly cadence (8 days = 1 week + 1 day grace, so a
+// skipped week is flagged the day after it was due rather than two days later).
+const MAILCHIMP_STALE_HOURS = 192;
 
 async function checkFeedFreshness() {
   console.log('\n📰 Liveness: feed.xml freshness...');
