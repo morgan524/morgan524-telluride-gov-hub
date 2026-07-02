@@ -378,7 +378,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -2279,165 +2279,36 @@ const ROTARY_NEWS = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
-    title: "‘Two peas in a pod,’ have partnered for Wild Gals Market",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "arts-culture",
-    copy: "When Galit Korngold had the idea of opening a store eight years ago, her vision included Mallory Rice, Nucla native whose roots go back to the time the CCC Ditch construction. “Mallory …",
-    href: "https://www.sanmiguelbasinforum.com/stories/two-peas-in-a-pod-have-partnered-for-wild-gals-market,120633",
-    img: "https://zeta.creativecirclecdn.com/smb/original/20260702-091035-c75-C1%20-%20peas%20in%20a%20pod.jpg"
-  },
-  {
     title: "It’s time to bake; annual dessert contest is July 11",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    dateSource: "article",
     newsTopic: "community",
     copy: "Katie Alexander, superintendent of the decades-old dessert contest, is getting ready for the big day July 11, a Saturday, kicking off the San Miguel Basin Fair. What used to be a pie contest for the …",
     href: "https://www.sanmiguelbasinforum.com/stories/its-time-to-bake-annual-dessert-contest-is-july-11,120634",
     img: ""
   },
   {
-    title: "This year’s theme is ‘Celebrate'",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "infrastructure",
-    copy: "After many Navajo Taco Nights of fundraising in the last year, the Nucla Water Days Steering Committee is gearing up for its annual holiday, which takes place this year on July 4. This year’s theme …",
-    href: "https://www.sanmiguelbasinforum.com/stories/this-years-theme-is-celebrate,120635",
-    img: ""
-  },
-  {
-    title: "Citizen unhappy with denial of variance for fence",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "community",
-    copy: "Mia Cain, of Naturita, told the Forum she’s displeased with the process she’s gone through regarding obtaining a variance for a fence, rather what she says is a barrier, she had installed. Cain …",
-    href: "https://www.sanmiguelbasinforum.com/stories/citizen-unhappy-with-denial-of-variance-for-fence,120636",
-    img: ""
-  },
-  {
     title: "West End producers sell at Ridgway markets",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-01",
+    dateSource: "article",
     newsTopic: "arts-culture",
     copy: "Every Friday morning, from May 22 to Oct. 16, Ridgway’s Hartwell Park is filled with vendors and buyers attending the local farmers market. As the market celebrates its 26th anniversary, it …",
     href: "https://www.sanmiguelbasinforum.com/stories/west-end-producers-sell-at-ridgway-markets,120637",
     img: ""
   },
   {
-    title: "TNYP supports teens through river trip, college tour, jobs board, scholarships, magazine",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "government",
-    copy: "Representatives from True North Youth Program continue to help local kids in rural and remote Colorado have access to opportunities and experiences they may not have otherwise. To begin …",
-    href: "https://www.sanmiguelbasinforum.com/stories/untitled,119797",
-    img: "https://zeta.creativecirclecdn.com/smb/original/20260623-231546-a12-youth%204.jpg"
-  },
-  {
-    title: "Town awarded $500,000 for water infrastructure",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "infrastructure",
-    copy: "On June 17, representatives from the Town of Norwood announced they were pleased the town had been awarded a $500,000 Community Assistance Grant through the Colorado Department of Labor and …",
-    href: "https://www.sanmiguelbasinforum.com/stories/town-awarded-500000-water-infrastructure,119798",
-    img: ""
-  },
-  {
-    title: "Town discusses splash pad, Public Works, old hefty fine",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "infrastructure",
-    copy: "Chris Daniels went before Nucla’s town trustees at the regular meeting June 8 to remind them the Red Rock Rodders, the car club, will have a display July 4 for Water Days. Trustees also discussed …",
-    href: "https://www.sanmiguelbasinforum.com/stories/town-discusses-splash-pad-public-works-an-old-hefty-fine,119799",
-    img: ""
-  },
-  {
-    title: "Commissioners approve service plan; clinic holds annual meeting",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "government",
-    copy: "The Basin Clinic Board of Directors held their annual meeting June 16. The meeting took place at Hopkin’s Field, Nucla’s Airport. Board President Chris Daniels reviewed 2025. She spoke of …",
-    href: "https://www.sanmiguelbasinforum.com/stories/untitled,119800",
-    img: ""
-  },
-  {
-    title: "Mayor reports on Main Street business meetings",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "government",
-    copy: "Some Nucla Main Street business owners have been attending meetings to discuss initiatives to increase tourism, commerce and visibility. At the Nucla Town Board Meeting of Trustees on June 8 — …",
-    href: "https://www.sanmiguelbasinforum.com/stories/mayor-reports-on-main-street-business-meetings,119801",
-    img: ""
-  },
-  {
-    title: "King on receiving end of services post-op, grateful for help",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "community",
-    copy: "Social worker Melissa King has been helping people of the West End in her work as a crisis professional for some time. Through Paragon’s on-call support team, she’s employed to provide relief to …",
-    href: "https://www.sanmiguelbasinforum.com/stories/king-on-receiving-end-of-services-post-op-grateful-for-help,118952",
-    img: ""
-  },
-  {
-    title: "DEEEP users reach nearly 20k; project updates forthcoming",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "education",
-    copy: "Carol Hunter, the coordinator of the Dominguez-Escalante Expedition Education Project (DEEEP), released data regarding its website and the educational tools. DEEEP is an interactive teaching …",
-    href: "https://www.sanmiguelbasinforum.com/stories/deeep-users-reach-nearly-20k-project-updates-forthcoming,118953",
-    img: ""
-  },
-  {
-    title: "Commissioners review service plan; locals give input",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "government",
-    copy: "The Montrose Board of County Commissioners (BOCC) held a special meeting June 10 at the Nucla Community Center. The majority of the meeting was focused on the Basin Clinic’s critical access …",
-    href: "https://www.sanmiguelbasinforum.com/stories/commissioners-review-service-plan-locals-give-input,118954",
-    img: "https://zeta.creativecirclecdn.com/smb/original/20260616-134416-90b-F2%20-%20health%20care%20.jpg"
-  },
-  {
-    title: "Beehive Fire mostly contained; ‘nothing else active … yet’",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "public-safety",
-    copy: "Many were holding their breath in the West End when they saw the smoke or heard about it last week. The Beehive Fire, caused by lightning strike, was reported June 8. On BLM-managed land, fire crews …",
-    href: "https://www.sanmiguelbasinforum.com/stories/beehive-fire-mostly-contained-nothing-else-active-yet,118955",
-    img: ""
-  },
-  {
     title: "Farmers market started; weekly Wild Gal’s meals back",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
+    date: "June 17, 2026",
+    firstSeen: "2026-06-17",
+    dateSource: "article",
     newsTopic: "arts-culture",
     copy: "Galit Korngold, of the West End and who owns and operates Wild Gal’s Market in Naturita, told the Forum over the weekend that there are two big things the community should know about: the summer …",
     href: "https://www.sanmiguelbasinforum.com/stories/farmers-market-started-weekly-wild-gals-meals-back,118956",
@@ -2449,10 +2320,23 @@ const SMB_FORUM_ARTICLES = [
     sourceKey: "smb",
     date: "June 10, 2026",
     firstSeen: "2026-06-10",
+    dateSource: "article",
     newsTopic: "community",
     copy: "Wyatt Hughes, a Norwood native and the son of Howard Hughes, reached the top of Mount Everest May 28 at 12:30 p.m. How does the son of a western Colorado rancher, from a remote place like Norwood, …",
     href: "https://www.sanmiguelbasinforum.com/stories/norwood-native-wyatt-hughes-summits-everest,118050",
     img: "https://zeta.creativecirclecdn.com/smb/original/20260609-202440-699-F1%20-%20everest.JPG"
+  },
+  {
+    title: "Bird offers home care support in West End",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "June 10, 2026",
+    firstSeen: "2026-06-10",
+    dateSource: "article",
+    newsTopic: "health",
+    copy: "Christina Bird, of Paradox, spent nearly 20 years as a licensed practical nurse (LPN), working in long-term health care facilities. Originally from Paradox, she left for a while, but moved back when …",
+    href: "https://www.sanmiguelbasinforum.com/stories/bird-offers-home-care-support-in-west-end,118048",
+    img: ""
   },
   {
     title: "Johnson makes new CORA request, questions town leadership",
@@ -2460,6 +2344,7 @@ const SMB_FORUM_ARTICLES = [
     sourceKey: "smb",
     date: "June 3, 2026",
     firstSeen: "2026-06-03",
+    dateSource: "article",
     newsTopic: "community",
     copy: "Mimi Johnson, vocal opponent to the newly erected cell tower in Nucla, shared with the Forum she contacted Nucla Town Hall that she was conducting a Colorado Open Records Act (CORA). In …",
     href: "https://www.sanmiguelbasinforum.com/stories/johnson-makes-new-cora-request-questions-town-leadership,117346",
