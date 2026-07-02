@@ -97,6 +97,38 @@ function isAllowed(target) {
   return ALLOWED_HOSTS.some((h) => host === h || host.endsWith("." + h));
 }
 
+// SSRF guard for endpoints that must fetch arbitrary user-supplied URLs (e.g.
+// /og link previews, where an allow-list would defeat the feature). Rejects
+// non-http(s), non-standard ports, and hostnames that resolve to loopback /
+// link-local / RFC-1918 private space or cloud metadata. Literal-IP checks
+// only (can't resolve DNS here), but that blocks the common SSRF probes; pair
+// with origin-scoped CORS so browsers other than our site can't read results.
+function isPublicHttpUrl(target) {
+  let u;
+  try { u = new URL(target); } catch { return false; }
+  if (u.protocol !== "http:" && u.protocol !== "https:") return false;
+  if (u.port && u.port !== "80" && u.port !== "443") return false;
+  const host = u.hostname.toLowerCase();
+  if (host === "localhost" || host.endsWith(".localhost") || host.endsWith(".internal") || host.endsWith(".local")) return false;
+  // Literal IPv4?
+  const m = host.match(/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/);
+  if (m) {
+    const [a, b] = [Number(m[1]), Number(m[2])];
+    if (a === 10) return false;                         // 10.0.0.0/8
+    if (a === 127) return false;                        // loopback
+    if (a === 0) return false;                          // 0.0.0.0/8
+    if (a === 169 && b === 254) return false;           // link-local / metadata
+    if (a === 172 && b >= 16 && b <= 31) return false;  // 172.16.0.0/12
+    if (a === 192 && b === 168) return false;           // 192.168.0.0/16
+    if (a === 100 && b >= 64 && b <= 127) return false; // CGNAT 100.64.0.0/10
+    if (a >= 224) return false;                         // multicast / reserved
+  }
+  // Literal IPv6 loopback / link-local / unique-local.
+  if (host === "::1" || host === "[::1]") return false;
+  if (/^\[?(fe80|fc|fd)/i.test(host)) return false;
+  return true;
+}
+
 function authOk(request, url, env) {
   const need = env.PROXY_KEY || "";
   if (!need) return true; // no key configured -> open
@@ -369,11 +401,15 @@ async function handleUpdateProfile(request, env) {
   if (Object.keys(interests).length) body.interests = interests;
   if (!Object.keys(body).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
-  // Dual-write to Customer.io (parallel to Mailchimp during the migration).
-  // Map the SAME inputs onto the import's attribute schema. Booleans in
-  // data.subs are explicit toggles, so we always forward them (including
-  // false → drops the person from that segment). Best-effort; awaited so it
-  // completes within the request, but its result never affects the response.
+  // Prepare the Customer.io dual-write payload, but DON'T send it yet. cioIdentify
+  // is an unconditional upsert keyed by the request-supplied email — running it
+  // before we know the address is a real Mailchimp member let anyone inject
+  // arbitrary contacts into Customer.io. We map the inputs here, then fire the
+  // upsert only AFTER Mailchimp confirms the member exists (2xx below). This is
+  // an intentionally-unauthenticated by-email endpoint (the weekly-email
+  // "manage preferences" link and pre-account signup both call it without a
+  // Firebase token), so membership-gating is the guard we can enforce without
+  // breaking those flows.
   const cioAttrs = {};
   for (const [k, attr] of Object.entries(CIO_FIELDS_TO_ATTR)) {
     if (merge_fields[k]) cioAttrs[attr] = merge_fields[k];
@@ -383,7 +419,6 @@ async function handleUpdateProfile(request, env) {
       if (CIO_SUBS_TO_ATTR[k] && typeof v === "boolean") cioAttrs[CIO_SUBS_TO_ATTR[k]] = v;
     }
   }
-  const cioStatus = await cioIdentify(env, email, cioAttrs);
 
   const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
   const apiUrl = `https://${dc}.api.mailchimp.com/3.0/lists/${MC_LIST_ID}/members/${md5(email)}`;
@@ -404,6 +439,9 @@ async function handleUpdateProfile(request, env) {
     return json({ ok: false, msg: "We couldn't find that email on our list. Use the address you subscribed with, or sign up first." });
   }
   if (resp.status >= 200 && resp.status < 300) {
+    // Member confirmed — now safe to mirror into Customer.io. Best-effort;
+    // its result never changes the response the user sees.
+    const cioStatus = await cioIdentify(env, email, cioAttrs);
     return json({ ok: true, msg: "Your info has been updated — thank you!", cio: cioStatus });
   }
   let detail = "";
@@ -747,16 +785,17 @@ export default {
       return Response.json({ ok: true, version: VERSION, allowed: ALLOWED_HOSTS });
     }
     if (url.pathname === "/og") {
-      // Open-Graph extractor — fetches any public page and returns
-      // { imageUrl, title, description } as JSON for Hub-Bub link previews.
-      const corsH = { "Access-Control-Allow-Origin": "*", "Content-Type": "application/json" };
+      // Open-Graph extractor for Hub-Bub link previews. It legitimately needs to
+      // fetch arbitrary user-pasted URLs, so it can't use the proxy allow-list —
+      // instead it blocks private/loopback/link-local targets (SSRF guard) and
+      // scopes CORS to our own site so the endpoint can't be used as an
+      // anonymous cross-origin fetch amplifier.
+      const corsH = { ...profileCorsHeaders(request.headers.get("Origin") || ""), "Access-Control-Allow-Methods": "GET, OPTIONS" };
       if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsH });
       const targetUrl = url.searchParams.get("url");
       if (!targetUrl) return new Response(JSON.stringify({ error: "No url param" }), { status: 400, headers: corsH });
-      let pu;
-      try { pu = new URL(targetUrl); } catch { return new Response(JSON.stringify({ error: "Invalid URL" }), { status: 400, headers: corsH }); }
-      if (pu.protocol !== "https:" && pu.protocol !== "http:") {
-        return new Response(JSON.stringify({ error: "Only http/https" }), { status: 400, headers: corsH });
+      if (!isPublicHttpUrl(targetUrl)) {
+        return new Response(JSON.stringify({ error: "URL not allowed" }), { status: 400, headers: corsH });
       }
       try {
         const resp = await fetch(targetUrl, {
