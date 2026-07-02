@@ -18,6 +18,7 @@ on:
 
 permissions:
   contents: read
+  issues: write   # ci-health-issue failure tracker
 
 jobs:
   preview:
@@ -86,3 +87,12 @@ jobs:
             weekend-mailchimp.html
           retention-days: 14
           if-no-files-found: ignore
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Weekend Email Preview workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

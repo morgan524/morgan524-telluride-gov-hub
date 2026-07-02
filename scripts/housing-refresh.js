@@ -23,6 +23,7 @@ const https = require('https');
 const http  = require('http');
 const fs    = require('fs');
 const path  = require('path');
+const { assertParses } = require('./lib/write-guard.js');
 
 const REPO_ROOT   = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS  = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -328,6 +329,8 @@ async function main() {
   }
 
   const updated = replaceJsArray(govHubSrc, 'HOUSING_LISTINGS', merged);
+  // Compile-check before writing so a bad serialize never ships a broken file.
+  assertParses('gov-helpers.js', updated);
   fs.writeFileSync(GOV_HELPERS_JS, updated, 'utf8');
 
   console.log('\n✅ Updated HOUSING_LISTINGS:');

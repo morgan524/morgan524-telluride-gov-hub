@@ -3,10 +3,14 @@
 // lib/serialize.js, extracted from content-refresh.js (used 30+ times there)
 // so it's unit-tested and reusable.
 //
-// NOTE: these are naive bracket-matchers — they count every [ ] { } including
-// any inside string literals. The bot's serialized data never contains an
-// unbalanced bracket inside a string (serializeArray JSON-quotes values), so
-// this is safe for that data. Don't point it at arbitrary hand-written JS.
+// These bracket-matchers are STRING-AWARE: they skip over the contents of
+// '…' / "…" / `…` string literals (honoring backslash escapes) so a stray
+// [ ] { } inside scraped title/summary text can't fool the depth counter.
+// A naive counter that counted brackets inside strings would mis-place the
+// closing bracket on data like "[UPDATED] closure" or LLM prose containing a
+// lone '}', slice a malformed literal, throw, and return null — and every
+// caller does `|| []`, silently wiping carried-forward history. See
+// docs/news-pipeline.md and the write-guard incident notes.
 
 function extractBalanced(source, varName, open, close) {
   const esc = open === '[' ? '\\[' : '\\{';
@@ -14,10 +18,19 @@ function extractBalanced(source, varName, open, close) {
   const match = startRe.exec(source);
   if (!match) return null;
   let depth = 0;
+  let quote = null; // current string delimiter (' " `) or null when outside a string
   const start = match.index + match[0].length - 1; // position of the opening bracket
   for (let i = start; i < source.length; i++) {
-    if (source[i] === open) depth++;
-    else if (source[i] === close) {
+    const ch = source[i];
+    if (quote) {
+      // Inside a string literal: consume until the matching unescaped delimiter.
+      if (ch === '\\') { i++; continue; } // skip the escaped char
+      if (ch === quote) quote = null;
+      continue;
+    }
+    if (ch === '"' || ch === "'" || ch === '`') { quote = ch; continue; }
+    if (ch === open) depth++;
+    else if (ch === close) {
       depth--;
       if (depth === 0) {
         const literal = source.slice(start, i + 1);

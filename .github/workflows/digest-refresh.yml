@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  issues: write   # ci-health-issue failure tracker
 
 jobs:
   refresh:
@@ -50,4 +51,22 @@ jobs:
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
           git add digest/
-          if git diff --cached --quiet; then echo "no digest changes"; else git commit -m "Digest refresh $(date -u +%F)" && git push; fi
+          if git diff --cached --quiet; then
+            echo "no digest changes"
+          else
+            git commit -m "Digest refresh $(date -u +%F)"
+            # Rebase + retry so a bot commit landing between checkout and push
+            # (e.g. a late content-refresh) doesn't make the push fail silently.
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && break || { echo "push attempt $i failed; retrying"; sleep 10; }
+            done
+          fi
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Digest Refresh workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

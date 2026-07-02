@@ -17,6 +17,10 @@ on:
       - 'cloudflare-worker/livabletelluride-digest/worker.js'
       - 'cloudflare-worker/livabletelluride-digest/wrangler.toml'
 
+permissions:
+  contents: read
+  issues: write   # ci-health-issue failure tracker
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -40,3 +44,12 @@ jobs:
           CUSTOMERIO_BROADCAST_ID: ${{ secrets.CUSTOMERIO_BROADCAST_ID }}
           CUSTOMERIO_TEST_BROADCAST_ID: ${{ secrets.CUSTOMERIO_TEST_BROADCAST_ID }}
           DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Deploy Digest Worker workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

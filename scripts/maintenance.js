@@ -19,6 +19,9 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { execSync } = require('child_process');
+const { serializeArray } = require('./lib/serialize.js');
+const { extractJsArray } = require('./lib/extract.js');
+const { assertParses } = require('./lib/write-guard.js');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -79,23 +82,7 @@ function fetchText(url, timeoutMs = 10000, headers = {}) {
 }
 
 // ── JS file parsing helpers ──
-function extractJsArray(source, varName) {
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
-  const match = startRe.exec(source);
-  if (!match) return null;
-  let depth = 0, start = match.index + match[0].length - 1;
-  for (let i = start; i < source.length; i++) {
-    if (source[i] === '[') depth++;
-    else if (source[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        try { return new Function(`return (${source.slice(start, i + 1)})`)(); }
-        catch { return null; }
-      }
-    }
-  }
-  return null;
-}
+// extractJsArray comes from ./lib/extract.js (string-aware bracket matcher).
 
 function replaceJsArray(source, varName, arr) {
   const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
@@ -110,19 +97,12 @@ function replaceJsArray(source, varName, arr) {
         let end = i + 1;
         while (end < source.length && source[end] !== ';') end++;
         if (source[end] === ';') end++;
-        const items = arr.map(item => {
-          const props = Object.entries(item).map(([k, v]) => {
-            if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-              const inner = Object.entries(v).map(([ik, iv]) => `${ik}: '${String(iv).replace(/'/g, "\\'")}'`).join(', ');
-              return `    ${k}: { ${inner} }`;
-            }
-            if (Array.isArray(v)) return `    ${k}: [${v.map(i => `'${String(i).replace(/'/g, "\\'")}'`).join(', ')}]`;
-            if (typeof v === 'boolean' || typeof v === 'number') return `    ${k}: ${v}`;
-            return `    ${k}: '${String(v).replace(/'/g, "\\'")}'`;
-          });
-          return `  {\n${props.join(',\n')}\n  }`;
-        });
-        const block = `const ${varName} = [\n${items.join(',\n')}\n];`;
+        // Serialize via the shared, unit-tested serializer (JSON.stringify-based)
+        // rather than the old apostrophe-only escaper that lived here — that one
+        // emitted raw newlines/backslashes and produced unterminated string
+        // literals, corrupting gov-helpers.js (the 2026-07-01 outage). See
+        // lib/serialize.js and lib/write-guard.js.
+        const block = serializeArray(varName, arr);
         return source.slice(0, match.index) + block + source.slice(end);
       }
     }
@@ -328,8 +308,9 @@ const FEED_STALE_HOURS = 12;
 const EVENTS_CONFIG_FILE = path.join(REPO_ROOT, 'email-events-config.json');
 // The subscriber email is currently a MANUAL weekly REGULAR campaign (pasted from
 // scripts/weekly-email.js), not an RSS-driven daily digest — so check for any
-// recently-SENT campaign on a weekly cadence (9 days = 1 week + 2 days grace).
-const MAILCHIMP_STALE_HOURS = 216;
+// recently-SENT campaign on a weekly cadence (8 days = 1 week + 1 day grace, so a
+// skipped week is flagged the day after it was due rather than two days later).
+const MAILCHIMP_STALE_HOURS = 192;
 
 async function checkFeedFreshness() {
   console.log('\n📰 Liveness: feed.xml freshness...');
@@ -679,6 +660,10 @@ async function main() {
 
   // Write updated files
   if (changed) {
+    // Compile-check before writing so a bad serialize never ships a broken
+    // data file (the last good file stays in place and the run fails loudly).
+    assertParses('gov-helpers.js', govHubSrc);
+    assertParses('community-pulse.js', pulseSrc);
     fs.writeFileSync(GOV_HELPERS_JS, govHubSrc);
     fs.writeFileSync(COMMUNITY_PULSE_JS, pulseSrc);
     console.log('\n✅ Maintenance complete — files updated.');

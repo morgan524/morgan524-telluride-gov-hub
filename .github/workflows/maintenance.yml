@@ -2,8 +2,11 @@ name: Daily Maintenance
 
 on:
   schedule:
-    # Daily at 12:00 UTC (6am Mountain)
-    - cron: '0 12 * * *'
+    # Daily at 12:30 UTC (6:30am Mountain). Offset 30 min past content-refresh's
+    # 12:00 slot so the two don't rewrite gov-helpers.js simultaneously — a
+    # concurrent whole-array rewrite can't be textually rebase-merged, so the
+    # loser's push would fail and its work would be silently lost.
+    - cron: '30 12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -52,13 +55,31 @@ jobs:
           git pull --rebase origin main
           git push
 
+      # Liveness/health findings (feed freshness, events sheet, and the
+      # weekly-email staleness tripwire) land in maintenance-issues.log. Open or
+      # refresh a dedicated issue so they're actually seen — a missed weekly send
+      # used to surface only as a log ::warning:: nobody reads.
       - name: Report issues
         if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: '🩺 Maintenance liveness/health findings'
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
+          set +e
           if [ -f maintenance-issues.log ]; then
             echo "::warning::Maintenance found issues — check the log"
             cat maintenance-issues.log
           fi
+          NUM=$(gh issue list --state open --search "$ISSUE_TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ -s maintenance-issues.log ]; then
+            BODY=$(printf 'Daily maintenance liveness/health checks flagged the following as of %s:\n\n```\n%s\n```\nRun: %s\n\nThese are off-machine pipeline signals (feed freshness, events sheet reachability, weekly-email send staleness). This issue refreshes each run and auto-closes on the first clean run.' "$NOW" "$(cat maintenance-issues.log)" "$RUN_URL")
+            if [ -n "$NUM" ]; then gh issue edit "$NUM" --body "$BODY"; else gh issue create --title "$ISSUE_TITLE" --body "$BODY"; fi
+          elif [ -n "$NUM" ]; then
+            gh issue close "$NUM" --comment "✅ Liveness/health checks clean as of $NOW. Closing."
+          fi
+          exit 0
 
       # Deterministic daily review (JS syntax / broken assets / nav drift).
       # scripts/maintenance.js writes review-findings.log when it finds

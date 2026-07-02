@@ -25,6 +25,7 @@ const path   = require('path');
 const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
 
+const { assertParses } = require('./lib/write-guard.js');
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const CLAUDE_MODEL      = require('./lib/claude-model.js').HAIKU; // fast + cheap for triage
 const USER_AGENT        = 'LivableTelluride-Bot/1.0 (+https://livabletelluride.org)';
@@ -275,8 +276,12 @@ function extractDeepDiveUpdates(src) {
 
 function serializeUpdates(arr) {
   if (!arr.length) return 'const DEEP_DIVE_UPDATES = [];';
+  // Quote BOTH keys and values via JSON.stringify. Keys come from Claude's JSON
+  // output; an unexpected key (space/hyphen/emoji from a malformed or
+  // injection-influenced response) written bare would produce invalid JS. A
+  // JSON-stringified string is always a valid JS object-property key.
   const items = arr.map(u => {
-    const props = Object.entries(u).map(([k, v]) => `  ${k}: ${JSON.stringify(v)}`);
+    const props = Object.entries(u).map(([k, v]) => `  ${JSON.stringify(String(k))}: ${JSON.stringify(v)}`);
     return '{\n' + props.join(',\n') + '\n}';
   });
   return 'const DEEP_DIVE_UPDATES = [\n' + items.join(',\n') + '\n];';
@@ -436,6 +441,10 @@ async function main() {
   // ── Write back ────────────────────────────────────────────────────────────
   if (newCount > 0 || pruned.length < existing.length) {
     src = patchDeepDiveUpdates(src, allUpdates);
+    // This runs AFTER content-refresh in the same workflow, so its write is what
+    // gets committed — compile-check before writing so a bad serialize never
+    // ships a broken gov-helpers.js.
+    assertParses('gov-helpers.js', src);
     fs.writeFileSync(GOV_HELPERS_JS, src, 'utf8');
     console.log('\nWrote ' + allUpdates.length + ' total entries to DEEP_DIVE_UPDATES (' + newCount + ' new)');
   } else {
