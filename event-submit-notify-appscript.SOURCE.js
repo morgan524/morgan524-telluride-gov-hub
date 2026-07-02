@@ -125,7 +125,7 @@ function sendNotification(d) {
   html += '<p style="margin:0 0 16px;color:#555;">Submitted on livabletelluride.org. Review it in the queue:</p>';
   html += '<p style="margin:0 0 18px;"><a href="' + _esc(reviewUrl) + '" '
         + 'style="display:inline-block;background:#1f5130;color:#fff;text-decoration:none;'
-        + 'padding:10px 18px;border-radius:8px;font-weight:700;">Review &amp; Approve →</a></p>';
+        + 'padding:10px 18px;border-radius:8px;font-weight:700;">Review &amp; Approve &#8594;</a></p>';
   html += '<table style="border-collapse:collapse;width:100%;max-width:560px;">';
   rows.forEach(function (r) {
     var label = r[0], val = (r[1] == null ? '' : String(r[1])).trim();
@@ -182,22 +182,25 @@ function sendApprovalThankYou(d) {
   var title   = (d.title ? String(d.title).trim() : (isOrg ? 'your organization' : 'your event'));
   var where   = isOrg ? 'the Local Organizations directory' : 'the community events calendar';
   var pageUrl = isOrg ? ORGS_URL : EVENTS_URL;
+  // Pure-ASCII subject: Subject headers can't use HTML entities, and raw
+  // non-ASCII (emoji, curly quotes, em dash) is what got mis-decoded as MacRoman
+  // on recipients' mail clients.
   var subject = isOrg
-    ? '✅ You’re in the directory — thanks for posting to Livable Telluride'
-    : '✅ You’re on the calendar — thanks for posting to Livable Telluride';
+    ? "You're in the directory - thanks for posting to Livable Telluride"
+    : "You're on the calendar - thanks for posting to Livable Telluride";
   var greeting = name ? ('Hi ' + name + ',') : 'Hi there,';
-  var cta = isOrg ? 'See the directory →' : 'See it on the calendar →';
+  var cta = isOrg ? 'See the directory' : 'See it on the calendar';
 
   var html = ''
     + '<div style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#1a2e29;line-height:1.6;max-width:560px;">'
     + '<p style="margin:0 0 14px;">' + _esc(greeting) + '</p>'
     + '<p style="margin:0 0 14px;">Thank you for submitting <strong>' + _esc(title) + '</strong> to Livable Telluride. '
-    + 'Good news — it’s been <strong>approved</strong> and will appear in ' + where + ' shortly '
+    + 'Good news &#8212; it&#8217;s been <strong>approved</strong> and will appear in ' + where + ' shortly '
     + '(usually within a few minutes).</p>'
     + '<p style="margin:0 0 20px;"><a href="' + _esc(pageUrl) + '" '
     + 'style="display:inline-block;background:#1f5130;color:#ffffff;text-decoration:none;padding:11px 22px;border-radius:999px;'
-    + 'font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;">' + _esc(cta) + '</a></p>'
-    + '<p style="margin:0 0 14px;">We’re an independent, reader-funded nonprofit keeping the box canyon informed — '
+    + 'font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;">' + _esc(cta) + ' &#8594;</a></p>'
+    + '<p style="margin:0 0 14px;">We&#8217;re an independent, reader-funded nonprofit keeping the box canyon informed &#8212; '
     + 'please post again anytime you have something for the community.</p>'
     + '<p style="margin:18px 0 0;color:#5a6b64;">With gratitude,<br><strong>Livable Telluride</strong><br>'
     + '<a href="https://livabletelluride.org" style="color:#5a6b64;">livabletelluride.org</a></p>'
@@ -206,7 +209,7 @@ function sendApprovalThankYou(d) {
   var plain = greeting + '\n\n'
     + 'Thank you for submitting "' + title + '" to Livable Telluride. It has been approved and will appear in '
     + where + ' shortly (usually within a few minutes).\n\n'
-    + cta.replace(' →', '') + ': ' + pageUrl + '\n\n'
+    + cta + ': ' + pageUrl + '\n\n'
     + 'We are an independent, reader-funded nonprofit keeping the box canyon informed - please post again anytime.\n\n'
     + 'With gratitude,\nLivable Telluride\nhttps://livabletelluride.org';
 
@@ -264,9 +267,16 @@ function orgTest() {
 }
 
 function _esc(s) {
-  return String(s)
+  s = String(s)
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+  // Non-ASCII -> numeric HTML entities so submitter names/titles with accents or
+  // emoji are charset-proof too (kills the UTF-8-as-MacRoman mojibake). Array.from
+  // iterates by code point, so an emoji becomes one correct entity.
+  return Array.from(s).map(function (ch) {
+    var cp = ch.codePointAt(0);
+    return cp > 127 ? '&#' + cp + ';' : ch;
+  }).join('');
 }
 function _json(obj) {
   return ContentService
