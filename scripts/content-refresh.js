@@ -1552,19 +1552,24 @@ Write a plain-text preview of 50 words or less describing the key issues or agen
 // firstSeen='2025-01-01' get hidden without being deleted (used to
 // suppress the initial-deployment flood: see the 23 ancient-dated
 // seed entries in js/gov-helpers.js).
-// SMBF moved its landing page from /news/ to /stories/ (~late June 2026).
-// The old /news/ URL still resolves but serves a FROZEN copy of the stories
-// that were live at cutover, so scraping it silently stalled the feed for
-// ~3 weeks. The /stories/ page uses the identical Creative Circle markup
-// (landing-story / heading-3 / lead / img.photo) — only the URL changed.
-// Story hrefs are now /stories/<slug>,<id>.
-const SMBF_NEWS_URL = 'https://www.sanmiguelbasinforum.com/stories/';
-// SMBF publishes weekly (≈ 1 story per week). The default 14-day news
-// window would leave at most 1-2 visible at a time, which would feel
-// like the source had been dropped again whenever there was a gap.
-// 35 days keeps ~4-5 stories visible — closer to the SMBF homepage
-// itself, which shows the same 5-or-so most-recent stories all week.
-const SMBF_MAX_AGE_DAYS = 35;
+// SMBF's public site is organized by editorial CATEGORY. We scrape the three
+// English category landing pages below. (The combined /stories/ view also
+// mixes in Spanish translations and other sections, and the old /news/-only
+// scrape missed community/sports stories entirely.) Every category page uses
+// the same Creative Circle markup (landing-story / heading-3 / lead /
+// img.photo) and links to /stories/<slug>,<id>.
+const SMBF_CATEGORY_URLS = [
+  'https://www.sanmiguelbasinforum.com/news/',
+  'https://www.sanmiguelbasinforum.com/community/',
+  'https://www.sanmiguelbasinforum.com/sports/',
+];
+// Hard age cutoff. IMPORTANT: the category pages are NOT date-limited -- they
+// show the 25 most-recent-in-category no matter how old, so /community/ still
+// lists last year's "Trunk or Treat" etc. The landing cards carry no date, so
+// we read each article's real datePublished from its detail page and drop
+// anything older than this many days. (Was a firstSeen "day we saw it" model;
+// user asked for a true article-age cutoff, 2026-07-02.)
+const SMBF_MAX_AGE_DAYS = 30;
 
 // High-signal Spanish function words. None of these occurs as a standalone
 // word in an English news headline, so counting them is a cheap, false-
@@ -1587,127 +1592,137 @@ function isSpanishTitle(title) {
   return hits >= 3;
 }
 
+// Pull an article's real publish date from its detail-page HTML. Prefers
+// schema.org JSON-LD ("datePublished"), falls back to the <time datetime>
+// tag. Returns an ISO yyyy-mm-dd string, or null if neither is present.
+function extractSmbDate(html) {
+  const ld = /"datePublished"\s*:\s*"([^"]+)"/i.exec(html);
+  if (ld) {
+    const d = new Date(ld[1]);
+    if (!isNaN(d)) return d.toISOString().slice(0, 10);
+  }
+  const t = /<time[^>]*datetime=["']([^"']+)["']/i.exec(html);
+  if (t) {
+    const d = new Date(t[1]);
+    if (!isNaN(d)) return d.toISOString().slice(0, 10);
+  }
+  return null;
+}
+
+const SMBF_DECODE = (s) => s
+  .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+  .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+  .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+  .replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+  .replace(/&nbsp;/g, ' ');
+
 async function pullSmbForum(existingSmbArticles = []) {
-  console.log('\n🌄 San Miguel Basin Forum: scraping landing page...');
-  const cutoff = new Date(Date.now() - SMBF_MAX_AGE_DAYS * 86400000);
+  console.log('\n🌄 San Miguel Basin Forum: scraping category pages...');
+  const cutoffMs = Date.now() - SMBF_MAX_AGE_DAYS * 86400000;
   const existingByHref = new Map(existingSmbArticles.map(a => [a.href, a]));
 
-  let html;
-  try {
-    const resp = await fetch(SMBF_NEWS_URL);
-    if (resp.status !== 200) {
-      console.warn(`  SMBF news page HTTP ${resp.status} — preserving existing list`);
-      return existingSmbArticles;
+  // firstSeen now holds the article's REAL publish date (yyyy-mm-dd). Trust a
+  // cached date only when a prior run stamped it from the article itself
+  // (dateSource:'article') -- old records carried firstSeen = "day we saw it".
+  const cachedDate = (href) => {
+    const c = existingByHref.get(href);
+    return (c && c.dateSource === 'article' && /^\d{4}-\d{2}-\d{2}$/.test(c.firstSeen || ''))
+      ? c.firstSeen : null;
+  };
+
+  const out = [];
+  const seenHrefs = new Set();
+  let anyPageOk = false, newCount = 0, fetchedDetails = 0;
+
+  for (const url of SMBF_CATEGORY_URLS) {
+    let html;
+    try {
+      const resp = await fetch(url);
+      if (resp.status !== 200) {
+        console.warn(`  SMBF ${url} HTTP ${resp.status} -- skipping this category`);
+        continue;
+      }
+      html = resp.text;
+    } catch (e) {
+      console.warn(`  SMBF ${url} fetch error: ${e.message} -- skipping this category`);
+      continue;
     }
-    html = resp.text;
-  } catch (e) {
-    console.warn(`  SMBF fetch error: ${e.message} — preserving existing list`);
+    anyPageOk = true;
+
+    const blocks = html.split(/<div\s+class=["']landing-story[^"']*["'][^>]*>/i);
+    blocks.shift(); // first piece is everything before the first card
+
+    // Category pages are newest-first by date. Once we pass the age cutoff the
+    // rest of the page is older too, so stop after a short run of stale cards
+    // (a couple, to tolerate same-day ordering jitter) to bound detail fetches.
+    let staleStreak = 0;
+    for (const block of blocks) {
+      const h3 = /<h3[^>]*class=['"][^'"]*heading-3[^'"]*['"][^>]*>\s*<a[^>]+href=['"]([^'"]+)['"][^>]*>([\s\S]*?)<\/a>\s*<\/h3>/.exec(block);
+      if (!h3) continue;
+      const rawHref = h3[1].trim().replace(/\?$/, '');
+      const fullHref = rawHref.startsWith('http')
+        ? rawHref
+        : 'https://www.sanmiguelbasinforum.com' + (rawHref.startsWith('/') ? '' : '/') + rawHref;
+      if (seenHrefs.has(fullHref)) continue; // a story can list in >1 category
+      seenHrefs.add(fullHref);
+      const title = SMBF_DECODE(h3[2].replace(/<[^>]+>/g, '').trim());
+      if (!title) continue;
+      // Skip the Spanish translation twins SMBF publishes beside each story.
+      if (isSpanishTitle(title)) continue;
+
+      // Resolve the real publish date (cache -> detail-page fetch).
+      let iso = cachedDate(fullHref);
+      if (!iso) {
+        try {
+          const d = await fetch(fullHref);
+          fetchedDetails++;
+          if (d.status === 200) iso = extractSmbDate(d.text);
+        } catch (e) { /* undated -> skip below */ }
+      }
+      if (!iso) continue; // no date -> don't risk surfacing stale content
+
+      if (new Date(iso + 'T00:00:00Z').getTime() < cutoffMs) {
+        if (++staleStreak >= 2) break; // deep into the old part of the page
+        continue;
+      }
+      staleStreak = 0;
+
+      const leadM = /<div\s+class=['"]lead['"][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
+      const lead = leadM
+        ? SMBF_DECODE(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+        : '';
+      const imgM = /<img[^>]*class=["'][^"']*photo[^"']*["'][^>]*src=["']([^"']+)["']/i.exec(block);
+      const img = imgM ? imgM[1] : '';
+      const cached = existingByHref.get(fullHref);
+      if (!cached) newCount++;
+
+      out.push({
+        title,
+        source: 'San Miguel Basin Forum',
+        sourceKey: 'smb',
+        date: formatDate(new Date(iso + 'T12:00:00Z')),
+        firstSeen: iso,          // = the article's real publish date
+        dateSource: 'article',   // marks the date as trustworthy for next run
+        newsTopic: classifyNewsTopic(title, lead),
+        copy: (lead || (cached && cached.copy) || '').slice(0, 300),
+        href: fullHref,
+        img: img || (cached && cached.img) || '',
+      });
+    }
+  }
+
+  // If every category page failed, keep the existing list rather than wiping
+  // the section on a transient proxy/network outage.
+  if (!anyPageOk) {
+    console.warn('  SMBF: all category pages failed -- preserving existing list');
     return existingSmbArticles;
   }
 
-  const decode = (s) => s
-    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
-    .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-    .replace(/&nbsp;/g, ' ');
+  // Newest first, by publish date.
+  out.sort((a, b) => (b.firstSeen || '').localeCompare(a.firstSeen || ''));
 
-  // Split the HTML on landing-story block boundaries — each one is a
-  // self-contained article card with image + headline + lead.  Then
-  // extract each piece scoped to its own block.
-  const blocks = html.split(/<div\s+class=["']landing-story[^"']*["'][^>]*>/i);
-  blocks.shift(); // first piece is everything before the first card
-
-  const items = [];
-  const seenHrefs = new Set();
-  for (const block of blocks) {
-    const h3 = /<h3[^>]*class=['"][^'"]*heading-3[^'"]*['"][^>]*>\s*<a[^>]+href=['"]([^'"]+)['"][^>]*>([\s\S]*?)<\/a>\s*<\/h3>/.exec(block);
-    if (!h3) continue;
-    let rawHref = h3[1].trim().replace(/\?$/, '');
-    const fullHref = rawHref.startsWith('http')
-      ? rawHref
-      : 'https://www.sanmiguelbasinforum.com' + (rawHref.startsWith('/') ? '' : '/') + rawHref;
-    if (seenHrefs.has(fullHref)) continue;
-    seenHrefs.add(fullHref);
-    const title = decode(h3[2].replace(/<[^>]+>/g, '').trim());
-    if (!title) continue;
-    // SMBF now publishes each story TWICE — once in English and once as a
-    // Spanish translation, each as its own landing card. Local News serves an
-    // English-reading audience, so skip the Spanish duplicates. Detected by
-    // counting high-signal Spanish function words; an English headline
-    // essentially never reaches 3 (see isSpanishTitle).
-    if (isSpanishTitle(title)) continue;
-    const leadM = /<div\s+class=['"]lead['"][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
-    const lead = leadM
-      ? decode(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
-      : '';
-    const imgM = /<img[^>]*class=["'][^"']*photo[^"']*["'][^>]*src=["']([^"']+)["']/i.exec(block);
-    const img = imgM ? imgM[1] : '';
-    items.push({ href: fullHref, title, lead, img });
-  }
-
-  // ── Build the output array ──
-  // First pass: every article currently on the landing page. If we've
-  // already seen it (in `existingByHref`), preserve its firstSeen
-  // (a.k.a. the publish date we display). Otherwise mark it new today.
-  const todayIso = new Date().toISOString().slice(0, 10);
-  const todayHuman = formatDate(new Date());
-  const out = [];
-  let newCount = 0;
-  for (const it of items) {
-    const cached = existingByHref.get(it.href);
-    if (cached) {
-      // Refresh content (title/lead/img may have been edited upstream)
-      // but KEEP the original firstSeen / date so the article's display
-      // date doesn't move around on us.
-      out.push({
-        title: it.title || cached.title,
-        source: 'San Miguel Basin Forum',
-        sourceKey: 'smb',
-        date: cached.date || todayHuman,
-        firstSeen: cached.firstSeen || todayIso,
-        newsTopic: classifyNewsTopic(it.title, it.lead),
-        copy: (it.lead || cached.copy || '').slice(0, 300),
-        href: it.href,
-        img: it.img || cached.img || '',
-      });
-    } else {
-      // Brand new to us.  PUBLISH DATE = TODAY, regardless of the
-      // article's own byline date (see top-of-section note about
-      // SMBF's print-first publishing cadence).
-      newCount++;
-      out.push({
-        title: it.title,
-        source: 'San Miguel Basin Forum',
-        sourceKey: 'smb',
-        date: todayHuman,
-        firstSeen: todayIso,
-        newsTopic: classifyNewsTopic(it.title, it.lead),
-        copy: (it.lead || '').slice(0, 300),
-        href: it.href,
-        img: it.img || '',
-      });
-    }
-  }
-
-  // Second pass: carry forward existing articles that have rolled off
-  // the landing page but are still within the 35-day window. Once
-  // they're both off-landing AND past the window, drop them.
-  const scrapedHrefs = new Set(out.map(a => a.href));
-  for (const [href, art] of existingByHref) {
-    if (scrapedHrefs.has(href)) continue;
-    const seenAt = art.firstSeen ? new Date(art.firstSeen + 'T00:00:00Z') : null;
-    if (seenAt && !isNaN(seenAt) && seenAt >= cutoff) out.push(art);
-  }
-
-  // Newest first, by firstSeen.
-  out.sort((a, b) => {
-    const da = a.firstSeen ? new Date(a.firstSeen + 'T00:00:00Z').getTime() : 0;
-    const db = b.firstSeen ? new Date(b.firstSeen + 'T00:00:00Z').getTime() : 0;
-    return db - da;
-  });
-
-  console.log(`  SMBF: ${out.length} article(s) tracked (${newCount} new today)`);
+  console.log(`  SMBF: ${out.length} article(s) within ${SMBF_MAX_AGE_DAYS} days ` +
+    `(${newCount} new, ${fetchedDetails} detail fetch${fetchedDetails === 1 ? '' : 'es'})`);
   return out;
 }
 

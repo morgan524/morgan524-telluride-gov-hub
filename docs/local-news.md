@@ -11,60 +11,59 @@ Storage: `SMB_FORUM_ARTICLES` in `js/gov-helpers.js`. Renderer:
 **SMBF uses Creative Circle CMS** (same publishing platform as
 Telluride Times) BUT has the `/search/?f=rss` RSS endpoint DISABLED —
 returns HTTP 403 from Varnish. So instead of TT's RSS pattern, the
-refresh scrapes the `/stories/` landing page HTML and pairs each
+refresh scrapes the per-CATEGORY landing pages and pairs each
 `<div class="landing-story row">` block with its `<h3 class="heading-3">`
 headline, `<div class="lead">` summary, and `<img class="photo">`.
 
-**Landing-page URL moved `/news/` → `/stories/` (~late June 2026).** The
-old `/news/` URL still returns 200 but serves a **frozen** copy of the
-stories that were live at cutover — so the scraper silently stalled
-(`SMBF: N tracked (0 new)`) for ~3 weeks while real stories piled up under
-`/stories/`. Markup is identical; only `SMBF_NEWS_URL` changed. Story hrefs
-are now `/stories/<slug>,<id>`. If SMBF ever appears frozen again, re-check
-the live landing-page URL first (fixed 2026-07-02, commit updates
-`SMBF_NEWS_URL`).
+**Three category pages, not one (2026-07-02).** `SMBF_CATEGORY_URLS`
+scrapes `/news/`, `/community/`, and `/sports/`. History of how we got
+here, so nobody re-breaks it:
+- Originally scraped `/news/` only. SMBF reorganized (~late June 2026):
+  `/news/` became a slow "News" category (the July stories are all under
+  Community/Sports), so `/news/` looked frozen and the feed stalled at
+  the June 10 story for ~3 weeks.
+- A combined `/stories/` view exists and IS fresh, but it also folds in
+  Spanish translations and other sections — too noisy. The three English
+  editorial category pages are the clean source. All of them link to
+  `/stories/<slug>,<id>`; a story listed in two categories is de-duped by
+  href.
 
-**Spanish-translation twins are skipped.** SMBF now publishes every story
-twice — English + a Spanish translation, each its own landing card. Local
-News is English-only, so `pullSmbForum` drops the Spanish cards via
+**Real publish date + hard 30-day cutoff (2026-07-02, replaces the old
+firstSeen model).** The category pages are **not** date-limited — each
+shows the 25 most-recent-in-category no matter how old (so `/community/`
+still lists last year's "Trunk or Treat", `/sports/` lists spring track).
+The landing cards carry **no date**, so per user direction we now read
+each article's **real** `datePublished` from its detail page
+(`extractSmbDate`: schema.org JSON-LD `"datePublished"`, falling back to
+the `<time datetime>` tag) and drop anything older than
+`SMBF_MAX_AGE_DAYS = 30`. `firstSeen` now holds that real ISO publish
+date and `date` is its human form; records also carry
+`dateSource:'article'`.
+- **Date cache:** a detail page is fetched only once — on later runs a
+  record with `dateSource:'article'` is trusted, so steady-state cost is
+  just a couple of boundary fetches per category plus any brand-new story.
+  (Old records that predate this change lack `dateSource`, so they get
+  re-fetched once and their bogus observation-date `firstSeen` is corrected
+  to the real publish date — the live data self-heals on the first run.)
+- **Early break:** category pages are newest-first, so once two
+  consecutive cards fall past the cutoff we stop scanning that category
+  (bounds detail fetches; see `staleStreak`).
+- This makes the old **no-flood seeding** trick and the `2025-01-01`
+  sentinel entries obsolete — old content is now excluded by real date,
+  not by pre-seeding. Nothing older than 30 days is ever stored, so the
+  renderer's existing `firstSeen` window is just a redundant backstop.
+
+**Spanish-translation twins are skipped.** SMBF publishes some stories
+twice — English + a Spanish translation, each its own card. Local News is
+English-only, so `pullSmbForum` drops the Spanish cards via
 `isSpanishTitle()` (counts high-signal Spanish function words; an English
 headline never reaches the ≥3 threshold — the blocks carry no `lang`
 attribute to key off).
 
-**Date model — print-first publishing convention (2026-05-26).**
-SMBF is a print-first weekly. Stories appear in the print edition
-days-to-weeks before they're posted online, so the article's online
-byline date (`datePublished` in schema.org JSON-LD) understates
-freshness. Per user direction we use a different convention than
-TT/KOTO: the "publish date" shown on Local News = the day the bot
-first observes the story on the SMBF website (`firstSeen`), NOT the
-byline date. The displayed `date` field mirrors `firstSeen` in human
-form. Side benefit: no per-article detail-page fetches are needed
-anymore — the landing page has everything the renderer reads.
-
-**No-flood seeding.** On the very first run after deploy, every
-article on SMBF's landing page would otherwise look "new" and get
-stamped with today's date — flooding Local News with 25 stories of
-varying actual age. To prevent this, `SMB_FORUM_ARTICLES` in
-`js/gov-helpers.js` is seeded with the entire current landing page:
-the two articles the user wanted to feature on launch day carry
-`firstSeen` = launch date (visible), the other 23 carry a sentinel
-`firstSeen='2025-01-01'` so the bot recognises them as "already
-known" and `local-news.html`'s 35-day-firstSeen filter hides them.
-As real new stories appear at the top of the landing page over the
-following weeks, the bot adds them with today's `firstSeen` and the
-sentinel entries gradually fall out of relevance.
-
 Knobs in `scripts/content-refresh.js`:
-- `SMBF_NEWS_URL` — the landing page to scrape (now `/stories/`).
-- `SMBF_MAX_AGE_DAYS = 35` — articles whose `firstSeen` is older than
-  this AND that have rolled off the landing page get dropped. The
-  35-day window is wider than the 14-day default because SMBF only
-  publishes ~1 story per week.
-
-In `local-news.html`'s `loadLiveData()`, the same 35-day window is
-applied as a display filter on `firstSeen` — sentinel-dated entries
-never render even though they live in the array.
+- `SMBF_CATEGORY_URLS` — the category landing pages to scrape.
+- `SMBF_MAX_AGE_DAYS = 30` — drop any article whose real `datePublished`
+  is older than this.
 
 Cloudflare Worker allow-list: `sanmiguelbasinforum.com` and
 `www.sanmiguelbasinforum.com` are in both `cloudflare-worker/.../worker.js`
