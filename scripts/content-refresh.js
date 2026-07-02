@@ -1614,7 +1614,13 @@ const SMBF_DECODE = (s) => s
   .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
   .replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
   .replace(/&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>')
-  .replace(/&nbsp;/g, ' ');
+  .replace(/&nbsp;/g, ' ')
+  // Strip AFTER decoding: callers tag-strip then decode, so an entity-encoded
+  // tag (&lt;img onerror=…&gt;) would otherwise be reconstituted into live
+  // markup that later renders unescaped. Remove any tags decoding produced so
+  // this stays a plain-text decoder no matter the call order (defense in depth
+  // behind the render-site escaping).
+  .replace(/<[^>]*>/g, '');
 
 async function pullSmbForum(existingSmbArticles = []) {
   console.log('\n🌄 San Miguel Basin Forum: scraping category pages...');

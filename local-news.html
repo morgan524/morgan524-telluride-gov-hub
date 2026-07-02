@@ -830,6 +830,22 @@
          Override with our own letter icon for visual distinction.
        - KOTO: no enclosure → cow brand-logo fallback.
        - Everything else: enclosure image (a.img). */
+    // Escape bot-scraped text before it goes into innerHTML template literals.
+    // Article titles/summaries/authors are scraped from external feeds (Telluride
+    // Times, KOTO, San Miguel Basin Forum) and are attacker-influenceable, so
+    // every interpolation of them must be escaped to prevent stored XSS.
+    function escapeHtml(s) {
+      return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
+        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+      ));
+    }
+    // Only allow http(s) hrefs (blocks javascript:/data: URIs) and escape quotes
+    // so a scraped URL can't break out of the attribute.
+    function safeHref(u) {
+      const s = String(u == null ? '' : u).trim();
+      return /^https?:\/\//i.test(s) ? s.replace(/["'<>]/g, encodeURIComponent) : '#';
+    }
+
     function isLetterToEditor(a) {
       return !!(a && (a.isLetter === true || (a.href && /\/letters_to_editor\//i.test(a.href))));
     }
@@ -868,10 +884,10 @@
       const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
-        ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
+        ? `<img src="${escapeHtml(src)}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
         : '';
       const authorLine = (isLetter && a.letterAuthor)
-        ? `<div class="letter-author">By ${a.letterAuthor}</div>`
+        ? `<div class="letter-author">By ${escapeHtml(a.letterAuthor)}</div>`
         : '';
       const letterLogo = isLetter
         ? `<img class="src-logo" src="/logo/Letter%20to%20Editor.png" alt="Letter to the Editor" onerror="this.style.display='none'">`
@@ -890,16 +906,16 @@
         <div class="body">
           <span class="featured-tag">Featured</span>
           ${authorLine}
-          <h2><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h2>
+          <h2><a href="${safeHref(a.href)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${escapeHtml(a.title)}</a></h2>
           <div class="meta">
             ${letterLogo}
-            <span>${a.source}</span>
+            <span>${escapeHtml(a.source)}</span>
             <span class="sep">·</span>
-            <span>${a.date}</span>
+            <span>${escapeHtml(a.date)}</span>
           </div>
-          <div class="summary">${a.summary}</div>
+          <div class="summary">${escapeHtml(a.summary)}</div>
           <div class="actions">
-            <a class="read-more" href="${a.href}" target="_blank" rel="noopener">Read more →</a>
+            <a class="read-more" href="${safeHref(a.href)}" target="_blank" rel="noopener">Read more →</a>
             ${cornerLogo}
           </div>
         </div>
@@ -917,13 +933,13 @@
       const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
       const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
       const imgEl = src
-        ? `<img src="${src}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
+        ? `<img src="${escapeHtml(src)}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
         : '';
       // Author byline for Letters to the Editor — sits directly under the
       // image (above the title). a.letterAuthor populated by content-refresh
       // for newly-fetched letters; older entries omit the byline gracefully.
       const authorLine = (isLetter && a.letterAuthor)
-        ? `<div class="letter-author">By ${a.letterAuthor}</div>`
+        ? `<div class="letter-author">By ${escapeHtml(a.letterAuthor)}</div>`
         : '';
       const banner = a.isLetter === true
         ? `<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>`
@@ -934,15 +950,15 @@
           <div class="img-wrap">${imgEl}</div>
           <div class="body">
             ${authorLine}
-            <h3><a href="${a.href}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${a.title}</a></h3>
+            <h3><a href="${safeHref(a.href)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${escapeHtml(a.title)}</a></h3>
             <div class="meta">
-              <span>${a.source}</span>
+              <span>${escapeHtml(a.source)}</span>
               <span class="sep">·</span>
-              <span>${a.date}</span>
+              <span>${escapeHtml(a.date)}</span>
             </div>
-            <div class="summary">${a.summary}</div>
+            <div class="summary">${escapeHtml(a.summary)}</div>
             <div class="actions">
-              <a class="read-more" href="${a.href}" target="_blank" rel="noopener">Read more →</a>
+              <a class="read-more" href="${safeHref(a.href)}" target="_blank" rel="noopener">Read more →</a>
               ${logoTag(a.sourceKey, 'source-logo-corner')}
             </div>
           </div>

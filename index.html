@@ -1002,15 +1002,19 @@
             }
             items.sort((a, b) => a.date - b.date);
             const top = items.slice(0, 5);
+            // Escape bot-written meeting/event fields before they hit innerHTML
+            // (titles trace back to scraped agendas/feeds → attacker-influenceable).
+            const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+            const safeHref = u => { const s = String(u == null ? '' : u).trim(); return /^(https?:\/\/|\/)/i.test(s) ? esc(s) : '#'; };
             list.innerHTML = top.map(it => {
               const m = it.date.toLocaleString('en', { month: 'short' });
               const d = it.date.getDate();
               // External agenda links (PDFs / portals) open in a new tab;
               // internal /gov-hub.html and /events.html links stay in-tab.
               const tgt = it.external ? ' target="_blank" rel="noopener"' : '';
-              return '<a class="week-item" href="' + it.href + '"' + tgt + '>'
+              return '<a class="week-item" href="' + safeHref(it.href) + '"' + tgt + '>'
                    +   '<div class="week-date"><div class="month">' + m + '</div><div class="day">' + d + '</div></div>'
-                   +   '<div class="info"><h4>' + it.title + '</h4><p class="meta">' + it.meta + '</p></div>'
+                   +   '<div class="info"><h4>' + esc(it.title) + '</h4><p class="meta">' + esc(it.meta) + '</p></div>'
                    +   '<div class="arrow">›</div>'
                    + '</a>';
             }).join('');

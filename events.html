@@ -1234,9 +1234,9 @@
       // href so we never render a broken empty href.
       const _href = (e.href && e.href !== '#') ? e.href : '';
       const _fb = getFallbackImg(e);
-      const _imgTag = `<img src="${e.img || _fb}" alt="${e.title}" loading="lazy" onload="handlePortrait(this)" onerror="this.onerror=null;this.src='${_fb}'">`;
+      const _imgTag = `<img src="${ltEsc((e.img && /^https?:\/\//i.test(e.img)) ? e.img : _fb)}" alt="${ltEsc(e.title)}" loading="lazy" onload="handlePortrait(this)" onerror="this.onerror=null;this.src='${_fb}'">`;
       const _imgLinked = _href
-        ? `<a href="${_href}" target="_blank" rel="noopener" class="img-link" aria-label="View source for ${e.title}">${_imgTag}</a>`
+        ? `<a href="${ltEsc(ltSafeUrl(_href))}" target="_blank" rel="noopener" class="img-link" aria-label="View source for ${ltEsc(e.title)}">${_imgTag}</a>`
         : _imgTag;
       return `
         <article class="event-card">
@@ -1248,23 +1248,23 @@
             ${_imgLinked}
           </div>
           <div class="body">
-            <h3>${e.title}</h3>
+            <h3>${ltEsc(e.title)}</h3>
             <div class="meta-line">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>${formatLong(e.date)}${e.time ? ' • ' + e.time : ''}</span>
+              <span>${formatLong(e.date)}${e.time ? ' • ' + ltEsc(e.time) : ''}</span>
             </div>
             <div class="meta-line">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>${e.location}</span>
+              <span>${ltEsc(e.location)}</span>
             </div>
-            <div class="summary">${e.summary}</div>
-            <div class="source-line">SOURCE: <strong>${e.source}</strong></div>
+            <div class="summary">${ltEsc(e.summary)}</div>
+            <div class="source-line">SOURCE: <strong>${ltEsc(e.source)}</strong></div>
             <div class="actions">
-              <a class="btn-cal" href="${googleCalUrl(e)}" target="_blank" rel="noopener">
+              <a class="btn-cal" href="${ltEsc(googleCalUrl(e))}" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Add to Calendar
               </a>
-              <a class="btn-details" href="${e.href}" target="_blank" rel="noopener">View Details</a>
+              <a class="btn-details" href="${ltEsc(ltSafeUrl(e.href))}" target="_blank" rel="noopener">View Details</a>
             </div>
           </div>
         </article>
