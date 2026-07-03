@@ -1,5 +1,10 @@
 {
-  "hash": "e2429c3c23d14ad6ea8b7e2242952396ab9a5a89",
-  "lede": "The Fourth of July weekend dominates this week, with Better Than Ezra, the Red White and Blues celebration, a drone show, and a full run of events stretching across both Telluride and Mountain Village. Once the holiday settles down, the Board of County Commissioners has multiple meetings scheduled for July 8 — including a special session out in Norwood at the Sheriff Annex — and both the Open Space and Ecology Commissions convene, though none of those agendas have been posted yet.",
-  "notable": []
+  "hash": "fa7df6090ec3711a4ed9daa1ad16bb35cf6471f6",
+  "lede": "The most substantive government action this week is a joint work session Thursday where the San Miguel County Planning Commission and Board of County Commissioners sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal operations, and condominium plats — no final votes, but this is where the real shaping happens. Before that, the valley kicks off the Fourth of July weekend with the parade Saturday, drone shows Friday and Saturday, Better Than Ezra, Mindchatter, and the 16th Annual Rundola. Most other boards meeting this week haven't posted agendas yet.",
+  "notable": [
+    {
+      "id": 7,
+      "stake": "Proposed Land Use Code changes to forestry, oil/gas, geothermal, and condo plat rules up for joint review."
+    }
+  ]
 }

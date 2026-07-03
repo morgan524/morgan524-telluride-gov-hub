@@ -6,8 +6,21 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jul 2026 19:22:45 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2026 02:34:30 GMT</lastBuildDate>
     <ttl>360</ttl>
+    <item>
+      <title>[Sat, Jul 4] Telluride Fourth of July Parade</title>
+      <link>https://www.telluride.com/event/telluride-4th-of-july-parade/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20fourth%20of%20july%7C2026-07-04</guid>
+      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44403/img_2267-2100x1400-717e96b7-57a1-4fb1-8082-d7ef66424a4e.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Telluride 4th of July Parade is the longest running event in the Town's history. The parade celebrates our …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44403/img_2267-2100x1400-717e96b7-57a1-4fb1-8082-d7ef66424a4e.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
     <item>
       <title>[Meeting] Open Space Commission - Jul 06 2026 — 2026-07-06</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -62,6 +75,41 @@ The July 8 Special BOCC meeting in Norwood at the Sheriff Annex has been posted,
 The July 8, 2026 Ecology Commission agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-07-09</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-07-09%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-07-09
+
+The July 9 SMART Board of Directors agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning Commission Meeting — 2026-07-09</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-09%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-07-09
+
+The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Planning Commission and Board of County Commissioners Joint Work Session — 2026-07-09</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-09%7CPlanning%20Commission%20and%20Board%20of%20County%20Commissioners%20Joint%20Work%20Session</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-07-09
+
+The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
+
+⚡ Why it matters: Proposed Land Use Code changes to forestry, oil/gas, geothermal, and condo plat rules up for joint review.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
   </channel>
 </rss>
