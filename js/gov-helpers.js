@@ -405,7 +405,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -598,6 +598,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Wildfire southwest of Denver forces thousands to evacuate and destroys more than 160 structures",
+    source: "Telluride Times",
+    date: "July 3, 2026",
+    firstSeen: "2026-07-03",
+    newsTopic: "public-safety",
+    copy: "The Aspen Acres fire southwest of Denver has grown to nearly 105 square miles with zero containment, forcing full evacuations of Colorado City, Beulah, Rye, and San Isabel. Over 160 structures have been destroyed. It's a busy and dangerous fire season across the region right now.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_29d77297-868c-58e9-8a2b-f0f96bba3c3d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c3/ec3cc2dc-3a76-55de-b275-629ec7c9e937/6a47e1184168f.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Wildfire anxiety mounts amid fast-moving blazes and repeat evacuations",
     source: "Telluride Times",
     date: "July 3, 2026",
@@ -607,6 +619,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_4d973373-7208-53fb-a780-c1b2993859f2.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/61/26177bf3-f9b2-5216-a5a0-8353d34a6cdb/6a47b33cc2422.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride receives 2026 community survey results",
+    source: "Telluride Times",
+    date: "July 3, 2026",
+    firstSeen: "2026-07-03",
+    newsTopic: "land-use",
+    copy: "Telluride's 2026 community survey drew 633 responses — a 42% jump over recent years. Residents rated natural environment, safety, and walkability highly, but cost of living scored \"excellent or good\" with just 3%, affordable housing at 11%, and overall economic health dropped 14% from 2025. Downtown vibrancy also fell 20 points.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_126b40a1-0567-46c9-a410-a1b3434e286f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/4a/74a308e5-d221-4cbd-b37f-ef54504ccab2/6a460acfeec68.image.jpg",
     imgHiRes: true
   },
   {
@@ -655,18 +679,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/local/business/article_776e8672-b48d-5fd7-a527-2ddda3ad5a55.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/76/776e8672-b48d-5fd7-a527-2ddda3ad5a55/6a45970f3e9fc.preview.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride receives 2026 community survey results",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "land-use",
-    copy: "Telluride's 2026 community survey drew 633 responses — a 42% jump over recent years. Residents rated natural environment, safety, and walkability highly, but cost of living scored \"excellent or good\" with just 3%, affordable housing at 11%, and overall economic health dropped 14% from 2025. Downtown vibrancy also fell 20 points.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_126b40a1-0567-46c9-a410-a1b3434e286f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/4a/74a308e5-d221-4cbd-b37f-ef54504ccab2/6a460acfeec68.image.jpg",
     imgHiRes: true
   },
   {
@@ -1927,6 +1939,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
   },
   {
+    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 18, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
+    source: "Town of Telluride",
+    date: "June 16, 2026",
+    newsTopic: "land-use",
+    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
+  },
+  {
+    title: "Town of Telluride Releases Findings of Independent Investigation",
+    source: "Town of Telluride",
+    date: "June 10, 2026",
+    newsTopic: "recreation",
+    copy: "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
+  },
+  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "June 27, 2026",
@@ -1943,6 +1982,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1402",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14335"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
+  },
+  {
+    title: "Mill Creek Park Site Closed for Revegetation",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
+  },
+  {
+    title: "Beaver Park Gravel Pit Closure",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
     title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
@@ -2132,6 +2207,28 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-03",
+    newsTopic: "housing",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-workforce-%26-affordable-housing-committee-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Town Council Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-03",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-tc-agenda.pdf",
     img: ""
   },
   {
@@ -2776,17 +2873,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
   },
   {
-    title: "Yoga For All with Jay and Jane",
-    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-03/",
-    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-07-03T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-03/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2796,17 +2882,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-03/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-07-03T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3183,6 +3258,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
   },
   {
+    title: "“The Mountain Ark” Screening in Norwood at The Livery!",
+    link: "https://koto.org/event/the-mountain-ark-screening-in-norwood-at-the-livery/",
+    description: "If you missed the screenings in Telluride, there's one more chance to see \"The Mountain Ark\" in the County: at The Livery in Norwood on Thursday, July 9th, at 7pm, with filmmaker Ken Bailey in-person. The film is a tribute to Lissa Margetts and her beloved wildlife rehabilitation center on Wilson Mesa. Bring your personal Ark stories to share! Tickets at the door are $5 / $2 for kids under 12.",
+    pubDate: "2026-07-10T01:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Livery Norwood",
+    imageUrl: ""
+  },
+  {
     title: "Yoga For All with Jay and Jane",
     link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-10/",
     description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
@@ -3246,17 +3332,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mauritson Wine Dinner",
-    link: "https://koto.org/event/mauritson-wine-dinner/",
-    description: "Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For more than 150 years, the Mauritson family has cultivated the rugged landscape of Sonoma's Dry Creek Valley, building a legacy rooted in stewardship, perseverance, and a deep connection to the land. This special evening begins with a private reception in Falcon Room, followed by a multi-course dinner in Timber Room thoughtfully paired with wines from Mauritson Wines and Loam Vineyards. Throughout the experience, Clay will share rare library selections, limited-production releases, and the stories behind the vineyards that have shaped his family's winemaking journey across six generations. Guests will gain a deeper understanding of the people, places, and soils that define Sonoma's distinctive character while enjoying a menu crafted to complement each wine's unique expression. Friday, July 10th Reception in Falcon Room | 6:00 PM Dinner in Timber Room | 7:00 PM",
-    pubDate: "2026-07-11T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hotel Madeline, Mountain Village",
     imageUrl: ""
   }
 ];
