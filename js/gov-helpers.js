@@ -393,7 +393,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -3254,70 +3254,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "CANCELLED - Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801138?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-07-02T15:00:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803446?hs=a",
+    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-07-03T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772763?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-07-02T16:30:00.000Z",
+    title: "Telluride Farmers Marketshow: Gerald Robinson Magic",
+    link: "https://telluridelibrary.libcal.com/event/15564470?hs=a",
+    description: "11:00 AM – 12:00 PM · Gerald Robinson is a professional magician from Denver, Colorado. He has been learning and performing magic since he was 8 years old. Now at 25, he has performed all over the world including Germany, UK, and Canada. Most notably he is known for street performing on the Pearl Street Mall in Boulder, CO, and the resident magician at the former Enigma Bazaar. Most recently Gerald was one of the house magicians at the world famous Casa Bonita, in Denver, CO.",
+    pubDate: "2026-07-03T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_29_07.png"
+  },
+  {
+    title: "Cupcake Competition",
+    link: "https://telluridelibrary.libcal.com/event/16815145?hs=a",
+    description: "3:00 PM – 4:00 PM · Bake and decorate six cupcakes at home and bring them in to be judged/shared with other competitors. Winners take home a prize!  For ages 8-12.  Register online. Hornea y decora seis cupcakes en casa y tr&aacute;elos para ser juzgados/compartir con otros competidores. &iexcl;El ganador se lleva un premio a casa!  Siglos 8-12.  Se requiere registro.",
+    pubDate: "2026-07-03T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
-  },
-  {
-    title: "Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536278?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-07-02T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960350?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-07-02T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "French Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/15970653?hs=a",
-    description: "5:00 PM – 6:00 PM · Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-07-02T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1747415393.jpg"
-  },
-  {
-    title: "Tarde de Piscina",
-    link: "https://telluridelibrary.libcal.com/event/16773025?hs=a",
-    description: "5:00 PM – 6:30 PM · El tiempo de verano est&aacute; aqu&iacute;, pero &iquest;sab&iacute;as que hay una piscina en el parque del pueblo? Ven a nadar y visita la piscina! Todas las edades son bienvenidas.",
-    pubDate: "2026-07-02T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_28_11_22_18.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_09_25_11.png"
   }
 ];
 
@@ -3338,18 +3305,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Bright Light Social Hour Night 1",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-bright-light-social-hour-night-1",
-    description: "Austin’s The Bright Light Social Hour are widely recognized as the essence of Te...",
-    pubDate: "2026-07-02",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/fc726446-27d2-4554-96e7-4e36cff186e5/-/crop/3037x1519/137,0/-/preview/"
-  },
   {
     title: "The Bright Light Social Hour Night 2",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-bright-light-social-hour-night-2",
@@ -4037,17 +3992,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
-    title: "Ouray Youth Summer Programs: Fly Fishing",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/339?onlineSiteId=0&from_original_cui=true",
-    description: "Participants will learn the basics of fly fishing techniques with instruction and equipment provided by Ridgway State Park staff. Please meet at the Pa-Co-Chu-Puk area of Ridgway State Park and bring snacks, water, weather-appropriate clothing, and sunglasses for eye protection while fishing. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993896774577/huge/f8a8f4f0f395170cb24aaa84ed744e29fb7d74e4.jpg"
-  },
-  {
     title: "Ridgway Concert Series",
     link: "https://pickinproductions.com/upcomingshows",
     description: "The Town of Ridgway & Pickin’ Productions Present THE 19TH ANNUAL 2026 RIDGWAY CONCERT SERIES FOOD - VENDORS - BEER - WINE & MARGARITAS JULY 2 LEVI PLATERO Shelby Means JULY 9 BLACK UHURU Psylo JULY 16 SAM GRISMAN PROJECT Tanasi JULY 23 DOGS IN A PILE Felix Y Los Gatos JULY 30 THE RUMBLE Ft. Chief Joseph Boudreaux Jr. Handmade Moments No Dogs or Outside Alcohol Permitted SPONSORS Ridgway Real Estate – Alpine Bank – Chipeta Lodge Resort & Space- Orvis Hot Springs – Julie & Dave Duff – Bennett Forgeworks- OAK – Billings Artwork – Todd W. Hoffman Foundation- The Market at Ridgway – Fiddlers Green – KVNF Public Radio – Alpine Edge Engineering - Alt Space Coworking- Vacation Rental Collective For More Information, Please Visit: www.pickinproductions.com",
@@ -4439,6 +4383,39 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray KOA",
     imageUrl: "https://localist-images.azureedge.net/photos/53082388585996/huge/8f84b01bd22d47aca2573a9e1e048373c5a20130.jpg"
+  },
+  {
+    title: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/cacao-sound-ceremony-with-brian-dickinson-live-music-the-wright",
+    description: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright WHEN? Saturday, July 11 Doors at 1:30 pm • Event at 2:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Join Brian Dickinson for an immersive Cacao & Sound Ceremony designed to create space for reflection, relaxation, and connection through intentional sound and shared experience. Combining ceremonial cacao with meditative soundscapes, this experience invites participants to slow down, settle in, and engage with music and vibration in a deeply restorative setting. Through live sound, resonance, and mindful presence, guests are encouraged to explore stillness and renewal in the historic setting of the Wright Opera House. Please bring your own blanket, yoga mat, or anything else that helps create a comfortable space to rest during the sound experience. …",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52931877221087/huge/c922252dd282798a2a91ee39c35282c81910f49e.jpg"
+  },
+  {
+    title: "Deep Relaxation Sound Bath with Brian Dickinson: Live Music @ the Wright",
+    link: "https://wrightoperahouse.org",
+    description: "Deep Relaxation Sound Bath with Brian Dickinson: Live Music @ the Wright WHEN? Saturday, July 11 Doors at 6:00 pm • Event at 6:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Join us for a special Deep Relaxation Sound Bath with Brian Dickinson, designed to help relax, balance, and restore energy throughout the body. Brian will intuitively guide participants through a sound immersion journey using a rich collection of instruments including gongs, singing bowls, handpan, bells, flutes, ancient whistles, chimes, and more. As guests settle into a cosmic ocean of sound, these layered vibrations create a deeply immersive experience that gently massages the body and calms the nervous system. The harmonic resonance of gong tones allows participants to naturally drop into a peaceful state of deep relaxation, creating space for rest, restoration, and healing. …",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932388838595/huge/3d53a3b85d29b20688afb793e034dfc642d33f6a.jpg"
+  },
+  {
+    title: "Benefit Concert for Fire Fighters and OCEMS - Sacred Fire-Santana Tribute Band",
+    link: "https://www.ocpag.org/sacredfire",
+    description: "We will be doing this as a benefit concert for all volunteer fire departments in our county and OCEMS. Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. Contreras teaches at Swallow Hill Music in Denver and has found it to be the perfect place to educate folks about the power and spirituality of music. …",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
   }
 ];
 
