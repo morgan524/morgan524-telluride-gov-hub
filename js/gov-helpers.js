@@ -81,9 +81,6 @@ const MEETING_AGENDA_META = {
   "county|2026-06-11|Planning Commission Meeting":
     {"zoomUrl":"https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1","meetingId":"893 1709 0915","passcode":"670854","phone":"970-728-3844"},
 
-  "county|2026-06-03|Board of County Commissioners Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/83995847328","meetingId":"839 9584 7328","passcode":"308083","phone":"719-359-4580"},
-
   "county|2026-06-10|Board of Review and Planning Commission Joint Work Session":
     {"zoomUrl":"https://us06web.zoom.us/j/84720329875","phone":"970-728-3844"},
 
@@ -112,7 +109,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     {"sv":4},
@@ -259,6 +256,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-18|San Miguel Basin Fair Board":
+    {"sv":4},
+
+  "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
     {"sv":4}
 };
 
@@ -286,9 +286,6 @@ const MANUAL_SUMMARIES = {
 
   "norwood|2026-06-15|Planning and Zoning Commission Meeting":
     "The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.",
-
-  "county|2026-06-03|Board of County Commissioners Meeting":
-    "Regular commissioner meeting · Agenda details not yet available",
 
   "county|2026-06-11|Planning Commission Meeting":
     "Agenda not available",
@@ -320,15 +317,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-06-09|Town Council - Jun 09 2026":
     "Agenda not yet published",
 
-  "telluride|2026-06-03|Ecology Commission - Jun 03 2026":
-    "Monthly Ecology Commission meeting · Human-wildlife interaction oversight · General commission business",
-
-  "telluride|2026-06-03|Commission for Community Assistance, Arts & Special Events - Jun 03 2026":
-    "The agenda text for this Commission for Community Assistance, Arts & Special Events meeting is missing — only the portal navigation and meeting list appears.",
-
-  "telluride|2026-06-03|Telluride Housing Authority Subcommittee - Jun 03 2026":
-    "The Jun 03 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
-
   "med|2026-06-25|Regular Board Meeting":
     "The Telluride Hospital District board meets June 25 with a full slate of internal matters. The heaviest item on the agenda is a 45-minute discussion of mill levy considerations — the taxing mechanism that funds the district, and a recurring pressure point as the hospital works toward a new facility. Board members will also spend time on new facility updates and partnership updates, plus a communications strategy discussion. The finance committee and CFO will walk through May 2026 draft financials. Consent items include ratification of an updated investment policy.",
 
@@ -337,9 +325,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     "The Chair was scheduled to take up the 238 N Pine Street minor subdivision (a request to split a 7,500 sq ft Historic Residential lot into two), but the applicant has asked for it to be continued again — to the July 23 P&Z meeting. No substantive action is expected at this meeting. 4:00 PM at Rebekah Hall.",
-
-  "ouray|2026-06-03|The Planning Commission will conduct a regular meeting and hold a public hearing to consider and make recommendation on an application for a 6-lot regular PUD in the South Mesa Zone (Packet Materials are attached to the agenda)":
-    "The Planning Commission will review a 6-lot subdivision proposal in the South Mesa Zone — a public hearing where neighbors can weigh in before commissioners make their recommendation to the county.",
 
   "telluride|2026-06-30|Town Council - Jun 30 2026":
     "A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.",
@@ -366,7 +351,7 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board meets to review junior livestock sale terms and update bylaws for the upcoming fair season.",
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "The July 6, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.",
 
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
@@ -405,7 +390,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -486,7 +471,10 @@ const MANUAL_SUMMARIES = {
     "The San Miguel Basin Fair Board holds a special meeting at 10pm — late by design, after a full day at the fair. The agenda is a debrief: how the day went and whatever issues made their way up to the board during it. Routine end-of-day business, but these conversations are often where the real operational picture emerges.",
 
   "county|2026-07-18|San Miguel Basin Fair Board":
-    "A late-night special meeting — 10 p.m. — to debrief the day's fair activities and work through whatever issues surfaced during the event. The agenda is intentionally open-ended, which is typical for fair boards wrapping up a long day."
+    "A late-night special meeting — 10 p.m. — to debrief the day's fair activities and work through whatever issues surfaced during the event. The agenda is intentionally open-ended, which is typical for fair boards wrapping up a long day.",
+
+  "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
+    "The August 3, 2026 Open Space Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -607,6 +595,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_29d77297-868c-58e9-8a2b-f0f96bba3c3d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c3/ec3cc2dc-3a76-55de-b275-629ec7c9e937/6a47e1184168f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A summer camp like no other",
+    source: "Telluride Times",
+    date: "July 3, 2026",
+    firstSeen: "2026-07-04",
+    newsTopic: "education",
+    copy: "Telluride Ski & Snowboard Club athletes have been training aerial maneuvers at a water ramps facility in Park City, but that access ends mid-August when construction begins on a hotel at the complex. The Steamboat Springs water ramps facility is also closing for a residential development. TSSC's athletic director says it could be a few years before a comparable facility is available again.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_e8e1f7fd-ad54-43e7-ac5a-4061ac2f9113.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f1/4f1e1dcb-8401-4873-8fc9-fa1eddf7dc1a/6a4608438706a.image.jpg",
     imgHiRes: true
   },
   {
@@ -1876,42 +1876,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Rico Trails Alliance receives grant for bridge project",
-    source: "Telluride Times",
-    date: "June 20, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "infrastructure",
-    copy: "Rico Trails Alliance secured over $300,000 — including a $250,000 Colorado Parks and Wildlife grant and $40,000 from the Telluride Foundation — for a 68-foot ADA-compliant pedestrian bridge spanning the east fork of the Dolores River south of Rico. The bridge will link Rico's recreation facilities and the historic Rio Grande Southern railroad grade to hundreds of miles of Forest Service trails, serving the broader upper Dolores watershed from Lizard Head to Priest Gulch.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d0cf73ba-3f29-4037-a93a-6a60886242c3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/73/873b82ff-8683-45c3-af51-3f30ea87d3b8/6a32698771b03.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The soul of the West",
-    source: "Telluride Times",
-    date: "June 20, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "recreation",
-    copy: "A longtime Tucson native reflects on 35 years living at the confluence of two rivers on the Uncompahgre Plateau — drawn here by a desert upbringing that shaped how she reads landscape, weather, and time. The piece moves through petroglyphs, monsoons, wildfires, and winter squalls as quiet markers of life on the Western Slope.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_2eb36a10-3147-437b-8935-90158fe0e902.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b7/5b7f3f51-d1c4-4ae9-9ef5-47b3c10edbf1/6a31bb6dbc01b.image.webp",
-    imgHiRes: true
-  },
-  {
-    title: "Sierra Hull embodies new bluegrass generation of genre busters",
-    source: "Telluride Times",
-    date: "June 20, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Sierra Hull — seven-time IBMA Mandolin Player of the Year, four Grammy nominations this year — is making her Telluride debut, something she says has been on her list for a long time. She'll also appear as a special guest during Béla Fleck and Renée Fleming's Friday set.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_ccd5bf74-2043-4d36-bd76-ed763fa5e790.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/02/20223a93-b43c-42a2-a1c0-01c290f6b72d/6a2cdfe5814ac.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2157,7 +2121,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2168,7 +2132,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2179,7 +2143,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2190,7 +2154,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2201,7 +2165,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2245,7 +2209,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "July 3, 2026",
+    date: "July 4, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2873,61 +2837,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-03/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-03T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-07-03/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-07-03T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-07-03/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-07-03T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-03/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-07-03T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "6th Annual Alpine Cookout",
-    link: "https://koto.org/event/6th-annual-alpine-cookout/",
-    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music, and unforgettable moments. From world-renowned chefs and artisan pop-ups to craft drinks and lawn games, with the San Juans as your backdrop, this is everything a summer afternoon should be. This year’s featured chefs include: – Dean Fearing, James Beard Award-winning chef and pioneer of Southwestern cuisine, renowned for his bold flavors and the iconic Fearing’s Restaurant. – Viet Pham, Iron Chef winner and founder of Pretty Bird, known for his refined approach to bold flavors and his signature take on hot chicken. – Mark Kiffin, James Beard Award-winning chef and Santa Fe culinary icon, celebrated for his refined, ingredient-driven approach to modern Southwestern cuisine. …",
-    pubDate: "2026-07-03T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Reflection Plaza Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Telluride Foundation Rundola: Run for Good",
     link: "https://koto.org/event/telluride-foundation-rundola-run-for-good/",
     description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.",
@@ -3333,6 +3242,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Mauritson Wine Dinner",
+    link: "https://koto.org/event/mauritson-wine-dinner/",
+    description: "Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For more than 150 years, the Mauritson family has cultivated the rugged landscape of Sonoma's Dry Creek Valley, building a legacy rooted in stewardship, perseverance, and a deep connection to the land. This special evening begins with a private reception in Falcon Room, followed by a multi-course dinner in Timber Room thoughtfully paired with wines from Mauritson Wines and Loam Vineyards. Throughout the experience, Clay will share rare library selections, limited-production releases, and the stories behind the vineyards that have shaped his family's winemaking journey across six generations. Guests will gain a deeper understanding of the people, places, and soils that define Sonoma's distinctive character while enjoying a menu crafted to complement each wine's unique expression. Friday, July 10th Reception in Falcon Room | 6:00 PM Dinner in Timber Room | 7:00 PM",
+    pubDate: "2026-07-11T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hotel Madeline, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "2nd annual Dark Sky Disc Golf in Norwood!",
+    link: "https://koto.org/event/2nd-annual-dark-sky-disc-golf-in-norwood/",
+    description: "Norwood Park & Rec, Wright's Mesa Disc Golf, and Norwood Dark Sky Advocates present the 2nd annual night of Dark Sky Disc Golf on Friday, July 10th, on the NEW course in downtown Norwood. Sunset gather is at 8:25pm, play begins at 9pm. Baskets will be a-glow and LED lights provided for discs. Plus refreshments, music, and telescopes! Access via western gate on County Road 42Z. More info at norwoodparkandrec.org .",
+    pubDate: "2026-07-11T02:25:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Tom Gullikson Tennis Camp",
+    link: "https://koto.org/event/tom-gullikson-tennis-camp/2026-07-11/",
+    description: "Camp Pro-staff: Eric Fey, Tom Gullikson, Eric Alexon, and a Guest Professional Session One | July 11 & 12 | 9:00am – 12:00pm Session Two | July 18 & 19 | 9:00am – 12:00pm Tom is a decorated Tennis coach and playing professional. Come out and enjoy some of the best coaching in the country! Ranked #34 in singles and #4 in doubles US Open Mixed Doubles Champion 1984 Wimbledon Men's Doubles Runner- up 1983 US Open Men's Doubles Semi-Finalist 1982 Australian Open Men's Doubles Semi-Finalist 1983 Coach of Pete Sampras, Todd Martin, Andy Roddick, and Jennifer Capriati Former US Davis Cup Captain 1994 – 1999. Coached the US Davis Cup team to victory in 1995! Olympic Coach for the US team for the Atlanta Olympics when Andre Agassi won his Olympic gold medal! Please sign up on the TRC app or reach out to tellurideracquetclub@gmail.com",
+    pubDate: "2026-07-11T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/IMG_5733.png"
+  },
+  {
+    title: "Zumba with Gisela",
+    link: "https://koto.org/event/zumba-with-gisela/2026-07-11/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-07-11T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Meet the Winemaker Hike with Clay Mauritson",
+    link: "https://koto.org/event/meet-the-winemaker-hike-with-clay-mauritson/",
+    description: "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's spectacular landscape. Limited to just eight guests, this exclusive experience offers a rare opportunity to explore the mountains alongside a steward of one of California's most storied agricultural legacies. For more than 150 years, the Mauritson family has farmed the rugged terrain of Sonoma's Dry Creek Valley, cultivating a deep respect for the land that continues to shape Clay's approach to winemaking today. Together, guests will travel via gondola into Telluride before setting out on a guided hike to Bear Creek Falls, where conversations unfold against a backdrop of soaring peaks, alpine forests, and rushing waterfalls. Along the way, Clay will share stories of family, farming, and the enduring connection between place and craft. …",
+    pubDate: "2026-07-11T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Bear Creek Trail, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg"
   }
 ];
 
@@ -5386,17 +5350,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/55989/download_3.800x533.webp"
-  },
-  {
-    title: "The Color of Summer Exhibit Opening",
-    link: "https://www.telluride.com/event/the-color-of-summer/",
-    description: "Visit the Telluride Arts HQ Gallery to view \"The Color of Summer\" from July 2 - October 25, 2026. More About the …",
-    pubDate: "2026-07-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62906/telluride_arts_color_of_summer_tot_2200_x_1237_px.800x533.webp"
   },
   {
     title: "Jewelry Show With Nanci Modica",

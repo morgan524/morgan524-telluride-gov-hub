@@ -1,10 +1,14 @@
 {
-  "hash": "2491ef00e0fc065de2be145116ef8e121205cded",
-  "lede": "The most substantive government action this week is Thursday's joint work session where the San Miguel County Planning Commission and Board of County Commissioners sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal operations, and condominium plats — no final votes, but this is where the shape of those rules gets decided. In the meantime, the valley is deep into Fourth of July mode, with the parade, drone shows, Rundola, and a full slate of music and community events filling the holiday weekend.",
+  "hash": "b3337b350d39422d36b58f8e63257918663b4ef5",
+  "lede": "The most consequential meeting this week is Thursday's joint work session where the Planning Commission and Board of County Commissioners sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal operations, and condominium plats — the kind of foundational code-shaping that rarely gets public attention but shapes how this county develops for years. Before that, Monday's Open Space Commission takes up real decisions on Valley Floor trail alignments and a Telluride Mountain Club request to route trail through open space, both worth watching. The week opens with the Fourth of July parade, the Rundola, and a drone show.",
   "notable": [
     {
+      "id": 0,
+      "stake": "Commission votes on Valley Floor trail routes and a Mountain Club trail request."
+    },
+    {
       "id": 7,
-      "stake": "Joint session shapes Land Use Code rules on forestry, oil, gas, and geothermal."
+      "stake": "County land use code rewrites on forestry, oil/gas, geothermal, and condo plats."
     }
   ]
 }

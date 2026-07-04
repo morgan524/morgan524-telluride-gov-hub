@@ -6,58 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Jul 2026 19:18:01 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 02:32:40 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Jul 3] Red, White &amp; Blues</title>
-      <link>https://www.telluride.com/event/red-white-and-blues/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/red%20white%20and%20blues%7C2026-07-03</guid>
-      <pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/37568/screenshot_2026-06-09_at_9_49_43_am_870x435.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Mountain Village's beloved Red, White & Blues Celebration returns July 3-4, 2026, bringing two days of FREE family …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/37568/screenshot_2026-06-09_at_9_49_43_am_870x435.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 3] Mountain Village Red, White &amp; Blues Celebration</title>
-      <link>https://koto.org/event/mountain-village-red-white-blues-celebration/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mountain%20village%20red%20white%7C2026-07-03</guid>
-      <pubDate>Fri, 03 Jul 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Mountain Village Plazas
-
-Mountain Village's beloved Red, White &Blues Celebration returns July 3-4, 2026, bringing two days of FREE family activities, live music, arts and cultural programming, and community festivities to Mountain Village. Presented by the Telluride Mountain Village Owners Association (TMVOA), the annual Independence Day celebration invites residents and visitors alike to gather in the heart of the San Juan Mountains for a weekend filled with live entertainment, interactive activities, merchant specials, and fun for all ages. This year's celebration carries special significance as the nation commemorates the250thanniversary of the United States and Colorado celebrates its 150th anniversary of statehood. New programming includes a special Drone Show, a performance by '90s alt-rock legends Better Than Ezra, Telluride Arts' This is Colorado (In One Square Foot) Sesquicentennial exhibition, Telluride Theatre Sesquisemiquincentennial performances, and a new Family Happy Hour with Movies Under the Stars on Saturday evening. Festivities begin at 1 p.m. …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 3] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-03/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-03</guid>
-      <pubDate>Fri, 03 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 3] Free Youth Tennis &amp; Pickleball Program</title>
-      <link>https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-03/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20youth%20tennis%20and%7C2026-07-03</guid>
-      <pubDate>Fri, 03 Jul 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Jul 4] 16th Annual Rundola</title>
       <link>https://telluridefoundation.org/tf-events/</link>
@@ -85,15 +35,66 @@ Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rund
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Meeting] Open Space Commission - Jul 06 2026 — 2026-07-06</title>
+      <title>[Sat, Jul 4] Telluride 4th of July Parade</title>
+      <link>https://koto.org/event/telluride-4th-of-july-parade/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%204th%20of%20july%7C2026-07-04</guid>
+      <pubDate>Sat, 04 Jul 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Parade Info The Parade starts at 11 a.m. and runs eastward down Main Street. There will be a fighter jet fly by. It is usually at 11 a.m. but last year it was at noon. Time is to be determined by the jet people. We LOVE water guns and super soakers but please NO water balloons Nothing that creates trash. This goes for floats and spectators. If participating in water activities – do not spray babies, older folks, classic cars and anyone with a camera. It is best to only engage with other people with water. Please make sure children stay behind the white line for their safety. Parade Registration All are welcome to participate in the parade! Register at tridejuly4parade.org before 5 p.m. on Friday July 3rd. Late entries are welcome but not eligible for judging. Please make sure to use patriotic decorations. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Jul 5] Movies Under the Stars</title>
+      <link>https://koto.org/event/movies-under-the-stars/2026-07-04/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movies%20under%20the%20stars%7C2026-07-05</guid>
+      <pubDate>Sun, 05 Jul 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Conference Center Plaza Mountain Village
+
+Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Open Space Commission - Jul 06 2026 — 2026-07-06</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-06%7COpen%20Space%20Commission%20-%20Jul%2006%202026</guid>
       <pubDate>Mon, 06 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-06
 
-The July 6, 2026 Open Space Commission agenda hasn't been posted yet.]]></description>
+Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.
+
+⚡ Why it matters: Commission votes on Valley Floor trail routes and a Mountain Club trail request.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 6] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-06/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-06</guid>
+      <pubDate>Mon, 06 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 7] Pie Contest</title>
+      <link>https://koto.org/event/pie-contest/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/pie%20contest%7C2026-07-07</guid>
+      <pubDate>Tue, 07 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Pie-Contest-4.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Our beloved tradition returns! Calling all pie enthusiasts! The Wilkinson Public Library is hosting its annual Pie Contest on Monday, July 6th! This delicious competition is open to bakers of all ages. Show off your skills and vie for bragging rights and a litany of prizes! Our panel of esteemed judges will decide the fate of your flaky masterpiece, based on appearance, creativity, and of course, taste. Register in advance]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/Pie-Contest-4.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-07-08</title>
@@ -170,7 +171,7 @@ The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: Joint session shapes Land Use Code rules on forestry, oil, gas, and geothermal.]]></description>
+⚡ Why it matters: County land use code rewrites on forestry, oil/gas, geothermal, and condo plats.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
