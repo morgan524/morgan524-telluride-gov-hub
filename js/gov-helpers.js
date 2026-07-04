@@ -390,7 +390,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -585,6 +585,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Man of many hats",
+    source: "Telluride Times",
+    date: "July 4, 2026",
+    firstSeen: "2026-07-04",
+    newsTopic: "community",
+    copy: "Ashley Boling has been leading historical walking tours of Telluride for 35 years, launching from the Telluride Historical Museum every Tuesday and Thursday at 1 p.m. The roughly 90-minute tours cover mining history, the Ute Indians, the New Sheridan, and the site of Butch Cassidy's first bank robbery. The museum now markets the walks, calling them its most popular regular program.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1aa0f815-808d-4e76-88ac-e77e7f2d4213.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/61/c615d9e1-79cd-400b-a98b-c4ca9a19b8db/6a48bf48cae8d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Wildfire southwest of Denver forces thousands to evacuate and destroys more than 160 structures",
     source: "Telluride Times",
@@ -4301,6 +4313,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53306626930226/huge/e9e9fa52e3b4c6283408d5cb97ce02cf32452428.jpg"
   },
   {
+    title: "Secrets in the Stone: Rocks and Gems",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Unearth the hidden treasures right beneath your feet! Join guest speaker Don Rodarte, president of the Uncompahgre Treasure Club for a fascinating evening exploring the dazzling world of geology, rocks, and minerals. This hands-on presentation will introduce you to the stunning gems, local crystals, and unique rock formations that make Colorado a haven for rockhounds.",
+    pubDate: "2026-07-10T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53330919005733/huge/98218f053d10b356e894b85a41922cbe408afced.jpg"
+  },
+  {
     title: "Ridgway Bird Walks & Talks with Mike Campbell: “Riparian Habitat Birding”",
     link: "https://weehawkenarts.org/education/adult-art-classes/",
     description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org.",
@@ -4335,6 +4358,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53082388585996/huge/8f84b01bd22d47aca2573a9e1e048373c5a20130.jpg"
   },
   {
+    title: "Grip it & Rip it: Raptor Talons and Tails",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Hosted by the experts from the Black Canyon Audubon Society, this interactive program dives into the bio-mechanics of raptors, exploring how specialized talons and aerodynamic tails allow eagles, hawks, and owls to dominate the Colorado skyline. It’s a perfect opportunity for families and bird enthusiasts to learn about these powerful predators in their natural habitat.",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53330932690609/huge/63e1d8a2cbe6bfb8374f46241ae508a0cc663280.jpg"
+  },
+  {
     title: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/cacao-sound-ceremony-with-brian-dickinson-live-music-the-wright",
     description: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright WHEN? Saturday, July 11 Doors at 1:30 pm • Event at 2:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Join Brian Dickinson for an immersive Cacao & Sound Ceremony designed to create space for reflection, relaxation, and connection through intentional sound and shared experience. Combining ceremonial cacao with meditative soundscapes, this experience invites participants to slow down, settle in, and engage with music and vibration in a deeply restorative setting. Through live sound, resonance, and mindful presence, guests are encouraged to explore stillness and renewal in the historic setting of the Wright Opera House. Please bring your own blanket, yoga mat, or anything else that helps create a comfortable space to rest during the sound experience. …",
@@ -4355,6 +4389,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52932388838595/huge/3d53a3b85d29b20688afb793e034dfc642d33f6a.jpg"
+  },
+  {
+    title: "Untamed: Mustangs in Spring Creek Basin",
+    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
+    description: "Feel the spirit of the untamed West right here in southwestern Colorado! Join Bureau of Land Management wild horse partner and author TJ Holmes for an unforgettable look into the lives of our region's most iconic animals the free ranging Mustangs in Spring Creek Basin.",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53330945645101/huge/c9e4d0ca84acb6c39abd70455b75a164e9cae0ee.jpg"
   },
   {
     title: "Benefit Concert for Fire Fighters and OCEMS - Sacred Fire-Santana Tribute Band",
@@ -4483,28 +4528,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "6th Annual Alpine Cookout",
-    link: "https://townofmountainvillage.com/explore/events/all-events/6th-annual-alpine-cookout/",
-    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational cuisine, live music,",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48895/untitled_design_1.png"
-  },
-  {
-    title: "Red, White & Blues: Special Concert with Better Than Ezra + Drone Show",
-    link: "https://townofmountainvillage.com/explore/events/all-events/red-white-blues-special-concert-with-better-than-ezra-drone-show/",
-    description: "Friday evening's live music lineup begins with acclaimed singer-songwriter and local legend Emily Scott Robinson at 5 p.m. At 6:00 p.m.,",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49151/tmv-eventgraphicbtesmall.jpg"
-  },
   {
     title: "Telluride Foundation Rundola: Run for Good",
     link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
