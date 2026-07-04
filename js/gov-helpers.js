@@ -390,7 +390,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -444,7 +444,7 @@ const MANUAL_SUMMARIES = {
     "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet.",
+    "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
     "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -3301,39 +3301,7 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-  {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803446?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-07-03T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "Telluride Farmers Marketshow: Gerald Robinson Magic",
-    link: "https://telluridelibrary.libcal.com/event/15564470?hs=a",
-    description: "11:00 AM – 12:00 PM · Gerald Robinson is a professional magician from Denver, Colorado. He has been learning and performing magic since he was 8 years old. Now at 25, he has performed all over the world including Germany, UK, and Canada. Most notably he is known for street performing on the Pearl Street Mall in Boulder, CO, and the resident magician at the former Enigma Bazaar. Most recently Gerald was one of the house magicians at the world famous Casa Bonita, in Denver, CO.",
-    pubDate: "2026-07-03T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Gondola Plaza - Telluride",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_29_07.png"
-  },
-  {
-    title: "Cupcake Competition",
-    link: "https://telluridelibrary.libcal.com/event/16815145?hs=a",
-    description: "3:00 PM – 4:00 PM · Bake and decorate six cupcakes at home and bring them in to be judged/shared with other competitors. Winners take home a prize!  For ages 8-12.  Register online. Hornea y decora seis cupcakes en casa y tr&aacute;elos para ser juzgados/compartir con otros competidores. &iexcl;El ganador se lleva un premio a casa!  Siglos 8-12.  Se requiere registro.",
-    pubDate: "2026-07-03T21:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_30_09_25_11.png"
-  }
+
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -3342,7 +3310,20 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-190",
+    name: "Peppa",
+    species: "Dog",
+    breed: "Poodle, Miniature / Schnauzer",
+    ageGroup: "Adult Dog",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/c90348512d680b41160e384fc81688da/b549acbd39f70efb5528d5ad45a7cfcf.png",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214040349",
+    summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
+    firstSeen: "2026-07-04",
+    revealDate: "2026-07-04",
+    lastSeen: "2026-07-04"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3353,18 +3334,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Bright Light Social Hour Night 2",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-bright-light-social-hour-night-2",
-    description: "Austin’s The Bright Light Social Hour are widely recognized as the essence of Te...",
-    pubDate: "2026-07-03",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/fc726446-27d2-4554-96e7-4e36cff186e5/-/crop/3037x1519/137,0/-/preview/"
-  },
   {
     title: "MINDCHATTER DJ SET",
     link: "https://www.alibitelluride.com/calendar#eca-event=mindchatter-dj-set",
@@ -3884,18 +3853,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   },
   {
-    title: "First Friday Art Walk",
-    link: "https://www.ridgwayfuse.org/firstfridays",
-    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
-    pubDate: "2026-05-01T12:00:00.000Z",
-    endDate: "2026-12-04",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Downtown Ridgway, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
-  },
-  {
     title: "Parks and Recreation Committee (PARC)",
     link: "https://cityofouray.com/city_offices/committees___boards/parks_and_recreation_committee.php",
     description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
@@ -3942,6 +3899,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Swimming Classes for Kids",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search?activity_select_param=2&viewMode=list",
+    description: "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30 minutes each day ✔️ 8 classes per session ✔️ $45 per session (that’s less than $6 per class!) ✔️ Pool entry during class period included Class Options: Parent Tots: (Under 3 with an adult) Level 1: Beginner Skills (Ages 3+) Level 2: Intermediate Skills (All Ages) Level 3: Advanced Skills (All Ages) 📅 You can register at tinyurl.com/ourayactivities! Registration for each session closes the Friday before the session begins. Questions? Contact our Swim Safety Coordinator at 970-325-3009 or JWyatt@CityofOuray.com.",
+    pubDate: "2026-06-01T12:00:00.000Z",
+    endDate: "2026-07-27",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg"
   },
   {
     title: "True Grit Historic Walking Tours",
@@ -4050,73 +4019,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52696447609647/huge/b28c8601f5e3e0db939bf8de5f0e8929fe11dc2b.jpg"
-  },
-  {
-    title: "RIDGWAY WRECKING CREW",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Colorado Girl- First Friday",
-    link: "https://events.ourayridgwayevents.com/event/colorado-girl-first-friday",
-    description: "This Friday, July 3rd is \"First Friday,\" and the Colorado Grill will be open so come visit us, enjoy our new small plate menu, new drinks, and the artwork of Gary Radcliffe. Other artist include Kris Batchelder and Susan Clark.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53314365156136/huge/ba6d72f47daf73d21c6af8968c6919c75dd36a1d.jpg"
-  },
-  {
-    title: "First Friday at Rootwings Art",
-    link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
-    description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    endDate: "2026-12-04",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
-  },
-  {
-    title: "Neon Sky Band",
-    link: "https://events.ourayridgwayevents.com/event/neon-sky-band",
-    description: "Start making plans for the biggest summer holiday celebration!! Join us in Ouray, CO July 3rd and 4th!! Southern rock to the rescue! Country music to sooth the soul and sing along. July 3rd - 6-10:30 pm in Fellin Park",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53055035817748/huge/dddd6148831e8d2649d60b1e881859ecc4ea323e.jpg"
-  },
-  {
-    title: "Hoofbeats & Brushstrokes - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Discover the intersection of fine art and equine beauty! Join us at the Ridgway State Park Visitors Center for an evening with renowned local artist Alice Billings. Known for her incredible ability to capture the spirit, power, and movement of horses, Alice will share the techniques and stories behind her celebrated work.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53169382297247/huge/90c8516d4f798c06d78d5d4768e32e810fcfd7c3.jpg"
-  },
-  {
-    title: "Ouray Weird Trivia Night @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "Ouray Weird Trivia Night @ the Wright WHEN? Friday, July 3 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Ouray Weird Trivia Night returns to the Wright for an evening of strange facts, useless knowledge, unexpected questions, and community-powered chaos. From local lore and pop culture to history, movies, science, and wonderfully obscure nonsense, teams will compete for bragging rights in a trivia night designed for both serious competitors and people who just enjoy laughing with friends. Locals, tourists, fringe personalities, and mainstream minds are all welcome! Free to Attend In-person event at the historic Wright Opera House Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889.",
-    pubDate: "2026-07-03T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52931510224219/huge/bc7122ef6b232e543532628c54c9b91bf49b16f5.jpg"
   },
   {
     title: "Ouray Elks #492 Bloody Mary Bar",
@@ -4464,6 +4366,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Sweet T & Lady V",
+    link: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
+    description: "July 12 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $14 Advance / $18 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Join us for an intimate evening with Grand Junction duo Sweet T & Lady V! With masterful mandolin, guitar, and rich vocal harmonies, these two create a beautifully woven wall of sound that’s both captivating and unforgettable. Come enjoy an evening of heartfelt music in an intimate setting—you won’t want to miss it! …",
+    pubDate: "2026-07-12T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53306472560017/huge/aff5c9b2f459a2dc668c6dbb64c16f4677ee6924.jpg"
   }
 ];
 
