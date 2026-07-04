@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2026 13:18:35 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 19:09:07 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 4–10</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-26</guid>
-      <pubDate>Sat, 04 Jul 2026 13:18:35 GMT</pubDate>
-      <description><![CDATA[The most consequential meeting this week is Thursday's joint work session where the Planning Commission and Board of County Commissioners sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal operations, and condominium plats — the kind of foundational code-shaping that rarely gets public attention but shapes how this county develops for years. Before that, Monday's Open Space Commission takes up real decisions on Valley Floor trail alignments and a Telluride Mountain Club request to route trail through open space, both worth watching. The week opens with the Fourth of July parade, the Rundola, and a drone show.]]></description>
+      <pubDate>Sat, 04 Jul 2026 19:09:07 GMT</pubDate>
+      <description><![CDATA[The meeting to watch this week is Thursday's joint work session where the San Miguel County Planning Commission and the Board of County Commissioners sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas, geothermal operations, and condominium plats — the kind of code rewrite that shapes how land gets used here for years. Monday's Open Space Commission meeting is also worth attention, with three trail alignment options for Reach 1 of the Valley Floor on the table, plus a Telluride Mountain Club request to route part of a long-planned trail across open space. The week kicks off with Fourth of July celebrations all over town.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -133,19 +133,6 @@ Independence Day uphill foot race from the Gondola base in Telluride to the top 
       <media:content url="https://telluridefoundation.org/wp-content/uploads/2026/06/rundola26_680x440.jpg" medium="image" />
       <category>Community Event</category>
       <category>Telluride Foundation</category>
-    </item>
-    <item>
-      <title>[Sat, Jul 4] Telluride Foundation Rundola: Run for Good</title>
-      <link>https://koto.org/event/telluride-foundation-rundola-run-for-good/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20foundation%20rundola%20run%7C2026-07-04</guid>
-      <pubDate>Sat, 04 Jul 2026 13:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Oak Street Plaza, Telluride
-
-Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good Neighbor Fund, which offers emergency financial assistance for local individuals and families in crisis—helping with housing, transportation, medical expenses, and more. The Rundola is family friendly and open to all—whether you’re a seasoned runner, a casual hiker, or just looking for a fun holiday challenge. The race kicks off at 7:30 a.m. at the base of the Gondola in Telluride and climbs to the top of San Sophia Ridge via Telluride Trail. Top finishers in each category and leading fundraisers will receive medals + prizes, and every participant gets a custom Rundola t-shirt.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/rundola26_2200x1237-scaled.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Jul 4] Telluride 4th of July Parade</title>
@@ -281,7 +268,7 @@ Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in th
 
 Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.
 
-⚡ Why it matters: Commission votes on Valley Floor trail routes and a Mountain Club trail request.]]></description>
+⚡ Why it matters: Commission picks Valley Floor trail route; Mountain Club access request also decided.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -346,6 +333,18 @@ Join the Telluride Historical Museum for History at the Movies! In celebration o
       <media:content url="https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 7] Birding with Katie Triest at Patagonia Telluride , July 6 and 7</title>
+      <link>https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-07/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/birding%20with%20katie%20triest%7C2026-07-07</guid>
+      <pubDate>Tue, 07 Jul 2026 14:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Patagonia Telluride, Telluride Retail
+
+On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-07-08</title>
@@ -422,7 +421,7 @@ The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: County land use code rewrites on forestry, oil/gas, geothermal, and condo plats.]]></description>
+⚡ Why it matters: Proposed Land Use Code rewrites on forestry, oil/gas, geothermal, and condo plats discussed.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
