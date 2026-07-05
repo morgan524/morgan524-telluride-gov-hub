@@ -96,15 +96,21 @@ const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushro
 const SITE_URL = 'https://livabletelluride.org';
 const IMG_FALLBACKS = [
   { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: SITE_URL + '/img/email/fourth-of-july-parade.jpg' },
-  { match: /music on the green/i, img: SITE_URL + '/img/music-on-the-green/music-on-the-green.jpg' },
 ];
 const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test(title || '')) return f.img; return ''; };
-// Resolve an event image for EMAIL. Email needs ABSOLUTE URLs, and a relative
-// /img/… path only renders if the file is actually committed. Show the real
-// image when it exists; otherwise fall back by title (e.g. a Music on the Green
-// concert with no band photo → the series poster).
+// Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so
+// the events page and the email agree on which image an event gets. Email needs
+// ABSOLUTE URLs and can read the repo, so we pass the origin + an existence
+// check: a committed relative band photo → an absolute URL; a Music on the Green
+// concert with no band photo → the series poster; anything else → a title-based
+// fallback (e.g. the July 4th parade).
+const resolveEventImage = G('resolveEventImage');
 const resolveEmailImg = (e) => {
-  const raw = e.img || e.imageUrl || '';
+  if (typeof resolveEventImage === 'function') {
+    const r = resolveEventImage(e, { origin: SITE_URL, exists: (p) => fs.existsSync('.' + p) });
+    return r.primary || r.fallback || imgFallback(e.title);
+  }
+  const raw = e.img || e.imageUrl || '';   // graceful degrade if the shared helper is absent
   if (/^https?:\/\//.test(raw)) return raw;
   if (/^\/img\//.test(raw) && fs.existsSync('.' + raw)) return SITE_URL + raw;
   return imgFallback(e.title);

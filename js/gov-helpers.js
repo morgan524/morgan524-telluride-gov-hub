@@ -70,6 +70,42 @@ function isBadSummary(text) {
   return false;
 }
 
+// ── Shared event-image resolution ───────────────────────────────────────────
+// The ONE place that decides which image an event shows, used by BOTH the
+// events page (browser) and the weekly email (Node). Returns { primary, fallback }:
+//   primary  = the event's own image (band photo / flyer) as a usable URL, or ''
+//   fallback = a series poster when the event matches one (e.g. Music on the
+//              Green), else ''
+// Environment-agnostic: the caller supplies how to absolutize a relative /img/
+// path (opts.origin) and, optionally, how to check whether that local file
+// exists (opts.exists). The email passes BOTH — it needs absolute URLs and can
+// read the repo on disk, so a relative image whose file is missing is dropped in
+// favor of the poster. The page passes NEITHER — it keeps paths relative and
+// lets <img onerror> fall back to the poster at runtime.
+// To add a new series poster, add one line to SERIES_POSTERS.
+function resolveEventImage(e, opts) {
+  opts = opts || {};
+  var origin = opts.origin || '';
+  var exists = opts.exists || function () { return true; };
+  var abs = function (p) { return (!p || /^https?:\/\//.test(p) || !origin) ? p : origin + p; };
+  var usable = function (p) {
+    if (!p) return '';
+    if (/^https?:\/\//.test(p)) return p;                       // already absolute
+    if (/^\/img\//.test(p)) return exists(p) ? abs(p) : '';     // local file — keep only if present
+    return abs(p);                                              // other relative path — best effort
+  };
+  var own = (e && (e.img || e.imageUrl)) || '';
+  var hay = (((e && e.title) || '') + ' ' + ((e && e.source) || '') + ' ' + ((e && e.sourceLabel) || '')).toLowerCase();
+  var SERIES_POSTERS = [
+    { match: 'music on the green', img: '/img/music-on-the-green/music-on-the-green.jpg' },
+  ];
+  var series = '';
+  for (var i = 0; i < SERIES_POSTERS.length; i++) {
+    if (hay.indexOf(SERIES_POSTERS[i].match) !== -1) { series = SERIES_POSTERS[i].img; break; }
+  }
+  return { primary: usable(own), fallback: usable(series) };
+}
+
 // Per-meeting Zoom info parsed out of the agenda PDF by
 // scripts/content-refresh.js (parseZoomFromAgenda). Keyed by the same
 // source|date|title string as MANUAL_SUMMARIES. Read by zoomPanel() in
