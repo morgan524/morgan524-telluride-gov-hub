@@ -19,6 +19,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const { stripDescPreamble } = require('./lib/clean-text.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -114,7 +115,7 @@ for (const name of EVENT_ARRAYS) {
     evts.push({
       title: e.title, date,
       href: e.link || e.href || e.url || '',
-      summary: (e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim(),
+      summary: stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim()),
       time: e.time || '', location: e.location || '', img: e.img || e.imageUrl || imgFallback(e.title),
       isFestival: !!e.isFestival, source: e.sourceLabel || e.source || name,
     });
@@ -361,7 +362,16 @@ for (const fn of MEETING_FNS) {
     if (meetSeen.has(key)) continue; meetSeen.add(key);
     let sm = ''; try { sm = (getMeetingSummary && getMeetingSummary(m)) || ''; } catch (e) {}
     sm = sm || m.description || '';
-    if (isWeak(sm)) sm = bodyDesc(name, src);
+    // When the only "summary" we have is an agenda-not-posted placeholder, the
+    // meeting is real but the agenda simply isn't out yet (agendas usually post a
+    // few days before). Fall back to the body description PLUS a clear pending
+    // note, so the card reads as "details coming" rather than looking empty — it
+    // fills in on its own once the agenda posts (the digest re-renders daily).
+    const agendaPending = /not posted|hasn['’]?t been posted|not available|not yet/i.test(sm);
+    if (isWeak(sm)) {
+      sm = bodyDesc(name, src);
+      if (agendaPending && !/agenda/i.test(sm)) sm += ' The agenda hasn’t been posted yet — details will follow closer to the meeting.';
+    }
     const agenda = m.agendaLink || (m.hasAgenda ? m.link : '') || '';
     meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda });
   }

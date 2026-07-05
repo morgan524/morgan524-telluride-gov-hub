@@ -2939,6 +2939,7 @@ function readJsFile(filePath) {
 // extractJsArray / extractJsObject live in a unit-tested lib now
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
+const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
  * Guard the JS-as-data write path. Object writes (MANUAL_SUMMARIES, agenda meta)
@@ -3599,6 +3600,9 @@ async function syncOurayRidgwayEvents() {
     let desc = (ev.description_text || '')
       .replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
     if (/^https?:\/\/\S+$/.test(desc)) desc = '';
+    // Some submitters draft copy with an AI tool and paste the lead-in too
+    // ("Here's a polished calendar description …: <real text>"). Strip it.
+    desc = stripDescPreamble(desc);
     desc = smartTruncate(desc, EVENT_DESC_MAX);
     byUid.set(uid, {
       title: (ev.title || '').trim(),
