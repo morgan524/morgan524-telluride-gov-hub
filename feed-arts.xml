@@ -6,35 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Jul 2026 19:09:07 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 02:41:48 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Sat, Jul 4] MINDCHATTER DJ SET</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=mindchatter-dj-set</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mindchatter%20dj%20set%7C2026-07-04</guid>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Singer, songwriter, and multi-instrumentalist Bryce Connolly, better known as M...]]></description>
-      <media:content url="https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Sat, Jul 4] Mindchatter</title>
-      <link>https://www.telluride.com/event/mindchatter/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/mindchatter%7C2026-07-04</guid>
-      <pubDate>Sat, 04 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62894/download_4_5.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Singer, songwriter, and multi-instrumentalist Bryce Connolly, better known as Mindchatter, has built a reputation for …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62894/download_4_5.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
     <item>
       <title>[Sun, Jul 5] Zander Rodriguez</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=zander-rodriguez</link>
@@ -83,7 +56,7 @@ Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Br
 
 Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.
 
-⚡ Why it matters: Commission picks Valley Floor trail route; Mountain Club access request also decided.]]></description>
+⚡ Why it matters: Three Valley Floor decisions up, including trail routes near wetlands.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -98,6 +71,20 @@ Three substantive items on the Valley Floor dominate this meeting. First, the Co
 Join us every Monday for "Savvy Seniors," an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you’re looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 8] B-Side Players</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=b-side-players</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/b%20side%20players%7C2026-07-08</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/3bac837e-cc78-4024-a064-b06fa2834a6d/-/crop/2589x1295/0,133/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+The B-Side Players make music without borders or boundar...]]></description>
+      <media:content url="https://ucarecdn.com/3bac837e-cc78-4024-a064-b06fa2834a6d/-/crop/2589x1295/0,133/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-07-08</title>
@@ -144,6 +131,18 @@ The July 8, 2026 Ecology Commission agenda hasn't been posted yet.]]></descripti
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Wed, Jul 8] Tennis Clinic | 105 | 3.0+ | Golden Hour</title>
+      <link>https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-08/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tennis%20clinic%20105%203%7C2026-07-08</guid>
+      <pubDate>Wed, 08 Jul 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] SMART Board of Directors — 2026-07-09</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-07-09%7CSMART%20Board%20of%20Directors</guid>
@@ -174,7 +173,7 @@ The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: Proposed Land Use Code rewrites on forestry, oil/gas, geothermal, and condo plats discussed.]]></description>
+⚡ Why it matters: Land Use Code rewrites covering forestry, oil, gas, geothermal, and condo plats.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

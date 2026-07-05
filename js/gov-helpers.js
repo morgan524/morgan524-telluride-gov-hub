@@ -586,6 +586,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Hardrock 100: ‘Christmas in July’",
+    source: "Telluride Times",
+    date: "July 4, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "land-use",
+    copy: "Hardrock 100 runs clockwise this year, with runners passing through Telluride at mile 27.8 and an aid station in Town Park. Race directors are monitoring the Gold Mountain Fire near Ouray, with Run Director Dale Garland noting conditions can shift fast but currently favor holding the event. This year's field of 147 includes a record 22% women, drawn from 2,726 lottery applicants across 47 states and 63 countries.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_55c153a6-2304-4b39-b713-e40535642b57.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/98/9980a000-6908-4fd1-bad5-432cabe70384/6a48c28e26e28.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Man of many hats",
     source: "Telluride Times",
     date: "July 4, 2026",
@@ -1852,42 +1864,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Wyndham Clark wins his second U.S. Open title with wire-to-wire victory at Shinnecock Hills",
-    source: "Telluride Times",
-    date: "June 21, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "The Colorado Supreme Court ruled on June 15 that planned unit development (PUD) agreements are administrative in nature, meaning they can't be changed through citizen ballot initiatives. It's a significant legal line to draw in a town where land use decisions tend to generate strong community opinions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_741c8fd1-5de3-5dac-aec3-248d0ce3eb06.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "True North, Juvenile Diversion programs team up for youth",
-    source: "Telluride Times",
-    date: "June 21, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "education",
-    copy: "True North and San Miguel County's juvenile diversion program joined forces for a first-ever multi-day college tour, taking students from Norwood, Nucla, and Telluride to visit four schools and two national parks across southern Colorado. The trip was funded through an opioid prevention grant and a state human services program. Organizers hope to make it an annual overnight event.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_d6449172-ab41-482d-b4d5-c74c1415f80c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/dd/5ddbec01-609b-4606-b58e-a3643c3d7351/6a31b91e9d10d.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Court ruling will protect open space in Butcher Creek",
-    source: "Telluride Times",
-    date: "June 21, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "land-use",
-    copy: "Colorado's Supreme Court unanimously ruled that the Butcher Creek PUD agreement can't be changed through a ballot initiative, keeping Lot A as common open space. The court found Brighton's proposal tried to bypass the town's required administrative process for amending planned unit developments. The 37-acre hillside has steep slopes, geologic hazards, and bedrock close to the surface.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a35ab12e-3137-49bf-80e7-278cc26eda89.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/11/2112bc34-deea-4afa-b03b-c1ef73ab051f/6a3566c709038.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2133,7 +2109,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2144,7 +2120,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-28",
     newsTopic: "public-safety",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2155,7 +2131,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2166,7 +2142,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2177,12 +2153,23 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---July-7%2C-2026.pdf",
     img: ""
   },
   {
@@ -2221,7 +2208,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "July 4, 2026",
+    date: "July 5, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2838,28 +2825,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mountain Village Red, White & Blues Celebration",
-    link: "https://koto.org/event/mountain-village-red-white-blues-celebration/",
-    description: "Mountain Village's beloved Red, White &Blues Celebration returns July 3-4, 2026, bringing two days of FREE family activities, live music, arts and cultural programming, and community festivities to Mountain Village. Presented by the Telluride Mountain Village Owners Association (TMVOA), the annual Independence Day celebration invites residents and visitors alike to gather in the heart of the San Juan Mountains for a weekend filled with live entertainment, interactive activities, merchant specials, and fun for all ages. This year's celebration carries special significance as the nation commemorates the250thanniversary of the United States and Colorado celebrates its 150th anniversary of statehood. New programming includes a special Drone Show, a performance by '90s alt-rock legends Better Than Ezra, Telluride Arts' This is Colorado (In One Square Foot) Sesquicentennial exhibition, Telluride Theatre Sesquisemiquincentennial performances, and a new Family Happy Hour with Movies Under the Stars on Saturday evening. Festivities begin at 1 p.m. …",
-    pubDate: "2026-07-03T06:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Village Plazas",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/RWB-BTE-Mailchimpbanner-scaled.png"
-  },
-  {
-    title: "Telluride 4th of July Parade",
-    link: "https://koto.org/event/telluride-4th-of-july-parade/",
-    description: "Parade Info The Parade starts at 11 a.m. and runs eastward down Main Street. There will be a fighter jet fly by. It is usually at 11 a.m. but last year it was at noon. Time is to be determined by the jet people. We LOVE water guns and super soakers but please NO water balloons Nothing that creates trash. This goes for floats and spectators. If participating in water activities – do not spray babies, older folks, classic cars and anyone with a camera. It is best to only engage with other people with water. Please make sure children stay behind the white line for their safety. Parade Registration All are welcome to participate in the parade! Register at tridejuly4parade.org before 5 p.m. on Friday July 3rd. Late entries are welcome but not eligible for judging. Please make sure to use patriotic decorations. …",
-    pubDate: "2026-07-04T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://koto.org/event/movies-under-the-stars/2026-07-04/",
     description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
@@ -3298,6 +3263,94 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Bear Creek Trail, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg"
+  },
+  {
+    title: "Flying Bear Pizzeria presents “Blood, Sweat & Gears” poetry night!",
+    link: "https://koto.org/event/flying-bear-pizzeria-presents-blood-sweat-gears-poetry-night/",
+    description: "Flying Bear Pizzeria at Naturita Bicycle Company presents \"Blood, Sweat & Gears\" poetry night! The 5th installment of this biannual literary shindig will feature poets Kierstin Bridger, Ellen Metrick, and Daiva Chesonis. $5 cover and $5 margaritas. Doors at 6pm, words at 7. Bring some of your own (3 minutes max) for the open mic afterward.",
+    pubDate: "2026-07-12T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-07-11/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-07-12T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "Palm Arts Presents: AVID Dance: The Wolff & Other Works",
+    link: "https://koto.org/event/palm-arts-presents-avid-dance-the-wolff-other-works/",
+    description: "Artistic Ventures in Dance (AVID) invites you to join us for \"The Wolff & Other Works”, an unforgettable evening at the Michael D. Palm Theatre. In “The Wolff & Other Works” audiences will see: The Wolff is a darker, thought-provoking reimagining of the classic Little Red Riding Hood tale from the wolf’s perspective. Created by former Houston Ballet Principal Dancer and longtime AVID collaborator Melody Mennite, the work uses vivid kinesthetic storytelling to challenge conventional notions of heroes and villains, inviting audiences to confront fear, bias, and perception through a fresh interpretation of a familiar story. An AVID collaborator since the company's inaugural season, Mennite brings her distinctive artistic voice and creative vision to this compelling work. …",
+    pubDate: "2026-07-12T01:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Telluride-Tour-Poster1-1.png"
+  },
+  {
+    title: "Tom Gullikson Tennis Camp",
+    link: "https://koto.org/event/tom-gullikson-tennis-camp/2026-07-12/",
+    description: "Camp Pro-staff: Eric Fey, Tom Gullikson, Eric Alexon, and a Guest Professional Session One | July 11 & 12 | 9:00am – 12:00pm Session Two | July 18 & 19 | 9:00am – 12:00pm Tom is a decorated Tennis coach and playing professional. Come out and enjoy some of the best coaching in the country! Ranked #34 in singles and #4 in doubles US Open Mixed Doubles Champion 1984 Wimbledon Men's Doubles Runner- up 1983 US Open Men's Doubles Semi-Finalist 1982 Australian Open Men's Doubles Semi-Finalist 1983 Coach of Pete Sampras, Todd Martin, Andy Roddick, and Jennifer Capriati Former US Davis Cup Captain 1994 – 1999. Coached the US Davis Cup team to victory in 1995! Olympic Coach for the US team for the Atlanta Olympics when Andre Agassi won his Olympic gold medal! Please sign up on the TRC app or reach out to tellurideracquetclub@gmail.com",
+    pubDate: "2026-07-12T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/04/IMG_5733.png"
+  },
+  {
+    title: "Pickleball Open Play",
+    link: "https://koto.org/event/pickleball-open-play/2026-07-12/",
+    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
+    pubDate: "2026-07-12T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord-2/2026-07-12/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-07-12T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-12/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-07-12T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-07-12/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-07-12T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   }
 ];
 
@@ -3323,7 +3376,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
     firstSeen: "2026-07-04",
     revealDate: "2026-07-04",
-    lastSeen: "2026-07-04"
+    lastSeen: "2026-07-05"
   }
 ];
 
@@ -4606,17 +4659,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/screenshot_2026-07-01_at_1_45_30_pm.png"
   },
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
@@ -5313,39 +5355,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/37568/screenshot_2026-06-09_at_9_49_43_am_870x435.800x533.webp"
   },
   {
-    title: "Madeline Hotel & Residences Annual Alpine Cookout",
-    link: "https://www.telluride.com/event/madeline-hotel-residences-annual-alpine-cookout/",
-    description: "The 6th Annual Alpine Cookout at Madeline Hotel & Residences returns this July! Get ready for a day of sensational …",
-    pubDate: "2026-07-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48038/copy_of_alpine_cookout_hero.800x533.webp"
-  },
-  {
-    title: "Better Than Ezra",
-    link: "https://www.telluride.com/event/better-than-ezra/",
-    description: "Friday evening's live music lineup begins with acclaimed singer-songwriter and local legend Emily Scott Robinson at 5 …",
-    pubDate: "2026-07-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62891/bte_show_poster.800x533.webp"
-  },
-  {
-    title: "Fourth of July Drone Show",
-    link: "https://www.telluride.com/event/fourth-of-july-drone-show-mountain-village/",
-    description: "Head to Mountain Village for a Fourth of July drone show! The 2026 edition will take place after Better Than Ezra.",
-    pubDate: "2026-07-03",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62993/dsc05106--1--2100x1400-66fb62fd-2190-48b7-ba10-131d268becc2_1.800x533.webp"
-  },
-  {
     title: "Telluride Fourth of July Parade",
     link: "https://www.telluride.com/event/telluride-4th-of-july-parade/",
     description: "The Telluride 4th of July Parade is the longest running event in the Town's history. The parade celebrates our …",
@@ -5955,6 +5964,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/57622/of_the_trees_by_frankie_zarantonello.800x533.webp"
+  },
+  {
+    title: "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
+    link: "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
+    description: "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
+    pubDate: "2026-09-03",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp"
   }
 ];
 
@@ -6720,6 +6740,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "July 8, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---July-8%2C-2026.pdf",
+
   "June 16, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---June-16%2C-2026.pdf",
 
