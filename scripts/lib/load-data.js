@@ -29,7 +29,11 @@ function loadDataArrays(repoRoot) {
   const constNames = [...new Set(
     [...combined.matchAll(/^const\s+([A-Z][A-Z0-9_]*)\s*=/gm)].map(m => m[1])
   )];
-  const helperNames = ['localDate', 'isBadSummary', 'truncate'];
+  const helperNames = ['localDate', 'isBadSummary', 'truncate',
+    // Data-layer functions exposed for golden tests (all read back via `captured`;
+    // absent names resolve to undefined so this is safe across versions):
+    'getMeetingSummary', 'getCountyCachedMeetings', 'meetingBoardToken',
+    'getTellurideMeetings', 'resolveEventImage'];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =
@@ -42,11 +46,17 @@ function loadDataArrays(repoRoot) {
                     getElementById() { return null; }, createElement() { return {}; } };
   const stubStorage = { getItem() { return null; }, setItem() {}, removeItem() {} };
 
+  // AI_SUMMARIES is defined INLINE in gov-hub.html, not in the data files, but
+  // getMeetingSummary() references it — so outside that page it throws
+  // ReferenceError (silently swallowed by callers' try/catch). Provide it as a
+  // Function parameter defaulting to {} so getMeetingSummary works in tooling;
+  // if a future pipeline writes a real `const AI_SUMMARIES` into gov-helpers.js,
+  // that declaration simply shadows this parameter.
   let captured;
   try {
-    const fn = new Function('window', 'document', 'navigator', 'localStorage', 'self', 'location',
+    const fn = new Function('window', 'document', 'navigator', 'localStorage', 'self', 'location', 'AI_SUMMARIES',
       combined + epilogue);
-    captured = fn(stubWindow, stubDoc, {}, stubStorage, stubWindow, { href: '', hash: '' }) || {};
+    captured = fn(stubWindow, stubDoc, {}, stubStorage, stubWindow, { href: '', hash: '' }, {}) || {};
   } catch (e) {
     throw new Error('Could not evaluate data files: ' + e.message);
   }

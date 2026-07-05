@@ -2,8 +2,25 @@
 
 **Status:** IN PROGRESS. Strangler approach agreed (no from-scratch rewrite).
 **Phase 0 (audit) COMPLETE** → `docs/overhaul/phase-0-audit.md`. **P0 quick-wins
-all shipped** (2026-06-28/29) — see that doc's P0 section. **Phase 1 PLANNED** →
-`docs/overhaul/phase-1-plan.md` (schemas + parity harness + golden tests).
+all shipped** (2026-06-28/29) — see that doc's P0 section.
+
+**Phase 1 STARTED (2026-07-05):** first safety net in — golden/regression tests
+for the `gov-helpers.js` DATA LAYER (`scripts/test/gov-helpers.test.js`, run in CI
+via `test.yml`): `localDate` (the recurring UTC off-by-one), `isBadSummary` (the
+heuristic that once suppressed good summaries), `getMeetingSummary`, and
+`getCountyCachedMeetings` — the last locking the rename/dedup fix (no stale-title
+shadow, the Jul 8/9 bug). `lib/load-data.js` now supplies `AI_SUMMARIES` to the
+sandbox so `getMeetingSummary` is testable/usable in tooling. **Finding (logged in
+the backlog):** `AI_SUMMARIES` is defined only inline in `gov-hub.html`, so
+`getMeetingSummary` throws everywhere else (silently caught) — the cross-context
+fix belongs in `gov-helpers.js` but changes digest output, so it's deferred until
+the parity harness exists. Still TODO in Phase 1: schemas; the end-to-end parity
+harness; golden tests for the copy-pasted `featuredScore` / `tkey` dedup (still in
+weekly-email.js + events.html, not a shared lib yet).
+
+Opportunistic wins already shipped that belong to later phases: `js/site-config.js`
+(Phase 5 config consolidation) and `resolveEventImage` in `gov-helpers.js`
+(Phase 3 shared-lib start — one image resolver for the events page + the email).
 
 **Goal:** end the recurring "holes" — silent breakage, stale data, decoupled
 pipelines, drifted logic — by moving to a structured, validated, observable
