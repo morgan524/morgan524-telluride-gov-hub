@@ -195,6 +195,21 @@ const COUNTY_CACHED_DATA = [
     location: '305 W Colorado Ave, Telluride, CO 81435',
     civicClerkId: null,
     note: 'Agenda typically posted the Friday before.'
+  },
+  {
+    date: 'July 8, 2026',
+    time: '5:30 PM',
+    title: 'Board of County Commissioners Special - In Norwood at Sheriff Annex',
+    type: 'bocc',
+    location: '1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423',
+    civicClerkId: 1001
+  },
+  {
+    date: 'July 9, 2026',
+    time: '9:30 AM',
+    title: 'Planning Commission and Board of County Commissioners Joint Work Session',
+    type: 'planning',
+    civicClerkId: 921
   }
 ];
 
