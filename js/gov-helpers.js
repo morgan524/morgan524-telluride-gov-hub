@@ -378,7 +378,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -447,7 +447,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -585,6 +585,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Memorial service to honor firefighters killed on Colorado-Utah border",
+    source: "Telluride Times",
+    date: "July 5, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "public-safety",
+    copy: "Three wildland firefighters — Emily Barker, Nick Hutcherson, and Sydney Watson — were killed June 27 when fast-moving flames overtook their Helitack crew in Mesa County, near the Colorado-Utah border. Two others were injured. A memorial service is set for Sunday at 11 a.m. at Las Colonias Park Amphitheater in Grand Junction.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_55ad13b6-d887-5039-b115-7b1f56da9f36.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/3a/03aac3ca-135f-5082-a952-3b562ebab08f/6a4a56a49fc94.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Glimmers of hope",
+    source: "Telluride Times",
+    date: "July 5, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "health",
+    copy: "Terry Tempest Williams visits Wilkinson Public Library as part of the One Book, One Canyon program to discuss her new book *The Glorians*, about finding the sacred in everyday nature. Copies are available at Between the Covers at 10% off; books for signing must be dropped off by 6 p.m. July 14.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_7fad6b4b-31c5-4102-9c44-46f4d46e71e7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/bf/ebf96caa-4583-46cc-9478-0dc97ac82bae/6a48c7c991b33.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Hardrock 100: ‘Christmas in July’",
     source: "Telluride Times",
@@ -766,18 +790,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Julie Beth Flatt Parker",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "recreation",
-    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Ann Grundy",
     source: "Telluride Times",
     date: "July 2, 2026",
@@ -799,6 +811,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Julie Beth Flatt Parker",
+    source: "Telluride Times",
+    date: "July 2, 2026",
+    firstSeen: "2026-07-02",
+    newsTopic: "recreation",
+    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
     imgHiRes: true
   },
   {
@@ -4549,17 +4573,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
-    title: "Telluride Foundation Rundola: Run for Good",
-    link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting uphill foot race supports the Good",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48757/rundola26_1800x900.jpg"
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
@@ -4932,6 +4945,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "Town Talk: single molecule views of Nature’s nanomachines",
+    link: "https://townofmountainvillage.com/explore/events/all-events/single-molecule-views-of-natures-nanomachines/",
+    description: "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
+    pubDate: "2026-08-04T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png"
   }
 ];
 
