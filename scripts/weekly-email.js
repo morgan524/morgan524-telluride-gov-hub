@@ -93,10 +93,22 @@ const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushro
 // public-domain art we host ourselves so it never breaks or carries usage
 // strings. (Norwood "Star Spangled Saturday Parade" → a public-domain c.1886
 // small-town July 4th parade painting, Howland, hosted at /img/email/.)
+const SITE_URL = 'https://livabletelluride.org';
 const IMG_FALLBACKS = [
-  { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: 'https://livabletelluride.org/img/email/fourth-of-july-parade.jpg' },
+  { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: SITE_URL + '/img/email/fourth-of-july-parade.jpg' },
+  { match: /music on the green/i, img: SITE_URL + '/img/music-on-the-green/music-on-the-green.jpg' },
 ];
 const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test(title || '')) return f.img; return ''; };
+// Resolve an event image for EMAIL. Email needs ABSOLUTE URLs, and a relative
+// /img/… path only renders if the file is actually committed. Show the real
+// image when it exists; otherwise fall back by title (e.g. a Music on the Green
+// concert with no band photo → the series poster).
+const resolveEmailImg = (e) => {
+  const raw = e.img || e.imageUrl || '';
+  if (/^https?:\/\//.test(raw)) return raw;
+  if (/^\/img\//.test(raw) && fs.existsSync('.' + raw)) return SITE_URL + raw;
+  return imgFallback(e.title);
+};
 
 // ── Collect events from the source arrays ──
 const EVENT_ARRAYS = ['WILKINSON_EVENTS','SHERIDAN_EVENTS','ALIBI_EVENTS','SHERBINO_EVENTS','NUCLA_NATURITA_EVENTS','CLUB_RED_SHOWS','FRESH_FOOD_HUB_EVENTS','COMMUNITY_EVENTS','MUSIC_ON_THE_GREEN','TELLURIDE_FARMERS_MARKET','BEACON_EVENTS','CHAMBER_MUSIC_EVENTS','TELLURIDE_SCIENCE_EVENTS','TELLURIDE_FOUNDATION_EVENTS','TELLURIDE_VENTURE_EVENTS','OURAY_COUNTY_EVENTS','NORWOOD_EVENTS','MOUNTAIN_VILLAGE_EVENTS','TELLURIDE_COM_EVENTS','KOTO_COMMUNITY_EVENTS','OURAY_RIDGWAY_EVENTS','SHERIDAN_OPERA_EVENTS'];
@@ -116,7 +128,7 @@ for (const name of EVENT_ARRAYS) {
       title: e.title, date,
       href: e.link || e.href || e.url || '',
       summary: stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim()),
-      time: e.time || '', location: e.location || '', img: e.img || e.imageUrl || imgFallback(e.title),
+      time: e.time || '', location: e.location || '', img: resolveEmailImg(e),
       isFestival: !!e.isFestival, source: e.sourceLabel || e.source || name,
     });
   }

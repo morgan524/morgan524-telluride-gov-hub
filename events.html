@@ -1209,6 +1209,10 @@
     };
     function getFallbackImg(e) {
       const txt = ((e.title || '') + ' ' + (e.summary || '') + ' ' + (e.description || '')).toLowerCase();
+      // Music on the Green: when a concert has no band-specific photo, use the
+      // series poster rather than a generic music stock image.
+      if (/music on the green/.test(txt) || /music on the green/i.test((e.source || '') + ' ' + (e.sourceLabel || '')))
+        return '/img/music-on-the-green/music-on-the-green.jpg';
       if (/yoga|stretch|meditat|pilates|wellness/.test(txt))      return FALLBACK_IMGS.yoga;
       if (/dance|dancing|cardio|zumba|aerobic/.test(txt))         return FALLBACK_IMGS.dance;
       if (/music|concert|band|perform|bluegrass|sing|choir/.test(txt)) return FALLBACK_IMGS.music;
@@ -1235,7 +1239,7 @@
       // href so we never render a broken empty href.
       const _href = (e.href && e.href !== '#') ? e.href : '';
       const _fb = getFallbackImg(e);
-      const _imgTag = `<img src="${ltEsc((e.img && /^https?:\/\//i.test(e.img)) ? e.img : _fb)}" alt="${ltEsc(e.title)}" loading="lazy" onload="handlePortrait(this)" onerror="this.onerror=null;this.src='${_fb}'">`;
+      const _imgTag = `<img src="${ltEsc((e.img && (/^https?:\/\//i.test(e.img) || /^\/img\//i.test(e.img))) ? e.img : _fb)}" alt="${ltEsc(e.title)}" loading="lazy" onload="handlePortrait(this)" onerror="this.onerror=null;this.src='${_fb}'">`;
       const _imgLinked = _href
         ? `<a href="${ltEsc(ltSafeUrl(_href))}" target="_blank" rel="noopener" class="img-link" aria-label="View source for ${ltEsc(e.title)}">${_imgTag}</a>`
         : _imgTag;
