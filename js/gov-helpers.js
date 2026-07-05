@@ -447,7 +447,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -2825,17 +2825,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://koto.org/event/movies-under-the-stars/2026-07-04/",
-    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    pubDate: "2026-07-05T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Conference Center Plaza Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
     title: "Pickleball Open Play",
     link: "https://koto.org/event/pickleball-open-play/2026-07-05/",
     description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
@@ -3355,7 +3344,39 @@ const KOTO_COMMUNITY_EVENTS = [
 ];
 
 const WILKINSON_EVENTS = [
-
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536438?hs=a",
+    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-07-05T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+  },
+  {
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970381?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-07-05T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/16567832?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-07-05T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+  }
 ];
 
 // Bot-managed by scripts/content-refresh.js Task 7 (syncHumaneSocietyAnimals).
@@ -3388,18 +3409,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "MINDCHATTER DJ SET",
-    link: "https://www.alibitelluride.com/calendar#eca-event=mindchatter-dj-set",
-    description: "Singer, songwriter, and multi-instrumentalist Bryce Connolly, better known as M...",
-    pubDate: "2026-07-04",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/9944f858-66bb-428d-b435-1f6248dfb345/-/crop/2376x1189/0,1317/-/preview/"
-  },
   {
     title: "Zander Rodriguez",
     link: "https://www.alibitelluride.com/calendar#eca-event=zander-rodriguez",
@@ -3835,6 +3844,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
+    link: "https://sherbino.org/events/",
+    description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please",
+    pubDate: "2026-03-10T12:00:00.000Z",
+    endDate: "2028-02-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
     title: "Ouray Economic Development Committee",
     link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
     description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests.",
@@ -3845,6 +3866,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Community Meditation",
+    link: "https://www.ridgwayfuse.org",
+    description: "Join us for a peer-led weekly meditation series at the Decker Community Room. Free and open to the public! We meet every 1st, 2nd, and 4th Tuesday of the month (all but the 3rd Tuesday!)",
+    pubDate: "2026-03-24T12:00:00.000Z",
+    endDate: "2026-12-22",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338340283147/huge/582622671001d9ab20f8c25a5d229c9ecbbba165.jpg"
   },
   {
     title: "Zumba Fitness with Tamra",
@@ -4073,116 +4106,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52696447609647/huge/b28c8601f5e3e0db939bf8de5f0e8929fe11dc2b.jpg"
-  },
-  {
-    title: "Ouray Elks #492 Bloody Mary Bar",
-    link: "https://events.ourayridgwayevents.com/event/ouray-elks-492-bloody-mary-bar",
-    description: "Come join us for our famous annual Bloody Mary Bar! Cost is $15 for the Bloody Mary and other drinks will be available. OPEN TO THE PUBLIC!",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312647689044/huge/046d1fcd91c6004a723578f64cbea2f7db87bf2b.jpg"
-  },
-  {
-    title: "Ouray's 4th of July Celebration",
-    link: "https://cms5.revize.com/revize/cityofourayco/news_detail_T2_R585.php",
-    description: "We have a fun-packed day full of something for everyone! Below is a list of the main events. Please feel free to check out local restaurants and retail stores for other events or specials throughout the holiday as well. Our Visit Ouray website has a comprehensive listing of all the wonderful places to check out while here. Celebrate responsibly, remember your sunscreen, stay hydrated, and please have a designated driver if traveling. 7:30 AM - Ourayce 10K Starts at City Hall, Registration opens at 7 am 10 AM - Parade West side = wet side 11 AM - Kids Games Fellin Park 2 PM - Water Fights 6th & Main Street 9:15ish (dusk) - Fireworks Weather Permitting",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "ouray, colorado",
-    imageUrl: "https://localist-images.azureedge.net/photos/53055005519669/huge/908d40629803a11a75965b3341e740a4c20372bf.jpg"
-  },
-  {
-    title: "Ourayce 10K Fun Run",
-    link: "https://hometrustoc.org/event/43rd-annual-ourayce-10k-fun-run/",
-    description: "10K Fun Run to kick off the 4th of July in Ouray. All proceeds benefit the Home Trust of Ouray County. Teams, costumes, and other positive ways to have a fun time for a good cause are encouraged. Pre-registration: $35/entry which includes Official Race T-shirt! $40 after July 2nd.",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center ",
-    imageUrl: "https://localist-images.azureedge.net/photos/52799047964496/huge/aa0e3974def4b41e5c52e23f113a307c37cedb5b.jpg"
-  },
-  {
-    title: "Ouray Elks #492 BBQ",
-    link: "https://events.ourayridgwayevents.com/event/ouray-elks-492-bbq",
-    description: "Come and grab your BBQ plate on 4th of July! Includes pulled pork sandwich and sides for $15. This will be available outside in front of the lodge starting around 10:30am!",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312694813185/huge/1e4e38037b91768ebc225c5c6540f4d8d5332ed8.jpg"
-  },
-  {
-    title: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "Fourth of July Tavern Open House: Drunk History Tours @ the Wright WHEN? Saturday, July 4 Tavern Open: 11:00 am – after the parade WHERE? Wright Opera House Tavern 472 Main St. Ouray, Colorado ABOUT THE EVENT Step into the Wright Tavern this Fourth of July and meet a few of the forgotten friends, colorful characters, and questionable legends woven into the history of the Wright Opera House. Throughout the day, guests can join Drunk History Tours led by none other than Letitia Wright or Alewife Addie, two spirited guides with a talent for storytelling and perhaps a flexible relationship with historical restraint. These lively tours shine a lantern on the strange, true, and unexpectedly entertaining stories hidden within the walls of one of Ouray’s most historic buildings. Expect frontier personalities, local lore, forgotten characters, and a few delightful detours along the way. …",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52931651916712/huge/bf90b207aa8421d1e362931dc586e1ec3146c45b.jpg"
-  },
-  {
-    title: "4th of July Courtyard Celebration",
-    link: "https://beaumonthotel.com/celebrate-the-4th-of-july-at-the-beaumont-hotel-garden-courtyard/",
-    description: "Looking for the perfect way to spend your Independence Day in Ouray? Join us on Saturday, July 4th, from Noon to 4:00 PM for an afternoon of live music, great food, refreshing drinks, and unforgettable mountain-town atmosphere at the Beaumont Hotel’s beautiful Garden Courtyard. This special 4th of July celebration will feature live music from Jack Haight and his full band, bringing an energetic mix of music to help make your holiday weekend memorable. Whether you’re a local resident or visiting the San Juan Mountains for the holiday, the Garden Courtyard offers the perfect place to relax, connect with friends, and enjoy the summer season. Guests can also purchase food and beverages while enjoying the festivities. Surrounded by the historic elegance of the Beaumont Hotel and the stunning scenery of downtown Ouray, this event combines the best of Colorado mountain living with classic Independence Day fun. …",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53171340326261/huge/16a6724455125724b02cad6f8eb6d278ce193b90.jpg"
-  },
-  {
-    title: "Neon Sky - Playing at Twin Peaks",
-    link: "https://events.ourayridgwayevents.com/event/neon-sky-playing-at-twin-peaks",
-    description: "Start making plans for the biggest summer holiday celebration!! Join us in Ouray, CO 4th!! Southern rock to the rescue! Country music to sooth the soul and sing along. July 4th - 5 - 9 pm at Twin Peaks Lodge and Hot Springs",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Twin Peaks Lodge and Hot Springs",
-    imageUrl: "https://localist-images.azureedge.net/photos/53055048338026/huge/1972c7c294d4aeea7ec59595611ab9d6216447d5.jpg"
-  },
-  {
-    title: "Ridgway Rocks",
-    link: "https://www.instagram.com/ridgwayrocksfest/",
-    description: "Live Music in Town Park 6-10 PM. Damon Robinson, Null & Void, Flannel Feedback.",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52745922632341/huge/0250190a0bcc6088f63749a38406222953357e3e.jpg"
-  },
-  {
-    title: "4th of July Karaoke 7:00pm",
-    link: "https://events.ourayridgwayevents.com/event/4th-of-july-karaoke-700pm",
-    description: "OPEN TO THE PUBLIC Every 4th of July we invite the community to join us for a free karaoke night. Singing starts at 7:00, but the bar is open much earlier!",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312742009387/huge/e1825f1fc05b2829c70dc8011622c5e1195b4fa2.jpg"
-  },
-  {
-    title: "A Geological Odyssey: Ouray County - Ridgway State Park Summer Program Series",
-    link: "https://cpw.state.co.us/events?f%5B0%5D=state_parks%3A186",
-    description: "Join us for a fascinating journey through time with expert John Mitchell. From ancient volcanic eruptions to the glacial forces that shaped our modern landscape, he will unravel the epic story written in the rocks of Ouray County.",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53161788541140/huge/43e5cbd69d31cef897cd453db90b4a55db1e9c83.jpg"
   },
   {
     title: "Funky Ouray: Reggae music in Fellin Park",
@@ -4464,6 +4387,50 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53306472560017/huge/aff5c9b2f459a2dc668c6dbb64c16f4677ee6924.jpg"
+  },
+  {
+    title: "Ouray Youth Summer Programs: Hiking at Red Mountain Pass",
+    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/341?onlineSiteId=0&from_original_cui=true",
+    description: "Participants will hike in the Red Mountain Pass area while practicing the preparation, navigation, and risk management skills needed for safe mountain travel. This is a moderately difficult hike with approximately 2 hours of hiking uphill and 2 hours back down. Participants should bring hiking footwear, a small backpack, a rain jacket, a warm hat, at least 1 quart of water, and a packed lunch. Meet at the Idarado Interpretive Pullout on Red Mountain Pass. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Red Mountain Pass",
+    imageUrl: "https://localist-images.azureedge.net/photos/52995309242674/huge/74a3a78472727b889b977a52a3fb41c6acd56f27.jpg"
+  },
+  {
+    title: "DAVE MENSCH",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "The Sherbino presents: From Intention to Impact; Planned Giving Essentials",
+    link: "https://sherbino.org/event/from-intention-to-impact-planned-giving-essentials-ridgway/",
+    description: "Doors at 6:00 PM || Presentation at 6:30 || Entry by donation Setting: seated || Registration is free but required Join Attorney Lincoln Anderson and Investment Advisor Michael Murphy as they explain ways to manage your retirement accounts for the benefit of causes you care about. In this session they will provide information about Qualified Charitable Distributions (QCD’s) and appreciated stock donations, and will cover other estate planning tips.",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52993971594245/huge/f9035f0193aa8672df7c5c47480495916f4ba6b2.jpg"
+  },
+  {
+    title: "Recreation & Our River Community Meeting",
+    link: "https://uncompahgrewatershed.org",
+    description: "The Uncompahgre Watershed Partnership and Recreation Allies of the Uncompahgre River are hosting a community meeting to discuss the needs and priorities for recreation along the Uncompahgre River. To RSVP, email info@uncompahgrewatershed.org. Tue, July 14, 6:30-8 p.m. Recreation & Our River community meeting, at Pa-Co-Chu-Puk Shelter B, Ridgway State Park, US-550, Montrose, CO 81403",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53303421143344/huge/d4da45f825ed8346925301cac3250da0f1ebced8.jpg"
   }
 ];
 
@@ -4570,6 +4537,17 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-07-04T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
   {
     title: "Telluride Foundation Rundola: Run for Good",
     link: "https://townofmountainvillage.com/explore/events/all-events/telluride-foundation-rundola-run-for-good/",
