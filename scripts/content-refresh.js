@@ -4445,100 +4445,7 @@ async function enrichRecurringActsPosters() {
 }
 
 
-// ── Task 10: Telluride Foundation Events (HTML scraper) ──
-// The TF events page is a manually-maintained WPBakery page — no RSS.
-// We fetch the HTML, parse each wpb_text_column block for event data,
-// and keep only future events.
-async function syncTelluridFoundationEvents() {
-  console.log('\n🌲 Task 10: Syncing Telluride Foundation events...');
-  try {
-    const res = await fetch('https://telluridefoundation.org/tf-events/', {
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; LivableTelluride/1.0)' }
-    });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const html = await res.text();
-
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    // Each event lives inside a .wpb_wrapper div. Pull all of them.
-    const blockRe = /<div class="wpb_wrapper">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>/g;
-    const events = [];
-    const seen = new Set();
-
-    // Decode common HTML entities
-    const decode = s => s
-      .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
-      .replace(/&#8211;/g, '–').replace(/&#8212;/g, '—')
-      .replace(/&#8216;|&#8217;/g, "'").replace(/&#8220;|&#8221;/g, '"')
-      .replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-
-    let m;
-    while ((m = blockRe.exec(html)) !== null) {
-      const block = m[1];
-      // Strip all tags to plain text
-      const plain = decode(block.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim());
-      if (!plain) continue;
-
-      // Must contain a day-of-week + month date pattern
-      const dateRe = /((?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4})/gi;
-      const dateMatches = [...plain.matchAll(dateRe)];
-      if (!dateMatches.length) continue;
-
-      // Title: bold/underlined text before the first date (strip leading fluff)
-      const firstDateIdx = plain.indexOf(dateMatches[0][1]);
-      let rawTitle = plain.slice(0, firstDateIdx).trim();
-      // Remove stray "Upcoming Events:" prefix if present
-      rawTitle = rawTitle.replace(/^(?:PLEASE JOIN US!?\s*)?(?:Upcoming Events:?\s*)?/i, '').trim();
-      if (!rawTitle || rawTitle.length < 4) continue;
-      // Use first 120 chars max
-      const title = rawTitle.slice(0, 120).replace(/\s+/g, ' ').trim();
-
-      // Time: HH:MM AM/PM – HH:MM AM/PM
-      const timeM = plain.match(/(\d{1,2}:\d{2}\s*(?:AM|PM)\s*[–-]\s*\d{1,2}:\d{2}\s*(?:AM|PM))/i);
-      const eventTimes = timeM ? timeM[1].replace(/\s*[–-]\s*/g, ' – ') : '';
-
-      // Location: bold text right after the time line (usually a venue name)
-      // Heuristic: text between time and the long description (first sentence)
-      let location = '';
-      if (timeM) {
-        const afterTime = plain.slice(plain.indexOf(timeM[1]) + timeM[1].length).trim();
-        // Take text up to first sentence-ending period or long gap
-        const locM = afterTime.match(/^([^.\n]{3,60}?)(?:\s{2,}|\.|The |Join |Both |All )/);
-        if (locM) location = locM[1].trim();
-      }
-
-      // Description: everything after the first date+time block, up to ~300 chars
-      const afterFirst = plain.slice(firstDateIdx).replace(dateRe, '').replace(timeM ? timeM[1] : '', '');
-      const copy = smartTruncate(afterFirst.replace(location, '').replace(/^[^a-zA-Z]+/, ''), EVENT_DESC_MAX);
-
-      // For multi-date events (same title, two locations), emit one entry per future date
-      for (const dm of dateMatches) {
-        const eventDate = new Date(dm[1]);
-        if (isNaN(eventDate.getTime()) || eventDate < today) continue;
-        const key = title.slice(0, 40) + '|' + eventDate.toISOString().slice(0, 10);
-        if (seen.has(key)) continue;
-        seen.add(key);
-        events.push({
-          title,
-          date: eventDate.toISOString(),
-          location: location || 'Telluride Area',
-          eventTimes,
-          copy,
-          href: 'https://telluridefoundation.org/tf-events/',
-          source: 'Telluride Foundation',
-          sourceKey: 'tf-news'
-        });
-      }
-    }
-
-    console.log(`  Found ${events.length} upcoming TF events`);
-    return events;
-  } catch (e) {
-    console.error('  TF events scrape error:', e.message);
-    return null; // null = skip update
-  }
-}
+// Task 10 removed — Telluride Foundation events are hand-curated (see above).
 
 
 // ══════════════════════════════════════════════════════════════
@@ -6393,16 +6300,11 @@ async function main() {
     }
   }
 
-  // ── 10. Telluride Foundation Events ──
-  const newTfEvents = await syncTelluridFoundationEvents();
-  if (newTfEvents !== null && newTfEvents !== undefined) {
-    const existingTf = extractJsArray(govHubSrc, 'TF_FOUNDATION_EVENTS') || [];
-    if (JSON.stringify(newTfEvents) !== JSON.stringify(existingTf)) {
-      govHubSrc = replaceJsValue(govHubSrc, 'TF_FOUNDATION_EVENTS', newTfEvents, false);
-      changed = true;
-      console.log(`  TF_FOUNDATION_EVENTS updated (was ${existingTf.length}, now ${newTfEvents.length})`);
-    }
-  }
+  // ── 10 (removed): Telluride Foundation events are HAND-CURATED in
+  //    gov-helpers.js (TELLURIDE_FOUNDATION_EVENTS). The old scraper wrote to a
+  //    dead const name (TF_FOUNDATION_EVENTS, nothing read it) and its result was
+  //    discarded every run. Removed per audit to stop the waste and protect the
+  //    hand-curated list.
 
 
   // ── 11. Nucla-Naturita Events ──
@@ -6603,7 +6505,8 @@ async function main() {
   // description, then writes the patched arrays back into govHubSrc.
   const eventArrayNames = [
     'WILKINSON_EVENTS', 'KOTO_COMMUNITY_EVENTS', 'SHERIDAN_EVENTS',
-    'ALIBI_EVENTS', 'SHERBINO_EVENTS', 'TF_FOUNDATION_EVENTS',
+    'ALIBI_EVENTS', 'SHERBINO_EVENTS', 'NUCLA_NATURITA_EVENTS',
+    'CLUB_RED_SHOWS', 'FRESH_FOOD_HUB_EVENTS',
     'MUSIC_ON_THE_GREEN', 'COMMUNITY_EVENTS', 'TELLURIDE_COM_EVENTS',
     'OURAY_COUNTY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'NORWOOD_EVENTS',
   ];
@@ -6633,7 +6536,8 @@ async function main() {
     const { reconcileByTrust } = require('./lib/source-trust.js');
     const reconcileNames = [
       'KOTO_COMMUNITY_EVENTS', 'SHERIDAN_EVENTS', 'TELLURIDE_COM_EVENTS', 'TELLURIDE_SCIENCE_EVENTS',
-      'WILKINSON_EVENTS', 'COMMUNITY_EVENTS', 'ALIBI_EVENTS', 'TF_FOUNDATION_EVENTS', 'SHERBINO_EVENTS',
+      'WILKINSON_EVENTS', 'COMMUNITY_EVENTS', 'ALIBI_EVENTS', 'SHERBINO_EVENTS',
+      'NUCLA_NATURITA_EVENTS', 'CLUB_RED_SHOWS', 'FRESH_FOOD_HUB_EVENTS',
       'OURAY_COUNTY_EVENTS', 'OURAY_RIDGWAY_EVENTS', 'NORWOOD_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS',
     ];
     const arraysByName = {};
