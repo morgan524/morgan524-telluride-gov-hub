@@ -80,12 +80,16 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
     <textarea id="lede" style="min-height:104px;resize:vertical"></textarea>
     <div style="margin-top:8px"><button class="btn sec tiny" id="applyLede">Apply intro to preview</button></div>
     <div style="margin-top:14px"><button class="btn sec tiny" id="reset">↺ Reset to generated</button></div>
+    <div style="margin-top:14px">
+      <button class="btn sec" id="lockbtn" style="width:100%">🔒 Save as Final &amp; Lock this week</button>
+      <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
+    </div>
     <label style="margin-top:18px">Send a test to</label>
     <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
     <button class="btn sec" id="fulltest" style="margin-top:8px">▶ Send full test (real broadcast → your test list)</button>
     <button class="btn primary" id="approve">✓ Approve &amp; Post via Customer.io</button>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here (most common change) and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. When it looks right, <b>Send test</b>, then <b>Approve &amp; Post</b>.</div>
+    <div class="note">Edit the <b>intro</b> here and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. When it looks right, click <b>🔒 Save as Final &amp; Lock this week</b> to freeze this exact version — the daily bot will no longer change the lede or swap events. Then <b>Send test</b> and, on Monday, <b>Approve &amp; Post</b>. (The lock clears itself when the week rolls over.)</div>
   </div>
 
   <div class="panel">
@@ -132,7 +136,10 @@ async function boot(){
     for(const k of Object.keys(manifest.digests)){
       const d = manifest.digests[k];
       const html = await fetch(d.file+"?t="+Date.now()).then(r=>r.text());
-      state[k] = { name:d.name, subject:d.subject, covers:d.covers, audience:d.audience, baseHtml:html, html:html, history:[] };
+      state[k] = { name:d.name, subject:d.subject, covers:d.covers, audience:d.audience, weekStart:d.weekStart||"", baseHtml:html, html:html, history:[], locked:false };
+      // Is this digest already frozen for its week? (lock file is a repo file, same-origin)
+      try{ const lk = await fetch("digest/"+k+".lock.json?t="+Date.now()).then(r=>r.ok?r.json():null).catch(()=>null);
+        if(lk && lk.weekStart && lk.weekStart === state[k].weekStart) state[k].locked=true; }catch(e){}
     }
     hideGate(); $("app").style.display="grid";
     buildSeg(); buildChips(); load("weekend");
@@ -163,8 +170,27 @@ function load(k){
   $("meta").innerHTML="<b>Audience:</b> "+d.audience+" segment<br><b>Covers:</b> "+d.covers;
   $("subject").value=d.subject; $("psubj").textContent=d.subject; $("frame").srcdoc=d.html;
   $("lede").value=currentLede(d.html);
-  renderLog(); hideStatus();
+  renderLog(); hideStatus(); updateLockState();
 }
+function updateLockState(){
+  const d=state[cur], el=$("lockstate"), btn=$("lockbtn");
+  if(d.locked){ el.innerHTML='🔒 <b>Locked — final for this week.</b> The daily bot will not change it. Re-save to update the frozen version.';
+    btn.textContent='🔒 Update the locked version'; }
+  else { el.textContent='Not locked — the daily bot may still re-render this until you lock it.';
+    btn.textContent='🔒 Save as Final & Lock this week'; }
+}
+async function lockDigest(){
+  const d=state[cur];
+  if(!d.weekStart){ showStatus("Can't lock — this digest has no weekStart (re-run Digest Refresh first).",true); return; }
+  if(!confirm('Freeze "'+d.subject+'" as the FINAL version for the week of '+d.weekStart+'? The daily bot will stop changing it.')) return;
+  showStatus('<span class="spin"></span> Saving & locking…'); $("lockbtn").disabled=true;
+  try{ const r=await api("/save",{ key:cur, html:d.html, subject:d.subject, weekStart:d.weekStart });
+    if(r.ok){ d.locked=true; updateLockState(); showStatus("✓ Locked — this exact version is final for the week. The bot won't change it."); }
+    else showStatus("⚠ "+(r.error||"lock failed")+(r.detail?" — "+r.detail:""),true);
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("lockbtn").disabled=false; }
+}
+$("lockbtn").onclick=lockDigest;
 function renderPreview(){ $("frame").srcdoc=state[cur].html; $("psubj").textContent=state[cur].subject; }
 function showStatus(msg,isErr){ const s=$("status"); s.innerHTML=msg; s.className="status show"+(isErr?" err":""); }
 function hideStatus(){ $("status").className="status"; }
