@@ -115,8 +115,18 @@ lookups) → fold into the Phase 3 shared date lib. See `docs/overhaul/phase-1-p
 - **Phase 6:** cutover + delete the old files (proven by parity).
 
 ## Notes / corrections to prior mental model
-- `AI_SUMMARIES` is **not** a runtime Firestore read — it's generated static into
-  `gov-helpers.js` by the pipeline and served as a global, same as
-  `MANUAL_SUMMARIES`. The gov-hub stub comment is vestigial and misleading.
+- `AI_SUMMARIES` is **not** a runtime Firestore read. **CORRECTION (2026-07-05,
+  surfaced by the Phase 1 golden tests):** it is also **not** in `gov-helpers.js`
+  — it is defined **inline only in `gov-hub.html`**, yet `getMeetingSummary()`
+  (in gov-helpers.js, ~L8078) references it. So on every OTHER surface that loads
+  gov-helpers (the digest via weekly-email, content-review, source-health,
+  events) `getMeetingSummary` throws `ReferenceError: AI_SUMMARIES is not defined`
+  on its first line — silently swallowed by each caller's `try/catch`, so its
+  richer AI/MANUAL resolution is dead there and callers fall back to
+  `m.description`. Risk class B/C/F. **Fix (deferred, parity-gated):** make
+  `getMeetingSummary` default `AI_SUMMARIES` to `{}` in gov-helpers.js — but that
+  changes what summaries the digest renders, so it waits for the parity harness.
+  Interim: `lib/load-data.js` now injects `AI_SUMMARIES={}` into its sandbox so
+  tooling (and the golden tests) get a working `getMeetingSummary`.
 - The DCL-race class is largely fixed (readyState guard is near-universal); the
   residual risk is the *data*-load fallback, which is still per-page.
