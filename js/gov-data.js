@@ -1120,66 +1120,23 @@ const WHY_THIS_MATTERS = [
 // agendas post; see the "Memory: deep-link URL patterns" memory file
 // for the per-source pattern.
 
-const MEETING_ZOOM_LINKS = {
-  // Add entries as they appear in agenda PDFs, e.g.
-  // 'telluride|2026-06-17|HARC Meeting': 'https://us06web.zoom.us/meeting/register/...',
-
-  // ── May 2026 meetings (extracted from posted agendas) ──
-  'norwood|2026-05-18|Planning and Zoning Commission Meeting':
-    'https://us02web.zoom.us/j/85001344971',
-  'ophir|2026-05-19|General Assembly Meeting':
-    'https://us02web.zoom.us/j/86701438435',
-  'smart|2026-05-20|SMART Board of Directors':
-    'https://us02web.zoom.us/j/84956549553?pwd=ufEmj1aZHEU6r8ocV7KV3YGbS403wI.1',
-};
+// SOURCE OF TRUTH for per-meeting zoom links + passcodes is MEETING_AGENDA_META
+// (js/gov-helpers.js — bot-managed, per-meeting-instance, extracted from posted
+// agendas) plus SCHOOL_ZOOM_LINK below (the school district's constant Zoom).
+// gov-hub.html reads MEETING_AGENDA_META first and only falls back to these
+// static maps. The maps previously held a handful of frozen past-date entries
+// (all long superseded), which created a split-brain "two places to update zoom
+// info" bug. They're now intentionally EMPTY — do NOT add entries here; the bot
+// keeps MEETING_AGENDA_META current. The consts remain (empty) so
+// getMeetingZoomLink()/getMeetingPasscode() still resolve without errors.
+const MEETING_ZOOM_LINKS = {};
 
 const SCHOOL_ZOOM_LINK = 'https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09';
 
-const MEETING_PASSCODES = {
-  'county|2026-03-25|Board of County Commissioners Special Meeting': {
-    id: '816 3670 5978',
-    passcode: '025045',
-    phone: '719-359-4580 or 253-205-0468'
-  },
-
-  // ── Telluride Town Council ──
-  'telluride|2026-03-17|Town Council': {
-    id: '839 0705 0138',
-    passcode: '404452',
-    phone: '(719) 359-4580 or (346) 248-7799'
-  },
-
-  // ── Telluride P&Z ──
-  'telluride|2026-03-26|Planning & Zoning Commission': {
-    id: '846 6324 0731',
-    passcode: '464546',
-    phone: '1-301-715-8592 or 1-312-626-6799'
-  },
-
-  // ── School District (consistent across meetings) ──
-  '__school_default__': {
-    id: '865 8512 4120',
-    passcode: 'TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09',
-    phone: ''
-  },
-
-  // ── May 2026 meetings (extracted from posted agendas) ──
-  'norwood|2026-05-18|Planning and Zoning Commission Meeting': {
-    id: '850 0134 4971',
-    passcode: '8142302',
-    phone: ''
-  },
-  'ophir|2026-05-19|General Assembly Meeting': {
-    id: '867 0143 8435',
-    passcode: '373146',
-    phone: '+1-669-900-6833 (San Jose)'
-  },
-  'smart|2026-05-20|SMART Board of Directors': {
-    id: '849 5654 9553',
-    passcode: '(use Zoom link — passcode embedded in URL)',
-    phone: ''
-  }
-};
+// Intentionally EMPTY — see the MEETING_ZOOM_LINKS note above. Per-meeting
+// passcodes live in MEETING_AGENDA_META (gov-helpers.js); the school district's
+// constant passcode is derived from SCHOOL_ZOOM_LINK by getMeetingPasscode().
+const MEETING_PASSCODES = {};
 
 const LAND_USE_ISSUES = {
   carhenge: {

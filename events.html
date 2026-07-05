@@ -1415,7 +1415,7 @@
     const RC_PALETTE = ['#2f7a5f','#b8860b','#9c4221','#2c5282','#6b46c1','#b83280','#2b6cb0','#975a16','#285e61','#7b341e','#553c9a','#1a7e76','#9b2c2c','#3182ce','#805ad5'];
     const RC_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     const RC_DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    const rcEsc = (s) => String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    const rcEsc = (s) => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const rcDecode = (function(){ const ta=document.createElement('textarea'); return (s) => { ta.innerHTML=String(s==null?'':s); return ta.value; }; })();
     const rcPad = (n) => String(n).padStart(2,'0');
     const rcDate = (iso) => { const p=String(iso).split('-'); return new Date(+p[0], +p[1]-1, +p[2], 12, 0, 0); };
