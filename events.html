@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/site-config.js"></script>
   <title>Community Events — Livable Telluride</title>
   <meta name="description" content="Find community events, classes, meetings, and festivals across the Telluride, Colorado region — Telluride, Mountain Village, Norwood, Ridgway, Ouray and the West End.">
   <meta property="og:title" content="Community Events — Livable Telluride">
@@ -2469,7 +2470,7 @@
       // /exec URL (see event-submit-notify-appscript.SOURCE.js). Failure
       // here never blocks the user's thank-you — the queue write already
       // succeeded by the time this runs.
-      const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwGuobdZ-uhIcb6Idq6WC_JJNgai1yLnaVec0eRzZyiPJ2ehf-Vs1MwRYORTTF67fps/exec';  // Apps Script web app (info@ account) — emails info@ on each submission
+      const NOTIFY_WEBAPP_URL = SITE_CONFIG.APPS_SCRIPT_EXEC;  // Apps Script web app (info@ account) — emails info@ on each submission
       function notifyAdmin(sub) {
         if (!NOTIFY_WEBAPP_URL) return;
         try {

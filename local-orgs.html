@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/site-config.js"></script>
   <title>Local Organizations — Livable Telluride</title>
   <meta name="description" content="Local Organizations — a directory of nonprofits, clubs, and community groups serving the Telluride, Colorado region.">
   <!--
@@ -1051,7 +1052,7 @@
     // as events.html; the generic {subject, fields[]} payload renders a clean
     // email once the script is re-deployed with the generic branch. No-op if
     // empty. Failure never blocks the thank-you (Firestore write already done).
-    const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwGuobdZ-uhIcb6Idq6WC_JJNgai1yLnaVec0eRzZyiPJ2ehf-Vs1MwRYORTTF67fps/exec';
+    const NOTIFY_WEBAPP_URL = SITE_CONFIG.APPS_SCRIPT_EXEC;
     function notifyOrgAdmin(d) {
       if (!NOTIFY_WEBAPP_URL) return;
       try {

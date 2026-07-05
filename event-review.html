@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
+  <script src="js/site-config.js"></script>
   <title>Event Review — Livable Telluride</title>
   <style>
     :root {
@@ -160,7 +161,7 @@
       return h;
     }
 
-    const NOTIFY_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycbwGuobdZ-uhIcb6Idq6WC_JJNgai1yLnaVec0eRzZyiPJ2ehf-Vs1MwRYORTTF67fps/exec';
+    const NOTIFY_WEBAPP_URL = SITE_CONFIG.APPS_SCRIPT_EXEC;
     // On Approve, ping the info@ Apps Script to email the SUBMITTER a thank-you /
     // confirmation. Fire-and-forget; no-op when there's no submitter email.
     function notifyApproval(kind, email, name, title) {
@@ -232,7 +233,7 @@
     // Have Claude read the flyer image and write a summary into the Description
     // box. Calls the Cloudflare Worker (key stays server-side). Needs a flyer
     // image uploaded/attached first.
-    const SUMMARIZE_URL = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/summarize-flyer';
+    const SUMMARIZE_URL = SITE_CONFIG.RSS_PROXY_BASE + '/summarize-flyer';
     function generateSummary(btn) {
       const card = btn.closest('.card');
       const imgUrl = (card.querySelector('[data-field="imageUrl"]').value || '').trim();
