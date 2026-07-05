@@ -2,13 +2,24 @@ name: Content Refresh
 
 on:
   schedule:
-    # Every 6 hours: midnight, 6am, noon, 6pm UTC
-    - cron: '0 0,6,12,18 * * *'
+    # Every 3 hours (00,03,06,09,12,15,18,21 UTC). Bumped from every-6h so
+    # fast-moving local news — the Telluride Times publishes on weekday
+    # mornings ~3-7am MT (09:00-13:00 UTC) — appears within a few hours
+    # instead of waiting up to a full 6h cycle (plus GitHub's cron drift).
+    # The 15:00 UTC (09:00 MT) slot reliably lands the morning TT batch.
+    - cron: '0 0,3,6,9,12,15,18,21 * * *'
   workflow_dispatch: # Allow manual trigger from GitHub UI
 
 permissions:
   contents: write
   issues: write   # for the failure-tracker step to create/close the CI Health issue
+
+# Serialize runs so the tighter cadence can't stack two refreshes rewriting
+# gov-helpers.js at once (a long run plus the next tick). Queue rather than
+# cancel so an in-flight refresh always finishes and commits its work.
+concurrency:
+  group: content-refresh
+  cancel-in-progress: false
 
 jobs:
   refresh:
