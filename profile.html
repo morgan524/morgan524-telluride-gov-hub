@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="js/site-config.js"></script>
 <title>Your Profile · Livable Telluride (PROTOTYPE)</title>
   <meta name="description" content="Manage your Livable Telluride subscription and notification preferences.">
 <style>
@@ -259,9 +260,9 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-storage-compat.js"></script>
 <script>
   // ── Cloudflare Worker endpoints (Mailchimp API key lives server-side) ──
-  const WORKER_ENDPOINT = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile';
-  const READ_ENDPOINT   = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/profile-read';
-  const AVAIL_ENDPOINT  = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/interests';
+  const WORKER_ENDPOINT = SITE_CONFIG.RSS_PROXY_BASE + '/update-profile';
+  const READ_ENDPOINT   = SITE_CONFIG.RSS_PROXY_BASE + '/profile-read';
+  const AVAIL_ENDPOINT  = SITE_CONFIG.RSS_PROXY_BASE + '/interests';
 
   function qp(name){ try{ return new URLSearchParams(location.search).get(name) || ''; }catch(_){ return ''; } }
   function val(id){ const el=document.getElementById(id); return el ? el.value.trim() : ''; }
