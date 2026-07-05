@@ -197,25 +197,23 @@ async function handleProxy(request, url, env) {
   return resp;
 }
 
-// ── Mailchimp "Update your profile" endpoint ──────────────────────────
+// ── Customer.io "Update your profile" + "Read your profile" endpoints ──
 // POST /update-profile { email, fields:{FNAME,LNAME,MMERGE6,MMERGE10,
 // MMERGE11}, interests:{ "<interestId>": bool } }. PATCHes the subscriber
 // (update-only — a non-member returns a friendly "subscribe first", so this
 // can't be used to inject arbitrary contacts). Only non-empty fields are
-// sent, so it never blanks data the person didn't touch. Needs the
-// MAILCHIMP_API_KEY Worker secret (datacenter is read from the key suffix).
-const MC_LIST_ID = "f83dc56387";
+// sent, so it never blanks data the person didn't touch. Needs the Customer.io
+// credentials (SITE_ID/TRACK_API_KEY for writes; APP_API_KEY for /profile-read).
 const PROFILE_ALLOWED_ORIGINS = [
   "https://livabletelluride.org",
   "https://www.livabletelluride.org",
 ];
 const PROFILE_MERGE_FIELDS = ["FNAME", "LNAME", "MMERGE6", "MMERGE10", "MMERGE11"];
 
-// Customer.io dual-write (parallel to Mailchimp during the migration). Maps the
-// same signup/profile inputs onto the Customer.io attribute schema used by the
-// one-time import (scripts/mailchimp-to-customerio.js) so a person identified
-// here looks identical to an imported one. subs[] keys are the name-based keys
-// resolveInterests() returns; fields[] are Mailchimp merge tags.
+// Customer.io is the system of record. Maps the signup/profile inputs onto the
+// Customer.io attribute schema (also used by the one-time import). subs[] keys
+// are the name-based subscription keys the site sends (weekly/newsletter + the
+// four Event Topics); fields[] are the profile field names the form posts.
 const CIO_SUBS_TO_ATTR = {
   weekly:     "sub_weekly_update",
   newsletter: "sub_newsletter",
@@ -228,8 +226,8 @@ const CIO_FIELDS_TO_ATTR = { FNAME: "first_name", LNAME: "last_name", MMERGE6: "
 
 // Identify (upsert) a person in Customer.io via the Track API, keyed by email
 // (lowercased) — matches the import's identifier. Best-effort: returns a status
-// string and never throws, so a Customer.io hiccup can't break the Mailchimp
-// write or the signup. No-ops silently until the two Worker secrets are set.
+// string and never throws, so a Customer.io hiccup can't break the signup flow.
+// No-ops silently until the two Worker secrets are set.
 async function cioIdentify(env, email, attrs) {
   if (!env.CUSTOMERIO_SITE_ID || !env.CUSTOMERIO_TRACK_API_KEY) return "skipped";
   if (!attrs || !Object.keys(attrs).length) return "empty";
@@ -275,64 +273,25 @@ async function verifyFirebaseEmail(idToken) {
 }
 
 // The embedded signup form uses Mailchimp "web IDs" (group[7915][24641]); the
-// API keys member.interests by a DIFFERENT alphanumeric interest ID. Resolve
-// the real IDs by interest NAME ("Weekly Update" / "Newsletter") so both read
-// and write are correct regardless of the numeric web IDs. Cached per isolate.
-// Resolves all known subscription groups -> real Mailchimp interest IDs by
-// matching interest NAMES (so the 4 pilot "Event Topics" light up automatically
-// once you create them in Mailchimp). Cached ~5 min so newly-created groups are
-// picked up without a redeploy. Keys whose group doesn't exist yet are null.
-let _interestCache = null, _interestTs = 0;
-async function resolveInterests(env) {
-  if (_interestCache && (Date.now() - _interestTs < 300000)) return _interestCache;
-  const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
-  const auth = "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY);
-  const base = "https://" + dc + ".api.mailchimp.com/3.0/lists/" + MC_LIST_ID;
-  const map = {};
-  try {
-    const cr = await fetch(base + "/interest-categories?count=60", { headers: { Authorization: auth } });
-    const cj = await cr.json();
-    for (const cat of (cj.categories || [])) {
-      const ir = await fetch(base + "/interest-categories/" + cat.id + "/interests?count=200", { headers: { Authorization: auth } });
-      const ij = await ir.json();
-      for (const it of (ij.interests || [])) map[String(it.name || "").trim().toLowerCase()] = it.id;
-    }
-  } catch (_) {}
-  const find = (re) => { for (const n of Object.keys(map)) if (re.test(n)) return map[n]; return null; };
-  const result = {
-    weekly:     find(/weekly/),
-    newsletter: find(/newsletter/),
-    arts:       find(/\barts\b|music|festival/),
-    civic:      find(/government|civic|\bmeetings?\b/),
-    family:     find(/family|kids/),
-    outdoors:   find(/outdoor|recreation/),
-  };
-  if (result.weekly || result.newsletter) { _interestCache = result; _interestTs = Date.now(); } // cache only a good fetch
-  return result;
-}
-
-// POST /interests — public, non-PII: which subscription groups currently exist
-// on the list (booleans only), so the profile page shows only real options.
+// POST /interests — which subscription groups exist. Post-Mailchimp these are a
+// fixed Customer.io attribute set, so they're always available.
 async function handleInterests(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
-  if (!env.MAILCHIMP_API_KEY) return json({ ok: false, available: {} });
-  const ids = await resolveInterests(env);
-  const available = {};
-  for (const k of Object.keys(ids)) available[k] = !!ids[k];
-  return json({ ok: true, available });
+  return json({ ok: true, available: { weekly: true, newsletter: true, arts: true, civic: true, family: true, outdoors: true } });
 }
 
-// POST /profile-read { idToken } — returns the signed-in user's own Mailchimp
-// fields + subscription state so the profile page can pre-fill. Token-verified;
-// a non-subscriber gets { ok:true, found:false }.
+// POST /profile-read { idToken } — returns the signed-in user's own Customer.io
+// attributes (name, region, subscription flags) so the profile page can pre-fill.
+// Token-verified; the email comes from the verified token, never from input. A
+// contact Customer.io doesn't have yet returns { ok:true, found:false }.
 async function handleProfileRead(request, env) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
-  if (!env.MAILCHIMP_API_KEY) return json({ ok: false, msg: "Profile lookup isn't configured yet." }, 500);
+  if (!env.CUSTOMERIO_APP_API_KEY) return json({ ok: false, msg: "Profile lookup isn't configured yet." }, 500);
 
   let data; try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
   const idToken = data && data.idToken;
@@ -340,27 +299,29 @@ async function handleProfileRead(request, env) {
   const email = await verifyFirebaseEmail(idToken);
   if (!email) return json({ ok: false, msg: "We couldn't verify your sign-in." }, 401);
 
-  const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
-  const apiUrl = "https://" + dc + ".api.mailchimp.com/3.0/lists/" + MC_LIST_ID + "/members/" + md5(email);
+  // Read the contact's attributes from Customer.io (App API; contact id == email).
   let resp;
-  try { resp = await fetch(apiUrl, { headers: { Authorization: "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY) } }); }
-  catch { return json({ ok: false, msg: "Couldn't reach Mailchimp." }, 502); }
+  try {
+    resp = await fetch("https://api.customer.io/v1/customers/" + encodeURIComponent(email) + "/attributes", {
+      headers: { Authorization: "Bearer " + env.CUSTOMERIO_APP_API_KEY },
+    });
+  } catch { return json({ ok: false, msg: "Couldn't reach Customer.io." }, 502); }
   if (resp.status === 404) return json({ ok: true, found: false, email });
   if (!(resp.status >= 200 && resp.status < 300)) return json({ ok: false, msg: "Lookup failed (" + resp.status + ")." });
 
-  const m = await resp.json();
-  const mf = m.merge_fields || {};
-  const mi = m.interests || {};
-  const ids = await resolveInterests(env);
+  let a = {};
+  try { const j = await resp.json(); a = (j.customer && j.customer.attributes) || j.attributes || {}; } catch (_) {}
+  const truthy = (v) => v === true || v === 1 || v === "true" || v === "1";
   return json({
     ok: true, found: true, email,
-    fields: {
-      FNAME: mf.FNAME || "", LNAME: mf.LNAME || "", MMERGE6: mf.MMERGE6 || "",
-      MMERGE10: mf.MMERGE10 || "", MMERGE11: mf.MMERGE11 || "",
-    },
+    fields: { FNAME: a.first_name || "", LNAME: a.last_name || "", MMERGE6: a.region || "" },
     subs: {
-      weekly:     ids.weekly     ? !!mi[ids.weekly]     : null,
-      newsletter: ids.newsletter ? !!mi[ids.newsletter] : null,
+      weekly:     truthy(a.sub_weekly_update),
+      newsletter: truthy(a.sub_newsletter),
+      arts:       truthy(a.topic_music_arts),
+      civic:      truthy(a.topic_gov_meetings),
+      family:     truthy(a.topic_family_kids),
+      outdoors:   truthy(a.topic_outdoors_rec),
     },
   });
 }
@@ -408,67 +369,6 @@ async function handleUpdateProfile(request, env) {
   return json({ ok: false, msg: "Couldn't save your info right now — please try again.", cio: cioStatus }, 502);
 }
 
-// MD5 (public-domain, Paul Johnston implementation). Mailchimp's subscriber
-// hash is md5(lowercased email); crypto.subtle has no MD5, so we embed it.
-function md5(string) {
-  function RotateLeft(v, c) { return (v << c) | (v >>> (32 - c)); }
-  function AddUnsigned(lX, lY) {
-    const lX8 = lX & 0x80000000, lY8 = lY & 0x80000000, lX4 = lX & 0x40000000, lY4 = lY & 0x40000000;
-    const lResult = (lX & 0x3FFFFFFF) + (lY & 0x3FFFFFFF);
-    if (lX4 & lY4) return lResult ^ 0x80000000 ^ lX8 ^ lY8;
-    if (lX4 | lY4) return (lResult & 0x40000000) ? (lResult ^ 0xC0000000 ^ lX8 ^ lY8) : (lResult ^ 0x40000000 ^ lX8 ^ lY8);
-    return lResult ^ lX8 ^ lY8;
-  }
-  const F = (x, y, z) => (x & y) | (~x & z);
-  const G = (x, y, z) => (x & z) | (y & ~z);
-  const H = (x, y, z) => x ^ y ^ z;
-  const I = (x, y, z) => y ^ (x | ~z);
-  function FF(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(F(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
-  function GG(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(G(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
-  function HH(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(H(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
-  function II(a, b, c, d, x, s, ac) { a = AddUnsigned(a, AddUnsigned(AddUnsigned(I(b, c, d), x), ac)); return AddUnsigned(RotateLeft(a, s), b); }
-  function ConvertToWordArray(str) {
-    const len = str.length;
-    const nWords = (((len + 8 - ((len + 8) % 64)) / 64) + 1) * 16;
-    const wa = new Array(nWords - 1).fill(0);
-    let bytePos = 0, byteCount = 0;
-    while (byteCount < len) {
-      const wc = (byteCount - (byteCount % 4)) / 4; bytePos = (byteCount % 4) * 8;
-      wa[wc] = wa[wc] | (str.charCodeAt(byteCount) << bytePos);
-      byteCount++;
-    }
-    const wc = (byteCount - (byteCount % 4)) / 4; bytePos = (byteCount % 4) * 8;
-    wa[wc] = wa[wc] | (0x80 << bytePos);
-    wa[nWords - 2] = len << 3; wa[nWords - 1] = len >>> 29;
-    return wa;
-  }
-  function WordToHex(v) { let s = ""; for (let i = 0; i <= 3; i++) { const b = (v >>> (i * 8)) & 255; s += ("0" + b.toString(16)).slice(-2); } return s; }
-  const x = ConvertToWordArray(string);
-  let a = 0x67452301, b = 0xEFCDAB89, c = 0x98BADCFE, d = 0x10325476;
-  const S11 = 7, S12 = 12, S13 = 17, S14 = 22, S21 = 5, S22 = 9, S23 = 14, S24 = 20,
-        S31 = 4, S32 = 11, S33 = 16, S34 = 23, S41 = 6, S42 = 10, S43 = 15, S44 = 21;
-  for (let k = 0; k < x.length; k += 16) {
-    const AA = a, BB = b, CC = c, DD = d;
-    a = FF(a, b, c, d, x[k + 0], S11, 0xD76AA478); d = FF(d, a, b, c, x[k + 1], S12, 0xE8C7B756); c = FF(c, d, a, b, x[k + 2], S13, 0x242070DB); b = FF(b, c, d, a, x[k + 3], S14, 0xC1BDCEEE);
-    a = FF(a, b, c, d, x[k + 4], S11, 0xF57C0FAF); d = FF(d, a, b, c, x[k + 5], S12, 0x4787C62A); c = FF(c, d, a, b, x[k + 6], S13, 0xA8304613); b = FF(b, c, d, a, x[k + 7], S14, 0xFD469501);
-    a = FF(a, b, c, d, x[k + 8], S11, 0x698098D8); d = FF(d, a, b, c, x[k + 9], S12, 0x8B44F7AF); c = FF(c, d, a, b, x[k + 10], S13, 0xFFFF5BB1); b = FF(b, c, d, a, x[k + 11], S14, 0x895CD7BE);
-    a = FF(a, b, c, d, x[k + 12], S11, 0x6B901122); d = FF(d, a, b, c, x[k + 13], S12, 0xFD987193); c = FF(c, d, a, b, x[k + 14], S13, 0xA679438E); b = FF(b, c, d, a, x[k + 15], S14, 0x49B40821);
-    a = GG(a, b, c, d, x[k + 1], S21, 0xF61E2562); d = GG(d, a, b, c, x[k + 6], S22, 0xC040B340); c = GG(c, d, a, b, x[k + 11], S23, 0x265E5A51); b = GG(b, c, d, a, x[k + 0], S24, 0xE9B6C7AA);
-    a = GG(a, b, c, d, x[k + 5], S21, 0xD62F105D); d = GG(d, a, b, c, x[k + 10], S22, 0x02441453); c = GG(c, d, a, b, x[k + 15], S23, 0xD8A1E681); b = GG(b, c, d, a, x[k + 4], S24, 0xE7D3FBC8);
-    a = GG(a, b, c, d, x[k + 9], S21, 0x21E1CDE6); d = GG(d, a, b, c, x[k + 14], S22, 0xC33707D6); c = GG(c, d, a, b, x[k + 3], S23, 0xF4D50D87); b = GG(b, c, d, a, x[k + 8], S24, 0x455A14ED);
-    a = GG(a, b, c, d, x[k + 13], S21, 0xA9E3E905); d = GG(d, a, b, c, x[k + 2], S22, 0xFCEFA3F8); c = GG(c, d, a, b, x[k + 7], S23, 0x676F02D9); b = GG(b, c, d, a, x[k + 12], S24, 0x8D2A4C8A);
-    a = HH(a, b, c, d, x[k + 5], S31, 0xFFFA3942); d = HH(d, a, b, c, x[k + 8], S32, 0x8771F681); c = HH(c, d, a, b, x[k + 11], S33, 0x6D9D6122); b = HH(b, c, d, a, x[k + 14], S34, 0xFDE5380C);
-    a = HH(a, b, c, d, x[k + 1], S31, 0xA4BEEA44); d = HH(d, a, b, c, x[k + 4], S32, 0x4BDECFA9); c = HH(c, d, a, b, x[k + 7], S33, 0xF6BB4B60); b = HH(b, c, d, a, x[k + 10], S34, 0xBEBFBC70);
-    a = HH(a, b, c, d, x[k + 13], S31, 0x289B7EC6); d = HH(d, a, b, c, x[k + 0], S32, 0xEAA127FA); c = HH(c, d, a, b, x[k + 3], S33, 0xD4EF3085); b = HH(b, c, d, a, x[k + 6], S34, 0x04881D05);
-    a = HH(a, b, c, d, x[k + 9], S31, 0xD9D4D039); d = HH(d, a, b, c, x[k + 12], S32, 0xE6DB99E5); c = HH(c, d, a, b, x[k + 15], S33, 0x1FA27CF8); b = HH(b, c, d, a, x[k + 2], S34, 0xC4AC5665);
-    a = II(a, b, c, d, x[k + 0], S41, 0xF4292244); d = II(d, a, b, c, x[k + 7], S42, 0x432AFF97); c = II(c, d, a, b, x[k + 14], S43, 0xAB9423A7); b = II(b, c, d, a, x[k + 5], S44, 0xFC93A039);
-    a = II(a, b, c, d, x[k + 12], S41, 0x655B59C3); d = II(d, a, b, c, x[k + 3], S42, 0x8F0CCC92); c = II(c, d, a, b, x[k + 10], S43, 0xFFEFF47D); b = II(b, c, d, a, x[k + 1], S44, 0x85845DD1);
-    a = II(a, b, c, d, x[k + 8], S41, 0x6FA87E4F); d = II(d, a, b, c, x[k + 15], S42, 0xFE2CE6E0); c = II(c, d, a, b, x[k + 6], S43, 0xA3014314); b = II(b, c, d, a, x[k + 13], S44, 0x4E0811A1);
-    a = II(a, b, c, d, x[k + 4], S41, 0xF7537E82); d = II(d, a, b, c, x[k + 11], S42, 0xBD3AF235); c = II(c, d, a, b, x[k + 2], S43, 0x2AD7D2BB); b = II(b, c, d, a, x[k + 9], S44, 0xEB86D391);
-    a = AddUnsigned(a, AA); b = AddUnsigned(b, BB); c = AddUnsigned(c, CC); d = AddUnsigned(d, DD);
-  }
-  return (WordToHex(a) + WordToHex(b) + WordToHex(c) + WordToHex(d)).toLowerCase();
-}
 
 // POST /summarize-flyer { imageUrl } → { ok, summary }. Reads the flyer image
 // with Claude (vision) and returns a short factual event summary for the
