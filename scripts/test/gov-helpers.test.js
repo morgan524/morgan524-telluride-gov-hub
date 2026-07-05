@@ -101,10 +101,12 @@ test('resolveEventImage: band photo when present, series poster as fallback', (t
   assert.equal(withPhoto.primary, 'https://livabletelluride.org/img/music-on-the-green/alex-maryol.jpg');
   assert.match(withPhoto.fallback, /music-on-the-green\.jpg$/);
 
-  // Band photo MISSING (exists=false) → primary drops, poster remains the fallback.
+  // Band photo MISSING but the series poster IS present — so exists() must answer
+  // per-path (like fs.existsSync does in the email), not a blanket false which
+  // would wrongly drop the poster too.
   const missing = resolveEventImage(
     { title: 'New Band — Music on the Green', imageUrl: '/img/music-on-the-green/new-band.jpg' },
-    { origin: 'https://livabletelluride.org', exists: () => false });
+    { origin: 'https://livabletelluride.org', exists: (p) => !/new-band/.test(p) });
   assert.equal(missing.primary, '');
   assert.match(missing.fallback, /music-on-the-green\.jpg$/);
 
