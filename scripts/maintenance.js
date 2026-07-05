@@ -649,7 +649,10 @@ async function main() {
   // `issues` so all three run even if an earlier one finds a problem.
   await checkFeedFreshness();
   await checkEventsSheet();
-  await checkMailchimpDigests();
+  // checkMailchimpDigests() retired 2026-07-06 — Mailchimp is gone, so watching
+  // it for send-freshness would false-alarm forever. The weekly send is now the
+  // human-approved Customer.io Digest Review Desk; a CIO send-freshness check
+  // could be added later (function kept, uncalled).
   checkTellurideTimesFreshness(govHubSrc);
 
   // Keep sitemap.xml in sync with the public HTML pages (git add -A commits it).
