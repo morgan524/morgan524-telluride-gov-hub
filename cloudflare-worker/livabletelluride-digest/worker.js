@@ -151,7 +151,63 @@ async function send(body, env) {
     body: JSON.stringify({ data: { subject, body: html } }),
   });
   const t = await r.text();
-  return r.ok ? { ok: true, mode: "broadcast" } : { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+  if (!r.ok) return { error: "Customer.io " + r.status, detail: t.slice(0, 400) };
+  // Sent — archive the exact HTML and record it so the next content-refresh run
+  // turns this newsletter into a blog post. Best-effort: a blog hiccup must never
+  // report the send as failed (it already went out).
+  let blog = "skipped";
+  if (env.GITHUB_TOKEN) { try { blog = await archiveBroadcast(env, body); } catch (e) { blog = "archive-error: " + String((e && e.message) || e).slice(0, 120); } }
+  return { ok: true, mode: "broadcast", blog };
+}
+
+// Archive a just-sent broadcast: commit the exact HTML to digest/archive/ and
+// append a record to data/sent-broadcasts.json (content-refresh turns those into
+// BLOG_POSTS). Reuses the /save GitHub token.
+async function archiveBroadcast(env, body) {
+  const key = body.key === "weekend" ? "weekend" : "weekly";
+  const html = String(body.emailHtml || "");
+  const subject = String(body.subject || "Livable Telluride");
+  const now = new Date();
+  const iso = now.toISOString().slice(0, 10);
+  const pretty = now.toLocaleDateString("en-US", { timeZone: "America/Denver", month: "short", day: "numeric", year: "numeric" });
+  const archivePath = "digest/archive/" + iso + "-" + key + ".html";
+  await ghPutFile(env, archivePath, html, "Blog: archive sent " + key + " broadcast " + iso);
+  const excerpt = html.replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ").replace(/\s+/g, " ").trim().slice(0, 400);
+  await ghAppendJson(env, "data/sent-broadcasts.json", {
+    date: pretty, subject, key, href: "https://livabletelluride.org/" + archivePath, excerpt, sentAt: now.toISOString(),
+  });
+  return "archived";
+}
+
+// UTF-8-safe base64 DECODE (for reading an existing repo file's content).
+function fromB64(b64str) {
+  const bin = atob(String(b64str).replace(/\n/g, ""));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder().decode(bytes);
+}
+
+// Prepend an entry to a JSON array file in the repo (newest-first, capped).
+async function ghAppendJson(env, path, entry) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const base = "https://api.github.com/repos/" + repo + "/contents/" + path;
+  const headers = {
+    "Authorization": "Bearer " + env.GITHUB_TOKEN,
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "livabletelluride-digest-worker",
+    "Content-Type": "application/json",
+  };
+  let arr = [], sha;
+  const g = await fetch(base + "?ref=main", { headers });
+  if (g.ok) { try { const gj = await g.json(); sha = gj.sha; const parsed = JSON.parse(fromB64(gj.content)); if (Array.isArray(parsed)) arr = parsed; } catch (e) {} }
+  arr.unshift(entry);
+  if (arr.length > 100) arr = arr.slice(0, 100);
+  const put = await fetch(base, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({ message: "Blog: record sent broadcast " + (entry.date || ""), content: b64(JSON.stringify(arr, null, 2) + "\n"), branch: "main", ...(sha ? { sha } : {}) }),
+  });
+  if (!put.ok) { const tt = await put.text(); throw new Error("GitHub " + put.status + ": " + tt.slice(0, 150)); }
 }
 
 // ── /save — freeze the human-approved digest as final for the week ──

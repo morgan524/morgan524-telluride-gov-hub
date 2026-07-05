@@ -3040,16 +3040,13 @@ function replaceConstString(source, varName, newValue) {
 // ══════════════════════════════════════════════════════════════
 
 // ══════════════════════════════════════════════════════════════
-// ── Task 6: Mailchimp Blog Sync ──
-// ══════════════════════════════════════════════════════════════
-// Pulls the audience archive RSS feed (every campaign sent to the
-// Livable Telluride audience) and merges any campaigns we haven't
-// already captured into the BLOG_POSTS array. Hand-curated entries
-// (source: 'livable-telluride.org') are NEVER touched — only entries
-// with source: 'mailchimp' are managed by this sync.
-
-const MAILCHIMP_ARCHIVE_FEED =
-  'https://us15.campaign-archive.com/feed?u=5d9192289b9af78822f2f69bf&id=f83dc56387';
+// ── Task 6: Blog from sent Customer.io broadcasts ──
+// Mailchimp (and its campaign-archive RSS) was retired 2026-07-06. Blog posts
+// now come from the newsletters actually SENT via the Digest Review Desk: the
+// digest Worker /send archives each sent broadcast into data/sent-broadcasts.json
+// (title, date, permalink, excerpt). syncBroadcastBlog() below turns any
+// not-yet-listed broadcast into a BLOG_POSTS entry. Hand-curated posts (any
+// non-'customerio' source) are never touched.
 
 // Strip HTML tags and collapse whitespace for excerpt extraction.
 function htmlToText(s) {
@@ -3085,121 +3082,30 @@ function firstImageFromHtml(html) {
   return '';
 }
 
-async function syncMailchimpBlog(existingPosts) {
-  console.log('\n📰 Task 6: Syncing Mailchimp blog archive...');
-  let resp;
+function syncBroadcastBlog(existingPosts) {
+  let sent = [];
   try {
-    resp = await fetch(MAILCHIMP_ARCHIVE_FEED);
-  } catch (e) {
-    console.warn(`  Fetch error: ${e.message}`);
-    return null;
-  }
-  if (!resp || resp.status !== 200) {
-    console.warn(`  Archive feed HTTP ${resp ? resp.status : 'no response'}`);
-    return null;
-  }
-
-  let parsed;
-  try {
-    parsed = await parseXml(resp.text);
-  } catch (e) {
-    console.warn(`  XML parse error: ${e.message}`);
-    return null;
-  }
-  const items = parsed?.rss?.channel?.item;
-  const arr = Array.isArray(items) ? items : (items ? [items] : []);
-  console.log(`  Archive feed returned ${arr.length} campaigns`);
-
-  if (!arr.length) return existingPosts;
-
-  // Active prune: drop any existing mailchimp-source entries that match
-  // the digest-skip pattern. This cleans up past mistakes (digest emails
-  // that leaked into the blog before the skip pattern was added).
-  const isDigestTitle = (t) => {
-    if (!t) return false;
-    return (/^Posts from Livable Telluride for /i.test(t) ||
-            /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t));
-  };
-  const prunedExisting = existingPosts.filter(p => {
-    if (p && p.source === 'mailchimp' && isDigestTitle(p.title)) {
-      console.log(`  Pruning leaked digest from blog: ${p.title}`);
-      return false;
-    }
-    return true;
-  });
-
-  // Index existing posts by href AND by normalized title, so we don't
-  // duplicate a Mailchimp campaign whose content was already hand-curated
-  // as a livabletelluride.org post (same title, different URL).
-  const normTitle = (s) => String(s || '')
-    .toLowerCase()
-    .replace(/[\u201C\u201D\u2018\u2019]/g, '')   // smart quotes
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim();
-  const existingByHref = new Map();
-  const existingByTitle = new Map();
-  for (const p of prunedExisting) {
-    if (p && p.href) existingByHref.set(p.href, p);
-    if (p && p.title) existingByTitle.set(normTitle(p.title), p);
-  }
-
-  // Build entries for any campaign we haven't seen.
-  const newEntries = [];
-  for (const item of arr) {
-    const href = item.link || '';
-    if (!href) continue;
-    if (existingByHref.has(href)) continue;
-    const title = (item.title || '').trim();
-    if (!title) continue;
-    if (existingByTitle.has(normTitle(title))) {
-      console.log(`  Skipping duplicate-by-title: ${title}`);
-      continue;
-    }
-    // Skip campaigns whose title is flagged private (convention for one-offs
-    // that should NOT appear on the public blog).
-    if (/\[(private|skip|internal|test)\]/i.test(title)) {
-      console.log(`  Skipping private campaign: ${title}`);
-      continue;
-    }
-    // Skip the auto-generated daily/weekly digest emails. Their titles
-    // are 'Posts from Livable Telluride for MM/DD/YYYY' (Mailchimp's
-    // RSS-driven campaign uses *|RSSFEED:DATE|* in the subject line).
-    // Those go to opt-in subscribers via feed.xml and shouldn't appear
-    // on the public blog tab — only manually-authored campaigns should.
-    if (/^Posts from Livable Telluride for /i.test(title) ||
-        /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(title)) {
-      console.log(`  Skipping digest campaign: ${title}`);
-      continue;
-    }
-    const desc = item.description || '';
-    const text = htmlToText(desc).slice(0, 400);
-    const image = firstImageFromHtml(desc);
-    let dateStr = item.pubDate || '';
-    // Normalize to a friendly format consistent with the migrated posts.
-    const d = new Date(dateStr);
-    if (!isNaN(d.getTime())) {
-      dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-    }
-    newEntries.push({
-      title,
-      date: dateStr,
-      href,
-      image: image || '',
-      excerpt: text,
+    sent = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'data', 'sent-broadcasts.json'), 'utf8'));
+  } catch (e) { return existingPosts; }
+  if (!Array.isArray(sent) || !sent.length) return existingPosts;
+  const haveHref = new Set(existingPosts.map((p) => p && p.href));
+  const additions = [];
+  for (const b of sent) {
+    if (!b || !b.href || haveHref.has(b.href)) continue;
+    additions.push({
+      title:    String(b.subject || 'Newsletter'),
+      date:     String(b.date || ''),
+      href:     String(b.href),
+      image:    'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
+      excerpt:  String(b.excerpt || ''),
       category: 'Newsletter',
-      source: 'mailchimp',
+      source:   'customerio',
     });
-    console.log(`  + New campaign: ${title}`);
+    haveHref.add(b.href);
   }
-
-  if (!newEntries.length) {
-    console.log('  No new Mailchimp campaigns to add');
-    return prunedExisting;
-  }
-
-  // Prepend new entries (newest from feed first), preserving existing
-  // (already-pruned) posts.
-  return [...newEntries, ...prunedExisting];
+  if (!additions.length) return existingPosts;
+  // sent-broadcasts.json is newest-first; keep newest posts on top.
+  return [...additions, ...existingPosts];
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -6233,13 +6139,16 @@ async function main() {
     }
   }
 
-  // ── 6. Blog Sync — RETIRED 2026-07-06 with the Mailchimp cutover ──
-  // Blog posts used to be pulled from the Mailchimp campaign archive. Mailchimp
-  // is gone, so that source is dead: existing BLOG_POSTS are FROZEN (left exactly
-  // as-is), and the bot no longer fetches Mailchimp. New blog posts are a future
-  // decision (Customer.io broadcasts / hand-curated). syncMailchimpBlog() and
-  // MAILCHIMP_ARCHIVE_FEED above are now dead code, retained pending that
-  // decision; nothing calls them.
+  // ── 6. Blog from sent Customer.io broadcasts ──
+  // Turn any newsletter sent via the Digest Review Desk (recorded in
+  // data/sent-broadcasts.json by the digest Worker) into a BLOG_POSTS entry.
+  const existingBlogPosts = extractJsArray(govHubSrc, 'BLOG_POSTS') || [];
+  const updatedBlogPosts = syncBroadcastBlog(existingBlogPosts);
+  if (updatedBlogPosts.length !== existingBlogPosts.length) {
+    govHubSrc = replaceJsValue(govHubSrc, 'BLOG_POSTS', updatedBlogPosts, false);
+    changed = true;
+    console.log(`  BLOG_POSTS: +${updatedBlogPosts.length - existingBlogPosts.length} from sent broadcasts`);
+  }
 
   // ── 7. Telluride Humane Society Adoptable Animals ──
   // Pass the existing array IN so syncHumaneSocietyAnimals can preserve
