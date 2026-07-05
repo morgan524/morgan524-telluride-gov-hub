@@ -36,18 +36,21 @@ jobs:
           # wrangler.toml still hardcoding it.
           accountId: 8f020e73de4e9956f0e3ad7dce070ef4
           workingDirectory: cloudflare-worker/livabletelluride-rss-proxy
-          # Push the Customer.io Track-API credentials as Worker secrets so the
-          # /update-profile dual-write can identify people in Customer.io. Only
-          # these two are managed here; the other Worker secrets (MAILCHIMP_API_KEY,
-          # ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT, MAIL_RELAY_URL) were set
-          # manually and persist across deploys. Uploading secrets still runs the
-          # default `deploy` command afterward.
+          # Push the Customer.io credentials as Worker secrets: SITE_ID +
+          # TRACK_API_KEY for /update-profile writes, APP_API_KEY for the
+          # /profile-read attribute lookup. The other Worker secrets
+          # (ANTHROPIC_API_KEY, FIREBASE_SERVICE_ACCOUNT, MAIL_RELAY_URL) were set
+          # manually and persist across deploys. (MAILCHIMP_API_KEY is no longer
+          # used — safe to delete that manual secret.) Uploading secrets still
+          # runs the default `deploy` command afterward.
           secrets: |
             CUSTOMERIO_SITE_ID
             CUSTOMERIO_TRACK_API_KEY
+            CUSTOMERIO_APP_API_KEY
         env:
           CUSTOMERIO_SITE_ID: ${{ secrets.CUSTOMERIO_SITE_ID }}
           CUSTOMERIO_TRACK_API_KEY: ${{ secrets.CUSTOMERIO_TRACK_API_KEY }}
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
 
       - name: CI health issue
         if: always()
