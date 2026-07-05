@@ -25,8 +25,12 @@ jobs:
       - name: Render digests + manifest from live data
         run: |
           set -eo pipefail
-          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
-          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          # Cache-bust (?t=timestamp) so we always get the freshest data, not a
+          # CDN-cached copy, and -f so a site outage fails the run loudly instead
+          # of feeding an error page to node.
+          T=$(date +%s)
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-data.js?t=$T"    -o /tmp/gd.js
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
           WE=$(date -u -d "friday" +%F)     # coming Friday (today if Fri)
           WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
           WE_LABEL="$(date -u -d "$WE" '+%B %-d') - $(date -u -d "$WE +2 days" '+%B %-d, %Y')"
