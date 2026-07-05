@@ -35,18 +35,45 @@ jobs:
           WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
           WE_LABEL="$(date -u -d "$WE" '+%B %-d') - $(date -u -d "$WE +2 days" '+%B %-d, %Y')"
           WK_LABEL="$(date -u -d "$WK" '+%B %-d') - $(date -u -d "$WK +6 days" '+%B %-d, %Y')"
-          WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WE" "$WE_LABEL" digest/weekend.html
-          node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
-          export WE_SUBJ="The Weekend Outlook - $WE_LABEL"
-          export WK_SUBJ="The Week Ahead - $WK_LABEL"
+
+          # ── Freeze/lock support ──
+          # If digest/<key>.lock.json exists and its weekStart matches the coming
+          # Friday/Monday, a human has APPROVED that digest on the Review Desk —
+          # do NOT re-render it (that would change the lede or swap events after
+          # approval). A lock whose weekStart no longer matches is stale (the week
+          # rolled over): delete it and render fresh.
+          lock_ws() { if [ -f "$1" ]; then python3 -c "import json;print(json.load(open('$1')).get('weekStart',''))" 2>/dev/null || true; fi; }
+          lock_subj() { python3 -c "import json;print(json.load(open('$1')).get('subject',''))" 2>/dev/null || true; }
+
+          WE_SUBJ_LOCK=""
+          if [ "$(lock_ws digest/weekend.lock.json)" = "$WE" ]; then
+            echo "weekend digest LOCKED for $WE — preserving the approved version"
+            WE_SUBJ_LOCK="$(lock_subj digest/weekend.lock.json)"
+          else
+            rm -f digest/weekend.lock.json
+            WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WE" "$WE_LABEL" digest/weekend.html
+          fi
+
+          WK_SUBJ_LOCK=""
+          if [ "$(lock_ws digest/week.lock.json)" = "$WK" ]; then
+            echo "week digest LOCKED for $WK — preserving the approved version"
+            WK_SUBJ_LOCK="$(lock_subj digest/week.lock.json)"
+          else
+            rm -f digest/week.lock.json
+            node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
+          fi
+
+          export WE_SUBJ="${WE_SUBJ_LOCK:-The Weekend Outlook - $WE_LABEL}"
+          export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead - $WK_LABEL}"
           export WE_COV="Fri $(date -u -d "$WE" '+%b %-d') to Sun $(date -u -d "$WE +2 days" '+%b %-d, %Y')"
           export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
+          export WE WK   # ISO weekStart per digest → the desk passes it to /save so the lock matches
           export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
           python3 - <<'PY'
           import json, os
           m={"generated":os.environ["GEN"],"digests":{
-            "weekend":{"name":"Weekend Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"audience":"Weekly Update","file":"digest/weekend.html"},
-            "weekly":{"name":"Week Ahead","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"audience":"Weekly Update","file":"digest/week.html"}}}
+            "weekend":{"name":"Weekend Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"},
+            "weekly":{"name":"Week Ahead","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}}
           open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
           print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
           PY
@@ -54,7 +81,7 @@ jobs:
         run: |
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
-          git add digest/
+          git add -A digest/   # -A so a deleted (stale) lock file is staged too
           if git diff --cached --quiet; then
             echo "no digest changes"
           else
