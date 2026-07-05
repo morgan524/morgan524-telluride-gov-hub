@@ -32,8 +32,8 @@ const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft 
 // Thursday the email covers. Everything below is unchanged for the weekly path.
 const WEEKEND = !!process.env.WEEKEND;
 const WINDOW_DAYS = WEEKEND ? 3 : 7;   // weekend email covers Fri–Sun (sent Thursday)
-const EMAIL_TITLE = WEEKEND ? 'The Weekend Outlook' : 'The Week Ahead';
-const KICKER = WEEKEND ? 'Livable Telluride · Weekend Outlook' : 'Livable Telluride · Weekly Update';
+const EMAIL_TITLE = WEEKEND ? 'The Weekend Ahead Outlook' : 'The Week Ahead Outlook';
+const KICKER = WEEKEND ? 'Livable Telluride · Weekend Ahead Outlook' : 'Livable Telluride · Weekly Update';
 const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
 
 // ── Week Ahead lede — edit data/week-ahead-lede.json (no code change needed).

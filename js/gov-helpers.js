@@ -144,12 +144,6 @@ const MEETING_AGENDA_META = {
   "county|2026-07-01|Board of County Commissioners Meeting":
     {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg","meetingId":"828 4833 4181","passcode":"562164","phone":"719-359-4580"},
 
-  "county|2026-07-08|Board of County Commissioners Work Session":
-    {"sv":2},
-
-  "county|2026-07-09|Planning Commission Meeting":
-    {"sv":2},
-
   "mv|2026-06-17|Town Council Meeting":
     {"zoomUrl":"https://us06web.zoom.us/webinar/register/WN_XDMlJEPIRy6V3a5BeMEfCQ","phone":"970-369-6429","sv":2},
 
@@ -185,9 +179,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
     {"sv":4},
-
-  "county|2026-07-08|Board of County Commissioners Special":
-    {"sv":2},
 
   "fire|2026-07-21|Board of Directors Meeting":
     {"sv":2},
@@ -356,17 +347,11 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
     "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
-  "county|2026-07-08|Board of County Commissioners Work Session":
-    "The July 8 Board of County Commissioners Work Session agenda hasn't been posted yet.",
-
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
     "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
-
-  "county|2026-07-09|Planning Commission Meeting":
-    "The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
     "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
@@ -400,9 +385,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
     "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
-
-  "county|2026-07-08|Board of County Commissioners Special":
-    "The July 8 Board of County Commissioners Special Meeting agenda hasn't been posted yet.",
 
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -7408,6 +7390,17 @@ function getCountyCachedMeetings() {
       : (meetingBoardToken(t) || 'gen');
     const seen = {};
     out.forEach(m => { if (m.eventDate) seen[m.eventDate.toLocaleDateString('en-CA', { timeZone: 'America/Denver' }) + '|' + ctok(m.title)] = 1; });
+    // The county sometimes RENAMES a meeting (e.g. "Board of County
+    // Commissioners Work Session" -> "...Special - In Norwood at Sheriff Annex",
+    // "Planning Commission Meeting" -> "...Joint Work Session"), which leaves the
+    // older placeholder-keyed entry behind. Both share the same date+board, so we
+    // must surface exactly ONE — and it has to be the CURRENT one (which carries
+    // the real agenda summary), not whichever key happened to be inserted first.
+    // So group future summary keys by date+board and keep the RICHEST: a real
+    // summary beats an "agenda not posted yet" placeholder; among equals, the
+    // longer (more detailed) text wins.
+    const isPlaceholder = (s) => !s || /hasn['’]?t been posted|not (yet )?(been )?posted|no agenda (items|detail)|nothing to summarize|not available yet|isn['’]?t available/i.test(s);
+    const best = {};   // dk -> { rawTitle, eventDate, summary }
     for (const key of Object.keys(MANUAL_SUMMARIES)) {
       if (key.slice(0, 7).toLowerCase() !== 'county|') continue;
       const parts = key.split('|');
@@ -7418,18 +7411,27 @@ function getCountyCachedMeetings() {
       const rawTitle = (parts.slice(2).join('|') || 'County Meeting')
         .replace(/\s*-\s*[A-Z][a-z]{2}\s+\d{1,2}\s+\d{4}\s*$/, '').trim() || 'County Meeting';
       const dk = date + '|' + ctok(rawTitle);
-      if (seen[dk]) continue; seen[dk] = 1;
+      if (seen[dk]) continue;                                // already covered by the static cache
+      const summary = String(MANUAL_SUMMARIES[key] || '');
+      const cur = best[dk];
+      const better = !cur
+        || (isPlaceholder(cur.summary) && !isPlaceholder(summary))              // real beats placeholder
+        || (isPlaceholder(cur.summary) === isPlaceholder(summary) && summary.length > cur.summary.length);
+      if (better) best[dk] = { rawTitle, eventDate, summary };
+    }
+    for (const dk of Object.keys(best)) {
+      const b = best[dk];
       out.push({
-        title: rawTitle,
+        title: b.rawTitle,
         link: COUNTY_CIVICCLERK_FALLBACK,
-        description: MANUAL_SUMMARIES[key] || '',
-        eventDate,
+        description: b.summary,
+        eventDate: b.eventDate,
         eventDates: '',
         eventTimes: '',
         location: '',
         source: 'county',
         sourceLabel: 'San Miguel County',
-        category: /planning/i.test(rawTitle) ? 'Planning Commission' : /board/i.test(rawTitle) ? 'Board Meeting' : 'Meeting',
+        category: /planning/i.test(b.rawTitle) ? 'Planning Commission' : /board/i.test(b.rawTitle) ? 'Board Meeting' : 'Meeting',
         canceled: false,
         hasAgenda: false,
         agendaLink: COUNTY_CIVICCLERK_FALLBACK
