@@ -1,0 +1,132 @@
+name: Digest Scheduled Send
+
+# Sends an APPROVED digest at 6:00 AM America/Denver:
+#   - Monday  → the "Week Ahead" (weekly) digest
+#   - Thursday → the "Weekend Outlook" (weekend) digest
+#
+# "Approved" means a human clicked Approve & Schedule on the Digest Review Desk,
+# which writes digest/<key>.lock.json. This job sends ONLY when that lock exists
+# for the current week — so nothing ever goes out unless it was approved, and it
+# can never fire early. It also refuses to re-send a subject already recorded in
+# data/sent-broadcasts.json, so an approved digest can't go out twice.
+#
+# A manual run (workflow_dispatch, confirm=SEND) bypasses those gates — an
+# explicit human override for an off-cycle send.
+on:
+  schedule:
+    - cron: '0 12 * * 1'   # Mon 12:00 UTC = 06:00 MDT (summer)
+    - cron: '0 13 * * 1'   # Mon 13:00 UTC = 06:00 MST (winter)
+    - cron: '0 12 * * 4'   # Thu 12:00 UTC = 06:00 MDT (summer)
+    - cron: '0 13 * * 4'   # Thu 13:00 UTC = 06:00 MST (winter)
+  workflow_dispatch:
+    inputs:
+      digest:
+        description: 'Which digest to send (weekly or weekend)'
+        required: true
+        default: 'weekly'
+      confirm:
+        description: 'Type SEND to fire the real broadcast now (bypasses approval + duplicate gates)'
+        required: true
+        default: ''
+
+permissions:
+  contents: read
+  issues: write   # ci-health-issue failure tracker
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide whether to run + which digest
+        id: guard
+        run: |
+          set -eo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.confirm }}" != "SEND" ]; then
+              echo "manual run without confirm=SEND — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0
+            fi
+            echo "manual override — digest=${{ github.event.inputs.digest }}"
+            echo "go=true"   >> "$GITHUB_OUTPUT"
+            echo "digest=${{ github.event.inputs.digest }}" >> "$GITHUB_OUTPUT"
+            echo "override=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Scheduled: only proceed at 06:00 America/Denver (so exactly one of the
+          # summer/winter cron pair fires), and map the weekday to a digest.
+          HOUR="$(TZ='America/Denver' date +%H)"
+          DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
+          if [ "$HOUR" != "06" ]; then echo "Denver hour=$HOUR (not 06) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          case "$DOW" in
+            1) DIGEST=weekly ;;
+            4) DIGEST=weekend ;;
+            *) echo "Denver weekday=$DOW (not Mon/Thu) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
+          esac
+          echo "scheduled send — digest=$DIGEST at 06:00 MT"
+          echo "go=true" >> "$GITHUB_OUTPUT"
+          echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
+          echo "override=false" >> "$GITHUB_OUTPUT"
+
+      - name: Send the approved digest to its broadcast
+        if: steps.guard.outputs.go == 'true'
+        env:
+          DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
+          WORKER_BASE: https://livabletelluride-digest.morgan-8f0.workers.dev
+          DIGEST_KIND: ${{ steps.guard.outputs.digest }}
+          OVERRIDE: ${{ steps.guard.outputs.override }}
+        run: |
+          set -eo pipefail
+          test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
+          python3 - <<'PY'
+          import json, os, sys, urllib.request, urllib.error
+          key = os.environ["DIGEST_KIND"]
+          override = os.environ.get("OVERRIDE") == "true"
+          if key not in ("weekly", "weekend"):
+              raise SystemExit(f"Unknown digest kind: {key!r}")
+          man = json.load(open("digest/manifest.json"))
+          d = man["digests"][key]
+          subject, fpath, week_start = d["subject"], d["file"], d.get("weekStart", "")
+          html = open(fpath, encoding="utf-8").read()
+          if len(html) < 2000:
+              raise SystemExit(f"{fpath} looks too small ({len(html)} bytes) — aborting")
+
+          if not override:
+              # 1) Approval gate: the human must have approved (locked) THIS week's digest.
+              lock_path = f"digest/{key}.lock.json"
+              if not os.path.exists(lock_path):
+                  print(f"No approval lock ({lock_path}) — nothing was approved for this {key} digest. Skipping."); sys.exit(0)
+              lock = json.load(open(lock_path))
+              if lock.get("weekStart") and week_start and lock["weekStart"] != week_start:
+                  print(f"Approval lock is for weekStart {lock.get('weekStart')} but manifest is {week_start} — stale approval. Skipping."); sys.exit(0)
+              # 2) Duplicate gate: never send a subject already in the sent archive.
+              try:
+                  sent = json.load(open("data/sent-broadcasts.json"))
+              except Exception:
+                  sent = []
+              if any(s.get("subject") == subject for s in sent):
+                  print(f"Already sent this subject ({subject!r}) — skipping to avoid a duplicate."); sys.exit(0)
+
+          payload = json.dumps({"emailHtml": html, "subject": subject, "test": False, "key": key}).encode()
+          req = urllib.request.Request(
+              os.environ["WORKER_BASE"] + "/send", data=payload,
+              headers={"Content-Type": "application/json", "x-digest-key": os.environ["DIGEST_KEY"]}, method="POST")
+          try:
+              with urllib.request.urlopen(req) as r:
+                  body = r.read().decode()
+          except urllib.error.HTTPError as e:
+              raise SystemExit(f"HTTP {e.code}: {e.read().decode()[:400]}")
+          print("response:", body)
+          if not json.loads(body).get("ok"):
+              raise SystemExit("Send did not return ok: " + body)
+          print(f"SENT {key} broadcast — subject: {subject}")
+          PY
+
+      - name: CI health issue
+        if: failure()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Digest scheduled send failed'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

@@ -80,16 +80,15 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
     <textarea id="lede" style="min-height:104px;resize:vertical"></textarea>
     <div style="margin-top:8px"><button class="btn sec tiny" id="applyLede">Apply intro to preview</button></div>
     <div style="margin-top:14px"><button class="btn sec tiny" id="reset">↺ Reset to generated</button></div>
-    <div style="margin-top:14px">
-      <button class="btn sec" id="lockbtn" style="width:100%">🔒 Save as Final &amp; Lock this week</button>
-      <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
-    </div>
     <label style="margin-top:18px">Send a test to</label>
     <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
     <button class="btn sec" id="fulltest" style="margin-top:8px">▶ Send full test (real broadcast → your test list)</button>
-    <button class="btn primary" id="approve">✓ Approve &amp; Post via Customer.io</button>
+    <div style="margin-top:14px">
+      <button class="btn primary" id="lockbtn" style="width:100%">✓ Approve &amp; Schedule</button>
+      <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
+    </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. When it looks right, click <b>🔒 Save as Final &amp; Lock this week</b> to freeze this exact version — the daily bot will no longer change the lede or swap events. Then <b>Send test</b> and, on Monday, <b>Approve &amp; Post</b>. (The lock clears itself when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>, the <b>Weekend Outlook Thursday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
@@ -112,6 +111,9 @@ const $ = (id) => document.getElementById(id);
 let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekend";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
+// When each approved digest auto-sends (the scheduled job fires at 6:00 AM MT).
+const SEND_WHEN = { weekly: "Monday 6:00 AM", weekend: "Thursday 6:00 AM" };
+const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
 function showGate(msg){ $("gate").style.display="flex"; $("gateerr").textContent=msg||""; $("gatekey").focus(); }
@@ -174,19 +176,19 @@ function load(k){
 }
 function updateLockState(){
   const d=state[cur], el=$("lockstate"), btn=$("lockbtn");
-  if(d.locked){ el.innerHTML='🔒 <b>Locked — final for this week.</b> The daily bot will not change it. Re-save to update the frozen version.';
-    btn.textContent='🔒 Update the locked version'; }
-  else { el.textContent='Not locked — the daily bot may still re-render this until you lock it.';
-    btn.textContent='🔒 Save as Final & Lock this week'; }
+  if(d.locked){ el.innerHTML='✅ <b>Approved &amp; scheduled.</b> This exact version sends automatically <b>'+sendWhen()+'</b>. The daily bot won\'t change it. Re-approve to update the scheduled version.';
+    btn.textContent='✓ Update the approved version'; }
+  else { el.textContent='Not approved — nothing will send until you Approve & Schedule.';
+    btn.textContent='✓ Approve & Schedule — sends '+sendWhen(); }
 }
 async function lockDigest(){
   const d=state[cur];
-  if(!d.weekStart){ showStatus("Can't lock — this digest has no weekStart (re-run Digest Refresh first).",true); return; }
-  if(!confirm('Freeze "'+d.subject+'" as the FINAL version for the week of '+d.weekStart+'? The daily bot will stop changing it.')) return;
-  showStatus('<span class="spin"></span> Saving & locking…'); $("lockbtn").disabled=true;
+  if(!d.weekStart){ showStatus("Can't approve — this digest has no weekStart (re-run Digest Refresh first).",true); return; }
+  if(!confirm('Approve "'+d.subject+'" and SCHEDULE it? It becomes the final version and sends automatically '+sendWhen()+'. Nothing is sent right now.')) return;
+  showStatus('<span class="spin"></span> Approving & scheduling…'); $("lockbtn").disabled=true;
   try{ const r=await api("/save",{ key:cur, html:d.html, subject:d.subject, weekStart:d.weekStart });
-    if(r.ok){ d.locked=true; updateLockState(); showStatus("✓ Locked — this exact version is final for the week. The bot won't change it."); }
-    else showStatus("⚠ "+(r.error||"lock failed")+(r.detail?" — "+r.detail:""),true);
+    if(r.ok){ d.locked=true; updateLockState(); showStatus("✓ Approved & scheduled — this exact version sends automatically "+sendWhen()+". Nothing was sent now."); }
+    else showStatus("⚠ "+(r.error||"approve failed")+(r.detail?" — "+r.detail:""),true);
   }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
   finally{ $("lockbtn").disabled=false; }
 }
@@ -261,17 +263,12 @@ $("fulltest").onclick=async()=>{
   }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
   finally{ $("fulltest").disabled=false; }
 };
-$("approve").onclick=async()=>{
-  const d=state[cur];
-  if(!confirm('Approve and POST "'+d.subject+'" to the '+d.audience+' segment?')) return;
-  showStatus('<span class="spin"></span> Posting via Customer.io…'); $("approve").disabled=true;
-  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, test:false, key:cur });
-    if(r.ok) showStatus("✓ Posted to the "+d.audience+" segment via Customer.io.");
-    else if(r.pending) showStatus("⏳ "+r.error,true);
-    else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
-  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
-  finally{ $("approve").disabled=false; }
-};
+// The old "Approve & Post" button fired the broadcast IMMEDIATELY, which is not
+// what "approve" should mean — approval now = "Approve & Schedule" (the lockbtn
+// above), which freezes the digest and lets the scheduled Monday-6AM job send it.
+// There is deliberately NO Desk button that sends to the real list right now; a
+// real send only happens via the scheduled job (or a manual, confirm-gated run
+// of the digest-send workflow).
 
 // ---- start ----
 if(KEY) boot(); else showGate();
