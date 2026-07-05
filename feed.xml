@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2026 19:31:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 22:11:20 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 5–11</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-26</guid>
-      <pubDate>Sun, 05 Jul 2026 19:31:14 GMT</pubDate>
-      <description><![CDATA[The Planning Commission and Board of County Commissioners are sitting down together Thursday for a joint work session on proposed Land Use Code amendments covering forestry practices, oil and gas, deep geothermal operations, and condominium plats — no final votes, but this is where the shape of those changes gets worked out. Earlier in the week, the Open Space Commission takes up real decisions on Valley Floor trail alignments and a Telluride Mountain Club request to route a quarter-mile of trail through open space. The rest of the week is lighter on civic business but full of summer: a pie contest, Market on the Plaza, birding walks, and the 5th of July picnic in Town Park.]]></description>
+      <pubDate>Sun, 05 Jul 2026 22:11:20 GMT</pubDate>
+      <description><![CDATA[The most consequential meeting this week is Monday's Open Space Commission, which takes up three real decisions on the Valley Floor — including which of three trail alignments moves forward for Reach 1 and whether the Telluride Mountain Club gets permission to route a quarter-mile of trail through that corridor. Thursday brings a joint Planning Commission and BOCC work session where county staff and elected officials will work through proposed Land Use Code changes covering forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but the direction set in work sessions like this tends to stick.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -55,17 +55,6 @@ The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage
       <media:content url="https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Sun, Jul 5] 5th of July picnic with the San Miguel County Democrats in Telluride Town Park</title>
-      <link>https://koto.org/event/5th-of-july-picnic-with-the-san-miguel-county-democrats-in-telluride-town-park/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/5th%20of%20july%20picnic%7C2026-07-05</guid>
-      <pubDate>Sun, 05 Jul 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-
-The San Miguel County Democrats invite the public to a picnic on July 5 from 10:30-2 at Telluride Town Park to celebrate and defend 250 years of America's democracy. Food and drinks provided.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sun, Jul 5] Gentle Yoga with Kristen Milord</title>
@@ -115,7 +104,7 @@ The San Miguel County Democrats invite the public to a picnic on July 5 from 10:
 
 Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.
 
-⚡ Why it matters: Commission chooses Valley Floor trail routes; Mountain Club access request decided.]]></description>
+⚡ Why it matters: Commission chooses among three Valley Floor trail routes; Mountain Club reroute also on table.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -417,9 +406,23 @@ The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: Land Use Code rewrites covering forestry, oil, gas, geothermal, and condos take shape.]]></description>
+⚡ Why it matters: Land Use Code amendments covering forestry, oil/gas, geothermal, and condo plats get shaped here.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 9] River Spell w/ Moonbeem</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=river-spell</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/river%20spell%20w%20moonbeem%7C2026-07-09</guid>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/9725c41c-1954-4f96-8d5a-bbe4507c7d01/-/crop/3998x1998/0,26/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+River Spell is a Colorado-based jam band that delivers heartfelt songwriting and...]]></description>
+      <media:content url="https://ucarecdn.com/9725c41c-1954-4f96-8d5a-bbe4507c7d01/-/crop/3998x1998/0,26/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
     </item>
   </channel>
 </rss>

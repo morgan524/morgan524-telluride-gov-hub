@@ -363,7 +363,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -375,7 +375,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -567,6 +567,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘It feels so good’ to gather",
+    source: "Telluride Times",
+    date: "July 5, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "land-use",
+    copy: "Telluride's People's March gathers monthly at the San Miguel County Courthouse — two speakers, a walk to the park and back, then an open mic. Drew from as far as Montrose, it's been running about a year and a half. Next up: Saturday, July 11 at noon, with Bryan Miller speaking.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_bb8b75f7-4df3-48e4-a86d-35dee7aa8ac6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/94/994ab3e1-47cf-416c-baf1-4ff75ed5358b/6a48ca441116d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Memorial service to honor firefighters killed on Colorado-Utah border",
     source: "Telluride Times",
@@ -2830,28 +2842,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "5th of July picnic with the San Miguel County Democrats in Telluride Town Park",
-    link: "https://koto.org/event/5th-of-july-picnic-with-the-san-miguel-county-democrats-in-telluride-town-park/",
-    description: "The San Miguel County Democrats invite the public to a picnic on July 5 from 10:30-2 at Telluride Town Park to celebrate and defend 250 years of America's democracy. Food and drinks provided.",
-    pubDate: "2026-07-05T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-05/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-07-05T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-07-05/",
