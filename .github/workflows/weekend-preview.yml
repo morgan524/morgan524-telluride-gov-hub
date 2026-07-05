@@ -43,8 +43,11 @@ jobs:
           WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
         run: |
           set -o pipefail
-          curl -sS https://livabletelluride.org/js/gov-data.js    -o /tmp/gd.js
-          curl -sS https://livabletelluride.org/js/gov-helpers.js -o /tmp/gh.js
+          # Cache-bust + -f so we always render from the freshest data and fail
+          # loudly on a site outage instead of feeding an error page to node.
+          T=$(date +%s)
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-data.js?t=$T"    -o /tmp/gd.js
+          curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
           # Honour the workflow_dispatch input when one is provided, otherwise
           # use the upcoming Friday — the email sends Thursday (cron day) and
           # covers Fri–Sun, so `date -d friday` from Thursday gives tomorrow.

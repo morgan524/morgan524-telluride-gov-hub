@@ -496,16 +496,44 @@ const closingNote = `<tr><td class="callout-wrap" style="padding:28px 34px 6px;"
 // request to support the 501(c)(3); links straight to the Stripe checkout.
 const donateBlock = `<tr><td class="sec-pad" style="padding:26px 34px 6px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="background:#21443c;border-radius:8px;padding:27px 26px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;margin-bottom:9px;">Keep This Going</div><p style="margin:0 0 17px;font-size:14.5px;line-height:1.7;color:#e7efe9;">Livable Telluride is a reader-funded <strong>501(c)(3) nonprofit</strong> — no ads, no paywall. If this is useful to you, a gift of any size keeps it coming.</p><a href="https://buy.stripe.com/7sY7sD2TZ2MV5Vudf40Ba00" style="display:inline-block;background:#b58a2c;color:#ffffff;text-decoration:none;font-weight:700;font-size:15px;padding:13px 32px;border-radius:999px;">&#9829; Donate</a><div style="font-size:11.5px;color:#9fbcb0;margin-top:13px;">Secure checkout via Stripe &middot; Your gift is tax-deductible to the extent allowed by law.</div></td></tr></table></td></tr>`;
 
-// One-off "What We're Reading" box — gated to a single week's WEEK_START so it
-// auto-disappears the following week (no manual cleanup). To feature a different
-// article another week, set WHATS_READING for that week's Monday date; leave it
-// null otherwise.
-const WHATS_READING = (WEEK_START === '2026-06-15') ? {
-  url: 'https://coloradosun.com/2026/06/13/opinion-stripped-for-parts-documentary/',
-  title: 'When communities lose their newspapers, they lose more than news',
-  source: 'The Colorado Sun · Essay by John Barry',
-  blurb: 'This essay names exactly why Livable Telluride exists. When local newspapers are hollowed out, a community loses far more than headlines: it loses the shared facts, the accountability, and the civic infrastructure that democracy runs on. His prescription, that local journalism deserves the same public and philanthropic support we give schools and libraries, is the very idea behind this donor-funded nonprofit.',
-} : null;
+// "What We're Reading" box. Two sources, in priority order:
+//   1. A manual editorial pick for a specific week (WHATS_READING_MANUAL, keyed
+//      by that week's Monday) — use this to feature a specific essay/article.
+//   2. Otherwise it AUTO-FILLS with the most recent substantive local news
+//      story from the live Telluride Times feed — so the box always carries
+//      current news and never silently goes empty. (It used to be hard-gated to
+//      one week and had shown nothing since 2026-06-15.)
+const WHATS_READING_MANUAL = {
+  // Example / historical pick — copy this shape to feature a specific piece:
+  '2026-06-15': {
+    url: 'https://coloradosun.com/2026/06/13/opinion-stripped-for-parts-documentary/',
+    title: 'When communities lose their newspapers, they lose more than news',
+    source: 'The Colorado Sun · Essay by John Barry',
+    blurb: 'This essay names exactly why Livable Telluride exists. When local newspapers are hollowed out, a community loses far more than headlines: it loses the shared facts, the accountability, and the civic infrastructure that democracy runs on. His prescription, that local journalism deserves the same public and philanthropic support we give schools and libraries, is the very idea behind this donor-funded nonprofit.',
+  },
+};
+// Auto-pick the newest local news story worth reading. TELLURIDE_TIMES_ARTICLES
+// also carries government press releases and meeting agendas (source "Town of
+// Ridgway", "San Miguel County", etc.) — those aren't editorial reads, so
+// restrict to actual newspaper articles (source "Telluride Times") and skip
+// obituaries, legal roundups, and hearing notices. The blurb comes from `copy`
+// (the article text); `claudeSummary` is a boolean quality flag, not text, so
+// it only nudges ranking (prefer summarized stories), newest first.
+function autoWhatsReading() {
+  const arr = (typeof G === 'function' ? G('TELLURIDE_TIMES_ARTICLES') : null) || [];
+  const isRealRead = (a) => a && a.title && a.copy && /^https?:\/\//i.test(a.href || '')
+    && String(a.source || '') === 'Telluride Times'
+    && !/\/obituaries\//i.test(a.href)
+    && !/\/legals\//i.test(a.href)
+    && !/^\s*legals?\b|public notices|notice of public hearing/i.test(a.title);
+  const byNewest = (x, y) => (Date.parse(y.date) || 0) - (Date.parse(x.date) || 0);
+  const a = arr.filter(x => isRealRead(x) && x.claudeSummary === true).sort(byNewest)[0]
+         || arr.filter(isRealRead).sort(byNewest)[0];
+  if (!a) return null;
+  const raw = String(a.copy || '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+  return { url: a.href, title: a.title, source: a.source || 'Telluride Times', blurb: trunc(raw, 320) };
+}
+const WHATS_READING = WHATS_READING_MANUAL[WEEK_START] || autoWhatsReading();
 const whatsReadingBox = WHATS_READING ? `<tr><td class="callout-wrap" style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">→ What We're Reading</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;"><a href="${WHATS_READING.url}" style="color:#1a2e29;text-decoration:none;">${esc(WHATS_READING.title)}</a></div><div style="font-size:12px;color:#7a8a85;margin:3px 0 9px;">${esc(WHATS_READING.source)}</div><p style="margin:0;font-size:14px;line-height:1.65;color:#2c3b35;">${esc(WHATS_READING.blurb)}</p><a href="${WHATS_READING.url}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:none;border-bottom:1px solid #a0531f;font-size:12.5px;font-weight:600;">Read it →</a></td></tr></table></td></tr>` : '';
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
