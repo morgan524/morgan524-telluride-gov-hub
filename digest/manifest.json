@@ -1,17 +1,19 @@
 {
-  "generated": "2026-07-05 14:23 UTC",
+  "generated": "2026-07-05 22:10 UTC",
   "digests": {
     "weekend": {
-      "name": "Weekend Outlook",
-      "subject": "The Weekend Outlook - July 10 - July 12, 2026",
+      "name": "The Weekend Ahead Outlook",
+      "subject": "The Weekend Ahead Outlook - July 10 - July 12, 2026",
       "covers": "Fri Jul 10 to Sun Jul 12, 2026",
+      "weekStart": "2026-07-10",
       "audience": "Weekly Update",
       "file": "digest/weekend.html"
     },
     "weekly": {
-      "name": "Week Ahead",
-      "subject": "The Week Ahead - July 6 - July 12, 2026",
+      "name": "The Week Ahead Outlook",
+      "subject": "The Week Ahead Outlook - July 6 - July 12, 2026",
       "covers": "Mon Jul 6 to Sun Jul 12, 2026",
+      "weekStart": "2026-07-06",
       "audience": "Weekly Update",
       "file": "digest/week.html"
     }
