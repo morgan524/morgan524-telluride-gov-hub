@@ -5,14 +5,7 @@
 (function() {
   'use strict';
   // ─── Firebase Configuration ───
-  const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-    authDomain: "telluride-gov-hub.firebaseapp.com",
-    projectId: "telluride-gov-hub",
-    storageBucket: "telluride-gov-hub.firebasestorage.app",
-    messagingSenderId: "14117089764",
-    appId: "1:14117089764:web:4287985258f0bc929cd7f1"
-  };
+  const FIREBASE_CONFIG = SITE_CONFIG.FIREBASE;
   // ─── Initialize Firebase ───
   let app, auth, db, storage;
   let hbUser = null;           // Current authenticated user
@@ -817,7 +810,7 @@
       // one-click Accept/Deny links. Never blocks posting; failure is silent.
       try {
         if (docRef && docRef.id) {
-          fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/moderate', {
+          fetch(SITE_CONFIG.RSS_PROXY_BASE + '/moderate', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ postId: docRef.id, title: title, body: body, authorName: hbResolveName(hbUser) })
           }).catch(function() {});
@@ -2048,7 +2041,7 @@
 
   // ── Open-Graph link-preview helpers ────────────────────────────────────────
   var HB_OG_CACHE = {};
-  var HB_OG_WORKER = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/og';
+  var HB_OG_WORKER = SITE_CONFIG.RSS_PROXY_BASE + '/og';
 
   function hbFetchOgPreview(url, cb) {
     if (!url) return;

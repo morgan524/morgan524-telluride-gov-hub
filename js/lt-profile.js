@@ -22,7 +22,7 @@
  */
 (function () {
   var WORKER_ENDPOINT =
-    'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile';
+    SITE_CONFIG.RSS_PROXY_BASE + '/update-profile';
 
   // Mailchimp interest groups under category 7915 ("Email Subscriptions").
   // Add future "Event Topics" groups here as { id, label, desc } and they

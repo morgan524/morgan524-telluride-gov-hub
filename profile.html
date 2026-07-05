@@ -360,14 +360,7 @@
     const loginHint = 'Have an account? <a href="/hub-bub.html#login">Log in</a> and your saved info loads here automatically.';
     if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
     try {
-      firebase.initializeApp({
-        apiKey: 'AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0',
-        authDomain: 'telluride-gov-hub.firebaseapp.com',
-        projectId: 'telluride-gov-hub',
-        storageBucket: 'telluride-gov-hub.firebasestorage.app',
-        messagingSenderId: '14117089764',
-        appId: '1:14117089764:web:4287985258f0bc929cd7f1'
-      });
+      firebase.initializeApp(SITE_CONFIG.FIREBASE);
     } catch(e) { /* already initialized */ }
     try { _db = firebase.firestore(); _storage = firebase.storage(); } catch(e) {}
     firebase.auth().onAuthStateChanged(function(user){

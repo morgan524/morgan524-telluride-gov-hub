@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/site-config.js"></script>
   <title>Hub-Bub — Livable Telluride</title>
   <meta name="description" content="Hub-Bub — the community forum for residents of the Telluride, Colorado region to discuss local government, housing, land use, and events.">
 
@@ -1116,14 +1117,7 @@
     import { getAuth, signInWithEmailAndPassword, onAuthStateChanged }
       from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-      authDomain: "telluride-gov-hub.firebaseapp.com",
-      projectId: "telluride-gov-hub",
-      storageBucket: "telluride-gov-hub.firebasestorage.app",
-      messagingSenderId: "14117089764",
-      appId: "1:14117089764:web:4287985258f0bc929cd7f1"
-    };
+    const firebaseConfig = SITE_CONFIG.FIREBASE;
 
     try {
       const app = initializeApp(firebaseConfig);
@@ -1925,7 +1919,7 @@
         var profFields = { FNAME: firstName, LNAME: lastName };
         if (region) profFields.MMERGE6 = region;
         try {
-          fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/update-profile', {
+          fetch(SITE_CONFIG.RSS_PROXY_BASE + '/update-profile', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email: email, fields: profFields, subs: subs })
           }).catch(function () {});
