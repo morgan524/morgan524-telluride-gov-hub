@@ -370,46 +370,26 @@ async function handleUpdateProfile(request, env) {
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
   if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
-  if (!env.MAILCHIMP_API_KEY) return json({ ok: false, msg: "Profile updates aren't configured yet." }, 500);
+  if (!env.CUSTOMERIO_SITE_ID || !env.CUSTOMERIO_TRACK_API_KEY) return json({ ok: false, msg: "Profile updates aren't configured yet." }, 500);
 
   let data;
   try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
   const email = String(data.email || "").trim().toLowerCase();
   if (!email || !email.includes("@")) return json({ ok: false, msg: "Please enter a valid email address." }, 400);
 
+  // Customer.io is the system of record (Mailchimp retired 2026-07-06). Map the
+  // inputs onto the Customer.io attribute schema, then cioIdentify PUT-upserts the
+  // contact by email — creating it on signup, updating it on a profile edit.
+  // This is an intentionally-unauthenticated by-email endpoint (the weekly-email
+  // manage-preferences link + pre-account signup both call it without a Firebase
+  // token) — same posture as any public newsletter form; the abuse ceiling is
+  // "opt in / edit a known email" (low-harm, one-click unsubscribe). HMAC-signed
+  // email links remain the future hardening (see audit).
   const merge_fields = {};
   const inFields = data.fields && typeof data.fields === "object" ? data.fields : {};
   for (const k of PROFILE_MERGE_FIELDS) {
     if (inFields[k] != null && String(inFields[k]).trim() !== "") merge_fields[k] = String(inFields[k]).trim();
   }
-  const interests = {};
-  if (data.interests && typeof data.interests === "object") {
-    for (const [id, on] of Object.entries(data.interests)) {
-      if (/^[0-9a-f]+$/i.test(id)) interests[id] = !!on;
-    }
-  }
-  // Preferred path: name-based subs resolved to the real Mailchimp interest IDs
-  // (the form's 24641/24642 are web IDs that the API ignores).
-  if (data.subs && typeof data.subs === "object") {
-    const ids = await resolveInterests(env);
-    for (const [k, v] of Object.entries(data.subs)) {
-      if (ids[k] && typeof v === "boolean") interests[ids[k]] = v;
-    }
-  }
-  const body = {};
-  if (Object.keys(merge_fields).length) body.merge_fields = merge_fields;
-  if (Object.keys(interests).length) body.interests = interests;
-  if (!Object.keys(body).length) return json({ ok: false, msg: "Nothing to update." }, 400);
-
-  // Prepare the Customer.io dual-write payload, but DON'T send it yet. cioIdentify
-  // is an unconditional upsert keyed by the request-supplied email — running it
-  // before we know the address is a real Mailchimp member let anyone inject
-  // arbitrary contacts into Customer.io. We map the inputs here, then fire the
-  // upsert only AFTER Mailchimp confirms the member exists (2xx below). This is
-  // an intentionally-unauthenticated by-email endpoint (the weekly-email
-  // "manage preferences" link and pre-account signup both call it without a
-  // Firebase token), so membership-gating is the guard we can enforce without
-  // breaking those flows.
   const cioAttrs = {};
   for (const [k, attr] of Object.entries(CIO_FIELDS_TO_ATTR)) {
     if (merge_fields[k]) cioAttrs[attr] = merge_fields[k];
@@ -419,34 +399,13 @@ async function handleUpdateProfile(request, env) {
       if (CIO_SUBS_TO_ATTR[k] && typeof v === "boolean") cioAttrs[CIO_SUBS_TO_ATTR[k]] = v;
     }
   }
+  if (!Object.keys(cioAttrs).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
-  const dc = env.MAILCHIMP_API_KEY.split("-")[1] || "us15";
-  const apiUrl = `https://${dc}.api.mailchimp.com/3.0/lists/${MC_LIST_ID}/members/${md5(email)}`;
-  let resp;
-  try {
-    resp = await fetch(apiUrl, {
-      method: "PATCH",
-      headers: {
-        "Authorization": "Basic " + btoa("anystring:" + env.MAILCHIMP_API_KEY),
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    });
-  } catch (e) {
-    return json({ ok: false, msg: "Couldn't reach Mailchimp — please try again." }, 502);
-  }
-  if (resp.status === 404) {
-    return json({ ok: false, msg: "We couldn't find that email on our list. Use the address you subscribed with, or sign up first." });
-  }
-  if (resp.status >= 200 && resp.status < 300) {
-    // Member confirmed — now safe to mirror into Customer.io. Best-effort;
-    // its result never changes the response the user sees.
-    const cioStatus = await cioIdentify(env, email, cioAttrs);
+  const cioStatus = await cioIdentify(env, email, cioAttrs);
+  if (cioStatus === "ok") {
     return json({ ok: true, msg: "Your info has been updated — thank you!", cio: cioStatus });
   }
-  let detail = "";
-  try { const j = await resp.json(); detail = j.detail || j.title || ""; } catch (_) {}
-  return json({ ok: false, msg: detail || `Update failed (${resp.status}).` });
+  return json({ ok: false, msg: "Couldn't save your info right now — please try again.", cio: cioStatus }, 502);
 }
 
 // MD5 (public-domain, Paul Johnston implementation). Mailchimp's subscriber
