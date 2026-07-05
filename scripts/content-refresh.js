@@ -6233,13 +6233,13 @@ async function main() {
     }
   }
 
-  // ── 6. Mailchimp Blog Sync ──
-  const existingBlogPosts = extractJsArray(govHubSrc, 'BLOG_POSTS') || [];
-  const updatedBlogPosts = await syncMailchimpBlog(existingBlogPosts);
-  if (updatedBlogPosts && updatedBlogPosts.length !== existingBlogPosts.length) {
-    govHubSrc = replaceJsValue(govHubSrc, 'BLOG_POSTS', updatedBlogPosts, false);
-    changed = true;
-  }
+  // ── 6. Blog Sync — RETIRED 2026-07-06 with the Mailchimp cutover ──
+  // Blog posts used to be pulled from the Mailchimp campaign archive. Mailchimp
+  // is gone, so that source is dead: existing BLOG_POSTS are FROZEN (left exactly
+  // as-is), and the bot no longer fetches Mailchimp. New blog posts are a future
+  // decision (Customer.io broadcasts / hand-curated). syncMailchimpBlog() and
+  // MAILCHIMP_ARCHIVE_FEED above are now dead code, retained pending that
+  // decision; nothing calls them.
 
   // ── 7. Telluride Humane Society Adoptable Animals ──
   // Pass the existing array IN so syncHumaneSocietyAnimals can preserve
