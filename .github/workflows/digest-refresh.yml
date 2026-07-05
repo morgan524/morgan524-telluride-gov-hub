@@ -63,8 +63,8 @@ jobs:
             node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
           fi
 
-          export WE_SUBJ="${WE_SUBJ_LOCK:-The Weekend Outlook - $WE_LABEL}"
-          export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead - $WK_LABEL}"
+          export WE_SUBJ="${WE_SUBJ_LOCK:-The Weekend Ahead Outlook - $WE_LABEL}"
+          export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead Outlook - $WK_LABEL}"
           export WE_COV="Fri $(date -u -d "$WE" '+%b %-d') to Sun $(date -u -d "$WE +2 days" '+%b %-d, %Y')"
           export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
           export WE WK   # ISO weekStart per digest → the desk passes it to /save so the lock matches
@@ -72,8 +72,8 @@ jobs:
           python3 - <<'PY'
           import json, os
           m={"generated":os.environ["GEN"],"digests":{
-            "weekend":{"name":"Weekend Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"},
-            "weekly":{"name":"Week Ahead","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}}
+            "weekend":{"name":"The Weekend Ahead Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"},
+            "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}}
           open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
           print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
           PY
