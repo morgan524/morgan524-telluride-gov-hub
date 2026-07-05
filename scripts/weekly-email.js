@@ -577,39 +577,10 @@ const festCard = (f) => {
 };
 const festivalHero = festivalsThisWeek.map(festCard).join('');
 
-// ── Customer.io mode (CUSTOMERIO=1) ──
-// Emit the per-section blocks as a message_data JSON instead of the single
-// Mailchimp paste HTML. A Customer.io broadcast then assembles each email
-// per-person via Liquid (Claude Files/customerio-weekly-liquid-template.html),
-// showing only the sections a subscriber's topic_* attributes opt into. The
-// Mailchimp path below is unchanged.
-if (process.env.CUSTOMERIO) {
-  const topicBlock = (key, label) => {
-    const seen = new Set();
-    const rows = evts
-      .filter((e) => eventCategory(e) === key)
-      .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
-      .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
-      .slice(0, 8).map(evRow).join('');
-    return rows ? section(label, rows) : '';
-  };
-  // Same pure-ASCII entity pass the email uses, so the blocks render cleanly.
-  const ascii = (s) => Array.from(String(s)).map((ch) => { const cp = ch.codePointAt(0); return cp > 127 ? '&#' + cp + ';' : ch; }).join('');
-  const md = {
-    label:         LABEL,
-    lede:          LEDE,
-    meetings_html: WEEKEND ? '' : section('Public Meetings This Week', mh),
-    events_html:   festivalHero + section(EVENTS_HEADING, eh),
-    arts_html:     WEEKEND ? '' : topicBlock('arts', 'Music & Arts This Week'),
-    family_html:   WEEKEND ? '' : topicBlock('family', 'Family & Kids This Week'),
-    outdoors_html: WEEKEND ? '' : topicBlock('outdoors', 'Outdoors & Recreation This Week'),
-  };
-  for (const k of Object.keys(md)) md[k] = ascii(md[k]);
-  fs.writeFileSync(OUT, JSON.stringify(md, null, 2));
-  console.log('message_data → ' + OUT + ': ' + Object.entries(md).map(([k, v]) => `${k}(${v.length})`).join(' '));
-  console.log('SUBJECT=' + EMAIL_TITLE + ' — ' + LABEL);
-  process.exit(0);
-}
+// (The old CUSTOMERIO=1 message_data mode was retired 2026-07-06 with the
+// customerio-weekly.yml auto-broadcast — the weekly email now sends only
+// through the human-approved Digest Review Desk, which uses this normal
+// rendered-HTML output.)
 
 const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
 @media only screen and (max-width:480px){
