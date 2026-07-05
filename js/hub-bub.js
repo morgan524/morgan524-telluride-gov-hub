@@ -5,14 +5,7 @@
 (function() {
   'use strict';
   // ─── Firebase Configuration ───
-  const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-    authDomain: "telluride-gov-hub.firebaseapp.com",
-    projectId: "telluride-gov-hub",
-    storageBucket: "telluride-gov-hub.firebasestorage.app",
-    messagingSenderId: "14117089764",
-    appId: "1:14117089764:web:4287985258f0bc929cd7f1"
-  };
+  const FIREBASE_CONFIG = SITE_CONFIG.FIREBASE;
   // ─── Initialize Firebase ───
   let app, auth, db, storage;
   let hbUser = null;           // Current authenticated user

@@ -2313,14 +2313,7 @@
                    return setTimeout(go, 100);
                  }
                  try {
-                   if (!firebase.apps.length) firebase.initializeApp({
-                     apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-                     authDomain: "telluride-gov-hub.firebaseapp.com",
-                     projectId: "telluride-gov-hub",
-                     storageBucket: "telluride-gov-hub.firebasestorage.app",
-                     messagingSenderId: "14117089764",
-                     appId: "1:14117089764:web:4287985258f0bc929cd7f1"
-                   });
+                   if (!firebase.apps.length) firebase.initializeApp(SITE_CONFIG.FIREBASE);
                    firebase.firestore().collection('event_submissions')
                      .where('status', '==', 'approved').get()
                      .then(snap => {
@@ -2438,14 +2431,7 @@
       //    mailto to info@ that links to a /event-review.html draft (rendered
       //    from URL params) so the approver can SEE the flyer + layout before
       //    approving/denying. Anonymous Firebase Auth gates the upload. ──────
-      const FB_CONFIG = {
-        apiKey: "AIzaSyCyAjB0RA_LtoETyRqxVJor0lRB4NRyXF0",
-        authDomain: "telluride-gov-hub.firebaseapp.com",
-        projectId: "telluride-gov-hub",
-        storageBucket: "telluride-gov-hub.firebasestorage.app",
-        messagingSenderId: "14117089764",
-        appId: "1:14117089764:web:4287985258f0bc929cd7f1"
-      };
+      const FB_CONFIG = SITE_CONFIG.FIREBASE;
       let _storage = null, _auth = null, _db = null;
       function ensureFirebase() {
         if (_db) return Promise.resolve();
