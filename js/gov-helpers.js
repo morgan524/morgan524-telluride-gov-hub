@@ -390,7 +390,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -441,7 +441,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -2849,17 +2849,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Pickleball Open Play",
-    link: "https://koto.org/event/pickleball-open-play/2026-07-05/",
-    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
-    pubDate: "2026-07-05T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "5th of July picnic with the San Miguel County Democrats in Telluride Town Park",
     link: "https://koto.org/event/5th-of-july-picnic-with-the-san-miguel-county-democrats-in-telluride-town-park/",
     description: "The San Miguel County Democrats invite the public to a picnic on July 5 from 10:30-2 at Telluride Town Park to celebrate and defend 250 years of America's democracy. Food and drinks provided.",
@@ -2869,17 +2858,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
-  },
-  {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://koto.org/event/gentle-yoga-with-kristen-milord-2/2026-07-05/",
-    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-07-05T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
   },
   {
     title: "Drop In Tech Time with Oliver",

@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2026 16:19:47 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 19:31:14 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 5–11</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-26</guid>
-      <pubDate>Sun, 05 Jul 2026 16:19:47 GMT</pubDate>
-      <description><![CDATA[The most consequential meeting this week is Monday's Open Space Commission, where three competing trail alignments for Valley Floor Reach 1 are on the table — routes that thread around wetland delineations and will shape how people move through that land for a long time. The Telluride Mountain Club is also asking permission to route a quarter-mile of long-planned trail through open space, which is the kind of incremental decision that adds up. Mid-week, the Planning Commission and BOCC sit down together Thursday to work through Land Use Code amendments touching forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but this is where the language gets written.]]></description>
+      <pubDate>Sun, 05 Jul 2026 19:31:14 GMT</pubDate>
+      <description><![CDATA[The Planning Commission and Board of County Commissioners are sitting down together Thursday for a joint work session on proposed Land Use Code amendments covering forestry practices, oil and gas, deep geothermal operations, and condominium plats — no final votes, but this is where the shape of those changes gets worked out. Earlier in the week, the Open Space Commission takes up real decisions on Valley Floor trail alignments and a Telluride Mountain Club request to route a quarter-mile of trail through open space. The rest of the week is lighter on civic business but full of summer: a pie contest, Market on the Plaza, birding walks, and the 5th of July picnic in Town Park.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -55,18 +55,6 @@ The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage
       <media:content url="https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Sun, Jul 5] Pickleball Open Play</title>
-      <link>https://koto.org/event/pickleball-open-play/2026-07-05/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/pickleball%20open%20play%7C2026-07-05</guid>
-      <pubDate>Sun, 05 Jul 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sun, Jul 5] 5th of July picnic with the San Miguel County Democrats in Telluride Town Park</title>
@@ -127,7 +115,7 @@ The San Miguel County Democrats invite the public to a picnic on July 5 from 10:
 
 Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.
 
-⚡ Why it matters: Three Valley Floor trail routes up for review; wetlands and access hang in the balance.]]></description>
+⚡ Why it matters: Commission chooses Valley Floor trail routes; Mountain Club access request decided.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -387,6 +375,18 @@ A crowd pleaser for more than 15 years attracting those from near and far, the S
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Jul 8] Sound Bath with Danielle &amp; Ian</title>
+      <link>https://koto.org/event/sound-bath-with-danielle-ian/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/sound%20bath%20with%20danielle%7C2026-07-08</guid>
+      <pubDate>Wed, 08 Jul 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 – 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] SMART Board of Directors — 2026-07-09</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-07-09%7CSMART%20Board%20of%20Directors</guid>
@@ -417,7 +417,7 @@ The July 9, 2026 Planning Commission Meeting agenda hasn't been posted yet.]]></
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: Land Use Code rewrites on forestry, oil, gas, geothermal, and condo plats take shape here.]]></description>
+⚡ Why it matters: Land Use Code rewrites covering forestry, oil, gas, geothermal, and condos take shape.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
