@@ -3692,6 +3692,15 @@ const SHERIDAN_EVENTS = [
 // (e.g. the Feb–Mar 2026 Strategy & Growth Bootcamp).
 const TELLURIDE_VENTURE_EVENTS = [];
 
+// West End / regional venue event feeds (Tribe Events API), bot-managed by
+// content-refresh.js Tasks 11-13 + Sherbino. Declared empty here so the bot's
+// splice has a target; they populate on the next content-refresh run and are
+// consumed by events.html + the weekly email.
+const NUCLA_NATURITA_EVENTS = [];
+const CLUB_RED_SHOWS = [];
+const FRESH_FOOD_HUB_EVENTS = [];
+const SHERBINO_EVENTS = [];
+
 // Beacon — outreach to seasonal / young-adult workers (beacontelluride.com).
 // Maintained by the `beacon-events-refresh` scheduled task, which re-reads
 // https://www.beacontelluride.com/upcoming-events weekly and re-derives this
