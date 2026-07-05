@@ -817,7 +817,7 @@
       // one-click Accept/Deny links. Never blocks posting; failure is silent.
       try {
         if (docRef && docRef.id) {
-          fetch('https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/moderate', {
+          fetch(SITE_CONFIG.RSS_PROXY_BASE + '/moderate', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ postId: docRef.id, title: title, body: body, authorName: hbResolveName(hbUser) })
           }).catch(function() {});
@@ -2048,7 +2048,7 @@
 
   // ── Open-Graph link-preview helpers ────────────────────────────────────────
   var HB_OG_CACHE = {};
-  var HB_OG_WORKER = 'https://livabletelluride-rss-proxy.morgan-8f0.workers.dev/og';
+  var HB_OG_WORKER = SITE_CONFIG.RSS_PROXY_BASE + '/og';
 
   function hbFetchOgPreview(url, cb) {
     if (!url) return;
