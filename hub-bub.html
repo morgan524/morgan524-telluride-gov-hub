@@ -1712,48 +1712,19 @@
   <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
   <script>
   (function () {
-    /* ── Mailchimp JSONP submit ──
-       IMPORTANT: must use the audience-specific subdomain
-       (letpeopledecide.us15.list-manage.com), NOT the bare us15
-       datacenter host. Mailchimp's JSONP form-embed endpoint only
-       lives at <audience>.<dc>.list-manage.com. Until 2026-05-29
-       this used the bare datacenter URL, so every Hub-Bub signup
-       silently failed to land in Mailchimp — the script callback
-       returned an error, mcSubscribe's caller logged a console.warn
-       (best-effort), and Firebase account creation proceeded. Users
-       got a Hub-Bub forum account but never received the digest or
-       blog posts. Always preserve the audience subdomain. */
-    const MC_POST = 'https://letpeopledecide.us15.list-manage.com/subscribe/post-json?u=5d9192289b9af78822f2f69bf&id=f83dc56387';
+    /* ── Newsletter signup ──
+       Mailchimp was retired 2026-07-06 in favor of Customer.io. The actual
+       subscription write now happens in the signup handler's callback below,
+       via the Worker POST /update-profile (which upserts the Customer.io
+       contact + subscription attributes by name — the same reliable path the
+       Event Topics already used). This shim keeps mcSubscribe's async
+       callback contract so the signup control flow (subscribe → create
+       Firebase account → sign in) is unchanged; it just no longer contacts
+       Mailchimp. */
     function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, cb) {
-      const params = new URLSearchParams({
-        EMAIL: email,
-        FNAME: firstName,
-        LNAME: lastName,
-      });
-      if (region) params.set('MMERGE6', region);   // Region (East End / West End / Ridgway/Ouray)
-      if (digestFreq) params.set('MMERGE9', digestFreq);
-      // NOTE: we deliberately do NOT send group[7915][24641]/[24642] here.
-      // Those numbers are Mailchimp embedded-form "web IDs" that the audience
-      // API IGNORES — so they silently never attached, and signups ended up
-      // with MMERGE9=weekly but in NEITHER the Newsletter nor Weekly Update
-      // group (which is what the campaigns target). The Newsletter + Weekly
-      // Update groups are now set by NAME via the Worker /update-profile call
-      // in the signup handler (same reliable path as the Event Topics).
-      // mcSubscribe just creates the member + sets merge fields.
-      // JSONP — supply the callback name explicitly via `&c=` (the
-      // function name window[cbName] must match). No `c=?` placeholder
-      // in MC_POST, otherwise two `c=` params race and Mailchimp picks
-      // whichever it parses last.
-      const cbName = '_mc_cb_' + Date.now();
-      window[cbName] = function (data) {
-        delete window[cbName];
-        document.head.removeChild(script);
-        cb(data.result === 'success', data.msg || '');
-      };
-      const script = document.createElement('script');
-      script.src = MC_POST + '&' + params.toString() + '&c=' + cbName;
-      script.onerror = () => { delete window[cbName]; cb(false, 'Network error.'); };
-      document.head.appendChild(script);
+      // No external call — the Customer.io write is the /update-profile POST in
+      // the callback. Invoke asynchronously to preserve the original timing.
+      setTimeout(function () { cb(true, ''); }, 0);
     }
 
     /* ── Firebase Auth helper ── */
@@ -1926,37 +1897,31 @@
       btn.disabled = true;
       btn.textContent = 'Creating account…';
 
-      // Step 1: Mailchimp subscribe — BEST EFFORT, never blocks account
-      // creation. A mailing-list hiccup (Mailchimp down, weird response,
-      // etc.) must not stop someone from getting their Hub-Bub account and
-      // being logged in. Failures are logged, not surfaced as a hard error.
-      // Show immediate feedback so existing subscribers don't see a blank
-      // button during the Mailchimp round-trip.
+      // Step 1: newsletter subscribe — BEST EFFORT, never blocks account
+      // creation. The subscription write is the Worker /update-profile POST in
+      // the callback below (Customer.io); mcSubscribe is now a shim. A
+      // mailing-list hiccup must never stop someone from getting their Hub-Bub
+      // account and being logged in, so failures are logged, not surfaced.
       showMsg('hbSignupMsg', 'Creating your account…', 'info');
 
       mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, function (ok, msg) {
-        // Mailchimp is BEST-EFFORT — existing subscribers (already in the list)
-        // will get ok=false with an "already subscribed" message. Any other
-        // Mailchimp failure (network, quota, etc.) is also non-fatal. We log
-        // it and always proceed to Firebase account creation so that having an
-        // existing Mailchimp subscription never blocks getting a Hub-Bub login.
-        if (!ok) console.warn('Hub-Bub signup: Mailchimp (' + (msg||'unknown') + ') — proceeding to Firebase.');
+        // The subscribe shim above never fails; kept best-effort + non-blocking
+        // so a subscription hiccup can never stop Firebase account creation.
+        if (!ok) console.warn('Hub-Bub signup: subscribe (' + (msg||'unknown') + ') — proceeding to Firebase.');
 
-        // Subscriptions + Event Topics — ALL set by NAME via the Worker, which
-        // resolves each name → the real Mailchimp interest ID and PATCHes the
-        // member. This is the reliable path: the JSONP group[][] params above
-        // use web IDs the API ignores. The member was just created (or already
-        // existed), so PATCH-by-email works. Always sent (not just when topics
-        // are chosen) so Newsletter/Weekly Update actually attach. Event topics
-        // are only included when the weekly email is on (they ride in it).
+        // Subscriptions + Event Topics — ALL set by NAME via the Worker
+        // /update-profile call below, which upserts the Customer.io contact and
+        // its subscription attributes by name (weekly / newsletter / the four
+        // Event Topics). Always sent (not just when topics are chosen) so
+        // Newsletter/Weekly Update actually attach. Event topics ride along only
+        // when the weekly email is on.
         const subs = {
           weekly: digestFreq === 'weekly',
           newsletter: includeNewsletter,
         };
         if (digestFreq === 'weekly') topics.forEach(function (t) { subs[t] = true; });
-        // Also pass name + region as merge fields so the Worker's Customer.io
-        // dual-write captures them on signup (Mailchimp already got them via
-        // the JSONP call above; re-sending is idempotent).
+        // Name + region ride along as fields → Customer.io first_name / last_name
+        // / region attributes.
         var profFields = { FNAME: firstName, LNAME: lastName };
         if (region) profFields.MMERGE6 = region;
         try {
