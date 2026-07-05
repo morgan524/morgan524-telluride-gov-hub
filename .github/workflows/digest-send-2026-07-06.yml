@@ -1,0 +1,92 @@
+name: Digest Send — one-shot 2026-07-06 06:00 MT
+
+# ONE-SHOT scheduled send. Fires the APPROVED weekly digest (digest/week.html)
+# to the Customer.io "everyone" broadcast at 06:00 America/Denver on 2026-07-06
+# (MDT = UTC-6, so 12:00 UTC). It POSTs the exact same payload the Digest Review
+# Desk's "Approve & Send" button posts — i.e. this is an automated Approve & Send.
+#
+# WHO IT REACHES is the segment that CUSTOMERIO_BROADCAST_ID targets in the
+# Customer.io UI. Make sure that broadcast points at the full "Weekly Update"
+# segment (everyone), not a test/Me-Only segment, or this reaches the wrong list.
+#
+# A UTC-date guard makes this a true one-shot (the yearly cron can't re-fire on a
+# future July 6). Delete this file after it has run.
+on:
+  schedule:
+    - cron: '0 12 6 7 *'    # 2026-07-06 12:00 UTC == 06:00 MDT
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type SEND to fire the real broadcast to everyone now'
+        required: true
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Guard — only the intended date / explicit confirm
+        id: guard
+        run: |
+          set -eo pipefail
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            if [ "${{ github.event.inputs.confirm }}" = "SEND" ]; then
+              echo "manual confirm=SEND — proceeding"; echo "go=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "manual run without confirm=SEND — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"
+            fi
+          else
+            TODAY="$(date -u +%F)"
+            if [ "$TODAY" = "2026-07-06" ]; then
+              echo "scheduled fire on $TODAY — proceeding"; echo "go=true" >> "$GITHUB_OUTPUT"
+            else
+              echo "stray cron fire on $TODAY (expected 2026-07-06) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Fire the approved weekly digest to the everyone broadcast
+        if: steps.guard.outputs.go == 'true'
+        env:
+          DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
+          WORKER_BASE: https://livabletelluride-digest.morgan-8f0.workers.dev
+        run: |
+          set -eo pipefail
+          test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.error
+          html = open("digest/week.html", encoding="utf-8").read()
+          man  = json.load(open("digest/manifest.json"))
+          subject = man["digests"]["weekly"]["subject"]
+          if len(html) < 2000:
+              raise SystemExit(f"digest/week.html looks too small ({len(html)} bytes) — aborting send")
+          payload = json.dumps({"emailHtml": html, "subject": subject, "test": False, "key": "weekly"}).encode()
+          req = urllib.request.Request(
+              os.environ["WORKER_BASE"] + "/send",
+              data=payload,
+              headers={"Content-Type": "application/json", "x-digest-key": os.environ["DIGEST_KEY"]},
+              method="POST")
+          try:
+              with urllib.request.urlopen(req) as r:
+                  body = r.read().decode()
+          except urllib.error.HTTPError as e:
+              raise SystemExit(f"HTTP {e.code}: {e.read().decode()[:400]}")
+          print("response:", body)
+          res = json.loads(body)
+          if not res.get("ok"):
+              raise SystemExit("Send did not return ok: " + body)
+          print(f"SENT broadcast — subject: {subject}")
+          PY
+
+      - name: CI health issue
+        if: failure()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Digest scheduled send (2026-07-06) failed'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
