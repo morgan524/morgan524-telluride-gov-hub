@@ -2050,12 +2050,14 @@
                    endDateStr = ed.toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
                    endDiff = (new Date(endDateStr + 'T00:00:00') - today) / 86400000;
                    // Any MULTI-DAY event (spans more than one calendar day —
-                   // e.g. the 4-week Rotary Hikeathon or a 3-night concert run)
-                   // renders in the left "Ongoing Events" sidebar instead of as
-                   // a single date-pinned grid card. The grid stays single-day
-                   // only. Festivals have their own sidebar, so exclude them here.
+                   // e.g. the 4-week Rotary Hikeathon, a 3-night concert run, or
+                   // a multi-day festival like MusicFest) is "long running": it
+                   // renders as a full-span band on the Recurring Events calendar
+                   // AND gets a single Daily grid card on its START day only (see
+                   // the split in finishAndRender). Festivals are included now —
+                   // they used to be forced to a persistent single-day Daily card.
                    const spanDays = (new Date(endDateStr + 'T00:00:00') - new Date(dateStr + 'T00:00:00')) / 86400000;
-                   isLongRunning = !e.isFestival && spanDays >= 1;
+                   isLongRunning = spanDays >= 1;
                  }
                }
                if (endDiff < 0 || diff > maxDays) return;
@@ -2206,17 +2208,16 @@
                  keys.forEach(k => seenKeys.add(k));
                  return true;
                });
-               // Split the set: single-day events + festivals → "Daily Events"
-               // grid; multi-day non-festival series → the "Recurring Events"
-               // calendar. The Music on the Green umbrella span is suppressed —
-               // its per-band single-day cards already cover it in Daily Events.
-               // A festival can survive dedup as its telluride.com copy (no
-               // isFestival flag), so also match marquee festivals BY NAME to
-               // keep them in Daily Events, not the Recurring calendar.
-               const FEST_NAMES = (typeof TELLURIDE_FESTIVALS !== 'undefined' ? TELLURIDE_FESTIVALS : [])
-                 .map(f => String(f.name || '').toLowerCase()).filter(Boolean);
-               const isFestivalTitle = (t) => { const x = String(t || '').toLowerCase(); return FEST_NAMES.some(n => x.includes(n) || n.includes(x)); };
-               const isRecurring  = (e) => e.isLongRunning && !e.isFestival && !isFestivalTitle(e.title);
+               // Split the set. Every MULTI-DAY event (isLongRunning — now
+               // including multi-day festivals like MusicFest) goes to the
+               // "Recurring Events" calendar as a full-span band for its ENTIRE
+               // period, AND gets a single "Daily Events" card on its START day
+               // only (it drops out of the Daily grid once that day has passed,
+               // instead of lingering as a stale single-day card for the whole
+               // run). Single-day events live only in the Daily grid. The Music
+               // on the Green umbrella span is suppressed from both — its
+               // per-band single-day cards already cover it in Daily Events.
+               const isRecurring  = (e) => !!e.isLongRunning;
                const isSuppressed = (e) => {
                  if (!isRecurring(e)) return false;
                  const t = (e.title || '').toLowerCase();
@@ -2224,13 +2225,25 @@
                  for (const s of RECURRING_ACT_SERIES) if (s && t.includes(s)) return true;  // has specific acts in recurring-acts.json
                  return false;
                };
+               const todayStr = todayMT();
                RECURRING.length = 0;
                deduped.filter(e => isRecurring(e) && !isSuppressed(e))
                  .sort((a,b) => a.date.localeCompare(b.date))
-                 .forEach((e, i) => { e.idx = i; e.color = RC_PALETTE[i % RC_PALETTE.length]; e.title = rcDecode(e.title); if (e.summary) e.summary = rcDecode(e.summary); if (e.location) e.location = rcDecode(e.location); if (e.source) e.source = rcDecode(e.source); RECURRING.push(e); });
+                 // Push a CLONE: a long-running event is also in EVENTS (its
+                 // start-day Daily card) and rcDecode mutates title/summary, so
+                 // sharing the object would corrupt the Daily copy.
+                 .forEach((e, i) => { const c = { ...e }; c.idx = i; c.color = RC_PALETTE[i % RC_PALETTE.length]; c.title = rcDecode(c.title); if (c.summary) c.summary = rcDecode(c.summary); if (c.location) c.location = rcDecode(c.location); if (c.source) c.source = rcDecode(c.source); RECURRING.push(c); });
                if (deduped.length > 0) {
                  EVENTS.length = 0;
-                 deduped.filter(e => !isRecurring(e))
+                 // Daily grid: all single-day events, plus a long-running event
+                 // ONLY while its start day is still today or ahead (so it shows
+                 // on day one and then hands off to the Recurring calendar).
+                 // Suppressed umbrella spans (Music on the Green) show in neither.
+                 deduped.filter(e => {
+                     if (isSuppressed(e)) return false;
+                     if (isRecurring(e)) return e.date >= todayStr;
+                     return true;
+                   })
                    .sort((a,b) => a.date.localeCompare(b.date))
                    .forEach(e => EVENTS.push(e));
                  render();
