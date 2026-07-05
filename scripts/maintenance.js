@@ -306,18 +306,13 @@ function checkParity() {
 const FEED_URL = 'https://livabletelluride.org/feed.xml';
 const FEED_STALE_HOURS = 12;
 const EVENTS_CONFIG_FILE = path.join(REPO_ROOT, 'email-events-config.json');
-// The subscriber email is currently a MANUAL weekly REGULAR campaign (pasted from
-// scripts/weekly-email.js), not an RSS-driven daily digest — so check for any
-// recently-SENT campaign on a weekly cadence (8 days = 1 week + 1 day grace, so a
-// skipped week is flagged the day after it was due rather than two days later).
-const MAILCHIMP_STALE_HOURS = 192;
 
 async function checkFeedFreshness() {
   console.log('\n📰 Liveness: feed.xml freshness...');
   try {
     const res = await fetchText(FEED_URL, 10000);
     if (res.status !== 200) {
-      issues.push(`feed.xml fetch returned HTTP ${res.status} — Mailchimp digest can't consume the feed. URL: ${FEED_URL}`);
+      issues.push(`feed.xml fetch returned HTTP ${res.status} — the site RSS feed is unreachable. URL: ${FEED_URL}`);
       return;
     }
     const m = res.body.match(/<lastBuildDate>([^<]+)<\/lastBuildDate>/);
@@ -390,65 +385,6 @@ async function checkEventsSheet() {
   }
 }
 
-async function checkMailchimpDigests() {
-  console.log('\n📧 Liveness: Mailchimp digest campaigns...');
-  const apiKey = process.env.MAILCHIMP_API_KEY;
-  if (!apiKey) {
-    console.log('  ℹ MAILCHIMP_API_KEY not set — skipping digest campaign check.');
-    console.log('     To enable: create an API key at https://us15.admin.mailchimp.com/account/api/');
-    console.log('     and add it as a GitHub Actions secret named MAILCHIMP_API_KEY.');
-    return;
-  }
-  // Mailchimp API keys carry their data-center suffix: e.g. "abc123-us15".
-  const dc = (apiKey.split('-')[1] || 'us15');
-  // Any sent campaign (regular OR rss) — the weekly subscriber email is a manual
-  // REGULAR campaign now, so don't filter by type=rss (that caused a permanent
-  // false "no RSS campaign ever sent" warning).
-  const url = `https://${dc}.api.mailchimp.com/3.0/campaigns?status=sent&count=10&sort_field=send_time&sort_dir=DESC`;
-  try {
-    const res = await fetchText(url, 15000, {
-      // Mailchimp accepts HTTP Basic with "anystring:<api-key>".
-      'Authorization': 'Basic ' + Buffer.from('anystring:' + apiKey).toString('base64'),
-      'Accept': 'application/json'
-    });
-    if (res.status === 401) {
-      issues.push(`Mailchimp API returned 401 — MAILCHIMP_API_KEY is invalid or revoked`);
-      return;
-    }
-    if (res.status !== 200) {
-      issues.push(`Mailchimp API returned HTTP ${res.status} for campaigns list`);
-      return;
-    }
-    let parsed;
-    try { parsed = JSON.parse(res.body); }
-    catch (_) { issues.push('Mailchimp API returned non-JSON body'); return; }
-    const campaigns = parsed.campaigns || [];
-    if (campaigns.length === 0) {
-      issues.push(
-        `No Mailchimp campaigns have ever been sent. The weekly subscriber email ` +
-        `is a manual REGULAR campaign (build with scripts/weekly-email.js, paste into ` +
-        `Mailchimp → Campaigns → Regular, send to the Weekly Update group). Confirm ` +
-        `at https://us15.admin.mailchimp.com/.`
-      );
-      return;
-    }
-    const latest = campaigns[0];
-    const sentAt = new Date(latest.send_time);
-    const hoursSinceLast = (Date.now() - sentAt.getTime()) / 3600000;
-    if (hoursSinceLast > MAILCHIMP_STALE_HOURS) {
-      issues.push(
-        `No Mailchimp campaign has been sent in ${(hoursSinceLast / 24).toFixed(1)} days ` +
-        `(threshold: ${(MAILCHIMP_STALE_HOURS / 24).toFixed(0)} days). The weekly subscriber ` +
-        `email may have been missed — it's a manual paste-and-send for now. Build it with ` +
-        `scripts/weekly-email.js and send the Regular campaign to the Weekly Update group.`
-      );
-    } else {
-      console.log(`  ✓ Latest Mailchimp campaign sent ${hoursSinceLast.toFixed(1)}h ago — "${latest.settings && latest.settings.subject_line || '?'}"`);
-    }
-  } catch (e) {
-    issues.push(`Mailchimp API check failed: ${e.message}`);
-  }
-}
 
 // ── Liveness: Telluride Times scrape (TT_AUTH_COOKIE) ──
 // TT scraping uses an authenticated cookie (GH secret TT_AUTH_COOKIE) that

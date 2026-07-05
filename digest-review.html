@@ -265,7 +265,7 @@ $("approve").onclick=async()=>{
   const d=state[cur];
   if(!confirm('Approve and POST "'+d.subject+'" to the '+d.audience+' segment?')) return;
   showStatus('<span class="spin"></span> Posting via Customer.io…'); $("approve").disabled=true;
-  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, test:false });
+  try{ const r=await api("/send",{ emailHtml:d.html, subject:d.subject, test:false, key:cur });
     if(r.ok) showStatus("✓ Posted to the "+d.audience+" segment via Customer.io.");
     else if(r.pending) showStatus("⏳ "+r.error,true);
     else showStatus("⚠ "+(r.error||"send failed")+(r.detail?" — "+r.detail:""),true);
