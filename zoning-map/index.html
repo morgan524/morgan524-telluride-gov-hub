@@ -1866,7 +1866,7 @@ function addOverlayLayers() {
     source:"parcels",
     "source-layer":"parcel",
     layout:{ visibility:"none" },
-    filter:["all", ["!=", ["get", "high_country"], "True"], ["!=", ["get", "open_space"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!=", ["get", "SUBNAME"], "SOCIETY TURN BUSINESS PARK SUBDIVISION/PUD"], ["!=", ["get", "PIN"], "456335100067"], ["any", ["==", ["get", "buildable_unrestricted"], "True"], ["==", ["get", "buildable_unrestricted"], true]]],
+    filter:["all", ["!=", ["get", "high_country"], "True"], ["!=", ["get", "open_space"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!=", ["get", "SUBNAME"], "SOCIETY TURN BUSINESS PARK SUBDIVISION/PUD"], ["!=", ["get", "PIN"], "456335100067"], ["!=", ["get", "PIN"], "456336300001"], ["any", ["==", ["get", "buildable_unrestricted"], "True"], ["==", ["get", "buildable_unrestricted"], true]]],
     paint:{
       "fill-color":"#c45a2a",
       "fill-opacity":0.58
