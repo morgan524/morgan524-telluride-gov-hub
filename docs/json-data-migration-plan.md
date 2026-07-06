@@ -33,9 +33,17 @@ NOT mirrored (by design): static hand-only config in gov-data.js — `LOCAL_ORGS
 `KEY_ISSUE_TIERS`, `DEEP_DIVE_PAGES` — not bot-data, so mirroring them is pure
 hand-edit friction with no migration payoff (revisit at the reader-flip if needed).
 
-Next: begin flipping READERS one at a time — the browser loads `data/*.json`
-instead of the JS global. That's the first client-visible step; do it per-array,
-each proven identical via the parity harness (#61), with a browser check.
+**Phase 2 STARTED — first reader flipped (2026-07-06): `BLOG_POSTS` on
+deep-dives.html.** The blog list now `fetch()`es `data/blog-posts.json` (~10 KB)
+instead of loading the full ~511 KB `gov-helpers.js` just for that array — with a
+fallback: on ANY fetch failure it loads gov-helpers.js and reads the `BLOG_POSTS`
+global (the old path). Verified in-browser: identical 18-card render, gov-helpers
+NOT loaded, no console errors. Reversible (restore the old loader).
+
+Pattern for each subsequent flip: JSON-first `fetch()` + global fallback (both
+still exist), browser-verify identical render, ship. Once a page no longer reads
+a JS global at all, it can drop the gov-helpers.js/gov-data.js load entirely.
+Then, once every reader of an array is flipped, delete that JS literal (Phase 6).
 
 ## Why
 
