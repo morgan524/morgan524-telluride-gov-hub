@@ -32,21 +32,38 @@ console.log('parcels from v18:', parcelData.features.length);
 // ── HIGH COUNTRY AREA zoning rings ──
 const zon = JSON.parse(fs.readFileSync(ZON, 'utf8'));
 function ringsOf(g) { const o = []; if (!g) return o; if (g.type === 'Polygon') o.push(...g.coordinates); else if (g.type === 'MultiPolygon') for (const p of g.coordinates) o.push(...p); return o; }
-const hcRings = [], osRings = [];
+const hcRings = [], osRings = [], airRings = [];
 const OPEN_SPACE_ZONES = new Set(['OPEN SPACE', 'OPEN SPACE CONSERVATION EASEMENT']);
 for (const f of zon.features) {
-  const z = String((f.properties || {}).ZONING || '');
+  const props = f.properties || {};
+  const z = String(props.ZONING || '');
   if (z === 'HIGH COUNTRY AREA') hcRings.push(...ringsOf(f.geometry));
   else if (OPEN_SPACE_ZONES.has(z)) osRings.push(...ringsOf(f.geometry));
+  // Airport height restriction is a NOTES_USE annotation on certain zoning
+  // polygons (independent of the base ZONING value). Applied by OVERLAP, not
+  // centroid — the note says "MAY BE SUBJECT" and parcels straddle the edge.
+  if (/airport height restriction/i.test(String(props.NOTES_USE || ''))) airRings.push(...ringsOf(f.geometry));
 }
 function ptInRing(x, y, ring) { let inside = false; for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) { const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1]; if (((yi > y) != (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) inside = !inside; } return inside; }
 function centroid(g) { const rs = ringsOf(g); if (!rs.length) return null; const r = rs[0]; let xs = 0, ys = 0, n = 0; for (const c of r) { xs += c[0]; ys += c[1]; n++; } return n ? [xs / n, ys / n] : null; }
+function ringBbox(rings) { const b = [Infinity, Infinity, -Infinity, -Infinity]; for (const r of rings) for (const c of r) { if (c[0] < b[0]) b[0] = c[0]; if (c[1] < b[1]) b[1] = c[1]; if (c[0] > b[2]) b[2] = c[0]; if (c[1] > b[3]) b[3] = c[1]; } return b; }
+function bboxOverlap(a, b) { return !(a[2] < b[0] || b[2] < a[0] || a[3] < b[1] || b[3] < a[1]); }
+const airBbox = ringBbox(airRings);
+// A parcel is airport-restricted if it OVERLAPS any airport-restriction ring:
+// any parcel vertex inside an airport ring, or any airport vertex inside a
+// parcel ring (hole-free polygons). Gated by a bbox pre-filter for speed.
+function airportOverlap(pRings) {
+  if (!bboxOverlap(ringBbox(pRings), airBbox)) return false;
+  for (const pr of pRings) for (const c of pr) if (airRings.some(ar => ptInRing(c[0], c[1], ar))) return true;
+  for (const ar of airRings) for (const c of ar) if (pRings.some(pr => ptInRing(c[0], c[1], pr))) return true;
+  return false;
+}
 
 const round6 = n => Math.round(n * 1e6) / 1e6;
 function roundCoords(node) { if (Array.isArray(node)) return node.map(roundCoords); if (node && typeof node === 'object') { const o = {}; for (const k of Object.keys(node)) o[k] = k === 'coordinates' ? roundNums(node[k]) : roundCoords(node[k]); return o; } return node; }
 function roundNums(n) { return Array.isArray(n) ? n.map(roundNums) : (typeof n === 'number' ? round6(n) : n); }
 
-let taggedHc = 0, taggedOs = 0;
+let taggedHc = 0, taggedOs = 0, taggedAir = 0;
 for (const f of parcelData.features) {
   if (f.properties) delete f.properties.LEGAL;
   const c = centroid(f.geometry);
@@ -55,8 +72,10 @@ for (const f of parcelData.features) {
   if (hcRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.high_country = 'True'; taggedHc++; }
   // OPEN SPACE / OPEN SPACE CONSERVATION EASEMENT zoning = protected, not developable
   if (osRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.open_space = 'True'; taggedOs++; }
+  // Airport height restriction — parcel OVERLAP (not centroid), shown in the popup
+  if (airportOverlap(ringsOf(f.geometry))) { f.properties.airport_restriction = 'True'; taggedAir++; }
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
-console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs);
+console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir);
 console.log('wrote', path.join(outDir, 'parcel.json'), (fs.statSync(path.join(outDir, 'parcel.json')).size / 1e6).toFixed(1) + 'MB');
