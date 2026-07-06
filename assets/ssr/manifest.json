@@ -1,6 +1,36 @@
 {
   "documents": [
     {
+      "id": "14347",
+      "title": "July SSR No. 6 Meeting Packet",
+      "slug": "July-SSR-No-6-Meeting-Packet",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14347/July-SSR-No-6-Meeting-Packet",
+      "localPath": "assets/ssr/14347-July-SSR-No-6-Meeting-Packet.pdf",
+      "contentType": "application/pdf",
+      "bytes": 329736,
+      "firstSeen": "2026-07-06T20:15:13.942Z"
+    },
+    {
+      "id": "14346",
+      "title": "Affordable Housing Land Use Code Update",
+      "slug": "document-14346",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14346",
+      "localPath": "assets/ssr/14346-document-14346.pdf",
+      "contentType": "application/pdf",
+      "bytes": 7445027,
+      "firstSeen": "2026-07-06T20:15:13.687Z"
+    },
+    {
+      "id": "14345",
+      "title": "Affordable Housing Code Update Appendix A Redline",
+      "slug": "document-14345",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14345",
+      "localPath": "assets/ssr/14345-document-14345.pdf",
+      "contentType": "application/pdf",
+      "bytes": 580387,
+      "firstSeen": "2026-07-06T20:15:13.859Z"
+    },
+    {
       "id": "14256",
       "title": "April SSR No. 5 Meeting High-Level Summary",
       "slug": "SSR-No-5-April-Meeting-High-Level-Summary",
@@ -131,5 +161,5 @@
       "firstSeen": "2026-04-27T17:16:56.032Z"
     }
   ],
-  "lastChecked": "2026-07-06T15:55:40.000Z"
+  "lastChecked": "2026-07-06T20:15:13.942Z"
 }
