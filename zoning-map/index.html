@@ -1,0 +1,2145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>San Miguel County Zoning and Parcel Development Map</title>
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+<style>
+:root {
+  --green:#24483d;
+  --paper:#fffdf7;
+  --tan:#f3eadb;
+  --line:#cfc4b1;
+  --ink:#2b2b2b;
+  --blue:#0b5e8e;
+}
+html,body { height:100%; margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:#e8dfd0; }
+#app { height:100%; display:grid; grid-template-columns:410px 1fr; }
+#sidebar { background:var(--paper); border-right:1px solid var(--line); overflow:auto; box-shadow:0 0 18px rgba(0,0,0,.16); z-index:2; }
+header { padding:20px 20px 16px; background:var(--green); color:white; }
+h1 { margin:0 0 7px; font-size:22px; line-height:1.1; }
+header p { margin:0; font-size:13px; opacity:.92; line-height:1.35; }
+.panel { padding:15px 18px; border-bottom:1px solid var(--line); }
+label { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.08em; font-weight:750; color:#5d574e; margin:0 0 6px; }
+input,select,button { box-sizing:border-box; width:100%; border:1px solid #b9ad9b; border-radius:7px; background:white; padding:9px 10px; font-size:14px; }
+button { cursor:pointer; background:var(--green); color:white; border:0; font-weight:700; }
+button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; }
+.row { display:flex; gap:8px; margin-top:8px; }
+.row button { flex:1; }
+.check { display:flex; gap:8px; align-items:center; font-size:14px; margin-top:10px; }
+.check input { width:auto; }
+.small { font-size:12px; line-height:1.35; color:#666; }
+#map { position:relative; width:100%; height:100%; }
+#mapbox-note { position:absolute; right:14px; bottom:30px; z-index:1; background:rgba(255,253,247,.95); border:1px solid var(--line); border-radius:8px; padding:9px 12px; max-width:395px; font-size:12px; box-shadow:0 2px 10px rgba(0,0,0,.16); }
+#selection h2 { margin:0 0 8px; font-size:18px; color:var(--green); }
+.field { margin:5px 0; font-size:13px; line-height:1.35; word-break:break-word; }
+.field b { color:#444; }
+.results { max-height:190px; overflow:auto; margin-top:8px; border:1px solid var(--line); border-radius:7px; display:none; background:white; }
+.result { padding:8px 9px; border-bottom:1px solid #eee; cursor:pointer; font-size:13px; }
+.result:hover { background:#f2eee5; }
+.result small { display:block; color:#666; margin-top:2px; }
+#legend { max-height:250px; overflow:auto; }
+.legend-item { display:grid; grid-template-columns:18px 1fr 32px; gap:7px; align-items:center; font-size:12px; margin:4px 0; }
+.legend-item span { width:14px; height:14px; border:1px solid rgba(0,0,0,.25); }
+.legend-item button { background:transparent; color:#222; border:0; text-align:left; padding:0; font-weight:500; font-size:12px; }
+.legend-item em { color:#777; font-style:normal; text-align:right; }
+.mapboxgl-popup-content { font:13px/1.35 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; max-width:320px; }
+.mapboxgl-popup-content h3 { margin:0 0 7px; color:var(--green); }
+@media(max-width:850px) {
+  #app { grid-template-columns:1fr; grid-template-rows:55% 45%; }
+  #sidebar { order:2; border-right:0; border-top:1px solid var(--line); }
+  #map { order:1; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+<aside id="sidebar">
+  <header>
+    <h1>San Miguel County Zoning</h1>
+    <p>Mapbox version with a visible regional basemap beneath transparent zoning colors, an official San Miguel County boundary outline, with parcel outlines visible by default, optional roads, and a parcel development status view.</p>
+  </header>
+
+  <div class="panel">
+    <label for="addressSearch">Address search</label>
+    <input id="addressSearch" placeholder="Enter driveway address, road, owner, or PIN">
+    <div class="row"><button id="findAddress">Find Address</button></div>
+    <div id="addressResults" class="results"></div>
+    <p class="small">Searches uploaded driveway address points. Selecting a result zooms to the address and drops a marker with zoning, parcel, and subdivision information where matched.</p>
+  </div>
+
+  <div class="panel">
+    <label>Map view</label>
+    <div class="row">
+      <button id="viewZoning">Zoning</button>
+      <button class="secondary" id="viewPuds">Show PUDs</button>
+      <button class="secondary" id="viewBuiltLand">Vacant Lots</button>
+    </div>
+    <div class="row">
+      <button class="secondary" id="viewSubdivisions">Show Subdivisions</button>
+      <button class="secondary" id="viewClear">Clear</button>
+    </div>
+    <div class="row">
+      <button class="secondary" id="viewBuildable">Buildable w/o Restrictions</button>
+    </div>
+
+    <div id="zoningFilterBlock">
+      <label for="zoning" style="margin-top:12px;">Filter by zoning</label>
+      <select id="zoning"><option value="">All zoning categories (412)</option><option value="ACCOMMODATIONS & RECREATION 1">ACCOMMODATIONS & RECREATION 1 (1)</option>
+<option value="ACCOMMODATIONS & RECREATION 2">ACCOMMODATIONS & RECREATION 2 (1)</option>
+<option value="ACCOMMODATIONS DISTRICT 1">ACCOMMODATIONS DISTRICT 1 (1)</option>
+<option value="ACCOMMODATIONS DISTRICT 2">ACCOMMODATIONS DISTRICT 2 (2)</option>
+<option value="AFFORDABLE HOUSING PUD">AFFORDABLE HOUSING PUD (9)</option>
+<option value="AFFORDABLE HOUSING WEST">AFFORDABLE HOUSING WEST (1)</option>
+<option value="CEMETERY DISTRICT">CEMETERY DISTRICT (1)</option>
+<option value="COMMERCIAL">COMMERCIAL (4)</option>
+<option value="COMMUNITY HOUSING">COMMUNITY HOUSING (1)</option>
+<option value="FORESTRY/AGRICULTURE">FORESTRY/AGRICULTURE (46)</option>
+<option value="HEAVY COMMERCIAL">HEAVY COMMERCIAL (4)</option>
+<option value="HIGH COUNTRY AREA">HIGH COUNTRY AREA (4)</option>
+<option value="HILLSIDE DEVELOPING DISTRICT 2">HILLSIDE DEVELOPING DISTRICT 2 (1)</option>
+<option value="HILLSIDE DEVELOPING I">HILLSIDE DEVELOPING I (1)</option>
+<option value="HILLSIDE TRANSITIONAL">HILLSIDE TRANSITIONAL (6)</option>
+<option value="HISTORIC COMMERCIAL">HISTORIC COMMERCIAL (1)</option>
+<option value="HISTORIC RESIDENTIAL">HISTORIC RESIDENTIAL (1)</option>
+<option value="INDUSTRIAL">INDUSTRIAL (38)</option>
+<option value="LOW DENSITY">LOW DENSITY (26)</option>
+<option value="LOW DENSITY RESIDENTIAL">LOW DENSITY RESIDENTIAL (2)</option>
+<option value="MEDIUM DENSITY">MEDIUM DENSITY (16)</option>
+<option value="MIXED USE">MIXED USE (1)</option>
+<option value="MOBILE HOME">MOBILE HOME (12)</option>
+<option value="NORWOOD AGRICULTURAL">NORWOOD AGRICULTURAL (1)</option>
+<option value="NORWOOD B1">NORWOOD B1 (24)</option>
+<option value="NORWOOD PUBLIC">NORWOOD PUBLIC (10)</option>
+<option value="NORWOOD PUD R1">NORWOOD PUD R1 (1)</option>
+<option value="NORWOOD R1">NORWOOD R1 (39)</option>
+<option value="OPEN SPACE">OPEN SPACE (14)</option>
+<option value="OPEN SPACE CONSERVATION EASEMENT">OPEN SPACE CONSERVATION EASEMENT (6)</option>
+<option value="PARK">PARK (9)</option>
+<option value="PENDING">PENDING (1)</option>
+<option value="PLACERVILLE COMMERCIAL">PLACERVILLE COMMERCIAL (15)</option>
+<option value="PLACERVILLE RESIDENTIAL">PLACERVILLE RESIDENTIAL (2)</option>
+<option value="PLANNED UNIT DEVELOPMENT">PLANNED UNIT DEVELOPMENT (10)</option>
+<option value="PUBLIC">PUBLIC (12)</option>
+<option value="PUBLIC PURPOSE">PUBLIC PURPOSE (3)</option>
+<option value="PUBLIC PURPOSE   PARKING">PUBLIC PURPOSE   PARKING (2)</option>
+<option value="RANGELAND/GRAZING">RANGELAND/GRAZING (1)</option>
+<option value="RESIDENTIAL">RESIDENTIAL (31)</option>
+<option value="RESIDENTIAL/COMMERCIAL">RESIDENTIAL/COMMERCIAL (2)</option>
+<option value="RESIDENTIAL/COMMERCIAL/GONDOLA OVERLAY">RESIDENTIAL/COMMERCIAL/GONDOLA OVERLAY (1)</option>
+<option value="SPLIT SEE NOTES">SPLIT SEE NOTES (10)</option>
+<option value="TELLURIDE RESIDENTIAL">TELLURIDE RESIDENTIAL (7)</option>
+<option value="TOWN COMMERCIAL">TOWN COMMERCIAL (2)</option>
+<option value="UNASSIGNED">UNASSIGNED (14)</option>
+<option value="WEST END">WEST END (2)</option>
+<option value="WEST HILLSIDE">WEST HILLSIDE (1)</option>
+<option value="WRIGHTS MESA">WRIGHTS MESA (8)</option>
+<option value="WRIGHTS MESA LIGHT INDUSTRIAL">WRIGHTS MESA LIGHT INDUSTRIAL (3)</option>
+<option value="WRIGHTS MESA RURAL AGRICULTURAL">WRIGHTS MESA RURAL AGRICULTURAL (1)</option></select>
+    </div>
+
+    <div id="subdivisionFilterBlock" style="display:none;">
+      <label for="subdivisionFilter" style="margin-top:12px;">Filter subdivisions</label>
+      <select id="subdivisionFilter" disabled>
+        <option value="">All subdivisions (426)</option>
+        <option value="116 WEST COLUMBIA">116 WEST COLUMBIA</option>
+        <option value="127 SO. OAK ST. CONDOS">127 SO. OAK ST. CONDOS</option>
+        <option value="150 WEST CONDOS">150 WEST CONDOS</option>
+        <option value="205 SOUTH OAK RESIDENCES">205 SOUTH OAK RESIDENCES</option>
+        <option value="211 SOUTH OAK RESIDENCES">211 SOUTH OAK RESIDENCES</option>
+        <option value="237 S OAK CONDO">237 S OAK CONDO</option>
+        <option value="330 West Pacific Condos">330 West Pacific Condos</option>
+        <option value="340 WEST PACIFIC CONDOS">340 WEST PACIFIC CONDOS</option>
+        <option value="350 WEST PACIFIC CONDOS">350 WEST PACIFIC CONDOS</option>
+        <option value="408 WEST PACIFIC CONDOS">408 WEST PACIFIC CONDOS</option>
+        <option value="419 Depot Condominiums">419 Depot Condominiums</option>
+        <option value="449 WEST GALENA CONDO">449 WEST GALENA CONDO</option>
+        <option value="467 WEST DAKOTA">467 WEST DAKOTA</option>
+        <option value="469 WEST PACIFIC TOWNHOME CONDOS">469 WEST PACIFIC TOWNHOME CONDOS</option>
+        <option value="513 WEST PACIFIC RESIDENCES">513 WEST PACIFIC RESIDENCES</option>
+        <option value="545 WEST PACIFIC">545 WEST PACIFIC</option>
+        <option value="547 WEST PACIFIC STREET">547 WEST PACIFIC STREET</option>
+        <option value="548 TELLURIDE CONDOS">548 TELLURIDE CONDOS</option>
+        <option value="555 WEST GALENA AVENUE">555 WEST GALENA AVENUE</option>
+        <option value="586 WEST PACIFIC CONDO">586 WEST PACIFIC CONDO</option>
+        <option value="784 SMUGGLER">784 SMUGGLER</option>
+        <option value="792 MAHONEY DRIVE CONDOS">792 MAHONEY DRIVE CONDOS</option>
+        <option value="ADAMS RANCH">ADAMS RANCH</option>
+        <option value="ADAMS RANCH CONDO">ADAMS RANCH CONDO</option>
+        <option value="AJAX CONDOS">AJAX CONDOS</option>
+        <option value="ALDASORO RANCH">ALDASORO RANCH</option>
+        <option value="ALDER CANYON RANCHES">ALDER CANYON RANCHES</option>
+        <option value="ALTA LAKES">ALTA LAKES</option>
+        <option value="ANDERSON RANCH">ANDERSON RANCH</option>
+        <option value="ASPEN RIDGE">ASPEN RIDGE</option>
+        <option value="ASPEN RIDGEII CONDOS">ASPEN RIDGEII CONDOS</option>
+        <option value="AVALON MESA">AVALON MESA</option>
+        <option value="BACKMAN VILLAGE">BACKMAN VILLAGE</option>
+        <option value="BALLARD HOUSE">BALLARD HOUSE</option>
+        <option value="BASE AT TELLURIDE AKA CIMMARON">BASE AT TELLURIDE AKA CIMMARON</option>
+        <option value="BEAR CREEK LOFTS">BEAR CREEK LOFTS</option>
+        <option value="BEAVER PINES">BEAVER PINES</option>
+        <option value="BEAVER POND">BEAVER POND</option>
+        <option value="BEAVER POND SUBDIVISION">BEAVER POND SUBDIVISION</option>
+        <option value="BELVEDERE PARK CONDO">BELVEDERE PARK CONDO</option>
+        <option value="BERMAN BUCKSKIN RANCH">BERMAN BUCKSKIN RANCH</option>
+        <option value="BIG VALLEY RANCH">BIG VALLEY RANCH</option>
+        <option value="BLACK BEAR">BLACK BEAR</option>
+        <option value="BLIZILS">BLIZILS</option>
+        <option value="BLUE CANYON RANCHES">BLUE CANYON RANCHES</option>
+        <option value="BLUE MESA CONDO">BLUE MESA CONDO</option>
+        <option value="BLUE MESA LODGE CONDOS">BLUE MESA LODGE CONDOS</option>
+        <option value="BLUE VISTA SUBDIVISION">BLUE VISTA SUBDIVISION</option>
+        <option value="BLUFFS">BLUFFS</option>
+        <option value="BOOMERANG LODGE CONDO">BOOMERANG LODGE CONDO</option>
+        <option value="BOOMERANG VILLAGE CONDO">BOOMERANG VILLAGE CONDO</option>
+        <option value="BOSTON COMMONS">BOSTON COMMONS</option>
+        <option value="BOULDER VILLAGE">BOULDER VILLAGE</option>
+        <option value="BOYD SUBDIVISION">BOYD SUBDIVISION</option>
+        <option value="BRAZY HOUSE">BRAZY HOUSE</option>
+        <option value="BREWERY PROPERTY">BREWERY PROPERTY</option>
+        <option value="BRIDAL VEIL TOWNHOUSE">BRIDAL VEIL TOWNHOUSE</option>
+        <option value="BROWN DOG RANCH">BROWN DOG RANCH</option>
+        <option value="BROWN HOMESTEAD">BROWN HOMESTEAD</option>
+        <option value="BROWN RANCH">BROWN RANCH</option>
+        <option value="BROWN RANCH EAST">BROWN RANCH EAST</option>
+        <option value="BROWN RANCH ESTATES">BROWN RANCH ESTATES</option>
+        <option value="BROWN RANCH NORTH">BROWN RANCH NORTH</option>
+        <option value="BROWN RANCH WEST">BROWN RANCH WEST</option>
+        <option value="BUCKNAM">BUCKNAM</option>
+        <option value="BUSS SUBDIVISION">BUSS SUBDIVISION</option>
+        <option value="CABINS AT GOLD HILL">CABINS AT GOLD HILL</option>
+        <option value="CABINS ON THE GREEN">CABINS ON THE GREEN</option>
+        <option value="CAMELS GARDEN">CAMELS GARDEN</option>
+        <option value="CANON TRACTS">CANON TRACTS</option>
+        <option value="CANYONLANDS">CANYONLANDS</option>
+        <option value="CARIBOO">CARIBOO</option>
+        <option value="CASCADE CONDO">CASCADE CONDO</option>
+        <option value="CASSIDY RIDGE">CASSIDY RIDGE</option>
+        <option value="CASTELLINA">CASTELLINA</option>
+        <option value="CENTRUM CONDOS">CENTRUM CONDOS</option>
+        <option value="CHARLIE DENT ESTATE">CHARLIE DENT ESTATE</option>
+        <option value="CHARLIES PLACE">CHARLIES PLACE</option>
+        <option value="CLEARWATER">CLEARWATER</option>
+        <option value="CLUB TELLURIDE">CLUB TELLURIDE</option>
+        <option value="COLORADO PLACE">COLORADO PLACE</option>
+        <option value="COLT MEADOWS RANCH">COLT MEADOWS RANCH</option>
+        <option value="COLUMBIA HOTEL CONDO'S">COLUMBIA HOTEL CONDO'S</option>
+        <option value="COLUMBIA PLACE">COLUMBIA PLACE</option>
+        <option value="COLUMBIA WEST CONDO">COLUMBIA WEST CONDO</option>
+        <option value="COLUMBINE">COLUMBINE</option>
+        <option value="COONSKIN CONDO">COONSKIN CONDO</option>
+        <option value="COPPS ADDITION">COPPS ADDITION</option>
+        <option value="CORNERSTONE MINOR">CORNERSTONE MINOR</option>
+        <option value="CORNET FALLS">CORNET FALLS</option>
+        <option value="CORTINA LAND CONDOS">CORTINA LAND CONDOS</option>
+        <option value="COTTONWOOD CREEK ESTATE">COTTONWOOD CREEK ESTATE</option>
+        <option value="COURCHEVAL">COURCHEVAL</option>
+        <option value="COYOTE COURT">COYOTE COURT</option>
+        <option value="CRADLE PARK">CRADLE PARK</option>
+        <option value="CREEKSIDE CONDOS">CREEKSIDE CONDOS</option>
+        <option value="CRYSTAL">CRYSTAL</option>
+        <option value="DAHL HOUSE">DAHL HOUSE</option>
+        <option value="DAKOTA ADDITION">DAKOTA ADDITION</option>
+        <option value="DAKOTA PLACE CONDOS">DAKOTA PLACE CONDOS</option>
+        <option value="DAVED COMMERCIAL CONDO">DAVED COMMERCIAL CONDO</option>
+        <option value="DEEP CREEK PLACER">DEEP CREEK PLACER</option><option value="DEEP CREEK RANCHES">DEEP CREEK RANCHES</option>
+        <option value="DEPOT CONDO">DEPOT CONDO</option>
+        <option value="DEPOT RIVERSIDE">DEPOT RIVERSIDE</option>
+        <option value="DIAMOND RANCH">DIAMOND RANCH</option>
+        <option value="DIAMOND RIDGE">DIAMOND RIDGE</option>
+        <option value="DIAMOND TOOTH BUILDING">DIAMOND TOOTH BUILDING</option>
+        <option value="DORAL HOTEL">DORAL HOTEL</option>
+        <option value="DOUBLE CABINS TOWNHOMES">DOUBLE CABINS TOWNHOMES</option>
+        <option value="DOUBLE DIAMOND CONDO">DOUBLE DIAMOND CONDO</option>
+        <option value="Deep Creek Mesa Ranch">Deep Creek Mesa Ranch</option>
+        <option value="EAGLE VIEW RESERVE ESTTES">EAGLE VIEW RESERVE ESTTES</option>
+        <option value="EAST COLORADO AVE RES AND COMM LAND CONDOS">EAST COLORADO AVE RES AND COMM LAND CONDOS</option>
+        <option value="EAST PANDORA">EAST PANDORA</option>
+        <option value="EAST TELLURIDE ADDITION">EAST TELLURIDE ADDITION</option>
+        <option value="EAST TELLURIDE BLOCK 24">EAST TELLURIDE BLOCK 24</option>
+        <option value="EIDER CREEK CONDO">EIDER CREEK CONDO</option>
+        <option value="EL DIENTE">EL DIENTE</option>
+        <option value="ELEMENT 52 A BLDG">ELEMENT 52 A BLDG</option>
+        <option value="ELEMENT 52 CENTRAL BLDG">ELEMENT 52 CENTRAL BLDG</option>
+        <option value="ELEMENT 52 EAST BLDG">ELEMENT 52 EAST BLDG</option>
+        <option value="ELEMENT 52 RIVERHOUSE">ELEMENT 52 RIVERHOUSE</option>
+        <option value="ELEMENT 52 S CENTRAL BLDG">ELEMENT 52 S CENTRAL BLDG</option>
+        <option value="ELEMENT 52 SW BLDG">ELEMENT 52 SW BLDG</option>
+        <option value="ELEMENT 52 WEST BLDG">ELEMENT 52 WEST BLDG</option>
+        <option value="ELK MEADOWS">ELK MEADOWS</option>
+        <option value="ELK RUN">ELK RUN</option>
+        <option value="ELKS BUILDING CONDO">ELKS BUILDING CONDO</option>
+        <option value="ELKSTONE">ELKSTONE</option>
+        <option value="ELKSTONE CABINS">ELKSTONE CABINS</option>
+        <option value="EMPORIUM BUILDING">EMPORIUM BUILDING</option>
+        <option value="ENTRADA">ENTRADA</option>
+        <option value="ESTATE RANCHES">ESTATE RANCHES</option>
+        <option value="ETTA PLACE CONDO">ETTA PLACE CONDO</option>
+        <option value="ETTA PLACE TOO CONDO">ETTA PLACE TOO CONDO</option>
+        <option value="EXCHANGE PLACE CONDOS">EXCHANGE PLACE CONDOS</option>
+        <option value="Elk Creek Meadows Ranch">Elk Creek Meadows Ranch</option>
+        <option value="FAGO TOWERS">FAGO TOWERS</option>
+        <option value="FAIRWAY FOUR">FAIRWAY FOUR</option>
+        <option value="FALL CREEK SUBDIVISION">FALL CREEK SUBDIVISION</option>
+        <option value="FALL CREEK VILLAGE">FALL CREEK VILLAGE</option>
+        <option value="FALL LINE">FALL LINE</option>
+        <option value="FALLS AT TELLURIDE">FALLS AT TELLURIDE</option>
+        <option value="FCB CONDO">FCB CONDO</option>
+        <option value="FERRIC OXIDE PLACER SUB">FERRIC OXIDE PLACER SUB</option>
+        <option value="FINNEGAN RANCH">FINNEGAN RANCH</option>
+        <option value="FINO CONDO">FINO CONDO</option>
+        <option value="FOX CONDO">FOX CONDO</option>
+        <option value="FRONTIER">FRONTIER</option>
+        <option value="GARDNER">GARDNER</option>
+        <option value="GARGOYLE CONDO">GARGOYLE CONDO</option>
+        <option value="GHOSTRIDERS CONDO">GHOSTRIDERS CONDO</option>
+        <option value="GILBERT AND DAVIDSON CONDO">GILBERT AND DAVIDSON CONDO</option>
+        <option value="GOLD BELT CONDO">GOLD BELT CONDO</option>
+        <option value="GOLD DUST CROSSING">GOLD DUST CROSSING</option>
+        <option value="GOLD KING SUBDIVISION">GOLD KING SUBDIVISION</option>
+        <option value="GOLD RUN SUB EAST TELLURIDE">GOLD RUN SUB EAST TELLURIDE</option>
+        <option value="GOLDEN BEAR RANCH">GOLDEN BEAR RANCH</option>
+        <option value="GOLDEN LEDGE">GOLDEN LEDGE</option>
+        <option value="GOLDSWORTHY">GOLDSWORTHY</option>
+        <option value="GONDOLA PLAZA PARKING">GONDOLA PLAZA PARKING</option>
+        <option value="GONDOLA WEST TOWNHOME">GONDOLA WEST TOWNHOME</option>
+        <option value="GOURLEYS ADDITION">GOURLEYS ADDITION</option>
+        <option value="GRACIE SKY MOUNTAIN RANCH">GRACIE SKY MOUNTAIN RANCH</option>
+        <option value="GRANITA CONDO">GRANITA CONDO</option>
+        <option value="GRAY HEAD AT TELLURIDE">GRAY HEAD AT TELLURIDE</option>
+        <option value="GRAYSILL CONDO">GRAYSILL CONDO</option>
+        <option value="GREAT AMERICAN">GREAT AMERICAN</option>
+        <option value="GREGORY CONDOS">GREGORY CONDOS</option>
+        <option value="GURLEY CANYON RANCH">GURLEY CANYON RANCH</option>
+        <option value="GURLEY LAKE RANCHES">GURLEY LAKE RANCHES</option>
+        <option value="HALLS ADDITION">HALLS ADDITION</option>
+        <option value="HAMPTON COURT TH CONDO">HAMPTON COURT TH CONDO</option>
+        <option value="HARDMAN SUBDIVISION">HARDMAN SUBDIVISION</option>
+        <option value="HASTINGS ESTATES">HASTINGS ESTATES</option>
+        <option value="HASTINGS MESA ESTATE">HASTINGS MESA ESTATE</option>
+        <option value="HERITAGE CROSSING AT GONDOLA CONDO">HERITAGE CROSSING AT GONDOLA CONDO</option>
+        <option value="HERNDON SUB EXEMPTION">HERNDON SUB EXEMPTION</option>
+        <option value="HIDDEN LAKE ESTATES">HIDDEN LAKE ESTATES</option>
+        <option value="HIGHLAND MEADOWS RANCH">HIGHLAND MEADOWS RANCH</option>
+        <option value="HIGHLINE PLANNED COMMUNITY">HIGHLINE PLANNED COMMUNITY</option>
+        <option value="HILLSIDE OF NORWOOD">HILLSIDE OF NORWOOD</option>
+        <option value="HILLSIDE OF TELLURIDE">HILLSIDE OF TELLURIDE</option>
+        <option value="HOLLAND ADDITION">HOLLAND ADDITION</option>
+        <option value="HOMESTEAD OF THE SHINING MTN">HOMESTEAD OF THE SHINING MTN</option>
+        <option value="HOMESTEAD SUBDIVISION">HOMESTEAD SUBDIVISION</option>
+        <option value="HOTEL TELLURIDE CONDO">HOTEL TELLURIDE CONDO</option>
+        <option value="HUB BUSINESS">HUB BUSINESS</option>
+        <option value="HUNTER'S GULCH">HUNTER'S GULCH</option>
+        <option value="ICE HOUSE">ICE HOUSE</option>
+        <option value="ICE HOUSE LODGE CONDOS">ICE HOUSE LODGE CONDOS</option>
+        <option value="IDARADO SUBDIVISION">IDARADO SUBDIVISION</option>
+        <option value="ILIUM VALLEY">ILIUM VALLEY</option>
+        <option value="INN AT LOST CREEK">INN AT LOST CREEK</option>
+        <option value="IRONWOOD AT TELLURIDE">IRONWOOD AT TELLURIDE</option>
+        <option value="JAWS CONDO">JAWS CONDO</option>
+        <option value="KAYENTA LEGEND HOUSE">KAYENTA LEGEND HOUSE</option>
+        <option value="KAYENTA PHASE II">KAYENTA PHASE II</option>
+        <option value="KING AND WILLIAMS">KING AND WILLIAMS</option>
+        <option value="KNOLL ESTATES">KNOLL ESTATES</option>
+        <option value="KOTO SUBDIVISION">KOTO SUBDIVISION</option>
+        <option value="LA JOLLA">LA JOLLA</option>
+        <option value="LA MESA VISTA">LA MESA VISTA</option>
+        <option value="LAKE FORK JUNCTION">LAKE FORK JUNCTION</option>
+        <option value="LAKES AT CARSTENS RANCH">LAKES AT CARSTENS RANCH</option>
+        <option value="LAST DOLLAR CONDO">LAST DOLLAR CONDO</option>
+        <option value="LAST DOLLAR PUD">LAST DOLLAR PUD</option>
+        <option value="LAST DOLLAR TRACTS">LAST DOLLAR TRACTS</option>
+        <option value="LAWSON HILL">LAWSON HILL</option>
+        <option value="LAWSON HILL ILIUM">LAWSON HILL ILIUM</option>
+        <option value="LE CHAMONIX CONDO">LE CHAMONIX CONDO</option>
+        <option value="LE CHATEAU CONDO">LE CHATEAU CONDO</option>
+        <option value="LIFTSIDE VILLAS">LIFTSIDE VILLAS</option>
+        <option value="LITCHFIELD BUILDING CONDO">LITCHFIELD BUILDING CONDO</option>
+        <option value="LITTLE CONE RANCHES">LITTLE CONE RANCHES</option>
+        <option value="LITTLE LAKE RANCHES">LITTLE LAKE RANCHES</option>
+        <option value="LITTLE ROSE">LITTLE ROSE</option>
+        <option value="LIVERY CONDOS">LIVERY CONDOS</option>
+        <option value="LIZARD HEAD LAND COMPANY">LIZARD HEAD LAND COMPANY</option>
+        <option value="LODGES ON SUNDANCE">LODGES ON SUNDANCE</option>
+        <option value="LONE CONE LIBRARY SUBDIVISION">LONE CONE LIBRARY SUBDIVISION</option>
+        <option value="LONGWILL 16">LONGWILL 16</option>
+        <option value="LORENZ CONDOS">LORENZ CONDOS</option>
+        <option value="LORIAN AT PROSPECT">LORIAN AT PROSPECT</option>
+        <option value="LOT 161A-1R BUILDING">LOT 161A-1R BUILDING</option>
+        <option value="LOT 28 CONDOMINIUMS (LUMIERE)">LOT 28 CONDOMINIUMS (LUMIERE)</option>
+        <option value="LULU CITY CONDO">LULU CITY CONDO</option>
+        <option value="MAIN STREET CONDO">MAIN STREET CONDO</option>
+        <option value="MANITOU RIVERHOUSES">MANITOU RIVERHOUSES</option>
+        <option value="MATTERHORN TOWNHOMES">MATTERHORN TOWNHOMES</option>
+        <option value="MCKEEVERS ADDITION">MCKEEVERS ADDITION</option>
+        <option value="MCKENZIE SPRING RANCH">MCKENZIE SPRING RANCH</option>
+        <option value="MEADOWS AT DEEP CRK">MEADOWS AT DEEP CRK</option>
+        <option value="MEADOWS AT LONE CONE">MEADOWS AT LONE CONE</option>
+        <option value="MENDOTA RESIDENCES">MENDOTA RESIDENCES</option>
+        <option value="MERIBEL RESIDENCES">MERIBEL RESIDENCES</option>
+        <option value="MERRIMACK">MERRIMACK</option>
+        <option value="MILL PLACER">MILL PLACER</option>
+        <option value="MINERS UNION CONDO">MINERS UNION CONDO</option>
+        <option value="MORNINGSTAR CONDOMINIUMS">MORNINGSTAR CONDOMINIUMS</option>
+        <option value="MOUNTAIN VIEW ESTATES">MOUNTAIN VIEW ESTATES</option>
+        <option value="MULFORD BUILDING">MULFORD BUILDING</option>
+        <option value="MUSCATEL FLATS">MUSCATEL FLATS</option>
+        <option value="Manna Condominiums">Manna Condominiums</option>
+        <option value="NEEDLE ROCK">NEEDLE ROCK</option>
+        <option value="NIX ADDITION">NIX ADDITION</option>
+        <option value="NORTH BEAVER POND">NORTH BEAVER POND</option>
+        <option value="NORTH GURLEY RESERVE">NORTH GURLEY RESERVE</option>
+        <option value="NORTH GURLEY RESERVE FILING 3">NORTH GURLEY RESERVE FILING 3</option>
+        <option value="NORTH TELLURIDE ADDITION">NORTH TELLURIDE ADDITION</option>
+        <option value="NORTHSTAR B">NORTHSTAR B</option>
+        <option value="NORWOOD">NORWOOD</option>
+        <option value="NORWOOD GARDEN ESTATES">NORWOOD GARDEN ESTATES</option>
+        <option value="NORWOOD LIVERY">NORWOOD LIVERY</option>
+        <option value="OAK HILL">OAK HILL</option>
+        <option value="OAK STREET TOWNHOMES">OAK STREET TOWNHOMES</option>
+        <option value="OLD ELAM RANCH">OLD ELAM RANCH</option>
+        <option value="OLD PLACERVILLE ESTATE">OLD PLACERVILLE ESTATE</option>
+        <option value="OPHIR">OPHIR</option>
+        <option value="ORE STATION LODGE">ORE STATION LODGE</option>
+        <option value="OUTLAWS AT PROSPECT CREEK">OUTLAWS AT PROSPECT CREEK</option>
+        <option value="OWL MEADOWS">OWL MEADOWS</option>
+        <option value="PACIFIC DAVIS">PACIFIC DAVIS</option>
+        <option value="PACIFIC PLACE">PACIFIC PLACE</option>
+        <option value="PACIFIC STREET">PACIFIC STREET</option>
+        <option value="PACIFIC STREET TOWNHOMES">PACIFIC STREET TOWNHOMES</option>
+        <option value="PACIFICA HOUSE">PACIFICA HOUSE</option>
+        <option value="PAINTER BLDG CONDO">PAINTER BLDG CONDO</option>
+        <option value="PALMYRA">PALMYRA</option>
+        <option value="PANORAMA ACRES">PANORAMA ACRES</option>
+        <option value="PARKER RIDGE">PARKER RIDGE</option>
+        <option value="PARKSIDE">PARKSIDE</option>
+        <option value="PARKVIEW BUILDING">PARKVIEW BUILDING</option>
+        <option value="PATHFINDER">PATHFINDER</option>
+        <option value="PEARL SUBDIVISION">PEARL SUBDIVISION</option>
+        <option value="PEHRSON RANCH">PEHRSON RANCH</option>
+        <option value="PEKKARINE">PEKKARINE</option>
+        <option value="PENINSULA">PENINSULA</option>
+        <option value="PENINSULA PARK">PENINSULA PARK</option>
+        <option value="PENINSULA PINES">PENINSULA PINES</option>
+        <option value="PENINSULA POINT">PENINSULA POINT</option>
+        <option value="PICK AND GAD">PICK AND GAD</option>
+        <option value="PINE MEADOWS">PINE MEADOWS</option>
+        <option value="PINE STREET GARDENS">PINE STREET GARDENS</option>
+        <option value="PIONEER VILLAGE">PIONEER VILLAGE</option>
+        <option value="PLACERVALLEY VILLAGE">PLACERVALLEY VILLAGE</option>
+        <option value="PLACERVILLE">PLACERVILLE</option>
+        <option value="PLAZA">PLAZA</option>
+        <option value="PLEASANT VIEW">PLEASANT VIEW</option>
+        <option value="PLUNGE CONDO">PLUNGE CONDO</option>
+        <option value="PLUNGE LANDING">PLUNGE LANDING</option>
+        <option value="POINTE AT LAWSON HILL">POINTE AT LAWSON HILL</option>
+        <option value="PONDEROSA RIDGE">PONDEROSA RIDGE</option>
+        <option value="POPCORN ALLEY">POPCORN ALLEY</option>
+        <option value="PRESERVE">PRESERVE</option>
+        <option value="PRIMROSE">PRIMROSE</option>
+        <option value="PROSPECT CREEK">PROSPECT CREEK</option>
+        <option value="PROSPECT HOUSE CONDOS">PROSPECT HOUSE CONDOS</option>
+        <option value="PROSPECT PLAZA">PROSPECT PLAZA</option>
+        <option value="PTARMIGAN AT ILLIUM">PTARMIGAN AT ILLIUM</option>
+        <option value="PTARMIGAN RANCH">PTARMIGAN RANCH</option>
+        <option value="RANTA SHOP BUILDING">RANTA SHOP BUILDING</option>
+        <option value="RASPBERRY PATCH">RASPBERRY PATCH</option>
+        <option value="REDCLIFF ESTATES">REDCLIFF ESTATES</option>
+        <option value="REDRIDGE HOMES">REDRIDGE HOMES</option>
+        <option value="REDTAIL ESTATES">REDTAIL ESTATES</option>
+        <option value="REED SUBDIVISON EXEMPTION">REED SUBDIVISON EXEMPTION</option>
+        <option value="RENEGADE RANCH">RENEGADE RANCH</option>
+        <option value="RESIDENCES BUSINESSES AT TOP OF THE HILL AT LAWSON HILL">RESIDENCES BUSINESSES AT TOP OF THE HILL AT LAWSON HILL</option>
+        <option value="RIDGE AT TELLURIDE">RIDGE AT TELLURIDE</option>
+        <option value="RIDGEVIEW AT LAWSON HILL">RIDGEVIEW AT LAWSON HILL</option>
+        <option value="RIO VISTAS CONDOS">RIO VISTAS CONDOS</option>
+        <option value="RIVER CLUB CONDOS">RIVER CLUB CONDOS</option>
+        <option value="RIVER EDGE">RIVER EDGE</option>
+        <option value="RIVERCROWN CONDOMINIUMS">RIVERCROWN CONDOMINIUMS</option>
+        <option value="RIVERSIDE">RIVERSIDE</option>
+        <option value="RIVERVIEW">RIVERVIEW</option>
+        <option value="RIVERWATCH">RIVERWATCH</option>
+        <option value="ROSORADO">ROSORADO</option>
+        <option value="ROYER CREEK">ROYER CREEK</option>
+        <option value="RUMMEL TRACT SMALL SCALE SUBDIVISION">RUMMEL TRACT SMALL SCALE SUBDIVISION</option>
+        <option value="RUNNING HORSE RANCH">RUNNING HORSE RANCH</option>
+        <option value="S.M.P.A. Subdivision">S.M.P.A. Subdivision</option>
+        <option value="SADLER SUBDIVISION">SADLER SUBDIVISION</option>
+        <option value="SAN BERNARDO">SAN BERNARDO</option>
+        <option value="SAN JOAQUIN VILLAGE">SAN JOAQUIN VILLAGE</option>
+        <option value="SAN JUAN BUILDING">SAN JUAN BUILDING</option>
+        <option value="SAN JUAN RANCH">SAN JUAN RANCH</option>
+        <option value="SAN JUAN VILLAGE">SAN JUAN VILLAGE</option>
+        <option value="SAN JUAN VISTA">SAN JUAN VISTA</option>
+        <option value="SAN JUAN WAREHOUSE CONDOS">SAN JUAN WAREHOUSE CONDOS</option>
+        <option value="SAN MIGUEL">SAN MIGUEL</option>
+        <option value="SAN MIGUEL HERITAGE BUILDING">SAN MIGUEL HERITAGE BUILDING</option>
+        <option value="SAN MIGUEL RIDGE">SAN MIGUEL RIDGE</option>
+        <option value="SAN MIGUEL RIVER TRCTS">SAN MIGUEL RIVER TRCTS</option>
+        <option value="SARAH PLACER SUBDIVISION">SARAH PLACER SUBDIVISION</option>
+        <option value="SAWPIT">SAWPIT</option>
+        <option value="SEE FOREVER PLAZA">SEE FOREVER PLAZA</option>
+        <option value="SEE FOREVER VILLAGE AT THE PEAKS">SEE FOREVER VILLAGE AT THE PEAKS</option>
+        <option value="SEVEN RAYS TREE FARM SUB">SEVEN RAYS TREE FARM SUB</option>
+        <option value="SHADOHOOCHI HILL">SHADOHOOCHI HILL</option>
+        <option value="SHIRANA">SHIRANA</option>
+        <option value="SHULL APARTMENTS">SHULL APARTMENTS</option>
+        <option value="SILVER JACK BUILDING CONDOS">SILVER JACK BUILDING CONDOS</option>
+        <option value="SKALLA SUBDIVISION">SKALLA SUBDIVISION</option>
+        <option value="SKI RANCHES">SKI RANCHES</option>
+        <option value="SMUGGLER">SMUGGLER</option>
+        <option value="SOUTH CORNET CREEK CONDOS">SOUTH CORNET CREEK CONDOS</option>
+        <option value="SOUTH FORK ESTATES">SOUTH FORK ESTATES</option>
+        <option value="SOUTH SPRUCE STREET PENTHOUSES">SOUTH SPRUCE STREET PENTHOUSES</option>
+        <option value="SPECIE MESA RANCH">SPECIE MESA RANCH</option>
+        <option value="SPECIE WILDERNESS">SPECIE WILDERNESS</option>
+        <option value="SPIRAL STAIRS">SPIRAL STAIRS</option>
+        <option value="SPRUCE HOUSE CONDOMINIUMS">SPRUCE HOUSE CONDOMINIUMS</option>
+        <option value="SPRUCE LODGE">SPRUCE LODGE</option>
+        <option value="STEPHENS">STEPHENS</option>
+        <option value="STONES THROW DUPLEX">STONES THROW DUPLEX</option>
+        <option value="SUMMER OF 72">SUMMER OF 72</option>
+        <option value="SUNBURST">SUNBURST</option>
+        <option value="SUNDANCE">SUNDANCE</option>
+        <option value="SUNDANCE ESTATES">SUNDANCE ESTATES</option>
+        <option value="SUNRISE">SUNRISE</option>
+        <option value="SUNSET RIDGE AT TELLURIDE">SUNSET RIDGE AT TELLURIDE</option>
+        <option value="SWINGER">SWINGER</option>
+        <option value="Stones Throw II">Stones Throw II</option>
+        <option value="TACO BELLE SUBD">TACO BELLE SUBD</option>
+        <option value="TELEMARK">TELEMARK</option>
+        <option value="TELL RGN AIRPORT PHASE ONE HANGAR CONDO">TELL RGN AIRPORT PHASE ONE HANGAR CONDO</option>
+        <option value="TELLURIDE">TELLURIDE</option>
+        <option value="TELLURIDE AIRPORT HANGER PH II">TELLURIDE AIRPORT HANGER PH II</option>
+        <option value="TELLURIDE FINANCIAL CENTER">TELLURIDE FINANCIAL CENTER</option>
+        <option value="TELLURIDE HANGAR UNITS">TELLURIDE HANGAR UNITS</option>
+        <option value="TELLURIDE LODGE">TELLURIDE LODGE</option>
+        <option value="TELLURIDE MOUNTAIN HOUSE">TELLURIDE MOUNTAIN HOUSE</option>
+        <option value="TELLURIDE PINES">TELLURIDE PINES</option>
+        <option value="TELLURIDE SPRING CREEK">TELLURIDE SPRING CREEK</option>
+        <option value="TELLURIDE TRANSFER CONDOS SWC">TELLURIDE TRANSFER CONDOS SWC</option>
+        <option value="TERRACES AT MEADOWS RUN">TERRACES AT MEADOWS RUN</option>
+        <option value="THE HALLELUJAH BUILDING CONDOS">THE HALLELUJAH BUILDING CONDOS</option>
+        <option value="THE OVERLOOK AT TELLURIDE">THE OVERLOOK AT TELLURIDE</option>
+        <option value="THE RED BRICK CONDO">THE RED BRICK CONDO</option>
+        <option value="TIMBERLINE VIEW">TIMBERLINE VIEW</option>
+        <option value="TIMBERVIEW">TIMBERVIEW</option>
+        <option value="TOMBOY LODGE">TOMBOY LODGE</option>
+        <option value="TOP OF THE WORLD">TOP OF THE WORLD</option>
+        <option value="TOWER HOUSE">TOWER HOUSE</option>
+        <option value="TOWNHOMES ON CREEK @ TRISTANT">TOWNHOMES ON CREEK @ TRISTANT</option>
+        <option value="TRAILS EDGE AT DOUBLE CABIN">TRAILS EDGE AT DOUBLE CABIN</option>
+        <option value="TRAMONTANA CONDOS">TRAMONTANA CONDOS</option>
+        <option value="TRES CASAS CONDO">TRES CASAS CONDO</option>
+        <option value="TRISTANT AT PROSPECT CROSSING">TRISTANT AT PROSPECT CROSSING</option>
+        <option value="TROUT LAKE">TROUT LAKE</option>
+        <option value="TRUE WEST RANCH AT MIRAMONTE">TRUE WEST RANCH AT MIRAMONTE</option>
+        <option value="TWIN BRICKS">TWIN BRICKS</option>
+        <option value="TWO RIVERS">TWO RIVERS</option>
+        <option value="UPPER PINES">UPPER PINES</option>
+        <option value="VIKING LODGE">VIKING LODGE</option>
+        <option value="VILLAGE AT ADAMS RANCH">VILLAGE AT ADAMS RANCH</option>
+        <option value="VILLAGE COURT APARTMENT">VILLAGE COURT APARTMENT</option>
+        <option value="VILLAGE CREEK CONDOS">VILLAGE CREEK CONDOS</option>
+        <option value="VILLAGE LEASEHOLD">VILLAGE LEASEHOLD</option>
+        <option value="VILLAS AT CORTINA">VILLAS AT CORTINA</option>
+        <option value="VILLAS AT TRISTANT">VILLAS AT TRISTANT</option>
+        <option value="WARES HOUSE CONDOS">WARES HOUSE CONDOS</option>
+        <option value="WASATCH">WASATCH</option>
+        <option value="WASATCH II">WASATCH II</option>
+        <option value="WEST HASTINGS MESA">WEST HASTINGS MESA</option>
+        <option value="WEST KENTUCKY PLACER">WEST KENTUCKY PLACER</option>
+        <option value="WEST PACIFIC CAMPUS CONDOS">WEST PACIFIC CAMPUS CONDOS</option>
+        <option value="WEST PACIFIC TOWNHOMES">WEST PACIFIC TOWNHOMES</option>
+        <option value="WEST TELLURIDE ADDITION">WEST TELLURIDE ADDITION</option>
+        <option value="WEST WILLOW">WEST WILLOW</option>
+        <option value="WESTERMERE">WESTERMERE</option>
+        <option value="WESTERN ACRES">WESTERN ACRES</option>
+        <option value="WHITE HOUSE CONDOMINIUMS">WHITE HOUSE CONDOMINIUMS</option>
+        <option value="WHOVILLE CONDOMINIUMS">WHOVILLE CONDOMINIUMS</option>
+        <option value="WILLMENG SPRINGS">WILLMENG SPRINGS</option>
+        <option value="WILLOW CONDO">WILLOW CONDO</option>
+        <option value="WILLOWS AT TELLURIDE">WILLOWS AT TELLURIDE</option>
+        <option value="WILSON MESA RANCHES">WILSON MESA RANCHES</option>
+        <option value="WINTERCROWN">WINTERCROWN</option>
+        <option value="WINTERLEAF">WINTERLEAF</option>
+        <option value="WOODS AT LAWSON">WOODS AT LAWSON</option>
+        <option value="WOODYS ADDITION">WOODYS ADDITION</option>
+        <option value="XYZ SUB">XYZ SUB</option>
+        <option value="YANKEE BOY">YANKEE BOY</option>
+      </select>
+    </div>
+  </div>
+
+<div class="panel">
+    <label for="opacity">Colored section transparency</label>
+    <input id="opacity" type="range" min="0.15" max="0.80" value="0.48" step="0.01">
+    <p class="small">Lower opacity makes roads, terrain, rivers, and labels easier to see under the zoning colors.</p>
+  </div>
+  <div class="panel" id="builtLegend" style="display:none;">
+    <label>Vacant lots legend</label>
+    <div class="legend-item"><span style="background:#5a9e5a"></span><button type="button">Vacant lot (no structure)</button><em></em></div>
+    <p class="small">Green shows lots with no building on that specific parcel, based on 2021&ndash;2024 building footprints. Each lot is judged on its own; lots with a structure are not shaded.</p>
+  </div>
+
+
+
+  <div class="panel">
+    <div class="row"><button id="home">Reset map</button><button class="secondary" id="clear">Clear selection</button></div>
+  </div>
+  <div class="panel">
+    <label>Selected item</label>
+    <div id="selection" class="small">Search for an address, or click a zoning section, parcel, PUD, subdivision, or buildable candidate.</div>
+  </div>
+
+  
+  <div class="panel" id="subdivisionLegend" style="display:none;">
+    <label>Subdivision legend</label>
+    <div class="legend-item"><span style="background:#6fb6d6;border:2px solid #0b5e8e"></span><button type="button">Subdivision area, PUDs excluded</button><em></em></div>
+  </div>
+
+  <div class="panel" id="clearLegend" style="display:none;">
+    <label>Clear view</label>
+    <div class="legend-item"><span style="background:transparent;border:1px solid #5a3b1f"></span><button type="button">Parcel outlines only</button><em></em></div>
+  </div>
+
+  
+  <div class="panel" id="buildableLegend" style="display:none;">
+    <label>Buildable w/o Restrictions legend</label>
+    <div class="legend-item"><span style="background:#c45a2a"></span><button type="button">Candidate parcel</button><em></em></div>
+    <p class="small">Candidate parcels are not in detected PUD/subdivision areas and are empty or unknown under the built-land ownership rule.</p>
+  </div>
+
+  <div class="panel" id="zoningLegendPanel">
+    <label>Zoning legend</label>
+    <div id="legend"><div class="legend-item" data-zoning="FORESTRY/AGRICULTURE"><span style="background:hsl(166, 54%, 58%)"></span><button type="button">FORESTRY/AGRICULTURE</button><em>46</em></div>
+<div class="legend-item" data-zoning="NORWOOD R1"><span style="background:hsl(145, 54%, 58%)"></span><button type="button">NORWOOD R1</button><em>39</em></div>
+<div class="legend-item" data-zoning="INDUSTRIAL"><span style="background:hsl(185, 54%, 58%)"></span><button type="button">INDUSTRIAL</button><em>38</em></div>
+<div class="legend-item" data-zoning="RESIDENTIAL"><span style="background:hsl(20, 54%, 58%)"></span><button type="button">RESIDENTIAL</button><em>31</em></div>
+<div class="legend-item" data-zoning="LOW DENSITY"><span style="background:hsl(84, 54%, 58%)"></span><button type="button">LOW DENSITY</button><em>26</em></div>
+<div class="legend-item" data-zoning="NORWOOD B1"><span style="background:hsl(9, 54%, 58%)"></span><button type="button">NORWOOD B1</button><em>24</em></div>
+<div class="legend-item" data-zoning="MEDIUM DENSITY"><span style="background:hsl(237, 54%, 58%)"></span><button type="button">MEDIUM DENSITY</button><em>16</em></div>
+<div class="legend-item" data-zoning="PLACERVILLE COMMERCIAL"><span style="background:hsl(339, 54%, 58%)"></span><button type="button">PLACERVILLE COMMERCIAL</button><em>15</em></div>
+<div class="legend-item" data-zoning="OPEN SPACE"><span style="background:hsl(192, 54%, 58%)"></span><button type="button">OPEN SPACE</button><em>14</em></div>
+<div class="legend-item" data-zoning="UNASSIGNED"><span style="background:hsl(359, 54%, 58%)"></span><button type="button">UNASSIGNED</button><em>14</em></div>
+<div class="legend-item" data-zoning="MOBILE HOME"><span style="background:hsl(141, 54%, 58%)"></span><button type="button">MOBILE HOME</button><em>12</em></div>
+<div class="legend-item" data-zoning="PUBLIC"><span style="background:hsl(57, 54%, 58%)"></span><button type="button">PUBLIC</button><em>12</em></div>
+<div class="legend-item" data-zoning="NORWOOD PUBLIC"><span style="background:hsl(235, 54%, 58%)"></span><button type="button">NORWOOD PUBLIC</button><em>10</em></div>
+<div class="legend-item" data-zoning="PLANNED UNIT DEVELOPMENT"><span style="background:hsl(19, 54%, 58%)"></span><button type="button">PLANNED UNIT DEVELOPMENT</button><em>10</em></div>
+<div class="legend-item" data-zoning="SPLIT SEE NOTES"><span style="background:hsl(334, 54%, 58%)"></span><button type="button">SPLIT SEE NOTES</button><em>10</em></div>
+<div class="legend-item" data-zoning="AFFORDABLE HOUSING PUD"><span style="background:hsl(334, 54%, 58%)"></span><button type="button">AFFORDABLE HOUSING PUD</button><em>9</em></div>
+<div class="legend-item" data-zoning="PARK"><span style="background:hsl(2, 54%, 58%)"></span><button type="button">PARK</button><em>9</em></div>
+<div class="legend-item" data-zoning="WRIGHTS MESA"><span style="background:hsl(208, 54%, 58%)"></span><button type="button">WRIGHTS MESA</button><em>8</em></div>
+<div class="legend-item" data-zoning="TELLURIDE RESIDENTIAL"><span style="background:hsl(0, 54%, 58%)"></span><button type="button">TELLURIDE RESIDENTIAL</button><em>7</em></div>
+<div class="legend-item" data-zoning="HILLSIDE TRANSITIONAL"><span style="background:hsl(216, 54%, 58%)"></span><button type="button">HILLSIDE TRANSITIONAL</button><em>6</em></div>
+<div class="legend-item" data-zoning="OPEN SPACE CONSERVATION EASEMENT"><span style="background:hsl(255, 54%, 58%)"></span><button type="button">OPEN SPACE CONSERVATION EASEMENT</button><em>6</em></div>
+<div class="legend-item" data-zoning="COMMERCIAL"><span style="background:hsl(306, 54%, 58%)"></span><button type="button">COMMERCIAL</button><em>4</em></div>
+<div class="legend-item" data-zoning="HEAVY COMMERCIAL"><span style="background:hsl(43, 54%, 58%)"></span><button type="button">HEAVY COMMERCIAL</button><em>4</em></div>
+<div class="legend-item" data-zoning="HIGH COUNTRY AREA"><span style="background:hsl(213, 54%, 58%)"></span><button type="button">HIGH COUNTRY AREA</button><em>4</em></div>
+<div class="legend-item" data-zoning="PUBLIC PURPOSE"><span style="background:hsl(119, 54%, 58%)"></span><button type="button">PUBLIC PURPOSE</button><em>3</em></div>
+<div class="legend-item" data-zoning="WRIGHTS MESA LIGHT INDUSTRIAL"><span style="background:hsl(283, 54%, 58%)"></span><button type="button">WRIGHTS MESA LIGHT INDUSTRIAL</button><em>3</em></div>
+<div class="legend-item" data-zoning="ACCOMMODATIONS DISTRICT 2"><span style="background:hsl(111, 54%, 58%)"></span><button type="button">ACCOMMODATIONS DISTRICT 2</button><em>2</em></div>
+<div class="legend-item" data-zoning="LOW DENSITY RESIDENTIAL"><span style="background:hsl(16, 54%, 58%)"></span><button type="button">LOW DENSITY RESIDENTIAL</button><em>2</em></div>
+<div class="legend-item" data-zoning="PLACERVILLE RESIDENTIAL"><span style="background:hsl(227, 54%, 58%)"></span><button type="button">PLACERVILLE RESIDENTIAL</button><em>2</em></div>
+<div class="legend-item" data-zoning="PUBLIC PURPOSE   PARKING"><span style="background:hsl(335, 54%, 58%)"></span><button type="button">PUBLIC PURPOSE   PARKING</button><em>2</em></div>
+<div class="legend-item" data-zoning="RESIDENTIAL/COMMERCIAL"><span style="background:hsl(229, 54%, 58%)"></span><button type="button">RESIDENTIAL/COMMERCIAL</button><em>2</em></div>
+<div class="legend-item" data-zoning="TOWN COMMERCIAL"><span style="background:hsl(344, 54%, 58%)"></span><button type="button">TOWN COMMERCIAL</button><em>2</em></div>
+<div class="legend-item" data-zoning="WEST END"><span style="background:hsl(58, 54%, 58%)"></span><button type="button">WEST END</button><em>2</em></div>
+<div class="legend-item" data-zoning="ACCOMMODATIONS & RECREATION 1"><span style="background:hsl(268, 54%, 58%)"></span><button type="button">ACCOMMODATIONS & RECREATION 1</button><em>1</em></div>
+<div class="legend-item" data-zoning="ACCOMMODATIONS & RECREATION 2"><span style="background:hsl(269, 54%, 58%)"></span><button type="button">ACCOMMODATIONS & RECREATION 2</button><em>1</em></div>
+<div class="legend-item" data-zoning="ACCOMMODATIONS DISTRICT 1"><span style="background:hsl(110, 54%, 58%)"></span><button type="button">ACCOMMODATIONS DISTRICT 1</button><em>1</em></div>
+<div class="legend-item" data-zoning="AFFORDABLE HOUSING WEST"><span style="background:hsl(264, 54%, 58%)"></span><button type="button">AFFORDABLE HOUSING WEST</button><em>1</em></div>
+<div class="legend-item" data-zoning="CEMETERY DISTRICT"><span style="background:hsl(220, 54%, 58%)"></span><button type="button">CEMETERY DISTRICT</button><em>1</em></div>
+<div class="legend-item" data-zoning="COMMUNITY HOUSING"><span style="background:hsl(206, 54%, 58%)"></span><button type="button">COMMUNITY HOUSING</button><em>1</em></div>
+<div class="legend-item" data-zoning="HILLSIDE DEVELOPING DISTRICT 2"><span style="background:hsl(227, 54%, 58%)"></span><button type="button">HILLSIDE DEVELOPING DISTRICT 2</button><em>1</em></div>
+<div class="legend-item" data-zoning="HILLSIDE DEVELOPING I"><span style="background:hsl(318, 54%, 58%)"></span><button type="button">HILLSIDE DEVELOPING I</button><em>1</em></div>
+<div class="legend-item" data-zoning="HISTORIC COMMERCIAL"><span style="background:hsl(171, 54%, 58%)"></span><button type="button">HISTORIC COMMERCIAL</button><em>1</em></div>
+<div class="legend-item" data-zoning="HISTORIC RESIDENTIAL"><span style="background:hsl(147, 54%, 58%)"></span><button type="button">HISTORIC RESIDENTIAL</button><em>1</em></div>
+<div class="legend-item" data-zoning="MIXED USE"><span style="background:hsl(258, 54%, 58%)"></span><button type="button">MIXED USE</button><em>1</em></div>
+<div class="legend-item" data-zoning="NORWOOD AGRICULTURAL"><span style="background:hsl(337, 54%, 58%)"></span><button type="button">NORWOOD AGRICULTURAL</button><em>1</em></div>
+<div class="legend-item" data-zoning="NORWOOD PUD R1"><span style="background:hsl(154, 54%, 58%)"></span><button type="button">NORWOOD PUD R1</button><em>1</em></div>
+<div class="legend-item" data-zoning="PENDING"><span style="background:hsl(95, 54%, 58%)"></span><button type="button">PENDING</button><em>1</em></div>
+<div class="legend-item" data-zoning="RANGELAND/GRAZING"><span style="background:hsl(359, 54%, 58%)"></span><button type="button">RANGELAND/GRAZING</button><em>1</em></div>
+<div class="legend-item" data-zoning="RESIDENTIAL/COMMERCIAL/GONDOLA OVERLAY"><span style="background:hsl(268, 54%, 58%)"></span><button type="button">RESIDENTIAL/COMMERCIAL/GONDOLA OVERLAY</button><em>1</em></div>
+<div class="legend-item" data-zoning="WEST HILLSIDE"><span style="background:hsl(129, 54%, 58%)"></span><button type="button">WEST HILLSIDE</button><em>1</em></div>
+<div class="legend-item" data-zoning="WRIGHTS MESA RURAL AGRICULTURAL"><span style="background:hsl(101, 54%, 58%)"></span><button type="button">WRIGHTS MESA RURAL AGRICULTURAL</button><em>1</em></div></div>
+  </div>
+</aside>
+
+<main id="map">
+  <div id="mapbox-note">Use the buttons at left to switch between zoning, PUDs, built-land status, subdivisions, buildable parcels, or a clean parcel-outline view.</div>
+</main>
+</div>
+
+<script type="module">
+/* ── Data loader (split out of the monolith; fetched in parallel) ── */
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData;
+try {
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData] = await Promise.all([
+    fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/meadows-at-deep-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('meadows-at-deep-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/sunnyside-ranches-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('sunnyside-ranches-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/deep-creek-mesa-ranch-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('deep-creek-mesa-ranch-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/mill-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('mill-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/skyfield-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('skyfield-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/west-meadows-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('west-meadows-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/lawson-hill-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('lawson-hill-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/lawson-hill-ilium-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('lawson-hill-ilium-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/two-rivers-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('two-rivers-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/last-dollar-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('last-dollar-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/zoning.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('zoning.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('subdivision.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/address.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('address.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/county-outline.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('county-outline.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/trout-lake-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('trout-lake-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/wilson-mesa-ranches-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wilson-mesa-ranches-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/society-turn-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
+  ]);
+} catch (err) {
+  const el = document.getElementById('map');
+  if (el) el.innerHTML = '<div style="padding:40px;font:15px system-ui;color:#7a2b2b">Map data failed to load. Please refresh. (' + err.message + ')</div>';
+  throw err;
+}
+
+mapboxgl.accessToken = "pk.eyJ1IjoibGl2YWJsZXRlbGx1cmlkZSIsImEiOiJjbXA0NTVva3EwNXo1MnBwcmhnaHhka3dsIn0.8erE-LUnadeYwRSwdr20_w";
+
+/*__DATA_REMOVED__ aldasoroPudData*/
+/*__DATA_REMOVED__ butcherCreekPudData*/
+
+/*__DATA_REMOVED__ backmanVillageSubdivisionData*/
+
+/*__DATA_REMOVED__ meadowsAtDeepCreekPudData*//*__DATA_REMOVED__ sunnysideRanchesPudData*/
+/*__DATA_REMOVED__ deepCreekMesaRanchPudData*/
+/*__DATA_REMOVED__ millCreekPudData*/
+/*__DATA_REMOVED__ skyfieldPudData*/
+/*__DATA_REMOVED__ westMeadowsPudData*/
+
+/*__DATA_REMOVED__ lawsonHillPudData*/
+/*__DATA_REMOVED__ lawsonHillIliumPudData*/
+/*__DATA_REMOVED__ twoRiversPudData*/
+/*__DATA_REMOVED__ lastDollarPudData*/
+/*__DATA_REMOVED__ zoningData*/
+/*__DATA_REMOVED__ subdivisionData*/
+/*__DATA_REMOVED__ roadsData*/
+/*__DATA_REMOVED__ addressData*/
+/*__DATA_REMOVED__ parcelData*/
+/*__DATA_REMOVED__ countyOutlineData*/
+const countyBounds = [[-109.12154589149449, 37.750691959748515], [-107.65443029773658, 38.17760368986394]];
+const countyCenter = [-108.38798809461554, 37.96414782480623];
+const subdivisionFillColor = "#6fb6d6";
+const zoningColorExpression = ["match", ["get", "ZONING"], "ACCOMMODATIONS & RECREATION 1", "hsl(268, 54%, 58%)", "ACCOMMODATIONS & RECREATION 2", "hsl(269, 54%, 58%)", "ACCOMMODATIONS DISTRICT 1", "hsl(110, 54%, 58%)", "ACCOMMODATIONS DISTRICT 2", "hsl(111, 54%, 58%)", "AFFORDABLE HOUSING PUD", "hsl(334, 54%, 58%)", "AFFORDABLE HOUSING WEST", "hsl(264, 54%, 58%)", "CEMETERY DISTRICT", "hsl(220, 54%, 58%)", "COMMERCIAL", "hsl(306, 54%, 58%)", "COMMUNITY HOUSING", "hsl(206, 54%, 58%)", "FORESTRY/AGRICULTURE", "hsl(166, 54%, 58%)", "HEAVY COMMERCIAL", "hsl(43, 54%, 58%)", "HIGH COUNTRY AREA", "hsl(213, 54%, 58%)", "HILLSIDE DEVELOPING DISTRICT 2", "hsl(227, 54%, 58%)", "HILLSIDE DEVELOPING I", "hsl(318, 54%, 58%)", "HILLSIDE TRANSITIONAL", "hsl(216, 54%, 58%)", "HISTORIC COMMERCIAL", "hsl(171, 54%, 58%)", "HISTORIC RESIDENTIAL", "hsl(147, 54%, 58%)", "INDUSTRIAL", "hsl(185, 54%, 58%)", "LOW DENSITY", "hsl(84, 54%, 58%)", "LOW DENSITY RESIDENTIAL", "hsl(16, 54%, 58%)", "MEDIUM DENSITY", "hsl(237, 54%, 58%)", "MIXED USE", "hsl(258, 54%, 58%)", "MOBILE HOME", "hsl(141, 54%, 58%)", "NORWOOD AGRICULTURAL", "hsl(337, 54%, 58%)", "NORWOOD B1", "hsl(9, 54%, 58%)", "NORWOOD PUBLIC", "hsl(235, 54%, 58%)", "NORWOOD PUD R1", "hsl(154, 54%, 58%)", "NORWOOD R1", "hsl(145, 54%, 58%)", "OPEN SPACE", "hsl(192, 54%, 58%)", "OPEN SPACE CONSERVATION EASEMENT", "hsl(255, 54%, 58%)", "PARK", "hsl(2, 54%, 58%)", "PENDING", "hsl(95, 54%, 58%)", "PLACERVILLE COMMERCIAL", "hsl(339, 54%, 58%)", "PLACERVILLE RESIDENTIAL", "hsl(227, 54%, 58%)", "PLANNED UNIT DEVELOPMENT", "hsl(19, 54%, 58%)", "PUBLIC", "hsl(57, 54%, 58%)", "PUBLIC PURPOSE", "hsl(119, 54%, 58%)", "PUBLIC PURPOSE   PARKING", "hsl(335, 54%, 58%)", "RANGELAND/GRAZING", "hsl(359, 54%, 58%)", "RESIDENTIAL", "hsl(20, 54%, 58%)", "RESIDENTIAL/COMMERCIAL", "hsl(229, 54%, 58%)", "RESIDENTIAL/COMMERCIAL/GONDOLA OVERLAY", "hsl(268, 54%, 58%)", "SPLIT SEE NOTES", "hsl(334, 54%, 58%)", "TELLURIDE RESIDENTIAL", "hsl(0, 54%, 58%)", "TOWN COMMERCIAL", "hsl(344, 54%, 58%)", "UNASSIGNED", "hsl(359, 54%, 58%)", "WEST END", "hsl(58, 54%, 58%)", "WEST HILLSIDE", "hsl(129, 54%, 58%)", "WRIGHTS MESA", "hsl(208, 54%, 58%)", "WRIGHTS MESA LIGHT INDUSTRIAL", "hsl(283, 54%, 58%)", "WRIGHTS MESA RURAL AGRICULTURAL", "hsl(101, 54%, 58%)", "#bdb7ab"];
+
+const map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/outdoors-v12",
+  center: countyCenter,
+  zoom: 8.35,
+  minZoom: 7,
+  maxZoom: 18,
+  maxBounds: countyBounds
+});
+
+map.addControl(new mapboxgl.NavigationControl({ showCompass:false }), "top-right");
+
+let selectedPopup = null;
+let addressDotsVisible = false;
+let subsVisible = false;
+let parcelsVisible = true;
+let roadsVisible = false;
+let subdivisionsVisible = false;
+
+const selectionEl = document.getElementById("selection");
+
+function value(v) {
+  return (v === undefined || v === null || v === "") ? "—" : String(v);
+}
+
+function fieldRows(fields) {
+  return fields.map(([k,v]) => `<div class="field"><b>${k}:</b> ${value(v)}</div>`).join("");
+}
+
+function addressSearchString(f) {
+  return (f.properties.search || "").toLowerCase();
+}
+
+function showSelection(html) {
+  selectionEl.innerHTML = html;
+}
+
+function popupHtml(title, fields) {
+  return `<h3>${value(title)}</h3>` + fieldRows(fields);
+}
+
+function showPopup(lngLat, html) {
+  if (selectedPopup) selectedPopup.remove();
+  selectedPopup = new mapboxgl.Popup({ closeButton:true, maxWidth:"340px" })
+    .setLngLat(lngLat)
+    .setHTML(html)
+    .addTo(map);
+}
+
+function firstSymbolLayerId() {
+  const layers = map.getStyle().layers || [];
+  const symbol = layers.find(l => l.type === "symbol");
+  return symbol ? symbol.id : undefined;
+}
+
+
+
+let currentMapView = "zoning";
+
+function setButtonState(activeId) {
+  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable"].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (id === activeId) {
+      el.classList.remove("secondary");
+    } else {
+      el.classList.add("secondary");
+    }
+  });
+}
+
+function showLayer(layer, visible) {
+  if (map.getLayer(layer)) map.setLayoutProperty(layer, "visibility", visible ? "visible" : "none");
+}
+
+
+function setAddedPudLayers(visible) {
+  showLayer("sunnyside-ranches-pud-fill", visible);
+  showLayer("sunnyside-ranches-pud-outline", visible);
+  showLayer("deep-creek-mesa-ranch-pud-fill", visible);
+  showLayer("deep-creek-mesa-ranch-pud-outline", visible);
+  showLayer("mill-creek-pud-fill", visible);
+  showLayer("mill-creek-pud-outline", visible);
+  showLayer("skyfield-pud-fill", visible);
+  showLayer("skyfield-pud-outline", visible);
+  showLayer("west-meadows-pud-fill", visible);
+  showLayer("west-meadows-pud-outline", visible);
+}
+
+
+
+function setMapNote(html) {
+  const note = document.getElementById("mapbox-note");
+  if (note) note.innerHTML = html;
+}
+
+const mapNotes = {
+  zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
+  puds: "<strong>PUDs:</strong> Yellow areas show PUDs. Parcel outlines remain visible as an underlay; road layers are hidden.",
+  built: "<strong>Vacant Lots:</strong> Green shows lots with no structure on that specific parcel, based on 2021\u20132024 building footprints. Each lot is judged on its own \u2014 owning a built parcel next door does not make an empty lot count as built. Lots with a building are not shaded.",
+  subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
+  buildable: "<strong>Buildable w/o Restrictions:</strong> This view highlights parcels that are not within detected PUD or subdivision areas and are empty or unknown under the built-land ownership rule. Federal forest, BLM, and public wildland parcels are excluded.",
+  clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, built-land, subdivision, or buildable colors."
+};
+
+function setPanelDisplay(id, display) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = display;
+}
+
+function setFilterBlocks(zoningVisible, subdivisionVisible) {
+  setPanelDisplay("zoningFilterBlock", zoningVisible ? "block" : "none");
+  setPanelDisplay("subdivisionFilterBlock", subdivisionVisible ? "block" : "none");
+  const z = document.getElementById("zoning");
+  if (z) z.disabled = !zoningVisible;
+  const s = document.getElementById("subdivisionFilter");
+  if (s) s.disabled = !subdivisionVisible;
+}
+
+function setLegendView(view) {
+  setPanelDisplay("zoningLegendPanel", view === "zoning" ? "block" : "none");
+  setPanelDisplay("builtLegend", view === "built" ? "block" : "none");
+  setPanelDisplay("subdivisionLegend", view === "subdivisions" ? "block" : "none");
+  setPanelDisplay("clearLegend", view === "clear" ? "block" : "none");
+  setPanelDisplay("buildableLegend", view === "buildable" ? "block" : "none");
+}
+
+const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline"];
+const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
+const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
+const builtLayerIds = ['parcel-development-fill'];
+const buildableLayerIds = ['buildable-unrestricted-fill'];
+
+function setLayersVisible(ids, visible) {
+  ids.forEach(id => showLayer(id, visible));
+}
+
+function hideThematicLayers() {
+  setLayersVisible(zoningLayerIds, false);
+  setLayersVisible(pudLayerIds, false);
+  setLayersVisible(subdivisionLayerIds, false);
+  setLayersVisible(builtLayerIds, false);
+  if (typeof buildableLayerIds !== 'undefined') setLayersVisible(buildableLayerIds, false);
+}
+
+function resetSubdivisionFilterOnly() {
+  const s = document.getElementById("subdivisionFilter");
+  if (s) s.value = "";
+  if (map.getLayer("subdivision-fill")) map.setFilter("subdivision-fill", null);
+  if (map.getLayer("subdivision-line")) map.setFilter("subdivision-line", null);
+}
+
+function resetZoningFilterOnly() {
+  const z = document.getElementById("zoning");
+  if (z) z.value = "";
+  if (map.getLayer("zoning-fill")) map.setFilter("zoning-fill", ["all"]);
+  if (map.getLayer("zoning-line")) map.setFilter("zoning-line", ["all"]);
+}
+
+
+function setZoningView() {
+  setMapNote(mapNotes.zoning);
+  currentMapView = "zoning";
+  setButtonState("viewZoning");
+  hideThematicLayers();
+  setLegendView("zoning");
+  setFilterBlocks(true, false);
+
+  showLayer("zoning-fill", true);
+  showLayer("zoning-line", true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  setFilters();  setColoredSectionTransparency();
+}
+
+
+function setPudView() {
+  setMapNote(mapNotes.puds);
+  currentMapView = "puds";
+  setButtonState("viewPuds");
+  hideThematicLayers();
+  setLegendView("puds");
+  setFilterBlocks(false, false);
+
+  setLayersVisible(pudLayerIds, true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);  setColoredSectionTransparency();
+}
+
+
+function setBuiltLandView() {
+  setMapNote(mapNotes.built);
+  currentMapView = "built";
+  setButtonState("viewBuiltLand");
+  hideThematicLayers();
+  setLegendView("built");
+  setFilterBlocks(false, false);
+
+  showLayer("parcel-development-fill", true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);  setColoredSectionTransparency();
+}
+
+
+function setSubdivisionView() {
+  setMapNote(mapNotes.subdivisions);
+  currentMapView = "subdivisions";
+  setButtonState("viewSubdivisions");
+  hideThematicLayers();
+  setLayersVisible(pudLayerIds, false);
+  setLegendView("subdivisions");
+  setFilterBlocks(false, true);
+
+  showLayer("subdivision-fill", true);
+  showLayer("subdivision-line", true);
+  // Backman Village is a subdivision, not a PUD, so it appears only with the subdivision view.
+  showLayer("backman-village-subdivision-fill", true);
+  showLayer("backman-village-subdivision-outline", true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);
+  applySubdivisionFilter();  setColoredSectionTransparency();
+}
+
+
+function setClearView() {
+  setMapNote(mapNotes.clear);
+  currentMapView = "clear";
+  setButtonState("viewClear");
+  hideThematicLayers();
+  setLegendView("clear");
+  setFilterBlocks(false, false);
+
+  resetSubdivisionFilterOnly();
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);
+}
+
+
+function setBuildableView() {
+  currentMapView = "buildable";
+  setMapNote(mapNotes.buildable);
+  setButtonState("viewBuildable");
+  hideThematicLayers();
+  setLegendView("buildable");
+  setFilterBlocks(false, false);
+
+  showLayer("buildable-unrestricted-fill", true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);
+  setColoredSectionTransparency();
+}
+
+
+function setFilters() {
+  const zoning = document.getElementById("zoning").value;
+  const filters = ["all"];
+  if (zoning) filters.push(["==", ["get", "ZONING"], zoning]);
+
+  if (map.getLayer("zoning-fill")) map.setFilter("zoning-fill", filters);
+  if (map.getLayer("zoning-line")) map.setFilter("zoning-line", filters);
+  if (currentMapView === "zoning") {
+    showLayer("zoning-fill", true);
+    showLayer("zoning-line", true);
+  }
+}
+
+
+function setSubdivisionLayer(on) {
+  if (on) {
+    setSubdivisionView();
+  } else {
+    setClearView();
+  }
+}
+
+function applySubdivisionFilter() {
+  const select = document.getElementById("subdivisionFilter");
+  const val = select ? select.value : "";
+  if (!map.getLayer("subdivision-line")) return;
+
+  if (val) {
+    if (map.getLayer("subdivision-fill")) map.setFilter("subdivision-fill", ["==", ["get", "SUBNAME"], val]);
+    map.setFilter("subdivision-line", ["==", ["get", "SUBNAME"], val]);
+    const feature = subdivisionData.features.find(f => String(f.properties.SUBNAME || "") === val);
+    if (feature) {
+      map.getSource("selected-subdivision").setData({ type:"FeatureCollection", features:[feature] });
+      const bbox = featureBbox(feature);
+      if (bbox) map.fitBounds(bbox, { padding:80, maxZoom:14 });
+      showSelection('<h2>' + val + '</h2><div class="field"><b>Layer:</b> Subdivision</div><div class="field"><b>Feature count:</b> ' + (feature.properties.feature_count || '') + '</div>');
+    }
+  } else {
+    if (map.getLayer("subdivision-fill")) map.setFilter("subdivision-fill", null);
+    map.setFilter("subdivision-line", null);
+    if (map.getSource("selected-subdivision")) {
+      map.getSource("selected-subdivision").setData({ type:"FeatureCollection", features:[] });
+    }
+  }
+}
+
+function setColoredSectionTransparency() {
+  const slider = document.getElementById("opacity");
+  const raw = Number(slider ? slider.value : 0.48);
+  const maxVal = Number(slider ? slider.max : 1);
+  const opacity = Math.max(0, Math.min(1, maxVal <= 1 ? raw : raw / 100));
+
+  const fillLayers = [
+    "zoning-fill",
+    "trout-lake-pud-fill",
+    "wilson-mesa-ranches-pud-fill",
+    "society-turn-pud-fill",
+    "aldasoro-pud-fill",
+    "butcher-creek-pud-fill",
+    "meadows-at-deep-creek-pud-fill",
+    "sunnyside-ranches-pud-fill",
+    "deep-creek-mesa-ranch-pud-fill",
+    "mill-creek-pud-fill",
+    "skyfield-pud-fill",
+    "west-meadows-pud-fill",
+    "lawson-hill-pud-fill",
+    "lawson-hill-ilium-pud-fill",
+    "two-rivers-pud-fill",
+    "last-dollar-pud-fill",
+    "parcel-development-fill",
+    "subdivision-fill",
+    "backman-village-subdivision-fill",
+    "buildable-unrestricted-fill"
+  ];
+
+  fillLayers.forEach(layer => {
+    if (map.getLayer(layer)) {
+      map.setPaintProperty(layer, "fill-opacity", opacity);
+    }
+  });
+}
+
+function clearSelection() {
+  if (selectedPopup) selectedPopup.remove();
+  selectedPopup = null;
+  if (map.getSource("selected-address")) map.getSource("selected-address").setData({type:"FeatureCollection", features:[]});
+  if (map.getSource("selected-zoning")) map.getSource("selected-zoning").setData({type:"FeatureCollection", features:[]});
+  if (map.getSource("selected-subdivision")) map.getSource("selected-subdivision").setData({type:"FeatureCollection", features:[]});
+  if (map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection", features:[]});
+  if (map.getSource("selected-road")) map.getSource("selected-road").setData({type:"FeatureCollection", features:[]});
+  showSelection("Search for an address, or click a zoning section or parcel.");
+}
+
+function selectZoningFeature(feature, lngLat) {
+  map.getSource("selected-zoning").setData({ type:"FeatureCollection", features:[feature] });
+  const p = feature.properties;
+  const html = popupHtml(p.ZONING, [
+    ["Zoning", p.ZONING],
+    ["Code", p.LUCZONE],
+    ["Jurisdiction", p.ZONE_AUTH],
+    ["PUD", p.PUD],
+    ["Resolution", p.ZONE_RESOL],
+    ["Subdivision/area field", p.SUBNAME],
+    ["Parcel/tract", p.PARCEL_NAM],
+    ["PIN", p.PIN],
+    ["Acres field", p.Acres],
+    ["Notes", p.NOTES],
+    ["Use notes", p.NOTES_USE]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+}
+
+function selectAddressFeature(feature) {
+  const coords = feature.geometry.coordinates;
+  map.getSource("selected-address").setData({ type:"FeatureCollection", features:[feature] });
+  const p = feature.properties;
+  const html = popupHtml(p.label, [
+    ["Address", p.Address],
+    ["Unit", p.Unit],
+    ["City", p.City],
+    ["ZIP", p.Post_Code],
+    ["Zoning", p.ZONING],
+    ["Code", p.LUCZONE],
+    ["Jurisdiction", p.ZONE_AUTH],
+    ["PUD", p.PUD],
+    ["Subdivision", p.Subdivision],
+    ["PIN", p.PIN],
+    ["Owner/name field", p.Owner],
+    ["Account", p.ParcelAccount],
+    ["Place type", p.PlaceType]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  showPopup(coords, html);
+  map.flyTo({ center: coords, zoom: Math.max(map.getZoom(), 14), speed: 1.4 });
+
+  if (p.zone_id !== "") {
+    const zoneFeature = zoningData.features.find(z => String(z.properties.zone_id) === String(p.zone_id));
+    if (zoneFeature) map.getSource("selected-zoning").setData({ type:"FeatureCollection", features:[zoneFeature] });
+  }
+  if (p.sub_id !== "") {
+    const subFeature = subdivisionData.features.find(s => String(s.properties.sub_id) === String(p.sub_id));
+    if (subFeature) {
+      map.getSource("selected-subdivision").setData({ type:"FeatureCollection", features:[subFeature] });
+      if (currentMapView !== "subdivisions") setSubdivisionView();
+    }
+  }
+}
+
+
+
+function selectRoadFeature(feature, lngLat) {
+  map.getSource("selected-road").setData({ type:"FeatureCollection", features:[feature] });
+
+  const p = feature.properties;
+  const fields = Object.keys(p)
+    .filter(k => !["road_id"].includes(k))
+    .slice(0, 14)
+    .map(k => [k, p[k]]);
+  const html = popupHtml(p.road_label || "Road segment", fields);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+}
+
+function showRoads(on) {
+  roadsVisible = on;
+  if (map.getLayer("roads-line")) map.setLayoutProperty("roads-line", "visibility", on ? "visible" : "none");
+}
+
+
+function genericFeatureDetails(title, props, fieldPairs) {
+  const rows = fieldPairs
+    .filter(pair => props && props[pair[1]] !== undefined && props[pair[1]] !== null && String(props[pair[1]]).trim() !== "")
+    .map(pair => [pair[0], props[pair[1]]]);
+  return popupHtml(title, rows);
+}
+
+function selectPudArea(feature, lngLat, fallbackTitle) {
+  const p = feature.properties || {};
+  const title = p.name || p.SUBNAME || p.ZONING || fallbackTitle || "PUD area";
+  const html = genericFeatureDetails(title, p, [
+    ["Layer", "layer"],
+    ["Name", "name"],
+    ["Subdivision", "SUBNAME"],
+    ["Zoning", "ZONING"],
+    ["PUD", "PUD"],
+    ["Source note", "source_note"],
+    ["Feature count", "feature_count"],
+    ["Resolution", "ZONE_RESOL"],
+    ["Notes", "NOTES"]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+}
+
+function selectBuiltLandFeature(feature, lngLat) {
+  const p = feature.properties || {};
+  const title = p.STREETADDR || p.PIN || p.NAMEDISPLAY || "Parcel";
+  const html = popupHtml(title, [
+    ["Built land status", p.built_status_effective],
+    ["Built status reason", p.built_reason],
+    ["Building flag", p.BLDG],
+    ["Owner/name field", p.NAMEDISPLAY || p.NAME1],
+    ["Property address", p.STREETADDR],
+    ["PIN", p.PIN],
+    ["Subdivision", p.SUBNAME],
+    ["Same-owner contiguous group", p.contiguous_owner_group_id],
+    ["Federal forest/public land", p.federal_forest_public_land],
+    ["Net acres", p.NETACRES],
+    ["Legal", p.LEGAL]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+}
+
+
+function selectBuildableFeature(feature, lngLat) {
+  const p = feature.properties || {};
+  const title = p.STREETADDR || p.PIN || p.NAMEDISPLAY || "Buildable candidate";
+  const html = popupHtml(title, [
+    ["Buildable status", p.buildable_unrestricted_status],
+    ["Reason", p.buildable_unrestricted_reason],
+    ["Built land status", p.built_status_effective],
+    ["Built status reason", p.built_reason],
+    ["Restriction status", p.restriction_reason],
+    ["Owner/name field", p.NAMEDISPLAY || p.NAME1],
+    ["Property address", p.STREETADDR],
+    ["PIN", p.PIN],
+    ["Subdivision", p.SUBNAME],
+    ["Federal forest/public land", p.federal_forest_public_land],
+    ["Net acres", p.NETACRES],
+    ["Legal", p.LEGAL]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+}
+
+function selectParcelFeature(feature, lngLat) {
+  map.getSource("selected-parcel").setData({ type:"FeatureCollection", features:[feature] });
+  showParcels(true);
+
+  const p = feature.properties;
+  const html = popupHtml(p.STREETADDR || p.PIN || "Parcel", [
+    ["PIN", p.PIN],
+    ["Account", p.ACCOUNTNO],
+    ["Owner/name field", p.NAMEDISPLAY || p.NAME1],
+    ["Property address", p.STREETADDR],
+    ["Property city", p.PROPCITY],
+    ["Subdivision", p.SUBNAME],
+    ["Filing", p.FILINGNO],
+    ["Block", p.BLOCK],
+    ["Lot", p.LOT],
+    ["Tract", p.TRACT],
+    ["Account type", p.ACCTTYPE],
+    ["Building flag", p.BLDG],
+    ["Built land status", p.built_status_effective],
+    ["Built status reason", p.built_reason],
+    ["Same-owner contiguous group", p.contiguous_owner_group_id],
+    ["Federal forest/public land", p.federal_forest_public_land],
+    ["Net acres", p.NETACRES],
+    ["Tax district", p.TAXDISTRICT]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+
+  const bbox = featureBbox(feature);
+  if (bbox) map.fitBounds(bbox, { padding:80, maxZoom:16 });
+}
+
+function showParcels(on) {
+  parcelsVisible = on;
+  if (map.getLayer("parcel-line")) map.setLayoutProperty("parcel-line", "visibility", on ? "visible" : "none");
+}
+
+function selectSubdivisionFeature(feature, lngLat) {
+  map.getSource("selected-subdivision").setData({ type:"FeatureCollection", features:[feature] });
+  if (currentMapView !== "subdivisions") setSubdivisionView();
+
+  const p = feature.properties;
+  const html = popupHtml(p.SUBNAME, [
+    ["Subdivision", p.SUBNAME],
+    ["Object ID", p.OBJECTID],
+    ["Source area field", p.Shape__Area],
+    ["Source length field", p.Shape__Length]
+  ]);
+  showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+  if (lngLat) showPopup(lngLat, html);
+
+  const bbox = featureBbox(feature);
+  if (bbox) map.fitBounds(bbox, { padding:80, maxZoom:14 });
+}
+
+function featureBbox(feature) {
+  let minX=Infinity, minY=Infinity, maxX=-Infinity, maxY=-Infinity;
+  function scan(coords) {
+    if (typeof coords[0] === "number") {
+      minX = Math.min(minX, coords[0]); maxX = Math.max(maxX, coords[0]);
+      minY = Math.min(minY, coords[1]); maxY = Math.max(maxY, coords[1]);
+    } else {
+      coords.forEach(scan);
+    }
+  }
+  scan(feature.geometry.coordinates);
+  if (!isFinite(minX)) return null;
+  return [[minX,minY],[maxX,maxY]];
+}
+
+function showAddressDots(on) {
+  addressDotsVisible = on;
+  if (map.getLayer("address-points")) map.setLayoutProperty("address-points", "visibility", on ? "visible" : "none");
+}
+
+function showSubs(on) {
+  subsVisible = on;
+  if (map.getLayer("subdivision-line")) map.setLayoutProperty("subdivision-line", "visibility", on ? "visible" : "none");
+}
+
+function renderAddressResults(list) {
+  const box = document.getElementById("addressResults");
+  if (!list.length) {
+    box.style.display = "block";
+    box.innerHTML = '<div class="result">No matching addresses found.</div>';
+    return;
+  }
+  box.style.display = "block";
+  box.innerHTML = list.slice(0, 35).map((f,i) => {
+    const p = f.properties;
+    return `<div class="result" data-i="${i}"><strong>${value(p.label)}</strong><small>${value(p.ZONING)}${p.Subdivision ? " · " + p.Subdivision : ""}</small></div>`;
+  }).join("") + (list.length > 35 ? `<div class="result"><small>Showing first 35 of ${list.length} matches. Type more to narrow.</small></div>` : "");
+  [...box.querySelectorAll(".result[data-i]")].forEach(el => el.onclick = () => selectAddressFeature(list[+el.dataset.i]));
+}
+
+function findAddress() {
+  const q = document.getElementById("addressSearch").value.trim().toLowerCase();
+  if (!q) return;
+  const words = q.split(/\s+/).filter(Boolean);
+  const matches = addressData.features
+    .filter(f => words.every(w => addressSearchString(f).includes(w)))
+    .sort((a,b) => value(a.properties.label).localeCompare(value(b.properties.label)));
+  renderAddressResults(matches);
+  if (matches.length === 1) selectAddressFeature(matches[0]);
+}
+
+function addOverlayLayers() {
+  const labelLayerId = firstSymbolLayerId();
+
+  map.addSource("zoning", { type:"geojson", data:zoningData, generateId:false });
+  map.addSource("last-dollar-pud", { type:"geojson", data:lastDollarPudData, generateId:false });
+  map.addSource("lawson-hill-pud", { type:"geojson", data:lawsonHillPudData, generateId:false });
+  map.addSource("lawson-hill-ilium-pud", { type:"geojson", data:lawsonHillIliumPudData, generateId:false });
+  map.addSource("two-rivers-pud", { type:"geojson", data:twoRiversPudData, generateId:false });
+  map.addSource("sunnyside-ranches-pud", { type:"geojson", data:sunnysideRanchesPudData, generateId:false });
+  map.addSource("deep-creek-mesa-ranch-pud", { type:"geojson", data:deepCreekMesaRanchPudData, generateId:false });
+  map.addSource("mill-creek-pud", { type:"geojson", data:millCreekPudData, generateId:false });
+  map.addSource("skyfield-pud", { type:"geojson", data:skyfieldPudData, generateId:false });
+  map.addSource("west-meadows-pud", { type:"geojson", data:westMeadowsPudData, generateId:false });
+  map.addSource("aldasoro-pud", { type:"geojson", data:aldasoroPudData, generateId:false });
+  map.addSource("butcher-creek-pud", { type:"geojson", data:butcherCreekPudData, generateId:false });
+  map.addSource("meadows-at-deep-creek-pud", { type:"geojson", data:meadowsAtDeepCreekPudData, generateId:false });
+  /*__DATA_REMOVED__ troutLakePudData*/
+  map.addSource("trout-lake-pud", { type:"geojson", data:troutLakePudData, generateId:false });
+  map.addLayer({
+    id:"trout-lake-pud-fill",
+    type:"fill",
+    source:"trout-lake-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+  map.addLayer({
+    id:"trout-lake-pud-outline",
+    type:"line",
+    source:"trout-lake-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+  /*__DATA_REMOVED__ wilsonMesaRanchesPudData*/
+  map.addSource("wilson-mesa-ranches-pud", { type:"geojson", data:wilsonMesaRanchesPudData, generateId:false });
+  map.addLayer({
+    id:"wilson-mesa-ranches-pud-fill",
+    type:"fill",
+    source:"wilson-mesa-ranches-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+  map.addLayer({
+    id:"wilson-mesa-ranches-pud-outline",
+    type:"line",
+    source:"wilson-mesa-ranches-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+  /*__DATA_REMOVED__ societyTurnPudData*/
+  map.addSource("society-turn-pud", { type:"geojson", data:societyTurnPudData, generateId:false });
+  map.addLayer({
+    id:"society-turn-pud-fill",
+    type:"fill",
+    source:"society-turn-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+  map.addLayer({
+    id:"society-turn-pud-outline",
+    type:"line",
+    source:"society-turn-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+  map.addSource("backman-village-subdivision", { type:"geojson", data:backmanVillageSubdivisionData, generateId:false });
+  map.addSource("subdivisions", { type:"geojson", data:subdivisionData, generateId:false });
+  map.addSource("roads", { type:"vector", url:"mapbox://livabletelluride.smc_roads" });
+  map.addSource("addresses", { type:"geojson", data:addressData, generateId:false });
+  map.addSource("county-outline-source", { type:"geojson", data:countyOutlineData, generateId:false });
+  map.addSource("parcels", { type:"vector", url:"mapbox://livabletelluride.smc_parcels" });
+  map.addSource("selected-zoning", { type:"geojson", data:{type:"FeatureCollection", features:[]} });
+  map.addSource("selected-address", { type:"geojson", data:{type:"FeatureCollection", features:[]} });
+  map.addSource("selected-subdivision", { type:"geojson", data:{type:"FeatureCollection", features:[]} });
+  map.addSource("selected-parcel", { type:"geojson", data:{type:"FeatureCollection", features:[]} });
+  map.addSource("selected-road", { type:"geojson", data:{type:"FeatureCollection", features:[]} });
+
+  map.addLayer({
+    id:"zoning-fill",
+    type:"fill",
+    source:"zoning",
+    paint:{
+      "fill-color": zoningColorExpression,
+      "fill-opacity": Number(document.getElementById("opacity").value)
+    }
+  }, labelLayerId);
+
+  map.addLayer({
+    id:"zoning-line",
+    type:"line",
+    source:"zoning",
+    paint:{
+      "line-color":"#4a4742",
+      "line-width":0.75,
+      "line-opacity":0.75
+    }
+  }, labelLayerId);
+
+
+  map.addLayer({
+    id:"subdivision-fill",
+    type:"fill",
+    source:"subdivisions",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color": subdivisionFillColor,
+      "fill-opacity":0.34
+    }
+  });
+
+  map.addLayer({
+    id:"subdivision-line",
+    type:"line",
+    source:"subdivisions",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#0b5e8e",
+      "line-width":["interpolate", ["linear"], ["zoom"], 7, 1.1, 12, 2.0, 16, 2.6],
+      "line-opacity":0.9
+    }
+  });
+
+  map.addLayer({
+    id:"address-points",
+    type:"circle",
+    source:"addresses",
+    layout:{ visibility:"none" },
+    paint:{
+      "circle-radius":["interpolate", ["linear"], ["zoom"], 8, 1.4, 13, 3.3, 16, 5],
+      "circle-color":"#111111",
+      "circle-opacity":0.42,
+      "circle-stroke-color":"#ffffff",
+      "circle-stroke-width":0.6
+    }
+  });
+
+  map.addLayer({
+    id:"selected-zoning-fill",
+    type:"fill",
+    source:"selected-zoning",
+    paint:{ "fill-color":"#fff000", "fill-opacity":0.26 }
+  });
+
+  map.addLayer({
+    id:"selected-zoning-line",
+    type:"line",
+    source:"selected-zoning",
+    paint:{ "line-color":"#000000", "line-width":4.0 }
+  });
+
+  map.addLayer({
+    id:"selected-subdivision-line",
+    type:"line",
+    source:"selected-subdivision",
+    paint:{ "line-color":"#d92d20", "line-width":3.5 }
+  });
+
+  map.addLayer({
+    id:"selected-address-point",
+    type:"circle",
+    source:"selected-address",
+    paint:{
+      "circle-radius":8,
+      "circle-color":"#d92d20",
+      "circle-stroke-color":"#ffffff",
+      "circle-stroke-width":3
+    }
+  });
+
+
+
+
+
+  map.addLayer({
+    id:"aldasoro-pud-fill",
+    type:"fill",
+    source:"aldasoro-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"aldasoro-pud-outline",
+    type:"line",
+    source:"aldasoro-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"butcher-creek-pud-fill",
+    type:"fill",
+    source:"butcher-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"butcher-creek-pud-outline",
+    type:"line",
+    source:"butcher-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"meadows-at-deep-creek-pud-fill",
+    type:"fill",
+    source:"meadows-at-deep-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"meadows-at-deep-creek-pud-outline",
+    type:"line",
+    source:"meadows-at-deep-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"sunnyside-ranches-pud-fill",
+    type:"fill",
+    source:"sunnyside-ranches-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"sunnyside-ranches-pud-outline",
+    type:"line",
+    source:"sunnyside-ranches-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"deep-creek-mesa-ranch-pud-fill",
+    type:"fill",
+    source:"deep-creek-mesa-ranch-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"deep-creek-mesa-ranch-pud-outline",
+    type:"line",
+    source:"deep-creek-mesa-ranch-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"mill-creek-pud-fill",
+    type:"fill",
+    source:"mill-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"mill-creek-pud-outline",
+    type:"line",
+    source:"mill-creek-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"skyfield-pud-fill",
+    type:"fill",
+    source:"skyfield-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"skyfield-pud-outline",
+    type:"line",
+    source:"skyfield-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"west-meadows-pud-fill",
+    type:"fill",
+    source:"west-meadows-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"west-meadows-pud-outline",
+    type:"line",
+    source:"west-meadows-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+  map.addLayer({
+    id:"backman-village-subdivision-fill",
+    type:"fill",
+    source:"backman-village-subdivision",
+    layout:{ visibility:"visible" },
+    paint:{
+      "fill-color":"#ffffff",
+      "fill-opacity":0.04
+    }
+  });
+
+  map.addLayer({
+    id:"backman-village-subdivision-outline",
+    type:"line",
+    source:"backman-village-subdivision",
+    layout:{ visibility:"visible" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 7, 1.4, 12, 2.8, 16, 4.2],
+      "line-opacity":0.92
+    }
+  });
+
+
+  map.addLayer({
+    id:"lawson-hill-pud-fill",
+    type:"fill",
+    source:"lawson-hill-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"lawson-hill-pud-outline",
+    type:"line",
+    source:"lawson-hill-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"lawson-hill-ilium-pud-fill",
+    type:"fill",
+    source:"lawson-hill-ilium-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"lawson-hill-ilium-pud-outline",
+    type:"line",
+    source:"lawson-hill-ilium-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"two-rivers-pud-fill",
+    type:"fill",
+    source:"two-rivers-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"two-rivers-pud-outline",
+    type:"line",
+    source:"two-rivers-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+
+  map.addLayer({
+    id:"last-dollar-pud-fill",
+    type:"fill",
+    source:"last-dollar-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":"#ffd84d",
+      "fill-opacity":0.48
+    }
+  });
+
+  map.addLayer({
+    id:"last-dollar-pud-outline",
+    type:"line",
+    source:"last-dollar-pud",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":"#000000",
+      "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.8, 16, 1.6],
+      "line-opacity":1
+    }
+  });
+
+  map.addLayer({
+    id:"parcel-development-fill",
+    type:"fill",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"none" },
+    filter:["all", ["==", ["get", "vacant_lot"], "True"], ["!=", ["get", "federal_forest_public_land"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"]],
+    paint:{
+      "fill-color":"#5a9e5a",
+      "fill-opacity":0.55
+    }
+  });
+
+
+  map.addLayer({
+    id:"buildable-unrestricted-fill",
+    type:"fill",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"none" },
+    filter:["all", ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"], ["!=", ["get", "SUBNAME"], "SOCIETY TURN BUSINESS PARK SUBDIVISION/PUD"], ["!=", ["get", "PIN"], "456335100067"], ["any", ["==", ["get", "buildable_unrestricted"], "True"], ["==", ["get", "buildable_unrestricted"], true]]],
+    paint:{
+      "fill-color":"#c45a2a",
+      "fill-opacity":0.58
+    }
+  });
+
+  map.addLayer({
+    id:"parcel-line",
+    type:"line",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"visible" },
+    paint:{
+      "line-color":"#5a3b1f",
+      "line-width":["interpolate", ["linear"], ["zoom"], 8, 0.45, 12, 1.0, 16, 1.7],
+      "line-opacity":["interpolate", ["linear"], ["zoom"], 8, 0.55, 12, 0.78, 16, 0.95]
+    }
+  });
+
+  // Invisible fill over ALL parcels so a click anywhere inside a parcel can be
+  // resolved via queryRenderedFeatures (replaces the old whole-array JS
+  // point-in-polygon now that parcels live in a vector tileset). opacity:0 but
+  // visibility:visible → still returned by queryRenderedFeatures.
+  map.addLayer({
+    id:"parcel-hit",
+    type:"fill",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"visible" },
+    paint:{ "fill-color":"#000000", "fill-opacity":0 }
+  });
+
+
+  map.addLayer({
+    id:"roads-line",
+    type:"line",
+    source:"roads",
+    "source-layer":"road",
+    layout:{ visibility:"none", "line-join":"round", "line-cap":"round" },
+    paint:{
+      "line-color":"#7a2e1f",
+      "line-width":["interpolate", ["linear"], ["zoom"], 8, 0.55, 12, 1.2, 16, 2.6],
+      "line-opacity":["interpolate", ["linear"], ["zoom"], 8, 0.45, 12, 0.72, 16, 0.92]
+    }
+  });
+
+  map.addLayer({
+    id:"selected-road-line",
+    type:"line",
+    source:"selected-road",
+    paint:{ "line-color":"#ff3300", "line-width":5.0, "line-opacity":1 }
+  });
+
+  map.addLayer({
+    id:"selected-parcel-line",
+    type:"line",
+    source:"selected-parcel",
+    paint:{ "line-color":"#ff5a00", "line-width":4.0, "line-opacity":1 }
+  });
+
+  // Official county outline is intentionally added last so it stays visible above the zoning coloration, parcels, and basemap labels.
+  map.addLayer({
+    id:"county-outline",
+    type:"line",
+    source:"county-outline-source",
+    paint:{
+      "line-color":"#16392f",
+      "line-width":["interpolate", ["linear"], ["zoom"], 7, 2.2, 12, 3.4, 16, 4.5],
+      "line-opacity":0.98
+    }
+  });
+
+
+  // ---- Unified click info box: parcel + zoning + PUD at the clicked point ----
+  function _ptInRing(x,y,ring){
+    let inside=false;
+    for(let i=0,j=ring.length-1;i<ring.length;j=i++){
+      const xi=ring[i][0],yi=ring[i][1],xj=ring[j][0],yj=ring[j][1];
+      if(((yi>y)!==(yj>y)) && (x<(xj-xi)*(y-yi)/(yj-yi)+xi)) inside=!inside;
+    }
+    return inside;
+  }
+  function _ptInPolygon(x,y,geom){
+    if(!geom) return false;
+    if(geom.type==="Polygon"){
+      if(!_ptInRing(x,y,geom.coordinates[0])) return false;
+      for(let k=1;k<geom.coordinates.length;k++) if(_ptInRing(x,y,geom.coordinates[k])) return false;
+      return true;
+    }
+    if(geom.type==="MultiPolygon"){
+      for(const poly of geom.coordinates){
+        if(_ptInRing(x,y,poly[0])){
+          let hole=false;
+          for(let k=1;k<poly.length;k++){ if(_ptInRing(x,y,poly[k])){hole=true;break;} }
+          if(!hole) return true;
+        }
+      }
+    }
+    return false;
+  }
+  function _bboxOf(geom){
+    let a=Infinity,b=Infinity,c=-Infinity,d=-Infinity;
+    (function scan(arr){ if(typeof arr[0]==="number"){ if(arr[0]<a)a=arr[0]; if(arr[0]>c)c=arr[0]; if(arr[1]<b)b=arr[1]; if(arr[1]>d)d=arr[1]; } else arr.forEach(scan); })(geom.coordinates);
+    return [a,b,c,d];
+  }
+  function _featureAt(lng,lat,fc){
+    if(!fc||!fc.features) return null;
+    for(const f of fc.features){
+      if(!f.geometry) continue;
+      if(!f._bb) f._bb=_bboxOf(f.geometry);
+      const bb=f._bb;
+      if(lng<bb[0]||lng>bb[2]||lat<bb[1]||lat>bb[3]) continue;
+      if(_ptInPolygon(lng,lat,f.geometry)) return f;
+    }
+    return null;
+  }
+  const _PUD_LAYERS = [
+    ["Trout Lake PUD", troutLakePudData],
+    ["Wilson Mesa Ranches PUD", wilsonMesaRanchesPudData],
+    ["Society Turn PUD", societyTurnPudData],
+    ["Aldasoro PUD", aldasoroPudData],
+    ["Sunnyside PUD", sunnysideRanchesPudData],
+    ["Last Dollar PUD", lastDollarPudData],
+    ["Lawson Hill PUD", lawsonHillPudData],
+    ["Lawson Hill Ilium PUD", lawsonHillIliumPudData],
+    ["Two Rivers PUD", twoRiversPudData],
+    ["The Meadows at Deep Creek PUD", meadowsAtDeepCreekPudData],
+    ["Deep Creek Mesa Ranch PUD", deepCreekMesaRanchPudData],
+    ["Butcher Creek PUD", butcherCreekPudData],
+    ["Mill Creek PUD", millCreekPudData],
+    ["West Meadows PUD", westMeadowsPudData],
+    ["Skyfield PUD", skyfieldPudData]
+  ];
+  function _pudAt(lng,lat){
+    for(const pair of _PUD_LAYERS){
+      const fc=pair[1];
+      if(!fc||!fc.features) continue;
+      for(const f of fc.features){
+        if(f.geometry && _ptInPolygon(lng,lat,f.geometry)) return (f.properties&&f.properties.name)||pair[0];
+      }
+    }
+    return null;
+  }
+  function selectUnifiedFeature(lngLat, point){
+    const lng=lngLat.lng, lat=lngLat.lat;
+    // Parcels live in a vector tileset now — resolve the clicked parcel from the
+    // rendered tile via the transparent parcel-hit layer instead of a whole-array
+    // point-in-polygon. (Returns null when zoomed out past the parcel minzoom,
+    // which is fine — parcels aren't drawn then.)
+    let parcel=null;
+    if(point && map.getLayer("parcel-hit")){
+      const hits=map.queryRenderedFeatures(point,{layers:["parcel-hit"]});
+      parcel=hits && hits.length ? hits[0] : null;
+    }
+    const zoning=_featureAt(lng,lat,zoningData);
+    if(!parcel && !zoning) return;
+    const pp=parcel?parcel.properties:{}, zp=zoning?zoning.properties:{};
+    const owner = pp.NAMEDISPLAY || pp.NAME1;
+    const acreage = (pp.NETACRES!==undefined&&pp.NETACRES!==null&&pp.NETACRES!=="")?pp.NETACRES:zp.Acres;
+    const subdivision = pp.SUBNAME || zp.SUBNAME;
+    const parcelTract = zp.PARCEL_NAM || pp.TRACT;
+    const title = pp.STREETADDR || pp.PIN || zp.ZONING || "Property";
+    const html = popupHtml(title, [
+      ["Parcel #", pp.PIN],
+      ["Account #", pp.ACCOUNTNO],
+      ["Owner", owner],
+      ["Zoning", zp.ZONING],
+      ["Acreage", acreage],
+      ["PUD", pp.pud || _pudAt(lng,lat)],
+      ["Subdivision/area field", subdivision],
+      ["Parcel/tract", parcelTract]
+    ]);
+    if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
+    showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
+    showPopup(lngLat, html);
+  }
+  map.on("click", e => { selectUnifiedFeature(e.lngLat, e.point); });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  map.on("click", "address-points", e => {
+    if (e.features && e.features.length) selectAddressFeature(e.features[0]);
+  });
+
+
+
+  map.on("click", "roads-line", e => {
+    if (e.features && e.features.length) selectRoadFeature(e.features[0], e.lngLat);
+  });
+
+  ["zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
+    map.on("mouseenter", layer, () => map.getCanvas().style.cursor = "pointer");
+    map.on("mouseleave", layer, () => map.getCanvas().style.cursor = "");
+  });
+
+  setFilters();
+  setColoredSectionTransparency();
+  setZoningView();
+}
+
+map.on("load", () => {
+  map.fitBounds(countyBounds, { padding: 35, duration: 0 });
+  addOverlayLayers();
+});
+
+document.getElementById("findAddress").onclick = findAddress;
+document.getElementById("addressSearch").addEventListener("keydown", e => { if (e.key === "Enter") findAddress(); });
+
+
+document.getElementById("zoning").onchange = () => {
+  setZoningView();
+  setFilters();
+};
+document.getElementById("opacity").oninput = setColoredSectionTransparency;
+document.getElementById("viewZoning").onclick = setZoningView;
+document.getElementById("viewPuds").onclick = setPudView;
+document.getElementById("viewBuiltLand").onclick = setBuiltLandView;
+document.getElementById("viewSubdivisions").onclick = setSubdivisionView;
+document.getElementById("viewClear").onclick = setClearView;
+document.getElementById("viewBuildable").onclick = setBuildableView;
+document.getElementById("subdivisionFilter").onchange = applySubdivisionFilter;
+
+document.getElementById("home").onclick = () => map.fitBounds(countyBounds, { padding:35 });
+document.getElementById("clear").onclick = () => {
+  document.getElementById("addressSearch").value = "";
+  document.getElementById("addressResults").style.display = "none";
+  resetZoningFilterOnly();
+  resetSubdivisionFilterOnly();
+  clearSelection();
+  setClearView();
+};
+
+document.querySelectorAll(".legend-item button").forEach(btn => {
+  btn.onclick = () => {
+    const item = btn.closest(".legend-item");
+    document.getElementById("zoning").value = item.dataset.zoning;
+    setFilters();
+  };
+});
+</script>
+<!-- Built land effective counts: {'built': 8205, 'empty': 1947, 'unknown': 598}; original counts: {'built': 7201, 'empty': 2948, 'unknown': 601}; promoted_by_same_owner_contiguous=1004; owner_groups=755 -->
+<!-- Built land effective counts with federal forest/public land gray: {'built': 8171, 'empty': 1854, 'unknown': 725}; original counts: {'built': 7201, 'empty': 2948, 'unknown': 601}; promoted_by_same_owner_contiguous=991; federal_forest_public_gray=465; forest_pre_override_built=21; owner_groups=751 -->
+<!-- Buildable w/o Restrictions candidates: 749; excludes PUD/subdivision overlap, federal forest/public, and built-effective parcels. -->
+</body>
+</html>
