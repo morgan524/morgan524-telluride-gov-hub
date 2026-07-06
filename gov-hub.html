@@ -330,22 +330,21 @@
       padding: 4px;
       border: 1px solid var(--border-card);
     }
+    /* The summary is the focus of the card — show it in full (no line clamp),
+       a touch larger, with comfortable line-height. */
     .meet-summary {
-      font-size: 0.92rem;
+      font-size: 0.96rem;
+      line-height: 1.55;
       color: var(--text-secondary);
-      margin: 0;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      margin: 2px 0 2px;
     }
     .meet-meta {
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       color: var(--text-muted);
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      padding-top: 8px;
+      gap: 4px 12px;
+      padding-top: 6px;
       border-top: 1px solid var(--border-card);
     }
     .meet-meta span { display: inline-flex; align-items: center; gap: 4px; }
@@ -354,18 +353,18 @@
     .zoom-panel {
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      padding: 10px 12px;
+      gap: 6px;
+      padding: 7px 10px;
       background: var(--accent-green-soft);
       border: 1px solid var(--accent-green-border);
       border-radius: 8px;
-      font-size: 0.82rem;
+      font-size: 0.76rem;
       color: var(--text-primary);
     }
-    .zoom-panel .zoom-info { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: baseline; }
+    .zoom-panel .zoom-info { display: flex; flex-wrap: wrap; gap: 3px 12px; align-items: baseline; }
     .zoom-panel .zoom-info span { display: inline-flex; gap: 4px; }
     .zoom-panel .zoom-label { color: var(--forest); font-weight: 700; margin-right: 6px; }
-    .zoom-panel .zoom-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    .zoom-panel .zoom-buttons { display: flex; gap: 6px; flex-wrap: wrap; }
     /* Join Zoom + Livestream buttons share the same "is the meeting
        happening RIGHT NOW?" coloring scheme:
          FUTURE (default): darker brown so it doesn't compete with the
@@ -384,7 +383,7 @@
 
     .meet-actions {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
       margin-top: 4px;
     }
@@ -392,11 +391,11 @@
       display: inline-block;
       background: var(--accent-green-soft);
       color: var(--forest);
-      padding: 5px 11px;
+      padding: 4px 10px;
       border-radius: 999px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.77rem;
+      font-size: 0.72rem;
       border: 1px solid var(--accent-green-border);
       transition: background 0.15s;
     }
@@ -1056,11 +1055,9 @@
       // Comment button
       const ci = commentInfo(m);
       let commentBtn = '';
-      let deadlineNote = '';
       if (ci) {
         const subject = encodeURIComponent('Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || ''));
         commentBtn = '<a class="btn-action comment" href="mailto:' + ci.email + '?subject=' + subject + '">✉️ Submit Comment</a>';
-        deadlineNote = '<div class="comment-deadline">📅 ' + ci.deadline + '</div>';
       }
 
       return '<article class="' + cardClass + '">'
@@ -1076,7 +1073,6 @@
            + ((commentBtn || wtmBtn || recordBtn)
                ? '<div class="meet-actions meet-actions-secondary">' + commentBtn + wtmBtn + recordBtn + '</div>'
                : '')
-           + deadlineNote
            + '</article>';
     }
 

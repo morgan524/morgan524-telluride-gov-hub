@@ -642,11 +642,12 @@ CONTENT RULES:
 - The "why it matters" section should connect agenda items to key local issues when relevant, written in the voice.
 
 SHORT SUMMARY — HARD CONSTRAINTS:
-- Length scales with the agenda. When a posted agenda offers real substance (code
-  changes, multiple land-use items, consequential decisions), write UP TO ~180 words
-  to give residents meaningful detail on what's actually being decided. When the
-  agenda is thin or routine, stay around 50-70 words. When no agenda is posted yet,
-  1 short sentence. Count and respect the upper cap; truncate lower-priority content first.
+- Length scales with the agenda, and err on the side of MORE detail — residents
+  want to understand what's actually being decided, item by item. When a posted
+  agenda offers real substance (code changes, multiple land-use items, consequential
+  decisions), write a thorough ~150-220 words that walks through each substantive
+  item. When the agenda is thin or routine, ~80-110 words. When no agenda is posted
+  yet, 1-2 short sentences. Respect the upper cap; truncate lower-priority content first.
 - Order content by this priority hierarchy:
     1. CODE CHANGES — text amendments, ordinances, regulation changes, second readings, repeals,
        and anything that changes the rules of the road for the jurisdiction. Lead with these.
