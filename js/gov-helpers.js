@@ -247,7 +247,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
 
   "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
     {"sv":4},
@@ -429,7 +429,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -471,13 +471,13 @@ const MANUAL_SUMMARIES = {
     "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.",
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
-    "The July 08 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The Ecology Commission meets Wednesday to work through two substantive items. The main session is a work session reviewing the 2022 Climate Action Plan, with discussion focused on two specific focus areas: Transportation & Land Use and Materials & Consumption — both of which connect directly to how people move around the box canyon and what gets consumed and discarded here. The commission will also take action on appointing members to the Green Grants Selection Subcommittee, which directs local environmental funding. Rounding out the agenda is a report on the outcome of the Trash Bash event. The June meeting was canceled, so there are no prior minutes to approve.",
 
   "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -639,6 +639,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Dry thunderstorms could complicate firefighting efforts",
+    source: "Telluride Times",
+    date: "July 6, 2026",
+    firstSeen: "2026-07-06",
+    newsTopic: "public-safety",
+    copy: "The Gold Mountain Fire near Ouray has grown to nearly 30,000 acres with just 3% containment, while the Ferris Fire near Dolores has reached 50,000 acres at 21% contained. San Miguel County is under an air quality health advisory through at least Tuesday due to smoke. No active fires are currently burning in San Miguel County, which is under Stage 2 fire restrictions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8e9913c5-3691-468d-a3ae-eaa7ca037c48.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/47/a47d7dfb-9699-46ee-8b6e-87a921969428/6a4c0938939c5.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Memorial service to honor firefighters killed on Colorado-Utah border",
     source: "Telluride Times",
@@ -2801,28 +2813,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-06/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-06T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Savvy Seniors",
-    link: "https://koto.org/event/savvy-seniors/",
-    description: "Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you’re looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-07-06T19:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Birding with Katie Triest at Patagonia Telluride , July 6 and 7",
     link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-06/",
     description: "On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.",
@@ -3430,6 +3420,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/9725c41c-1954-4f96-8d5a-bbe4507c7d01/-/crop/3998x1998/0,26/-/preview/"
+  },
+  {
+    title: "The Itals w/ DJ Wombat",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-itals",
+    description: "“The Itals stand for everything pure, natural, unpolluted, straight to the sourc...",
+    pubDate: "2026-07-10",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/37cbde54-dc85-4157-ba1f-87cc0bc97995/"
   },
   {
     title: "Après Nova",
@@ -4833,6 +4835,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
+    title: "HAHA Little Giggles",
+    link: "https://townofmountainvillage.com/explore/events/all-events/haha-little-giggles/",
+    description: "Sunday morning provides access to the entire HAHA Experience for families, children and teens ages 3-17, who must be accompanied by a Little Giggles ticketed",
+    pubDate: "2026-07-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49341/haha_sunday_photo_76.jpeg"
+  },
+  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5498,6 +5511,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62760/untitled_design_2.800x533.webp"
   },
   {
+    title: "Artistic Ventures In Dance Open Rehearsal",
+    link: "https://www.telluride.com/event/artistic-ventures-in-dance-open-rehearsal/",
+    description: "Step behind‑the‑scenes for a look at how Artistic Ventures in Dance 'AVID' brings ballet to life. During this sneak …",
+    pubDate: "2026-07-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63008/preview_posters_2200_x_1237_px.800x533.webp"
+  },
+  {
     title: "North Mississippi Allstars",
     link: "https://www.telluride.com/event/north-mississippi-allstars/",
     description: "The Sheridan Arts Foundation presents North Mississippi Allstars Live in Concert at the historic Sheridan Opera House …",
@@ -5541,6 +5565,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62925/telluride_tour_poster_1.800x533.webp"
+  },
+  {
+    title: "Twenty(by)Telluride: Ah Haa HAHA",
+    link: "https://www.telluride.com/event/twenty-by-telluride-ah-haa-haha/",
+    description: "Join the Ah Haa for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event …",
+    pubDate: "2026-07-15",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63014/eblast-1800x600.800x533.webp"
   },
   {
     title: "Liver Down the River",
