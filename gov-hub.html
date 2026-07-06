@@ -264,6 +264,7 @@
       border-radius: 999px;
     }
     .recap-body { font-size: 0.95rem; line-height: 1.55; color: #333; margin: 4px 0 0; }
+    .recap-body + .recap-body { margin-top: 0.7em; }   /* space between recap paragraphs */
     .recap-byline { font-size: 0.78rem; color: #8a6d3b; font-style: italic; margin-top: 6px; }
     .meet-card-head {
       display: flex;
@@ -1081,6 +1082,27 @@
 
     // Past-meeting "Rick" recap card. Shown in the Past Meeting Summaries
     // section for 3 days after the meeting, then drops off automatically.
+    // Recaps arrive as one long blob (no line breaks). Split into readable
+    // paragraphs: break at sentence boundaries, then group sentences into
+    // ~length-balanced paragraphs (a short trailing bit merges into the last).
+    function paragraphize(text) {
+      const clean = String(text || '').replace(/\s+/g, ' ').trim();
+      if (!clean) return [];
+      const sentences = clean.split(/(?<=[.!?])\s+(?=["'“(]?[A-Z0-9])/).map(s => s.trim()).filter(Boolean);
+      const paras = [];
+      let cur = '';
+      const MAX = 260;   // start a new paragraph before a sentence pushes past this
+      for (const s of sentences) {
+        if (cur && cur.length + 1 + s.length > MAX) { paras.push(cur); cur = s; }
+        else cur = cur ? cur + ' ' + s : s;
+      }
+      if (cur) {
+        if (paras.length && cur.length < 90) paras[paras.length - 1] += ' ' + cur;  // no orphan scrap
+        else paras.push(cur);
+      }
+      return paras.length ? paras : [clean];
+    }
+
     function recapCard(r) {
       const dateBadge = fmtDateBadge(r.date);
       const logos = {
@@ -1102,7 +1124,7 @@
            + '<div class="meet-info"><span class="recap-tag">Recap</span>'
            + '<h2 class="meet-title">' + esc(r.title || '') + '</h2></div>'
            + logo + '</div>'
-           + '<p class="recap-body">' + esc(r.recap || '') + '</p>'
+           + paragraphize(r.recap).map(p => '<p class="recap-body">' + esc(p) + '</p>').join('')
            + (watch ? '<div class="meet-actions meet-actions-secondary">' + watch + '</div>' : '')
            + '</article>';
     }
