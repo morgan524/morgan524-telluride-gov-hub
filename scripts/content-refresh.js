@@ -2940,7 +2940,7 @@ function readJsFile(filePath) {
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
-const { MIRROR_ARRAYS, writeMirror } = require('./lib/json-mirror.js');
+const { MIRROR_ARRAYS, MIRROR_OBJECTS, writeMirror } = require('./lib/json-mirror.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -6494,8 +6494,13 @@ async function main() {
   // alongside the JS literal (write-if-different, so no-op on a no-change run).
   // No client reads these yet; test/json-mirror.test.js asserts they match the
   // JS. Runs regardless of `changed` so the mirror self-heals if it ever drifts.
+  const _dataDir = path.join(REPO_ROOT, 'data');
   for (const name of MIRROR_ARRAYS) {
-    try { writeMirror(name, extractJsArray(govHubSrc, name) || [], path.join(REPO_ROOT, 'data')); }
+    try { writeMirror(name, extractJsArray(govHubSrc, name) || [], _dataDir); }
+    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
+  }
+  for (const name of MIRROR_OBJECTS) {
+    try { writeMirror(name, extractJsObject(govHubSrc, name) || {}, _dataDir); }
     catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
   }
 

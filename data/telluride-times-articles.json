@@ -1,17 +1,5 @@
 [
   {
-    "title": "‘It feels so good’ to gather",
-    "source": "Telluride Times",
-    "date": "July 5, 2026",
-    "firstSeen": "2026-07-05",
-    "newsTopic": "land-use",
-    "copy": "Telluride's People's March gathers monthly at the San Miguel County Courthouse — two speakers, a walk to the park and back, then an open mic. Drew from as far as Montrose, it's been running about a year and a half. Next up: Saturday, July 11 at noon, with Bryan Miller speaking.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_bb8b75f7-4df3-48e4-a86d-35dee7aa8ac6.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/94/994ab3e1-47cf-416c-baf1-4ff75ed5358b/6a48ca441116d.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Memorial service to honor firefighters killed on Colorado-Utah border",
     "source": "Telluride Times",
     "date": "July 5, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_55ad13b6-d887-5039-b115-7b1f56da9f36.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/3a/03aac3ca-135f-5082-a952-3b562ebab08f/6a4a56a49fc94.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "‘It feels so good’ to gather",
+    "source": "Telluride Times",
+    "date": "July 5, 2026",
+    "firstSeen": "2026-07-05",
+    "newsTopic": "land-use",
+    "copy": "Telluride's People's March gathers monthly at the San Miguel County Courthouse — two speakers, a walk to the park and back, then an open mic. Drew from as far as Montrose, it's been running about a year and a half. Next up: Saturday, July 11 at noon, with Bryan Miller speaking.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_bb8b75f7-4df3-48e4-a86d-35dee7aa8ac6.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/94/994ab3e1-47cf-416c-baf1-4ff75ed5358b/6a48ca441116d.image.jpg",
     "imgHiRes": true
   },
   {
@@ -1278,42 +1278,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Munchie Mansion is a new eatery in Placerville",
-    "source": "Telluride Times",
-    "date": "June 22, 2026",
-    "firstSeen": "2026-06-24",
-    "newsTopic": "community",
-    "copy": "Jenni Watkins opened Munchie Mansion, a food trailer at 260 Front St. in Placerville, in March — an offshoot of her decade-old catering business, The Sunny Side. The trailer runs Monday–Friday, 10am–4pm, serving homemade sandwiches, sides, and espresso from Telluride Coffee Roasters. Dinner service is planned for this summer.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/norwood_post/article_9d05a760-b3f2-4345-947d-02c7bf92ff3a.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/e5/8e553ba1-8595-4d5c-8b98-84b7caf90acf/6a31b60d0bdce.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "‘Threads of sound’",
-    "source": "Telluride Times",
-    "date": "June 22, 2026",
-    "firstSeen": "2026-06-24",
-    "newsTopic": "arts-culture",
-    "copy": "Telluride Chamber Music returns to the Mai residence — a restored barn beneath Sunshine Mountain — for three evening concerts June 28, July 2, and July 5, featuring violinists, a cellist, and pianist Orion Weiss, with guest clarinetist Alan Kay of Juilliard joining the July 2 program. The concerts mix classical masterworks with contemporary pieces, ending each night on a lighter note. A Local Artists' Night is also scheduled June 30.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_ce72d8c6-e7f3-46f2-846a-529ca94e23f4.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/a5/ba56e910-dc41-4628-afeb-b4f75e839c5e/6a391393f2918.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Wyndham Clark avoids record collapse and holds on to win the US Open",
-    "source": "Telluride Times",
-    "date": "June 22, 2026",
-    "firstSeen": "2026-06-24",
-    "newsTopic": "community",
-    "copy": "Wyndham Clark won his second U.S. Open title at Shinnecock Hills, closing with a 73 but holding off Sam Burns by one shot. He built a big 54-hole lead that nearly vanished before a clutch 30-foot birdie on 16 steadied him. His father flew overnight from Denver to watch him win for the first time.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_2dfa6045-3d42-50d3-8d67-378ce6f4ffdb.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5f/85ff96ce-ec9b-566b-9232-80f9c06de7c0/6a386d86ea740.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     "source": "Town of Telluride",
     "date": "June 30, 2026",
@@ -1458,17 +1422,6 @@
     "img": ""
   },
   {
-    "title": "Gold Mountain Fire Update",
-    "source": "Town of Ridgway",
-    "date": "July 2, 2026",
-    "firstSeen": "2026-07-03",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/FINAL-MediaRelDalyUpdate_20260702_00009911.pdf",
-    "img": ""
-  },
-  {
     "title": "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
     "source": "Town of Ridgway",
     "date": "July 1, 2026",
@@ -1477,61 +1430,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
-    "img": ""
-  },
-  {
-    "title": "Gold Mountain Fire Update",
-    "source": "Town of Ridgway",
-    "date": "July 1, 2026",
-    "firstSeen": "2026-07-01",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/GMFiewMediaRelDalyUpdate_20260701_0000991.pdf",
-    "img": ""
-  },
-  {
-    "title": "Gold Mountain Fire Perimeter Map",
-    "source": "Town of Ridgway",
-    "date": "July 1, 2026",
-    "firstSeen": "2026-07-01",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/MAPpio_8x11_land_20260630_2130_GoldMountain_COGMF000099_0701day.pdf",
-    "img": ""
-  },
-  {
-    "title": "Gold Mountain Fire Update",
-    "source": "Town of Ridgway",
-    "date": "June 30, 2026",
-    "firstSeen": "2026-06-30",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Gold-Mtn-Fire-Update-2026-06-30.pdf",
-    "img": ""
-  },
-  {
-    "title": "Gold Mountain Fire Perimeter Map",
-    "source": "Town of Ridgway",
-    "date": "June 30, 2026",
-    "firstSeen": "2026-06-30",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/pio_8x11_land_20260630.pdf",
-    "img": ""
-  },
-  {
-    "title": "Gold Mountain Fire Update",
-    "source": "Town of Ridgway",
-    "date": "June 29, 2026",
-    "firstSeen": "2026-06-30",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Gold-Mtn-Fire-Update-2026-06-29.pdf",
     "img": ""
   },
   {
@@ -1557,31 +1455,9 @@
     "img": ""
   },
   {
-    "title": "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
-    "source": "Town of Ridgway",
-    "date": "July 5, 2026",
-    "firstSeen": "2026-06-28",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/News-Release_-June-28-Gold-Mountain-Fire-Update.pdf",
-    "img": ""
-  },
-  {
-    "title": "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
-    "source": "Town of Ridgway",
-    "date": "July 5, 2026",
-    "firstSeen": "2026-06-28",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/News-Release_-Gold-Mountain-Fire---Google-Docs.pdf",
-    "img": ""
-  },
-  {
     "title": "Movie Mondays 8:30pm in Hartwell Park",
     "source": "Town of Ridgway",
-    "date": "July 5, 2026",
+    "date": "July 6, 2026",
     "firstSeen": "2026-06-24",
     "newsTopic": "arts-culture",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1592,7 +1468,7 @@
   {
     "title": "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     "source": "Town of Ridgway",
-    "date": "July 5, 2026",
+    "date": "July 6, 2026",
     "firstSeen": "2026-06-24",
     "newsTopic": "infrastructure",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1603,7 +1479,7 @@
   {
     "title": "Planting Trees in Ridgway - Species Recommendations Brochure",
     "source": "Town of Ridgway",
-    "date": "July 5, 2026",
+    "date": "July 6, 2026",
     "firstSeen": "2026-06-24",
     "newsTopic": "community",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1658,7 +1534,7 @@
   {
     "title": "Notice of Introduction - Ordinance No. 04-2026",
     "source": "Town of Ridgway",
-    "date": "July 5, 2026",
+    "date": "July 6, 2026",
     "firstSeen": "2026-06-26",
     "newsTopic": "government",
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
