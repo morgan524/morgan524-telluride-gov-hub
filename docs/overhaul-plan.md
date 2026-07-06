@@ -14,9 +14,21 @@ sandbox so `getMeetingSummary` is testable/usable in tooling. **Finding (logged 
 the backlog):** `AI_SUMMARIES` is defined only inline in `gov-hub.html`, so
 `getMeetingSummary` throws everywhere else (silently caught) — the cross-context
 fix belongs in `gov-helpers.js` but changes digest output, so it's deferred until
-the parity harness exists. Still TODO in Phase 1: schemas; the end-to-end parity
-harness; golden tests for the copy-pasted `featuredScore` / `tkey` dedup (still in
-weekly-email.js + events.html, not a shared lib yet).
+the parity harness exists.
+
+**Parity harness DONE (2026-07-05):** `scripts/parity/capture.js` +
+`docs/overhaul/parity-harness.md`. Snapshots the rendered digests + the
+data-layer getters (county/Telluride meetings, `getMeetingSummary`,
+`resolveEventImage`) so a refactor can be proven behavior-preserving via a
+before/after `diff -ru`. Verified deterministic (two no-change captures diff
+empty). A CI guard (`scripts/test/parity.test.js`) runs the whole capture so a
+broken pipeline fails the build. **This unblocks the deferred `getMeetingSummary`
+/`AI_SUMMARIES` fix and the Phase 2 data migration** — each can now be diffed.
+
+Still TODO in Phase 1: record **schemas** (meeting/event/summary); golden tests
+for the copy-pasted `featuredScore` / `tkey` dedup — note `featuredScore` has
+already **drifted** between weekly-email.js and events.html, so unifying it is a
+behavior change that must be parity-diffed and is NOT a no-input refactor.
 
 Opportunistic wins already shipped that belong to later phases: `js/site-config.js`
 (Phase 5 config consolidation) and `resolveEventImage` in `gov-helpers.js`

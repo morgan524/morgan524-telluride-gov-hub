@@ -52,3 +52,6 @@ content-review-actionable.log
 content-review-email.html
 scripts/review/last-review.json
 scripts/review/site-review.json
+
+# Parity harness output (scripts/parity/capture.js) — never commit snapshots
+parity-snapshot/
