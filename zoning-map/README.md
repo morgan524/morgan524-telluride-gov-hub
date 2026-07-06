@@ -34,7 +34,16 @@ source GeoJSON in a local `data/` dir (regenerate the LEGAL-stripped
 `parcel.json`/`roads.json` from `assets/GIS Data/` + the v18 computed fields
 first — those large files are intentionally NOT kept in the repo).
 
+`prep-parcels.js` regenerates that `parcel.json` from the v18 export: strips
+`LEGAL`, rounds coordinates, and — importantly — tags `high_country:"True"` on
+every parcel whose centroid falls in the `HIGH COUNTRY AREA` zoning district
+(the alpine mining claims). The Vacant Lots and Buildable style filters in
+`index.html` exclude `high_country` parcels, so **a re-upload MUST re-run this
+tagging** or those claims will reappear in those two views.
+
 ```
+node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
+# then point upload-tilesets.js's DATA dir at it and run:
 node upload-tilesets.js
 ```
 

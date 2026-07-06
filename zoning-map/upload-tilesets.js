@@ -46,9 +46,12 @@ async function createOrUpdateTileset(L) {
     body: JSON.stringify({ name: L.tileset, recipe })
   });
   if (r.status === 400 && /already exists/i.test(await r.clone().text())) {
-    // Update the recipe on the existing tileset.
+    // Update the recipe on the existing tileset. The recipe PATCH body is the
+    // recipe object itself (NOT wrapped in {recipe}). Note: re-uploading the
+    // SOURCE + publishing already refreshes the data; the recipe only needs
+    // updating when layers/zoom change.
     const pr = await fetch(`${API}/${id}/recipe?access_token=${TOK}`, {
-      method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ recipe })
+      method: 'PATCH', headers: { 'content-type': 'application/json' }, body: JSON.stringify(recipe)
     });
     if (!pr.ok) throw new Error(`recipe update ${id} ${pr.status}: ${(await pr.text()).slice(0, 200)}`);
     console.log(`  tileset ${id}: recipe updated`);
