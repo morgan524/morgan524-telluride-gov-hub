@@ -1014,9 +1014,12 @@
       // gov-helpers.js is the purpose-built v2 data file regenerated from gov-hub.js every 6 hours.
       // It contains TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, etc. without the full app code
       // that would throw errors when loaded outside the main single-page app context.
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
-      dataScript.onload = () => {
+      // JSON-first: read the small data/*.json mirrors instead of the ~511 KB
+      // gov-helpers.js. This page reads ONLY data (no helper functions), so on a
+      // successful fetch it never loads gov-helpers.js. On ANY fetch failure it
+      // falls back to the old path (load gov-helpers.js + read the globals). Both
+      // sources are CI-verified identical during the dual-write phase.
+      function applyNewsData() {
         try {
             // A syntactically-broken gov-helpers.js still fires onload (only a
             // network failure hits onerror), so if the expected global is missing
@@ -1273,12 +1276,23 @@
             }
             render();
         } catch (err) { console.warn('loadLiveData filter pass failed:', err); showNewsError(); }
-      };
-      dataScript.onerror = () => {
-        console.warn('Could not load gov-helpers.js');
-        showNewsError();
-      };
-      document.head.appendChild(dataScript);
+      }
+      // Fallback: load the full gov-helpers.js and read the globals (old path).
+      function loadFromGovHelpers() {
+        const dataScript = document.createElement('script');
+        dataScript.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
+        dataScript.onload = applyNewsData;
+        dataScript.onerror = () => { console.warn('Could not load gov-helpers.js'); showNewsError(); };
+        document.head.appendChild(dataScript);
+      }
+      const _files = ['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'humane-society-animals', 'local-news-featured'];
+      const _globals = ['TELLURIDE_TIMES_ARTICLES', 'KOTO_NEWSCASTS', 'SMB_FORUM_ARTICLES', 'HUMANE_SOCIETY_ANIMALS', 'LOCAL_NEWS_FEATURED'];
+      Promise.all(_files.map(function (f) {
+        return fetch('/data/' + f + '.json?v=' + day).then(function (r) { if (!r.ok) throw new Error(f + ' HTTP ' + r.status); return r.json(); });
+      })).then(function (datas) {
+        datas.forEach(function (d, i) { window[_globals[i]] = d; });   // set globals the render reads
+        applyNewsData();
+      }).catch(loadFromGovHelpers);
     }
     loadLiveData();
   </script>
