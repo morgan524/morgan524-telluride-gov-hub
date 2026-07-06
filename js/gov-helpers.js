@@ -8106,13 +8106,19 @@ function meetingBoardToken(title) {
 
 function getMeetingSummary(item) {
   if (!item.eventDate) return '';
+  // AI_SUMMARIES is defined inline ONLY in gov-hub.html; referencing it bare on
+  // any other surface (digest, content-review, source-health) threw a
+  // ReferenceError here, silently swallowed by callers' try/catch — so this
+  // resolver never ran there. Alias through a typeof guard: never throws;
+  // degrades to {} off-page, uses the real store on gov-hub.
+  const _AI = (typeof AI_SUMMARIES !== 'undefined' && AI_SUMMARIES) ? AI_SUMMARIES : {};
   const dateKey = localDateKey(item.eventDate);
   const cleanTitle = item.title.replace(/ -- CANCELED$/, '');
   const exactKey = item.source + '|' + dateKey + '|' + cleanTitle;
 
   // 1. Check AI summaries (from Firestore via Cloud Function)
-  if (AI_SUMMARIES[exactKey] && AI_SUMMARIES[exactKey].shortSummary) {
-    const s = AI_SUMMARIES[exactKey].shortSummary;
+  if (_AI[exactKey] && _AI[exactKey].shortSummary) {
+    const s = _AI[exactKey].shortSummary;
     if (isBadSummary(s)) return '';
     return s;
   }
@@ -8139,7 +8145,7 @@ function getMeetingSummary(item) {
     };
     const mm = pickBest(MANUAL_SUMMARIES, k => MANUAL_SUMMARIES[k] || '');
     if (mm) return mm;
-    const am = pickBest(AI_SUMMARIES, k => (AI_SUMMARIES[k] && AI_SUMMARIES[k].shortSummary) || '');
+    const am = pickBest(_AI, k => (_AI[k] && _AI[k].shortSummary) || '');
     if (am) return am;
   }
 
@@ -8152,9 +8158,9 @@ function getMeetingSummary(item) {
   }
 
   // 4. Partial match in AI summaries
-  const aiKeys = Object.keys(AI_SUMMARIES).filter(k => k.startsWith(item.source + '|' + dateKey + '|'));
-  if (aiKeys.length === 1 && AI_SUMMARIES[aiKeys[0]].shortSummary) {
-    const s = AI_SUMMARIES[aiKeys[0]].shortSummary;
+  const aiKeys = Object.keys(_AI).filter(k => k.startsWith(item.source + '|' + dateKey + '|'));
+  if (aiKeys.length === 1 && _AI[aiKeys[0]].shortSummary) {
+    const s = _AI[aiKeys[0]].shortSummary;
     if (isBadSummary(s)) return '';
     return s;
   }
