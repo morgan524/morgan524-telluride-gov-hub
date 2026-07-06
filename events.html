@@ -1946,14 +1946,22 @@
        const _v = Math.floor(Date.now()/600000);
        const gd = document.createElement('script');
        gd.src = 'https://livabletelluride.org/js/gov-data.js?v=' + _v;
-       gd.onload = () => { try { renderFestivalCalendar(); } catch(e) { console.warn('renderFestivalCalendar:', e); } loadHelpers(_v); };
-       gd.onerror = () => { console.warn('Could not load gov-data.js (festivals)'); loadHelpers(_v); };
+       gd.onload = () => { try { renderFestivalCalendar(); } catch(e) { console.warn('renderFestivalCalendar:', e); } loadEventsData(_v); };
+       gd.onerror = () => { console.warn('Could not load gov-data.js (festivals)'); loadEventsData(_v); };
        document.head.appendChild(gd);
      }
      function loadHelpers(_v) {
        const s = document.createElement('script');
        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + _v;
-       s.onload = () => {
+       s.onload = processEvents;
+       s.onerror = () => console.warn('Could not load gov-helpers.js for live events');
+       document.head.appendChild(s);
+     }
+     // Process every event feed and render. The source globals are already set
+     // — either by the JSON-first fetch in loadEventsData() (the fast path) or
+     // by gov-helpers.js (the fallback). Each source is read via
+     // `typeof X !== 'undefined'`, so a missing feed just drops that bucket.
+     function processEvents() {
            try {
              const live = [];
              // Find a town keyword in an arbitrary string. Returns '' (not
@@ -2338,9 +2346,34 @@
 
              Promise.allSettled([ridgwayP, communityJsonP, approvedP, recActsP]).finally(() => finishAndRender());
            } catch (err) { console.warn('loadLiveEvents failed:', err); }
-       };
-       s.onerror = () => console.warn('Could not load gov-helpers.js for live events');
-       document.head.appendChild(s);
+     }
+     // JSON-first: fetch just the event data files this page needs (~a few KB
+     // each) instead of the 511KB js/gov-helpers.js bundle. Set each window
+     // global, then run the SAME processEvents(). Any fetch failure (offline,
+     // 404, bad JSON) falls back to gov-helpers.js — identical prior behavior.
+     // The file list mirrors the arrays processEvents() reads; keep in sync.
+     function loadEventsData(_v) {
+       const FILES = [
+         ['alibi-events', 'ALIBI_EVENTS'], ['sheridan-events', 'SHERIDAN_EVENTS'],
+         ['wilkinson-events', 'WILKINSON_EVENTS'], ['community-events', 'COMMUNITY_EVENTS'],
+         ['music-on-the-green', 'MUSIC_ON_THE_GREEN'], ['telluride-farmers-market', 'TELLURIDE_FARMERS_MARKET'],
+         ['beacon-events', 'BEACON_EVENTS'], ['chamber-music-events', 'CHAMBER_MUSIC_EVENTS'],
+         ['telluride-rotary-meetings', 'TELLURIDE_ROTARY_MEETINGS'], ['telluride-science-events', 'TELLURIDE_SCIENCE_EVENTS'],
+         ['telluride-foundation-events', 'TELLURIDE_FOUNDATION_EVENTS'], ['telluride-venture-events', 'TELLURIDE_VENTURE_EVENTS'],
+         ['ouray-county-events', 'OURAY_COUNTY_EVENTS'], ['norwood-events', 'NORWOOD_EVENTS'],
+         ['mountain-village-events', 'MOUNTAIN_VILLAGE_EVENTS'], ['telluride-com-events', 'TELLURIDE_COM_EVENTS'],
+         ['ouray-ridgway-events', 'OURAY_RIDGWAY_EVENTS'], ['koto-community-events', 'KOTO_COMMUNITY_EVENTS'],
+       ];
+       Promise.all(FILES.map(function (pair) {
+         return fetch('/data/' + pair[0] + '.json?v=' + _v)
+           .then(function (r) { if (!r.ok) throw new Error(pair[0] + ' HTTP ' + r.status); return r.json(); });
+       })).then(function (datas) {
+         datas.forEach(function (d, i) { window[FILES[i][1]] = d; });
+         processEvents();
+       }).catch(function (err) {
+         console.warn('events JSON fetch failed, loading gov-helpers.js:', err);
+         loadHelpers(_v);
+       });
      }
      loadLiveEvents();
 

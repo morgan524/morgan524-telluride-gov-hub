@@ -24,10 +24,16 @@ const path = require('path');
 const MIRROR_ARRAYS = [
   // news
   'TELLURIDE_TIMES_ARTICLES', 'SMB_FORUM_ARTICLES', 'KOTO_NEWSCASTS', 'KOTO_FEATURED_STORIES',
-  // events
+  // events (bot-synced)
   'ALIBI_EVENTS', 'SHERIDAN_EVENTS', 'SHERBINO_EVENTS', 'CLUB_RED_SHOWS', 'WILKINSON_EVENTS',
   'KOTO_COMMUNITY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'TELLURIDE_COM_EVENTS', 'TELLURIDE_SCIENCE_EVENTS',
   'FRESH_FOOD_HUB_EVENTS', 'NORWOOD_EVENTS', 'NUCLA_NATURITA_EVENTS', 'OURAY_COUNTY_EVENTS', 'OURAY_RIDGWAY_EVENTS',
+  // events (hand-curated in gov-helpers.js — NOT bot-written). content-refresh
+  // still re-mirrors them from the current JS each run, so the JSON self-heals
+  // within ~6h; a hand-edit needs `node scripts/mirror-json.js` to sync CI now.
+  // events.html reads these JSON files directly (reader flip), so keep them here.
+  'COMMUNITY_EVENTS', 'MUSIC_ON_THE_GREEN', 'TELLURIDE_FARMERS_MARKET', 'BEACON_EVENTS',
+  'CHAMBER_MUSIC_EVENTS', 'TELLURIDE_ROTARY_MEETINGS', 'TELLURIDE_FOUNDATION_EVENTS', 'TELLURIDE_VENTURE_EVENTS',
   // meetings / civic / other
   'TELLURIDE_BOARD_MEETINGS', 'LEGAL_NOTICES', 'HUMANE_SOCIETY_ANIMALS',
   // blog
