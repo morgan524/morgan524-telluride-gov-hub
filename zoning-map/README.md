@@ -35,11 +35,13 @@ source GeoJSON in a local `data/` dir (regenerate the LEGAL-stripped
 first — those large files are intentionally NOT kept in the repo).
 
 `prep-parcels.js` regenerates that `parcel.json` from the v18 export: strips
-`LEGAL`, rounds coordinates, and — importantly — tags `high_country:"True"` on
-every parcel whose centroid falls in the `HIGH COUNTRY AREA` zoning district
-(the alpine mining claims). The Vacant Lots and Buildable style filters in
-`index.html` exclude `high_country` parcels, so **a re-upload MUST re-run this
-tagging** or those claims will reappear in those two views.
+`LEGAL`, rounds coordinates, and — importantly — spatially tags two protected
+classes by parcel centroid vs the zoning polygons: `high_country:"True"` (the
+`HIGH COUNTRY AREA` alpine mining claims) and `open_space:"True"`
+(`OPEN SPACE` / `OPEN SPACE CONSERVATION EASEMENT` zoning). The Vacant Lots and
+Buildable style filters in `index.html` exclude both flags (plus any `PIN`
+containing `COMMON`/`OPEN SPACE`), so **a re-upload MUST re-run this tagging** or
+those protected parcels will reappear in those two views.
 
 ```
 node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
