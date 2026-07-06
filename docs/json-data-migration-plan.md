@@ -6,14 +6,20 @@ real-time (Hub-Bub, submissions). This is a structural change that affects how
 every browser page loads data — executed one array at a time with a rollback at
 each step. Do **not** big-bang it.
 
-**Phase 1 dual-write is LIVE for the `BLOG_POSTS` pilot:** the bot now writes
-`data/blog-posts.json` alongside the JS literal (`scripts/lib/json-mirror.js` +
-the hook in `content-refresh.js`), `scripts/mirror-json.js` seeds/re-syncs, and
-`scripts/test/json-mirror.test.js` (CI) asserts the JSON equals the JS literal —
-verified it catches a tampered mirror and that `mirror-json.js` fixes it. NO
-client reads the JSON yet (zero browser change). Reversible: drop `BLOG_POSTS`
-from `MIRROR_ARRAYS`. Next: add more arrays to `MIRROR_ARRAYS`, watch, then begin
-flipping readers (each flip proven via the parity harness).
+**Phase 1 dual-write is LIVE for all 22 bot-managed `gov-helpers.js` arrays**
+(news, events, meetings, legal notices, animals, blog): the bot writes
+`data/<name>.json` alongside each JS literal (`scripts/lib/json-mirror.js`
+`MIRROR_ARRAYS` + the hook in `content-refresh.js`), `scripts/mirror-json.js`
+seeds/re-syncs, and `scripts/test/json-mirror.test.js` (CI) asserts every JSON
+equals its JS literal — verified it catches a tampered mirror and that
+`mirror-json.js` fixes it. content-refresh.js is the sole writer of these arrays
+(verified), so its atomic commits keep the mirrors in lockstep. NO client reads
+the JSON yet (zero browser change). Reversible: shrink `MIRROR_ARRAYS`.
+
+Not yet mirrored: gov-data.js arrays (e.g. `*_CACHED_DATA` — need file-aware
+extraction) and object-maps (`MANUAL_SUMMARIES`, `MEETING_AGENDA_META`,
+`*_AGENDA_MAP` — need object mirroring). Next: those, then begin flipping
+readers one array at a time (each flip proven identical via the parity harness).
 
 ## Why
 

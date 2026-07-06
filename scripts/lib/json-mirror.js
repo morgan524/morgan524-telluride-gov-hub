@@ -17,8 +17,22 @@ const fs = require('fs');
 const path = require('path');
 
 // The arrays currently dual-written. Single source of truth for the bot writer,
-// the re-sync tool, and the CI check.
-const MIRROR_ARRAYS = ['BLOG_POSTS'];
+// the re-sync tool, and the CI check. All live in js/gov-helpers.js and are
+// written ONLY by content-refresh.js (verified) — so its atomic commits keep the
+// JSON in lockstep. (gov-data.js arrays and object-maps like MANUAL_SUMMARIES are
+// later phases: they need file-aware / object-aware mirroring.)
+const MIRROR_ARRAYS = [
+  // news
+  'TELLURIDE_TIMES_ARTICLES', 'SMB_FORUM_ARTICLES', 'KOTO_NEWSCASTS', 'KOTO_FEATURED_STORIES',
+  // events
+  'ALIBI_EVENTS', 'SHERIDAN_EVENTS', 'SHERBINO_EVENTS', 'CLUB_RED_SHOWS', 'WILKINSON_EVENTS',
+  'KOTO_COMMUNITY_EVENTS', 'MOUNTAIN_VILLAGE_EVENTS', 'TELLURIDE_COM_EVENTS', 'TELLURIDE_SCIENCE_EVENTS',
+  'FRESH_FOOD_HUB_EVENTS', 'NORWOOD_EVENTS', 'NUCLA_NATURITA_EVENTS', 'OURAY_COUNTY_EVENTS', 'OURAY_RIDGWAY_EVENTS',
+  // meetings / civic / other
+  'TELLURIDE_BOARD_MEETINGS', 'LEGAL_NOTICES', 'HUMANE_SOCIETY_ANIMALS',
+  // blog
+  'BLOG_POSTS',
+];
 
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {
