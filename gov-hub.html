@@ -222,6 +222,29 @@
       gap: 8px;
     }
     #recapSection { margin-bottom: 32px; }
+    /* Upcoming / Past meetings toggle (segmented control) */
+    .meet-toggle {
+      display: inline-flex;
+      gap: 3px;
+      background: #eef2ef;
+      border: 1px solid var(--border-card);
+      border-radius: 999px;
+      padding: 3px;
+      margin: 0 0 18px;
+    }
+    .meet-tab {
+      border: 0;
+      background: transparent;
+      color: #4a5c54;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .meet-tab.active { background: var(--forest); color: #fff; }
+    .meet-tab:hover:not(.active) { color: var(--forest); }
     /* Past-meeting recap cards: a warm amber stroke distinguishes a
        completed meeting (what happened) from upcoming meetings (green). */
     .meet-card.recap-card {
@@ -241,6 +264,7 @@
       border-radius: 999px;
     }
     .recap-body { font-size: 0.95rem; line-height: 1.55; color: #333; margin: 4px 0 0; }
+    .recap-body + .recap-body { margin-top: 0.7em; }   /* space between recap paragraphs */
     .recap-byline { font-size: 0.78rem; color: #8a6d3b; font-style: italic; margin-top: 6px; }
     .meet-card-head {
       display: flex;
@@ -553,13 +577,15 @@
     </aside>
 
     <div class="content-col">
-      <section id="recapSection" style="display:none">
-        <h2 class="meet-section-heading">📝 Past Meeting Summaries</h2>
-        <div class="meet-grid" id="recapGrid"></div>
-      </section>
-      <section>
-        <h2 class="meet-section-heading" id="upcomingHeading" style="display:none">📅 Upcoming Meetings</h2>
+      <div class="meet-toggle" role="tablist" aria-label="Meetings view">
+        <button type="button" id="tabUpcoming" class="meet-tab active" role="tab" aria-selected="true">📅 Upcoming Meetings</button>
+        <button type="button" id="tabPast" class="meet-tab" role="tab" aria-selected="false">📝 Past Meetings</button>
+      </div>
+      <section id="upcomingSection">
         <div class="meet-grid" id="meetGrid"></div>
+      </section>
+      <section id="recapSection" style="display:none">
+        <div class="meet-grid" id="recapGrid"></div>
       </section>
     </div>
   </main>
@@ -1056,6 +1082,60 @@
 
     // Past-meeting "Rick" recap card. Shown in the Past Meeting Summaries
     // section for 3 days after the meeting, then drops off automatically.
+    // Recaps arrive as one long blob (no line breaks). Split into readable
+    // paragraphs: break at sentence boundaries, then group sentences into
+    // ~length-balanced paragraphs (a short trailing bit merges into the last).
+    function paragraphize(text) {
+      const clean = String(text || '').replace(/\s+/g, ' ').trim();
+      if (!clean) return [];
+      const sentences = clean.split(/(?<=[.!?])\s+(?=["'“(]?[A-Z0-9])/).map(s => s.trim()).filter(Boolean);
+      const paras = [];
+      let cur = '';
+      const MAX = 260;   // start a new paragraph before a sentence pushes past this
+      for (const s of sentences) {
+        if (cur && cur.length + 1 + s.length > MAX) { paras.push(cur); cur = s; }
+        else cur = cur ? cur + ' ' + s : s;
+      }
+      if (cur) {
+        if (paras.length && cur.length < 90) paras[paras.length - 1] += ' ' + cur;  // no orphan scrap
+        else paras.push(cur);
+      }
+      return paras.length ? paras : [clean];
+    }
+
+    // Emphasize proper nouns (people, places, projects like "Shandoka") in a recap
+    // so they're easy to scan. Heuristic: bold Title-Case word runs; a LONE
+    // Title-Case word is bolded only when it's NOT sentence-initial and NOT a
+    // generic civic/temporal word (Council, Board, months, Section, …). Operates
+    // on the raw text and escapes as it goes.
+    const NAME_STOP = new Set(('The A An On In At As It This That These Those Its Their And But Or If '
+      + 'After Before During While Also Both Two Three Four Five Several Additional Other Following New '
+      + 'Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session '
+      + 'Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda '
+      + 'Work Executive Regular Special Substantial Councilors '
+      + 'January February March April May June July August September October November December '
+      + 'Section Stage Phase Article Item Step Unit No Yes').split(/\s+/));
+    function emphasizeNames(raw) {
+      const runRe = /[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*/g;
+      let html = '', last = 0, m;
+      while ((m = runRe.exec(raw)) !== null) {
+        const start = m.index, run = m[0];
+        html += esc(raw.slice(last, start));
+        let trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');   // drop trailing connectors
+        const tail = run.slice(trimmed.length);
+        let leadThe = '';                                       // keep a leading "The" outside the bold
+        if (/\s/.test(trimmed)) { const t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+        const multi = /\s/.test(trimmed);
+        const before = raw.slice(0, start).replace(/\s+$/, '');
+        const sentenceStart = before === '' || /[.!?]$/.test(before);
+        const bold = multi || (!sentenceStart && !NAME_STOP.has(trimmed));
+        html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+        last = start + run.length;
+      }
+      html += esc(raw.slice(last));
+      return html;
+    }
+
     function recapCard(r) {
       const dateBadge = fmtDateBadge(r.date);
       const logos = {
@@ -1077,9 +1157,23 @@
            + '<div class="meet-info"><span class="recap-tag">Recap</span>'
            + '<h2 class="meet-title">' + esc(r.title || '') + '</h2></div>'
            + logo + '</div>'
-           + '<p class="recap-body">' + esc(r.recap || '') + '</p>'
+           + paragraphize(r.recap).map(p => '<p class="recap-body">' + emphasizeNames(p) + '</p>').join('')
            + (watch ? '<div class="meet-actions meet-actions-secondary">' + watch + '</div>' : '')
            + '</article>';
+    }
+
+    // ── Upcoming / Past meetings toggle (default: upcoming) ──────────────────
+    let meetView = 'upcoming';
+    function applyMeetView() {
+      const up = meetView === 'upcoming';
+      const upSec = document.getElementById('upcomingSection');
+      const pastSec = document.getElementById('recapSection');
+      if (upSec) upSec.style.display = up ? '' : 'none';
+      if (pastSec) pastSec.style.display = up ? 'none' : '';
+      const tu = document.getElementById('tabUpcoming');
+      const tp = document.getElementById('tabPast');
+      if (tu) { tu.classList.toggle('active', up); tu.setAttribute('aria-selected', String(up)); }
+      if (tp) { tp.classList.toggle('active', !up); tp.setAttribute('aria-selected', String(!up)); }
     }
 
     function render() {
@@ -1087,10 +1181,9 @@
       if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
 
-      // Past-meeting recaps (visible for 3 days after each meeting).
-      const recapSection = document.getElementById('recapSection');
+      // Past-meeting recaps (visible for 3 days after each meeting). Shown in the
+      // "Past" tab; the Upcoming/Past toggle (applyMeetView) controls visibility.
       const recapGrid = document.getElementById('recapGrid');
-      const upcomingHeading = document.getElementById('upcomingHeading');
       let recaps = [];
       if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
         // Show up to FOUR recaps (two rows on desktop) so multiple recent
@@ -1112,9 +1205,9 @@
         // Pick 4 (priority-weighted), then show them newest-first.
         recaps = pool.slice(0, 4).sort((a, b) => b.date.localeCompare(a.date));
       }
-      if (recapGrid) recapGrid.innerHTML = recaps.map(recapCard).join('');
-      if (recapSection) recapSection.style.display = recaps.length ? '' : 'none';
-      if (upcomingHeading) upcomingHeading.style.display = recaps.length ? 'flex' : 'none';
+      if (recapGrid) recapGrid.innerHTML = recaps.length
+        ? recaps.map(recapCard).join('')
+        : '<div class="empty">No recent meeting summaries yet — check back after the next meeting.</div>';
 
       const filtered = activeFilter === 'all'
         ? MEETINGS
@@ -1136,8 +1229,14 @@
           if (chipBar) window.scrollTo({ top: chipBar.offsetTop - 70, behavior: 'smooth' });
         });
       });
+      applyMeetView();
     }
     render();
+    // Upcoming / Past toggle — wired once (the tab buttons are static markup).
+    const _tabUp = document.getElementById('tabUpcoming');
+    const _tabPast = document.getElementById('tabPast');
+    if (_tabUp) _tabUp.addEventListener('click', () => { meetView = 'upcoming'; applyMeetView(); });
+    if (_tabPast) _tabPast.addEventListener('click', () => { meetView = 'past'; applyMeetView(); });
 
     /* ── Live data: pulls meetings from the deployed gov-hub.js. ───────
        The deployed file exposes get*Meetings() functions per entity,
