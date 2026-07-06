@@ -1,0 +1,78 @@
+[
+  {
+    "date": "April 23, 2026",
+    "time": "8:30 AM - 11:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/29fb007a9/THD+Reg+BOD+Mtg+4.23.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "note": "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    "date": "May 28, 2026",
+    "time": "8:30 AM - 11:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/7296984b8/THD+Reg+BOD+Mtg+5.28.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "note": null
+  },
+  {
+    "date": "June 25, 2026",
+    "time": "8:30 AM - 11:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/bab17808c/THD+Reg+BOD+Mtg+6.25.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "note": null
+  },
+  {
+    "date": "March 26, 2026",
+    "time": "8:30 AM - 11:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/651140033/THD+Reg+BOD+Mtg+3.26.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    "note": null
+  },
+  {
+    "date": "March 9, 2026",
+    "time": "1:00 PM - 2:00 PM",
+    "title": "Special Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/a6a367fff/THD+Special+Bd+Mtg+Agenda+3.9.25.pdf",
+    "packetUrl": null,
+    "special": true,
+    "location": "TMC Wellness Annex / Zoom"
+  },
+  {
+    "date": "March 5, 2026",
+    "time": "8:00 AM - 8:30 AM",
+    "title": "Special Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/5e604df7f/THD+Special+Bd+Mtg+Agenda+3.5.25.pdf",
+    "packetUrl": null,
+    "special": true,
+    "location": "TMC Wellness Annex / Zoom"
+  },
+  {
+    "date": "February 26, 2026",
+    "time": "8:30 AM - 11:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/06f7d8cca/THD+Reg+BOD+Mtg+2.26.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  },
+  {
+    "date": "January 22, 2026",
+    "time": "8:30 AM",
+    "title": "Regular Board Meeting",
+    "agendaUrl": "https://www.tellmed.org/files/3252b5faf/THD+BOD+Mtg+1.22.26+Agenda.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "333 W Colorado Ave (2nd Floor), Telluride / Zoom"
+  }
+]
