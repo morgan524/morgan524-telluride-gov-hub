@@ -35,13 +35,17 @@ source GeoJSON in a local `data/` dir (regenerate the LEGAL-stripped
 first — those large files are intentionally NOT kept in the repo).
 
 `prep-parcels.js` regenerates that `parcel.json` from the v18 export: strips
-`LEGAL`, rounds coordinates, and — importantly — spatially tags two protected
-classes by parcel centroid vs the zoning polygons: `high_country:"True"` (the
-`HIGH COUNTRY AREA` alpine mining claims) and `open_space:"True"`
-(`OPEN SPACE` / `OPEN SPACE CONSERVATION EASEMENT` zoning). The Vacant Lots and
-Buildable style filters in `index.html` exclude both flags (plus any `PIN`
-containing `COMMON`/`OPEN SPACE`), so **a re-upload MUST re-run this tagging** or
-those protected parcels will reappear in those two views.
+`LEGAL`, rounds coordinates, and — importantly — spatially tags parcels against
+the zoning polygons:
+- `high_country:"True"` — centroid in `HIGH COUNTRY AREA` (alpine mining claims)
+- `open_space:"True"` — centroid in `OPEN SPACE` / `OPEN SPACE CONSERVATION EASEMENT`
+- `airport_restriction:"True"` — parcel *overlaps* a zoning polygon whose
+  `NOTES_USE` says "MAY BE SUBJECT TO AIRPORT HEIGHT RESTRICTION"
+
+The Vacant Lots / Buildable filters exclude `high_country` + `open_space` (plus
+any `PIN` containing `COMMON`/`OPEN SPACE`); the parcel popup shows a bold notice
+for `airport_restriction`. So **a re-upload MUST re-run this tagging** or those
+classifications will disappear.
 
 ```
 node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
