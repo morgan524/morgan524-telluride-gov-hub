@@ -37,7 +37,7 @@ const MIRROR_ARRAYS = [
   // meetings / civic / other
   'TELLURIDE_BOARD_MEETINGS', 'LEGAL_NOTICES', 'HUMANE_SOCIETY_ANIMALS',
   // blog
-  'BLOG_POSTS',
+  'BLOG_POSTS', 'LOCAL_NEWS_FEATURED',
 ];
 
 // Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted
