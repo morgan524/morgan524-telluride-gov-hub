@@ -2939,6 +2939,8 @@ function readJsFile(filePath) {
 // extractJsArray / extractJsObject live in a unit-tested lib now
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
+// JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
+const { MIRROR_ARRAYS, writeMirror } = require('./lib/json-mirror.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -6486,6 +6488,15 @@ async function main() {
     fs.writeFileSync(GOV_DATA_JS, govDataSrc);
     console.log('✅ gov-data.js updated with newly-detected agenda URLs.');
     changed = true;
+  }
+
+  // ── JS→JSON migration (Phase 1): mirror bot-managed arrays to data/<name>.json
+  // alongside the JS literal (write-if-different, so no-op on a no-change run).
+  // No client reads these yet; test/json-mirror.test.js asserts they match the
+  // JS. Runs regardless of `changed` so the mirror self-heals if it ever drifts.
+  for (const name of MIRROR_ARRAYS) {
+    try { writeMirror(name, extractJsArray(govHubSrc, name) || [], path.join(REPO_ROOT, 'data')); }
+    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
   }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
