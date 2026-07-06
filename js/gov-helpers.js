@@ -298,7 +298,13 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    {"sv":4}
+    {"sv":4},
+
+  "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
+    {"sv":4},
+
+  "county|2026-07-16|Housing Code Update SSR":
+    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -411,7 +417,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -423,7 +429,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -465,13 +471,13 @@ const MANUAL_SUMMARIES = {
     "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.",
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
-    "The July 8, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The July 08 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -516,7 +522,13 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
+    "The July 21, 2026 Block 23 Housing Corporation agenda hasn't been posted yet.",
+
+  "county|2026-07-16|Housing Code Update SSR":
+    "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1933,6 +1945,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
   },
   {
+    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 18, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
+    source: "Town of Telluride",
+    date: "June 16, 2026",
+    newsTopic: "land-use",
+    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
+  },
+  {
+    title: "Town of Telluride Releases Findings of Independent Investigation",
+    source: "Town of Telluride",
+    date: "June 10, 2026",
+    newsTopic: "recreation",
+    copy: "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
+  },
+  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "June 27, 2026",
@@ -1949,6 +1988,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1402",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14335"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
+  },
+  {
+    title: "Mill Creek Park Site Closed for Revegetation",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
+  },
+  {
+    title: "Beaver Park Gravel Pit Closure",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
     title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
@@ -3044,6 +3119,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Sneak Peak behind the scenes with Artistic Ventures in Dance(AVID)",
+    link: "https://koto.org/event/sneak-peak-behind-the-scenes-with-artistic-ventures-in-danceavid/",
+    description: "Step into the stage for an intimate, behind‑the‑scenes look at how Artistic Ventures in Dance 'AVID' brings ballet to life. During this sneak peek, you’ll watch dancers rehearse will Valerie Madonia and hear how each piece is crafted to connect performers and audience. You'll also get an exclusive preview of our World Premier of The Wolff. Reserve your spot to experience the creative process up close and support AVID’s work enriching our community through classical and contemporary dance . Live music, dance, lights bites and drinks will make the evening one to remember!",
+    pubDate: "2026-07-10T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Michael D. Palm Theater, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Mauritson Wine Dinner",
     link: "https://koto.org/event/mauritson-wine-dinner/",
     description: "Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For more than 150 years, the Mauritson family has cultivated the rugged landscape of Sonoma's Dry Creek Valley, building a legacy rooted in stewardship, perseverance, and a deep connection to the land. This special evening begins with a private reception in Falcon Room, followed by a multi-course dinner in Timber Room thoughtfully paired with wines from Mauritson Wines and Loam Vineyards. Throughout the experience, Clay will share rare library selections, limited-production releases, and the stories behind the vineyards that have shaped his family's winemaking journey across six generations. Guests will gain a deeper understanding of the people, places, and soils that define Sonoma's distinctive character while enjoying a menu crafted to complement each wine's unique expression. Friday, July 10th Reception in Falcon Room | 6:00 PM Dinner in Timber Room | 7:00 PM",
@@ -3207,17 +3293,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Alibi, Telluride",
     imageUrl: ""
-  },
-  {
-    title: "Cardio Dance w/Kelsey",
-    link: "https://koto.org/event/cardio-dance-w-kelsey/",
-    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    pubDate: "2026-07-14T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   }
 ];
 
@@ -3354,6 +3429,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/9725c41c-1954-4f96-8d5a-bbe4507c7d01/-/crop/3998x1998/0,26/-/preview/"
+  },
+  {
+    title: "Après Nova",
+    link: "https://www.alibitelluride.com/calendar#eca-event=apres-nova",
+    description: "With a mixture of improvisation and lack of preparation, Après Nova, composed of...",
+    pubDate: "2026-07-11",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/2309d98f-2b7b-4cea-91c3-024cd1812d1c/-/crop/1206x603/0,0/-/preview/"
   },
   {
     title: "Strumbucket",
@@ -4298,18 +4385,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53073815786547/huge/8387acbab2071461ef1077e1f731fcbe4010dbb0.jpg"
   },
   {
-    title: "2-Day Trail Stewardship Trip: Courthouse to South Stealey Jct",
-    link: "https://ouraytrails.org/volunteers",
-    description: "Join Ouray Trail Group Crew Leader Kevin for a two-day stewardship trip from. Courthouse to South Stealey Junction . Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. Feel free to join us for one or both days. There's no cost, but please register.https://tinyurl.com/OTGsummer2026",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    endDate: "2026-07-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Courthouse Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932478605706/huge/594f0611d04b8cac902b2db3b64ffb53ae543a95.jpg"
-  },
-  {
     title: "Wildflower Walk with Mary Menz",
     link: "https://lp.constantcontactpages.com/ev/reg/6gbhr9f",
     description: "Experience the scenic vistas of the San Juan Mountains in Ouray from an entirely new perspective during this wildflower walk. 🌼 Join landowner Charlie Parker for a scenic three-mile hike across his private property while local botany expert Mary Menz helps identify the colorful wildflowers and alpine plants found along the trail. This event is in partnership with Colorado West Land Trust. 🕘 July 11 | 8:30 AM-1 PM 📍 Meet at the Ouray KOA, 225 Co Rd 23, Ridgway, CO 81432 💲 Free REGISTER: https://lp.constantcontactpages.com/ev/reg/6gbhr9f",
@@ -4330,6 +4405,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53330932690609/huge/63e1d8a2cbe6bfb8374f46241ae508a0cc663280.jpg"
+  },
+  {
+    title: "Show Opening: Silverton, Interpreted",
+    link: "https://www.ridgwayfuse.org",
+    description: "Join us for the opening reception of Silverton Interpreted. This traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker.",
+    pubDate: "2026-07-11T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047134482853/huge/29f47320cc40fddf16a0212cb4f823f1953adc4e.jpg"
   },
   {
     title: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright",
@@ -4374,6 +4460,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53249868268500/huge/efe64b82d26bee2c8f8ee442ea9628870d8f4e3d.jpg"
+  },
+  {
+    title: "On Display: Silverton, Interpreted",
+    link: "https://www.ridgwayfuse.org",
+    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker.",
+    pubDate: "2026-07-12T12:00:00.000Z",
+    endDate: "2026-08-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Sweet T & Lady V",
