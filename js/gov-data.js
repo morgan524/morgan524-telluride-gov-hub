@@ -1565,7 +1565,7 @@ const SOURCE_SHORT_NAME = {
   smart: 'SMART',
   mv: 'Mountain Village',
   school: 'School District',
-  fire: 'First District',
+  fire: 'Fire District',
   med: 'Med Center',
   norwood: 'Norwood',
   smb: 'Basin Forum',
