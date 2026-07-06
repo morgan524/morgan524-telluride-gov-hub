@@ -222,6 +222,29 @@
       gap: 8px;
     }
     #recapSection { margin-bottom: 32px; }
+    /* Upcoming / Past meetings toggle (segmented control) */
+    .meet-toggle {
+      display: inline-flex;
+      gap: 3px;
+      background: #eef2ef;
+      border: 1px solid var(--border-card);
+      border-radius: 999px;
+      padding: 3px;
+      margin: 0 0 18px;
+    }
+    .meet-tab {
+      border: 0;
+      background: transparent;
+      color: #4a5c54;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 7px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .meet-tab.active { background: var(--forest); color: #fff; }
+    .meet-tab:hover:not(.active) { color: var(--forest); }
     /* Past-meeting recap cards: a warm amber stroke distinguishes a
        completed meeting (what happened) from upcoming meetings (green). */
     .meet-card.recap-card {
@@ -553,13 +576,15 @@
     </aside>
 
     <div class="content-col">
-      <section id="recapSection" style="display:none">
-        <h2 class="meet-section-heading">📝 Past Meeting Summaries</h2>
-        <div class="meet-grid" id="recapGrid"></div>
-      </section>
-      <section>
-        <h2 class="meet-section-heading" id="upcomingHeading" style="display:none">📅 Upcoming Meetings</h2>
+      <div class="meet-toggle" role="tablist" aria-label="Meetings view">
+        <button type="button" id="tabUpcoming" class="meet-tab active" role="tab" aria-selected="true">📅 Upcoming Meetings</button>
+        <button type="button" id="tabPast" class="meet-tab" role="tab" aria-selected="false">📝 Past Meetings</button>
+      </div>
+      <section id="upcomingSection">
         <div class="meet-grid" id="meetGrid"></div>
+      </section>
+      <section id="recapSection" style="display:none">
+        <div class="meet-grid" id="recapGrid"></div>
       </section>
     </div>
   </main>
@@ -1082,15 +1107,28 @@
            + '</article>';
     }
 
+    // ── Upcoming / Past meetings toggle (default: upcoming) ──────────────────
+    let meetView = 'upcoming';
+    function applyMeetView() {
+      const up = meetView === 'upcoming';
+      const upSec = document.getElementById('upcomingSection');
+      const pastSec = document.getElementById('recapSection');
+      if (upSec) upSec.style.display = up ? '' : 'none';
+      if (pastSec) pastSec.style.display = up ? 'none' : '';
+      const tu = document.getElementById('tabUpcoming');
+      const tp = document.getElementById('tabPast');
+      if (tu) { tu.classList.toggle('active', up); tu.setAttribute('aria-selected', String(up)); }
+      if (tp) { tp.classList.toggle('active', !up); tp.setAttribute('aria-selected', String(!up)); }
+    }
+
     function render() {
       const chipRowEl = document.getElementById('chipRow');
       if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
       document.getElementById('entityList').innerHTML = entitiesHtml();
 
-      // Past-meeting recaps (visible for 3 days after each meeting).
-      const recapSection = document.getElementById('recapSection');
+      // Past-meeting recaps (visible for 3 days after each meeting). Shown in the
+      // "Past" tab; the Upcoming/Past toggle (applyMeetView) controls visibility.
       const recapGrid = document.getElementById('recapGrid');
-      const upcomingHeading = document.getElementById('upcomingHeading');
       let recaps = [];
       if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
         // Show up to FOUR recaps (two rows on desktop) so multiple recent
@@ -1112,9 +1150,9 @@
         // Pick 4 (priority-weighted), then show them newest-first.
         recaps = pool.slice(0, 4).sort((a, b) => b.date.localeCompare(a.date));
       }
-      if (recapGrid) recapGrid.innerHTML = recaps.map(recapCard).join('');
-      if (recapSection) recapSection.style.display = recaps.length ? '' : 'none';
-      if (upcomingHeading) upcomingHeading.style.display = recaps.length ? 'flex' : 'none';
+      if (recapGrid) recapGrid.innerHTML = recaps.length
+        ? recaps.map(recapCard).join('')
+        : '<div class="empty">No recent meeting summaries yet — check back after the next meeting.</div>';
 
       const filtered = activeFilter === 'all'
         ? MEETINGS
@@ -1136,8 +1174,14 @@
           if (chipBar) window.scrollTo({ top: chipBar.offsetTop - 70, behavior: 'smooth' });
         });
       });
+      applyMeetView();
     }
     render();
+    // Upcoming / Past toggle — wired once (the tab buttons are static markup).
+    const _tabUp = document.getElementById('tabUpcoming');
+    const _tabPast = document.getElementById('tabPast');
+    if (_tabUp) _tabUp.addEventListener('click', () => { meetView = 'upcoming'; applyMeetView(); });
+    if (_tabPast) _tabPast.addEventListener('click', () => { meetView = 'past'; applyMeetView(); });
 
     /* ── Live data: pulls meetings from the deployed gov-hub.js. ───────
        The deployed file exposes get*Meetings() functions per entity,
