@@ -34,6 +34,12 @@ const MIRROR_ARRAYS = [
   'BLOG_POSTS',
 ];
 
+// Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted
+// via extractJsObject instead of extractJsArray. All in js/gov-helpers.js, all
+// sole-written by content-refresh.js (verified). MANUAL_SUMMARIES is the meeting
+// summaries; MEETING_AGENDA_META the per-meeting zoom/agenda metadata.
+const MIRROR_OBJECTS = ['MANUAL_SUMMARIES', 'MEETING_AGENDA_META', 'RIDGWAY_AGENDA_MAP', 'RICO_AGENDA_MAP'];
+
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {
   return String(varName).toLowerCase().replace(/_/g, '-') + '.json';
@@ -42,15 +48,16 @@ function mirrorPath(varName, dataDir) {
   return path.join(dataDir, mirrorFileName(varName));
 }
 
-// Write data/<name>.json = JSON view of `arr`. Write-if-different so a no-change
-// run doesn't touch the file (no spurious commits). Returns the path written to.
-function writeMirror(varName, arr, dataDir) {
+// Write data/<name>.json = JSON view of `data` (an array OR an object).
+// Write-if-different so a no-change run doesn't touch the file (no spurious
+// commits). Returns the path written to.
+function writeMirror(varName, data, dataDir) {
   const p = mirrorPath(varName, dataDir);
-  const json = JSON.stringify(arr, null, 2) + '\n';
+  const json = JSON.stringify(data, null, 2) + '\n';
   let cur = null;
   try { cur = fs.readFileSync(p, 'utf8'); } catch (e) { /* not yet created */ }
   if (cur !== json) fs.writeFileSync(p, json);
   return p;
 }
 
-module.exports = { MIRROR_ARRAYS, mirrorFileName, mirrorPath, writeMirror };
+module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, mirrorFileName, mirrorPath, writeMirror };

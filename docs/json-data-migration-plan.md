@@ -7,19 +7,21 @@ every browser page loads data — executed one array at a time with a rollback a
 each step. Do **not** big-bang it.
 
 **Phase 1 dual-write is LIVE for all 22 bot-managed `gov-helpers.js` arrays**
-(news, events, meetings, legal notices, animals, blog): the bot writes
-`data/<name>.json` alongside each JS literal (`scripts/lib/json-mirror.js`
-`MIRROR_ARRAYS` + the hook in `content-refresh.js`), `scripts/mirror-json.js`
-seeds/re-syncs, and `scripts/test/json-mirror.test.js` (CI) asserts every JSON
-equals its JS literal — verified it catches a tampered mirror and that
-`mirror-json.js` fixes it. content-refresh.js is the sole writer of these arrays
+(news, events, meetings, legal notices, animals, blog) **and the 4 object-maps**
+(`MANUAL_SUMMARIES`, `MEETING_AGENDA_META`, `RIDGWAY_AGENDA_MAP`,
+`RICO_AGENDA_MAP` — via `MIRROR_OBJECTS` + `extractJsObject`): the bot writes
+`data/<name>.json` alongside each JS literal (`scripts/lib/json-mirror.js` +
+the hook in `content-refresh.js`), `scripts/mirror-json.js` seeds/re-syncs, and
+`scripts/test/json-mirror.test.js` (CI) asserts every JSON equals its JS literal
+— verified it catches a tampered mirror (array AND object) and that
+`mirror-json.js` fixes it. content-refresh.js is the sole writer of all of these
 (verified), so its atomic commits keep the mirrors in lockstep. NO client reads
-the JSON yet (zero browser change). Reversible: shrink `MIRROR_ARRAYS`.
+the JSON yet (zero browser change). Reversible: shrink `MIRROR_ARRAYS` /
+`MIRROR_OBJECTS`.
 
 Not yet mirrored: gov-data.js arrays (e.g. `*_CACHED_DATA` — need file-aware
-extraction) and object-maps (`MANUAL_SUMMARIES`, `MEETING_AGENDA_META`,
-`*_AGENDA_MAP` — need object mirroring). Next: those, then begin flipping
-readers one array at a time (each flip proven identical via the parity harness).
+extraction, since the mirror hook reads gov-helpers.js). Next: those, then begin
+flipping readers one at a time (each flip proven identical via the parity harness).
 
 ## Why
 
