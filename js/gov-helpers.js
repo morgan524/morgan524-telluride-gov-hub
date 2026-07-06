@@ -286,6 +286,15 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
+    {"sv":4},
+
+  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
+    {"sv":4},
+
+  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
+    {"sv":4},
+
+  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
     {"sv":4}
 };
 
@@ -399,7 +408,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -492,7 +501,16 @@ const MANUAL_SUMMARIES = {
     "A late-night special meeting — 10 p.m. — to debrief the day's fair activities and work through whatever issues surfaced during the event. The agenda is intentionally open-ended, which is typical for fair boards wrapping up a long day.",
 
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    "The August 3, 2026 Open Space Commission agenda hasn't been posted yet."
+    "The August 3, 2026 Open Space Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
+    "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
+    "The August 5, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+
+  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
+    "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1882,42 +1900,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Munchie Mansion is a new eatery in Placerville",
-    source: "Telluride Times",
-    date: "June 22, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Jenni Watkins opened Munchie Mansion, a food trailer at 260 Front St. in Placerville, in March — an offshoot of her decade-old catering business, The Sunny Side. The trailer runs Monday–Friday, 10am–4pm, serving homemade sandwiches, sides, and espresso from Telluride Coffee Roasters. Dinner service is planned for this summer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_9d05a760-b3f2-4345-947d-02c7bf92ff3a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/e5/8e553ba1-8595-4d5c-8b98-84b7caf90acf/6a31b60d0bdce.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘Threads of sound’",
-    source: "Telluride Times",
-    date: "June 22, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Telluride Chamber Music returns to the Mai residence — a restored barn beneath Sunshine Mountain — for three evening concerts June 28, July 2, and July 5, featuring violinists, a cellist, and pianist Orion Weiss, with guest clarinetist Alan Kay of Juilliard joining the July 2 program. The concerts mix classical masterworks with contemporary pieces, ending each night on a lighter note. A Local Artists' Night is also scheduled June 30.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_ce72d8c6-e7f3-46f2-846a-529ca94e23f4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/a5/ba56e910-dc41-4628-afeb-b4f75e839c5e/6a391393f2918.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Wyndham Clark avoids record collapse and holds on to win the US Open",
-    source: "Telluride Times",
-    date: "June 22, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Wyndham Clark won his second U.S. Open title at Shinnecock Hills, closing with a 73 but holding off Sam Burns by one shot. He built a big 54-hole lead that nearly vanished before a clutch 30-foot birdie on 16 steadied him. His father flew overnight from Denver to watch him win for the first time.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_2dfa6045-3d42-50d3-8d67-378ce6f4ffdb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/5f/85ff96ce-ec9b-566b-9232-80f9c06de7c0/6a386d86ea740.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2062,17 +2044,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Gold Mountain Fire Update",
-    source: "Town of Ridgway",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/FINAL-MediaRelDalyUpdate_20260702_00009911.pdf",
-    img: ""
-  },
-  {
     title: "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
     source: "Town of Ridgway",
     date: "July 1, 2026",
@@ -2081,61 +2052,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire Update",
-    source: "Town of Ridgway",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/GMFiewMediaRelDalyUpdate_20260701_0000991.pdf",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire Perimeter Map",
-    source: "Town of Ridgway",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/MAPpio_8x11_land_20260630_2130_GoldMountain_COGMF000099_0701day.pdf",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire Update",
-    source: "Town of Ridgway",
-    date: "June 30, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Gold-Mtn-Fire-Update-2026-06-30.pdf",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire Perimeter Map",
-    source: "Town of Ridgway",
-    date: "June 30, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/pio_8x11_land_20260630.pdf",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire Update",
-    source: "Town of Ridgway",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Gold-Mtn-Fire-Update-2026-06-29.pdf",
     img: ""
   },
   {
@@ -2161,31 +2077,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 12:23pm",
-    source: "Town of Ridgway",
-    date: "July 5, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/News-Release_-June-28-Gold-Mountain-Fire-Update.pdf",
-    img: ""
-  },
-  {
-    title: "Update on Gold Mountain Fire in Ouray County - June 28, 2026, 1:45 a.m.",
-    source: "Town of Ridgway",
-    date: "July 5, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/News-Release_-Gold-Mountain-Fire---Google-Docs.pdf",
-    img: ""
-  },
-  {
     title: "Movie Mondays 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 5, 2026",
+    date: "July 6, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2196,7 +2090,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 5, 2026",
+    date: "July 6, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2207,7 +2101,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 5, 2026",
+    date: "July 6, 2026",
     firstSeen: "2026-06-24",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2262,7 +2156,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "July 5, 2026",
+    date: "July 6, 2026",
     firstSeen: "2026-06-26",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2470,6 +2364,15 @@ const LOCAL_NEWS_FEATURED = [
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "The Week Ahead Outlook - July 6 - July 12, 2026",
+    date: "Jul 5, 2026",
+    href: "https://livabletelluride.org/digest/archive/2026-07-05-weekly.html",
+    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
+    excerpt: "@media only screen and (max-width:480px){ .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;} .ev-img-cell img{width:160px !important;height:160px !important;} .ev-text-cell{display:block !important;width:100% !important;} .fest-logo-cell{display:block !important;width:100% !important;padding:14px 14px 0 !important;} .fest-body-cell{display:block !important;",
+    category: "Newsletter",
+    source: "customerio"
+  },
   {
     title: "Weekend Update July 2",
     date: "Jul 2, 2026",
@@ -2878,17 +2781,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-07-05/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-07-05T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-06/",
@@ -3350,6 +3242,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-13/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-13T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Library Game Night at The Alibi",
+    link: "https://koto.org/event/library-game-night-at-the-alibi/",
+    description: "Join us on Monday, July 13th at The Alibi (121 S Fir St) for a night of laid-back, social gaming from 5-7pm. We'll have cribbage, backgammon, mahjong, chess boards and more to choose from. Bring a friend, or come solo and meet someone new! Oh, and did we mention there will be FREE PIZZA too?! Please sign up in advance so we know how many pizzas to get :) Hope to see you there!",
+    pubDate: "2026-07-13T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Cardio Dance w/Kelsey",
+    link: "https://koto.org/event/cardio-dance-w-kelsey/",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-07-14T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3407,7 +3332,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
     firstSeen: "2026-07-04",
     revealDate: "2026-07-04",
-    lastSeen: "2026-07-05"
+    lastSeen: "2026-07-06"
   }
 ];
 
@@ -3434,7 +3359,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3638,7 +3563,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3650,7 +3575,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3748,7 +3673,99 @@ const TELLURIDE_VENTURE_EVENTS = [];
 const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
-const SHERBINO_EVENTS = [];
+const SHERBINO_EVENTS = [
+  {
+    title: "Covenhoven (Courtyard @ 610)",
+    href: "https://sherbino.org/event/covenhoven-courtyard-at-610-july-7-ridgway/",
+    date: "2026-07-07 19:30:00",
+    endDate: "2026-07-07 19:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Doors: 7 || Show: 7:30 || $20 advance / $24 day of || General Admission Seating || Limited Bar onsite || enter via the alleyway behind the Sherbino and the 610 Arts Collective Gallery **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Covenhoven is the internationally recognized indie-folk project of Colorado singer-songwriter Joel Van Horne, whose layered acoustic arrangements, rich harmonies, reedy baritone, and soaring falsetto have captivated audiences and critics alike since 2013. Through five full-length albums and two EPs, Covenhoven has crafted a signature sound that blends intimate folk songwriting with sweeping orchestral textures and atmospheric Americana. His songs balance hard-won wisdom with the beauty and hope found in the natural world — drawing inspiration from the landscapes of Colorado, Big Sur, and the American West. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/2026-sherb-event-banners-36.png"
+  },
+  {
+    title: "Avid Dance Workshop & Presentation",
+    href: "https://sherbino.org/event/avid-dance-workshop-presentation/",
+    date: "2026-07-09 16:00:00",
+    endDate: "2026-07-09 17:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Experience The Wolff and Other Works, a free AVID dance workshop and presentation at the Sherbino Theatre in Ridgway on Wednesday, July 9, from 4:30–5:30 p.m. Featuring choreography by Gerald Arpino, Melody Mennite, Daniel Ojeda, and Danielle Diniz, with live music and an original composition by Kebra-Seyoun Charles. @ Entry By Donation WORKSHOP: 4:30 – 5:00 pm || Presentation doors at 5 pm, Starts at 5:10 – 5:40 pm || Free Admisison The Wolff & Other Works ~ an Avid Dance workshop, followed by a public presentation The special collaboration brings together Artistic Ventures in Dance (AVID) and Weehawken Dance for a dynamic, family-friendly experience that highlights the power of dance to connect and uplift. Blending professional artistry with young artists, this performance celebrates collaboration, growth, and the joy of moving together offering a rare opportunity to witness dancers at different stages of their journey share the stage. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/ChatGPT-Image-Jul-1-2026-05_21_58-PM.png"
+  },
+  {
+    title: "Opening Reception for The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    href: "https://sherbino.org/event/opening-reception-for-the-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips/",
+    date: "2026-07-10 17:00:00",
+    endDate: "2026-07-10 19:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado's Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/photo-banner.png"
+  },
+  {
+    title: "Sacred Fire ~ Santana Tribute Band — presented by OCPAG with support from LoNote & The Sherbino as a fundraiser for local fire and OCEMS teams",
+    href: "https://sherbino.org/event/sacred-fire-santana-tribute-band-presented-by-ocpag-with-support-from-lonote-the-sherbino-as-a-fundraiser-for-fire-and-ems-teams/",
+    date: "2026-07-11 19:30:00",
+    endDate: "2026-07-11 21:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ tickets JULY 11 || 7:30 pm start || 7:00 pm doors || At The Sherbino || A Benefit Concert for Fire and EMS teams || TICKETS Presented by OCPAG with support from LoNote & The Sherbino as a fundraiser for Fire and EMS teams​ Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-44.png"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Sweet T & Lady V",
+    href: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
+    date: "2026-07-12 19:00:00",
+    endDate: "2026-07-12 20:30:00",
+    location: "The Courtyard at 610, Ridgway",
+    copy: "@ Gates: 6:30 || Show: 7:00pm || $14 Advance / $18 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated  || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater.  Join us for an intimate evening with Grand Junction duo Sweet T & Lady V!  With masterful mandolin, guitar, and rich vocal harmonies, these two create a beautifully woven wall of sound that's both captivating and unforgettable. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/Sweet-T-and-Lady-V-banner.png"
+  },
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-07-14/",
+    date: "2026-07-14 10:00:00",
+    endDate: "2026-07-14 12:00:00",
+    location: "Ridgway, CO",
+    copy: "",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A monthly gathering at the Sherbino in Ridgway for veterans through the Welcome Home Alliance, offering a casual coffee meetup and a chance to connect with fellow veterans and community members. The event is part of a recurring series supporting veteran community and fellowship in the region."
+  },
+  {
+    title: "The Sherbino presents: From Intention to Impact; Planned Giving Essentials",
+    href: "https://sherbino.org/event/from-intention-to-impact-planned-giving-essentials-ridgway/",
+    date: "2026-07-14 18:30:00",
+    endDate: "2026-07-14 20:00:00",
+    location: "Ridgway, CO",
+    copy: "Join The Sherbino on Tuesday, July 14, from 6:30–8 p.m. for “From Intention to Impact: Planned Giving Essentials,” an evening conversation about legacy giving, community impact, and supporting the future of arts and culture in Ridgway.\n\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors at 6:00 PM ||  Presentation at 6:30 ||  Entry by donation\n\n\n\nSetting: seated || Registration is free but required \n\n\n\n\nJoin Attorney Lincoln Anderson and Investment Advisor Michael Murphy as they explain ways to manage your retirement accounts for the benefit of causes you care about. In this session they will provide information about Qualified Charitable Distributions (QCD's) and appreciated stock donations, and will cover other estate planning tips.  Learn in one evening how to give now and reduce your taxes!\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/ChatGPT-Image-May-15-2026-03_07_26-PM.png"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Heather & Douglas",
+    href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas/",
+    date: "2026-07-19 19:30:00",
+    endDate: "2026-07-19 21:00:00",
+    location: "The Courtyard at 610, Ridgway",
+    copy: "@ Gates: 7:00 || Show: 7:30pm || $15 Advance / $20 at gates  Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. Enter through the alleyway behind the Sherbino and 610 Gallery for a magical summer night. Beloved regional duo Heather & Douglas return to The Courtyard for a relaxed, intimate concert filled with heartfelt ballads, spontaneous fun, and harmonies that hit just right. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/Heather-Douglas-banner-july-19.png"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Hiroya Tsukamoto",
+    href: "https://sherbino.org/event/hiroya-tsukamoto-courtyard-610-july-25-2026/",
+    date: "2026-07-25 19:30:00",
+    endDate: "2026-07-25 21:00:00",
+    location: "The Courtyard at 610, Ridgway",
+    copy: "@ Gates: 7 (behind the 610 Gallery and Sherbino) || Show: 7:30 || $20 – Online / $25 – At Door General Admission Seating || Limited BarThe Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Hiroya Tsukamoto is a one-of-a-kind composer, guitarist, and storyteller from Kyoto, Japan. He began playing the five-string banjo when he was thirteen, and took up the guitar shortly after. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/ChatGPT-Image-Apr-30-2026-02_34_08-PM.png"
+  },
+  {
+    title: "Paul McDonald and the Mourning Doves",
+    href: "https://sherbino.org/event/paul-mcdonald-sherbino-ridgway-august-2026/",
+    date: "2026-08-01 19:30:00",
+    endDate: "2026-08-01 21:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Doors: 7:00 pm | Show: 7:30 pm*$25 advance | $30 day of show – to buy GA tickets, select from the ticket option BELOW the seating chart*Limited reserved tables available – to purchase a reserved table, hover over the tables on the seating chart. ABOUT PAUL MCDONALD:Born in Alabama and baptized in the dive bars of the southeast, Paul McDonald first made noise with the Grand Magnolias, a roots-rock outfit, before catching fire in the public eye during American Idol’s 2011 run. When the bright lights blurred and the cameras turned, the man behind the voice slipped into the shadows where he did what real artists do: he lived, he lost, and he wrote. Retreating to Nashville, that holy city of reinvention, Paul stitched himself back together with worn boots, hard songs, and a new band called the Mourning Doves. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-22.png"
+  }
+];
 
 // Beacon — outreach to seasonal / young-adult workers (beacontelluride.com).
 // Maintained by the `beacon-events-refresh` scheduled task, which re-reads
@@ -4457,7 +4474,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4468,7 +4485,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4479,7 +4496,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4490,7 +4507,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4501,7 +4518,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4512,7 +4529,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4523,7 +4540,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4534,7 +4551,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4545,7 +4562,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4556,28 +4573,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-07-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Girl Scout Cookie Booth",
     link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
@@ -5292,30 +5287,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/45978/telluride-festival-plein-air-artists-2015-home-1.800x533.webp"
   },
   {
-    title: "Trunk Show",
-    link: "https://www.telluride.com/event/trunk-show-elinoff-gallery/",
-    description: "The Elinoff Gallery is excited to have one of their favorite makers join them for the holiday week and bring some …",
-    pubDate: "2026-07-01",
-    endDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62621/300x300_c.800x533.webp"
-  },
-  {
-    title: "Bright Light Social Hour",
-    link: "https://www.telluride.com/event/bright-light-social-hour/",
-    description: "Austin’s The Bright Light Social Hour are widely recognized as the essence of Texas psych rock – no one better …",
-    pubDate: "2026-07-02",
-    endDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/55989/download_3.800x533.webp"
-  },
-  {
     title: "Jewelry Show With Nanci Modica",
     link: "https://www.telluride.com/event/jewelry-show-with-nanci-modica/",
     description: "New York-based goldsmith Nanci Modica is returning to Telluride with an all new collection of work from July 2 - 5, …",
@@ -5350,83 +5321,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/37568/screenshot_2026-06-09_at_9_49_43_am_870x435.800x533.webp"
-  },
-  {
-    title: "Telluride Fourth of July Parade",
-    link: "https://www.telluride.com/event/telluride-4th-of-july-parade/",
-    description: "The Telluride 4th of July Parade is the longest running event in the Town's history. The parade celebrates our …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44403/img_2267-2100x1400-717e96b7-57a1-4fb1-8082-d7ef66424a4e.800x533.webp"
-  },
-  {
-    title: "Rundola",
-    link: "https://www.telluride.com/event/rundola/",
-    description: "Celebrate Independence Day with the Telluride Foundation at the 16th Annual Rundola on July 4th, 2026! This exciting …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44821/download_11.800x533.webp"
-  },
-  {
-    title: "Fourth of July Celebration at the Museum",
-    link: "https://www.telluride.com/event/4th-of-july-celebration-at-the-museum/",
-    description: "Come celebrate the 4th of July with the Museum with their annual root beer float fundraiser. Come up the hill to the …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48234/july4_2018_poster.800x533.webp"
-  },
-  {
-    title: "Fourth of July Bash",
-    link: "https://www.telluride.com/event/fourth-of-july-bash/",
-    description: "The Town of Telluride is hosting a celebration for The Fourth of July in Telluride Town Park immediately following the …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48287/tot4th26-ttb-header.800x533.webp"
-  },
-  {
-    title: "Fourth of July Drone Show",
-    link: "https://www.telluride.com/event/fourth-of-july-drone-show/",
-    description: "Join the Town of Telluride for a Drone Show on the Fourth of July at dusk.",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58552/dsc05106--1--2100x1400-66fb62fd-2190-48b7-ba10-131d268becc2.800x533.webp"
-  },
-  {
-    title: "Mindchatter",
-    link: "https://www.telluride.com/event/mindchatter/",
-    description: "Singer, songwriter, and multi-instrumentalist Bryce Connolly, better known as Mindchatter, has built a reputation for …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62894/download_4_5.800x533.webp"
-  },
-  {
-    title: "Apertivi & Oysters",
-    link: "https://www.telluride.com/event/apertivi-oysters-for-july-4th/",
-    description: "Celebrate July 4th and America's 250th with Apertivi and Oysters at The National! Whether you prefer to unwind inside …",
-    pubDate: "2026-07-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62972/049eng_national_june26.800x533.webp"
   },
   {
     title: "Village Film Nights",
@@ -5972,6 +5866,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp"
+  },
+  {
+    title: "Telluride Film Festival",
+    link: "https://www.telluride.com/event/telluride-film-festival/",
+    description: "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
+    pubDate: "2026-09-04",
+    endDate: "2026-09-08",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
   }
 ];
 

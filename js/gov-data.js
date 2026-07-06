@@ -202,14 +202,16 @@ const COUNTY_CACHED_DATA = [
     title: 'Board of County Commissioners Special - In Norwood at Sheriff Annex',
     type: 'bocc',
     location: '1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423',
-    civicClerkId: 1001
+    civicClerkId: 1001,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1001/files/agenda/1881'
   },
   {
     date: 'July 9, 2026',
     time: '9:30 AM',
     title: 'Planning Commission and Board of County Commissioners Joint Work Session',
     type: 'planning',
-    civicClerkId: 921
+    civicClerkId: 921,
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/921/files/agenda/1873'
   }
 ];
 

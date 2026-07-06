@@ -1,14 +1,18 @@
 {
-  "hash": "3373dce2f58d28d109d977fe169feb2b55a95c1e",
-  "lede": "The most consequential meeting this week is Monday's Open Space Commission, which takes up three real decisions on the Valley Floor — including which of three trail alignments moves forward for Reach 1 and whether the Telluride Mountain Club gets permission to route a quarter-mile of trail through that corridor. Thursday brings a joint Planning Commission and BOCC work session where county staff and elected officials will work through proposed Land Use Code changes covering forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but the direction set in work sessions like this tends to stick.",
+  "hash": "a92f0516e571e0bbb35000d0438a912ab41f79fb",
+  "lede": "The biggest government action this week is a joint work session Thursday where the San Miguel County Planning Commission and Board of County Commissioners dig into proposed Land Use Code amendments covering forestry, oil and gas, geothermal operations, and condominium plats — no final votes, but this is where the shape of those rules gets set. Monday's Open Space Commission takes up real trail-alignment decisions on the Valley Floor, and Wednesday evening the commissioners head to Norwood for a rare West End meeting that includes a Planning Commission appointment and Placerville Fire Survey results. Mixed in around all that: birding, a pie contest, Market on the Plaza, and music at the Alibi.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission chooses among three Valley Floor trail routes; Mountain Club reroute also on table."
+      "stake": "Commission chooses between three Valley Floor trail routes affecting wetlands."
     },
     {
-      "id": 7,
-      "stake": "Land Use Code amendments covering forestry, oil/gas, geothermal, and condo plats get shaped here."
+      "id": 1,
+      "stake": "Commissioners may appoint Planning Commission alternate; fire survey results presented."
+    },
+    {
+      "id": 4,
+      "stake": "Land Use Code rewrites on forestry, oil/gas, geothermal, and condo plats take shape here."
     }
   ]
 }
