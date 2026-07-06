@@ -1,9 +1,19 @@
 # Plan: migrate bot-managed data from JS-source-rewriting to JSON
 
-**Status: PLAN ONLY — not started.** This is a structural change that affects how
-every browser page loads data. It needs browser testing and should be its own
-focused effort, executed one array at a time with a rollback at each step. Do
-**not** big-bang it.
+**Status: PHASE 1 STARTED (2026-07-05).** Decision made: **JSON-in-repo** (not
+Firestore) for bot-produced reference data; Firestore stays for user-generated /
+real-time (Hub-Bub, submissions). This is a structural change that affects how
+every browser page loads data — executed one array at a time with a rollback at
+each step. Do **not** big-bang it.
+
+**Phase 1 dual-write is LIVE for the `BLOG_POSTS` pilot:** the bot now writes
+`data/blog-posts.json` alongside the JS literal (`scripts/lib/json-mirror.js` +
+the hook in `content-refresh.js`), `scripts/mirror-json.js` seeds/re-syncs, and
+`scripts/test/json-mirror.test.js` (CI) asserts the JSON equals the JS literal —
+verified it catches a tampered mirror and that `mirror-json.js` fixes it. NO
+client reads the JSON yet (zero browser change). Reversible: drop `BLOG_POSTS`
+from `MIRROR_ARRAYS`. Next: add more arrays to `MIRROR_ARRAYS`, watch, then begin
+flipping readers (each flip proven via the parity harness).
 
 ## Why
 
