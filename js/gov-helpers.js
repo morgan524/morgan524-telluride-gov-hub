@@ -295,6 +295,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
+    {"sv":4},
+
+  "county|2026-08-05|Board of County Commissioners Meeting":
     {"sv":4}
 };
 
@@ -408,7 +411,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -504,13 +507,16 @@ const MANUAL_SUMMARIES = {
     "The August 3, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The August 05 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
     "The August 5, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
-    "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet."
+    "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
+
+  "county|2026-08-05|Board of County Commissioners Meeting":
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -622,18 +628,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "‘It feels so good’ to gather",
-    source: "Telluride Times",
-    date: "July 5, 2026",
-    firstSeen: "2026-07-05",
-    newsTopic: "land-use",
-    copy: "Telluride's People's March gathers monthly at the San Miguel County Courthouse — two speakers, a walk to the park and back, then an open mic. Drew from as far as Montrose, it's been running about a year and a half. Next up: Saturday, July 11 at noon, with Bryan Miller speaking.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_bb8b75f7-4df3-48e4-a86d-35dee7aa8ac6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/94/994ab3e1-47cf-416c-baf1-4ff75ed5358b/6a48ca441116d.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Memorial service to honor firefighters killed on Colorado-Utah border",
     source: "Telluride Times",
     date: "July 5, 2026",
@@ -643,6 +637,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_55ad13b6-d887-5039-b115-7b1f56da9f36.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/3a/03aac3ca-135f-5082-a952-3b562ebab08f/6a4a56a49fc94.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘It feels so good’ to gather",
+    source: "Telluride Times",
+    date: "July 5, 2026",
+    firstSeen: "2026-07-05",
+    newsTopic: "land-use",
+    copy: "Telluride's People's March gathers monthly at the San Miguel County Courthouse — two speakers, a walk to the park and back, then an open mic. Drew from as far as Montrose, it's been running about a year and a half. Next up: Saturday, July 11 at noon, with Bryan Miller speaking.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_bb8b75f7-4df3-48e4-a86d-35dee7aa8ac6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/94/994ab3e1-47cf-416c-baf1-4ff75ed5358b/6a48ca441116d.image.jpg",
     imgHiRes: true
   },
   {
@@ -3280,37 +3286,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536438?hs=a",
-    description: "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-07-05T17:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568419?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-07-06T16:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+  },
+  {
+    title: "Learn to Play Pickleball!",
+    link: "https://telluridelibrary.libcal.com/event/16897846?hs=a",
+    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
+    pubDate: "2026-07-06T17:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
+  },
+  {
+    title: "Strings in the Stacks: Live Violin with Annie Foxen",
+    link: "https://telluridelibrary.libcal.com/event/16759873?hs=a",
+    description: "12:00 PM – 1:00 PM · Unwind at the library with live violin music from violinist and WPL staff member, Annie Foxen. On the first Monday of every month, Annie fills the library with a calming mix of classical, Celtic, and folk tunes—perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
+    pubDate: "2026-07-06T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
+  },
+  {
+    title: "Savvy Seniors - Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17029817?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-07-06T19:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_10_14_59_47.png"
+  },
+  {
+    title: "Hobby Hopping",
+    link: "https://telluridelibrary.libcal.com/event/17065533?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! July 6: Henna Tattoos July 13: Cyanotype Printing July 20: Architecture Studio July 27: T-Shirt Pom Poms",
+    pubDate: "2026-07-06T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_27_58.png"
+  },
+  {
+    title: "Family Movie Matinee: Hoppers",
+    link: "https://telluridelibrary.libcal.com/event/15536161?hs=a",
+    description: "A free family movie screening at Wilkinson Public Library's Program Room, showing a film called *Hoppers*. The event runs from 2:00 to 4:00 PM and is open to families and kids of all ages.",
+    pubDate: "2026-07-06T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_31_47.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970381?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-07-05T19:00:00.000Z",
+    title: "Pie Contest!",
+    link: "https://telluridelibrary.libcal.com/event/17019543?hs=a",
+    description: "6:00 PM – 7:30 PM · Our beloved tradition returns! Calling all pie enthusiasts! The Wilkinson Public Library is hosting its annual Pie Contest on Monday, July 6th! This delicious competition is open to bakers of all ages. Show off your skills and vie for bragging rights and a litany of prizes! Our panel of esteemed judges will decide the fate of your flaky masterpiece, based on appearance, creativity, and of course, taste. Register in advance (see link below) and bring your pie for drop off between 5-6pm on July 6th. Judging begins promptly at 6:01pm. Don&#39;t miss this chance to celebrate the perfect summer treat! Spots will go fast, so be sure to sign up ASAP! &iexcl;Vuelve nuestra querida tradici&oacute;n! Amantes de las tartas, al llamado! La Biblioteca P&uacute;blica Wilkinson organiza su Concurso Anual de Tartas el lunes 6 de julio. …",
+    pubDate: "2026-07-07T00:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/16567832?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-07-05T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_10_16_48.jpg"
   }
 ];
 
@@ -3344,18 +3394,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Zander Rodriguez",
-    link: "https://www.alibitelluride.com/calendar#eca-event=zander-rodriguez",
-    description: "Zander Rodriguez is a singer-songwriter now based in Phoenix, Arizona. Originall...",
-    pubDate: "2026-07-05",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/587eca13-bf75-4c6c-a808-93088ae7164f/-/crop/2624x1311/0,680/-/preview/"
-  },
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
@@ -4467,6 +4505,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53303421143344/huge/d4da45f825ed8346925301cac3250da0f1ebced8.jpg"
+  },
+  {
+    title: "Recreation and Our River: A Community Conversation",
+    link: "https://www.uncompahgrewatershed.org/tell-us-about-what-you-love-about-the-uncompahgre-river/",
+    description: "How does river recreation impact the local economy and quality of life in Ouray County? Join us for a community conversation to share your feedback and insights on how recreation on the Uncompahgre shapes our community. Come share your thoughts on the current state of the river and help us plan for the future. 📅 Tuesday, July 14 ⏰ 6:30 PM - 8:00 PM 📍 Pa-Co-Chu-Puk Campground, Picnic Shelter B 🍿 Light snacks and refreshments will be provided 👉 Please RSVP at https://www.uncompahgrewatershed.org/recreation-and-our-river-a-community-conversation/ or scan the QR code Have questions? Reach out to info@uncompahgrewatershed.org or call (970) 325-3010. Special thanks to our funders, the Town of Ridgway and the Western Colorado Community Foundation, for making this project possible.",
+    pubDate: "2026-07-14T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53181106878061/huge/9cccd312a17d0b6a8983658a932f79062a593b9b.jpg"
   }
 ];
 
