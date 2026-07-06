@@ -7294,7 +7294,16 @@ function getCountyCachedMeetings() {
       : /historic/i.test(t) ? 'historical'
       : (meetingBoardToken(t) || 'gen');
     const seen = {};
-    out.forEach(m => { if (m.eventDate) seen[m.eventDate.toLocaleDateString('en-CA', { timeZone: 'America/Denver' }) + '|' + ctok(m.title)] = 1; });
+    // Key on the eventDate's LOCAL calendar day (localDateKey), NOT a Denver
+    // toLocaleDateString round-trip. localDate() builds each eventDate from the
+    // intended calendar date via `new Date(y, m, d)` (local midnight), so its
+    // local Y-M-D always equals that date. Re-formatting through
+    // timeZone:'America/Denver' on a UTC runner (CI) instead shifts local-
+    // midnight back a day (Jul 9 00:00 UTC -> Jul 8 18:00 MT -> "2026-07-08"),
+    // so the key stopped matching the raw "YYYY-MM-DD" date used on the summary
+    // side below — and a renamed meeting's stale shadow slipped through. See the
+    // Jul 8/9 joint-work-session dedup test.
+    out.forEach(m => { if (m.eventDate) seen[localDateKey(m.eventDate) + '|' + ctok(m.title)] = 1; });
     // The county sometimes RENAMES a meeting (e.g. "Board of County
     // Commissioners Work Session" -> "...Special - In Norwood at Sheriff Annex",
     // "Planning Commission Meeting" -> "...Joint Work Session"), which leaves the
