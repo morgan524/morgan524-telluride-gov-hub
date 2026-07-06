@@ -1,0 +1,25 @@
+[
+  {
+    "title": "West End Renaissance",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "July 1, 2026",
+    "summary": "The West End has weathered cattle, mining, timber, coal, and COVID -- the usual boom-bust pattern. Now broadband, airport upgrades, remote work, and the West End Vision Project are pointing toward a more diversified local economy. WEEDC is searching for a new executive director at what looks like a pivotal moment.",
+    "href": "https://www.telluridenews.com/norwood_post/article_64d52a82-dfcd-41c1-8ad7-17356b158ae9.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/49/249a2e22-e7f8-4e77-842d-ef742134e68b/6a4451d589a77.image.jpg",
+    "category": "Community",
+    "featured": true
+  },
+  {
+    "title": "Is Telluride Paradise?",
+    "source": "Letter to the Editor",
+    "sourceKey": "letter",
+    "date": "June 17, 2026",
+    "summary": "Paradise, California was a beautiful mountain town until the 2018 Camp Fire killed 85 people. Kate Fedack draws a direct comparison to Telluride -- a wildland-urban interface community at the dead end of a box canyon with one primary paved way out -- and asks why dense new development at the canyon's throat is advancing with no public wildfire egress analysis.",
+    "href": "/Blog%20Posts/is-telluride-paradise/",
+    "img": "/images/blog/telluride-paradise-fire.jpg",
+    "category": "Opinion",
+    "isLetter": true,
+    "letterAuthor": "Kate Fedack"
+  }
+]
