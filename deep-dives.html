@@ -766,21 +766,26 @@
         }).join('');
       }
 
-      // Load gov-helpers.js which contains BLOG_POSTS (bot-updated every 6h)
+      // Blog posts now come from the JSON mirror data/blog-posts.json (~10 KB)
+      // instead of loading the full ~511 KB gov-helpers.js just for this list.
+      // JS→JSON migration: both exist and are CI-verified identical, so on ANY
+      // fetch failure we fall back to the old path (load gov-helpers.js + read
+      // the BLOG_POSTS global) — the render is identical either way.
       const day = Math.floor(Date.now()/600000);
-      const s = document.createElement('script');
-      s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
-      s.onload = function () {
-        if (typeof BLOG_POSTS !== 'undefined') {
-          renderBlog(BLOG_POSTS);
-        } else {
-          grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
-        }
-      };
-      s.onerror = function () {
-        grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
-      };
-      document.body.appendChild(s);
+      function blogFromGlobal() {
+        const s = document.createElement('script');
+        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
+        s.onload = function () {
+          if (typeof BLOG_POSTS !== 'undefined') renderBlog(BLOG_POSTS);
+          else grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
+        };
+        s.onerror = function () { grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>'; };
+        document.body.appendChild(s);
+      }
+      fetch('https://livabletelluride.org/data/blog-posts.json?v=' + day)
+        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+        .then(function (posts) { if (Array.isArray(posts) && posts.length) renderBlog(posts); else blogFromGlobal(); })
+        .catch(blogFromGlobal);
     })();
 
     /* Make each deep-dive card's image a hyperlink to that card's page.
