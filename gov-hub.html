@@ -1023,7 +1023,9 @@
         : '';
       const tagLabel = /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || '');
       const tag = tagLabel ? '<span class="meet-tag">' + tagLabel + '</span>' : '';
-      const summary = m.summary ? '<p class="meet-summary">' + esc(m.summary) + '</p>' : '';
+      // Bold proper nouns (names, places, projects) like the past-meeting recaps —
+      // but no paragraph splitting here (keep the upcoming card compact).
+      const summary = m.summary ? '<p class="meet-summary">' + emphasizeNames(m.summary) + '</p>' : '';
       const loc = m.location ? '<span>📍 ' + esc(m.location) + '</span>' : '';
       const time = m.time ? '<span>🕐 ' + esc(m.time) + '</span>' : '';
       const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
@@ -1110,6 +1112,7 @@
       + 'Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda '
       + 'Work Executive Regular Special Substantial Councilors '
       + 'January February March April May June July August September October November December '
+      + 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday '
       + 'Section Stage Phase Article Item Step Unit No Yes').split(/\s+/));
     function emphasizeNames(raw) {
       const runRe = /[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*/g;
