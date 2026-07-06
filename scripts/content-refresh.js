@@ -2941,7 +2941,7 @@ function readJsFile(filePath) {
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
-const { MIRROR_ARRAYS, MIRROR_OBJECTS, writeMirror } = require('./lib/json-mirror.js');
+const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, writeMirror } = require('./lib/json-mirror.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -6502,6 +6502,10 @@ async function main() {
   }
   for (const name of MIRROR_OBJECTS) {
     try { writeMirror(name, extractJsObject(govHubSrc, name) || {}, _dataDir); }
+    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
+  }
+  for (const name of MIRROR_GOVDATA_ARRAYS) {   // meeting-seed arrays live in gov-data.js
+    try { writeMirror(name, extractJsArray(govDataSrc, name) || [], _dataDir); }
     catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
   }
 

@@ -40,6 +40,17 @@ const MIRROR_ARRAYS = [
 // summaries; MEETING_AGENDA_META the per-meeting zoom/agenda metadata.
 const MIRROR_OBJECTS = ['MANUAL_SUMMARIES', 'MEETING_AGENDA_META', 'RIDGWAY_AGENDA_MAP', 'RICO_AGENDA_MAP'];
 
+// Meeting-seed arrays that live in js/gov-DATA.js (not gov-helpers). content-refresh
+// hand-maintains their base entries and PATCHES agenda URLs into them. Mirrored
+// file-aware (extracted from gov-data.js). NOT the static config in gov-data.js
+// (LOCAL_ORGS, TELLURIDE_FESTIVALS, reject/skip patterns, QR_OPTIONS, …) — that's
+// hand-only config, not part of the bot-data migration.
+const MIRROR_GOVDATA_ARRAYS = [
+  'COUNTY_CACHED_DATA', 'NORWOOD_CACHED_DATA', 'OPHIR_CACHED_DATA', 'SCHOOL_CACHED_DATA',
+  'TELLURIDE_CACHED_DATA', 'MV_CACHED_DATA', 'MED_CACHED_DATA', 'SMART_CACHED_DATA',
+  'FIRE_CACHED_DATA', 'RIDGWAY_CACHED_DATA', 'AIRPORT_CACHED_DATA',
+];
+
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {
   return String(varName).toLowerCase().replace(/_/g, '-') + '.json';
@@ -60,4 +71,4 @@ function writeMirror(varName, data, dataDir) {
   return p;
 }
 
-module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, mirrorFileName, mirrorPath, writeMirror };
+module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, mirrorFileName, mirrorPath, writeMirror };

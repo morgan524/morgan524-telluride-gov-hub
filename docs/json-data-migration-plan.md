@@ -19,9 +19,23 @@ the hook in `content-refresh.js`), `scripts/mirror-json.js` seeds/re-syncs, and
 the JSON yet (zero browser change). Reversible: shrink `MIRROR_ARRAYS` /
 `MIRROR_OBJECTS`.
 
-Not yet mirrored: gov-data.js arrays (e.g. `*_CACHED_DATA` — need file-aware
-extraction, since the mirror hook reads gov-helpers.js). Next: those, then begin
-flipping readers one at a time (each flip proven identical via the parity harness).
+**Also mirrored now: the 11 `*_CACHED_DATA` meeting-seed arrays in gov-DATA.js**
+(`MIRROR_GOVDATA_ARRAYS`, file-aware — the hook/tool/test read gov-data.js for
+these). content-refresh only patches agenda URLs into them, but they're also
+hand-maintained, so unlike the gov-helpers arrays a HUMAN edit needs a
+`node scripts/mirror-json.js` re-sync before commit (the CI check says so;
+content-refresh also self-heals within a run). With this, **the entire
+bot-managed data layer is dual-written** — gov-helpers arrays + object-maps and
+the gov-data meeting seeds.
+
+NOT mirrored (by design): static hand-only config in gov-data.js — `LOCAL_ORGS`,
+`TELLURIDE_FESTIVALS`, reject/skip patterns, `QR_OPTIONS`, `WHY_THIS_MATTERS`,
+`KEY_ISSUE_TIERS`, `DEEP_DIVE_PAGES` — not bot-data, so mirroring them is pure
+hand-edit friction with no migration payoff (revisit at the reader-flip if needed).
+
+Next: begin flipping READERS one at a time — the browser loads `data/*.json`
+instead of the JS global. That's the first client-visible step; do it per-array,
+each proven identical via the parity harness (#61), with a browser check.
 
 ## Why
 
