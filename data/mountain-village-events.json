@@ -22,17 +22,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
-    "title": "MusicFest",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/musicfest-2/",
-    "description": "Come and celebrate MusicFest 2026! This chamber music festival will offers the chance to enjoy chamber music performances by world class musicians in a",
-    "pubDate": "2026-07-05T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48604/musicfest.jpg"
-  },
-  {
     "title": "Market on the Plaza",
     "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -372,5 +361,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "pubDate": "2026-08-05T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ]

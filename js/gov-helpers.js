@@ -411,7 +411,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -471,7 +471,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -507,7 +507,7 @@ const MANUAL_SUMMARIES = {
     "The August 3, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    "The August 05 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
     "The August 5, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
@@ -3343,7 +3343,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Family Movie Matinee: Hoppers",
     link: "https://telluridelibrary.libcal.com/event/15536161?hs=a",
-    description: "A free family movie screening at Wilkinson Public Library's Program Room, showing a film called *Hoppers*. The event runs from 2:00 to 4:00 PM and is open to families and kids of all ages.",
+    description: "2:00 PM – 4:00 PM",
     pubDate: "2026-07-06T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3397,7 +3397,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
+    description: "The B-Side Players make music without borders or boundar...",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3601,7 +3601,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3613,7 +3613,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3764,8 +3764,7 @@ const SHERBINO_EVENTS = [
     endDate: "2026-07-14 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A monthly gathering at the Sherbino in Ridgway for veterans through the Welcome Home Alliance, offering a casual coffee meetup and a chance to connect with fellow veterans and community members. The event is part of a recurring series supporting veteran community and fellowship in the region."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "The Sherbino presents: From Intention to Impact; Planned Giving Essentials",
@@ -4206,18 +4205,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
   },
   {
-    title: "Opening Reception: Roots & Rhythms @ Ridgway's Frist Friday Art Walk",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-on-display-roots-rhythms",
-    description: "Join us for the opening reception of Roots & Rhythms, a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Rooted in what came before and flowing toward what is possible, the exhibition explores memory, movement, and transformation through layered textures, organic forms, and expressive craftsmanship. Celebrate the opening during Ridgway's First Friday Art Walk with: Live music by Tibone A live steam-bending demonstration Meet-the-artist opportunities Complimentary refreshments The exhibition will remain on view July 3–August 4 during regular gallery hours (Monday–Wednesday and Friday, 9 a.m.–4 p.m.). Come experience an evening of art, conversation, and creativity in the heart of Ridgway.",
-    pubDate: "2026-07-06T12:00:00.000Z",
-    endDate: "2026-08-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53321591214673/huge/1e676b7f1743ef4737a6611d181ff63c6cb11505.jpg"
-  },
-  {
     title: "Soussical The Musical - Summer Youth Theatre Program",
     link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
     description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
@@ -4523,7 +4510,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
+    description: "",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4534,7 +4521,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4545,7 +4532,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4556,7 +4543,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4567,7 +4554,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4578,7 +4565,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4589,7 +4576,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4600,7 +4587,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4611,7 +4598,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4643,17 +4630,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "MusicFest",
-    link: "https://townofmountainvillage.com/explore/events/all-events/musicfest-2/",
-    description: "Come and celebrate MusicFest 2026! This chamber music festival will offers the chance to enjoy chamber music performances by world class musicians in a",
-    pubDate: "2026-07-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48604/musicfest.jpg"
   },
   {
     title: "Market on the Plaza",
@@ -4995,6 +4971,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-08-05T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 
@@ -7873,18 +7860,18 @@ function getTownAgendaLink(title, eventDate) {
 const TELLURIDE_BOARD_MEETINGS = [
   {
     date: "July 21, 2026",
-    title: "Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
-    hasAgenda: false,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
-  {
-    date: "July 21, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: ""
+  },
+  {
+    date: "July 21, 2026",
+    title: "Telluride Housing Authority",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
+    hasAgenda: false,
+    location: "Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
   {
