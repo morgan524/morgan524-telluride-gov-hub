@@ -1843,7 +1843,7 @@ function addOverlayLayers() {
     source:"parcels",
     "source-layer":"parcel",
     layout:{ visibility:"none" },
-    filter:["all", ["==", ["get", "vacant_lot"], "True"], ["!=", ["get", "federal_forest_public_land"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"]],
+    filter:["all", ["==", ["get", "vacant_lot"], "True"], ["!=", ["get", "federal_forest_public_land"], "True"], ["!=", ["get", "high_country"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"]],
     paint:{
       "fill-color":"#5a9e5a",
       "fill-opacity":0.55
@@ -1857,7 +1857,7 @@ function addOverlayLayers() {
     source:"parcels",
     "source-layer":"parcel",
     layout:{ visibility:"none" },
-    filter:["all", ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"], ["!=", ["get", "SUBNAME"], "SOCIETY TURN BUSINESS PARK SUBDIVISION/PUD"], ["!=", ["get", "PIN"], "456335100067"], ["any", ["==", ["get", "buildable_unrestricted"], "True"], ["==", ["get", "buildable_unrestricted"], true]]],
+    filter:["all", ["!=", ["get", "high_country"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!=", ["get", "PIN"], "OPEN SPACE"], ["!=", ["get", "PIN"], "COMMON"], ["!=", ["get", "SUBNAME"], "SOCIETY TURN BUSINESS PARK SUBDIVISION/PUD"], ["!=", ["get", "PIN"], "456335100067"], ["any", ["==", ["get", "buildable_unrestricted"], "True"], ["==", ["get", "buildable_unrestricted"], true]]],
     paint:{
       "fill-color":"#c45a2a",
       "fill-opacity":0.58
