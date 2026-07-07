@@ -114,6 +114,23 @@ const ZONING_MINLOT = {
 };
 const DEFAULT_MINLOT = [35, 35];  // rural baseline (~1 unit / 35 ac) when nothing else known
 
+// ── Manual developable-classification overrides (corrections the automated flags
+// miss). FORCE_NOT_DEVELOPABLE: parcels actually in a PUD/entitled area that the
+// PUD detection missed. FORCE_DEVELOPABLE: developable parcels wrongly excluded
+// (e.g. a conservation-easement or federal-land false positive). ──
+const FORCE_NOT_DEVELOPABLE = new Set([
+  '456530420167', '456519400011',  // in the Aldasoro PUD (missed by in_pud_or_subdivision)
+  '477905400009',
+]);
+const FORCE_DEVELOPABLE = new Set([
+  '477920100505', '477917300502', '477920200503', '477920200504', '477920200506', '477917300013',
+]);
+// The Genesee parcels in the Society Turn Business Park PUD determine uses via the
+// PUD, so they are not independently developable.
+const genseeAtSocietyTurn = p =>
+  /GENESEE PROPERTIES/i.test(String(p.NAMEDISPLAY || p.NAME1 || '')) &&
+  /SOCIETY TURN/i.test(String(p.SUBNAME || ''));
+
 const DATA = path.join(__dirname, 'data');
 const loadFC = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 
@@ -188,7 +205,8 @@ for (const f of parcelData.features) {
   // Developable = unentitled + unprotected + has division potential. Airport-
   // restricted parcels stay IN (a height limit caps scale, doesn't prohibit).
   const pin = String(f.properties.PIN || '').toLowerCase();
-  const developable =
+  const rawPin = String(f.properties.PIN || '');
+  let developable =
     f.properties.in_pud_or_subdivision !== 'True' &&
     String(f.properties.federal_forest_public_land) !== 'True' &&
     f.properties.high_country !== 'True' &&
@@ -196,7 +214,14 @@ for (const f of parcelData.features) {
     f.properties.conservation_easement !== 'True' &&
     pin !== 'row' && !pin.includes('open space') && !pin.includes('common') &&
     devHi >= 1;
-  if (developable) { f.properties.developable = 'True'; taggedDev++; }
+  // Manual corrections (owner/PIN cases the automated flags miss).
+  if (FORCE_NOT_DEVELOPABLE.has(rawPin) || genseeAtSocietyTurn(f.properties)) developable = false;
+  if (FORCE_DEVELOPABLE.has(rawPin)) developable = true;
+  if (developable) {
+    // A forced-in parcel with no computed potential still shows as at least 1 lot.
+    if (FORCE_DEVELOPABLE.has(rawPin) && devHi < 1) { f.properties.dev_lots_hi = 1; f.properties.dev_lots_lo = 0; }
+    f.properties.developable = 'True'; taggedDev++;
+  }
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
