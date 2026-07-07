@@ -3054,6 +3054,11 @@ function replaceConstString(source, varName, newValue) {
 // Strip HTML tags and collapse whitespace for excerpt extraction.
 function htmlToText(s) {
   return String(s || '')
+    // Strip HTML comments FIRST — Outlook/MSO conditional comments
+    // (<!--[if gte mso]>…<![endif]-->) wrap markup like
+    // <o:PixelsPerInch>96</o:PixelsPerInch>, whose text ("96") otherwise
+    // leaks into the excerpt once the surrounding tags are removed.
+    .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<style[\s\S]*?<\/style>/gi, '')
     .replace(/<script[\s\S]*?<\/script>/gi, '')
     .replace(/<[^>]+>/g, ' ')
@@ -3063,52 +3068,143 @@ function htmlToText(s) {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    // Drop zero-width / invisible chars email tools use as preheader padding
+    // (͏ U+034F, ‌‍ U+200C/D, U+200B, U+FEFF, soft hyphen U+00AD).
+    .replace(/[​-‍﻿͏­]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
 
-// Pull the first reasonable image URL out of the campaign HTML.
+// A logo/header image we do NOT want as a blog-card image — the site logo or the
+// Mailchimp-hosted Livable Telluride logo reused across every newsletter header.
+function isLogoImage(url) {
+  if (!url) return true;
+  const u = String(url).toLowerCase();
+  return u.includes('234a1ccb-fc9c-7aab-8d5f-dab36d775b79') ||  // Mailchimp-hosted Livable logo
+         u.includes('/logo/') ||
+         u.includes('livable%20telluride%20logo') ||
+         u.includes('livable-telluride-logo') ||
+         /\blogo\b/.test(u);
+}
+
+// Pull the best image out of the newsletter HTML: prefer the first INTERIOR
+// (content) image over the logo/header. Falls back to the first image only when
+// no interior image exists.
 function firstImageFromHtml(html) {
   if (!html) return '';
-  // Look for <img ... src="..."> — Mailchimp emails are heavy on tracking
-  // pixels and email-client compat images, so we filter out 1x1 / sprite /
-  // common boilerplate images.
+  // Mailchimp emails are heavy on tracking pixels and email-client compat
+  // images, so we filter out 1x1 / sprite / boilerplate images.
   const re = /<img[^>]+src\s*=\s*["']([^"']+)["'][^>]*>/gi;
-  let m;
+  let m, firstAny = '';
   while ((m = re.exec(html)) !== null) {
     const url = m[1];
     if (!url) continue;
     if (/(spacer|tracking|pixel|1x1|open\.gif|empty\.gif|transparent)/i.test(url)) continue;
     if (url.startsWith('data:')) continue;
-    return url;
+    if (!firstAny) firstAny = url;
+    if (!isLogoImage(url)) return url;   // first non-logo (interior) image wins
   }
-  return '';
+  return firstAny;                        // fallback: first image (may be a logo)
 }
 
-function syncBroadcastBlog(existingPosts) {
+// The recurring digest emails (weekly "Week Ahead Outlook", "Weekend Update /
+// Outlook", and the RSS "Posts from Livable Telluride for …") should NOT appear
+// on the public blog — only manually-authored newsletters do.
+function isDigestTitle(t) {
+  if (!t) return false;
+  return /^Posts from Livable Telluride for /i.test(t) ||
+         /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t) ||
+         /\bWeek Ahead\b/i.test(t) ||
+         /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t);
+}
+
+const BLOG_UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15';
+
+// Fetch a URL's HTML with a timeout; return '' on any failure.
+async function fetchHtml(url, ms = 12000) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), ms);
+  try {
+    const r = await fetch(url, { headers: { 'User-Agent': BLOG_UA }, signal: ctl.signal });
+    if (!r.ok) return '';
+    return await r.text();
+  } catch (e) { return ''; }
+  finally { clearTimeout(t); }
+}
+
+async function syncBroadcastBlog(existingPosts) {
+  // 1. Prune any digest-titled post regardless of source — keeps the blog to
+  //    real newsletters (removes the weekly "Week Ahead" / "Weekend" digests,
+  //    including the customerio-sourced ones the old code left behind).
+  let posts = existingPosts.filter((p) => {
+    if (p && isDigestTitle(p.title)) { console.log(`  Pruning digest from blog: ${p.title}`); return false; }
+    return true;
+  });
+
+  // 2. Add any not-yet-listed sent broadcast that ISN'T a digest.
   let sent = [];
   try {
     sent = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'data', 'sent-broadcasts.json'), 'utf8'));
-  } catch (e) { return existingPosts; }
-  if (!Array.isArray(sent) || !sent.length) return existingPosts;
-  const haveHref = new Set(existingPosts.map((p) => p && p.href));
-  const additions = [];
-  for (const b of sent) {
-    if (!b || !b.href || haveHref.has(b.href)) continue;
-    additions.push({
-      title:    String(b.subject || 'Newsletter'),
-      date:     String(b.date || ''),
-      href:     String(b.href),
-      image:    'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
-      excerpt:  String(b.excerpt || ''),
-      category: 'Newsletter',
-      source:   'customerio',
-    });
-    haveHref.add(b.href);
+  } catch (e) { sent = []; }
+  if (Array.isArray(sent) && sent.length) {
+    const haveHref = new Set(posts.map((p) => p && p.href));
+    const additions = [];
+    for (const b of sent) {
+      if (!b || !b.href || haveHref.has(b.href)) continue;
+      if (isDigestTitle(b.subject)) { console.log(`  Skipping digest broadcast: ${b.subject}`); continue; }
+      additions.push({
+        title:    String(b.subject || 'Newsletter'),
+        date:     String(b.date || ''),
+        href:     String(b.href),
+        image:    'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
+        excerpt:  String(b.excerpt || ''),
+        category: 'Newsletter',
+        source:   'customerio',
+      });
+      haveHref.add(b.href);
+    }
+    posts = [...additions, ...posts];  // sent-broadcasts.json is newest-first
   }
-  if (!additions.length) return existingPosts;
-  // sent-broadcasts.json is newest-first; keep newest posts on top.
-  return [...additions, ...existingPosts];
+
+  // 3. Enrich: for posts whose card image is the logo (or missing), pull the first
+  //    INTERIOR image + a clean excerpt. Fixes the logo-instead-of-content image
+  //    and the MSO-comment "96" / CSS leaks in old excerpts. Idempotent (once a
+  //    real image is set it's skipped) and never touches hand-curated posts (they
+  //    have real images). The Mailchimp archive RSS feed still serves the CLEAN
+  //    campaign body for legacy mailchimp posts — far better than the mailchi.mp
+  //    PAGE, which wraps the body in archive chrome (share links, language menu).
+  const needEnrich = posts.filter((p) => p && p.href && /^https?:\/\//i.test(p.href) && (!p.image || isLogoImage(p.image)));
+  if (needEnrich.length) {
+    const norm = (s) => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const feedByHref = new Map(), feedByTitle = new Map();
+    const feedText = await fetchHtml('https://us15.campaign-archive.com/feed?u=5d9192289b9af78822f2f69bf&id=f83dc56387');
+    if (feedText) {
+      for (const chunk of feedText.split(/<item>/).slice(1)) {
+        const link = ((chunk.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || '').trim();
+        const title = ((chunk.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || '').replace(/<!\[CDATA\[|\]\]>/g, '').trim();
+        const desc = ((chunk.match(/<description>([\s\S]*?)<\/description>/) || [])[1] || '').replace(/^\s*<!\[CDATA\[/, '').replace(/\]\]>\s*$/, '');
+        if (link) feedByHref.set(link, desc);
+        if (title) feedByTitle.set(norm(title), desc);
+      }
+    }
+    for (const p of needEnrich) {
+      const desc = feedByHref.get(p.href) || feedByTitle.get(norm(p.title));
+      if (desc) {
+        const img = firstImageFromHtml(desc);
+        if (img && !isLogoImage(img)) { p.image = img; }
+        const text = htmlToText(desc).slice(0, 400);
+        if (text) p.excerpt = text;
+        console.log(`  Enriched from feed: ${p.title}`);
+      } else {
+        // Not in the mailchimp feed (e.g. a Customer.io newsletter) — fetch the
+        // page for an interior image; keep the existing excerpt (page text may
+        // carry archive chrome).
+        const img = firstImageFromHtml(await fetchHtml(p.href));
+        if (img && !isLogoImage(img)) { p.image = img; console.log(`  Interior image (page): ${p.title}`); }
+      }
+    }
+  }
+  return posts;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -6146,11 +6242,14 @@ async function main() {
   // Turn any newsletter sent via the Digest Review Desk (recorded in
   // data/sent-broadcasts.json by the digest Worker) into a BLOG_POSTS entry.
   const existingBlogPosts = extractJsArray(govHubSrc, 'BLOG_POSTS') || [];
-  const updatedBlogPosts = syncBroadcastBlog(existingBlogPosts);
-  if (updatedBlogPosts.length !== existingBlogPosts.length) {
+  const updatedBlogPosts = await syncBroadcastBlog(existingBlogPosts);
+  // Compare content, not just length — the enrich pass changes images/excerpts
+  // in place (same count) and pruning digests changes count.
+  if (JSON.stringify(updatedBlogPosts) !== JSON.stringify(existingBlogPosts)) {
     govHubSrc = replaceJsValue(govHubSrc, 'BLOG_POSTS', updatedBlogPosts, false);
     changed = true;
-    console.log(`  BLOG_POSTS: +${updatedBlogPosts.length - existingBlogPosts.length} from sent broadcasts`);
+    const delta = updatedBlogPosts.length - existingBlogPosts.length;
+    console.log(`  BLOG_POSTS: ${delta >= 0 ? '+' : ''}${delta} (net); images/excerpts/digests updated`);
   }
 
   // ── 7. Telluride Humane Society Adoptable Animals ──
