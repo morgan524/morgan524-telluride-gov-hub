@@ -486,7 +486,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -645,6 +645,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Wildfires significantly less common in roadless areas",
+    source: "Telluride Times",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "public-safety",
+    copy: "Roadless areas see fire ignition rates four times lower than lands near Forest Service roads, with 90% of fires on FS land linked to human causes. Only 1% of significant wildfires since 2010 occurred in roadless areas. The data comes from a 32-year, 200,000-fire study across all contiguous U.S. Forest Service regions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6b1401c9-73a1-4186-b1ed-a172c2733235.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/70/e70d41b2-f117-416f-b2c4-e68d35130f78/6a4c80454e418.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Disaster planning for pets",
+    source: "Telluride Times",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "land-use",
+    copy: "If you're away when evacuation hits, have a neighbor with a key ready to move your pets. Keep emergency kits packed with food, water, meds, and ID gear — one for sheltering, one lightweight for go-time. Make sure every pet is microchipped and tagged, with current contact info.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_9ffbcd52-0209-48cc-9b86-eadeb74b7324.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/db/4dbad19a-28ec-49b3-ba8e-23195194a7c4/6a4c8232f3f42.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Dry thunderstorms could complicate firefighting efforts",
     source: "Telluride Times",
@@ -1958,6 +1982,127 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
+  },
+  {
+    title: "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
+    source: "Town of Ridgway",
+    date: "July 1, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions Implemented in Ridgway",
+    source: "Town of Ridgway",
+    date: "June 28, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-2-Fire-Restrictions-press-release-2026-06-28.pdf",
+    img: ""
+  },
+  {
+    title: "Finding of the Town Manager Enacting Town Wide Fire Ban",
+    source: "Town of Ridgway",
+    date: "June 28, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "public-safety",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Wide-Fire-Ban---Stage-2-Restrictions---June-28%2C-2026---signed.pdf",
+    img: ""
+  },
+  {
+    title: "Movie Mondays 8:30pm in Hartwell Park",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "arts-culture",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Movie-Mondays-Poster-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "infrastructure",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
+    img: ""
+  },
+  {
+    title: "Planting Trees in Ridgway - Species Recommendations Brochure",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---July-7%2C-2026.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "housing",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-workforce-%26-affordable-housing-committee-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Ridgway Town Council Meeting Agenda",
+    source: "Town of Ridgway",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-tc-agenda.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing - Application for Resubdivision - Hyde Subdivision Lots 1, 2, 3, 4 of Block 14 (847 and 845 Hyde Street)",
+    source: "Town of Ridgway",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Introduction - Ordinance No. 04-2026",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "government",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
+    img: ""
   }
 ];
 
@@ -3087,81 +3232,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568419?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-07-06T16:30:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772764?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-07-07T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Learn to Play Pickleball!",
-    link: "https://telluridelibrary.libcal.com/event/16897846?hs=a",
-    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
-    pubDate: "2026-07-06T17:30:00.000Z",
+    title: "Pup Meetup at the Gondola Plaza",
+    link: "https://telluridelibrary.libcal.com/event/17052033?hs=a",
+    description: "11:30 AM – 12:00 PM · Get ready to unleash the fun at our Pup Meetup! 🐶 Join us at the Gondola Plaza by the Coffee Cowboy Cart for a tail-wagging good time that's sure to leave both you and your furry friend feeling pawsitively delighted. Make sure to stick around for the raffle with prizes from local pet stores and free pup cups from the Coffee Cowboy! Marney Prince with My Pup&#39;s Remedy will be there with free treats for your furry friend as well! With the Wilkinson Public Library, anything is PAW-sible. Who knows...you may even make some new FUR-ever friends!",
+    pubDate: "2026-07-07T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
+    location: "Gondola Plaza - Telluride",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_12_32.jpg"
   },
   {
-    title: "Strings in the Stacks: Live Violin with Annie Foxen",
-    link: "https://telluridelibrary.libcal.com/event/16759873?hs=a",
-    description: "12:00 PM – 1:00 PM · Unwind at the library with live violin music from violinist and WPL staff member, Annie Foxen. On the first Monday of every month, Annie fills the library with a calming mix of classical, Celtic, and folk tunes—perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
-    pubDate: "2026-07-06T18:00:00.000Z",
+    title: "Cocina con Corazón",
+    link: "https://telluridelibrary.libcal.com/event/17067340?hs=a",
+    description: "12:00 PM – 1:30 PM · Tendremos el programa Cocina con Coraz&oacute;n cada mes asociado con Ah Haa para traer m&aacute;s programas para la comunidad de hispanohablantes. Vamos a cocinar pupusas con Krista.  Este program solamente es para adultos y en espa&ntilde;ol.   &iexcl;Tenemos espacio para 12 adultos, inscr&iacute;bete con Claudia hoy!  Todos los niveles de espa&ntilde;ol son bienvenidos.",
+    pubDate: "2026-07-07T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_18_26_04.png"
   },
   {
-    title: "Savvy Seniors - Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/17029817?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-07-06T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_10_14_59_47.png"
-  },
-  {
-    title: "Hobby Hopping",
-    link: "https://telluridelibrary.libcal.com/event/17065533?hs=a",
-    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! July 6: Henna Tattoos July 13: Cyanotype Printing July 20: Architecture Studio July 27: T-Shirt Pom Poms",
-    pubDate: "2026-07-06T20:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935714?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-07-07T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_27_58.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
   },
   {
-    title: "Family Movie Matinee: Hoppers",
-    link: "https://telluridelibrary.libcal.com/event/15536161?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-07-06T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_31_47.png"
-  },
-  {
-    title: "Pie Contest!",
-    link: "https://telluridelibrary.libcal.com/event/17019543?hs=a",
-    description: "6:00 PM – 7:30 PM · Our beloved tradition returns! Calling all pie enthusiasts! The Wilkinson Public Library is hosting its annual Pie Contest on Monday, July 6th! This delicious competition is open to bakers of all ages. Show off your skills and vie for bragging rights and a litany of prizes! Our panel of esteemed judges will decide the fate of your flaky masterpiece, based on appearance, creativity, and of course, taste. Register in advance (see link below) and bring your pie for drop off between 5-6pm on July 6th. Judging begins promptly at 6:01pm. Don&#39;t miss this chance to celebrate the perfect summer treat! Spots will go fast, so be sure to sign up ASAP! &iexcl;Vuelve nuestra querida tradici&oacute;n! Amantes de las tartas, al llamado! La Biblioteca P&uacute;blica Wilkinson organiza su Concurso Anual de Tartas el lunes 6 de julio. …",
-    pubDate: "2026-07-07T00:00:00.000Z",
+    title: "I Heart Art with SMRC",
+    link: "https://telluridelibrary.libcal.com/event/16574855?hs=a",
+    description: "A Library-hosted arts program presented in partnership with SMRC, taking place on the Lower Terrace outdoors. The event runs for one hour in the afternoon.",
+    pubDate: "2026-07-07T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_10_16_48.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_02.png"
+  },
+  {
+    title: "Punk Science with Pinhead",
+    link: "https://telluridelibrary.libcal.com/event/16297533?hs=a",
+    description: "A library event at Wilkinson Public Library featuring Punk Science with Pinhead, held outdoors on the Lower Terrace. The program runs from 5:15 to 6:00 PM.",
+    pubDate: "2026-07-07T23:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: ""
+  },
+  {
+    title: "Bardic Trails Online Poetry Night: Lawton Eddy",
+    link: "https://telluridelibrary.libcal.com/event/15970601?hs=a",
+    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of Santa Cruz (CA)* Feb. …",
+    pubDate: "2026-07-08T01:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg"
   }
 ];
 
@@ -3212,7 +3357,7 @@ const ALIBI_EVENTS = [
   {
     title: "B-Side Players",
     link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
+    description: "The B-Side Players bring their genre-blending sound to The Alibi for a late-night live music performance. Known for fusing styles across cultural boundaries, the band takes the stage at 9:00 PM.",
     pubDate: "2026-07-08",
     time: "9:00 PM",
     source: "alibi",
@@ -3440,7 +3585,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3452,7 +3597,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3603,7 +3748,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-07-14 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A monthly gathering at the Sherbino in Ridgway for veterans through the Welcome Home Alliance, offering a casual coffee meetup and a chance to connect with fellow veterans and community members. The event is part of a recurring series supporting veteran community and fellowship in the region."
   },
   {
     title: "The Sherbino presents: From Intention to Impact; Planned Giving Essentials",
@@ -3742,18 +3888,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://weehawkenarts.org/karate-2/",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-03-02T12:00:00.000Z",
-    endDate: "2026-12-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -4032,18 +4166,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg"
   },
   {
-    title: "On Display: Roots & Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
-    pubDate: "2026-07-06T12:00:00.000Z",
-    endDate: "2026-08-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
-  },
-  {
     title: "Soussical The Musical - Summer Youth Theatre Program",
     link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
     description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
@@ -4054,6 +4176,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
+  },
+  {
+    title: "On Display: Roots & Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
+    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
+    pubDate: "2026-07-06T12:00:00.000Z",
+    endDate: "2026-08-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create",
+    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Rock Climbing",
@@ -4353,6 +4487,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53181106878061/huge/9cccd312a17d0b6a8983658a932f79062a593b9b.jpg"
+  },
+  {
+    title: "July Book Club - \"A Confederacy of Dunces\"",
+    link: "https://ouray.colibraries.org/lib-cal/",
+    description: "Join us at the Ouray Library to discuss the July Book Club book, \"A Confederacy of Dunces,\" by John Kennedy Toole.",
+    pubDate: "2026-07-15T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53144844449971/huge/0ff7e1c07fa6594dbb5b9913e2f56db7c9c80215.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: Flowers and Friends",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. She is a proud member of the Mountain Girl Gallery, her work has been commissioned multiple times and featured in exhibitions at multiple local galleries, with additional pieces sold through online platforms. …",
+    pubDate: "2026-07-15T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53074003726272/huge/68a0dbff08bbc13a6c4c4aa12ec5ade31107e5e2.jpg"
   }
 ];
 
@@ -4360,7 +4516,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed In Observance Of 4th Of July",
     link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of the 4th of July holiday. Residents should plan accordingly for any town services or offices they may need to access around this time.",
     pubDate: "2026-07-02T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4371,7 +4527,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4382,7 +4538,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4393,7 +4549,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4404,7 +4560,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4415,7 +4571,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4426,7 +4582,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4437,7 +4593,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4448,7 +4604,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

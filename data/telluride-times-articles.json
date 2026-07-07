@@ -1,5 +1,29 @@
 [
   {
+    "title": "Wildfires significantly less common in roadless areas",
+    "source": "Telluride Times",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "public-safety",
+    "copy": "Roadless areas see fire ignition rates four times lower than lands near Forest Service roads, with 90% of fires on FS land linked to human causes. Only 1% of significant wildfires since 2010 occurred in roadless areas. The data comes from a 32-year, 200,000-fire study across all contiguous U.S. Forest Service regions.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_6b1401c9-73a1-4186-b1ed-a172c2733235.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/70/e70d41b2-f117-416f-b2c4-e68d35130f78/6a4c80454e418.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Disaster planning for pets",
+    "source": "Telluride Times",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "land-use",
+    "copy": "If you're away when evacuation hits, have a neighbor with a key ready to move your pets. Keep emergency kits packed with food, water, meds, and ID gear — one for sheltering, one lightweight for go-time. Make sure every pet is microchipped and tagged, with current contact info.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news_release/article_9ffbcd52-0209-48cc-9b86-eadeb74b7324.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/db/4dbad19a-28ec-49b3-ba8e-23195194a7c4/6a4c8232f3f42.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Dry thunderstorms could complicate firefighting efforts",
     "source": "Telluride Times",
     "date": "July 6, 2026",
@@ -1311,6 +1335,127 @@
     "newsTopic": "public-safety",
     "copy": "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    "img": ""
+  },
+  {
+    "title": "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
+    "source": "Town of Ridgway",
+    "date": "July 1, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "public-safety",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
+    "img": ""
+  },
+  {
+    "title": "Stage 2 Fire Restrictions Implemented in Ridgway",
+    "source": "Town of Ridgway",
+    "date": "June 28, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "public-safety",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-2-Fire-Restrictions-press-release-2026-06-28.pdf",
+    "img": ""
+  },
+  {
+    "title": "Finding of the Town Manager Enacting Town Wide Fire Ban",
+    "source": "Town of Ridgway",
+    "date": "June 28, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "public-safety",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Wide-Fire-Ban---Stage-2-Restrictions---June-28%2C-2026---signed.pdf",
+    "img": ""
+  },
+  {
+    "title": "Movie Mondays 8:30pm in Hartwell Park",
+    "source": "Town of Ridgway",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "arts-culture",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Movie-Mondays-Poster-2026.pdf",
+    "img": ""
+  },
+  {
+    "title": "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
+    "source": "Town of Ridgway",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "infrastructure",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
+    "img": ""
+  },
+  {
+    "title": "Planting Trees in Ridgway - Species Recommendations Brochure",
+    "source": "Town of Ridgway",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Sustainability Advisory Board Meeting Agenda",
+    "source": "Town of Ridgway",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---July-7%2C-2026.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
+    "source": "Town of Ridgway",
+    "date": "July 8, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "housing",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-workforce-%26-affordable-housing-committee-agenda.pdf",
+    "img": ""
+  },
+  {
+    "title": "Ridgway Town Council Meeting Agenda",
+    "source": "Town of Ridgway",
+    "date": "July 8, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-tc-agenda.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice of Public Hearing - Application for Resubdivision - Hyde Subdivision Lots 1, 2, 3, 4 of Block 14 (847 and 845 Hyde Street)",
+    "source": "Town of Ridgway",
+    "date": "July 15, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
+    "img": ""
+  },
+  {
+    "title": "Notice of Introduction - Ordinance No. 04-2026",
+    "source": "Town of Ridgway",
+    "date": "July 7, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
     "img": ""
   }
 ]
