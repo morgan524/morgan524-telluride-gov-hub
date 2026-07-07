@@ -584,10 +584,10 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   </div>
   <div class="panel" id="builtLegend" style="display:none;">
     <label>Developable Land &mdash; max lots</label>
-    <div class="legend-item"><span style="background:#dadaeb"></span><button type="button">1 lot</button><em></em></div>
-    <div class="legend-item"><span style="background:#9e9ac8"></span><button type="button">2&ndash;4 lots</button><em></em></div>
-    <div class="legend-item"><span style="background:#756bb1"></span><button type="button">5&ndash;19 lots</button><em></em></div>
-    <div class="legend-item"><span style="background:#54278f"></span><button type="button">20+ lots</button><em></em></div>
+    <div class="legend-item"><span style="background:#ecd6e8"></span><button type="button">1 lot</button><em></em></div>
+    <div class="legend-item"><span style="background:#d3a3cc"></span><button type="button">2&ndash;4 lots</button><em></em></div>
+    <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
+    <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
   </div>
 
@@ -2172,12 +2172,13 @@ function addOverlayLayers() {
     filter:["all", ["==", ["get", "developable"], "True"], ["!=", ["get", "airport_restriction"], "True"]],
     paint:{
       // Choropleth by estimated additional lots (dev_lots_hi = ceiling of the
-      // plan/zoning density range). Sequential purple ramp = "how much more".
+      // plan/zoning density range). Sequential ROSE ramp = "how much more" —
+      // rose (not purple) so it's distinct from the basemap's purple airport.
       "fill-color":["step", ["to-number", ["get", "dev_lots_hi"]],
-        "#dadaeb",        // 1 lot
-        2, "#9e9ac8",     // 2–4
-        5, "#756bb1",     // 5–19
-        20, "#54278f"],   // 20+
+        "#ecd6e8",        // 1 lot
+        2, "#d3a3cc",     // 2–4
+        5, "#b87fb0",     // 5–19
+        20, "#7a3670"],   // 20+
       "fill-opacity":0.6
     }
   });
