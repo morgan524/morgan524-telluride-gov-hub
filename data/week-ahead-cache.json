@@ -1,18 +1,18 @@
 {
-  "hash": "99af492bfd392ba7c7b9b6f5b88a2a5ac4808621",
-  "lede": "The biggest item this week is a joint work session Thursday where the San Miguel County Planning Commission and Board of County Commissioners dig into proposed Land Use Code amendments covering forestry, oil and gas, condominium plats, and deep geothermal operations — no final votes, but this is where the shape of those rules gets decided. Monday the Open Space Commission takes up three trail alignment options for Valley Floor Reach 1, threading around wetland delineations, plus a Telluride Mountain Club request to route a quarter-mile of trail through the open space. Wednesday the commissioners travel to Norwood for a rare West End meeting that includes a Planning Commission appointment and a Placerville Fire Survey presentation.",
+  "hash": "3e004e93df8e305886ea5b66a2d6acb2c5e3e7ed",
+  "lede": "The biggest thing on the government calendar this week is the joint work session Wednesday where the Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments covering forestry, oil and gas, and geothermal operations — the kind of shaping-the-rules session that doesn't get a lot of attention but sets the table for decisions that will. Wednesday evening the commissioners also make a rare trip to Norwood to consider a Planning Commission appointment and hear Placerville Fire Survey results, while the Ecology Commission digs into the county's Climate Action Plan with a focus on transportation and land use.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission chooses Valley Floor trail routes and rules on Mountain Club access request."
+      "stake": "Commissioners appoint Planning Commission alternate and review Placerville Fire Survey results."
     },
     {
       "id": 1,
-      "stake": "Commissioners appoint alternate Planning Commission member, affecting future land-use votes."
+      "stake": "Climate Action Plan review covers transportation and land use — policies that affect how locals move around."
     },
     {
-      "id": 4,
-      "stake": "County land use code rewrites on forestry, oil/gas, geothermal, and condos take shape here."
+      "id": 3,
+      "stake": "Proposed Land Use Code changes to forestry, oil and gas, and geothermal rules are on the table."
     }
   ]
 }

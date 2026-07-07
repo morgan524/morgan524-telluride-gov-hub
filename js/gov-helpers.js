@@ -304,7 +304,10 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-16|Housing Code Update SSR":
-    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4}
+    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4},
+
+  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
+    {"sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -429,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -483,7 +486,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -528,7 +531,10 @@ const MANUAL_SUMMARIES = {
     "The July 21, 2026 Block 23 Housing Corporation agenda hasn't been posted yet.",
 
   "county|2026-07-16|Housing Code Update SSR":
-    "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come."
+    "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.",
+
+  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
+    "The August 6, 2026 Town Council Retreat agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1810,126 +1816,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Former Colorado analyst pleads guilty in DNA testing scandal",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "A former Colorado Bureau of Investigation DNA analyst pleaded guilty after admitting she altered and deleted data to close cases faster, compromising hundreds of criminal cases including homicides and sexual assaults. At least one murder conviction was overturned, and the fallout could cost the state more than $11 million. She faces 8–16 years at her September sentencing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fc275fb9-ae95-5c69-975b-ecd480d72128.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/92/9925a063-2561-5b9c-be59-16030bc6f892/6a3b18fb1f281.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Norwood Preschool receives top marks in education",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "land-use",
-    copy: "Norwood Preschool earned a Level 5 rating from Colorado Shines — the state's highest designation for licensed early care programs — following a three-hour observation and documentation review. The voluntary rating covers everything from child interactions to hand-washing routines. The play-based program serves around 20 kids ages 3–4 annually.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_13743ca3-47e6-403f-8324-59865ce523e3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/0f/90fed00b-4458-435b-b257-5512a7ddf256/6a3ab2216a0e6.image.webp",
-    imgHiRes: true
-  },
-  {
-    title: "Analog bags",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "A columnist reflects on the \"analog bag\" trend — carrying non-digital items like books or sketchbooks to step away from screens — and draws a parallel to Native American medicine pouches as objects of meaning and presence. A camping trip near Gateway without charged phones drove the point home: restlessness faded, and the orioles and the Dolores River got louder.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_994bfc5a-45a5-4b19-9f33-f693a5ba9a0a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/08/9082f483-bf86-4ba3-bc9f-853fa807f1a0/6a3aec0b31509.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The rainbow beyond Oz",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "health",
-    copy: "This is a personal Father's Day reflection by Stan Brooks, a part-time Telluride resident and Emmy-winning filmmaker, on becoming a grandfather for the first time. He writes about the unexpected emotional depth of the experience and touches on the science of \"grandfather brain\" — hormonal surges triggered by holding a grandchild.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_1caa1d01-a579-4b22-b79a-c1137e420a22.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f9/7f901c02-8dfb-48ca-b7c8-a95575406658/6a3aec943e006.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Look up at the night sky",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "The Telluride region still enjoys genuinely dark skies, partly because many mesa residents run on solar and skip outdoor lighting after dark. The piece reflects on how light pollution is erasing that experience for most people, disrupting sleep cycles and severing a connection to the night sky that humans have always had.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_0f6e6a21-52cf-4a99-ac59-af96a0a0cf73.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/95/c95b2983-db7a-4f1f-84de-a0b4b148e9a3/6a3aead128b96.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Mushroom Festival to honor Katrina Blair",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Mushroom Festival will honor the late Katrina Blair, a 16-year festival contributor known for her annual Durango-to-Telluride wild foraging walk and the beloved Wild Foods Dinner. This year's dinner (Aug. 14, Ah Haa rooftop) continues with Mila Garelle making the traditional journey. A free public memorial is set for Aug. 15 at Elks Park.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_381d9f6c-932e-4ee1-8281-a2fa6a4f2abe.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/d0/dd0d329f-f9cb-49fd-8ba8-1a753ebb8660/6a3ae9d1407f4.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The Breeders show",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "housing",
-    copy: "This article isn't a Telluride Times piece — it's a personal essay about attending a Breeders concert in Maine. There's no local Telluride news here to summarize for a community card.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_3077e4a4-034f-4a33-894c-b249699ac869.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/b0/eb02b27f-652b-43ff-8b38-ed62f5119b16/6a3ae8b36e075.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "All things wellness",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Telluride Yoga Festival runs June 25–28 across Mountain Village and Telluride, marking its 18th season with record attendance — 1,200 passholders, 50 presenters, and 150-plus offerings. Many free public events are included daily: yoga in Elms Park, live music, meditations, and opening/closing ceremonies. About 26% of attendees are local residents; the rest come from all 50 states and beyond.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_119bdb3b-96a7-4823-9921-f3ce090d1538.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/4d/34df2b7b-ebe5-4835-bd30-9c75b7f87713/6a3ac6382ce06.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Bluegrass Festival astounds",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Sam Bush anchored this year's Telluride Bluegrass Festival across multiple sets — with the Telluride House Band, Tedeschi Trucks Band, Larkin Poe, Leftover Salmon, and more — in what sounded like one of his busiest festivals in his 52 consecutive years attending. Highlights included Jake Shimabukuro, soprano Renée Fleming singing \"Ave Maria\" backed by Béla Fleck's banjo, and Fleck's bluegrass take on \"Rhapsody in Blue.\" Sierra Hull, Greensky Bluegrass, the Infamous Stringdusters, and first-timers Dallahan and Alash rounded out a characteristically wide-ranging lineup.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_c2d45aa1-2ba5-49cb-b903-fcf3608376bf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/0e/c0e8308a-eb16-4314-b6e6-5e0ebdf76089/6a3a57dd9d203.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Housing and the environment",
-    source: "Telluride Times",
-    date: "June 23, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "land-use",
-    copy: "Nearly half of San Miguel County workers commute more than 25 miles, with transportation making up 30% of local emissions. The county needs roughly 1,100 housing units by 2030, and more homes near town would cut those commutes. Multifamily buildings also tend to run more energy-efficiently than larger second homes sitting dark.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7e2ae631-ad66-4171-a7bb-16e0afca004c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/35/6359fa98-3753-4424-9fb7-8510347a2bf2/6a391a4d3d1bf.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2072,131 +1958,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
-  },
-  {
-    title: "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
-    source: "Town of Ridgway",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
-    img: ""
-  },
-  {
-    title: "Stage 2 Fire Restrictions Implemented in Ridgway",
-    source: "Town of Ridgway",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-2-Fire-Restrictions-press-release-2026-06-28.pdf",
-    img: ""
-  },
-  {
-    title: "Finding of the Town Manager Enacting Town Wide Fire Ban",
-    source: "Town of Ridgway",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Wide-Fire-Ban---Stage-2-Restrictions---June-28%2C-2026---signed.pdf",
-    img: ""
-  },
-  {
-    title: "Movie Mondays 8:30pm in Hartwell Park",
-    source: "Town of Ridgway",
-    date: "July 6, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Movie-Mondays-Poster-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
-    source: "Town of Ridgway",
-    date: "July 6, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "infrastructure",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
-    img: ""
-  },
-  {
-    title: "Planting Trees in Ridgway - Species Recommendations Brochure",
-    source: "Town of Ridgway",
-    date: "July 6, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "July 7, 2026",
-    firstSeen: "2026-07-05",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---July-7%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "housing",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-workforce-%26-affordable-housing-committee-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-tc-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Public Hearing - Application for Resubdivision - Hyde Subdivision Lots 1, 2, 3, 4 of Block 14 (847 and 845 Hyde Street)",
-    source: "Town of Ridgway",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Introduction - Ordinance No. 04-2026",
-    source: "Town of Ridgway",
-    date: "July 6, 2026",
-    firstSeen: "2026-06-26",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
-    img: ""
   }
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 7-6-26",
+    source: "KOTO Community Radio",
+    date: "July 7, 2026",
+    newsTopic: "public-safety",
+    copy: "A Gold Mountain Fire Update; Smoke Fills the San Juans",
+    href: "https://koto.org/news/newscast-7-6-26/"
+  },
   {
     title: "Newscast 7-2-26",
     source: "KOTO Community Radio",
@@ -2244,14 +2017,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "Remembering a BF Deal; Bluegrass Needs a Rethink; The Battle for Truth",
     href: "https://koto.org/news/newscast-6-24-26/"
-  },
-  {
-    title: "Newscast 6-22-26",
-    source: "KOTO Community Radio",
-    date: "June 23, 2026",
-    newsTopic: "recreation",
-    copy: "First Responders See Busy Weekend; Mountain Village Considers Ethics Code Changes",
-    href: "https://koto.org/news/newscast-6-22-26/"
   }
 ];
 
@@ -2814,28 +2579,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Birding with Katie Triest at Patagonia Telluride , July 6 and 7",
-    link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-06/",
-    description: "On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.",
-    pubDate: "2026-07-06T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Patagonia Telluride, Telluride Retail",
-    imageUrl: ""
-  },
-  {
-    title: "Pie Contest",
-    link: "https://koto.org/event/pie-contest/",
-    description: "Our beloved tradition returns! Calling all pie enthusiasts! The Wilkinson Public Library is hosting its annual Pie Contest on Monday, July 6th! This delicious competition is open to bakers of all ages. Show off your skills and vie for bragging rights and a litany of prizes! Our panel of esteemed judges will decide the fate of your flaky masterpiece, based on appearance, creativity, and of course, taste. Register in advance",
-    pubDate: "2026-07-07T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Pie-Contest-4.png"
-  },
-  {
-    title: "Birding with Katie Triest at Patagonia Telluride , July 6 and 7",
     link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-july-6-and-7/2026-07-07/",
     description: "On July 6, join us for an evening of bird education and discussion led by local birder, Katie Triest at 5 pm at Patagonia Telluride. Join us again, on July 7 at 8:30 am in front of the Patagonia Telluride store for a bird walk with Katie. Please bring binoculars if you have them. If you don't, they will be provided. Please sign up at Patagonia Telluride or scan the QR code on flyers posted around town. Walk is limited to 12 participants.",
     pubDate: "2026-07-07T14:30:00.000Z",
@@ -3284,6 +3027,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "The Alibi, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Cardio Dance w/Kelsey",
+    link: "https://koto.org/event/cardio-dance-w-kelsey/",
+    description: "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-07-14T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-14/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-14T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
+    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-07-14/",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    pubDate: "2026-07-14T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Book Buzz at Telluride Brewing Co-Lawson Hill",
+    link: "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill-2/",
+    description: "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We'll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff. Don't have a card? No problem! We'll make one for you on the spot!",
+    pubDate: "2026-07-14T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Brewing Company Lawson Hill Taproom",
+    imageUrl: ""
+  },
+  {
+    title: "Music Theory For Beginners",
+    link: "https://koto.org/event/music-theory-for-beginners/",
+    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
+    pubDate: "2026-07-14T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3385,7 +3183,21 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
     firstSeen: "2026-07-04",
     revealDate: "2026-07-04",
-    lastSeen: "2026-07-06"
+    lastSeen: "2026-07-07"
+  },
+  {
+    id: "TEL-A-191",
+    name: "Rex",
+    species: "Dog",
+    breed: "Shepherd, German",
+    ageGroup: "Young Puppy",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/444d84dfc9e0e4e592f18e169e7b88e3/3ae2a87c028087bef7ae6ffa837d7f45.JPG",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214054660",
+    summary: "Young Puppy • Shepherd, German • Male",
+    firstSeen: "2026-07-07",
+    revealDate: "2026-07-07",
+    lastSeen: "2026-07-07"
   }
 ];
 
@@ -4648,28 +4460,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Girl Scout Cookie Booth",
-    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    pubDate: "2026-07-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    title: "Sunday Rehab: Apres Edition",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    pubDate: "2026-07-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5396,18 +5186,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
-    title: "Red, White & Blues",
-    link: "https://www.telluride.com/event/red-white-and-blues/",
-    description: "Mountain Village's beloved Red, White & Blues Celebration returns July 3-4, 2026, bringing two days of FREE family …",
-    pubDate: "2026-07-03",
-    endDate: "2026-07-05",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/37568/screenshot_2026-06-09_at_9_49_43_am_870x435.800x533.webp"
-  },
-  {
     title: "Village Film Nights",
     link: "https://www.telluride.com/event/village-film-nights/",
     description: "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
@@ -6069,42 +5847,6 @@ const LEGAL_NOTICES = [
     expires: "2026-07-15",
     dates: "2/5 through 7/9 (biweekly)",
     papers: ["ttimes", "npost"]
-  },
-  {
-    title: "Ordinance -- Community Development Code Amendment for Wildfire Resilience (Passed Second Reading)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "mv",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "Town of Mountain Village passed an ordinance on second reading on April 23, 2026 regarding Community Development Code amendments for compliance with Colorado Wildfire Resilience Code. The ordinance is available for review at Town Hall or on the town website.",
-    deadline: "",
-    expires: "2026-07-06",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Town of Mountain Village",
-    noticeKey: "mv-ord-wildfire-2026"
-  },
-  {
-    title: "Condominium Notice -- First Mortgagee Consent for Declaration Amendment (Village Creek)",
-    entity: "Village Creek Condominium Association",
-    entityClass: "ent-county",
-    entityLogo: "mv",
-    icon: "🏠",
-    iconClass: "type-hearing",
-    type: "Housing Notice",
-    filterTag: "housing",
-    summary: "Village Creek Condominium Association has issued a proposed First Amendment to the Declaration and is notifying all first mortgagees. First mortgagees have 60 days from the mailed notice to deliver a negative response, or they will be deemed to have approved the amendment.",
-    deadline: "60 days after mailed notice to mortgagees",
-    expires: "2026-07-06",
-    dates: "5/6",
-    papers: ["ttimes_0506"],
-    url: "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    address: "Village Creek Condominiums, San Miguel County, Colorado",
-    noticeKey: "village-creek-condo-amend-2026"
   },
   {
     title: "Request for Quote -- Request for Quote: Material Hauling",

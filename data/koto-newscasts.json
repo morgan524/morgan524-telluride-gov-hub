@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-6-26",
+    "source": "KOTO Community Radio",
+    "date": "July 7, 2026",
+    "newsTopic": "public-safety",
+    "copy": "A Gold Mountain Fire Update; Smoke Fills the San Juans",
+    "href": "https://koto.org/news/newscast-7-6-26/"
+  },
+  {
     "title": "Newscast 7-2-26",
     "source": "KOTO Community Radio",
     "date": "July 3, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "Remembering a BF Deal; Bluegrass Needs a Rethink; The Battle for Truth",
     "href": "https://koto.org/news/newscast-6-24-26/"
-  },
-  {
-    "title": "Newscast 6-22-26",
-    "source": "KOTO Community Radio",
-    "date": "June 23, 2026",
-    "newsTopic": "recreation",
-    "copy": "First Responders See Busy Weekend; Mountain Village Considers Ethics Code Changes",
-    "href": "https://koto.org/news/newscast-6-22-26/"
   }
 ]

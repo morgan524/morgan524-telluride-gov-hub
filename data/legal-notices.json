@@ -31,46 +31,6 @@
     ]
   },
   {
-    "title": "Ordinance -- Community Development Code Amendment for Wildfire Resilience (Passed Second Reading)",
-    "entity": "Town of Mountain Village",
-    "entityClass": "ent-county",
-    "entityLogo": "mv",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "Town of Mountain Village passed an ordinance on second reading on April 23, 2026 regarding Community Development Code amendments for compliance with Colorado Wildfire Resilience Code. The ordinance is available for review at Town Hall or on the town website.",
-    "deadline": "",
-    "expires": "2026-07-06",
-    "dates": "5/6",
-    "papers": [
-      "ttimes_0506"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    "address": "Town of Mountain Village",
-    "noticeKey": "mv-ord-wildfire-2026"
-  },
-  {
-    "title": "Condominium Notice -- First Mortgagee Consent for Declaration Amendment (Village Creek)",
-    "entity": "Village Creek Condominium Association",
-    "entityClass": "ent-county",
-    "entityLogo": "mv",
-    "icon": "🏠",
-    "iconClass": "type-hearing",
-    "type": "Housing Notice",
-    "filterTag": "housing",
-    "summary": "Village Creek Condominium Association has issued a proposed First Amendment to the Declaration and is notifying all first mortgagees. First mortgagees have 60 days from the mailed notice to deliver a negative response, or they will be deemed to have approved the amendment.",
-    "deadline": "60 days after mailed notice to mortgagees",
-    "expires": "2026-07-06",
-    "dates": "5/6",
-    "papers": [
-      "ttimes_0506"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_ed4e10c4-69c5-441c-82eb-a85c1c99999e.html",
-    "address": "Village Creek Condominiums, San Miguel County, Colorado",
-    "noticeKey": "village-creek-condo-amend-2026"
-  },
-  {
     "title": "Request for Quote -- Request for Quote: Material Hauling",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
