@@ -81,11 +81,17 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     </div>
     <div class="row">
       <button class="secondary" id="viewClear">Clear</button>
-      <button class="secondary" id="viewBuiltLand">Developable Land</button>
+      <button class="secondary" id="viewFutureLandUse">Future Land Use</button>
       <button class="secondary" id="viewVacant">Vacant Lots</button>
     </div>
     <div class="row">
-      <button class="secondary" id="viewFutureLandUse">Future Land Use</button>
+      <button class="secondary" id="viewBuiltLand">Developable Land</button>
+    </div>
+
+    <div id="devFilterBlock" style="display:none;">
+      <label style="margin-top:12px;">Limit developable land</label>
+      <label style="display:flex;align-items:center;gap:7px;font-weight:400;margin:5px 0;cursor:pointer;"><input type="checkbox" id="devHidePuds" style="width:auto;margin:0;"> Hide PUDs</label>
+      <label style="display:flex;align-items:center;gap:7px;font-weight:400;margin:5px 0;cursor:pointer;"><input type="checkbox" id="devHideSubs" style="width:auto;margin:0;"> Hide subdivisions</label>
     </div>
 
     <div id="zoningFilterBlock">
@@ -590,7 +596,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
     <div class="legend-item"><span style="background:repeating-linear-gradient(-45deg,#b91c1c 0,#b91c1c 2px,transparent 2px,transparent 6px)"></span><button type="button">Steep slope (&gt;30% grade)</button><em></em></div>
-    <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
+    <p class="small">Starts with the same undeveloped parcels as <b>Vacant Lots</b> (minus forest/BLM, conservation, open space and airport land). Use <b>Hide PUDs</b> and <b>Hide subdivisions</b> above to narrow toward unentitled land. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
     <p class="small">The red hatch marks terrain steeper than <b>30% grade</b> (~16.7°) &mdash; a regional slope screen from the terrain DEM (~30&nbsp;m), often a hillside-development constraint. <b>Approximate</b>; confirm with a survey.</p>
     <p class="small">Parcels near Telluride Regional Airport show an <b>airport height/lighting note</b> in their popup when they fall under the FAA Part&nbsp;77 airspace &mdash; confirm under SMC §5-418.</p>
   </div>
@@ -1128,7 +1134,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>teal dashed</strong> area is <strong>Parcel C</strong> (approximate) — an older label for land whose inclusion in the Aldasoro subdivision / PUD is <strong>in litigation</strong>; the property lines have since changed. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Click a parcel for the estimate.",
+  built: "<strong>Developable Land:</strong> starts with the same undeveloped parcels as <strong>Vacant Lots</strong> (no residential structure, minus forest/BLM, conservation, open space and airport land), shaded by the <strong>maximum development</strong> each could support (net acres ÷ plan / zoning min lot size &mdash; advisory, not a guarantee). Use <strong>Hide PUDs</strong> / <strong>Hide subdivisions</strong> to narrow toward unentitled land. Click a parcel for the estimate.",
   vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
@@ -1143,6 +1149,7 @@ function setPanelDisplay(id, display) {
 function setFilterBlocks(zoningVisible, subdivisionVisible) {
   setPanelDisplay("zoningFilterBlock", zoningVisible ? "block" : "none");
   setPanelDisplay("subdivisionFilterBlock", subdivisionVisible ? "block" : "none");
+  setPanelDisplay("devFilterBlock", "none");  // only the Developable view re-shows it
   const z = document.getElementById("zoning");
   if (z) z.disabled = !zoningVisible;
   const s = document.getElementById("subdivisionFilter");
@@ -1233,6 +1240,41 @@ function setPudView() {
 
 
 
+// The parcel tileset has minzoom 9 — below that no parcels render at all. When a
+// parcel-fill view is opened from the county overview (zoom ~8.35), nudge in so
+// the coloration actually appears.
+function ensureParcelZoom() {
+  if (map.getZoom() < 9.15) map.easeTo({ zoom: 9.3, duration: 500 });
+}
+
+// Developable Land starts as the same broad set the Vacant view shows (parcels
+// with no residential structure, minus federal/public, conservation, open space,
+// airport, and ROW/common non-lots). The "Hide PUDs" / "Hide subdivisions"
+// checkboxes then carve that set down toward truly unentitled land.
+function developableFilter() {
+  const notPud = ["!", ["has", "pud"]];
+  const f = ["all",
+    ["==", ["get", "no_residential"], "True"],
+    ["!=", ["get", "federal_forest_public_land"], "True"],
+    ["!=", ["get", "conservation_easement"], "True"],
+    ["!=", ["get", "open_space"], "True"],
+    ["!=", ["get", "airport_restriction"], "True"],
+    ["!=", ["get", "PIN"], "ROW"],
+    ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
+    ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]
+  ];
+  const hidePuds = document.getElementById("devHidePuds");
+  const hideSubs = document.getElementById("devHideSubs");
+  if (hidePuds && hidePuds.checked) f.push(notPud);
+  // A subdivision parcel = in_pud_or_subdivision but not a PUD (PUDs are handled
+  // by their own checkbox), so hiding subdivisions shouldn't also remove PUDs.
+  if (hideSubs && hideSubs.checked) f.push(["!", ["all", ["==", ["get", "in_pud_or_subdivision"], "True"], notPud]]);
+  return f;
+}
+function applyDevelopableFilter() {
+  if (map.getLayer("parcel-development-fill")) map.setFilter("parcel-development-fill", developableFilter());
+}
+
 function setBuiltLandView() {
   setMapNote(mapNotes.built);
   currentMapView = "built";
@@ -1240,14 +1282,16 @@ function setBuiltLandView() {
   hideThematicLayers();
   setLegendView("built");
   setFilterBlocks(false, false);
+  setPanelDisplay("devFilterBlock", "block");
 
-  // Exclusions are baked into `developable` — no checkboxes needed.
+  applyDevelopableFilter();
   showLayer("parcel-development-fill", true);
   showLayer("parcel-c-fill", true);
   showLayer("parcel-c-outline", true);
   showLayer("steep-slopes-fill", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
+  ensureParcelZoom();
 }
 
 
@@ -1263,6 +1307,7 @@ function setVacantView() {
   showLayer("parcel-vacant-fill", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
+  ensureParcelZoom();
 }
 
 
@@ -2313,12 +2358,18 @@ function addOverlayLayers() {
     source:"parcels",
     "source-layer":"parcel",
     layout:{ visibility:"none" },
-    // Developable = private, unentitled (not in PUD/subdivision), unprotected
-    // (not federal / open space / high country / conservation easement) land
-    // with room for at least one more lot — baked into `developable` by
-    // prep-parcels.js. Also exclude airport land (any parcel in the airport
-    // height-restriction zone), per request.
-    filter:["all", ["==", ["get", "developable"], "True"], ["!=", ["get", "airport_restriction"], "True"]],
+    // Filter is set dynamically by developableFilter()/applyDevelopableFilter():
+    // starts as the broad Vacant set, then the Hide PUDs / Hide subdivisions
+    // checkboxes carve it down. Initial value here mirrors the unchecked state.
+    filter:["all",
+      ["==", ["get", "no_residential"], "True"],
+      ["!=", ["get", "federal_forest_public_land"], "True"],
+      ["!=", ["get", "conservation_easement"], "True"],
+      ["!=", ["get", "open_space"], "True"],
+      ["!=", ["get", "airport_restriction"], "True"],
+      ["!=", ["get", "PIN"], "ROW"],
+      ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
+      ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
     paint:{
       // Choropleth by estimated additional lots (dev_lots_hi = ceiling of the
       // plan/zoning density range). Sequential ROSE ramp = "how much more" —
@@ -2680,6 +2731,8 @@ document.getElementById("viewSubdivisions").onclick = setSubdivisionView;
 document.getElementById("viewClear").onclick = setClearView;
 document.getElementById("viewFutureLandUse").onclick = setFutureLandUseView;
 document.getElementById("subdivisionFilter").onchange = applySubdivisionFilter;
+document.getElementById("devHidePuds").onchange = applyDevelopableFilter;
+document.getElementById("devHideSubs").onchange = applyDevelopableFilter;
 
 document.getElementById("home").onclick = () => map.fitBounds(countyBounds, { padding:35 });
 document.getElementById("clear").onclick = () => {
