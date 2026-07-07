@@ -1,0 +1,45 @@
+name: Hub-Bub Pulse
+
+# Once a day, turns recent local material (meeting summaries for now) into ONE
+# short Rick-voice discussion prompt and emails you a tokenized review link.
+# NOTHING posts to the Hub-Bub feed without your approval in that email.
+#
+# Safe to leave scheduled before setup: run-pulse.js exits cleanly (no failure)
+# when EDITORIAL_SECRET isn't set, so this just no-ops until you configure it.
+#
+# Needs: ANTHROPIC_API_KEY (already used by content-refresh) and EDITORIAL_SECRET
+# (shared with the Worker — the same secret the editorial layer uses, so
+# /pulse-create authenticates). Set both to activate; nothing else to flip.
+
+on:
+  schedule:
+    - cron: '0 15 * * *'   # ~09:00 MT daily (after the 12:00 UTC content refresh)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (triage + draft, print, do NOT create/email)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Run Hub-Bub pulse (triage + draft + email review link)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: |
+          set -o pipefail
+          node scripts/pulse/run-pulse.js ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }} 2>&1 | tee /tmp/pulse.log

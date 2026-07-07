@@ -633,6 +633,7 @@ function toFsValue(v) {
   if (v === null || v === undefined) return { nullValue: null };
   if (typeof v === "boolean") return { booleanValue: v };
   if (typeof v === "number") return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+  if (v instanceof Date) return { timestampValue: v.toISOString() };  // interleaves with user posts' createdAt
   if (Array.isArray(v)) return { arrayValue: { values: v.map(toFsValue) } };
   if (typeof v === "object") return { mapValue: { fields: toFsFields(v) } };
   return { stringValue: String(v) };
@@ -883,6 +884,158 @@ async function handleArticlePublished(request, env) {
   return json({ ok: true });
 }
 
+// ════════════════════ PULSE — Hub-Bub discussion prompts ════════════════════
+// Sibling of the editorial article layer: scripts/pulse/* drafts a short
+// Rick-voice discussion prompt, POSTs it here, and on your approval it's
+// published as a system-authored post in the Hub-Bub feed (posts collection).
+// Same token-gated, service-account, human-in-the-loop shape as /article-*.
+//   POST /pulse-create  {secret, draft}   — loop creates a draft + emails the link
+//   GET  /pulse-draft?id=&t=              — review page reads the draft (token)
+//   POST /pulse-decide  {id,t,action,...} — approve(publishes)/edit/deny (token)
+//   GET  /pulse-exists?id=&secret=        — dedup check for the loop
+const PULSE_COLL = "pulse_drafts";
+const PULSE_AUTHOR_UID = "livable-telluride-desk";   // sentinel uid; not a real user
+const PULSE_AUTHOR_NAME = "Livable Telluride";
+
+async function pulseToken(env, id, exp) { return exp + "." + (await modSign(env, "pulse|" + id + "|" + exp)); }
+async function pulseVerify(env, id, t) {
+  const dot = String(t || "").indexOf(".");
+  if (dot < 0) return { ok: false };
+  const exp = String(t).slice(0, dot), sig = String(t).slice(dot + 1);
+  if (!/^\d+$/.test(exp)) return { ok: false };
+  if ((await modSign(env, "pulse|" + id + "|" + exp)) !== sig) return { ok: false };
+  if (Date.now() > Number(exp)) return { ok: false, expired: true };
+  return { ok: true };
+}
+
+function pulseEmailHtml(doc, reviewUrl) {
+  const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const tri = doc.triage || {};
+  const sides = ((tri.controversy && tri.controversy.sides) || []).map((s) => `<li style="margin:3px 0">${esc(s)}</li>`).join("");
+  const body = (doc.editedBody || doc.body || "").split(/\n\n+/).map((p) => `<p style="margin:0 0 12px">${esc(p)}</p>`).join("");
+  const cites = (doc.citations || []).map((c) => `<li style="margin:3px 0;font-size:12px;color:#7a8a85">${esc(c.text)}${c.url ? " &mdash; " + esc(c.url) : ""}</li>`).join("");
+  const flags = (doc.flaggedClaims || []).length
+    ? `<div style="background:#fdf1e6;border:1px solid #e8c7a8;border-radius:8px;padding:10px 12px;margin:12px 0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#a8401f">Flagged &mdash; not fully sourced</div><ul style="margin:6px 0 0;padding-left:18px">${doc.flaggedClaims.map((f) => `<li style="font-size:13px;color:#7a3e16">${esc(f)}</li>`).join("")}</ul></div>` : "";
+  return `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;color:#1a2e29">
+  <div style="background:#21443c;color:#fff;padding:18px 22px;border-radius:8px 8px 0 0">
+    <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#e7b24a">Hub-Bub &middot; Discussion prompt for review</div>
+    <div style="font-size:19px;font-weight:700;margin-top:3px">${esc(doc.editedTitle || doc.title || "Untitled")}</div></div>
+  <div style="border:1px solid #e6e9e6;border-top:0;border-radius:0 0 8px 8px;padding:20px 22px">
+    <div style="background:#efe9dc;border-radius:8px;padding:12px 14px;margin-bottom:16px">
+      <div style="font-size:13px;font-weight:700;color:#21443c">Why surfaced &mdash; newsworthiness ${esc(tri.score)}/5</div>
+      ${tri.angle ? `<div style="font-size:13px;color:#4a5e57;margin-top:4px">${esc(tri.angle)}</div>` : ""}
+      ${sides ? `<ul style="margin:6px 0 0;padding-left:18px;font-size:13px;color:#4a5e57">${sides}</ul>` : ""}
+    </div>
+    <div style="font-size:15px;line-height:1.6;color:#1a2e29">${body}</div>
+    ${flags}
+    ${cites ? `<div style="margin-top:14px;border-top:1px solid #e6e9e6;padding-top:10px"><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#7a8a85">Sourcing</div><ul style="margin:6px 0 0;padding-left:18px">${cites}</ul></div>` : ""}
+    <table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px 0 6px"><tr>
+      <td><a href="${reviewUrl}" style="display:inline-block;background:#21443c;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 28px;border-radius:8px">Review &rarr; approve, edit, or deny</a></td>
+    </tr></table>
+    <p style="font-size:12px;color:#9aa7a1;margin-top:10px">Nothing posts to Hub-Bub until you approve it. Link expires in 30 days.</p>
+  </div></div>`;
+}
+
+// Publish an approved prompt as a system-authored Hub-Bub post. Deterministic
+// doc id (pulse_<id>) so re-approval can't double-post; createdAt is a real
+// timestamp so it interleaves chronologically with resident posts.
+async function publishPulsePost(env, doc) {
+  const post = {
+    authorUid: PULSE_AUTHOR_UID, authorId: PULSE_AUTHOR_UID, authorName: PULSE_AUTHOR_NAME,
+    authorPhoto: null, authorIcon: null,
+    title: doc.editedTitle || doc.title || "",
+    body: doc.editedBody || doc.body || "",
+    tags: Array.isArray(doc.topics) ? doc.topics.slice(0, 5) : [],
+    postType: "question",
+    attachments: [], imageUrl: null, linkUrl: doc.sourceUrl || null,
+    createdAt: new Date(),
+    replyCount: 0, upvotes: 0, downvotes: 0, upvoters: [], downvoters: [],
+    reactions: { useful: 0, helpful_source: 0, good_question: 0, learned: 0 }, reactors: {},
+    nextStep: null, fromPulse: true,
+  };
+  await firestorePatch(env, "posts/pulse_" + doc.id, post);
+  return "pulse_" + doc.id;
+}
+
+async function handlePulseCreate(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false, msg: "bad json" }, 400); }
+  if (!editSecretOk(env, d.secret || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const draft = d.draft || {};
+  const id = String(draft.id || "").trim();
+  if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { const existing = await firestoreGet(env, PULSE_COLL + "/" + id); if (existing) return json({ ok: true, id, skipped: "exists", status: existing.status || "pending" }); } catch (e) {}
+  const now = new Date().toISOString();
+  const docToWrite = Object.assign({}, draft, { status: "pending", createdAt: now });
+  try { await firestorePatch(env, PULSE_COLL + "/" + id, docToWrite); }
+  catch (e) { return json({ ok: false, msg: "firestore: " + String((e && e.message) || e).slice(0, 120) }, 502); }
+  const exp = Date.now() + 30 * 24 * 3600 * 1000;
+  const t = await pulseToken(env, id, exp);
+  const reviewUrl = "https://livabletelluride.org/pulse-review.html?id=" + encodeURIComponent(id) + "&t=" + encodeURIComponent(t);
+  let emailed = false;
+  if (env.MAIL_RELAY_URL) {
+    try { await fetch(env.MAIL_RELAY_URL, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ kind: "pulse", to: MOD_RECIPIENT, subject: "💬 Hub-Bub prompt for review: " + (draft.title || id), html: pulseEmailHtml(docToWrite, reviewUrl), secret: env.MAIL_RELAY_SECRET || "" }) }); emailed = true; } catch (e) {}
+  }
+  return json({ ok: true, id, reviewUrl, emailed });
+}
+
+async function handlePulseDraftRead(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  const url = new URL(request.url);
+  const id = url.searchParams.get("id") || "", t = url.searchParams.get("t") || "";
+  if (!id || !t) return json({ ok: false, msg: "Missing link parameters." }, 400);
+  const v = await pulseVerify(env, id, t);
+  if (!v.ok) return json({ ok: false, msg: v.expired ? "This review link has expired." : "This link couldn't be verified." }, 403);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "Draft storage isn't configured." }, 500);
+  let doc; try { doc = await firestoreGet(env, PULSE_COLL + "/" + id); } catch (e) { return json({ ok: false, msg: "Could not load the draft." }, 502); }
+  if (!doc) return json({ ok: false, msg: "This draft no longer exists." }, 404);
+  return json({ ok: true, draft: doc, status: doc.status || "pending" });
+}
+
+async function handlePulseDecide(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  const id = String(d.id || ""), t = String(d.t || ""), action = String(d.action || "");
+  if (!id || !t) return json({ ok: false, msg: "Missing link parameters." }, 400);
+  const v = await pulseVerify(env, id, t);
+  if (!v.ok) return json({ ok: false, msg: v.expired ? "This review link has expired." : "This link couldn't be verified." }, 403);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "Draft storage isn't configured." }, 500);
+  const now = new Date().toISOString();
+  const patch = {};
+  if (d.editedTitle !== undefined) patch.editedTitle = String(d.editedTitle);
+  if (d.editedBody !== undefined) patch.editedBody = String(d.editedBody);
+  if (action === "approve") { patch.status = "published"; patch.reviewedAt = now; }
+  else if (action === "deny") { patch.status = "denied"; patch.denyReason = String(d.denyReason || ""); patch.reviewedAt = now; }
+  else if (action === "edit") { patch.status = "pending"; patch.editedAt = now; }
+  else return json({ ok: false, msg: "Unknown action." }, 400);
+  try { await firestorePatch(env, PULSE_COLL + "/" + id, patch); }
+  catch (e) { return json({ ok: false, msg: "Could not save: " + String((e && e.message) || e).slice(0, 100) }, 502); }
+  if (action === "approve") {
+    try { const full = await firestoreGet(env, PULSE_COLL + "/" + id); const postId = await publishPulsePost(env, full || { id }); return json({ ok: true, status: "published", postId }); }
+    catch (e) { return json({ ok: false, msg: "Approved but publish failed: " + String((e && e.message) || e).slice(0, 120) }, 502); }
+  }
+  return json({ ok: true, status: patch.status });
+}
+
+async function handlePulseExists(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const id = url.searchParams.get("id") || "";
+  if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { const doc = await firestoreGet(env, PULSE_COLL + "/" + id); return json({ ok: true, exists: !!doc, status: doc ? (doc.status || "pending") : null }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 140) }, 502); }
+}
+
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -921,6 +1074,18 @@ export default {
     }
     if (url.pathname === "/article-published") {
       return handleArticlePublished(request, env);
+    }
+    if (url.pathname === "/pulse-create") {
+      return handlePulseCreate(request, env);
+    }
+    if (url.pathname === "/pulse-draft") {
+      return handlePulseDraftRead(request, env);
+    }
+    if (url.pathname === "/pulse-decide") {
+      return handlePulseDecide(request, env);
+    }
+    if (url.pathname === "/pulse-exists") {
+      return handlePulseExists(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });
