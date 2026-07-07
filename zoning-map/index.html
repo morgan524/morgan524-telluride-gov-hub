@@ -595,7 +595,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   <div class="panel" id="vacantLegend" style="display:none;">
     <label>Vacant Lots</label>
     <div class="legend-item"><span style="background:#2b6cb0"></span><button type="button">No residential structure</button><em></em></div>
-    <p class="small">Parcels with <b>no identifiable residential structure</b> &mdash; vacant land, land with only an outbuilding (barn / shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land is excluded. Click a parcel for details.</p>
+    <p class="small">Parcels with <b>no identifiable residential structure</b> &mdash; vacant land, land with only an outbuilding (barn / shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.</p>
   </div>
 
   <div class="panel" id="futureLandUseLegend" style="display:none;">
@@ -1013,7 +1013,7 @@ const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
   built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, or high country &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Amber dashed outline = airport height limit (caps scale, doesn't prohibit). Click a parcel for the estimate.",
-  vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land is excluded. Click a parcel for details.",
+  vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
   futurelanduse: "<strong>Future Land Use:</strong> The county's adopted master-plan future land-use categories &mdash; East End (2024) and Wright's Mesa &mdash; overlaid on the parcels. <strong>Advisory</strong> recommendations for future density, not current zoning. Forest Service / BLM is grayed; conservation easements (hatched) are permanently protected, <strong>not developable</strong>. Click an area or lot to see its category and recommended density."
@@ -2194,7 +2194,8 @@ function addOverlayLayers() {
   });
 
   // Vacant Lots — parcels with no identifiable residential structure (baked
-  // `no_residential`), minus federal/public land and ROW/COMMON non-lots.
+  // `no_residential`), minus federal/public land, conservation easements, open
+  // space, and ROW/COMMON non-lots.
   map.addLayer({
     id:"parcel-vacant-fill",
     type:"fill",
@@ -2204,6 +2205,8 @@ function addOverlayLayers() {
     filter:["all",
       ["==", ["get", "no_residential"], "True"],
       ["!=", ["get", "federal_forest_public_land"], "True"],
+      ["!=", ["get", "conservation_easement"], "True"],
+      ["!=", ["get", "open_space"], "True"],
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
       ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
