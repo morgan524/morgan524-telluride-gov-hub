@@ -709,9 +709,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -736,6 +736,7 @@ try {
     fetch(new URL('./data/east-end-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/wrights-mesa-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wrights-mesa-flu.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/conservation-easements.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/municipal-boundaries.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('municipal-boundaries.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -2371,6 +2372,12 @@ function addOverlayLayers() {
     const fiCode = fi && fi.code ? " (" + fi.code + ")" : "";
     // Conservation easement under the click (null outside any easement).
     const ea = easementInfoFromFeature(_featureAt(lng,lat,conservationEasementsData));
+    // Municipal jurisdiction — which incorporated town the point falls in (else
+    // unincorporated county). Determines who has land-use authority.
+    const _town = _featureAt(lng,lat,municipalBoundariesData);
+    const jurisdiction = _town && _town.properties
+      ? ("Town of " + String(_town.properties.NAMELSAD || _town.properties.NAME || "").replace(/\s+town$/i, "").trim())
+      : "Unincorporated San Miguel County";
     if(!parcel && !zoning){
       // Nothing to select but we're over a future land-use area and/or a
       // conservation easement (e.g. zoomed out past the parcel layer) — show it.
@@ -2395,6 +2402,7 @@ function addOverlayLayers() {
       ["Parcel #", pp.PIN],
       ["Account #", pp.ACCOUNTNO],
       ["Owner", owner],
+      ["Jurisdiction", jurisdiction],
       ["Zoning", zp.ZONING],
       ["Acreage", acreage],
       ["PUD", pp.pud || _pudAt(lng,lat)],

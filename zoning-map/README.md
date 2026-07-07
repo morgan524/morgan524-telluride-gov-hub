@@ -19,8 +19,11 @@ heavy data is split out and the biggest layers are served from Mapbox.
   (point-in-polygon), `county-outline.json`, `east-end-flu.json` +
   `wrights-mesa-flu.json` (master-plan future land use — overlay +
   point-in-polygon for popups), `conservation-easements.json`
-  (protected/not-developable land). The module in `index.html` fetches these in
-  parallel via top-level `await` before the map initializes.
+  (protected/not-developable land), `municipal-boundaries.json` (the 6
+  incorporated town limits — point-in-polygon drives the popup "Jurisdiction"
+  row: Town of X, else Unincorporated San Miguel County). The module in
+  `index.html` fetches these in parallel via top-level `await` before the map
+  initializes.
 
 The parcel click popup resolves the clicked parcel from the tileset via
 `map.queryRenderedFeatures` against the transparent `parcel-hit` fill layer
