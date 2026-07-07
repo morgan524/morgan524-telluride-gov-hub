@@ -889,6 +889,74 @@ function terrainTileElevation(lng, lat) {
   });
 }
 
+// Decode a whole Terrain-RGB tile once (cached), so a parcel's grid of samples
+// only fetches each tile a single time.
+const _terrainTileCache = {};
+function loadTerrainTile(z, tx, ty) {
+  const key = z + "/" + tx + "/" + ty;
+  if (_terrainTileCache[key]) return _terrainTileCache[key];
+  const p = new Promise(resolve => {
+    const img = new Image(); img.crossOrigin = "anonymous";
+    img.onload = () => { try { const cv = document.createElement("canvas"); cv.width = 256; cv.height = 256; const ctx = cv.getContext("2d"); ctx.drawImage(img, 0, 0); resolve(ctx.getImageData(0, 0, 256, 256)); } catch (e) { resolve(null); } };
+    img.onerror = () => resolve(null);
+    img.src = `https://api.mapbox.com/v4/mapbox.terrain-rgb/${z}/${tx}/${ty}.pngraw?access_token=${mapboxgl.accessToken}`;
+  });
+  _terrainTileCache[key] = p;
+  return p;
+}
+
+// Outer rings (lng/lat) of the clicked parcel feature, for terrain sampling.
+function parcelRings(parcel) {
+  const g = parcel && parcel.geometry;
+  if (!g) return null;
+  const rings = [];
+  if (g.type === "Polygon") g.coordinates.forEach(r => rings.push(r));
+  else if (g.type === "MultiPolygon") g.coordinates.forEach(p => p.forEach(r => rings.push(r)));
+  return rings.length ? rings : null;
+}
+
+// Sample the terrain DEM over a parcel (grid clipped to its rings) and return
+// { meanElevFt, steepPct } — the mean ground elevation and the share of the
+// parcel steeper than 30% grade. Async (fetches the covering Terrain-RGB tiles).
+async function parcelTerrainStats(rings) {
+  if (!rings || !rings.length) return null;
+  const z = 14, n = Math.pow(2, z);
+  let minx = Infinity, miny = Infinity, maxx = -Infinity, maxy = -Infinity;
+  for (const r of rings) for (const c of r) { if (c[0] < minx) minx = c[0]; if (c[0] > maxx) maxx = c[0]; if (c[1] < miny) miny = c[1]; if (c[1] > maxy) maxy = c[1]; }
+  const lat0 = (miny + maxy) / 2, mLat = 111132, mLon = 111320 * Math.cos(lat0 * Math.PI / 180);
+  const wM = (maxx - minx) * mLon, hM = (maxy - miny) * mLat;
+  const nx = Math.max(3, Math.min(36, Math.round(wM / 30) + 1)), ny = Math.max(3, Math.min(36, Math.round(hM / 30) + 1));
+  const dxM = wM / (nx - 1) || 1, dyM = hM / (ny - 1) || 1;
+  const tilePx = (lng, lat) => { const xt = (lng + 180) / 360 * n, latR = lat * Math.PI / 180, yt = (1 - Math.log(Math.tan(latR) + 1 / Math.cos(latR)) / Math.PI) / 2 * n; return { tx: Math.floor(xt), ty: Math.floor(yt), px: Math.min(255, Math.floor((xt - Math.floor(xt)) * 256)), py: Math.min(255, Math.floor((yt - Math.floor(yt)) * 256)) }; };
+  const pip = (lng, lat) => { let inside = false; for (const r of rings) for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const xi = r[i][0], yi = r[i][1], xj = r[j][0], yj = r[j][1]; if (((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / (yj - yi) + xi)) inside = !inside; } return inside; };
+  const pts = [], need = new Set();
+  for (let r = 0; r < ny; r++) for (let c = 0; c < nx; c++) {
+    const lng = minx + (maxx - minx) * (nx > 1 ? c / (nx - 1) : 0), lat = miny + (maxy - miny) * (ny > 1 ? r / (ny - 1) : 0);
+    const tp = tilePx(lng, lat); need.add(tp.tx + "/" + tp.ty); pts.push({ r, c, lng, lat, tp });
+  }
+  const tiles = {};
+  await Promise.all([...need].map(async k => { const [tx, ty] = k.split("/").map(Number); tiles[k] = await loadTerrainTile(z, tx, ty); }));
+  const elev = new Array(nx * ny).fill(null), inside = new Array(nx * ny).fill(false);
+  for (const p of pts) {
+    const idata = tiles[p.tp.tx + "/" + p.tp.ty];
+    if (idata) { const o = (p.tp.py * 256 + p.tp.px) * 4; elev[p.r * nx + p.c] = -10000 + (idata.data[o] * 65536 + idata.data[o + 1] * 256 + idata.data[o + 2]) * 0.1; }
+    inside[p.r * nx + p.c] = pip(p.lng, p.lat);
+  }
+  let sum = 0, cnt = 0;
+  for (let k = 0; k < elev.length; k++) if (inside[k] && elev[k] != null) { sum += elev[k]; cnt++; }
+  if (!cnt) return null;
+  const meanElevFt = sum / cnt * FT_PER_M;
+  let steep = 0, tot = 0;
+  for (let r = 1; r < ny - 1; r++) for (let c = 1; c < nx - 1; c++) {
+    const k = r * nx + c; if (!inside[k]) continue;
+    const zL = elev[k - 1], zR = elev[k + 1], zU = elev[k - nx], zD = elev[k + nx];
+    if (zL == null || zR == null || zU == null || zD == null) continue;
+    const gx = (zR - zL) / (2 * dxM), gy = (zD - zU) / (2 * dyM);
+    tot++; if (Math.hypot(gx, gy) > 0.30) steep++;
+  }
+  return { meanElevFt, steepPct: tot ? (100 * steep / tot) : null, samples: cnt };
+}
+
 // Horizontal distance (ft) from a lng/lat to the runway centerline segment.
 function texRunwayDistFt(lng, lat) {
   const lat0 = 37.954 * Math.PI / 180;
@@ -2585,18 +2653,9 @@ function addOverlayLayers() {
     // the airport height note with full coverage, independent of the tileset flag.
     const _p77 = part77Data ? (["approach","horizontal","conical"].reduce((hit,s) =>
       hit || _featureAt(lng,lat,{type:"FeatureCollection",features:part77Data.features.filter(f=>f.properties.surface===s)}), null)) : null;
-    // Part 77 max-height math needs the ground elevation, fetched async from a
-    // terrain-RGB tile (no global 3D terrain). The popup shows a placeholder that
-    // this token lets us patch in when the elevation resolves.
-    const _p77tok = _p77 ? (++p77HeightSeq) : 0;
-    if (_p77) {
-      const _surf = (_p77.properties && _p77.properties.surface), _lo = lng, _la = lat;
-      terrainTileElevation(_lo, _la).then(m => {
-        const html = (m != null) ? airportHeightRows(_lo, _la, _surf, m * FT_PER_M)
-          : '<div class="field" style="font-size:11px;color:#888">Elevation unavailable at this point.</div>';
-        document.querySelectorAll(".p77h-" + _p77tok).forEach(el => { el.innerHTML = html; });
-      });
-    }
+    // Terrain-dependent popup bits (steep-terrain %, airport note + max height)
+    // resolve together in an async pass below; this token patches the right popup.
+    const _tok = ++p77HeightSeq;
     const _town = _featureAt(lng,lat,municipalBoundariesData);
     const jurisdiction = _town && _town.properties
       ? ("Town of " + String(_town.properties.NAMELSAD || _town.properties.NAME || "").replace(/\s+town$/i, "").trim())
@@ -2634,10 +2693,36 @@ function addOverlayLayers() {
       ...structureRows(pp),
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
-    ]) + airportNote(pp, _p77, lng, lat, null, _p77tok) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+    ]) + '<span class="steep-' + _tok + '"></span><span class="faa-' + _tok + '"></span>'
+      + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
+
+    // Async terrain pass: samples the parcel's DEM once for two popup features.
+    (async () => {
+      const _rings = parcelRings(parcel);
+      const _stats = _rings ? await parcelTerrainStats(_rings) : null;
+      // (1) Steep-terrain advisory — only when >10% of the parcel is over 30% grade.
+      if (_stats && _stats.steepPct != null && _stats.steepPct > 10) {
+        const pct = Math.round(_stats.steepPct);
+        const row = '<div class="field" style="margin-top:6px;color:#8a3b1f"><b>Steep &amp; hard to build:</b> ~' + pct + '% of the parcel is over 30% grade</div>';
+        document.querySelectorAll(".steep-" + _tok).forEach(el => { el.innerHTML = row; });
+      }
+      // (2) Airport Part 77 note — but suppress it when the parcel's mean elevation
+      // sits 100 ft or more below the imaginary surface (ample clearance).
+      const _surf = (_p77 && _p77.properties && _p77.properties.surface) || (pp.airport_restriction === "True" ? "flag" : null);
+      if (_surf) {
+        const ci = texCeilingMSL(lng, lat, _surf);
+        const clearance = (_stats && _stats.meanElevFt != null && ci.ceiling != null) ? (ci.ceiling - _stats.meanElevFt) : null;
+        const suppress = (clearance != null && clearance >= 100 && _surf !== "approach");
+        if (!suppress) {
+          const gm = await terrainTileElevation(lng, lat);
+          const faa = airportNote(pp, _p77, lng, lat, gm != null ? gm * FT_PER_M : null, _tok);
+          document.querySelectorAll(".faa-" + _tok).forEach(el => { el.innerHTML = faa; });
+        }
+      }
+    })();
   }
   map.on("click", e => { selectUnifiedFeature(e.lngLat, e.point); });
 
