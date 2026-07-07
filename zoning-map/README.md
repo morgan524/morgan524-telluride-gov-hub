@@ -18,7 +18,8 @@ heavy data is split out and the biggest layers are served from Mapbox.
   `subdivision.json` (filter), `address.json` (text search), the PUD polygons
   (point-in-polygon), `county-outline.json`, `east-end-flu.json` +
   `wrights-mesa-flu.json` (master-plan future land use — overlay +
-  point-in-polygon for popups). The module in `index.html` fetches these in
+  point-in-polygon for popups), `conservation-easements.json`
+  (protected/not-developable land). The module in `index.html` fetches these in
   parallel via top-level `await` before the map initializes.
 
 The parcel click popup resolves the clicked parcel from the tileset via
@@ -27,22 +28,25 @@ The parcel click popup resolves the clicked parcel from the tileset via
 
 `LEGAL` was dropped from parcels entirely (data + popup) per request.
 
-## Master-plan Future Land Use overlays (East End + Wright's Mesa)
+## Future Land Use view (East End + Wright's Mesa + protected land)
 
-Two map views overlay the county's adopted master-plan *Future Land Use* maps on
-the parcels. Both are client-side GeoJSON overlays from the county's published
-ArcGIS `County_Land_Use` FeatureServer (`services.arcgis.com/aXqye4IXyXsdIpPb`),
+One **"Future Land Use"** map view (`setFutureLandUseView`) overlays the county's
+adopted master-plan *Future Land Use* maps on the parcels. The two plan areas
+don't overlap, so both show at once and the user sees whichever they pan to. All
+overlays are client-side GeoJSON from the county's published ArcGIS
+`County_Land_Use` FeatureServer (`services.arcgis.com/aXqye4IXyXsdIpPb`),
 downloaded as WGS84 GeoJSON and precision-trimmed — **no tileset re-upload
-needed** (like Parcel C). Each overlay draws below `parcel-line` so parcel
-outlines stay visible on top.
+needed** (like Parcel C). Each FLU overlay draws below `parcel-line` so parcel
+outlines stay visible on top. `futureLandUseLayerIds` = both FLU overlays +
+`notDevelopableLayerIds` (federal gray + easement hatch).
 
 - **East End Master Plan** — `data/east-end-flu.json` (FeatureServer/**7**, 211
   polygons; `FLU` code + `FLUDesc` category). Colors sampled from the plan's
   Map 11 legend. Seven categories: Residential Low (1/7–35 ac), Residential
   Medium (1/1–7 ac), Residential High/Mixed Use (>1/ac), Commercial/Industrial,
-  Public/Institutional, Conservation & Large Lots (1/35+ ac), Parks & Open
-  Space. Incorporated towns (Telluride, Mountain Village core) are absent from
-  the layer by design → no future-land-use row when clicked.
+  Public/Institutional, Conservation & Large Lots (1/35+ ac, dark green), Parks &
+  Open Space. Incorporated towns (Telluride, Mountain Village core) are absent
+  from the layer by design → no future-land-use row when clicked.
 - **Wright's Mesa Plan** — `data/wrights-mesa-flu.json` (FeatureServer/**8**, 29
   polygons; `NAME` category), Norwood / Wright's Mesa area (western county).
   Four categories: Town Residential (6–12/ac, up to 15 rare), Light Industrial
@@ -62,6 +66,20 @@ zoning** — the plans explicitly do not rezone anything; popups label them as
 such. To refresh either dataset, re-query its ArcGIS layer as GeoJSON
 (`?where=1=1&outFields=*&outSR=4326&f=geojson`) and drop it in as the matching
 `data/*.json`.
+
+The view also layers on **not-developable land** for contrast:
+- **Forest Service / BLM** — parcels flagged `federal_forest_public_land` filled
+  gray (`federal-public-fill`, above the FLU fills) so public land fades back.
+- **Conservation easements** — `data/conservation-easements.json` (the county's
+  `LandHeritageProgram.geojson` + `OtherConservationEasements.geojson` merged,
+  146 polygons, `grantee`/`acres`/`src`) shown as a diagonal **hatch**
+  (`conservation-easements-fill` + canvas-generated `conservation-hatch`
+  pattern) — permanently protected, not developable.
+
+Popups surface both regardless of view (facts about the parcel/location, useful
+for the developable-land analysis too): a bold "Federal public land … not
+developable" note (`fedNote`) and a "Conservation easement … permanently
+protected, not developable (grantee)" note (`easementNote`, point-in-polygon).
 
 ## Re-uploading the tilesets (when parcel/road data changes)
 
