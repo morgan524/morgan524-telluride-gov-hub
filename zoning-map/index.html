@@ -601,9 +601,11 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#e34a1c"></span><button type="button">Residential High / Mixed Use</button><em>&gt;1/ac</em></div>
     <div class="legend-item"><span style="background:#1261b8"></span><button type="button">Commercial / Industrial</button><em></em></div>
     <div class="legend-item"><span style="background:#ad9480"></span><button type="button">Public / Institutional</button><em></em></div>
-    <div class="legend-item"><span style="background:#c9e0c7"></span><button type="button">Conservation &amp; Large Lots</button><em>1/35+ ac</em></div>
+    <div class="legend-item"><span style="background:#4a8c5a"></span><button type="button">Conservation &amp; Large Lots</button><em>1/35+ ac</em></div>
     <div class="legend-item"><span style="background:#2bdbba"></span><button type="button">Parks &amp; Open Space</button><em></em></div>
-    <p class="small">The county's 2024 East End Master Plan <b>future land-use</b> map (Map 11), overlaid on the parcels. These are advisory recommendations for future development density &mdash; <b>not current zoning</b>. Click an area or lot to see its category and recommended density.</p>
+    <div class="legend-item"><span style="background:#9a9a9a"></span><button type="button">Forest Service / BLM (public)</button><em></em></div>
+    <div class="legend-item"><span style="background:repeating-linear-gradient(45deg,#1f5c34,#1f5c34 2px,#ffffff 2px,#ffffff 5px);border:1px solid #1f5c34"></span><button type="button">Conservation easement</button><em></em></div>
+    <p class="small">The county's 2024 East End Master Plan <b>future land-use</b> map (Map 11), overlaid on the parcels. These are advisory recommendations for future development density &mdash; <b>not current zoning</b>. Forest Service / BLM land is grayed; <b>conservation easements</b> (hatched) are permanently protected &mdash; <b>not developable</b>. Click an area or lot to see its category and recommended density.</p>
   </div>
 
 
@@ -697,9 +699,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, conservationEasementsData;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, conservationEasementsData] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -722,6 +724,7 @@ try {
     fetch(new URL('./data/society-turn-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/parcel-c.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('parcel-c.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/east-end-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/conservation-easements.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -742,7 +745,7 @@ const EAST_END_FLU = {
   "Residential High/Mixed Use":  { code: "RH/MU", color: "#e34a1c", density: "Greater than 1 unit per acre" },
   "Commercial/Industrial":       { code: "C/I",   color: "#1261b8", density: "Commercial / industrial (non-residential)" },
   "Public/Institutional":        { code: "P/I",   color: "#ad9480", density: "Public / institutional (non-residential)" },
-  "Conservation and Large Lots": { code: "F/L",   color: "#c9e0c7", density: "1 unit per 35+ acres" },
+  "Conservation and Large Lots": { code: "F/L",   color: "#4a8c5a", density: "1 unit per 35+ acres" },
   "Parks and Open Space":        { code: "P/OS",  color: "#2bdbba", density: "Parks / open space (non-residential)" }
 };
 
@@ -859,6 +862,29 @@ function eastEndNote(fi) {
     : "";
 }
 
+// Bold notice when a parcel is federal public land (US Forest Service / BLM).
+function fedNote(props) {
+  return (props && props.federal_forest_public_land === "True")
+    ? '<div class="field" style="margin-top:8px;font-weight:800;color:#555">Federal public land (US Forest Service / BLM) &mdash; not developable.</div>'
+    : "";
+}
+
+// Given a conservation-easement polygon feature (or null), return its grantee /
+// acres, or null. Conservation easements are permanently protected, not developable.
+function easementInfoFromFeature(f) {
+  if (!f || !f.properties) return null;
+  return { grantee: f.properties.grantee || null, acres: f.properties.acres || null };
+}
+
+// Bold notice when a click falls inside a conservation easement.
+function easementNote(ea) {
+  return ea
+    ? '<div class="field" style="margin-top:8px;font-weight:800;color:#1f5c34">Conservation easement &mdash; permanently protected, not developable.'
+      + (ea.grantee ? ' <span style="font-weight:400;color:#555">(' + value(ea.grantee) + ')</span>' : '')
+      + '</div>'
+    : "";
+}
+
 function showPopup(lngLat, html) {
   if (selectedPopup) selectedPopup.remove();
   selectedPopup = new mapboxgl.Popup({ closeButton:true, maxWidth:"340px" })
@@ -952,7 +978,7 @@ const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-s
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
 const builtLayerIds = ['parcel-development-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
-const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
+const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline', 'federal-public-fill', 'conservation-easements-fill', 'conservation-easements-outline'];
 
 function setLayersVisible(ids, visible) {
   ids.forEach(id => showLayer(id, visible));
@@ -1712,6 +1738,51 @@ function addOverlayLayers() {
     paint:{ "line-color":"#5f5f5f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.4, 16, 1.1], "line-opacity":0.6 }
   });
 
+  // Forest Service / BLM (federal public land) — grayed on the East End view so
+  // it fades into the background and the future-land-use colors read better.
+  // Drawn ABOVE the FLU fill (federal land is inside the plan's Conservation
+  // category) so it overrides the green there. Parcel tileset, federal flag.
+  map.addLayer({
+    id:"federal-public-fill",
+    type:"fill",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"none" },
+    filter:["==", ["get", "federal_forest_public_land"], "True"],
+    paint:{ "fill-color":"#9a9a9a", "fill-opacity":0.78 }
+  });
+
+  // Conservation easements (Land Heritage Program + other easements, merged) —
+  // legally protected, NOT developable. Shown as a diagonal hatch over whatever
+  // is beneath so the base land-use color still reads through. Hatch image is
+  // generated on a canvas so no external asset is needed.
+  (function addConservationHatch(){
+    if (map.hasImage && map.hasImage("conservation-hatch")) return;
+    const s = 16, cvs = document.createElement("canvas");
+    cvs.width = s; cvs.height = s;
+    const ctx = cvs.getContext("2d");
+    ctx.strokeStyle = "#1f5c34"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = -s; i < s * 2; i += 6) { ctx.moveTo(i, 0); ctx.lineTo(i + s, s); }
+    ctx.stroke();
+    try { map.addImage("conservation-hatch", ctx.getImageData(0, 0, s, s), { pixelRatio: 2 }); } catch (e) {}
+  })();
+  map.addSource("conservation-easements", { type:"geojson", data:conservationEasementsData, generateId:false });
+  map.addLayer({
+    id:"conservation-easements-fill",
+    type:"fill",
+    source:"conservation-easements",
+    layout:{ visibility:"none" },
+    paint:{ "fill-pattern":"conservation-hatch" }
+  });
+  map.addLayer({
+    id:"conservation-easements-outline",
+    type:"line",
+    source:"conservation-easements",
+    layout:{ visibility:"none" },
+    paint:{ "line-color":"#1f5c34", "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.5, 16, 1.4], "line-opacity":0.85 }
+  });
+
 
   map.addLayer({
     id:"butcher-creek-pud-fill",
@@ -2180,14 +2251,17 @@ function addOverlayLayers() {
     const zoning=_featureAt(lng,lat,zoningData);
     // East End Master Plan future land use under the click (null outside the plan area).
     const fi = fluInfoFromFeature(_featureAt(lng,lat,eastEndFluData));
+    // Conservation easement under the click (null outside any easement).
+    const ea = easementInfoFromFeature(_featureAt(lng,lat,conservationEasementsData));
     if(!parcel && !zoning){
-      // Nothing to select but we're over an East End future land-use area
-      // (e.g. zoomed out past the parcel layer) — show the FLU category anyway.
-      if(fi){
-        const fhtml = popupHtml(fi.desc + " (" + fi.code + ")", [
-          ["Future land use", fi.desc],
-          ["Recommended density", fi.density]
-        ]) + eastEndNote(fi);
+      // Nothing to select but we're over a future land-use area and/or a
+      // conservation easement (e.g. zoomed out past the parcel layer) — show it.
+      if(fi || ea){
+        const rows = [];
+        if(fi){ rows.push(["Future land use", fi.desc], ["Recommended density", fi.density]); }
+        if(ea && ea.acres){ rows.push(["Easement acreage", ea.acres]); }
+        const ftitle = fi ? (fi.desc + " (" + fi.code + ")") : "Conservation easement";
+        const fhtml = popupHtml(ftitle, rows) + eastEndNote(fi) + easementNote(ea);
         showSelection(fhtml.replace("<h3","<h2").replace("</h3>","</h2>"));
         showPopup(lngLat, fhtml);
       }
@@ -2210,7 +2284,7 @@ function addOverlayLayers() {
       ["Parcel/tract", parcelTract],
       ...structureRows(pp),
       ...(fi ? [["East End Plan future land use", fi.desc + " (" + fi.code + ")"], ["Recommended density", fi.density]] : [])
-    ]) + airportNote(pp) + eastEndNote(fi);
+    ]) + airportNote(pp) + fedNote(pp) + eastEndNote(fi) + easementNote(ea);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
@@ -2275,7 +2349,7 @@ function addOverlayLayers() {
     showPopup(e.lngLat, html);
   });
 
-  ["parcel-c-fill","east-end-flu-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
+  ["parcel-c-fill","east-end-flu-fill","conservation-easements-fill","federal-public-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
     map.on("mouseenter", layer, () => map.getCanvas().style.cursor = "pointer");
     map.on("mouseleave", layer, () => map.getCanvas().style.cursor = "");
   });

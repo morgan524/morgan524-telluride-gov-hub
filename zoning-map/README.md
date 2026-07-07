@@ -17,9 +17,10 @@ heavy data is split out and the biggest layers are served from Mapbox.
   whole-dataset JS logic — `zoning.json` (legend counts + filter),
   `subdivision.json` (filter), `address.json` (text search), the PUD polygons
   (point-in-polygon), `county-outline.json`, `east-end-flu.json` (East End
-  Master Plan future land use — overlay + point-in-polygon for popups). The
-  module in `index.html` fetches these in parallel via top-level `await` before
-  the map initializes.
+  Master Plan future land use — overlay + point-in-polygon for popups),
+  `conservation-easements.json` (protected/not-developable land). The module in
+  `index.html` fetches these in parallel via top-level `await` before the map
+  initializes.
 
 The parcel click popup resolves the clicked parcel from the tileset via
 `map.queryRenderedFeatures` against the transparent `parcel-hit` fill layer
@@ -53,6 +54,22 @@ so clicks there show no future-land-use row. To refresh the data, re-query the
 ArcGIS layer as GeoJSON (`?where=1=1&outFields=FLU,FLUDesc&outSR=4326&f=geojson`)
 and drop it in as `data/east-end-flu.json`; no tileset re-upload is needed (it's
 a client-side GeoJSON overlay, like Parcel C).
+
+The East End view also layers on **not-developable land** for contrast:
+- **Forest Service / BLM** — parcels flagged `federal_forest_public_land` are
+  filled gray (`federal-public-fill`, above the FLU fill) so public land fades
+  back and the land-use colors read better.
+- **Conservation easements** — `data/conservation-easements.json` (the county's
+  `LandHeritageProgram.geojson` + `OtherConservationEasements.geojson` merged,
+  146 polygons, `grantee`/`acres`/`src` kept) shown as a diagonal **hatch**
+  (`conservation-easements-fill` with a canvas-generated `conservation-hatch`
+  pattern) — permanently protected, not developable.
+
+Popups surface both regardless of view (they're facts about the parcel /
+location, useful for the developable-land analysis too): a bold "Federal public
+land … not developable" note (`fedNote`) and a "Conservation easement …
+permanently protected, not developable (grantee)" note (`easementNote`, via
+point-in-polygon against the easement data).
 
 ## Re-uploading the tilesets (when parcel/road data changes)
 
