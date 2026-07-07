@@ -841,13 +841,15 @@ function popupHtml(title, fields) {
   return `<h3>${value(title)}</h3>` + fieldRows(fields);
 }
 
-// A bold notice appended to a parcel popup when the parcel overlaps an airport
-// height-restriction zoning area (tagged airport_restriction:"True" in the
-// tileset). Location-based; see prep-parcels.js.
+// FAA airport-restriction notice for a parcel under the Telluride Regional
+// Airport FAR Part 77 airspace surfaces (tagged airport_restriction:"True" in the
+// tileset). Numbers are from the 2016 TEX Master Plan Part 77 drawing (airport
+// elev 9,070 ft MSL; horizontal surface 9,220; conical up to 9,420). See
+// prep-parcels.js for the flag and SMC Land Use Code §5-418 for the regulation.
 function airportNote(props) {
-  return (props && props.airport_restriction === "True")
-    ? '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ May be subject to airport height restriction</div>'
-    : "";
+  if (!props || props.airport_restriction !== "True") return "";
+  return '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ Airport height restriction (Telluride Regional Airport)</div>'
+    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This parcel is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. Confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>';
 }
 
 // Development status + what's built on the parcel, from the county assessor
