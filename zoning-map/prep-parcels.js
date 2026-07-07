@@ -140,6 +140,23 @@ const genseeAtSocietyTurn = p =>
   /GENESEE PROPERTIES/i.test(String(p.NAMEDISPLAY || p.NAME1 || '')) &&
   /SOCIETY TURN/i.test(String(p.SUBNAME || ''));
 
+// Public infrastructure / state conservation land is not a development
+// opportunity (airport, special districts, cemetery, CDOT, and all State of
+// Colorado / Division of Wildlife / Land Board parcels). MUNICIPAL land — Town
+// of *, San Miguel County, Mountain Village — is KEPT (potential housing sites).
+const isPublicInfraOwner = (p) => {
+  const o = String(p.NAMEDISPLAY || p.NAME1 || '').toUpperCase();
+  return /\bAIRPORT\b/.test(o) ||
+         /\bCEMETERY\b/.test(o) ||
+         /SANITATION/.test(o) ||
+         /WATER (DISTRICT|CONSERVANCY|AUTHORITY)/.test(o) ||
+         /METRO(POLITAN)? DISTRICT/.test(o) ||
+         /FIRE PROTECTION/.test(o) ||
+         /STATE OF COLORADO/.test(o) ||       // incl. DOW, Land Board, CDOT, DPW
+         /DIVISION OF WILDLIFE/.test(o) ||
+         /BOARD OF LAND COMMISSION/.test(o);
+};
+
 const DATA = path.join(__dirname, 'data');
 const loadFC = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 
@@ -221,7 +238,7 @@ for (const f of parcelData.features) {
     f.properties.high_country !== 'True' &&                    // not unbuildable alpine terrain
     pin !== 'row' && !pin.includes('open space') && !pin.includes('common');
   // Manual corrections (owner/PIN cases the automated flags miss).
-  if (FORCE_NOT_DEVELOPABLE.has(rawPin) || genseeAtSocietyTurn(f.properties)) developable = false;
+  if (FORCE_NOT_DEVELOPABLE.has(rawPin) || genseeAtSocietyTurn(f.properties) || isPublicInfraOwner(f.properties)) developable = false;
   if (FORCE_DEVELOPABLE.has(rawPin)) developable = true;
   if (developable) { f.properties.developable = 'True'; taggedDev++; }
 }
