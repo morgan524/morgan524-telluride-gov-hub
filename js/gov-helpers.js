@@ -480,7 +480,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -1984,6 +1984,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Town Manager's Report",
+    source: "Town of Ridgway",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---July-7%2C-2026.pdf",
+    img: ""
+  },
+  {
     title: "Stage 2 Fire Restrictions Implemented in Ridgway",
     source: "Town of Ridgway",
     date: "June 28, 2026",
@@ -2305,24 +2316,6 @@ const LOCAL_NEWS_FEATURED = [
 ];
 
 const BLOG_POSTS = [
-  {
-    title: "The Week Ahead Outlook - July 6 - July 12, 2026",
-    date: "Jul 5, 2026",
-    href: "https://livabletelluride.org/digest/archive/2026-07-05-weekly.html",
-    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
-    excerpt: "@media only screen and (max-width:480px){ .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;} .ev-img-cell img{width:160px !important;height:160px !important;} .ev-text-cell{display:block !important;width:100% !important;} .fest-logo-cell{display:block !important;width:100% !important;padding:14px 14px 0 !important;} .fest-body-cell{display:block !important;",
-    category: "Newsletter",
-    source: "customerio"
-  },
-  {
-    title: "Weekend Update July 2",
-    date: "Jul 2, 2026",
-    href: "https://mailchi.mp/8bef8f98c535/weekend-update-july-2",
-    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
-    excerpt: "Livable Telluride &#183; Weekend Outlook The Weekend Outlook July 3 - July 5, 2026 &#128197; The Weekend Outlook \"It's Fourth of July weekend and many communities in the region will be offering free family fun. Wherever you land, please check in with the local jurisdiction for the latest fire restrictions. Telluride will kick off Saturday morning with the Rundola first thing followed by the longes",
-    category: "Newsletter",
-    source: "mailchimp"
-  },
   {
     title: "When the Town Judges Its Own Projects",
     date: "Jun 30, 2026",
@@ -2734,17 +2727,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Pup Meet Up- Gondola Plaza",
-    link: "https://koto.org/event/pup-meet-up-gondola-plaza/",
-    description: "Get ready to unleash the fun at our Pup Meetup! 🐶 Join us at the Gondola Plaza by the Coffee Cowboy Cart for a tail-wagging good time that’s sure to leave both you and your furry friend feeling pawsitively delighted. Make sure to stick around for the raffle with prizes from local pet stores and free pup cups from the Coffee Cowboy! Marney Prince with My Pup's Remedy will be there with free treats for your furry friend as well! With the Wilkinson Public Library, anything is PAW-sible. Who knows&#8230;you may even make some new FUR-ever friends!",
-    pubDate: "2026-07-07T17:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Gondola Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-07-07/",
     description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
@@ -3053,6 +3035,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg"
   },
   {
+    title: "Celebration of the Life of Christine Wahle Johnson",
+    link: "https://koto.org/event/celebration-of-the-life-of-christine-wahle-johnson/",
+    description: "There is a Life Celebration for Christine Wahle Johnson at the Telluride Science and Innovation Center (the old depot building) from 2:30-5:30pm on Saturday, July 11th. All are Welcome. The funeral service is 10am alpine chapel same day, all welcome at both events.",
+    pubDate: "2026-07-11T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: ""
+  },
+  {
     title: "Flying Bear Pizzeria presents “Blood, Sweat & Gears” poetry night!",
     link: "https://koto.org/event/flying-bear-pizzeria-presents-blood-sweat-gears-poetry-night/",
     description: "Flying Bear Pizzeria at Naturita Bicycle Company presents \"Blood, Sweat & Gears\" poetry night! The 5th installment of this biannual literary shindig will feature poets Kierstin Bridger, Ellen Metrick, and Daiva Chesonis. $5 cover and $5 margaritas. Doors at 6pm, words at 7. Bring some of your own (3 minutes max) for the open mic afterward.",
@@ -3204,17 +3197,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Brewing Company Lawson Hill Taproom",
-    imageUrl: ""
-  },
-  {
-    title: "Music Theory For Beginners",
-    link: "https://koto.org/event/music-theory-for-beginners/",
-    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
-    pubDate: "2026-07-14T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -5340,7 +5322,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58512/0412692b-4dd2-d891-5547-848b9c1541a8.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/58512/vfn-theinvite-_banner1800x900_870x435.800x533.webp"
   },
   {
     title: "Alpine Chapel Outdoor Service",
