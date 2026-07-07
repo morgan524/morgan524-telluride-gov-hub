@@ -854,6 +854,34 @@ function popupHtml(title, fields) {
 const TEX_RW9 = [-107.9204, 37.9563], TEX_RW27 = [-107.8969, 37.9517];
 const TEX_FIELD_ELEV = 9070, TEX_HORIZ_MSL = 9220;   // field + 150 ft
 const FT_PER_M = 3.280839895;
+let p77HeightSeq = 0;   // per-click token so async elevation patches the right popup
+
+// Ground elevation (metres) at a point, from a single Mapbox Terrain-RGB tile
+// fetched + decoded on demand. Async, so it can't drive the initial popup HTML —
+// the popup renders a placeholder and this patches it in. Avoids enabling global
+// 3D terrain (which broke the vector-tile parcel fills on some GPUs).
+function terrainTileElevation(lng, lat) {
+  const z = 14, n = Math.pow(2, z);
+  const xt = (lng + 180) / 360 * n;
+  const latR = lat * Math.PI / 180;
+  const yt = (1 - Math.log(Math.tan(latR) + 1 / Math.cos(latR)) / Math.PI) / 2 * n;
+  const tx = Math.floor(xt), ty = Math.floor(yt);
+  const px = Math.min(255, Math.floor((xt - tx) * 256)), py = Math.min(255, Math.floor((yt - ty) * 256));
+  return new Promise(resolve => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => {
+      try {
+        const cv = document.createElement("canvas"); cv.width = 256; cv.height = 256;
+        const ctx = cv.getContext("2d"); ctx.drawImage(img, 0, 0);
+        const d = ctx.getImageData(px, py, 1, 1).data;
+        resolve(-10000 + (d[0] * 65536 + d[1] * 256 + d[2]) * 0.1);
+      } catch (e) { resolve(null); }
+    };
+    img.onerror = () => resolve(null);
+    img.src = `https://api.mapbox.com/v4/mapbox.terrain-rgb/${z}/${tx}/${ty}.pngraw?access_token=${mapboxgl.accessToken}`;
+  });
+}
 
 // Horizontal distance (ft) from a lng/lat to the runway centerline segment.
 function texRunwayDistFt(lng, lat) {
@@ -913,7 +941,7 @@ function airportHeightRows(lng, lat, surfaceHint, groundFt) {
 // elev 9,070 ft MSL; horizontal surface 9,220; conical up to 9,420). See
 // prep-parcels.js for the flag and SMC Land Use Code §5-418 for the regulation.
 // lng/lat + groundFt (terrain elevation, feet) drive the computed max-height box.
-function airportNote(props, p77, lng, lat, groundFt) {
+function airportNote(props, p77, lng, lat, groundFt, token) {
   // Fire when the click falls inside a generated Part 77 surface (full-coverage,
   // regardless of the county overlay) OR the parcel carries the tileset flag.
   const surf = (p77 && p77.properties && p77.properties.surface)
@@ -928,7 +956,12 @@ function airportNote(props, p77, lng, lat, groundFt) {
     : 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths';
   return '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ Airport height restriction (Telluride Regional Airport)</div>'
     + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>'
-    + ((surf !== "flag" && typeof lng === "number") ? airportHeightRows(lng, lat, surf, groundFt) : "");
+    + ((surf !== "flag" && typeof lng === "number")
+        ? '<span class="p77h p77h-' + token + '">'
+          + (groundFt != null ? airportHeightRows(lng, lat, surf, groundFt)
+             : '<div class="field" style="margin-top:6px;font-size:11px;color:#888">Calculating max building height…</div>')
+          + '</span>'
+        : "");
 }
 
 // Development status + what's built on the parcel, from the county assessor
@@ -1635,14 +1668,10 @@ function findAddress() {
 function addOverlayLayers() {
   const labelLayerId = firstSymbolLayerId();
 
-  // Terrain DEM for the Part 77 max-height math. exaggeration 0 keeps the map
-  // flat (2D) while still letting queryTerrainElevation return true elevations.
-  try {
-    if (!map.getSource("mapbox-dem")) {
-      map.addSource("mapbox-dem", { type:"raster-dem", url:"mapbox://mapbox.mapbox-terrain-dem-v1", tileSize:512, maxzoom:14 });
-      map.setTerrain({ source:"mapbox-dem", exaggeration:0 });
-    }
-  } catch (e) { /* elevation readout just won't populate */ }
+  // NOTE: we do NOT enable 3D terrain (map.setTerrain). Draping the vector-tile
+  // parcel fills (Developable / Vacant) on a terrain mesh made them vanish on some
+  // GPUs. The Part 77 height readout instead fetches a single terrain-RGB tile on
+  // click (see terrainTileElevation) — no global terrain, no rendering side-effects.
 
   map.addSource("zoning", { type:"geojson", data:zoningData, generateId:false });
   map.addSource("last-dollar-pud", { type:"geojson", data:lastDollarPudData, generateId:false });
@@ -2505,12 +2534,17 @@ function addOverlayLayers() {
     // the airport height note with full coverage, independent of the tileset flag.
     const _p77 = part77Data ? (["approach","horizontal","conical"].reduce((hit,s) =>
       hit || _featureAt(lng,lat,{type:"FeatureCollection",features:part77Data.features.filter(f=>f.properties.surface===s)}), null)) : null;
-    // Terrain elevation (ft) at the click, for the Part 77 max-height math. Uses
-    // the Mapbox DEM (map flat at exaggeration 0); null until the DEM tile loads.
-    let _groundFt = null;
-    if (_p77 && map.queryTerrainElevation) {
-      const _m = map.queryTerrainElevation(lngLat, { exaggerated: false });
-      if (typeof _m === "number" && isFinite(_m)) _groundFt = _m * FT_PER_M;
+    // Part 77 max-height math needs the ground elevation, fetched async from a
+    // terrain-RGB tile (no global 3D terrain). The popup shows a placeholder that
+    // this token lets us patch in when the elevation resolves.
+    const _p77tok = _p77 ? (++p77HeightSeq) : 0;
+    if (_p77) {
+      const _surf = (_p77.properties && _p77.properties.surface), _lo = lng, _la = lat;
+      terrainTileElevation(_lo, _la).then(m => {
+        const html = (m != null) ? airportHeightRows(_lo, _la, _surf, m * FT_PER_M)
+          : '<div class="field" style="font-size:11px;color:#888">Elevation unavailable at this point.</div>';
+        document.querySelectorAll(".p77h-" + _p77tok).forEach(el => { el.innerHTML = html; });
+      });
     }
     const _town = _featureAt(lng,lat,municipalBoundariesData);
     const jurisdiction = _town && _town.properties
@@ -2549,7 +2583,7 @@ function addOverlayLayers() {
       ...structureRows(pp),
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
-    ]) + airportNote(pp, _p77, lng, lat, _groundFt) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+    ]) + airportNote(pp, _p77, lng, lat, null, _p77tok) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
