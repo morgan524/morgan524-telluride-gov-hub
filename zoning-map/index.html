@@ -82,6 +82,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="row">
       <button class="secondary" id="viewClear">Clear</button>
       <button class="secondary" id="viewBuiltLand">Developable Land</button>
+      <button class="secondary" id="viewVacant">Vacant Lots</button>
     </div>
     <div class="row">
       <button class="secondary" id="viewFutureLandUse">Future Land Use</button>
@@ -582,13 +583,19 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <p class="small">Lower opacity makes roads, terrain, rivers, and labels easier to see under the zoning colors.</p>
   </div>
   <div class="panel" id="builtLegend" style="display:none;">
-    <label>Developable Land &mdash; est. new lots</label>
+    <label>Developable Land &mdash; max lots</label>
     <div class="legend-item"><span style="background:#dadaeb"></span><button type="button">1 lot</button><em></em></div>
     <div class="legend-item"><span style="background:#9e9ac8"></span><button type="button">2&ndash;4 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#756bb1"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#54278f"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:transparent;border:1.5px dashed #d98b3a"></span><button type="button">Airport height limit</button><em></em></div>
-    <p class="small">Private land <b>not</b> in a PUD or subdivision and <b>not</b> protected (federal, open space, high country, conservation easement), with room to add lots. Shade = <b>estimated new lots</b> if divided at the plan / zoning density &mdash; an <b>advisory estimate</b>, not a guarantee. Amber dashed = airport height limit (caps scale, doesn't prohibit). Click a parcel for its estimate.</p>
+    <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, or high country &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Amber dashed = airport height limit (caps scale, doesn't prohibit). Click a parcel for its estimate.</p>
+  </div>
+
+  <div class="panel" id="vacantLegend" style="display:none;">
+    <label>Vacant Lots</label>
+    <div class="legend-item"><span style="background:#2b6cb0"></span><button type="button">No residential structure</button><em></em></div>
+    <p class="small">Parcels with <b>no identifiable residential structure</b> &mdash; vacant land, land with only an outbuilding (barn / shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land is excluded. Click a parcel for details.</p>
   </div>
 
   <div class="panel" id="futureLandUseLegend" style="display:none;">
@@ -871,7 +878,7 @@ function devPotentialRows(pp) {
   if (!isFinite(hi) || hi < 1) return [];
   const range = (!isFinite(lo) || lo === hi) ? String(hi)
     : (lo === 0 ? ("up to " + hi) : (lo + "–" + hi));
-  const rows = [["Est. new lots (if divided)", range]];
+  const rows = [["Max development (lots)", range]];
   if (pp.dev_cat) rows.push(["Density basis", pp.dev_cat]);
   if (pp.min_lot_lo) {
     const ml = (pp.min_lot_hi && Number(pp.min_lot_hi) !== Number(pp.min_lot_lo))
@@ -885,7 +892,7 @@ function fmtAcres(v) { const n = Number(v); return n < 1 ? n.toFixed(2).replace(
 // A short advisory caveat appended to a Developable Land popup.
 function devPotentialNote(pp) {
   return (pp && pp.developable === "True" && Number(pp.dev_lots_hi) >= 1)
-    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">Advisory estimate of subdivision potential (net acres ÷ plan/zoning min lot size − existing units) — not an entitlement or a guarantee.</div>'
+    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">Advisory estimate of maximum development (net acres ÷ plan/zoning min lot size) — not an entitlement or a guarantee.</div>'
     : "";
 }
 
@@ -966,7 +973,7 @@ function firstSymbolLayerId() {
 let currentMapView = "zoning";
 
 function setButtonState(activeId) {
-  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable", "viewFutureLandUse"].forEach(id => {
+  ["viewZoning", "viewPuds", "viewBuiltLand", "viewVacant", "viewSubdivisions", "viewClear", "viewBuildable", "viewFutureLandUse"].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     if (id === activeId) {
@@ -1005,7 +1012,8 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Developable Land:</strong> Private land that is <strong>not</strong> in a PUD or subdivision and <strong>not</strong> protected (federal, open space, high country, or conservation easement), with room to add lots. Shaded by the <strong>estimated number of new lots</strong> it could be divided into (from the plan / zoning density &mdash; an advisory estimate, not a guarantee). Amber dashed outline = airport height limit (caps scale, doesn't prohibit). Click a parcel for the estimate.",
+  built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, or high country &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Amber dashed outline = airport height limit (caps scale, doesn't prohibit). Click a parcel for the estimate.",
+  vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land is excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
   futurelanduse: "<strong>Future Land Use:</strong> The county's adopted master-plan future land-use categories &mdash; East End (2024) and Wright's Mesa &mdash; overlaid on the parcels. <strong>Advisory</strong> recommendations for future density, not current zoning. Forest Service / BLM is grayed; conservation easements (hatched) are permanently protected, <strong>not developable</strong>. Click an area or lot to see its category and recommended density."
@@ -1028,6 +1036,7 @@ function setFilterBlocks(zoningVisible, subdivisionVisible) {
 function setLegendView(view) {
   setPanelDisplay("zoningLegendPanel", view === "zoning" ? "block" : "none");
   setPanelDisplay("builtLegend", view === "built" ? "block" : "none");
+  setPanelDisplay("vacantLegend", view === "vacant" ? "block" : "none");
   setPanelDisplay("subdivisionLegend", view === "subdivisions" ? "block" : "none");
   setPanelDisplay("pudsLegend", view === "puds" ? "block" : "none");
   setPanelDisplay("clearLegend", view === "clear" ? "block" : "none");
@@ -1038,6 +1047,7 @@ const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-me
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
 const builtLayerIds = ['parcel-development-fill', 'parcel-airport-dev-outline'];
+const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
 const wrightsMesaLayerIds = ['wrights-mesa-flu-fill', 'wrights-mesa-flu-outline'];
@@ -1055,6 +1065,7 @@ function hideThematicLayers() {
   setLayersVisible(pudLayerIds, false);
   setLayersVisible(subdivisionLayerIds, false);
   setLayersVisible(builtLayerIds, false);
+  setLayersVisible(vacantLayerIds, false);
   setLayersVisible(futureLandUseLayerIds, false);
   if (typeof buildableLayerIds !== 'undefined') setLayersVisible(buildableLayerIds, false);
 }
@@ -1117,6 +1128,21 @@ function setBuiltLandView() {
   // Exclusions are baked into `developable` — no checkboxes needed.
   showLayer("parcel-development-fill", true);
   showLayer("parcel-airport-dev-outline", true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);  setColoredSectionTransparency();
+}
+
+
+// Vacant Lots — parcels with no identifiable residential structure.
+function setVacantView() {
+  setMapNote(mapNotes.vacant);
+  currentMapView = "vacant";
+  setButtonState("viewVacant");
+  hideThematicLayers();
+  setLegendView("vacant");
+  setFilterBlocks(false, false);
+
+  showLayer("parcel-vacant-fill", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -2167,6 +2193,23 @@ function addOverlayLayers() {
     paint:{ "line-color":"#d98b3a", "line-width":["interpolate", ["linear"], ["zoom"], 10, 1, 16, 2.4], "line-dasharray":[2, 1.3] }
   });
 
+  // Vacant Lots — parcels with no identifiable residential structure (baked
+  // `no_residential`), minus federal/public land and ROW/COMMON non-lots.
+  map.addLayer({
+    id:"parcel-vacant-fill",
+    type:"fill",
+    source:"parcels",
+    "source-layer":"parcel",
+    layout:{ visibility:"none" },
+    filter:["all",
+      ["==", ["get", "no_residential"], "True"],
+      ["!=", ["get", "federal_forest_public_land"], "True"],
+      ["!=", ["get", "PIN"], "ROW"],
+      ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
+      ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
+    paint:{ "fill-color":"#2b6cb0", "fill-opacity":0.5 }
+  });
+
 
   map.addLayer({
     id:"buildable-unrestricted-fill",
@@ -2434,7 +2477,7 @@ function addOverlayLayers() {
     showPopup(e.lngLat, html);
   });
 
-  ["parcel-c-fill","east-end-flu-fill","wrights-mesa-flu-fill","conservation-easements-fill","federal-public-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
+  ["parcel-c-fill","east-end-flu-fill","wrights-mesa-flu-fill","conservation-easements-fill","federal-public-fill","parcel-vacant-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
     map.on("mouseenter", layer, () => map.getCanvas().style.cursor = "pointer");
     map.on("mouseleave", layer, () => map.getCanvas().style.cursor = "");
   });
@@ -2461,6 +2504,7 @@ document.getElementById("opacity").oninput = setColoredSectionTransparency;
 document.getElementById("viewZoning").onclick = setZoningView;
 document.getElementById("viewPuds").onclick = setPudView;
 document.getElementById("viewBuiltLand").onclick = setBuiltLandView;
+document.getElementById("viewVacant").onclick = setVacantView;
 document.getElementById("viewSubdivisions").onclick = setSubdivisionView;
 document.getElementById("viewClear").onclick = setClearView;
 document.getElementById("viewFutureLandUse").onclick = setFutureLandUseView;

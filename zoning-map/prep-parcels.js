@@ -29,13 +29,20 @@ for (const f of JSON.parse(fs.readFileSync(IMP, 'utf8')).features) {
 // structure type lives in BLTASDESCRIPTION).
 const OUT_BLT = /barn|shed|equipment|farm util|corral|stable|greenhouse|hangar|hanger|detached garage|pole build|loafing|\bhay\b|granary|silo|utility build|out ?building/i;
 const isOutbuilding = p => ['Out Building', 'Parking'].includes(String(p.PROPERTYTYPE)) || OUT_BLT.test(String(p.BLTASDESCRIPTION || ''));
+// A residential (dwelling) improvement, per the assessor PROPERTYTYPE. Everything
+// else — Commercial, Out Building, Parking — is not a residence.
+const RESIDENTIAL_PROPTYPES = new Set(['Residential', 'Condo', 'Duplex', 'DR ADU', 'Multiple Unit', 'Townhouse', 'Mobile Home']);
+const hasResidential = imps => imps.some(p => RESIDENTIAL_PROPTYPES.has(String(p.PROPERTYTYPE)));
 function structureInfo(acct) {
   const imps = impByAcct[acct] || [];
-  if (!imps.length) return { structure_class: 'vacant' };
+  // `no_residential` = no identifiable residential structure (vacant land,
+  // outbuilding-only, or commercial-only). Drives the Vacant Lots view.
+  if (!imps.length) return { structure_class: 'vacant', no_residential: 'True' };
   const cls = imps.every(isOutbuilding) ? 'outbuilding' : 'developed';
   const main = imps.slice().sort((a, b) => (b.IMPSF || 0) - (a.IMPSF || 0))[0];  // biggest structure
   const totalSf = imps.reduce((t, x) => t + (Number(x.IMPSF) || 0), 0);
   const info = { structure_class: cls, imp_count: String(imps.length) };
+  if (!hasResidential(imps)) info.no_residential = 'True';
   if (main.BLTASDESCRIPTION) info.imp_desc = String(main.BLTASDESCRIPTION);
   if (main.PROPERTYTYPE) info.imp_type = String(main.PROPERTYTYPE);
   if (totalSf) info.imp_sqft = String(Math.round(totalSf));
@@ -179,49 +186,42 @@ for (const f of parcelData.features) {
   // Conservation easement (protected, not developable)
   if (easeRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.conservation_easement = 'True'; taggedEase++; }
 
-  // ── Division-potential estimate ──
-  // Min lot size from the future-land-use category (plan) where the parcel sits,
-  // else current zoning, else a rural default. Additional lots =
-  // floor(net acres / min lot) − current units. Range because densities are ranges.
+  // ── Maximum-development estimate ──
+  // The land could be sold for maximum development regardless of any existing
+  // structure, so this is the TOTAL lots the parcel could support (not "additional
+  // beyond what's there"): max(1, floor(net acres / min lot)). Min lot from the
+  // future-land-use category (plan), else current zoning, else a rural default.
+  // Range because plan densities are ranges.
   const flu = fluCatAt(c);
   const zcat = zoneCatAt(c);
   const cat = flu || zcat;
-  const fluIsNonRes = flu && FLU_MINLOT[flu] === null;   // e.g. Commercial/Industrial, Public — no home-lot split
-  let ml = flu ? FLU_MINLOT[flu] : null;
-  if (!ml && !fluIsNonRes) ml = (zcat && ZONING_MINLOT[zcat]) || DEFAULT_MINLOT;
+  const ml = (flu && FLU_MINLOT[flu]) || (zcat && ZONING_MINLOT[zcat]) || DEFAULT_MINLOT;
   if (cat) f.properties.dev_cat = cat;
-  const curUnits = si.structure_class === 'developed' ? 1 : 0;
-  f.properties.cur_units = curUnits;
-  let devLo = 0, devHi = 0;
-  if (ml) {
-    const acres = Number(f.properties.NETACRES) || 0;
-    f.properties.min_lot_lo = round6(ml[0]); f.properties.min_lot_hi = round6(ml[1]);
-    devHi = Math.max(0, Math.floor(acres / ml[0]) - curUnits);  // smaller lot → more lots
-    devLo = Math.max(0, Math.floor(acres / ml[1]) - curUnits);  // larger lot → fewer
-  }
-  f.properties.dev_lots_lo = devLo;
-  f.properties.dev_lots_hi = devHi;
+  f.properties.cur_units = si.structure_class === 'developed' ? 1 : 0;
+  const acres = Number(f.properties.NETACRES) || 0;
+  f.properties.min_lot_lo = round6(ml[0]); f.properties.min_lot_hi = round6(ml[1]);
+  f.properties.dev_lots_hi = Math.max(1, Math.floor(acres / ml[0]));  // smaller lot → more lots
+  f.properties.dev_lots_lo = Math.max(1, Math.floor(acres / ml[1]));  // larger lot → fewer
 
-  // Developable = unentitled + unprotected + has division potential. Airport-
-  // restricted parcels stay IN (a height limit caps scale, doesn't prohibit).
+  // Developable = land NOT in conservation / forest / BLM / PUD / subdivision.
+  // An existing structure is IRRELEVANT — the owner could sell it for maximum
+  // development regardless. So there is NO current-structure or lot-count gate
+  // (every non-excluded parcel supports at least 1 lot). Airport-restricted
+  // parcels stay IN (a height limit caps scale, doesn't prohibit). High-country
+  // alpine terrain is unbuildable, so it stays excluded.
   const pin = String(f.properties.PIN || '').toLowerCase();
   const rawPin = String(f.properties.PIN || '');
   let developable =
-    f.properties.in_pud_or_subdivision !== 'True' &&
-    String(f.properties.federal_forest_public_land) !== 'True' &&
-    f.properties.high_country !== 'True' &&
-    f.properties.open_space !== 'True' &&
-    f.properties.conservation_easement !== 'True' &&
-    pin !== 'row' && !pin.includes('open space') && !pin.includes('common') &&
-    devHi >= 1;
+    f.properties.in_pud_or_subdivision !== 'True' &&           // not in a PUD or subdivision
+    String(f.properties.federal_forest_public_land) !== 'True' && // not Forest Service / BLM
+    f.properties.conservation_easement !== 'True' &&           // not a conservation easement
+    f.properties.open_space !== 'True' &&                      // not open-space/conservation zoning
+    f.properties.high_country !== 'True' &&                    // not unbuildable alpine terrain
+    pin !== 'row' && !pin.includes('open space') && !pin.includes('common');
   // Manual corrections (owner/PIN cases the automated flags miss).
   if (FORCE_NOT_DEVELOPABLE.has(rawPin) || genseeAtSocietyTurn(f.properties)) developable = false;
   if (FORCE_DEVELOPABLE.has(rawPin)) developable = true;
-  if (developable) {
-    // A forced-in parcel with no computed potential still shows as at least 1 lot.
-    if (FORCE_DEVELOPABLE.has(rawPin) && devHi < 1) { f.properties.dev_lots_hi = 1; f.properties.dev_lots_lo = 0; }
-    f.properties.developable = 'True'; taggedDev++;
-  }
+  if (developable) { f.properties.developable = 'True'; taggedDev++; }
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
