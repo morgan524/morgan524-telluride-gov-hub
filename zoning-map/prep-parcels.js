@@ -128,9 +128,11 @@ const DEFAULT_MINLOT = [35, 35];  // rural baseline (~1 unit / 35 ac) when nothi
 const FORCE_NOT_DEVELOPABLE = new Set([
   '456530420167', '456519400011',  // in the Aldasoro PUD (missed by in_pud_or_subdivision)
   '477905400009',
+  '456533200030',  // Town of Telluride wastewater treatment plant — public infrastructure
 ]);
 const FORCE_DEVELOPABLE = new Set([
-  '477920100505', '477917300502', '477920200503', '477920200504', '477920200506', '477917300013',
+  '477920100505', '477917300502', '477920200503', '477920200504', '477917300013',
+  // (477920200506 was a typo — not in the county parcel data)
 ]);
 // The Genesee parcels in the Society Turn Business Park PUD determine uses via the
 // PUD, so they are not independently developable.
