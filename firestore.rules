@@ -309,6 +309,17 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // ── pulse_drafts/{id} ─────────────────────────────────────────────
+    // Hub-Bub surfacing drafts (scripts/pulse/*). Same as article_drafts:
+    // written/decided ONLY by the Cloudflare Worker via the service account
+    // (which bypasses these rules); the review page (pulse-review.html) goes
+    // through token-gated Worker endpoints (/pulse-draft, /pulse-decide). On
+    // approval the Worker publishes a normal doc into `posts` (the feed), which
+    // its own rules govern. Lock clients out of the drafts collection.
+    match /pulse_drafts/{id} {
+      allow read, write: if false;
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but
