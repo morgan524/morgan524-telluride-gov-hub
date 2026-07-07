@@ -211,7 +211,7 @@ const COUNTY_CACHED_DATA = [
     title: 'Planning Commission and Board of County Commissioners Joint Work Session',
     type: 'planning',
     civicClerkId: 921,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/921/files/agenda/1873'
+    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/921/files/agenda/1901'
   }
 ];
 
