@@ -589,7 +589,10 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
+    <div class="legend-item"><span style="background:rgba(240,173,78,0.35);border:1px dashed #a9691a"></span><button type="button">Airport airspace (Part&nbsp;77)</button><em></em></div>
+    <div class="legend-item"><span style="background:rgba(217,83,79,0.4);border:1px dashed #b02a25"></span><button type="button">Airport approach corridor</button><em></em></div>
     <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
+    <p class="small">The dashed amber/red zones mark the <b>FAA Part&nbsp;77 airspace</b> around Telluride Regional Airport, where building height and lighting may be limited (roughly 9,220&ndash;9,420&nbsp;ft MSL; lower under the approach corridors). <b>Approximate</b> &mdash; confirm under SMC §5-418.</p>
   </div>
 
   <div class="panel" id="vacantLegend" style="display:none;">
@@ -710,9 +713,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -738,6 +741,7 @@ try {
     fetch(new URL('./data/wrights-mesa-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wrights-mesa-flu.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/conservation-easements.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/municipal-boundaries.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('municipal-boundaries.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/part77-surfaces.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('part77-surfaces.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -846,10 +850,21 @@ function popupHtml(title, fields) {
 // tileset). Numbers are from the 2016 TEX Master Plan Part 77 drawing (airport
 // elev 9,070 ft MSL; horizontal surface 9,220; conical up to 9,420). See
 // prep-parcels.js for the flag and SMC Land Use Code §5-418 for the regulation.
-function airportNote(props) {
-  if (!props || props.airport_restriction !== "True") return "";
+function airportNote(props, p77) {
+  // Fire when the click falls inside a generated Part 77 surface (full-coverage,
+  // regardless of the county overlay) OR the parcel carries the tileset flag.
+  const surf = (p77 && p77.properties && p77.properties.surface)
+    || ((props && props.airport_restriction === "True") ? "flag" : null);
+  if (!surf) return "";
+  const ceiling = surf === "approach"
+    ? 'you are under a runway <b>approach corridor</b>, where the height limit <b>slopes down toward the runway</b> &mdash; the strictest case, well below the 9,220&nbsp;ft ceiling near the runway ends'
+    : surf === "conical"
+    ? 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface'
+    : surf === "horizontal"
+    ? 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface'
+    : 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths';
   return '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ Airport height restriction (Telluride Regional Airport)</div>'
-    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This parcel is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. Confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>';
+    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>';
 }
 
 // Development status + what's built on the parcel, from the county assessor
@@ -1050,7 +1065,7 @@ function setLegendView(view) {
 const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline", "parcel-c-fill", "parcel-c-outline"];
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
-const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline'];
+const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline', 'part77-fill', 'part77-line'];
 const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
@@ -1133,6 +1148,9 @@ function setBuiltLandView() {
   showLayer("parcel-development-fill", true);
   showLayer("parcel-c-fill", true);
   showLayer("parcel-c-outline", true);
+  // FAA Part 77 airspace overlay — shows the airport height-restriction "range".
+  showLayer("part77-fill", true);
+  showLayer("part77-line", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -2225,6 +2243,40 @@ function addOverlayLayers() {
     }
   });
 
+  // ---- FAA Part 77 airspace surfaces (overlay for the Developable view) ----
+  // Approximate imaginary surfaces derived from the 2016 TEX Master Plan Part 77
+  // sheet + AirNav runway geometry (see data/part77-surfaces.json). Translucent
+  // so the parcel choropleth stays readable underneath.
+  map.addSource("part77", { type:"geojson", data:part77Data, generateId:false });
+  map.addLayer({
+    id:"part77-fill",
+    type:"fill",
+    source:"part77",
+    layout:{ visibility:"none" },
+    paint:{
+      "fill-color":["match", ["get","surface"],
+        "approach", "#d9534f",
+        "horizontal", "#f2c14e",
+        /* conical */ "#f0ad4e"],
+      "fill-opacity":["match", ["get","surface"],
+        "approach", 0.22,
+        "horizontal", 0.13,
+        /* conical */ 0.10]
+    }
+  });
+  map.addLayer({
+    id:"part77-line",
+    type:"line",
+    source:"part77",
+    layout:{ visibility:"none" },
+    paint:{
+      "line-color":["match", ["get","surface"], "approach", "#b02a25", "#a9691a"],
+      "line-width":["interpolate", ["linear"], ["zoom"], 9, 1.0, 14, 1.8],
+      "line-dasharray":[3, 2],
+      "line-opacity":0.9
+    }
+  });
+
   map.addLayer({
     id:"parcel-line",
     type:"line",
@@ -2383,6 +2435,11 @@ function addOverlayLayers() {
     const ea = easementInfoFromFeature(_featureAt(lng,lat,conservationEasementsData));
     // Municipal jurisdiction — which incorporated town the point falls in (else
     // unincorporated county). Determines who has land-use authority.
+    // FAA Part 77 airspace surface under the click, if any. Approach corridor
+    // wins over the broader horizontal/conical zones (strictest limit). Drives
+    // the airport height note with full coverage, independent of the tileset flag.
+    const _p77 = part77Data ? (["approach","horizontal","conical"].reduce((hit,s) =>
+      hit || _featureAt(lng,lat,{type:"FeatureCollection",features:part77Data.features.filter(f=>f.properties.surface===s)}), null)) : null;
     const _town = _featureAt(lng,lat,municipalBoundariesData);
     const jurisdiction = _town && _town.properties
       ? ("Town of " + String(_town.properties.NAMELSAD || _town.properties.NAME || "").replace(/\s+town$/i, "").trim())
@@ -2420,7 +2477,7 @@ function addOverlayLayers() {
       ...structureRows(pp),
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
-    ]) + airportNote(pp) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+    ]) + airportNote(pp, _p77) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
