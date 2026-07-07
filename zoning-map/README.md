@@ -19,8 +19,11 @@ heavy data is split out and the biggest layers are served from Mapbox.
   (point-in-polygon), `county-outline.json`, `east-end-flu.json` +
   `wrights-mesa-flu.json` (master-plan future land use — overlay +
   point-in-polygon for popups), `conservation-easements.json`
-  (protected/not-developable land). The module in `index.html` fetches these in
-  parallel via top-level `await` before the map initializes.
+  (protected/not-developable land), `municipal-boundaries.json` (the 6
+  incorporated town limits — point-in-polygon drives the popup "Jurisdiction"
+  row: Town of X, else Unincorporated San Miguel County). The module in
+  `index.html` fetches these in parallel via top-level `await` before the map
+  initializes.
 
 The parcel click popup resolves the clicked parcel from the tileset via
 `map.queryRenderedFeatures` against the transparent `parcel-hit` fill layer
@@ -102,20 +105,42 @@ It also joins the county assessor **`Improvements.geojson`** (by `ACCOUNTNO`) to
 tag each parcel's `structure_class` — `vacant` (no improvements) / `outbuilding`
 (only a barn/shed/etc., classified from `BLTASDESCRIPTION`) / `developed` (has a
 dwelling or commercial building; condos count here) — plus `imp_desc`/`imp_type`/
-`imp_sqft`/`imp_year`/`imp_bd`/`imp_ba`/`imp_count` for the popup. This is the
-authoritative "what's built here" source and drives the **Vacant/Developable
-Land** view (shows `vacant` + `outbuilding`) and colors (blue / teal / amber).
+`imp_sqft`/`imp_year`/`imp_bd`/`imp_ba`/`imp_count` for the popup, and
+`no_residential:"True"` when the parcel has **no identifiable residential
+structure** (no improvement with a residential `PROPERTYTYPE` — i.e. vacant,
+outbuilding-only, or commercial-only). Drives the **Vacant Lots** view
+(`parcel-vacant-fill`, minus federal + ROW/COMMON; includes subdivision lots).
 
-The Vacant Land filter selects `structure_class` in {vacant, outbuilding} and
-excludes `high_country` + `open_space` (plus any `PIN` containing
-`COMMON`/`OPEN SPACE`); the popup shows structure details + a bold
-`airport_restriction` notice. So **a re-upload MUST re-run this tagging** or
-those classifications disappear.
+**Conservation easements + developable-land estimate**: prep also spatially tags —
+- `conservation_easement:"True"` — centroid in `LandHeritageProgram.geojson` or
+  `OtherConservationEasements.geojson` (protected, not developable).
+- `dev_cat` / `min_lot_lo` / `min_lot_hi` — the parcel's future-land-use category
+  (East End `east-end-flu.json` / Wright's Mesa `wrights-mesa-flu.json`) or, outside
+  those plan areas, current `ZONING`, mapped to a min-lot-size **range** via
+  `FLU_MINLOT` / `ZONING_MINLOT` (rural default 35 ac). Densities are ranges, so
+  min-lot is `[lo, hi]`.
+- `dev_lots_lo` / `dev_lots_hi` = `max(1, floor(NETACRES / min_lot))` — the TOTAL
+  **maximum development** the land could support (hi uses the smaller lot). An
+  existing structure is irrelevant (the owner could sell for max development), so
+  current units are NOT subtracted.
+- `developable:"True"` — land NOT in `in_pud_or_subdivision`, federal (forest/BLM),
+  `conservation_easement`, `open_space`, `high_country` (unbuildable alpine), or a
+  ROW/COMMON PIN. No structure/lot gate — every non-excluded parcel qualifies.
+  Airport-restricted parcels stay in (a height limit caps scale, not permission).
+- Manual overrides: `FORCE_NOT_DEVELOPABLE` / `FORCE_DEVELOPABLE` PIN sets +
+  `genseeAtSocietyTurn()` — corrections the automated flags miss (e.g. parcels the
+  PUD detection missed, or a federal/easement false positive).
+
+The **Developable Land** view (`parcel-development-fill`) filters on `developable`
+and shades by `dev_lots_hi` (purple ramp: 1 / 2–4 / 5–19 / 20+); an amber dashed
+outline marks airport-height parcels; the popup shows the max-development range +
+density basis + min lot (`devPotentialRows`). So **a re-upload MUST re-run this
+tagging** or the classifications + estimate disappear.
 
 ```
 node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
-# then point upload-tilesets.js's DATA dir at it and run:
-node upload-tilesets.js
+# then upload the parcels source + publish smc_parcels (parcels only):
+node upload-tilesets.js   # (or a parcels-only uploader pointed at the /tmp file)
 ```
 
 The map reads the tilesets with the public `pk.` token embedded in `index.html`
