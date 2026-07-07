@@ -1,18 +1,18 @@
 {
-  "hash": "f959a98b537563601f3e45aa6ecbf6ebc39f8357",
-  "lede": "The big one this week is a joint work session Wednesday where the Planning Commission and Board of County Commissioners sit down together to dig into proposed Land Use Code amendments covering forestry, oil and gas, geothermal operations, and condominium plats — the kind of session where the shape of future decisions gets set, even without a final vote. Also Wednesday evening, the commissioners make the unusual trip out to Norwood to consider a Planning Commission appointment and hear results from the Placerville Fire Survey. The Ecology Commission is also meeting Wednesday to review the 2022 Climate Action Plan, with a focus on transportation, land use, and consumption.",
+  "hash": "d52e8705faeb6155409abdd623518e4a6418ed3e",
+  "lede": "The biggest thing on the civic calendar this week is a joint work session Wednesday where the Planning Commission and Board of County Commissioners dig into proposed Land Use Code amendments covering forestry, oil and gas, geothermal operations, and condominium plats — the kind of behind-the-scenes shaping that determines what gets built and how in San Miguel County. The same evening, commissioners make a rare trip to Norwood for a special meeting that includes appointing a Planning Commission alternate and hearing results of the Placerville Fire Survey. The week rounds out with the Ecology Commission reviewing the 2022 Climate Action Plan on transportation and consumption.",
   "notable": [
     {
+      "id": 3,
+      "stake": "Land Use Code rewrites on forestry, oil, gas, geothermal, and condos being drafted now."
+    },
+    {
       "id": 0,
-      "stake": "Commissioners may appoint a Planning Commission alternate; fire survey results presented."
+      "stake": "Planning Commission alternate appointment and Placerville Fire Survey results presented."
     },
     {
       "id": 1,
-      "stake": "Climate Action Plan review targets transportation and consumption — policy direction at stake."
-    },
-    {
-      "id": 3,
-      "stake": "Land Use Code amendments on forestry, oil, gas, geothermal, and condos are being shaped now."
+      "stake": "Climate Action Plan review shapes future policy on transportation and consumption."
     }
   ]
 }

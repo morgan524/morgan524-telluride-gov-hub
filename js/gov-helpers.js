@@ -480,13 +480,13 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -645,6 +645,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Town council discusses TEMP updates",
+    source: "Telluride Times",
+    date: "July 7, 2026",
+    firstSeen: "2026-07-07",
+    newsTopic: "land-use",
+    copy: "Telluride's Town Council held a work session on updates to the TEMP program, which requires buildings with high-energy exterior features like snowmelt and heated garages to offset emissions via renewables or mitigation fees. Building energy use accounts for 58% of Telluride's greenhouse gas emissions. No final decisions were made, but council discussed expanding the program's scope and potential safety exemptions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_968f5fc7-c53e-4287-bb67-08c676477458.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/d0/cd0125f3-c591-4242-8636-f9d0809bfe4b/6a4d7765a2c84.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Wildfires significantly less common in roadless areas",
     source: "Telluride Times",
@@ -2715,17 +2727,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-07/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-07T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Bardic Trails Online Poetry Night",
     link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-07-07/",
