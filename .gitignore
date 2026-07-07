@@ -55,3 +55,8 @@ scripts/review/site-review.json
 
 # Parity harness output (scripts/parity/capture.js) — never commit snapshots
 parity-snapshot/
+
+# Editorial layer — regenerated triage output
+scripts/editorial/triage-report.json
+scripts/editorial/draft-sample.json
+scripts/editorial/.just-published.json

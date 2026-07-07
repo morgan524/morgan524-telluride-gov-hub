@@ -616,6 +616,273 @@ async function handleModerationAction(request, env) {
   return page("Unknown action", "That action isn't recognized.");
 }
 
+// ════════════════════ EDITORIAL — meeting-article drafts ════════════════════
+// The agentic editorial layer (scripts/editorial/*) drafts an article when a
+// meeting summary scores newsworthy, writes it here, and emails info@ a
+// tokenized review link. The decision page (article-review.html) reads the
+// draft and records Approve/Deny/Edit — all token-gated, all server-side via
+// the service account, so article_drafts is locked to clients (firestore.rules).
+//   POST /article-create  {secret, draft}      — loop creates a draft + emails the link
+//   GET  /article-draft?id=&t=                 — decision page reads the draft (token)
+//   POST /article-decide  {id,t,action,...}    — decision page records the decision (token)
+const ART_COLL = "article_drafts";
+
+// Firestore REST uses typed values; firestoreDelete didn't need (de)serializers
+// but get/patch do. Recursive so nested triage/citations/flaggedClaims survive.
+function toFsValue(v) {
+  if (v === null || v === undefined) return { nullValue: null };
+  if (typeof v === "boolean") return { booleanValue: v };
+  if (typeof v === "number") return Number.isInteger(v) ? { integerValue: String(v) } : { doubleValue: v };
+  if (Array.isArray(v)) return { arrayValue: { values: v.map(toFsValue) } };
+  if (typeof v === "object") return { mapValue: { fields: toFsFields(v) } };
+  return { stringValue: String(v) };
+}
+function toFsFields(obj) {
+  const f = {};
+  for (const k of Object.keys(obj)) if (obj[k] !== undefined) f[k] = toFsValue(obj[k]);
+  return f;
+}
+function fromFsValue(v) {
+  if (!v || typeof v !== "object") return null;
+  if ("nullValue" in v) return null;
+  if ("booleanValue" in v) return v.booleanValue;
+  if ("integerValue" in v) return Number(v.integerValue);
+  if ("doubleValue" in v) return v.doubleValue;
+  if ("stringValue" in v) return v.stringValue;
+  if ("timestampValue" in v) return v.timestampValue;
+  if ("arrayValue" in v) return (v.arrayValue.values || []).map(fromFsValue);
+  if ("mapValue" in v) return fromFsFields(v.mapValue.fields || {});
+  return null;
+}
+function fromFsFields(fields) {
+  const o = {};
+  for (const k of Object.keys(fields || {})) o[k] = fromFsValue(fields[k]);
+  return o;
+}
+async function firestoreGet(env, docPath) {
+  const sa = getServiceAccount(env);
+  const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
+  const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
+    "/databases/(default)/documents/" + docPath;
+  const r = await fetch(url, { headers: { Authorization: "Bearer " + token } });
+  if (r.status === 404) return null;
+  if (!r.ok) throw new Error("firestore get " + r.status + " " + (await r.text().catch(() => "")).slice(0, 120));
+  const j = await r.json();
+  return fromFsFields(j.fields || {});
+}
+// PATCH with an updateMask covering exactly the supplied keys → also creates the
+// doc if absent (used for both create and partial update).
+async function firestorePatch(env, docPath, obj) {
+  const sa = getServiceAccount(env);
+  const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
+  const keys = Object.keys(obj).filter((k) => obj[k] !== undefined);
+  const mask = keys.map((k) => "updateMask.fieldPaths=" + encodeURIComponent(k)).join("&");
+  const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
+    "/databases/(default)/documents/" + docPath + "?" + mask;
+  const r = await fetch(url, {
+    method: "PATCH",
+    headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" },
+    body: JSON.stringify({ fields: toFsFields(obj) }),
+  });
+  if (!r.ok) throw new Error("firestore patch " + r.status + " " + (await r.text().catch(() => "")).slice(0, 160));
+  return true;
+}
+
+// Article review token: "<exp>.<sig>", sig = HMAC over "article|id|exp". Reuses
+// modSign so there's no new secret to manage; namespaced so it can't collide
+// with moderation links.
+async function artToken(env, id, exp) {
+  return exp + "." + (await modSign(env, "article|" + id + "|" + exp));
+}
+async function artVerify(env, id, t) {
+  const dot = String(t || "").indexOf(".");
+  if (dot < 0) return { ok: false };
+  const exp = String(t).slice(0, dot), sig = String(t).slice(dot + 1);
+  if (!/^\d+$/.test(exp)) return { ok: false };
+  if ((await modSign(env, "article|" + id + "|" + exp)) !== sig) return { ok: false };
+  if (Date.now() > Number(exp)) return { ok: false, expired: true };
+  return { ok: true };
+}
+
+function articleEmailHtml(doc, reviewUrl) {
+  const esc = (s) => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const tri = doc.triage || {};
+  const reasons = (tri.reasons || []).map((r) => `<li style="margin:4px 0">${esc(r)}</li>`).join("");
+  const body = doc.editedBodyHtml || doc.bodyHtml || "";   // trusted (pipeline-authored)
+  const cites = (doc.citations || []).map((c) => `<li style="margin:3px 0;font-size:12px;color:#7a8a85">[${esc(c.marker)}] ${esc(c.text)}</li>`).join("");
+  const flags = (doc.flaggedClaims || []).length
+    ? `<div style="background:#fdf1e6;border:1px solid #e8c7a8;border-radius:8px;padding:10px 12px;margin:12px 0"><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#a8401f">Flagged &mdash; not verifiable from sources</div><ul style="margin:6px 0 0;padding-left:18px">${doc.flaggedClaims.map((f) => `<li style="font-size:13px;color:#7a3e16">${esc(f)}</li>`).join("")}</ul></div>`
+    : "";
+  return `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:600px;margin:0 auto;color:#1a2e29">
+  <div style="background:#21443c;color:#fff;padding:18px 22px;border-radius:8px 8px 0 0">
+    <div style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#e7b24a">Editorial &middot; Draft for review</div>
+    <div style="font-size:19px;font-weight:700;margin-top:3px">${esc(doc.title || "Untitled draft")}</div></div>
+  <div style="border:1px solid #e6e9e6;border-top:0;border-radius:0 0 8px 8px;padding:20px 22px">
+    <div style="background:#efe9dc;border-radius:8px;padding:12px 14px;margin-bottom:16px">
+      <div style="font-size:13px;font-weight:700;color:#21443c">Why this was drafted &mdash; newsworthiness ${esc(tri.score)}/5</div>
+      <ul style="margin:6px 0 0;padding-left:18px;font-size:13px;color:#4a5e57">${reasons}</ul>
+    </div>
+    ${doc.dek ? `<p style="font-style:italic;color:#4a5e57;font-size:15px;margin:0 0 12px">${esc(doc.dek)}</p>` : ""}
+    <div style="font-size:15px;line-height:1.65;color:#1a2e29">${body}</div>
+    ${flags}
+    ${cites ? `<div style="margin-top:14px;border-top:1px solid #e6e9e6;padding-top:10px"><div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#7a8a85">Sources</div><ul style="margin:6px 0 0;padding-left:18px">${cites}</ul></div>` : ""}
+    <table role="presentation" cellpadding="0" cellspacing="0" style="margin:22px 0 6px"><tr>
+      <td><a href="${reviewUrl}" style="display:inline-block;background:#21443c;color:#fff;font-weight:700;font-size:15px;text-decoration:none;padding:13px 28px;border-radius:8px">Review &rarr; approve, edit, or deny</a></td>
+    </tr></table>
+    <p style="font-size:12px;color:#9aa7a1;margin-top:10px">Nothing publishes until you approve it. Link expires in 30 days.</p>
+  </div></div>`;
+}
+
+async function handleArticleCreate(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false, msg: "bad json" }, 400); }
+  const secret = env.EDITORIAL_SECRET || env.MAIL_RELAY_SECRET || "";
+  if (!secret || d.secret !== secret) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const draft = d.draft || {};
+  const id = String(draft.id || draft.slug || "").trim();
+  if (!id) return json({ ok: false, msg: "missing id/slug" }, 400);
+
+  // Idempotent: the loop calls this every run, so if a draft for this meeting
+  // already exists (ANY status — including denied), don't re-create or re-email.
+  try {
+    const existing = await firestoreGet(env, ART_COLL + "/" + id);
+    if (existing) return json({ ok: true, id, skipped: "exists", status: existing.status || "pending" });
+  } catch (e) { /* fall through and attempt create */ }
+
+  const now = new Date().toISOString();
+  const doc = Object.assign({}, draft, { status: "pending", createdAt: now });
+  delete doc.id;
+  try { await firestorePatch(env, ART_COLL + "/" + id, doc); }
+  catch (e) { return json({ ok: false, msg: "firestore: " + String((e && e.message) || e).slice(0, 120) }, 502); }
+
+  const exp = Date.now() + 30 * 24 * 3600 * 1000;
+  const t = await artToken(env, id, exp);
+  const reviewUrl = "https://livabletelluride.org/article-review.html?id=" + encodeURIComponent(id) + "&t=" + encodeURIComponent(t);
+
+  let emailed = false;
+  if (env.MAIL_RELAY_URL) {
+    try {
+      await fetch(env.MAIL_RELAY_URL, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ kind: "editorial", to: MOD_RECIPIENT, subject: "📝 Draft for review: " + (doc.title || id), html: articleEmailHtml(doc, reviewUrl), secret: env.MAIL_RELAY_SECRET || "" }),
+      });
+      emailed = true;
+    } catch (e) { /* best-effort */ }
+  }
+  return json({ ok: true, id, reviewUrl, emailed });
+}
+
+async function handleArticleDraftRead(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  const url = new URL(request.url);
+  const id = url.searchParams.get("id") || "", t = url.searchParams.get("t") || "";
+  if (!id || !t) return json({ ok: false, msg: "Missing link parameters." }, 400);
+  const v = await artVerify(env, id, t);
+  if (!v.ok) return json({ ok: false, msg: v.expired ? "This review link has expired." : "This link couldn't be verified." }, 403);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "Draft storage isn't configured." }, 500);
+  let doc;
+  try { doc = await firestoreGet(env, ART_COLL + "/" + id); }
+  catch (e) { return json({ ok: false, msg: "Could not load the draft." }, 502); }
+  if (!doc) return json({ ok: false, msg: "This draft no longer exists." }, 404);
+  return json({ ok: true, draft: doc, status: doc.status || "pending" });
+}
+
+async function handleArticleDecide(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  const id = String(d.id || ""), t = String(d.t || ""), action = String(d.action || "");
+  if (!id || !t) return json({ ok: false, msg: "Missing link parameters." }, 400);
+  const v = await artVerify(env, id, t);
+  if (!v.ok) return json({ ok: false, msg: v.expired ? "This review link has expired." : "This link couldn't be verified." }, 403);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "Draft storage isn't configured." }, 500);
+
+  const now = new Date().toISOString();
+  const patch = {};
+  if (d.editedTitle !== undefined) patch.editedTitle = String(d.editedTitle);
+  if (d.editedDek !== undefined) patch.editedDek = String(d.editedDek);
+  if (d.editedBodyHtml !== undefined) patch.editedBodyHtml = String(d.editedBodyHtml);
+  if (action === "approve") { patch.status = "approved"; patch.reviewedAt = now; }
+  else if (action === "deny") { patch.status = "denied"; patch.denyReason = String(d.denyReason || ""); patch.reviewedAt = now; }
+  else if (action === "edit") { patch.status = "pending"; patch.editedAt = now; }
+  else return json({ ok: false, msg: "Unknown action." }, 400);
+
+  try { await firestorePatch(env, ART_COLL + "/" + id, patch); }
+  catch (e) { return json({ ok: false, msg: "Could not save: " + String((e && e.message) || e).slice(0, 100) }, 502); }
+  return json({ ok: true, status: patch.status });
+}
+
+// Firestore structured query (status == value). Used by the publish job to
+// pull approved drafts. Returns docs with `.id` attached.
+async function firestoreQuery(env, collection, field, value) {
+  const sa = getServiceAccount(env);
+  const token = await googleAccessToken(env, "https://www.googleapis.com/auth/datastore");
+  const url = "https://firestore.googleapis.com/v1/projects/" + (sa.project_id || MOD_PROJECT) +
+    "/databases/(default)/documents:runQuery";
+  const body = { structuredQuery: {
+    from: [{ collectionId: collection }],
+    where: { fieldFilter: { field: { fieldPath: field }, op: "EQUAL", value: toFsValue(value) } },
+    limit: 50,
+  } };
+  const r = await fetch(url, { method: "POST", headers: { Authorization: "Bearer " + token, "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) throw new Error("firestore query " + r.status + " " + (await r.text().catch(() => "")).slice(0, 160));
+  const rows = await r.json();
+  const out = [];
+  for (const row of rows || []) {
+    if (row.document) { const doc = fromFsFields(row.document.fields || {}); doc.id = row.document.name.split("/").pop(); out.push(doc); }
+  }
+  return out;
+}
+
+const editSecretOk = (env, given) => {
+  const secret = env.EDITORIAL_SECRET || env.MAIL_RELAY_SECRET || "";
+  return secret && given === secret;
+};
+
+// GET /article-exists?id=&secret=  — cheap dedup check for the loop (so it
+// skips scoring/drafting a meeting already drafted). → { ok, exists, status }
+async function handleArticleExists(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const id = url.searchParams.get("id") || "";
+  if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { const doc = await firestoreGet(env, ART_COLL + "/" + id);
+    return json({ ok: true, exists: !!doc, status: doc ? (doc.status || "pending") : null }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 140) }, 502); }
+}
+
+// GET /article-pending-publish?secret=  — approved-but-not-yet-published drafts,
+// for the pull-model publish job. → { ok, drafts: [...] }
+async function handleArticlePendingPublish(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  try { return json({ ok: true, drafts: await firestoreQuery(env, ART_COLL, "status", "approved") }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 160) }, 502); }
+}
+
+// POST /article-published  {secret, id}  — mark a draft published after the
+// publish job has generated + committed its page.
+async function handleArticlePublished(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false }, 400); }
+  if (!editSecretOk(env, d.secret || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  const id = String(d.id || ""); if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { await firestorePatch(env, ART_COLL + "/" + id, { status: "published", publishedAt: new Date().toISOString() }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 140) }, 502); }
+  return json({ ok: true });
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -636,6 +903,24 @@ export default {
     }
     if (url.pathname === "/moderation-action") {
       return handleModerationAction(request, env);
+    }
+    if (url.pathname === "/article-create") {
+      return handleArticleCreate(request, env);
+    }
+    if (url.pathname === "/article-draft") {
+      return handleArticleDraftRead(request, env);
+    }
+    if (url.pathname === "/article-decide") {
+      return handleArticleDecide(request, env);
+    }
+    if (url.pathname === "/article-exists") {
+      return handleArticleExists(request, env);
+    }
+    if (url.pathname === "/article-pending-publish") {
+      return handleArticlePendingPublish(request, env);
+    }
+    if (url.pathname === "/article-published") {
+      return handleArticlePublished(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });
