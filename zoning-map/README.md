@@ -42,10 +42,19 @@ the zoning polygons:
 - `airport_restriction:"True"` — parcel *overlaps* a zoning polygon whose
   `NOTES_USE` says "MAY BE SUBJECT TO AIRPORT HEIGHT RESTRICTION"
 
-The Vacant Lots / Buildable filters exclude `high_country` + `open_space` (plus
-any `PIN` containing `COMMON`/`OPEN SPACE`); the parcel popup shows a bold notice
-for `airport_restriction`. So **a re-upload MUST re-run this tagging** or those
-classifications will disappear.
+It also joins the county assessor **`Improvements.geojson`** (by `ACCOUNTNO`) to
+tag each parcel's `structure_class` — `vacant` (no improvements) / `outbuilding`
+(only a barn/shed/etc., classified from `BLTASDESCRIPTION`) / `developed` (has a
+dwelling or commercial building; condos count here) — plus `imp_desc`/`imp_type`/
+`imp_sqft`/`imp_year`/`imp_bd`/`imp_ba`/`imp_count` for the popup. This is the
+authoritative "what's built here" source and drives the **Vacant/Developable
+Land** view (shows `vacant` + `outbuilding`) and colors (blue / teal / amber).
+
+The Vacant Land filter selects `structure_class` in {vacant, outbuilding} and
+excludes `high_country` + `open_space` (plus any `PIN` containing
+`COMMON`/`OPEN SPACE`); the popup shows structure details + a bold
+`airport_restriction` notice. So **a re-upload MUST re-run this tagging** or
+those classifications disappear.
 
 ```
 node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
