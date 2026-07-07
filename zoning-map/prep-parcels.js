@@ -129,6 +129,7 @@ const FORCE_NOT_DEVELOPABLE = new Set([
   '456530420167', '456519400011',  // in the Aldasoro PUD (missed by in_pud_or_subdivision)
   '477905400009',
   '456533200030',  // Town of Telluride wastewater treatment plant — public infrastructure
+  '456532200006',  // per request (the other four in that request are airport land, already excluded)
 ]);
 const FORCE_DEVELOPABLE = new Set([
   '477920100505', '477917300502', '477920200503', '477920200504', '477917300013',

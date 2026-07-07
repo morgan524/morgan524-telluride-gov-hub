@@ -39,7 +39,10 @@ async function uploadSource(L) {
 }
 
 async function createOrUpdateTileset(L) {
-  const recipe = { version: 1, layers: { [L.layer]: { source: `mapbox://tileset-source/${USER}/${L.source}`, minzoom: L.minzoom, maxzoom: L.maxzoom } } };
+  // layer_size 2500 (the MTS max) raises the per-tile byte budget so features
+  // aren't dropped at mid zooms — with ~10.7k detailed parcels the default
+  // 500 KB budget dropped fills from the dense Vacant Lots / parcel views.
+  const recipe = { version: 1, layers: { [L.layer]: { source: `mapbox://tileset-source/${USER}/${L.source}`, minzoom: L.minzoom, maxzoom: L.maxzoom, tiles: { layer_size: 2500 } } } };
   const id = `${USER}.${L.tileset}`;
   let r = await fetch(`${API}/${id}?access_token=${TOK}`, {
     method: 'POST', headers: { 'content-type': 'application/json' },
