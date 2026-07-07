@@ -83,6 +83,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     </div>
     <div class="row">
       <button class="secondary" id="viewEastEnd">East End Master Plan</button>
+      <button class="secondary" id="viewWrightsMesa">Wright's Mesa Plan</button>
     </div>
 
     <div id="vacantToggles" style="display:none; margin-top:12px;">
@@ -606,6 +607,15 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <p class="small">The county's 2024 East End Master Plan <b>future land-use</b> map (Map 11), overlaid on the parcels. These are advisory recommendations for future development density &mdash; <b>not current zoning</b>. Click an area or lot to see its category and recommended density.</p>
   </div>
 
+  <div class="panel" id="wrightsMesaLegend" style="display:none;">
+    <label>Wright's Mesa Plan &mdash; Future Land Use</label>
+    <div class="legend-item"><span style="background:#e5733a"></span><button type="button">Town Residential</button><em>6&ndash;12/ac</em></div>
+    <div class="legend-item"><span style="background:#8e6aa8"></span><button type="button">Light Industrial</button><em></em></div>
+    <div class="legend-item"><span style="background:#b5c98f"></span><button type="button">Rural / Agricultural</button><em>1/35 ac</em></div>
+    <div class="legend-item"><span style="background:#ad9480"></span><button type="button">Public</button><em></em></div>
+    <p class="small">The county's Wright's Mesa Master Plan <b>future land-use</b> categories, overlaid on the parcels around Norwood. These are advisory recommendations for future development density &mdash; <b>not current zoning</b>. Click an area or lot to see its category and recommended density.</p>
+  </div>
+
 
 
   <div class="panel">
@@ -697,9 +707,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -722,6 +732,7 @@ try {
     fetch(new URL('./data/society-turn-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/parcel-c.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('parcel-c.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/east-end-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/wrights-mesa-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wrights-mesa-flu.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -744,6 +755,18 @@ const EAST_END_FLU = {
   "Public/Institutional":        { code: "P/I",   color: "#ad9480", density: "Public / institutional (non-residential)" },
   "Conservation and Large Lots": { code: "F/L",   color: "#c9e0c7", density: "1 unit per 35+ acres" },
   "Parks and Open Space":        { code: "P/OS",  color: "#2bdbba", density: "Parks / open space (non-residential)" }
+};
+
+// Wright's Mesa Master Plan Future Land Use categories — keyed by the NAME field
+// in wrights-mesa-flu.json (the county's published GIS layer). Separate plan area
+// (Norwood / Wright's Mesa, western county) with its own scheme. Densities are
+// from the Wright's Mesa Master Plan (sanmiguelcountyco.gov). Advisory future
+// land-use recommendations, not current zoning.
+const WRIGHTS_MESA_FLU = {
+  "Wrights Mesa Town Residential":   { code: "TR",  color: "#e5733a", density: "6–12 units per acre (up to 15 in rare cases)" },
+  "Wrights Mesa Light Industrial":   { code: "LI",  color: "#8e6aa8", density: "Light industrial (non-residential)" },
+  "Wrights Mesa Rural/Agricultural": { code: "R/A", color: "#b5c98f", density: "1 unit per 35 acres (up to 2 via Open Land Protection)" },
+  "Public":                          { code: "P",   color: "#ad9480", density: "Public / institutional (non-residential)" }
 };
 
 /*__DATA_REMOVED__ aldasoroPudData*/
@@ -849,13 +872,25 @@ function fluInfoFromFeature(f) {
   if (!f || !f.properties) return null;
   const info = EAST_END_FLU[f.properties.FLUDesc];
   if (!info) return null;
-  return { desc: f.properties.FLUDesc, code: info.code, density: info.density };
+  return { desc: f.properties.FLUDesc, code: info.code, density: info.density,
+    planShort: "East End Plan",
+    planNote: "East End Master Plan (2024) future land-use recommendation — advisory guidance, not current zoning." };
 }
 
-// Advisory caveat appended whenever a popup shows East End future land-use data.
-function eastEndNote(fi) {
+// Same, for a Wright's Mesa Master Plan polygon (keyed by NAME).
+function wmInfoFromFeature(f) {
+  if (!f || !f.properties) return null;
+  const info = WRIGHTS_MESA_FLU[f.properties.NAME];
+  if (!info) return null;
+  return { desc: f.properties.NAME, code: info.code, density: info.density,
+    planShort: "Wright's Mesa Plan",
+    planNote: "Wright's Mesa Master Plan future land-use recommendation — advisory guidance, not current zoning." };
+}
+
+// Advisory caveat appended whenever a popup shows master-plan future land-use data.
+function planNote(fi) {
   return fi
-    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">East End Master Plan (2024) future land-use recommendation &mdash; advisory guidance, not current zoning.</div>'
+    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">' + fi.planNote + '</div>'
     : "";
 }
 
@@ -878,7 +913,7 @@ function firstSymbolLayerId() {
 let currentMapView = "zoning";
 
 function setButtonState(activeId) {
-  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable", "viewEastEnd"].forEach(id => {
+  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable", "viewEastEnd", "viewWrightsMesa"].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     if (id === activeId) {
@@ -920,7 +955,8 @@ const mapNotes = {
   built: "<strong>Developable Land:</strong> From county assessor records. Blue = no structure on record; teal = only an outbuilding (barn/shed), no home; amber = under an airport (FAA) height limit. Click a lot for details. Use the checkboxes at left to remove PUD, subdivision, or protected (open-space) land.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
-  eastend: "<strong>East End Master Plan:</strong> The county's 2024 Future Land Use map (Map 11) overlaid on the parcels, colored by recommended future land-use category. These are <strong>advisory</strong> recommendations for future development density &mdash; not current zoning. Click an area or lot to see its category and recommended density."
+  eastend: "<strong>East End Master Plan:</strong> The county's 2024 Future Land Use map (Map 11) overlaid on the parcels, colored by recommended future land-use category. These are <strong>advisory</strong> recommendations for future development density &mdash; not current zoning. Click an area or lot to see its category and recommended density.",
+  wrightsmesa: "<strong>Wright's Mesa Plan:</strong> The county's Wright's Mesa Master Plan Future Land Use, overlaid on the parcels around Norwood. These are <strong>advisory</strong> recommendations for future development density &mdash; not current zoning. Click an area or lot to see its category and recommended density."
 };
 
 function setPanelDisplay(id, display) {
@@ -944,6 +980,7 @@ function setLegendView(view) {
   setPanelDisplay("pudsLegend", view === "puds" ? "block" : "none");
   setPanelDisplay("clearLegend", view === "clear" ? "block" : "none");
   setPanelDisplay("eastEndLegend", view === "eastend" ? "block" : "none");
+  setPanelDisplay("wrightsMesaLegend", view === "wrightsmesa" ? "block" : "none");
   setPanelDisplay("vacantToggles", view === "built" ? "block" : "none");
 }
 
@@ -953,6 +990,7 @@ const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 's
 const builtLayerIds = ['parcel-development-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
+const wrightsMesaLayerIds = ['wrights-mesa-flu-fill', 'wrights-mesa-flu-outline'];
 
 function setLayersVisible(ids, visible) {
   ids.forEach(id => showLayer(id, visible));
@@ -964,6 +1002,7 @@ function hideThematicLayers() {
   setLayersVisible(subdivisionLayerIds, false);
   setLayersVisible(builtLayerIds, false);
   setLayersVisible(eastEndLayerIds, false);
+  setLayersVisible(wrightsMesaLayerIds, false);
   if (typeof buildableLayerIds !== 'undefined') setLayersVisible(buildableLayerIds, false);
 }
 
@@ -1105,6 +1144,22 @@ function setEastEndView() {
   setFilterBlocks(false, false);
 
   setLayersVisible(eastEndLayerIds, true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);
+  setColoredSectionTransparency();
+}
+
+
+function setWrightsMesaView() {
+  setMapNote(mapNotes.wrightsmesa);
+  currentMapView = "wrightsmesa";
+  setButtonState("viewWrightsMesa");
+  hideThematicLayers();
+  setLegendView("wrightsmesa");
+  setFilterBlocks(false, false);
+
+  setLayersVisible(wrightsMesaLayerIds, true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);
   showLayer("roads-line", false);
@@ -1712,6 +1767,28 @@ function addOverlayLayers() {
     paint:{ "line-color":"#5f5f5f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.4, 16, 1.1], "line-opacity":0.6 }
   });
 
+  // Wright's Mesa Master Plan Future Land Use overlay — the county GIS layer
+  // (wrights-mesa-flu.json, keyed by NAME), colored per WRIGHTS_MESA_FLU. Same
+  // treatment as the East End overlay. Hidden by default.
+  const _wmColorMatch = ["match", ["get", "NAME"]];
+  Object.entries(WRIGHTS_MESA_FLU).forEach(([name, info]) => { _wmColorMatch.push(name, info.color); });
+  _wmColorMatch.push("#cccccc");
+  map.addSource("wrights-mesa-flu", { type:"geojson", data:wrightsMesaFluData, generateId:false });
+  map.addLayer({
+    id:"wrights-mesa-flu-fill",
+    type:"fill",
+    source:"wrights-mesa-flu",
+    layout:{ visibility:"none" },
+    paint:{ "fill-color":_wmColorMatch, "fill-opacity":0.55 }
+  });
+  map.addLayer({
+    id:"wrights-mesa-flu-outline",
+    type:"line",
+    source:"wrights-mesa-flu",
+    layout:{ visibility:"none" },
+    paint:{ "line-color":"#5f5f5f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.4, 16, 1.1], "line-opacity":0.6 }
+  });
+
 
   map.addLayer({
     id:"butcher-creek-pud-fill",
@@ -2178,16 +2255,19 @@ function addOverlayLayers() {
       parcel=hits && hits.length ? hits[0] : null;
     }
     const zoning=_featureAt(lng,lat,zoningData);
-    // East End Master Plan future land use under the click (null outside the plan area).
-    const fi = fluInfoFromFeature(_featureAt(lng,lat,eastEndFluData));
+    // Master-plan future land use under the click — East End or Wright's Mesa
+    // (null outside both plan areas; they don't overlap).
+    const fi = fluInfoFromFeature(_featureAt(lng,lat,eastEndFluData))
+            || wmInfoFromFeature(_featureAt(lng,lat,wrightsMesaFluData));
+    const fiCode = fi && fi.code ? " (" + fi.code + ")" : "";
     if(!parcel && !zoning){
-      // Nothing to select but we're over an East End future land-use area
-      // (e.g. zoomed out past the parcel layer) — show the FLU category anyway.
+      // Nothing to select but we're over a future land-use area (e.g. zoomed out
+      // past the parcel layer) — show the plan category anyway.
       if(fi){
-        const fhtml = popupHtml(fi.desc + " (" + fi.code + ")", [
+        const fhtml = popupHtml(fi.desc + fiCode, [
           ["Future land use", fi.desc],
           ["Recommended density", fi.density]
-        ]) + eastEndNote(fi);
+        ]) + planNote(fi);
         showSelection(fhtml.replace("<h3","<h2").replace("</h3>","</h2>"));
         showPopup(lngLat, fhtml);
       }
@@ -2209,8 +2289,8 @@ function addOverlayLayers() {
       ["Subdivision/area field", subdivision],
       ["Parcel/tract", parcelTract],
       ...structureRows(pp),
-      ...(fi ? [["East End Plan future land use", fi.desc + " (" + fi.code + ")"], ["Recommended density", fi.density]] : [])
-    ]) + airportNote(pp) + eastEndNote(fi);
+      ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Recommended density", fi.density]] : [])
+    ]) + airportNote(pp) + planNote(fi);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
@@ -2275,7 +2355,7 @@ function addOverlayLayers() {
     showPopup(e.lngLat, html);
   });
 
-  ["parcel-c-fill","east-end-flu-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
+  ["parcel-c-fill","east-end-flu-fill","wrights-mesa-flu-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
     map.on("mouseenter", layer, () => map.getCanvas().style.cursor = "pointer");
     map.on("mouseleave", layer, () => map.getCanvas().style.cursor = "");
   });
@@ -2305,6 +2385,7 @@ document.getElementById("viewBuiltLand").onclick = setBuiltLandView;
 document.getElementById("viewSubdivisions").onclick = setSubdivisionView;
 document.getElementById("viewClear").onclick = setClearView;
 document.getElementById("viewEastEnd").onclick = setEastEndView;
+document.getElementById("viewWrightsMesa").onclick = setWrightsMesaView;
 document.getElementById("subdivisionFilter").onchange = applySubdivisionFilter;
 ["tgPud", "tgSub", "tgProtected"].forEach(id => {
   const el = document.getElementById(id);
