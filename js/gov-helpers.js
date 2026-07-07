@@ -1867,33 +1867,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
   },
   {
-    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "June 18, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
-    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
-    source: "Town of Telluride",
-    date: "June 16, 2026",
-    newsTopic: "land-use",
-    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
-  },
-  {
-    title: "Town of Telluride Releases Findings of Independent Investigation",
-    source: "Town of Telluride",
-    date: "June 10, 2026",
-    newsTopic: "recreation",
-    copy: "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "June 27, 2026",
@@ -1910,42 +1883,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1402",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14335"
-  },
-  {
-    title: "Commissioners Finalize Deed Restriction Reversion Process",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
-  },
-  {
-    title: "Mill Creek Park Site Closed for Revegetation",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
-  },
-  {
-    title: "Beaver Park Gravel Pit Closure",
-    source: "San Miguel County",
-    date: "June 17, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
-  },
-  {
-    title: "County Enters Stage 1 Fire Restrictions",
-    source: "San Miguel County",
-    date: "June 17, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
     title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
