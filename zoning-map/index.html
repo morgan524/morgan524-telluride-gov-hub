@@ -601,6 +601,12 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   </div>
 
   
+  <div class="panel" id="pudsLegend" style="display:none;">
+    <label>PUD legend</label>
+    <div class="legend-item"><span style="background:#ffd84d;border:1px solid #b89a2e"></span><button type="button">PUD</button><em></em></div>
+    <div class="legend-item"><span style="background:#c026d3;border:1px dashed #86198f"></span><button type="button">Under litigation</button><em></em></div>
+  </div>
+
   <div class="panel" id="subdivisionLegend" style="display:none;">
     <label>Subdivision legend</label>
     <div class="legend-item"><span style="background:#6fb6d6;border:2px solid #0b5e8e"></span><button type="button">Subdivision area, PUDs excluded</button><em></em></div>
@@ -865,6 +871,7 @@ function setLegendView(view) {
   setPanelDisplay("zoningLegendPanel", view === "zoning" ? "block" : "none");
   setPanelDisplay("builtLegend", view === "built" ? "block" : "none");
   setPanelDisplay("subdivisionLegend", view === "subdivisions" ? "block" : "none");
+  setPanelDisplay("pudsLegend", view === "puds" ? "block" : "none");
   setPanelDisplay("clearLegend", view === "clear" ? "block" : "none");
   setPanelDisplay("vacantToggles", view === "built" ? "block" : "none");
 }
