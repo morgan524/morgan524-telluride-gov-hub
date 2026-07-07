@@ -102,10 +102,13 @@ It also joins the county assessor **`Improvements.geojson`** (by `ACCOUNTNO`) to
 tag each parcel's `structure_class` — `vacant` (no improvements) / `outbuilding`
 (only a barn/shed/etc., classified from `BLTASDESCRIPTION`) / `developed` (has a
 dwelling or commercial building; condos count here) — plus `imp_desc`/`imp_type`/
-`imp_sqft`/`imp_year`/`imp_bd`/`imp_ba`/`imp_count` for the popup.
+`imp_sqft`/`imp_year`/`imp_bd`/`imp_ba`/`imp_count` for the popup, and
+`no_residential:"True"` when the parcel has **no identifiable residential
+structure** (no improvement with a residential `PROPERTYTYPE` — i.e. vacant,
+outbuilding-only, or commercial-only). Drives the **Vacant Lots** view
+(`parcel-vacant-fill`, minus federal + ROW/COMMON; includes subdivision lots).
 
-**Conservation easements + developable-land estimate** (added for the Developable
-Land view): prep also spatially tags —
+**Conservation easements + developable-land estimate**: prep also spatially tags —
 - `conservation_easement:"True"` — centroid in `LandHeritageProgram.geojson` or
   `OtherConservationEasements.geojson` (protected, not developable).
 - `dev_cat` / `min_lot_lo` / `min_lot_hi` — the parcel's future-land-use category
@@ -113,18 +116,23 @@ Land view): prep also spatially tags —
   those plan areas, current `ZONING`, mapped to a min-lot-size **range** via
   `FLU_MINLOT` / `ZONING_MINLOT` (rural default 35 ac). Densities are ranges, so
   min-lot is `[lo, hi]`.
-- `cur_units` (0 vacant/outbuilding, 1 developed), `dev_lots_lo` / `dev_lots_hi`
-  = `max(0, floor(NETACRES / min_lot) − cur_units)` (hi uses the smaller lot).
-- `developable:"True"` — not `in_pud_or_subdivision`, not federal / high country /
-  open space / conservation easement, not ROW/COMMON, and `dev_lots_hi ≥ 1`
-  (i.e. room to add a lot, **regardless of an existing house**). Airport-restricted
-  parcels stay in (a height limit caps scale, not permission).
+- `dev_lots_lo` / `dev_lots_hi` = `max(1, floor(NETACRES / min_lot))` — the TOTAL
+  **maximum development** the land could support (hi uses the smaller lot). An
+  existing structure is irrelevant (the owner could sell for max development), so
+  current units are NOT subtracted.
+- `developable:"True"` — land NOT in `in_pud_or_subdivision`, federal (forest/BLM),
+  `conservation_easement`, `open_space`, `high_country` (unbuildable alpine), or a
+  ROW/COMMON PIN. No structure/lot gate — every non-excluded parcel qualifies.
+  Airport-restricted parcels stay in (a height limit caps scale, not permission).
+- Manual overrides: `FORCE_NOT_DEVELOPABLE` / `FORCE_DEVELOPABLE` PIN sets +
+  `genseeAtSocietyTurn()` — corrections the automated flags miss (e.g. parcels the
+  PUD detection missed, or a federal/easement false positive).
 
-The **Developable Land** view (`parcel-development-fill`) filters on
-`developable` and shades by `dev_lots_hi` (purple ramp: 1 / 2–4 / 5–19 / 20+); an
-amber dashed outline marks airport-height parcels; the popup shows the estimated
-new-lot range + density basis + min lot (`devPotentialRows`). So **a re-upload
-MUST re-run this tagging** or the classifications + estimate disappear.
+The **Developable Land** view (`parcel-development-fill`) filters on `developable`
+and shades by `dev_lots_hi` (purple ramp: 1 / 2–4 / 5–19 / 20+); an amber dashed
+outline marks airport-height parcels; the popup shows the max-development range +
+density basis + min lot (`devPotentialRows`). So **a re-upload MUST re-run this
+tagging** or the classifications + estimate disappear.
 
 ```
 node prep-parcels.js /tmp/parcel-upload   # writes /tmp/parcel-upload/parcel.json
