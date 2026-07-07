@@ -843,12 +843,74 @@ function popupHtml(title, fields) {
   return `<h3>${value(title)}</h3>` + fieldRows(fields);
 }
 
+// --- Part 77 height math (Telluride Regional Airport / KTEX) ---
+// The imaginary surfaces are fixed MSL elevations: the horizontal surface is a
+// flat 9,220 ft lid within 10,000 ft of the runway; beyond that the conical
+// surface rises 1 ft per 20 ft out to 14,000 ft (9,420 ft). Approach corridors
+// slope down toward the runway (stricter, location-specific — no single number).
+const TEX_RW9 = [-107.9204, 37.9563], TEX_RW27 = [-107.8969, 37.9517];
+const TEX_FIELD_ELEV = 9070, TEX_HORIZ_MSL = 9220;   // field + 150 ft
+const FT_PER_M = 3.280839895;
+
+// Horizontal distance (ft) from a lng/lat to the runway centerline segment.
+function texRunwayDistFt(lng, lat) {
+  const lat0 = 37.954 * Math.PI / 180;
+  const mLon = 111320 * Math.cos(lat0), mLat = 111132;
+  const px = lng * mLon, py = lat * mLat;
+  const ax = TEX_RW9[0] * mLon, ay = TEX_RW9[1] * mLat;
+  const bx = TEX_RW27[0] * mLon, by = TEX_RW27[1] * mLat;
+  const dx = bx - ax, dy = by - ay, L2 = dx * dx + dy * dy;
+  let t = L2 ? ((px - ax) * dx + (py - ay) * dy) / L2 : 0;
+  t = Math.max(0, Math.min(1, t));
+  const cx = ax + t * dx, cy = ay + t * dy;
+  return Math.hypot(px - cx, py - cy) / 0.3048;   // metres -> feet
+}
+
+// Controlling Part 77 surface elevation (ft MSL) at a point, or a sloped/None
+// result. surfaceHint comes from the point-in-polygon (approach wins).
+function texCeilingMSL(lng, lat, surfaceHint) {
+  if (surfaceHint === "approach") return { surface: "approach", sloped: true, ceiling: null };
+  const d = texRunwayDistFt(lng, lat);
+  if (d <= 10000) return { surface: "horizontal", sloped: false, ceiling: TEX_HORIZ_MSL };
+  if (d <= 14000) return { surface: "conical", sloped: false, ceiling: Math.round(TEX_HORIZ_MSL + (d - 10000) / 20) };
+  return { surface: surfaceHint || "horizontal", sloped: false, ceiling: TEX_HORIZ_MSL };
+}
+
+// HTML rows giving the computed max building height at the clicked point, from
+// the controlling Part 77 surface minus the terrain elevation (groundFt, or null
+// if the DEM hasn't resolved). Advisory — the binding limit is whichever is lower,
+// this or the local zoning height cap.
+function airportHeightRows(lng, lat, surfaceHint, groundFt) {
+  const ci = texCeilingMSL(lng, lat, surfaceHint);
+  const g = (typeof groundFt === "number" && isFinite(groundFt)) ? Math.round(groundFt) : null;
+  const box = (inner) => '<div class="field" style="margin-top:6px;font-size:11px;color:#444;line-height:1.5;background:#faf3ec;border:1px solid #e8d6c4;border-radius:6px;padding:6px 8px">' + inner + '</div>';
+  if (ci.sloped) {
+    return box((g != null ? '<b>Ground here:</b> ~' + g.toLocaleString() + ' ft MSL<br>' : '')
+      + 'Under a runway <b>approach corridor</b> the height limit <b>slopes down toward the runway</b> — stricter than the 9,220 ft lid and site-specific. A structure here needs an FAA <b>Form 7460-1</b> review.');
+  }
+  if (g == null) return "";
+  const maxH = ci.ceiling - g;
+  const surfName = ci.surface === "conical" ? "Conical surface" : "Horizontal surface";
+  let line;
+  if (maxH <= 0) {
+    line = '<b style="color:#a11">Max structure height: none</b> — the ground here (~' + g.toLocaleString()
+      + ' ft) is already at/above the Part 77 surface (' + ci.ceiling.toLocaleString()
+      + ' ft MSL). New structures would penetrate protected airspace and require an FAA <b>Form 7460-1</b> review.';
+  } else {
+    line = '<b>Max structure height (Part 77): ~' + Math.round(maxH).toLocaleString() + ' ft</b> above grade';
+  }
+  return box('<b>Ground here:</b> ~' + g.toLocaleString() + ' ft MSL &nbsp;·&nbsp; <b>' + surfName + ':</b> '
+    + ci.ceiling.toLocaleString() + ' ft MSL<br>' + line
+    + '<br><span style="color:#777">The binding cap is whichever is lower — this or the county zoning height limit (usually ~30–35 ft). Terrain from the USGS DEM; confirm with a survey.</span>');
+}
+
 // FAA airport-restriction notice for a parcel under the Telluride Regional
 // Airport FAR Part 77 airspace surfaces (tagged airport_restriction:"True" in the
 // tileset). Numbers are from the 2016 TEX Master Plan Part 77 drawing (airport
 // elev 9,070 ft MSL; horizontal surface 9,220; conical up to 9,420). See
 // prep-parcels.js for the flag and SMC Land Use Code §5-418 for the regulation.
-function airportNote(props, p77) {
+// lng/lat + groundFt (terrain elevation, feet) drive the computed max-height box.
+function airportNote(props, p77, lng, lat, groundFt) {
   // Fire when the click falls inside a generated Part 77 surface (full-coverage,
   // regardless of the county overlay) OR the parcel carries the tileset flag.
   const surf = (p77 && p77.properties && p77.properties.surface)
@@ -862,7 +924,8 @@ function airportNote(props, p77) {
     ? 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface'
     : 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths';
   return '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ Airport height restriction (Telluride Regional Airport)</div>'
-    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>';
+    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>'
+    + ((surf !== "flag" && typeof lng === "number") ? airportHeightRows(lng, lat, surf, groundFt) : "");
 }
 
 // Development status + what's built on the parcel, from the county assessor
@@ -1567,6 +1630,15 @@ function findAddress() {
 
 function addOverlayLayers() {
   const labelLayerId = firstSymbolLayerId();
+
+  // Terrain DEM for the Part 77 max-height math. exaggeration 0 keeps the map
+  // flat (2D) while still letting queryTerrainElevation return true elevations.
+  try {
+    if (!map.getSource("mapbox-dem")) {
+      map.addSource("mapbox-dem", { type:"raster-dem", url:"mapbox://mapbox.mapbox-terrain-dem-v1", tileSize:512, maxzoom:14 });
+      map.setTerrain({ source:"mapbox-dem", exaggeration:0 });
+    }
+  } catch (e) { /* elevation readout just won't populate */ }
 
   map.addSource("zoning", { type:"geojson", data:zoningData, generateId:false });
   map.addSource("last-dollar-pud", { type:"geojson", data:lastDollarPudData, generateId:false });
@@ -2406,6 +2478,13 @@ function addOverlayLayers() {
     // the airport height note with full coverage, independent of the tileset flag.
     const _p77 = part77Data ? (["approach","horizontal","conical"].reduce((hit,s) =>
       hit || _featureAt(lng,lat,{type:"FeatureCollection",features:part77Data.features.filter(f=>f.properties.surface===s)}), null)) : null;
+    // Terrain elevation (ft) at the click, for the Part 77 max-height math. Uses
+    // the Mapbox DEM (map flat at exaggeration 0); null until the DEM tile loads.
+    let _groundFt = null;
+    if (_p77 && map.queryTerrainElevation) {
+      const _m = map.queryTerrainElevation(lngLat, { exaggerated: false });
+      if (typeof _m === "number" && isFinite(_m)) _groundFt = _m * FT_PER_M;
+    }
     const _town = _featureAt(lng,lat,municipalBoundariesData);
     const jurisdiction = _town && _town.properties
       ? ("Town of " + String(_town.properties.NAMELSAD || _town.properties.NAME || "").replace(/\s+town$/i, "").trim())
@@ -2443,7 +2522,7 @@ function addOverlayLayers() {
       ...structureRows(pp),
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
-    ]) + airportNote(pp, _p77) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+    ]) + airportNote(pp, _p77, lng, lat, _groundFt) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
