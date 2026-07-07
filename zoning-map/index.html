@@ -588,8 +588,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#9e9ac8"></span><button type="button">2&ndash;4 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#756bb1"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#54278f"></span><button type="button">20+ lots</button><em></em></div>
-    <div class="legend-item"><span style="background:transparent;border:1.5px dashed #d98b3a"></span><button type="button">Airport height limit</button><em></em></div>
-    <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, or high country &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Amber dashed = airport height limit (caps scale, doesn't prohibit). Click a parcel for its estimate.</p>
+    <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
   </div>
 
   <div class="panel" id="vacantLegend" style="display:none;">
@@ -873,7 +872,8 @@ function structureRows(pp) {
 // many additional lots a parcel could be divided into at the plan/zoning density
 // (baked into the tileset by prep-parcels.js). Advisory only.
 function devPotentialRows(pp) {
-  if (!pp || pp.developable !== "True") return [];
+  // Airport land is excluded from Developable, so don't show a dev estimate for it.
+  if (!pp || pp.developable !== "True" || pp.airport_restriction === "True") return [];
   const hi = Number(pp.dev_lots_hi), lo = Number(pp.dev_lots_lo);
   if (!isFinite(hi) || hi < 1) return [];
   const range = (!isFinite(lo) || lo === hi) ? String(hi)
@@ -891,7 +891,7 @@ function fmtAcres(v) { const n = Number(v); return n < 1 ? n.toFixed(2).replace(
 
 // A short advisory caveat appended to a Developable Land popup.
 function devPotentialNote(pp) {
-  return (pp && pp.developable === "True" && Number(pp.dev_lots_hi) >= 1)
+  return (pp && pp.developable === "True" && pp.airport_restriction !== "True" && Number(pp.dev_lots_hi) >= 1)
     ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">Advisory estimate of maximum development (net acres ÷ plan/zoning min lot size) — not an entitlement or a guarantee.</div>'
     : "";
 }
@@ -1012,7 +1012,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, or high country &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Amber dashed outline = airport height limit (caps scale, doesn't prohibit). Click a parcel for the estimate.",
+  built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Click a parcel for the estimate.",
   vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
@@ -1046,7 +1046,7 @@ function setLegendView(view) {
 const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline", "parcel-c-fill", "parcel-c-outline"];
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
-const builtLayerIds = ['parcel-development-fill', 'parcel-airport-dev-outline'];
+const builtLayerIds = ['parcel-development-fill'];
 const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
@@ -1127,7 +1127,6 @@ function setBuiltLandView() {
 
   // Exclusions are baked into `developable` — no checkboxes needed.
   showLayer("parcel-development-fill", true);
-  showLayer("parcel-airport-dev-outline", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -2166,9 +2165,10 @@ function addOverlayLayers() {
     layout:{ visibility:"none" },
     // Developable = private, unentitled (not in PUD/subdivision), unprotected
     // (not federal / open space / high country / conservation easement) land
-    // with room for at least one more lot. All baked into `developable` by
-    // prep-parcels.js. Airport-restricted parcels stay in (scale-limited).
-    filter:["==", ["get", "developable"], "True"],
+    // with room for at least one more lot — baked into `developable` by
+    // prep-parcels.js. Also exclude airport land (any parcel in the airport
+    // height-restriction zone), per request.
+    filter:["all", ["==", ["get", "developable"], "True"], ["!=", ["get", "airport_restriction"], "True"]],
     paint:{
       // Choropleth by estimated additional lots (dev_lots_hi = ceiling of the
       // plan/zoning density range). Sequential purple ramp = "how much more".
@@ -2179,18 +2179,6 @@ function addOverlayLayers() {
         20, "#54278f"],   // 20+
       "fill-opacity":0.6
     }
-  });
-
-  // Airport height-restriction outline on developable parcels — a height limit
-  // caps the scale of development but does not prohibit it (per the plan).
-  map.addLayer({
-    id:"parcel-airport-dev-outline",
-    type:"line",
-    source:"parcels",
-    "source-layer":"parcel",
-    layout:{ visibility:"none" },
-    filter:["all", ["==", ["get", "developable"], "True"], ["==", ["get", "airport_restriction"], "True"]],
-    paint:{ "line-color":"#d98b3a", "line-width":["interpolate", ["linear"], ["zoom"], 10, 1, 16, 2.4], "line-dasharray":[2, 1.3] }
   });
 
   // Vacant Lots — parcels with no identifiable residential structure (baked
