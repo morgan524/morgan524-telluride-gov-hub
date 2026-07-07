@@ -1338,17 +1338,6 @@
     "img": ""
   },
   {
-    "title": "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
-    "source": "Town of Ridgway",
-    "date": "July 1, 2026",
-    "firstSeen": "2026-07-07",
-    "newsTopic": "public-safety",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
-    "img": ""
-  },
-  {
     "title": "Stage 2 Fire Restrictions Implemented in Ridgway",
     "source": "Town of Ridgway",
     "date": "June 28, 2026",
@@ -1371,7 +1360,7 @@
     "img": ""
   },
   {
-    "title": "Movie Mondays 8:30pm in Hartwell Park",
+    "title": "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     "source": "Town of Ridgway",
     "date": "July 7, 2026",
     "firstSeen": "2026-07-07",
@@ -1456,6 +1445,17 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
+    "img": ""
+  },
+  {
+    "title": "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
+    "source": "Town of Ridgway",
+    "date": "July 1, 2026",
+    "firstSeen": "2026-07-07",
+    "newsTopic": "public-safety",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
     "img": ""
   }
 ]
