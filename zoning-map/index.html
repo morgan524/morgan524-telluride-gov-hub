@@ -589,10 +589,8 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
-    <div class="legend-item"><span style="background:rgba(240,173,78,0.35);border:1px dashed #a9691a"></span><button type="button">Airport airspace (Part&nbsp;77)</button><em></em></div>
-    <div class="legend-item"><span style="background:rgba(217,83,79,0.4);border:1px dashed #b02a25"></span><button type="button">Airport approach corridor</button><em></em></div>
     <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
-    <p class="small">The dashed amber/red zones mark the <b>FAA Part&nbsp;77 airspace</b> around Telluride Regional Airport, where building height and lighting may be limited (roughly 9,220&ndash;9,420&nbsp;ft MSL; lower under the approach corridors). <b>Approximate</b> &mdash; confirm under SMC §5-418.</p>
+    <p class="small">Parcels near Telluride Regional Airport show an <b>airport height/lighting note</b> in their popup when they fall under the FAA Part&nbsp;77 airspace &mdash; confirm under SMC §5-418.</p>
   </div>
 
   <div class="panel" id="vacantLegend" style="display:none;">
@@ -1065,7 +1063,7 @@ function setLegendView(view) {
 const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline", "parcel-c-fill", "parcel-c-outline"];
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
-const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline', 'part77-fill', 'part77-line'];
+const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline'];
 const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
@@ -1148,9 +1146,6 @@ function setBuiltLandView() {
   showLayer("parcel-development-fill", true);
   showLayer("parcel-c-fill", true);
   showLayer("parcel-c-outline", true);
-  // FAA Part 77 airspace overlay — shows the airport height-restriction "range".
-  showLayer("part77-fill", true);
-  showLayer("part77-line", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -2243,39 +2238,10 @@ function addOverlayLayers() {
     }
   });
 
-  // ---- FAA Part 77 airspace surfaces (overlay for the Developable view) ----
-  // Approximate imaginary surfaces derived from the 2016 TEX Master Plan Part 77
-  // sheet + AirNav runway geometry (see data/part77-surfaces.json). Translucent
-  // so the parcel choropleth stays readable underneath.
-  map.addSource("part77", { type:"geojson", data:part77Data, generateId:false });
-  map.addLayer({
-    id:"part77-fill",
-    type:"fill",
-    source:"part77",
-    layout:{ visibility:"none" },
-    paint:{
-      "fill-color":["match", ["get","surface"],
-        "approach", "#d9534f",
-        "horizontal", "#f2c14e",
-        /* conical */ "#f0ad4e"],
-      "fill-opacity":["match", ["get","surface"],
-        "approach", 0.22,
-        "horizontal", 0.13,
-        /* conical */ 0.10]
-    }
-  });
-  map.addLayer({
-    id:"part77-line",
-    type:"line",
-    source:"part77",
-    layout:{ visibility:"none" },
-    paint:{
-      "line-color":["match", ["get","surface"], "approach", "#b02a25", "#a9691a"],
-      "line-width":["interpolate", ["linear"], ["zoom"], 9, 1.0, 14, 1.8],
-      "line-dasharray":[3, 2],
-      "line-opacity":0.9
-    }
-  });
+  // NOTE: the FAA Part 77 airspace surfaces (data/part77-surfaces.json) are NOT
+  // drawn as a map overlay — they're used only for the client-side point-in-polygon
+  // in the popup (see airportNote / _p77), so a parcel under the airspace shows a
+  // height/lighting note without cluttering the map with the surface shapes.
 
   map.addLayer({
     id:"parcel-line",
