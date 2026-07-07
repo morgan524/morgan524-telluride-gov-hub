@@ -75,18 +75,18 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="row">
       <button id="viewZoning">Zoning</button>
       <button class="secondary" id="viewPuds">Show PUDs</button>
-      <button class="secondary" id="viewBuiltLand">Vacant Land</button>
+      <button class="secondary" id="viewSubdivisions">Show Subdivisions</button>
     </div>
     <div class="row">
-      <button class="secondary" id="viewSubdivisions">Show Subdivisions</button>
       <button class="secondary" id="viewClear">Clear</button>
+      <button class="secondary" id="viewBuiltLand">Vacant Land</button>
     </div>
 
     <div id="vacantToggles" style="display:none; margin-top:12px;">
       <label>Remove restricted land</label>
       <label class="check"><input type="checkbox" id="tgPud"> Hide PUD land</label>
       <label class="check"><input type="checkbox" id="tgSub"> Hide subdivision land</label>
-      <label class="check"><input type="checkbox" id="tgProtected" checked> Hide protected land (mining claims, open space)</label>
+      <label class="check"><input type="checkbox" id="tgProtected" checked> Hide protected land (open space)</label>
     </div>
 
     <div id="zoningFilterBlock">
@@ -585,9 +585,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   </div>
   <div class="panel" id="builtLegend" style="display:none;">
     <label>Vacant land legend</label>
-    <div class="legend-item"><span style="background:#5a9e5a"></span><button type="button">Vacant land (buildable)</button><em></em></div>
+    <div class="legend-item"><span style="background:#2b6cb0"></span><button type="button">Vacant land (buildable)</button><em></em></div>
     <div class="legend-item"><span style="background:#d98b3a"></span><button type="button">Vacant &mdash; airport height limit</button><em></em></div>
-    <p class="small">Green = a lot with no structure (2021&ndash;2024 building footprints). Amber lots fall under an airport (FAA) height restriction &mdash; still buildable, but density/height limited. Use the checkboxes above to remove PUD, subdivision, or protected land.</p>
+    <p class="small">Blue = a lot with no structure (2021&ndash;2024 building footprints). Amber lots fall under an airport (FAA) height restriction &mdash; still buildable, but density/height limited. Use the checkboxes above to remove PUD, subdivision, or protected land.</p>
   </div>
 
 
@@ -848,7 +848,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Vacant Land:</strong> Green = a lot with no structure (2021\u20132024 building footprints). Amber = a lot under an airport (FAA) height limit \u2014 still buildable, but restricted. Use the checkboxes at left to remove PUD, subdivision, or protected (mining-claim / open-space) land.",
+  built: "<strong>Vacant Land:</strong> Blue = a lot with no structure (2021\u20132024 building footprints). Amber = a lot under an airport (FAA) height limit \u2014 still buildable, but restricted. Use the checkboxes at left to remove PUD, subdivision, or protected (open-space) land.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors."
 };
@@ -947,6 +947,7 @@ function setPudView() {
 const VACANT_BASE = ["all",
   ["==", ["get", "vacant_lot"], "True"],
   ["!=", ["get", "federal_forest_public_land"], "True"],
+  ["!=", ["get", "high_country"], "True"],
   ["!=", ["get", "PIN"], "ROW"],
   ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
   ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]],
@@ -960,7 +961,7 @@ function vacantFilter() {
   const f = JSON.parse(JSON.stringify(VACANT_BASE));
   if (isChecked("tgPud")) f.push(["==", ["to-string", ["get", "pud"]], ""]);
   if (isChecked("tgSub")) f.push(["in", ["to-string", ["get", "SUBNAME"]], ["literal", ["", "TOWNSHIP AND RANGE"]]]);
-  if (isChecked("tgProtected")) { f.push(["!=", ["get", "high_country"], "True"]); f.push(["!=", ["get", "open_space"], "True"]); }
+  if (isChecked("tgProtected")) { f.push(["!=", ["get", "open_space"], "True"]); }
   return f;
 }
 function applyVacantFilter() {
@@ -1891,7 +1892,7 @@ function addOverlayLayers() {
     layout:{ visibility:"none" },
     filter:["all", ["==", ["get", "vacant_lot"], "True"], ["!=", ["get", "federal_forest_public_land"], "True"], ["!=", ["get", "high_country"], "True"], ["!=", ["get", "open_space"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!=", ["get", "PIN"], "456335100067"], ["!=", ["get", "PIN"], "456530300022"], ["!=", ["get", "PIN"], "456331230005"], ["!=", ["get", "PIN"], "456329330002"]],
     paint:{
-      "fill-color":["case", ["==", ["get", "airport_restriction"], "True"], "#d98b3a", "#5a9e5a"],
+      "fill-color":["case", ["==", ["get", "airport_restriction"], "True"], "#d98b3a", "#2b6cb0"],
       "fill-opacity":0.55
     }
   });
