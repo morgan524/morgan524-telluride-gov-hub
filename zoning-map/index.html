@@ -81,6 +81,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
       <button class="secondary" id="viewClear">Clear</button>
       <button class="secondary" id="viewBuiltLand">Further Developable Land</button>
     </div>
+    <div class="row">
+      <button class="secondary" id="viewEastEnd">East End Master Plan</button>
+    </div>
 
     <div id="vacantToggles" style="display:none; margin-top:12px;">
       <label>Remove restricted land</label>
@@ -591,6 +594,18 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <p class="small">Based on the county assessor's building records. <b>Blue</b> = no structure on record. <b>Teal</b> = only an outbuilding (barn / shed / garage), no home &mdash; still developable. <b>Amber</b> = under an airport (FAA) height restriction. Click a lot to see what's on it. Use the checkboxes above to remove PUD, subdivision, or protected land.</p>
   </div>
 
+  <div class="panel" id="eastEndLegend" style="display:none;">
+    <label>East End Master Plan &mdash; Future Land Use</label>
+    <div class="legend-item"><span style="background:#ebbf5c"></span><button type="button">Residential Low</button><em>1/7&ndash;35 ac</em></div>
+    <div class="legend-item"><span style="background:#e58a1f"></span><button type="button">Residential Medium</button><em>1/1&ndash;7 ac</em></div>
+    <div class="legend-item"><span style="background:#e34a1c"></span><button type="button">Residential High / Mixed Use</button><em>&gt;1/ac</em></div>
+    <div class="legend-item"><span style="background:#1261b8"></span><button type="button">Commercial / Industrial</button><em></em></div>
+    <div class="legend-item"><span style="background:#ad9480"></span><button type="button">Public / Institutional</button><em></em></div>
+    <div class="legend-item"><span style="background:#c9e0c7"></span><button type="button">Conservation &amp; Large Lots</button><em>1/35+ ac</em></div>
+    <div class="legend-item"><span style="background:#2bdbba"></span><button type="button">Parks &amp; Open Space</button><em></em></div>
+    <p class="small">The county's 2024 East End Master Plan <b>future land-use</b> map (Map 11), overlaid on the parcels. These are advisory recommendations for future development density &mdash; <b>not current zoning</b>. Click an area or lot to see its category and recommended density.</p>
+  </div>
+
 
 
   <div class="panel">
@@ -682,9 +697,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -706,6 +721,7 @@ try {
     fetch(new URL('./data/wilson-mesa-ranches-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wilson-mesa-ranches-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/society-turn-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/parcel-c.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('parcel-c.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/east-end-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -714,6 +730,21 @@ try {
 }
 
 mapboxgl.accessToken = "pk.eyJ1IjoibGl2YWJsZXRlbGx1cmlkZSIsImEiOiJjbXA0NTVva3EwNXo1MnBwcmhnaHhka3dsIn0.8erE-LUnadeYwRSwdr20_w";
+
+// East End Master Plan (2024) Future Land Use categories — keyed by the FLUDesc
+// field in east-end-flu.json (the county's published GIS layer). Colors match the
+// plan's Map 11 legend (sampled from the PDF); densities are from the plan's land-
+// use category descriptions. These are ADVISORY future land-use recommendations,
+// not current zoning. Used by the East End overlay paint, its legend, and popups.
+const EAST_END_FLU = {
+  "Residential Low":              { code: "RL",    color: "#ebbf5c", density: "1 unit per 7–35 acres" },
+  "Residential Medium":          { code: "RM",    color: "#e58a1f", density: "1 unit per 1–7 acres" },
+  "Residential High/Mixed Use":  { code: "RH/MU", color: "#e34a1c", density: "Greater than 1 unit per acre" },
+  "Commercial/Industrial":       { code: "C/I",   color: "#1261b8", density: "Commercial / industrial (non-residential)" },
+  "Public/Institutional":        { code: "P/I",   color: "#ad9480", density: "Public / institutional (non-residential)" },
+  "Conservation and Large Lots": { code: "F/L",   color: "#c9e0c7", density: "1 unit per 35+ acres" },
+  "Parks and Open Space":        { code: "P/OS",  color: "#2bdbba", density: "Parks / open space (non-residential)" }
+};
 
 /*__DATA_REMOVED__ aldasoroPudData*/
 /*__DATA_REMOVED__ butcherCreekPudData*/
@@ -811,6 +842,23 @@ function structureRows(pp) {
   return rows;
 }
 
+// Given an East End FLU polygon feature (or null), return its category
+// desc/code/density from EAST_END_FLU, or null. Caller supplies the feature
+// (found via _featureAt inside addOverlayLayers, where the plan data is joined).
+function fluInfoFromFeature(f) {
+  if (!f || !f.properties) return null;
+  const info = EAST_END_FLU[f.properties.FLUDesc];
+  if (!info) return null;
+  return { desc: f.properties.FLUDesc, code: info.code, density: info.density };
+}
+
+// Advisory caveat appended whenever a popup shows East End future land-use data.
+function eastEndNote(fi) {
+  return fi
+    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">East End Master Plan (2024) future land-use recommendation &mdash; advisory guidance, not current zoning.</div>'
+    : "";
+}
+
 function showPopup(lngLat, html) {
   if (selectedPopup) selectedPopup.remove();
   selectedPopup = new mapboxgl.Popup({ closeButton:true, maxWidth:"340px" })
@@ -830,7 +878,7 @@ function firstSymbolLayerId() {
 let currentMapView = "zoning";
 
 function setButtonState(activeId) {
-  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable"].forEach(id => {
+  ["viewZoning", "viewPuds", "viewBuiltLand", "viewSubdivisions", "viewClear", "viewBuildable", "viewEastEnd"].forEach(id => {
     const el = document.getElementById(id);
     if (!el) return;
     if (id === activeId) {
@@ -871,7 +919,8 @@ const mapNotes = {
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
   built: "<strong>Developable Land:</strong> From county assessor records. Blue = no structure on record; teal = only an outbuilding (barn/shed), no home; amber = under an airport (FAA) height limit. Click a lot for details. Use the checkboxes at left to remove PUD, subdivision, or protected (open-space) land.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors."
+  clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
+  eastend: "<strong>East End Master Plan:</strong> The county's 2024 Future Land Use map (Map 11) overlaid on the parcels, colored by recommended future land-use category. These are <strong>advisory</strong> recommendations for future development density &mdash; not current zoning. Click an area or lot to see its category and recommended density."
 };
 
 function setPanelDisplay(id, display) {
@@ -894,6 +943,7 @@ function setLegendView(view) {
   setPanelDisplay("subdivisionLegend", view === "subdivisions" ? "block" : "none");
   setPanelDisplay("pudsLegend", view === "puds" ? "block" : "none");
   setPanelDisplay("clearLegend", view === "clear" ? "block" : "none");
+  setPanelDisplay("eastEndLegend", view === "eastend" ? "block" : "none");
   setPanelDisplay("vacantToggles", view === "built" ? "block" : "none");
 }
 
@@ -902,6 +952,7 @@ const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-s
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
 const builtLayerIds = ['parcel-development-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
+const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
 
 function setLayersVisible(ids, visible) {
   ids.forEach(id => showLayer(id, visible));
@@ -912,6 +963,7 @@ function hideThematicLayers() {
   setLayersVisible(pudLayerIds, false);
   setLayersVisible(subdivisionLayerIds, false);
   setLayersVisible(builtLayerIds, false);
+  setLayersVisible(eastEndLayerIds, false);
   if (typeof buildableLayerIds !== 'undefined') setLayersVisible(buildableLayerIds, false);
 }
 
@@ -1041,6 +1093,22 @@ function setClearView() {
   showLayer("parcel-line", true);
   showLayer("county-outline", true);
   showLayer("roads-line", false);
+}
+
+
+function setEastEndView() {
+  setMapNote(mapNotes.eastend);
+  currentMapView = "eastend";
+  setButtonState("viewEastEnd");
+  hideThematicLayers();
+  setLegendView("eastend");
+  setFilterBlocks(false, false);
+
+  setLayersVisible(eastEndLayerIds, true);
+  showLayer("parcel-line", true);
+  showLayer("county-outline", true);
+  showLayer("roads-line", false);
+  setColoredSectionTransparency();
 }
 
 
@@ -1622,6 +1690,28 @@ function addOverlayLayers() {
     paint:{ "line-color":"#86198f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 1.2, 16, 2.6], "line-dasharray":[2, 1.4] }
   });
 
+  // East End Master Plan (2024) Future Land Use overlay — the county GIS layer
+  // (east-end-flu.json), colored to match the plan's Map 11 legend. Drawn below
+  // parcel-line so parcel outlines stay visible on top. Hidden by default.
+  const _fluColorMatch = ["match", ["get", "FLUDesc"]];
+  Object.entries(EAST_END_FLU).forEach(([desc, info]) => { _fluColorMatch.push(desc, info.color); });
+  _fluColorMatch.push("#cccccc");
+  map.addSource("east-end-flu", { type:"geojson", data:eastEndFluData, generateId:false });
+  map.addLayer({
+    id:"east-end-flu-fill",
+    type:"fill",
+    source:"east-end-flu",
+    layout:{ visibility:"none" },
+    paint:{ "fill-color":_fluColorMatch, "fill-opacity":0.55 }
+  });
+  map.addLayer({
+    id:"east-end-flu-outline",
+    type:"line",
+    source:"east-end-flu",
+    layout:{ visibility:"none" },
+    paint:{ "line-color":"#5f5f5f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 0.4, 16, 1.1], "line-opacity":0.6 }
+  });
+
 
   map.addLayer({
     id:"butcher-creek-pud-fill",
@@ -2088,7 +2178,21 @@ function addOverlayLayers() {
       parcel=hits && hits.length ? hits[0] : null;
     }
     const zoning=_featureAt(lng,lat,zoningData);
-    if(!parcel && !zoning) return;
+    // East End Master Plan future land use under the click (null outside the plan area).
+    const fi = fluInfoFromFeature(_featureAt(lng,lat,eastEndFluData));
+    if(!parcel && !zoning){
+      // Nothing to select but we're over an East End future land-use area
+      // (e.g. zoomed out past the parcel layer) — show the FLU category anyway.
+      if(fi){
+        const fhtml = popupHtml(fi.desc + " (" + fi.code + ")", [
+          ["Future land use", fi.desc],
+          ["Recommended density", fi.density]
+        ]) + eastEndNote(fi);
+        showSelection(fhtml.replace("<h3","<h2").replace("</h3>","</h2>"));
+        showPopup(lngLat, fhtml);
+      }
+      return;
+    }
     const pp=parcel?parcel.properties:{}, zp=zoning?zoning.properties:{};
     const owner = pp.NAMEDISPLAY || pp.NAME1;
     const acreage = (pp.NETACRES!==undefined&&pp.NETACRES!==null&&pp.NETACRES!=="")?pp.NETACRES:zp.Acres;
@@ -2104,8 +2208,9 @@ function addOverlayLayers() {
       ["PUD", pp.pud || _pudAt(lng,lat)],
       ["Subdivision/area field", subdivision],
       ["Parcel/tract", parcelTract],
-      ...structureRows(pp)
-    ]) + airportNote(pp);
+      ...structureRows(pp),
+      ...(fi ? [["East End Plan future land use", fi.desc + " (" + fi.code + ")"], ["Recommended density", fi.density]] : [])
+    ]) + airportNote(pp) + eastEndNote(fi);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
@@ -2170,7 +2275,7 @@ function addOverlayLayers() {
     showPopup(e.lngLat, html);
   });
 
-  ["parcel-c-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
+  ["parcel-c-fill","east-end-flu-fill","zoning-fill","trout-lake-pud-fill","wilson-mesa-ranches-pud-fill","society-turn-pud-fill","last-dollar-pud-fill","two-rivers-pud-fill","lawson-hill-ilium-pud-fill","lawson-hill-pud-fill","buildable-unrestricted-fill","subdivision-fill","parcel-development-fill","aldasoro-pud-fill","butcher-creek-pud-fill","meadows-at-deep-creek-pud-fill","sunnyside-ranches-pud-fill","deep-creek-mesa-ranch-pud-fill","mill-creek-pud-fill","skyfield-pud-fill","west-meadows-pud-fill","address-points","subdivision-line","parcel-line","roads-line"].forEach(layer => {
     map.on("mouseenter", layer, () => map.getCanvas().style.cursor = "pointer");
     map.on("mouseleave", layer, () => map.getCanvas().style.cursor = "");
   });
@@ -2199,6 +2304,7 @@ document.getElementById("viewPuds").onclick = setPudView;
 document.getElementById("viewBuiltLand").onclick = setBuiltLandView;
 document.getElementById("viewSubdivisions").onclick = setSubdivisionView;
 document.getElementById("viewClear").onclick = setClearView;
+document.getElementById("viewEastEnd").onclick = setEastEndView;
 document.getElementById("subdivisionFilter").onchange = applySubdivisionFilter;
 ["tgPud", "tgSub", "tgProtected"].forEach(id => {
   const el = document.getElementById(id);

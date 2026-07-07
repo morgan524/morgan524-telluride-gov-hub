@@ -16,14 +16,43 @@ heavy data is split out and the biggest layers are served from Mapbox.
 - **`data/*.json`** (in this repo, fetched at load): everything that needs
   whole-dataset JS logic — `zoning.json` (legend counts + filter),
   `subdivision.json` (filter), `address.json` (text search), the PUD polygons
-  (point-in-polygon), `county-outline.json`. The module in `index.html` fetches
-  these in parallel via top-level `await` before the map initializes.
+  (point-in-polygon), `county-outline.json`, `east-end-flu.json` (East End
+  Master Plan future land use — overlay + point-in-polygon for popups). The
+  module in `index.html` fetches these in parallel via top-level `await` before
+  the map initializes.
 
 The parcel click popup resolves the clicked parcel from the tileset via
 `map.queryRenderedFeatures` against the transparent `parcel-hit` fill layer
 (there is no in-memory parcel array anymore).
 
 `LEGAL` was dropped from parcels entirely (data + popup) per request.
+
+## East End Master Plan (Future Land Use) overlay
+
+The **East End Master Plan** map view overlays the county's 2024 East End
+Master Plan *Future Land Use* map (Map 11) on the parcels. Data is
+`data/east-end-flu.json` — the county's published ArcGIS layer
+(`services.arcgis.com/aXqye4IXyXsdIpPb/.../County_Land_Use/FeatureServer/7`,
+211 polygons), downloaded as WGS84 GeoJSON and precision-trimmed. Each polygon
+carries `FLU` (code) + `FLUDesc` (category name).
+
+`EAST_END_FLU` (const near the top of the module in `index.html`) maps each
+`FLUDesc` to its plan color (sampled from the PDF's Map 11 legend) and advisory
+density, and drives three things: the overlay `fill-color` match expression,
+the legend, and the popup. The overlay draws below `parcel-line` so parcel
+outlines stay visible.
+
+**Densities are advisory** future-land-use recommendations from the plan, **not
+current zoning** (the plan explicitly does not rezone anything). Popups label
+them as such. The seven categories + densities: Residential Low (1/7–35 ac),
+Residential Medium (1/1–7 ac), Residential High/Mixed Use (>1/ac),
+Commercial/Industrial, Public/Institutional, Conservation & Large Lots
+(1/35+ ac), Parks & Open Space. Incorporated towns (Telluride, Mountain Village
+core) are intentionally absent from the layer — the county plan excludes them,
+so clicks there show no future-land-use row. To refresh the data, re-query the
+ArcGIS layer as GeoJSON (`?where=1=1&outFields=FLU,FLUDesc&outSR=4326&f=geojson`)
+and drop it in as `data/east-end-flu.json`; no tileset re-upload is needed (it's
+a client-side GeoJSON overlay, like Parcel C).
 
 ## Re-uploading the tilesets (when parcel/road data changes)
 
