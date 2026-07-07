@@ -91,11 +91,58 @@ function airportOverlap(pRings) {
   return false;
 }
 
+// ── Developable-land division-potential inputs ──
+// Min lot size (acres) per future-land-use / zoning category, as a [lo, hi]
+// range (the plan densities are ranges). Additional lots = floor(acres/minlot)
+// − current units. Non-residential FLU categories = null (no home-lot split).
+const FLU_MINLOT = {
+  'Residential Low': [7, 35],
+  'Residential Medium': [1, 7],
+  'Residential High/Mixed Use': [0.25, 1],
+  'Conservation and Large Lots': [35, 35],
+  'Wrights Mesa Town Residential': [1 / 12, 1 / 6],
+  'Wrights Mesa Rural/Agricultural': [17.5, 35],
+  'Commercial/Industrial': null, 'Public/Institutional': null, 'Parks and Open Space': null,
+  'Wrights Mesa Light Industrial': null, 'Public': null,
+};
+// Fallback by current zoning where a parcel is outside both plan areas.
+const ZONING_MINLOT = {
+  'FORESTRY/AGRICULTURE': [35, 35],
+  'LOW DENSITY': [2, 2], 'MEDIUM DENSITY': [1, 1],
+  'RESIDENTIAL': [0.5, 0.5], 'TELLURIDE RESIDENTIAL': [0.25, 0.25],
+  'MOBILE HOME': [0.5, 0.5], 'NORWOOD R1': [0.25, 0.25],
+};
+const DEFAULT_MINLOT = [35, 35];  // rural baseline (~1 unit / 35 ac) when nothing else known
+
+const DATA = path.join(__dirname, 'data');
+const loadFC = p => JSON.parse(fs.readFileSync(p, 'utf8'));
+
+// FLU category rings (labelled) — East End (FLUDesc) + Wright's Mesa (NAME).
+const fluCatRings = [];
+for (const f of loadFC(path.join(DATA, 'east-end-flu.json')).features) {
+  const cat = String((f.properties || {}).FLUDesc || ''); if (cat) fluCatRings.push({ cat, rings: ringsOf(f.geometry) });
+}
+for (const f of loadFC(path.join(DATA, 'wrights-mesa-flu.json')).features) {
+  const cat = String((f.properties || {}).NAME || ''); if (cat) fluCatRings.push({ cat, rings: ringsOf(f.geometry) });
+}
+function fluCatAt(c) { for (const g of fluCatRings) if (g.rings.some(r => ptInRing(c[0], c[1], r))) return g.cat; return null; }
+
+// Zoning category rings (labelled by ZONING) for the min-lot fallback.
+const zoneCatRings = [];
+for (const f of zon.features) { const z = String((f.properties || {}).ZONING || ''); if (z) zoneCatRings.push({ cat: z, rings: ringsOf(f.geometry) }); }
+function zoneCatAt(c) { for (const g of zoneCatRings) if (g.rings.some(r => ptInRing(c[0], c[1], r))) return g.cat; return null; }
+
+// Conservation easement rings (Land Heritage Program + other easements) = protected.
+const easeRings = [];
+for (const src of ['LandHeritageProgram.geojson', 'OtherConservationEasements.geojson']) {
+  for (const f of loadFC(GIS + '/' + src).features) easeRings.push(...ringsOf(f.geometry));
+}
+
 const round6 = n => Math.round(n * 1e6) / 1e6;
 function roundCoords(node) { if (Array.isArray(node)) return node.map(roundCoords); if (node && typeof node === 'object') { const o = {}; for (const k of Object.keys(node)) o[k] = k === 'coordinates' ? roundNums(node[k]) : roundCoords(node[k]); return o; } return node; }
 function roundNums(n) { return Array.isArray(n) ? n.map(roundNums) : (typeof n === 'number' ? round6(n) : n); }
 
-let taggedHc = 0, taggedOs = 0, taggedAir = 0;
+let taggedHc = 0, taggedOs = 0, taggedAir = 0, taggedEase = 0, taggedDev = 0;
 const clsCount = { vacant: 0, outbuilding: 0, developed: 0 };
 for (const f of parcelData.features) {
   if (f.properties) delete f.properties.LEGAL;
@@ -111,9 +158,49 @@ for (const f of parcelData.features) {
   const si = structureInfo(String(f.properties.ACCOUNTNO || ''));
   Object.assign(f.properties, si);
   clsCount[si.structure_class] = (clsCount[si.structure_class] || 0) + 1;
+
+  // Conservation easement (protected, not developable)
+  if (easeRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.conservation_easement = 'True'; taggedEase++; }
+
+  // ── Division-potential estimate ──
+  // Min lot size from the future-land-use category (plan) where the parcel sits,
+  // else current zoning, else a rural default. Additional lots =
+  // floor(net acres / min lot) − current units. Range because densities are ranges.
+  const flu = fluCatAt(c);
+  const zcat = zoneCatAt(c);
+  const cat = flu || zcat;
+  const fluIsNonRes = flu && FLU_MINLOT[flu] === null;   // e.g. Commercial/Industrial, Public — no home-lot split
+  let ml = flu ? FLU_MINLOT[flu] : null;
+  if (!ml && !fluIsNonRes) ml = (zcat && ZONING_MINLOT[zcat]) || DEFAULT_MINLOT;
+  if (cat) f.properties.dev_cat = cat;
+  const curUnits = si.structure_class === 'developed' ? 1 : 0;
+  f.properties.cur_units = curUnits;
+  let devLo = 0, devHi = 0;
+  if (ml) {
+    const acres = Number(f.properties.NETACRES) || 0;
+    f.properties.min_lot_lo = round6(ml[0]); f.properties.min_lot_hi = round6(ml[1]);
+    devHi = Math.max(0, Math.floor(acres / ml[0]) - curUnits);  // smaller lot → more lots
+    devLo = Math.max(0, Math.floor(acres / ml[1]) - curUnits);  // larger lot → fewer
+  }
+  f.properties.dev_lots_lo = devLo;
+  f.properties.dev_lots_hi = devHi;
+
+  // Developable = unentitled + unprotected + has division potential. Airport-
+  // restricted parcels stay IN (a height limit caps scale, doesn't prohibit).
+  const pin = String(f.properties.PIN || '').toLowerCase();
+  const developable =
+    f.properties.in_pud_or_subdivision !== 'True' &&
+    String(f.properties.federal_forest_public_land) !== 'True' &&
+    f.properties.high_country !== 'True' &&
+    f.properties.open_space !== 'True' &&
+    f.properties.conservation_easement !== 'True' &&
+    pin !== 'row' && !pin.includes('open space') && !pin.includes('common') &&
+    devHi >= 1;
+  if (developable) { f.properties.developable = 'True'; taggedDev++; }
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
 console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir);
+console.log('tagged conservation_easement:', taggedEase, '| tagged developable:', taggedDev);
 console.log('structure_class:', JSON.stringify(clsCount));
 console.log('wrote', path.join(outDir, 'parcel.json'), (fs.statSync(path.join(outDir, 'parcel.json')).size / 1e6).toFixed(1) + 'MB');
