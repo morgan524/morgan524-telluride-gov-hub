@@ -297,6 +297,18 @@ service cloud.firestore {
       allow update, delete: if isAdmin();
     }
 
+    // ── article_drafts/{id} ───────────────────────────────────────────
+    // Editorial-layer meeting-article drafts. These are written and decided
+    // EXCLUSIVELY by the editorial Cloudflare Worker using the service
+    // account (which bypasses these rules entirely). No client — not even
+    // the admin's browser — touches this collection directly; the decision
+    // page (article-review.html) reads/writes through token-gated Worker
+    // endpoints (/article-draft, /article-decide). So lock clients out
+    // completely. (Default-deny would already do this; explicit is safer.)
+    match /article_drafts/{id} {
+      allow read, write: if false;
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but

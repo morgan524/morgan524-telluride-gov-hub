@@ -1043,6 +1043,11 @@
       const recordBtn = m.recordingUrl
         ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
         : '';
+      // "Full article →" — only when this meeting's draft was approved + published.
+      const _art = articleFor(m);
+      const fullArticleBtn = _art
+        ? '<a class="btn-action primary" href="' + _art.url + '">📰 Full article →</a>'
+        : '';
 
       // "Why This Matters" button + card highlight when the meeting touches
       // a code amendment or high-level land-use issue.
@@ -1072,8 +1077,8 @@
            // Row 2: everything else (Submit Comment, Why This Matters,
            // Recording) on the line below.
            + '<div class="meet-actions meet-actions-agenda">' + agendaBtn + packetBtn + '</div>'
-           + ((commentBtn || wtmBtn || recordBtn)
-               ? '<div class="meet-actions meet-actions-secondary">' + commentBtn + wtmBtn + recordBtn + '</div>'
+           + ((commentBtn || wtmBtn || recordBtn || fullArticleBtn)
+               ? '<div class="meet-actions meet-actions-secondary">' + fullArticleBtn + commentBtn + wtmBtn + recordBtn + '</div>'
                : '')
            + '</article>';
     }
@@ -1230,6 +1235,38 @@
       });
       applyMeetView();
     }
+
+    // Published editorial articles (meetingKey → {url,title,...}), written by
+    // the Editorial Publish workflow. Drives the "📰 Full article →" button on
+    // any meeting card whose draft was approved + published. Empty = no buttons.
+    let PUBLISHED_ARTICLES = {};
+    function articleFor(m) {
+      if (!m || !m.eventDate || !PUBLISHED_ARTICLES) return null;
+      try {
+        const dk = m.eventDate.toISOString().slice(0, 10);
+        const ct = (m.title || '').replace(/ -- CANCELED$/, '');
+        // 1. exact key (source|date|title)
+        if (PUBLISHED_ARTICLES[m.source + '|' + dk + '|' + ct]) return PUBLISHED_ARTICLES[m.source + '|' + dk + '|' + ct];
+        // 2. tolerant match: card titles are often the clean form ("Town
+        //    Council") while the published key carries a suffix ("Town Council
+        //    - Jun 30 2026"). Mirror getMeetingSummary's source|date| prefix
+        //    fallback, plus a title-overlap guard so two same-day meetings of
+        //    the same body don't cross-match.
+        const prefix = m.source + '|' + dk + '|';
+        const ctl = ct.toLowerCase();
+        for (const k in PUBLISHED_ARTICLES) {
+          if (k.indexOf(prefix) !== 0) continue;
+          const kt = k.slice(prefix.length).toLowerCase();
+          if (kt === ctl || kt.indexOf(ctl) === 0 || ctl.indexOf(kt) === 0) return PUBLISHED_ARTICLES[k];
+        }
+        return null;
+      } catch (e) { return null; }
+    }
+    fetch('/data/published-articles.json?v=' + Math.floor(Date.now() / 600000))
+      .then(r => (r.ok ? r.json() : {}))
+      .then(d => { PUBLISHED_ARTICLES = d || {}; render(); })
+      .catch(() => {});
+
     render();
     // Upcoming / Past toggle — wired once (the tab buttons are static markup).
     const _tabUp = document.getElementById('tabUpcoming');

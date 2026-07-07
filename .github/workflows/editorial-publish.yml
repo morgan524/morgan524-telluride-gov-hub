@@ -1,0 +1,65 @@
+name: Editorial Publish
+
+# The pull side of the human gate. Every 15 minutes, asks the Worker for drafts
+# you've APPROVED, generates each as a /meetings/<slug>/ page, updates
+# data/published-articles.json (which drives the "Full article →" button), and
+# commits. Only after the commit lands does it mark the draft published in
+# Firestore (so a published flag never points at a page that didn't ship).
+#
+# Cheap when idle: if there are no approved drafts, nothing is generated and the
+# commit step is skipped. Needs EDITORIAL_SECRET (shared with the Worker).
+
+on:
+  # MANUAL-ONLY until EDITORIAL_SECRET is configured (GitHub Actions secret +
+  # the Cloudflare Worker's EDITORIAL_SECRET). To go live, restore the every-
+  # 15-minute pull by uncommenting the schedule block below.
+  # schedule:
+  #   - cron: '*/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: editorial-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Generate pages for approved drafts
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: |
+          set -o pipefail
+          node scripts/editorial/publish-approved.js 2>&1 | tee /tmp/editorial-publish.log
+
+      - name: Commit & push new article pages
+        id: commit
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          if [ -n "$(git status --porcelain meetings data/published-articles.json)" ]; then
+            git add meetings data/published-articles.json
+            git commit -m "📰 Publish approved meeting article(s)"
+            git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No approved drafts to publish."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Mark drafts published (only after the page actually shipped)
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          EDITORIAL_SECRET: ${{ secrets.EDITORIAL_SECRET }}
+        run: node scripts/editorial/publish-approved.js --mark
