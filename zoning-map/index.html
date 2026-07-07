@@ -588,6 +588,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#d3a3cc"></span><button type="button">2&ndash;4 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
+    <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
     <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
   </div>
 
@@ -600,7 +601,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   <div class="panel" id="futureLandUseLegend" style="display:none;">
     <label>Future Land Use</label>
     <div style="font-size:11px;font-weight:700;color:#556;margin:6px 0 3px;text-transform:uppercase;letter-spacing:.04em">East End Master Plan</div>
-    <div class="legend-item"><span style="background:#ebbf5c"></span><button type="button">Residential Low</button><em>1/7&ndash;35 ac</em></div>
+    <div class="legend-item"><span style="background:#ebbf5c"></span><button type="button">Residential Low</button><em>1/7 ac</em></div>
     <div class="legend-item"><span style="background:#e58a1f"></span><button type="button">Residential Medium</button><em>1/1&ndash;7 ac</em></div>
     <div class="legend-item"><span style="background:#e34a1c"></span><button type="button">Residential High / Mixed Use</button><em>&gt;1/ac</em></div>
     <div class="legend-item"><span style="background:#1261b8"></span><button type="button">Commercial / Industrial</button><em></em></div>
@@ -632,7 +633,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
   <div class="panel" id="pudsLegend" style="display:none;">
     <label>PUD legend</label>
     <div class="legend-item"><span style="background:#ffd84d;border:1px solid #b89a2e"></span><button type="button">PUD</button><em></em></div>
-    <div class="legend-item"><span style="background:#c026d3;border:1px dashed #86198f"></span><button type="button">Under litigation</button><em></em></div>
+    <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
   </div>
 
   <div class="panel" id="subdivisionLegend" style="display:none;">
@@ -752,7 +753,7 @@ mapboxgl.accessToken = "pk.eyJ1IjoibGl2YWJsZXRlbGx1cmlkZSIsImEiOiJjbXA0NTVva3EwN
 // use category descriptions. These are ADVISORY future land-use recommendations,
 // not current zoning. Used by the East End overlay paint, its legend, and popups.
 const EAST_END_FLU = {
-  "Residential Low":              { code: "RL",    color: "#ebbf5c", density: "1 unit per 7–35 acres" },
+  "Residential Low":              { code: "RL",    color: "#ebbf5c", density: "1 unit per 7 acres" },
   "Residential Medium":          { code: "RM",    color: "#e58a1f", density: "1 unit per 1–7 acres" },
   "Residential High/Mixed Use":  { code: "RH/MU", color: "#e34a1c", density: "Greater than 1 unit per acre" },
   "Commercial/Industrial":       { code: "C/I",   color: "#1261b8", density: "Commercial / industrial (non-residential)" },
@@ -956,11 +957,11 @@ function showPopup(lngLat, html) {
     .setHTML(html + '<button type="button" class="popup-close">Click to close</button>')
     .addTo(map);
   // Explicit "Click to close" button — works for popups in every view/filter.
+  // Also unselects the parcel/feature (clearSelection removes the popup + all
+  // selection highlights + resets the sidebar).
   const popEl = selectedPopup.getElement();
   const closeBtn = popEl && popEl.querySelector(".popup-close");
-  if (closeBtn) closeBtn.addEventListener("click", () => {
-    if (selectedPopup) { selectedPopup.remove(); selectedPopup = null; }
-  });
+  if (closeBtn) closeBtn.addEventListener("click", () => clearSelection());
 }
 
 function firstSymbolLayerId() {
@@ -1012,7 +1013,7 @@ function setMapNote(html) {
 
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
-  puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
+  puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>teal dashed</strong> area is <strong>Parcel C</strong> (approximate) — an older label for land whose inclusion in the Aldasoro subdivision / PUD is <strong>in litigation</strong>; the property lines have since changed. Parcel outlines remain visible as an underlay; road layers are hidden.",
   built: "<strong>Developable Land:</strong> Land that is <strong>not</strong> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shaded by the <strong>maximum development</strong> the land could support (net acres ÷ plan / zoning min lot size &mdash; an advisory estimate, not a guarantee). Click a parcel for the estimate.",
   vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
@@ -1047,7 +1048,7 @@ function setLegendView(view) {
 const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline", "parcel-c-fill", "parcel-c-outline"];
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
-const builtLayerIds = ['parcel-development-fill'];
+const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline'];
 const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
@@ -1128,6 +1129,8 @@ function setBuiltLandView() {
 
   // Exclusions are baked into `developable` — no checkboxes needed.
   showLayer("parcel-development-fill", true);
+  showLayer("parcel-c-fill", true);
+  showLayer("parcel-c-outline", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -1765,21 +1768,24 @@ function addOverlayLayers() {
 
   // Parcel C — a disputed area (in litigation over whether it is part of the
   // Aldasoro subdivision). Geometry traced from Diamond Ridge2.svg and
-  // georeferenced. Magenta with a dashed outline to read as "contested".
+  // georeferenced. Shown on both the PUDs and Developable Land views in TEAL
+  // with a dashed outline — teal reads as "contested/special", is the same on
+  // both maps, and stays distinct from the rose developable choropleth + yellow
+  // PUDs.
   map.addSource("parcel-c", { type:"geojson", data:parcelCData, generateId:false });
   map.addLayer({
     id:"parcel-c-fill",
     type:"fill",
     source:"parcel-c",
     layout:{ visibility:"none" },
-    paint:{ "fill-color":"#c026d3", "fill-opacity":0.5 }
+    paint:{ "fill-color":"#0d9488", "fill-opacity":0.5 }
   });
   map.addLayer({
     id:"parcel-c-outline",
     type:"line",
     source:"parcel-c",
     layout:{ visibility:"none" },
-    paint:{ "line-color":"#86198f", "line-width":["interpolate", ["linear"], ["zoom"], 10, 1.2, 16, 2.6], "line-dasharray":[2, 1.4] }
+    paint:{ "line-color":"#0b5c53", "line-width":["interpolate", ["linear"], ["zoom"], 10, 1.4, 16, 2.8], "line-dasharray":[2, 1.4] }
   });
 
   // East End Master Plan (2024) Future Land Use overlay — the county GIS layer
@@ -2384,7 +2390,7 @@ function addOverlayLayers() {
       // conservation easement (e.g. zoomed out past the parcel layer) — show it.
       if(fi || ea){
         const rows = [];
-        if(fi){ rows.push(["Future land use", fi.desc], ["Recommended density", fi.density]); }
+        if(fi){ rows.push(["Future land use", fi.desc], ["Proposed density", fi.density]); }
         if(ea && ea.acres){ rows.push(["Easement acreage", ea.acres]); }
         const ftitle = fi ? (fi.desc + fiCode) : "Conservation easement";
         const fhtml = popupHtml(ftitle, rows) + planNote(fi) + easementNote(ea);
@@ -2410,7 +2416,7 @@ function addOverlayLayers() {
       ["Subdivision/area field", subdivision],
       ["Parcel/tract", parcelTract],
       ...structureRows(pp),
-      ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Recommended density", fi.density]] : []),
+      ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
     ]) + airportNote(pp) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
@@ -2472,7 +2478,7 @@ function addOverlayLayers() {
   });
 
   map.on("click", "parcel-c-fill", e => {
-    const html = '<h3>Parcel C</h3><div class="field">A disputed area currently <b>in litigation</b> over whether it is part of the Aldasoro subdivision.</div>';
+    const html = '<h3>Parcel C (approximate)</h3><div class="field">“Parcel C” is an older label, and the property lines here have since changed. Whether this land is part of the Aldasoro subdivision / PUD is <b>currently in litigation</b> — so the area shown is approximate.</div>';
     showSelection(html.replace("<h3", "<h2").replace("</h3>", "</h2>"));
     showPopup(e.lngLat, html);
   });
