@@ -973,7 +973,21 @@
         ? ARTICLES
         : ARTICLES.filter(a => a.category === activeCategory);
 
-      const featured = filtered.find(a => a.featured) || filtered.find(a => !isObituary(a)) || filtered[0];
+      // The hero is the newest non-obituary story by default. A hand-pinned
+      // story (LOCAL_NEWS_FEATURED featured:true) overrides it — but ONLY while
+      // it's still current (within ~1.5 days of the newest story). Otherwise a
+      // pin would freeze the hero on a stale story while fresh news piles up
+      // below (the "didn't update this morning" bug). Stale pins auto-release.
+      const newest = filtered.find(a => !isObituary(a)) || filtered[0];
+      const pin = filtered.find(a => a.featured);
+      let featured = newest;
+      if (pin) {
+        const dp = new Date(pin.date).getTime();
+        const dn = newest ? new Date(newest.date).getTime() : NaN;
+        const pinIsCurrent = isFinite(dp) && (!isFinite(dn) || (dn - dp) <= 1.5 * 86400000);
+        if (pinIsCurrent) featured = pin;
+      }
+      featured = featured || filtered[0];
       const rest = filtered.filter(a => a !== featured);
 
       document.getElementById('featuredCard').innerHTML = featured ? featuredHtml(featured) : '';
