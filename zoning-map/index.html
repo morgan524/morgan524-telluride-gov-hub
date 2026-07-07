@@ -589,7 +589,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
+    <div class="legend-item"><span style="background:repeating-linear-gradient(-45deg,#b91c1c 0,#b91c1c 2px,transparent 2px,transparent 6px)"></span><button type="button">Steep slope (&gt;30% grade)</button><em></em></div>
     <p class="small">Land <b>not</b> in a PUD, subdivision, conservation easement, forest/BLM, open space, high country, or airport land &mdash; developable regardless of any existing structure. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
+    <p class="small">The red hatch marks terrain steeper than <b>30% grade</b> (~16.7°) &mdash; a regional slope screen from the terrain DEM (~30&nbsp;m), often a hillside-development constraint. <b>Approximate</b>; confirm with a survey.</p>
     <p class="small">Parcels near Telluride Regional Airport show an <b>airport height/lighting note</b> in their popup when they fall under the FAA Part&nbsp;77 airspace &mdash; confirm under SMC §5-418.</p>
   </div>
 
@@ -711,9 +713,9 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
 
 <script type="module">
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
-let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data;
+let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data, steepSlopesData;
 try {
-  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data] = await Promise.all([
+  [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data, steepSlopesData] = await Promise.all([
     fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
@@ -740,6 +742,7 @@ try {
     fetch(new URL('./data/conservation-easements.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/municipal-boundaries.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('municipal-boundaries.json HTTP ' + r.status); return r.json(); }),
     fetch(new URL('./data/part77-surfaces.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('part77-surfaces.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/steep-slopes.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('steep-slopes.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -1126,7 +1129,7 @@ function setLegendView(view) {
 const pudLayerIds = ["trout-lake-pud-fill", "trout-lake-pud-outline", "wilson-mesa-ranches-pud-fill", "wilson-mesa-ranches-pud-outline", "society-turn-pud-fill", "society-turn-pud-outline", 'aldasoro-pud-fill', 'aldasoro-pud-outline', 'butcher-creek-pud-fill', 'butcher-creek-pud-outline', 'meadows-at-deep-creek-pud-fill', 'meadows-at-deep-creek-pud-outline', 'sunnyside-ranches-pud-fill', 'sunnyside-ranches-pud-outline', 'deep-creek-mesa-ranch-pud-fill', 'deep-creek-mesa-ranch-pud-outline', 'mill-creek-pud-fill', 'mill-creek-pud-outline', 'skyfield-pud-fill', 'skyfield-pud-outline', 'west-meadows-pud-fill', 'west-meadows-pud-outline', "lawson-hill-pud-fill", "lawson-hill-pud-outline", "lawson-hill-ilium-pud-fill", "lawson-hill-ilium-pud-outline", "two-rivers-pud-fill", "two-rivers-pud-outline", "last-dollar-pud-fill", "last-dollar-pud-outline", "parcel-c-fill", "parcel-c-outline"];
 const subdivisionLayerIds = ['subdivision-fill', 'subdivision-line', 'selected-subdivision-line', 'backman-village-subdivision-fill', 'backman-village-subdivision-outline'];
 const zoningLayerIds = ['zoning-fill', 'zoning-line', 'selected-zoning-fill', 'selected-zoning-line'];
-const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline'];
+const builtLayerIds = ['parcel-development-fill', 'parcel-c-fill', 'parcel-c-outline', 'steep-slopes-fill'];
 const vacantLayerIds = ['parcel-vacant-fill'];
 const buildableLayerIds = ['buildable-unrestricted-fill'];
 const eastEndLayerIds = ['east-end-flu-fill', 'east-end-flu-outline'];
@@ -1209,6 +1212,7 @@ function setBuiltLandView() {
   showLayer("parcel-development-fill", true);
   showLayer("parcel-c-fill", true);
   showLayer("parcel-c-outline", true);
+  showLayer("steep-slopes-fill", true);
   showLayer("parcel-line", true);
   showLayer("county-outline", true);  setColoredSectionTransparency();
 }
@@ -1955,6 +1959,29 @@ function addOverlayLayers() {
     source:"conservation-easements",
     layout:{ visibility:"none" },
     paint:{ "fill-pattern":"conservation-hatch" }
+  });
+
+  // Steep slopes (>30% grade) within developable parcels — a red diagonal hatch
+  // over the choropleth so the parcel shade still reads through. Advisory regional
+  // slope screen from the Mapbox terrain DEM (~30 m); see gen-steep-slopes.js.
+  (function addSteepHatch(){
+    if (map.hasImage && map.hasImage("steep-hatch")) return;
+    const s = 16, cvs = document.createElement("canvas");
+    cvs.width = s; cvs.height = s;
+    const ctx = cvs.getContext("2d");
+    ctx.strokeStyle = "#b91c1c"; ctx.lineWidth = 2;
+    ctx.beginPath();
+    for (let i = -s; i < s * 2; i += 6) { ctx.moveTo(i + s, 0); ctx.lineTo(i, s); }  // opposite diagonal to conservation
+    ctx.stroke();
+    try { map.addImage("steep-hatch", ctx.getImageData(0, 0, s, s), { pixelRatio: 2 }); } catch (e) {}
+  })();
+  map.addSource("steep-slopes", { type:"geojson", data:steepSlopesData, generateId:false });
+  map.addLayer({
+    id:"steep-slopes-fill",
+    type:"fill",
+    source:"steep-slopes",
+    layout:{ visibility:"none" },
+    paint:{ "fill-pattern":"steep-hatch", "fill-opacity":0.85 }
   });
   map.addLayer({
     id:"conservation-easements-outline",
