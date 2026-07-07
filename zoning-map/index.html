@@ -1259,6 +1259,10 @@ function hideThematicLayers() {
   setLayersVisible(vacantLayerIds, false);
   setLayersVisible(futureLandUseLayerIds, false);
   if (typeof buildableLayerIds !== 'undefined') setLayersVisible(buildableLayerIds, false);
+  // Restore the full county-overview zoom floor for every view. The two
+  // parcel-fill views re-raise it to 9 afterward (see ensureParcelZoom) so their
+  // coloration can't be lost by zooming out; every other view keeps the overview.
+  if (map.getMinZoom() !== 7) map.setMinZoom(7);
 }
 
 function resetSubdivisionFilterOnly() {
@@ -1308,11 +1312,14 @@ function setPudView() {
 
 
 
-// The parcel tileset has minzoom 9 — below that no parcels render at all. When a
-// parcel-fill view is opened from the county overview (zoom ~8.35), nudge in so
-// the coloration actually appears.
+// The parcel tileset has minzoom 9 — below that NO parcels render, so the
+// Developable/Vacant coloration vanishes whenever the map is zoomed out past 9.
+// The permanent fix: while a parcel-fill view is active, LOCK the map's minimum
+// zoom to 9. setMinZoom clamps the current zoom up (so opening from the ~8.35
+// overview snaps in to where parcels draw) AND blocks zooming back out below 9,
+// so the coloration can no longer be lost. hideThematicLayers() restores 7.
 function ensureParcelZoom() {
-  if (map.getZoom() < 9.15) map.easeTo({ zoom: 9.3, duration: 500 });
+  if (map.getMinZoom() < 9) map.setMinZoom(9);
 }
 
 // Developable Land starts as the same broad set the Vacant view shows (parcels
