@@ -79,7 +79,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     </div>
     <div class="row">
       <button class="secondary" id="viewClear">Clear</button>
-      <button class="secondary" id="viewBuiltLand">Vacant Land</button>
+      <button class="secondary" id="viewBuiltLand">Vacant or Developable</button>
     </div>
 
     <div id="vacantToggles" style="display:none; margin-top:12px;">
@@ -584,10 +584,11 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <p class="small">Lower opacity makes roads, terrain, rivers, and labels easier to see under the zoning colors.</p>
   </div>
   <div class="panel" id="builtLegend" style="display:none;">
-    <label>Vacant land legend</label>
-    <div class="legend-item"><span style="background:#2b6cb0"></span><button type="button">Vacant land (buildable)</button><em></em></div>
-    <div class="legend-item"><span style="background:#d98b3a"></span><button type="button">Vacant &mdash; airport height limit</button><em></em></div>
-    <p class="small">Blue = a lot with no structure (2021&ndash;2024 building footprints). Amber lots fall under an airport (FAA) height restriction &mdash; still buildable, but density/height limited. Use the checkboxes above to remove PUD, subdivision, or protected land.</p>
+    <label>Developable land legend</label>
+    <div class="legend-item"><span style="background:#2b6cb0"></span><button type="button">Vacant (no structures)</button><em></em></div>
+    <div class="legend-item"><span style="background:#0d9488"></span><button type="button">Underdeveloped (outbuilding only)</button><em></em></div>
+    <div class="legend-item"><span style="background:#d98b3a"></span><button type="button">Airport height limit</button><em></em></div>
+    <p class="small">Based on the county assessor's building records. <b>Blue</b> = no structure on record. <b>Teal</b> = only an outbuilding (barn / shed / garage), no home &mdash; still developable. <b>Amber</b> = under an airport (FAA) height restriction. Click a lot to see what's on it. Use the checkboxes above to remove PUD, subdivision, or protected land.</p>
   </div>
 
 
@@ -790,6 +791,26 @@ function airportNote(props) {
     : "";
 }
 
+// Development status + what's built on the parcel, from the county assessor
+// Improvements record (structure_class / imp_* baked into the tileset).
+function structureRows(pp) {
+  if (!pp) return [];
+  const rows = [];
+  const label = pp.structure_class === "vacant" ? "Vacant (no structures on record)"
+    : pp.structure_class === "outbuilding" ? "Underdeveloped (outbuilding only)"
+    : pp.structure_class === "developed" ? "Developed"
+    : "";
+  if (label) rows.push(["Development status", label]);
+  if (pp.imp_desc) {
+    rows.push(["Main structure", pp.imp_desc + (pp.imp_type ? " (" + pp.imp_type + ")" : "")]);
+    if (pp.imp_sqft) rows.push(["Total building sq ft", pp.imp_sqft]);
+    if (pp.imp_year) rows.push(["Year built", pp.imp_year]);
+    if (pp.imp_bd || pp.imp_ba) rows.push(["Beds / baths", (pp.imp_bd || "0") + " / " + (pp.imp_ba || "0")]);
+    if (pp.imp_count && Number(pp.imp_count) > 1) rows.push(["Structures on parcel", pp.imp_count]);
+  }
+  return rows;
+}
+
 function showPopup(lngLat, html) {
   if (selectedPopup) selectedPopup.remove();
   selectedPopup = new mapboxgl.Popup({ closeButton:true, maxWidth:"340px" })
@@ -848,7 +869,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>magenta</strong> parcel is <strong>Parcel C</strong> — a disputed area in litigation over whether it is part of the Aldasoro subdivision. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Vacant Land:</strong> Blue = a lot with no structure (2021\u20132024 building footprints). Amber = a lot under an airport (FAA) height limit \u2014 still buildable, but restricted. Use the checkboxes at left to remove PUD, subdivision, or protected (open-space) land.",
+  built: "<strong>Developable Land:</strong> From county assessor records. Blue = no structure on record; teal = only an outbuilding (barn/shed), no home; amber = under an airport (FAA) height limit. Click a lot for details. Use the checkboxes at left to remove PUD, subdivision, or protected (open-space) land.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors."
 };
@@ -945,7 +966,11 @@ function setPudView() {
 // NOT filtered here — they stay visible and are recolored amber by the layer
 // paint expression (a height limit, not a bar to development).
 const VACANT_BASE = ["all",
-  ["==", ["get", "vacant_lot"], "True"],
+  // Developable = no dwelling/commercial building per the county assessor:
+  // "vacant" (no structures) OR "outbuilding" (only a barn/shed/etc.). This
+  // replaces the old imagery footprint flag, which mis-counted condo units as
+  // vacant and missed ~700 real buildings.
+  ["in", ["get", "structure_class"], ["literal", ["vacant", "outbuilding"]]],
   ["!=", ["get", "federal_forest_public_land"], "True"],
   ["!=", ["get", "high_country"], "True"],
   ["!=", ["get", "PIN"], "ROW"],
@@ -1892,7 +1917,10 @@ function addOverlayLayers() {
     layout:{ visibility:"none" },
     filter:["all", ["==", ["get", "vacant_lot"], "True"], ["!=", ["get", "federal_forest_public_land"], "True"], ["!=", ["get", "high_country"], "True"], ["!=", ["get", "open_space"], "True"], ["!=", ["get", "PIN"], "ROW"], ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]], ["!=", ["get", "PIN"], "456335100067"], ["!=", ["get", "PIN"], "456530300022"], ["!=", ["get", "PIN"], "456331230005"], ["!=", ["get", "PIN"], "456329330002"]],
     paint:{
-      "fill-color":["case", ["==", ["get", "airport_restriction"], "True"], "#d98b3a", "#2b6cb0"],
+      "fill-color":["case",
+        ["==", ["get", "airport_restriction"], "True"], "#d98b3a",
+        ["==", ["get", "structure_class"], "outbuilding"], "#0d9488",
+        "#2b6cb0"],
       "fill-opacity":0.55
     }
   });
@@ -2075,7 +2103,8 @@ function addOverlayLayers() {
       ["Acreage", acreage],
       ["PUD", pp.pud || _pudAt(lng,lat)],
       ["Subdivision/area field", subdivision],
-      ["Parcel/tract", parcelTract]
+      ["Parcel/tract", parcelTract],
+      ...structureRows(pp)
     ]) + airportNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));

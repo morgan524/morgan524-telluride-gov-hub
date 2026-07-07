@@ -8,10 +8,42 @@
 const fs = require('fs');
 const path = require('path');
 
+const GIS = '/Volumes/External/Dropbox (Personal)/Claude/Projects/Livable-Telluride2/assets/GIS Data';
 const V18 = '/Users/morgansmith/Downloads/Livable-Telluride-Map-v18.html';
-const ZON = '/Volumes/External/Dropbox (Personal)/Claude/Projects/Livable-Telluride2/assets/GIS Data/SanMiguelZoning_-3786858185677232847.geojson';
+const ZON = GIS + '/SanMiguelZoning_-3786858185677232847.geojson';
+const IMP = GIS + '/Improvements.geojson';
 const outDir = process.argv[2];
 fs.mkdirSync(outDir, { recursive: true });
+
+// ── Assessor Improvements table (keyed by ACCOUNTNO) → per-parcel structure
+// classification. This is the authoritative "what is built here" record, far
+// better than the imagery footprint flag: it distinguishes homes/commercial
+// from barns/sheds, and correctly treats condo units as developed. ──
+const impByAcct = {};
+for (const f of JSON.parse(fs.readFileSync(IMP, 'utf8')).features) {
+  const p = f.properties || {};
+  (impByAcct[p.ACCOUNTNO] = impByAcct[p.ACCOUNTNO] || []).push(p);
+}
+// An improvement is an OUTBUILDING (not a dwelling/commercial building) by its
+// build description (PROPERTYTYPE is mostly the parcel's tax class, so the
+// structure type lives in BLTASDESCRIPTION).
+const OUT_BLT = /barn|shed|equipment|farm util|corral|stable|greenhouse|hangar|hanger|detached garage|pole build|loafing|\bhay\b|granary|silo|utility build|out ?building/i;
+const isOutbuilding = p => ['Out Building', 'Parking'].includes(String(p.PROPERTYTYPE)) || OUT_BLT.test(String(p.BLTASDESCRIPTION || ''));
+function structureInfo(acct) {
+  const imps = impByAcct[acct] || [];
+  if (!imps.length) return { structure_class: 'vacant' };
+  const cls = imps.every(isOutbuilding) ? 'outbuilding' : 'developed';
+  const main = imps.slice().sort((a, b) => (b.IMPSF || 0) - (a.IMPSF || 0))[0];  // biggest structure
+  const totalSf = imps.reduce((t, x) => t + (Number(x.IMPSF) || 0), 0);
+  const info = { structure_class: cls, imp_count: String(imps.length) };
+  if (main.BLTASDESCRIPTION) info.imp_desc = String(main.BLTASDESCRIPTION);
+  if (main.PROPERTYTYPE) info.imp_type = String(main.PROPERTYTYPE);
+  if (totalSf) info.imp_sqft = String(Math.round(totalSf));
+  if (main.ADJUSTEDYEARBUILT) info.imp_year = String(main.ADJUSTEDYEARBUILT);
+  if (Number(main.BEDROOMCOUNT) > 0) info.imp_bd = String(main.BEDROOMCOUNT);
+  if (Number(main.BATHCOUNT) > 0) info.imp_ba = String(main.BATHCOUNT);
+  return info;
+}
 
 // ── extract `const parcelData = {...};` from v18 via brace matching ──
 const raw = fs.readFileSync(V18, 'utf8');
@@ -64,6 +96,7 @@ function roundCoords(node) { if (Array.isArray(node)) return node.map(roundCoord
 function roundNums(n) { return Array.isArray(n) ? n.map(roundNums) : (typeof n === 'number' ? round6(n) : n); }
 
 let taggedHc = 0, taggedOs = 0, taggedAir = 0;
+const clsCount = { vacant: 0, outbuilding: 0, developed: 0 };
 for (const f of parcelData.features) {
   if (f.properties) delete f.properties.LEGAL;
   const c = centroid(f.geometry);
@@ -74,8 +107,13 @@ for (const f of parcelData.features) {
   if (osRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.open_space = 'True'; taggedOs++; }
   // Airport height restriction — parcel OVERLAP (not centroid), shown in the popup
   if (airportOverlap(ringsOf(f.geometry))) { f.properties.airport_restriction = 'True'; taggedAir++; }
+  // Assessor structure classification + popup details (join by ACCOUNTNO)
+  const si = structureInfo(String(f.properties.ACCOUNTNO || ''));
+  Object.assign(f.properties, si);
+  clsCount[si.structure_class] = (clsCount[si.structure_class] || 0) + 1;
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
 console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir);
+console.log('structure_class:', JSON.stringify(clsCount));
 console.log('wrote', path.join(outDir, 'parcel.json'), (fs.statSync(path.join(outDir, 'parcel.json')).size / 1e6).toFixed(1) + 'MB');
