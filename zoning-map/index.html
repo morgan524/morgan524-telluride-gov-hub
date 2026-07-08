@@ -1322,6 +1322,16 @@ function ensureParcelZoom() {
   if (map.getMinZoom() < 9) map.setMinZoom(9);
 }
 
+// Parcels manually removed from BOTH the Vacant and Developable views: dedicated
+// PUD open space (not zoned OPEN SPACE, so the open_space flag misses it) and
+// institutional land. Keyed by PIN.
+const EXCLUDED_LAND_PINS = [
+  "456529002245", // Aldasoro PUD dedicated open space (Aldasoro Ranch Homeowners)
+  "456532102001", // Last Dollar PUD dedicated open space
+  "456536310902", // Telluride School District — the school
+];
+const notExcludedPin = ["!", ["in", ["get", "PIN"], ["literal", EXCLUDED_LAND_PINS]]];
+
 // Developable Land starts as the same broad set the Vacant view shows (parcels
 // with no residential structure, minus federal/public, conservation, open space,
 // airport, and ROW/common non-lots). The "Hide PUDs" / "Hide subdivisions"
@@ -1333,6 +1343,7 @@ function developableFilter() {
     ["!=", ["get", "federal_forest_public_land"], "True"],
     ["!=", ["get", "conservation_easement"], "True"],
     ["!=", ["get", "open_space"], "True"],
+    notExcludedPin,
     // HIGH COUNTRY AREA zone = alpine claims (Palmyra, Gold Hill, etc.), no
     // realistic road access — not developable.
     ["!=", ["get", "high_country"], "True"],
@@ -1341,8 +1352,8 @@ function developableFilter() {
     // ranch land (Diamond Ranch/Ridge, Aldasoro, Magnum) that IS developable,
     // just height-limited — the popup already shows the Part 77 cap for those.
     ["!", ["any",
-      ["in", "airport", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
-      ["in", "airport", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
+      ["in", "airport auth", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
+      ["in", "airport auth", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
     ["!=", ["get", "PIN"], "ROW"],
     ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
     ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]
@@ -2454,6 +2465,7 @@ function addOverlayLayers() {
       ["!", ["any",
         ["in", "airport auth", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
         ["in", "airport auth", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
+      notExcludedPin,
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
       ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
@@ -2484,6 +2496,7 @@ function addOverlayLayers() {
       ["!=", ["get", "federal_forest_public_land"], "True"],
       ["!=", ["get", "conservation_easement"], "True"],
       ["!=", ["get", "open_space"], "True"],
+      notExcludedPin,
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
       ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
