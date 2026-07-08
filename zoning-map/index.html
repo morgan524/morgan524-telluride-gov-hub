@@ -785,6 +785,74 @@ const WRIGHTS_MESA_FLU = {
   "Public":                          { code: "P",   color: "#ad9480", density: "Public / institutional (non-residential)" }
 };
 
+// Current BY-RIGHT residential density per zoning designation, from the San Miguel
+// County Land Use Code, Article 5 — Standards (adopted Nov 2021; density figures
+// §§5-302 to 5-322). This is the density a parcel is entitled to WITHOUT a
+// discretionary Planned Unit Development (PUD). The striking fact the East End
+// debate turns on: in the County's density districts (HD/MD/LD/LDR) and the F, R
+// and HCA districts, the by-right minimum lot is 35 acres — i.e. 1 unit per 35+
+// acres — and greater density is only obtainable through the PUD process (§5-14).
+// Keyed by the exact GIS ZONING string. Municipal parcels (Town of Telluride /
+// Mountain Village / Norwood) are governed by their own town code, not this table
+// — those fall through to the jurisdiction-based note in zoningDensity().
+const ZONING_DENSITY = {
+  // County residential / agricultural — 35-acre by-right minimum lot
+  "FORESTRY/AGRICULTURE":             "1 unit per 35+ acres",
+  "HIGH COUNTRY AREA":                "1 unit per 35+ acres",
+  "LOW DENSITY":                      "1 unit per 35+ acres (by right)",
+  "MEDIUM DENSITY":                   "1 unit per 35+ acres (by right)",
+  "HIGH DENSITY":                     "1 unit per 35+ acres (by right)",
+  "LOW DENSITY RESIDENTIAL":          "1 unit per 35+ acres (by right)",
+  "RESIDENTIAL":                      "1 unit per 35+ acres (by right)",
+  "AFFORDABLE HOUSING PUD":           "1 unit per 35+ acres by right; up to 15 units/acre via PUD",
+  // County residential — other minimums
+  "MOBILE HOME":                      "1 unit per 2 acres (down to 7,500 sq ft with full utilities)",
+  "PLACERVILLE RESIDENTIAL":          "1 unit per 18,750 sq ft",
+  "WEST END":                         "1 unit per 3 acres (2 dwellings per parcel)",
+  "WRIGHTS MESA RURAL AGRICULTURAL":  "1 unit per 5 acres",
+  "RANGELAND/GRAZING":                "Agricultural / grazing — large lot",
+  // Non-residential county districts
+  "INDUSTRIAL":                       "Industrial — 35-acre lots (non-residential)",
+  "WRIGHTS MESA LIGHT INDUSTRIAL":    "Light industrial (non-residential)",
+  "HEAVY COMMERCIAL":                 "Commercial (non-residential)",
+  "COMMERCIAL":                       "Commercial (non-residential)",
+  "PLACERVILLE COMMERCIAL":           "Commercial (non-residential)",
+  "OPEN SPACE":                       "Open space (non-residential)",
+  "OPEN SPACE CONSERVATION EASEMENT": "Protected open space (non-residential)",
+  "PARK":                             "Park (non-residential)",
+  "PUBLIC":                           "Public / institutional (non-residential)",
+  "PUBLIC PURPOSE":                   "Public / institutional (non-residential)",
+  "PUBLIC PURPOSE   PARKING":         "Public parking (non-residential)",
+  "CEMETERY DISTRICT":                "Cemetery (non-residential)",
+  // Site-specific / plan-governed
+  "PLANNED UNIT DEVELOPMENT":         "Set by the parcel's PUD agreement",
+  "NORWOOD PUD R1":                   "Set by the parcel's PUD agreement",
+  "WRIGHTS MESA":                     "Varies by Wright's Mesa sub-district (5–35 acres)"
+};
+
+// The "Current allowed density" popup value for a parcel's zoning designation.
+// Known County zones come from ZONING_DENSITY; parcels inside an incorporated town
+// are governed by that town's code; anything else (UNASSIGNED / SPLIT SEE NOTES /
+// PENDING) is site-specific. Never returns null when a zoning string exists, so the
+// row shows on every parcel box.
+function zoningDensity(zoning, jurisdiction) {
+  const z = String(zoning || "").toUpperCase().trim();
+  if (!z) return null;
+  if (ZONING_DENSITY[z]) return ZONING_DENSITY[z];
+  if (/^Town of/i.test(jurisdiction || "")) return "Set by " + jurisdiction + " zoning";
+  return "Site-specific — see County zoning";
+}
+
+// Sourcing / by-right caveat shown once beneath a box that carries a County
+// by-right density (i.e. a zone in ZONING_DENSITY), so the "35 acres" figures read
+// as "without a PUD", not "the most you could ever build".
+function zoningDensityNote(zoning) {
+  const z = String(zoning || "").toUpperCase().trim();
+  return ZONING_DENSITY[z]
+    ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">By-right density under the San Miguel County Land Use Code (Article 5). In the County density districts and the F, R &amp; HCA districts, higher density than 1 unit per 35 acres generally requires a discretionary PUD.</div>'
+    : "";
+}
+
 /*__DATA_REMOVED__ aldasoroPudData*/
 /*__DATA_REMOVED__ butcherCreekPudData*/
 
@@ -2705,6 +2773,7 @@ function addOverlayLayers() {
       ["Owner", owner],
       ["Jurisdiction", jurisdiction],
       ["Zoning", zp.ZONING],
+      ["Current allowed density", zoningDensity(zp.ZONING, jurisdiction)],
       ["Acreage", acreage],
       ["PUD", pp.pud || _pudAt(lng,lat)],
       ["Subdivision/area field", subdivision],
@@ -2713,7 +2782,7 @@ function addOverlayLayers() {
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
     ]) + '<span class="steep-' + _tok + '"></span><span class="faa-' + _tok + '"></span>'
-      + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+      + zoningDensityNote(zp.ZONING) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
