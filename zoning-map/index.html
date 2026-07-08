@@ -836,11 +836,43 @@ function zoningDensity(zoning, jurisdiction) {
   return "Site-specific — see County zoning";
 }
 
-// Sourcing / by-right caveat shown once beneath a box that carries a County
-// by-right density (i.e. a zone in ZONING_DENSITY), so the "35 acres" figures read
-// as "without a PUD", not "the most you could ever build".
-function zoningDensityNote(zoning) {
+// Single-family / large-lot zones whose base density (e.g. "1 unit per 35+ acres")
+// is misleading for a parcel that is ALREADY a platted lot in an approved
+// subdivision or PUD — the subdivision/PUD created the lots, and each is entitled to
+// a single home regardless of the underlying large-lot zoning.
+const SINGLE_FAMILY_ZONES = new Set([
+  "FORESTRY/AGRICULTURE", "HIGH COUNTRY AREA", "LOW DENSITY", "MEDIUM DENSITY",
+  "HIGH DENSITY", "LOW DENSITY RESIDENTIAL", "RESIDENTIAL", "RANGELAND/GRAZING",
+  "WEST END", "WRIGHTS MESA RURAL AGRICULTURAL", "MOBILE HOME",
+  "PLACERVILLE RESIDENTIAL", "AFFORDABLE HOUSING PUD"
+]);
+// A parcel is a platted lot in an approved subdivision/PUD when it sits inside a
+// mapped subdivision polygon or carries a PUD name.
+function isPlattedLot(pp) {
+  return !!(pp && (pp.in_named_subdivision === "True" || (pp.pud && String(pp.pud) !== "")));
+}
+
+// The "Current allowed density" value. For a platted lot in an approved subdivision
+// or PUD with single-family / large-lot zoning, show the LOT entitlement (one home
+// per lot) rather than the base zoning's "1 unit per 35 acres" — the subdivision/PUD
+// already established the lots. All other parcels use the zoning density.
+function currentAllowedDensity(pp, zoning, jurisdiction) {
   const z = String(zoning || "").toUpperCase().trim();
+  if (isPlattedLot(pp) && SINGLE_FAMILY_ZONES.has(z)) {
+    const name = (pp.pud && String(pp.pud) !== "") ? String(pp.pud) : String(pp.SUBNAME || "").trim();
+    return "1 single-family home per lot" + (name ? " (approved " + name + ")" : " (platted subdivision lot)");
+  }
+  return zoningDensity(zoning, jurisdiction);
+}
+
+// Caveat beneath the density line. A platted subdivision/PUD lot gets a note that the
+// lot entitlement supersedes the base zoning; otherwise the by-right / PUD caveat for
+// County zones that carry a large-lot number.
+function zoningDensityNote(pp, zoning) {
+  const z = String(zoning || "").toUpperCase().trim();
+  if (isPlattedLot(pp) && SINGLE_FAMILY_ZONES.has(z)) {
+    return '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">This is a platted lot in an approved subdivision / PUD — it is entitled to a single-family home regardless of the underlying large-lot (1 unit / 35 ac) zoning.</div>';
+  }
   return ZONING_DENSITY[z]
     ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">By-right density under the San Miguel County Land Use Code (Article 5). In the County density districts and the F, R &amp; HCA districts, higher density than 1 unit per 35 acres generally requires a discretionary PUD.</div>'
     : "";
@@ -1449,6 +1481,7 @@ const EXCLUDED_LAND_PINS = [
   "456532102001", // Last Dollar PUD dedicated open space
   "456536310902", // Telluride School District — the school
   "456532117319", // Deep Creek Mesa Ranch PUD dedicated open space (Genesee)
+  "477901207001", // Backman Village open space (Telluride Ski & Golf)
 ];
 const notExcludedPin = ["!", ["in", ["get", "PIN"], ["literal", EXCLUDED_LAND_PINS]]];
 
@@ -1515,9 +1548,12 @@ function developableFilter() {
   const hidePuds = document.getElementById("devHidePuds");
   const hideSubs = document.getElementById("devHideSubs");
   if (hidePuds && hidePuds.checked) f.push(notPud);
-  // A subdivision parcel = in_pud_or_subdivision but not a PUD (PUDs are handled
-  // by their own checkbox), so hiding subdivisions shouldn't also remove PUDs.
-  if (hideSubs && hideSubs.checked) f.push(["!", ["all", ["==", ["get", "in_pud_or_subdivision"], "True"], notPud]]);
+  // Hide subdivisions removes any parcel that falls inside a polygon drawn on the
+  // "Show subdivisions" map — baked as in_named_subdivision (point-in-polygon vs
+  // subdivision.json + Backman Village in prep-parcels.js). This deliberately
+  // INCLUDES subdivisions that are also PUDs (e.g. the whole Aldasoro Ranch), to
+  // mirror that map exactly.
+  if (hideSubs && hideSubs.checked) f.push(["!", ["==", ["get", "in_named_subdivision"], "True"]]);
   return f;
 }
 function applyDevelopableFilter() {
@@ -2872,7 +2908,7 @@ function addOverlayLayers() {
       ["Owner", owner],
       ["Jurisdiction", jurisdiction],
       ["Zoning", zp.ZONING],
-      ["Current allowed density", zoningDensity(zp.ZONING, jurisdiction)],
+      ["Current allowed density", currentAllowedDensity(pp, zp.ZONING, jurisdiction)],
       ["Acreage", acreage],
       ["PUD", pp.pud || _pudAt(lng,lat)],
       ["Subdivision/area field", subdivision],
@@ -2882,7 +2918,7 @@ function addOverlayLayers() {
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
     ]) + '<span class="steep-' + _tok + '"></span><span class="faa-' + _tok + '"></span>'
-      + zoningDensityNote(zp.ZONING) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+      + zoningDensityNote(pp, zp.ZONING) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);

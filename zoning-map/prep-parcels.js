@@ -72,7 +72,11 @@ console.log('parcels from v18:', parcelData.features.length);
 const zon = JSON.parse(fs.readFileSync(ZON, 'utf8'));
 function ringsOf(g) { const o = []; if (!g) return o; if (g.type === 'Polygon') o.push(...g.coordinates); else if (g.type === 'MultiPolygon') for (const p of g.coordinates) o.push(...p); return o; }
 const hcRings = [], osRings = [], airRings = [];
-const OPEN_SPACE_ZONES = new Set(['OPEN SPACE', 'OPEN SPACE CONSERVATION EASEMENT']);
+// Zones that are public/protected land, never vacant/developable housing sites.
+// PARK is included so town/county parks drop out of the Vacant + Developable views
+// (they share the open_space exclusion). OSCE parcels whose centroid lands in a PARK
+// polygon are covered here too.
+const OPEN_SPACE_ZONES = new Set(['OPEN SPACE', 'OPEN SPACE CONSERVATION EASEMENT', 'PARK']);
 for (const f of zon.features) {
   const props = f.properties || {};
   const z = String(props.ZONING || '');
@@ -182,11 +186,30 @@ for (const src of ['LandHeritageProgram.geojson', 'OtherConservationEasements.ge
   for (const f of loadFC(GIS + '/' + src).features) easeRings.push(...ringsOf(f.geometry));
 }
 
+// Named-subdivision rings — the exact polygons drawn on the "Show subdivisions" map
+// (data/subdivision.json + Backman Village). A parcel whose centroid falls inside
+// one is "in a mapped subdivision" (in_named_subdivision), so the Developable view's
+// Hide-subdivisions toggle can mirror that map precisely (incl. the whole Aldasoro
+// Ranch subdivision, even though it's also a PUD). Bbox-indexed for speed.
+const subRingsBbox = [];
+for (const src of ['subdivision.json', 'backman-village-subdivision.json']) {
+  for (const f of loadFC(path.join(DATA, src)).features) {
+    for (const ring of ringsOf(f.geometry)) subRingsBbox.push({ ring, bb: ringBbox([ring]) });
+  }
+}
+function inNamedSubdivision(c) {
+  for (const s of subRingsBbox) {
+    if (c[0] < s.bb[0] || c[0] > s.bb[2] || c[1] < s.bb[1] || c[1] > s.bb[3]) continue;
+    if (ptInRing(c[0], c[1], s.ring)) return true;
+  }
+  return false;
+}
+
 const round6 = n => Math.round(n * 1e6) / 1e6;
 function roundCoords(node) { if (Array.isArray(node)) return node.map(roundCoords); if (node && typeof node === 'object') { const o = {}; for (const k of Object.keys(node)) o[k] = k === 'coordinates' ? roundNums(node[k]) : roundCoords(node[k]); return o; } return node; }
 function roundNums(n) { return Array.isArray(n) ? n.map(roundNums) : (typeof n === 'number' ? round6(n) : n); }
 
-let taggedHc = 0, taggedOs = 0, taggedAir = 0, taggedEase = 0, taggedDev = 0;
+let taggedHc = 0, taggedOs = 0, taggedAir = 0, taggedEase = 0, taggedDev = 0, taggedSub = 0;
 const clsCount = { vacant: 0, outbuilding: 0, developed: 0 };
 for (const f of parcelData.features) {
   if (f.properties) delete f.properties.LEGAL;
@@ -194,6 +217,8 @@ for (const f of parcelData.features) {
   if (!c) continue;
   f.properties = f.properties || {};
   if (hcRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.high_country = 'True'; taggedHc++; }
+  // In a mapped subdivision polygon (drives the Developable Hide-subdivisions toggle).
+  if (inNamedSubdivision(c)) { f.properties.in_named_subdivision = 'True'; taggedSub++; }
   // OPEN SPACE / OPEN SPACE CONSERVATION EASEMENT zoning = protected, not developable
   if (osRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.open_space = 'True'; taggedOs++; }
   // Airport height restriction — parcel OVERLAP (not centroid), shown in the popup
@@ -245,7 +270,7 @@ for (const f of parcelData.features) {
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
-console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir);
+console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir, '| tagged in_named_subdivision:', taggedSub);
 console.log('tagged conservation_easement:', taggedEase, '| tagged developable:', taggedDev);
 console.log('structure_class:', JSON.stringify(clsCount));
 console.log('wrote', path.join(outDir, 'parcel.json'), (fs.statSync(path.join(outDir, 'parcel.json')).size / 1e6).toFixed(1) + 'MB');
