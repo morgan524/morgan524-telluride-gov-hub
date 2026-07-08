@@ -1058,12 +1058,20 @@ function structureRows(pp) {
   return rows;
 }
 
+// State of Colorado land (DOW / State Land Board / CDOT) is excluded from
+// Developable by owner name — mirror the map filter so the popup agrees even when
+// the baked `developable` flag is stale.
+function isStateOwned(pp) {
+  const o = String((pp && (pp.NAMEDISPLAY || pp.NAME1)) || "").toLowerCase();
+  return o.includes("state of colorado") || o.includes("division of wildlife") || o.includes("board of land commission");
+}
+
 // Division-potential estimate for the Developable Land view: rows describing how
 // many additional lots a parcel could be divided into at the plan/zoning density
 // (baked into the tileset by prep-parcels.js). Advisory only.
 function devPotentialRows(pp) {
-  // Airport land is excluded from Developable, so don't show a dev estimate for it.
-  if (!pp || pp.developable !== "True" || pp.airport_restriction === "True") return [];
+  // Airport / State land is excluded from Developable, so don't show a dev estimate.
+  if (!pp || pp.developable !== "True" || pp.airport_restriction === "True" || isStateOwned(pp)) return [];
   const hi = Number(pp.dev_lots_hi), lo = Number(pp.dev_lots_lo);
   if (!isFinite(hi) || hi < 1) return [];
   const range = (!isFinite(lo) || lo === hi) ? String(hi)
@@ -1081,7 +1089,7 @@ function fmtAcres(v) { const n = Number(v); return n < 1 ? n.toFixed(2).replace(
 
 // A short advisory caveat appended to a Developable Land popup.
 function devPotentialNote(pp) {
-  return (pp && pp.developable === "True" && pp.airport_restriction !== "True" && Number(pp.dev_lots_hi) >= 1)
+  return (pp && pp.developable === "True" && pp.airport_restriction !== "True" && !isStateOwned(pp) && Number(pp.dev_lots_hi) >= 1)
     ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">Advisory estimate of maximum development (net acres ÷ plan/zoning min lot size) — not an entitlement or a guarantee.</div>'
     : "";
 }
@@ -1332,6 +1340,16 @@ const EXCLUDED_LAND_PINS = [
 ];
 const notExcludedPin = ["!", ["in", ["get", "PIN"], ["literal", EXCLUDED_LAND_PINS]]];
 
+// State of Colorado land (Division of Wildlife, State Land Board, CDOT) is public
+// conservation / infrastructure land, not a private development opportunity — excluded
+// from Developable by owner name. Municipal land (Town of *, San Miguel County,
+// Mountain Village) is KEPT (potential housing sites).
+const notStateOwned = ["!", ["any",
+  ["in", "state of colorado", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
+  ["in", "state of colorado", ["downcase", ["to-string", ["get", "NAME1"]]]],
+  ["in", "division of wildlife", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
+  ["in", "board of land commission", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]]]];
+
 // Developable Land starts as the same broad set the Vacant view shows (parcels
 // with no residential structure, minus federal/public, conservation, open space,
 // airport, and ROW/common non-lots). The "Hide PUDs" / "Hide subdivisions"
@@ -1354,6 +1372,7 @@ function developableFilter() {
     ["!", ["any",
       ["in", "airport auth", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
       ["in", "airport auth", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
+    notStateOwned,
     ["!=", ["get", "PIN"], "ROW"],
     ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
     ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]
@@ -2465,6 +2484,7 @@ function addOverlayLayers() {
       ["!", ["any",
         ["in", "airport auth", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
         ["in", "airport auth", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
+      notStateOwned,
       notExcludedPin,
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
