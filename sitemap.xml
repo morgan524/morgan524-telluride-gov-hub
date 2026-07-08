@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://livabletelluride.org/</loc></url>
   <url><loc>https://livabletelluride.org/about.html</loc></url>
+  <url><loc>https://livabletelluride.org/article-review.html</loc></url>
   <url><loc>https://livabletelluride.org/community-guidelines.html</loc></url>
   <url><loc>https://livabletelluride.org/data-deletion.html</loc></url>
   <url><loc>https://livabletelluride.org/deep-dive-carhenge.html</loc></url>
@@ -27,5 +28,6 @@
   <url><loc>https://livabletelluride.org/profile.html</loc></url>
   <url><loc>https://livabletelluride.org/projects-map/</loc></url>
   <url><loc>https://livabletelluride.org/projects-map/cost-tracker.html</loc></url>
+  <url><loc>https://livabletelluride.org/pulse-review.html</loc></url>
   <url><loc>https://livabletelluride.org/terms-of-use.html</loc></url>
 </urlset>
