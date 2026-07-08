@@ -1,18 +1,14 @@
 {
-  "hash": "68b876e7eef00177f2db15608cd672c7a6866efe",
-  "lede": "The most consequential thing on the calendar this week is Wednesday's joint work session where the Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments touching forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but this is where the shape of those changes gets decided. Also Wednesday, the commissioners make a rare trip to Norwood to consider a Planning Commission appointment and hear results from the Placerville Fire Survey. In between, the Ecology Commission digs into the 2022 Climate Action Plan with a focus on transportation and consumption.",
+  "hash": "a14114adb027ac55ca2facfe0cdc928f74c13b0b",
+  "lede": "The big one this week is Wednesday's joint Planning Commission and BOCC work session, where San Miguel County works through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal, and condominium plats — the kind of code-shaping session that quietly sets the rules for years of development decisions to come. Also Wednesday, the BOCC heads to Norwood for a rare West End meeting to consider a Planning Commission appointment and hear results from the Placerville Fire Survey — two items worth tracking if you care about land use and fire preparedness in the broader valley.",
   "notable": [
     {
       "id": 4,
-      "stake": "Land Use Code amendments on forestry, oil/gas, geothermal, and condo plats being shaped."
+      "stake": "County land use code amendments on forestry, oil, gas, geothermal, and condos being shaped."
     },
     {
       "id": 0,
-      "stake": "Commissioners may appoint a Planning Commission alternate, affecting future land-use votes."
-    },
-    {
-      "id": 1,
-      "stake": "Climate Action Plan review on transportation and consumption — public direction being set."
+      "stake": "Commissioners may appoint a Planning Commission alternate; fire survey results presented publicly."
     }
   ]
 }
