@@ -1,38 +1,5 @@
 [
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-08/",
-    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    "pubDate": "2026-07-08T15:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Market on the Plaza",
-    "link": "https://koto.org/event/market-on-the-plaza/2026-07-08/",
-    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    "pubDate": "2026-07-08T17:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Heritage Plaza, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Mahjongg for Independent Players",
-    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-08/",
-    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    "pubDate": "2026-07-08T19:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
     "title": "Sewing 101 with Melissa",
     "link": "https://koto.org/event/sewing-101-with-melissa/2026-07-08/",
     "description": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
@@ -418,6 +385,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
+    "link": "https://koto.org/event/without-a-doubt-film-screening-qa-w-braydon-bringhurst/",
+    "description": "Join us in-store for a screening of Patagonia Films' Without a Doubt featuring Braydon Bringhurst. In May of 2026, Braydon Bringhurst stood at the bottom of Gouranga, an iconic double-black-diamond descent in Squamish, British Columbia. The trail is steep, technical and high consequence, and will give even experienced riders jitters. But Braydon wasn’t there just to ride down Gouranga. He’d done that already, many times. This time, he was there to ride up it. Impossible? Likely. But that uncertainty is where Braydon thrives, and each failure is just another piece of the larger process. And for Braydon, that’s where the joy lies. Following the film, stick around for a Q&A with Braydon.",
+    "pubDate": "2026-07-14T01:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "imageUrl": ""
+  },
+  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-14/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -482,16 +460,5 @@
     "category": "Community Event",
     "location": "Heritage Plaza, Mountain Village",
     "imageUrl": ""
-  },
-  {
-    "title": "Mahjongg for Independent Players",
-    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-15/",
-    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    "pubDate": "2026-07-15T19:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   }
 ]

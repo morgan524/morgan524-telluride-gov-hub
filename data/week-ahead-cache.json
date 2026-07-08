@@ -1,14 +1,18 @@
 {
-  "hash": "68b876e7eef00177f2db15608cd672c7a6866efe",
-  "lede": "The most consequential meeting this week is Wednesday's joint work session where the Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments covering forestry, oil and gas, and deep geothermal operations — the kind of shaping session that determines what actually gets built into county rules before any public vote. That same evening, commissioners head to Norwood for a rare West End appearance, taking up a Planning Commission seat appointment and hearing results from the Placerville Fire Survey. The Ecology Commission is also meeting Wednesday to dig into the 2022 Climate Action Plan's transportation and materials sections.",
+  "hash": "a01da16d60f78e3d8c33a5cb1972161bd0ad6a0e",
+  "lede": "The biggest item this week is Wednesday's joint work session where the San Miguel County Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal, and condominium plats — no final votes, but this is where the shape of those rules gets set. Also Wednesday, the commissioners make a rare trip to Norwood to consider a Planning Commission appointment and hear results from the Placerville Fire Survey. The Ecology Commission meets the same evening to dig into the 2022 Climate Action Plan's transportation and materials sections.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commissioners may appoint a Planning Commission alternate; Placerville Fire Survey results presented."
+      "stake": "Commissioners appoint a Planning Commission alternate and review Placerville Fire Survey results."
+    },
+    {
+      "id": 1,
+      "stake": "Town's Climate Action Plan under review — transportation and consumption policies up for discussion."
     },
     {
       "id": 4,
-      "stake": "Land Use Code amendments to forestry, oil and gas, geothermal, and condo plat rules being shaped now."
+      "stake": "Proposed Land Use Code changes to forestry, oil and gas, geothermal, and condo plat rules being shaped."
     }
   ]
 }

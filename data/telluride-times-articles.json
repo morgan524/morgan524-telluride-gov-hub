@@ -1,14 +1,14 @@
 [
   {
-    "title": "Support Allen Highfield for TMVOA board",
+    "title": "Aldasoro Ranch turns 100",
     "source": "Telluride Times",
     "date": "July 8, 2026",
     "firstSeen": "2026-07-08",
-    "newsTopic": "government",
-    "copy": "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
+    "newsTopic": "community",
+    "copy": "The Aldasoro Ranch, founded in 1926 when Joaquin Aldasoro bought 1,400 acres on Deep Creek Mesa, turns 100 this year. The family is marking the milestone with a public celebration Sunday, July 12, 11 a.m.–3 p.m. at 5605 Last Dollar Rd. Free shuttles run every 30 minutes from the county courthouse.",
     "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "href": "https://www.telluridenews.com/news/article_92132a6f-84c7-4cf5-8194-30f9c965f8ed.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/93/493cf380-3382-4640-9817-6a2042523f39/6a4ea04ecc377.image.png",
     "imgHiRes": true
   },
   {
@@ -17,8 +17,8 @@
     "date": "July 8, 2026",
     "firstSeen": "2026-07-08",
     "newsTopic": "community",
-    "copy": "A 100% rating for Max Silverman.",
-    "claudeSummary": false,
+    "copy": "The article text appears to be corrupted or garbled and doesn't contain readable content about Max Silverman or a 100% rating. A reliable summary can't be produced from this text. Please check the source article and resubmit.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
@@ -44,6 +44,18 @@
     "copy": "A local resident is raising questions about evacuation plans during Telluride's busy festival season, concerned about what happens when thousands of visitors are in town. Meanwhile, wildfire activity across the region is serious — three firefighters were killed in Mesa County, and dry thunderstorms this week could spark new fires.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Support Allen Highfield for TMVOA board",
+    "source": "Telluride Times",
+    "date": "July 8, 2026",
+    "firstSeen": "2026-07-08",
+    "newsTopic": "government",
+    "copy": "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
   },
