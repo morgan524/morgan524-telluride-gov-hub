@@ -432,7 +432,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -486,7 +486,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -645,6 +645,66 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Support Allen Highfield for TMVOA board",
+    source: "Telluride Times",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-08",
+    newsTopic: "government",
+    copy: "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A 100% rating for Max Silverman",
+    source: "Telluride Times",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-08",
+    newsTopic: "community",
+    copy: "A 100% rating for Max Silverman.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "On paving the oval",
+    source: "Telluride Times",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-08",
+    newsTopic: "community",
+    copy: "The article text here is mostly login/paywall boilerplate — the actual content about paving the oval isn't accessible. Based on what's visible, a letter to the editor references the Town of Telluride and a community concern, likely about paving a local green space for recreational use.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Playing with fire",
+    source: "Telluride Times",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-08",
+    newsTopic: "public-safety",
+    copy: "A local resident is raising questions about evacuation plans during Telluride's busy festival season, concerned about what happens when thousands of visitors are in town. Meanwhile, wildfire activity across the region is serious — three firefighters were killed in Mesa County, and dry thunderstorms this week could spark new fires.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Coffee Camp dispute sparks petition",
+    source: "Telluride Times",
+    date: "July 8, 2026",
+    firstSeen: "2026-07-08",
+    newsTopic: "housing",
+    copy: "Neighbors near Coffee Camp in Norwood's mixed-use business district raised concerns at the June 10 Town Board meeting over noise, wildlife, and highway parking tied to the food truck operation. Town staff noted no evidence linking the business to a broader skunk problem in town, and supporters pushed back, comparing Coffee Camp's cooking to a nearby market. Norwood's land use code doesn't currently address food trucks specifically.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_edbdf11b-8bad-4aac-ab0d-bb6b8de98f1d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/39/53975440-28ca-4f51-ad6d-34c7b1faf5be/6a4e7fc74523f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Town council discusses TEMP updates",
     source: "Telluride Times",
@@ -2678,17 +2738,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Lite Lunch- Go Gentle",
-    link: "https://koto.org/event/lite-lunch-go-gentle/",
-    description: "The New York Times bestselling author of Where'd You Go, Bernadette returns to form in her most exuberant and life-affirming novel yet with the story of one woman’s cheerful determination to live a life of the mind only to have the heart force its way in. Adora Hazzard has it all figured out. A Stoic philosopher and divorcée, she lives a contented life on New York City’s Upper West Side. Having discovered that the secret to happiness is to desire only what you have, she’s applied this insight to blissful effect: relishing her teenage daughter, the freedom of being solo, and her job as a moral tutor for the twin boys of an old-money family. She’s even assembled a \"coven\"—like-minded women who live on the same floor in the legendary Ansonia—and is making active efforts to grow its membership. …",
-    pubDate: "2026-07-08T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Mahjongg for Independent Players",
     link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-08/",
     description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
@@ -3222,8 +3271,8 @@ const WILKINSON_EVENTS = [
   {
     title: "Teen Movie and Ice Cream Club",
     link: "https://telluridelibrary.libcal.com/event/16935734?hs=a",
-    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-07-08T22:00:00.000Z",
+    description: "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-07-08T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
@@ -4109,18 +4158,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg"
   },
   {
-    title: "On Display: Roots & Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
-    pubDate: "2026-07-06T12:00:00.000Z",
-    endDate: "2026-08-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
-  },
-  {
     title: "Soussical The Musical - Summer Youth Theatre Program",
     link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
     description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
@@ -4175,6 +4212,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53126308954360/huge/dc39d236acf1a73124e22fdae0143e571ac34d55.jpg"
+  },
+  {
+    title: "AVID Dance - FREE Workshop + Performance",
+    link: "https://sherbino.org/event/avid-dance-workshop-presentation/",
+    description: "The special collaboration brings together the Ouray County Performing Arts Guild (OCPAG), Artistic Ventures in Dance (AVID), Weehawken Dance, and the Sherbino Theatre for a dynamic, family-friendly experience that highlights the power of dance to connect and uplift. Blending professional artistry with young artists, this performance celebrates collaboration, growth, and the joy of moving together offering a rare opportunity to witness dancers at different stages of their journey share the stage. Come be part of an evening that is as much about participation as it is performance, and experience firsthand how dance can build confidence, connection, and community. Admission is FREE. Thursday, July 9 Sherbino Theater, Ridgway Schedule: 4:30–5:00 PM: Interactive dance workshop 5:00–5:30 PM: Free performance by AVID Dance Ages 7 to adults welcome to dance and/or attend the performance. Then make a night of it! …",
+    pubDate: "2026-07-09T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53373531340426/huge/9ae7a4ee9f5c6268af8c1714eb33756207cd1eaa.jpg"
   },
   {
     title: "2026 Hardrock Hundred",
@@ -5395,6 +5443,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62925/telluride_tour_poster_1.800x533.webp"
+  },
+  {
+    title: "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
+    link: "https://www.telluride.com/event/without-a-doubt-film-screening-q-a-w-braydon-bringhurst/",
+    description: "Join Patagonia in-store for a screening of Patagonia Films' Without a Doubt featuring Braydon Bringhurst. In May of …",
+    pubDate: "2026-07-13",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63027/without_a_doubt_jpg.800x533.webp"
   },
   {
     title: "Twenty(by)Telluride: Ah Haa HAHA",
