@@ -2465,6 +2465,43 @@ const BLOG_POSTS = [
 
 const COMMUNITY_EVENTS = [
   {
+    title: "Voter Registration Group Training",
+    source: "San Miguel County Democrats",
+    date: "July 23, 2026",
+    time: "4:00 PM - 5:30 PM",
+    location: "Wilkinson Public Library, Telluride Room, Telluride",
+    copy: "San Miguel County Democrats voter-registration training. Bring a personal laptop or iPad. RSVP to Cindy at mtnmama70@gmail.com.",
+    href: "https://smcdemocrats.org/"
+  },
+  {
+    title: "Voter Registration Group Training",
+    source: "San Miguel County Democrats",
+    date: "July 24, 2026",
+    time: "1:00 PM - 2:30 PM",
+    location: "Lone Cone Library Conference Room, Norwood",
+    copy: "San Miguel County Democrats voter-registration training. Bring a personal laptop or iPad. RSVP to Cindy at mtnmama70@gmail.com.",
+    href: "https://smcdemocrats.org/"
+  },
+  {
+    title: "Postcard Writing Party",
+    source: "San Miguel County Democrats",
+    date: "August 13, 2026",
+    time: "6:00 PM - 7:30 PM",
+    location: "Oliver House, 1555 Summit Street, Norwood",
+    copy: "San Miguel County Democrats postcard-writing party. Bring a snack to share. RSVP to Cindy at mtnmama70@gmail.com.",
+    href: "https://smcdemocrats.org/"
+  },
+  {
+    title: "Ridgway Friday Protests",
+    source: "San Miguel County Democrats",
+    date: "July 10, 2026",
+    endDate: "December 25, 2026",
+    time: "3:00 PM - 5:00 PM",
+    location: "Hartwell Park, CO-62, Ridgway",
+    copy: "Weekly community protest gathering every Friday afternoon at Hartwell Park in Ridgway - come when you can, leave when you have to. Ongoing; confirm the current schedule at smcdemocrats.org.",
+    href: "https://smcdemocrats.org/ridgway-protests-every-friday/"
+  },
+  {
     title: "2nd Annual Telluride Rotary Hikeathon",
     source: "Telluride Rotary Club",
     date: "May 31, 2026",
