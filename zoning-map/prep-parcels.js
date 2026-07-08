@@ -205,11 +205,27 @@ function inNamedSubdivision(c) {
   return false;
 }
 
+// Incorporated-town rings — parcels inside a Town boundary (Mountain Village,
+// Telluride, Norwood, Ophir, Sawpit) are already platted town lots, not raw
+// developable ranch land. Baked as in_town so the Developable Hide-subdivisions
+// toggle folds them in and the popup can label them as single-family town lots.
+const townRingsBbox = [];
+for (const f of loadFC(path.join(DATA, 'municipal-boundaries.json')).features) {
+  for (const ring of ringsOf(f.geometry)) townRingsBbox.push({ ring, bb: ringBbox([ring]) });
+}
+function inTown(c) {
+  for (const t of townRingsBbox) {
+    if (c[0] < t.bb[0] || c[0] > t.bb[2] || c[1] < t.bb[1] || c[1] > t.bb[3]) continue;
+    if (ptInRing(c[0], c[1], t.ring)) return true;
+  }
+  return false;
+}
+
 const round6 = n => Math.round(n * 1e6) / 1e6;
 function roundCoords(node) { if (Array.isArray(node)) return node.map(roundCoords); if (node && typeof node === 'object') { const o = {}; for (const k of Object.keys(node)) o[k] = k === 'coordinates' ? roundNums(node[k]) : roundCoords(node[k]); return o; } return node; }
 function roundNums(n) { return Array.isArray(n) ? n.map(roundNums) : (typeof n === 'number' ? round6(n) : n); }
 
-let taggedHc = 0, taggedOs = 0, taggedAir = 0, taggedEase = 0, taggedDev = 0, taggedSub = 0;
+let taggedHc = 0, taggedOs = 0, taggedAir = 0, taggedEase = 0, taggedDev = 0, taggedSub = 0, taggedTown = 0;
 const clsCount = { vacant: 0, outbuilding: 0, developed: 0 };
 for (const f of parcelData.features) {
   if (f.properties) delete f.properties.LEGAL;
@@ -219,6 +235,8 @@ for (const f of parcelData.features) {
   if (hcRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.high_country = 'True'; taggedHc++; }
   // In a mapped subdivision polygon (drives the Developable Hide-subdivisions toggle).
   if (inNamedSubdivision(c)) { f.properties.in_named_subdivision = 'True'; taggedSub++; }
+  // Inside an incorporated town boundary (already-platted town lot).
+  if (inTown(c)) { f.properties.in_town = 'True'; taggedTown++; }
   // OPEN SPACE / OPEN SPACE CONSERVATION EASEMENT zoning = protected, not developable
   if (osRings.some(r => ptInRing(c[0], c[1], r))) { f.properties.open_space = 'True'; taggedOs++; }
   // Airport height restriction — parcel OVERLAP (not centroid), shown in the popup
@@ -270,7 +288,7 @@ for (const f of parcelData.features) {
 }
 const rounded = roundCoords(parcelData);
 fs.writeFileSync(path.join(outDir, 'parcel.json'), JSON.stringify(rounded));
-console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir, '| tagged in_named_subdivision:', taggedSub);
+console.log('tagged high_country:', taggedHc, '| tagged open_space:', taggedOs, '| tagged airport_restriction:', taggedAir, '| tagged in_named_subdivision:', taggedSub, '| tagged in_town:', taggedTown);
 console.log('tagged conservation_easement:', taggedEase, '| tagged developable:', taggedDev);
 console.log('structure_class:', JSON.stringify(clsCount));
 console.log('wrote', path.join(outDir, 'parcel.json'), (fs.statSync(path.join(outDir, 'parcel.json')).size / 1e6).toFixed(1) + 'MB');

@@ -862,16 +862,34 @@ function currentAllowedDensity(pp, zoning, jurisdiction) {
     const name = (pp.pud && String(pp.pud) !== "") ? String(pp.pud) : String(pp.SUBNAME || "").trim();
     return "1 single-family home per lot" + (name ? " (approved " + name + ")" : " (platted subdivision lot)");
   }
+  // A vacant lot inside an incorporated town (Mountain Village, Telluride, …) is a
+  // platted town lot — a single-family homesite under the town's code, not raw
+  // large-lot land.
+  if (isVacantTownLot(pp, jurisdiction)) {
+    const town = /^Town of/i.test(jurisdiction || "") ? jurisdiction : "platted town lot";
+    return "1 single-family home per lot (" + town + ")";
+  }
   return zoningDensity(zoning, jurisdiction);
 }
 
-// Caveat beneath the density line. A platted subdivision/PUD lot gets a note that the
-// lot entitlement supersedes the base zoning; otherwise the by-right / PUD caveat for
-// County zones that carry a large-lot number.
-function zoningDensityNote(pp, zoning) {
+// A vacant parcel that sits inside an incorporated town boundary (jurisdiction from
+// the runtime lookup, or the baked in_town flag as a fallback).
+function isVacantTownLot(pp, jurisdiction) {
+  const vacant = pp && (pp.no_residential === "True" || pp.structure_class === "vacant");
+  const inTown = /^Town of/i.test(jurisdiction || "") || !!(pp && pp.in_town === "True");
+  return !!(vacant && inTown);
+}
+
+// Caveat beneath the density line. A platted subdivision/PUD lot or a vacant town lot
+// gets a note that the lot entitlement supersedes the base zoning; otherwise the
+// by-right / PUD caveat for County zones that carry a large-lot number.
+function zoningDensityNote(pp, zoning, jurisdiction) {
   const z = String(zoning || "").toUpperCase().trim();
   if (isPlattedLot(pp) && SINGLE_FAMILY_ZONES.has(z)) {
     return '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">This is a platted lot in an approved subdivision / PUD — it is entitled to a single-family home regardless of the underlying large-lot (1 unit / 35 ac) zoning.</div>';
+  }
+  if (isVacantTownLot(pp, jurisdiction)) {
+    return '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">A platted lot within an incorporated town — buildable for a home under the town\'s own code. Confirm specific use and dimensional limits with the town.</div>';
   }
   return ZONING_DENSITY[z]
     ? '<div class="field" style="margin-top:6px;font-size:11px;color:#555;line-height:1.4">By-right density under the San Miguel County Land Use Code (Article 5). In the County density districts and the F, R &amp; HCA districts, higher density than 1 unit per 35 acres generally requires a discretionary PUD.</div>'
@@ -1548,12 +1566,14 @@ function developableFilter() {
   const hidePuds = document.getElementById("devHidePuds");
   const hideSubs = document.getElementById("devHideSubs");
   if (hidePuds && hidePuds.checked) f.push(notPud);
-  // Hide subdivisions removes any parcel that falls inside a polygon drawn on the
-  // "Show subdivisions" map — baked as in_named_subdivision (point-in-polygon vs
-  // subdivision.json + Backman Village in prep-parcels.js). This deliberately
-  // INCLUDES subdivisions that are also PUDs (e.g. the whole Aldasoro Ranch), to
-  // mirror that map exactly.
-  if (hideSubs && hideSubs.checked) f.push(["!", ["==", ["get", "in_named_subdivision"], "True"]]);
+  // Hide subdivisions removes any parcel that falls inside a mapped subdivision
+  // polygon (in_named_subdivision, incl. the whole Aldasoro Ranch even though it's
+  // also a PUD) OR inside an incorporated town (in_town) — Mountain Village,
+  // Telluride, etc. are already platted town lots, so hiding subdivisions narrows
+  // the view to raw unentitled county land.
+  if (hideSubs && hideSubs.checked) f.push(["!", ["any",
+    ["==", ["get", "in_named_subdivision"], "True"],
+    ["==", ["get", "in_town"], "True"]]]);
   return f;
 }
 function applyDevelopableFilter() {
@@ -2918,7 +2938,7 @@ function addOverlayLayers() {
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
     ]) + '<span class="steep-' + _tok + '"></span><span class="faa-' + _tok + '"></span>'
-      + zoningDensityNote(pp, zp.ZONING) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
+      + zoningDensityNote(pp, zp.ZONING, jurisdiction) + fedNote(pp) + planNote(fi) + easementNote(ea) + devPotentialNote(pp);
     if(parcel && map.getSource("selected-parcel")) map.getSource("selected-parcel").setData({type:"FeatureCollection",features:[parcel]});
     showSelection(html.replace("<h3","<h2").replace("</h3>","</h2>"));
     showPopup(lngLat, html);
