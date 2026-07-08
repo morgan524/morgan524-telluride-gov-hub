@@ -2728,9 +2728,14 @@ function addOverlayLayers() {
         const row = '<div class="field" style="margin-top:6px;color:#8a3b1f"><b>Steep &amp; hard to build:</b> ~' + pct + '% of the parcel is over 30% grade</div>';
         document.querySelectorAll(".steep-" + _tok).forEach(el => { el.innerHTML = row; });
       }
-      // (2) Airport Part 77 note — but suppress it when the parcel's mean elevation
-      // sits 100 ft or more below the imaginary surface (ample clearance).
-      const _surf = (_p77 && _p77.properties && _p77.properties.surface) || (pp.airport_restriction === "True" ? "flag" : null);
+      // (2) Airport Part 77 note. The Part 77 surfaces reach ~2.6 miles out
+      // (over Mountain Village), which flagged far too many parcels — limit the
+      // note to within ~1 mile of the runway (the Deep Creek / airport vicinity).
+      // Still suppressed when the parcel mean sits 100+ ft below the surface.
+      const _nearAirport = texRunwayDistFt(lng, lat) <= 5280;
+      const _surf = _nearAirport
+        ? ((_p77 && _p77.properties && _p77.properties.surface) || (pp.airport_restriction === "True" ? "flag" : null))
+        : null;
       if (_surf) {
         const ci = texCeilingMSL(lng, lat, _surf);
         const clearance = (_stats && _stats.meanElevFt != null && ci.ceiling != null) ? (ci.ceiling - _stats.meanElevFt) : null;
