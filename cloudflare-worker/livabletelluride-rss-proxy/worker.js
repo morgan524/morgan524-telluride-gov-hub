@@ -1036,6 +1036,49 @@ async function handlePulseExists(request, env) {
 }
 
 
+// ── PULSE email-in lane: forwarded notices → candidate queue ──
+// The Gmail Apps Script (scripts/pulse/hubbub-inbox.gs) POSTs each forwarded
+// email to /pulse-submit; run-pulse reads /pulse-queue and marks items
+// /pulse-inbox-mark. All three are gated by EDITORIAL_SECRET.
+const PULSE_INBOX = "pulse_inbox";
+
+async function handlePulseSubmit(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false, msg: "bad json" }, 400); }
+  if (!editSecretOk(env, d.secret || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  const id = String(d.id || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 120);
+  if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  const title = String(d.title || "").slice(0, 300);
+  const body = String(d.body || "").slice(0, 20000);
+  if (!body && !title) return json({ ok: false, msg: "empty" }, 400);
+  try { await firestorePatch(env, PULSE_INBOX + "/" + id, { title, body, url: String(d.url || ""), from: String(d.from || ""), receivedAt: new Date().toISOString(), status: "new" }); }
+  catch (e) { return json({ ok: false, msg: "firestore: " + String((e && e.message) || e).slice(0, 120) }, 502); }
+  return json({ ok: true, id });
+}
+
+async function handlePulseQueue(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  const url = new URL(request.url);
+  if (!editSecretOk(env, url.searchParams.get("secret") || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  if (!env.FIREBASE_SERVICE_ACCOUNT) return json({ ok: false, msg: "no service account" }, 500);
+  try { return json({ ok: true, items: await firestoreQuery(env, PULSE_INBOX, "status", "new") }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 160) }, 502); }
+}
+
+async function handlePulseInboxMark(request, env) {
+  const json = (o, s) => new Response(JSON.stringify(o), { status: s || 200, headers: { "Content-Type": "application/json" } });
+  if (request.method !== "POST") return json({ ok: false }, 405);
+  let d; try { d = await request.json(); } catch { return json({ ok: false }, 400); }
+  if (!editSecretOk(env, d.secret || "")) return json({ ok: false, msg: "unauthorized" }, 401);
+  const id = String(d.id || ""); if (!id) return json({ ok: false, msg: "missing id" }, 400);
+  try { await firestorePatch(env, PULSE_INBOX + "/" + id, { status: String(d.status || "processed"), processedAt: new Date().toISOString() }); }
+  catch (e) { return json({ ok: false, msg: String((e && e.message) || e).slice(0, 120) }, 502); }
+  return json({ ok: true });
+}
+
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -1086,6 +1129,15 @@ export default {
     }
     if (url.pathname === "/pulse-exists") {
       return handlePulseExists(request, env);
+    }
+    if (url.pathname === "/pulse-submit") {
+      return handlePulseSubmit(request, env);
+    }
+    if (url.pathname === "/pulse-queue") {
+      return handlePulseQueue(request, env);
+    }
+    if (url.pathname === "/pulse-inbox-mark") {
+      return handlePulseInboxMark(request, env);
     }
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405 });

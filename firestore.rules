@@ -320,6 +320,14 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // ── pulse_inbox/{id} ──────────────────────────────────────────────
+    // Email-in queue: forwarded notices the Gmail Apps Script POSTs via the
+    // Worker (/pulse-submit), read by run-pulse (/pulse-queue). Worker /
+    // service-account only; no client access.
+    match /pulse_inbox/{id} {
+      allow read, write: if false;
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but
