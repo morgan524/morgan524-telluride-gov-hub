@@ -589,14 +589,12 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <p class="small">Lower opacity makes roads, terrain, rivers, and labels easier to see under the zoning colors.</p>
   </div>
   <div class="panel" id="builtLegend" style="display:none;">
-    <label>Developable Land &mdash; max lots</label>
-    <div class="legend-item"><span style="background:#ecd6e8"></span><button type="button">1 lot</button><em></em></div>
-    <div class="legend-item"><span style="background:#d3a3cc"></span><button type="button">2&ndash;4 lots</button><em></em></div>
-    <div class="legend-item"><span style="background:#b87fb0"></span><button type="button">5&ndash;19 lots</button><em></em></div>
-    <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
+    <label>Developable Land</label>
+    <div class="legend-item"><span style="background:#3f9b57"></span><button type="button">Vacant &mdash; no residential structure</button><em></em></div>
+    <div class="legend-item"><span style="background:#e08a2e"></span><button type="button">Further developable (room to subdivide)</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
     <div class="legend-item"><span style="background:repeating-linear-gradient(-45deg,#b91c1c 0,#b91c1c 2px,transparent 2px,transparent 6px)"></span><button type="button">Steep slope (&gt;30% grade)</button><em></em></div>
-    <p class="small">Starts with the same undeveloped parcels as <b>Vacant Lots</b> (minus forest/BLM, conservation, open space, high country and airport land). Use <b>Hide PUDs</b> and <b>Hide subdivisions</b> above to narrow toward unentitled land. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
+    <p class="small"><b>Green</b> = vacant land (no residential structure). <b>Amber</b> = land that already has a home but is large enough to carve at least one more lot at the current zoning minimum (35-acre County districts &mdash; so &ge;70 net acres). Use <b>Hide PUDs</b> and <b>Hide subdivisions</b> above to narrow toward unentitled land. Click a parcel for its by-right lot count &mdash; an <b>advisory estimate</b>, not a guarantee.</p>
     <p class="small">The red hatch marks terrain steeper than <b>30% grade</b> (~16.7°) &mdash; a regional slope screen from the terrain DEM (~30&nbsp;m), often a hillside-development constraint. <b>Approximate</b>; confirm with a survey.</p>
     <p class="small">Parcels near Telluride Regional Airport show an <b>airport height/lighting note</b> in their popup when they fall under the FAA Part&nbsp;77 airspace &mdash; confirm under SMC §5-418.</p>
   </div>
@@ -1162,6 +1160,56 @@ function devPotentialNote(pp) {
     : "";
 }
 
+// By-right minimum lot size (acres) per CURRENT zoning designation, from the San
+// Miguel County Land Use Code, Article 5. Used to translate a parcel's acreage into
+// how many by-right lots it could hold. The County density/ag districts are all 35
+// acres by right (the default); only a few zones are denser. Keyed by GIS ZONING.
+const ZONE_MINLOT_ACRES = {
+  "WEST END": 3,                       // §5-320 (2 dwellings per parcel; 3-ac min)
+  "WRIGHTS MESA RURAL AGRICULTURAL": 5,
+  "MOBILE HOME": 2,                    // §5-312 (down to 7,500 sq ft w/ full utilities)
+  "PLACERVILLE RESIDENTIAL": 0.43      // §5-310 (18,750 sq ft)
+};
+function zoneMinLotAcres(zoning) {
+  const z = String(zoning || "").toUpperCase().trim();
+  return ZONE_MINLOT_ACRES[z] || 35;
+}
+
+// True when a parcel is excluded from the Developable view — mirrors the map filter
+// exclusions so the popup's developability line agrees. Does NOT apply the optional
+// Hide-PUDs / Hide-subdivisions carve-downs (those only narrow the map view).
+function isDevExcluded(pp) {
+  if (!pp) return true;
+  const nd = String(pp.NAMEDISPLAY || "").toLowerCase(), n1 = String(pp.NAME1 || "").toLowerCase();
+  const pin = String(pp.PIN || ""), pinl = pin.toLowerCase();
+  return pp.federal_forest_public_land === "True" || pp.conservation_easement === "True"
+    || pp.open_space === "True" || pp.high_country === "True"
+    || nd.includes("airport auth") || n1.includes("airport auth")
+    || isStateOwned(pp)
+    || EXCLUDED_LAND_PINS.includes(pin)
+    || pin === "ROW" || pinl.includes("open space") || pinl.includes("common");
+}
+
+// The "Developable / Further developable" popup line, applying CURRENT ZONING by
+// right. A vacant parcel is developable (can hold 1+ home). A parcel that already
+// has a home is "further developable" only if it clears at least 2 by-right lots
+// (net acres ÷ zone minimum) — i.e. there's room to carve off another lot. Empty
+// when the parcel is excluded or too small to add a lot.
+function developabilityRows(pp, zoning) {
+  if (isDevExcluded(pp)) return [];
+  const acres = Number(pp.NETACRES) || 0;
+  const minlot = zoneMinLotAcres(zoning);
+  const lots = Math.max(1, Math.floor(acres / minlot));
+  const vacant = pp.no_residential === "True" || pp.structure_class === "vacant";
+  if (vacant) {
+    return [["Developability", lots >= 2
+      ? ("Developable — up to " + lots + " lots of " + fmtAcres(minlot) + " acres (current zoning)")
+      : "Developable"]];
+  }
+  if (acres < 2 * minlot) return [];   // already has a home, no room for another by-right lot
+  return [["Developability", "Further developable into " + lots + " lots of " + fmtAcres(minlot) + " acres (current zoning)"]];
+}
+
 // Given an East End FLU polygon feature (or null), return its category
 // desc/code/density from EAST_END_FLU, or null. Caller supplies the feature
 // (found via _featureAt inside addOverlayLayers, where the plan data is joined).
@@ -1278,7 +1326,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>teal dashed</strong> area is <strong>Parcel C</strong> (approximate) — an older label for land whose inclusion in the Aldasoro subdivision / PUD is <strong>in litigation</strong>; the property lines have since changed. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Developable Land:</strong> starts with the same undeveloped parcels as <strong>Vacant Lots</strong> (no residential structure, minus forest/BLM, conservation, open space, high country and airport land), shaded by the <strong>maximum development</strong> each could support (net acres ÷ plan / zoning min lot size &mdash; advisory, not a guarantee). Use <strong>Hide PUDs</strong> / <strong>Hide subdivisions</strong> to narrow toward unentitled land. Click a parcel for the estimate.",
+  built: "<strong>Developable Land:</strong> land that could take new housing (minus forest/BLM, conservation, open space, high country, airport and State of Colorado land). <strong>Green</strong> = <strong>vacant</strong> (no residential structure). <strong>Amber</strong> = <strong>further developable</strong> — already has a home but is large enough to carve at least one more lot at the current zoning minimum (35-acre County districts, so &ge;70 net acres). Use <strong>Hide PUDs</strong> / <strong>Hide subdivisions</strong> to narrow toward unentitled land. Click a parcel for its by-right lot count &mdash; advisory, not a guarantee.",
   vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
@@ -1425,7 +1473,14 @@ const notStateOwned = ["!", ["any",
 function developableFilter() {
   const notPud = ["!", ["has", "pud"]];
   const f = ["all",
-    ["==", ["get", "no_residential"], "True"],
+    // Include a parcel if it is VACANT (no residential structure) OR big enough to
+    // carve at least one more 35-acre by-right lot beyond an existing home (≥70 net
+    // acres) — the "vacant OR further-developable" set. The 35-ac test is the County
+    // density/ag standard; the popup uses each parcel's true per-zone minimum (West
+    // End 3 ac, Wright's Mesa Rural 5 ac, …) for the exact lot count.
+    ["any",
+      ["==", ["get", "no_residential"], "True"],
+      [">=", ["to-number", ["get", "NETACRES"]], 70]],
     ["!=", ["get", "federal_forest_public_land"], "True"],
     ["!=", ["get", "conservation_easement"], "True"],
     ["!=", ["get", "open_space"], "True"],
@@ -2544,7 +2599,9 @@ function addOverlayLayers() {
     // starts as the broad Vacant set, then the Hide PUDs / Hide subdivisions
     // checkboxes carve it down. Initial value here mirrors the unchecked state.
     filter:["all",
-      ["==", ["get", "no_residential"], "True"],
+      ["any",
+        ["==", ["get", "no_residential"], "True"],
+        [">=", ["to-number", ["get", "NETACRES"]], 70]],
       ["!=", ["get", "federal_forest_public_land"], "True"],
       ["!=", ["get", "conservation_easement"], "True"],
       ["!=", ["get", "open_space"], "True"],
@@ -2558,14 +2615,11 @@ function addOverlayLayers() {
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
       ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
     paint:{
-      // Choropleth by estimated additional lots (dev_lots_hi = ceiling of the
-      // plan/zoning density range). Sequential ROSE ramp = "how much more" —
-      // rose (not purple) so it's distinct from the basemap's purple airport.
-      "fill-color":["step", ["to-number", ["get", "dev_lots_hi"]],
-        "#ecd6e8",        // 1 lot
-        2, "#d3a3cc",     // 2–4
-        5, "#b87fb0",     // 5–19
-        20, "#7a3670"],   // 20+
+      // Two categories: VACANT (no residential structure) in GREEN vs FURTHER
+      // DEVELOPABLE (already has a home but ≥70 ac — room to subdivide) in AMBER.
+      "fill-color":["case",
+        ["==", ["get", "no_residential"], "True"], "#3f9b57",   // vacant — green
+        "#e08a2e"],                                             // further developable — amber
       "fill-opacity":0.6
     }
   });
@@ -2812,6 +2866,7 @@ function addOverlayLayers() {
       ["Subdivision/area field", subdivision],
       ["Parcel/tract", parcelTract],
       ...structureRows(pp),
+      ...developabilityRows(pp, zp.ZONING),
       ...(fi ? [[fi.planShort + " future land use", fi.desc + fiCode], ["Proposed density", fi.density]] : []),
       ...devPotentialRows(pp)
     ]) + '<span class="steep-' + _tok + '"></span><span class="faa-' + _tok + '"></span>'
