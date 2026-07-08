@@ -596,7 +596,7 @@ button.secondary { background:#eee6d8; color:#2a2a2a; border:1px solid #c8bda9; 
     <div class="legend-item"><span style="background:#7a3670"></span><button type="button">20+ lots</button><em></em></div>
     <div class="legend-item"><span style="background:#0d9488;border:1px dashed #0b5c53"></span><button type="button">Parcel C (in litigation)</button><em></em></div>
     <div class="legend-item"><span style="background:repeating-linear-gradient(-45deg,#b91c1c 0,#b91c1c 2px,transparent 2px,transparent 6px)"></span><button type="button">Steep slope (&gt;30% grade)</button><em></em></div>
-    <p class="small">Starts with the same undeveloped parcels as <b>Vacant Lots</b> (minus forest/BLM, conservation, open space and airport land). Use <b>Hide PUDs</b> and <b>Hide subdivisions</b> above to narrow toward unentitled land. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
+    <p class="small">Starts with the same undeveloped parcels as <b>Vacant Lots</b> (minus forest/BLM, conservation, open space, high country and airport land). Use <b>Hide PUDs</b> and <b>Hide subdivisions</b> above to narrow toward unentitled land. Shade = <b>maximum development</b> the land could support (net acres ÷ plan/zoning min lot size) &mdash; an <b>advisory estimate</b>, not a guarantee. Click a parcel for its estimate.</p>
     <p class="small">The red hatch marks terrain steeper than <b>30% grade</b> (~16.7°) &mdash; a regional slope screen from the terrain DEM (~30&nbsp;m), often a hillside-development constraint. <b>Approximate</b>; confirm with a survey.</p>
     <p class="small">Parcels near Telluride Regional Airport show an <b>airport height/lighting note</b> in their popup when they fall under the FAA Part&nbsp;77 airspace &mdash; confirm under SMC §5-418.</p>
   </div>
@@ -1202,7 +1202,7 @@ function setMapNote(html) {
 const mapNotes = {
   zoning: "<strong>Zoning:</strong> Colored sections are semi-transparent so the basemap remains visible beneath the active layer.",
   puds: "<strong>PUDs:</strong> Yellow areas show PUDs. The <strong>teal dashed</strong> area is <strong>Parcel C</strong> (approximate) — an older label for land whose inclusion in the Aldasoro subdivision / PUD is <strong>in litigation</strong>; the property lines have since changed. Parcel outlines remain visible as an underlay; road layers are hidden.",
-  built: "<strong>Developable Land:</strong> starts with the same undeveloped parcels as <strong>Vacant Lots</strong> (no residential structure, minus forest/BLM, conservation, open space and airport land), shaded by the <strong>maximum development</strong> each could support (net acres ÷ plan / zoning min lot size &mdash; advisory, not a guarantee). Use <strong>Hide PUDs</strong> / <strong>Hide subdivisions</strong> to narrow toward unentitled land. Click a parcel for the estimate.",
+  built: "<strong>Developable Land:</strong> starts with the same undeveloped parcels as <strong>Vacant Lots</strong> (no residential structure, minus forest/BLM, conservation, open space, high country and airport land), shaded by the <strong>maximum development</strong> each could support (net acres ÷ plan / zoning min lot size &mdash; advisory, not a guarantee). Use <strong>Hide PUDs</strong> / <strong>Hide subdivisions</strong> to narrow toward unentitled land. Click a parcel for the estimate.",
   vacant: "<strong>Vacant Lots:</strong> Parcels with <strong>no identifiable residential structure</strong> &mdash; vacant land, land with only an outbuilding (barn/shed), or commercial-only lots. Includes vacant lots inside subdivisions. Federal / public land, conservation easements, and open space are excluded. Click a parcel for details.",
   subdivisions: "<strong>Subdivisions:</strong> Subdivisions may be entirely separate from a PUD or may be part of a PUD. Parcel outlines remain visible as an underlay; road layers are hidden.",
   clear: "<strong>Clear view:</strong> This shows the basemap, county outline, and parcel outlines without zoning, PUD, vacant-land, or subdivision colors.",
@@ -1333,6 +1333,9 @@ function developableFilter() {
     ["!=", ["get", "federal_forest_public_land"], "True"],
     ["!=", ["get", "conservation_easement"], "True"],
     ["!=", ["get", "open_space"], "True"],
+    // HIGH COUNTRY AREA zone = alpine claims (Palmyra, Gold Hill, etc.), no
+    // realistic road access — not developable.
+    ["!=", ["get", "high_country"], "True"],
     ["!=", ["get", "airport_restriction"], "True"],
     ["!=", ["get", "PIN"], "ROW"],
     ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
@@ -2441,6 +2444,7 @@ function addOverlayLayers() {
       ["!=", ["get", "federal_forest_public_land"], "True"],
       ["!=", ["get", "conservation_easement"], "True"],
       ["!=", ["get", "open_space"], "True"],
+      ["!=", ["get", "high_country"], "True"],
       ["!=", ["get", "airport_restriction"], "True"],
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
