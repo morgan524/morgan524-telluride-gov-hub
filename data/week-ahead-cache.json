@@ -1,14 +1,18 @@
 {
-  "hash": "eceee75a7928741a0f841fb13a9c675b90387bc1",
-  "lede": "The biggest thing on the civic calendar this week is Wednesday's joint work session where the Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments touching forestry, oil and gas, geothermal operations, and condominium plats — the kind of foundational code-shaping that quietly governs how this county grows and what gets built where. Wednesday also brings the commissioners to Norwood for a rare West End meeting, where they'll take up a Planning Commission appointment and hear results from the Placerville Fire Survey. In between all that, the week has its usual good texture: Market on the Plaza, the Hardrock Hundred kicking off Friday, and live music most nights.",
+  "hash": "68b876e7eef00177f2db15608cd672c7a6866efe",
+  "lede": "The most consequential thing on the calendar this week is Wednesday's joint work session where the Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments touching forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but this is where the shape of those changes gets decided. Also Wednesday, the commissioners make a rare trip to Norwood to consider a Planning Commission appointment and hear results from the Placerville Fire Survey. In between, the Ecology Commission digs into the 2022 Climate Action Plan with a focus on transportation and consumption.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commissioners may appoint a Planning Commission alternate, shaping future land-use votes."
+      "id": 4,
+      "stake": "Land Use Code amendments on forestry, oil/gas, geothermal, and condo plats being shaped."
     },
     {
-      "id": 4,
-      "stake": "Proposed Land Use Code changes to forestry, oil/gas, geothermal, and condo plat rules under review."
+      "id": 0,
+      "stake": "Commissioners may appoint a Planning Commission alternate, affecting future land-use votes."
+    },
+    {
+      "id": 1,
+      "stake": "Climate Action Plan review on transportation and consumption — public direction being set."
     }
   ]
 }

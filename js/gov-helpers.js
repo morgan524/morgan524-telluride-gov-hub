@@ -480,7 +480,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -3153,81 +3153,103 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772764?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-07-07T16:30:00.000Z",
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610075?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-07-08T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+  },
+  {
+    title: "Mountain Village Farmers Marketshow: Books Alive with Telluride Theatre",
+    link: "https://telluridelibrary.libcal.com/event/15564456?hs=a",
+    description: "11:00 AM – 12:00 PM · Join us at the Mountain Village Farmers Market for a fun filled Books Alive performance with the Telluride Theatre!",
+    pubDate: "2026-07-08T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Mountain Village Market",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_29_35.png"
+  },
+  {
+    title: "Lite lunch- Go Gentle",
+    link: "https://telluridelibrary.libcal.com/event/17029360?hs=a",
+    description: "12:00 PM – 1:00 PM · The New York Times bestselling author of Where&#39;d You Go, Bernadette returns to form in her most exuberant and life-affirming novel yet with the story of one woman's cheerful determination to live a life of the mind only to have the heart force its way in. Adora Hazzard has it all figured out. A Stoic philosopher and divorc&eacute;e, she lives a contented life on New York City's Upper West Side. Having discovered that the secret to happiness is to desire only what you have, she's applied this insight to blissful effect: relishing her teenage daughter, the freedom of being solo, and her job as a moral tutor for the twin boys of an old-money family. She's even assembled a \"coven\"—like-minded women who live on the same floor in the legendary Ansonia—and is making active efforts to grow its membership. …",
+    pubDate: "2026-07-08T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_08_02.png"
   },
   {
-    title: "Pup Meetup at the Gondola Plaza",
-    link: "https://telluridelibrary.libcal.com/event/17052033?hs=a",
-    description: "11:30 AM – 12:00 PM · Get ready to unleash the fun at our Pup Meetup! 🐶 Join us at the Gondola Plaza by the Coffee Cowboy Cart for a tail-wagging good time that's sure to leave both you and your furry friend feeling pawsitively delighted. Make sure to stick around for the raffle with prizes from local pet stores and free pup cups from the Coffee Cowboy! Marney Prince with My Pup&#39;s Remedy will be there with free treats for your furry friend as well! With the Wilkinson Public Library, anything is PAW-sible. Who knows...you may even make some new FUR-ever friends!",
-    pubDate: "2026-07-07T17:30:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17021872?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-07-08T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Gondola Plaza - Telluride",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_12_32.jpg"
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png"
   },
   {
-    title: "Cocina con Corazón",
-    link: "https://telluridelibrary.libcal.com/event/17067340?hs=a",
-    description: "12:00 PM – 1:30 PM · Tendremos el programa Cocina con Coraz&oacute;n cada mes asociado con Ah Haa para traer m&aacute;s programas para la comunidad de hispanohablantes. Vamos a cocinar pupusas con Krista.  Este program solamente es para adultos y en espa&ntilde;ol.   &iexcl;Tenemos espacio para 12 adultos, inscr&iacute;bete con Claudia hoy!  Todos los niveles de espa&ntilde;ol son bienvenidos.",
-    pubDate: "2026-07-07T18:00:00.000Z",
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767656?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-07-08T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Ahh Haa School of Arts",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_18_26_04.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935714?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-07-07T20:00:00.000Z",
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935734?hs=a",
+    description: "4:00 PM – 6:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-07-08T22:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_53_50.png"
   },
   {
-    title: "I Heart Art with SMRC",
-    link: "https://telluridelibrary.libcal.com/event/16574855?hs=a",
-    description: "2:30 PM – 3:30 PM",
-    pubDate: "2026-07-07T20:30:00.000Z",
+    title: "Sewing 101 with Melissa",
+    link: "https://telluridelibrary.libcal.com/event/15970619?hs=a",
+    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
+    pubDate: "2026-07-08T23:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_02.png"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
   },
   {
-    title: "Punk Science with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/16297533?hs=a",
-    description: "5:15 PM – 6:00 PM",
-    pubDate: "2026-07-07T23:15:00.000Z",
+    title: "Cafecito con un Policía",
+    link: "https://telluridelibrary.libcal.com/event/15905933?hs=a",
+    description: "5:30 PM – 6:30 PM · Cafecito con un polic&iacute;a es un programa que pasa cada mes, tienes la oportunidad de tener conversacionales con nuestros polic&iacute;as en la area.",
+    pubDate: "2026-07-08T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: ""
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1766083827.jpg"
   },
   {
-    title: "Bardic Trails Online Poetry Night: Lawton Eddy",
-    link: "https://telluridelibrary.libcal.com/event/15970601?hs=a",
-    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of Santa Cruz (CA)* Feb. …",
-    pubDate: "2026-07-08T01:00:00.000Z",
+    title: "Sound Bath with Danielle Christmas & Ian Wilson",
+    link: "https://telluridelibrary.libcal.com/event/16802611?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 - 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! …",
+    pubDate: "2026-07-08T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_29_15_45_27.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg"
   }
 ];
 
@@ -3907,18 +3929,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   },
   {
-    title: "Parks and Recreation Committee (PARC)",
-    link: "https://cityofouray.com/city_offices/committees___boards/parks_and_recreation_committee.php",
-    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
-    pubDate: "2026-05-05T12:00:00.000Z",
-    endDate: "2027-04-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
-  },
-  {
     title: "Dallas Park Cemetery Tour",
     link: "https://www.ouraycountyhistoricalsociety.org",
     description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay",
@@ -4087,18 +4097,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg"
   },
   {
-    title: "Soussical The Musical - Summer Youth Theatre Program",
-    link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
-    description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
-    pubDate: "2026-07-06T12:00:00.000Z",
-    endDate: "2026-07-24",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
-  },
-  {
     title: "On Display: Roots & Rhythms",
     link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
     description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
@@ -4111,37 +4109,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/c0c6f24f89c138a1d24652048a4c0c00ddd32f68.jpg"
   },
   {
-    title: "Ouray Youth Summer Programs: Rock Climbing",
-    link: "https://anc.apm.activecommunities.com/cityofouray/activity/search/detail/340?onlineSiteId=0&from_original_cui=true",
-    description: "Participants will learn to rock climb or get to experience more challenging rock climbs with instruction from a local guide service. The guide service will provide all technical equipment including helmets, harnesses, and shoes. Please bring appropriate clothes for the day, sun protection, water, and snacks. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com",
-    pubDate: "2026-07-07T12:00:00.000Z",
+    title: "Soussical The Musical - Summer Youth Theatre Program",
+    link: "https://www.minervawest.org/youththeatre#anchors-mnyz5o91",
+    description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org.",
+    pubDate: "2026-07-06T12:00:00.000Z",
+    endDate: "2026-07-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52994950182035/huge/cd7de10752ab32dcb54e1001e4d01b26ce8b716a.jpg"
-  },
-  {
-    title: "RED MOUNTAIN REVIVAL",
-    link: "https://coloradoboydepot.com/calendar/",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
-    pubDate: "2026-07-07T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Covenhoven - Live at The Courtyard at 610",
-    link: "https://sherbino.org/event/covenhoven-courtyard-at-610-july-7-ridgway/",
-    description: "Doors: 7 || Show: 7:30 || $20 advance / $24 day of || General Admission Seating || Limited Bar onsite || enter via the alleyway behind the Sherbino and the 610 Arts Collective Gallery Covenhoven is the internationally recognized indie-folk project of Colorado singer-songwriter Joel Van Horne, whose layered acoustic arrangements, rich harmonies, reedy baritone, and soaring falsetto have captivated audiences and critics alike since 2013. Through five full-length albums and two EPs, Covenhoven has crafted a signature sound that blends intimate folk songwriting with sweeping orchestral textures and atmospheric Americana. His songs balance hard-won wisdom with the beauty and hope found in the natural world — drawing inspiration from the landscapes of Colorado, Big Sur, and the American West. Covenhoven’s newest release, The Color of the Dark (2025), has already received widespread acclaim. …",
-    pubDate: "2026-07-07T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52993910590740/huge/ee591be41df7dce6d2bdb9e84e37d1b1ae810587.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
   },
   {
     title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz : “Exploring Lower Black Bear Pass”",
@@ -4430,6 +4407,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53144844449971/huge/0ff7e1c07fa6594dbb5b9913e2f56db7c9c80215.jpg"
+  },
+  {
+    title: "Paint & Sip with Nicole: Flowers and Friends",
+    link: "https://weehawkenarts.org/education/adult-art-classes/",
+    description: "Unwind, sip, and create! Join us for a relaxed painting session designed for all skill levels—no experience needed. Nicole will guide you through the featured painting while you enjoy a beverage of your choice! All art supplies and one adult beverage are included; just bring your creativity! About Nicole Greenfield: Nicole Greenfield is a painter based in Ridgway, Colorado. Working primarily in acrylic and oil, she creates expressive portraits and atmospheric landscapes that explore the quiet intimacy found in observing people and the natural world. Nicole is a self-taught artist who has developed her skills through years of dedicated practice and online learning. She is a proud member of the Mountain Girl Gallery, her work has been commissioned multiple times and featured in exhibitions at multiple local galleries, with additional pieces sold through online platforms. …",
+    pubDate: "2026-07-15T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53074003726272/huge/68a0dbff08bbc13a6c4c4aa12ec5ade31107e5e2.jpg"
   }
 ];
 
