@@ -1448,8 +1448,17 @@ const EXCLUDED_LAND_PINS = [
   "456529002245", // Aldasoro PUD dedicated open space (Aldasoro Ranch Homeowners)
   "456532102001", // Last Dollar PUD dedicated open space
   "456536310902", // Telluride School District — the school
+  "456532117319", // Deep Creek Mesa Ranch PUD dedicated open space (Genesee)
 ];
 const notExcludedPin = ["!", ["in", ["get", "PIN"], ["literal", EXCLUDED_LAND_PINS]]];
+
+// Parcels that ARE in a PUD but whose pud name didn't get baked in (PUD detection
+// missed them), so they're treated as PUD by the Hide PUDs carve-down — otherwise
+// they'd fall in the subdivision bucket instead.
+const FORCE_PUD_PINS = [
+  "456528102009", // Sunnyside Ranch West — Sunnyside PUD
+  "456527102029", // Sunnyside East — Sunnyside PUD
+];
 
 // State of Colorado land (Division of Wildlife, State Land Board, CDOT) is public
 // conservation / infrastructure land, not a private development opportunity — excluded
@@ -1466,11 +1475,15 @@ const notStateOwned = ["!", ["any",
 // airport, and ROW/common non-lots). The "Hide PUDs" / "Hide subdivisions"
 // checkboxes then carve that set down toward truly unentitled land.
 function developableFilter() {
-  // A parcel is "in a PUD" only when it has a NON-EMPTY pud name. Every parcel
+  // A parcel is "in a PUD" when it has a NON-EMPTY pud name, OR it's on the manual
+  // FORCE_PUD_PINS list (PUD parcels whose pud name wasn't baked in). Every parcel
   // carries a pud key ("" for non-PUD), so ["has","pud"] is true for ALL of them —
   // testing the value is what actually distinguishes PUD parcels. (Without this,
   // Hide PUDs removed everything and Hide subdivisions did nothing.)
-  const notPud = ["!", ["all", ["has", "pud"], ["!=", ["to-string", ["get", "pud"]], ""]]];
+  const isPud = ["any",
+    ["all", ["has", "pud"], ["!=", ["to-string", ["get", "pud"]], ""]],
+    ["in", ["get", "PIN"], ["literal", FORCE_PUD_PINS]]];
+  const notPud = ["!", isPud];
   const f = ["all",
     // Include a parcel if it is VACANT (no residential structure) OR big enough to
     // carve at least one more 35-acre by-right lot beyond an existing home (≥70 net
