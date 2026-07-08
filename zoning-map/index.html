@@ -1336,7 +1336,13 @@ function developableFilter() {
     // HIGH COUNTRY AREA zone = alpine claims (Palmyra, Gold Hill, etc.), no
     // realistic road access — not developable.
     ["!=", ["get", "high_country"], "True"],
-    ["!=", ["get", "airport_restriction"], "True"],
+    // Exclude airport-OWNED land only (Telluride Regional Airport Authority).
+    // NOT the whole airport height-restriction overlay: that cone covers private
+    // ranch land (Diamond Ranch/Ridge, Aldasoro, Magnum) that IS developable,
+    // just height-limited — the popup already shows the Part 77 cap for those.
+    ["!", ["any",
+      ["in", "airport", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
+      ["in", "airport", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
     ["!=", ["get", "PIN"], "ROW"],
     ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
     ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]
@@ -2445,7 +2451,9 @@ function addOverlayLayers() {
       ["!=", ["get", "conservation_easement"], "True"],
       ["!=", ["get", "open_space"], "True"],
       ["!=", ["get", "high_country"], "True"],
-      ["!=", ["get", "airport_restriction"], "True"],
+      ["!", ["any",
+        ["in", "airport auth", ["downcase", ["to-string", ["get", "NAMEDISPLAY"]]]],
+        ["in", "airport auth", ["downcase", ["to-string", ["get", "NAME1"]]]]]],
       ["!=", ["get", "PIN"], "ROW"],
       ["!", ["in", "open space", ["downcase", ["to-string", ["get", "PIN"]]]]],
       ["!", ["in", "common", ["downcase", ["to-string", ["get", "PIN"]]]]]],
