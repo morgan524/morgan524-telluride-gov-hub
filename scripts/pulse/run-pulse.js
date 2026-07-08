@@ -20,7 +20,7 @@
 //      shared with the editorial layer), PULSE_WORKER (URL override),
 //      PULSE_WEEKS (window, default 3), PULSE_MAX_PER_RUN (default 1).
 
-const { loadCandidates, httpJson, WORKER_DEFAULT, isPlaceholder, daysSince, SOURCE_LABELS } = require('./lib.js');
+const { loadCandidates, httpJson, WORKER_DEFAULT, isPlaceholder, daysSince, SOURCE_LABELS, pulseItemId } = require('./lib.js');
 const { scoreItem } = require('./score-item.js');
 const { writePrompt } = require('./write-prompt.js');
 const { loadMeetings } = require('../editorial/lib.js');
@@ -40,6 +40,34 @@ async function alreadySurfaced(id) {
     const r = await httpJson('GET', `${WORKER}/pulse-exists?id=${encodeURIComponent(id)}&secret=${encodeURIComponent(SECRET)}`);
     return !!(r.json && r.json.exists);
   } catch (e) { return false; } // fail-open: better a rare dup than silent drop
+}
+
+// Email-in lane: pull anything you forwarded (queued via the Gmail Apps Script
+// + Worker) as human-submitted candidates, and mark each processed so it's
+// handled exactly once. Fail-soft: no worker/secret -> no email candidates.
+async function fetchEmailQueue() {
+  if (DRY || !SECRET) return [];
+  try {
+    const r = await httpJson('GET', `${WORKER}/pulse-queue?secret=${encodeURIComponent(SECRET)}`);
+    const items = (r.json && r.json.items) || [];
+    return items.map((it) => {
+      const c = {
+        source: 'email',
+        origin_date: (it.receivedAt || '').slice(0, 10),
+        url: it.url || '',
+        title: it.title || '(forwarded email)',
+        raw_text: it.body || '',
+        submitted_by_human: true,
+        _inboxId: it.id,
+      };
+      c.id = pulseItemId(c);
+      return c;
+    });
+  } catch (e) { log(`  (email queue unavailable: ${e.message})`); return []; }
+}
+async function markInbox(id) {
+  if (DRY || !SECRET || !id) return;
+  try { await httpJson('POST', `${WORKER}/pulse-inbox-mark`, { secret: SECRET, id, status: 'processed' }); } catch (e) {}
 }
 
 // Light conditional enrichment (brief §4.4): if triage says the item builds on
@@ -67,18 +95,22 @@ function gatherContext(candidate, triage, allMeetings) {
     return;
   }
 
-  const candidates = loadCandidates({ weeks: WEEKS });
-  log(`· pulse: ${candidates.length} candidate(s) in the last ${WEEKS} week(s).`);
+  // Forwarded emails (human-submitted) come first, then the automated lane.
+  const emailCandidates = await fetchEmailQueue();
+  const candidates = [...emailCandidates, ...loadCandidates({ weeks: WEEKS })];
+  log(`· pulse: ${candidates.length} candidate(s) (${emailCandidates.length} forwarded, ${candidates.length - emailCandidates.length} from the last ${WEEKS} week(s)).`);
 
   // 1) dedup, then 2) triage the new ones
   const scored = [];
   for (const c of candidates) {
-    if (await alreadySurfaced(c.id)) { log(`  skip (already surfaced): ${c.title}`); continue; }
+    if (await alreadySurfaced(c.id)) { log(`  skip (already surfaced): ${c.title}`); if (c._inboxId) await markInbox(c._inboxId); continue; }
     const triage = await scoreItem(c);
     let score = triage.score;
-    if (c.submitted_by_human && score < 3) score = 3; // human floor
+    // Anything you forwarded is always drafted for your review — you chose it.
+    if (c.submitted_by_human && score < 4) score = 4;
     const band = score < 2 ? 'drop' : score < 4 ? 'flag' : 'eligible';
-    log(`  [${score}] ${band.padEnd(8)} ${c.title}${triage.error ? '  (triage error: ' + triage.error + ')' : ''}`);
+    log(`  [${score}] ${band.padEnd(8)} ${c.title}${c.submitted_by_human ? ' (forwarded)' : ''}${triage.error ? '  (triage error: ' + triage.error + ')' : ''}`);
+    if (c._inboxId) await markInbox(c._inboxId);   // consume the inbox item once
     if (band === 'eligible') scored.push({ c, triage, score });
   }
 
