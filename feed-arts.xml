@@ -6,19 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jul 2026 22:22:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jul 2026 03:25:12 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Tue, Jul 7] Covenhoven (Courtyard @ 610)</title>
-      <link>https://sherbino.org/event/covenhoven-courtyard-at-610-july-7-ridgway/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/covenhoven%20courtyard%20610%7C2026-07-07</guid>
-      <pubDate>Tue, 07 Jul 2026 19:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2026/05/2026-sherb-event-banners-36.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 The Sherbino, Ridgway
-
-@ Doors: 7 || Show: 7:30 || $20 advance / $24 day of || General Admission Seating || Limited Bar onsite || enter via the alleyway behind the Sherbino and the 610 Arts Collective Gallery **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Covenhoven is the internationally recognized indie-folk project of Colorado singer-songwriter Joel Van Horne, whose layered acoustic arrangements, rich harmonies, reedy baritone, and soaring falsetto have captivated audiences and critics alike since 2013. Through five full-length albums and two EPs, Covenhoven has crafted a signature sound that blends intimate folk songwriting with sweeping orchestral textures and atmospheric Americana. His songs balance hard-won wisdom with the beauty and hope found in the natural world — drawing inspiration from the landscapes of Colorado, Big Sur, and the American West. …]]></description>
-      <media:content url="https://sherbino.org/wp-content/uploads/2026/05/2026-sherb-event-banners-36.png" medium="image" />
-      <category>Community Event</category>
-    </item>
     <item>
       <title>[Wed, Jul 8] B-Side Players</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=b-side-players</link>
@@ -42,22 +31,31 @@ The B-Side Players make music without borders or boundar...]]></description>
 
 A rare West End meeting — the commissioners convene Wednesday evening at the Norwood Sheriff Annex. Two items of substance: the board considers appointing an alternate member to the Planning Commission (a seat that matters whenever land-use decisions get close), and Deputy County Manager Jarrod Biggs presents the results of the Placerville Fire Survey. At 6:00 the board holds an open listening session with San Miguel County residents. Consent covers routine approval of minutes. Earlier in the afternoon, commissioners tour the Wright's Mesa Historical Society and Log Cabin Museum.
 
-⚡ Why it matters: Planning Commission alternate appointment and Placerville Fire Survey results presented.]]></description>
+⚡ Why it matters: Commissioners may appoint a Planning Commission alternate, shaping future land-use votes.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Ecology Commission - Jul 08 2026 — 2026-07-08</title>
+      <title>[Meeting] Ecology Commission - Jul 08 2026 — 2026-07-08</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-08%7CEcology%20Commission%20-%20Jul%2008%202026</guid>
       <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-08
 
-The Ecology Commission meets Wednesday to work through two substantive items. The main session is a work session reviewing the 2022 Climate Action Plan, with discussion focused on two specific focus areas: Transportation & Land Use and Materials & Consumption — both of which connect directly to how people move around the box canyon and what gets consumed and discarded here. The commission will also take action on appointing members to the Green Grants Selection Subcommittee, which directs local environmental funding. Rounding out the agenda is a report on the outcome of the Trash Bash event. The June meeting was canceled, so there are no prior minutes to approve.
-
-⚡ Why it matters: Climate Action Plan review shapes future policy on transportation and consumption.]]></description>
+The Ecology Commission meets Wednesday to work through two substantive items. The main session is a work session reviewing the 2022 Climate Action Plan, with discussion focused on two specific focus areas: Transportation & Land Use and Materials & Consumption — both of which connect directly to how people move around the box canyon and what gets consumed and discarded here. The commission will also take action on appointing members to the Green Grants Selection Subcommittee, which directs local environmental funding. Rounding out the agenda is a report on the outcome of the Trash Bash event. The June meeting was canceled, so there are no prior minutes to approve.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Meeting] Ridgway Town Council Regular Meeting — 2026-07-08</title>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---July-8%2C-2026.pdf</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/ridgway%7C2026-07-08%7CRidgway%20Town%20Council%20Regular%20Meeting</guid>
+      <pubDate>Wed, 08 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Ridgway • 2026-07-08
+
+Agenda typically posted the Friday before.]]></description>
+      <category>Meeting</category>
+      <category>Town of Ridgway</category>
     </item>
     <item>
       <title>[Wed, Jul 8] Tennis Clinic | 105 | 3.0+ | Golden Hour</title>
@@ -104,9 +102,49 @@ The July 9 SMART Board of Directors agenda hasn't been posted yet.]]></descripti
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: Land Use Code rewrites on forestry, oil, gas, geothermal, and condos being drafted now.]]></description>
+⚡ Why it matters: Proposed Land Use Code changes to forestry, oil/gas, geothermal, and condo plat rules under review.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 9] The Creative Exchange at Telluride Arts HQ</title>
+      <link>https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-07-09/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20creative%20exchange%20at%7C2026-07-09</guid>
+      <pubDate>Thu, 09 Jul 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Arts HQ, TELLURIDE
+
+The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 10] The Itals w/ DJ Wombat</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=the-itals</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20itals%20w%20dj%7C2026-07-10</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/37cbde54-dc85-4157-ba1f-87cc0bc97995/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+“The Itals stand for everything pure, natural, unpolluted, straight to the sourc...]]></description>
+      <media:content url="https://ucarecdn.com/37cbde54-dc85-4157-ba1f-87cc0bc97995/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 10] Artistic Ventures In Dance Open Rehearsal</title>
+      <link>https://www.telluride.com/event/artistic-ventures-in-dance-open-rehearsal/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/artistic%20ventures%20in%20dance%7C2026-07-10</guid>
+      <pubDate>Fri, 10 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63008/preview_posters_2200_x_1237_px.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Step behind‑the‑scenes for a look at how Artistic Ventures in Dance 'AVID' brings ballet to life. During this sneak …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/63008/preview_posters_2200_x_1237_px.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Meeting] San Miguel Basin Fair Board — 2026-07-12</title>
@@ -116,6 +154,28 @@ The Planning Commission and BOCC are sitting down together for a joint work sess
       <description><![CDATA[San Miguel County • 2026-07-12
 
 The Fair Board convenes for a special meeting to divide up pre-fair responsibilities among board members and sort out lamb bedding setup. Housekeeping before the fair season — the kind of meeting that keeps things from falling through the cracks.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Historical Commission — 2026-07-14</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-14%7CHistorical%20Commission</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-07-14
+
+The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] San Miguel Basin Fair Board — 2026-07-14</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-14%7CSan%20Miguel%20Basin%20Fair%20Board</guid>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-07-14
+
+The San Miguel Basin Fair Board holds a special midday meeting to debrief on the day's events, discuss any matters that came up, and set market classes. Routine fair-board business.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

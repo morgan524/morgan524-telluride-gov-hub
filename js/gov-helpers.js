@@ -480,13 +480,13 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1768,90 +1768,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Jake Gordon takes his seat at CSU Extension office",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-25",
-    newsTopic: "arts-culture",
-    copy: "Jake Gordon, a Norwood-area native, has joined the San Miguel Basin CSU Extension office as its first natural resources staffer in roughly a decade. He's running youth ag programs, setting up trainings on weeds, Russian olive, and range management, and organizing Community Animal Response Teams for evacuations. The San Miguel Basin Fair runs July 10–18; schedule at sanmiguelcountyfair.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_b520494e-d7d5-44ad-a5dc-9f0ea23060bf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b9/db970a35-5737-4362-91a6-cf5a21780a18/6a3ab0c3c92f3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Tau: Untangling early Alzheimer’s detection",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-25",
-    newsTopic: "community",
-    copy: "Telluride Science hosts a free Town Talk Tuesday, June 30, 6:30 p.m. at the Telluride Conference Center in Mountain Village. UT Southwestern's Dr. Lukasz Joachimiak presents on tau protein — how it misfolds and may signal Alzheimer's and other brain diseases decades before symptoms appear.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_7b6d1b27-9e63-4a8a-8c97-7eb128433440.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/59/159d8d47-5109-41ba-a693-c8c945993f15/6a3ac66656a02.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A safe space for local youth",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "San Miguel County teens pushed for years to get a dedicated hangout spot, and in May 2025 they got one. The Shed — a 500-square-foot space on the Voodoo Lounge property in Telluride — is run by CTC and funded jointly by the Town of Telluride, Mountain Village, and San Miguel County. Open to ages 12–19, it offers everything from ping-pong to SAT prep, with programming shaped by a youth advisory board.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1d5a5b26-5d2a-4e4c-b252-d72cf27cf1e5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/41/e411def4-084b-45db-b6b0-b25c02feaf4a/6a3a40da633cb.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Art in action",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Telluride Plein Air runs June 29–July 5, with invited painters working at easels along Main Street and around the valley. The Quick Draw on July 2 challenges artists to finish a piece in 90 minutes, followed by a free public sale and preview party at the Sheridan. Daily exhibitions run July 3–5 in Oak Street and Elms parks.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_4fcd4e03-8616-4b12-a68f-439b35cf921f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8b/c8b7c334-f80f-4d54-bada-1626a191875a/6a3a4e35bdf48.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Grand Mesa Writers’ Symposium features local wordsmiths",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "community",
-    copy: "The Grand Mesa Writers' Symposium runs Sept. 11–13 in Cedaredge, featuring regional writers including Telluride poet Kierstin Bridger, nonfiction author Craig Childs, and Western Slope poet Rosemerry Wahtola Trommer, who closes the event. Weekend passes are $160; a Saturday evening showcase tickets are $25 through Sept. 11. Details at grandmesawriters.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_8af44439-d60b-4d7a-a140-ae8bcb66f298.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/8d/e8da4f89-97f9-4069-ad21-1e20a4ae773f/6a3ac1b1511e7.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Olympian skier Bode Miller pleads not guilty to Idaho misdemeanor drug charges",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "public-safety",
-    copy: "Bode Miller pleaded not guilty to misdemeanor drug charges in Idaho after a traffic stop turned up psilocybin mushrooms. Miller says the cannabis found belonged to a friend and he was unaware of it; court documents note a deputy found 4.1 grams of mushrooms in a dispensary bag.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_fdc646b7-89fe-5981-8395-245aac89bbbe.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/eb/3eb4bef7-d4b3-5c21-98a1-4ff3c1a91d21/6a3b202368366.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A party where the past meets the present",
-    source: "Telluride Times",
-    date: "June 24, 2026",
-    firstSeen: "2026-06-24",
-    newsTopic: "arts-culture",
-    copy: "Telluride Theatre is hosting the Muleskinner's Ball, a fundraising gala featuring a buffet dinner by Telluride Chef, casino games, a secret speakeasy, and pop-up theatrical performances set in early 1900s wild west Telluride. Funds support theater programs, artist pay, venue costs, and a mortgage on office space the organization purchased last year. Telluride Theatre also took over the drama program at Telluride Middle/High School in 2025 after a longtime teacher retired.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_92e80cd9-0fef-47b9-b267-4042ab2d0018.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/a3/0a3dc82b-b051-4a69-a4f5-cd1bb21ff908/6a3acd7b8004c.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2031,7 +1947,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 7, 2026",
+    date: "July 8, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2042,7 +1958,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 7, 2026",
+    date: "July 8, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2053,7 +1969,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 7, 2026",
+    date: "July 8, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2108,7 +2024,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Introduction - Ordinance No. 04-2026",
     source: "Town of Ridgway",
-    date: "July 7, 2026",
+    date: "July 8, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2728,17 +2644,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Bardic Trails Online Poetry Night",
-    link: "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-07-07/",
-    description: "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit to get the zoom link each month, Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. Jan. 6 / Euro-American poet Dane Cervine of California Feb. …",
-    pubDate: "2026-07-08T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-08/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3199,6 +3104,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Brewing Company Lawson Hill Taproom",
     imageUrl: ""
+  },
+  {
+    title: "Music Theory For Beginners",
+    link: "https://koto.org/event/music-theory-for-beginners/",
+    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
+    pubDate: "2026-07-14T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-15/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-15T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-07-15/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-07-15T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-15/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-07-15T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   }
 ];
 
@@ -3300,7 +3249,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
     firstSeen: "2026-07-04",
     revealDate: "2026-07-04",
-    lastSeen: "2026-07-07"
+    lastSeen: "2026-07-08"
   },
   {
     id: "TEL-A-191",
@@ -3314,7 +3263,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, German • Male",
     firstSeen: "2026-07-07",
     revealDate: "2026-07-07",
-    lastSeen: "2026-07-07"
+    lastSeen: "2026-07-08"
   }
 ];
 
@@ -5264,42 +5213,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58332/dsc01583lr--1-.800x533.webp"
-  },
-  {
-    title: "Telluride Chamber Music: MusicFest",
-    link: "https://www.telluride.com/event/musicfest/",
-    description: "Come and celebrate MusicFest 2026! Telluride Chamber Music is eagerly anticipating this event coming June and July. …",
-    pubDate: "2026-06-28",
-    endDate: "2026-07-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/46727/mf_artists_26.800x533.webp"
-  },
-  {
-    title: "Telluride Plein Air",
-    link: "https://www.telluride.com/event/telluride-plein-air/",
-    description: "The Telluride Plein Air Festival is an essential fundraiser for the Sheridan Arts Foundation, a 501 (c) (3) …",
-    pubDate: "2026-06-29",
-    endDate: "2026-07-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/45978/telluride-festival-plein-air-artists-2015-home-1.800x533.webp"
-  },
-  {
-    title: "Jewelry Show With Nanci Modica",
-    link: "https://www.telluride.com/event/jewelry-show-with-nanci-modica/",
-    description: "New York-based goldsmith Nanci Modica is returning to Telluride with an all new collection of work from July 2 - 5, …",
-    pubDate: "2026-07-02",
-    endDate: "2026-07-06",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62954/untitled_-_june_25-_2026_at_14_42_16_2.800x533.webp"
   },
   {
     title: "Mind Blown",
@@ -7908,6 +7821,14 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "October 1, 2026",
     title: "Town Council Budget",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: ""
+  },
+  {
+    date: "October 6, 2026",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
