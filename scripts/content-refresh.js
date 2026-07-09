@@ -3532,96 +3532,99 @@ async function syncOurayCountyEvents() {
   return events;
 }
 
-// ── Task 16: Ouray/Ridgway Events (Localist JSON API) ──
-// Fetches from events.ourayridgwayevents.com using the same Localist API
-// the client uses, but server-side so the data is baked into gov-helpers.js.
-// The client's fetchOurayRidgwayEvents() prefers OURAY_RIDGWAY_EVENTS if
-// it is non-empty, falling back to a live client-side API call.
-const LOCALIST_ORE_URL = 'https://events.ourayridgwayevents.com/api/2/events?school=ridgwayouray&days=60&pp=100';
+// ── Task 16: Ouray/Ridgway Events (Localist RSS feed) ──
+// Switched 2026-07-09 from the /api/2 JSON API to the calendar RSS feed
+// (calendar/1.xml) — the Ouray/Ridgway team's official/blessed feed, so our
+// automated pulls can be allow-listed instead of mimicking a browser. Routed
+// through the proxy (host is in PROXY_HOSTS). Recurring events appear as one
+// <item> per instance sharing the same <link>; we collapse by link into a
+// first→last span (the client routes multi-day/recurring to the Recurring calendar).
+const ORE_RSS_URL = 'https://events.ourayridgwayevents.com/calendar/1.xml';
+
+// Unescape CDATA + the handful of XML entities Localist emits.
+function decodeXmlText(s) {
+  return String(s || '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
 
 async function syncOurayRidgwayEvents() {
-  console.log('\n🏔  Task 16: Syncing Ouray/Ridgway events (Localist)...');
-  let json;
+  console.log('\n🏔  Task 16: Syncing Ouray/Ridgway events (Localist RSS)...');
+  let xml;
   try {
-    const resp = await fetch(LOCALIST_ORE_URL, {
-      headers: { 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36' }
-    });
-    if (!resp || resp.status !== 200) {
-      console.warn(`  Localist API HTTP ${resp ? resp.status : 'no response'}`);
+    const resp = await fetch(ORE_RSS_URL);
+    if (!resp || resp.status !== 200 || !resp.text) {
+      console.warn(`  Ouray/Ridgway RSS HTTP ${resp ? resp.status : 'no response'}`);
       return null;
     }
-    json = JSON.parse(resp.text);
+    xml = resp.text;
   } catch (e) {
-    console.warn(`  Localist fetch/parse error: ${e.message}`);
+    console.warn(`  Ouray/Ridgway RSS fetch error: ${e.message}`);
     return null;
   }
 
-  const rawEvents = Array.isArray(json && json.events) ? json.events : [];
-  if (rawEvents.length === 0) {
-    console.log('  No events returned from Localist API');
+  const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
+  if (items.length === 0) {
+    console.log('  No <item> entries in the Ouray/Ridgway RSS feed');
     return [];
   }
+  const field = (block, tag) => {
+    const m = block.match(new RegExp('<' + tag + '[^>]*>([\\s\\S]*?)</' + tag + '>'));
+    return m ? m[1].trim() : '';
+  };
 
   const now = Date.now();
   const horizon = now + 60 * 86400000;
-  // Collapse by event id into ONE entry spanning first_date→last_date. Localist
-  // lists a multi-day / "Ongoing:" / recurring event as one wrapped row PER day;
-  // emitting each as its own single-day card floods the grid and (since the
-  // client routes multi-day events to the Recurring calendar) keeps exhibits out
-  // of it. Using the event's own first_date/last_date gives the true span.
-  const byUid = new Map();
-  let skippedGov = 0;
-  let skippedPast = 0;
+  // Collapse recurring/multi-day events: Localist lists one <item> per instance,
+  // all sharing the event's <link>. Key by link, widen [start→end] across the
+  // in-window instances, so an every-Tue/Thu class becomes ONE spanned row.
+  const byLink = new Map();
+  let skippedGov = 0, skippedPast = 0, skippedFar = 0;
 
-  for (const wrapped of rawEvents) {
-    const ev = wrapped && wrapped.event;
-    if (!ev || ev.private || ev.status !== 'live') continue;
-    if (GOV_MEETING_PATTERN_NODE.test(ev.title || '')) { skippedGov++; continue; }
-    // Permanently hidden niche events (per user 2026-06-15). Mirror of the
-    // EXCLUDED_EVENTS list in events.html — keep the two in sync.
-    if (/wright opera house guided tour|ridgway railroad museum|free train ride|summer bingo|ultimate frisbee/i.test(ev.title || '')) continue;
+  for (const it of items) {
+    // RSS <title> = "Mon D, YYYY: Event Title at Venue". Strip the date prefix,
+    // then peel the trailing " at <Venue>" into a location (Localist convention).
+    const rawTitle = decodeXmlText(field(it, 'title')).replace(/\s+/g, ' ').trim();
+    let title = rawTitle.replace(/^[A-Za-z]{3,9}\s+\d{1,2},\s*\d{4}:\s*/, '').trim();
+    let location = '';
+    const lastAt = title.lastIndexOf(' at ');
+    if (lastAt > 0) { location = title.slice(lastAt + 4).trim(); title = title.slice(0, lastAt).trim(); }
+    if (!title) continue;
 
-    // Span = first_date → last_date (fall back to the instance start).
-    const inst = Array.isArray(ev.event_instances) && ev.event_instances[0]
-      && ev.event_instances[0].event_instance;
-    const startStr = ev.first_date ? ev.first_date + 'T12:00:00' : (inst && inst.start);
-    const startDate = startStr ? new Date(startStr) : null;
-    if (!startDate || isNaN(startDate.getTime())) continue;
-    const endDate = ev.last_date ? new Date(ev.last_date + 'T12:00:00') : startDate;
-    const endMs = isNaN(endDate.getTime()) ? startDate.getTime() : endDate.getTime();
+    if (GOV_MEETING_PATTERN_NODE.test(title)) { skippedGov++; continue; }
+    // Permanently hidden niche events (per user 2026-06-15) — mirror of the
+    // EXCLUDED_EVENTS list in events.html; keep the two in sync.
+    if (/wright opera house guided tour|ridgway railroad museum|free train ride|summer bingo|ultimate frisbee/i.test(title)) continue;
 
-    // Keep when the span overlaps the [today-1d, +60d] window.
-    if (endMs < now - 86400000) { skippedPast++; continue; }  // whole run already over
-    if (startDate.getTime() > horizon) continue;               // starts >60 days out
+    // <dc:date> is the event START (ISO w/ tz); pubDate mirrors it.
+    const start = new Date(field(it, 'dc:date') || field(it, 'pubDate'));
+    if (isNaN(start.getTime())) continue;
+    const ms = start.getTime();
+    if (ms < now - 86400000) { skippedPast++; continue; }
+    if (ms > horizon) { skippedFar++; continue; }
 
-    const uid = String(ev.id || ev.urlname || ev.title);
-    if (byUid.has(uid)) {
-      // Widen the span if a later wrapped row reports a broader range.
-      const g = byUid.get(uid);
-      if (startDate.getTime() < g.startMs) g.startMs = startDate.getTime();
-      if (endMs > g.endMs) g.endMs = endMs;
+    const link = decodeXmlText(field(it, 'link')) || 'https://events.ourayridgwayevents.com/';
+    if (byLink.has(link)) {
+      const g = byLink.get(link);
+      if (ms < g.startMs) g.startMs = ms;
+      if (ms > g.endMs) g.endMs = ms;
       continue;
     }
-    let desc = (ev.description_text || '')
-      .replace(/\r?\n+/g, ' ').replace(/\s+/g, ' ').trim();
+    let desc = decodeXmlText(field(it, 'description')).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (/^https?:\/\/\S+$/.test(desc)) desc = '';
-    // Some submitters draft copy with an AI tool and paste the lead-in too
-    // ("Here's a polished calendar description …: <real text>"). Strip it.
-    desc = stripDescPreamble(desc);
-    desc = smartTruncate(desc, EVENT_DESC_MAX);
-    byUid.set(uid, {
-      title: (ev.title || '').trim(),
-      link: ev.url || `https://events.ourayridgwayevents.com/event/${ev.urlname || ev.id}`,
-      description: desc,
-      startMs: startDate.getTime(),
-      endMs,
-      location: ev.location || '',
-      imageUrl: ev.photo_url || ''
+    desc = smartTruncate(stripDescPreamble(desc), EVENT_DESC_MAX);
+    const img = it.match(/<media:content[^>]*url=['"]([^'"]+)['"]/);
+    byLink.set(link, {
+      title, link, description: desc,
+      startMs: ms, endMs: ms, location,
+      imageUrl: img ? img[1] : ''
     });
   }
 
   const events = [];
-  for (const g of byUid.values()) {
+  for (const g of byLink.values()) {
     const startISO = new Date(g.startMs).toISOString();
     const startDay = startISO.slice(0, 10);
     const endDay = new Date(g.endMs).toISOString().slice(0, 10);
@@ -3639,9 +3642,10 @@ async function syncOurayRidgwayEvents() {
     });
   }
   events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
-  console.log(`  Ouray/Ridgway: ${events.length} events (collapsed by id; ${skippedPast} past, ${skippedGov} gov skipped)`);
+  console.log(`  Ouray/Ridgway: ${events.length} events (RSS; collapsed by link; ${skippedPast} past, ${skippedFar} >60d, ${skippedGov} gov skipped)`);
   return events;
 }
+
 
 async function syncKotoCommunityEvents() {
   console.log('\n🎵 Task 8: Syncing KOTO Community Calendar...');
