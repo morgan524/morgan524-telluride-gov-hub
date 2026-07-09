@@ -40,23 +40,34 @@ function json(obj, status, origin) {
 
 const SYSTEM = `You are the editor's assistant for "Livable Telluride", a community newsletter for Telluride, Mountain Village, and the surrounding San Miguel County towns. A reviewer is looking at a ready-to-send HTML email digest (a "Weekend Outlook" or "Week Ahead") and may ask you to edit it or answer questions about it.
 
-You receive the FULL current email as HTML. When the reviewer asks for a change, return the FULL updated email HTML with ONLY that change applied. Rules:
-- Preserve the existing structure, inline styles, <table> layout, and overall design EXACTLY. It is an email — keep it email-safe (inline styles, table layout, no <script>, no external CSS or web fonts).
-- To REMOVE an event, delete that event's entire card row (its <tr>...</tr>). To ADD one, copy the markup of an existing event card and fill in the details (date badge, title link, location line, a short blurb, a "Details" link, and an <img> only if a real photo URL is provided). To REWRITE, change only that card's text.
-- Keep the tone informational and grounded in the local area — never breathless, salesy, or padded. Keep any *|MERGE|* tags (e.g. *|UNSUB|*, *|EMAIL|*) intact and unmoved. Keep the output PURE ASCII, using numeric HTML entities (e.g. &#8212; for an em dash, &#128205; for a pin) exactly like the rest of the email.
-- Never invent facts about an event (dates, prices, lineups). If you lack a detail the reviewer didn't give you, ask for it instead of guessing.
-- If the reviewer only asks a question, answer it and do NOT change the HTML (changed=false, empty html).
-Always respond by calling the "respond" tool.`;
+You receive the FULL current email as HTML. When the reviewer asks for a change, DO NOT return the whole email — return a small set of precise find/replace EDITS via the "respond" tool. This keeps you fast and safe. Rules:
+- Each edit has "find" (an EXACT substring copied VERBATIM from the current email HTML — identical text, whitespace, tags, and &#...; entities) and "replace" (the new text). Keep "find" as SHORT as possible while still matching the intended spot EXACTLY ONCE; if a short snippet would be ambiguous, include just enough surrounding markup to make it unique. Order edits top-to-bottom.
+- To REMOVE an event, set find = that event's entire card <tr>...</tr> and replace = "" (empty). To ADD one, set find = a unique nearby anchor (e.g. the closing </tr> of an existing card) and replace = that same anchor followed by a new card copied from an existing card's markup (date badge, title link, location line, short blurb, a "Details" link, and an <img> only if a real photo URL is given). To REWRITE, find only the specific text/attribute and replace it.
+- Preserve email-safe structure: inline styles, <table> layout, no <script>, no external CSS or web fonts. Keep any *|MERGE|* tags (e.g. *|UNSUB|*, *|EMAIL|*) intact. Keep everything PURE ASCII using numeric HTML entities (e.g. &#8212; em dash, &#128205; pin) exactly like the rest of the email.
+- Keep the tone informational and grounded in the local area — never breathless, salesy, or padded. Never invent facts about an event (dates, prices, lineups). If you lack a detail the reviewer didn't give you, ask for it instead of guessing.
+- To change the subject line, set "subject". If the reviewer only asks a question, answer it in "reply" with changed=false and no edits.
+Always respond by calling the "respond" tool. Set changed=true only when you provide edits or a new subject.`;
 
 const TOOL = {
   name: "respond",
-  description: "Reply to the reviewer; include the full edited email HTML when you changed it.",
+  description: "Reply to the reviewer; provide precise find/replace edits when changing the email.",
   input_schema: {
     type: "object",
     properties: {
       reply: { type: "string", description: "A short, plain message to the reviewer describing what you changed, or answering their question." },
-      changed: { type: "boolean", description: "true ONLY if you edited the email HTML or subject." },
-      html: { type: "string", description: "The FULL updated email HTML when changed is true; otherwise an empty string." },
+      changed: { type: "boolean", description: "true ONLY if you provide edits or a new subject." },
+      edits: {
+        type: "array",
+        description: "Find/replace edits applied in order to the current email HTML. Empty when you are not changing the body.",
+        items: {
+          type: "object",
+          properties: {
+            find: { type: "string", description: "EXACT substring copied verbatim from the current email HTML; must match exactly once." },
+            replace: { type: "string", description: "Replacement text (use an empty string to delete)." },
+          },
+          required: ["find", "replace"],
+        },
+      },
       subject: { type: "string", description: "An updated subject line if the reviewer asked to change it; otherwise an empty string." },
     },
     required: ["reply", "changed"],
@@ -81,7 +92,7 @@ async function chat(body, env) {
     headers: { "Content-Type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
     body: JSON.stringify({
       model: "claude-sonnet-4-6",
-      max_tokens: 16000,
+      max_tokens: 8000,
       system: SYSTEM,
       tools: [TOOL],
       tool_choice: { type: "tool", name: "respond" },
@@ -93,11 +104,35 @@ async function chat(body, env) {
   const block = (data.content || []).find((b) => b.type === "tool_use");
   if (!block) return { reply: "(no response)", changed: false, html: "", subject: "" };
   const inp = block.input || {};
+
+  // Apply the model's find/replace edits to the current email HTML server-side.
+  // Output is tiny (just the changed snippets), so this returns in seconds
+  // instead of the ~2 min it took to re-emit the whole email. The response
+  // contract to the front end is unchanged: { reply, changed, html, subject }.
+  const emailHtml = String(body.emailHtml || "");
+  const edits = Array.isArray(inp.edits) ? inp.edits : [];
+  let newHtml = emailHtml, applied = 0;
+  const misses = [];
+  for (const e of edits) {
+    if (!e || typeof e.find !== "string" || typeof e.replace !== "string" || e.find === "") continue;
+    const idx = newHtml.indexOf(e.find);
+    if (idx === -1) { misses.push(e.find.replace(/\s+/g, " ").slice(0, 50)); continue; }
+    newHtml = newHtml.slice(0, idx) + e.replace + newHtml.slice(idx + e.find.length);
+    applied++;
+  }
+  const subj = typeof inp.subject === "string" ? inp.subject : "";
+  const subjectChanged = !!subj && subj !== String(body.subject || "");
+  const changed = applied > 0 || subjectChanged;
+
+  let note = "";
+  if (misses.length) note = " (I couldn't locate " + misses.length + " passage" + (misses.length > 1 ? "s" : "") + " to change exactly — the wording may differ from what I expected; try rephrasing or being more specific.)";
+  else if (inp.changed && !changed) note = " (No change was applied.)";
+
   return {
-    reply: inp.reply || "",
-    changed: !!inp.changed,
-    html: inp.changed ? (inp.html || "") : "",
-    subject: inp.subject || "",
+    reply: (inp.reply || "") + note,
+    changed,
+    html: changed ? newHtml : "",
+    subject: subj,
   };
 }
 
