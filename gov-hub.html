@@ -1118,13 +1118,40 @@
       + 'Work Executive Regular Special Substantial Councilors '
       + 'January February March April May June July August September October November December '
       + 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday '
-      + 'Section Stage Phase Article Item Step Unit No Yes').split(/\s+/));
+      + 'Section Stage Phase Article Item Step Unit No Yes '
+      // Low-value planning/zoning words that don't identify anything on their own.
+      + 'Accommodations Building Buildings Preliminary Large Scale').split(/\s+/));
+    // Street-address matcher: a number followed by EITHER a direction-led street
+    // (700 W Pacific Ave, 239 N Aspen) OR a suffix-terminated street (860 Black
+    // Bear Rd). Requiring a direction or a street suffix keeps plain "2026
+    // Performance Report"-style number+Title-case runs from registering as
+    // addresses.
+    const _ADDR_DIR = '(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?';
+    const _ADDR_SUF = '(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)';
+    const _ADDR_W = "[A-Z][A-Za-z'’]*";
+    const _ADDR_SRC = '\\d+\\s+(?:' + _ADDR_DIR + '\\s+' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*(?:\\s+' + _ADDR_SUF + ')?|' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*\\s+' + _ADDR_SUF + ')';
+    const _RUN_SRC = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
     function emphasizeNames(raw) {
-      const runRe = /[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*/g;
+      // Scan for addresses first, then proper-noun runs (they can't overlap: one
+      // starts with a digit, the other with a capital letter).
+      const scanRe = new RegExp('(' + _ADDR_SRC + ')|(' + _RUN_SRC + ')', 'g');
       let html = '', last = 0, m;
-      while ((m = runRe.exec(raw)) !== null) {
-        const start = m.index, run = m[0];
+      while ((m = scanRe.exec(raw)) !== null) {
+        const start = m.index;
         html += esc(raw.slice(last, start));
+        if (m[1]) {
+          // A street address. Bold it in full (number included) UNLESS it merely
+          // locates a named project — i.e. it's introduced by "at"/"on" (e.g.
+          // "Carhenge … at 700 W Pacific Ave" / "Shandoka … at 860 Black Bear
+          // Rd"), where the project name carries the emphasis. A standalone
+          // address (e.g. "for 239 N Aspen") is the identifier, so it's bolded.
+          const addr = m[1];
+          const locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, start));
+          html += locates ? esc(addr) : '<strong>' + esc(addr) + '</strong>';
+          last = start + addr.length;
+          continue;
+        }
+        const run = m[2];
         let trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');   // drop trailing connectors
         const tail = run.slice(trimmed.length);
         let leadThe = '';                                       // keep a leading "The" outside the bold
@@ -1132,7 +1159,11 @@
         const multi = /\s/.test(trimmed);
         const before = raw.slice(0, start).replace(/\s+$/, '');
         const sentenceStart = before === '' || /[.!?]$/.test(before);
-        const bold = multi || (!sentenceStart && !NAME_STOP.has(trimmed));
+        // Suppress low-value words even inside a multi-word run when EVERY
+        // significant word is a stop word (e.g. "Preliminary Large-Scale").
+        const sig = trimmed.split(/\s+/).filter((w) => !/^(?:of|the)$/i.test(w));
+        const allStop = sig.length > 0 && sig.every((w) => NAME_STOP.has(w));
+        const bold = !allStop && (multi || (!sentenceStart && !NAME_STOP.has(trimmed)));
         html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
         last = start + run.length;
       }
