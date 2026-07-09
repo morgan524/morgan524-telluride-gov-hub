@@ -429,7 +429,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -477,7 +477,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -643,6 +643,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Stark, Dalton win town council seats after final tally",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "government",
+    copy: "Charles Dalton hung on to a narrow lead over Chris Uihlein to win the second seat in the June 30 election for two Telluride Town Council members, joining incumbent Marya Stark, the first-place finisher who led by enough to secure…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_a4d7e059-764a-4ec0-8f25-0d610940f403.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/271f4bfe-a1dc-4660-b1b8-51db12d95fa4/6a501d7de1d9b.image.png",
+    imgHiRes: true
+  },
+  {
     title: "Weed of the Month is the oxeye daisy",
     source: "Telluride Times",
     date: "July 9, 2026",
@@ -679,6 +691,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Coffee talk",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "public-safety",
+    copy: "Coffee has been part of human culture for over a thousand years, from Ethiopian energy balls to Yemeni monastery rituals to today's sprawling menu of roasts, add-ins, and preparations. Recent research increasingly links regular consumption to reduced risk of heart disease, liver disease, and type 2 diabetes, largely due to polyphenols. Downsides — sleep disruption, caffeine dependence, sugar-loaded drinks — are real too.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_1c001e43-9a15-4c53-aa99-71a15dfaa0bb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/62/9625db20-cb96-4e42-98a4-2e709c28de62/6a4e8ef37beb7.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Here comes the judge",
     source: "Telluride Times",
     date: "July 9, 2026",
@@ -688,6 +712,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_d27e3f57-76ae-4581-804d-f706b0c0a0e8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b0/4b0dd2b6-df33-4b21-9baa-8640361a22ab/6a4efb7392a71.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "James M Bedford",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "community",
+    copy: "James M Bedford.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/obituaries/article_25ca1190-2e44-431e-b3e7-f8f571632acd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/4a/c4a67251-fb36-492c-b7d3-198169e2ca73/6a50021de2b74.image.jpg",
     imgHiRes: true
   },
   {
@@ -2804,17 +2840,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-09/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-09T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Booze and Books at Liz",
     link: "https://koto.org/event/booze-and-books-at-liz/",
     description: "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. Meet at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
@@ -3309,20 +3334,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-190",
-    name: "Peppa",
-    species: "Dog",
-    breed: "Poodle, Miniature / Schnauzer",
-    ageGroup: "Adult Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/c90348512d680b41160e384fc81688da/b549acbd39f70efb5528d5ad45a7cfcf.png",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214040349",
-    summary: "Adult Dog • Poodle, Miniature / Schnauzer • Female",
-    firstSeen: "2026-07-04",
-    revealDate: "2026-07-04",
-    lastSeen: "2026-07-09"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -4438,7 +4450,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Brittany Stadler: In Color — Art Opening Reception @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/brittany-stadler-in-color-art-opening-reception-the-wright",
-    description: "Brittany Stadler: In Color — Art Opening Reception @ the Wright WHEN? Opening Reception: Friday, July 17 4:00 pm – 6:00 pm Exhibition on View in Tavern: July 17 – September 7, 2026, Tu-Th 10-4 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EXHIBITION Celebrate the opening of In Color, a new exhibition by regional artist Brittany Stadler, at a free community reception hosted by the Wright Opera House. Meet the artist, explore the exhibition, and enjoy an evening of conversation, creativity, and community as the Wright transforms into a gallery space showcasing Brittany's latest work. Whether you're a longtime collector or simply curious to discover new local artists, everyone is welcome. Brittany's work begins with a single animal that represents an ecosystem, region, or idea, gradually expanding into intricate compositions inspired by research, observation, and the relationships between plants, animals, and landscapes. …",
+    description: "Brittany Stadler: In Color — Art Opening Reception @ the Wright WHEN? Opening Reception: Friday, July 17 4:00 pm – 6:00 pm Exhibition on View in Tavern: July 17 – September 3, 2026, Tu-Th 10-4 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EXHIBITION Celebrate the opening of In Color, a new exhibition by regional artist Brittany Stadler, at a free community reception hosted by the Wright Opera House. Meet the artist, explore the exhibition, and enjoy an evening of conversation, creativity, and community as the Wright transforms into a gallery space showcasing Brittany's latest work. Whether you're a longtime collector or simply curious to discover new local artists, everyone is welcome. Brittany's work begins with a single animal that represents an ecosystem, region, or idea, gradually expanding into intricate compositions inspired by research, observation, and the relationships between plants, animals, and landscapes. …",
     pubDate: "2026-07-17T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
