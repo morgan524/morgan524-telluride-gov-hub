@@ -1,5 +1,17 @@
 [
   {
+    "title": "Aldasoro Ranch turns 100",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "July 8, 2026",
+    "summary": "The Aldasoro Ranch, founded in 1926 when Joaquin Aldasoro bought 1,400 acres on Deep Creek Mesa, turns 100 this year. The family is marking the milestone with a public celebration Sunday, July 12, 11 a.m.–3 p.m. at 5605 Last Dollar Rd. Free shuttles run every 30 minutes from the county courthouse.",
+    "href": "https://www.telluridenews.com/news/article_92132a6f-84c7-4cf5-8194-30f9c965f8ed.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/93/493cf380-3382-4640-9817-6a2042523f39/6a4ea04ecc377.image.png",
+    "category": "Community",
+    "newsTopic": "community",
+    "featured": true
+  },
+  {
     "title": "Dry thunderstorms could complicate firefighting efforts",
     "source": "Telluride Times",
     "sourceKey": "ttimes",
@@ -8,8 +20,7 @@
     "href": "https://www.telluridenews.com/news/article_8e9913c5-3691-468d-a3ae-eaa7ca037c48.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/47/a47d7dfb-9699-46ee-8b6e-87a921969428/6a4c0938939c5.image.jpg",
     "category": "Public Safety",
-    "newsTopic": "public-safety",
-    "featured": true
+    "newsTopic": "public-safety"
   },
   {
     "title": "Is Telluride Paradise?",

@@ -214,7 +214,7 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    {"sv":4},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "fire|2026-07-21|Board of Directors Meeting":
     {"sv":2},
@@ -438,7 +438,7 @@ const MANUAL_SUMMARIES = {
     "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    "The July 16, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "A routine liquor licensing session. On the consent calendar: draft minutes from the July 1 meeting and ratification of a state-issued license transfer for The Catorce Group Ltd., doing business as Cuatro Cinco Seis at 219 W. Pacific Ave. The one public hearing covers a request by Telluride Science for a single special event permit for Town Talk at 300 S. Townsend St. on August 25, 2026, from 5:00 to 9:00 pm. The July 1 draft minutes reflect fourteen special event permits approved at that session — covering summer and fall events including Bluegrass, Jazz Festival, Film Festival, Telluride Mountain Run, Noche de Luz, and several Telluride Table fundraisers — all granted without public comment.",
 
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -483,7 +483,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -642,6 +642,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "CHALKBOARD Week of July 9-15",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "government",
+    copy: "Local birthdays, meeting schedules, and recurring community events for the week of July 9–15 in the Norwood and Nucla-Naturita area. Highlights include the Thursday Farmers Market (2–6 p.m. at Pocket Park), weekly Senior Meals, Sunday Food Pantry distribution, and regular pickleball, AA, and civic board meetings.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_fd76a51e-b077-4f84-a744-d79eb7b787c2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b3/ab354c44-1d8b-4ff9-9d46-9dc0b9930db8/6a4e832b19d9b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Weed of the Month is the oxeye daisy",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "community",
+    copy: "Oxeye daisy — pretty as it looks — is an invasive from Europe and Asia that's taken hold around Telluride, Mountain Village, and Ophir. It crowds out native plants, erodes soil, and one flower can drop 200+ seeds that stay viable for 40 years. San Miguel County is asking residents to remove it where they find it.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_6e06e253-035b-4983-9eb3-5959c2de90a7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f3/6f32d9cd-bf80-4278-b273-d6fea58237de/6a4e808998162.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Just desserts",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "community",
+    copy: "An annual homemade dessert contest returns to Norwood School on July 11, with drop-off from 2–5 p.m., judging 5–6 p.m., and public tasting at 6 p.m. Categories run from youth to professional, resident to non-resident. Call (970) 327-4650 for entry details.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_0502877a-72b0-4b56-a009-6d65705d6b69.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e7/5e7a684c-ec95-4a7a-bda7-3956b5ca1f09/6a4e8a4dd8b85.image.png",
+    imgHiRes: true
+  },
   {
     title: "Here comes the judge",
     source: "Telluride Times",
@@ -3844,17 +3880,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-  {
-    title: "Ouray County MAC Group Meeting",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=2378",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=2378",
-    pubDate: "2026-07-09T14:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "4-H Event Center - 22739 Highway 550 Ridgway CO 81432",
-    imageUrl: ""
-  }
+
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -4157,6 +4183,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
+  },
+  {
+    title: "On Display: Roots & Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
+    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.",
+    pubDate: "2026-07-06T12:00:00.000Z",
+    endDate: "2026-08-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create",
+    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg"
   },
   {
     title: "AVID Dance - FREE Workshop + Performance",
@@ -4479,33 +4517,10 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Meet at Museum 420 6th Avenue ",
     imageUrl: "https://localist-images.azureedge.net/photos/52462472948306/huge/342edcb84d91e63ff410e641df23204e0abcb3be.jpg"
-  },
-  {
-    title: "How the West Was Worn Or… Black Hat Optional: Theatre @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "Dear Friends, Like so many of you, our hearts have been with our community these past days as the wildfire has touched so many lives, including some of our own cast and crew. Because of this, we've made the difficult decision to postpone our 2026 melodrama, How the West Was Worn, originally scheduled for July 17-20. We know how much you look forward to this show, and we're so grateful for your support. We're working to bring the show back to you within the year. Things are still uncertain right now, but we promise to keep you posted as soon as we have real dates to share. Your ticket will simply carry over to the new dates. …",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    endDate: "2026-07-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932502125812/huge/c4a0083e2a38c8bce646c53ac7943f10714eb802.jpg"
   }
 ];
 
 const NORWOOD_EVENTS = [
-  {
-    title: "Closed In Observance Of 4th Of July",
-    link: "https://www.norwoodtown.com/2026-07-02-closed-in-observance-of-4th-of-july",
-    description: "",
-    pubDate: "2026-07-02T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Town Closure",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
@@ -4607,17 +4622,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Science of Cocktails",
-    link: "https://townofmountainvillage.com/explore/events/all-events/science-of-cocktails-1/",
-    description: "A crowd pleaser for more than 15 years attracting those from near and far, the Science of Cocktails is Pinhead’s not-to-be-missed annual fundraiser.",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49160/soc2026_v1_0_instagram45_copy.png"
   },
   {
     title: "Public Art Commission Meeting",
@@ -4970,6 +4974,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48859/logan_metz_1800x900px.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-08-08T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-08-08T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
