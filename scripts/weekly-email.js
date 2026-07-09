@@ -571,6 +571,15 @@ function autoWhatsReading() {
 }
 const WHATS_READING = WHATS_READING_MANUAL[WEEK_START] || autoWhatsReading();
 const whatsReadingBox = WHATS_READING ? `<tr><td class="callout-wrap" style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">→ What We're Reading</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;"><a href="${WHATS_READING.url}" style="color:#1a2e29;text-decoration:none;">${esc(WHATS_READING.title)}</a></div><div style="font-size:12px;color:#7a8a85;margin:3px 0 9px;">${esc(WHATS_READING.source)}</div><p style="margin:0;font-size:14px;line-height:1.65;color:#2c3b35;">${esc(WHATS_READING.blurb)}</p><a href="${WHATS_READING.url}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:none;border-bottom:1px solid #a0531f;font-size:12.5px;font-weight:600;">Read it →</a></td></tr></table></td></tr>` : '';
+// ── "What We're Looking For" recruitment box (freelance-writer push, added
+// 2026-07-09). When SHOW_LOOKING_FOR is true it REPLACES the What We're Reading
+// box in both the weekend and weekly digests. Set it back to false to restore
+// What We're Reading. The "I'm interested" links open a pre-addressed email
+// (mailto isn't UTM-tagged or entity-mangled — all ASCII).
+const SHOW_LOOKING_FOR = true;
+const LOOKING_FOR_MAILTO = "mailto:info@livabletelluride.org?subject=I%27m%20interested%20in%20the%20freelance%20position";
+const whatsLookingForBox = `<tr><td class="callout-wrap" style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">&#8594; What We're Looking For</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;">Write for Livable Telluride</div><p style="margin:8px 0 0;font-size:14px;line-height:1.65;color:#2c3b35;">Have you ever dreamed of being a local reporter &#8212; like Superman moonlighting at the Daily Planet? Now may be your time to shine. Livable Telluride is looking for local people interested in helping write about current events around the region. We'll start with paid freelance work and see where it goes, and our rates are competitive with other organizations. Send an email to <a href="${LOOKING_FOR_MAILTO}" style="color:#a0531f;text-decoration:underline;">info@livabletelluride.org</a> with a resume, a link to prior work if you have it, and a note about why you'd be a good fit.</p><a href="${LOOKING_FOR_MAILTO}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:none;border-bottom:1px solid #a0531f;font-size:12.5px;font-weight:600;">I'm interested &#8594;</a></td></tr></table></td></tr>`;
+const calloutBox = SHOW_LOOKING_FOR ? whatsLookingForBox : whatsReadingBox;
 const section = (label, rows) => rows ? `<tr><td class="sec-pad" style="padding:24px 34px 0;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;border-bottom:1px solid #d4c9b0;padding-bottom:8px;">→ ${label}</div><table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows}</table></td></tr>` : '';
 // Conditional per-interest extras — each block renders only for subscribers in
 // that Mailchimp "Event Topics" group. The *|INTERESTED|* tags are raw (NOT
@@ -666,7 +675,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   ${WEEKEND ? '' : section('Public Meetings This Week', mh)}
   ${festivalHero}
   ${section(EVENTS_HEADING, eh)}${WEEKEND ? '' : topicHtml}
-  ${whatsReadingBox}
+  ${calloutBox}
   ${donateBlock}
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>

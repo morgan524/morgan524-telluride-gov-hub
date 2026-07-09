@@ -122,7 +122,15 @@ $("gatebtn").onclick = () => { const v=$("gatekey").value.trim(); if(!v){showGat
 $("gatekey").addEventListener("keydown",e=>{ if(e.key==="Enter") $("gatebtn").click(); });
 
 async function api(path, payload){
-  const r = await fetch(WORKER+path, { method:"POST", headers:{ "Content-Type":"application/json", "x-digest-key":KEY }, body:JSON.stringify(payload) });
+  // Hard timeout so a slow/stuck request surfaces an error instead of spinning
+  // forever (the old failure mode). Edits now return in seconds; 90s is a wide
+  // safety margin.
+  const ctrl = new AbortController();
+  const timer = setTimeout(()=>ctrl.abort(), 90000);
+  let r;
+  try{ r = await fetch(WORKER+path, { method:"POST", headers:{ "Content-Type":"application/json", "x-digest-key":KEY }, body:JSON.stringify(payload), signal:ctrl.signal }); }
+  catch(e){ if(e.name==="AbortError") throw new Error("timed out — the request took too long. Try again, or make a smaller change."); throw e; }
+  finally{ clearTimeout(timer); }
   if(r.status===401){ sessionStorage.removeItem("digestKey"); KEY=""; showGate("Wrong passphrase — try again."); throw new Error("unauthorized"); }
   return r.json();
 }
