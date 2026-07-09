@@ -42,6 +42,7 @@ jobs:
         id: render
         env:
           WEEK_START_INPUT: ${{ github.event.inputs.week_start }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Rick-voice lede generation
         run: |
           set -o pipefail
           # Cache-bust + -f so we always render from the freshest data and fail
