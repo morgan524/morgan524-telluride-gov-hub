@@ -4704,17 +4704,29 @@ async function syncMedAgendas() {
 // and "<Month> <YYYY> Board Packet". (The PDF filenames themselves are wildly
 // inconsistent — "Agenda2025.11.13_r.pdf", "SMART-Board-Agenda_June-11th-2026
 // _distributed.pdf", etc. — so we key off the clean LINK TEXT, not the file
-// name.) SMART meets once a month, so we join the page's (month, year) to the
-// full dates in SMART_CACHED_DATA and return exact-date-keyed agenda + packet
-// maps for patchAgendaUrls(). Returns null on fetch failure (carry forward).
-async function syncSmartAgendas(govDataSrc) {
+// name.)
+//
+// SMART meets the 2nd Thursday of the month, but not every month, and the old
+// approach joined the page months to a HAND-CURATED SMART_CACHED_DATA stub
+// list — which silently went stale (the list stopped at a fixed date, so newer
+// meetings never rendered and their agendas were never picked up). This now
+// REBUILDS SMART_CACHED_DATA from the live page every run: it emits a stub for
+// each upcoming month (this month → +3) that has an agenda posted, PLUS the
+// single next upcoming meeting as a placeholder so an upcoming meeting shows
+// before its agenda posts. Agenda-driven, so it never goes stale and doesn't
+// fabricate cards for months SMART skips. Returns the stub array, or null on
+// fetch failure (carry forward the existing list). getSmartMeetings() and the
+// summary pipeline both read SMART_CACHED_DATA unchanged, so keys stay aligned.
+async function syncSmartAgendas() {
   console.log('\n🚌 Syncing SMART agenda + packet PDFs...');
   const PAGE = AGENDA_SOURCES.smart.pageUrl;
   const ORIGIN = 'https://smarttelluride.colorado.gov';
   const html = await fetchPage(PAGE, 'SMART board-meetings page');
   if (!html) return null;
 
-  // 1. Page anchors → { 'month yyyy': { agendaUrl, packetUrl } }
+  // 1. Page anchors → { 'Month YYYY': { agendaUrl, packetUrl } } (Title-case key).
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
   const byMonth = {};
   const aRe = /<a\b[^>]*href="([^"]+\.pdf[^"]*)"[^>]*>([\s\S]*?)<\/a>/gi;
   let m;
@@ -4725,28 +4737,47 @@ async function syncSmartAgendas(govDataSrc) {
     const t = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})\b[\s\S]*?\b(Agenda|Packet)\b/i);
     if (!t) continue;
     if (!/^https?:/i.test(href)) href = ORIGIN + (href.startsWith('/') ? href : '/' + href);
-    const key = (t[1] + ' ' + t[2]).toLowerCase();
+    const key = t[1][0].toUpperCase() + t[1].slice(1).toLowerCase() + ' ' + t[2];
     byMonth[key] = byMonth[key] || {};
     if (/agenda/i.test(t[3])) byMonth[key].agendaUrl = href;
     else byMonth[key].packetUrl = href;
   }
+  if (!Object.keys(byMonth).length) { console.warn('  No SMART agenda links found — check HTML structure'); return null; }
 
-  // 2. Join (month, year) to SMART_CACHED_DATA's full dates.
-  const block = (govDataSrc.match(/const\s+SMART_CACHED_DATA\s*=\s*\[[\s\S]*?\n\];/) || [''])[0];
-  const agendaMap = {}, packetMap = {};
-  const dateRe = /date:\s*'([^']+)'/g;
-  let d;
-  while ((d = dateRe.exec(block)) !== null) {
-    const full = d[1]; // e.g. "June 11, 2026"
-    const mm = full.match(/^([A-Za-z]+)\s+\d{1,2},\s*(\d{4})$/);
-    if (!mm) continue;
-    const hit = byMonth[(mm[1] + ' ' + mm[2]).toLowerCase()];
-    if (!hit) continue;
-    if (hit.agendaUrl) agendaMap[full] = hit.agendaUrl;
-    if (hit.packetUrl) packetMap[full] = hit.packetUrl;
+  // 2. Rebuild SMART_CACHED_DATA stubs: 2nd Thursday of each month, this month
+  //    → +3, only for months with an agenda posted, plus one upcoming placeholder.
+  function secondThursday(year, month) {                 // month 0-based
+    const firstDow = new Date(year, month, 1).getDay();  // 0=Sun..6=Sat
+    const firstThu = 1 + ((4 - firstDow + 7) % 7);
+    return firstThu + 7;
   }
-  console.log(`  SMART: ${Object.keys(byMonth).length} month(s) on page; matched agenda=${Object.keys(agendaMap).length} packet=${Object.keys(packetMap).length}`);
-  return { agendaMap, packetMap };
+  const now = new Date();
+  const todayMid = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const stubs = [];
+  let placeholderUsed = false;
+  for (let i = 0; i <= 3; i++) {
+    const base = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const year = base.getFullYear(), month = base.getMonth();
+    const docs = byMonth[MONTHS[month] + ' ' + year] || {};
+    const agendaUrl = docs.agendaUrl || null;
+    const day = secondThursday(year, month);
+    if (!agendaUrl) {
+      // Only surface the single next upcoming meeting as a placeholder; don't
+      // fabricate cards for later, un-agenda'd months (SMART skips some months).
+      if (placeholderUsed || new Date(year, month, day) < todayMid) continue;
+      placeholderUsed = true;
+    }
+    stubs.push({
+      date: MONTHS[month] + ' ' + day + ', ' + year,
+      time: '4:00 PM',
+      title: 'SMART Board of Directors',
+      location: 'SMART Office, Lawson Hill (also virtual — see agenda)',
+      agendaUrl,
+      packetUrl: docs.packetUrl || null
+    });
+  }
+  console.log(`  SMART: ${Object.keys(byMonth).length} month(s) on page; rebuilt ${stubs.length} stub(s) (${stubs.filter(s => s.agendaUrl).length} with agenda)`);
+  return stubs;
 }
 
 // San Miguel County — queries CivicClerk OData for upcoming events whose
@@ -6052,25 +6083,22 @@ async function main() {
     }
   }
 
-  // ── 0b. SMART agenda + packet (separate: it patches TWO url fields) ──
-  // SMART's colorado.gov page exposes both a "Board Agenda" and a "Board
-  // Packet" PDF per month; patch both onto SMART_CACHED_DATA.
+  // ── 0b. SMART: rebuild SMART_CACHED_DATA from the live board-meetings page ──
+  // syncSmartAgendas() now returns a freshly-generated stub array (2nd-Thursday
+  // dates + agenda/packet URLs + one upcoming placeholder) instead of patching a
+  // hand-curated list, so SMART never goes stale. Bump SMART_CACHE_DATE so the
+  // source-health staleness check stays green.
   try {
-    const smart = await syncSmartAgendas(govDataSrc);
-    if (smart) {
-      let smartChanged = 0;
-      if (Object.keys(smart.agendaMap).length) {
-        const r = patchAgendaUrls(govDataSrc, 'SMART_CACHED_DATA', smart.agendaMap);
-        govDataSrc = r.src; smartChanged += r.changed;
-      }
-      if (Object.keys(smart.packetMap).length) {
-        const r = patchAgendaUrls(govDataSrc, 'SMART_CACHED_DATA', smart.packetMap, 'packetUrl');
-        govDataSrc = r.src; smartChanged += r.changed;
-      }
-      if (smartChanged > 0) {
+    const smartStubs = await syncSmartAgendas();
+    if (smartStubs && smartStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'SMART_CACHED_DATA') || [];
+      if (JSON.stringify(smartStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'SMART_CACHED_DATA', smartStubs, false);
         govDataChanged = true;
-        console.log(`  SMART_CACHED_DATA: patched ${smartChanged} url field(s)`);
+        console.log(`  SMART_CACHED_DATA: rebuilt (${smartStubs.length} meetings)`);
       }
+      govDataSrc = replaceConstString(govDataSrc, 'SMART_CACHE_DATE', today());
+      govDataChanged = true;
     }
   } catch (e) {
     console.warn(`  SMART agenda sync error: ${e.message}`);
