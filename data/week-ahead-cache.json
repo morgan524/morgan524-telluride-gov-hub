@@ -1,18 +1,18 @@
 {
-  "hash": "a01da16d60f78e3d8c33a5cb1972161bd0ad6a0e",
-  "lede": "The biggest item this week is Wednesday's joint work session where the San Miguel County Planning Commission and BOCC sit down together to work through proposed Land Use Code amendments covering forestry practices, oil and gas operations, deep geothermal, and condominium plats — no final votes, but this is where the shape of those rules gets set. Also Wednesday, the commissioners make a rare trip to Norwood to consider a Planning Commission appointment and hear results from the Placerville Fire Survey. The Ecology Commission meets the same evening to dig into the 2022 Climate Action Plan's transportation and materials sections.",
+  "hash": "6b65b3e3468938f829fc5a3689d625fce48e9997",
+  "lede": "The biggest government action this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in Backman Village — that's a significant project and the public-hearing format means your voice counts. The Planning Commission and BOCC also sit down together Thursday for a joint work session on proposed Land Use Code amendments touching forestry, oil and gas, geothermal operations, and condominium plats — no final votes, but these are the conversations that shape what gets adopted later. On the community side, the Hardrock Hundred kicks off Friday and the farmers markets are running in both Telluride and Ridgway.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commissioners appoint a Planning Commission alternate and review Placerville Fire Survey results."
+      "id": 6,
+      "stake": "Public hearings on major Carhenge multi-building redevelopment at 700 W Pacific Ave."
+    },
+    {
+      "id": 5,
+      "stake": "HARC reviews alterations to two Town-owned landmark buildings, including floor area increase."
     },
     {
       "id": 1,
-      "stake": "Town's Climate Action Plan under review — transportation and consumption policies up for discussion."
-    },
-    {
-      "id": 4,
-      "stake": "Proposed Land Use Code changes to forestry, oil and gas, geothermal, and condo plat rules being shaped."
+      "stake": "County land use code amendments covering forestry, oil, gas, geothermal, and condo plats under discussion."
     }
   ]
 }

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-8-26",
+    "source": "KOTO Community Radio",
+    "date": "July 9, 2026",
+    "newsTopic": "public-safety",
+    "copy": "Gold Mountain Fire Evacuees Return Home; Mountain Village Looks for New Town Manager; AVID Dance Brings a Universal Language",
+    "href": "https://koto.org/news/newscast-7-8-26/"
+  },
+  {
     "title": "Newscast 7-6-26",
     "source": "KOTO Community Radio",
     "date": "July 7, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "recreation",
     "copy": "West End Roundup with the San Miguel Basin Forum; Lions in the Mountains; Dwayne Romero Vies for Congress",
     "href": "https://koto.org/news/newscast-6-25-26/"
-  },
-  {
-    "title": "Newscast 6-24-26",
-    "source": "KOTO Community Radio",
-    "date": "June 25, 2026",
-    "newsTopic": "community",
-    "copy": "Remembering a BF Deal; Bluegrass Needs a Rethink; The Battle for Truth",
-    "href": "https://koto.org/news/newscast-6-24-26/"
   }
 ]
