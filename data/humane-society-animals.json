@@ -12,19 +12,5 @@
     "firstSeen": "2026-07-04",
     "revealDate": "2026-07-04",
     "lastSeen": "2026-07-09"
-  },
-  {
-    "id": "TEL-A-191",
-    "name": "Rex",
-    "species": "Dog",
-    "breed": "Shepherd, German",
-    "ageGroup": "Young Puppy",
-    "sex": "Male",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/444d84dfc9e0e4e592f18e169e7b88e3/3ae2a87c028087bef7ae6ffa837d7f45.JPG",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/214054660",
-    "summary": "Young Puppy • Shepherd, German • Male",
-    "firstSeen": "2026-07-07",
-    "revealDate": "2026-07-07",
-    "lastSeen": "2026-07-09"
   }
 ]

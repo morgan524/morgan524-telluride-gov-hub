@@ -486,7 +486,7 @@ const MANUAL_SUMMARIES = {
     "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
-    "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     "The July 21, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
@@ -642,6 +642,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Here comes the judge",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "government",
+    copy: "Telluride Town Council approved Ronald Carlson as deputy municipal court judge, backing up Judge Daniel Zemke. Carlson brings 30 years on the Frisco bench plus service in several other mountain towns. The part-time role pays $2,000 annually — a figure at least one councilmember thinks may be worth revisiting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d27e3f57-76ae-4581-804d-f706b0c0a0e8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b0/4b0dd2b6-df33-4b21-9baa-8640361a22ab/6a4efb7392a71.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Legals and Public Notices for July 9-15, 2026",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "infrastructure",
+    copy: "Telluride School District is seeking bids for custodial services at its three school buildings; proposals are due by July 21. Mountain Village is holding a second reading July 16 on proposed lighting regulation changes. The Farmers' Water Development Company is processing a replacement share certificate for a lost certificate #887.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Curtis L. Moe",
+    source: "Telluride Times",
+    date: "July 9, 2026",
+    firstSeen: "2026-07-09",
+    newsTopic: "community",
+    copy: "Curtis Moe spent winters in Telluride, singing with the Chamber Singers and volunteering at KOTO community radio. He came to skiing late in life, working his way from bunny hills to black diamonds. He's remembered for his generosity, his music, and his deep connections to the people around him.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/obituaries/article_7ef6f384-ed3b-4440-b345-d7e53f859792.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/3850f2fd-6abd-49cf-a9be-4fd64a50da75/6a4e5ebd82160.image.png",
+    imgHiRes: true
+  },
   {
     title: "Telluride Science completes $13.5 million capital campaign",
     source: "Telluride Times",
@@ -3203,103 +3239,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610075?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-07-08T15:00:00.000Z",
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801139?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-07-09T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
   },
   {
-    title: "Mountain Village Farmers Marketshow: Books Alive with Telluride Theatre",
-    link: "https://telluridelibrary.libcal.com/event/15564456?hs=a",
-    description: "11:00 AM – 12:00 PM · Join us at the Mountain Village Farmers Market for a fun filled Books Alive performance with the Telluride Theatre!",
-    pubDate: "2026-07-08T17:00:00.000Z",
+    title: "Community Support/ Apoyo Comunitario",
+    link: "https://telluridelibrary.libcal.com/event/17044365?hs=a",
+    description: "9:00 AM – 12:00 PM · Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm . Advance registration is encouraged. &iquest;Necesita ayuda para solicitar programas de asistencia p&uacute;blica? Ruth, de Tri-County Health Network , brindar&aacute; orientaci&oacute;n para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y tambi&eacute;n puede apoyarle para conectarse con otros recursos comunitarios. Se llevar&aacute; a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipaci&oacute;n. …",
+    pubDate: "2026-07-09T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_29_35.png"
+    location: "Meeting Room #5 - small",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771543641.jpg"
   },
   {
-    title: "Lite lunch- Go Gentle",
-    link: "https://telluridelibrary.libcal.com/event/17029360?hs=a",
-    description: "12:00 PM – 1:00 PM · The New York Times bestselling author of Where&#39;d You Go, Bernadette returns to form in her most exuberant and life-affirming novel yet with the story of one woman's cheerful determination to live a life of the mind only to have the heart force its way in. Adora Hazzard has it all figured out. A Stoic philosopher and divorc&eacute;e, she lives a contented life on New York City's Upper West Side. Having discovered that the secret to happiness is to desire only what you have, she's applied this insight to blissful effect: relishing her teenage daughter, the freedom of being solo, and her job as a moral tutor for the twin boys of an old-money family. She's even assembled a \"coven\"—like-minded women who live on the same floor in the legendary Ansonia—and is making active efforts to grow its membership. …",
-    pubDate: "2026-07-08T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_08_02.png"
-  },
-  {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/17021872?hs=a",
-    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
-    pubDate: "2026-07-08T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png"
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767656?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-08T19:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772765?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-07-09T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935734?hs=a",
-    description: "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-07-08T21:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_53_50.png"
-  },
-  {
-    title: "Sewing 101 with Melissa",
-    link: "https://telluridelibrary.libcal.com/event/15970619?hs=a",
-    description: "5:00 PM – 7:00 PM · Don&#39;t throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we&#39;ll provide the sewing materials.",
-    pubDate: "2026-07-08T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1717100108.jpg"
-  },
-  {
-    title: "Cafecito con un Policía",
-    link: "https://telluridelibrary.libcal.com/event/15905933?hs=a",
-    description: "5:30 PM – 6:30 PM · Cafecito con un polic&iacute;a es un programa que pasa cada mes, tienes la oportunidad de tener conversacionales con nuestros polic&iacute;as en la area.",
-    pubDate: "2026-07-08T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1766083827.jpg"
-  },
-  {
-    title: "Sound Bath with Danielle Christmas & Ian Wilson",
-    link: "https://telluridelibrary.libcal.com/event/16802611?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 - 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! …",
-    pubDate: "2026-07-08T23:30:00.000Z",
+    title: "Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536279?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-09T18:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_09_11_28_23.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
+  },
+  {
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960351?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-07-09T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "Booze and Books",
+    link: "https://telluridelibrary.libcal.com/event/16963781?hs=a",
+    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . VENUE CHANGE! THIS BOOZE AND BOOKS WILL BE HELD AT 123 TACOS!",
+    pubDate: "2026-07-09T23:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "123 Tacos Restaurant",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_20_15_54_25.jpg"
   }
 ];
 
@@ -3322,20 +3325,6 @@ const HUMANE_SOCIETY_ANIMALS = [
     firstSeen: "2026-07-04",
     revealDate: "2026-07-04",
     lastSeen: "2026-07-09"
-  },
-  {
-    id: "TEL-A-191",
-    name: "Rex",
-    species: "Dog",
-    breed: "Shepherd, German",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/444d84dfc9e0e4e592f18e169e7b88e3/3ae2a87c028087bef7ae6ffa837d7f45.JPG",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214054660",
-    summary: "Young Puppy • Shepherd, German • Male",
-    firstSeen: "2026-07-07",
-    revealDate: "2026-07-07",
-    lastSeen: "2026-07-09"
   }
 ];
 
@@ -3347,18 +3336,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "B-Side Players",
-    link: "https://www.alibitelluride.com/calendar#eca-event=b-side-players",
-    description: "The B-Side Players make music without borders or boundar...",
-    pubDate: "2026-07-08",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/3bac837e-cc78-4024-a064-b06fa2834a6d/-/crop/2589x1295/0,133/-/preview/"
-  },
   {
     title: "River Spell w/ Moonbeem",
     link: "https://www.alibitelluride.com/calendar#eca-event=river-spell",
@@ -4051,6 +4028,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
   },
   {
+    title: "Live Music- Boxcar Band",
+    link: "https://www.stelmohotel.com/summer-sound/boxcarband",
+    description: "Join us for a summer of live music, craft cocktails, mountain views, and unforgettable nights at the St. Elmo Tavern patio EVERY WEDNESDAY! We can’t wait for Boxcar Band to play on the patio Wednesday, June 17th at 5pm. A favorite of Southwest Colorado, this group brings a lively, acoustic sound to each performance. There’s not much better than the tunage of Boxcar Band set in the heart of the San Juan Rockies. No ticket required for this show. We hope to see you there!",
+    pubDate: "2026-06-17T12:00:00.000Z",
+    endDate: "2026-07-17",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53119177194372/huge/13ce62d819a542640ba5fa399a8b230d7074a608.jpg"
+  },
+  {
     title: "Functional Fitness - Strength & Mobility Training For Women",
     link: "https://www.signupgenius.com/go/10C044DAAA82DA7FAC70-60167874-functional#/",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility What To Bring: yoga mat, water, no shoes preferred - If you need to wear shoes they must be clean indoor shoes only. No mud, dirt, snow, etc. Every Tuesday & Thursday 8:15-9 am / Advance sign up required! …",
@@ -4157,50 +4146,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
-  },
-  {
-    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz : “Exploring Lower Black Bear Pass”",
-    link: "https://weehawkenarts.org/education/adult-art-classes/",
-    description: "Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here Please check your email the evening before class for any unexpected cancellations or weather-related updates. …",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Location Disclosed after Registration ",
-    imageUrl: "https://localist-images.azureedge.net/photos/53073706225439/huge/7ca2ac43b5dfe7097ca5e25b50578698e2badcb0.jpg"
-  },
-  {
-    title: "July Film Club: Faces Places",
-    link: "https://ouray.colibraries.org/lib-cal/",
-    description: "Join our July Film Club! We will be watching and discussing \"Faces Places\" (2017), starting at 5:30 pm on Wednesday, July 8th. Please email programsouraypl@gmail.com for more information and for the location.",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53197072496149/huge/61d58f7a04d45b6160d170ddafbfba45141454d8.jpg"
-  },
-  {
-    title: "BlacKkKlansman: CO-150 Film Festival @ the Wright",
-    link: "https://wrightoperahouse.org",
-    description: "BlacKkKlansman: CO-150 Film Festival @ the Wright WHEN? Wednesday, July 8 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 15min RATING: R ROTTEN TOMATOES SCORE: 96% ABOUT THE FILM BlacKkKlansman (2018) tells the remarkable true story of Ron Stallworth, the first Black detective in the Colorado Springs Police Department, who infiltrates the Ku Klux Klan with the help of a fellow officer posing as him in person. Directed by Spike Lee, the film blends sharp humor, suspense, and social commentary while exploring racism, identity, and the enduring relevance of America’s past and present struggles. A bold and thought-provoking crime drama that balances tension, satire, and powerful historical reflection. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of Movie Night @ the Wright, bringing film, community, and conversation to downtown Ouray since 1909.",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/52931777161068/huge/6e18b842e960f4345690c291aa60d3caea7ecac4.jpg"
-  },
-  {
-    title: "Live Music- Dave Jordan",
-    link: "https://www.stelmohotel.com/summer-sound/dave-jordan",
-    description: "Join us on Wednesday, July 8th as we welcome Dave Jordan. A New Orleans rooted singer-songwriter and bandleader with nearly three decades of American highways under his belt, Dave brings a sound that has been described as a swampy lovechild of Tom Petty, Dr. John, and John Prine. His music weaves rock, blues, funk, and Americana into a rich, soulful tapestry, all anchored by that unmistakable South Louisiana rhythm. An award-winning storyteller, his songs cover the full spectrum of human emotion with warmth, wit, and plenty of groove.",
-    pubDate: "2026-07-08T12:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53126308954360/huge/dc39d236acf1a73124e22fdae0143e571ac34d55.jpg"
   },
   {
     title: "AVID Dance - FREE Workshop + Performance",
@@ -4478,6 +4423,63 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53366415230674/huge/57a7dab642a1ff3b2a2dffbea80fb348baf7641e.jpg"
+  },
+  {
+    title: "Paw Prints Book Club",
+    link: "https://ouray.colibraries.org/lib-cal/",
+    description: "Join us in Ouray Library from 1:00 pm to 2:00 pm for the new Paw Prints Book Club! This is an animal themed graphic novel book club ran by a kid, for kids. There will be four book club meetings over 4 weeks, where there will be discussion on a different graphic novel each week. This book club is open to all ages, but the reading level is from 8 to 12 years old. To sign up and reserve a book, please email programsouraypl@gmail.com",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    endDate: "2026-08-07",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53198530879947/huge/403c155aa2c93ade83d633e106dcb10f0e69f9d8.jpg"
+  },
+  {
+    title: "Brittany Stadler: In Color — Art Opening Reception @ the Wright",
+    link: "https://wrightoperahouse.org",
+    description: "Brittany Stadler: In Color — Art Opening Reception @ the Wright WHEN? Opening Reception: Friday, July 17 4:00 pm – 6:00 pm Exhibition on View in Tavern: July 17 – September 7, 2026, Tu-Th 10-4 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EXHIBITION Celebrate the opening of In Color, a new exhibition by regional artist Brittany Stadler, at a free community reception hosted by the Wright Opera House. Meet the artist, explore the exhibition, and enjoy an evening of conversation, creativity, and community as the Wright transforms into a gallery space showcasing Brittany's latest work. Whether you're a longtime collector or simply curious to discover new local artists, everyone is welcome. Brittany's work begins with a single animal that represents an ecosystem, region, or idea, gradually expanding into intricate compositions inspired by research, observation, and the relationships between plants, animals, and landscapes. …",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53374956782894/huge/76c4468c0b32db49f60887901f1c2a7c0efd0820.jpg"
+  },
+  {
+    title: "THE KILLENS",
+    link: "https://coloradoboydepot.com/calendar/",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Historic Walking Tour",
+    link: "https://www.ouraycountyhistoricalsociety.org",
+    description: "Historic Walking Tour on Oak Street, Ouray. Includes the Power Plant, Wheeer House, the Old Depot Site, and the Western Hotel. Tour Led by Jenny Hart",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Meet at Museum 420 6th Avenue ",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462472948306/huge/342edcb84d91e63ff410e641df23204e0abcb3be.jpg"
+  },
+  {
+    title: "How the West Was Worn Or… Black Hat Optional: Theatre @ the Wright",
+    link: "https://wrightoperahouse.org",
+    description: "Dear Friends, Like so many of you, our hearts have been with our community these past days as the wildfire has touched so many lives, including some of our own cast and crew. Because of this, we've made the difficult decision to postpone our 2026 melodrama, How the West Was Worn, originally scheduled for July 17-20. We know how much you look forward to this show, and we're so grateful for your support. We're working to bring the show back to you within the year. Things are still uncertain right now, but we promise to keep you posted as soon as we have real dates to share. Your ticket will simply carry over to the new dates. …",
+    pubDate: "2026-07-17T12:00:00.000Z",
+    endDate: "2026-07-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932502125812/huge/c4a0083e2a38c8bce646c53ac7943f10714eb802.jpg"
   }
 ];
 
@@ -6502,6 +6504,78 @@ const LEGAL_NOTICES = [
     address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     noticeKey: "foreclosure-sale-202604-lot166ar2-mountain-village",
     caseNumber: "202604"
+  },
+  {
+    title: "RFP -- Custodial Services for School Facilities (COL-000178)",
+    entity: "Telluride School District R-1",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Telluride School District R-1 is soliciting proposals for custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. The contract is year-round and covers trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; bidders may bid on all or portions of the work. Vendors must request full specifications by email by 4:00 PM on July 14, 2026, and submit completed proposals by 4:00 PM on July 21, 2026.",
+    deadline: "2026-07-21T16:00:00",
+    expires: "2026-07-21",
+    dates: "7/9",
+    papers: ["ttimes_0709"],
+    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    address: "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
+    noticeKey: "rfp-tsd-custodial-2026"
+  },
+  {
+    title: "Ordinance -- Community Development Code Amendment to Lighting Regulations Section 17.5.12 (COL-000175)",
+    entity: "Town of Mountain Village",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Town of Mountain Village is providing notice that an ordinance amending Section 17.5.12 Lighting Regulations of the Community Development Code passed its first reading on April 23, 2026. The second reading, public hearing, and final Council vote will be held on Thursday, July 16, 2026, at 2:00 PM at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The full ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
+    deadline: "2026-07-16T14:00:00",
+    expires: "2026-07-16",
+    dates: "7/9",
+    papers: ["ttimes_0709"],
+    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
+    noticeKey: "ord-mv-lighting-sec17.5.12"
+  },
+  {
+    title: "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",
+    entity: "Farmers' Water Development Company (FWDC)",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any person wishing to object to the issuance of a replacement certificate must file written notice with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post. If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
+    deadline: "2026-08-20",
+    expires: "2026-08-20",
+    dates: "7/9",
+    papers: ["ttimes_0709"],
+    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    address: "PO Box 10, Norwood, CO 81423",
+    noticeKey: "fwdc-share-cert-887"
+  },
+  {
+    title: "Property Tax Exemption Notice -- Senior Citizens, Veterans with Disability, Gold Star Veteran Spouses (COL-000182)",
+    entity: "San Miguel County Assessor",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "The Colorado Assessor's office is notifying qualifying senior citizens, veterans with a disability, and gold star veteran spouses that they may be eligible for a property tax exemption under the Colorado Constitution, which exempts 50% of the first $200,000 in actual value of a primary residence from property taxes, with the State of Colorado paying the exempted amount. Qualifying seniors must generally be at least 65 years old, have owned and occupied the property as their primary residence for at least 10 consecutive years, and submit an application to the assessor by July 15, with late applications accepted until August 15. Applications and informational brochures are available by contacting the San Miguel County Assessor's office.",
+    deadline: "2026-07-15",
+    expires: "2026-08-15",
+    dates: "7/9",
+    papers: ["ttimes_0709"],
+    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    address: "San Miguel County, Colorado",
+    noticeKey: "tax-exemption-senior-veteran-2026"
   }
 ];
 

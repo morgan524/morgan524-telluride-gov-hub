@@ -625,5 +625,85 @@
     "address": "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     "noticeKey": "foreclosure-sale-202604-lot166ar2-mountain-village",
     "caseNumber": "202604"
+  },
+  {
+    "title": "RFP -- Custodial Services for School Facilities (COL-000178)",
+    "entity": "Telluride School District R-1",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Telluride School District R-1 is soliciting proposals for custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. The contract is year-round and covers trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; bidders may bid on all or portions of the work. Vendors must request full specifications by email by 4:00 PM on July 14, 2026, and submit completed proposals by 4:00 PM on July 21, 2026.",
+    "deadline": "2026-07-21T16:00:00",
+    "expires": "2026-07-21",
+    "dates": "7/9",
+    "papers": [
+      "ttimes_0709"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    "address": "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
+    "noticeKey": "rfp-tsd-custodial-2026"
+  },
+  {
+    "title": "Ordinance -- Community Development Code Amendment to Lighting Regulations Section 17.5.12 (COL-000175)",
+    "entity": "Town of Mountain Village",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Mountain Village is providing notice that an ordinance amending Section 17.5.12 Lighting Regulations of the Community Development Code passed its first reading on April 23, 2026. The second reading, public hearing, and final Council vote will be held on Thursday, July 16, 2026, at 2:00 PM at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The full ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
+    "deadline": "2026-07-16T14:00:00",
+    "expires": "2026-07-16",
+    "dates": "7/9",
+    "papers": [
+      "ttimes_0709"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
+    "noticeKey": "ord-mv-lighting-sec17.5.12"
+  },
+  {
+    "title": "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",
+    "entity": "Farmers' Water Development Company (FWDC)",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "💧",
+    "iconClass": "type-hearing",
+    "type": "Utilities",
+    "filterTag": "utilities",
+    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any person wishing to object to the issuance of a replacement certificate must file written notice with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post. If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
+    "deadline": "2026-08-20",
+    "expires": "2026-08-20",
+    "dates": "7/9",
+    "papers": [
+      "ttimes_0709"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    "address": "PO Box 10, Norwood, CO 81423",
+    "noticeKey": "fwdc-share-cert-887"
+  },
+  {
+    "title": "Property Tax Exemption Notice -- Senior Citizens, Veterans with Disability, Gold Star Veteran Spouses (COL-000182)",
+    "entity": "San Miguel County Assessor",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "The Colorado Assessor's office is notifying qualifying senior citizens, veterans with a disability, and gold star veteran spouses that they may be eligible for a property tax exemption under the Colorado Constitution, which exempts 50% of the first $200,000 in actual value of a primary residence from property taxes, with the State of Colorado paying the exempted amount. Qualifying seniors must generally be at least 65 years old, have owned and occupied the property as their primary residence for at least 10 consecutive years, and submit an application to the assessor by July 15, with late applications accepted until August 15. Applications and informational brochures are available by contacting the San Miguel County Assessor's office.",
+    "deadline": "2026-07-15",
+    "expires": "2026-08-15",
+    "dates": "7/9",
+    "papers": [
+      "ttimes_0709"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
+    "address": "San Miguel County, Colorado",
+    "noticeKey": "tax-exemption-senior-veteran-2026"
   }
 ]
