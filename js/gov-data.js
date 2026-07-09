@@ -217,69 +217,16 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-05-12';
+const SMART_CACHE_DATE = '2026-07-09';
 
 const SMART_CACHED_DATA = [
-  // ── Upcoming (2nd Thursday of each month, 4:00 PM, SMART Office • Lawson Hill) ──
-  // Note: May meeting moved to 3rd Wednesday (May 20) per board schedule
   {
-    date: 'May 20, 2026',
-    time: '4:00 PM',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_May%2014th%202026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Meeting%20Packet%20May%2014th%202026.pdf',
-    special: false,
-    location: 'SMART Office • Lawson Hill'
-  },
-  {
-    date: 'June 11, 2026',
-    time: '4:00 PM',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Agenda_June-11th-2026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Meeting-Packet_June-11th-2026.pdf',
-    special: false,
-    location: 'SMART Office • Lawson Hill'
-  },
-  {
-    date: 'July 9, 2026',
-    time: '4:00 PM',
-    title: 'SMART Board of Directors',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: 'SMART Office • Lawson Hill'
-  },
-  {
-    date: 'August 13, 2026',
-    time: '4:00 PM',
-    title: 'SMART Board of Directors',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    location: 'SMART Office • Lawson Hill'
-  },
-  // ── Recent ──
-  {
-    date: 'April 9, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: null,
-    packetUrl: null,
-    special: false,
-    note: 'April meeting -- agenda and packet posted closer to the date.'
-  },
-  {
-    date: 'March 12, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_March%2012th%202026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_March%2012th%202026.pdf',
-    special: false
-  },
-  {
-    date: 'January 8, 2026',
-    title: 'SMART Board of Directors',
-    agendaUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20Agenda_January%208th%202026_distributed.pdf',
-    packetUrl: 'https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART%20Board%20meeting%20packet_January%208th%202026.pdf',
-    special: false
+    date: "July 9, 2026",
+    time: "4:00 PM",
+    title: "SMART Board of Directors",
+    location: "SMART Office, Lawson Hill (also virtual — see agenda)",
+    agendaUrl: "null",
+    packetUrl: "null"
   }
 ];
 

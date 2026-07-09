@@ -1,17 +1,5 @@
 [
   {
-    "title": "CHALKBOARD Week of July 9-15",
-    "source": "Telluride Times",
-    "date": "July 9, 2026",
-    "firstSeen": "2026-07-09",
-    "newsTopic": "government",
-    "copy": "Local birthdays, meeting schedules, and recurring community events for the week of July 9–15 in the Norwood and Nucla-Naturita area. Highlights include the Thursday Farmers Market (2–6 p.m. at Pocket Park), weekly Senior Meals, Sunday Food Pantry distribution, and regular pickleball, AA, and civic board meetings.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/norwood_post/article_fd76a51e-b077-4f84-a744-d79eb7b787c2.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b3/ab354c44-1d8b-4ff9-9d46-9dc0b9930db8/6a4e832b19d9b.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Weed of the Month is the oxeye daisy",
     "source": "Telluride Times",
     "date": "July 9, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/norwood_post/article_6e06e253-035b-4983-9eb3-5959c2de90a7.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f3/6f32d9cd-bf80-4278-b273-d6fea58237de/6a4e808998162.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "CHALKBOARD Week of July 9-15",
+    "source": "Telluride Times",
+    "date": "July 9, 2026",
+    "firstSeen": "2026-07-09",
+    "newsTopic": "government",
+    "copy": "Local birthdays, meeting schedules, and recurring community events for the week of July 9–15 in the Norwood and Nucla-Naturita area. Highlights include the Thursday Farmers Market (2–6 p.m. at Pocket Park), weekly Senior Meals, Sunday Food Pantry distribution, and regular pickleball, AA, and civic board meetings.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_fd76a51e-b077-4f84-a744-d79eb7b787c2.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b3/ab354c44-1d8b-4ff9-9d46-9dc0b9930db8/6a4e832b19d9b.image.jpg",
     "imgHiRes": true
   },
   {
@@ -156,18 +156,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Support Allen Highfield for TMVOA board",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "government",
-    "copy": "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "A 100% rating for Max Silverman",
     "source": "Telluride Times",
     "date": "July 8, 2026",
@@ -200,6 +188,18 @@
     "copy": "A local resident is raising questions about evacuation plans during Telluride's busy festival season, concerned about what happens when thousands of visitors are in town. Meanwhile, wildfire activity across the region is serious — three firefighters were killed in Mesa County, and dry thunderstorms this week could spark new fires.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Support Allen Highfield for TMVOA board",
+    "source": "Telluride Times",
+    "date": "July 8, 2026",
+    "firstSeen": "2026-07-08",
+    "newsTopic": "government",
+    "copy": "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
   },
