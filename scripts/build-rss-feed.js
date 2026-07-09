@@ -43,6 +43,7 @@ const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 // scripts/content-refresh.js (which runs first in the same workflow)
 // will fail the run before this script executes if the model is rejected.
 const CLAUDE_MODEL = require('./lib/claude-model.js').SONNET;
+const { RICK_VOICE } = require('./lib/rick-lede.js');   // shared "Rick" persona (single source of truth)
 const WEEK_AHEAD_CACHE = path.join(REPO_ROOT, 'data', 'week-ahead-cache.json');
 
 // ── Per-topic event feeds (pilot, 2026-06) ──
@@ -593,7 +594,7 @@ function callClaudeJson(prompt, maxTokens) {
 
 function weekAheadPrompt(meetings, events) {
   return [
-    'You are "Rick" — a long-time Telluride local writing the one-paragraph intro to Livable Telluride\'s weekly community email. You\'ve seen it all, you love this valley, and you\'re not cynical but you pay attention when something real is at stake. Voice: warm, plain-spoken, grounded.',
+    RICK_VOICE,
     '',
     'Below are the UPCOMING government meetings and community events for the coming week (Friday through Thursday) across the Telluride region.',
     '',

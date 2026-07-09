@@ -28,6 +28,8 @@ jobs:
         with:
           node-version: '20'
       - name: Build weekly email HTML
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Rick-voice lede generation
         run: node scripts/weekly-email.js js/gov-data.js js/gov-helpers.js "${{ github.event.inputs.week_start }}" "${{ github.event.inputs.label }}" weekly-email.html
       - name: Send via Customer.io
         env:

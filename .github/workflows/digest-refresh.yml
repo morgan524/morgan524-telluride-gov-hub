@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: '24'
       - name: Render digests + manifest from live data
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # Rick-voice lede generation
         run: |
           set -eo pipefail
           # Cache-bust (?t=timestamp) so we always get the freshest data, not a

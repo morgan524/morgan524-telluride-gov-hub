@@ -20,6 +20,7 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const { stripDescPreamble } = require('./lib/clean-text.js');
+const { generateRickLede } = require('./lib/rick-lede.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -43,11 +44,18 @@ const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
 const FALLBACK_LEDE = WEEKEND
   ? "A few of the best things happening around the box canyon this weekend — pick one and get out there."
   : "A fresh week across the box canyon — public meetings, community events, and a few ways to get involved are all below.";
+// Precedence (resolved below): a HUMAN-pinned dated entry in the lede JSON
+// always wins; otherwise the intro DEFAULTS to a fresh Rick-voice summary of
+// this window's real events (generated in the async block near the end, once
+// the events/meetings are assembled); the generic "default"/FALLBACK strings
+// are only a last resort for when there's no API key or generation fails.
 let LEDE = FALLBACK_LEDE;
+let LEDE_IS_OVERRIDE = false;   // a person deliberately set the intro for this date
 try {
   const ledeFile = WEEKEND ? 'weekend-ahead-lede.json' : 'week-ahead-lede.json';
   const ledeMap = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', ledeFile), 'utf8'));
-  LEDE = ledeMap[WEEK_START] || ledeMap.default || FALLBACK_LEDE;
+  if (ledeMap[WEEK_START]) { LEDE = ledeMap[WEEK_START]; LEDE_IS_OVERRIDE = true; }
+  else { LEDE = ledeMap.default || FALLBACK_LEDE; }
 } catch (e) { console.error('lede json not read (' + e.message + ') — using fallback lede'); }
 
 // Window [WEEK_START, WEEK_START + WINDOW_DAYS-1]: 7 days for the weekly,
@@ -600,6 +608,24 @@ const festivalHero = festivalsThisWeek.map(festCard).join('');
 // through the human-approved Digest Review Desk, which uses this normal
 // rendered-HTML output.)
 
+// Everything from here (lede generation + HTML assembly + write) runs inside an
+// async block because the Rick lede is generated via an async Claude call.
+(async () => {
+
+// DEFAULT the intro to a fresh Rick-voice summary of THIS window's real
+// meetings + events — unless a human pinned a dated intro in the lede JSON
+// (that override always wins). Best-effort: generateRickLede returns null when
+// there's no ANTHROPIC_API_KEY or the call fails, and we keep the fallback.
+if (!LEDE_IS_OVERRIDE) {
+  const rickLede = await generateRickLede({
+    cadence: WEEKEND ? 'weekend' : 'week',
+    meetings: WEEKEND ? [] : meetings.map((m) => ({ title: m.name, date: m.date, summary: m.summary })),
+    events: chosen.map((e) => ({ title: e.title, date: e.date, location: townLabel(e), summary: e.summary })),
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  });
+  if (rickLede) LEDE = rickLede;
+}
+
 const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>
 @media only screen and (max-width:480px){
   /* Event cards: stack image on top, text below, for easier mobile reading. */
@@ -653,9 +679,15 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
 // Mailchimp merge tags neutralised so the footer/links aren't left broken.
 let out = html;
 if (PREVIEW) {
+  // Where the reviewer edits this draft (edit with Claude + send): the hosted,
+  // passphrase-gated Digest Review Desk. This link lives ONLY in the review
+  // banner, which is inside this PREVIEW branch — so it is never present in the
+  // real subscriber send (the non-preview HTML has no banner at all).
+  const EDIT_URL = 'https://livabletelluride.org/digest-review.html';
+  const editLink = `<br><a href="${EDIT_URL}" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or send this draft at the Review Desk &rarr;</a>`;
   const banner = WEEKEND
-    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">To change the intro, edit data/weekend-ahead-lede.json (key ${WEEK_START}) and re-run the workflow.</span></td></tr>\n`
-    : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">To change the intro, just reply to this email with the new text (week-key ${WEEK_START}).</span></td></tr>\n`;
+    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this weekend&rsquo;s events. To pin a specific intro instead, add a "${WEEK_START}" entry to data/weekend-ahead-lede.json and re-run the workflow.</span>${editLink}</td></tr>\n`
+    : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this week&rsquo;s meetings and events. To override it, reply with the new text (week-key ${WEEK_START}).</span>${editLink}</td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
            .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
@@ -681,3 +713,5 @@ const SUBJECT = `${EMAIL_TITLE} — ${LABEL}`;
 console.log('SUBJECT=' + SUBJECT);
 console.log(`weekly-email: ${meetings.length} meetings (${meetings.filter(m=>m.hasAgenda).length} w/ agenda links), ${chosen.length} events → ${OUT}${PREVIEW ? ' [preview]' : ''}`);
 console.log(`  conditional topic blocks: ${topicSections.map(t=>`${t.group} (${t.events.length})`).join(', ') || 'none this week'}`);
+
+})().catch((e) => { console.error('weekly-email FATAL', e.message); process.exit(1); });
