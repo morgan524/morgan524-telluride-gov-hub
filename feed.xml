@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Jul 2026 15:27:52 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 18:13:23 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 9–15</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-27</guid>
-      <pubDate>Thu, 09 Jul 2026 15:27:52 GMT</pubDate>
-      <description><![CDATA[The biggest item this week is Tuesday's HARC hearing on the Carhenge redevelopment at 700 W Pacific Ave — three separate large-scale public hearings covering eight new buildings in Backman Village, and the public can weigh in. Thursday's joint Planning Commission and BOCC work session also deserves attention, with county staff and commissioners working through proposed Land Use Code amendments on forestry, oil and gas, deep geothermal, and condominium plats. Sprinkled through the week are fair board prep meetings and the Hardrock Hundred gets underway Friday.]]></description>
+      <pubDate>Thu, 09 Jul 2026 18:13:23 GMT</pubDate>
+      <description><![CDATA[The biggest item this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings — multiple new buildings across Lots 34 and 34B in an Accommodations 2 zone, and the public can weigh in. That same day, HARC also takes up alterations to Town Hall and the Parks & Rec office. On Thursday, the Planning Commission and BOCC sit down together to work through proposed Land Use Code changes touching forestry, oil and gas, deep geothermal, and condominium plats — no final votes, but this is where the shape of those amendments gets decided.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -36,7 +36,7 @@ The July 9 SMART Board of Directors agenda hasn't been posted yet.]]></descripti
 
 The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.
 
-⚡ Why it matters: County LUC amendments on forestry, oil/gas, geothermal, and condo plats under review.]]></description>
+⚡ Why it matters: Joint work session shaping Land Use Code amendments across five substantive sections.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -105,30 +105,6 @@ River Spell is a Colorado-based jam band that delivers heartfelt songwriting and
       <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1771543641.jpg" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 9] Yoga with Miriah</title>
-      <link>https://koto.org/event/yoga-with-miriah/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20with%20miriah%7C2026-07-09</guid>
-      <pubDate>Thu, 09 Jul 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses. We'll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 9] Community Support w/TCHN</title>
-      <link>https://koto.org/event/community-support-w-tchn/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/community%20support%20w%20tchn%7C2026-07-09</guid>
-      <pubDate>Thu, 09 Jul 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Do you need help applying for public assistance programs? Ruth from Tri-County Health Network will provide guidance with filling out applications for SNAP, the Good Neighbor Fund, the Behavioral Health Fund, Medicaid, and can provide support in guiding you towards other helpful community resources. This will be held in Meeting Room #5 on the 2nd Thursday of the month from 9am-12pm. Advance registration is encouraged. ¿Necesita ayuda para solicitar programas de asistencia pública? Ruth, de Tri-County Health Network, brindará orientación para completar solicitudes de SNAP, el Fondo Good Neighbor, el Fondo de Salud Mental, Medicaid, y también puede apoyarle para conectarse con otros recursos comunitarios. Se llevará a cabo en la Sala de reuniones #5 el segundo jueves de cada mes, de 9 a.m. a 12 p.m. Se recomienda registrarse con anticipación. Por favor, envíe un correo electrónico a tosborne@telluridelibrary.org si necesita servicios de traducción.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Thu, Jul 9] Youth Tennis &amp; Pickleball Camp</title>
@@ -360,6 +336,30 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Fri, Jul 10] Ridgway Farmer&apos;s Market</title>
+      <link>https://koto.org/event/ridgway-farmers-market/2026-07-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-07-10</guid>
+      <pubDate>Fri, 10 Jul 2026 16:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Hartwell Park Ridgway
+
+The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 10] Telluride Farmer&apos;s Market</title>
+      <link>https://koto.org/event/telluride-farmers-market/2026-07-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmer%20s%20market%7C2026-07-10</guid>
+      <pubDate>Fri, 10 Jul 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Oak Street Plaza, Telluride
+
+We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] San Miguel Basin Fair Board — 2026-07-12</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-12%7CSan%20Miguel%20Basin%20Fair%20Board</guid>
@@ -401,7 +401,7 @@ The San Miguel Basin Fair Board holds a special midday meeting to debrief on the
 
 Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.
 
-⚡ Why it matters: HARC votes on alterations to two Town-owned landmark buildings, including floor area increase.]]></description>
+⚡ Why it matters: HARC reviews alterations to two Town-owned landmark civic buildings.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -414,7 +414,7 @@ Two Town-owned civic buildings come before HARC on July 15. First is Town Hall a
 
 The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2, and E3 on Lots 34 and 34B of Backman Village, all new construction outside the Telluride Historic Landmark District in an Accommodations 2 zone, with Design Workshop as applicant and the Town itself as owner. A work session on the Shandoka Lot redevelopment at 860 Black Bear Rd — another Town-owned Accommodations 2 parcel — follows. Also on the hearing docket is a continued amendment to a prior Certificate of Appropriateness for 239 N Aspen, inside the THLD, elevated by the HARC Chair back in May.
 
-⚡ Why it matters: Public hearings on Carhenge redevelopment — eight new buildings in Accommodations 2 zone.]]></description>
+⚡ Why it matters: Public hearings on large-scale Carhenge redevelopment — multiple new buildings in Accommodations 2 zone.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -436,7 +436,7 @@ The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.]]
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[San Miguel County • 2026-07-15
 
-The July 15 Board of County Commissioners agenda hasn't been posted yet.]]></description>
+The July 15 Board of County Commissioners meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -475,12 +475,12 @@ Upcoming Town of Ridgway meeting — the agenda posts closer to the date on the 
     </item>
     <item>
       <title>[Meeting] Rico Board of Trustees Regular Meeting — 2026-07-15</title>
-      <link>https://townofrico.colorado.gov/government/board-of-trustees</link>
+      <link>https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202026%20Agenda.pdf</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/rico%7C2026-07-15%7CRico%20Board%20of%20Trustees%20Regular%20Meeting</guid>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Rico • 2026-07-15
 
-Regular monthly meeting of the Rico Board of Trustees. The agenda and packet are typically posted the Wednesday before the meeting.]]></description>
+Board agenda and full meeting packet available (PDF).]]></description>
       <category>Meeting</category>
       <category>Town of Rico</category>
     </item>
