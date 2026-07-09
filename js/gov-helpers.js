@@ -57,8 +57,24 @@ function localDateKey(d) {
   return `${y}-${m}-${day}`;
 }
 
+// A "meta-summary" / refusal: the model explaining WHY it can't summarize —
+// corrupt/garbled text, a paywall, no readable content, "can't be produced",
+// "resubmit" — instead of actually summarizing. NEVER show these on a card: a
+// blank summary is strictly better than an apology about the source. Used by
+// the renderers (local-news.html) AND mirrored in scripts/content-refresh.js so
+// such text is never stored in the first place. Kept narrow so it only catches
+// refusals, not real summaries that happen to mention access or a document.
+function isRefusalSummary(text) {
+  if (!text) return false;
+  const t = String(text);
+  return /\b(?:article|article text|text|content|source)\b[^.!?]{0,60}\b(?:corrupt(?:ed)?|garbl(?:ed)?|unreadable|not readable|no readable content|isn'?t accessible|is not accessible|not accessible|(?:login\/)?paywall|boilerplate)\b/i.test(t)
+      || /\b(?:can'?t|cannot|could ?n'?t|couldn'?t|unable to)\b[^.!?]{0,40}\b(?:produce|generate|summar\w*|extract|access|read|be produced)\b/i.test(t)
+      || /\bresubmit\b|check the source article|based on what'?s visible|no reliable summary/i.test(t);
+}
+
 function isBadSummary(text) {
   if (!text) return false;
+  if (isRefusalSummary(text)) return true;
   if (SUMMARY_REJECT_PATTERNS.some(pat => pat.test(text))) return true;
   // Catch scraped-page artifacts that slip past SUMMARY_REJECT_PATTERNS — text
   // describing the agenda DOCUMENT/PAGE itself, not the meeting's substance.
@@ -840,7 +856,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "community",
-    copy: "The article text appears to be corrupted or garbled and doesn't contain readable content about Max Silverman or a 100% rating. A reliable summary can't be produced from this text. Please check the source article and resubmit.",
+    copy: "",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
@@ -852,7 +868,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "community",
-    copy: "The article text here is mostly login/paywall boilerplate — the actual content about paving the oval isn't accessible. Based on what's visible, a letter to the editor references the Town of Telluride and a community concern, likely about paving a local green space for recreational use.",
+    copy: "",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",

@@ -1164,13 +1164,13 @@
             // Filtering first guarantees the cap counts real local articles.
             TELLURIDE_TIMES_ARTICLES.filter(shouldKeep).slice(0, 45).forEach(a => live.push({
               title: a.title, source: a.source, sourceKey: 'ttimes',
-              date: a.date, summary: a.copy, href: a.href, img: a.img,
+              date: a.date, summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy, href: a.href, img: a.img,
               newsTopic: a.newsTopic || ''
             }));
             if (typeof KOTO_NEWSCASTS !== 'undefined') {
               KOTO_NEWSCASTS.slice(0, 15).forEach(a => live.push({
                 title: a.title, source: 'KOTO', sourceKey: 'koto',
-                date: a.date, summary: a.copy, href: a.href, img: a.img || '',
+                date: a.date, summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy, href: a.href, img: a.img || '',
                 newsTopic: a.newsTopic || ''
               }));
             }
@@ -1202,7 +1202,7 @@
                   source: 'San Miguel Basin Forum',
                   sourceKey: 'smb',
                   date: a.date,
-                  summary: a.copy,
+                  summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy,
                   href: a.href,
                   img: a.img || '',
                   newsTopic: a.newsTopic || ''

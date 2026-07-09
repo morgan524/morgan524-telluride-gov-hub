@@ -2307,11 +2307,25 @@ function extractTTArticleText(html) {
   return null;
 }
 
+// A "meta-summary" / refusal: the model explaining WHY it can't summarize
+// (corrupt/garbled text, paywall, no readable content, "can't be produced",
+// "resubmit") instead of summarizing. NEVER store one — a blank card beats an
+// apology about the source. Mirror of isRefusalSummary() in js/gov-helpers.js
+// (keep the two in sync).
+function isRefusalSummary(text) {
+  if (!text) return false;
+  const t = String(text);
+  return /\b(?:article|article text|text|content|source)\b[^.!?]{0,60}\b(?:corrupt(?:ed)?|garbl(?:ed)?|unreadable|not readable|no readable content|isn'?t accessible|is not accessible|not accessible|(?:login\/)?paywall|boilerplate)\b/i.test(t)
+      || /\b(?:can'?t|cannot|could ?n'?t|couldn'?t|unable to)\b[^.!?]{0,40}\b(?:produce|generate|summar\w*|extract|access|read|be produced)\b/i.test(t)
+      || /\bresubmit\b|check the source article|based on what'?s visible|no reliable summary/i.test(t);
+}
+
 /**
  * Use Claude to write a 2-3 sentence summary of a TT article for the news card.
  * Voice: "Rick" — the site's single named summary persona (long-time local,
  * knowing not cynical, observational, no advocacy). Never named in output.
- * Falls back to rssFallback if the API call fails.
+ * Falls back to rssFallback if the API call fails; returns '' (blank) if the
+ * model produces a refusal/meta-summary rather than a real one.
  */
 async function summarizeTTArticle(title, fullText, rssFallback) {
   if (!ANTHROPIC_API_KEY || !fullText) return rssFallback;
@@ -2347,6 +2361,7 @@ ${fullText.slice(0, 4000)}`;
         try {
           const json = JSON.parse(data);
           const text = (json.content?.[0]?.text || '').trim();
+          if (isRefusalSummary(text)) { resolve(''); return; }   // meta-summary → blank, never an apology
           resolve(text.length > 20 ? text : rssFallback);
         } catch (_) { resolve(rssFallback); }
       });
