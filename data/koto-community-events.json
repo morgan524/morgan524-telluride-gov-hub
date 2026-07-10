@@ -1,38 +1,5 @@
 [
   {
-    "title": "Booze and Books at Liz",
-    "link": "https://koto.org/event/booze-and-books-at-liz/",
-    "description": "Sip on a libation while chatting with other bibliophiles about books you have read recently. It's totally open ended and open to everyone! 5:15 the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage. Please sign up in advance. Meet at Liz at 200 W. Colorado Ave. in Telluride. (Entrance is on Fir St.)",
-    "pubDate": "2026-07-09T23:15:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Liz, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "The Creative Exchange at Telluride Arts HQ",
-    "link": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-07-09/",
-    "description": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
-    "pubDate": "2026-07-09T23:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
-  },
-  {
-    "title": "“The Mountain Ark” Screening in Norwood at The Livery!",
-    "link": "https://koto.org/event/the-mountain-ark-screening-in-norwood-at-the-livery/",
-    "description": "If you missed the screenings in Telluride, there's one more chance to see \"The Mountain Ark\" in the County: at The Livery in Norwood on Thursday, July 9th, at 7pm, with filmmaker Ken Bailey in-person. The film is a tribute to Lissa Margetts and her beloved wildlife rehabilitation center on Wilson Mesa. Bring your personal Ark stories to share! Tickets at the door are $5 / $2 for kids under 12.",
-    "pubDate": "2026-07-10T01:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Livery Norwood",
-    "imageUrl": ""
-  },
-  {
     "title": "Yoga For All with Jay and Jane",
     "link": "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-10/",
     "description": "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
@@ -415,6 +382,94 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Gondola Plaza, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-16/",
+    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "pubDate": "2026-07-16T18:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "DIY Floral Bath Salts @ WPL",
+    "link": "https://koto.org/event/diy-floral-bath-salts-wpl/",
+    "description": "Join us for a relaxing and creative summer wellness program where participants will make their own floral bath salts and soothing lavender sachets to take home. Enjoy a calming evening of self-care, creativity, and community while learning simple DIY wellness crafts. Free and open to adults. All materials will be provided. Registration is required. Join us for our final DIY Summer Wellness program on August 26th (Soothing Foot Scrubs).",
+    "pubDate": "2026-07-16T23:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-07-16/",
+    "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
+    "pubDate": "2026-07-16T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    "title": "2026 One Book, One Canyon – Terry Tempest Williams",
+    "link": "https://koto.org/event/2026-one-book-one-canyon-terry-tempest-williams/",
+    "description": "2026 One Book, One Canyon Author Announcement Join Wilkinson Public Library on Wednesday, July 15th at 5:30 pm for a special evening with Terry Tempest Williams as she discusses her best-selling new book, The Glorians: Visitations from the Holy Ordinary . “I go to Terry Tempest Williams for the reasons I go to Whitman and Thoreau: to recover a capacious spirit and to rejoin the urgent living world. She gives me something bigger than hope.”―Richard Powers, author of The Overstory From the acclaimed nature writer and New York Times bestselling author, a revelatory work of narrative nonfiction exploring beauty, climate change, and transformative moments of hope in a world beset by uncertainty. You can find physical copies of the book through the library catalog, as well as ebooks and audiobooks through Libby and Hoopla . …",
+    "pubDate": "2026-07-16T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Yoga For All with Jay and Jane",
+    "link": "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-17/",
+    "description": "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    "pubDate": "2026-07-17T14:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-17/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-07-17T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-17/",
+    "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    "pubDate": "2026-07-17T16:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Lone Cone Library Norwood",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "link": "https://koto.org/event/ridgway-farmers-market/2026-07-17/",
+    "description": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    "pubDate": "2026-07-17T16:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Hartwell Park Ridgway",
     "imageUrl": ""
   }
 ]

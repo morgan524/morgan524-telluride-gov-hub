@@ -217,11 +217,11 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-07-09';
+const SMART_CACHE_DATE = '2026-07-10';
 
 const SMART_CACHED_DATA = [
   {
-    date: "July 9, 2026",
+    date: "August 13, 2026",
     time: "4:00 PM",
     title: "SMART Board of Directors",
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",

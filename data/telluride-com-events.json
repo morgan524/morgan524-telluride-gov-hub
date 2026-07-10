@@ -360,17 +360,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
   },
   {
-    "title": "Science of Cocktails",
-    "link": "https://www.telluride.com/event/science-of-cocktails/",
-    "description": "A crowd pleaser for more than 15 years attracting those from near and far, the Science of Cocktails is Pinhead’s …",
-    "pubDate": "2026-07-08",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/53794/soc2026_v1_0_instagram45.800x533.webp"
-  },
-  {
     "title": "SoDown",
     "link": "https://www.telluride.com/event/sodown/",
     "description": "SoDown, the project of Denver-based producer, multi-instrumentalist, and live performer Ehren River Wright, delivers an …",
@@ -774,6 +763,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp"
+  },
+  {
+    "title": "The Casual Enormity of Adam Palmer Film Screening and Panel Discusson",
+    "link": "https://www.telluride.com/event/the-casual-enormity-of-adam-palmer-film-screening-and-panel-discusson/",
+    "description": "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer …",
+    "pubDate": "2026-08-01",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
   },
   {
     "title": "Big Love Car Wash",

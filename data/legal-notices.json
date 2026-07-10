@@ -586,26 +586,6 @@
     "noticeKey": "COL-000181-fwdc-share-cert-887"
   },
   {
-    "title": "Public Hearing -- San Miguel County Planning Commission & BOCC Joint Work Session (July 9, 2026)",
-    "entity": "San Miguel County Planning Commission / Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The San Miguel County Planning Commission and Board of County Commissioners will hold a joint work session on July 9, 2026 at 9:30 AM to discuss proposed Land Use Code amendments, including sections on Forestry Practices, Oil & Gas Operations, Deep Geothermal Operations, Condominium Plats, and Planned Unit Development & Subdivisions. The meeting is open to the public in person at 333 West Colorado Ave., Telluride, or via Zoom.",
-    "deadline": "2026-07-09",
-    "expires": "2026-07-09",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    "noticeKey": "COL-000184-pc-bocc-worksession-2026-07-09"
-  },
-  {
     "title": "Foreclosure Sale Notice -- Lot 166AR2, Telluride Mountain Village (Sale No. 202604)",
     "entity": "Federal Holding Realty / Two Stonegate LLC",
     "entityClass": "ent-county",
