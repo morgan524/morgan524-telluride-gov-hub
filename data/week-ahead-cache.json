@@ -1,18 +1,18 @@
 {
-  "hash": "eaeeafc89ba75ba4acca678a8daaf04c2445e946",
-  "lede": "The biggest thing on the agenda this week is Tuesday's San Miguel County housing code working session, the sixth in the ongoing Land Use Code rewrite focused on zoning, density, and regulatory incentives to make affordable and workforce housing easier to build — worth paying attention to as those redline recommendations take shape. Alongside that, HARC meets Tuesday for public hearings on the large-scale Carhenge redevelopment at 700 W Pacific, a multi-building new construction project in an Accommodations 2 zone, plus reviews of Town Hall accessibility renovations and a floor-area addition at the Parks & Rec facility. The Hardrock Hundred kicks off Friday, so expect the usual beautiful chaos on the trails and in town.",
+  "hash": "095a490adb16c38cdce027cd74e7e19b8b300d88",
+  "lede": "The biggest thing on the government calendar this week is Tuesday's HARC hearing on the Carhenge redevelopment at 700 W Pacific Ave — multiple large-scale preliminary public hearings covering eight new buildings in the Accommodations 2 zone, which is as significant a development review as this town sees. Also Tuesday, HARC takes up alterations to Town Hall and the Parks & Rec garage, and Wednesday San Miguel County holds its sixth working session on the Land Use Code rewrite, focused on zoning, density, and incentives aimed at getting more workforce housing built.",
   "notable": [
     {
       "id": 4,
-      "stake": "Public hearings on large-scale multi-building Carhenge redevelopment at 700 W Pacific Ave."
+      "stake": "Public hearings on eight new buildings at Carhenge redevelopment site"
     },
     {
       "id": 3,
-      "stake": "HARC reviews floor-area addition and landmark alterations at two Town-owned civic buildings."
+      "stake": "HARC votes on alterations to two Town-owned landmark civic buildings"
     },
     {
       "id": 14,
-      "stake": "County's housing code rewrite shapes zoning and density rules affecting affordable housing development."
+      "stake": "County shapes final affordable-housing zoning and density rules this session"
     }
   ]
 }
