@@ -323,6 +323,9 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4},
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
+    {"sv":4},
+
+  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
     {"sv":4}
 };
 
@@ -433,7 +436,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
+    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -487,7 +490,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -535,7 +538,10 @@ const MANUAL_SUMMARIES = {
     "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.",
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    "The August 6, 2026 Town Council Retreat agenda hasn't been posted yet."
+    "The August 6, 2026 Town Council Retreat agenda hasn't been posted yet.",
+
+  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
+    "The July 23, 2026 Planning & Zoning Commission Chair meeting has been cancelled."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2007,6 +2013,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
+  },
+  {
+    title: "Telluride, Mountain Village investigations find no evidence of government conspiracy in offer to buy ski area",
+    source: "Colorado Sun",
+    date: "July 10, 2026",
+    firstSeen: "2026-07-10",
+    newsTopic: "recreation",
+    copy: "The outside investigations by both towns did not uncover illegal actions by local leaders who have resigned from their jobs in the wake of their offer to buy Telluride ski area from billionaire owner Chuck Horning",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/07/10/telluride-mountain-village-investigations/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/01/122725_TRIDE_STRIKE_009-scaled.jpg?fit=1024%2C683&amp;ssl=1"
   },
   {
     title: "Town Manager's Report",
@@ -3494,7 +3511,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3506,7 +3523,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3554,39 +3571,37 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "23rd Annual Telluride Plein Air",
-    link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air/",
-    description: "The 23rd Annual Telluride Plein Air is a longstanding celebration of outdoor painting bringing together artists who create works on location throughout the Telluride area. The event is held at the Sheridan Opera House, serving as a hub for this established regional arts tradition.",
-    pubDate: "2026-06-29",
-    endDate: "2026-06-30",
+    title: "SoDown Live in Concert",
+    link: "https://sheridanoperahouse.com/events/sodown-live-in-concert/",
+    description: "SoDown brings their genre-blending electronic music to the historic Sheridan Opera House for a live concert. The performance showcases the artist's signature fusion of hip-hop, funk, and bass music in one of Telluride's most beloved and intimate venues.",
+    pubDate: "2026-07-09",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/Vios-Richie-Rainy-Day-in-Telluride-90-mins.-QuickDraw-8x10-Watercolor-800.webp"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/unnamed-file.jpg"
   },
   {
-    title: "23rd Annual Telluride Plein Air",
-    link: "https://sheridanoperahouse.com/events/23rd-annual-telluride-plein-air-2/",
-    description: "The 23rd Annual Telluride Plein Air is a longstanding outdoor painting event held in and around Telluride, bringing together artists who work directly from observation in the landscape. The Sheridan Opera House serves as a hub for the event, which celebrates the tradition of painting en plein air in the scenic mountain setting of Telluride.",
-    pubDate: "2026-07-01",
-    endDate: "2026-07-05",
+    title: "Telluride Table: Trevor Hall",
+    link: "https://sheridanoperahouse.com/events/telluride-table-trevor-hall/",
+    description: "Trevor Hall performs at the historic Sheridan Opera House as part of the Telluride Table series. It is a concert held at one of Telluride's most beloved and intimate performance venues.",
+    pubDate: "2026-07-10",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/03/Vios-Richie-Rainy-Day-in-Telluride-90-mins.-QuickDraw-8x10-Watercolor-800.webp"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/06/cropped-Telluride-Table-Logo-for-web.webp"
   },
   {
-    title: "Telluride Venture Network's Pitch Day",
-    link: "https://sheridanoperahouse.com/events/telluride-venture-networks-pitch-day/",
-    description: "Telluride Venture Network's Pitch Day is a startup pitch competition event held at the Sheridan Opera House, bringing together entrepreneurs and investors in the Telluride community. Local and regional founders present their business concepts to a panel in a live, public forum setting.",
-    pubDate: "2026-07-01",
+    title: "North Mississippi Allstars Live in Concert",
+    link: "https://sheridanoperahouse.com/events/north-mississippi-allstars-live-in-concert/",
+    description: "The North Mississippi Allstars bring their blues-rooted, Southern rock sound to the historic Sheridan Opera House for a live concert on July 11, 2026. The band is known for drawing on Deep South musical traditions, blending raw electric blues with groove-driven energy.",
+    pubDate: "2026-07-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Telluride-Venture-Network-.png"
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/06/000024970002-2.jpg"
   }
 ];
 
@@ -4128,7 +4143,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility What To Bring: yoga mat, water, no shoes preferred - If you need to wear shoes they must be clean indoor shoes only. No mud, dirt, snow, etc. Every Tuesday & Thursday 8:15-9 am / Advance sign up required! …",
     pubDate: "2026-07-14T14:15:00.000Z",
-    endDate: "2026-09-03",
+    endDate: "2026-09-08",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5234,7 +5249,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "",
+    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5245,7 +5260,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5256,7 +5271,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5267,7 +5282,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5278,7 +5293,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5289,7 +5304,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5300,7 +5315,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5311,7 +5326,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5322,17 +5337,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Public Art Commission Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/public-art-commission-meeting/",
-    description: "The Public Art Commission meets on an as-needed basis. Please join the meeting from your computer, tablet or smartphone through this link.",
-    pubDate: "2026-07-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49288/screenshot_2026-07-01_at_1_45_30_pm.png"
-  },
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
@@ -5695,6 +5699,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Girl Scout Cookie Booth",
+    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
+    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    pubDate: "2026-08-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
+  },
+  {
+    title: "Sunday Rehab: Apres Edition",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
+    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    pubDate: "2026-08-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   }
 ];
 
