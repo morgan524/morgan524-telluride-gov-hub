@@ -1148,6 +1148,20 @@
               return true;
             }
 
+            // Meta-summary / refusal detector — defined INLINE here (not taken
+            // from gov-helpers.js) because this page's fast path reads only the
+            // data file and never loads gov-helpers' functions, so the shared
+            // isRefusalSummary would be undefined here. Keep in sync with the
+            // copy in js/gov-helpers.js + scripts/content-refresh.js. Never show
+            // an AI "can't summarize this" apology — blank it.
+            const isRefusalSummary = (text) => {
+              if (!text) return false;
+              const t = String(text);
+              return /\b(?:article|article text|text|content|source)\b[^.!?]{0,60}\b(?:corrupt(?:ed)?|garbl(?:ed)?|unreadable|not readable|no readable content|isn'?t accessible|is not accessible|not accessible|(?:login\/)?paywall|boilerplate)\b/i.test(t)
+                  || /\b(?:can'?t|cannot|could ?n'?t|couldn'?t|unable to)\b[^.!?]{0,40}\b(?:produce|generate|summar\w*|extract|access|read|be produced)\b/i.test(t)
+                  || /\bresubmit\b|check the source article|based on what'?s visible|no reliable summary/i.test(t);
+            };
+
             // ── Collect from sources, then filter, then dedup by title ──
             const live = [];
             // Hand-curated featured items (bot-safe) come first so a pinned
