@@ -481,7 +481,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -676,8 +676,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 10, 2026",
     firstSeen: "2026-07-10",
     newsTopic: "community",
-    copy: "Victor Marx wins Republican nomination for governor in Colorado.",
-    claudeSummary: false,
+    copy: "The Town of Telluride wrapped up its third annual community survey, which feeds into planning and budget decisions for local projects and services. Dry thunderstorms are in the forecast this week, raising wildfire concerns from lightning and strong outflow winds across the region.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_d7e9087e-dbd4-5aa1-9198-1e837b601d5d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
