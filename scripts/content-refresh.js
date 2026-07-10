@@ -1826,11 +1826,18 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         // the "By <author>" byline. Re-fetch just the full text (no re-summarize)
         // so we can extract the signature.
         const cachedHit = existingByHref.get(href);
-        // Skip carrying forward an entry whose text was corrupted by the old
-        // chunk-split UTF-8 bug (contains U+FFFD); let it fall through to a
-        // fresh fetch so apostrophes/quotes come back clean.
-        const cachedCorrupt = cachedHit && (/\uFFFD/.test(cachedHit.copy || '') || /\uFFFD/.test(cachedHit.letterAuthor || ''));
-        if (existingByHref.has(href) && cachedHit.claudeSummary && !cachedCorrupt) {
+        // Don't carry forward an entry that needs a fresh try: (a) text
+        // corrupted by the old chunk-split UTF-8 bug (contains U+FFFD), or
+        // (b) an EMPTY copy \u2014 a summary that failed at scrape time (e.g. a
+        // transient auth/fetch miss produced a refusal we've since blanked, or
+        // the TT_AUTH_COOKIE was briefly invalid). Retrying picks up a real
+        // summary once the article is reachable again; if it still isn't, the
+        // refusal guard keeps it blank. Self-healing instead of stuck-forever.
+        const cachedRetry = cachedHit && (
+          /\uFFFD/.test(cachedHit.copy || '') ||
+          /\uFFFD/.test(cachedHit.letterAuthor || '') ||
+          !String(cachedHit.copy || '').trim());
+        if (existingByHref.has(href) && cachedHit.claudeSummary && !cachedRetry) {
           const cached = cachedHit;
           const isLetterCached = /\/letters_to_editor\//i.test(href);
           if (isLetterCached && !cached.letterAuthor && TT_AUTH_COOKIE) {
