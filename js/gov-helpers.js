@@ -910,8 +910,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "public-safety",
-    copy: "A local resident is raising questions about evacuation plans during Telluride's busy festival season, concerned about what happens when thousands of visitors are in town. Meanwhile, wildfire activity across the region is serious — three firefighters were killed in Mesa County, and dry thunderstorms this week could spark new fires.",
-    claudeSummary: true,
+    copy: "",
+    claudeSummary: false,
     href: "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true

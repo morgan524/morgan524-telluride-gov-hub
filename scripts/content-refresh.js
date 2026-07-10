@@ -1865,7 +1865,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         let copy = rssCopy;
         let claudeSummary = false;
         let letterAuthor = '';
-        const isLetter = /\/letters_to_editor\//i.test(href);
+        let isLetter = /\/letters_to_editor\//i.test(href);
         // Letters are public (no paywall), and their RSS lead is usually just
         // the "Dear Editor," salutation — so always fetch+summarize letters,
         // even when no TT auth cookie is configured.
@@ -1876,6 +1876,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
             if (result && result.status === 200) {
               const fullText = extractTTArticleText(result.text);
               if (fullText) {
+                if (!isLetter && isLetterBody(fullText)) isLetter = true;
                 copy = await summarizeTTArticle(title, fullText, rssCopy);
                 claudeSummary = true;
                 newCount++;
@@ -2252,13 +2253,16 @@ function extractLetterAuthor(fullText) {
   // Look in the last ~700 chars — letter bodies wrap with the signature
   // close to the end, after the salutation.
   const tail = fullText.slice(-700);
-  const sigRe = /(?:Sincerely|Yours(?:\s+truly)?|Best(?:\s+regards)?|Thanks|Thank\s+you|Regards|Cheers|Respectfully)[,. ]+\s*([A-Z][A-Za-z'’\-.]+(?:\s+[A-Z][A-Za-z'’\-.]+){0,3})/;
-  const sig = tail.match(sigRe);
+  // Take the LAST sign-off in the tail — a "Thanks, Max." mid-letter must not
+  // shadow the real "Sincerely, <author>" signature at the end.
+  const sigRe = /(?:Sincerely|Yours(?:\s+truly)?|Best(?:\s+regards)?|Thanks|Thank\s+you|Regards|Cheers|Respectfully)[,. ]+\s*([A-Z][A-Za-z'’\-.]+(?:\s+(?:[A-Z][A-Za-z'’\-.]+|[“"][^”"]{1,20}[”"])){0,3})/g;
+  let sig = null, sm;
+  while ((sm = sigRe.exec(tail)) !== null) sig = sm;
   if (sig) {
     let author = sig[1].trim();
     // Look at what immediately follows the name — often a title/role
     // ("Director, Rainbow Preschool") on its own short line.
-    const after = tail.slice(tail.indexOf(sig[0]) + sig[0].length).trim();
+    const after = tail.slice(sig.index + sig[0].length).trim();
     const nextLine = after.match(/^[\s,]*([A-Za-z][^,\n]{2,80}?)(?:\.\s|\n|$)/);
     if (nextLine && /^[A-Z]/.test(nextLine[1]) && !/^(?:and|or|the|to)\b/i.test(nextLine[1])) {
       author += ', ' + nextLine[1].trim();
@@ -2274,6 +2278,17 @@ function extractLetterAuthor(fullText) {
   return '';
 }
 
+// A letter body: salutation up top, or a signed-off closing near the end.
+// Catches letters TT files under /opinion/ instead of /letters_to_editor/,
+// which the URL-based check misses — those should still get the author
+// byline and the letter placeholder (never a fully blank card).
+function isLetterBody(fullText) {
+  const t = String(fullText || '').trim();
+  if (!t) return false;
+  if (/\b(?:dear|to\s+the)\s+editor\b/i.test(t.slice(0, 300))) return true;
+  return /\b(?:sincerely|respectfully(?:\s+submitted)?|gratefully|yours\s+truly)\s*,/i.test(t.slice(-250));
+}
+
 // True when a card "copy"/lead is useless to a reader: blank, or just a
 // salutation ("Dear Editor," / "To the Editor"), or too short to be a summary.
 function isUselessCopy(s) {
@@ -2283,7 +2298,41 @@ function isUselessCopy(s) {
   return t.replace(/[^a-z]/gi, '').length < 20;
 }
 
+// Paragraphs that are page chrome, not article text: the <noscript> paywall
+// warning that precedes every encrypted block, and the weather-widget lines
+// that sit at the top of every TT page.
+const TT_PAGE_BOILERPLATE = /javascript is required|this page requires javascript|enable it in your browser|\b(?:high|low)\s+\d+\s*f\b|\bmph\b|\bwinds?\s+[nsew]|sunshine|partly cloudy|clear skies|^updated:\s/i;
+
 function extractTTArticleText(html) {
+  // 0. Scope to the article's own body region when the BLOX markers are
+  //    present. The rest of the page carries noscript paywall warnings, the
+  //    weather module, and trending-story teasers — the whole-page fallbacks
+  //    below used to blend that noise into the text sent to the summarizer
+  //    (or bury a short letter in it, producing a refusal → blank card).
+  const rStart = html.indexOf('id="asset-content"');
+  if (rStart >= 0) {
+    let rEnd = html.indexOf('tncms-region-article_bottom', rStart);
+    if (rEnd < 0) rEnd = html.indexOf('id="asset-below"', rStart);
+    const region = rEnd > rStart ? html.slice(rStart, rEnd) : html.slice(rStart);
+    // Walk the region in document order, collecting visible paragraphs and
+    // decoded subscriber-only blocks as they appear — paywalled articles
+    // interleave plain teaser <p>s with encrypted blocks.
+    const pieces = [];
+    const re = /<div[^>]*class="subscriber-only encrypted-content"[^>]*>([\s\S]*?)<\/div>|<p\b[^>]*>([\s\S]*?)<\/p>/gi;
+    let m;
+    while ((m = re.exec(region)) !== null) {
+      const raw = m[1] !== undefined ? decodeTncms(unescapeTncmsPayload(m[1])) : m[2];
+      const plain = raw
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&nbsp;/g, ' ')
+        .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(parseInt(n, 10)))
+        .replace(/\s{2,}/g, ' ').trim();
+      if (plain && !TT_PAGE_BOILERPLATE.test(plain)) pieces.push(plain);
+    }
+    const joined = pieces.join(' ').replace(/\s{2,}/g, ' ').trim();
+    if (joined.length > 100) return joined;
+  }
+
   // 1. Paywalled blocks (most articles)
   const tncmsText = extractTncmsText(html);
   if (tncmsText && tncmsText.length > 100) return tncmsText;
@@ -2308,7 +2357,7 @@ function extractTTArticleText(html) {
       .replace(/<[^>]+>/g, ' ')
       .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/&#\d+;/g, ' ').replace(/&[a-z]+;/g, ' ')
       .replace(/\s{2,}/g, ' ').trim())
-    .filter(t => t && !/\b(?:high|low)\s+\d+\s*f\b|\bmph\b|\bwinds?\s+[nsew]|sunshine|partly cloudy|clear skies|^updated:\s/i.test(t));
+    .filter(t => t && !TT_PAGE_BOILERPLATE.test(t));
   let joined = paras.join(' ').replace(/\s{2,}/g, ' ').trim();
   // If the letter salutation is present, start the text there (drops any
   // leftover weather/preamble before it).
@@ -2403,6 +2452,11 @@ function decodeTncms(text) {
     const o = text.charCodeAt(i);
     if (o < 33) {
       result += text[i];
+    } else if (o > 125) {
+      // The encoder only shifts printable ASCII (33–125); non-ASCII plaintext
+      // (curly quotes, em dashes, &nbsp;) passes through unchanged. The -47
+      // branch below used to mangle these (“ → ῭, nbsp → q).
+      result += text[i];
     } else if (o >= 79) {
       result += String.fromCharCode(o - 47);
     } else {
@@ -2410,6 +2464,19 @@ function decodeTncms(text) {
     }
   }
   return result;
+}
+
+// The cipher maps plaintext k/m/U/Q/V to < > & " ' — characters the page
+// then serves HTML-escaped (&lt; &gt; &amp; …). Unescape them BEFORE
+// decoding, or every k/m/U in the article decodes as multi-char junk
+// ("lucky" → "lucU=Ejy"), which reads as corrupt text and makes the
+// summarizer refuse → blank card. (Root cause of the 2026-07-08 blank
+// letters and the garbled letter-author names.)
+function unescapeTncmsPayload(payload) {
+  return payload
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#0?39;/g, "'")
+    .replace(/&amp;/g, '&');
 }
 
 /**
@@ -2475,7 +2542,7 @@ function extractTncmsText(html) {
   const blocks = [];
   let m;
   while ((m = re.exec(html)) !== null) {
-    blocks.push(decodeTncms(m[1]));
+    blocks.push(decodeTncms(unescapeTncmsPayload(m[1])));
   }
   if (blocks.length === 0) return null;
   const combined = blocks.join('\n');
