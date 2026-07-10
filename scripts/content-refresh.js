@@ -1895,9 +1895,14 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         // like "Dear Editor,") reach a card. Prefer a non-useless RSS lead;
         // otherwise a neutral placeholder. No fabrication.
         if (isUselessCopy(copy)) {
+          // Prefer a real RSS lead; otherwise leave the card summary BLANK.
+          // Never echo the headline back as the "summary" (redundant on a card
+          // that already shows the title) — a blank summary is better. This is
+          // the path for a piece we couldn't fetch/summarize (e.g. an opinion
+          // letter whose body isn't retrievable): headline + Read more, no text.
           copy = isLetter
             ? 'A letter to the editor published in the Telluride Times. Select "Read more" for the full letter.'
-            : (!isUselessCopy(rssCopy) ? rssCopy : ((item.title || '').trim() + '.'));
+            : (!isUselessCopy(rssCopy) ? rssCopy : '');
           claudeSummary = false;
         }
 
