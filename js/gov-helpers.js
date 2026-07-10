@@ -436,7 +436,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    "The July 15, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The July 15 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
@@ -490,7 +490,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -886,10 +886,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "A letter to the editor from Mike Ritchey of Gunnison praises Max Silverman's film \"Rebuilding,\" calling it a well-crafted, low-key cinematic work with perfectly chosen actors. Ritchey also acknowledges Max's father Rick, noting the film's dedication to his parents.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Mike Ritchey Gunnison",
     imgHiRes: true
   },
   {
@@ -898,10 +899,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "community",
-    copy: "",
-    claudeSummary: false,
+    copy: "Telluride's beloved grass oval may be eyed for pickleball courts, and not everyone's on board. Tom Sokolowski put it plainly with a nod to Joni Mitchell. Some places, once changed, don't come back.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Tom “Socko” Sokolowski",
     imgHiRes: true
   },
   {
@@ -910,10 +912,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 8, 2026",
     firstSeen: "2026-07-08",
     newsTopic: "public-safety",
-    copy: "",
-    claudeSummary: false,
+    copy: "A Telluride resident is asking town officials to clarify the evacuation plan when festivals bring thousands of visitors into town. It's a fair question — the canyon geography doesn't change when the crowds show up.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Eliot Brown",
     imgHiRes: true
   },
   {
@@ -1880,6 +1883,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
   },
   {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 18, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
+    source: "Town of Telluride",
+    date: "June 16, 2026",
+    newsTopic: "land-use",
+    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
+  },
+  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -1887,6 +1926,60 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
+    title: "Natural Resources Land Use Code Amendments",
+    source: "San Miguel County",
+    date: "June 26, 2026",
+    newsTopic: "land-use",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1402",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14335"
+  },
+  {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
+  },
+  {
+    title: "Mill Creek Park Site Closed for Revegetation",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
+  },
+  {
+    title: "Beaver Park Gravel Pit Closure",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
+  },
+  {
+    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
+    source: "San Miguel County",
+    date: "June 24, 2026",
+    newsTopic: "housing",
+    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
+    img: ""
   },
   {
     title: "Town of Telluride Election Today",
@@ -1904,6 +1997,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "The Town is aware of the Gold Mountain Fire currently burning in Ouray County, north of the City of Ouray. We want to assure residents and visitors that the Gold Mountain Fire does not pose a direct threat to the Town of Telluride at this time.",
     href: "http://ouraycountyco.gov",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -3403,7 +3505,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3415,7 +3517,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3465,7 +3567,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "SoDown Live in Concert",
     link: "https://sheridanoperahouse.com/events/sodown-live-in-concert/",
-    description: "SoDown brings their genre-blending electronic music to the historic Sheridan Opera House for a live concert. The performance showcases the artist's signature fusion of hip-hop, funk, and bass music in one of Telluride's most beloved and intimate venues.",
+    description: "",
     pubDate: "2026-07-09",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3476,7 +3578,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Table: Trevor Hall",
     link: "https://sheridanoperahouse.com/events/telluride-table-trevor-hall/",
-    description: "Trevor Hall performs at the historic Sheridan Opera House as part of the Telluride Table series. It is a concert held at one of Telluride's most beloved and intimate performance venues.",
+    description: "",
     pubDate: "2026-07-10",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3487,7 +3589,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "North Mississippi Allstars Live in Concert",
     link: "https://sheridanoperahouse.com/events/north-mississippi-allstars-live-in-concert/",
-    description: "The North Mississippi Allstars bring their blues-rooted, Southern rock sound to the historic Sheridan Opera House for a live concert on July 11, 2026. The band is known for drawing on Deep South musical traditions, blending raw electric blues with groove-driven energy.",
+    description: "",
     pubDate: "2026-07-11",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4058,7 +4160,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
     description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please View on site | Email this event",
     pubDate: "2026-07-14T16:00:00.000Z",
-    endDate: "2026-08-11",
+    endDate: "2026-09-08",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5095,7 +5197,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-07",
+    endDate: "2026-09-08",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5141,7 +5243,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Star Spangled Saturday Parade 11 Am",
     link: "https://www.norwoodtown.com/2026-07-04-star-spangled-saturday-parade-11-am",
-    description: "The Town of Norwood hosts its annual Star Spangled Saturday Parade on the Fourth of July, stepping off at 11 a.m. This community celebration brings together residents and visitors to mark Independence Day with a traditional hometown parade through Norwood.",
+    description: "",
     pubDate: "2026-07-04T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5152,7 +5254,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5163,7 +5265,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5174,7 +5276,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5185,7 +5287,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5196,7 +5298,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5207,7 +5309,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5218,7 +5320,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -8509,18 +8611,18 @@ function getTownAgendaLink(title, eventDate) {
 const TELLURIDE_BOARD_MEETINGS = [
   {
     date: "July 21, 2026",
-    title: "Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
-    hasAgenda: false,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
-  },
-  {
-    date: "July 21, 2026",
     title: "Telluride Housing Authority",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
     hasAgenda: false,
     location: "Rebekah Hall, 113 W Columbia Ave",
+    time: ""
+  },
+  {
+    date: "July 21, 2026",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
   {

@@ -1,22 +1,18 @@
 {
-  "hash": "095a490adb16c38cdce027cd74e7e19b8b300d88",
-  "lede": "The biggest thing on the docket this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W. Pacific Ave. goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in Backman Village — that's a significant chunk of the west end, and it's open to the public. Also Tuesday, San Miguel County holds its sixth working session on the Land Use Code rewrite, drilling into zoning, density, and regulatory incentives aimed at making workforce and affordable housing easier to build — worth your attention if housing in this valley matters to you.",
+  "hash": "eaeeafc89ba75ba4acca678a8daaf04c2445e946",
+  "lede": "The biggest thing on the agenda this week is Tuesday's San Miguel County housing code working session, the sixth in the ongoing Land Use Code rewrite focused on zoning, density, and regulatory incentives to make affordable and workforce housing easier to build — worth paying attention to as those redline recommendations take shape. Alongside that, HARC meets Tuesday for public hearings on the large-scale Carhenge redevelopment at 700 W Pacific, a multi-building new construction project in an Accommodations 2 zone, plus reviews of Town Hall accessibility renovations and a floor-area addition at the Parks & Rec facility. The Hardrock Hundred kicks off Friday, so expect the usual beautiful chaos on the trails and in town.",
   "notable": [
     {
       "id": 4,
-      "stake": "Public hearings on large-scale Carhenge redevelopment — multiple new buildings at 700 W Pacific."
+      "stake": "Public hearings on large-scale multi-building Carhenge redevelopment at 700 W Pacific Ave."
     },
     {
       "id": 3,
-      "stake": "HARC votes on alterations to two Town-owned landmark buildings, including a floor-area addition."
+      "stake": "HARC reviews floor-area addition and landmark alterations at two Town-owned civic buildings."
     },
     {
       "id": 14,
-      "stake": "County Land Use Code rewrite targets zoning and density rules affecting affordable housing production."
-    },
-    {
-      "id": 12,
-      "stake": "Public hearing on Telluride Science special event liquor permit for Town Talk."
+      "stake": "County's housing code rewrite shapes zoning and density rules affecting affordable housing development."
     }
   ]
 }

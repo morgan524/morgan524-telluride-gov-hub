@@ -233,10 +233,11 @@
     "date": "July 8, 2026",
     "firstSeen": "2026-07-08",
     "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "copy": "A letter to the editor from Mike Ritchey of Gunnison praises Max Silverman's film \"Rebuilding,\" calling it a well-crafted, low-key cinematic work with perfectly chosen actors. Ritchey also acknowledges Max's father Rick, noting the film's dedication to his parents.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "Mike Ritchey Gunnison",
     "imgHiRes": true
   },
   {
@@ -245,10 +246,11 @@
     "date": "July 8, 2026",
     "firstSeen": "2026-07-08",
     "newsTopic": "community",
-    "copy": "",
-    "claudeSummary": false,
+    "copy": "Telluride's beloved grass oval may be eyed for pickleball courts, and not everyone's on board. Tom Sokolowski put it plainly with a nod to Joni Mitchell. Some places, once changed, don't come back.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "Tom “Socko” Sokolowski",
     "imgHiRes": true
   },
   {
@@ -257,10 +259,11 @@
     "date": "July 8, 2026",
     "firstSeen": "2026-07-08",
     "newsTopic": "public-safety",
-    "copy": "A local resident is raising questions about evacuation plans during Telluride's busy festival season, concerned about what happens when thousands of visitors are in town. Meanwhile, wildfire activity across the region is serious — three firefighters were killed in Mesa County, and dry thunderstorms this week could spark new fires.",
+    "copy": "A Telluride resident is asking town officials to clarify the evacuation plan when festivals bring thousands of visitors into town. It's a fair question — the canyon geography doesn't change when the crowds show up.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "Eliot Brown",
     "imgHiRes": true
   },
   {
@@ -1261,15 +1264,6 @@
     "copy": "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
     "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
-  },
-  {
-    "title": "Town of Telluride Releases Findings of Independent Investigation",
-    "source": "Town of Telluride",
-    "date": "June 10, 2026",
-    "newsTopic": "recreation",
-    "copy": "(June 10, 2026) – Telluride, CO – The Town has released the findings of an independent investigation conducted by Investigations Law Group (ILG) regarding former Mayor Pro Tem Meehan Fee’s involvement in discussions and negotiations with Telski.",
-    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=394",
-    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15572"
   },
   {
     "title": "Home Rebate Programs",
