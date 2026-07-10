@@ -1,18 +1,18 @@
 {
-  "hash": "e978d4bed96a3079562c3399e86a43a8814d9efb",
-  "lede": "The biggest item this week is the Carhenge redevelopment at 700 W Pacific Ave, where HARC holds three separate Preliminary Large-Scale public hearings Tuesday on Buildings A through E — new construction in an Accommodations 2 zone that will reshape a significant piece of the west end. Also Tuesday, HARC takes up accessibility renovations at Town Hall and a floor-area addition at the Parks & Rec office, while Wednesday's county Land Use Code working session digs into zoning, density, and regulatory incentives aimed at making workforce housing easier to build.",
+  "hash": "f03530d8feecae0ba90f1e29a33dd69cd8654d6f",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC hearing on the Carhenge redevelopment at 700 W Pacific Ave — multiple large-scale public hearings covering a dense cluster of new buildings in Backman Village, and public input matters at this stage. That same day, HARC also takes up accessibility renovations at Town Hall and an addition to the Parks & Rec building. Then on Thursday, San Miguel County holds its sixth working session on the Land Use Code rewrite, focused on zoning, density, and regulatory tools to expand workforce and affordable housing.",
   "notable": [
     {
       "id": 4,
-      "stake": "Public hearings on major multi-building Carhenge redevelopment in Accommodations 2 zone."
+      "stake": "Preliminary large-scale public hearings on major Carhenge redevelopment project."
     },
     {
       "id": 3,
-      "stake": "HARC reviews alterations to two Town-owned landmarks, including a floor-area increase."
+      "stake": "HARC votes on alterations to two Town-owned landmark and civic buildings."
     },
     {
       "id": 14,
-      "stake": "County LUC rewrite targets zoning and density rules that govern affordable housing construction."
+      "stake": "County shapes final affordable-housing code rewrite with zoning and density changes."
     }
   ]
 }
