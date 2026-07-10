@@ -1,22 +1,18 @@
 {
-  "hash": "1fcec64600e39a2a5d75fad04735e960b986cb7b",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC hearing on the Carhenge redevelopment at 700 W Pacific Ave — multiple large-scale preliminary public hearings covering a cluster of new buildings in Backman Village, and that kind of project deserves eyes in the room. Also on Tuesday, San Miguel County holds its sixth working session on the Land Use Code rewrite, drilling into zoning, density, and regulatory incentives aimed at getting more workforce housing built. Between the fair, the Hardrock Hundred, and a full slate of music and markets, the valley is humming.",
+  "hash": "a02f055b2cbdcddf660f5bcb682b5d84c741a4c9",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering a cluster of new buildings in Backman Village — the kind of project that shapes what the west end of town looks like for decades. Also Tuesday, San Miguel County holds its sixth working session on the Land Use Code rewrite, this round focused on zoning, density, and regulatory incentives aimed at making workforce and affordable housing easier to build. Sprinkled through the weekend, the Hardrock Hundred rolls through and the North Mississippi Allstars hit the Sheridan Saturday night.",
   "notable": [
     {
       "id": 4,
-      "stake": "Public hearings on major multi-building Carhenge redevelopment in Accommodations 2 zone."
+      "stake": "Public hearings on major multi-building Carhenge redevelopment in Backman Village."
     },
     {
       "id": 3,
-      "stake": "HARC reviews alterations and floor-area addition to two Town-owned landmark civic buildings."
+      "stake": "HARC reviews alterations and floor-area addition to two Town-owned landmark buildings."
     },
     {
       "id": 14,
-      "stake": "County LUC rewrite session sets final redline recommendations on workforce housing zoning and density."
-    },
-    {
-      "id": 12,
-      "stake": "Public hearing on Telluride Science special event liquor permit; license transfer ratification."
+      "stake": "County's housing code rewrite advances zoning, density, and affordability incentive recommendations."
     }
   ]
 }

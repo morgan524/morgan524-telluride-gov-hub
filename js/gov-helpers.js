@@ -653,6 +653,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Art for chuckleheads",
+    source: "Telluride Times",
+    date: "July 10, 2026",
+    firstSeen: "2026-07-10",
+    newsTopic: "land-use",
+    copy: "Ah Haa School for the Arts hosts its fifth annual HAHA event July 17–19, transforming the three-floor Silver Jack Building into immersive art installations by 17 artists selected from a record 60 applicants. Evening events run July 17–18, with a kids' program July 19. Preview events include a photo booth and free slideshow earlier in the week.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_3416ae2c-5801-435d-a86c-7ed6669fcccd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/07/1078ce6a-2d44-4101-b581-c431daad4691/6a51382cde3c7.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Breakthroughs in RNA science",
+    source: "Telluride Times",
+    date: "July 10, 2026",
+    firstSeen: "2026-07-10",
+    newsTopic: "health",
+    copy: "Penn State professor Philip Bevilacqua speaks Tuesday, July 14 at 6:30 p.m. at the Telluride Conference Center on RNA science — from its primordial origins to mRNA vaccines and CRISPR. His research contributed to the 2023 Nobel Prize work. Free and open to the public.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_a76e350e-6ffc-4820-9965-eef63a085ccc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/e7/4e759722-ca02-45a3-b590-efa6d27d138f/6a4e8f630d2a9.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Victor Marx wins the Republican primary for Colorado governor",
     source: "Telluride Times",
     date: "July 10, 2026",
@@ -2086,36 +2110,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
+    title: "Ridgway Planning Commission Meeting Agenda",
     source: "Town of Ridgway",
-    date: "July 7, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "government",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-10",
+    newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---July-7%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Workforce &amp; Affordable Housing Committee Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "housing",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-workforce-%26-affordable-housing-committee-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/July-8-tc-agenda.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf",
     img: ""
   },
   {
@@ -2127,17 +2129,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Introduction - Ordinance No. 04-2026",
-    source: "Town of Ridgway",
-    date: "July 10, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ord-introduction-notice.pdf",
     img: ""
   },
   {
@@ -2770,39 +2761,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-10/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-10T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-07-10/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-07-10T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-07-10/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-07-10T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Free Youth Tennis & Pickleball Program",
     link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-10/",
@@ -7292,6 +7250,23 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     address: "San Miguel County, Colorado",
     noticeKey: "tax-exemption-senior-veteran-2026"
+  },
+  {
+    title: "Request for Proposal -- Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "Town of Telluride is seeking qualified respondents for: Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting.",
+    deadline: "Closes 7/31/2026",
+    expires: "2026-07-31",
+    dates: "7/10",
+    url: "https://www.telluride.gov/bids.aspx?bidID=131",
+    address: "",
+    totBidID: "131"
   }
 ];
 
@@ -7713,6 +7688,9 @@ const RIDGWAY_AGENDA_MAP = {
 
   "March 11, 2020":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2020.03.11%20TC%20Agenda%20Packet.pdf",
+
+  "July 15, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf",
 
   "June 17, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---June-17%2C-2026.pdf",

@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jul 2026 19:46:17 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jul 2026 22:17:41 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jul 10] Telluride Table</title>
@@ -20,18 +20,6 @@ Family, whether forged by blood or bond, is the center of community and it all s
       <media:content url="https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 10] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-10/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-10</guid>
-      <pubDate>Fri, 10 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Fri, Jul 10] Teen Karate, Manga, and Ramen Club</title>
@@ -67,6 +55,19 @@ Community Tennis & Pickleball Program This program is available for children age
 📍 Hotel Madeline, Mountain Village
 
 Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For more than 150 years, the Mauritson family has cultivated the rugged landscape of Sonoma's Dry Creek Valley, building a legacy rooted in stewardship, perseverance, and a deep connection to the land. This special evening begins with a private reception in Falcon Room, followed by a multi-course dinner in Timber Room thoughtfully paired with wines from Mauritson Wines and Loam Vineyards. Throughout the experience, Clay will share rare library selections, limited-production releases, and the stories behind the vineyards that have shaped his family's winemaking journey across six generations. Guests will gain a deeper understanding of the people, places, and soils that define Sonoma's distinctive character while enjoying a menu crafted to complement each wine's unique expression. Friday, July 10th Reception in Falcon Room | 6:00 PM Dinner in Timber Room | 7:00 PM]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Jul 11] Meet the Winemaker Hike with Clay Mauritson</title>
+      <link>https://koto.org/event/meet-the-winemaker-hike-with-clay-mauritson/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/meet%20the%20winemaker%20hike%7C2026-07-11</guid>
+      <pubDate>Sat, 11 Jul 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Bear Creek Trail, Telluride
+
+Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's spectacular landscape. Limited to just eight guests, this exclusive experience offers a rare opportunity to explore the mountains alongside a steward of one of California's most storied agricultural legacies. For more than 150 years, the Mauritson family has farmed the rugged terrain of Sonoma's Dry Creek Valley, cultivating a deep respect for the land that continues to shape Clay's approach to winemaking today. Together, guests will travel via gondola into Telluride before setting out on a guided hike to Bear Creek Falls, where conversations unfold against a backdrop of soaring peaks, alpine forests, and rushing waterfalls. Along the way, Clay will share stories of family, farming, and the enduring connection between place and craft. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -112,7 +113,7 @@ The San Miguel Basin Fair Board holds a special midday meeting to debrief on the
 
 Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.
 
-⚡ Why it matters: HARC reviews alterations and floor-area addition to two Town-owned landmark civic buildings.]]></description>
+⚡ Why it matters: HARC reviews alterations and floor-area addition to two Town-owned landmark buildings.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -125,7 +126,7 @@ Two Town-owned civic buildings come before HARC on July 15. First is Town Hall a
 
 The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2, and E3 on Lots 34 and 34B of Backman Village, all new construction outside the Telluride Historic Landmark District in an Accommodations 2 zone, with Design Workshop as applicant and the Town itself as owner. A work session on the Shandoka Lot redevelopment at 860 Black Bear Rd — another Town-owned Accommodations 2 parcel — follows. Also on the hearing docket is a continued amendment to a prior Certificate of Appropriateness for 239 N Aspen, inside the THLD, elevated by the HARC Chair back in May.
 
-⚡ Why it matters: Public hearings on major multi-building Carhenge redevelopment in Accommodations 2 zone.]]></description>
+⚡ Why it matters: Public hearings on major multi-building Carhenge redevelopment in Backman Village.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -175,12 +176,12 @@ The San Miguel Basin Fair Board holds a special meeting at 10pm on July 15 — a
     </item>
     <item>
       <title>[Meeting] Ridgway Planning Commission Meeting — 2026-07-15</title>
-      <link>https://townofridgway.colorado.gov/i-want-to/ridgway-planning-commission</link>
+      <link>https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/ridgway%7C2026-07-15%7CRidgway%20Planning%20Commission%20Meeting</guid>
       <pubDate>Wed, 15 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Ridgway • 2026-07-15
 
-Upcoming Town of Ridgway meeting — the agenda posts closer to the date on the Gov-Hub.]]></description>
+Agenda and full meeting packet available (PDF).]]></description>
       <category>Meeting</category>
       <category>Town of Ridgway</category>
     </item>
@@ -207,15 +208,13 @@ The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted 
       <category>airport</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Liquor Licensing Authority - Jul 16 2026 — 2026-07-16</title>
+      <title>[Meeting] Liquor Licensing Authority - Jul 16 2026 — 2026-07-16</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-16%7CLiquor%20Licensing%20Authority%20-%20Jul%2016%202026</guid>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-16
 
-A routine liquor licensing session. On the consent calendar: draft minutes from the July 1 meeting and ratification of a state-issued license transfer for The Catorce Group Ltd., doing business as Cuatro Cinco Seis at 219 W. Pacific Ave. The one public hearing covers a request by Telluride Science for a single special event permit for Town Talk at 300 S. Townsend St. on August 25, 2026, from 5:00 to 9:00 pm. The July 1 draft minutes reflect fourteen special event permits approved at that session — covering summer and fall events including Bluegrass, Jazz Festival, Film Festival, Telluride Mountain Run, Noche de Luz, and several Telluride Table fundraisers — all granted without public comment.
-
-⚡ Why it matters: Public hearing on Telluride Science special event liquor permit; license transfer ratification.]]></description>
+A routine liquor licensing session. On the consent calendar: draft minutes from the July 1 meeting and ratification of a state-issued license transfer for The Catorce Group Ltd., doing business as Cuatro Cinco Seis at 219 W. Pacific Ave. The one public hearing covers a request by Telluride Science for a single special event permit for Town Talk at 300 S. Townsend St. on August 25, 2026, from 5:00 to 9:00 pm. The July 1 draft minutes reflect fourteen special event permits approved at that session — covering summer and fall events including Bluegrass, Jazz Festival, Film Festival, Telluride Mountain Run, Noche de Luz, and several Telluride Table fundraisers — all granted without public comment.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -239,7 +238,7 @@ The San Miguel Basin Fair Board convenes a special meeting at 10pm — an end-of
 
 San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.
 
-⚡ Why it matters: County LUC rewrite session sets final redline recommendations on workforce housing zoning and density.]]></description>
+⚡ Why it matters: County's housing code rewrite advances zoning, density, and affordability incentive recommendations.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

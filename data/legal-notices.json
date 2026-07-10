@@ -685,5 +685,22 @@
     "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     "address": "San Miguel County, Colorado",
     "noticeKey": "tax-exemption-senior-veteran-2026"
+  },
+  {
+    "title": "Request for Proposal -- Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "Town of Telluride is seeking qualified respondents for: Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting.",
+    "deadline": "Closes 7/31/2026",
+    "expires": "2026-07-31",
+    "dates": "7/10",
+    "url": "https://www.telluride.gov/bids.aspx?bidID=131",
+    "address": "",
+    "totBidID": "131"
   }
 ]
