@@ -1,22 +1,22 @@
 {
-  "hash": "3f98eccdec7b8150ea2c16f33c914211bfa98800",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's BOCC meeting, where the county takes up two Land Use Code amendments — one on Natural Medicine Businesses and one on Nonconforming Lots — the kind of code changes that quietly set the rules for years to come. That same day, HARC holds public hearings on the Carhenge redevelopment at 700 W Pacific Ave, a large-scale new construction project across multiple buildings in Backman Village. Monday afternoon, the Open Space Commission heads to the Valley Floor for a weed pull with public comment open to anyone who shows up.",
+  "hash": "b978f280c6125e53003d5e3b1a651600e23c970a",
+  "lede": "The biggest thing on the docket this week is the July 15 HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes to Preliminary Large-Scale public hearing — multiple buildings, multiple lots, and a project big enough to reshape that end of town. That same day, the Board of County Commissioners takes up two Land Use Code amendments covering Natural Medicine Businesses and Nonconforming Lots, both the kind of code language that has real staying power. HARC also reviews alterations to Town Hall and the Parks & Rec building on the 15th, and the Open Space Commission hosts a public-comment-eligible weed pull on the Valley Floor Monday afternoon.",
   "notable": [
     {
       "id": 5,
-      "stake": "Public hearings on large-scale Carhenge redevelopment — multiple new buildings up for review."
-    },
-    {
-      "id": 4,
-      "stake": "HARC reviews alterations to Town Hall landmark and a floor-area-increasing addition at Parks & Rec."
+      "stake": "Preliminary public hearings on large multi-building Carhenge redevelopment at 700 W Pacific."
     },
     {
       "id": 7,
       "stake": "BOCC votes on Land Use Code changes for natural medicine businesses and nonconforming lots."
     },
     {
+      "id": 4,
+      "stake": "HARC reviews alterations and floor-area addition to two Town-owned landmark buildings."
+    },
+    {
       "id": 1,
-      "stake": "Valley Floor site walk includes open public comment — residents can speak on record."
+      "stake": "Public comment accepted at Valley Floor site walk — open to anyone who shows up."
     }
   ]
 }
