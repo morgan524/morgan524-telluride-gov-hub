@@ -88,11 +88,11 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply; for anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>, the <b>Weekend Outlook Thursday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them); to bold anything else, select it in the preview and click <b>B Bold selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
-    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span></div>
+    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button></div>
     <iframe class="frame" id="frame"></iframe>
   </div>
 
@@ -109,10 +109,11 @@ const WORKER = "https://livabletelluride-digest.morgan-8f0.workers.dev";
 const CHIPS = ["Remove an event…","Add an event…","Rewrite a card…","Make the intro shorter","Why is this listed?"];
 const $ = (id) => document.getElementById(id);
 let KEY = sessionStorage.getItem("digestKey") || "";
-let manifest = null, cur = "weekend";
+let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
 // When each approved digest auto-sends (the scheduled job fires at 6:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 6:00 AM", weekend: "Thursday 6:00 AM" };
+// (The Weekend Outlook was retired 2026-07-11 — weekly is the only digest.)
+const SEND_WHEN = { weekly: "Monday 6:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
@@ -152,7 +153,7 @@ async function boot(){
         if(lk && lk.weekStart && lk.weekStart === state[k].weekStart) state[k].locked=true; }catch(e){}
     }
     hideGate(); $("app").style.display="grid";
-    buildSeg(); buildChips(); load("weekend");
+    buildSeg(); buildChips(); load(state.weekly ? "weekly" : Object.keys(state)[0]);
   }catch(e){ if(e.message!=="unauthorized") showGate("Couldn't load — "+e.message); }
 }
 function setPill(h){
@@ -205,6 +206,35 @@ function renderPreview(){ $("frame").srcdoc=state[cur].html; $("psubj").textCont
 function showStatus(msg,isErr){ const s=$("status"); s.innerHTML=msg; s.className="status show"+(isErr?" err":""); }
 function hideStatus(){ $("status").className="status"; }
 
+// ---- bold selected text in the preview ----
+// Select text in the preview iframe, then click B. Uses the iframe's own
+// editing engine (designMode + execCommand) so selections spanning elements
+// work, then serializes the edited DOM back into state[cur].html —
+// re-encoding non-ASCII to numeric entities so the email stays pure-ASCII.
+$("boldbtn").addEventListener("mousedown",e=>e.preventDefault());   // don't steal the iframe's selection
+$("boldbtn").onclick=()=>{
+  const fr=$("frame"), doc=fr.contentDocument, win=fr.contentWindow;
+  const sel=win && win.getSelection();
+  if(!sel || sel.rangeCount===0 || sel.isCollapsed || !sel.toString().trim()){
+    showStatus("Select some text <b>in the preview</b> first, then click Bold.",true); return;
+  }
+  const range=sel.getRangeAt(0).cloneRange();
+  doc.designMode="on";
+  try{
+    const s2=win.getSelection(); s2.removeAllRanges(); s2.addRange(range);
+    try{ doc.execCommand("styleWithCSS",false,false); }catch(e){}
+    doc.execCommand("bold");
+  } finally { doc.designMode="off"; }
+  // Serialize the edited DOM back to the stored HTML (outerHTML drops the
+  // doctype — carry it over from the current version).
+  let html=doc.documentElement.outerHTML;
+  html=Array.from(html).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
+  const dt=state[cur].html.match(/^\s*<!doctype[^>]*>/i);
+  state[cur].html=(dt?dt[0]+"\n":"")+html;
+  $("lede").value=currentLede(state[cur].html);
+  showStatus("Bold applied — it's part of this version now (click B again on the same text to unbold).");
+};
+
 // ---- Ask Claude ----
 function renderLog(){
   const log=$("ailog"); log.innerHTML="";
@@ -239,9 +269,13 @@ $("aiin").addEventListener("keydown",e=>{ if(e.key==="Enter") aiSend($("aiin").v
 // The intro is the one <p> with this exact style in the rendered email.
 const LEDE_RE=/(<p style="margin:11px 0 0;font-size:15\.5px;line-height:1\.65;color:#2c3b35;">)([\s\S]*?)(<\/p>)/;
 function decodeEntities(s){ const t=document.createElement("textarea"); t.innerHTML=s; return t.value; }
-function currentLede(html){ const m=(html||"").match(LEDE_RE); return m?decodeEntities(m[2]):""; }
+// Bold in the edit box is written as **double asterisks** — real <b>/<strong>
+// tags in the email map to ** on the way in and back to <b> on the way out,
+// so a bold applied in the preview survives an intro edit (and you can type
+// **word** to bold in the intro directly).
+function currentLede(html){ const m=(html||"").match(LEDE_RE); return m?decodeEntities(m[2].replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")):""; }
 // Match the email's pure-ASCII encoding: escape <,>,& then numeric-entity the rest.
-function encodeLede(s){ s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); return Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join(""); }
+function encodeLede(s){ s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); s=Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join(""); return s.replace(/\*\*([\s\S]+?)\*\*/g,"<b>$1</b>"); }
 function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro paragraph to update.",true); return; }
   const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,(m,a,b,c)=>a+encodeLede(txt)+c); renderPreview(); showStatus("Intro updated in the preview."); }
 $("applyLede").onclick=applyLede;

@@ -6,9 +6,11 @@ name: Weekend Email Preview
 # every THURSDAY morning. The run also saves the paste-ready HTML
 # (weekend-mailchimp.html) as an artifact to send after approval.
 # Edit the intro in data/weekend-ahead-lede.json before the send.
+#
+# RETIRED 2026-07-11: the weekend edition was never sent, so the weekly
+# Thursday review email stopped. Manual dispatch still works if a one-off
+# weekend email is ever wanted again (re-add the cron to resume).
 on:
-  schedule:
-    - cron: '0 14 * * 4'   # Thursday 14:00 UTC (~8am Mountain)
   workflow_dispatch:
     inputs:
       week_start:
