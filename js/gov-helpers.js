@@ -487,13 +487,13 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission meeting agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -664,6 +664,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘This film could save lives’",
+    source: "Telluride Times",
+    date: "July 11, 2026",
+    firstSeen: "2026-07-11",
+    newsTopic: "arts-culture",
+    copy: "Filmmaker David Holbrooke is wrapping up \"Peace Officer,\" a feature-length documentary on retiring San Miguel County Sheriff Bill Masters and his 50 years of service — from 1970s Telluride through today. Masters built his career around peacekeeping over enforcement, and the film covers his drug policy writing and immigration stance alongside quieter, human moments. Holbrooke says the project is near the finish line but facing significant funding hurdles.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_4d2919fc-1e7b-4b77-add1-0534af029b70.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Tiny libraries",
+    source: "Telluride Times",
+    date: "July 11, 2026",
+    firstSeen: "2026-07-11",
+    newsTopic: "community",
+    copy: "Telluride has its own Little Free Library — a handbuilt, community-maintained book exchange where anyone can take or leave a book. The writer stopped by recently and found a group of kids gathered around it. Small thing, but worth knowing it's there.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_d8e5537a-4415-4593-a7c6-9f45c4536fa6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/79/b79c3730-41f1-4811-bc9a-1340561db544/6a4e901bf17fb.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "County discusses forestry amendments",
     source: "Telluride Times",
