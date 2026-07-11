@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-10-26",
+    "source": "KOTO Community Radio",
+    "date": "July 11, 2026",
+    "newsTopic": "land-use",
+    "copy": "On this week's Regional Roundup, we'll hear about the extreme fire danger facing communities across the Rocky Mountain West. Then, we go to Aspen, where an all-American form of dance called Bandaloop turned the side of a building into a stage during the Fourth of July weekend. After that, we'll visit Boulder where a gun safety initiative is giving ",
+    "href": "https://koto.org/news/newscast-7-10-26/"
+  },
+  {
     "title": "Newscast 7-9-26",
     "source": "KOTO Community Radio",
     "date": "July 10, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "public-safety",
     "copy": "A Gold Mountain Fire Update; Coming Up Next, Telluride",
     "href": "https://koto.org/news/newscast-6-29-26/"
-  },
-  {
-    "title": "Newscast 6-26-26",
-    "source": "KOTO Community Radio",
-    "date": "June 27, 2026",
-    "newsTopic": "land-use",
-    "copy": "On this week's Regional Roundup, we bring you voices from Pride celebrations across the Rocky Mountain West. We also hear about a new app that connects LGBTQIA+ community members with volunteer opportunities in Utah and beyond. As drought conditions persist across the region, Trout Unlimited is urging anglers to give stressed fish a break by reduci",
-    "href": "https://koto.org/news/newscast-6-26-26/"
   }
 ]

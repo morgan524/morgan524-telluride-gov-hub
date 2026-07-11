@@ -1,18 +1,22 @@
 {
-  "hash": "a02f055b2cbdcddf660f5bcb682b5d84c741a4c9",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering a cluster of new buildings in Backman Village — the kind of project that shapes what the west end of town looks like for decades. Also Tuesday, San Miguel County holds its sixth working session on the Land Use Code rewrite, this round focused on zoning, density, and regulatory incentives aimed at making workforce and affordable housing easier to build. Sprinkled through the weekend, the Hardrock Hundred rolls through and the North Mississippi Allstars hit the Sheridan Saturday night.",
+  "hash": "b35f5b1445fdfd9785dd5e8a6ba591c5b3926643",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in Backman Village — the kind of project that sets a tone for what this town becomes. Also Tuesday, the Board of County Commissioners takes up two Land Use Code amendments, one on Natural Medicine Businesses and one on Nonconforming Lots, both of which quietly shape what gets built and where across the county.",
   "notable": [
     {
+      "id": 5,
+      "stake": "Public hearings on major multi-building Carhenge redevelopment at 700 W Pacific Ave."
+    },
+    {
       "id": 4,
-      "stake": "Public hearings on major multi-building Carhenge redevelopment in Backman Village."
+      "stake": "HARC reviews alterations to Town Hall landmark and a floor-area addition at Parks office."
     },
     {
-      "id": 3,
-      "stake": "HARC reviews alterations and floor-area addition to two Town-owned landmark buildings."
+      "id": 7,
+      "stake": "BOCC considers Land Use Code changes on psychedelic businesses and nonconforming lots."
     },
     {
-      "id": 14,
-      "stake": "County's housing code rewrite advances zoning, density, and affordability incentive recommendations."
+      "id": 1,
+      "stake": "Open Space Commission site walk includes public comment opportunity at Valley Floor."
     }
   ]
 }

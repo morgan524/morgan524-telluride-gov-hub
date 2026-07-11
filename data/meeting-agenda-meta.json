@@ -5,10 +5,6 @@
     "passcode": "670854",
     "phone": "970-728-3844"
   },
-  "county|2026-06-10|Board of Review and Planning Commission Joint Work Session": {
-    "zoomUrl": "https://us06web.zoom.us/j/84720329875",
-    "phone": "970-728-3844"
-  },
   "smart|2026-06-11|SMART Board of Directors": {
     "zoomUrl": "https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"
   },
@@ -145,7 +141,11 @@
     "sv": 4
   },
   "county|2026-07-15|Board of County Commissioners Meeting": {
-    "sv": 4
+    "sv": 4,
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA",
+    "meetingId": "891 9923 0367",
+    "passcode": "036814",
+    "phone": "719-359-4580"
   },
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026": {
     "sv": 4
@@ -286,6 +286,15 @@
     "sv": 4
   },
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED": {
+    "sv": 4
+  },
+  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026": {
+    "sv": 4
+  },
+  "telluride|2026-07-26|Open Space Commission - Jul 26 2026": {
+    "sv": 4
+  },
+  "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026": {
     "sv": 4
   }
 }
