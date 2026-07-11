@@ -1,22 +1,22 @@
 {
-  "hash": "b35f5b1445fdfd9785dd5e8a6ba591c5b3926643",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in Backman Village — the kind of project that sets a tone for what this town becomes. Also Tuesday, the Board of County Commissioners takes up two Land Use Code amendments, one on Natural Medicine Businesses and one on Nonconforming Lots, both of which quietly shape what gets built and where across the county.",
+  "hash": "3f98eccdec7b8150ea2c16f33c914211bfa98800",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's BOCC meeting, where the county takes up two Land Use Code amendments — one on Natural Medicine Businesses and one on Nonconforming Lots — the kind of code changes that quietly set the rules for years to come. That same day, HARC holds public hearings on the Carhenge redevelopment at 700 W Pacific Ave, a large-scale new construction project across multiple buildings in Backman Village. Monday afternoon, the Open Space Commission heads to the Valley Floor for a weed pull with public comment open to anyone who shows up.",
   "notable": [
     {
       "id": 5,
-      "stake": "Public hearings on major multi-building Carhenge redevelopment at 700 W Pacific Ave."
+      "stake": "Public hearings on large-scale Carhenge redevelopment — multiple new buildings up for review."
     },
     {
       "id": 4,
-      "stake": "HARC reviews alterations to Town Hall landmark and a floor-area addition at Parks office."
+      "stake": "HARC reviews alterations to Town Hall landmark and a floor-area-increasing addition at Parks & Rec."
     },
     {
       "id": 7,
-      "stake": "BOCC considers Land Use Code changes on psychedelic businesses and nonconforming lots."
+      "stake": "BOCC votes on Land Use Code changes for natural medicine businesses and nonconforming lots."
     },
     {
       "id": 1,
-      "stake": "Open Space Commission site walk includes public comment opportunity at Valley Floor."
+      "stake": "Valley Floor site walk includes open public comment — residents can speak on record."
     }
   ]
 }
