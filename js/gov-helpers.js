@@ -487,13 +487,13 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -2738,28 +2738,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tom Gullikson Tennis Camp",
-    link: "https://koto.org/event/tom-gullikson-tennis-camp/2026-07-11/",
-    description: "Camp Pro-staff: Eric Fey, Tom Gullikson, Eric Alexon, and a Guest Professional Session One | July 11 & 12 | 9:00am – 12:00pm Session Two | July 18 & 19 | 9:00am – 12:00pm Tom is a decorated Tennis coach and playing professional. Come out and enjoy some of the best coaching in the country! Ranked #34 in singles and #4 in doubles US Open Mixed Doubles Champion 1984 Wimbledon Men's Doubles Runner- up 1983 US Open Men's Doubles Semi-Finalist 1982 Australian Open Men's Doubles Semi-Finalist 1983 Coach of Pete Sampras, Todd Martin, Andy Roddick, and Jennifer Capriati Former US Davis Cup Captain 1994 – 1999. Coached the US Davis Cup team to victory in 1995! Olympic Coach for the US team for the Atlanta Olympics when Andre Agassi won his Olympic gold medal! Please sign up on the TRC app or reach out to tellurideracquetclub@gmail.com",
-    pubDate: "2026-07-11T15:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/04/IMG_5733.png"
-  },
-  {
-    title: "Zumba with Gisela",
-    link: "https://koto.org/event/zumba-with-gisela/2026-07-11/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-07-11T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Meet the Winemaker Hike with Clay Mauritson",
     link: "https://koto.org/event/meet-the-winemaker-hike-with-clay-mauritson/",
     description: "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's spectacular landscape. Limited to just eight guests, this exclusive experience offers a rare opportunity to explore the mountains alongside a steward of one of California's most storied agricultural legacies. For more than 150 years, the Mauritson family has farmed the rugged terrain of Sonoma's Dry Creek Valley, cultivating a deep respect for the land that continues to shape Clay's approach to winemaking today. Together, guests will travel via gondola into Telluride before setting out on a guided hike to Bear Creek Falls, where conversations unfold against a backdrop of soaring peaks, alpine forests, and rushing waterfalls. Along the way, Clay will share stories of family, farming, and the enduring connection between place and craft. …",
@@ -3758,18 +3736,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53073815786547/huge/8387acbab2071461ef1077e1f731fcbe4010dbb0.jpg"
   },
   {
-    title: "Canceled: Jul 11, 2026: 2-Day Trail Stewardship Trip: Courthouse to South Stealey Jct",
-    link: "https://events.ourayridgwayevents.com/event/2-day-trail-stewardship-trip-courthouse-to-south-stealey-jct",
-    description: "Join Ouray Trail Group Crew Leader Kevin for a two-day stewardship trip from. Courthouse to South Stealey Junction . Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. Feel free to join us for one or both days. There's no cost, but please register. https://tinyurl.com/OTGsummer2026 View on site | Email this event",
-    pubDate: "2026-07-11T14:00:00.000Z",
-    endDate: "2026-07-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Courthouse Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932478605706/huge/594f0611d04b8cac902b2db3b64ffb53ae543a95.jpg"
-  },
-  {
     title: "Wildflower Walk with Mary Menz",
     link: "https://events.ourayridgwayevents.com/event/wildflower-walk-with-mary-menz",
     description: "Experience the scenic vistas of the San Juan Mountains in Ouray from an entirely new perspective during this wildflower walk. 🌼 Join landowner Charlie Parker for a scenic three-mile hike across his private property while local botany expert Mary Menz helps identify the colorful wildflowers and alpine plants found along the trail. This event is in partnership with Colorado West Land Trust. 🕘 July 11 | 8:30 AM-1 PM 📍 Meet at the Ouray KOA, 225 Co Rd 23, Ridgway, CO 81432 💲 Free REGISTER: https://lp.constantcontactpages.com/ev/reg/6gbhr9f View on site | Email this event",
@@ -3849,17 +3815,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53047134482853/huge/29f47320cc40fddf16a0212cb4f823f1953adc4e.jpg"
-  },
-  {
-    title: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/cacao-sound-ceremony-with-brian-dickinson-live-music-the-wright",
-    description: "Cacao & Sound Ceremony with Brian Dickinson: Live Music @ the Wright WHEN? Saturday, July 11 Doors at 1:30 pm • Event at 2:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Join Brian Dickinson for an immersive Cacao & Sound Ceremony designed to create space for reflection, relaxation, and connection through intentional sound and shared experience. Combining ceremonial cacao with meditative soundscapes, this experience invites participants to slow down, settle in, and engage with music and vibration in a deeply restorative setting. Through live sound, resonance, and mindful presence, guests are encouraged to explore stillness and renewal in the historic setting of the Wright Opera House. Please bring your own blanket, yoga mat, or anything else that helps create a comfortable space to rest during the sound experience. …",
-    pubDate: "2026-07-11T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/52931877221087/huge/c922252dd282798a2a91ee39c35282c81910f49e.jpg"
   },
   {
     title: "Deep Relaxation Sound Bath with Brian Dickinson: Live Music @ the Wright",

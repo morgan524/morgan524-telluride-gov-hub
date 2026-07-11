@@ -1,22 +1,22 @@
 {
-  "hash": "b978f280c6125e53003d5e3b1a651600e23c970a",
-  "lede": "The biggest thing on the docket this week is the July 15 HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes to Preliminary Large-Scale public hearing — multiple buildings, multiple lots, and a project big enough to reshape that end of town. That same day, the Board of County Commissioners takes up two Land Use Code amendments covering Natural Medicine Businesses and Nonconforming Lots, both the kind of code language that has real staying power. HARC also reviews alterations to Town Hall and the Parks & Rec building on the 15th, and the Open Space Commission hosts a public-comment-eligible weed pull on the Valley Floor Monday afternoon.",
+  "hash": "c600431ebdc58a9b74d2bea283a3fa4ef6ff3fb2",
+  "lede": "The biggest item this week is Tuesday's BOCC meeting, where the county takes up two Land Use Code amendments — one updating rules for Natural Medicine Businesses and one addressing Nonconforming Lots, the kind of quiet code language that shapes what gets built and where for years to come. HARC meets the same day with a full plate: accessibility renovations at Town Hall, a floor-area addition at the Parks & Rec office, and three preliminary large-scale public hearings on the Carhenge redevelopment at 700 W Pacific Ave. Monday afternoon, the Open Space Commission holds a public weed pull on the Valley Floor with public comment open to anyone who shows up.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Preliminary public hearings on large multi-building Carhenge redevelopment at 700 W Pacific."
+      "id": 7,
+      "stake": "Two Land Use Code amendments — Natural Medicine rules and Nonconforming Lots — up for action."
     },
     {
-      "id": 7,
-      "stake": "BOCC votes on Land Use Code changes for natural medicine businesses and nonconforming lots."
+      "id": 5,
+      "stake": "Three preliminary large-scale public hearings on Carhenge redevelopment, multiple new buildings."
     },
     {
       "id": 4,
-      "stake": "HARC reviews alterations and floor-area addition to two Town-owned landmark buildings."
+      "stake": "HARC votes on alterations to Town Hall landmark and a floor-area addition at Parks & Rec."
     },
     {
       "id": 1,
-      "stake": "Public comment accepted at Valley Floor site walk — open to anyone who shows up."
+      "stake": "Public comment open at Valley Floor site walk — residents can speak on record."
     }
   ]
 }
