@@ -487,7 +487,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -664,6 +664,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "County discusses forestry amendments",
+    source: "Telluride Times",
+    date: "July 11, 2026",
+    firstSeen: "2026-07-11",
+    newsTopic: "land-use",
+    copy: "San Miguel County held a joint work session July 9 to discuss Land Use Code amendments covering forestry practices — the next step after solar and mining updates. New rules would require applicants to submit impact reports and mitigation plans, with an eye toward supporting forest health and wildfire mitigation without creating rigid seasonal cutoff dates that don't match unpredictable conditions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_61bcf79d-d755-42ef-88db-af961dd0fe7b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/a3/7a3df327-18a2-47a9-b13d-896bdc790910/6a51a6bd8d731.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Art for chuckleheads",
     source: "Telluride Times",
