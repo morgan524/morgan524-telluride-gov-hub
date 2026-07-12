@@ -475,7 +475,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -484,7 +484,7 @@ const MANUAL_SUMMARIES = {
     "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
-    "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     "The July 21, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
@@ -655,6 +655,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "'Toggery University'",
+    source: "Telluride Times",
+    date: "July 12, 2026",
+    firstSeen: "2026-07-12",
+    newsTopic: "community",
+    copy: "Wendy Basham and Todd Tice have co-owned the Telluride Toggery since 2004, carrying on a store that's been part of town since 1972. In January 2025, they bought the building and committed its six upper-floor units to full-time locals — two tenants are Toggery employees whose rent the store helps subsidize. The next generation is already working the floor.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_d7ed4299-05dc-4093-8c48-e86956858f18.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/75/47518859-6ad8-4624-9a18-74b31fb5809b/6a52e927353dd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘This film could save lives’",
     source: "Telluride Times",
