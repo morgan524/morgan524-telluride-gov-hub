@@ -130,12 +130,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "county|2026-06-11|Planning Commission Meeting":
-    {"zoomUrl":"https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1","meetingId":"893 1709 0915","passcode":"670854","phone":"970-728-3844"},
-
-  "smart|2026-06-11|SMART Board of Directors":
-    {"zoomUrl":"https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"},
-
   "county|2026-06-18|Lodging Tax Board 06/18/26":
     {"meetingId":"860 8356 9395","passcode":"993341","phone":"970-728-3844","sv":2},
 
@@ -332,6 +326,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026":
+    {"sv":4},
+
+  "telluride|2026-08-11|Town Council - Aug 11 2026":
     {"sv":4}
 };
 
@@ -345,14 +342,8 @@ const MANUAL_SUMMARIES = {
   "ophir|2026-06-16|General Assembly Meeting":
     "Agenda not yet available",
 
-  "smart|2026-06-11|SMART Board of Directors":
-    "SMART's board meets to approve a lease with Telluride Gymnastics Academy at 137 Society Drive, plus the usual gondola update and quarterly reports.",
-
   "norwood|2026-06-15|Planning and Zoning Commission Meeting":
     "The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.",
-
-  "county|2026-06-11|Planning Commission Meeting":
-    "Agenda not available",
 
   "county|2026-06-17|Board of County Commissioners Meeting":
     "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
@@ -407,9 +398,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
     "Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.",
-
-  "telluride|2026-06-11|San Miguel Authority for Regional Transportation - Jun 11 2026":
-    "The June 11, 2026 SMART agenda hasn't been posted yet.",
 
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
@@ -487,7 +475,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -553,7 +541,10 @@ const MANUAL_SUMMARIES = {
     "The July 26, 2026 Open Space Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026":
-    "The Open Space Commission heads out to the Valley Floor for a hands-on weed pull — meeting at the Eider Creek Trailhead, south of the intersection of Eider Creek Lane and W. Hwy 145 Spur, at 4:00 PM. No deliberations, no votes. Public comment is on the agenda, so anyone who shows up can speak."
+    "The Open Space Commission heads out to the Valley Floor for a hands-on weed pull — meeting at the Eider Creek Trailhead, south of the intersection of Eider Creek Lane and W. Hwy 145 Spur, at 4:00 PM. No deliberations, no votes. Public comment is on the agenda, so anyone who shows up can speak.",
+
+  "telluride|2026-08-11|Town Council - Aug 11 2026":
+    "The August 11, 2026 Town Council agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1838,66 +1829,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Dry, windy conditions fuel explosive wildfire growth across western US",
-    source: "Telluride Times",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "public-safety",
-    copy: "Wildfire conditions across the West are severe this season — low humidity, warm temps, and gusty winds pushing fires fast across steep, hard-to-reach terrain. Utah declared an emergency, banned fireworks ahead of July 4th, and cut power in some areas to reduce risk. Nearly 3 million acres have burned nationally, already above the 10-year average.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ae2d65ba-16e2-566a-8769-e292b774e752.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d6/ad61ec39-0c6c-537e-ab49-0d4477843304/6a405e4511644.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Livable Telluride aims to help residents stay informed",
-    source: "Telluride Times",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "land-use",
-    copy: "Livable Telluride is a new website pulling together government meetings, agendas, development projects, and community resources for the Telluride region — covering the towns, county, and special districts in one place. The site includes a projects map, deep-dive explainers, and a message board, with AI handling most of the data gathering automatically.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_7b89e05e-4bf6-4d82-9a32-fbec9c2a5fde.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/84/4849e313-a51b-4162-88a4-8c26532fb1d8/6a3fd61eae1ca.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "NASA races to save Swift telescope from falling back to Earth with daring rescue mission",
-    source: "Telluride Times",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "public-safety",
-    copy: "NASA hired startup Katalyst Space Technologies to boost the aging Swift Observatory to a higher orbit before it falls back to Earth, with liftoff as early as Tuesday aboard a Pegasus rocket. A small autonomous spacecraft called Link will spend roughly three months catching and repositioning Swift from 224 to 373 miles up. Hubble faces a similar fate and could be next in line for this kind of robotic rescue.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_d7e4086c-85cd-5b1e-8db8-a9642945934e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/4b/c4b2c0d7-1838-5df1-8cfd-d7dd192e78e8/6a4111f77745a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "3 firefighters killed, 2 injured while tackling wildfires on the Colorado-Utah border, U.S. Wildland Fire Service says",
-    source: "Telluride Times",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "public-safety",
-    copy: "Three firefighters were killed and two injured fighting wildfires along the Colorado-Utah border, according to the U.S. Wildland Fire Service. This region knows fire season well — losing crews is a hard reminder of what's at stake out there.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6252f903-83d2-534d-a819-c1bbebca95df.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Sacred Sundays at Grace Reins",
-    source: "Telluride Times",
-    date: "June 28, 2026",
-    firstSeen: "2026-06-28",
-    newsTopic: "community",
-    copy: "Grace Reins, a Placerville facility cofounded by Erin Cain and Joe Crilly, works with eight rescued mustangs and one horse in therapeutic sessions for individuals, couples, groups, and students. A new bimonthly series called Sacred Sundays runs 3–5 p.m. through October 18, pairing conversations with local guests, time with the herd, and a sound bath.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_851f94d0-fc20-4708-bf13-cc7607c6a3a6.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/06/7060b43b-d069-4648-bee6-185456a0a1f8/6a3e256be27a3.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2055,31 +1986,9 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Stage 2 Fire Restrictions Implemented in Ridgway",
-    source: "Town of Ridgway",
-    date: "June 28, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Stage-2-Fire-Restrictions-press-release-2026-06-28.pdf",
-    img: ""
-  },
-  {
-    title: "Finding of the Town Manager Enacting Town Wide Fire Ban",
-    source: "Town of Ridgway",
-    date: "June 28, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Wide-Fire-Ban---Stage-2-Restrictions---June-28%2C-2026---signed.pdf",
-    img: ""
-  },
-  {
     title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 11, 2026",
+    date: "July 12, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2090,7 +1999,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 11, 2026",
+    date: "July 12, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2101,7 +2010,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 11, 2026",
+    date: "July 12, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2762,39 +2671,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Meet the Winemaker Hike with Clay Mauritson",
-    link: "https://koto.org/event/meet-the-winemaker-hike-with-clay-mauritson/",
-    description: "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's spectacular landscape. Limited to just eight guests, this exclusive experience offers a rare opportunity to explore the mountains alongside a steward of one of California's most storied agricultural legacies. For more than 150 years, the Mauritson family has farmed the rugged terrain of Sonoma's Dry Creek Valley, cultivating a deep respect for the land that continues to shape Clay's approach to winemaking today. Together, guests will travel via gondola into Telluride before setting out on a guided hike to Bear Creek Falls, where conversations unfold against a backdrop of soaring peaks, alpine forests, and rushing waterfalls. Along the way, Clay will share stories of family, farming, and the enduring connection between place and craft. …",
-    pubDate: "2026-07-11T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Bear Creek Trail, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Rockpile-bottle-at-Mauritson-Winery.-Photo-credit-King-Lawrence-1-scaled.jpg"
-  },
-  {
-    title: "Celebration of the Life of Christine Wahle Johnson",
-    link: "https://koto.org/event/celebration-of-the-life-of-christine-wahle-johnson/",
-    description: "There is a Life Celebration for Christine Wahle Johnson at the Telluride Science and Innovation Center (the old depot building) from 2:30-5:30pm on Saturday, July 11th. All are Welcome. The funeral service is 10am alpine chapel same day, all welcome at both events.",
-    pubDate: "2026-07-11T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
-    imageUrl: ""
-  },
-  {
-    title: "Flying Bear Pizzeria presents “Blood, Sweat & Gears” poetry night!",
-    link: "https://koto.org/event/flying-bear-pizzeria-presents-blood-sweat-gears-poetry-night/",
-    description: "Flying Bear Pizzeria at Naturita Bicycle Company presents \"Blood, Sweat & Gears\" poetry night! The 5th installment of this biannual literary shindig will feature poets Kierstin Bridger, Ellen Metrick, and Daiva Chesonis. $5 cover and $5 margaritas. Doors at 6pm, words at 7. Bring some of your own (3 minutes max) for the open mic afterward.",
-    pubDate: "2026-07-12T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://koto.org/event/movies-under-the-stars/2026-07-11/",
     description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
@@ -2804,17 +2680,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Conference Center Plaza Mountain Village",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
-    title: "Palm Arts Presents: AVID Dance: The Wolff & Other Works",
-    link: "https://koto.org/event/palm-arts-presents-avid-dance-the-wolff-other-works/",
-    description: "Artistic Ventures in Dance (AVID) invites you to join us for \"The Wolff & Other Works”, an unforgettable evening at the Michael D. Palm Theatre. In “The Wolff & Other Works” audiences will see: The Wolff is a darker, thought-provoking reimagining of the classic Little Red Riding Hood tale from the wolf’s perspective. Created by former Houston Ballet Principal Dancer and longtime AVID collaborator Melody Mennite, the work uses vivid kinesthetic storytelling to challenge conventional notions of heroes and villains, inviting audiences to confront fear, bias, and perception through a fresh interpretation of a familiar story. An AVID collaborator since the company's inaugural season, Mennite brings her distinctive artistic voice and creative vision to this compelling work. …",
-    pubDate: "2026-07-12T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Michael D. Palm Theater, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/Telluride-Tour-Poster1-1.png"
   },
   {
     title: "Tom Gullikson Tennis Camp",
@@ -3189,6 +3054,105 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-07-18/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-07-19T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "HAHA",
+    link: "https://koto.org/event/haha/2026-07-18/",
+    description: "HAHA is a community art event unlike you’ve ever experienced! HAHA is the immersive art installation event of the summer! Local, national and international artists take over the Ah Haa School for the Arts creating experiential realms and creative chaos! Adults can join in on Friday and Saturday nights, and Sunday’s Little Giggles is for kids and families. Get your tickets to create, play and explore! Participation supports Ah Haa’s ability to provide high-quality, affordable art experiences and tuition assistance for people of all ages, year-round. HAHA attendees can look forward to an out-of-this-world experience with completely hand drawn Trompe-l'œil masterpiece, kinetic sound sculptures, giant folded friends, a secret desert, pinata playplace, whimsical alien worlds, a hideaway for all, playful puzzles revealing color and sound, a Human Intelligence Powered FAUXTO Booth, a curated gift shop, creative bars, generative art making everywhere and so much more to discover!",
+    pubDate: "2026-07-19T01:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Ah Haa School for the Arts, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/haha-banner-small-26.webp"
+  },
+  {
+    title: "Shakespeare in the Park: \"Henry V\"",
+    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-18/",
+    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    pubDate: "2026-07-19T02:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Town Park",
+    imageUrl: ""
+  },
+  {
+    title: "Pickleball Open Play",
+    link: "https://koto.org/event/pickleball-open-play/2026-07-19/",
+    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
+    pubDate: "2026-07-19T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "HAHA Little Giggles",
+    link: "https://koto.org/event/haha-little-giggles/",
+    description: "Sunday morning provides access to the entire HAHA Experience for families, children and teens ages 3-17, who must be accompanied by a Little Giggles ticketed adult. You must purchase Little Giggles tickets for all children (ages 3-17, if under 3 kids do not need tickers) AND adults attending on Sunday. This event is sponsored by Alpine Bank. HAHA is the immersive art installation event of the summer! Local, national and international artists take over the Ah Haa School for the Arts creating experiential realms and creative chaos! Adults can join in on Friday and Saturday nights, and Sunday’s Little Giggles is for kids and families. Get your tickets to create, play and explore! Participation supports Ah Haa’s ability to provide high-quality, affordable art experiences and tuition assistance for people of all ages, year-round. …",
+    pubDate: "2026-07-19T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Ah Haa School for the Arts, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/HAHA-July-2023_Tellluride-CO_Credit_Alex-Ferrari-0001673.jpg"
+  },
+  {
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://koto.org/event/gentle-yoga-with-kristen-milord-2/2026-07-19/",
+    description: "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-07-19T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-19/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-07-19T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-07-19/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-07-19T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Shakespeare in the Park: \"Henry V\"",
+    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-19/",
+    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    pubDate: "2026-07-20T02:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Town Park",
+    imageUrl: ""
   }
 ];
 
@@ -3235,7 +3199,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-11"
+    lastSeen: "2026-07-12"
   },
   {
     id: "TEL-A-189",
@@ -3249,7 +3213,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-13",
-    lastSeen: "2026-07-11"
+    lastSeen: "2026-07-12"
   }
 ];
 
@@ -4122,7 +4086,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-07-15T23:30:00.000Z",
-    endDate: "2026-09-02",
+    endDate: "2026-09-09",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4134,7 +4098,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd! View on site | Email this event",
     pubDate: "2026-07-16T00:00:00.000Z",
-    endDate: "2026-09-03",
+    endDate: "2026-09-10",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4146,7 +4110,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/yoga-in-the-park-wednesday-evenings",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person. View on site | Email this event",
     pubDate: "2026-07-16T00:00:00.000Z",
-    endDate: "2026-09-03",
+    endDate: "2026-09-10",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5282,17 +5246,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48853/sway_wild_1800x900px_1.png"
   },
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
@@ -5942,17 +5895,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
   },
   {
-    title: "Hardrock Hundred Endurance Run",
-    link: "https://www.telluride.com/event/hardrock-100/",
-    description: "The Hardrock Hundred Mile Endurance Run is an ultramarathon of 102.5 miles in length, plus 33,197 feet of climb and …",
-    pubDate: "2026-07-10",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/47185/hr100-home8.800x533.webp"
-  },
-  {
     title: "Telluride Table",
     link: "https://www.telluride.com/event/telluride-table/",
     description: "Family, whether forged by blood or bond, is the center of community and it all starts at the table. With a meal, with …",
@@ -5963,28 +5905,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
-  },
-  {
-    title: "Mauritson Wine Dinner",
-    link: "https://www.telluride.com/event/mauritson-wine-dinner-madeline-hotel-residences/",
-    description: "Join sixth-generation Sonoma winemaker Clay Mauritson for an intimate evening at Madeline Hotel & Residences. For …",
-    pubDate: "2026-07-10",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62760/untitled_design_2.800x533.webp"
-  },
-  {
-    title: "Artistic Ventures In Dance Open Rehearsal",
-    link: "https://www.telluride.com/event/artistic-ventures-in-dance-open-rehearsal/",
-    description: "Step behind‑the‑scenes for a look at how Artistic Ventures in Dance 'AVID' brings ballet to life. During this sneak …",
-    pubDate: "2026-07-10",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63008/preview_posters_2200_x_1237_px.800x533.webp"
   },
   {
     title: "North Mississippi Allstars",

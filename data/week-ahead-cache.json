@@ -1,22 +1,22 @@
 {
-  "hash": "c600431ebdc58a9b74d2bea283a3fa4ef6ff3fb2",
-  "lede": "The biggest item this week is Tuesday's BOCC meeting, where the county takes up two Land Use Code amendments — one updating rules for Natural Medicine Businesses and one addressing Nonconforming Lots, the kind of quiet code language that shapes what gets built and where for years to come. HARC meets the same day with a full plate: accessibility renovations at Town Hall, a floor-area addition at the Parks & Rec office, and three preliminary large-scale public hearings on the Carhenge redevelopment at 700 W Pacific Ave. Monday afternoon, the Open Space Commission holds a public weed pull on the Valley Floor with public comment open to anyone who shows up.",
+  "hash": "0fdea13bb4ca3e5905b845295ad2e4f775a9758f",
+  "lede": "The biggest thing on the calendar this week is Tuesday's BOCC meeting, where county commissioners take up two Land Use Code amendments — one on Natural Medicine Businesses and one on Nonconforming Lots — the kind of code language that quietly determines what gets built and where for years to come. Wednesday brings three separate public hearings at HARC on the Carhenge redevelopment at 700 W Pacific Ave, a large-scale project covering multiple new buildings in Backman Village. HARC also reviews alterations to Town Hall and the Parks & Rec office on Tuesday, and Monday afternoon the Open Space Commission hosts a Valley Floor weed pull with public comment open to anyone who shows up.",
   "notable": [
     {
-      "id": 7,
-      "stake": "Two Land Use Code amendments — Natural Medicine rules and Nonconforming Lots — up for action."
-    },
-    {
       "id": 5,
-      "stake": "Three preliminary large-scale public hearings on Carhenge redevelopment, multiple new buildings."
+      "stake": "Public hearings on large-scale Carhenge redevelopment, multiple new buildings in Backman Village."
     },
     {
       "id": 4,
-      "stake": "HARC votes on alterations to Town Hall landmark and a floor-area addition at Parks & Rec."
+      "stake": "HARC reviews alterations and a floor-area addition to two Town-owned landmark buildings."
+    },
+    {
+      "id": 7,
+      "stake": "BOCC votes on Land Use Code amendments affecting Natural Medicine Businesses and Nonconforming Lots."
     },
     {
       "id": 1,
-      "stake": "Public comment open at Valley Floor site walk — residents can speak on record."
+      "stake": "Valley Floor site walk includes open public comment opportunity."
     }
   ]
 }

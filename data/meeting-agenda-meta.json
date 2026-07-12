@@ -1,13 +1,4 @@
 {
-  "county|2026-06-11|Planning Commission Meeting": {
-    "zoomUrl": "https://us06web.zoom.us/j/89317090915?pwd=s1SDCrhwsjqY7klJbBNGI7Oyc3Sg2U.1",
-    "meetingId": "893 1709 0915",
-    "passcode": "670854",
-    "phone": "970-728-3844"
-  },
-  "smart|2026-06-11|SMART Board of Directors": {
-    "zoomUrl": "https://us02web.zoom.us/j/82926286001?pwd=hhw2xIVjbwIb6pBVuRTO5mtaLM70GN.1"
-  },
   "county|2026-06-18|Lodging Tax Board 06/18/26": {
     "meetingId": "860 8356 9395",
     "passcode": "993341",
@@ -295,6 +286,9 @@
     "sv": 4
   },
   "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026": {
+    "sv": 4
+  },
+  "telluride|2026-08-11|Town Council - Aug 11 2026": {
     "sv": 4
   }
 }
