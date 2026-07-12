@@ -2,18 +2,21 @@ name: Weekly Email Preview
 
 # Renders the upcoming weekly email via scripts/weekly-email.js (from the live
 # gov-data.js + gov-helpers.js — real agenda links, curated events, topic
-# sections) and emails a review copy to info@ every SATURDAY — running after
-# Friday means agendas posted Friday are picked up. The run also saves the
-# paste-ready Mailchimp HTML (weekly-mailchimp.html) as an artifact.
+# sections) and emails a review copy to info@ every SUNDAY at 10:00 AM
+# Mountain (moved from Saturday 2026-07-12 per Morgan — the draft arrives for
+# review/edits the morning before the Monday 6:00 AM send, with anything
+# posted Friday/Saturday picked up). The run also saves the paste-ready
+# Mailchimp HTML (weekly-mailchimp.html) as an artifact.
 # Edit the "Week Ahead" lede before the send in the LEDE const of
 # scripts/weekly-email.js.
 on:
   schedule:
-    - cron: '0 14 * * 6'   # Saturday 14:00 UTC (~8am Mountain)
+    - cron: '0 16 * * 0'   # Sun 16:00 UTC = 10:00 AM MDT (summer)
+    - cron: '0 17 * * 0'   # Sun 17:00 UTC = 10:00 AM MST (winter)
   workflow_dispatch:
     inputs:
       week_start:
-        description: 'Week start date YYYY-MM-DD (override "next Monday" auto-detect). Use e.g. 2026-06-22 to re-render THIS week''s email after Saturday''s auto-send already advanced to next week.'
+        description: 'Week start date YYYY-MM-DD (override "next Monday" auto-detect). Use e.g. 2026-06-22 to re-render THIS week''s email after Sunday''s auto-send already advanced to next week.'
         required: false
         default: ''
 
@@ -22,7 +25,30 @@ permissions:
   issues: write   # ci-health-issue failure tracker
 
 jobs:
+  # DST guard: exactly one of the cron pair lands on 10:00 AM in Denver;
+  # skip the other. Manual dispatch always runs.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+    steps:
+      - name: Only proceed at 10:00 AM America/Denver
+        id: g
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          HOUR="$(TZ='America/Denver' date +%H)"
+          if [ "$HOUR" = "10" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Denver hour=$HOUR (not 10) — DST twin cron, skipping"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+
   preview:
+    needs: guard
+    if: needs.guard.outputs.go == 'true'
     runs-on: ubuntu-latest
     env:
       # Email send is skipped (just renders + uploads an artifact) until these
@@ -53,7 +79,7 @@ jobs:
           # Honour the workflow_dispatch input when one is provided, otherwise
           # use the cron-default "next Monday". This lets a manual re-render
           # target THIS week (the one that's actually about to send) after
-          # the Saturday auto-send has already advanced the default to the
+          # the Sunday auto-send has already advanced the default to the
           # following Monday.
           if [ -n "$WEEK_START_INPUT" ]; then
             WS="$WEEK_START_INPUT"
@@ -82,7 +108,7 @@ jobs:
 
       - name: Note when email isn't configured
         if: env.PREVIEW_SMTP_PASS == ''
-        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Saturday email."
+        run: echo "::warning::PREVIEW_SMTP_PASS secret not set — rendered weekly-preview.html (see artifact) but did not email. Add PREVIEW_SMTP_USER + PREVIEW_SMTP_PASS to enable the Sunday email."
 
       - name: Upload preview artifact
         if: always()

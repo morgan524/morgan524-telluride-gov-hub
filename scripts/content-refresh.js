@@ -831,6 +831,58 @@ function loadCachedMeetings(now, horizon) {
   return out;
 }
 
+// Ridgway + Rico. Neither fits loadCachedMeetings: Ridgway's CACHED_DATA
+// stubs carry agendaUrl:null (the packet PDF is resolved at render time from
+// RIDGWAY_AGENDA_MAP, keyed by "Month D, YYYY"), and Rico's regular meetings
+// are GENERATED (3rd Wednesday monthly — mirror of getRicoMeetings() in
+// gov-helpers.js) with PDFs resolved from RICO_AGENDA_MAP ("Month YYYY").
+// Mirror that resolution here so refreshSummaries() summarizes their agendas
+// like every other board's. Titles must match the get*Meetings() card titles
+// exactly — source|date|title is the MANUAL_SUMMARIES lookup key.
+// The maps are read from js/gov-helpers.js as last written, i.e. as of the
+// PREVIOUS run (Task 20/20d rebuilds them later in this run) — at most one
+// 6-hour cycle stale, fine because packets post days before the meeting.
+function loadRidgwayRicoMeetings(now, horizon) {
+  const out = [];
+  const helpersSrc = readJsFile(GOV_HELPERS_JS);
+  const dataSrc = readJsFile(GOV_DATA_JS);
+
+  // Ridgway: meeting stubs from RIDGWAY_CACHED_DATA + agenda PDF from the map.
+  const ridgwayMap = extractJsObject(helpersSrc, 'RIDGWAY_AGENDA_MAP') || {};
+  for (const m of (extractJsArray(dataSrc, 'RIDGWAY_CACHED_DATA') || [])) {
+    if (!m || !m.date) continue;
+    const mDate = new Date(m.date);
+    if (isNaN(mDate) || mDate < now || mDate > horizon) continue;
+    out.push({
+      source: 'ridgway',
+      date: mDate.toISOString().split('T')[0],
+      title: m.title || 'Meeting',
+      agendaUrl: m.agendaUrl || ridgwayMap[m.date] || ''
+    });
+  }
+
+  // Rico: 3rd-Wednesday regular meetings; agenda (fallback: full packet)
+  // from the map.
+  const ricoMap = extractJsObject(helpersSrc, 'RICO_AGENDA_MAP') || {};
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+                  'August', 'September', 'October', 'November', 'December'];
+  for (let i = 0; i <= 1; i++) {
+    const base = new Date(now.getFullYear(), now.getMonth() + i, 1);
+    const firstDow = base.getDay();                      // 0=Sun..6=Sat
+    const day = 1 + ((3 - firstDow + 7) % 7) + 14;       // 3rd Wednesday
+    const mDate = new Date(base.getFullYear(), base.getMonth(), day);
+    if (mDate < now || mDate > horizon) continue;
+    const docs = ricoMap[MONTHS[base.getMonth()] + ' ' + base.getFullYear()] || {};
+    out.push({
+      source: 'rico',
+      date: mDate.toISOString().split('T')[0],
+      title: 'Rico Board of Trustees Regular Meeting',
+      agendaUrl: docs.agenda || docs.packet || ''
+    });
+  }
+  return out;
+}
+
 async function fetchUpcomingMeetings() {
   const meetings = [];
   const now = new Date();
@@ -843,6 +895,13 @@ async function fetchUpcomingMeetings() {
     meetings.push(...loadCachedMeetings(now, horizon));
   } catch (e) {
     console.warn('  gov-data.js cached-meetings load error:', e.message);
+  }
+
+  // Ridgway + Rico — agenda PDFs resolved from the bot-maintained maps.
+  try {
+    meetings.push(...loadRidgwayRicoMeetings(now, horizon));
+  } catch (e) {
+    console.warn('  Ridgway/Rico meetings load error:', e.message);
   }
 
   // Town of Telluride — CivicWeb meetings API.  See fetchTownTellurideMeetings()

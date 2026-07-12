@@ -8,6 +8,9 @@ name: Digest Refresh
 on:
   schedule:
     - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain)
+    - cron: '45 15 * * 0'  # Sunday 15:45 UTC (8:45/9:45am MT) — freshen the
+                           # Review Desk draft right before the 10:00 AM Sunday
+                           # review email (weekly-preview.yml)
   workflow_dispatch:
 
 permissions:
