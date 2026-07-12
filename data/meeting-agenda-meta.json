@@ -290,5 +290,15 @@
   },
   "telluride|2026-08-11|Town Council - Aug 11 2026": {
     "sv": 4
+  },
+  "ridgway|2026-07-15|Ridgway Planning Commission Meeting": {
+    "zoomUrl": "https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1",
+    "meetingId": "839 2651 7027",
+    "passcode": "519777",
+    "phone": "970.626.5308",
+    "sv": 4
+  },
+  "rico|2026-07-15|Rico Board of Trustees Regular Meeting": {
+    "sv": 4
   }
 }

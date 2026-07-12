@@ -329,6 +329,12 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-08-11|Town Council - Aug 11 2026":
+    {"sv":4},
+
+  "ridgway|2026-07-15|Ridgway Planning Commission Meeting":
+    {"zoomUrl":"https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1","meetingId":"839 2651 7027","passcode":"519777","phone":"970.626.5308","sv":4},
+
+  "rico|2026-07-15|Rico Board of Trustees Regular Meeting":
     {"sv":4}
 };
 
@@ -544,7 +550,13 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out to the Valley Floor for a hands-on weed pull — meeting at the Eider Creek Trailhead, south of the intersection of Eider Creek Lane and W. Hwy 145 Spur, at 4:00 PM. No deliberations, no votes. Public comment is on the agenda, so anyone who shows up can speak.",
 
   "telluride|2026-08-11|Town Council - Aug 11 2026":
-    "The August 11, 2026 Town Council agenda hasn't been posted yet."
+    "The August 11, 2026 Town Council agenda hasn't been posted yet.",
+
+  "ridgway|2026-07-15|Ridgway Planning Commission Meeting":
+    "The July 15th Ridgway Planning Commission meeting has one substantive item: a public hearing on a proposed resubdivision at 845 & 847 Hyde Street. The applicant, Zack Young, is asking to split an existing lot — currently holding a duplex, a greenhouse, storage outbuildings, and a vacant parcel — into two separate lots. Lot 2 (8,059 sq. ft.) would retain the existing duplex; Lot 1 (6,104 sq. ft.) would be vacant and available for future development. No new construction is proposed now. The property is zoned Historic Residential, and both lots meet minimum dimensional standards, though a staircase encroaching on a side setback must be removed before the plat is recorded. Outdoor storage on Lot 1 also needs to come into compliance. The Planning Commission's role here is to make a recommendation — final approval goes to Town Council. Routine minutes and staff updates round out the agenda.",
+
+  "rico|2026-07-15|Rico Board of Trustees Regular Meeting":
+    "A busy night in Rico. The Board takes up its Q2 financials, a lease with the Rico Historical Society for space at 15 S. Glasgow Avenue, and a construction contract with Lewis Excavation to replace the water service line beneath the Dolores River between Piedmont and North River Streets — that last one being the kind of infrastructure work small mountain towns have to keep doing quietly just to stay functional. Then comes a round of housekeeping on the books: six ordinances on first reading, all repeals. Out go an old misdemeanor penalty ordinance (no. 131), rules on municipal equipment loans to private individuals (no. 271), a standalone mayoral qualifications ordinance (no. 278), the Town Manager duties ordinance (no. 1999-2), dog licensing fees (no. 2001-5), and authorization for the North Rico non-profit corporation (no. 2006-1). Discussion rounds out the evening: a voluntary cleanup update, the November 2026 election, and — notably — whether to change how often the Board meets and when it starts."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
