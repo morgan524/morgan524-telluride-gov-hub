@@ -421,7 +421,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 Historical Commission agenda hasn't been posted yet.",
+    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -481,7 +481,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27 Open Space Commission meeting agenda hasn't been posted yet.",
+    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -667,6 +667,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride Torpedoes gear up for state championships",
+    source: "Telluride Times",
+    date: "July 12, 2026",
+    firstSeen: "2026-07-12",
+    newsTopic: "community",
+    copy: "The Telluride Torpedoes swim team, ages 7–17, is heading into the final stretch of its season with eight swimmers already qualified for the Colorado State Championships in Alamosa July 31–Aug. 2. Head coach Kelsea Wright, now in her fourth season, emphasizes personal improvement and team support over standings. The program has previously placed as high as third in state.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_4df1dca4-26a7-46ea-8553-18dbf7eda4a7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f2/2f28a551-87e9-4af4-8ccb-d39bd38b0f5b/6a52eb100ffd6.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Disaster planning for pets",
+    source: "Telluride Times",
+    date: "July 12, 2026",
+    firstSeen: "2026-07-12",
+    newsTopic: "land-use",
+    copy: "With wildfire season active in the region, it's worth having a plan for pets before evacuation becomes urgent. That means identifying pet-friendly hotels or boarding options ahead of time, assembling a go-kit, and making sure animals are microchipped and collared with current ID.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_93a9a5dd-e1b8-489f-8f7a-1bf67a617fd5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/07/d07ad9cd-73ee-403b-981d-2f854d307c3c/6a4e90f1a93ef.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "'Toggery University'",
     source: "Telluride Times",
@@ -2683,17 +2707,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-12/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-07-12T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-07-12/",
