@@ -1,27 +1,5 @@
 [
   {
-    "title": "Telluride Table: Trevor Hall",
-    "link": "https://sheridanoperahouse.com/events/telluride-table-trevor-hall/",
-    "description": "Trevor Hall performs at the historic Sheridan Opera House as part of the Telluride Table series. It is a concert held at one of Telluride's most beloved and intimate performance venues.",
-    "pubDate": "2026-07-10",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/cropped-Telluride-Table-Logo-for-web.webp"
-  },
-  {
-    "title": "North Mississippi Allstars Live in Concert",
-    "link": "https://sheridanoperahouse.com/events/north-mississippi-allstars-live-in-concert/",
-    "description": "The North Mississippi Allstars bring their blues-rooted, Southern rock sound to the historic Sheridan Opera House for a live concert on July 11, 2026. The band is known for drawing on Deep South musical traditions, blending raw electric blues with groove-driven energy.",
-    "pubDate": "2026-07-11",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/000024970002-2.jpg"
-  },
-  {
     "title": "Randy Houser Live in Concert Presented by The Alpine Club, A benefit for the Telluride Foundation’s Good Neighbor Fund",
     "link": "https://sheridanoperahouse.com/events/randy-houser-live-in-concert-presented-by-the-alpine-club-and-a-benefit-for-the-telluride-foundations-good-neighbor-fund/",
     "description": "Randy Houser performs live in concert at the historic Sheridan Opera House in Telluride, presented by The Alpine Club. The event benefits the Telluride Foundation's Good Neighbor Fund, a local initiative supporting community members in need.",
@@ -31,5 +9,27 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-1.png"
+  },
+  {
+    "title": "An Evening with Josh Abbott",
+    "link": "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
+    "description": "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.",
+    "pubDate": "2026-07-22",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg"
+  },
+  {
+    "title": "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
+    "link": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
+    "description": "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
+    "pubDate": "2026-07-23",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
   }
 ]

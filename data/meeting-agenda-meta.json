@@ -179,7 +179,11 @@
   },
   "telluride|2026-07-21|Town Council - Jul 21 2026": {
     "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040"
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/hL-sJDF8Q8ej2lG69VjXKg",
+    "meetingId": "834 6167 7173",
+    "passcode": "555594.",
+    "phone": "719) 359-4580"
   },
   "county|2026-07-22|Board of County Commissioners Special Meeting": {
     "sv": 4

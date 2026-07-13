@@ -1,22 +1,18 @@
 {
-  "hash": "bb70db91434979e90a5e81400203c2be8be84e26",
-  "lede": "Wednesday's HARC meeting is the one to watch this week: the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in Backman Village — the kind of project that will reshape a corner of town for a long time. The same day, the Board of County Commissioners takes up two Land Use Code amendments, including new rules for natural medicine businesses and nonconforming lots, both of which have real consequences for what gets built and where across the county. San Miguel County also holds its sixth housing code working session Thursday, pushing toward final recommendations on zoning, density, and workforce housing incentives.",
+  "hash": "d3d3b8190233f2301da5717f0126c2359aebc62b",
+  "lede": "The biggest thing on the civic calendar this week is Wednesday's BOCC meeting, where San Miguel County takes up two Land Use Code amendments — one governing natural medicine businesses and one reshaping rules around nonconforming lots, the kind of quiet code language that has real consequences for what gets built where. That same day, HARC holds public hearings on the large-scale Carhenge redevelopment at 700 W Pacific Ave, and the county kicks off its sixth working session on the Land Use Code rewrite focused on workforce and affordable housing zoning.",
   "notable": [
     {
-      "id": 3,
-      "stake": "HARC votes on alterations to two Town-owned landmark civic buildings."
-    },
-    {
       "id": 4,
-      "stake": "Carhenge redevelopment: three public hearings on large-scale new construction in Backman Village."
+      "stake": "Public hearings on major multi-building Carhenge redevelopment in Accommodations 2 zone."
     },
     {
       "id": 6,
-      "stake": "BOCC considers Land Use Code amendments on natural medicine businesses and nonconforming lots."
+      "stake": "County votes on Land Use Code amendments for natural medicine businesses and nonconforming lots."
     },
     {
       "id": 9,
-      "stake": "Public hearing on lot resubdivision at 845–847 Hyde Street in Ridgway."
+      "stake": "Public hearing on lot resubdivision at 845 & 847 Hyde Street in Ridgway."
     },
     {
       "id": 10,
@@ -24,7 +20,7 @@
     },
     {
       "id": 14,
-      "stake": "County housing code rewrite moves toward final redline recommendations on density and workforce housing."
+      "stake": "County working session shapes final affordable housing zoning recommendations."
     }
   ]
 }
