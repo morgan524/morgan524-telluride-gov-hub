@@ -52,11 +52,11 @@ jobs:
           rm -f digest/weekend.lock.json digest/weekend.html
 
           WK_SUBJ_LOCK=""
-          if [ "$(lock_ws digest/week.lock.json)" = "$WK" ]; then
+          if [ "$(lock_ws digest/weekly.lock.json)" = "$WK" ]; then
             echo "week digest LOCKED for $WK — preserving the approved version"
-            WK_SUBJ_LOCK="$(lock_subj digest/week.lock.json)"
+            WK_SUBJ_LOCK="$(lock_subj digest/weekly.lock.json)"
           else
-            rm -f digest/week.lock.json
+            rm -f digest/weekly.lock.json
             node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
           fi
 
