@@ -194,16 +194,16 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592"},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8019"},
 
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8018"},
 
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
     {"sv":4},
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580"},
+    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580","agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1914"},
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     {"sv":4},
@@ -221,19 +221,19 @@ const MEETING_AGENDA_META = {
     {"sv":2},
 
   "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
+    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8143"},
 
   "fire|2026-07-21|Board of Directors Meeting":
     {"sv":2},
 
   "telluride|2026-07-21|Town Council - Jul 21 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040"},
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
     {"sv":4},
 
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100"},
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
     {"sv":4},
@@ -266,76 +266,76 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288"},
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8080"},
 
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"},
 
   "county|2026-07-12|San Miguel Basin Fair Board":
     {"sv":4},
 
   "county|2026-07-14|San Miguel Basin Fair Board":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1049/files/agenda/1892"},
 
   "county|2026-07-15|San Miguel Basin Fair Board":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1050/files/agenda/1893"},
 
   "county|2026-07-16|San Miguel Basin Fair Board":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1046/files/agenda/1894"},
 
   "county|2026-07-17|San Miguel Basin Fair Board":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1047/files/agenda/1895"},
 
   "county|2026-07-18|San Miguel Basin Fair Board":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1045/files/agenda/1896"},
 
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130"},
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117"},
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065"},
 
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162"},
 
   "county|2026-08-05|Board of County Commissioners Meeting":
     {"sv":4},
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"},
 
   "county|2026-07-16|Housing Code Update SSR":
-    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4},
+    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1051/files/agenda/1898"},
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050"},
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8099"},
 
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057"},
 
   "telluride|2026-07-26|Open Space Commission - Jul 26 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8292"},
 
   "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026":
     {"sv":4},
 
   "telluride|2026-08-11|Town Council - Aug 11 2026":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041"},
 
   "ridgway|2026-07-15|Ridgway Planning Commission Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1","meetingId":"839 2651 7027","passcode":"519777","phone":"970.626.5308","sv":4},
+    {"zoomUrl":"https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1","meetingId":"839 2651 7027","passcode":"519777","phone":"970.626.5308","sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf"},
 
   "rico|2026-07-15|Rico Board of Trustees Regular Meeting":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202026%20Agenda.pdf"},
 
   "county|2026-08-12|Board of County Commissioners Work Session":
     {"sv":4}
@@ -481,7 +481,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
-    "The July 27, 2026 Open Space Commission Meeting agenda hasn't been posted yet.",
+    "The July 27 Open Space Commission Meeting agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
@@ -559,7 +559,7 @@ const MANUAL_SUMMARIES = {
     "A busy night in Rico. The Board takes up its Q2 financials, a lease with the Rico Historical Society for space at 15 S. Glasgow Avenue, and a construction contract with Lewis Excavation to replace the water service line beneath the Dolores River between Piedmont and North River Streets — that last one being the kind of infrastructure work small mountain towns have to keep doing quietly just to stay functional. Then comes a round of housekeeping on the books: six ordinances on first reading, all repeals. Out go an old misdemeanor penalty ordinance (no. 131), rules on municipal equipment loans to private individuals (no. 271), a standalone mayoral qualifications ordinance (no. 278), the Town Manager duties ordinance (no. 1999-2), dog licensing fees (no. 2001-5), and authorization for the North Rico non-profit corporation (no. 2006-1). Discussion rounds out the evening: a voluntary cleanup update, the November 2026 election, and — notably — whether to change how often the Board meets and when it starts.",
 
   "county|2026-08-12|Board of County Commissioners Work Session":
-    "The August 12, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet."
+    "The August 12 Board of County Commissioners Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -670,6 +670,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Crash of an aircraft helping to fight a Colorado wildfire leaves the pilot dead",
+    source: "Telluride Times",
+    date: "July 13, 2026",
+    firstSeen: "2026-07-13",
+    newsTopic: "public-safety",
+    copy: "A firefighting aircraft went down in Silver Jack Reservoir in Gunnison County on Sunday, killing the pilot, who was the only person on board. The pilot was supporting efforts against the Gold Mountain Fire, now at roughly 57 square miles and 13% contained. It's been a hard stretch for firefighters across the West.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_48ec6963-f0c7-5515-ab29-347e72870180.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6e/c6e2ca09-8995-540a-b3b6-308b9538ed79/6a54d4692463d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Heroes with a half shell",
     source: "Telluride Times",
@@ -4055,6 +4067,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52932502125812/huge/c4a0083e2a38c8bce646c53ac7943f10714eb802.jpg"
   },
   {
+    title: "Starlit Trails - Ridgway State Park Summer Program Series",
+    link: "https://events.ourayridgwayevents.com/event/starlit-trails-ridgway-state-park-summer-program-series-1601",
+    description: "Join us for a twilight adventure where the path meets the celestial. We’ll begin with a guided hike through the scenic landscape of Ridgway State Park before turning our focus toward the heavens as the stars emerge over the San Juan Mountains. View on site | Email this event",
+    pubDate: "2026-07-18T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway State Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53410710772126/huge/b4bba40ab795ca6deaf2854fd3b119b0374f0c5a.jpg"
+  },
+  {
     title: "Steps Tavern Presents Karaoke Night",
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
     description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
@@ -4077,6 +4100,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "LIttle Cimarron Trailhead",
     imageUrl: "https://localist-images.azureedge.net/photos/52793629408632/huge/349f8bcfb97523f1bdde0b0ccea440877d506752.jpg"
+  },
+  {
+    title: "Archery at the Park - Ridgway State Park Summer Program Series",
+    link: "https://events.ourayridgwayevents.com/event/archery-at-the-park-ridgway-state-park-summer-program-series",
+    description: "This program is an engaging, hands-on introduction to a timeless outdoor sport. Led by CPW staff and certified volunteer instructors, this free clinic provides attendees with the unique opportunity to learn archery skills. We will emphasize range safety, proper form, and the mental focus required to hit the bullseye, all within the natural setting of the park. View on site | Email this event",
+    pubDate: "2026-07-18T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway State Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53410738987655/huge/c5d289672d54d0fae8645320f97d31581a0875b6.jpg"
   },
   {
     title: "Saturday Yoga",
@@ -5410,6 +5444,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-08-12T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   }
 ];
 

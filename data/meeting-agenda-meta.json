@@ -119,14 +119,16 @@
     "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
     "meetingId": "876 4109 1694",
     "passcode": "695618.",
-    "phone": "301-715-8592"
+    "phone": "301-715-8592",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8019"
   },
   "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026": {
     "sv": 4,
     "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
     "meetingId": "812 9136 3866",
     "passcode": "440860.",
-    "phone": "301-715-8592"
+    "phone": "301-715-8592",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8018"
   },
   "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026": {
     "sv": 4
@@ -136,7 +138,8 @@
     "zoomUrl": "https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA",
     "meetingId": "891 9923 0367",
     "passcode": "036814",
-    "phone": "719-359-4580"
+    "phone": "719-359-4580",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1914"
   },
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026": {
     "sv": 4
@@ -168,19 +171,22 @@
     "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
     "meetingId": "861 6987 1704",
     "passcode": "281002.",
-    "phone": "346-248-7799"
+    "phone": "346-248-7799",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8143"
   },
   "fire|2026-07-21|Board of Directors Meeting": {
     "sv": 2
   },
   "telluride|2026-07-21|Town Council - Jul 21 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040"
   },
   "county|2026-07-22|Board of County Commissioners Special Meeting": {
     "sv": 4
   },
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100"
   },
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026": {
     "sv": 4
@@ -223,83 +229,104 @@
     "sv": 4
   },
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288"
   },
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8080"
   },
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
   },
   "county|2026-07-12|San Miguel Basin Fair Board": {
     "sv": 4
   },
   "county|2026-07-14|San Miguel Basin Fair Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1049/files/agenda/1892"
   },
   "county|2026-07-15|San Miguel Basin Fair Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1050/files/agenda/1893"
   },
   "county|2026-07-16|San Miguel Basin Fair Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1046/files/agenda/1894"
   },
   "county|2026-07-17|San Miguel Basin Fair Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1047/files/agenda/1895"
   },
   "county|2026-07-18|San Miguel Basin Fair Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1045/files/agenda/1896"
   },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130"
   },
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117"
   },
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065"
   },
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162"
   },
   "county|2026-08-05|Board of County Commissioners Meeting": {
     "sv": 4
   },
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"
   },
   "county|2026-07-16|Housing Code Update SSR": {
     "zoomUrl": "https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1",
     "meetingId": "845 0294 6677",
     "passcode": "519464",
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1051/files/agenda/1898"
   },
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050"
   },
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8099"
   },
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057"
   },
   "telluride|2026-07-26|Open Space Commission - Jul 26 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8292"
   },
   "telluride|2026-07-13|Open Space Commission Site Walk - Jul 13 2026": {
     "sv": 4
   },
   "telluride|2026-08-11|Town Council - Aug 11 2026": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041"
   },
   "ridgway|2026-07-15|Ridgway Planning Commission Meeting": {
     "zoomUrl": "https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1",
     "meetingId": "839 2651 7027",
     "passcode": "519777",
     "phone": "970.626.5308",
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf"
   },
   "rico|2026-07-15|Rico Board of Trustees Regular Meeting": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202026%20Agenda.pdf"
   },
   "county|2026-08-12|Board of County Commissioners Work Session": {
     "sv": 4
