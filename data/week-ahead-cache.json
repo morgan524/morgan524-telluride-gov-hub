@@ -1,30 +1,30 @@
 {
-  "hash": "322751257cbc86595dbbd4732ace8ad58105e78e",
-  "lede": "The biggest thing on the calendar this week is Tuesday's BOCC meeting, where two Land Use Code amendments go before the commissioners — one updating rules for natural medicine businesses, the other reshaping what's possible on nonconforming lots, the kind of quiet code language that has real consequences for property owners across the county. That same day, HARC takes up the Carhenge redevelopment at 700 W Pacific Ave, three preliminary large-scale public hearings covering multiple new buildings in an Accommodations 2 zone. Rico's Board of Trustees also meets Tuesday to act on a water line replacement contract and a historical society lease.",
+  "hash": "e54d91aa150630da49a30c4e17a4d41e142043eb",
+  "lede": "Wednesday's HARC meeting is the one to watch this week: the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate Preliminary Large-Scale public hearings covering multiple new buildings in the Accommodations 2 zone — the kind of project that will shape that corner of town for a long time. The same day, the Board of County Commissioners takes up two Land Use Code amendments, including new rules for Natural Medicine Businesses and Nonconforming Lots. San Miguel County also holds its sixth working session on the housing code rewrite Thursday, pushing toward final recommendations on zoning, density, and workforce housing incentives.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Public hearings on major multi-building new construction at Carhenge site."
-    },
-    {
       "id": 4,
-      "stake": "HARC votes on alterations to two Town-owned landmark and civic buildings."
+      "stake": "Multi-building Carhenge redevelopment gets three Preliminary Large-Scale public hearings."
     },
     {
-      "id": 7,
-      "stake": "BOCC considers two Land Use Code amendments affecting natural medicine rules and nonconforming lots."
+      "id": 3,
+      "stake": "HARC reviews alterations to two Town-owned landmark buildings, including floor area increase."
+    },
+    {
+      "id": 6,
+      "stake": "BOCC considers Land Use Code amendments on Natural Medicine Businesses and Nonconforming Lots."
+    },
+    {
+      "id": 9,
+      "stake": "Public hearing on lot split at 845-847 Hyde Street could set subdivision precedent in Ridgway."
     },
     {
       "id": 10,
-      "stake": "Public hearing on lot resubdivision at 845 & 847 Hyde Street in Ridgway."
+      "stake": "Rico votes on water line replacement contract and Historical Society lease agreement."
     },
     {
-      "id": 11,
-      "stake": "Rico board votes on water line replacement contract and historical society lease."
-    },
-    {
-      "id": 13,
-      "stake": "Public hearing on special event liquor permit for Telluride Science Town Talk."
+      "id": 14,
+      "stake": "County housing code rewrite session shapes final zoning and density recommendations."
     }
   ]
 }

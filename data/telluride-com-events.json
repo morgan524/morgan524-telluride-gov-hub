@@ -372,17 +372,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
   },
   {
-    "title": "North Mississippi Allstars",
-    "link": "https://www.telluride.com/event/north-mississippi-allstars/",
-    "description": "The Sheridan Arts Foundation presents North Mississippi Allstars Live in Concert at the historic Sheridan Opera House …",
-    "pubDate": "2026-07-11",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/61784/clientfile_609712.800x533.webp"
-  },
-  {
     "title": "Tom Gullikson Tennis Clinic",
     "link": "https://www.telluride.com/event/tom-gullikson-tennis-clinic/",
     "description": "Join the Gully Tennis Clinic @ TRC! Tom is a decorated Tennis coach and playing professional. Come out and enjoy some …",
@@ -393,28 +382,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
-  },
-  {
-    "title": "Meet the Winemaker Hike With Clay Mauritson",
-    "link": "https://www.telluride.com/event/meet-the-winemaker-hike-with-clay-mauritson/",
-    "description": "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's …",
-    "pubDate": "2026-07-11",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62762/clay_mauritson__photo_credit_king_lawrence.800x533.webp"
-  },
-  {
-    "title": "AVID Dance: The Wolff & Other Works",
-    "link": "https://www.telluride.com/event/palm-arts-presents-avid-dance-the-wolff-other-works/",
-    "description": "Artistic Ventures in Dance (AVID) invites you to join us for \"The Wolff & Other Works”, an unforgettable evening …",
-    "pubDate": "2026-07-11",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62925/telluride_tour_poster_1.800x533.webp"
   },
   {
     "title": "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
@@ -857,5 +824,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
+  },
+  {
+    "title": "The Meditations",
+    "link": "https://www.telluride.com/event/the-meditations/",
+    "description": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
+    "pubDate": "2026-09-11",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp"
   }
 ]

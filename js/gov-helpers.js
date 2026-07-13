@@ -411,9 +411,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-06-18|Lodging Tax Board 06/18/26":
     "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
 
-  "telluride|2026-06-12|Judicial Subcommittee - Jun 12 2026":
-    "The June 12, 2026 Judicial Subcommittee agenda hasn't been posted yet.",
-
   "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
     "The Open Space Commission will walk the Tilman-Beam Corral site at Lot B in the Pearl Subdivision to review corral and fence conditions. They'll meet at the Shell Station on Highway 145 at 4 PM before heading to the property.",
 
@@ -421,7 +418,7 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
-    "The July 14, 2026 San Miguel County Historical Commission agenda hasn't been posted yet.",
+    "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
     "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
@@ -1781,102 +1778,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "3 firefighters killed in Western wildfire were trying to shield themselves from flames",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "public-safety",
-    copy: "Three wildland firefighters — Emily Barker, Nick Hutcherson, and Sydney Watson — were killed near Grand Junction, Colorado, after attempting to deploy emergency shelters when they were overrun by fire. They were part of a Helitack crew working the Snyder Fire, which has burned roughly 44 square miles. The national wildfire preparedness level has been raised to 4 out of 5, with more than 8,000 firefighters deployed across the West.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_83a25af7-14a0-5408-b1e7-3e785a8bfc40.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/3b/43bb6b00-4dca-58d4-9b6a-95248b39f722/6a42a17b96f82.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Arkansas will move forward with a ban on using SNAP for candy and soda despite recent court ruling",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "arts-culture",
-    copy: "Arkansas is moving ahead with its ban on using SNAP benefits to buy candy and soda, even after a federal judge vacated similar waivers in five other states on procedural grounds. Grocers will carry the enforcement burden, with the state providing a banned-items list and a consumer app to help shoppers navigate the changes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_6dd706fc-b56e-5909-8648-20c00aa17a90.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/82/68294f25-d97e-5bd1-baac-0054d024a087/6a42f39b271b6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Echoes of deadly Arizona wildfire with 3 firefighters killed in Colorado-Utah blaze",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "public-safety",
-    copy: "Three firefighters on a Helitack crew were killed and two injured Saturday in a wildfire west of Grand Junction that has burned 44 square miles. They deployed fire shelters — last-resort heat-resistant tents — when flames overtook them, mirroring the 2013 Yarnell Hill tragedy in Arizona. Investigations like these often take months and rarely produce clear answers.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_577a5477-85e4-5731-913a-e6725143ec4d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/2e/22e691da-f0b3-5be8-a368-74d042eeda40/6a42df867f724.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Colorado court rejects November ballot initiatives aimed at redrawing congressional districts",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "government",
-    copy: "Colorado's Supreme Court threw out ballot initiatives that would have allowed mid-decade congressional redistricting, ruling both Democratic- and Republican-backed versions violated the state's multi-subject rule. Colorado's delegation currently sits at an even 4-4 split under maps drawn by the independent redistricting commission after 2020. That commission — created by voters in 2018 — remains intact.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_0d1a8d00-3442-582f-8656-1684af6654d7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/e1/ae1348ac-011e-5012-8696-6d5e86ee7336/6a42ec993cccc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Uncontained wildfires continue to ravage the Western Slope",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-30",
-    newsTopic: "public-safety",
-    copy: "Three firefighters from the Rifle Helitac crew were killed and two injured in a burnover on the Knowles Fire near Grand Junction, where merged fires have burned nearly 30,000 acres with zero containment. The Gold Mountain Fire north of Ouray topped 4,000 acres, prompting a disaster declaration and closing Highway 550; Norwood and Telluride fire crews are on scene. San Miguel County is under a smoke advisory and Stage 2 fire restrictions, though no active fires were burning there as of Monday.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_77b644e3-1bc0-4799-b0ca-1289b8078e53.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7b/e7b914ee-2087-4175-99f1-951c90a56f46/6a42d1776ce10.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Three firefighters who died in wildfires on Utah-Colorado border were from Alabama, Arizona and Michigan, officials say",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "public-safety",
-    copy: "Three firefighters killed in wildfires along the Utah-Colorado border have been identified as coming from Alabama, Arizona, and Michigan. Details beyond their home states have not yet been released.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e4e7bb70-4744-5bcb-b258-81fe5227d43b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "AP Decision Notes: What to expect in Colorado's state primary",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "government",
-    copy: "Colorado's June primary features a Democratic governor's race between Sen. Michael Bennet and AG Phil Weiser, with Bennet vowing to name his own Senate replacement — someone under 50 — if elected. On the Republican side, Victor Marx leads in fundraising. Sen. Hickenlooper also faces a primary challenge from state Sen. Julie Gonzales.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_34b59166-5bd5-5e02-be97-b9df3e6d5eac.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/40/1400a5b7-ed9e-535b-adbc-f9fc9d9d34cd/6a4258c3c87ef.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "MV Town Council considers recommendations on strengthening ethics code",
-    source: "Telluride Times",
-    date: "June 29, 2026",
-    firstSeen: "2026-06-29",
-    newsTopic: "government",
-    copy: "Mountain Village Town Council met with lead investigator Nick Boeving on June 17 to review ethics reform recommendations following last winter's procurement controversy. Council members pushed back on most suggestions, including adding \"appearance of impropriety\" language to the ethics code. Disclosure and recusal requirements drew the most support.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_73013665-e958-4674-9a72-571d5d48f074.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b5/fb5bc5b4-b6d7-4092-95d0-3c822ed0284c/6a3fe0b95f574.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2025,7 +1926,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 12, 2026",
+    date: "July 13, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2036,7 +1937,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
     source: "Town of Ridgway",
-    date: "July 12, 2026",
+    date: "July 13, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "infrastructure",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2047,7 +1948,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Planting Trees in Ridgway - Species Recommendations Brochure",
     source: "Town of Ridgway",
-    date: "July 12, 2026",
+    date: "July 13, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2708,17 +2609,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-07-12/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-07-12T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-13/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3135,6 +3025,83 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Town Park",
     imageUrl: ""
+  },
+  {
+    title: "Book Buzz w/The Pour Over Pedaler",
+    link: "https://koto.org/event/book-buzz-w-the-pour-over-pedaler-2/",
+    description: "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-07-20T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-20/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-20T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Authors Uncovered: Fierce Country by Heather Hansman",
+    link: "https://koto.org/event/authors-uncovered-fierce-country-by-heather-hansman/",
+    description: "Join us for an evening of conversation with Heather Hansman about her new book, FIERCE COUNTRY: The Untold Story of Three Women Who Ignited America’s Love for the Wild. The inspiring, untold story of three incredible women who spearheaded recreation, conservation and resilience in America’s most beloved landscapes, for readers of Pam Houston and David Grann In the spring of 1945, when just a handful of people had been through the Grand Canyon in boats, Georgie White jumped into the river in just a lifejacket and swam through the rapids. She spent the rest of her life bringing people through the canyon, kickstarting river running and the recreation industry.",
+    pubDate: "2026-07-20T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Shakespeare in the Park: \"Henry V\"",
+    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-20/",
+    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    pubDate: "2026-07-21T02:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Town Park",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-21/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-21T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Kombucha and Kefir w/ Kayla",
+    link: "https://koto.org/event/kombucha-and-kefir-w-kayla/",
+    description: "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
+    pubDate: "2026-07-21T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Stories & Poems Telluride",
+    link: "https://koto.org/event/stories-poems-telluride/",
+    description: "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
+    pubDate: "2026-07-21T23:15:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3203,7 +3170,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-12"
+    lastSeen: "2026-07-13"
   },
   {
     id: "TEL-A-189",
@@ -3217,7 +3184,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-13",
-    lastSeen: "2026-07-12"
+    lastSeen: "2026-07-13"
   }
 ];
 
@@ -3412,7 +3379,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3424,7 +3391,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3522,42 +3489,6 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Covenhoven (Courtyard @ 610)",
-    href: "https://sherbino.org/event/covenhoven-courtyard-at-610-july-7-ridgway/",
-    date: "2026-07-07 19:30:00",
-    endDate: "2026-07-07 19:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ Doors: 7 || Show: 7:30 || $20 advance / $24 day of || General Admission Seating || Limited Bar onsite || enter via the alleyway behind the Sherbino and the 610 Arts Collective Gallery **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Covenhoven is the internationally recognized indie-folk project of Colorado singer-songwriter Joel Van Horne, whose layered acoustic arrangements, rich harmonies, reedy baritone, and soaring falsetto have captivated audiences and critics alike since 2013. Through five full-length albums and two EPs, Covenhoven has crafted a signature sound that blends intimate folk songwriting with sweeping orchestral textures and atmospheric Americana. His songs balance hard-won wisdom with the beauty and hope found in the natural world — drawing inspiration from the landscapes of Colorado, Big Sur, and the American West. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/2026-sherb-event-banners-36.png"
-  },
-  {
-    title: "Avid Dance Workshop & Presentation",
-    href: "https://sherbino.org/event/avid-dance-workshop-presentation/",
-    date: "2026-07-09 16:00:00",
-    endDate: "2026-07-09 17:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "Experience The Wolff and Other Works, a free AVID dance workshop and presentation at the Sherbino Theatre in Ridgway on Wednesday, July 9, from 4:30–5:30 p.m. Featuring choreography by Gerald Arpino, Melody Mennite, Daniel Ojeda, and Danielle Diniz, with live music and an original composition by Kebra-Seyoun Charles. @ Entry By Donation WORKSHOP: 4:30 – 5:00 pm || Presentation doors at 5 pm, Starts at 5:10 – 5:40 pm || Free Admisison The Wolff & Other Works ~ an Avid Dance workshop, followed by a public presentation The special collaboration brings together Artistic Ventures in Dance (AVID) and Weehawken Dance for a dynamic, family-friendly experience that highlights the power of dance to connect and uplift. Blending professional artistry with young artists, this performance celebrates collaboration, growth, and the joy of moving together offering a rare opportunity to witness dancers at different stages of their journey share the stage. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/ChatGPT-Image-Jul-1-2026-05_21_58-PM.png"
-  },
-  {
-    title: "Opening Reception for The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    href: "https://sherbino.org/event/opening-reception-for-the-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips/",
-    date: "2026-07-10 17:00:00",
-    endDate: "2026-07-10 19:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado's Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/photo-banner.png"
-  },
-  {
-    title: "Sacred Fire ~ Santana Tribute Band — presented by OCPAG with support from LoNote & The Sherbino as a fundraiser for local fire and OCEMS teams",
-    href: "https://sherbino.org/event/sacred-fire-santana-tribute-band-presented-by-ocpag-with-support-from-lonote-the-sherbino-as-a-fundraiser-for-fire-and-ems-teams/",
-    date: "2026-07-11 19:30:00",
-    endDate: "2026-07-11 21:00:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ tickets JULY 11 || 7:30 pm start || 7:00 pm doors || At The Sherbino || A Benefit Concert for Fire and EMS teams || TICKETS Presented by OCPAG with support from LoNote & The Sherbino as a fundraiser for Fire and EMS teams​ Sacred Fire is a Santana tribute band composed entirely of professional musicians living and working in Denver. Established in November of 2024, band leader Ed Contreras' desire was to pay tribute to the band that inspired him to be a musician and to share the music which has already blessed millions of listeners since Woodstock in 1969. A Denver native, Ed Contreras has been playing World drums, drum kit, and percussion for over 50 years. His music covers everything from folk, jazz, rock, blues, country, and bluegrass to African, Flamenco, Brazilian, Eastern European and Middle Eastern styles. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-44.png"
-  },
-  {
     title: "The Courtyard at 610 Presents: Sweet T & Lady V",
     href: "https://sherbino.org/event/the-courtyard-at-610-presents-sweet-t-lady-v/",
     date: "2026-07-12 19:00:00",
@@ -3611,6 +3542,16 @@ const SHERBINO_EVENTS = [
     location: "The Sherbino, Ridgway",
     copy: "@ Doors: 7:00 pm | Show: 7:30 pm*$25 advance | $30 day of show – to buy GA tickets, select from the ticket option BELOW the seating chart*Limited reserved tables available – to purchase a reserved table, hover over the tables on the seating chart. ABOUT PAUL MCDONALD:Born in Alabama and baptized in the dive bars of the southeast, Paul McDonald first made noise with the Grand Magnolias, a roots-rock outfit, before catching fire in the public eye during American Idol’s 2011 run. When the bright lights blurred and the cameras turned, the man behind the voice slipped into the shadows where he did what real artists do: he lived, he lost, and he wrote. Retreating to Nashville, that holy city of reinvention, Paul stitched himself back together with worn boots, hard songs, and a new band called the Mourning Doves. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-22.png"
+  },
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-08-11/",
+    date: "2026-08-11 10:00:00",
+    endDate: "2026-08-11 12:00:00",
+    location: "Ridgway, CO",
+    copy: "",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
   }
 ];
 
@@ -4057,7 +3998,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/thirsty-thursday-game-night-at-floating-lotus",
     description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week View on site | Email this event",
     pubDate: "2026-07-17T01:00:00.000Z",
-    endDate: "2026-09-04",
+    endDate: "2026-09-11",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5019,6 +4960,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg"
+  },
+  {
+    title: "Jolie Holland - Live at The Sherbino",
+    link: "https://events.ourayridgwayevents.com/event/jolie-holland-live-at-the-sherbino",
+    description: "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie Holland has forged a timeless, captivating musical legacy; as she mines the depths of her, at times harrowing, life experiences, her creative choices are rooted in honesty and presence. They are also fearless. Jolie Holland has been on the road since the early 2000s, releasing seven of her own albums and collaborating on countless others. Her work has been described as a syncretization of American roots, with rock and experimental elements. She’s been in the studio with Booker T, Lucinda Williams, and TV On The Radio; and shared stages with Big Thief, St. Vincent, Elbow, and Mavis Staples. …",
+    pubDate: "2026-09-11T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53306519672947/huge/94dbb34c3a7f806ee827594137fa43bd0c00bfb2.jpg"
   }
 ];
 
@@ -5026,7 +4978,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "",
+    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5037,7 +4989,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5048,7 +5000,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5059,7 +5011,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5070,7 +5022,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5081,7 +5033,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5092,7 +5044,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5103,28 +5055,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-07-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Girl Scout Cookie Booth",
     link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
@@ -5864,17 +5794,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
   },
   {
-    title: "North Mississippi Allstars",
-    link: "https://www.telluride.com/event/north-mississippi-allstars/",
-    description: "The Sheridan Arts Foundation presents North Mississippi Allstars Live in Concert at the historic Sheridan Opera House …",
-    pubDate: "2026-07-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/61784/clientfile_609712.800x533.webp"
-  },
-  {
     title: "Tom Gullikson Tennis Clinic",
     link: "https://www.telluride.com/event/tom-gullikson-tennis-clinic/",
     description: "Join the Gully Tennis Clinic @ TRC! Tom is a decorated Tennis coach and playing professional. Come out and enjoy some …",
@@ -5885,28 +5804,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
-  },
-  {
-    title: "Meet the Winemaker Hike With Clay Mauritson",
-    link: "https://www.telluride.com/event/meet-the-winemaker-hike-with-clay-mauritson/",
-    description: "Join sixth-generation Sonoma farmer and winemaker Clay Mauritson for an intimate alpine adventure through Telluride's …",
-    pubDate: "2026-07-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62762/clay_mauritson__photo_credit_king_lawrence.800x533.webp"
-  },
-  {
-    title: "AVID Dance: The Wolff & Other Works",
-    link: "https://www.telluride.com/event/palm-arts-presents-avid-dance-the-wolff-other-works/",
-    description: "Artistic Ventures in Dance (AVID) invites you to join us for \"The Wolff & Other Works”, an unforgettable evening …",
-    pubDate: "2026-07-11",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62925/telluride_tour_poster_1.800x533.webp"
   },
   {
     title: "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
@@ -6349,6 +6246,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
+  },
+  {
+    title: "The Meditations",
+    link: "https://www.telluride.com/event/the-meditations/",
+    description: "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
+    pubDate: "2026-09-11",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp"
   }
 ];
 

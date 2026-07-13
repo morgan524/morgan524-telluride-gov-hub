@@ -1,16 +1,5 @@
 [
   {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-07-12/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-07-12T20:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-13/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -426,6 +415,83 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Town Park",
+    "imageUrl": ""
+  },
+  {
+    "title": "Book Buzz w/The Pour Over Pedaler",
+    "link": "https://koto.org/event/book-buzz-w-the-pour-over-pedaler-2/",
+    "description": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
+    "pubDate": "2026-07-20T15:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-20/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-07-20T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Authors Uncovered: Fierce Country by Heather Hansman",
+    "link": "https://koto.org/event/authors-uncovered-fierce-country-by-heather-hansman/",
+    "description": "Join us for an evening of conversation with Heather Hansman about her new book, FIERCE COUNTRY: The Untold Story of Three Women Who Ignited America’s Love for the Wild. The inspiring, untold story of three incredible women who spearheaded recreation, conservation and resilience in America’s most beloved landscapes, for readers of Pam Houston and David Grann In the spring of 1945, when just a handful of people had been through the Grand Canyon in boats, Georgie White jumped into the river in just a lifejacket and swam through the rapids. She spent the rest of her life bringing people through the canyon, kickstarting river running and the recreation industry.",
+    "pubDate": "2026-07-20T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Shakespeare in the Park: \"Henry V\"",
+    "link": "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-20/",
+    "description": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    "pubDate": "2026-07-21T02:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Town Park",
+    "imageUrl": ""
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-21/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-07-21T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Kombucha and Kefir w/ Kayla",
+    "link": "https://koto.org/event/kombucha-and-kefir-w-kayla/",
+    "description": "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
+    "pubDate": "2026-07-21T18:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Stories & Poems Telluride",
+    "link": "https://koto.org/event/stories-poems-telluride/",
+    "description": "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
+    "pubDate": "2026-07-21T23:15:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
   }
 ]
