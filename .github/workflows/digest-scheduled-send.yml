@@ -1,7 +1,8 @@
 name: Digest Scheduled Send
 
-# Sends the APPROVED "Week Ahead" (weekly) digest Monday 6:00 AM America/Denver.
-# (The Thursday "Weekend Outlook" was retired 2026-07-11 — never sent.)
+# Sends an APPROVED digest at 6:00 AM America/Denver:
+#   - Monday   → the "Week Ahead" (weekly) digest
+#   - Thursday → the "Weekend Ahead" (weekend) digest (events only)
 #
 # "Approved" means a human clicked Approve & Schedule on the Digest Review Desk,
 # which writes digest/<key>.lock.json. This job sends ONLY when that lock exists
@@ -15,10 +16,12 @@ on:
   schedule:
     - cron: '0 12 * * 1'   # Mon 12:00 UTC = 06:00 MDT (summer)
     - cron: '0 13 * * 1'   # Mon 13:00 UTC = 06:00 MST (winter)
+    - cron: '0 12 * * 4'   # Thu 12:00 UTC = 06:00 MDT (summer)
+    - cron: '0 13 * * 4'   # Thu 13:00 UTC = 06:00 MST (winter)
   workflow_dispatch:
     inputs:
       digest:
-        description: 'Which digest to send (only weekly exists now)'
+        description: 'Which digest to send (weekly or weekend)'
         required: true
         default: 'weekly'
       confirm:
@@ -57,7 +60,8 @@ jobs:
           if [ "$HOUR" != "06" ]; then echo "Denver hour=$HOUR (not 06) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           case "$DOW" in
             1) DIGEST=weekly ;;
-            *) echo "Denver weekday=$DOW (not Mon) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
+            4) DIGEST=weekend ;;
+            *) echo "Denver weekday=$DOW (not Mon/Thu) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
           echo "scheduled send — digest=$DIGEST at 06:00 MT"
           echo "go=true" >> "$GITHUB_OUTPUT"
@@ -78,8 +82,8 @@ jobs:
           import json, os, sys, urllib.request, urllib.error
           key = os.environ["DIGEST_KIND"]
           override = os.environ.get("OVERRIDE") == "true"
-          if key != "weekly":
-              raise SystemExit(f"Unknown digest kind: {key!r} (the weekend digest was retired 2026-07-11)")
+          if key not in ("weekly", "weekend"):
+              raise SystemExit(f"Unknown digest kind: {key!r}")
           man = json.load(open("digest/manifest.json"))
           d = man["digests"][key]
           subject, fpath, week_start = d["subject"], d["file"], d.get("weekStart", "")

@@ -8,6 +8,14 @@
       "weekStart": "2026-07-13",
       "audience": "Weekly Update",
       "file": "digest/week.html"
+    },
+    "weekend": {
+      "name": "The Weekend Ahead Outlook",
+      "subject": "The Weekend Ahead Outlook - July 17 - July 19, 2026",
+      "covers": "Fri Jul 17 to Sun Jul 19, 2026",
+      "weekStart": "2026-07-17",
+      "audience": "Weekly Update",
+      "file": "digest/weekend.html"
     }
   }
 }

@@ -104,6 +104,7 @@ const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushro
 const SITE_URL = 'https://livabletelluride.org';
 const IMG_FALLBACKS = [
   { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: SITE_URL + '/img/email/fourth-of-july-parade.jpg' },
+  { match: /randy houser/i, img: SITE_URL + '/assets/digest/randy-houser.png' },   // source photo is a .webp (breaks in email)
 ];
 const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test(title || '')) return f.img; return ''; };
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so
@@ -113,13 +114,18 @@ const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test
 // concert with no band photo → the series poster; anything else → a title-based
 // fallback (e.g. the July 4th parade).
 const resolveEventImage = G('resolveEventImage');
+// .webp images silently fail in many email clients (Outlook, older iOS Mail),
+// showing a broken-image box — so treat a .webp source as if there were no
+// image, letting IMG_FALLBACKS / a hosted photo take over instead.
+const emailUsableImg = (u) => /^https?:\/\//.test(u || '') && !/\.webp(\?|#|$)/i.test(u);
 const resolveEmailImg = (e) => {
   if (typeof resolveEventImage === 'function') {
     const r = resolveEventImage(e, { origin: SITE_URL, exists: (p) => fs.existsSync('.' + p) });
-    return r.primary || r.fallback || imgFallback(e.title);
+    const primary = emailUsableImg(r.primary) ? r.primary : '';
+    return primary || (emailUsableImg(r.fallback) ? r.fallback : '') || imgFallback(e.title);
   }
   const raw = e.img || e.imageUrl || '';   // graceful degrade if the shared helper is absent
-  if (/^https?:\/\//.test(raw)) return raw;
+  if (emailUsableImg(raw)) return raw;
   if (/^\/img\//.test(raw) && fs.existsSync('.' + raw)) return SITE_URL + raw;
   return imgFallback(e.title);
 };
@@ -137,6 +143,7 @@ for (const name of EVENT_ARRAYS) {
     if (!inWeek(date)) continue;
     if (isGovMeetingTitle(e.title)) continue;            // meetings live in their own section
     if (/closed|closure|holiday hours/i.test(e.title)) continue;
+    if (/(^|:\s*)(postponed|cancell?ed)\b/i.test(e.title)) continue;   // don't feature a postponed/canceled event
     if (MAJOR_FEST_RE.test(e.title)) continue;           // marquee festivals → featured hero, not daily picks
     evts.push({
       title: e.title, date,
@@ -163,7 +170,13 @@ let chosen = []; const usedTitles = new Set();
 // only the first-day pick survives.
 const TKEY_STOPWORDS = new Set(['gala','fundraiser','presents','featuring','annual','event','show','live','from','with','this']);
 const tkey = (t) => {
-  const tokens = (String(t || '').toLowerCase().match(/[a-z]+/g) || [])
+  const cleaned = String(t || '')
+    // "<show> With Special Guest <name>" is the SAME show as "<show>" — a common
+    // cross-source title variant (e.g. KOTO vs telluride.com both list the Randy
+    // Houser concert). Drop the tail so the two collapse to one card.
+    .replace(/\bwith special guests?\b.*/i, '')
+    .toLowerCase();
+  const tokens = (cleaned.match(/[a-z]+/g) || [])
     .filter(w => w.length >= 4 && !TKEY_STOPWORDS.has(w));
   return tokens.sort().join('-');
 };
@@ -175,7 +188,36 @@ const tkey = (t) => {
 const FEATURED_OVERRIDES = {
   '2026-07-04': { match: /rundola/i, link: 'https://telluridefoundation.org/rundola/' },  // Telluride Foundation Rundola — Run for Good
 };
+
+// The Weekend edition prefers events NOT already in the prior mailing(s): it
+// sends Thursday, a few days after the Monday "Week Ahead" (which covers the
+// same weekend), so a straight best-of would just replay Monday's picks. We
+// read the last couple of sent broadcasts' archived HTML, collect their event
+// links, and rank matching events AFTER the fresh ones — they still fill in if
+// nothing fresher is worthy. Best-effort: no archive (e.g. a local /tmp run) →
+// no preference applied.
+const normHref = (u) => String(u || '').toLowerCase().trim().split('#')[0].split('?')[0].replace(/\/+$/, '');
+function recentlyMailedHrefs() {
+  const out = new Set();
+  try {
+    const rec = JSON.parse(fs.readFileSync('data/sent-broadcasts.json', 'utf8'));
+    for (const r of rec.slice(-2)) {                              // prior Week Ahead + prior Weekend
+      const m = String(r.href || '').match(/digest\/archive\/[^"'#?]+\.html/);
+      if (!m || !fs.existsSync(m[0])) continue;
+      const html = fs.readFileSync(m[0], 'utf8');
+      for (const mm of html.matchAll(/href="(https?:\/\/[^"]+)"/gi)) {
+        const h = normHref(mm[1].replace(/&amp;/g, '&'));
+        if (/livabletelluride\.org|buy\.stripe\.com|list-manage\.com/.test(h)) continue;  // site chrome, not events
+        out.add(h);
+      }
+    }
+  } catch (e) { /* best-effort — leave the set empty */ }
+  return out;
+}
+
 if (WEEKEND) {
+  const MAILED = recentlyMailedHrefs();
+  const wasMailed = (e) => MAILED.size > 0 && MAILED.has(normHref(e.href || e.link || e.url || ''));
   // Weekend Outlook: a curated "best of the weekend" list across the Fri–Sun
   // window. Two goals: quality (rank by featuredScore; drop the penalized
   // drop-in/class/clinic items) and GEOGRAPHIC SPREAD — a regional roundup
@@ -217,7 +259,12 @@ if (WEEKEND) {
   const uniq = evts
     .filter((e) => inWeek(e.date) && featuredScore(e) >= 0)   // drop penalized classes/clinics
     .filter((e) => { const k = tkey(e.title); if (seen.has(k)) return false; seen.add(k); return true; })
-    .sort((a, b) => (featuredScore(b) - featuredScore(a)) || (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
+    // Fresh (not in the prior mailing) events first — ranked by score among
+    // themselves — then the already-mailed ones as fill (also by score).
+    .sort((a, b) =>
+      (wasMailed(a) - wasMailed(b)) ||
+      (featuredScore(b) - featuredScore(a)) ||
+      (a.date < b.date ? -1 : a.date > b.date ? 1 : 0));
   for (const re of PINS) { const hit = uniq.find((e) => re.test(e.title) && !chosen.includes(e)); if (hit) chosen.push(hit); }
   const fillToCap = (maxPerTown) => {
     const perTown = {}; chosen.forEach((e) => { const t = evTown(e); perTown[t] = (perTown[t] || 0) + 1; });

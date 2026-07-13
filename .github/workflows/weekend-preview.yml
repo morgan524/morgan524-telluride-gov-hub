@@ -1,16 +1,15 @@
 name: Weekend Email Preview
 
-# Renders the Thursday "Weekend Outlook" events email via scripts/weekly-email.js
-# in WEEKEND mode (from the live gov-data.js + gov-helpers.js — curated
-# best-of-the-weekend events, no meetings) and emails a review copy to info@
-# every THURSDAY morning. The run also saves the paste-ready HTML
-# (weekend-mailchimp.html) as an artifact to send after approval.
-# Edit the intro in data/weekend-ahead-lede.json before the send.
-#
-# RETIRED 2026-07-11: the weekend edition was never sent, so the weekly
-# Thursday review email stopped. Manual dispatch still works if a one-off
-# weekend email is ever wanted again (re-add the cron to resume).
+# Renders the "Weekend Ahead" events email via scripts/weekly-email.js in
+# WEEKEND mode (from the live gov-data.js + gov-helpers.js — curated best-of-
+# the-weekend events, no meetings, Rick-voice lede) and emails a review copy to
+# info@ every WEDNESDAY at 2:00 PM Mountain — the draft to review the day before
+# the Thursday 6:00 AM send (digest-scheduled-send.yml). Also saves the paste-
+# ready HTML as an artifact. (Revived 2026-07-13 per Morgan; Wed-review/Thu-send.)
 on:
+  schedule:
+    - cron: '0 20 * * 3'   # Wed 20:00 UTC = 2:00 PM MDT (summer)
+    - cron: '0 21 * * 3'   # Wed 21:00 UTC = 2:00 PM MST (winter)
   workflow_dispatch:
     inputs:
       week_start:
@@ -23,7 +22,30 @@ permissions:
   issues: write   # ci-health-issue failure tracker
 
 jobs:
+  # DST guard: exactly one of the cron pair lands on 2:00 PM in Denver; skip the
+  # other. Manual dispatch always runs.
+  guard:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.g.outputs.go }}
+    steps:
+      - name: Only proceed at 2:00 PM America/Denver
+        id: g
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          HOUR="$(TZ='America/Denver' date +%H)"
+          if [ "$HOUR" = "14" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Denver hour=$HOUR (not 14) — DST twin cron, skipping"
+            echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+
   preview:
+    needs: guard
+    if: needs.guard.outputs.go == 'true'
     runs-on: ubuntu-latest
     env:
       # Email send is skipped (just renders + uploads an artifact) until these

@@ -1,16 +1,20 @@
 name: Digest Refresh
 
 # Regenerates the Digest Review Desk's content from live site data and commits
-# it, so digest-review.html always shows the UPCOMING send:
-#   - weekly = the coming Mon–Sun (the Monday "Week Ahead")
-# (The Thursday "Weekend Outlook" was retired 2026-07-11 — never sent.)
+# it, so digest-review.html always shows the UPCOMING sends:
+#   - weekly  = the coming Mon–Sun (the Monday "Week Ahead")
+#   - weekend = the coming Fri–Sun (the Thursday "Weekend Ahead", events only)
 # Runs daily; also dispatchable. Commits only when the rendered output changes.
 on:
   schedule:
     - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain)
-    - cron: '45 15 * * 0'  # Sunday 15:45 UTC (8:45/9:45am MT) — freshen the
-                           # Review Desk draft right before the 10:00 AM Sunday
-                           # review email (weekly-preview.yml)
+    - cron: '45 15 * * 0'  # Sunday 15:45 UTC — freshen the Review Desk draft
+                           # right before the 10:00 AM Sunday weekly review email
+    - cron: '45 19 * * 3'  # Wed 19:45 UTC (1:45 PM MDT) — freshen right before
+    - cron: '45 20 * * 3'  # Wed 20:45 UTC (1:45 PM MST)   the 2:00 PM Wed weekend
+                           #   review email (weekend-preview.yml). Idempotent:
+                           #   commits only if the render changed, so running
+                           #   both DST twins is harmless.
   workflow_dispatch:
 
 permissions:
@@ -37,19 +41,18 @@ jobs:
           curl -fsS --retry 3 "https://livabletelluride.org/js/gov-data.js?t=$T"    -o /tmp/gd.js
           curl -fsS --retry 3 "https://livabletelluride.org/js/gov-helpers.js?t=$T" -o /tmp/gh.js
           WK=$(date -u -d "monday" +%F)     # coming Monday (today if Mon)
+          WE=$(date -u -d "friday" +%F)     # coming Friday (today if Fri)
           WK_LABEL="$(date -u -d "$WK" '+%B %-d') - $(date -u -d "$WK +6 days" '+%B %-d, %Y')"
+          WE_LABEL="$(date -u -d "$WE" '+%B %-d') - $(date -u -d "$WE +2 days" '+%B %-d, %Y')"
 
           # ── Freeze/lock support ──
           # If digest/<key>.lock.json exists and its weekStart matches the coming
-          # Monday, a human has APPROVED that digest on the Review Desk —
+          # Monday/Friday, a human has APPROVED that digest on the Review Desk —
           # do NOT re-render it (that would change the lede or swap events after
           # approval). A lock whose weekStart no longer matches is stale (the week
           # rolled over): delete it and render fresh.
           lock_ws() { if [ -f "$1" ]; then python3 -c "import json;print(json.load(open('$1')).get('weekStart',''))" 2>/dev/null || true; fi; }
           lock_subj() { python3 -c "import json;print(json.load(open('$1')).get('subject',''))" 2>/dev/null || true; }
-
-          # The retired weekend digest must never come back: clear any leftovers.
-          rm -f digest/weekend.lock.json digest/weekend.html
 
           WK_SUBJ_LOCK=""
           if [ "$(lock_ws digest/weekly.lock.json)" = "$WK" ]; then
@@ -60,16 +63,28 @@ jobs:
             node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WK" "$WK_LABEL" digest/week.html
           fi
 
+          WE_SUBJ_LOCK=""
+          if [ "$(lock_ws digest/weekend.lock.json)" = "$WE" ]; then
+            echo "weekend digest LOCKED for $WE — preserving the approved version"
+            WE_SUBJ_LOCK="$(lock_subj digest/weekend.lock.json)"
+          else
+            rm -f digest/weekend.lock.json
+            WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WE" "$WE_LABEL" digest/weekend.html
+          fi
+
           export WK_SUBJ="${WK_SUBJ_LOCK:-The Week Ahead Outlook - $WK_LABEL}"
+          export WE_SUBJ="${WE_SUBJ_LOCK:-The Weekend Ahead Outlook - $WE_LABEL}"
           export WK_COV="Mon $(date -u -d "$WK" '+%b %-d') to Sun $(date -u -d "$WK +6 days" '+%b %-d, %Y')"
-          export WK   # ISO weekStart → the desk passes it to /save so the lock matches
+          export WE_COV="Fri $(date -u -d "$WE" '+%b %-d') to Sun $(date -u -d "$WE +2 days" '+%b %-d, %Y')"
+          export WK WE   # ISO weekStart per digest → the desk passes it to /save so the lock matches
           export GEN="$(date -u '+%Y-%m-%d %H:%M UTC')"
           python3 - <<'PY'
           import json, os
           m={"generated":os.environ["GEN"],"digests":{
-            "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"}}}
+            "weekly":{"name":"The Week Ahead Outlook","subject":os.environ["WK_SUBJ"],"covers":os.environ["WK_COV"],"weekStart":os.environ["WK"],"audience":"Weekly Update","file":"digest/week.html"},
+            "weekend":{"name":"The Weekend Ahead Outlook","subject":os.environ["WE_SUBJ"],"covers":os.environ["WE_COV"],"weekStart":os.environ["WE"],"audience":"Weekly Update","file":"digest/weekend.html"}}}
           open("digest/manifest.json","w").write(json.dumps(m,indent=2)+"\n")
-          print("manifest:",os.environ["WK_SUBJ"])
+          print("manifest:",os.environ["WK_SUBJ"],"|",os.environ["WE_SUBJ"])
           PY
       - name: Commit if changed
         run: |
