@@ -104,9 +104,19 @@ jobs:
                   print(f"Already sent this subject ({subject!r}) — skipping to avoid a duplicate."); sys.exit(0)
 
           payload = json.dumps({"emailHtml": html, "subject": subject, "test": False, "key": key}).encode()
+          # A browser User-Agent is REQUIRED: Cloudflare's bot protection on the
+          # Worker rejects the default "Python-urllib/x.y" UA with HTTP 403
+          # error 1010, so every prior scheduled send silently failed at this
+          # step (the Monday 6 AM auto-send never actually went out). curl-based
+          # sends worked only because they carried a browser UA.
           req = urllib.request.Request(
               os.environ["WORKER_BASE"] + "/send", data=payload,
-              headers={"Content-Type": "application/json", "x-digest-key": os.environ["DIGEST_KEY"]}, method="POST")
+              headers={
+                  "Content-Type": "application/json",
+                  "x-digest-key": os.environ["DIGEST_KEY"],
+                  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+                  "Accept": "application/json",
+              }, method="POST")
           try:
               with urllib.request.urlopen(req) as r:
                   body = r.read().decode()
