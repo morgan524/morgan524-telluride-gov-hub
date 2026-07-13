@@ -6,13 +6,13 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 17:26:08 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 19:36:10 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 13–19</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-27</guid>
-      <pubDate>Mon, 13 Jul 2026 17:26:08 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 19:36:10 GMT</pubDate>
       <description><![CDATA[The biggest thing on the civic calendar this week is Wednesday's BOCC meeting, where San Miguel County takes up two Land Use Code amendments — one governing natural medicine businesses and one reshaping rules around nonconforming lots, the kind of quiet code language that has real consequences for what gets built where. That same day, HARC holds public hearings on the large-scale Carhenge redevelopment at 700 W Pacific Ave, and the county kicks off its sixth working session on the Land Use Code rewrite focused on workforce and affordable housing zoning.]]></description>
       <category>The Week Ahead</category>
     </item>
@@ -196,8 +196,7 @@ Join us in-store for a screening of Patagonia Films' Without a Doubt featuring B
       <guid isPermaLink="false">https://livabletelluride.org/event/monthly%20welcome%20home%20alliance%7C2026-07-14</guid>
       <pubDate>Tue, 14 Jul 2026 10:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />📍 Ridgway, CO
-
-A monthly gathering at the Sherbino in Ridgway for veterans through the Welcome Home Alliance, offering a casual coffee meetup and a chance to connect with fellow veterans and community members. The event is part of a recurring series supporting veteran community and fellowship in the region.]]></description>
+]]></description>
       <media:content url="https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png" medium="image" />
       <category>Community Event</category>
     </item>
