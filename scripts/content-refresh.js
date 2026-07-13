@@ -1307,6 +1307,18 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
   for (const m of meetings) {
     const key = `${m.source}|${m.date}|${m.title}`;
 
+    // Persist the meeting's agenda deep link for the site/digest renderers.
+    // Some sources (county CivicClerk especially) have real per-meeting
+    // agenda URLs here (/event/<id>/files/agenda/<fileId>) that the card
+    // renderers can't derive themselves — getCountyCachedMeetings' summary-
+    // derived fallback used to link the bare portal home instead of the
+    // agenda (caught on the Jul 15 2026 BOCC digest card). Cheap: comes
+    // from the listing/API, no extra fetch.
+    if (m.agendaUrl) {
+      const prevMeta = (meta[key] && typeof meta[key] === 'object') ? meta[key] : {};
+      if (prevMeta.agendaUrl !== m.agendaUrl) meta[key] = { ...prevMeta, agendaUrl: m.agendaUrl };
+    }
+
     // Always (re)extract agenda zoom info if we don't have it yet —
     // separate from whether we already have a summary. A meeting might
     // have its summary cached from a prior run that didn't yet know how

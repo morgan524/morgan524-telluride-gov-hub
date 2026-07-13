@@ -141,7 +141,7 @@ for (const name of EVENT_ARRAYS) {
     evts.push({
       title: e.title, date,
       href: e.link || e.href || e.url || '',
-      summary: stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim()),
+      summary: stripDescPreamble((e.summary || e.copy || e.description || '').replace(/<[^>]+>/g, ' ').replace(/https?:\/\/\S+/g, '').replace(/\*+/g, '').replace(/[\\|]/g, ' ').replace(/\s+/g, ' ').trim()),
       time: e.time || '', location: e.location || '', img: resolveEmailImg(e),
       isFestival: !!e.isFestival, source: e.sourceLabel || e.source || name,
     });

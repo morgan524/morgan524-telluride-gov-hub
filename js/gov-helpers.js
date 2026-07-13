@@ -7757,7 +7757,14 @@ function getCountyCachedMeetings() {
     // summary beats an "agenda not posted yet" placeholder; among equals, the
     // longer (more detailed) text wins.
     const isPlaceholder = (s) => !s || /hasn['’]?t been posted|not (yet )?(been )?posted|no agenda (items|detail)|nothing to summarize|not available yet|isn['’]?t available/i.test(s);
-    const best = {};   // dk -> { rawTitle, eventDate, summary }
+    // The bot stores each meeting's real agenda deep link (the CivicClerk
+    // /event/<id>/files/agenda/<fileId> URL) in MEETING_AGENDA_META, keyed by
+    // the SAME source|date|title as the summary. Without it this fallback used
+    // to link the bare portal home — so a card that HAD a full agenda summary
+    // still sent readers to a directory listing instead of the agenda (caught
+    // on the Jul 15 2026 BOCC digest card).
+    const agendaMeta = (typeof MEETING_AGENDA_META !== 'undefined' && MEETING_AGENDA_META) ? MEETING_AGENDA_META : {};
+    const best = {};   // dk -> { rawTitle, eventDate, summary, agendaUrl }
     for (const key of Object.keys(MANUAL_SUMMARIES)) {
       if (key.slice(0, 7).toLowerCase() !== 'county|') continue;
       const parts = key.split('|');
@@ -7770,17 +7777,20 @@ function getCountyCachedMeetings() {
       const dk = date + '|' + ctok(rawTitle);
       if (seen[dk]) continue;                                // already covered by the static cache
       const summary = String(MANUAL_SUMMARIES[key] || '');
+      const metaEntry = agendaMeta[key];
+      const agendaUrl = (metaEntry && typeof metaEntry === 'object' && metaEntry.agendaUrl) || '';
       const cur = best[dk];
       const better = !cur
         || (isPlaceholder(cur.summary) && !isPlaceholder(summary))              // real beats placeholder
         || (isPlaceholder(cur.summary) === isPlaceholder(summary) && summary.length > cur.summary.length);
-      if (better) best[dk] = { rawTitle, eventDate, summary };
+      if (better) best[dk] = { rawTitle, eventDate, summary, agendaUrl };
     }
     for (const dk of Object.keys(best)) {
       const b = best[dk];
+      const agendaLink = b.agendaUrl || COUNTY_CIVICCLERK_FALLBACK;
       out.push({
         title: b.rawTitle,
-        link: COUNTY_CIVICCLERK_FALLBACK,
+        link: agendaLink,
         description: b.summary,
         eventDate: b.eventDate,
         eventDates: '',
@@ -7790,8 +7800,8 @@ function getCountyCachedMeetings() {
         sourceLabel: 'San Miguel County',
         category: /planning/i.test(b.rawTitle) ? 'Planning Commission' : /board/i.test(b.rawTitle) ? 'Board Meeting' : 'Meeting',
         canceled: false,
-        hasAgenda: false,
-        agendaLink: COUNTY_CIVICCLERK_FALLBACK
+        hasAgenda: !!b.agendaUrl,
+        agendaLink
       });
     }
   }
