@@ -1,46 +1,68 @@
 [
   {
-    "title": "Gentle Yoga with Kristen Milord",
-    "link": "https://telluridelibrary.libcal.com/event/16536439?hs=a",
-    "description": "11:00 AM – 12:00 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    "pubDate": "2026-07-12T17:00:00.000Z",
+    "title": "Musik 4 Kinders",
+    "link": "https://telluridelibrary.libcal.com/event/16568420?hs=a",
+    "description": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    "pubDate": "2026-07-13T16:30:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Lower Terrace - outdoors",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+  },
+  {
+    "title": "Piano on the Patio with Oliver Henry",
+    "link": "https://telluridelibrary.libcal.com/event/16644815?hs=a",
+    "description": "12:00 PM – 1:00 PM · Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL&#39;s very own, Oliver Henry, of Apr&egrave;s Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.",
+    "pubDate": "2026-07-13T18:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Lower Terrace - outdoors",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg"
+  },
+  {
+    "title": "Savvy Seniors - Wellness Care",
+    "link": "https://telluridelibrary.libcal.com/event/17029818?hs=a",
+    "description": "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    "pubDate": "2026-07-13T19:30:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Meeting Room #6 - large",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_10_15_00_15.png"
+  },
+  {
+    "title": "Hobby Hopping",
+    "link": "https://telluridelibrary.libcal.com/event/17065534?hs=a",
+    "description": "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! July 6: Henna Tattoos July 13: Cyanotype Printing July 20: Architecture Studio July 27: T-Shirt Pom Poms",
+    "pubDate": "2026-07-13T20:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Teen Area",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_27_58.png"
+  },
+  {
+    "title": "Library Game Night at the Alibi",
+    "link": "https://telluridelibrary.libcal.com/event/16893535?hs=a",
+    "description": "5:00 PM – 7:00 PM · Join us on Monday, July 13th at  The Alibi  (121 S Fir St) for a night of laid-back, social gaming from 5-7pm. We&#39;ll have cribbage, backgammon, mahjong, chess boards and more to choose from. Bring a friend, or come solo and meet someone new! Oh, and did we mention there will be FREE PIZZA too?! Please sign up in advance so we know how many pizzas to get :) Hope to see you there!",
+    "pubDate": "2026-07-13T23:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "The Alibi",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_10_18_23.jpg"
+  },
+  {
+    "title": "Cardio Dance (Baile Cardio) with Kelsey",
+    "link": "https://telluridelibrary.libcal.com/event/16548371?hs=a",
+    "description": "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    "pubDate": "2026-07-14T00:00:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Program Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    "title": "Caminata por la Naturaleza",
-    "link": "https://telluridelibrary.libcal.com/event/17021966?hs=a",
-    "description": "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a hacer es Bear Creek (llegaremos a un &aacute;rea muy especial!). No est&aacute; lejos y todas las edades son bienvenidas.",
-    "pubDate": "2026-07-12T17:00:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Lobby",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_30_12_50_32.png"
-  },
-  {
-    "title": "Drop-In Tech Time with Oliver",
-    "link": "https://telluridelibrary.libcal.com/event/15970382?hs=a",
-    "description": "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    "pubDate": "2026-07-12T19:00:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "2nd Floor Desk",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    "title": "Tea and Tarot",
-    "link": "https://telluridelibrary.libcal.com/event/17029763?hs=a",
-    "description": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    "pubDate": "2026-07-12T20:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Telluride Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
   }
 ]
