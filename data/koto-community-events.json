@@ -1,16 +1,5 @@
 [
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-13/",
-    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    "pubDate": "2026-07-13T15:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Library Game Night at The Alibi",
     "link": "https://koto.org/event/library-game-night-at-the-alibi/",
     "description": "Join us on Monday, July 13th at The Alibi (121 S Fir St) for a night of laid-back, social gaming from 5-7pm. We'll have cribbage, backgammon, mahjong, chess boards and more to choose from. Bring a friend, or come solo and meet someone new! Oh, and did we mention there will be FREE PIZZA too?! Please sign up in advance so we know how many pizzas to get :) Hope to see you there!",
@@ -132,6 +121,17 @@
     "imageUrl": ""
   },
   {
+    "title": "HAHA TwentyByTelluride at the Alibi",
+    "link": "https://koto.org/event/haha-twentybytelluride-at-the-alibi/",
+    "description": "JULY 15 • 5:30-6:30PM • FREE EVENT | Join us for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event artists, innovators, and creative minds take the stage to share their ideas, passions, and process. Don’t forget to buy your tickets for the HAHA event July 17-19.",
+    "pubDate": "2026-07-15T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Alibi, Telluride",
+    "imageUrl": ""
+  },
+  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-16/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -195,6 +195,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Salon Night with Jula Cieciuch",
+    "link": "https://koto.org/event/salon-night-with-jula-cieciuch/",
+    "description": "JULY 16 • 5:30 – 6:30PM • FREE EVENT | Feeling creatively stuck? Join us on Salon Night for an evening of conversation, experimentation, and artistic play lead by local creator and Telluride Arts Intern Jula Cieciuch. Discover new ways to spark ideas, step outside your creative comfort zone, and try a medium you've never explored before. Grab a friend and stop by this Thursday!",
+    "pubDate": "2026-07-16T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Arts HQ, TELLURIDE",
     "imageUrl": ""
   },
   {
@@ -470,28 +481,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Kombucha and Kefir w/ Kayla",
-    "link": "https://koto.org/event/kombucha-and-kefir-w-kayla/",
-    "description": "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
-    "pubDate": "2026-07-21T18:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Stories & Poems Telluride",
-    "link": "https://koto.org/event/stories-poems-telluride/",
-    "description": "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
-    "pubDate": "2026-07-21T23:15:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
   }
 ]

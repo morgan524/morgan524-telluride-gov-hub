@@ -203,7 +203,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-15|Board of County Commissioners Meeting":
-    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580","agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1914"},
+    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580","agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1917"},
 
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
     {"sv":4},
@@ -493,7 +493,7 @@ const MANUAL_SUMMARIES = {
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
-    "The July 21, 2026 Telluride Housing Authority agenda hasn't been posted yet.",
+    "The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.",
 
   "county|2026-07-12|San Miguel Basin Fair Board":
     "The Fair Board convenes for a special meeting to divide up pre-fair responsibilities among board members and sort out lamb bedding setup. Housekeeping before the fair season — the kind of meeting that keeps things from falling through the cracks.",
@@ -526,10 +526,10 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
-    "The July 21, 2026 Block 23 Housing Corporation agenda hasn't been posted yet.",
+    "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
 
   "county|2026-07-16|Housing Code Update SSR":
     "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.",
@@ -670,6 +670,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Treatment of local owners and renters must change",
+    source: "Telluride Times",
+    date: "July 13, 2026",
+    firstSeen: "2026-07-13",
+    newsTopic: "housing",
+    copy: "Deed-restricted homeowners in Telluride are raising serious concerns about the town attorney's office — including claims it gave a Wilkin Court owner false information about a sale, forced subsequent buyers to sign new deed restrictions, and applied updated housing guidelines retroactively to existing owners. The author argues these practices violate property rights, contract law, and the Colorado Constitution. It's a long-running dispute that's apparently affected multiple owners quietly over the years.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_6310f37d-7581-438e-b29b-a5bc02d37cb7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/f8/df8b9a4c-e85d-4703-97a7-a10050e7ea0a/6a4e91a47b78d.image.png",
+    imgHiRes: true
+  },
   {
     title: "Crash of an aircraft helping to fight a Colorado wildfire leaves the pilot dead",
     source: "Telluride Times",
@@ -2650,17 +2662,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-13/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-13T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Library Game Night at The Alibi",
     link: "https://koto.org/event/library-game-night-at-the-alibi/",
     description: "Join us on Monday, July 13th at The Alibi (121 S Fir St) for a night of laid-back, social gaming from 5-7pm. We'll have cribbage, backgammon, mahjong, chess boards and more to choose from. Bring a friend, or come solo and meet someone new! Oh, and did we mention there will be FREE PIZZA too?! Please sign up in advance so we know how many pizzas to get :) Hope to see you there!",
@@ -2782,6 +2783,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "HAHA TwentyByTelluride at the Alibi",
+    link: "https://koto.org/event/haha-twentybytelluride-at-the-alibi/",
+    description: "JULY 15 • 5:30-6:30PM • FREE EVENT | Join us for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event artists, innovators, and creative minds take the stage to share their ideas, passions, and process. Don’t forget to buy your tickets for the HAHA event July 17-19.",
+    pubDate: "2026-07-15T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-16/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2845,6 +2857,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Salon Night with Jula Cieciuch",
+    link: "https://koto.org/event/salon-night-with-jula-cieciuch/",
+    description: "JULY 16 • 5:30 – 6:30PM • FREE EVENT | Feeling creatively stuck? Join us on Salon Night for an evening of conversation, experimentation, and artistic play lead by local creator and Telluride Arts Intern Jula Cieciuch. Discover new ways to spark ideas, step outside your creative comfort zone, and try a medium you've never explored before. Grab a friend and stop by this Thursday!",
+    pubDate: "2026-07-16T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: ""
   },
   {
@@ -3120,28 +3143,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Kombucha and Kefir w/ Kayla",
-    link: "https://koto.org/event/kombucha-and-kefir-w-kayla/",
-    description: "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
-    pubDate: "2026-07-21T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Stories & Poems Telluride",
-    link: "https://koto.org/event/stories-poems-telluride/",
-    description: "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
-    pubDate: "2026-07-21T23:15:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -5897,7 +5898,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63014/eblast-1800x600.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/63014/2200x1237.800x533.webp"
   },
   {
     title: "Liver Down the River",
@@ -6068,6 +6069,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62558/0728-tt_320_x_212-tf.800x533.webp"
+  },
+  {
+    title: "Book Signing With Micheline Klagsbrun",
+    link: "https://www.telluride.com/event/book-signing-with-micheline-klagsbrun/",
+    description: "Join Fringe for a book signing with Telluride artist Micheline Klagsbrun on Tuesday, July 28th, from 4:30 p.m. - 6 p.m. …",
+    pubDate: "2026-07-28",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63062/journey.800x533.webp"
   },
   {
     title: "The Mammoths",
@@ -8340,7 +8352,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "July 21, 2026",
     title: "Telluride Housing Authority",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },
