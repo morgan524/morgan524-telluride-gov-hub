@@ -1,11 +1,11 @@
 {
-  "generated": "2026-07-13 20:23 UTC",
+  "generated": "2026-07-14 14:41 UTC",
   "digests": {
     "weekly": {
       "name": "The Week Ahead Outlook",
-      "subject": "The Week Ahead Outlook - July 13 - July 19, 2026",
-      "covers": "Mon Jul 13 to Sun Jul 19, 2026",
-      "weekStart": "2026-07-13",
+      "subject": "The Week Ahead Outlook - July 20 - July 26, 2026",
+      "covers": "Mon Jul 20 to Sun Jul 26, 2026",
+      "weekStart": "2026-07-20",
       "audience": "Weekly Update",
       "file": "digest/week.html"
     },
