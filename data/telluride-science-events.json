@@ -6,17 +6,17 @@
     "location": "Telluride Conference Center, Telluride",
     "description": "Phil Bevilacqua, from Penn State University, will present breakthroughs in RNA medicine over the last decade including using CRISPR for gene editing, developing mRNA vaccines for stopping pandemics and curing cancer, and the investigating the roles of RNA in the origin of life itself.  He will also discuss how investing in basic science has led to these translational breakthroughs.\r\n\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     "link": "https://telluridescience.org/event/breakthroughs-in-rna-science/",
-    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.30.02-PM-scaled.png",
     "sourceLabel": "Telluride Science"
   },
   {
-    "title": "Town Talk",
+    "title": "When the Cure is a Virus: Reprogramming a Killer to Fight Cancer",
     "date": "2026-07-21",
     "time": "6:30 PM – 7:30 PM",
     "location": "Telluride Conference Center, Telluride",
-    "description": "This town talk will be presented by Clodagh O'Shea, Salk Institute for Biological Studies. The title and topic will be posted soon. \r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    "description": "Can a virus be turned into a cure? Clodagh O'Shea, of the Salk Institute will present \"When the Cure Is a Virus: Reprogramming a Killer to Fight Cancer.\" O'Shea, who holds the Wicklow Chair at Salk and has been named an HHMI Faculty Scholar and an Allen Distinguished Investigator, will share how her lab reengineers viruses to seek out and destroy cancer cells while leaving healthy tissue unharmed—research she is now advancing toward patients as scientific founder of the biotech company IconOVir Bio. A conversation with Emmy- and Peabody Award-winning journalists Judy Muller and George Lewis and an audience Q&A will follow. Town Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. …",
     "link": "https://telluridescience.org/event/clodagh-oshea/",
-    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.25.14-PM-scaled.png",
     "sourceLabel": "Telluride Science"
   },
   {
@@ -30,12 +30,22 @@
     "sourceLabel": "Telluride Science"
   },
   {
-    "title": "Single molecule views of Nature’s nanomachines",
+    "title": "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     "date": "2026-08-04",
     "time": "6:30 PM – 7:30 PM",
     "location": "Telluride Conference Center, Telluride",
     "description": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. \r\nDid you know that proteins are nano-scale machines that help us think, dance and keep the threat of cancer at bay? Did you know that biology is a new research frontier for physical scientists? In this talk, Professor Ha of Harvard University will discuss how biophysicists are using light-based tools to poke and examine Nature’s nano-machines, one molecule at a time, uncovering the amazing acrobatic abilities that are essential for all forms of life.\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     "link": "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "sourceLabel": "Telluride Science"
+  },
+  {
+    "title": "Seeking Elusive Quantum Advantages in Computational Chemistry",
+    "date": "2026-08-11",
+    "time": "6:30 PM – 7:30 PM",
+    "location": "Telluride Conference Center, Telluride",
+    "description": "This Town Talk will be presented by Joonhoo Lee from Harvard University.\r\nLee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh perspectives on how to think about what quantum computing can—and cannot—deliver for chemistry. He will also make the case for why chemists must learn theoretical computer science to prepare for the coming wave of fault-tolerant quantum computing.\r\nThis is the last Town Talk of the summer that  will be held oat the Telluride Conference Center in Mountain Village. The final Town Talk on August 25 will be held at the Telluride Innovation Center in Telluride.  Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    "link": "https://telluridescience.org/event/quantum-computing-chemistry/",
     "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     "sourceLabel": "Telluride Science"
   },

@@ -574,7 +574,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -689,6 +689,188 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Free Oak Street Park SummerSHOW Series continues",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "recreation",
+    copy: "The Sheridan Arts Foundation's free Oak Street Park SummerSHOW Series has three concerts left this summer — Selasee (July 23), Deltaphonic (Aug. 20), and Mariachi San José (Sept. 24). Shows are on the Opera House patio at 110 S. Oak St., with bar service and food on site. Bring a chair or blanket.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_15291567-c87c-41b3-a999-d18e401ed6b1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/eb/3ebe7471-92ca-4564-9ce7-be3766f5bcc6/6a56b1680e010.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "National Forest Foundation leaders convene in Telluride",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "The National Forest Foundation's board and executive leadership are meeting in Telluride July 21–24 to focus on wildfire preparedness and forest stewardship across the West. Field tours will visit Blue Lakes, Alta Lakes, and Lizard Head Pass to review active and potential projects on the GMU National Forests. The foundation cited the region's collaborative stewardship work as a reason for choosing Telluride.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_1c1dd375-ddcc-4895-b7fd-e0bf46364854.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/93/59354ae2-1072-4770-839a-08dfb371291f/6a56ad4f5520a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Talking Gourds features Esther Belin, Diné poet and artist",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "arts-culture",
+    copy: "Diné poet and artist Esther Belin, Durango's Poet Laureate, will read at Talking Gourds in the Wilkinson Public Library on July 21 at 5:15 p.m. The free event welcomes all ages; attendees are encouraged to bring a poem or story to share. This month's prompt is \"Water.\"",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_21a5512e-d334-4631-9607-3b5039fa2c18.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/82/682efc5f-d5fc-4198-9f35-33f18e5edfa7/6a56ac73c917f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "When the cure is a virus",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Salk Institute researcher Dr. Clodagh O'Shea presents a free Town Talk July 21 at 6:30 p.m. at the Telluride Conference Center in Mountain Village. She'll explain how her lab engineers viruses to target and destroy cancer cells while leaving healthy tissue alone — work now in clinical trials. The series runs Tuesdays through Aug. 11.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_6628b1e5-34db-4c20-bfc5-751e692a85eb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a0/8a02af43-dff7-4bc9-b5f2-30872ac66c2f/6a56ab4170bd2.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Western Colorado University publishing students launch new anthology",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "education",
+    copy: "Western Colorado University's MFA publishing students are launching their seventh anthology, \"Into the Deep, Dark Woods\" — 28 stories and poems spanning fantasy, horror, and fairy tale — on July 22 at 6 p.m. in Gunnison. Students handled every stage of production. Free and open to the public.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_e683da6f-ed51-4cba-a061-e0de05143b01.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/32/43277e79-0c17-4ce8-b8a5-06f2cb50ebc9/6a56aa6340648.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Friends don't leave friends in hot cars",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Parked cars heat up fast ' a 78°F day can push interior temps past 160°F in the sun within 30 minutes, which can kill a dog quickly. Colorado law outlines specific steps before breaking a window: call 911 first, document the vehicle, and use only necessary force. If you see a dog in distress, don't improvise — follow the statute.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_353d28c9-dfea-4ade-ad90-8db000b2e533.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b8/fb871491-6ed0-4c10-99fa-03eb13bb7e16/6a56a9b0bbeaa.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The Town of Mountain Village launches national search for manager",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "recreation",
+    copy: "Mountain Village is conducting a national search for a new town manager, partnering with recruitment firm KRW Associates. The position oversees 160 staff and a $50M+ budget, with big regional projects on the table — workforce housing, a wastewater plant, and gondola replacement. Applications close August 7th.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_cc5e0637-37bb-4d32-9b24-997459f1eb3c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/e3/de3c2535-1551-4e46-9ea3-2dd51e8bfd5a/6a56a8a5c1c4f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Keep the Oval green",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "recreation",
+    copy: "Two of the original builders of Telluride Town Park — who laid the sod and shaped those six acres starting in 1980 — are weighing in against paving the Oval for courts. They watched kids fill that grass during Bluegrass and say hardscape isn't the right trade-off. They're suggesting the indoor hockey arena and high school gym get a second look first.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_5de44ae8-c964-4dd9-af23-ec624d5e7782.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Looking for a ‘unicorn buyer’",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "land-use",
+    copy: "Five of 24 homes at Pinion Park, an affordable housing development in Norwood, are listed for sale but finding no takers. The AMI income caps create a narrow buyer pool, and without the low-interest, no-down-payment loans original buyers received, the ~$370K asking prices are out of reach for income-qualified buyers. Rural Homes and the county are exploring options, but grant covenants leave limited room to maneuver.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0f4d036f-b01e-4091-ae66-3a1849e04921.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/cc/0cced57b-f9dc-4119-ba73-3c2b0d53b758/6a55d8e525046.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "A community, not just a destination",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "A Democratic candidate for San Miguel County Commissioner is making workforce housing, economic diversification, and transparent government the center of his campaign. He argues that when workers can't afford to live where they work, schools thin out, businesses struggle to keep staff, and longtime residents quietly leave. The election is November 3.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_eff6f5ee-f9a1-4021-bbbd-927e0c953039.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Death, rebirth and morels",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "The sky is thick with the demise of a thousand trees and even the sun sets bloody, these days.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/opinion/columnists/article_558a094b-2688-4cb2-92bf-a322bdfd5b43.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/06/a066739c-ff2a-462b-a5b9-67b0793e6e62/6a56a442a7441.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Pickleball players need their own space",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "A resident letter to the editor raises concerns about pickleball sharing space with tennis at Town Park, citing noise carrying into the East End neighborhoods, nets left on courts, and players gathering early during reserved tennis time. The writer suggests the Hanley Rink could serve as a dedicated pickleball venue. Strong turnout at the June 30 Town Council meeting apparently opposed cementing the park oval for pickleball and basketball.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_09674367-044f-4f2f-90a0-72d04793246d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Mary Sama-Brown",
+    imgHiRes: true
+  },
+  {
+    title: "Democracy depends on participation",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "arts-culture",
+    copy: "San Miguel County Democrats held a community picnic July 5th, introducing local candidates including Lane Masters for sheriff, Paul Reich for commissioner, and incumbents Emil Sante, Michael Wyszynski, Brandi Hatfield, and Dave Foley. State House District 58 candidate Alec Lindeman also attended.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b2b08b03-551a-4eb2-b42f-bf9522e89821.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "San Miguel County Democrats",
+    imgHiRes: true
+  },
+  {
+    title: "What to know about Trump's order shrinking the size of 2 national monuments in Utah",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Trump has signed an order shrinking Bears Ears and Grand Staircase-Escalante national monuments in Utah from over 3.2 million acres to under 303,000 acres combined — a bigger cut than his first term. Utah officials support the move; tribal nations and conservationists say it opens sacred lands to mining.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_124dcf61-0626-5f12-ba0b-7e25ab746916.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/91/69129540-2171-588c-8ea6-b38558c446b6/6a558bcc1da3c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Trump reduces size of 2 national monuments in Utah as Republicans reshape land management",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Trump has reduced Bears Ears and Grand Staircase-Escalante national monuments in Utah by roughly 90% each — from over 3.2 million acres combined down to under 303,000 — opening much of the land to potential mining and drilling. He took similar action in his first term; Biden reversed it. Tribal nations consider Bears Ears a living cultural site and say they weren't properly consulted.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_e6bb1b22-8f36-5cdf-b863-3b7ab23f7677.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2b/42b866df-fd6b-549a-a651-fc401894ebc5/6a558bd227dd3.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Busy wildfire season tests US fire bosses as they juggle resources to stay ahead",
     source: "Telluride Times",
     date: "July 14, 2026",
@@ -710,30 +892,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_510cc405-a85a-4df5-8f1a-0787ddeed37e.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/83/283f5bf8-c554-438a-97c6-49a9401037f6/6a55d58c6a824.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Trump reduces size of 2 national monuments in Utah as Republicans reshape land management",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Trump has reduced Bears Ears and Grand Staircase-Escalante national monuments in Utah by roughly 90% each — from over 3.2 million acres combined down to under 303,000 — opening much of the land to potential mining and drilling. He took similar action in his first term; Biden reversed it. Tribal nations consider Bears Ears a living cultural site and say they weren't properly consulted.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e6bb1b22-8f36-5cdf-b863-3b7ab23f7677.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2b/42b866df-fd6b-549a-a651-fc401894ebc5/6a558bd227dd3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "What to know about Trump's order shrinking the size of 2 national monuments in Utah",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Trump has signed an order shrinking Bears Ears and Grand Staircase-Escalante national monuments in Utah from over 3.2 million acres to under 303,000 acres combined — a bigger cut than his first term. Utah officials support the move; tribal nations and conservationists say it opens sacred lands to mining.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_124dcf61-0626-5f12-ba0b-7e25ab746916.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/91/69129540-2171-588c-8ea6-b38558c446b6/6a558bcc1da3c.image.jpg",
     imgHiRes: true
   },
   {
@@ -1818,7 +1976,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Mayor-John-Clark-Receives-Prestigious-Award-2026-07-14.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2-Mayor-John-Clark-Receives-Prestigious-Award-2026-07-14.pdf",
     img: ""
   },
   {
@@ -1852,28 +2010,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Movie-Mondays-Poster-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Town of Ridgway 2026 Drinking Water Quality Report Covering Data for Calendar Year 2025",
-    source: "Town of Ridgway",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "infrastructure",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/RIDGWAY-TOWN-OF---CO0146676---2026-CCR.doc_0.pdf",
-    img: ""
-  },
-  {
-    title: "Planting Trees in Ridgway - Species Recommendations Brochure",
-    source: "Town of Ridgway",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TreesToPlant%20Brochure%202021.pdf",
     img: ""
   },
   {
@@ -2422,17 +2558,17 @@ const TELLURIDE_SCIENCE_EVENTS = [
     location: "Telluride Conference Center, Telluride",
     description: "Phil Bevilacqua, from Penn State University, will present breakthroughs in RNA medicine over the last decade including using CRISPR for gene editing, developing mRNA vaccines for stopping pandemics and curing cancer, and the investigating the roles of RNA in the origin of life itself.  He will also discuss how investing in basic science has led to these translational breakthroughs.\r\n\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     link: "https://telluridescience.org/event/breakthroughs-in-rna-science/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.30.02-PM-scaled.png",
     sourceLabel: "Telluride Science"
   },
   {
-    title: "Town Talk",
+    title: "When the Cure is a Virus: Reprogramming a Killer to Fight Cancer",
     date: "2026-07-21",
     time: "6:30 PM – 7:30 PM",
     location: "Telluride Conference Center, Telluride",
-    description: "This town talk will be presented by Clodagh O'Shea, Salk Institute for Biological Studies. The title and topic will be posted soon. \r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    description: "Can a virus be turned into a cure? Clodagh O'Shea, of the Salk Institute will present \"When the Cure Is a Virus: Reprogramming a Killer to Fight Cancer.\" O'Shea, who holds the Wicklow Chair at Salk and has been named an HHMI Faculty Scholar and an Allen Distinguished Investigator, will share how her lab reengineers viruses to seek out and destroy cancer cells while leaving healthy tissue unharmed—research she is now advancing toward patients as scientific founder of the biotech company IconOVir Bio. A conversation with Emmy- and Peabody Award-winning journalists Judy Muller and George Lewis and an audience Q&A will follow. Town Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. …",
     link: "https://telluridescience.org/event/clodagh-oshea/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.25.14-PM-scaled.png",
     sourceLabel: "Telluride Science"
   },
   {
@@ -2446,12 +2582,22 @@ const TELLURIDE_SCIENCE_EVENTS = [
     sourceLabel: "Telluride Science"
   },
   {
-    title: "Single molecule views of Nature’s nanomachines",
+    title: "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     date: "2026-08-04",
     time: "6:30 PM – 7:30 PM",
     location: "Telluride Conference Center, Telluride",
     description: "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. \r\nDid you know that proteins are nano-scale machines that help us think, dance and keep the threat of cancer at bay? Did you know that biology is a new research frontier for physical scientists? In this talk, Professor Ha of Harvard University will discuss how biophysicists are using light-based tools to poke and examine Nature’s nano-machines, one molecule at a time, uncovering the amazing acrobatic abilities that are essential for all forms of life.\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     link: "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
+    title: "Seeking Elusive Quantum Advantages in Computational Chemistry",
+    date: "2026-08-11",
+    time: "6:30 PM – 7:30 PM",
+    location: "Telluride Conference Center, Telluride",
+    description: "This Town Talk will be presented by Joonhoo Lee from Harvard University.\r\nLee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh perspectives on how to think about what quantum computing can—and cannot—deliver for chemistry. He will also make the case for why chemists must learn theoretical computer science to prepare for the coming wave of fault-tolerant quantum computing.\r\nThis is the last Town Talk of the summer that  will be held oat the Telluride Conference Center in Mountain Village. The final Town Talk on August 25 will be held at the Telluride Innovation Center in Telluride.  Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
+    link: "https://telluridescience.org/event/quantum-computing-chemistry/",
     imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     sourceLabel: "Telluride Science"
   },
@@ -2528,17 +2674,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-14/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-14T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Free Legal Clinic – Clínica Jurídica Gratuita",
     link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-07-14/",
@@ -2685,7 +2820,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "2026 One Book, One Canyon – Terry Tempest Williams",
     link: "https://koto.org/event/2026-one-book-one-canyon-terry-tempest-williams/",
-    description: "2026 One Book, One Canyon Author Announcement Join Wilkinson Public Library on Wednesday, July 15th at 5:30 pm for a special evening with Terry Tempest Williams as she discusses her best-selling new book, The Glorians: Visitations from the Holy Ordinary . “I go to Terry Tempest Williams for the reasons I go to Whitman and Thoreau: to recover a capacious spirit and to rejoin the urgent living world. She gives me something bigger than hope.”―Richard Powers, author of The Overstory From the acclaimed nature writer and New York Times bestselling author, a revelatory work of narrative nonfiction exploring beauty, climate change, and transformative moments of hope in a world beset by uncertainty. You can find physical copies of the book through the library catalog, as well as ebooks and audiobooks through Libby and Hoopla . …",
+    description: "2026 One Book, One Canyon Author Announcement Join Wilkinson Public Library on Thursday, July 16th at 5:30 pm for a special evening with Terry Tempest Williams as she discusses her best-selling new book, The Glorians: Visitations from the Holy Ordinary . “I go to Terry Tempest Williams for the reasons I go to Whitman and Thoreau: to recover a capacious spirit and to rejoin the urgent living world. She gives me something bigger than hope.”―Richard Powers, author of The Overstory From the acclaimed nature writer and New York Times bestselling author, a revelatory work of narrative nonfiction exploring beauty, climate change, and transformative moments of hope in a world beset by uncertainty. You can find physical copies of the book through the library catalog, as well as ebooks and audiobooks through Libby and Hoopla . …",
     pubDate: "2026-07-16T23:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3579,7 +3714,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Class Structure: 5 minute warm up / 30 minute circuit workout / 10 minute cooldown stretch & mobility What To Bring: yoga mat, water, no shoes preferred - If you need to wear shoes they must be clean indoor shoes only. No mud, dirt, snow, etc. Every Tuesday & Thursday 8:15-9 am / Advance sign up required! …",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-07-14T14:15:00.000Z",
     endDate: "2026-09-10",
     source: "oray",
@@ -4143,6 +4278,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52799317043664/huge/1714c75173a9eaf2aedc61c49a369db10de46721.jpg"
   },
   {
+    title: "White Buffalo, Voyager & Tyler Simmons - Live Music Fundraiser!",
+    link: "https://events.ourayridgwayevents.com/event/white-buffalo-voyager-tyler-simmons-live-music-fundraiser",
+    description: "Help us GIVE BACK! Join us for LIVE MUSIC with Tyler Simmons on Wednesday, 7/22, on the Rooftop at White Buffalo Restaurant + Bar at Chipeta Lodge. 10% of all non-alcoholic proceeds go to the Voyager Youth Program. Stay for SUNSET on the best rooftop deck in Ridgway! Reserve a Relaxation Access Pass to enjoy our pool and hot tubs before and after the music. Voyager works with Ouray County schools and the community to provide after-school and summer programs for Pre-K, K-5, and Teens 12+. Support these local programs and help build healthy and productive young adults. Learn more about Voyager Youth Program at https://www.voyageryouth.org/ @voyageryouth @chipetalodge @ridgwaycolorado #ridgwaycolorado #ouraycolorado View on site | Email this event",
+    pubDate: "2026-07-22T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "White Buffalo Rooftop",
+    imageUrl: "https://localist-images.azureedge.net/photos/53427639472690/huge/531b33824d528fc929d7ff8e1895f9d8f5cdac5d.jpg"
+  },
+  {
     title: "Vibe with Voyager - Great White Buffalo",
     link: "https://events.ourayridgwayevents.com/event/vibe-with-voyager-great-white-buffalo",
     description: "Join us on Wednesday, July 22, from 5:30–8:30 p.m. for an unforgettable summer evening at the rooftop of the Great White Buffalo Bar! Enjoy live music by Tyler Simmons, great food and drinks, stunning mountain views, and \"Vibe with Voyager\"—all while supporting a great cause. 10% of all food sales during the evening will be contributed to the Voyager Youth Program Scholarship Fund, helping local children access enriching youth programs regardless of financial circumstances. Bring your friends, soak up the summer vibes, and help us make a difference in the lives of Ouray County youth. We can't wait to see you there! Mark your calendar for the next Voyager fundraiser on August 20 at Greenwood's. View on site | Email this event",
@@ -4578,6 +4724,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Herran House",
     imageUrl: "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg"
+  },
+  {
+    title: "Old Man Polly & Natalie Heller at Fabula for First Friday!",
+    link: "https://events.ourayridgwayevents.com/event/old-man-polly-natalie-heller-at-fabula-for-first-friday",
+    description: "Music, mountains, and a little First Friday magic are coming to Fabula! Old Man Polly will bring high-energy vocals and a genre-spanning mix of familiar songs, drawing from both contemporary and traditional music. Led by powerhouse vocalist Polly Kroger—whose style calls to mind Janis Joplin, Amy Winehouse, and Karen O—this is a performance made for singing along. Fabula will also feature local photographer Natalie Heller, whose work celebrates the mountains and Western lifestyle of Southwest Colorado. Natalie is the creator of the award-winning coffee-table book SWC Southwest Colorado, and her photography is shown throughout Ouray County. Visiting artists in town for the Ridgway Arts Rendezvous are especially welcome to stop by, mingle, and kick off the weekend before the big event! Stop by Fabula this First Friday for live music, local art, and plenty of Ridgway energy! View on site | Email this event",
+    pubDate: "2026-08-07T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fabula",
+    imageUrl: "https://localist-images.azureedge.net/photos/53427873595934/huge/e8c4d0f511d41ca1fb1cab0e28187e4cfb436345.jpg"
   },
   {
     title: "The 42nd Annual Ridgway Rendezvous Arts Festival",
@@ -5396,6 +5553,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    title: "Opening Show for Telluride Jazz Festival",
+    link: "https://townofmountainvillage.com/explore/events/all-events/opening-show-for-telluride-jazz-festival/",
+    description: "Join us on Thursday, August 6, from 5:00–7:00 PM for the Telluride Jazz Festival Opening Show at Reflection Plaza in Mountain Village (Music on the Green",
+    pubDate: "2026-08-06T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49400/mtn-village-event-image-opening-show.jpg"
+  },
+  {
     title: "Music on the Green Presents Logan Metz",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-logan-metz/",
     description: "Beyond The Groove and TMVOA (tmvoa.org) present Logan Metz at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
@@ -5460,6 +5628,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Jazz Brunch",
+    link: "https://townofmountainvillage.com/explore/events/all-events/jazz-brunch/",
+    description: "New for 2026, Telluride Jazz Festival and the Madeline Hotel present the Jazz Brunch—a relaxed mountain gathering featuring great food, beautiful views,",
+    pubDate: "2026-08-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49398/jazz-brunch-9x16.jpeg"
   },
   {
     title: "Mountain Village Merchant Meeting",
