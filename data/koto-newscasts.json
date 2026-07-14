@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-13-26",
+    "source": "KOTO Community Radio",
+    "date": "July 14, 2026",
+    "newsTopic": "public-safety",
+    "copy": "ICE Arrests Man Outside San Miguel County Jail; Firefighter Dies Battling Gold Mountain; Charles Dalton Elected to Telluride Town Council",
+    "href": "https://koto.org/news/newscast-7-13-26/"
+  },
+  {
     "title": "Newscast 7-10-26",
     "source": "KOTO Community Radio",
     "date": "July 11, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "public-safety",
     "copy": "A Gold Mountain Fire Update; Town Council Election Still in Flux; Telluride Community Survey Shows Areas for Improvement",
     "href": "https://koto.org/news/newscast-7-1-26/"
-  },
-  {
-    "title": "Newscast 6-29-26",
-    "source": "KOTO Community Radio",
-    "date": "June 30, 2026",
-    "newsTopic": "public-safety",
-    "copy": "A Gold Mountain Fire Update; Coming Up Next, Telluride",
-    "href": "https://koto.org/news/newscast-6-29-26/"
   }
 ]

@@ -1,38 +1,5 @@
 [
   {
-    "title": "Library Game Night at The Alibi",
-    "link": "https://koto.org/event/library-game-night-at-the-alibi/",
-    "description": "Join us on Monday, July 13th at The Alibi (121 S Fir St) for a night of laid-back, social gaming from 5-7pm. We'll have cribbage, backgammon, mahjong, chess boards and more to choose from. Bring a friend, or come solo and meet someone new! Oh, and did we mention there will be FREE PIZZA too?! Please sign up in advance so we know how many pizzas to get :) Hope to see you there!",
-    "pubDate": "2026-07-13T23:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "The Alibi, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Cardio Dance w/Kelsey",
-    "link": "https://koto.org/event/cardio-dance-w-kelsey/",
-    "description": "Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won't even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday every month. ¡Únete a nosotros para una divertida noche de baile y ejercicio! Te divertirás tanto que ni te darás cuenta de que estás haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    "pubDate": "2026-07-14T00:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
-    "link": "https://koto.org/event/without-a-doubt-film-screening-qa-w-braydon-bringhurst/",
-    "description": "Join us in-store for a screening of Patagonia Films' Without a Doubt featuring Braydon Bringhurst. In May of 2026, Braydon Bringhurst stood at the bottom of Gouranga, an iconic double-black-diamond descent in Squamish, British Columbia. The trail is steep, technical and high consequence, and will give even experienced riders jitters. But Braydon wasn’t there just to ride down Gouranga. He’d done that already, many times. This time, he was there to ride up it. Impossible? Likely. But that uncertainty is where Braydon thrives, and each failure is just another piece of the larger process. And for Braydon, that’s where the joy lies. Following the film, stick around for a Q&A with Braydon.",
-    "pubDate": "2026-07-14T01:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Patagonia Telluride, Telluride Retail",
-    "imageUrl": ""
-  },
-  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-14/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -481,6 +448,61 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Kombucha and Kefir w/ Kayla",
+    "link": "https://koto.org/event/kombucha-and-kefir-w-kayla/",
+    "description": "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
+    "pubDate": "2026-07-21T18:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Stories & Poems Telluride",
+    "link": "https://koto.org/event/stories-poems-telluride/",
+    "description": "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
+    "pubDate": "2026-07-21T23:15:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Forest Health Talk w/Jason Sibold",
+    "link": "https://koto.org/event/forest-health-talk-w-jason-sibold/",
+    "description": "Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study here: https://www.libarts.colostate.edu/people/sibold/ https://www.instagram.com/p/DIUD7GZSrVL/ And join us the next day for a walk and talk in Bear Creek! Sign up is required. Please go to the listing here: https://telluridelibrary.libcal.com/event/17105410 Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way! Meet at the library and wear sturdy shoes.",
+    "pubDate": "2026-07-21T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Shakespeare in the Park: \"Henry V\"",
+    "link": "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-21/",
+    "description": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    "pubDate": "2026-07-22T02:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Town Park",
+    "imageUrl": ""
+  },
+  {
+    "title": "CPR World Wilderness First Aid course",
+    "link": "https://koto.org/event/cpr-world-wilderness-first-aid-course/",
+    "description": "CPR World is offering a 2-day Wilderness First Aid course July 22 & 23 in Telluride. For information and registration, visit cprworld.com or call (970) 729-2779.",
+    "pubDate": "2026-07-22T06:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
     "imageUrl": ""
   }
 ]
