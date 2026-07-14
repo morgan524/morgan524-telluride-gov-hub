@@ -347,7 +347,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1","meetingId":"830 2617 1795","passcode":"256663.","phone":"719) 359-4580"}
 };
 
 const MANUAL_SUMMARIES = {
@@ -496,7 +496,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -574,10 +574,10 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
-    "The July 27, 2026 Special Town Council agenda hasn't been posted yet."
+    "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1808,6 +1808,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "public-safety",
     copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    img: ""
+  },
+  {
+    title: "Mayor John Clark Receives Prestigious Award",
+    source: "Town of Ridgway",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Mayor-John-Clark-Receives-Prestigious-Award-2026-07-14.pdf",
     img: ""
   },
   {
@@ -3073,7 +3084,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Punk Science with Pinhead",
     link: "https://telluridelibrary.libcal.com/event/16297534?hs=a",
-    description: "A library program called Punk Science with Pinhead, held outdoors on the Lower Terrace. This Wilkinson Public Library event runs from 5:15 to 6:00 PM.",
+    description: "5:15 PM – 6:00 PM",
     pubDate: "2026-07-14T23:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3320,7 +3331,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3332,7 +3343,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3561,17 +3572,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-  {
-    title: "Recreation and Our River",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3768",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3768",
-    pubDate: "2026-07-14T18:30:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Pa-Co-Chu-Puk - Ridgway State Park - 28555 Highway 550 Ridgway CO 81432",
-    imageUrl: ""
-  }
+
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -4263,6 +4264,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53071990246481/huge/194d3a988c5385dedd7558e69f0f52df8571e58b.jpg"
   },
   {
+    title: "Community Open House",
+    link: "https://events.ourayridgwayevents.com/event/community-open-house",
+    description: "RACC, Citizens State Bank and the West Region Wildfire Council are hosting an open house on July 25 from 3-5pm. The purpose is to support Ridgway businesses, share knowledge of wildfire preparedness and how to fund it, learn how our donations of help flow to the firefighting effort, and to simply have a good time. Area residents can speak with experts in these areas as well as our own Mayor John Clark. We will be giving away gift cards to local retailers, Jazzfest passes, Blues and Brews Festival Passes and complimentary food and beverages. It will be a fun day in Ridgway beginning with the San Juan Gravel Classic, then the Community Open House and finishing up strong with Ridgway Rocks! View on site | Email this event",
+    pubDate: "2026-07-25T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53427267435930/huge/c7ba3e8f42ac3ee121e752e3d8deb8ef4b84ead2.jpg"
+  },
+  {
     title: "Ridgway Rocks",
     link: "https://events.ourayridgwayevents.com/event/ridgway-rocks-1818",
     description: "Live music in Town Park. Old Man Polly, Organtic, and PSYLO. View on site | Email this event",
@@ -4596,6 +4608,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright",
     description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
     pubDate: "2026-08-08T16:30:00.000Z",
+    endDate: "2026-09-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4792,6 +4805,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52250073410263/huge/0c5c647e572d5a4c1c7a05677aec7057f5312338.jpg"
   },
   {
+    title: "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    link: "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct",
+    description: "August 23 @ 1:00 pm – 3:00 pm Rocky Horror Picture Show — Live Shadowcast Edition Directed by Erin Cawley Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
+    pubDate: "2026-08-23T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53426340345256/huge/41f8f3856c62b8da4427d53a7b71309c0268ddc5.jpg"
+  },
+  {
     title: "San Juan Chamber MusicFest",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest",
     description: "The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of concerts and events in Ouray and Ridgway over the course of a week each August. This year's MusicFest will feature the world-renowned Ulysses Quartet. Read more about the SJCMF musicians HERE. OCPAG is grateful for the grant support from the Dave and Mary Wood Fund and the Western Colorado Community Foundation so that OCPAG is able to bring these concerts to stages around Ouray County. We are also most grateful to the patrons who attend and support this chamber music programming! View on site | Email this event",
@@ -4870,6 +4894,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg"
   },
   {
+    title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
+    link: "https://events.ourayridgwayevents.com/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion",
+    description: "September 1 @ 6:30 pm – 8:00 pm Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women’s health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women’s health all over the world. …",
+    pubDate: "2026-09-02T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53426262588908/huge/71a55615f11bffa976395d1cf0776b9aea0970bd.jpg"
+  },
+  {
     title: "Ongoing: Social Justice Travel Exhibition",
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
@@ -4931,7 +4966,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-07-08-board-of-trustees-meeting",
-    description: "The Town of Norwood Board of Trustees will hold a regularly scheduled meeting in Norwood. Members of the public are welcome to attend this local government session, where town officials gather to conduct municipal business.",
+    description: "",
     pubDate: "2026-07-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4942,7 +4977,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-07-09-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members with an interest in local sanitation services and infrastructure are welcome to attend.",
+    description: "",
     pubDate: "2026-07-09T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4953,7 +4988,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4964,7 +4999,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Board Of Trustees Special Meeting",
     link: "https://www.norwoodtown.com/2026-07-15-board-of-trustees-board-of-trustees-special-meeting",
-    description: "A special meeting of the Town of Norwood Board of Trustees, held outside of the board's regular meeting schedule to address specific agenda items requiring timely attention. The meeting is open to the public as part of the town's standard governmental process.",
+    description: "",
     pubDate: "2026-07-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4975,7 +5010,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4986,7 +5021,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4997,7 +5032,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5008,7 +5043,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5019,7 +5054,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5062,6 +5097,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Twenty(by)Telluride: Ah Haa HAHA",
+    link: "https://townofmountainvillage.com/explore/events/all-events/twenty-by-telluride-ah-haa-haha/",
+    description: "Join us for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event artists, innovators,",
+    pubDate: "2026-07-15T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49329/1800x900.jpg"
   },
   {
     title: "Music on the Green Presents Sway Wild",
@@ -5119,6 +5165,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49341/haha_sunday_photo_76.jpeg"
   },
   {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-07-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5128,6 +5185,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Party in the Park",
+    link: "https://townofmountainvillage.com/explore/events/all-events/party-in-the-park/",
+    description: "The Telluride Mountain Club invites the community to join its Annual Party in the Park at Telluride Town Park. The event supports the club's annual trail",
+    pubDate: "2026-07-23T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49382/tmtc_park_party_insta_6_22.jpg"
   },
   {
     title: "Music on the Green Presents Jon Stickley Trio",
@@ -5183,6 +5251,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-07-26T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
     title: "Town Talk: The Dual Challenge - Climate and Energy",
@@ -5284,6 +5363,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-08-02T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
     title: "Town Talk: single molecule views of Nature’s nanomachines",
     link: "https://townofmountainvillage.com/explore/events/all-events/single-molecule-views-of-natures-nanomachines/",
     description: "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
@@ -5359,6 +5449,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
+  },
+  {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-08-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
     title: "Mountain Village Merchant Meeting",
@@ -8289,7 +8390,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "July 27, 2026",
     title: "Special Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: ""
   },

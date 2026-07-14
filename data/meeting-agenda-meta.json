@@ -344,6 +344,10 @@
   },
   "telluride|2026-07-27|Special Town Council - Jul 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
-    "sv": 4
+    "sv": 4,
+    "zoomUrl": "https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1",
+    "meetingId": "830 2617 1795",
+    "passcode": "256663.",
+    "phone": "719) 359-4580"
   }
 }
