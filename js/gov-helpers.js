@@ -725,18 +725,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "When the cure is a virus",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Salk Institute researcher Dr. Clodagh O'Shea presents a free Town Talk July 21 at 6:30 p.m. at the Telluride Conference Center in Mountain Village. She'll explain how her lab engineers viruses to target and destroy cancer cells while leaving healthy tissue alone — work now in clinical trials. The series runs Tuesdays through Aug. 11.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_6628b1e5-34db-4c20-bfc5-751e692a85eb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a0/8a02af43-dff7-4bc9-b5f2-30872ac66c2f/6a56ab4170bd2.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Western Colorado University publishing students launch new anthology",
     source: "Telluride Times",
     date: "July 14, 2026",
@@ -746,6 +734,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news_release/article_e683da6f-ed51-4cba-a061-e0de05143b01.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/32/43277e79-0c17-4ce8-b8a5-06f2cb50ebc9/6a56aa6340648.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "When the cure is a virus",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "community",
+    copy: "Salk Institute researcher Dr. Clodagh O'Shea presents a free Town Talk July 21 at 6:30 p.m. at the Telluride Conference Center in Mountain Village. She'll explain how her lab engineers viruses to target and destroy cancer cells while leaving healthy tissue alone — work now in clinical trials. The series runs Tuesdays through Aug. 11.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/article_6628b1e5-34db-4c20-bfc5-751e692a85eb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a0/8a02af43-dff7-4bc9-b5f2-30872ac66c2f/6a56ab4170bd2.image.jpg",
     imgHiRes: true
   },
   {
@@ -1570,18 +1570,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "What to know about fireworks and the risk of wildfires this July 4th",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "public-safety",
-    copy: "Record dry conditions across the West have pushed wildfire risk unusually high heading into the Fourth of July. Nearly 85% of wildfires are human-caused, and ignitions spike sharply on July 4th. Experts and local officials are urging people to skip backyard fireworks and attend professional displays instead.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_2fb29e6f-8164-586a-8eb6-433f9d493108.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/6b/e6bf2806-8b34-5dff-9a10-9d3632cd660e/6a45a02e480c0.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Ann Grundy",
     source: "Telluride Times",
     date: "July 2, 2026",
@@ -1615,222 +1603,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Outdoor adventuring with conservation at the core",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "recreation",
-    copy: "Telluride Outside has been running guided outdoor trips here since 1984 — fly fishing, rafting, 4x4 tours, snowmobiling — and leases 12 miles of private water through its Telluride Angler shop. The outfit has raised over $9 million for Valley Floor riparian restoration and uses cleaner vehicles and four-stroke snowmobiles to cut emissions. Low snowfall is pushing schedule adjustments, with fishing trips moving to cooler morning hours.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/business/article_afaa6b38-4e93-4ea0-9c53-7976ce972ca2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/f9/ef9ac980-529b-426b-95cb-b81024b96cd0/6a4194c89458c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The Pac-12 basketball tournament is returning to Las Vegas as 7 new members join",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "The Pac-12 is bringing its men's and women's basketball tournaments back to MGM Grand Garden Arena in Las Vegas after a period of uncertainty following a mass exodus of member schools. Seven new members — including Gonzaga, Boise State, and San Diego State — officially joined Wednesday, leaving Oregon State and Washington State as the only holdovers from the old conference.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_bc44a18e-43eb-5a66-9b17-74481a24eebf.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/a6/fa6df350-6482-5002-9c7a-9143ad435df5/6a45656bc3b8a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Celebrate America 250 and Colorado 150 in Norwood",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "Norwood Parks and Rec has put together a $5 Bucket List card tied to America's 250th and Colorado's 150th, with 20 local activities ranging from fishing Miramonte to sitting in the Town Park gazebo. Complete enough to hit 150 or 250 points and you're entered to win prizes at the Aug. 8 Music on the Mesa drawing.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_66edcd96-ac5f-4ceb-b006-3f2791f564c7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/be/cbe8a1fc-da39-4218-a216-052bffcd6f76/6a4450dd58b34.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "West End Renaissance",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "The West End has weathered cattle, mining, timber, coal, and COVID — the usual boom-bust pattern. Now broadband, airport upgrades, remote work, and the West End Vision Project are pointing toward a more diversified local economy. WEEDC is searching for a new executive director at what looks like a pivotal moment.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_64d52a82-dfcd-41c1-8ad7-17356b158ae9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/49/249a2e22-e7f8-4e77-842d-ef742134e68b/6a4451d589a77.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Grand Mesa and Uncompahgre National Forests enter Stage 1 fire restrictions",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "public-safety",
-    copy: "Grand Mesa and Uncompahgre National Forests have entered Stage 1 fire restrictions amid severe drought across most of San Miguel County. Beetle outbreaks are killing trees near Busted Arm Draw, where timber removal projects are planned for next year to reduce wildfire risk where forest meets homes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_2d39aea1-17f7-4251-9383-1364826377f9.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7a/e7afb52b-6148-4787-901e-f023dd92e37e/6a444ff1046d3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "government",
-    copy: "The Chalkboard lists local birthdays for the week of July 2–7 and recurring community meeting schedules for Norwood and Nucla-Naturita area boards. Regular services include the Norwood Farmers Market Thursdays 2–6 p.m., weekly senior meals, Sunday food pantry, and pickleball sessions. AA meetings, free legal aid, and public health contacts are also noted.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_894e1c0c-5cb0-4604-ba04-88f713eb4805.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/3f/03f5379e-7873-4f42-8ea8-9af53a181d10/6a44526274f1b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Melat Kiros wins Democratic nomination for U.S. House in Colorado's 1st Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "Melat Kiros has won the Democratic nomination for U.S. House in Colorado's 1st Congressional District. The 1st District covers the Denver metro area, well removed from the Telluride region, but it's part of the broader Colorado political landscape locals follow.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_da646672-16a3-5d5a-a515-847b88d164b8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Stark wins council seat; Dalton and Uihlein remain close",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "government",
-    copy: "Christian Stark secured a Telluride Town Council seat, while the second seat remained tight between Dalton and Uihlein on election night. Both contested seats will be filled at the July 21 monthly council meeting. The special election was triggered by a mid-term resignation and a charter-required public vote on an appointed seat.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_dde69f5d-8cae-4bd7-a7f8-c993964bb25b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/7e/e7e5ec96-0503-4b3a-b54e-b0b54bfb0ce2/6a4477a9cec0c.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Dwayne Romero wins Democratic nomination for U.S. House in Colorado's 3rd Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "Dwayne Romero has won the Democratic nomination for U.S. House in Colorado's 3rd Congressional District. That's the seat covering this region, so it's worth keeping an eye on as the general election takes shape.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_9934cc04-fb71-53d1-99bb-4dc55a357486.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Phil Weiser wins Democratic nomination for governor in Colorado",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "Phil Weiser won the Democratic nomination for governor of Colorado. He'll face the Republican nominee in the general election for the state's top office.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_284f0737-7f3d-54d9-a0ad-deb2423ba68a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Michael Allen wins Republican nomination for attorney general in Colorado",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "The article text here is mostly navigation noise and unrelated snippets — there isn't enough substantive content about Michael Allen's Republican nomination for attorney general to summarize accurately. Only the headline and a single line confirm the result. Michael Allen has won the Republican nomination for Colorado attorney general. That's the extent of what the article actually establishes — no primary date, margin, or opponent details are included in the provided text.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_47e6d1ad-e489-5a7b-af91-95d73fb4dbe5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Kelley Dennison wins Republican nomination for U.S. House in Colorado's 2nd Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "The article text here is mostly site navigation and unrelated content fragments — the actual story on Dennison's nomination doesn't include substantive detail beyond the headline. Kelley Dennison won the Republican nomination for Colorado's 2nd Congressional District U.S. House seat. The 2nd District covers the western slope, including the Telluride area.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_81aa76af-e062-5bea-8e3b-75d565c5e369.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Jessica Killin wins Democratic nomination for U.S. House in Colorado's 5th Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "Jessica Killin has won the Democratic nomination for U.S. House in Colorado's 5th Congressional District. The 5th has long leaned heavily Republican, so this sets up a general election contest worth watching as the fall campaign takes shape.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_21c60642-616e-56db-b31c-a7e21f439974.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Manny Rutinel wins Democratic nomination for U.S. House in Colorado's 8th Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "Manny Rutinel has won the Democratic nomination for Colorado's 8th Congressional District U.S. House seat. The 8th District covers the northern Front Range corridor, well east of the Western Slope.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_00aac81e-43a7-5e27-bb8d-c01435a45f13.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "John Hickenlooper wins Democratic nomination for U.S. Senate in Colorado",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "John Hickenlooper has won the Democratic nomination for U.S. Senate in Colorado. The race now moves to the general election.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_d5fe6584-23a7-5f4a-9641-c9d530043638.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Jeff Hurd wins Republican nomination for U.S. House in Colorado's 3rd Congressional District",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "education",
-    copy: "Jeff Hurd has won the Republican nomination for U.S. House in Colorado's 3rd Congressional District, which covers this region. That sets him up as the GOP candidate heading into the general election for the seat that represents Western Colorado.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_059d9514-60de-5d74-8edc-a1af2c836925.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Jena Griswold wins Democratic nomination for attorney general in Colorado",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "The article text provided doesn't contain enough actual reporting on the Griswold story to summarize meaningfully — it's mostly site boilerplate and unrelated headlines mixed together. Only the headline itself carries any real information. Here's a summary based solely on what's confirmed in the text: Jena Griswold has won the Democratic nomination for Colorado attorney general. No further details about the race, margin, or opponents were included in the available article text. --- **Want me to write the card once you have the full article text?** I can turn it around quickly.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_70a8a5ff-fe7c-585d-9a10-3432695e1bf3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Amanda Gonzalez wins Democratic nomination for secretary of state in Colorado",
-    source: "Telluride Times",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    newsTopic: "community",
-    copy: "The article text here is mostly site boilerplate and navigation clutter — the actual story is thin. What's clear: Amanda Gonzalez won the Democratic nomination for Colorado Secretary of State. That's the whole of it, straight from the AP wire.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_923cf464-2af0-59cb-89b2-47f452a83136.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
   },
   {
@@ -2004,7 +1776,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 14, 2026",
+    date: "July 15, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -2032,17 +1804,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
-    img: ""
-  },
-  {
-    title: "Updates from the Town of Ridgway in light of the Gold Mountain Fire",
-    source: "Town of Ridgway",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "public-safety",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Updates-from-the-Town-2026-07-01.pdf",
     img: ""
   }
 ];
@@ -2675,39 +2436,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
-    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-07-14/",
-    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    pubDate: "2026-07-14T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Book Buzz at Telluride Brewing Co-Lawson Hill",
-    link: "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill-2/",
-    description: "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We'll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff. Don't have a card? No problem! We'll make one for you on the spot!",
-    pubDate: "2026-07-14T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Brewing Company Lawson Hill Taproom",
-    imageUrl: ""
-  },
-  {
-    title: "Music Theory For Beginners",
-    link: "https://koto.org/event/music-theory-for-beginners/",
-    description: "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
-    pubDate: "2026-07-14T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-15/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3168,6 +2896,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-22/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-22T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-07-22/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-07-22T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-22/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-07-22T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-07-22T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3269,21 +3041,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-14"
-  },
-  {
-    id: "TEL-A-189",
-    name: "Felix",
-    species: "Dog",
-    breed: "Shepherd, Australian / Mixed Breed (Medium)",
-    ageGroup: "Young Puppy",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/06367d2d5f7235d505458984c24375ee/5707ad72906b8e43d110c24f72a1b9eb.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214011325",
-    summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Male",
-    firstSeen: "2026-07-11",
-    revealDate: "2026-07-13",
-    lastSeen: "2026-07-14"
+    lastSeen: "2026-07-15"
   }
 ];
 
@@ -5116,6 +4874,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53306519672947/huge/94dbb34c3a7f806ee827594137fa43bd0c00bfb2.jpg"
+  },
+  {
+    title: "Young & Dead - Live at The Sherbino",
+    link: "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
+    description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of psychedelic exploration when Young & Dead takes over the Sherbino stage on Saturday, September 12. Hailing from Boulder, Colorado, this group of talented musicians in their early 20s bringsa fresh and electrifying approach to the music of the Grateful Dead — not simply recreating the catalog, but diving deep into the spirit of improvisation, experimentation, and musical adventure that made the Dead legendary. …",
+    pubDate: "2026-09-13T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg"
   }
 ];
 
@@ -6026,18 +5795,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
   },
   {
-    title: "Telluride Table",
-    link: "https://www.telluride.com/event/telluride-table/",
-    description: "Family, whether forged by blood or bond, is the center of community and it all starts at the table. With a meal, with …",
-    pubDate: "2026-07-10",
-    endDate: "2026-07-13",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
-  },
-  {
     title: "Tom Gullikson Tennis Clinic",
     link: "https://www.telluride.com/event/tom-gullikson-tennis-clinic/",
     description: "Join the Gully Tennis Clinic @ TRC! Tom is a decorated Tennis coach and playing professional. Come out and enjoy some …",
@@ -6048,17 +5805,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
-  },
-  {
-    title: "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
-    link: "https://www.telluride.com/event/without-a-doubt-film-screening-q-a-w-braydon-bringhurst/",
-    description: "Join Patagonia in-store for a screening of Patagonia Films' Without a Doubt featuring Braydon Bringhurst. In May of …",
-    pubDate: "2026-07-13",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63027/without_a_doubt_jpg.800x533.webp"
   },
   {
     title: "Twenty(by)Telluride: Ah Haa HAHA",
@@ -6534,6 +6280,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62898/screenshot_2026-06-15_at_11_29_51_am.800x533.webp"
+  },
+  {
+    title: "Balourdet Quartet",
+    link: "https://www.telluride.com/event/balourdet-quartet/",
+    description: "A concert by the multi-award winning Balourdet String Quartet. One of the most inspiring quartets of their generation. …",
+    pubDate: "2026-09-13",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp"
   }
 ];
 
@@ -6762,42 +6519,6 @@ const LEGAL_NOTICES = [
     caseNumber: "202601"
   },
   {
-    title: "Special Use Permit -- Scenic and Social Special Use (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application for a property at 488 S. Avalon Dr., Norwood. The hearing is scheduled for May 14, 2026 at 10:30 a.m. Written comments must be received by noon on April 30, 2026.",
-    deadline: "April 30, 2026 (comments deadline); May 14, 2026 (hearing)",
-    expires: "2026-07-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    noticeKey: "sup-452726103022-scenic-social"
-  },
-  {
-    title: "Special Use Permit -- Construction/Contractor Office and Staging Area (Parcel #452726103022)",
-    entity: "San Miguel County Planning Commission",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "John Miller on behalf of Kurt Works Inc. and Kurt Crockett has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area for excavation and grading business operations at 488 S. Avalon Dr., Norwood. Public hearing scheduled for May 14, 2026 at 10:45 a.m. Written comments due by noon April 30, 2026.",
-    deadline: "April 30, 2026 (comments deadline); May 14, 2026 (hearing)",
-    expires: "2026-07-14",
-    dates: "4/23",
-    papers: ["ttimes_0423"],
-    url: "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    address: "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    noticeKey: "sup-452726103022-contractor-office"
-  },
-  {
     title: "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
     entity: "San Miguel County Public Trustee",
     entityClass: "ent-county",
@@ -6815,24 +6536,6 @@ const LEGAL_NOTICES = [
     address: "Section 27, Township 45 North, Range 13 West, San Miguel County",
     noticeKey: "foreclosure-202602",
     caseNumber: "202602"
-  },
-  {
-    title: "Notice to First Mortgagees -- Village Creek Condominium Declaration Amendment",
-    entity: "Village Creek Condominium Association",
-    entityClass: "ent-county",
-    entityLogo: "smrha",
-    icon: "🏠",
-    iconClass: "type-hearing",
-    type: "Housing Notice",
-    filterTag: "housing",
-    summary: "Village Creek Condominium Association has issued a proposed First Amendment to the Declaration for Village Creek Condominiums, as established by the Condominium Declaration recorded December 23, 1987. Pursuant to C.R.S. sec. 38-33.3-217, this notice is being published to notify first mortgagees of the proposed amendment.",
-    deadline: "",
-    expires: "2026-07-14",
-    dates: "5/14",
-    papers: ["ttimes_0514"],
-    url: "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    address: "Village Creek Condominiums, San Miguel County",
-    noticeKey: "village-creek-condo-amendment"
   },
   {
     title: "Financial Report -- Treasurer's Semi-Annual Report (July-December 2025)",

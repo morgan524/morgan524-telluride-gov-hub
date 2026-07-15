@@ -1,30 +1,30 @@
 {
-  "hash": "54298e3aded52d5560cca597788d4d33bac95801",
-  "lede": "The biggest thing on the calendar this week is Tuesday's BOCC meeting, where San Miguel County takes up two Land Use Code amendments — one on natural medicine businesses and one on nonconforming lots, the kind of quiet code language that determines what gets built and where for years to come. Wednesday brings the county's sixth housing code working session, drilling into zoning, density, and incentives as staff moves toward final redline recommendations. Meanwhile, HARC sits down Tuesday with the multi-building Carhenge redevelopment at 700 W Pacific — preliminary large-scale public hearings on a project that would reshape a significant chunk of Backman Village.",
+  "hash": "c20cc0fc65a3edbb7e97de550c08f7c6a2d79ad5",
+  "lede": "The biggest thing on the government calendar this week is the July 15 HARC meeting, where the Carhenge redevelopment at 700 W Pacific Ave goes before the commission for three separate preliminary large-scale public hearings covering multiple new buildings in an Accommodations 2 zone — the kind of project that shapes what Telluride looks like for a long time. The same day, the Board of County Commissioners takes up two Land Use Code amendments, including new rules for natural medicine businesses and nonconforming lots, while San Miguel County's sixth housing code working session on July 16 keeps pushing toward final recommendations on zoning, density, and workforce housing incentives.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Two Land Use Code amendments — natural medicine businesses and nonconforming lots — up for decision."
+      "id": 1,
+      "stake": "Preliminary public hearings on major multi-building Carhenge redevelopment at 700 W Pacific."
+    },
+    {
+      "id": 0,
+      "stake": "HARC votes on alterations to two Town-owned landmark and civic buildings."
     },
     {
       "id": 3,
-      "stake": "Preliminary public hearings on large-scale Carhenge redevelopment across multiple buildings in Backman Village."
+      "stake": "BOCC amending county code on natural medicine businesses and nonconforming lots."
     },
     {
-      "id": 2,
-      "stake": "HARC reviews alterations to Town Hall landmark and a floor-area-adding Parks office expansion."
+      "id": 6,
+      "stake": "Public hearing on lot resubdivision at 845 & 847 Hyde Street in Ridgway."
     },
     {
-      "id": 13,
-      "stake": "County housing code rewrite moves toward final recommendations on zoning, density, and affordability incentives."
+      "id": 7,
+      "stake": "Rico board votes on water line contract and Historical Society lease agreement."
     },
     {
-      "id": 8,
-      "stake": "Public hearing on lot resubdivision at 845–847 Hyde Street in Ridgway."
-    },
-    {
-      "id": 9,
-      "stake": "Rico Board votes on water line replacement contract and a Historical Society lease."
+      "id": 11,
+      "stake": "County housing code rewrite advances zoning, density, and affordable housing incentives."
     }
   ]
 }

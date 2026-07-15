@@ -1,38 +1,5 @@
 [
   {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-07-14/",
-    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    "pubDate": "2026-07-14T22:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
-    "title": "Book Buzz at Telluride Brewing Co-Lawson Hill",
-    "link": "https://koto.org/event/book-buzz-at-telluride-brewing-co-lawson-hill-2/",
-    "description": "Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader's Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We'll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff. Don't have a card? No problem! We'll make one for you on the spot!",
-    "pubDate": "2026-07-14T23:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Brewing Company Lawson Hill Taproom",
-    "imageUrl": ""
-  },
-  {
-    "title": "Music Theory For Beginners",
-    "link": "https://koto.org/event/music-theory-for-beginners/",
-    "description": "In this event series, Annie and Rachel will take you on a journey,—starting from the very beginning of reading music—to give you the skills to start reading sheet music on your own. Annie began playing the piano at age 5 and the violin at age 8. She continued studying classical violin throughout high school and college. Today she enjoys playing chamber music with Telluride Chamber, working with her violin and piano students, and performing at wedding ceremonies throughout Southwest Colorado. She also enjoys learning new instruments- right now she is learning how to play the cello, and she is a new member of the Telluride Chorale. Rachel learned to read music at four years old during piano lessons and played the violin for eight years from elementary through high school. …",
-    "pubDate": "2026-07-14T23:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-15/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -492,6 +459,50 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-22/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-07-22T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://koto.org/event/market-on-the-plaza/2026-07-22/",
+    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    "pubDate": "2026-07-22T17:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-22/",
+    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-07-22T19:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    "link": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
+    "description": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    "pubDate": "2026-07-22T23:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
     "imageUrl": ""
   }
 ]

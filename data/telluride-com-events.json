@@ -360,18 +360,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
   },
   {
-    "title": "Telluride Table",
-    "link": "https://www.telluride.com/event/telluride-table/",
-    "description": "Family, whether forged by blood or bond, is the center of community and it all starts at the table. With a meal, with …",
-    "pubDate": "2026-07-10",
-    "endDate": "2026-07-13",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/48187/telluridetable_logoassets_updated-14.800x533.webp"
-  },
-  {
     "title": "Tom Gullikson Tennis Clinic",
     "link": "https://www.telluride.com/event/tom-gullikson-tennis-clinic/",
     "description": "Join the Gully Tennis Clinic @ TRC! Tom is a decorated Tennis coach and playing professional. Come out and enjoy some …",
@@ -382,17 +370,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
-  },
-  {
-    "title": "Without a Doubt Film Screening + Q&A w/Braydon Bringhurst",
-    "link": "https://www.telluride.com/event/without-a-doubt-film-screening-q-a-w-braydon-bringhurst/",
-    "description": "Join Patagonia in-store for a screening of Patagonia Films' Without a Doubt featuring Braydon Bringhurst. In May of …",
-    "pubDate": "2026-07-13",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63027/without_a_doubt_jpg.800x533.webp"
   },
   {
     "title": "Twenty(by)Telluride: Ah Haa HAHA",
@@ -868,5 +845,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62898/screenshot_2026-06-15_at_11_29_51_am.800x533.webp"
+  },
+  {
+    "title": "Balourdet Quartet",
+    "link": "https://www.telluride.com/event/balourdet-quartet/",
+    "description": "A concert by the multi-award winning Balourdet String Quartet. One of the most inspiring quartets of their generation. …",
+    "pubDate": "2026-09-13",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp"
   }
 ]

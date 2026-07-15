@@ -181,46 +181,6 @@
     "caseNumber": "202601"
   },
   {
-    "title": "Special Use Permit -- Scenic and Social Special Use (Parcel #452726103022)",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "San Miguel County Planning Commission will hold a public hearing on a Scenic and Social Special Use Permit application for a property at 488 S. Avalon Dr., Norwood. The hearing is scheduled for May 14, 2026 at 10:30 a.m. Written comments must be received by noon on April 30, 2026.",
-    "deadline": "April 30, 2026 (comments deadline); May 14, 2026 (hearing)",
-    "expires": "2026-07-14",
-    "dates": "4/23",
-    "papers": [
-      "ttimes_0423"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    "address": "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    "noticeKey": "sup-452726103022-scenic-social"
-  },
-  {
-    "title": "Special Use Permit -- Construction/Contractor Office and Staging Area (Parcel #452726103022)",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "John Miller on behalf of Kurt Works Inc. and Kurt Crockett has applied for a Special Use Permit to establish a Construction/Contractor Office and Staging Area for excavation and grading business operations at 488 S. Avalon Dr., Norwood. Public hearing scheduled for May 14, 2026 at 10:45 a.m. Written comments due by noon April 30, 2026.",
-    "deadline": "April 30, 2026 (comments deadline); May 14, 2026 (hearing)",
-    "expires": "2026-07-14",
-    "dates": "4/23",
-    "papers": [
-      "ttimes_0423"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_76d3542a-2f1e-4b15-bc4c-59de56d18ccc.html",
-    "address": "488 S. Avalon Dr., Norwood, CO, Parcel #452726103022",
-    "noticeKey": "sup-452726103022-contractor-office"
-  },
-  {
     "title": "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
     "entity": "San Miguel County Public Trustee",
     "entityClass": "ent-county",
@@ -240,26 +200,6 @@
     "address": "Section 27, Township 45 North, Range 13 West, San Miguel County",
     "noticeKey": "foreclosure-202602",
     "caseNumber": "202602"
-  },
-  {
-    "title": "Notice to First Mortgagees -- Village Creek Condominium Declaration Amendment",
-    "entity": "Village Creek Condominium Association",
-    "entityClass": "ent-county",
-    "entityLogo": "smrha",
-    "icon": "🏠",
-    "iconClass": "type-hearing",
-    "type": "Housing Notice",
-    "filterTag": "housing",
-    "summary": "Village Creek Condominium Association has issued a proposed First Amendment to the Declaration for Village Creek Condominiums, as established by the Condominium Declaration recorded December 23, 1987. Pursuant to C.R.S. sec. 38-33.3-217, this notice is being published to notify first mortgagees of the proposed amendment.",
-    "deadline": "",
-    "expires": "2026-07-14",
-    "dates": "5/14",
-    "papers": [
-      "ttimes_0514"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_37e5c98c-cc98-40ed-b749-f4e550c9ec5d.html",
-    "address": "Village Creek Condominiums, San Miguel County",
-    "noticeKey": "village-creek-condo-amendment"
   },
   {
     "title": "Financial Report -- Treasurer's Semi-Annual Report (July-December 2025)",
