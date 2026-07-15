@@ -496,7 +496,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -535,7 +535,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners Regular Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -574,7 +574,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -2349,16 +2349,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "Breakthroughs in RNA Science: From Pond Scum to Life-Saving Medicine",
-    date: "2026-07-14",
-    time: "6:30 PM – 7:30 PM",
-    location: "Telluride Conference Center, Telluride",
-    description: "Phil Bevilacqua, from Penn State University, will present breakthroughs in RNA medicine over the last decade including using CRISPR for gene editing, developing mRNA vaccines for stopping pandemics and curing cancer, and the investigating the roles of RNA in the origin of life itself.  He will also discuss how investing in basic science has led to these translational breakthroughs.\r\n\r\nTown Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
-    link: "https://telluridescience.org/event/breakthroughs-in-rna-science/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.30.02-PM-scaled.png",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "When the Cure is a Virus: Reprogramming a Killer to Fight Cancer",
     date: "2026-07-21",
     time: "6:30 PM – 7:30 PM",
@@ -3541,7 +3531,7 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
-    title: "Soussical The Musical - Summer Youth Theatre Program",
+    title: "Canceled: Jul 15, 2026: Seussical The Musical - Summer Youth Theatre Program",
     link: "https://events.ourayridgwayevents.com/event/soussical-the-musical-summer-youth-theatre-program",
     description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org . View on site | Email this event",
     pubDate: "2026-07-15T19:00:00.000Z",
@@ -4247,17 +4237,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52462553145158/huge/147bc715c72ab517c614f260fa4d426fda89f316.jpg"
   },
   {
-    title: "Final Friday: Crafts for Critters",
-    link: "https://events.ourayridgwayevents.com/event/final-friday-crafts-for-critters",
-    description: "🐾CALLING ALL ANIMAL LOVERS!🐾 Join us at the end of July to make some crafts for critters (dogs and cats), learn from a local behaviorist, and practice some agility with Maple. 🐶 For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Donna Maurer, a former art teacher and local behaviorist will be joining us. If you've ever been interested in learning more about dog behavior, training, and how to best support your pup when they are nervous then this is the Final Friday for you! …",
-    pubDate: "2026-07-31T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Voyager Basecamp",
-    imageUrl: "https://localist-images.azureedge.net/photos/53428193270953/huge/6a3c9c5a31bf4a7b3359a5c95b660171d698a5e8.jpg"
-  },
-  {
     title: "Chant to Calm the Fires",
     link: "https://events.ourayridgwayevents.com/event/chant-to-calm-the-fires",
     description: "Join Flora Zenit and Elisabeth \"Lava\" for an evening of chanting to calm our hearts, our minds, and the fires. Flora is an experienced kirtan leader from Venezuela, with an opening act for Sam Garrett under her belt. As an international speaker and performer, Flora has shared stages at Envision Festival, women’s circles, medicinal music events, and conscious festivals. No chanting experience necessary. Just bring the warmth of your heart and prayerful presence. We will be pleading with Divine Mother to calm the fires. We will be sending healing vibrations into the minds of all the first responders and others who are affected . . . and into the forest to all sentient beings affected. Elisabeth and her partner Dave have seen and met some of the firefighters in the field while they were allowed to re-enter briefly for medications while evacuated from their home between Ouray and Ridgway. …",
@@ -4786,17 +4765,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Final Friday: Clowning Around",
-    link: "https://events.ourayridgwayevents.com/event/final-friday-clowning-around",
-    description: "CLOWN SCHOOL IS NOW IN SESSION! Join us at the end of the first week back at school to be a little less serious and a little more silly. For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Andrea Sokolowski, founder of the local improv group The Play Does will be joining us. If you've ever been interested in learning about improv or wanted to run away to the circus then this is the Final Friday for you! …",
-    pubDate: "2026-08-28T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Voyager Basecamp",
-    imageUrl: "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg"
   },
   {
     title: "DARRELL SCOTT - Live at The Sherbino",
