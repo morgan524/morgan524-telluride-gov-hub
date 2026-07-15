@@ -574,7 +574,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -814,8 +814,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 14, 2026",
     firstSeen: "2026-07-14",
     newsTopic: "community",
-    copy: "The sky is thick with the demise of a thousand trees and even the sun sets bloody, these days.",
-    claudeSummary: false,
+    copy: "Last summer's Stoner Mesa Fire burned 10,000 acres above Rico in the San Juans. A recent visit to the burn scar turned up unexpected morels — mushrooms that respond to fire's heat and ash-rich soil as a cue to fruit, helping stabilize soils and kick off forest recovery. Heavy loss, but the cycles still turn up here.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_558a094b-2688-4cb2-92bf-a322bdfd5b43.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/06/a066739c-ff2a-462b-a5b9-67b0793e6e62/6a56a442a7441.image.jpg",
     imgHiRes: true
@@ -1905,6 +1905,30 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  {
+    title: "Wright, Dexter share wisdom on birds, fire",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-15",
+    dateSource: "article",
+    newsTopic: "public-safety",
+    copy: "Many know or remember Brenda Wright and Coen Dexter, former Nucla residents, who for years maintained an impressive food-producing garden off 5th Avenue. The couple first came to the West End …",
+    href: "https://www.sanmiguelbasinforum.com/stories/wright-dexter-share-wisdom-on-birds-fire,122305",
+    img: ""
+  },
+  {
+    title: "Dessert contest had 87 entries, 310 guests",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-15",
+    dateSource: "article",
+    newsTopic: "community",
+    copy: "The San Miguel Basin Fair’s annual dessert contest runs on procedure. There are judges, who remain secret until the event is over, who are given specific categories to judge. Those categories …",
+    href: "https://www.sanmiguelbasinforum.com/stories/dessert-contest-had-87-entries-310-guests,122303",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260713-235341-51b-F3%20-%20front%20page%20pic.jpg"
+  },
   {
     title: "Ouray locals reflect on impacts of fire",
     source: "San Miguel Basin Forum",
@@ -3053,18 +3077,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Jake Manzi",
-    link: "https://www.alibitelluride.com/calendar#eca-event=jake-manzi-1",
-    description: "Jake Manzi has been on a journey, and he's ready to tell you all about it. Raise...",
-    pubDate: "2026-07-14",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/7c0521ce-1758-4260-90ef-4561e574893f/-/crop/2807x1403/0,441/-/preview/"
-  },
   {
     title: "Liver Down the River w/ Grass Blasters",
     link: "https://www.alibitelluride.com/calendar#eca-event=liver-down-the-river-w-grass-blasters",
