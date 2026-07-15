@@ -574,7 +574,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -688,6 +688,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "BF Deal",
+    source: "Telluride Times",
+    date: "July 15, 2026",
+    firstSeen: "2026-07-15",
+    newsTopic: "arts-culture",
+    copy: "Jim Bedford, known as \"BF Deal,\" passed away at 81 after more than 50 years shaping Telluride. He co-founded KOTO radio, helped build the Telluride Film Festival over 36 years, and led Mountainfilm in its early days. He moved here in 1972 and never really stopped working.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_9657a583-1b26-466a-96a5-12dce3a67f9c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a2/9a21030a-af6f-4777-bec4-6254e892d0b6/6a569d831f3fd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Free Oak Street Park SummerSHOW Series continues",
     source: "Telluride Times",
