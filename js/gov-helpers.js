@@ -535,7 +535,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -574,7 +574,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -1618,6 +1618,51 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 18, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
+    source: "Town of Telluride",
+    date: "June 16, 2026",
+    newsTopic: "land-use",
+    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
+  },
+  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -1627,12 +1672,84 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
+  },
+  {
+    title: "Mill Creek Park Site Closed for Revegetation",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
+  },
+  {
+    title: "Beaver Park Gravel Pit Closure",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
+  },
+  {
     title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     source: "San Miguel County",
     date: "July 14, 2026",
     newsTopic: "housing",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
+    source: "San Miguel County",
+    date: "June 24, 2026",
+    newsTopic: "housing",
+    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Gold Mountain Fire",
+    source: "Town of Telluride",
+    date: "June 29, 2026",
+    newsTopic: "housing",
+    copy: "The Town is aware of the Gold Mountain Fire currently burning in Ouray County, north of the City of Ouray. We want to assure residents and visitors that the Gold Mountain Fire does not pose a direct threat to the Town of Telluride at this time.",
+    href: "http://ouraycountyco.gov",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -2938,7 +3055,7 @@ const WILKINSON_EVENTS = [
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_11_32_30.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_15_10_31_18.jpg"
   }
 ];
 
@@ -3193,7 +3310,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Randy Houser Live in Concert Presented by The Alpine Club, A benefit for the Telluride Foundation’s Good Neighbor Fund",
     link: "https://sheridanoperahouse.com/events/randy-houser-live-in-concert-presented-by-the-alpine-club-and-a-benefit-for-the-telluride-foundations-good-neighbor-fund/",
-    description: "Randy Houser performs live in concert at the historic Sheridan Opera House in Telluride, presented by The Alpine Club. The event benefits the Telluride Foundation's Good Neighbor Fund, a local initiative supporting community members in need.",
+    description: "",
     pubDate: "2026-07-17",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3204,7 +3321,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "An Evening with Josh Abbott",
     link: "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
-    description: "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.",
+    description: "",
     pubDate: "2026-07-22",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3215,7 +3332,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
-    description: "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
+    description: "",
     pubDate: "2026-07-23",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4130,6 +4247,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52462553145158/huge/147bc715c72ab517c614f260fa4d426fda89f316.jpg"
   },
   {
+    title: "Final Friday: Crafts for Critters",
+    link: "https://events.ourayridgwayevents.com/event/final-friday-crafts-for-critters",
+    description: "🐾CALLING ALL ANIMAL LOVERS!🐾 Join us at the end of July to make some crafts for critters (dogs and cats), learn from a local behaviorist, and practice some agility with Maple. 🐶 For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Donna Maurer, a former art teacher and local behaviorist will be joining us. If you've ever been interested in learning more about dog behavior, training, and how to best support your pup when they are nervous then this is the Final Friday for you! …",
+    pubDate: "2026-07-31T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Voyager Basecamp",
+    imageUrl: "https://localist-images.azureedge.net/photos/53428193270953/huge/6a3c9c5a31bf4a7b3359a5c95b660171d698a5e8.jpg"
+  },
+  {
     title: "Chant to Calm the Fires",
     link: "https://events.ourayridgwayevents.com/event/chant-to-calm-the-fires",
     description: "Join Flora Zenit and Elisabeth \"Lava\" for an evening of chanting to calm our hearts, our minds, and the fires. Flora is an experienced kirtan leader from Venezuela, with an opening act for Sam Garrett under her belt. As an international speaker and performer, Flora has shared stages at Envision Festival, women’s circles, medicinal music events, and conscious festivals. No chanting experience necessary. Just bring the warmth of your heart and prayerful presence. We will be pleading with Divine Mother to calm the fires. We will be sending healing vibrations into the minds of all the first responders and others who are affected . . . and into the forest to all sentient beings affected. Elisabeth and her partner Dave have seen and met some of the firefighters in the field while they were allowed to re-enter briefly for medications while evacuated from their home between Ouray and Ridgway. …",
@@ -4658,6 +4786,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Final Friday: Clowning Around",
+    link: "https://events.ourayridgwayevents.com/event/final-friday-clowning-around",
+    description: "CLOWN SCHOOL IS NOW IN SESSION! Join us at the end of the first week back at school to be a little less serious and a little more silly. For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Andrea Sokolowski, founder of the local improv group The Play Does will be joining us. If you've ever been interested in learning about improv or wanted to run away to the circus then this is the Final Friday for you! …",
+    pubDate: "2026-08-28T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Voyager Basecamp",
+    imageUrl: "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg"
   },
   {
     title: "DARRELL SCOTT - Live at The Sherbino",
