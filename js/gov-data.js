@@ -217,7 +217,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-07-15';
+const SMART_CACHE_DATE = '2026-07-16';
 
 const SMART_CACHED_DATA = [
   {

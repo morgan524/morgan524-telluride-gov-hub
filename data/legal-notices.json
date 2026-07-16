@@ -13,24 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses",
-    "entity": "San Miguel County Assessor",
-    "entityClass": "ent-assessor",
-    "entityLogo": "state",
-    "icon": "🏠",
-    "iconClass": "type-tax",
-    "type": "Tax Exemption",
-    "filterTag": "tax-finance",
-    "summary": "Colorado provides a property tax exemption of 50% of the first $200,000 in actual value for qualifying senior citizens (65+, 10-year ownership), veterans with 100% disability, and gold star veteran spouses. Applications accepted through July 15, 2026. Contact the Assessor at 970-728-3174.",
-    "deadline": "Applications due by July 15, 2026",
-    "expires": "2026-07-15",
-    "dates": "2/5 through 7/9 (biweekly)",
-    "papers": [
-      "ttimes",
-      "npost"
-    ]
-  },
-  {
     "title": "Request for Quote -- Request for Quote: Material Hauling",
     "entity": "San Miguel County",
     "entityClass": "ent-county",
@@ -324,26 +306,6 @@
     "caseNumber": "26PR30006"
   },
   {
-    "title": "Public Hearing Notice -- Land Use Code Amendment Section 5-1908 Nonconforming Lots",
-    "entity": "San Miguel County Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The San Miguel County Board of County Commissioners is holding a public hearing on July 15, 2026 at 10:00 a.m. in Telluride (333 W. Colorado Ave, 2nd Floor) and online to consider an amendment to Land Use Code Section 5-1908 regarding Nonconforming Lots, with related amendments to Sections 5-307 (Forestry, Agriculture and Open), 5-314 (Open Space), 5-319.1 (Wright's Mesa), 5-321 (High Country Area), and Article 7 (Definitions). This is the second step of a two-step process; written comments should be submitted to the San Miguel County Planning Department by noon on May 27, 2026.",
-    "deadline": "2026-07-15",
-    "expires": "2026-07-15",
-    "dates": "6/18",
-    "papers": [
-      "ttimes_0618"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    "address": "333 W. Colorado Ave, 2nd Floor, Telluride, CO 81435 (San Miguel County unincorporated lands)",
-    "noticeKey": "luc-amendment-5-1908-nonconforming-lots"
-  },
-  {
     "title": "Foreclosure Sale Notice -- Stonegate Drive Mountain Village (Sale No. 202603)",
     "entity": "Federal Holding Realty / Public Trustee San Miguel County",
     "entityClass": "ent-county",
@@ -403,26 +365,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
     "address": "District Court of San Miguel County, Colorado",
     "noticeKey": "creditors-kiball-COL-000175"
-  },
-  {
-    "title": "Public Hearing -- Lot Line Vacation & PUD Amendment, Lawson Hill (COL-000176)",
-    "entity": "San Miguel County Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "San Miguel County is considering an application by Drea Araiza on behalf of San Miguel County to vacate the lot line between Lots 425-1 and 425-2 in the Lawson Hill PUD (Parcels #456531201019 and #456531201020), in order to build employee housing as an accessory use to the county jail. The Board of County Commissioners will hold a public hearing on July 15, 2026 at 9:30 AM at 333 West Colorado Avenue, Telluride. Written comments of more than one page must be received by July 7, 2026 to receive full consideration.",
-    "deadline": "2026-07-15",
-    "expires": "2026-07-15",
-    "dates": "6/25",
-    "papers": [
-      "ttimes_0625"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
-    "address": "Lots 425-1 and 425-2, Lawson Hill PUD, Parcels #456531201019 and #456531201020, San Miguel County, CO",
-    "noticeKey": "lot-line-vacation-lawson-hill-COL-000176"
   },
   {
     "title": "Property Tax Exemption -- Senior Citizens, Disabled Veterans & Gold Star Spouses",

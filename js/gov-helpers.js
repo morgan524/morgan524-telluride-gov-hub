@@ -145,9 +145,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-06-17|Parks & Recreation Commission - Jun 17 2026":
     {"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z","sv":2},
 
-  "telluride|2026-06-15|Gondola Subcommittee - Jun 15 2026":
-    {"zoomUrl":"https://gbsm.zoom.us/j/82559576086","sv":2},
-
   "fire|2026-06-16|Board of Directors Meeting":
     {"sv":2},
 
@@ -174,9 +171,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ","meetingId":"815 3599 7736","passcode":"769982","phone":"301-715-8592"},
-
-  "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
-    {"sv":2},
 
   "county|2026-06-22|Open Space Commission Meeting":
     {"sv":2,"zoomUrl":"https://www.google.com/url?q=https://us06web.zoom.us/j/82416565788&sa=D&source=calendar&ust=1782161034577544&usg=AOvVaw1VhSAXMLvCsaoHEGucwKxm","meetingId":"824 1656 5788","passcode":"269895","phone":"970-369-5469"},
@@ -360,9 +354,6 @@ const MANUAL_SUMMARIES = {
   "ophir|2026-06-16|General Assembly Meeting":
     "Agenda not yet available",
 
-  "norwood|2026-06-15|Planning and Zoning Commission Meeting":
-    "The commission takes up two land-use code items. It will consider Resolution 0615-2026, recommending amendments to the Norwood Land Use Code to adopt the updated 2026 DarkSky International outdoor-lighting standards, alongside a discussion of the Dark Sky Coalition's updated rules. It also reviews a Current Conditions Analysis as part of the broader Land Use Code update. The consent agenda is limited to approving the May 18 minutes. 6:30 p.m. at Norwood Town Hall, with a Zoom option.",
-
   "county|2026-06-17|Board of County Commissioners Meeting":
     "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
 
@@ -422,12 +413,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-06-18|Lodging Tax Board 06/18/26":
     "The Lodging Tax Board meets to review tax reports and hear updates from the Norwood Chamber and Telluride Tourism Board. Standard quarterly check-in on how lodging tax dollars are being distributed and used across the county.",
-
-  "telluride|2026-06-15|Corrected Agenda for Open Space Commission Site Walk - Jun 15 2026":
-    "The Open Space Commission will walk the Tilman-Beam Corral site at Lot B in the Pearl Subdivision to review corral and fence conditions. They'll meet at the Shell Station on Highway 145 at 4 PM before heading to the property.",
-
-  "telluride|2026-06-15|Gondola Subcommittee - Jun 15 2026":
-    "The Gondola Advisory Committee meets to discuss federal funding timelines and local commitments for gondola replacement. The main focus is FTA Capital Investment Grant requirements — SMART needs $18M committed for project development work by fall 2026 to enter the federal program, with partners (Town of Telluride, Mountain Village entities) needing to formalize their share of a $140M total project cost. The committee will also hear updates from SMART and local jurisdictions, plus discuss next steps for the funding process.",
 
   "county|2026-07-14|Historical Commission":
     "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
@@ -535,7 +520,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1558,90 +1543,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Keeping homeless pets safe from wildfire",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "public-safety",
-    copy: "Second Chance Humane Society evacuated all 40 animals from its Ridgway shelter Wednesday after a fast-moving wildfire came into view of the facility. Over 100 community members responded to the emergency foster call, placing all 10 dogs and 30 cats within hours. The shelter expects animals to remain in foster homes two to four days; donations toward transport and HEPA filters are welcome at secondchancehumane.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_522f6f8b-f59f-487a-984b-d3b97298fc07.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/66/d66947a1-797f-42fd-8539-a9e708bc276e/6a46a455e2c73.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Fire shelters are a key defense for firefighters. But they don't guarantee survival",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "public-safety",
-    copy: "Fire shelters — layered aluminum, silica, and fiberglass wraps carried by wildland crews — have saved lives but aren't guaranteed protection. Escape routes and safety zones come first; the shelter is a last resort. Deployments have been rare recently, with only four recorded between 2021 and 2025.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_cecfb0ba-edd0-567a-8bf0-ca3a01ad9698.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/0d/80d00ef3-db70-56cd-8f14-70bdd66584e0/6a469ef7c213a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Trump and Republicans return to communist attacks against Democrats ahead of the midterm elections",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "government",
-    copy: "Republicans are ramping up \"communist\" attacks on Democrats ahead of the midterms, spurred by democratic socialist primary wins in New York City and Denver. Democrats are divided between centrists and a growing left wing. Both parties are maneuvering ahead of November with slim GOP majorities in play.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_204b6353-51fc-5ab6-8da9-b5a2f26015a5.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/6c/46cbd91d-c8da-5616-a33e-7d5904a0e4a3/6a464307452af.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Go Fourth",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "community",
-    copy: "Stage 2 fire restrictions canceled the traditional fireworks, but Telluride is filling the gap with drone shows, a laser party, and live music on both July 3 and 4. The July 4 parade rolls at 11 a.m. — a beloved, anything-goes spectacle with an F-16 flyover expected. Arrive early for a good spot.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_e7854f8b-1993-4501-8a59-396815c37898.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/ce/5cea32c5-b93e-4224-a32c-5d57a587f7f3/6a40b35117934.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Ann Grundy",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "community",
-    copy: "Ann Grundy, a longtime Telluride seasonal resident, passed away at her home on Lake Carroll. She and her late husband Dr. Laurence Grundy discovered Telluride in 1978, returning for decades of summers and winters. She is remembered for her stained-glass art, adventurous spirit, and quiet kindness.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_16eec0ce-93d5-4deb-acf4-501d346d9d50.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/99/e99f664b-854a-4df3-831a-3ffa0da6191f/6a45272a54c25.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for July 2-9, 2026",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "infrastructure",
-    copy: "San Miguel County's Board of Equalization is sitting July 1–August 5, 2026, to hear property valuation appeals. Deadlines are July 15 for real property and July 20 for personal property. Separately, Telluride School District is seeking bids for year-round custodial services at its three school buildings.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Julie Beth Flatt Parker",
-    source: "Telluride Times",
-    date: "July 2, 2026",
-    firstSeen: "2026-07-02",
-    newsTopic: "recreation",
-    copy: "Julie Beth Flatt Parker of San Antonio and Telluride passed away at 79. She and her husband George were longtime Telluride community supporters, backing the Telluride Foundation since 2001 and the San Miguel Resource Center, and Julie volunteered at Ah Haa School for the Arts.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_4ff92e0f-cf9d-4eeb-a6fb-bb4b3ce2287f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/d5/bd51fd7e-a968-46b4-a2e9-a2649026232d/6a4528871be36.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -1676,15 +1577,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
-    title: "Colorado Supreme Court Rules Unanimously That Butcher Creek PUD Cannot Be Amended or Rezoned by...",
-    source: "Town of Telluride",
-    date: "June 16, 2026",
-    newsTopic: "land-use",
-    copy: "(June 15, 2026) – The Colorado Supreme Court today issued a unanimous decision in Kavanaugh v. Telluride Locals Coalition Petitioners’ Committee et al. (2026 CO 47), ruling in favor of the Town of Telluride and reversing the Colorado Court of Appeals.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=395",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15579"
   },
   {
     title: "Home Rebate Programs",
@@ -1812,7 +1704,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
     source: "Town of Ridgway",
-    date: "July 15, 2026",
+    date: "July 16, 2026",
     firstSeen: "2026-07-07",
     newsTopic: "arts-culture",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -1845,6 +1737,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 7-15-26",
+    source: "KOTO Community Radio",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters Begin Repair Work on Ferris Fire Land; Finding the Glorians with Terry Tempest Williams; Goats Return to the Valley Floor",
+    href: "https://koto.org/news/newscast-7-15-26/"
+  },
   {
     title: "Newscast 7-13-26",
     source: "KOTO Community Radio",
@@ -1892,19 +1792,18 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "A Gold Mountain Fire Update; Telluride Town Council Names Resident Advisory Committee; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-7-2-26/"
-  },
-  {
-    title: "Newscast 7-1-26",
-    source: "KOTO Community Radio",
-    date: "July 2, 2026",
-    newsTopic: "public-safety",
-    copy: "A Gold Mountain Fire Update; Town Council Election Still in Flux; Telluride Community Survey Shows Areas for Improvement",
-    href: "https://koto.org/news/newscast-7-1-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "Finding the Glorians with Terry Tempest Williams",
+    source: "KOTO Community Radio",
+    date: "July 16, 2026",
+    newsTopic: "community",
+    copy: "In her new book, The Glorians: Visitations from the Holy Ordinary, author Terry Tempest Williams asks us to find moments of grace in a complicated world. Tempest Williams spoke with KOTO's Julia Caulfield.",
+    href: "https://koto.org/news/finding-the-glorians-with-terry-tempest-williams/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -2486,28 +2385,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-15/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-07-15T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "HAHA TwentyByTelluride at the Alibi",
-    link: "https://koto.org/event/haha-twentybytelluride-at-the-alibi/",
-    description: "JULY 15 • 5:30-6:30PM • FREE EVENT | Join us for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event artists, innovators, and creative minds take the stage to share their ideas, passions, and process. Don’t forget to buy your tickets for the HAHA event July 17-19.",
-    pubDate: "2026-07-15T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Alibi, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-16/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2692,7 +2569,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Zumba with Gisela",
@@ -2736,7 +2613,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Pickleball Open Play",
@@ -2802,7 +2679,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Book Buzz w/The Pour Over Pedaler",
@@ -2846,7 +2723,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -2901,7 +2778,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "CPR World Wilderness First Aid course",
@@ -2956,6 +2833,50 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Plant Party -You Buggin Me",
+    link: "https://koto.org/event/plant-party-you-buggin-me/",
+    description: "Who's Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
+    pubDate: "2026-07-22T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Shakespeare in the Park: \"Henry V\"",
+    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-22/",
+    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
+    pubDate: "2026-07-23T02:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Town Park",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-23/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-23T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "DIY Condiments with Kayla",
+    link: "https://koto.org/event/diy-condiments-with-kayla/",
+    description: "Skip the store-bought bottles and discover how easy—and delicious—it is to make your own flavorful condiments from scratch. Join fermentation educator and local food advocate Kayla Wexelberg of Taste Your Roots for a hands-on workshop focused on creating homemade condiments and barbecue sauce using fresh, wholesome ingredients. Learn the fundamentals of balancing sweet, salty, tangy, and savory flavors while crafting customizable recipes that fit your taste and dietary preferences. Participants will explore ingredient combinations, discover simple techniques for elevating everyday meals, and leave with recipes and inspiration to continue experimenting at home. Whether you're a backyard grill master, a home cook looking to expand your kitchen skills, or simply curious about making more foods from scratch, this class will help you add a personal touch to every meal.",
+    pubDate: "2026-07-23T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   }
 ];
@@ -3058,7 +2979,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-15"
+    lastSeen: "2026-07-16"
   }
 ];
 
@@ -3261,6 +3182,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/"
+  },
+  {
+    title: "The Last Wild Buffalo w/ Hunter Archer",
+    link: "https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer",
+    description: "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
+    pubDate: "2026-08-25",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/80e2e21e-674b-4121-b683-5081a143cca8/-/crop/1308x1310/67,0/-/preview/"
   },
   {
     title: "Big Blitz",
@@ -4996,6 +4929,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-07-15T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
+  },
+  {
     title: "Twenty(by)Telluride: Ah Haa HAHA",
     link: "https://townofmountainvillage.com/explore/events/all-events/twenty-by-telluride-ah-haa-haha/",
     description: "Join us for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event artists, innovators,",
@@ -5073,6 +5017,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-07-20T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5082,6 +5037,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-07-22T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   },
   {
     title: "Party in the Park",
@@ -5161,6 +5127,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-07-27T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Town Talk: The Dual Challenge - Climate and Energy",
     link: "https://townofmountainvillage.com/explore/events/all-events/town-talk-the-dual-challenge-climate-and-energy/",
     description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine",
@@ -5181,6 +5158,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-07-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   },
   {
     title: "New York Philharmonic Brass Quintet",
@@ -5271,6 +5259,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-08-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Town Talk: single molecule views of Nature’s nanomachines",
     link: "https://townofmountainvillage.com/explore/events/all-events/single-molecule-views-of-natures-nanomachines/",
     description: "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
@@ -5291,6 +5290,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-08-05T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   },
   {
     title: "Opening Show for Telluride Jazz Festival",
@@ -5381,6 +5391,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49398/jazz-brunch-9x16.jpeg"
   },
   {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-08-10T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
     title: "Mountain Village Merchant Meeting",
     link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
     description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
@@ -5401,6 +5422,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-08-12T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   },
   {
     title: "Music on the Green Presents Ben Musser & Walker Young",
@@ -5959,6 +5991,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62645/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.800x533.webp"
   },
   {
+    title: "The National Summer School: Taste Like a Master",
+    link: "https://www.telluride.com/event/the-national-summer-school-taste-like-a-master/",
+    description: "Step into the shoes of a Master Sommelier in this highly interactive, educational series session. Featuring a blind …",
+    pubDate: "2026-07-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63073/the-national_wineeducation-flyer_8_5x11.800x533.webp"
+  },
+  {
     title: "Town Talk: The Dual Challenge - Climate and Energy",
     link: "https://www.telluride.com/event/town-talk-the-dual-challenge-climate-and-energy/",
     description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. …",
@@ -6344,21 +6387,6 @@ const LEGAL_NOTICES = [
     url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    title: "Property Tax Exemption -- Seniors, Disabled Veterans & Gold Star Spouses",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-assessor",
-    entityLogo: "state",
-    icon: "🏠",
-    iconClass: "type-tax",
-    type: "Tax Exemption",
-    filterTag: "tax-finance",
-    summary: "Colorado provides a property tax exemption of 50% of the first $200,000 in actual value for qualifying senior citizens (65+, 10-year ownership), veterans with 100% disability, and gold star veteran spouses. Applications accepted through July 15, 2026. Contact the Assessor at 970-728-3174.",
-    deadline: "Applications due by July 15, 2026",
-    expires: "2026-07-15",
-    dates: "2/5 through 7/9 (biweekly)",
-    papers: ["ttimes", "npost"]
-  },
-  {
     title: "Request for Quote -- Request for Quote: Material Hauling",
     entity: "San Miguel County",
     entityClass: "ent-county",
@@ -6630,24 +6658,6 @@ const LEGAL_NOTICES = [
     caseNumber: "26PR30006"
   },
   {
-    title: "Public Hearing Notice -- Land Use Code Amendment Section 5-1908 Nonconforming Lots",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The San Miguel County Board of County Commissioners is holding a public hearing on July 15, 2026 at 10:00 a.m. in Telluride (333 W. Colorado Ave, 2nd Floor) and online to consider an amendment to Land Use Code Section 5-1908 regarding Nonconforming Lots, with related amendments to Sections 5-307 (Forestry, Agriculture and Open), 5-314 (Open Space), 5-319.1 (Wright's Mesa), 5-321 (High Country Area), and Article 7 (Definitions). This is the second step of a two-step process; written comments should be submitted to the San Miguel County Planning Department by noon on May 27, 2026.",
-    deadline: "2026-07-15",
-    expires: "2026-07-15",
-    dates: "6/18",
-    papers: ["ttimes_0618"],
-    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    address: "333 W. Colorado Ave, 2nd Floor, Telluride, CO 81435 (San Miguel County unincorporated lands)",
-    noticeKey: "luc-amendment-5-1908-nonconforming-lots"
-  },
-  {
     title: "Foreclosure Sale Notice -- Stonegate Drive Mountain Village (Sale No. 202603)",
     entity: "Federal Holding Realty / Public Trustee San Miguel County",
     entityClass: "ent-county",
@@ -6701,24 +6711,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "creditors-kiball-COL-000175"
-  },
-  {
-    title: "Public Hearing -- Lot Line Vacation & PUD Amendment, Lawson Hill (COL-000176)",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "San Miguel County is considering an application by Drea Araiza on behalf of San Miguel County to vacate the lot line between Lots 425-1 and 425-2 in the Lawson Hill PUD (Parcels #456531201019 and #456531201020), in order to build employee housing as an accessory use to the county jail. The Board of County Commissioners will hold a public hearing on July 15, 2026 at 9:30 AM at 333 West Colorado Avenue, Telluride. Written comments of more than one page must be received by July 7, 2026 to receive full consideration.",
-    deadline: "2026-07-15",
-    expires: "2026-07-15",
-    dates: "6/25",
-    papers: ["ttimes_0625"],
-    url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
-    address: "Lots 425-1 and 425-2, Lawson Hill PUD, Parcels #456531201019 and #456531201020, San Miguel County, CO",
-    noticeKey: "lot-line-vacation-lawson-hill-COL-000176"
   },
   {
     title: "Property Tax Exemption -- Senior Citizens, Disabled Veterans & Gold Star Spouses",
