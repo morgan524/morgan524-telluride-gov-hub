@@ -43,6 +43,15 @@ function serializeArray(varName, arr) {
       if (Array.isArray(v)) {
         return `    ${safeKey(k)}: [${v.map(i => JSON.stringify(String(i))).join(', ')}]`;
       }
+      if (v === null) {
+        // Emit the literal `null` keyword, NOT JSON.stringify(String(null)) —
+        // that fallback produced the quoted string "null", which is TRUTHY at
+        // render time. getSmartMeetings()/getMVMeetings() do `!!m.agendaUrl`
+        // and `m.agendaUrl || fallback`, so a "null" string made hasAgenda
+        // true and pointed the "View Agenda" button at a broken `/null` link.
+        // (Same class of bug as the endDate:"undefined" fix above.)
+        return `    ${safeKey(k)}: null`;
+      }
       if (typeof v === 'boolean' || typeof v === 'number') {
         return `    ${safeKey(k)}: ${v}`;
       }

@@ -9,6 +9,20 @@ test('serializeArray OMITS undefined fields (the endDate:"undefined" bug)', () =
   assert.match(out, /title: "Run"/);
 });
 
+test('serializeArray emits null as the literal null, not the "null" string', () => {
+  // Regression: `agendaUrl: null` (SMART/MV stubs with no agenda yet) used to
+  // serialize as the quoted string "null", which is truthy → broke hasAgenda
+  // and the "View Agenda" link. Must be the JS null keyword so `!!m.agendaUrl`
+  // is false.
+  const out = serializeArray('X', [{ title: 'Meeting', agendaUrl: null, packetUrl: null }]);
+  assert.match(out, /agendaUrl: null/);
+  assert.ok(!/"null"/.test(out), 'must not emit the quoted string "null"');
+  // eslint-disable-next-line no-new-func
+  const back = new Function(`${out}; return X;`)();
+  assert.equal(back[0].agendaUrl, null);
+  assert.ok(!back[0].agendaUrl, 'null must be falsy at render time');
+});
+
 test('serializeArray keeps real values and types', () => {
   const out = serializeArray('X', [{ title: 'Fest', date: '2026-07-10', endDate: '2026-07-12', notable: true, n: 3 }]);
   assert.match(out, /endDate: "2026-07-12"/);
