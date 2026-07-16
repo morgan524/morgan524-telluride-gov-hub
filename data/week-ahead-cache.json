@@ -1,22 +1,18 @@
 {
-  "hash": "a6531b2b06cc55d84eb58c821188469e496357e2",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code hits second reading — meaning a final vote on land use amendments that would reshape historic review and landscaping standards valley-wide. Running alongside that, San Miguel County holds its sixth working session on its Land Use Code rewrite Wednesday, pushing zoning, density, and workforce housing incentives toward final recommendations. The week also brings a Randy Houser benefit concert for the Telluride Foundation's Good Neighbor Fund Friday at the Sheridan, and Terry Tempest Williams speaks Thursday at the library as part of One Book, One Canyon.",
+  "hash": "a3a2f931db92a2d38e802012fe170b586a4c144b",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code hits second reading — meaning a vote on real changes to land use, historic review, and landscaping standards is likely imminent. Alongside that, San Miguel County holds its sixth working session on the Land Use Code rewrite Wednesday, grinding through zoning, density, and workforce housing incentives toward final recommendations. The Housing Authority also meets Tuesday to take up a new primary residency policy for dependents in multi-custodial households — a small item with real consequences for families trying to qualify.",
   "notable": [
     {
       "id": 3,
-      "stake": "County's LUC rewrite nears final zoning and workforce housing recommendations."
+      "stake": "County's LUC rewrite moves toward final redlines on zoning and workforce housing."
     },
     {
       "id": 7,
-      "stake": "Second reading vote on wildfire code that changes land use and landscaping rules."
+      "stake": "Second reading of Wildfire Resiliency Code means a vote on land use and landscaping rules."
     },
     {
       "id": 8,
-      "stake": "Housing Authority sets new primary residency policy affecting multi-custodial households."
-    },
-    {
-      "id": 1,
-      "stake": "Public hearing on Telluride Science special event liquor permit at Town Talk."
+      "stake": "New primary residency policy for dependents could affect housing eligibility for many families."
     }
   ]
 }

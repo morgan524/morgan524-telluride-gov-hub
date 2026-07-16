@@ -674,6 +674,54 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Nugget documentary premieres July 25",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "A 30-minute documentary about the Nugget Building's 23-year restoration premieres July 25 at the Sheridan Opera House — 6:30–9 p.m., tickets $25, proceeds to the Telluride Historical Museum. The film draws on footage Katrine Formby shot throughout the process and will also air on Rocky Mountain PBS August 27.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_2f7e38c8-ff08-4b9f-ae12-2f5aa1569469.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/e7/fe77c416-28f8-42ce-b739-59554210f863/6a588d9c070a0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Conversing with horses is for everyone",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "Three authors behind *Horse Brain Science* — neuroscientist Steven Peters, Crissi McDonald, and Mark Rashid — visit Norwood's Lone Cone Library on July 23 for a community dinner and public conversation, brought in by San Miguel Basin CSU Extension and the local 4-H horse program. Tickets are $10, seating is limited to 144.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_4da54dde-2df0-445c-8a30-287d81ebefa0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/d1/3d1c362c-4c1a-4c2f-bed6-9770fcca18e0/6a578902e8264.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "David and Goliath in the wild",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "Small birds mobbing a hawk, ants taking down large prey, a kangaroo rat dodging a rattlesnake — the region's wildlife offers daily reminders that size and force aren't the only things that matter out here. The piece draws a line from those moments straight through to Gandhi and beyond.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_c7f478a3-7de2-4d22-8220-d133d8e78bc8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/db/1db08448-f03b-4dc0-8418-e238ebce6dcc/6a578a49ce53b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of July 16-22",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "government",
+    copy: "The Telluride Times Chalkboard for July 16–22 lists birthdays for a dozen local residents and runs through the regular community calendar — town board, school board, farmers market, senior meals, food pantry, pickleball, and more. Most recurring meetings and services in Norwood and the Nucla-Naturita area follow their usual schedules.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_4c261cdf-35eb-46b1-93cf-da23a9eba1d4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/f2/bf21fdc4-695b-40e7-9eeb-5cfe0e537f13/6a578b2e20d14.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Paradox Valley ranch permanently protected",
     source: "Telluride Times",
     date: "July 16, 2026",
@@ -2433,28 +2481,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-16/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-16T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-16/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-07-16T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "DIY Floral Bath Salts @ WPL",
     link: "https://koto.org/event/diy-floral-bath-salts-wpl/",
     description: "Join us for a relaxing and creative summer wellness program where participants will make their own floral bath salts and soothing lavender sachets to take home. Enjoy a calming evening of self-care, creativity, and community while learning simple DIY wellness crafts. Free and open to adults. All materials will be provided. Registration is required. Join us for our final DIY Summer Wellness program on August 26th (Soothing Foot Scrubs).",
@@ -3220,7 +3246,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3232,7 +3258,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3294,7 +3320,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Randy Houser Live in Concert Presented by The Alpine Club, A benefit for the Telluride Foundation’s Good Neighbor Fund",
     link: "https://sheridanoperahouse.com/events/randy-houser-live-in-concert-presented-by-the-alpine-club-and-a-benefit-for-the-telluride-foundations-good-neighbor-fund/",
-    description: "",
+    description: "Randy Houser performs live in concert at the historic Sheridan Opera House in Telluride, presented by The Alpine Club. The event benefits the Telluride Foundation's Good Neighbor Fund, a local initiative supporting community members in need.",
     pubDate: "2026-07-17",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3305,7 +3331,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "An Evening with Josh Abbott",
     link: "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
-    description: "",
+    description: "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.",
     pubDate: "2026-07-22",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3316,7 +3342,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
-    description: "",
+    description: "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
     pubDate: "2026-07-23",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -4888,7 +4914,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4897,9 +4923,9 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Board Of Trustees Board Of Trustees Special Meeting",
-    link: "https://www.norwoodtown.com/2026-07-15-board-of-trustees-board-of-trustees-special-meeting",
-    description: "",
+    title: "Board Of Trustees Special Meeting",
+    link: "https://www.norwoodtown.com/2026-07-15-board-of-trustees-special-meeting",
+    description: "A special meeting of the Town of Norwood Board of Trustees, held in Norwood, Colorado. As an official government meeting, it is open to the public and provides an opportunity for community members to observe local municipal business.",
     pubDate: "2026-07-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4910,7 +4936,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4921,7 +4947,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4932,7 +4958,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4943,7 +4969,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4954,7 +4980,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
