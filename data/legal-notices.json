@@ -584,5 +584,86 @@
     "url": "https://www.telluride.gov/bids.aspx?bidID=131",
     "address": "",
     "totBidID": "131"
+  },
+  {
+    "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
+    "entity": "Estate of Lawrence de Bivort",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The estate of Lawrence de Bivort (also known as Lawrence Harwood de Bivort, Lawrence H. de Bivort, and Lawrence H. Debivort) is being probated in San Miguel County, Colorado. Benjamin L. de Bivort is serving as Personal Representative. All persons with claims against the estate must present them to the Personal Representative or the San Miguel County District Court by November 16, 2026, or their claims may be permanently barred.",
+    "deadline": "2026-11-16",
+    "expires": "2026-11-16",
+    "dates": "7/16",
+    "papers": [
+      "ttimes_0716"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
+    "address": "District Court of San Miguel County, Colorado",
+    "noticeKey": "probate-2026PR30008",
+    "caseNumber": "2026PR30008"
+  },
+  {
+    "title": "RFP -- Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting Project",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride is soliciting proposals for two related projects: Oval Improvements (Part 1) and fencing/safety netting at Warner Field, both located in Telluride's Town Park. The full RFP is available on the Town's website at www.telluride.gov. Proposals must be submitted before 3:00 PM MT on Friday, July 31, 2026.",
+    "deadline": "2026-07-31",
+    "expires": "2026-07-31",
+    "dates": "7/16",
+    "papers": [
+      "ttimes_0716"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
+    "address": "Town Park, Telluride, CO",
+    "noticeKey": "rfp-telluride-townpark-oval-warner"
+  },
+  {
+    "title": "Public Hearing -- San Miguel County LUC Amendment, Section 5-1305B \"Qualified Owner\" Definition",
+    "entity": "San Miguel County Board of County Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-1305B, which would change the definition of 'Qualified Owner,' along with related amendments to Sections 5-1305C and 5-1350F. This is the second step of a two-step LUC amendment process requiring Community Planning Commission review and Board action. The hearing is scheduled for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
+    "deadline": "2026-08-05",
+    "expires": "2026-08-05",
+    "dates": "7/16",
+    "papers": [
+      "ttimes_0716"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
+    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    "noticeKey": "smc-luc-amendment-5-1305B-qualified-owner"
+  },
+  {
+    "title": "Public Hearing -- San Miguel County LUC Amendment, Section 5-406 Wildfire Areas",
+    "entity": "San Miguel County Board of County Commissioners",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-406 (Wildfire Areas), with related amendments to Article 7 (Definitions). This is the second step of a two-step LUC amendment process. The hearing is set for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
+    "deadline": "2026-08-05",
+    "expires": "2026-08-05",
+    "dates": "7/16",
+    "papers": [
+      "ttimes_0716"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
+    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    "noticeKey": "smc-luc-amendment-5-406-wildfire"
   }
 ]
