@@ -4933,6 +4933,132 @@ async function syncMedAgendas() {
   return map;
 }
 
+// ── Generate + reconcile: shared meeting-list rebuild ─────────────────────────
+// Merges real scraped meetings (authoritative dates + agenda URLs) with a few
+// FORWARD cadence placeholders, so a board's section shows an upcoming date even
+// in the gap before its next agenda posts. This is the fix for the static-list
+// failure class: a patch-only sync could attach a URL to an existing stub but
+// never ADD a meeting, so once a hand-curated list ran past its newest date the
+// section silently went empty. Rules come from lib/schedule.js and were verified
+// from each board's own meeting history — never guessed. Real scraped dates
+// always win on a collision, and we project only a couple ahead, so a cadence
+// that ever drifts self-corrects the moment the next real agenda is scraped (and
+// the source-health "0 upcoming" alarm backstops a total miss).
+//
+//   scraped: [{ date:'Month D, YYYY', agendaUrl?, packetUrl?, title?, board?, time?, special? }]
+//   cadence: { nth, weekday } | null   (null ⇒ scraped-only, no placeholder)
+//   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
+// Returns a sorted stub array, or null when there's nothing to publish (so the
+// caller preserves the existing array rather than blanking the section).
+const { nextOccurrences: _nextOccurrences } = require('./lib/schedule.js');
+function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
+  const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
+  const lookback = new Date(now.getTime() - lookbackDays * 86400000);
+  const byDate = new Map();
+  for (const s of (scraped || [])) {
+    const d = new Date(s.date);
+    if (isNaN(d) || d < lookback) continue;
+    const stub = {
+      date: s.date,
+      time: s.time || opts.time || null,
+      title: s.title || opts.title,
+      agendaUrl: s.agendaUrl || null,
+      packetUrl: s.packetUrl || null,
+      special: !!s.special,
+      location: s.location || opts.location
+    };
+    const bd = s.board || opts.board;
+    if (bd) stub.board = bd;
+    byDate.set(s.date + '|' + (bd || ''), stub);
+  }
+  if (cadence) {
+    const placeholders = opts.placeholders == null ? 2 : opts.placeholders;
+    for (const occ of _nextOccurrences(cadence, now, placeholders, opts.skipMonths || [])) {
+      const key = occ.date + '|' + (opts.board || '');
+      if (byDate.has(key)) continue;
+      const stub = {
+        date: occ.date, time: opts.time || null, title: opts.title,
+        agendaUrl: null, packetUrl: null, special: false, location: opts.location
+      };
+      if (opts.board) stub.board = opts.board;
+      if (opts.note) stub.note = opts.note;
+      byDate.set(key, stub);
+    }
+  }
+  const out = [...byDate.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
+  return out.length ? out : null;
+}
+
+// Rebuild MED_CACHED_DATA: real Traction-Rec agendas + 4th-Thursday regulars.
+// (Verified cadence: the regular board meeting is the 4th Thursday every month.)
+async function rebuildMedMeetings() {
+  console.log('\n🏥 Rebuilding Hospital District meetings...');
+  const map = await syncMedAgendas();               // { 'Month D, YYYY': url } or null
+  if (map === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
+  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  return assembleBoardStubs(scraped, { nth: 4, weekday: 4 }, {
+    title: 'Regular Board Meeting',
+    time: '8:30 AM - 11:30 AM',
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted before the meeting.'
+  });
+}
+
+// Rebuild SCHOOL_CACHED_DATA: scraped-only (no weekday placeholder). The Board
+// of Education's meeting dates are set by the academic calendar and land on the
+// 2nd / 3rd / last Tuesday depending on the month — there is NO reliable weekday
+// cadence to project, so we never fabricate a date. Instead we rebuild straight
+// from the posted agendas (syncSchoolAgendas already parses date + type from each
+// PDF link), so School self-heals when the fall agendas post. During the summer
+// recess gap it shows nothing upcoming — which is correct, and the source-health
+// alarm covers it.
+async function rebuildSchoolMeetings() {
+  console.log('\n🏫 Rebuilding Board of Education meetings...');
+  const items = await syncSchoolAgendas();          // [{ date, type, url }] or null
+  if (items === null) { console.warn('  School: fetch failed — preserving existing SCHOOL_CACHED_DATA'); return null; }
+  const TITLES = {
+    monthly: 'Telluride Board of Education Monthly Meeting',
+    work:    'Telluride Board of Education Work Session',
+    special: 'Telluride Board of Education Special Meeting'
+  };
+  const scraped = items.map(it => ({
+    date: it.date,
+    agendaUrl: it.url,
+    title: TITLES[it.type] || 'Telluride Board of Education Meeting'
+  }));
+  return assembleBoardStubs(scraped, null, {
+    title: 'Telluride Board of Education Meeting',
+    location: 'Bridal Veil District Conference Room / Zoom',
+    placeholders: 0
+  });
+}
+
+// Ophir: project the General Assembly's 3rd-Tuesday meetings forward (verified
+// cadence). Existing recent entries are preserved; P&Z is as-needed (no reliable
+// cadence, and its agenda filenames carry no day) so it gets no placeholder.
+// Agenda URLs for the new GA stubs are attached by the existing Ophir agenda
+// sync step (patchAgendaUrls, Task 0c) which runs after this.
+function rebuildOphirMeetings(existing, now = new Date()) {
+  return assembleBoardStubs(existing, { nth: 3, weekday: 2 }, {
+    title: 'General Assembly Meeting', board: 'ga',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted closer to the date.'
+  }, now);
+}
+
+// Ridgway: project the Town Council's 2nd-Wednesday regular meetings forward
+// ("second Wednesday of the month", per the town's own page). Planning
+// Commission is as-needed (no placeholder). Agenda URLs resolve from
+// RIDGWAY_AGENDA_MAP by date at render time, so placeholders need none here.
+function rebuildRidgwayMeetings(existing, now = new Date()) {
+  return assembleBoardStubs(existing, { nth: 2, weekday: 3 }, {
+    title: 'Ridgway Town Council Regular Meeting', board: 'council', time: '6:00 PM',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted the week before.'
+  }, now);
+}
+
 // SMART (Telluride regional transit) — its colorado.gov board-meetings page
 // lists, per month, two direct-PDF links titled "<Month> <YYYY> Board Agenda"
 // and "<Month> <YYYY> Board Packet". (The PDF filenames themselves are wildly
@@ -6297,7 +6423,6 @@ async function main() {
   // run can be summarized in the same run.
   for (const [arrName, syncFn] of [
     ['FIRE_CACHED_DATA',      syncFireAgendas],
-    ['MED_CACHED_DATA',       syncMedAgendas],
     ['COUNTY_CACHED_DATA',    syncCountyAgendas],
     ['TELLURIDE_CACHED_DATA', syncTellurideAgendas]
   ]) {
@@ -6337,6 +6462,69 @@ async function main() {
     console.warn(`  MV agenda sync error: ${e.message}`);
   }
 
+  // ── 0a2. Hospital District: rebuild MED_CACHED_DATA (real agendas + 4th-Thu) ──
+  try {
+    const medStubs = await rebuildMedMeetings();
+    if (medStubs && medStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'MED_CACHED_DATA') || [];
+      if (JSON.stringify(medStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'MED_CACHED_DATA', medStubs, false);
+        govDataChanged = true;
+        console.log(`  MED_CACHED_DATA: rebuilt (${medStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'MED_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Med rebuild error: ${e.message}`); }
+
+  // ── 0a3. Board of Education: rebuild SCHOOL_CACHED_DATA from posted agendas ──
+  try {
+    const schoolStubs = await rebuildSchoolMeetings();
+    if (schoolStubs && schoolStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'SCHOOL_CACHED_DATA') || [];
+      if (JSON.stringify(schoolStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'SCHOOL_CACHED_DATA', schoolStubs, false);
+        govDataChanged = true;
+        console.log(`  SCHOOL_CACHED_DATA: rebuilt (${schoolStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'SCHOOL_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  School rebuild error: ${e.message}`); }
+
+  // ── 0a4. Ophir: project General Assembly (3rd-Tue) meetings forward ──
+  //   Runs BEFORE the Ophir agenda sync (0c) so patchAgendaUrls can attach
+  //   agendas to the freshly-projected GA stubs.
+  try {
+    const existing = extractJsArray(govDataSrc, 'OPHIR_CACHED_DATA') || [];
+    const ophirStubs = rebuildOphirMeetings(existing);
+    if (ophirStubs && ophirStubs.length) {
+      if (JSON.stringify(ophirStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'OPHIR_CACHED_DATA', ophirStubs, false);
+        govDataChanged = true;
+        console.log(`  OPHIR_CACHED_DATA: rebuilt (${ophirStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'OPHIR_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Ophir rebuild error: ${e.message}`); }
+
+  // ── 0a5. Ridgway: project Town Council (2nd-Wed) meetings forward ──
+  //   Agenda URLs resolve from RIDGWAY_AGENDA_MAP by date at render time.
+  try {
+    const existing = extractJsArray(govDataSrc, 'RIDGWAY_CACHED_DATA') || [];
+    const ridgwayStubs = rebuildRidgwayMeetings(existing);
+    if (ridgwayStubs && ridgwayStubs.length) {
+      if (JSON.stringify(ridgwayStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'RIDGWAY_CACHED_DATA', ridgwayStubs, false);
+        govDataChanged = true;
+        console.log(`  RIDGWAY_CACHED_DATA: rebuilt (${ridgwayStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'RIDGWAY_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
+
   // ── 0b. SMART: rebuild SMART_CACHED_DATA from the live board-meetings page ──
   // syncSmartAgendas() now returns a freshly-generated stub array (2nd-Thursday
   // dates + agenda/packet URLs + one upcoming placeholder) instead of patching a
@@ -6372,19 +6560,10 @@ async function main() {
     console.warn(`  Ophir agenda sync error: ${e.message}`);
   }
 
-  // ── 0d. Telluride Board of Education agenda URLs (date + meeting type) ──
-  try {
-    const schoolItems = await syncSchoolAgendas();
-    if (schoolItems && schoolItems.length) {
-      const r = patchSchoolAgendas(govDataSrc, schoolItems);
-      if (r.changed > 0) {
-        govDataSrc = r.src; govDataChanged = true;
-        console.log(`  SCHOOL_CACHED_DATA: patched ${r.changed} agendaUrl field(s)`);
-      }
-    }
-  } catch (e) {
-    console.warn(`  School agenda sync error: ${e.message}`);
-  }
+  // ── 0d. Telluride Board of Education — now handled by the 0a3 rebuild above,
+  //   which regenerates SCHOOL_CACHED_DATA from the posted agendas (date + type
+  //   + URL all come straight from syncSchoolAgendas), so the old patch-only
+  //   step (patchSchoolAgendas) is no longer needed.
 
   // ── 1. Meeting Summaries + Agenda-derived Zoom info ──
   // refreshSummaries now also parses Zoom URL / Meeting ID / Passcode /
