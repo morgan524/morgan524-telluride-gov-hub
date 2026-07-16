@@ -1591,42 +1591,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "recreation",
-    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
-  },
-  {
-    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
-    source: "Town of Telluride",
-    date: "June 24, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
-  },
-  {
-    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "June 24, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
-    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "June 18, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -1636,84 +1600,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
-    title: "Commissioners Finalize Deed Restriction Reversion Process",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
-  },
-  {
-    title: "Mill Creek Park Site Closed for Revegetation",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
-  },
-  {
-    title: "Beaver Park Gravel Pit Closure",
-    source: "San Miguel County",
-    date: "June 17, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
-  },
-  {
-    title: "County Enters Stage 1 Fire Restrictions",
-    source: "San Miguel County",
-    date: "June 17, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
-  },
-  {
     title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     source: "San Miguel County",
     date: "July 14, 2026",
     newsTopic: "housing",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
-    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
-    source: "San Miguel County",
-    date: "June 24, 2026",
-    newsTopic: "housing",
-    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
-    img: ""
-  },
-  {
-    title: "Town of Telluride Election Today",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "government",
-    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
-    img: ""
-  },
-  {
-    title: "Gold Mountain Fire",
-    source: "Town of Telluride",
-    date: "June 29, 2026",
-    newsTopic: "housing",
-    copy: "The Town is aware of the Gold Mountain Fire currently burning in Ouray County, north of the City of Ouray. We want to assure residents and visitors that the Gold Mountain Fire does not pose a direct threat to the Town of Telluride at this time.",
-    href: "http://ouraycountyco.gov",
-    img: ""
-  },
-  {
-    title: "Stage 2 Fire Restrictions In Effect",
-    source: "Town of Telluride",
-    date: "June 26, 2026",
-    newsTopic: "public-safety",
-    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
