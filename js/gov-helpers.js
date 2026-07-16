@@ -559,7 +559,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -673,6 +673,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Paradox Valley ranch permanently protected",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "A 266-acre ranch in Paradox Valley near Bedrock has been permanently protected through a conservation easement with Colorado West Land Trust, conserving over a mile of Dolores River frontage alongside a neighboring 114-acre easement completed last year. Landowner Jim Johnston bought the parcels between 2008 and 2016 specifically to keep them from being developed. More than 1,400 acres within 10 miles are now permanently protected.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_8dc56b93-f9b3-43d4-bba2-eb46a7a8d82f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8a/c8afbd54-900c-4622-ba84-7e00b6f1b01e/6a5785713dd15.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Meet the winners of Norwood’s annual dessert contest",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "The San Miguel Basin Fair dessert contest wrapped up its 42nd year in Norwood on July 11 with a record 87 entries across categories from pie to ice cream, drawing over 300 attendees. Winners took home hand-crafted wooden spoons and aprons across youth, amateur, and professional divisions.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_0df299c3-ee21-4cb6-8cd8-ec4e12c773b1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/31/231edc8b-2dc1-4603-8af0-c0d5aa52b66a/6a57873cd5a89.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "‘Once more unto the breach, dear friends’",
+    source: "Telluride Times",
+    date: "July 16, 2026",
+    firstSeen: "2026-07-16",
+    newsTopic: "community",
+    copy: "Telluride Theatre opens \"Henry V\" in Town Park on July 17, directed by Jim Cairl — a New York actor who first came out in 2024 on short notice and has been back every summer since. Julia Caulfield plays the king, with a cast that includes several longtime local performers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_cca895f7-7e7c-451a-b8ee-fd5a3e0891b7.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/dc/6dc4fa40-eaac-4e2f-9aa0-56e45146e4fc/6a574d9ec8af2.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Legals and Public Notices for July 16-22, 2026",
     source: "Telluride Times",
