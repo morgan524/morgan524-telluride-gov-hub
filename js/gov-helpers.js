@@ -481,7 +481,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -520,7 +520,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -559,7 +559,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -1672,21 +1672,21 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
+    title: "San Miguel County is in Stage 2 fire restrictions for privately-owned, unincorporated land",
+    source: "San Miguel County",
+    date: "July 16, 2026",
+    newsTopic: "housing",
+    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
+    img: ""
+  },
+  {
     title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     source: "San Miguel County",
     date: "July 14, 2026",
     newsTopic: "housing",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
-    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
-    source: "San Miguel County",
-    date: "June 24, 2026",
-    newsTopic: "housing",
-    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
     img: ""
   },
   {
@@ -2441,17 +2441,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Adventure Book Club-Mountain Village",
-    link: "https://koto.org/event/adventure-book-club-mountain-village/",
-    description: "Do you love to hike and talk about books? We will meet at San Sophia Station, at the top of the Gondola, and hike down to the Mountain Village Core. We'll talk about what books you have been reading, new titles, meet people & finish off with a sweet treat at Dolce. Space is Limited, please sign up",
-    pubDate: "2026-07-16T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Gondola Plaza, Telluride",
     imageUrl: ""
   },
   {
@@ -3807,7 +3796,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-07-20T18:00:00.000Z",
-    endDate: "2026-09-07",
+    endDate: "2026-09-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4435,6 +4424,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg"
+  },
+  {
+    title: "Electric Vehicle (EV) Ride and Drive",
+    link: "https://events.ourayridgwayevents.com/event/electric-vehicle-ev-ride-and-drive",
+    description: "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides! View on site | Email this event",
+    pubDate: "2026-08-08T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Railroad Museum",
+    imageUrl: "https://localist-images.azureedge.net/photos/53444478649232/huge/46383f7cbeab4425648f3e6bf6e4e504e8371d0c.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -6004,6 +6004,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
+  },
+  {
+    title: "Hike Into History: Keystone Gorge",
+    link: "https://www.telluride.com/event/hike-into-history-keystone-gorge/",
+    description: "Join the Telluride Museum for Power of Place: Hike into History! Ted Wilson, President of the San Miguel County …",
+    pubDate: "2026-07-23",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63085/screenshot_2026-07-16_at_11_56_27_am.800x533.webp"
   },
   {
     title: "Summer Spectacular: The Music Man",
@@ -8398,7 +8409,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     title: "Town Council Retreat",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
     hasAgenda: false,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    location: "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
     time: ""
   },
   {
