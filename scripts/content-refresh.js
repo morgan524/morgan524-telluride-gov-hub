@@ -4625,6 +4625,12 @@ async function enrichRecurringActsPosters() {
 // ══════════════════════════════════════════════════════════════
 // ── Task N: Sync Ouray County Meetings from CivicPlus RSS ──
 // ══════════════════════════════════════════════════════════════
+// DEPRECATED / UNUSED as of the gov-doc-pipeline fix: Ouray meetings now
+// surface via getOurayMeetings() (gov-helpers.js) off the MANUAL_SUMMARIES
+// 'ouray|…' keys, and the Ouray feeds are already fetched by the Ouray branch
+// of fetchUpcomingMeetings(). This function fed the OURAY_CACHED_DATA rebuild,
+// which was a dead no-op (see the "Ouray County meetings" note in main()).
+// Retained for reference; no longer called.
 async function syncOurayMeetings() {
   console.log('\n🏔️  Syncing Ouray County meetings from AgendaCenter RSS...');
   const now = new Date();
@@ -6692,25 +6698,29 @@ async function main() {
   const newSherbinoEvents = await syncSherbinoEvents();
 
   // ── Ouray County meetings ──
-  const newOurayData = await syncOurayMeetings();
-  if (newOurayData !== null) {
-    const existingOuray = extractJsArray(govHubSrc, 'OURAY_CACHED_DATA') || [];
-    if (JSON.stringify(newOurayData) !== JSON.stringify(existingOuray)) {
-      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_CACHED_DATA', newOurayData, false);
-      govHubSrc = replaceConstString(govHubSrc, 'OURAY_CACHE_DATE', today());
-      changed = true;
-    }
-  }
+  // (No OURAY_CACHED_DATA rebuild here anymore.) Ouray meetings surface via
+  // getOurayMeetings() in gov-helpers.js, which reads the 'ouray|…' keys in
+  // MANUAL_SUMMARIES (populated by the Ouray RSS branch of fetchUpcomingMeetings
+  // → refreshSummaries above). The old block wrote OURAY_CACHED_DATA into
+  // govHubSrc (gov-helpers.js), where no such array exists and nothing reads it
+  // — a dead no-op that logged a "Could not find" warning and double-fetched
+  // the Ouray feeds every run. Removed.
 
   // ── Norwood meetings ──
+  // NORWOOD_CACHED_DATA lives in gov-data.js (read by loadCachedMeetings and by
+  // getNorwoodMeetings). This block used to read/write govHubSrc (gov-helpers.js)
+  // by mistake — so the rebuilt data went nowhere and Norwood froze at its last
+  // hand-edited snapshot. Write govDataSrc so the rebuild actually lands.
   const newNorwoodData = await syncNorwoodMeetings();
   if (newNorwoodData !== null) {
-    const existingNorwood = extractJsArray(govHubSrc, 'NORWOOD_CACHED_DATA') || [];
+    const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
     if (JSON.stringify(newNorwoodData) !== JSON.stringify(existingNorwood)) {
-      govHubSrc = replaceJsValue(govHubSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
-      govHubSrc = replaceConstString(govHubSrc, 'NORWOOD_CACHE_DATE', today());
-      changed = true;
+      govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
+      govDataChanged = true;
+      console.log(`  NORWOOD_CACHED_DATA: rebuilt (${newNorwoodData.length} meetings)`);
     }
+    govDataSrc = replaceConstString(govDataSrc, 'NORWOOD_CACHE_DATE', today());
+    govDataChanged = true;
   }
 
   if (newSherbinoEvents !== undefined && newSherbinoEvents !== null) {
