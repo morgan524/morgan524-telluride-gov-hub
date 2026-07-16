@@ -520,7 +520,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -559,7 +559,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -1591,6 +1591,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Town of Telluride Implements Stage 1 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 18, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 17, 2026) – In response to heightened fire danger across the region, Town Manager Zoe Dohnal has implemented Stage 1 Fire Restrictions within the Town of Telluride, effective 1:00 a.m. MT on Thursday, June 18, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=396",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -1600,12 +1636,84 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
+    title: "Commissioners Finalize Deed Restriction Reversion Process",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "housing",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
+  },
+  {
+    title: "Mill Creek Park Site Closed for Revegetation",
+    source: "San Miguel County",
+    date: "June 18, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
+  },
+  {
+    title: "Beaver Park Gravel Pit Closure",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "recreation",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
+  },
+  {
+    title: "County Enters Stage 1 Fire Restrictions",
+    source: "San Miguel County",
+    date: "June 17, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
+  },
+  {
     title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     source: "San Miguel County",
     date: "July 14, 2026",
     newsTopic: "housing",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "San Miguel County upgrading fire restrictions to Stage 2 for privately-owned, unincorporated land effective June 26 at 12:01",
+    source: "San Miguel County",
+    date: "June 24, 2026",
+    newsTopic: "housing",
+    copy: "Currently, there are varying levels of restrictions across the region, so please check the appropriate websites for the areas you plan to travel to and recreate in.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=533",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Gold Mountain Fire",
+    source: "Town of Telluride",
+    date: "June 29, 2026",
+    newsTopic: "housing",
+    copy: "The Town is aware of the Gold Mountain Fire currently burning in Ouray County, north of the City of Ouray. We want to assure residents and visitors that the Gold Mountain Fire does not pose a direct threat to the Town of Telluride at this time.",
+    href: "http://ouraycountyco.gov",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -1650,17 +1758,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---July-7%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Movie Mondays - July 20 and August 17 at 8:30pm in Hartwell Park",
-    source: "Town of Ridgway",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "arts-culture",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Movie-Mondays-Poster-2026.pdf",
     img: ""
   },
   {
@@ -4293,6 +4390,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53427873595934/huge/e8c4d0f511d41ca1fb1cab0e28187e4cfb436345.jpg"
   },
   {
+    title: "Electric Showcase",
+    link: "https://events.ourayridgwayevents.com/event/electric-showcase",
+    description: "Experience electrification hands on! Visit the Electric Showcase booth at the southeast corner of the Ridgway Rendezvous. Check out electric yard equipmentLearn about financial incentivevsDiscover how you can win an E-Bike with SMPA! Presented by : The Town of Ridgway and the Ridgway Sustainability Advisory BoardEcoAction PartnersClean Energy Economy for the Region (CLEER) San Miguel Power Association (SMPA) View on site | Email this event",
+    pubDate: "2026-08-08T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53443481081189/huge/1c29ff615fd2208e8a6eab9017bb24268cd815b5.jpg"
+  },
+  {
     title: "The 42nd Annual Ridgway Rendezvous Arts Festival",
     link: "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
     description: "Ridgway Rendezvous Arts Festival (42nd Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 42nd year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest Colorado. Hosted by Weehawken Creative Arts, this highly regarded juried festival is known for exceptional craftsmanship, original design, and high-quality handmade work not easily found elsewhere in the region. Artists consistently call it “one of the best shows of the year,” citing strong sales and a welcoming, well-organized atmosphere. Set in the heart of Ridgway along the scenic Million Dollar Highway, the festival attracts an engaged audience of collectors, second homeowners, and visitors from across the country—and coincides with the nearby Telluride Jazz Festival, expanding its reach and energy. Enjoy live music throughout the day both days, featuring a diverse lineup of talented regional and touring musicians. …",
@@ -4690,7 +4798,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-10",
+    endDate: "2026-09-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
