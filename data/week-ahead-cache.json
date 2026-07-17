@@ -1,14 +1,14 @@
 {
-  "hash": "01bad554d001db8ba9fa56f2038f9e6476fc86ca",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where a newly sworn-in Council takes up second reading of the Colorado Wildfire Resiliency Code — land use amendments covering historic review and landscaping standards that bring Telluride into line with state wildfire law. Also Tuesday, the Telluride Housing Authority is working through a real policy question about primary residency for dependents in multi-custodial households, the kind of edge case that matters a lot to the families it affects. On the weekend side, the San Miguel Basin Fair is running through Saturday and Sunday with its usual late-night board debriefs, and Shakespeare in the Park opens Friday with 'Henry V.'",
+  "hash": "dd7df54df08d32c5909ef7e303f2ec9a3e98d922",
+  "lede": "The biggest thing on the calendar this week is Town Council's second reading of the Colorado Wildfire Resiliency Code on Tuesday, July 21 — this is the vote that would write new wildfire landscaping and historic-review standards directly into Telluride's Land Use Code, so it's worth paying attention. The Housing Authority meets the same day to take up a proposed policy on primary residency for dependents of multiple custodial parents, a narrow but real question for families navigating deed-restricted housing. On the social side, Randy Houser plays the Sheridan Friday night as a benefit for the Telluride Foundation's Good Neighbor Fund, and Telluride Theatre opens Shakespeare in the Park with Henry V this weekend.",
   "notable": [
     {
       "id": 3,
-      "stake": "Second reading vote on wildfire code changes to land use and landscaping rules."
+      "stake": "Second-reading vote on wildfire code changes to Land Use Code."
     },
     {
       "id": 4,
-      "stake": "New policy on primary residency for dependents in split-custody housing situations."
+      "stake": "New policy on primary residency for dependents in multi-custodial households."
     }
   ]
 }
