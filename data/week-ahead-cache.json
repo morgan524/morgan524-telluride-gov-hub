@@ -1,18 +1,22 @@
 {
-  "hash": "5998d0a02e881b06a6391f5581362593bc0e60b7",
-  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code goes to a vote — that's a real Land Use Code change covering landscaping, trees, and historic review that will affect properties across town. The same day, the Telluride Housing Authority takes up a proposed policy on primary residency for dependents in multi-custodial households, a small but consequential rules clarification for families navigating deed-restricted housing. The Gondola Subcommittee meets Monday to dig into the economic and fiscal impact analysis of gondola operations, and the San Miguel Basin Fair wraps its run with late-night board debriefs Thursday and Friday.",
+  "hash": "02ed08bdeaf2a5f702e20970882cbe1ee2cf0d7e",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code comes to a vote — that's a real Land Use Code change covering landscaping, trees, and historic review standards that will affect property owners across town. Same day, the Telluride Housing Authority takes up a proposed policy on primary residency for dependents in split-custody households, a quietly consequential question for working families in deed-restricted units. Thursday, Planning and Zoning digs into three Town-owned development projects — including the Carhenge Redevelopment — all moving through formal subdivision and concept review.",
   "notable": [
     {
       "id": 4,
-      "stake": "Vote on second reading of wildfire code changing Land Use, landscaping, and tree standards."
+      "stake": "Vote on wildfire code changing land-use, landscaping, and historic review rules."
     },
     {
       "id": 5,
-      "stake": "Policy vote on primary residency rules for dependents in multi-custodial deed-restricted households."
+      "stake": "New residency policy for split-custody dependents could reshape housing eligibility."
+    },
+    {
+      "id": 8,
+      "stake": "Formal review of three Town-owned redevelopment projects, including Carhenge subdivision."
     },
     {
       "id": 2,
-      "stake": "Council receives economic impact analysis tying gondola ops to town sales tax and visitation."
+      "stake": "Gondola economic analysis ties operations to sales tax and visitation — public data worth knowing."
     }
   ]
 }
