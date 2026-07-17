@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 16:24:40 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 19:23:51 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] San Miguel Basin Fair Board — 2026-07-17</title>
@@ -31,6 +31,19 @@ A late-night special meeting — 10 p.m. — to debrief the day's fair activitie
       <category>San Miguel County</category>
     </item>
     <item>
+      <title>⚡ [Meeting] Gondola Subcommittee - Jul 20 2026 — 2026-07-20</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-20%7CGondola%20Subcommittee%20-%20Jul%2020%202026</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-07-20
+
+The Gondola Advisory Committee meets virtually to receive the project team's economic and fiscal impact analysis of the gondola — the central item on this agenda. The analysis ties gondola operations to visitation patterns, retail spending, and sales tax across Telluride and Mountain Village, finding that 30% of Telluride visitors and 45% of Mountain Village visitors ride it at least once per trip, and that restaurant sales in particular track closely with ridership. Growth projections are being revised downward over the next 20 years, driven by rising costs of living, accelerating home values, infrastructure limits, and demographic shifts. The committee will also review materials for the July 28 Leadership Committee meeting, which will cover the FTA Capital Investment Grants program and local funding strategy — a consequential topic given that the hypothetical funding scenario puts the project at $140M total, with $20M each expected from the Town of Telluride and the Mountain Village Entity. August's Gsub meeting is set to examine traffic, parking, and bus-replacement scenarios in the event of a prolonged gondola outage.
+
+⚡ Why it matters: Council receives economic impact analysis tying gondola ops to town sales tax and visitation.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
       <title>[Meeting] Board of Directors Meeting — 2026-07-21</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-07-21%7CBoard%20of%20Directors%20Meeting</guid>
@@ -50,7 +63,7 @@ The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.
 
 A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado Wildfire Resiliency Code (CWRC) — amendments to the Land Use Code covering historic/architectural review and landscaping/tree standards that bring the town in line with state wildfire resiliency requirements. A public hearing follows on a temporary patio tent structure at 221 S. Oak Street (R/C zone, Gondola Corridor Overlay). The long-running Stender Residence HARC appeal — continued repeatedly since December 2025 — is continued again. Afternoon work sessions cover the Telluride Tourism Board contract, updates to the Telluride Energy Mitigation Program (TEMP) offset calculations and fees, and a Colorado Ave East End speed study. Manager's reports include updates on Carhenge, The Oval, Canyonlands/Tower House, and parking. The Housing Authority and Block 23 Housing Corporation hold sequential meetings at the back end of the day.
 
-⚡ Why it matters: Second-reading vote on wildfire code changes to Land Use Code.]]></description>
+⚡ Why it matters: Vote on second reading of wildfire code changing Land Use, landscaping, and tree standards.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -63,7 +76,7 @@ A newly seated Council opens with a swearing-in and executive session on San Mig
 
 The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.
 
-⚡ Why it matters: New policy on primary residency for dependents in multi-custodial households.]]></description>
+⚡ Why it matters: Policy vote on primary residency rules for dependents in multi-custodial deed-restricted households.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

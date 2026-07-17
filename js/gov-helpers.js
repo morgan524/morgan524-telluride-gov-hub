@@ -221,7 +221,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040","zoomUrl":"https://us06web.zoom.us/meeting/register/hL-sJDF8Q8ej2lG69VjXKg","meetingId":"834 6167 7173","passcode":"555594.","phone":"719) 359-4580"},
 
   "county|2026-07-22|Board of County Commissioners Special Meeting":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1919","zoomUrl":"https://us02web.zoom.us/meeting/register/o_8OplehSy6kph_vj5KITw","meetingId":"836 0680 9358","passcode":"535472","phone":"719-359-4580"},
 
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100"},
@@ -338,7 +338,13 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1","meetingId":"830 2617 1795","passcode":"256663.","phone":"719) 359-4580"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1","meetingId":"830 2617 1795","passcode":"256663.","phone":"719) 359-4580"},
+
+  "telluride|2026-07-20|Gondola Subcommittee - Jul 20 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8295","zoomUrl":"https://gbsm.zoom.us/j/82559576086","phone":"719-359-4580","sv":4},
+
+  "county|2026-07-27|Housing Code Update SSR":
+    {"sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -472,7 +478,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -550,10 +556,16 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
-    "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
+    "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
+
+  "telluride|2026-07-20|Gondola Subcommittee - Jul 20 2026":
+    "The Gondola Advisory Committee meets virtually to receive the project team's economic and fiscal impact analysis of the gondola — the central item on this agenda. The analysis ties gondola operations to visitation patterns, retail spending, and sales tax across Telluride and Mountain Village, finding that 30% of Telluride visitors and 45% of Mountain Village visitors ride it at least once per trip, and that restaurant sales in particular track closely with ridership. Growth projections are being revised downward over the next 20 years, driven by rising costs of living, accelerating home values, infrastructure limits, and demographic shifts. The committee will also review materials for the July 28 Leadership Committee meeting, which will cover the FTA Capital Investment Grants program and local funding strategy — a consequential topic given that the hypothetical funding scenario puts the project at $140M total, with $20M each expected from the Town of Telluride and the Mountain Village Entity. August's Gsub meeting is set to examine traffic, parking, and bus-replacement scenarios in the event of a prolonged gondola outage.",
+
+  "county|2026-07-27|Housing Code Update SSR":
+    "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1671,17 +1683,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "What to do in Colorado this week: A whimsical block party in Fort Collins",
-    source: "Colorado Sun",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "arts-culture",
-    copy: "Plus: A town wide arts festival in Green Mountain Falls, the annual Ah Haa Haha in Telluride and Global Climbing Day",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/07/16/whats-happening-colorado-fort-collins-telluride-global-climbing-day/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2024/02/perelandra-reader-in-residence-13-scaled.jpg?fit=1024%2C683&amp;ssl=1"
-  },
-  {
     title: "Mayor John Clark Receives Prestigious Award",
     source: "Town of Ridgway",
     date: "July 14, 2026",
@@ -2375,17 +2376,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Yoga For All with Jay and Jane",
-    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-17/",
-    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-07-17T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-17/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -2395,17 +2385,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-17/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-07-17T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -4040,6 +4019,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52462553145158/huge/147bc715c72ab517c614f260fa4d426fda89f316.jpg"
   },
   {
+    title: "Final Friday: Crafts for Critters",
+    link: "https://events.ourayridgwayevents.com/event/final-friday-crafts-for-critters",
+    description: "🐾CALLING ALL ANIMAL LOVERS!🐾 Join us at the end of July to make some crafts for critters (dogs and cats), learn from a local behaviorist, and practice some agility with Maple. 🐶 For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Donna Maurer, a former art teacher and local behaviorist will be joining us. If you've ever been interested in learning more about dog behavior, training, and how to best support your pup when they are nervous then this is the Final Friday for you! …",
+    pubDate: "2026-07-31T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Voyager Basecamp",
+    imageUrl: "https://localist-images.azureedge.net/photos/53428193270953/huge/6a3c9c5a31bf4a7b3359a5c95b660171d698a5e8.jpg"
+  },
+  {
     title: "Chant to Calm the Fires",
     link: "https://events.ourayridgwayevents.com/event/chant-to-calm-the-fires",
     description: "Join Flora Zenit and Elisabeth \"Lava\" for an evening of chanting to calm our hearts, our minds, and the fires. Flora is an experienced kirtan leader from Venezuela, with an opening act for Sam Garrett under her belt. As an international speaker and performer, Flora has shared stages at Envision Festival, women’s circles, medicinal music events, and conscious festivals. No chanting experience necessary. Just bring the warmth of your heart and prayerful presence. We will be pleading with Divine Mother to calm the fires. We will be sending healing vibrations into the minds of all the first responders and others who are affected . . . and into the forest to all sentient beings affected. Elisabeth and her partner Dave have seen and met some of the firefighters in the field while they were allowed to re-enter briefly for medications while evacuated from their home between Ouray and Ridgway. …",
@@ -4268,6 +4258,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
   },
   {
+    title: "Used Book Sale",
+    link: "https://events.ourayridgwayevents.com/event/used-book-sale",
+    description: "Used Book Sale hosted by Friends of the Ridgway Library on Saturday August 8th, 10am-2pm. Tote bags and t-shirts will be available for purchase. Want to volunteer? Sign up at the Ridgway Library front desk. Have books to donate? Call: 970-626-5252 View on site | Email this event",
+    pubDate: "2026-08-08T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53444356689862/huge/ac92e28117fe69a241a729e8065ab23d70be8daf.jpg"
+  },
+  {
     title: "Happy Little Trees: Classes @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright",
     description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
@@ -4424,6 +4425,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Teen Pride Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/teen-pride-karaoke-night",
+    description: "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This is an opportunity for rising 8th Graders up to Recent HS Grads from Ouray County and beyond to craft new friendships, strengthen existing ones, and find their voice so that they can fully express themselves. There will be food, games, crafting supplies, and take home bags available. TO RSVP STEP 1: Make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. STEP 2: Email Kayla@voyageryouth.org with questions and to let her know if you/your teen is planning on attending if you want to help us ensure there will be enough food and supplies. …",
+    pubDate: "2026-08-16T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53435902153115/huge/f4a7c1ac8c55f57a55ad821679d80f9d354f233f.jpg"
   },
   {
     title: "Ouray County Pride After Party @ the Wright presented by SMAC",
@@ -4604,6 +4616,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Final Friday: Clowning Around",
+    link: "https://events.ourayridgwayevents.com/event/final-friday-clowning-around",
+    description: "CLOWN SCHOOL IS NOW IN SESSION! Join us at the end of the first week back at school to be a little less serious and a little more silly. For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to be. 🤘 Come hang out for an evening that mixes chill social time with free food and fun activities. Every month, we have games, art and more available. All we ask is that you clean up after yourself and help us create a welcoming space for everyone. This month, Andrea Sokolowski, founder of the local improv group The Play Does will be joining us. If you've ever been interested in learning about improv or wanted to run away to the circus then this is the Final Friday for you! …",
+    pubDate: "2026-08-28T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Voyager Basecamp",
+    imageUrl: "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg"
+  },
+  {
     title: "DARRELL SCOTT - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
     description: "SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. …",
@@ -4735,6 +4758,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg"
+  },
+  {
+    title: "Woman's Club of Ouray County monthly meeting",
+    link: "https://events.ourayridgwayevents.com/event/womans-club-of-ouray-county-monthly-meeting-3004",
+    description: "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local speakers, a social hour and discussion regarding events to volunteer in and around Ouray County. For more information about the monthly meeting and the WCOC, please visit the organization's website. View on site | Email this event",
+    pubDate: "2026-09-15T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg"
   }
 ];
 

@@ -176,7 +176,12 @@
     "phone": "719) 359-4580"
   },
   "county|2026-07-22|Board of County Commissioners Special Meeting": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1919",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/o_8OplehSy6kph_vj5KITw",
+    "meetingId": "836 0680 9358",
+    "passcode": "535472",
+    "phone": "719-359-4580"
   },
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026": {
     "sv": 4,
@@ -339,5 +344,14 @@
     "meetingId": "830 2617 1795",
     "passcode": "256663.",
     "phone": "719) 359-4580"
+  },
+  "telluride|2026-07-20|Gondola Subcommittee - Jul 20 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8295",
+    "zoomUrl": "https://gbsm.zoom.us/j/82559576086",
+    "phone": "719-359-4580",
+    "sv": 4
+  },
+  "county|2026-07-27|Housing Code Update SSR": {
+    "sv": 4
   }
 }

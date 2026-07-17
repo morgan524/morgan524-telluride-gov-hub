@@ -1,14 +1,18 @@
 {
-  "hash": "dd7df54df08d32c5909ef7e303f2ec9a3e98d922",
-  "lede": "The biggest thing on the calendar this week is Town Council's second reading of the Colorado Wildfire Resiliency Code on Tuesday, July 21 — this is the vote that would write new wildfire landscaping and historic-review standards directly into Telluride's Land Use Code, so it's worth paying attention. The Housing Authority meets the same day to take up a proposed policy on primary residency for dependents of multiple custodial parents, a narrow but real question for families navigating deed-restricted housing. On the social side, Randy Houser plays the Sheridan Friday night as a benefit for the Telluride Foundation's Good Neighbor Fund, and Telluride Theatre opens Shakespeare in the Park with Henry V this weekend.",
+  "hash": "5998d0a02e881b06a6391f5581362593bc0e60b7",
+  "lede": "The biggest thing on the calendar this week is Tuesday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code goes to a vote — that's a real Land Use Code change covering landscaping, trees, and historic review that will affect properties across town. The same day, the Telluride Housing Authority takes up a proposed policy on primary residency for dependents in multi-custodial households, a small but consequential rules clarification for families navigating deed-restricted housing. The Gondola Subcommittee meets Monday to dig into the economic and fiscal impact analysis of gondola operations, and the San Miguel Basin Fair wraps its run with late-night board debriefs Thursday and Friday.",
   "notable": [
     {
-      "id": 3,
-      "stake": "Second-reading vote on wildfire code changes to Land Use Code."
+      "id": 4,
+      "stake": "Vote on second reading of wildfire code changing Land Use, landscaping, and tree standards."
     },
     {
-      "id": 4,
-      "stake": "New policy on primary residency for dependents in multi-custodial households."
+      "id": 5,
+      "stake": "Policy vote on primary residency rules for dependents in multi-custodial deed-restricted households."
+    },
+    {
+      "id": 2,
+      "stake": "Council receives economic impact analysis tying gondola ops to town sales tax and visitation."
     }
   ]
 }
