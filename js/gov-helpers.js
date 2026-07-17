@@ -566,6 +566,14 @@ const MANUAL_SUMMARIES = {
              videoUrl }                                                    */
 const MEETING_RECAPS = [
   {
+    sourceKey: "county",
+    sourceLabel: "San Miguel County",
+    date: "2026-07-16",
+    title: "Strategic Stakeholders Roundtable — Jul 16, 2026",
+    recap: "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses. A side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent. Discussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
+    videoUrl: "https://www.youtube.com/watch?v=T8SXtsAOB70"
+  },
+  {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
     date: "2026-06-30",
