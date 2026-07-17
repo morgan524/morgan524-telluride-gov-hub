@@ -142,27 +142,6 @@
     "noticeKey": "treasurer-report-2025-jul-dec"
   },
   {
-    "title": "Foreclosure Sale -- 122 43ZS Road, Norwood (Sale No. 202601)",
-    "entity": "San Miguel County Public Trustee",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "Public Trustee will conduct foreclosure sale at public auction on July 16, 2026 at 10:00 AM for property at 122 43ZS Road, Norwood. The property is in Section 26, Township 45 North, Range 13 West with an outstanding balance of $115,217.40.",
-    "deadline": "July 16, 2026 at 10:00 AM",
-    "expires": "2026-07-16",
-    "dates": "5/21",
-    "papers": [
-      "ttimes_0521"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    "address": "122 43ZS Road, Norwood, CO 81423 (Section 26, T45N, R13W)",
-    "noticeKey": "foreclosure-202601",
-    "caseNumber": "202601"
-  },
-  {
     "title": "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
     "entity": "San Miguel County Public Trustee",
     "entityClass": "ent-county",
@@ -242,26 +221,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
     "address": "Section 27, Township 45 North, Range 13 West (1730 Grand Avenue, Norwood, CO 81423)",
     "noticeKey": "foreclosure-col-000156"
-  },
-  {
-    "title": "Foreclosure Sale -- Esch Property (Sale No. 2026-01)",
-    "entity": "San Miguel County Public Trustee",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Sandra G. Esch due to failure to make timely mortgage payments. The property at 122 43ZS Road, Norwood will be auctioned on July 16, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $115,217.40.",
-    "deadline": "July 16, 2026 at 10:00 AM",
-    "expires": "2026-07-16",
-    "dates": "6/11",
-    "papers": [
-      "ttimes_0611"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    "address": "Northwest 1/4 Northwest 1/4, Section 26, Township 45 North, Range 13 West (122 43ZS Road, Norwood, CO 81423)",
-    "noticeKey": "foreclosure-2026-01"
   },
   {
     "title": "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
@@ -507,26 +466,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     "address": "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
     "noticeKey": "rfp-tsd-custodial-2026"
-  },
-  {
-    "title": "Ordinance -- Community Development Code Amendment to Lighting Regulations Section 17.5.12 (COL-000175)",
-    "entity": "Town of Mountain Village",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The Town of Mountain Village is providing notice that an ordinance amending Section 17.5.12 Lighting Regulations of the Community Development Code passed its first reading on April 23, 2026. The second reading, public hearing, and final Council vote will be held on Thursday, July 16, 2026, at 2:00 PM at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The full ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
-    "deadline": "2026-07-16T14:00:00",
-    "expires": "2026-07-16",
-    "dates": "7/9",
-    "papers": [
-      "ttimes_0709"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    "address": "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    "noticeKey": "ord-mv-lighting-sec17.5.12"
   },
   {
     "title": "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",

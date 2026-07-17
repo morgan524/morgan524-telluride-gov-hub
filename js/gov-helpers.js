@@ -145,9 +145,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-06-17|Parks & Recreation Commission - Jun 17 2026":
     {"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z","sv":2},
 
-  "fire|2026-06-16|Board of Directors Meeting":
-    {"sv":2},
-
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
@@ -348,12 +345,6 @@ const MANUAL_SUMMARIES = {
   "mv|2026-06-17|Town Council Meeting":
     "Council meets for a packed agenda that includes an executive session for legal advice on a recent investigation, plus a full hour set aside to review an independent investigation report and consider future actions. Two new staff members join — a housing director and planner. Council will vote on several items: expedited review policies for affordable housing projects to participate in state Prop 123, a water storage lease agreement with the utility company, and a height variance for a single-family home on San Joaquin Road. There's also a presentation on thermal energy network findings and the usual liquor permits for summer events.",
 
-  "fire|2026-06-16|Board of Directors Meeting":
-    "The fire district's monthly board meeting covers their 2025 audit results, master planning updates, and wildfire assignments as summer approaches. Station 3 construction gets an update, along with the usual reports from chiefs and coordinators across the district's operations.",
-
-  "ophir|2026-06-16|General Assembly Meeting":
-    "Agenda not yet available",
-
   "county|2026-06-17|Board of County Commissioners Meeting":
     "The commissioners will interview candidates for the Board of Adjustment and Planning Commission — Jonathan Prince for a direct appointment, and three applicants competing for an alternate Planning Commission slot. They'll get an update on affordable housing from the county's housing specialist, along with routine wastewater variances for two Ophir properties. The consent agenda includes adopting the latest Community Wildfire Protection Plan and approving a liquor license renewal for The Blue Jay in Placerville.",
 
@@ -481,7 +472,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -520,7 +511,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -559,7 +550,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -1543,102 +1534,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Wildfire southwest of Denver forces thousands to evacuate and destroys more than 160 structures",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "public-safety",
-    copy: "The Aspen Acres fire southwest of Denver has grown to nearly 105 square miles with zero containment, forcing full evacuations of Colorado City, Beulah, Rye, and San Isabel. Over 160 structures have been destroyed. It's a busy and dangerous fire season across the region right now.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_29d77297-868c-58e9-8a2b-f0f96bba3c3d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/c3/ec3cc2dc-3a76-55de-b275-629ec7c9e937/6a47e1184168f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A summer camp like no other",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-04",
-    newsTopic: "education",
-    copy: "Telluride Ski & Snowboard Club athletes have been training aerial maneuvers at a water ramps facility in Park City, but that access ends mid-August when construction begins on a hotel at the complex. The Steamboat Springs water ramps facility is also closing for a residential development. TSSC's athletic director says it could be a few years before a comparable facility is available again.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_e8e1f7fd-ad54-43e7-ac5a-4061ac2f9113.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f1/4f1e1dcb-8401-4873-8fc9-fa1eddf7dc1a/6a4608438706a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Wildfire anxiety mounts amid fast-moving blazes and repeat evacuations",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "public-safety",
-    copy: "Dry conditions and a low-snow winter have set the stage for a dangerous fire season across the West, with over 50 large fires burning and more than 9,000 personnel deployed. Evacuations have been ordered across Colorado, Utah, Arizona, New Mexico, and Washington — including near Ouray. Three firefighters died last weekend along the Colorado-Utah border.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_4d973373-7208-53fb-a780-c1b2993859f2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/61/26177bf3-f9b2-5216-a5a0-8353d34a6cdb/6a47b33cc2422.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride receives 2026 community survey results",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "land-use",
-    copy: "Telluride's 2026 community survey drew 633 responses — a 42% jump over recent years. Residents rated natural environment, safety, and walkability highly, but cost of living scored \"excellent or good\" with just 3%, affordable housing at 11%, and overall economic health dropped 14% from 2025. Downtown vibrancy also fell 20 points.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_126b40a1-0567-46c9-a410-a1b3434e286f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/4a/74a308e5-d221-4cbd-b37f-ef54504ccab2/6a460acfeec68.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "David Hoffmann is investing millions to preserve local newspapers",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "community",
-    copy: "Billionaire David Hoffmann became chairman of Lee Enterprises — which owns the Telluride Times and 100+ other local papers — in February, investing tens of millions to preserve community journalism. His motivation traces back to a 1960s Little League no-hitter covered by his hometown Missouri paper.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/local/business/article_882e9b0b-7bb8-5514-95e3-a4e179e0dfa8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/82/882e9b0b-7bb8-5514-95e3-a4e179e0dfa8/6a45972ba4ac7.preview.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "How David Hoffmann built the business behind his investment in local newspapers",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "community",
-    copy: "David Hoffmann built his fortune over 37 years through DHR Global, an executive search firm he founded after leaving corporate HR work. That multibillion-dollar private family business now spans 127 companies, 27,000 employees, and 8 industry verticals. Most recently, Hoffmann led a $50 million investment into Lee Enterprises, a major newspaper group.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/local/business/article_c2937343-37e8-527e-83fc-0bed977a6c16.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/29/c2937343-37e8-527e-83fc-0bed977a6c16/6a459718c0baf.preview.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "David Hoffmann chose family over football, and a path to success",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "land-use",
-    copy: "David Hoffmann turned down a Wake Forest scholarship to stay close to family, then quit football entirely to marry his high school sweetheart and transfer schools. He baled hay and waited tables to finish his degree in industrial safety and occupational health. That foundation eventually led to a billionaire business career.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/local/business/article_6b2157a5-0598-56e4-b76c-939a0813310e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/b2/6b2157a5-0598-56e4-b76c-939a0813310e/6a45972073b24.preview.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "David Hoffmann's childhood shaped his family's philanthropy",
-    source: "Telluride Times",
-    date: "July 3, 2026",
-    firstSeen: "2026-07-03",
-    newsTopic: "community",
-    copy: "David and Jerri Hoffmann's philanthropy grew from personal experience — childhood poverty, a love of the arts, and a grandson with Type 1 diabetes. Their family supports 350+ organizations, donates $3M+ annually, and runs a hockey camp for kids living with diabetes.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/local/business/article_776e8672-b48d-5fd7-a527-2ddda3ad5a55.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/76/776e8672-b48d-5fd7-a527-2ddda3ad5a55/6a45970f3e9fc.preview.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -1709,15 +1604,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1399",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14098"
-  },
-  {
-    title: "County Enters Stage 1 Fire Restrictions",
-    source: "San Miguel County",
-    date: "June 17, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1397",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14307"
   },
   {
     title: "San Miguel County is in Stage 2 fire restrictions for privately-owned, unincorporated land",
@@ -1834,6 +1720,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 7-16-26",
+    source: "KOTO Community Radio",
+    date: "July 17, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
+    href: "https://koto.org/news/newscast-7-16-26/"
+  },
+  {
     title: "Newscast 7-15-26",
     source: "KOTO Community Radio",
     date: "July 16, 2026",
@@ -1880,14 +1774,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "A Gold Mountain Fire Update; Smoke Fills the San Juans",
     href: "https://koto.org/news/newscast-7-6-26/"
-  },
-  {
-    title: "Newscast 7-2-26",
-    source: "KOTO Community Radio",
-    date: "July 3, 2026",
-    newsTopic: "public-safety",
-    copy: "A Gold Mountain Fire Update; Telluride Town Council Names Resident Advisory Committee; Cat Movie Fisher with Risho Unda",
-    href: "https://koto.org/news/newscast-7-2-26/"
   }
 ];
 
@@ -1995,18 +1881,6 @@ const SMB_FORUM_ARTICLES = [
     copy: "Every Friday morning, from May 22 to Oct. 16, Ridgway’s Hartwell Park is filled with vendors and buyers attending the local farmers market. As the market celebrates its 26th anniversary, it …",
     href: "https://www.sanmiguelbasinforum.com/stories/west-end-producers-sell-at-ridgway-markets,120637",
     img: ""
-  },
-  {
-    title: "Farmers market started; weekly Wild Gal’s meals back",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "June 17, 2026",
-    firstSeen: "2026-06-17",
-    dateSource: "article",
-    newsTopic: "arts-culture",
-    copy: "Galit Korngold, of the West End and who owns and operates Wild Gal’s Market in Naturita, told the Forum over the weekend that there are two big things the community should know about: the summer …",
-    href: "https://www.sanmiguelbasinforum.com/stories/farmers-market-started-weekly-wild-gals-meals-back,118956",
-    img: "https://zeta.creativecirclecdn.com/smb/original/20260616-133534-461-F4%20-%20farmers%20mkt.jpeg"
   }
 ];
 
@@ -2481,50 +2355,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "DIY Floral Bath Salts @ WPL",
-    link: "https://koto.org/event/diy-floral-bath-salts-wpl/",
-    description: "Join us for a relaxing and creative summer wellness program where participants will make their own floral bath salts and soothing lavender sachets to take home. Enjoy a calming evening of self-care, creativity, and community while learning simple DIY wellness crafts. Free and open to adults. All materials will be provided. Registration is required. Join us for our final DIY Summer Wellness program on August 26th (Soothing Foot Scrubs).",
-    pubDate: "2026-07-16T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Salon Night at Telluride Arts HQ",
-    link: "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-07-16/",
-    description: "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    pubDate: "2026-07-16T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
-    title: "2026 One Book, One Canyon – Terry Tempest Williams",
-    link: "https://koto.org/event/2026-one-book-one-canyon-terry-tempest-williams/",
-    description: "2026 One Book, One Canyon Author Announcement Join Wilkinson Public Library on Thursday, July 16th at 5:30 pm for a special evening with Terry Tempest Williams as she discusses her best-selling new book, The Glorians: Visitations from the Holy Ordinary . “I go to Terry Tempest Williams for the reasons I go to Whitman and Thoreau: to recover a capacious spirit and to rejoin the urgent living world. She gives me something bigger than hope.”―Richard Powers, author of The Overstory From the acclaimed nature writer and New York Times bestselling author, a revelatory work of narrative nonfiction exploring beauty, climate change, and transformative moments of hope in a world beset by uncertainty. You can find physical copies of the book through the library catalog, as well as ebooks and audiobooks through Libby and Hoopla . …",
-    pubDate: "2026-07-16T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Salon Night with Jula Cieciuch",
-    link: "https://koto.org/event/salon-night-with-jula-cieciuch/",
-    description: "JULY 16 • 5:30 – 6:30PM • FREE EVENT | Feeling creatively stuck? Join us on Salon Night for an evening of conversation, experimentation, and artistic play lead by local creator and Telluride Arts Intern Jula Cieciuch. Discover new ways to spark ideas, step outside your creative comfort zone, and try a medium you've never explored before. Grab a friend and stop by this Thursday!",
-    pubDate: "2026-07-16T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Arts HQ, TELLURIDE",
-    imageUrl: ""
-  },
-  {
     title: "Yoga For All with Jay and Jane",
     link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-17/",
     description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
@@ -2941,6 +2771,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-23/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-23T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Party in the Park",
+    link: "https://koto.org/event/party-in-the-park-2/",
+    description: "We hope you will join the Telluride Mountain Club for our annual party and membership drive in Telluride Town Park! This event supports our annual trail maintenance and new trail planning and implementation projects. Thank you to our sponsors: Alpine Club, Telluride Consulting, Jagged Edge, Latitude Insurance, Alpine Bank, Arc'teryx, Stellar Tours. We can't thank you enough! Ticket Price: Adult (Ages 14+): $40 Child (Under 14): $25 Ticket Includes: Food – BBQ by Black Salt Hospitality Reusable Telluride Mountain Club cup Beer (Stronghouse) & Wine – You must be 21 or over to drink alcohol. We'll be checking IDs. Music – DJ Bash Raffle Would you like to become a donor, sponsor, or provide product to our raffle? Please email hope@telluridemountainclub.org.",
+    pubDate: "2026-07-23T23:15:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Town Park",
+    imageUrl: ""
+  },
+  {
+    title: "Emotional Regualtion Workshop w/Betsy Lamberson",
+    link: "https://koto.org/event/emotional-regualtion-workshop-w-betsy-lamberson/",
+    description: "In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps them to navigate stress and identify what measures could be restorative to their nervous systems. There will be a mix of presentation, writing prompts, and group discussion. Betsy Lamberson is a parenting educator and nervous system coach who helps caregivers and professionals better understand behavior through the lens of stress and connection. Through her work at New Roots Parenting, she offers practical, neuroscience-informed tools rooted in co-regulation, self-awareness, and relationship repair. www.newrootsparenting.com",
+    pubDate: "2026-07-23T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Yoga For All with Jay and Jane",
+    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-24/",
+    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-07-24T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-24/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-24T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3075,7 +2960,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-16"
+    lastSeen: "2026-07-17"
   }
 ];
 
@@ -3246,7 +3131,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3258,7 +3143,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3834,7 +3719,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
     description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
     pubDate: "2026-07-21T00:15:00.000Z",
-    endDate: "2026-09-08",
+    endDate: "2026-09-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4914,7 +4799,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4925,7 +4810,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Special Meeting",
     link: "https://www.norwoodtown.com/2026-07-15-board-of-trustees-special-meeting",
-    description: "A special meeting of the Town of Norwood Board of Trustees, held in Norwood, Colorado. As an official government meeting, it is open to the public and provides an opportunity for community members to observe local municipal business.",
+    description: "",
     pubDate: "2026-07-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4936,7 +4821,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4947,7 +4832,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4958,7 +4843,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4969,7 +4854,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4980,7 +4865,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4991,28 +4876,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Wine and Wickets",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    pubDate: "2026-07-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
-  },
   {
     title: "Music on the Green Presents Sway Wild",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-sway-wild/",
@@ -5906,17 +5769,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
   },
   {
-    title: "Twenty(by)Telluride: Ah Haa HAHA",
-    link: "https://www.telluride.com/event/twenty-by-telluride-ah-haa-haha/",
-    description: "Join the Ah Haa for Twenty(by)Telluride: Ah Haa HAHA on July 15th at the Alibi! Telluride’s favorite HAHA event …",
-    pubDate: "2026-07-15",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63014/2200x1237.800x533.webp"
-  },
-  {
     title: "Liver Down the River",
     link: "https://www.telluride.com/event/liver-down-the-river/",
     description: "From the heart of Colorado comes a five piece band, Liver Down The River. The group has their roots in countless river …",
@@ -6606,25 +6458,6 @@ const LEGAL_NOTICES = [
     noticeKey: "treasurer-report-2025-jul-dec"
   },
   {
-    title: "Foreclosure Sale -- 122 43ZS Road, Norwood (Sale No. 202601)",
-    entity: "San Miguel County Public Trustee",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee will conduct foreclosure sale at public auction on July 16, 2026 at 10:00 AM for property at 122 43ZS Road, Norwood. The property is in Section 26, Township 45 North, Range 13 West with an outstanding balance of $115,217.40.",
-    deadline: "July 16, 2026 at 10:00 AM",
-    expires: "2026-07-16",
-    dates: "5/21",
-    papers: ["ttimes_0521"],
-    url: "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    address: "122 43ZS Road, Norwood, CO 81423 (Section 26, T45N, R13W)",
-    noticeKey: "foreclosure-202601",
-    caseNumber: "202601"
-  },
-  {
     title: "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
     entity: "San Miguel County Public Trustee",
     entityClass: "ent-county",
@@ -6696,24 +6529,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
     address: "Section 27, Township 45 North, Range 13 West (1730 Grand Avenue, Norwood, CO 81423)",
     noticeKey: "foreclosure-col-000156"
-  },
-  {
-    title: "Foreclosure Sale -- Esch Property (Sale No. 2026-01)",
-    entity: "San Miguel County Public Trustee",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Sandra G. Esch due to failure to make timely mortgage payments. The property at 122 43ZS Road, Norwood will be auctioned on July 16, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $115,217.40.",
-    deadline: "July 16, 2026 at 10:00 AM",
-    expires: "2026-07-16",
-    dates: "6/11",
-    papers: ["ttimes_0611"],
-    url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    address: "Northwest 1/4 Northwest 1/4, Section 26, Township 45 North, Range 13 West (122 43ZS Road, Norwood, CO 81423)",
-    noticeKey: "foreclosure-2026-01"
   },
   {
     title: "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
@@ -6935,24 +6750,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     address: "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
     noticeKey: "rfp-tsd-custodial-2026"
-  },
-  {
-    title: "Ordinance -- Community Development Code Amendment to Lighting Regulations Section 17.5.12 (COL-000175)",
-    entity: "Town of Mountain Village",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The Town of Mountain Village is providing notice that an ordinance amending Section 17.5.12 Lighting Regulations of the Community Development Code passed its first reading on April 23, 2026. The second reading, public hearing, and final Council vote will be held on Thursday, July 16, 2026, at 2:00 PM at Mountain Village Town Hall (2nd floor conference room) and via Zoom. The full ordinance is available for review at the Town Clerk's office at 455 Mountain Village Blvd, Suite A, or on the town website.",
-    deadline: "2026-07-16T14:00:00",
-    expires: "2026-07-16",
-    dates: "7/9",
-    papers: ["ttimes_0709"],
-    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    address: "455 Mountain Village Blvd, Suite A, Mountain Village, CO",
-    noticeKey: "ord-mv-lighting-sec17.5.12"
   },
   {
     title: "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",

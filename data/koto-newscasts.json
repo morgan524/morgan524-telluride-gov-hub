@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-16-26",
+    "source": "KOTO Community Radio",
+    "date": "July 17, 2026",
+    "newsTopic": "community",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
+    "href": "https://koto.org/news/newscast-7-16-26/"
+  },
+  {
     "title": "Newscast 7-15-26",
     "source": "KOTO Community Radio",
     "date": "July 16, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "public-safety",
     "copy": "A Gold Mountain Fire Update; Smoke Fills the San Juans",
     "href": "https://koto.org/news/newscast-7-6-26/"
-  },
-  {
-    "title": "Newscast 7-2-26",
-    "source": "KOTO Community Radio",
-    "date": "July 3, 2026",
-    "newsTopic": "public-safety",
-    "copy": "A Gold Mountain Fire Update; Telluride Town Council Names Resident Advisory Committee; Cat Movie Fisher with Risho Unda",
-    "href": "https://koto.org/news/newscast-7-2-26/"
   }
 ]
