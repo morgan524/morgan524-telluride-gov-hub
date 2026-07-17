@@ -472,7 +472,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -550,7 +550,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -664,6 +664,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "BOCC discusses public lands",
+    source: "Telluride Times",
+    date: "July 17, 2026",
+    firstSeen: "2026-07-17",
+    newsTopic: "housing",
+    copy: "San Miguel County commissioners signed letters of support for two federal public lands bills — one barring land sales through budget reconciliation, another halting layoffs at Interior and the Forest Service through 2030. Colorado has seen a 26% cut in public land agency staff since January. They also backed a $200,000 grant application for a floating solar project near Norwood.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_65e1b685-2138-4a3b-bcfc-cd30b2c7fe99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/47/c47437c9-5b07-4b76-b927-9099f02f7100/6a59c3a8929bd.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Nugget documentary premieres July 25",
     source: "Telluride Times",
