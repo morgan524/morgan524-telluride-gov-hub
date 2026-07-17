@@ -550,7 +550,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm."
@@ -2972,18 +2972,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Liver Down the River w/ Grass Blasters",
-    link: "https://www.alibitelluride.com/calendar#eca-event=liver-down-the-river-w-grass-blasters",
-    description: "From the heart of Colorado comes a five piece band, Liver Down The River. The gr...",
-    pubDate: "2026-07-16",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/c767a7dc-fc92-4eca-b98e-91b8c973fb5c/-/crop/3225x1612/0,0/-/preview/"
-  },
   {
     title: "The Saint Cecilia - Night One w/ Harvey Street",
     link: "https://www.alibitelluride.com/calendar#eca-event=the-saint-cecilia-night-one",
