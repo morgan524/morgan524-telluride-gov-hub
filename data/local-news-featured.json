@@ -1,5 +1,17 @@
 [
   {
+    "title": "Palm, parts of TIS and TM/HS flooded",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "July 18, 2026",
+    "summary": "Friday afternoon's heavy rain triggered multiple mudslides from the Jud Wiebe Trail area that sent water and mud down the hillside, flooding the Michael D. Palm Theatre and parts of Telluride Intermediate School and Telluride Middle/High School. The Palm's auditorium was the worst affected, with floodwater sitting level with the stage after the force of the water caved in a rear loading-bay door. Telluride Fire responded around 5:30 p.m. to assess for structural, gas, and electrical hazards.",
+    "href": "https://www.telluridenews.com/news/article_32546b30-de8d-4012-8929-88d83de86934.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/d6/0d6a74ff-58d1-4a51-b5ae-38b9f261deac/6a5af1330fabf.image.jpg",
+    "category": "Public Safety",
+    "newsTopic": "public-safety",
+    "featured": true
+  },
+  {
     "title": "Aldasoro Ranch turns 100",
     "source": "Telluride Times",
     "sourceKey": "ttimes",
@@ -8,8 +20,7 @@
     "href": "https://www.telluridenews.com/news/article_92132a6f-84c7-4cf5-8194-30f9c965f8ed.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/93/493cf380-3382-4640-9817-6a2042523f39/6a4ea04ecc377.image.png",
     "category": "Community",
-    "newsTopic": "community",
-    "featured": true
+    "newsTopic": "community"
   },
   {
     "title": "Dry thunderstorms could complicate firefighting efforts",
