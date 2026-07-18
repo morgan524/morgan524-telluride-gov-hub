@@ -526,7 +526,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -955,18 +955,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Looking for a ‘unicorn buyer’",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "land-use",
-    copy: "Five of 24 homes at Pinion Park, an affordable housing development in Norwood, are listed for sale but finding no takers. The AMI income caps create a narrow buyer pool, and without the low-interest, no-down-payment loans original buyers received, the ~$370K asking prices are out of reach for income-qualified buyers. Rural Homes and the county are exploring options, but grant covenants leave limited room to maneuver.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0f4d036f-b01e-4091-ae66-3a1849e04921.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/cc/0cced57b-f9dc-4119-ba73-3c2b0d53b758/6a55d8e525046.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "A community, not just a destination",
     source: "Telluride Times",
     date: "July 14, 2026",
@@ -988,6 +976,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_558a094b-2688-4cb2-92bf-a322bdfd5b43.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/06/a066739c-ff2a-462b-a5b9-67b0793e6e62/6a56a442a7441.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Looking for a ‘unicorn buyer’",
+    source: "Telluride Times",
+    date: "July 14, 2026",
+    firstSeen: "2026-07-14",
+    newsTopic: "land-use",
+    copy: "Five of 24 homes at Pinion Park, an affordable housing development in Norwood, are listed for sale but finding no takers. The AMI income caps create a narrow buyer pool, and without the low-interest, no-down-payment loans original buyers received, the ~$370K asking prices are out of reach for income-qualified buyers. Rural Homes and the county are exploring options, but grant covenants leave limited room to maneuver.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0f4d036f-b01e-4091-ae66-3a1849e04921.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/cc/0cced57b-f9dc-4119-ba73-3c2b0d53b758/6a55d8e525046.image.jpg",
     imgHiRes: true
   },
   {
@@ -4828,39 +4828,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Randy Houser Benefit Concert",
-    link: "https://townofmountainvillage.com/explore/events/all-events/randy-houser-benefit-concert/",
-    description: "Great music, for a great cause. The Telluride Foundation, in partnership with The Alpine Club, is proud to announce the Randy Houser Benefit Concert,",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48771/randy_houser_calendar_1800x900_1.png"
-  },
-  {
-    title: "Music on the Green Presents Sway Wild",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-sway-wild/",
-    description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present Music on the Green with Sway Wild on Friday, July 17,",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48853/sway_wild_1800x900px_1.png"
-  },
-  {
-    title: "Pristine Bins Demonstration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/meadow-parking-lot-pristine-bins-demonstration/",
-    description: "Join Pristine Bins for a live demonstration of our eco-friendly trash bin cleaning system on Monday, August 10 5:30-6:30 p.m.",
-    pubDate: "2026-07-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49434/pristine_bins_event_1800x900_1.png"
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
@@ -5387,6 +5354,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-08-17T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
