@@ -487,7 +487,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -654,6 +654,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Region expected to see record low streamflows",
+    source: "Telluride Times",
+    date: "July 18, 2026",
+    firstSeen: "2026-07-18",
+    newsTopic: "land-use",
+    copy: "Warm, dry winter conditions have pushed streamflows across the region to historic lows — the Uncompahgre at Ridgway hit an all-time record, while the San Miguel, Animas, and Dolores all logged fourth-lowest levels. Up to 20 miles of the San Miguel may drop below 10 cfs, stressing native fish and raising metal concentrations. Monsoon rains are unlikely to meaningfully shift the numbers this late in the season.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_dbdd8f79-5b19-431b-a325-7f028ec16a45.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/76/c76a2cd6-fb63-457e-b6c6-29005be04252/6a5aba1513e44.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Updated: Palm, parts of TIS and TM/HS flooded",
     source: "Telluride Times",
@@ -2816,7 +2828,7 @@ const WILKINSON_EVENTS = [
   {
     title: "90s Movie Matinee: The Sandlot",
     link: "https://telluridelibrary.libcal.com/event/15536169?hs=a",
-    description: "A free library screening of the beloved 1993 baseball coming-of-age film *The Sandlot*, hosted in the Program Room at Wilkinson Public Library. This afternoon matinee is part of the library's 90s Movie Matinee series.",
+    description: "2:00 PM – 4:00 PM",
     pubDate: "2026-07-18T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3003,7 +3015,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3015,7 +3027,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4738,7 +4750,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-07-14-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Committee, hosted by the Town of Norwood. The meeting provides an opportunity for community members and officials to address water-related issues and local governance matters.",
+    description: "",
     pubDate: "2026-07-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4749,7 +4761,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Special Meeting",
     link: "https://www.norwoodtown.com/2026-07-15-board-of-trustees-special-meeting",
-    description: "A special meeting of the Town of Norwood Board of Trustees, held in Norwood, Colorado. As an official government meeting, it is open to the public and provides an opportunity for community members to observe local municipal business.",
+    description: "",
     pubDate: "2026-07-15T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4760,7 +4772,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4771,7 +4783,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4782,7 +4794,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4793,7 +4805,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4804,7 +4816,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
