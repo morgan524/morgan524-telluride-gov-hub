@@ -6,169 +6,15 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 22:05:05 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 02:55:37 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>📅 The Week Ahead — Jul 17–23</title>
+      <title>📅 The Week Ahead — Jul 18–24</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-28</guid>
-      <pubDate>Fri, 17 Jul 2026 22:05:05 GMT</pubDate>
-      <description><![CDATA[The biggest thing on the civic calendar this week is Tuesday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code comes to a vote — that's a real Land Use Code change covering landscaping, trees, and historic review standards that will affect property owners across town. Same day, the Telluride Housing Authority takes up a proposed policy on primary residency for dependents in split-custody households, a quietly consequential question for working families in deed-restricted units. Thursday, Planning and Zoning digs into three Town-owned development projects — including the Carhenge Redevelopment — all moving through formal subdivision and concept review.]]></description>
+      <pubDate>Sat, 18 Jul 2026 02:55:37 GMT</pubDate>
+      <description><![CDATA[Tuesday is the one to watch: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, meaning a vote on actual land-use and landscaping standards could happen that day. Also Tuesday, the Housing Authority works through a primary-residency policy question for dependents in split-custody households — a real edge case that matters to families trying to qualify. Thursday, Planning and Zoning digs into the Carhenge Redevelopment and other Town-owned projects in the A2 zone, with subdivision and concept review on the table.]]></description>
       <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>[Meeting] San Miguel Basin Fair Board — 2026-07-17</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-17%7CSan%20Miguel%20Basin%20Fair%20Board</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-07-17
-
-The San Miguel Basin Fair Board holds a special meeting at 10pm — late by design, after a full day at the fair. The agenda is a debrief: how the day went and whatever issues made their way up to the board during it. Routine end-of-day business, but these conversations are often where the real operational picture emerges.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Randy Houser Live in Concert Presented by The Alpine Club, A benefit for the Telluride Foundation’s Good Neighbor Fund</title>
-      <link>https://sheridanoperahouse.com/events/randy-houser-live-in-concert-presented-by-the-alpine-club-and-a-benefit-for-the-telluride-foundations-good-neighbor-fund/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/randy%20houser%20live%20in%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-1.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-
-Randy Houser performs live in concert at the historic Sheridan Opera House in Telluride, presented by The Alpine Club. The event benefits the Telluride Foundation's Good Neighbor Fund, a local initiative supporting community members in need.]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/05/unnamed-file-1.png" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] The Saint Cecilia - Night One w/ Harvey Street</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=the-saint-cecilia-night-one</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20saint%20cecilia%20night%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/a5f0d482-c0f2-4049-a875-64a39a0b5888/-/crop/1080x540/0,245/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-From the outside, The Saint Cecilia is a collection of emotional images, love, a...]]></description>
-      <media:content url="https://ucarecdn.com/a5f0d482-c0f2-4049-a875-64a39a0b5888/-/crop/1080x540/0,245/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Ah Haa HAHA</title>
-      <link>https://www.telluride.com/event/ah-haa-haha/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ah%20haa%20haha%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44841/screenshot_2023-03-23_at_4_39_19_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The HAHA is a community art event unlike you’ve ever experienced! HAHA is the immersive art installation event of …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44841/screenshot_2023-03-23_at_4_39_19_pm.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Telluride Theatre&amp;#039;s Annual Shakespeare in the Park</title>
-      <link>https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20theatre%20and%20039%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/51687/thunder_tix_600x375px.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-2026 Shakespeare in the Park Henry, the young and newly crowned king, is impatient to assert control over the people …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/51687/thunder_tix_600x375px.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] The Saint Cecilia</title>
-      <link>https://www.telluride.com/event/the-saint-cecilia/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20saint%20cecilia%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/60544/the_saint_cecelia.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-From the outside, The Saint Cecilia is a collection of emotional images, love, art, power, passion, lust and verve. …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/60544/the_saint_cecelia.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Randy Houser Benefit Concert With Special Guest Jamey Johnson</title>
-      <link>https://www.telluride.com/event/randy-houser-benefit-concert/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/randy%20houser%20benefit%20concert%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62393/randy_houser_calendar_2200x1237_1.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Great music, for a great cause. The Telluride Foundation, in partnership with The Alpine Club, is proud to announce the …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62393/randy_houser_calendar_2200x1237_1.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Yoga for ALL with Jane &amp; Jay</title>
-      <link>https://telluridelibrary.libcal.com/event/15803448?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Telluride Farmers Marketshow: Taiko Japanese Drums</title>
-      <link>https://telluridelibrary.libcal.com/event/15564472?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmers%20marketshow%20taiko%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_30_41.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Gondola Plaza - Telluride
-
-11:00 AM – 12:00 PM · The sound of an authentic Taiko drum leads this exploration through Japanese culture. Costumes, Japanese folktales, percussion instruments, and the booming Taiko drum come together to immerse students in ancient Japanese art forms.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_30_41.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Teen Karate, Manga, and Ramen Club</title>
-      <link>https://telluridelibrary.libcal.com/event/17184394?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20karate%20manga%20and%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_10_11_04_54.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Teen Area
-
-1:00 PM – 3:00 PM · Join the WPL and CTC for our Teen Karate, Manga, and Ramen club. We will learn some karate, eat ramen, and do some fun activities about manga/ramen. All skill levels, including none, of karate are welcome.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_10_11_04_54.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] Free Youth Tennis &amp; Pickleball Program</title>
-      <link>https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-17/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20youth%20tennis%20and%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 17] West African Drum and Dance</title>
-      <link>https://telluridelibrary.libcal.com/event/16975157?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/west%20african%20drum%20and%7C2026-07-17</guid>
-      <pubDate>Fri, 17 Jul 2026 22:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_15_29_26.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-4:30 PM – 6:00 PM · This class is geared towards adults and teens. Children 12 and under must be accompanied by an adult. Sign up at the bottom of this page! Participants will learn a specific Guinean rhythm and get the opportunity to learn various foundational techniques and skills for playing the Djembe in harmony and beat with one another. The second half of the class will be learning the dance rhythm associated to the drum rhythm learned. This is accompanied by live drumming where participants get to experience how the drumming and dance play together. The classes are a full body, mind and heart experience that focuses on left and right brain activities as well as connection to community and a deeper understanding of Guinean arts. Song is also incorporated! Etienne Tolno is a professional musician from Guinea, West Africa. …]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_15_29_26.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Meeting] San Miguel Basin Fair Board — 2026-07-18</title>
@@ -194,19 +40,6 @@ From the outside, The Saint Cecilia is a collection of emotional images, love, a
       <media:content url="https://ucarecdn.com/a5f0d482-c0f2-4049-a875-64a39a0b5888/-/crop/1080x540/0,245/-/preview/" medium="image" />
       <category>Community Event</category>
       <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Sat, Jul 18] Randy Houser Benefit Concert</title>
-      <link>https://koto.org/event/randy-houser-benefit-concert/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/randy%20houser%20benefit%20concert%7C2026-07-18</guid>
-      <pubDate>Sat, 18 Jul 2026 01:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/TOMV_1800x900.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Sheridan Opera House, Telluride
-
-Great music, for a great cause. The Telluride Foundation, in partnership with The Alpine Club, is proud to announce the Randy Houser Benefit Concert, in support of our Good Neighbor Fund, on July 17th at the Sheridan Opera House. Randy Houser will take the stage in Telluride for the first time, bringing one of the most distinctive voices in the genre—raw, powerful, and instantly recognizable. As a multi-platinum artist known for hits like How Country Feels, Runnin’ Outta Moonlight, and Like A Cowboy, it’s a night you don't want to miss. The night will open with LVDY, a Colorado & Telluride-based duo known for their soaring harmonies and easy, feel-good sound. Tickets on sale May 15.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/TOMV_1800x900.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Jul 18] HAHA</title>
@@ -361,17 +194,90 @@ Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Br
       <category>Community Event</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Gondola Subcommittee - Jul 20 2026 — 2026-07-20</title>
+      <title>[Sun, Jul 19] Tea and Tarot</title>
+      <link>https://koto.org/event/tea-and-tarot/2026-07-19/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-07-19</guid>
+      <pubDate>Sun, 19 Jul 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Meeting] Gondola Subcommittee - Jul 20 2026 — 2026-07-20</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-20%7CGondola%20Subcommittee%20-%20Jul%2020%202026</guid>
       <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-20
 
-The Gondola Advisory Committee meets virtually to receive the project team's economic and fiscal impact analysis of the gondola — the central item on this agenda. The analysis ties gondola operations to visitation patterns, retail spending, and sales tax across Telluride and Mountain Village, finding that 30% of Telluride visitors and 45% of Mountain Village visitors ride it at least once per trip, and that restaurant sales in particular track closely with ridership. Growth projections are being revised downward over the next 20 years, driven by rising costs of living, accelerating home values, infrastructure limits, and demographic shifts. The committee will also review materials for the July 28 Leadership Committee meeting, which will cover the FTA Capital Investment Grants program and local funding strategy — a consequential topic given that the hypothetical funding scenario puts the project at $140M total, with $20M each expected from the Town of Telluride and the Mountain Village Entity. August's Gsub meeting is set to examine traffic, parking, and bus-replacement scenarios in the event of a prolonged gondola outage.
-
-⚡ Why it matters: Gondola economic analysis ties operations to sales tax and visitation — public data worth knowing.]]></description>
+The Gondola Advisory Committee meets virtually to receive the project team's economic and fiscal impact analysis of the gondola — the central item on this agenda. The analysis ties gondola operations to visitation patterns, retail spending, and sales tax across Telluride and Mountain Village, finding that 30% of Telluride visitors and 45% of Mountain Village visitors ride it at least once per trip, and that restaurant sales in particular track closely with ridership. Growth projections are being revised downward over the next 20 years, driven by rising costs of living, accelerating home values, infrastructure limits, and demographic shifts. The committee will also review materials for the July 28 Leadership Committee meeting, which will cover the FTA Capital Investment Grants program and local funding strategy — a consequential topic given that the hypothetical funding scenario puts the project at $140M total, with $20M each expected from the Town of Telluride and the Mountain Village Entity. August's Gsub meeting is set to examine traffic, parking, and bus-replacement scenarios in the event of a prolonged gondola outage.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 20] Telluride Baseball Festival</title>
+      <link>https://www.telluride.com/event/telluride-baseball-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20baseball%20festival%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44876/1caea1bf-5cda-4196-93fe-07036f415462.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44876/1caea1bf-5cda-4196-93fe-07036f415462.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 20] Shakespeare in the Park: &quot;Henry V&quot;</title>
+      <link>https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-19/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/shakespeare%20in%20the%20park%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 02:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Town Park
+
+Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; "The game's afoot!" Youth & "Pay-What-You-Can" discounts available!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 20] Book Buzz w/The Pour Over Pedaler</title>
+      <link>https://koto.org/event/book-buzz-w-the-pour-over-pedaler-2/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/book%20buzz%20w%20the%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 20] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-20/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Mon, Jul 20] Authors Uncovered: Fierce Country by Heather Hansman</title>
+      <link>https://koto.org/event/authors-uncovered-fierce-country-by-heather-hansman/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/authors%20uncovered%20fierce%20country%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join us for an evening of conversation with Heather Hansman about her new book, FIERCE COUNTRY: The Untold Story of Three Women Who Ignited America’s Love for the Wild. The inspiring, untold story of three incredible women who spearheaded recreation, conservation and resilience in America’s most beloved landscapes, for readers of Pam Houston and David Grann In the spring of 1945, when just a handful of people had been through the Grand Canyon in boats, Georgie White jumped into the river in just a lifejacket and swam through the rapids. She spent the rest of her life bringing people through the canyon, kickstarting river running and the recreation industry.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Board of Directors Meeting — 2026-07-21</title>
@@ -393,7 +299,7 @@ The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.
 
 A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado Wildfire Resiliency Code (CWRC) — amendments to the Land Use Code covering historic/architectural review and landscaping/tree standards that bring the town in line with state wildfire resiliency requirements. A public hearing follows on a temporary patio tent structure at 221 S. Oak Street (R/C zone, Gondola Corridor Overlay). The long-running Stender Residence HARC appeal — continued repeatedly since December 2025 — is continued again. Afternoon work sessions cover the Telluride Tourism Board contract, updates to the Telluride Energy Mitigation Program (TEMP) offset calculations and fees, and a Colorado Ave East End speed study. Manager's reports include updates on Carhenge, The Oval, Canyonlands/Tower House, and parking. The Housing Authority and Block 23 Housing Corporation hold sequential meetings at the back end of the day.
 
-⚡ Why it matters: Vote on wildfire code changing land-use, landscaping, and historic review rules.]]></description>
+⚡ Why it matters: Council votes second reading on wildfire code changes to land use and landscaping rules.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -406,7 +312,7 @@ A newly seated Council opens with a swearing-in and executive session on San Mig
 
 The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.
 
-⚡ Why it matters: New residency policy for split-custody dependents could reshape housing eligibility.]]></description>
+⚡ Why it matters: Housing Authority sets policy on primary residency for dependents in multi-custodial households.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -422,6 +328,67 @@ The Block 23 Housing Corporation holds what amounts to a housekeeping session �
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Tue, Jul 21] Shakespeare in the Park: &quot;Henry V&quot;</title>
+      <link>https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-20/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/shakespeare%20in%20the%20park%7C2026-07-21</guid>
+      <pubDate>Tue, 21 Jul 2026 02:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Telluride Town Park
+
+Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; "The game's afoot!" Youth & "Pay-What-You-Can" discounts available!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 21] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-21/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-21</guid>
+      <pubDate>Tue, 21 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 21] Kombucha and Kefir w/ Kayla</title>
+      <link>https://koto.org/event/kombucha-and-kefir-w-kayla/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/kombucha%20and%20kefir%20w%7C2026-07-21</guid>
+      <pubDate>Tue, 21 Jul 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 21] Stories &amp; Poems Telluride</title>
+      <link>https://koto.org/event/stories-poems-telluride/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/stories%20and%20poems%20telluride%7C2026-07-21</guid>
+      <pubDate>Tue, 21 Jul 2026 23:15:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Tue, Jul 21] Forest Health Talk w/Jason Sibold</title>
+      <link>https://koto.org/event/forest-health-talk-w-jason-sibold/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/forest%20health%20talk%20w%7C2026-07-21</guid>
+      <pubDate>Tue, 21 Jul 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study here: https://www.libarts.colostate.edu/people/sibold/ https://www.instagram.com/p/DIUD7GZSrVL/ And join us the next day for a walk and talk in Bear Creek! Sign up is required. Please go to the listing here: https://telluridelibrary.libcal.com/event/17105410 Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way! Meet at the library and wear sturdy shoes.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Board of County Commissioners Special Meeting — 2026-07-22</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-22%7CBoard%20of%20County%20Commissioners%20Special%20Meeting</guid>
@@ -433,6 +400,19 @@ The July 22 San Miguel County Board of County Commissioners Special Meeting has 
       <category>San Miguel County</category>
     </item>
     <item>
+      <title>[Wed, Jul 22] An Evening with Josh Abbott</title>
+      <link>https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/an%20evening%20with%20josh%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
+📍 Sheridan Opera House • Telluride, CO
+
+Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.]]></description>
+      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Sheridan Opera House</category>
+    </item>
+    <item>
       <title>⚡ [Meeting] Planning &amp; Zoning Commission - Jul 23 2026 — 2026-07-23</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-23%7CPlanning%20%26%20Zoning%20Commission%20-%20Jul%2023%202026</guid>
@@ -441,7 +421,7 @@ The July 22 San Miguel County Board of County Commissioners Special Meeting has 
 
 Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project gets two bites of the apple: a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B at 700 W Pacific Ave into a single parcel over 15,000 sq ft, and a Conceptual PUD for new construction on that consolidated lot (carried over from May). Separately, the Shandoka Lot at 860 Black Bear Rd gets its own Conceptual PUD hearing for proposed new construction on the Town's 4.07-acre parcel. Both sites sit at the center of the ongoing question about what Telluride does with its open-space-adjacent Town properties. Also on: a Minor Subdivision at 238 N Pine Street in the Historic Residential zone — a 7,500 sq ft or smaller parcel proposed to be split into two lots, a request that has been continued multiple times since February.
 
-⚡ Why it matters: Formal review of three Town-owned redevelopment projects, including Carhenge subdivision.]]></description>
+⚡ Why it matters: P&Z reviews subdivision and concept plans for Carhenge and other Town-owned A2-zone projects.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
