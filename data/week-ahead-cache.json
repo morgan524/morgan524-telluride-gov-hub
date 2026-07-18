@@ -1,18 +1,18 @@
 {
-  "hash": "e077b2ea804daba9b1d509aae81cea277f78326b",
-  "lede": "Tuesday is the one to watch: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, meaning a vote on actual land-use and landscaping standards could happen that day. Also Tuesday, the Housing Authority works through a primary-residency policy question for dependents in split-custody households — a real edge case that matters to families trying to qualify. Thursday, Planning and Zoning digs into the Carhenge Redevelopment and other Town-owned projects in the A2 zone, with subdivision and concept review on the table.",
+  "hash": "9c4e1d28034ef1580ce5b3f28d0b71832f2f3328",
+  "lede": "Tuesday is the one to watch this week: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would lock new landscaping and tree standards into the Land Use Code — that's a real vote with real consequences for property owners. The same day, the Telluride Housing Authority meets to work through a thorny primary-residency question for dependents in multi-custodial households, and Thursday's Planning & Zoning session digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge redevelopment at 700 W Pacific.",
   "notable": [
     {
       "id": 3,
-      "stake": "Council votes second reading on wildfire code changes to land use and landscaping rules."
+      "stake": "Second reading vote on Wildfire Resiliency Code changes to landscaping and historic review."
     },
     {
       "id": 4,
-      "stake": "Housing Authority sets policy on primary residency for dependents in multi-custodial households."
+      "stake": "New policy on primary residency for dependents in split-custody households could affect deed holders."
     },
     {
       "id": 7,
-      "stake": "P&Z reviews subdivision and concept plans for Carhenge and other Town-owned A2-zone projects."
+      "stake": "P&Z reviews subdivision and concept plans for three Town-owned redevelopment sites."
     }
   ]
 }
