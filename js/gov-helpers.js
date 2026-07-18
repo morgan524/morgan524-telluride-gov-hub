@@ -487,7 +487,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -654,6 +654,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Hickenlooper’s office updates county commissioners on relevant initiatives",
+    source: "Telluride Times",
+    date: "July 18, 2026",
+    firstSeen: "2026-07-18",
+    newsTopic: "government",
+    copy: "Sen. Hickenlooper's Southwest Regional Director briefed San Miguel County commissioners on several active issues, including voting rights legislation, immigration enforcement oversight, and public lands bills covering hundreds of thousands of Colorado acres. Wildfire resources, IRA water projects, and a major 2024 gas spill on Southern Ute land were also on the agenda.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_ad1056b1-54f0-4ac3-ad15-7f43c2fd6f07.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/da/9daf1ab2-558d-4e28-9814-44db631d9128/6a5abd5662386.image.webp",
+    imgHiRes: true
+  },
   {
     title: "Region expected to see record low streamflows",
     source: "Telluride Times",
@@ -1606,24 +1618,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
-  },
-  {
-    title: "Commissioners Finalize Deed Restriction Reversion Process",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "housing",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1401",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=13313"
-  },
-  {
-    title: "Mill Creek Park Site Closed for Revegetation",
-    source: "San Miguel County",
-    date: "June 18, 2026",
-    newsTopic: "recreation",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1400",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14312"
   },
   {
     title: "Lower Tomboy Road Closed to All Traffic",
