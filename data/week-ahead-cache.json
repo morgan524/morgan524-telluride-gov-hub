@@ -1,18 +1,18 @@
 {
-  "hash": "9c4e1d28034ef1580ce5b3f28d0b71832f2f3328",
-  "lede": "Tuesday is the one to watch this week: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would lock new landscaping and tree standards into the Land Use Code — that's a real vote with real consequences for property owners. The same day, the Telluride Housing Authority meets to work through a thorny primary-residency question for dependents in multi-custodial households, and Thursday's Planning & Zoning session digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge redevelopment at 700 W Pacific.",
+  "hash": "e11112eedca5ef1ff76664f816ea95501c9388f2",
+  "lede": "Tuesday is the one to watch: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code on historic review, landscaping, and tree standards — that's a real vote with lasting consequences for how properties here are built and maintained. The same day, the Telluride Housing Authority weighs a new primary-residency policy for dependents in split-custody households, and Planning & Zoning meets Thursday to review the Carhenge Redevelopment and two other Town-owned projects in a major land-use session.",
   "notable": [
     {
       "id": 3,
-      "stake": "Second reading vote on Wildfire Resiliency Code changes to landscaping and historic review."
+      "stake": "Second reading vote on wildfire code changes to Land Use Code landscaping and historic review."
     },
     {
       "id": 4,
-      "stake": "New policy on primary residency for dependents in split-custody households could affect deed holders."
+      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility determinations."
     },
     {
       "id": 7,
-      "stake": "P&Z reviews subdivision and concept plans for three Town-owned redevelopment sites."
+      "stake": "Subdivision and concept review votes on three Town-owned redevelopment projects including Carhenge."
     }
   ]
 }
