@@ -1,0 +1,94 @@
+{
+ "art": {
+  "license": "cc0",
+  "source": "rawpixel",
+  "title": "Guildhall art gallery exhibition, London",
+  "page": "https://www.rawpixel.com/image/6111381/photo-image-public-domain-green-person",
+  "image_url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTAyOTYwOS1pbWFnZS1rejJkem91Ny5qcGc.jpg"
+ },
+ "baseball": {
+  "license": "cc0",
+  "source": "rawpixel",
+  "title": "Baseball player competition",
+  "page": "https://www.rawpixel.com/image/3578249/free-photo-image-baseball-bat",
+  "image_url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmwxNTE2NzEzNjI1OS1pbWFnZS1rcWFuMmdwdy5qcGc.jpg"
+ },
+ "cycling": {
+  "license": "pdm",
+  "source": "flickr",
+  "title": "Swasey Recreation Area",
+  "page": "https://www.flickr.com/photos/50976304@N07/52095318955",
+  "image_url": "https://live.staticflickr.com/65535/52095318955_9176da17ce_b.jpg"
+ },
+ "family": {
+  "license": "cc0",
+  "source": "flickr",
+  "title": "Playground - children enjoying themselves",
+  "page": "https://www.flickr.com/photos/198109102@N06/54152854263",
+  "image_url": "https://live.staticflickr.com/65535/54152854263_f0cc13500d_b.jpg"
+ },
+ "food": {
+  "license": "pdm",
+  "source": "flickr",
+  "title": "20150627-FFAS-LSC-0041",
+  "page": "https://www.flickr.com/photos/41284017@N08/19046198060",
+  "image_url": "https://live.staticflickr.com/429/19046198060_6bec225620_b.jpg"
+ },
+ "hiking": {
+  "license": "pdm",
+  "source": "flickr",
+  "title": "Views along the Mary Mountain Trail: Hiker near the Mary Mountain Trailhead (3)",
+  "page": "https://www.flickr.com/photos/80223459@N05/55367294703",
+  "image_url": "https://live.staticflickr.com/65535/55367294703_0a8e1bd29d_b.jpg"
+ },
+ "livemusic": {
+  "license": "cc0",
+  "source": "stocksnap",
+  "title": "Music Guitar",
+  "page": "https://stocksnap.io/photo/music-guitar-BWLHIIOGVX",
+  "image_url": "https://cdn.stocksnap.io/img-thumbs/960w/BWLHIIOGVX.jpg"
+ },
+ "wellness": {
+  "license": "pdm",
+  "source": "flickr",
+  "title": "USS Ronald Reagan (CVN 76) Fitness and Wellness",
+  "page": "https://www.flickr.com/photos/61270229@N05/51846921884",
+  "image_url": "https://live.staticflickr.com/65535/51846921884_cb159bbe68_b.jpg"
+ },
+ "film": {
+  "license": "cc0",
+  "source": "rawpixel",
+  "title": "Free cinema seats image",
+  "page": "https://www.rawpixel.com/image/5927096/photo-image-public-domain-room-free",
+  "image_url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvaXMxNjgwNS1pbWFnZS1rd3Z5Z3h1OS5qcGc.jpg"
+ },
+ "talk": {
+  "license": "pdm",
+  "source": "flickr",
+  "title": "220124-N-BD231-1149",
+  "page": "https://www.flickr.com/photos/49251707@N07/51846396214",
+  "image_url": "https://live.staticflickr.com/65535/51846396214_38351217b1_b.jpg"
+ },
+ "festival": {
+  "license": "cc0",
+  "source": "stocksnap",
+  "title": "Concert Festival",
+  "page": "https://stocksnap.io/photo/concert-festival-4CNNMKE9IQ",
+  "image_url": "https://cdn.stocksnap.io/img-thumbs/960w/4CNNMKE9IQ.jpg"
+ },
+ "community": {
+  "license": "cc0",
+  "source": "rawpixel",
+  "title": "Colorado. 'Round up' Cimarron, photochrom",
+  "page": "https://www.rawpixel.com/image/7665216/image-art-vintage-public-domain",
+  "image_url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L2xyL3drMTEzMTEzODQtaW1hZ2UuanBn.jpg"
+ },
+ "theater": {
+  "license": "cc0",
+  "source": "rawpixel",
+  "title": "Main stage Palais Garnier, Paris",
+  "page": "https://www.rawpixel.com/image/6043139/photo-image-public-domain-art-room",
+  "image_url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmwxMDgxMDUwNzcyNi1pbWFnZS1reWJlbDV6OS5qcGc.jpg"
+ },
+ "_note": "Category fallback photos for the weekly/weekend digest (scripts/weekly-email.js CATEGORY_FALLBACKS). All CC0 / Public Domain Mark -- no attribution required. Re-sourced via Openverse."
+}

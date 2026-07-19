@@ -102,11 +102,41 @@ const MAJOR_FEST_RE = /mountainfilm|bluegrass|yoga festival|jazz festival|mushro
 // strings. (Norwood "Star Spangled Saturday Parade" → a public-domain c.1886
 // small-town July 4th parade painting, Howland, hosted at /img/email/.)
 const SITE_URL = 'https://livabletelluride.org';
+// Specific, hand-picked title fallbacks — checked FIRST, so a named match here
+// beats the generic category classifier below.
 const IMG_FALLBACKS = [
   { match: /star.?spangled.*parade|\bnorwood\b[^.]*\bparade\b/i, img: SITE_URL + '/img/email/fourth-of-july-parade.jpg' },
   { match: /randy houser/i, img: SITE_URL + '/assets/digest/randy-houser.png' },   // source photo is a .webp (breaks in email)
 ];
-const imgFallback = (title) => { for (const f of IMG_FALLBACKS) if (f.match.test(title || '')) return f.img; return ''; };
+// Category classifier — every EVENT card carries a photo. When a source has no
+// usable image and no specific fallback matches, classify by keyword and use a
+// representative, freely-licensed (CC0 / public-domain) photo we host ourselves
+// under /assets/digest/fallbacks/<slug>.jpg (400x400, email-safe JPG). Ordered
+// most-specific first; first match wins; DEFAULT_FALLBACK_IMG ('community')
+// catches anything unmatched. To expand: add a {match, slug} row and commit the
+// matching assets/digest/fallbacks/<slug>.jpg. (Meetings intentionally excluded.)
+const FB = (slug) => SITE_URL + '/assets/digest/fallbacks/' + slug + '.jpg';
+const CATEGORY_FALLBACKS = [
+  { match: /\bbaseball\b|softball|little league|t-?ball/i,                              slug: 'baseball' },
+  { match: /\bfilm\b|\bmovie\b|cinema|screening|documentary/i,                          slug: 'film' },
+  { match: /\bhike\b|hiking|\btrail\b|\btrek\b|summit|wildflower|nature walk|backpack/i, slug: 'hiking' },
+  { match: /\bbike\b|bicycle|cycling|mountain bike|\bMTB\b|gran fondo|pedal/i,           slug: 'cycling' },
+  { match: /gallery|exhibit|\bart\b|painting|sculpture|\bartist\b|open studio|mural/i,   slug: 'art' },
+  { match: /theat(?:er|re)|\bplay\b|improv|musical|opera|cabaret|\bdrama\b/i,            slug: 'theater' },
+  { match: /farmers market|\bfood\b|dinner|brunch|tasting|brewery|\bbeer\b|\bwine\b|chef|culinary|bbq|barbecue|potluck|harvest/i, slug: 'food' },
+  { match: /\bkids?\b|\bfamily\b|children|story ?time|\byouth\b|playgroup|toddler|puppet/i, slug: 'family' },
+  { match: /\byoga\b|meditation|wellness|pilates|breathwork|sound bath|tai chi|qigong/i, slug: 'wellness' },
+  { match: /lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club/i, slug: 'talk' },
+  { match: /festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i,           slug: 'festival' },
+  { match: /concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, slug: 'livemusic' },
+];
+const DEFAULT_FALLBACK_IMG = FB('community');   // box-canyon / mountain-town default
+const imgFallback = (title) => {
+  const t = title || '';
+  for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
+  for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) return FB(c.slug);
+  return DEFAULT_FALLBACK_IMG;
+};
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so
 // the events page and the email agree on which image an event gets. Email needs
 // ABSOLUTE URLs and can read the repo, so we pass the origin + an existence
