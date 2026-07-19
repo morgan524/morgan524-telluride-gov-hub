@@ -355,6 +355,33 @@ const topicSections = (SHOW_TOPIC_SECTIONS ? TOPIC_DEFS : []).map((td) => {
 // ── Collect meetings (with real agenda links) ──
 const MEETING_FNS = ['getTellurideMeetings','getCountyCachedMeetings','getMVMeetings','getSchoolMeetings','getFireMeetings','getMedMeetings','getRidgwayMeetings','getNorwoodMeetings','getOphirMeetings','getSmartMeetings','getAirportMeetings','getRicoMeetings','getOurayMeetings'];
 const getMeetingSummary = G('getMeetingSummary');
+
+// ── "Why This Matters" highlighting (ported from gov-hub.html) ──
+// The Gov-Hub government page highlights any meeting whose title/summary
+// matches a WHY_THIS_MATTERS entry — a tracked code amendment or high-level
+// land-use issue (Carhenge, Society Turn, Shandoka, Comp Plan, wildfire code,
+// etc.) — with a green-bordered card and a "Why This Matters" callout that
+// links out to the relevant Deep Dive. We mirror that exact treatment here so
+// the Week Ahead email flags the same consequential meetings the same way.
+const WHY_THIS_MATTERS = G('WHY_THIS_MATTERS') || [];
+function getWTMEntry(text) {
+  for (const entry of WHY_THIS_MATTERS) {
+    if (entry && entry.match && entry.match.test(text)) return entry;
+  }
+  return null;
+}
+// Map a WHY_THIS_MATTERS entry to its Deep Dive page — ported verbatim from
+// gov-hub.html deepDiveFor() so the email points at the same context + docs.
+function deepDiveFor(entry) {
+  const src = (entry && entry.match && entry.match.source || '').toLowerCase();
+  if (/carhenge|shandoka|chair\s*7/.test(src))                 return SITE + '/deep-dive-carhenge.html';
+  if (/society|jensen|healthcare|facility|hospital/.test(src)) return SITE + '/deep-dive-society.html';
+  if (/accelerated|comprehensive|forestry/.test(src))          return SITE + '/deep-dive-code.html';
+  if (/wildfire|wui/.test(src))                                return SITE + '/deep-dive-wildfire.html';
+  if (/gondola|smart/.test(src))                               return SITE + '/deep-dive-gondola.html';
+  if (/lucarelli|aldasoro|diamond/.test(src))                  return SITE + '/deep-dive-diamond.html';
+  return null;
+}
 function bodyDesc(name, src) {
   const n = (name + ' ' + src).toLowerCase();
   if (/county commissioner|bocc/.test(n)) return 'San Miguel County’s governing board — land use, budget, and countywide policy.';
@@ -446,7 +473,11 @@ for (const fn of MEETING_FNS) {
       if (agendaPending && !/agenda/i.test(sm)) sm += ' The agenda hasn’t been posted yet — details will follow closer to the meeting.';
     }
     const agenda = m.agendaLink || (m.hasAgenda ? m.link : '') || '';
-    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda });
+    // Match the meeting against WHY_THIS_MATTERS (title + summary + description),
+    // exactly like gov-hub.html's getWTMEntry(), so the same land-use / code
+    // meetings get the "Why This Matters" highlight in the email.
+    const wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''));
+    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm });
   }
 }
 meetings.sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
@@ -522,8 +553,21 @@ const mh = meetings.map((m) => {
     ? `<a href="${esc(commentMailto(m))}" style="display:inline-block;background:#2f7a5f;color:#fff;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;vertical-align:middle;">Comment</a>`
     : '';
   const sep = commentBtn ? ' &nbsp;&nbsp; ' : '';
+  // "Why This Matters" — mirror the Gov-Hub highlight: a green-bordered card
+  // plus an info callout with the stakes and a Deep Dive link, for meetings
+  // that touch a tracked code amendment or high-level land-use issue.
+  const dd = m.wtm ? deepDiveFor(m.wtm) : '';
+  const ddLink = dd ? ` <a href="${esc(dd)}" style="color:#2d6a4f;font-weight:700;text-decoration:underline;">Read the full Deep Dive →</a>` : '';
+  const wtmBlock = m.wtm
+    ? `<div style="margin:8px 0 4px;padding:10px 12px;background:#eef5f0;border-left:3px solid #2d6a4f;border-radius:4px;"><div style="font-family:Georgia,serif;font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:#2d6a4f;margin-bottom:4px;">ℹ Why This Matters</div><div style="font-size:12.5px;color:#2c3b35;line-height:1.55;">${renderSummary(trunc(m.wtm.popup || m.wtm.impact || m.wtm.decision || '', 400))}${ddLink}</div></div>`
+    : '';
+  // Highlighted card (green border + faint tint) when a WHY_THIS_MATTERS entry
+  // matched, matching gov-hub.html's `.meet-card.has-wtm` treatment.
+  const tdStyle = m.wtm
+    ? 'padding:14px 15px;border:2px solid #2d6a4f;border-radius:8px;background:#f7fbf8;'
+    : 'padding:13px 0;border-top:1px solid #eef1ee;';
   // Comment button first, then the Meeting-info / View-agenda link.
-  return `<tr><td style="padding:13px 0;border-top:1px solid #eef1ee;"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${commentBtn}${sep}${link}</td></tr>`;
+  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:13.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${commentBtn}${sep}${link}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
