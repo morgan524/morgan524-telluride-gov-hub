@@ -1566,33 +1566,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "recreation",
-    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
-  },
-  {
-    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
-    source: "Town of Telluride",
-    date: "June 24, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
-  },
-  {
-    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
-    source: "Town of Telluride",
-    date: "June 24, 2026",
-    newsTopic: "public-safety",
-    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -1635,24 +1608,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass and Tomboy Road are closed to all vehicle and pedestrian traffic following mudslides and flooding on Friday, July 17. The duration of the closure is unknown.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=70",
-    img: ""
-  },
-  {
-    title: "Town of Telluride Election Today",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "government",
-    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
-    img: ""
-  },
-  {
-    title: "Stage 2 Fire Restrictions In Effect",
-    source: "Town of Telluride",
-    date: "June 26, 2026",
-    newsTopic: "public-safety",
-    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
