@@ -413,6 +413,17 @@ const KEEP_BODY = /\b(town council|board of county commissioners|bocc|planning c
 // Trustees" — a board, not a "town council"), but these communities' decisions
 // still matter to the region, so include every meeting from these sources.
 const SMALL_TOWN_KEEP = new Set(['rico', 'ridgway', 'norwood', 'ophir', 'ouray']);
+// Specific, dated meetings to omit from the digest entirely — e.g. a special
+// meeting whose posted agenda has nothing of broad public interest. Kept
+// surgical on purpose: matched on source + EXACT date + a title regex, so it
+// drops one meeting instance without suppressing future meetings of that body.
+// Add one entry per meeting to hide; entries naturally go stale once the date
+// passes out of the window.
+const MEETING_EXCLUDE = [
+  { source: 'county', date: '2026-07-22', title: /board of county commissioners/i },  // Special Meeting — agenda posted but nothing of broad public interest
+];
+const isExcludedMeeting = (source, date, title) =>
+  MEETING_EXCLUDE.some((x) => x.source === (source || '').toLowerCase() && x.date === date && x.title.test(title || ''));
 const meetSeen = new Set(); const meetings = [];
 for (const fn of MEETING_FNS) {
   const f = G(fn); if (typeof f !== 'function') continue;
@@ -425,6 +436,7 @@ for (const fn of MEETING_FNS) {
     const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
     const src = m.sourceLabel || m.source || '';
     if (!KEEP_BODY.test(name + ' ' + src) && !SMALL_TOWN_KEEP.has((m.source || '').toLowerCase())) continue;   // TC/BOCC/PC/HARC + all small-town/county boards
+    if (isExcludedMeeting(m.source, date, m.title || name)) continue;   // specific dated meetings hidden from the digest (see MEETING_EXCLUDE)
     // Dedup key: alphabetise the title's word tokens before joining so word-order
     // anagrams collapse to the same key. Joint meetings show up in CivicWeb
     // under each commission's roster (e.g. "Special Meeting - HARC and P&Z" and
