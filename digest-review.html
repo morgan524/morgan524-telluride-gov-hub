@@ -88,11 +88,11 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them); to bold anything else, select it in the preview and click <b>B Bold selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, or write a link as <b>[text](https://…)</b>); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
-    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button></div>
+    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button><button class="btn ghost tiny" id="linkbtn" style="margin-left:6px" title="Select text in the preview below, then click to turn it into a link">&#128279; Link selection</button></div>
     <iframe class="frame" id="frame"></iframe>
   </div>
 
@@ -234,6 +234,37 @@ $("boldbtn").onclick=()=>{
   showStatus("Bold applied — it's part of this version now (click B again on the same text to unbold).");
 };
 
+// ---- link selected text in the preview ----
+// Same engine as Bold: select text in the preview, click Link, enter a URL.
+// execCommand("createLink") wraps the selection in a bare <a>; we then style
+// that fresh anchor to match the digest's green link look before serializing.
+$("linkbtn").addEventListener("mousedown",e=>e.preventDefault());   // don't steal the iframe's selection
+$("linkbtn").onclick=()=>{
+  const fr=$("frame"), doc=fr.contentDocument, win=fr.contentWindow;
+  const sel=win && win.getSelection();
+  if(!sel || sel.rangeCount===0 || sel.isCollapsed || !sel.toString().trim()){
+    showStatus("Select some text <b>in the preview</b> first, then click Link.",true); return;
+  }
+  let url=(window.prompt("Link URL (https://…):","https://")||"").trim();
+  if(!url) return;
+  if(!/^https?:\/\//i.test(url)){ showStatus("Links must start with http:// or https://",true); return; }
+  const range=sel.getRangeAt(0).cloneRange();
+  doc.designMode="on";
+  try{
+    const s2=win.getSelection(); s2.removeAllRanges(); s2.addRange(range);
+    doc.execCommand("createLink",false,url);
+  } finally { doc.designMode="off"; }
+  let html=doc.documentElement.outerHTML;
+  // Style only freshly-created bare anchors (every pre-existing digest link
+  // already carries an inline style=, so this leaves them untouched).
+  html=html.replace(/<a (?![^>]*\bstyle=)([^>]*?href=)/gi,'<a style="color:#2f7a5f;text-decoration:underline;" $1');
+  html=Array.from(html).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
+  const dt=state[cur].html.match(/^\s*<!doctype[^>]*>/i);
+  state[cur].html=(dt?dt[0]+"\n":"")+html;
+  $("lede").value=currentLede(state[cur].html);
+  showStatus("Link added — it's part of this version now.");
+};
+
 // ---- Ask Claude ----
 function renderLog(){
   const log=$("ailog"); log.innerHTML="";
@@ -272,9 +303,23 @@ function decodeEntities(s){ const t=document.createElement("textarea"); t.innerH
 // tags in the email map to ** on the way in and back to <b> on the way out,
 // so a bold applied in the preview survives an intro edit (and you can type
 // **word** to bold in the intro directly).
-function currentLede(html){ const m=(html||"").match(LEDE_RE); return m?decodeEntities(m[2].replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")):""; }
-// Match the email's pure-ASCII encoding: escape <,>,& then numeric-entity the rest.
-function encodeLede(s){ s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); s=Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join(""); return s.replace(/\*\*([\s\S]+?)\*\*/g,"<b>$1</b>"); }
+// Links round-trip as [text](url) markdown, bold as **double asterisks** — a real
+// <a href> in the email maps to [text](url) on the way in and back on the way out
+// (bold inside link text is preserved), so a link applied in the preview survives
+// an intro edit, and you can type [text](https://…) in the intro directly.
+function currentLede(html){
+  const m=(html||"").match(LEDE_RE); if(!m) return "";
+  let s=m[2].replace(/<a\b[^>]*?href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi,(mm,url,txt)=>"["+txt.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")+"]("+url.replace(/&amp;/gi,"&")+")");
+  return decodeEntities(s.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**"));
+}
+// Match the email's pure-ASCII encoding: escape <,>,& then numeric-entity the rest,
+// then convert [text](https://…) links (http/https only) and **bold**.
+function encodeLede(s){
+  s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  s=Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
+  s=s.replace(/\[([^\]]+)\]\(\s*([^)\s]+)\s*\)/g,(m,txt,url)=> /^https?:\/\//i.test(url) ? '<a href="'+url+'" style="color:#2f7a5f;text-decoration:underline;">'+txt+'</a>' : m);
+  return s.replace(/\*\*([\s\S]+?)\*\*/g,"<b>$1</b>");
+}
 function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro paragraph to update.",true); return; }
   const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,(m,a,b,c)=>a+encodeLede(txt)+c); renderPreview(); showStatus("Intro updated in the preview."); }
 $("applyLede").onclick=applyLede;
