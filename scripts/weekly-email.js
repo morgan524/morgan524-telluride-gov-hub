@@ -486,6 +486,61 @@ const boardName = (n, s) => (String(s).replace(/^town of /i, '') + ' ' + String(
 
 // ── Render ──
 const esc = (s) => String(s == null ? '' : s).replace(/&#0?39;/g, "'").replace(/[<>"]/g, (c) => ({ '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])).replace(/&(?!amp;|lt;|gt;|quot;)/g, '&amp;');
+
+// ── Emphasize proper-noun names & standalone addresses in meeting summaries ──
+// Ported from gov-hub.html's emphasizeNames so the weekly digest bolds the SAME
+// scannable entities (project/board names, street addresses) that the Gov-Hub
+// meeting cards do. Heuristic: bold Title-Case word runs; a LONE Title-Case word
+// is bolded only when it's NOT sentence-initial and NOT a generic civic/temporal
+// word (Council, Board, months, Section, …). Operates on the raw text and escapes
+// as it goes. Applied to meeting summaries only, via renderSummary().
+const NAME_STOP = new Set(('The A An On In At As It This That These Those Its Their And But Or If '
+  + 'After Before During While Also Both Two Three Four Five Several Additional Other Following New '
+  + 'Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session '
+  + 'Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda '
+  + 'Work Executive Regular Special Substantial Councilors '
+  + 'January February March April May June July August September October November December '
+  + 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday '
+  + 'Section Stage Phase Article Item Step Unit No Yes '
+  + 'Accommodations Building Buildings Preliminary Large Scale').split(/\s+/));
+const _ADDR_DIR = '(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?';
+const _ADDR_SUF = '(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)';
+const _ADDR_W = "[A-Z][A-Za-z'’]*";
+const _ADDR_SRC = '\\d+\\s+(?:' + _ADDR_DIR + '\\s+' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*(?:\\s+' + _ADDR_SUF + ')?|' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*\\s+' + _ADDR_SUF + ')';
+const _RUN_SRC = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
+function emphasizeNames(raw) {
+  const scanRe = new RegExp('(' + _ADDR_SRC + ')|(' + _RUN_SRC + ')', 'g');
+  let html = '', last = 0, m;
+  while ((m = scanRe.exec(raw)) !== null) {
+    const start = m.index;
+    html += esc(raw.slice(last, start));
+    if (m[1]) {
+      // A street address. Bold in full UNLESS it merely locates a named project
+      // (introduced by "at"/"on") — there the project name carries the emphasis.
+      const addr = m[1];
+      const locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, start));
+      html += locates ? esc(addr) : '<strong>' + esc(addr) + '</strong>';
+      last = start + addr.length;
+      continue;
+    }
+    const run = m[2];
+    let trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');   // drop trailing connectors
+    const tail = run.slice(trimmed.length);
+    let leadThe = '';                                       // keep a leading "The" outside the bold
+    if (/\s/.test(trimmed)) { const t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+    const multi = /\s/.test(trimmed);
+    const before = raw.slice(0, start).replace(/\s+$/, '');
+    const sentenceStart = before === '' || /[.!?]$/.test(before);
+    const sig = trimmed.split(/\s+/).filter((w) => !/^(?:of|the)$/i.test(w));
+    const allStop = sig.length > 0 && sig.every((w) => NAME_STOP.has(w));
+    const bold = !allStop && (multi || (!sentenceStart && !NAME_STOP.has(trimmed)));
+    html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+    last = start + run.length;
+  }
+  html += esc(raw.slice(last));
+  return html;
+}
+
 // Render summary text supporting [text](url) markdown-style hyperlinks.
 // Splits on the link pattern, escapes prose with esc(), and emits styled
 // <a> tags for each link (http(s) only — anything else falls back to
@@ -498,7 +553,7 @@ function renderSummary(s) {
   const re = /\[([^\]]+)\]\(([^)]+)\)/g;
   let out = '', lastIndex = 0, m;
   while ((m = re.exec(s)) !== null) {
-    out += esc(s.slice(lastIndex, m.index));
+    out += emphasizeNames(s.slice(lastIndex, m.index));
     const url = m[2].trim();
     if (/^https?:\/\//i.test(url)) {
       out += `<a href="${esc(url)}" style="color:#2f7a5f;text-decoration:underline;">${esc(m[1])}</a>`;
@@ -507,7 +562,7 @@ function renderSummary(s) {
     }
     lastIndex = m.index + m[0].length;
   }
-  out += esc(s.slice(lastIndex));
+  out += emphasizeNames(s.slice(lastIndex));
   return out;
 }
 const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', timeZone: 'America/Denver' });
