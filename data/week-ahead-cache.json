@@ -1,18 +1,18 @@
 {
-  "hash": "df69bbb6ebc87381cb5bf0cf91b49b1db8647d26",
-  "lede": "Tuesday is the one to watch: a newly sworn-in Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write state wildfire standards into Telluride's Land Use Code covering landscaping, trees, and historic review — if it passes, it's law. The Housing Authority meets the same day to work out a tricky primary-residency policy for dependents in split-custody households, and Thursday Planning and Zoning digs into three Town-owned development proposals in the Accommodations 2 zone, including the Carhenge redevelopment at 700 W Pacific.",
+  "hash": "38a1a95829e1fb3a98685a9c9213e389b1babf32",
+  "lede": "Tuesday is the one to watch: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards directly into the Land Use Code — that's a real vote on rules that affect properties across town. Same day, the Telluride Housing Authority meets to work out a primary-residency policy for dependents in multi-custodial households, a question with direct consequences for families trying to qualify for deed-restricted housing. Thursday, Planning and Zoning digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge redevelopment at 700 W Pacific.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changes to Land Use Code."
+      "stake": "Second-reading vote on wildfire code changes to Land Use Code landscaping and historic review."
     },
     {
       "id": 3,
-      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility."
+      "stake": "New primary-residency policy for dependents could affect deed-restricted housing eligibility."
     },
     {
       "id": 6,
-      "stake": "Town-owned Carhenge redevelopment and two other projects up for land-use review."
+      "stake": "P&Z reviews subdivision and concept plans for three Town-owned Accommodations 2 zone projects."
     }
   ]
 }

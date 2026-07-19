@@ -442,7 +442,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -648,6 +648,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Saturday update: It’s still messy",
+    source: "Telluride Times",
+    date: "July 19, 2026",
+    firstSeen: "2026-07-19",
+    newsTopic: "community",
+    copy: "Saturday brought another round of slides — up to a dozen at once — closing Hwy 145 between Keystone and Sawpit for about six hours. Imogene Pass and Tomboy Road remain closed, West Galena saw flooding, and the Palm/TIS cleanup continues with a SERVPRO crew expanding to 30–40 workers by Monday.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_28b83b17-44bd-4ac6-8c11-200dfc9236bc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/01/e01ed97f-f51c-45e0-82bb-7b3c394d7893/6a5c42d188d9d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Hickenlooper’s office updates county commissioners on relevant initiatives",
     source: "Telluride Times",
@@ -2333,39 +2345,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://koto.org/event/movies-under-the-stars/2026-07-18/",
-    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    pubDate: "2026-07-19T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Conference Center Plaza Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
-    title: "HAHA",
-    link: "https://koto.org/event/haha/2026-07-18/",
-    description: "HAHA is a community art event unlike you’ve ever experienced! HAHA is the immersive art installation event of the summer! Local, national and international artists take over the Ah Haa School for the Arts creating experiential realms and creative chaos! Adults can join in on Friday and Saturday nights, and Sunday’s Little Giggles is for kids and families. Get your tickets to create, play and explore! Participation supports Ah Haa’s ability to provide high-quality, affordable art experiences and tuition assistance for people of all ages, year-round. HAHA attendees can look forward to an out-of-this-world experience with completely hand drawn Trompe-l'œil masterpiece, kinetic sound sculptures, giant folded friends, a secret desert, pinata playplace, whimsical alien worlds, a hideaway for all, playful puzzles revealing color and sound, a Human Intelligence Powered FAUXTO Booth, a curated gift shop, creative bars, generative art making everywhere and so much more to discover!",
-    pubDate: "2026-07-19T01:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Ah Haa School for the Arts, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/haha-banner-small-26.webp"
-  },
-  {
-    title: "Shakespeare in the Park: \"Henry V\"",
-    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-18/",
-    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
-    pubDate: "2026-07-19T02:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
-  },
-  {
     title: "Pickleball Open Play",
     link: "https://koto.org/event/pickleball-open-play/2026-07-19/",
     description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
@@ -2875,26 +2854,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Zumba with Gisela",
-    link: "https://telluridelibrary.libcal.com/event/17117358?hs=a",
-    description: "10:00 AM – 11:00 AM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …",
-    pubDate: "2026-07-18T16:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536440?hs=a",
+    description: "11:00 AM – 12:30 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-07-19T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_26_14_10_49.jpg"
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
-    title: "90s Movie Matinee: The Sandlot",
-    link: "https://telluridelibrary.libcal.com/event/15536169?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-07-18T20:00:00.000Z",
+    title: "Caminata por la Naturaleza",
+    link: "https://telluridelibrary.libcal.com/event/17097621?hs=a",
+    description: "11:00 AM – 1:00 PM · Vamos a caminar por la naturaleza, nos vamos a ver en la biblioteca antes de empezar.  La caminata que vamos a hacer es Waterline hike (llegaremos a un &aacute;rea muy especial!). Todas las edades son bienvenidas.",
+    pubDate: "2026-07-19T17:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lobby",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_30_12_27_15.jpg"
+  },
+  {
+    title: "CANCELLED - Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970383?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-07-19T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Drop In Ping Pong",
+    link: "https://telluridelibrary.libcal.com/event/17203883?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you&#39;re a first-timer or a seasoned player, come enjoy this classic game with family and friends. No registration needed - just drop in! First come, first served (pun intended!) Pase por la biblioteca para partidos casuales de tenis de mesa. Nuestra mesa de ping pong estar&aacute; instalada y lista para jugadores de todas las edades y niveles de habilidad. Ya sea que juegue por primera vez o sea un jugador experimentado, venga a disfrutar de este juego cl&aacute;sico con familia y amigos. No necesita registrarse - &iexcl;simplemente venga!",
+    pubDate: "2026-07-19T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png"
+  },
+  {
+    title: "FIFA World Cup Finals Watch Party/Copa Mundial",
+    link: "https://telluridelibrary.libcal.com/event/16775026?hs=a",
+    description: "1:00 PM – 3:00 PM · Experience the excitement of the world&#39;s biggest sporting event with your community at Wilkinson Public Library! Join us as we watch the FIFA World Cup Final live on the big screen and cheer on the world&#39;s best teams together. This free, all-ages event is the perfect opportunity for soccer fans, families, and friends to come together for an afternoon of fun and friendly competition. Light refreshments will be provided. This is an alcohol-free event. Whether you&#39;re a lifelong soccer fan or simply want to be part of the excitement, everyone is welcome. &iexcl;Vive la emoci&oacute;n del evento deportivo m&aacute;s grande del mundo junto a tu comunidad en la Biblioteca P&uacute;blica Wilkinson! Acomp&aacute;&ntilde;anos para ver en vivo la Final de la Copa Mundial de la FIFA en pantalla grande y apoyar juntos a los mejores equipos del mundo. …",
+    pubDate: "2026-07-19T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_12.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_14_12_08_15.jpg"
+  },
+  {
+    title: "CANCELLEDTea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029764?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-07-19T20:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -2928,18 +2951,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Saint Cecilia - Night Two w/ Harvey Street",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-saint-cecilia-night-one-1",
-    description: "From the outside, The Saint Cecilia is a collection of emotional images, love, a...",
-    pubDate: "2026-07-18",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/a5f0d482-c0f2-4049-a875-64a39a0b5888/-/crop/1080x540/0,245/-/preview/"
-  },
   {
     title: "Young and Dead",
     link: "https://www.alibitelluride.com/calendar#eca-event=young-and-dead",
@@ -3336,82 +3347,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "It's time to make this your most creative season yet! From painting, pottery, photography, theater, dance, karate, creative writing, and so much more, Weehawken offers inspiring classes and workshops for children, teens, and adults across Ouray, Ridgway, and Montrose. Whether you're discovering a new passion, building your skills, or returning to a favorite creative outlet, there's something for every age and experience level. ✨ Don't wait—many classes fill quickly! 👉 Register today and explore the full lineup: https://weehawkenarts.org/ Let's make this fall a season of creativity, connection, and community. We can't wait to create with you! 🎭🎶🖌️ View on site | Email this event",
-    pubDate: "2026-07-18T06:00:00.000Z",
+    pubDate: "2026-07-19T06:00:00.000Z",
     endDate: "2026-07-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Creative Arts!",
     imageUrl: "https://localist-images.azureedge.net/photos/52325008688506/huge/e4cb878588d368b44b33697854b4f04e5aa2df35.jpg"
-  },
-  {
-    title: "Archery at the Park - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/archery-at-the-park-ridgway-state-park-summer-program-series",
-    description: "This program is an engaging, hands-on introduction to a timeless outdoor sport. Led by CPW staff and certified volunteer instructors, this free clinic provides attendees with the unique opportunity to learn archery skills. We will emphasize range safety, proper form, and the mental focus required to hit the bullseye, all within the natural setting of the park. View on site | Email this event",
-    pubDate: "2026-07-18T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53410738987655/huge/c5d289672d54d0fae8645320f97d31581a0875b6.jpg"
-  },
-  {
-    title: "Saturday Yoga",
-    link: "https://events.ourayridgwayevents.com/event/saturday-yoga",
-    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00. View on site | Email this event",
-    pubDate: "2026-07-18T15:00:00.000Z",
-    endDate: "2026-09-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-07-18T18:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Postponed: Jul 18, 2026: How the West Was Worn Or… Black Hat Optional: Theatre @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/how-the-west-was-worn-or-black-hat-optional-theatre-the-wright",
-    description: "Dear Friends, Like so many of you, our hearts have been with our community these past days as the wildfire has touched so many lives, including some of our own cast and crew. Because of this, we've made the difficult decision to postpone our 2026 melodrama, How the West Was Worn, originally scheduled for July 17-20. We know how much you look forward to this show, and we're so grateful for your support. We're working to bring the show back to you within the year. Things are still uncertain right now, but we promise to keep you posted as soon as we have real dates to share. Your ticket will simply carry over to the new dates. …",
-    pubDate: "2026-07-19T01:00:00.000Z",
-    endDate: "2026-07-21",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932502125812/huge/c4a0083e2a38c8bce646c53ac7943f10714eb802.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon — Screening @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-screening-the-wright",
-    description: "Ouray: Echoes in the Canyon — Special Community Screening @ the Wright Like so many of you, our hearts have been with our community these past several days as the Gold Mountain Fire has touched so many lives, including some of our own cast and crew. In place of this weekend's performances, we invite you to join us for a special hometown screening of Ouray: Echoes in the Canyon. Ouray: Echoes in the Canyon — Screening @ the Wright WHEN? Saturday, July 18 Doors at 6:30 pm • Film at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RATING: G ABOUT THE FILM Ouray: Echoes in the Canyon returns to the Wright Opera House following its sold-out premiere. …",
-    pubDate: "2026-07-19T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53375404981466/huge/b6ac805d7cab9956501ae2d370b3c2d63385e823.jpg"
-  },
-  {
-    title: "When Hollywood Invaded the Southwest - Ridgway state park summer program series",
-    link: "https://events.ourayridgwayevents.com/event/when-hollywood-invaded-the-southwest-ridgway-state-park-summer-program-series",
-    description: "Join guest speaker Ed Bovy for a captivating journey through the history of filmmaking in Southwest Colorado. From the rugged landscapes that served as the perfect backdrop for classic Westerns to the modern productions that have graced local peaks, learn why Hollywood fell in love with this corner of the world. View on site | Email this event",
-    pubDate: "2026-07-19T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53417007693969/huge/23ad5ec7cd309b689217faa3eb6c7937760a6a64.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -3426,6 +3368,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
   },
   {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-07-19T18:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
+  },
+  {
     title: "Funky Ouray: Reggae music in Fellin Park",
     link: "https://events.ourayridgwayevents.com/event/funky-ouray-reggae-music-in-fellin-park",
     description: "Join us in Fellin Park every Sunday in July for Funky Ouray, a free, all-ages reggae DJ set hosted by Night Nurse Sound System. Bring a blanket, gather your friends, and kick back to reggae rhythms. View on site | Email this event",
@@ -3436,6 +3390,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg"
+  },
+  {
+    title: "Postponed: Jul 19, 2026: How the West Was Worn Or… Black Hat Optional: Theatre @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/how-the-west-was-worn-or-black-hat-optional-theatre-the-wright",
+    description: "Dear Friends, Like so many of you, our hearts have been with our community these past days as the wildfire has touched so many lives, including some of our own cast and crew. Because of this, we've made the difficult decision to postpone our 2026 melodrama, How the West Was Worn, originally scheduled for July 17-20. We know how much you look forward to this show, and we're so grateful for your support. We're working to bring the show back to you within the year. Things are still uncertain right now, but we promise to keep you posted as soon as we have real dates to share. Your ticket will simply carry over to the new dates. …",
+    pubDate: "2026-07-19T22:00:00.000Z",
+    endDate: "2026-07-21",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/52932502125812/huge/c4a0083e2a38c8bce646c53ac7943f10714eb802.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Heather & Douglas at The Courtyard",
@@ -3828,6 +3794,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Visitor Center",
     imageUrl: "https://localist-images.azureedge.net/photos/53082440669906/huge/f9b15107b816e9da5bfff982f98a0735e575b8c4.jpg"
+  },
+  {
+    title: "Saturday Yoga",
+    link: "https://events.ourayridgwayevents.com/event/saturday-yoga",
+    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00. View on site | Email this event",
+    pubDate: "2026-07-25T15:00:00.000Z",
+    endDate: "2026-09-12",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
   },
   {
     title: "Lake Appreciation Day! at Ridgway State Park",
@@ -4898,6 +4876,17 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-07-18T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
   {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
