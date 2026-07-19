@@ -408,17 +408,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/60544/the_saint_cecelia.800x533.webp"
   },
   {
-    "title": "Randy Houser Benefit Concert With Special Guest Jamey Johnson",
-    "link": "https://www.telluride.com/event/randy-houser-benefit-concert/",
-    "description": "Great music, for a great cause. The Telluride Foundation, in partnership with The Alpine Club, is proud to announce the …",
-    "pubDate": "2026-07-17",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62393/randy_houser_calendar_2200x1237_1.800x533.webp"
-  },
-  {
     "title": "Young and Dead",
     "link": "https://www.telluride.com/event/young-and-dead/",
     "description": "Young and Dead is an exciting culmination of musicians in their early 20's from Boulder, Colorado. With a unique …",
@@ -856,5 +845,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp"
+  },
+  {
+    "title": "TASP Bob Miller Memorial Golf Classic",
+    "link": "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
+    "description": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
+    "pubDate": "2026-09-17",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp"
   }
 ]

@@ -1,18 +1,18 @@
 {
-  "hash": "e11112eedca5ef1ff76664f816ea95501c9388f2",
-  "lede": "Tuesday is the one to watch: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code on historic review, landscaping, and tree standards — that's a real vote with lasting consequences for how properties here are built and maintained. The same day, the Telluride Housing Authority weighs a new primary-residency policy for dependents in split-custody households, and Planning & Zoning meets Thursday to review the Carhenge Redevelopment and two other Town-owned projects in a major land-use session.",
+  "hash": "df69bbb6ebc87381cb5bf0cf91b49b1db8647d26",
+  "lede": "Tuesday is the one to watch: a newly sworn-in Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write state wildfire standards into Telluride's Land Use Code covering landscaping, trees, and historic review — if it passes, it's law. The Housing Authority meets the same day to work out a tricky primary-residency policy for dependents in split-custody households, and Thursday Planning and Zoning digs into three Town-owned development proposals in the Accommodations 2 zone, including the Carhenge redevelopment at 700 W Pacific.",
   "notable": [
     {
+      "id": 2,
+      "stake": "Second reading vote on wildfire code changes to Land Use Code."
+    },
+    {
       "id": 3,
-      "stake": "Second reading vote on wildfire code changes to Land Use Code landscaping and historic review."
+      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility."
     },
     {
-      "id": 4,
-      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility determinations."
-    },
-    {
-      "id": 7,
-      "stake": "Subdivision and concept review votes on three Town-owned redevelopment projects including Carhenge."
+      "id": 6,
+      "stake": "Town-owned Carhenge redevelopment and two other projects up for land-use review."
     }
   ]
 }
