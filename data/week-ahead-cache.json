@@ -1,18 +1,18 @@
 {
-  "hash": "045d2f7c6e3833405aed85ce33cb121cb0793c81",
-  "lede": "Tuesday's Town Council meeting is the one to watch this week — the newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, a Land Use Code amendment that would change historic review and landscaping standards across town to meet state wildfire requirements, and that's a vote worth knowing about. Also on Tuesday, the Telluride Housing Authority is hashing out a policy on primary residency for dependents in multi-custodial households, a real edge case that affects local families. Thursday, Planning and Zoning takes on the Carhenge Redevelopment and other Town-owned projects in a dense land-use session.",
+  "hash": "8b804818f2eb413761a6717964eff18a1ab1662b",
+  "lede": "Tuesday is the week's heaviest day for anyone paying attention to how this town is governed: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code — a real vote on land-use amendments affecting landscaping and historic review — while the Telluride Housing Authority meets to hash out primary residency policy for dependents in split-custody households, a quiet but consequential question for working families here. Thursday, Planning and Zoning digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment, which involves a large-scale subdivision and concept plan review at 700 W Pacific.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changes to Land Use Code landscaping and historic review."
+      "stake": "Second reading vote on wildfire code changes to land use, landscaping, and historic review."
     },
     {
       "id": 3,
-      "stake": "New policy on primary residency for dependents in split-custody households could affect housing eligibility."
+      "stake": "New residency policy for split-custody dependents could affect housing eligibility for local families."
     },
     {
       "id": 6,
-      "stake": "P&Z reviews subdivision and concept plans for major Town-owned redevelopment at Carhenge site."
+      "stake": "P&Z reviews subdivision and concept plans for three Town-owned development sites, including Carhenge."
     }
   ]
 }

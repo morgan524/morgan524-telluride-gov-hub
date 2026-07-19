@@ -649,6 +649,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Stakeholders discuss housing density",
+    source: "Telluride Times",
+    date: "July 19, 2026",
+    firstSeen: "2026-07-19",
+    newsTopic: "housing",
+    copy: "San Miguel County's Stakeholder Strategic Roundtable held its sixth meeting July 16, focusing on workforce housing types, zoning density definitions, and density bonus incentives as part of an ongoing land code audit. The county estimates it needs roughly 1,100 housing units by 2030, with nearly half its workers already commuting over 25 miles. No specific density recommendations have been finalized yet.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_3fa56ff6-1d64-4c3b-b271-0802fcb74db2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/94/1948eea0-c2e0-49bc-afdc-e5c61414fd91/6a5ac8e016a5b.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "An Indiana Jones training camp",
     source: "Telluride Times",
     date: "July 19, 2026",
@@ -1656,6 +1668,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Coloradans begin cleanup after rainstorms caused Western Slope mudslides",
+    source: "Colorado Sun",
+    date: "July 19, 2026",
+    firstSeen: "2026-07-19",
+    newsTopic: "land-use",
+    copy: "The mudslides stranded 21 people, blocked roads and flooded Main Street, a school and a historic theater in Telluride.",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/07/19/colorado-cleanup-western-slope-mudslide-telluride/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/07/749239217_1502046648336300_5312063395861243888_n.jpg?fit=640%2C481&amp;ssl=1"
+  },
+  {
     title: "Mayor John Clark Receives Prestigious Award",
     source: "Town of Ridgway",
     date: "July 14, 2026",
@@ -2356,28 +2379,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "HAHA Little Giggles",
-    link: "https://koto.org/event/haha-little-giggles/",
-    description: "Sunday morning provides access to the entire HAHA Experience for families, children and teens ages 3-17, who must be accompanied by a Little Giggles ticketed adult. You must purchase Little Giggles tickets for all children (ages 3-17, if under 3 kids do not need tickers) AND adults attending on Sunday. This event is sponsored by Alpine Bank. HAHA is the immersive art installation event of the summer! Local, national and international artists take over the Ah Haa School for the Arts creating experiential realms and creative chaos! Adults can join in on Friday and Saturday nights, and Sunday’s Little Giggles is for kids and families. Get your tickets to create, play and explore! Participation supports Ah Haa’s ability to provide high-quality, affordable art experiences and tuition assistance for people of all ages, year-round. …",
-    pubDate: "2026-07-19T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Ah Haa School for the Arts, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/HAHA-July-2023_Tellluride-CO_Credit_Alex-Ferrari-0001673.jpg"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-19/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-07-19T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-07-19/",
@@ -4325,6 +4326,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "St. Elmo Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/53126579046378/huge/120d7418d3aa1bc413c65d9a7d9d153b96c66963.jpg"
+  },
+  {
+    title: "August Book Club- \"Welcome to the Monkey House\"",
+    link: "https://events.ourayridgwayevents.com/event/august-book-club-welcome-to-the-monkey-house",
+    description: "Join us on Wednesday, August 12th at 5:00 p.m. to discuss our August Book Club Book, Welcome to the Monkey House, by Kurt Vonnegut. View on site | Email this event",
+    pubDate: "2026-08-12T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53453974758694/huge/c63328ec0cf2437eaccff89802415cf1f2bc5f52.jpg"
   },
   {
     title: "Zumba Fitness with Tamra",
