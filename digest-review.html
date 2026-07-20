@@ -245,12 +245,15 @@ $("linkbtn").onclick=()=>{
   if(!sel || sel.rangeCount===0 || sel.isCollapsed || !sel.toString().trim()){
     showStatus("Select some text <b>in the preview</b> first, then click Link.",true); return;
   }
+  // Capture the range BEFORE prompt() — the modal blurs the page and collapses
+  // the iframe selection, so grabbing it afterward would link nothing.
+  const range=sel.getRangeAt(0).cloneRange();
   let url=(window.prompt("Link URL (https://…):","https://")||"").trim();
   if(!url) return;
   if(!/^https?:\/\//i.test(url)){ showStatus("Links must start with http:// or https://",true); return; }
-  const range=sel.getRangeAt(0).cloneRange();
   doc.designMode="on";
   try{
+    win.focus();                                        // ensure execCommand targets the iframe doc
     const s2=win.getSelection(); s2.removeAllRanges(); s2.addRange(range);
     doc.execCommand("createLink",false,url);
   } finally { doc.designMode="off"; }
