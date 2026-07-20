@@ -10,14 +10,19 @@
   var root = document.getElementById('dive-root');
   if (!root) { console.error('[deep-dive] #dive-root missing'); return; }
   if (!window.LTData) { root.innerHTML = '<div class="lt-data-error" style="margin:40px 30px">This page failed to load. Please refresh in a minute.</div>'; return; }
-  var esc = LTData.esc, safe = LTData.safeUrl;
+  var esc = LTData.esc;
+  // Docs/news/meetings link to hosted PDFs via root-relative paths — allow
+  // those alongside http(s) (LTData.safeUrl is absolute-only).
+  function safe(u) { return /^(https?:\/\/|\/(?!\/)|mailto:)/i.test(u || '') ? u : '#'; }
 
   function section(label, inner) {
     return '<section class="dd-sect"><div class="eyebrow" style="margin-bottom:10px">' + esc(label) + '</div>' + inner + '</section>';
   }
 
-  LTData.load(['land-use-issues']).then(function (data) {
-    var issue = (data['land-use-issues'] || {})[key];
+  LTData.load(['land-use-issues', 'gondola-data']).then(function (data) {
+    var issues = data['land-use-issues'] || {};
+    if (data['gondola-data'] && data['gondola-data'].label) issues.gondola = data['gondola-data'];
+    var issue = issues[key];
     if (!issue) { root.innerHTML = '<div class="lt-data-error" style="margin:40px 30px">Topic not found.</div>'; return; }
     document.title = (issue.label || key) + ' — Livable Telluride Deep Dive';
 
@@ -47,6 +52,12 @@
     }
     if (issue.legalSummary) {
       body += section('Legal issues summary', '<div class="dd-legal">' + esc(issue.legalSummary) + '</div>');
+    }
+    if (issue.legalIssues && issue.legalIssues.length) {
+      body += section(issue.legalIssuesTitle || 'Key legal issues', issue.legalIssues.map(function (li) {
+        return '<div class="dd-player"><span class="p-ico">' + (li.icon || '\u2696') + '</span><div><strong>' + esc(li.title || '') + '</strong>' +
+          (li.copy ? '<p>' + esc(li.copy) + '</p>' : '') + '</div></div>';
+      }).join(''));
     }
     if (issue.timeline && issue.timeline.length) {
       body += section('How we got here', '<div class="tl">' + issue.timeline.map(function (t) {
