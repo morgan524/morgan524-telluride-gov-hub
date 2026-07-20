@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Notices — Livable Telluride</title>
+<meta name="description" content="Official public notices from local governments and districts — hearings, ordinances, budgets, and bids — gathered here and linked back to the issuing agency.">
+<!-- STAGING: remove noindex at cutover -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lt.css">
+<link rel="icon" href="uploads/lt-logo.png">
+<style>
+  .filters { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .filters select { font: 600 13px/1 var(--sans); color: var(--forest); background: var(--card); border: 1px solid rgba(36,72,63,.2); border-radius: 999px; padding: 8px 14px; }
+  .why { max-width: var(--maxw); margin: 22px auto 0; padding: 0 var(--pad-x); }
+  .why-card { background: var(--sage2); border-left: 4px solid var(--gold); border-radius: 8px; padding: 14px 18px; font: 400 14px/1.6 var(--sans); color: var(--body2); }
+  .notices { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--pad-x) 20px; }
+  .n-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .n-date { text-align: center; }
+  .n-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
+  .n-date .d { font: 600 30px/1.05 var(--serif); color: var(--forest); }
+  .n-date .y { font: 500 11px/1.4 var(--sans); color: var(--muted2); }
+  .n-row .ent { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
+  .n-row h3 { font: 600 21px/1.25 var(--serif); margin: 7px 0 5px; }
+  .n-row h3 a { color: var(--forest); }
+  .n-row:hover h3 a { color: var(--rust); }
+  .n-row .dek { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 7px; }
+  .n-row .chev { font-size: 22px; color: var(--rust); align-self: center; }
+  .n-empty { padding: 26px 0; }
+  @media (max-width: 900px) { .n-row { grid-template-columns: 52px 1fr; } .n-row .chev { display: none; } }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Act <span class="sep">&rsaquo;</span> Legal Notices</div>
+    <h1>Legal Notices</h1>
+    <p class="sub">Official public notices from local governments and districts &mdash; hearings, ordinances, budgets, and bids &mdash; gathered here and linked back to the issuing agency.</p>
+  </div>
+</header>
+
+<div class="filters" id="type-chips"><span class="chip active" data-type="">All</span></div>
+<div class="filters" style="padding-top:12px">
+  <select id="agency-sel" aria-label="Filter by agency"><option value="">All agencies</option></select>
+</div>
+
+<div class="why">
+  <div class="why-card"><strong>Why this matters:</strong> Legal notices are the official, often-overlooked announcements that start the clock on public comment and appeals. We surface them so deadlines don't pass unnoticed &mdash; always confirm details with the issuing agency.</div>
+</div>
+
+<main class="notices" id="notice-list"><p class="meta n-empty">Loading notices&hellip;</p></main>
+
+<div id="lt-footer"></div>
+<script src="site.js"></script>
+<script src="/js/lt-data.js"></script>
+<script>
+(function () {
+  var list = document.getElementById('notice-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var notices = [], typeFilter = '', agencyFilter = '';
+
+  function expiryBits(n) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(n.expires || '')) return null;
+    return { d: LTData.parseDateKey(n.expires), key: n.expires };
+  }
+  function render() {
+    var today = LTData.todayMT();
+    var rows = notices.filter(function (n) {
+      var e = expiryBits(n);
+      if (e && e.key < today) return false;                       // expired
+      if (typeFilter && (n.type || '') !== typeFilter) return false;
+      if (agencyFilter && (n.entity || '') !== agencyFilter) return false;
+      return true;
+    });
+    if (!rows.length) { list.innerHTML = '<p class="meta n-empty">No notices match this filter.</p>'; return; }
+    list.innerHTML = rows.map(function (n) {
+      var e = expiryBits(n);
+      var dateHtml = e
+        ? '<div class="n-date"><div class="m">' + MON[e.d.getMonth()] + '</div><div class="d">' + e.d.getDate() + '</div><div class="y">' + e.d.getFullYear() + '</div></div>'
+        : '<div class="n-date"><div class="m">Open</div></div>';
+      var deadline = e ? 'Expires ' + LTData.fmtDate(e.key, { month: 'short', day: 'numeric', year: 'numeric' }) + ' &middot; ' : '';
+      return '<article class="n-row story">' + dateHtml +
+        '<div><span class="tag">' + LTData.esc(n.type || 'Notice') + '</span><span class="ent">' + LTData.esc(n.entity || '') + '</span>' +
+        '<h3><a href="' + LTData.esc(LTData.safeUrl(n.url)) + '" target="_blank" rel="noopener">' + LTData.esc(n.title || '') + '</a></h3>' +
+        '<p class="dek">' + LTData.esc(n.summary || '') + '</p>' +
+        '<span class="meta">' + deadline + '</span><a class="doc-link" href="' + LTData.esc(LTData.safeUrl(n.url)) + '" target="_blank" rel="noopener">View notice &rsaquo;</a></div>' +
+        '<div class="chev">&rsaquo;</div></article>';
+    }).join('');
+  }
+
+  LTData.load(['legal-notices']).then(function (data) {
+    notices = (data['legal-notices'] || []).slice().sort(function (a, b) {
+      // soonest deadline first; open-ended (no expiry) notices last
+      var ea = /^\d{4}-\d{2}-\d{2}$/.test(a.expires || '') ? a.expires : '9999';
+      var eb = /^\d{4}-\d{2}-\d{2}$/.test(b.expires || '') ? b.expires : '9999';
+      return ea < eb ? -1 : ea > eb ? 1 : 0;
+    });
+    // chips + agency options derive from the live data
+    var types = {}; var ents = {};
+    notices.forEach(function (n) { if (n.type) types[n.type] = 1; if (n.entity) ents[n.entity] = 1; });
+    var chips = document.getElementById('type-chips');
+    Object.keys(types).sort().forEach(function (t) {
+      var s = document.createElement('span'); s.className = 'chip'; s.dataset.type = t; s.textContent = t;
+      chips.appendChild(s);
+    });
+    chips.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+      c.classList.add('active'); typeFilter = c.dataset.type || ''; render();
+    });
+    var sel = document.getElementById('agency-sel');
+    Object.keys(ents).sort().forEach(function (a) {
+      var o = document.createElement('option'); o.value = a; o.textContent = a; sel.appendChild(o);
+    });
+    sel.addEventListener('change', function () { agencyFilter = sel.value; render(); });
+    render();
+  }).catch(function (err) { LTData.showError(list, err); });
+})();
+</script>
+</body>
+</html>

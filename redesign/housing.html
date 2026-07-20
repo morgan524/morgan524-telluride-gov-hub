@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Housing — Livable Telluride</title>
+<meta name="description" content="Deed-restricted ownership opportunities, income-qualified rentals, and housing-program information for Telluride, Mountain Village, and the surrounding region.">
+<!-- STAGING: remove noindex at cutover -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lt.css">
+<link rel="icon" href="uploads/lt-logo.png">
+<style>
+  .note { max-width: var(--maxw); margin: 24px auto 0; padding: 0 var(--pad-x); }
+  .note-card { background: var(--sage2); border-left: 4px solid var(--gold); border-radius: 8px; padding: 13px 18px; font: 400 14px/1.6 var(--sans); color: var(--body2); }
+  .sect { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; }
+  .sect-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 22px; }
+  .sect-head h2 { margin-top: 6px; }
+  .listings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .listing { padding: 20px 22px; }
+  .listing h3 { font: 600 21px/1.25 var(--serif); margin: 8px 0 4px; }
+  .listing .addr { font: 500 13px/1.5 var(--sans); color: var(--muted); }
+  .listing .specs { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 8px 0 4px; }
+  .listing .price { font: 600 16px/1.4 var(--sans); color: var(--forest); }
+  .listing .note-line { font: 400 13px/1.5 var(--sans); color: var(--muted2); margin-top: 4px; }
+  .listing .cta { margin-top: 10px; }
+  .mgr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .mgr { padding: 24px; }
+  .mgr h3 { font: 600 23px/1.2 var(--serif); margin: 8px 0 8px; }
+  .mgr p { font: 400 14.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .mgr ul { margin: 0 0 12px; padding-left: 18px; font: 400 14.5px/1.7 var(--sans); color: var(--body2); }
+  .mgr .links a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 7px 0; border-top: 1px solid var(--hairline); }
+  .mgr .links a:hover { color: var(--rust); }
+  .sub-band { max-width: var(--maxw); margin: 44px auto 0; padding: 0 var(--pad-x); }
+  .sub-card { background: var(--forest); border-radius: 12px; padding: 34px; text-align: center; color: rgba(255,255,255,.9); }
+  .sub-card .k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  .sub-card h2 { font: 500 27px/1.25 var(--serif); color: #fff; margin: 10px 0 8px; }
+  .sub-card p { font: 400 15px/1.6 var(--sans); margin: 0 auto 18px; max-width: 520px; }
+  @media (max-width: 900px) { .listings, .mgr-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Connect <span class="sep">&rsaquo;</span> Housing</div>
+    <h1>Housing</h1>
+    <p class="sub">Deed-restricted ownership opportunities, income-qualified rentals, and housing-program information for Telluride, Mountain Village, and the surrounding region.</p>
+  </div>
+</header>
+
+<div class="note">
+  <div class="note-card"><strong>Note:</strong> This page lists deed-restricted and income-qualified housing only &mdash; not free-market listings.</div>
+</div>
+
+<section class="sect">
+  <div class="sect-head"><span class="eyebrow">Available now</span><h2 class="section-h">Current listings</h2></div>
+  <div class="listings" id="listing-grid"><p class="meta">Loading listings&hellip;</p></div>
+</section>
+
+<section class="sect">
+  <div class="sect-head"><span class="eyebrow">Programs &amp; applications</span><h2 class="section-h">Who manages local housing</h2></div>
+  <div class="mgr-grid">
+    <div class="mgr card">
+      <span class="tag">Ownership</span>
+      <h3>San Miguel Regional Housing Authority (SMRHA)</h3>
+      <p>Oversees qualification and compliance for ownership deed-restricted properties within the Town of Telluride and San Miguel County. Find available properties, qualifications, and applications:</p>
+      <div class="links">
+        <a href="https://smrha.org/property-listings/" target="_blank" rel="noopener">Property listings &#8599;</a>
+        <a href="https://smrha.org/town-of-telluride/" target="_blank" rel="noopener">Town of Telluride deed-restricted properties &#8599;</a>
+        <a href="https://smrha.org/applications/" target="_blank" rel="noopener">Applications &#8599;</a>
+      </div>
+    </div>
+    <div class="mgr card">
+      <span class="tag">Rentals</span>
+      <h3>Town-managed rentals</h3>
+      <p>Rentals are managed by the towns, not SMRHA. The Telluride Housing Department manages the Town of Telluride's rental properties:</p>
+      <ul>
+        <li>Shandoka</li>
+        <li>Virginia Placer Tiny Homes</li>
+        <li>Sunnyside</li>
+        <li>Boarding House</li>
+        <li>Voodoo</li>
+      </ul>
+      <div class="links">
+        <a href="https://www.telluride.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener">Telluride town-owned rental housing &#8599;</a>
+        <a href="https://townofmountainvillage.com/community/housing/village-court-apartments/" target="_blank" rel="noopener">Village Court Apartments (Mountain Village) &#8599;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sub-band">
+  <div class="sub-card">
+    <div class="k">Independent &middot; ad-free &middot; source-linked</div>
+    <h2>Housing decisions move fast. We help you keep up.</h2>
+    <p>Get housing openings, program changes, and related meetings delivered as they happen.</p>
+    <a class="btn btn-gold" href="/hub-bub.html#signup">&#128236; Subscribe to updates</a>
+  </div>
+</div>
+
+<div id="lt-footer"></div>
+<script src="site.js"></script>
+<script src="/js/lt-data.js"></script>
+<script>
+(function () {
+  var grid = document.getElementById('listing-grid');
+  if (!window.LTData) { grid.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var TYPE_LABEL = { 'deed-sale': 'Deed-restricted · For sale', 'deed-rental': 'Deed-restricted · Rental', 'rental': 'Income-qualified rental' };
+  LTData.load(['housing-listings']).then(function (data) {
+    var rows = data['housing-listings'] || [];
+    if (!rows.length) { grid.innerHTML = '<p class="meta">No listings right now &mdash; check the SMRHA links below for the latest.</p>'; return; }
+    grid.innerHTML = rows.map(function (l) {
+      var contact = (l.contact && (l.contact.phone || l.contact.email)) ?
+        '<div class="note-line">Contact: ' + LTData.esc([l.contact.phone, l.contact.email].filter(Boolean).join(' · ')) + '</div>' : '';
+      return '<article class="listing card story">' +
+        '<span class="tag rust-tint">' + LTData.esc(TYPE_LABEL[l.type] || l.type || 'Listing') + '</span>' +
+        '<h3>' + LTData.esc(String(l.title || '').replace(/^🏠\s*/, '')) + '</h3>' +
+        '<div class="addr">' + LTData.esc(l.address || '') + '</div>' +
+        '<div class="specs">' + LTData.esc(l.beds || '') + '</div>' +
+        '<div class="price">' + LTData.esc(l.price || '') + '</div>' +
+        (l.note ? '<div class="note-line">' + LTData.esc(l.note) + '</div>' : '') + contact +
+        '<div class="cta"><a class="btn btn-outline" href="' + LTData.esc(LTData.safeUrl(l.url, 'https://smrha.org/property-listings/')) + '" target="_blank" rel="noopener">View listing &rarr;</a></div>' +
+        '</article>';
+    }).join('');
+  }).catch(function (err) { LTData.showError(grid, err); });
+})();
+</script>
+</body>
+</html>
