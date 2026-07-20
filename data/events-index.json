@@ -172,17 +172,6 @@
     "endDate": "2026-08-03"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-20/",
-    "date": "2026-07-20",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-07-20",
@@ -386,6 +375,17 @@
     "source": "Ouray Ridgway Calendar"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-22",
+    "time": "4:00 PM - 5:30 PM",
+    "location": "Wilkinson Public Library, Telluride Room, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community"
+  },
+  {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
     "date": "2026-07-22",
@@ -565,6 +565,17 @@
     "source": "KOTO Community Calendar"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-23",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Lone Cone Library Conference Room, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community"
+  },
+  {
     "title": "DIY Condiments with Kayla",
     "href": "https://koto.org/event/diy-condiments-with-kayla/",
     "date": "2026-07-23",
@@ -585,17 +596,6 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-23",
-    "time": "4:00 PM - 5:30 PM",
-    "location": "Wilkinson Public Library, Telluride Room, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
   },
   {
     "title": "Party in the Park",
@@ -710,17 +710,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "endDate": "2026-08-07"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-24",
-    "time": "1:00 PM - 2:30 PM",
-    "location": "Lone Cone Library Conference Room, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -1299,6 +1288,17 @@
     "source": "KOTO Community Calendar"
   },
   {
+    "title": "The Dual Challenge: Climate and Energy",
+    "href": "https://telluridefoundation.org/tf-events/",
+    "date": "2026-07-28",
+    "time": "12:30 PM",
+    "location": "Telluride Innovation Center, Telluride, CO",
+    "town": "Telluride",
+    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
+    "category": "Community Event",
+    "source": "Telluride Foundation"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-2560",
     "date": "2026-07-28",
@@ -1342,17 +1342,6 @@
     "img": "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar"
-  },
-  {
-    "title": "The Dual Challenge: Climate and Energy",
-    "href": "https://telluridefoundation.org/tf-events/",
-    "date": "2026-07-28",
-    "time": "6:30 PM",
-    "location": "Telluride Innovation Center, Telluride, CO",
-    "town": "Telluride",
-    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
-    "category": "Community Event",
-    "source": "Telluride Foundation"
   },
   {
     "title": "Womens Empowerment Group",
@@ -2416,6 +2405,17 @@
     "endDate": "2026-09-10"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-12",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community"
+  },
+  {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
     "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     "date": "2026-08-12",
@@ -2447,17 +2447,6 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Concert",
     "source": "Telluride Chamber Music"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-13",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -2836,6 +2825,17 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "endDate": "2026-08-23"
+  },
+  {
+    "title": "Ouray Day",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-day",
+    "date": "2026-08-22",
+    "time": "12:00 PM",
+    "location": "Fellin Park",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53481231331209/huge/0f98224078eed909fdc030676f38cbd8272aff8d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar"
   },
   {
     "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
@@ -3281,5 +3281,16 @@
     "category": "Community Event",
     "source": "Telluride.com",
     "endDate": "2026-09-21"
+  },
+  {
+    "title": "OLD MAN POLLY",
+    "href": "https://events.ourayridgwayevents.com/event/old-man-polly-6979",
+    "date": "2026-09-18",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar"
   }
 ]

@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 19:55:22 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 22:11:35 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 20–26</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-28</guid>
-      <pubDate>Mon, 20 Jul 2026 19:55:22 GMT</pubDate>
-      <description><![CDATA[Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend land use rules covering historic review and landscaping standards for the whole town. That same Tuesday, the Telluride Housing Authority considers a new primary residency policy for dependents of multiple custodial parents, and Planning & Zoning tackles the Carhenge Redevelopment on Thursday with subdivision and concept review for Town-owned land on West Pacific.]]></description>
+      <pubDate>Mon, 20 Jul 2026 22:11:35 GMT</pubDate>
+      <description><![CDATA[Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend the Land Use Code on landscaping, trees, and historic review to meet state wildfire standards, and that vote matters for anyone who owns or rents in town. Also on Tuesday, the Housing Authority tackles a new primary-residency policy for dependents of multiple custodial households, and Thursday's Planning and Zoning Commission digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment at 700 W Pacific.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -51,18 +51,6 @@ The Telluride Baseball Festival offers the combination of an instructional girls
 9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!]]></description>
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Mon, Jul 20] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-20/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-20</guid>
-      <pubDate>Mon, 20 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Mon, Jul 20] Musik 4 Kinders</title>
@@ -149,7 +137,7 @@ The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.
 
 A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado Wildfire Resiliency Code (CWRC) — amendments to the Land Use Code covering historic/architectural review and landscaping/tree standards that bring the town in line with state wildfire resiliency requirements. A public hearing follows on a temporary patio tent structure at 221 S. Oak Street (R/C zone, Gondola Corridor Overlay). The long-running Stender Residence HARC appeal — continued repeatedly since December 2025 — is continued again. Afternoon work sessions cover the Telluride Tourism Board contract, updates to the Telluride Energy Mitigation Program (TEMP) offset calculations and fees, and a Colorado Ave East End speed study. Manager's reports include updates on Carhenge, The Oval, Canyonlands/Tower House, and parking. The Housing Authority and Block 23 Housing Corporation hold sequential meetings at the back end of the day.
 
-⚡ Why it matters: Second reading vote on wildfire code changes to land use and landscaping rules.]]></description>
+⚡ Why it matters: Council votes second reading on wildfire code changes to Land Use Code.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -162,7 +150,7 @@ A newly seated Council opens with a swearing-in and executive session on San Mig
 
 The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.
 
-⚡ Why it matters: New primary residency policy for dependents could affect housing eligibility determinations.]]></description>
+⚡ Why it matters: Housing Authority sets new primary-residency policy affecting multi-custodial households.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -380,7 +368,7 @@ Who's Buggin you and what can you do about it? We will discuss common plant ailm
 
 Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project gets two bites of the apple: a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B at 700 W Pacific Ave into a single parcel over 15,000 sq ft, and a Conceptual PUD for new construction on that consolidated lot (carried over from May). Separately, the Shandoka Lot at 860 Black Bear Rd gets its own Conceptual PUD hearing for proposed new construction on the Town's 4.07-acre parcel. Both sites sit at the center of the ongoing question about what Telluride does with its open-space-adjacent Town properties. Also on: a Minor Subdivision at 238 N Pine Street in the Historic Residential zone — a 7,500 sq ft or smaller parcel proposed to be split into two lots, a request that has been continued multiple times since February.
 
-⚡ Why it matters: Public review of subdivision and concept plans for Carhenge and other Town-owned sites.]]></description>
+⚡ Why it matters: P&Z reviews Town-owned Carhenge and two other major development projects.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -442,6 +430,19 @@ San Miguel County Democrats voter-registration training. Bring a personal laptop
 
 TMtC's annual Party in the Park is happening July 23 at Telluride Town Park! This community celebration supports our …]]></description>
       <media:content url="https://www.telluride.com/site/assets/files/48498/poster_board_img_0806.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 23] Chill With Chamber Music</title>
+      <link>https://www.telluride.com/event/chill-with-chamber-music/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/chill%20with%20chamber%20music%7C2026-07-23</guid>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Telluride Chamber Music is bringing music to the West End of the county with Community Concerts at the beautiful Livery …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
     </item>

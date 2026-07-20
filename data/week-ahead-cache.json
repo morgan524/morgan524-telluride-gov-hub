@@ -1,18 +1,18 @@
 {
-  "hash": "d2b7e4fa6931f24eaa7ed28b26967687fb4d8481",
-  "lede": "Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend land use rules covering historic review and landscaping standards for the whole town. That same Tuesday, the Telluride Housing Authority considers a new primary residency policy for dependents of multiple custodial parents, and Planning & Zoning tackles the Carhenge Redevelopment on Thursday with subdivision and concept review for Town-owned land on West Pacific.",
+  "hash": "e9ee7f7857185f9783a44222e25cafe00d68e34b",
+  "lede": "Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend the Land Use Code on landscaping, trees, and historic review to meet state wildfire standards, and that vote matters for anyone who owns or rents in town. Also on Tuesday, the Housing Authority tackles a new primary-residency policy for dependents of multiple custodial households, and Thursday's Planning and Zoning Commission digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment at 700 W Pacific.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changes to land use and landscaping rules."
+      "stake": "Council votes second reading on wildfire code changes to Land Use Code."
     },
     {
       "id": 3,
-      "stake": "New primary residency policy for dependents could affect housing eligibility determinations."
+      "stake": "Housing Authority sets new primary-residency policy affecting multi-custodial households."
     },
     {
       "id": 7,
-      "stake": "Public review of subdivision and concept plans for Carhenge and other Town-owned sites."
+      "stake": "P&Z reviews Town-owned Carhenge and two other major development projects."
     }
   ]
 }
