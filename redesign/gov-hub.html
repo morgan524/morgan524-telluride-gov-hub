@@ -150,8 +150,12 @@
       if (m.zoomLink) acts += '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
       if (!m.agendaUrl && m.link) acts += '<a class="abtn" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
-      var zoomline = m.zoomPasscode
-        ? '<div class="zoomline"><strong>Zoom passcode:</strong> ' + esc(m.zoomPasscode) + '</div>' : '';
+      // Zoom access details inline whenever present (Meeting ID + Passcode + Phone).
+      var zoomBits = [];
+      if (m.zoomMeetingId) zoomBits.push('<strong>Meeting ID:</strong> ' + esc(m.zoomMeetingId));
+      if (m.zoomPasscode) zoomBits.push('<strong>Passcode:</strong> ' + esc(String(m.zoomPasscode).replace(/\.$/, '')));
+      if (m.zoomPhone) zoomBits.push('<strong>Phone:</strong> ' + esc(m.zoomPhone));
+      var zoomline = zoomBits.length ? '<div class="zoomline">' + zoomBits.join(' &middot; ') + '</div>' : '';
       html += '<article class="m-card">' +
         '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +

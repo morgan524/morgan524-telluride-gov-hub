@@ -70,6 +70,29 @@ function buildWeekMeetings(repoRoot) {
   // Per-entity livestream URLs (gov-data ENTITY_REMOTE — e.g. the towns' and
   // county's YouTube stream pages, MV's AV Capture portal).
   const remote = captured.ENTITY_REMOTE || {};
+  // Per-meeting zoom/agenda metadata the bot scrapes into MEETING_AGENDA_META
+  // (zoomUrl, meetingId, passcode, phone, agendaUrl). Keys are
+  // `source|YYYY-MM-DD|<bot title>` where the bot title often differs from the
+  // card title (e.g. "Town Council - Jul 21 2026") — resolve exactly like the
+  // live gov-hub: exact key, else single prefix match, else board-token match
+  // (preferring the full commission over a "Chair" variant).
+  const agendaMeta = captured.MEETING_AGENDA_META || {};
+  const boardToken = captured.meetingBoardToken || function () { return ''; };
+  function resolveMeta(source, date, title) {
+    const prefix = source + '|' + date + '|';
+    const exact = agendaMeta[prefix + title];
+    if (exact) return exact;
+    const keys = Object.keys(agendaMeta).filter((k) => k.indexOf(prefix) === 0);
+    if (keys.length === 1) return agendaMeta[keys[0]];
+    const tok = boardToken(title);
+    if (tok) {
+      const hits = keys
+        .filter((k) => boardToken(k.slice(prefix.length)) === tok)
+        .sort((a, b) => (/chair/i.test(a) - /chair/i.test(b)));
+      if (hits.length) return agendaMeta[hits[0]];
+    }
+    return null;
+  }
   const pad = (n) => String(n).padStart(2, '0');
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const end = new Date(today.getTime() + WINDOW_DAYS * 86400000);
@@ -93,25 +116,31 @@ function buildWeekMeetings(repoRoot) {
       seen.add(key);
       let summary = '';
       try { summary = (getSummary && getSummary(m)) || ''; } catch (e) { /* leave blank */ }
+      const title = String(m.title || '').trim();
+      // Zoom: MEETING_AGENDA_META (bot-scraped, per-meeting) wins; the static
+      // MEETING_ZOOM_LINKS config via the getters is the fallback.
+      const meta = resolveMeta(source, date, title) || {};
       let zoomLink = '', zoomPasscode = '';
       try { zoomLink = (captured.getMeetingZoomLink && captured.getMeetingZoomLink(m)) || ''; } catch (e) { /* none */ }
       try { zoomPasscode = (captured.getMeetingPasscode && captured.getMeetingPasscode(m)) || ''; } catch (e) { /* none */ }
       out.push({
         source: source,
         sourceLabel: sourceLabel,   // the canonical entity label (GETTERS), not per-record variants — filters group on it
-        title: String(m.title || '').trim(),
+        title: title,
         date: date,
         time: String(m.time || '').trim(),
         location: String(m.location || '').trim(),
-        agendaUrl: m.agendaLink || '',
-        packetUrl: m.packetUrl || '',
+        agendaUrl: m.agendaLink || meta.agendaUrl || '',
+        packetUrl: m.packetUrl || meta.packetUrl || '',
         link: m.link || '',
-        hasAgenda: !!(m.agendaLink || m.hasAgenda),
+        hasAgenda: !!(m.agendaLink || meta.agendaUrl || m.hasAgenda),
         summary: String(summary || '').trim(),
-        zoomLink: String(zoomLink || ''),
-        zoomPasscode: String(zoomPasscode || ''),
+        zoomLink: String(meta.zoomUrl || zoomLink || ''),
+        zoomMeetingId: String(meta.meetingId || ''),
+        zoomPasscode: String(meta.passcode || zoomPasscode || ''),
+        zoomPhone: String(meta.phone || ''),
         livestream: (remote[source] && remote[source].livestream) || '',
-        commentEmail: commentEmailFor(source, m.title),
+        commentEmail: commentEmailFor(source, title),
       });
     }
   }
