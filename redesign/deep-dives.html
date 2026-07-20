@@ -7,22 +7,19 @@
 <meta name="description" content="Long-form, source-linked explainers on the projects and policies shaping Telluride and San Miguel County — timelines, original documents, and key votes.">
 <!-- STAGING: remove noindex at cutover -->
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="lt.css">
+<link rel="stylesheet" href="lt.css?v=3">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
   .feat-wrap { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; }
   .feat { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
   .feat .img-frame { aspect-ratio: 4/3; border-radius: 10px; box-shadow: var(--shadow-media); }
+  .img-frame.contain { background: linear-gradient(150deg, #e7efe7, #f7f2e6); }
+  .img-frame.contain img { object-fit: contain; padding: 10px; }
+  .story:hover .img-frame.contain img { transform: none; }
   .feat h2 { font: 600 42px/1.08 var(--serif); letter-spacing: -.015em; margin: 12px 0 10px; }
   .feat h2 a { color: var(--forest); }
   .feat:hover h2 a { color: var(--rust); }
   .feat .dek { font: 400 16.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 12px; }
-  .whats { max-width: var(--maxw); margin: 40px auto 0; padding: 0 var(--pad-x); }
-  .whats-card { border: 1px solid var(--hairline-strong); border-radius: 12px; display: grid; grid-template-columns: repeat(3, 1fr); }
-  .whats-card > div { padding: 22px 24px; border-left: 1px solid var(--hairline); }
-  .whats-card > div:first-child { border-left: 0; }
-  .whats-card h4 { font: 600 19px/1.25 var(--serif); margin: 6px 0 6px; }
-  .whats-card p { font: 400 15px/1.6 var(--sans); color: var(--muted); margin: 0; }
   .all-wrap { max-width: var(--maxw); margin: 0 auto; padding: 44px var(--pad-x) 0; }
   .all-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 24px; }
   .dive-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
@@ -30,7 +27,7 @@
   .dive-card h3 { font: 600 26px/1.15 var(--serif); margin: 8px 0 6px; }
   .dive-card h3 a { color: var(--forest); }
   .dive-card .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 8px; }
-  @media (max-width: 900px) { .feat, .dive-grid, .whats-card { grid-template-columns: 1fr; } .whats-card > div { border-left: 0; border-top: 1px solid var(--hairline); } }
+  @media (max-width: 900px) { .feat, .dive-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -48,13 +45,6 @@
 
 <div class="feat-wrap" id="feat-slot"></div>
 
-<div class="whats">
-  <div class="whats-card">
-    <div><span class="eyebrow">&#128336;</span><h4>Timelines &amp; context</h4><p>How each decision got here &mdash; every step, dated, with what changed along the way.</p></div>
-    <div><span class="eyebrow">&#128196;</span><h4>Original documents</h4><p>Applications, studies, and legal letters &mdash; linked directly so you can check our work.</p></div>
-    <div><span class="eyebrow">&#9878;</span><h4>Key votes &amp; who decided</h4><p>Which board voted, when, and what happens next in the process.</p></div>
-  </div>
-</div>
 
 <div class="all-wrap">
   <div class="all-head"><span class="eyebrow">The library</span><h2 class="section-h">All deep dives</h2></div>
@@ -62,25 +52,26 @@
 </div>
 
 <div id="lt-footer"></div>
-<script src="site.js"></script>
-<script src="/js/lt-data.js"></script>
+<script src="site.js?v=3"></script>
+<script src="/js/lt-data.js?v=3"></script>
 <script>
 (function () {
   var grid = document.getElementById('dive-grid');
   if (!window.LTData) { grid.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   // Per-topic presentation config (order = display order; first = featured).
   // Standalone dives (own pages, not LAND_USE_ISSUES-driven) are listed as extras.
+  // contain:true = image carries baked-in text; never crop it.
   var TOPICS = [
-    { key: 'carhenge', cat: 'Land Use' },
+    { key: 'carhenge', cat: 'Land Use', contain: true },
     { key: 'society',  cat: 'Land Use' },
     { key: 'code',     cat: 'Policy' },
     { key: 'wildfire', cat: 'Environment' },
     { key: 'diamond',  cat: 'Land Use' }
   ];
   var EXTRAS = [
-    { label: 'The Gondola', cat: 'Transportation', href: '/deep-dive-gondola.html',
+    { label: 'The Gondola', cat: 'Transportation', href: '/deep-dive-gondola.html', img: '/images/blog/gondola-station.png',
       dek: 'The free gondola’s funding fight — SMART’s ballot measure, the cost-sharing IGA, and what happens when the money runs out.' },
-    { label: 'VooDoo', cat: 'Housing Finance', href: '/deep-dive-voodoo.html',
+    { label: 'VooDoo', cat: 'Housing Finance', href: '/deep-dive-voodoo.html', img: '/images/blog/voodoo-project.png',
       dek: 'A $20M debt stack on one housing project — the $23M balloon due in 2032, and the rent-vs-debt-service shortfall.' }
   ];
   function clip(s, n) {
@@ -88,7 +79,9 @@
     return s.slice(0, n).replace(/\s+\S*$/, '') + '…';
   }
   function card(t, issue) {
-    var img = issue && issue.heroImage ? '<a href="' + href(t) + '"><div class="img-frame"><img src="' + LTData.esc(issue.heroImage) + '" alt="" loading="lazy"></div></a>' : '';
+    var src = (issue && issue.heroImage) || t.img || '';
+    var cls = 'img-frame' + (t.contain ? ' contain' : '');
+    var img = src ? '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>' : '';
     var dek = (issue && issue.intro) ? issue.intro : (t.dek || '');
     var docs = issue && issue.docs ? issue.docs.length + ' source documents' : '';
     var tl = issue && issue.timeline ? issue.timeline.length + ' timeline entries' : '';
@@ -110,7 +103,7 @@
         '<h2><a href="' + href(feat) + '">' + LTData.esc(fi.label) + '</a></h2>' +
         '<p class="dek">' + LTData.esc(clip(fi.intro, 300)) + '</p>' +
         '<a class="btn btn-forest" href="' + href(feat) + '">Read the deep dive &rarr;</a></div>' +
-        (fi.heroImage ? '<a href="' + href(feat) + '"><div class="img-frame"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
+        (fi.heroImage ? '<a href="' + href(feat) + '"><div class="img-frame' + (feat.contain ? ' contain' : '') + '"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
         '</article>';
     }
     var cards = TOPICS.slice(1).map(function (t) { return card(t, issues[t.key]); })

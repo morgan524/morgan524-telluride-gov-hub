@@ -22,9 +22,14 @@
     document.title = (issue.label || key) + ' — Livable Telluride Deep Dive';
 
     // ---- hero ----
-    var hero = '<header class="dd-hero">' +
-      (issue.heroImage ? '<img class="dd-hero-img" src="' + esc(issue.heroImage) + '" alt="' + esc(issue.heroAlt || '') + '">' : '') +
-      '<div class="dd-hero-grad"></div><div class="dd-hero-text">' +
+    var tall = issue.heroAspect === 'tall';
+    // heroImage paths in the data can be site-root-relative ('assets/…');
+    // resolve them absolutely so they work from any mount point.
+    var heroSrc = issue.heroImage || '';
+    if (heroSrc && !/^https?:\/\//.test(heroSrc) && heroSrc.charAt(0) !== '/') heroSrc = '/' + heroSrc;
+    var hero = '<header class="dd-hero' + (tall ? ' tall' : '') + '">' +
+      (heroSrc ? '<img class="dd-hero-img" src="' + esc(heroSrc) + '" alt="' + esc(issue.heroAlt || '') + '">' : '') +
+      (tall ? '' : '<div class="dd-hero-grad"></div>') + '<div class="dd-hero-text">' +
       '<div class="crumb" style="color:rgba(255,255,255,.8)"><a href="deep-dives.html" style="color:rgba(255,255,255,.8)">Deep Dives</a> <span class="sep">&rsaquo;</span> ' + esc(issue.label || key) + '</div>' +
       '<div style="margin:10px 0"><span class="tag" style="background:var(--gold);color:var(--forest)">Deep Dive</span> ' +
       '<span class="tag" style="background:rgba(255,255,255,.18);color:#fff">Land Use</span></div>' +
