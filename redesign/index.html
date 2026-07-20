@@ -11,41 +11,39 @@
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
   /* page-only layout (shared components live in lt.css) */
-  .tagline-strip { text-align: center; font: italic 500 14.5px/1.4 var(--serif); color: var(--muted); padding: 12px var(--pad-x); border-bottom: 1px solid var(--hairline); }
-  .hero { text-align: center; padding: 64px var(--pad-x) 40px; }
-  .hero h1 { font: 500 58px/1.06 var(--serif); letter-spacing: -.02em; max-width: 840px; margin: 18px auto 0; text-wrap: balance; }
-  .hero .sub { font: 400 18px/1.65 var(--sans); color: var(--body2); max-width: 660px; margin: 20px auto 0; }
-  .hero .ctas { display: flex; gap: 14px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
-  .photo-strip { max-width: var(--maxw); margin: 8px auto 0; padding: 0 var(--pad-x); }
-  .photo-strip .frame { position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-media); }
-  .photo-strip img { width: 100%; height: 100%; object-fit: cover; }
-  .photo-strip .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 20px 12px; font: 500 12.5px/1 var(--sans); color: rgba(255,255,255,.92); background: linear-gradient(180deg, transparent, rgba(20,34,29,.62)); }
-  .ways { padding: 56px var(--pad-x) 8px; max-width: var(--maxw); margin: 0 auto; }
-  .ways-head { border-bottom: 2px solid var(--forest); padding-bottom: 14px; margin-bottom: 28px; }
-  .ways-head h2 { margin-top: 8px; }
+  /* Hero — text left, photo bleeding in from the right (live-homepage layout),
+     with the three ways-in cards overlapping the bottom edge. */
+  .hero2 { position: relative; overflow: hidden; background: #fdf4ee; }
+  .hero2 .ph { position: absolute; right: 0; top: 0; width: 72%; height: 100%; object-fit: cover; object-position: center; }
+  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, #fdf4ee 30%, rgba(253,244,238,.55) 52%, rgba(253,244,238,0) 74%); }
+  .hero2-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 76px var(--pad-x) 230px; }
+  .hero2 .kicker { font: 700 15px/1.4 var(--sans); color: var(--gold); letter-spacing: .01em; }
+  .hero2 h1 { font: 600 64px/1.04 var(--serif); letter-spacing: -.02em; color: var(--forest); max-width: 480px; margin: 16px 0 0; }
+  .hero2 .sub { font: 400 17px/1.7 var(--sans); color: var(--body2); max-width: 490px; margin: 22px 0 0; }
+  .overlap { position: relative; z-index: 3; max-width: var(--maxw); margin: -175px auto 0; padding: 0 var(--pad-x); }
   .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .way { padding: 26px 24px; display: flex; flex-direction: column; }
   .way .g-label { font: 800 11px/1 var(--sans); text-transform: uppercase; letter-spacing: .09em; color: var(--rust); }
   .way h3 { font: 600 26px/1.15 var(--serif); margin: 10px 0 8px; }
-  .way p { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; flex: 1; }
+  .way p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; flex: 1; }
   .way .links a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 6px 0; border-top: 1px solid var(--hairline); }
   .way .links a:hover { color: var(--rust); }
   .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
   .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
   .mini .ico { font-size: 20px; color: var(--forest); }
   .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }
-  .mini p { font: 400 13.5px/1.55 var(--sans); color: var(--body2); margin: 0; }
+  .mini p { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 0; }
   .prior { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 8px; }
   .prior-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--forest); padding-bottom: 14px; flex-wrap: wrap; }
   .prior-head h2 { margin-top: 8px; }
-  .prior-head .all { font: 600 14px/1 var(--sans); }
+  .prior-head .all { font: 600 15px/1 var(--sans); }
   .prior-list .row { display: grid; grid-template-columns: 58px 64px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
   .prior-list .p-logo { width: 64px; height: 64px; background: #fff; border: 1px solid var(--hairline); border-radius: 9px; display: flex; align-items: center; justify-content: center; padding: 4px; }
   .prior-list .p-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .prior-list .d-mon { font: 800 10.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); }
   .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
   .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
-  .prior-list .hook { font: 400 14.5px/1.5 var(--sans); color: var(--body2); margin: 0 0 3px; }
+  .prior-list .hook { font: 400 15px/1.5 var(--sans); color: var(--body2); margin: 0 0 3px; }
   .prior-list .chev { font-size: 22px; color: var(--rust); }
   /* About Livable Telluride — mission/story cards + photo, directors, what-livable
      (layout mirrors the live homepage about section, per Morgan) */
@@ -66,13 +64,13 @@
   .directors-card .intro { font: 400 15.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; }
   .director-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
   .director-chips span { font: 600 15px/1 var(--sans); color: var(--ink); background: var(--paper); border: 1px solid var(--hairline); border-radius: 8px; padding: 13px 18px; }
-  .directors-card .reach { font: 400 14px/1.6 var(--sans); color: var(--muted); margin: 0; }
+  .directors-card .reach { font: 400 15px/1.6 var(--sans); color: var(--muted); margin: 0; }
   .livable-panel { margin-top: 24px; text-align: center; padding: 36px 40px; border-radius: 16px;
     border: 1px solid var(--hairline); background: linear-gradient(135deg, rgba(36,72,63,.04), rgba(216,169,77,.05)); }
   .livable-panel h3 { font: 600 30px/1.2 var(--serif); margin-bottom: 12px; }
   .livable-panel .lead-p { font: 400 16.5px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto 20px; }
   .question-chips { display: flex; gap: 10px 12px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 0 auto 20px; }
-  .question-chips .qc { font: 600 14.5px/1 var(--sans); color: var(--body2); background: var(--sage2); border-radius: 999px; padding: 12px 18px; }
+  .question-chips .qc { font: 600 15px/1 var(--sans); color: var(--body2); background: var(--sage2); border-radius: 999px; padding: 12px 18px; }
   .livable-panel .tail { font: 400 15px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto; }
   .about-band { max-width: var(--maxw); margin: 56px auto 0; padding: 0 var(--pad-x); }
   .about-inner { border-top: 2px solid var(--forest); padding-top: 28px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
@@ -90,35 +88,28 @@
     .mission-row { grid-template-columns: 1fr; }
     .photo-col { min-height: 320px; }
     .livable-panel { padding: 26px 22px; }
+    .hero2 .ph { width: 100%; opacity: .18; }
+    .hero2 .fade { display: none; }
+    .hero2-inner { padding: 48px var(--pad-x) 60px; }
+    .hero2 h1 { font-size: 40px; }
+    .overlap { margin-top: -20px; }
   }
 </style>
 </head>
 <body>
 <div id="lt-header"></div>
 
-<div class="tagline-strip">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole tri-county.</div>
-
-<section class="hero">
-  <h1>Everything happening in our community &mdash; in one place.</h1>
-  <p class="sub">Local news, deep dives, government meetings, housing data, community organizations, and events &mdash; gathered, explained, and always linked back to the original source.</p>
-  <div class="ctas">
-    <a class="btn btn-forest" href="#explore">Explore the hub</a>
-    <a class="btn btn-outline" href="about.html">Why we exist</a>
+<section class="hero2">
+  <img class="ph" src="/img/telluride-125.jpeg" alt="The road into Telluride under Mt Wilson, aspens turning">
+  <div class="fade"></div>
+  <div class="hero2-inner">
+    <div class="kicker">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole tri-county.</div>
+    <h1>Your Community. All in One Place.</h1>
+    <p class="sub">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
   </div>
 </section>
 
-<div class="photo-strip">
-  <div class="frame">
-    <img src="uploads/diamond-ridge.jpg" alt="The Wilson range above San Miguel County">
-    <div class="cap">The Wilson range &mdash; San Miguel County</div>
-  </div>
-</div>
-
-<section class="ways" id="explore">
-  <div class="ways-head">
-    <span class="eyebrow">What you'll find here</span>
-    <h2 class="section-h">Three ways in</h2>
-  </div>
+<section class="overlap" id="explore">
   <div class="ways-grid">
     <div class="way card hub-card">
       <span class="g-label">Learn</span>
@@ -151,6 +142,9 @@
       </div>
     </div>
   </div>
+</section>
+
+<section class="wrap" style="padding-top:0">
   <div class="mini-grid">
     <div class="mini"><span class="ico">&#9750;</span><h4>Housing</h4><p>Affordable &amp; deed-restricted listings, data, and resources.</p><a href="housing.html" class="meta" style="color:var(--rust)">Browse listings &rarr;</a></div>
     <div class="mini"><span class="ico">&#9745;</span><h4>Meetings &amp; Events</h4><p>A shared calendar of public meetings and community happenings.</p><a href="events.html" class="meta" style="color:var(--rust)">See the calendar &rarr;</a></div>
