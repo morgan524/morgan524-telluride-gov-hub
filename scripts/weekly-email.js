@@ -433,16 +433,11 @@ const trunc = (s, n) => {
   }
   return out;
 };
-// The summary is limited to the four bodies whose decisions draw public
-// comment: Town Council (Telluride + Mountain Village), the County Commissioners
-// (BOCC), the Planning Commissions / P&Z boards, and HARC. Everything else
-// (fire, general assemblies, transit, school, trustees, subcommittees) is dropped.
-const KEEP_BODY = /\b(town council|board of county commissioners|bocc|planning commission|planning (and|&) zoning|p&z|historic (and|&) architectural|harc)\b/i;
-// Small towns + counties whose boards we ALWAYS keep regardless of body title.
-// Their meeting names don't always match KEEP_BODY (e.g. "Rico Board of
-// Trustees" — a board, not a "town council"), but these communities' decisions
-// still matter to the region, so include every meeting from these sources.
-const SMALL_TOWN_KEEP = new Set(['rico', 'ridgway', 'norwood', 'ophir', 'ouray']);
+// EVERY government meeting from every source in MEETING_FNS is included — there is
+// no body-type filter. (Until 2026-07-19 the section was limited to Town Council /
+// BOCC / P&Z / HARC + small-town boards, dropping fire, housing authority, school,
+// transit, airport, and other boards; that exclusion was removed so all public
+// boards show.) Specific one-off meetings can still be hidden via MEETING_EXCLUDE.
 // Specific, dated meetings to omit from the digest entirely — e.g. a special
 // meeting whose posted agenda has nothing of broad public interest. Kept
 // surgical on purpose: matched on source + EXACT date + a title regex, so it
@@ -465,7 +460,6 @@ for (const fn of MEETING_FNS) {
     if (!inWeek(date)) continue;
     const name = (m.title || '').replace(/\s*--?\s*Special Meeting$/i, '').trim();
     const src = m.sourceLabel || m.source || '';
-    if (!KEEP_BODY.test(name + ' ' + src) && !SMALL_TOWN_KEEP.has((m.source || '').toLowerCase())) continue;   // TC/BOCC/PC/HARC + all small-town/county boards
     if (isExcludedMeeting(m.source, date, m.title || name)) continue;   // specific dated meetings hidden from the digest (see MEETING_EXCLUDE)
     // Dedup key: alphabetise the title's word tokens before joining so word-order
     // anagrams collapse to the same key. Joint meetings show up in CivicWeb
