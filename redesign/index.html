@@ -45,6 +45,7 @@
   .prior-list .d-mon { font: 800 10.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); }
   .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
   .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
+  .prior-list .hook { font: 400 14.5px/1.5 var(--sans); color: var(--body2); margin: 0 0 3px; }
   .prior-list .chev { font-size: 22px; color: var(--rust); }
   /* About Livable Telluride — mission/story cards + photo, directors, what-livable
      (layout mirrors the live homepage about section, per Morgan) */
@@ -254,7 +255,7 @@
     (data['week-meetings'] || []).forEach(function (m) {
       if (!m || !m.title || !m.date) return;
       if (m.date < today || m.date > end) return;
-      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title, srcKey: m.source,
+      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title, srcKey: m.source, hook: m.hook || '',
         time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: m.sourceLabel || m.source });
     });
     rows = rows.slice(0, 6);
@@ -268,6 +269,7 @@
         '<div><div class="d-mon">' + MON[r.d.getMonth()] + '</div><div class="d-day">' + r.d.getDate() + '</div></div>' +
         (LTData.entityLogo(r.srcKey) ? '<div class="p-logo"><img src="' + LTData.esc(LTData.entityLogo(r.srcKey)) + '" alt="' + LTData.esc(r.src) + '" loading="lazy"></div>' : '<div></div>') +
         '<div><span class="tag">' + LTData.esc(r.src) + '</span><h3>' + LTData.esc(r.title) + '</h3>' +
+        (r.hook ? '<div class="hook">' + LTData.esc(r.hook) + '</div>' : '') +
         '<div class="meta">' + LTData.esc(meta) + '</div></div>' +
         '<div class="chev">&rsaquo;</div></a>';
     }).join('');

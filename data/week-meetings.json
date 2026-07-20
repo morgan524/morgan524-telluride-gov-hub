@@ -16,7 +16,8 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "",
-    "commentEmail": "pdasaro@telluridefire.com"
+    "commentEmail": "pdasaro@telluridefire.com",
+    "hook": "Agenda not posted yet"
   },
   {
     "source": "county",
@@ -35,7 +36,8 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "bocc@sanmiguelcountyco.gov"
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": "Routine session — no substantive items posted"
   },
   {
     "source": "telluride",
@@ -54,7 +56,8 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-    "commentEmail": "townclerk@telluride.gov"
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": "Primary-residency policy for deed-restricted housing"
   },
   {
     "source": "telluride",
@@ -73,7 +76,8 @@
     "zoomPasscode": "555594.",
     "zoomPhone": "719) 359-4580",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-    "commentEmail": "townclerk@telluride.gov"
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": "Final vote on wildfire code changes to land use rules"
   },
   {
     "source": "county",
@@ -92,7 +96,8 @@
     "zoomPasscode": "535472",
     "zoomPhone": "719-359-4580",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "bocc@sanmiguelcountyco.gov"
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": "Special meeting — purpose not yet public"
   },
   {
     "source": "telluride",
@@ -111,7 +116,8 @@
     "zoomPasscode": "464545",
     "zoomPhone": "301-715-8592",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-    "commentEmail": "townclerk@telluride.gov"
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": "Carhenge: lot consolidation and PUD for town-owned housing"
   },
   {
     "source": "county",
@@ -130,7 +136,8 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "bocc@sanmiguelcountyco.gov"
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": "Sixth working session on the county housing code overhaul"
   },
   {
     "source": "county",
@@ -149,7 +156,8 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "bocc@sanmiguelcountyco.gov"
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": "Agenda not posted yet"
   },
   {
     "source": "telluride",
@@ -168,7 +176,8 @@
     "zoomPasscode": "256663.",
     "zoomPhone": "719) 359-4580",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-    "commentEmail": "townclerk@telluride.gov"
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": "Liquor permit hearing for KOTO's Live at the Drive"
   },
   {
     "source": "county",
@@ -187,6 +196,7 @@
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
-    "commentEmail": "planningcommission@sanmiguelcountyco.gov"
+    "commentEmail": "planningcommission@sanmiguelcountyco.gov",
+    "hook": "Agenda not posted yet"
   }
 ]
