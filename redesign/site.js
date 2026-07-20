@@ -24,14 +24,14 @@
       { href: '/projects-map/',    label: 'Projects Map',  built: true  }    // existing app (kept)
     ]},
     { key: 'connect', label: 'Connect', items: [
-      { href: 'events.html',       label: 'Events',        built: false },
-      { href: 'local-orgs.html',   label: 'Local Orgs',    built: false },
+      { href: 'events.html',       label: 'Events',        built: true },
+      { href: 'local-orgs.html',   label: 'Local Orgs',    built: true },
       { href: 'hub-bub.html',      label: 'Hub-Bub',       built: false },
       { href: 'housing.html',      label: 'Housing',       built: true }
     ]},
     { key: 'act', label: 'Act', items: [
-      { href: 'gov-hub.html',      label: 'Gov-Hub',       built: false },
-      { href: 'vote-tracker.html', label: 'Vote Tracker',  built: false },
+      { href: 'gov-hub.html',      label: 'Gov-Hub',       built: true },
+      { href: '/v2/vote-tracker.html', label: 'Vote Tracker', built: true },   // existing app (kept)
       { href: 'legal-notices.html',label: 'Legal Notices', built: true }
     ]}
   ];

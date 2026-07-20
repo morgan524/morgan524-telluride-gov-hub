@@ -6837,6 +6837,10 @@ async function main() {
   // homepage/gov-hub read ONE file. Runs after the data files are written.
   try { require('./build-week-meetings.js').run(REPO_ROOT); }
   catch (e) { console.warn('  week-meetings build failed: ' + e.message); }
+  // Precomputed events-index.json: all 22 event mirrors normalized, deduped,
+  // filtered, town-pinned, with category-fallback images (redesign events page).
+  try { require('./build-events-index.js').run(REPO_ROOT); }
+  catch (e) { console.warn('  events-index build failed: ' + e.message); }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
   // retired (2026-05-18). Everything that used to live in gov-helpers.js + be

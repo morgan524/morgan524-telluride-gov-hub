@@ -14,7 +14,7 @@
 //
 // Record shape (contract-checked in test/json-contract.test.js):
 //   { source, sourceLabel, title, date: 'YYYY-MM-DD', time, location,
-//     agendaUrl, link, hasAgenda, summary }
+//     agendaUrl, link, hasAgenda, summary, zoomLink, zoomPasscode, commentEmail }
 
 const path = require('path');
 const { loadDataArrays } = require('./lib/load-data.js');
@@ -36,6 +36,31 @@ const GETTERS = [
   ['airport',   'Airport Authority',   'getAirportMeetings'],
 ];
 const WINDOW_DAYS = 14;
+
+// Public-comment inboxes by body (same map the digest uses — weekly-email.js
+// COMMENT_MAP; keep in sync). Bodies without a recipient resolve to ''.
+const COMMENT_MAP = {
+  telluride:          'townclerk@telluride.gov',
+  'telluride-harc':   'dcandelaria@telluride.gov',
+  county:             'bocc@sanmiguelcountyco.gov',
+  'county-planning':  'planningcommission@sanmiguelcountyco.gov',
+  mv:                 'council@mtnvillage.org',
+  'mv-planning':      'planning@mtnvillage.org',
+  fire:               'pdasaro@telluridefire.com',
+  med:                'bodadmin@tellmed.org',
+  norwood:            'cross@norwoodtown.com',
+  ophir:              'clerk@ophir.us',
+  rico:               'townclerk@ricocolorado.gov',
+  airport:            'info@tellurideairport.com',
+};
+function commentEmailFor(source, title) {
+  let key = source;
+  const t = String(title || '').toLowerCase();
+  if (key === 'county' && /planning/.test(t)) key = 'county-planning';
+  if (key === 'mv' && /planning|design review/.test(t)) key = 'mv-planning';
+  if (key === 'telluride' && /harc|historic|architectural review/.test(t)) key = 'telluride-harc';
+  return COMMENT_MAP[key] || '';
+}
 
 function buildWeekMeetings(repoRoot) {
   const { captured } = loadDataArrays(repoRoot);
@@ -63,6 +88,9 @@ function buildWeekMeetings(repoRoot) {
       seen.add(key);
       let summary = '';
       try { summary = (getSummary && getSummary(m)) || ''; } catch (e) { /* leave blank */ }
+      let zoomLink = '', zoomPasscode = '';
+      try { zoomLink = (captured.getMeetingZoomLink && captured.getMeetingZoomLink(m)) || ''; } catch (e) { /* none */ }
+      try { zoomPasscode = (captured.getMeetingPasscode && captured.getMeetingPasscode(m)) || ''; } catch (e) { /* none */ }
       out.push({
         source: source,
         sourceLabel: m.sourceLabel || sourceLabel,
@@ -74,6 +102,9 @@ function buildWeekMeetings(repoRoot) {
         link: m.link || '',
         hasAgenda: !!(m.agendaLink || m.hasAgenda),
         summary: String(summary || '').trim(),
+        zoomLink: String(zoomLink || ''),
+        zoomPasscode: String(zoomPasscode || ''),
+        commentEmail: commentEmailFor(source, m.title),
       });
     }
   }

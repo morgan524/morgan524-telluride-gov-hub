@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gov-Hub — Livable Telluride</title>
+<meta name="description" content="Every public meeting in the region — agendas, plain-English summaries, Zoom links, and how to comment — for the next two weeks.">
+<!-- STAGING: remove noindex at cutover -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lt.css">
+<link rel="icon" href="uploads/lt-logo.png">
+<style>
+  .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; }
+  .meet-wrap { max-width: 900px; margin: 0 auto; padding: 10px var(--pad-x) 20px; }
+  .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
+  .m-card { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+  .m-date { text-align: center; }
+  .m-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
+  .m-date .d { font: 600 34px/1.05 var(--serif); color: var(--forest); }
+  .m-card .src { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
+  .m-card h3 { font: 600 23px/1.2 var(--serif); margin: 7px 0 6px; }
+  .m-card .summ { font: 400 15.5px/1.62 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .m-card .acts { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .m-card .acts .cbtn { display: inline-block; background: var(--forest); color: #fff; font: 600 12px/1 var(--sans); padding: 7px 14px; border-radius: 5px; }
+  .m-card .acts .cbtn:hover { background: #1c3a33; color: #fff; }
+  .m-card .acts a.txt { font: 600 13px/1 var(--sans); color: var(--rust); text-decoration: underline; }
+  .zoomline { font: 500 12.5px/1.6 var(--sans); color: var(--muted); margin-top: 6px; }
+  .zoomline a { text-decoration: underline; }
+  @media (max-width: 900px) { .m-card { grid-template-columns: 50px 1fr; } }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub</div>
+    <h1>Gov-Hub</h1>
+    <p class="sub">Every public meeting in the region for the next two weeks &mdash; agendas, plain-English summaries, Zoom links, and how to make your voice heard.</p>
+  </div>
+</header>
+
+<div class="chips" id="src-chips"><span class="chip active" data-src="">All bodies</span></div>
+
+<main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>
+
+<div id="lt-footer"></div>
+<script src="site.js"></script>
+<script src="/js/lt-data.js"></script>
+<script>
+(function () {
+  var list = document.getElementById('meet-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var esc = LTData.esc, safe = LTData.safeUrl;
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var meetings = [], srcFilter = '';
+
+  /* Bold proper-noun runs + standalone street addresses in summaries — the
+     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
+  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
+  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
+  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
+  function emphasizeNames(raw) {
+    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
+    var html = '', last = 0, m;
+    while ((m = re.exec(raw)) !== null) {
+      html += esc(raw.slice(last, m.index));
+      if (m[1]) {
+        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
+        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
+        last = m.index + m[1].length; continue;
+      }
+      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
+      var tail = run.slice(trimmed.length), leadThe = '';
+      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+      var multi = /\s/.test(trimmed);
+      var before = raw.slice(0, m.index).replace(/\s+$/, '');
+      var sentenceStart = before === '' || /[.!?]$/.test(before);
+      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
+      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
+      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
+      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+      last = m.index + run.length;
+    }
+    return html + esc(raw.slice(last));
+  }
+
+  function commentMailto(m) {
+    var subject = 'Re: the ' + LTData.fmtDate(m.date, { month: 'long', day: 'numeric' }) + ' ' + m.title;
+    return 'mailto:' + encodeURIComponent(m.commentEmail) + '?subject=' + encodeURIComponent(subject);
+  }
+  function render() {
+    var rows = meetings.filter(function (m) { return !srcFilter || m.sourceLabel === srcFilter; });
+    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings match this filter.</p>'; return; }
+    var html = '', lastDate = '';
+    rows.forEach(function (m) {
+      if (m.date !== lastDate) {
+        html += '<div class="day-h">' + LTData.fmtDate(m.date, { weekday: 'long', month: 'long', day: 'numeric' }) + '</div>';
+        lastDate = m.date;
+      }
+      var d = LTData.parseDateKey(m.date);
+      var acts = '';
+      if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">Comment</a>';
+      if (m.agendaUrl) acts += '<a class="txt" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View agenda &rarr;</a>';
+      else if (m.link) acts += '<a class="txt" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info &rarr;</a>';
+      var zoom = '';
+      if (m.zoomLink) {
+        zoom = '<div class="zoomline"><strong>Zoom:</strong> <a href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">Join remotely</a>' +
+          (m.zoomPasscode ? ' &middot; Passcode: ' + esc(m.zoomPasscode) : '') + '</div>';
+      }
+      html += '<article class="m-card">' +
+        '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div></div>' +
+        '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
+        '<h3>' + esc(m.title) + '</h3>' +
+        (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
+        (m.location ? '<div class="meta" style="margin-bottom:8px">&#128205; ' + esc(m.location) + '</div>' : '') +
+        zoom + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
+    });
+    list.innerHTML = html;
+  }
+
+  LTData.load(['week-meetings']).then(function (data) {
+    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
+    var chips = document.getElementById('src-chips'); var seen = {};
+    meetings.forEach(function (m) { seen[m.sourceLabel] = 1; });
+    Object.keys(seen).sort().forEach(function (s) {
+      var c = document.createElement('span'); c.className = 'chip'; c.dataset.src = s; c.textContent = s;
+      chips.appendChild(c);
+    });
+    chips.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+      c.classList.add('active'); srcFilter = c.dataset.src || ''; render();
+    });
+    render();
+  }).catch(function (err) { LTData.showError(list, err); });
+})();
+</script>
+</body>
+</html>

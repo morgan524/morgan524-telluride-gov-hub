@@ -1,0 +1,689 @@
+[
+  {
+    "name": "Beacon Outreach",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "A Telluride nonprofit reaching out to the region's seasonal and young-adult workers — building intentional community, mentoring, and hospitality so seasonal workers leave better than they came.",
+    "website": "https://www.beacontelluride.com/",
+    "donate": "https://www.beacontelluride.com/donate",
+    "social": {
+      "instagram": "https://www.instagram.com/tellurideya/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    "name": "Telluride Nordic Association",
+    "category": "recreation",
+    "town": "Telluride",
+    "summary": "A Colorado 501(c)(3) nonprofit dedicated to the education and enhancement of Nordic skiing for individuals of all ages and abilities in the Telluride region.",
+    "website": "https://www.telluridenordic.com/",
+    "donate": "https://pymt-at-telluridenordic-dot-com.square.site/home#ZRYHjz",
+    "social": {
+      "facebook": "https://www.facebook.com/TellurideNordic",
+      "instagram": "https://www.instagram.com/telluridenordicassociation"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Nordic.png"
+  },
+  {
+    "name": "Telluride Chamber Music",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Chamber music in the Box Canyon since 1973 — bringing world-class musicians to the Telluride region for concerts, workshops, kids' programs, and community performances.",
+    "website": "https://telluridechambermusic.org/",
+    "donate": "https://app.arts-people.com/index.php?donation=tcm",
+    "social": {
+      "facebook": "https://www.facebook.com/people/Telluride-Chamber-Music/61577075232852/",
+      "instagram": "https://www.instagram.com/telluridechambermusic"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Chamber.png"
+  },
+  {
+    "name": "Telluride Choral Society",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "A community choral society presenting seasonal concerts of classical and contemporary choral music in the Telluride region.",
+    "website": "https://www.telluridechoralsociety.org/",
+    "donate": "https://www.telluridechoralsociety.org/donate/",
+    "logo": "https://livabletelluride.org/logo/Telluride%20Choral.png"
+  },
+  {
+    "name": "Telluride Theatre",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Telluride's professional theatre company — producing original works, cabarets, and the beloved summer \"Shakespeare in the Park,\" reimagined classic productions staged at Town Park since 1990 and made accessible and entertaining for everyone.",
+    "website": "https://www.telluridetheatre.org/shakespeare",
+    "donate": "https://www.telluridetheatre.org/#donate",
+    "social": {
+      "facebook": "https://www.facebook.com/telluridetheater/",
+      "instagram": "https://www.instagram.com/telluridetheatre/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Theater.png"
+  },
+  {
+    "name": "Tri-County Health Network",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "A nonprofit collaborating with communities across southwest Colorado's tri-county region to improve healthcare access for everyone — running programs in health insurance enrollment, care coordination, food security, mental health, and immigrant and family support.",
+    "website": "https://tchnetwork.org/",
+    "donate": "https://tchnetwork.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/TriCountyHealthNetworkTelluride",
+      "instagram": "https://www.instagram.com/tchn_co/",
+      "twitter": "https://twitter.com/TCHNetwork_CO"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Tri-County%20Health.png"
+  },
+  {
+    "name": "Telluride Mountain Club",
+    "category": "recreation",
+    "town": "Telluride",
+    "summary": "A community catalyst for sustainable outdoor recreation — maintaining trails, climbing and via ferrata routes, and offering backcountry education across the Telluride region.",
+    "website": "https://www.telluridemountainclub.org/",
+    "donate": "https://www.telluridemountainclub.org/membership/",
+    "social": {
+      "facebook": "https://www.facebook.com/telluridemountainclub",
+      "instagram": "https://www.instagram.com/telluridemountainclub/"
+    },
+    "logo": "https://livabletelluride.org/logo/TtMC-logo.webp"
+  },
+  {
+    "name": "Telluride Venture Network",
+    "category": "business",
+    "town": "Telluride",
+    "summary": "A nationally recognized, award-winning entrepreneurial ecosystem that supports new, innovative, and growing businesses across Southwest Colorado with mentorship, capital connections, and resources.",
+    "website": "https://tellurideventurenetwork.com/",
+    "donate": "https://tellurideventurenetwork.com/donate-now/",
+    "social": {},
+    "logo": "https://livabletelluride.org/logo/Telluride%20Venture%20Net.webp"
+  },
+  {
+    "name": "Telluride Science",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Advances scientific knowledge by bringing global thought-leaders together for workshops on biomedical science, energy, climate, quantum computing, and fundamental research at the Telluride Science & Innovation Center.",
+    "website": "https://telluridescience.org/",
+    "donate": "https://telluridescience.org/donate/",
+    "social": {
+      "instagram": "https://www.instagram.com/telluridescience/",
+      "twitter": "https://twitter.com/telluridesci"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Science.png"
+  },
+  {
+    "name": "EcoAction Partners",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Works on environmental sustainability, climate action, waste reduction, energy efficiency, and community sustainability programs across San Miguel and Ouray counties.",
+    "website": "https://ecoactionpartners.org/",
+    "donate": "https://www.ecoactionpartners.org/donate",
+    "social": {
+      "instagram": "https://www.instagram.com/EcoAction_Partners/"
+    },
+    "logo": "https://livabletelluride.org/logo/Eco%20Action.webp"
+  },
+  {
+    "name": "Lone Cone Legacy Trust",
+    "category": "nonprofits",
+    "town": "Nucla/Naturita",
+    "summary": "Community trust model supporting local philanthropy, resident-driven improvement projects, and civic investment in outlying communities across the West End and surrounding areas.",
+    "website": "https://loneconelegacy.org/",
+    "donate": "https://loneconelegacy.org/ways-to-donate",
+    "social": {
+      "facebook": "https://www.facebook.com/LoneConeLegacy/"
+    },
+    "logo": "https://livabletelluride.org/logo/Norwood.png"
+  },
+  {
+    "name": "Sheep Mountain Alliance",
+    "category": "nonprofits",
+    "summary": "Southwest Colorado's leading wilderness conservation organization. Works to protect public lands, wildlife, and wild places in the San Juan Mountains and surrounding region through advocacy, education, and community engagement.",
+    "website": "https://www.sheepmountainalliance.org/",
+    "donate": "https://www.sheepmountainalliance.org/donate",
+    "social": {
+      "facebook": "https://www.facebook.com/SheepMountainAlliance/",
+      "instagram": "https://www.instagram.com/sheepmountainalliance/",
+      "twitter": "https://twitter.com/sheepmtn"
+    },
+    "logo": "https://livabletelluride.org/logo/sheep-mountain.png"
+  },
+  {
+    "name": "Sherbino Theater",
+    "category": "nonprofits",
+    "town": "Ridgway",
+    "summary": "Community arts, culture, and performance venue in Ridgway hosting music, film, theater, lectures, community gatherings, and educational events for the broader San Juan region.",
+    "website": "https://sherbino.org/",
+    "donate": "https://sherbino.org/contribute/",
+    "social": {
+      "facebook": "https://www.facebook.com/SherbinoTheater",
+      "instagram": "https://www.instagram.com/thesherbino/",
+      "twitter": "https://twitter.com/SherbinoTheater"
+    },
+    "logo": "https://livabletelluride.org/logo/Sherbino.png"
+  },
+  {
+    "name": "Telluride Foundation",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Community foundation serving the Telluride region since 2000. Provides grants to local nonprofits, hosts community events and public forums, runs youth programs, and fosters economic vitality and quality of life across the San Miguel Basin.",
+    "website": "https://telluridefoundation.org/",
+    "donate": "https://telluridefoundation.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/TellurideFoundation/",
+      "instagram": "https://www.instagram.com/telluridefoundation/",
+      "twitter": "https://twitter.com/TellurideFound"
+    },
+    "logo": "https://livabletelluride.org/logo/tf-foundation.png"
+  },
+  {
+    "name": "Norwood Fire Protection District",
+    "category": "clubs",
+    "town": "Norwood",
+    "summary": "Provides fire protection, emergency response, rescue, and public safety services for Norwood and the surrounding Wright's Mesa area. Volunteers welcome.",
+    "website": "https://norwoodfiredistrict.org/",
+    "social": {
+      "facebook": "https://www.facebook.com/Norwood-Fire-Protection-District-265734354230444",
+      "instagram": "https://www.instagram.com/nfpdco/"
+    },
+    "logo": "https://livabletelluride.org/logo/Norwood%20Fire.jpeg"
+  },
+  {
+    "name": "Rotary Club of Telluride",
+    "category": "clubs",
+    "town": "Telluride",
+    "summary": "Service club supporting scholarships, Youth Exchange, international projects, and community grants through the Telluride Rotary Foundation. \"Mountain High Service.\"",
+    "website": "https://portal.clubrunner.ca/3291",
+    "donate": "https://portal.clubrunner.ca/3291/donate",
+    "social": {
+      "facebook": "https://www.facebook.com/telluriderotary/",
+      "instagram": "https://www.instagram.com/telluriderotary/"
+    },
+    "logo": "https://clubrunner.blob.core.windows.net/00000003291/thumb/ClubLogo/clublogo.png"
+  },
+  {
+    "name": "Telluride Volunteer Fire Department",
+    "category": "clubs",
+    "town": "Telluride",
+    "summary": "Provides fire protection, emergency response, technical rescue, and public safety services for the Telluride Fire Protection District and surrounding communities. Volunteers welcome.",
+    "website": "https://telluridefire.com/",
+    "donate": "https://www.telluridefire.com/donate",
+    "social": {
+      "facebook": "https://www.facebook.com/telluridevfd/",
+      "instagram": "https://www.instagram.com/telluridefpd/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Fire.png"
+  },
+  {
+    "name": "Norwood Park and Recreation District",
+    "category": "recreation",
+    "town": "Norwood",
+    "summary": "Public recreation agency serving over 418,500 acres since 2008. Offers year-round programs including Nordic skiing, ice rink, disc golf, pickleball, fitness classes, youth sports, and arts programming. Manages The Livery event venue, 90+ miles of trails, and community facilities.",
+    "website": "https://www.norwoodparkandrec.org/",
+    "social": {
+      "facebook": "https://www.facebook.com/norwoodrec/"
+    },
+    "logo": "https://livabletelluride.org/logo/Norwood%20Parks.png"
+  },
+  {
+    "name": "Norwood Roping Club",
+    "category": "recreation",
+    "summary": "Roping club based at the San Miguel County Fairgrounds in Norwood. A fairground user group that organizes roping events and activities for the local ranching and rodeo community.",
+    "website": "https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups",
+    "social": {},
+    "logo": "https://livabletelluride.org/logo/roping.png"
+  },
+  {
+    "name": "Wright's Mesa Gymkhana Club",
+    "category": "recreation",
+    "summary": "Gymkhana club based at the San Miguel County Fairgrounds in Norwood. Organizes timed speed-pattern horse riding events and competitions for riders of all ages in the San Miguel Basin.",
+    "website": "https://www.sanmiguelcountyco.gov/431/Fairground-User-Groups",
+    "social": {},
+    "logo": "https://livabletelluride.org/logo/gymkhana.png"
+  },
+  {
+    "name": "San Miguel Basin 4-H Clubs",
+    "category": "youth",
+    "town": "Norwood",
+    "summary": "Part of Colorado State University Extension, 4-H provides project-based learning for youth across agriculture, livestock, horticulture, natural resources, and home &amp; family topics. Members join a local club to participate in hands-on activities, fairs, and community service.",
+    "website": "https://sanmiguel.extension.colostate.edu/smb-club-list/",
+    "donate": "https://extension.colostate.edu/san-miguel/give/",
+    "social": {
+      "facebook": "https://www.facebook.com/people/Colorado-State-University-Extension-San-Miguel-Basin-4-H/100079938742937/"
+    },
+    "logo": "https://livabletelluride.org/logo/4-h.png"
+  },
+  {
+    "name": "Telluride Ski &amp; Snowboard Club",
+    "category": "youth",
+    "town": "Telluride",
+    "summary": "Supports youth skiing and snowboarding through competitive programs, coaching, training camps, and mountain-sports development for athletes across the region.",
+    "website": "https://tssc.org/",
+    "donate": "https://www.tssc.org/donate",
+    "social": {
+      "instagram": "https://www.instagram.com/tellurideskisnowboardclub/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+  },
+  {
+    "name": "Telluride Youth Lacrosse / West Slope Lacrosse",
+    "category": "youth",
+    "town": "Telluride",
+    "summary": "Youth lacrosse programming serving Telluride and the broader western slope region. Contact for current season schedules, registration, and team information.",
+    "website": "https://www.westslopelacrosse.org/",
+    "donate": "https://www.telluridelacrosse.com/about/donate/20585",
+    "social": {},
+    "logo": "https://livabletelluride.org/logo/West%20Slope%20Lacross.jpeg"
+  },
+  {
+    "name": "Telluride Youth Soccer Club",
+    "category": "youth",
+    "town": "Telluride",
+    "summary": "Provides youth soccer programs, training, and recreational opportunities for young players in Telluride and the surrounding region. Programs for a range of ages and skill levels.",
+    "website": "https://www.telluridesoccer.com/",
+    "donate": "https://www.telluridesoccer.com/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/Telluridesoccer/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Soccer.jpeg"
+  },
+  {
+    "name": "The Pinhead Institute",
+    "category": "youth",
+    "town": "Telluride",
+    "summary": "Provides STEM education, science programs, youth internships, educational outreach, and hands-on learning opportunities for young people in Telluride and the surrounding region.",
+    "website": "https://www.pinheadinstitute.org/",
+    "donate": "https://www.pinheadinstitute.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/pages/Pinhead-Institute-A-Smithsonian-Affiliate/139925686059706",
+      "instagram": "https://www.instagram.com/pinheadinstitute/",
+      "youtube": "https://www.youtube.com/channel/UCzRuty1yIKquRiWGgYj-7yA"
+    },
+    "logo": "https://livabletelluride.org/logo/Pinhead.png"
+  },
+  {
+    "name": "True North Youth Program",
+    "category": "youth",
+    "town": "Nucla/Naturita",
+    "summary": "Provides youth-development programs, after-school enrichment, outdoor experiences, mentoring, and leadership support for young people in Norwood, Nucla, Naturita, Telluride, and surrounding communities.",
+    "website": "https://www.truenorthyouthprogram.org/",
+    "donate": "https://www.coloradogives.org/organization/TrueNorthYouthProgram",
+    "social": {
+      "facebook": "https://www.facebook.com/truenorthyouthprogram/",
+      "instagram": "https://www.instagram.com/truenorthyouthprogram/"
+    },
+    "logo": "https://livabletelluride.org/logo/True%20North.png"
+  },
+  {
+    "name": "Youth Soccer Club &amp; County Recreation",
+    "category": "youth",
+    "summary": "Youth soccer and recreational sports programming coordinated through San Miguel County. Check the county calendar for upcoming seasons, registration dates, and community recreation events.",
+    "website": "https://sanmiguelcountyco.gov/Calendar.aspx",
+    "social": {},
+    "logo": "https://livabletelluride.org/logo/soccer.png"
+  },
+  {
+    "name": "Norwood Chamber of Commerce",
+    "category": "business",
+    "town": "Norwood",
+    "summary": "Supports local business growth and community development in Norwood, Colorado. Maintains a business directory, facilitates networking, and promotes area tourism and economic vitality for this small mountain community.",
+    "website": "https://norwoodcolorado.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/p/Norwood-Chamber-of-Commerce-of-Wrights-Mesa-61554955367435/"
+    },
+    "logo": "https://livabletelluride.org/logo/norwood-chamber.png"
+  },
+  {
+    "name": "Nucla-Naturita Area Chamber of Commerce",
+    "category": "business",
+    "town": "Nucla/Naturita",
+    "summary": "Promotes local businesses, community events, tourism, and West End identity for Nucla, Naturita, Redvale, Bedrock, Paradox, and nearby communities.",
+    "website": "https://nucla-naturita.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/NuclaNaturitaAreaChamberofCommerce"
+    },
+    "logo": "https://livabletelluride.org/logo/Nucla%20Chamber.jpg"
+  },
+  {
+    "name": "Ridgway Area Chamber of Commerce",
+    "category": "business",
+    "town": "Ridgway",
+    "summary": "Supports local businesses, tourism, community events, visitor information, and regional economic activity in Ridgway and the surrounding area.",
+    "website": "https://ridgwaycolorado.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/visitridgwaycolorado",
+      "instagram": "https://www.instagram.com/ridgwaycolorado/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ridgway%20Chamber.png"
+  },
+  {
+    "name": "Christ Presbyterian Church Telluride",
+    "category": "churches",
+    "town": "Telluride",
+    "summary": "With roots dating to 1889 as a Congregational church, it became Presbyterian in 1938. A loving and accepting fellowship emphasizing hospitality and community, with children's ministry, contemplative gardens, and local outreach initiatives.",
+    "website": "https://christpresbyterianchurchtelluride.com/",
+    "donate": "https://give.tithe.ly/?locationId=0a4029c9-d139-4987-b918-ae3e308bd39e",
+    "social": {
+      "facebook": "https://www.facebook.com/p/Christ-Presbyterian-Church-Telluride-61562972470758/",
+      "youtube": "https://www.youtube.com/@ChristPresbyterianChurch-sd1nx"
+    },
+    "logo": "https://livabletelluride.org/logo/Church.png"
+  },
+  {
+    "name": "St. Patrick's Catholic Church",
+    "category": "churches",
+    "town": "Telluride",
+    "summary": "Historic Catholic parish established in 1896, serving the Telluride community at 8,750 feet in the San Juan Mountains. Part of the Diocese of Pueblo, also operating a mission in Nucla.",
+    "website": "https://stpatrickstelluride.com/",
+    "donate": "https://stpatrickstelluride.com/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/StPatricksTelluride/"
+    },
+    "logo": "https://livabletelluride.org/logo/Church.png"
+  },
+  {
+    "name": "Telluride Jewish Community",
+    "category": "churches",
+    "town": "Telluride",
+    "summary": "A lay-led, informal Jewish community serving the Telluride region for 40 years. Welcomes full-time, part-time, and visiting members with Shabbat services, holiday celebrations, youth programs, and cultural events. 501(c)(3) nonprofit; no dues.",
+    "website": "https://www.telluridejewishcommunity.com/",
+    "donate": "https://www.telluridejewishcommunity.com/new-page-1",
+    "social": {
+      "email": "mailto:info@telluridejewishcommunity.com"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Jewish.webp"
+  },
+  {
+    "name": "Telluride Christian Fellowship",
+    "category": "churches",
+    "summary": "Non-denominational Christian church serving the Telluride community with worship services, community outreach, and fellowship programs in a welcoming mountain-town setting.",
+    "website": "https://www.telluridechurch.org/",
+    "donate": "https://www.telluridechurch.org/give/",
+    "social": {
+      "facebook": "https://www.facebook.com/Telluride-Christian-Fellowship-47477149350",
+      "youtube": "https://www.youtube.com/@tcf8750"
+    },
+    "logo": "https://livabletelluride.org/logo/Church.png"
+  },
+  {
+    "name": "KOTO Community Radio",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Community radio station broadcasting on 91.7 FM (Telluride) and 105.5 FM (Norwood). Listener-supported nonprofit serving the San Juan region with local news, music, public affairs, and a community events calendar since 1975.",
+    "website": "https://koto.org/",
+    "donate": "https://koto.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/KOTOCommunityRadio/",
+      "instagram": "https://www.instagram.com/kotoradio/"
+    },
+    "logo": "https://livabletelluride.org/logo/koto-fm-logo.webp"
+  },
+  {
+    "name": "Telluride Humane Society",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Animal welfare nonprofit serving the San Miguel Basin since 1995. Runs the regional shelter, adoption program, low-cost spay/neuter, and humane education. All adoptable cats and dogs are listed on the Local News tab.",
+    "website": "https://telluridehumanesociety.com/",
+    "donate": "https://telluridehumanesociety.com/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/TellurideHumaneSociety/",
+      "instagram": "https://www.instagram.com/telluridehumanesociety/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Humane-400x400.png"
+  },
+  {
+    "name": "Second Chance Humane Society",
+    "category": "nonprofits",
+    "town": "Ridgway",
+    "summary": "Regional no-kill animal shelter based in Ridgway, serving the San Miguel and Ouray county region. Runs adoption, foster, low-cost spay/neuter, and humane-education programs.",
+    "website": "https://secondchancehumane.org/",
+    "donate": "https://secondchancehumane.org/support-us/donate",
+    "social": {
+      "facebook": "https://www.facebook.com/SecondChanceHumaneSociety",
+      "instagram": "https://www.instagram.com/secondchancehumanesociety/",
+      "twitter": "https://x.com/chancehumane",
+      "youtube": "https://www.youtube.com/channel/UC-gw9lq86637HbTJ0su2iiA"
+    },
+    "logo": "https://livabletelluride.org/logo/Second%20Chance.webp"
+  },
+  {
+    "name": "Wilkinson Public Library",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Telluride's public library, hosting community programs, author talks, kids' storytime, tech help, meeting rooms, and a robust event calendar. Special district funded through the Telluride Library District.",
+    "website": "https://telluridelibrary.org/",
+    "donate": "https://telluridelibrary.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/wilkinsonpubliclibrary/",
+      "instagram": "https://www.instagram.com/wilkinsonpubliclibrary/"
+    },
+    "logo": "https://livabletelluride.org/logo/Wilkenson.png"
+  },
+  {
+    "name": "Friends of the Wilkinson Public Library",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Volunteer nonprofit supporting Wilkinson Public Library through fundraising, advocacy, and programming the library's operating budget alone can't cover.",
+    "website": "https://www.telluridelibrary.org/fol",
+    "logo": "https://livabletelluride.org/logo/Telluriden%20FOT%20Library.webp"
+  },
+  {
+    "name": "Sheridan Opera House",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Historic 1913 opera house in downtown Telluride, owned and operated by the Sheridan Arts Foundation. Hosts concerts, films, theater, festivals, and the youth Young People's Theater program.",
+    "website": "https://sheridanoperahouse.com/",
+    "donate": "https://sheridanoperahouse.com/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/SheridanOperaHouse/",
+      "instagram": "https://www.instagram.com/sheridanoperahouse/"
+    },
+    "logo": "https://livabletelluride.org/logo/Sheridan%20Opera%20House.png"
+  },
+  {
+    "name": "Telluride Mountain Village Owners Association (TMVOA)",
+    "category": "clubs",
+    "town": "Mountain Village",
+    "summary": "Property owners' association governing common areas and amenities in Mountain Village — gondola maintenance contributions, recreation programs, special events, and homeowner services.",
+    "website": "https://tmvoa.org/",
+    "social": {
+      "facebook": "https://www.facebook.com/tmvoa/"
+    },
+    "logo": "https://livabletelluride.org/logo/TMVOA%20Logo.png"
+  },
+  {
+    "name": "Telluride Film Festival",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Independent film festival held every Labor Day weekend since 1974. Nonprofit dedicated to the art of cinema, runs year-round educational programs including the Filmmakers of Tomorrow student program.",
+    "website": "https://telluridefilmfestival.org/",
+    "donate": "https://telluridefilmfestival.org/support/",
+    "social": {
+      "facebook": "https://www.facebook.com/telluridefilmfestival/",
+      "instagram": "https://www.instagram.com/telluridefilmfestival/",
+      "twitter": "https://twitter.com/telluride"
+    },
+    "logo": "https://livabletelluride.org/logo/Film%20fest.jpg"
+  },
+  {
+    "name": "Telluride Bluegrass Festival (Planet Bluegrass)",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Four-day bluegrass and roots music festival held each June since 1973 in Town Park. Run by Planet Bluegrass; pairs with the Town of Telluride on community events and sustainability programs.",
+    "website": "https://bluegrass.com/telluride/",
+    "social": {
+      "facebook": "https://www.facebook.com/PlanetBluegrass/",
+      "instagram": "https://www.instagram.com/planetbluegrass/"
+    },
+    "logo": "https://livabletelluride.org/logo/Blue%20Grass.jpeg"
+  },
+  {
+    "name": "Mountainfilm",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Documentary film festival held over Memorial Day weekend since 1979. Year-round nonprofit operating the Mountainfilm on Tour program in dozens of cities and the Adventure Film Camp for youth.",
+    "website": "https://www.mountainfilm.org/",
+    "donate": "https://www.mountainfilm.org/support/",
+    "social": {
+      "facebook": "https://www.facebook.com/mountainfilm/",
+      "instagram": "https://www.instagram.com/mountainfilm/"
+    },
+    "logo": "https://livabletelluride.org/logo/Mountain%20Film.png"
+  },
+  {
+    "name": "Telluride Mushroom Festival",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Four-day August festival celebrating fungi through forays, lectures, art, and the Telluride Mushroom Parade. Run as a program of the Telluride Institute since 1981.",
+    "website": "https://shroomfest.com/",
+    "donate": "https://shroomfest.com/get-involved/",
+    "social": {
+      "facebook": "https://www.facebook.com/tellurideshroomfest/",
+      "instagram": "https://www.instagram.com/tellurideshroomfest/"
+    },
+    "logo": "https://livabletelluride.org/logo/Mushroom.png"
+  },
+  {
+    "name": "Original Thinkers",
+    "category": "nonprofits",
+    "town": "Telluride",
+    "summary": "Annual fall festival of ideas held in Telluride, pairing original films with live conversation. Year-round speaker series and the Original Thinkers Quarterly podcast.",
+    "website": "https://originalthinkers.com/",
+    "social": {
+      "facebook": "https://www.facebook.com/originalthinkers/",
+      "instagram": "https://www.instagram.com/originalthinkers/"
+    },
+    "logo": "https://livabletelluride.org/logo/Original%20Thinkers.png"
+  },
+  {
+    "name": "Habitat for Humanity of the San Juans",
+    "category": "nonprofits",
+    "town": "Ridgway",
+    "summary": "Affordable housing nonprofit serving San Miguel, Ouray, Hinsdale, and surrounding counties. Builds and rehabs homes with partner families and runs a ReStore (Ridgway) selling donated home goods to fund builds.",
+    "website": "https://www.habitatsanjuans.org/",
+    "donate": "https://www.habitatsanjuans.org/donate",
+    "social": {
+      "facebook": "https://www.facebook.com/HabitatforHumanityoftheSanJuans/"
+    },
+    "logo": "https://livabletelluride.org/logo/Habitat-for-Humanit-Logo.jpg"
+  },
+  {
+    "name": "Telluride Adaptive Sports Program",
+    "category": "recreation",
+    "town": "Telluride",
+    "summary": "Nonprofit providing adaptive winter and summer recreation experiences for people with physical, cognitive, sensory, and emotional disabilities. Winter ski/snowboard programs with the Telluride Ski Resort; summer hiking, cycling, and water programs.",
+    "website": "https://tellurideadaptivesports.org/",
+    "donate": "https://tellurideadaptivesports.org/donate/",
+    "social": {
+      "facebook": "https://www.facebook.com/TellurideAdaptiveSportsProgram/",
+      "instagram": "https://www.instagram.com/tellurideadaptivesports/"
+    },
+    "logo": "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+  },
+  {
+    "name": "Ouray Trail Group",
+    "category": "recreation",
+    "town": "Ouray",
+    "summary": "A nonprofit of volunteers founded in 1986, dedicated to the preservation and safe public use of Ouray County's trails — maintaining 84 mapped trails and providing hiking information across the region.",
+    "website": "https://ourayco.org/ouray-trail-group/",
+    "donate": "https://ouraytrails.org/support-us",
+    "social": {
+      "facebook": "https://www.facebook.com/OurayTrailGroup",
+      "instagram": "https://www.instagram.com/ouray_trail_group/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ouray%20Trail%20Club.webp"
+  },
+  {
+    "name": "Ouray Christian Fellowship",
+    "category": "churches",
+    "town": "Ouray",
+    "summary": "An EFCA-affiliated church in Ouray announcing \"the hope and truth of the Good News.\" Offers Sunday worship, adult and youth Sunday school, children's ministry, Bible studies, and missions involvement.",
+    "website": "https://ouraychristianfellowship.org/",
+    "donate": "https://ouraychristianfellowship.org/online-giving/",
+    "social": {
+      "facebook": "https://www.facebook.com/ouraychristianfellowship/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ouray%20Christian%20Fellowship.jpg"
+  },
+  {
+    "name": "Ouray School District",
+    "category": "youth",
+    "town": "Ouray",
+    "summary": "Ouray's PK-12 public school district (R-1), focused on educating \"the whole learner\" through diverse academic, arts, and outdoor experiences — \"developing minds to match our mountains.\"",
+    "website": "https://www.ourayschool.org/",
+    "social": {
+      "facebook": "https://www.facebook.com/ourayschool/",
+      "instagram": "https://www.instagram.com/ourayschool/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ouray%20School%20District.jpg"
+  },
+  {
+    "name": "Ridgway School District",
+    "category": "youth",
+    "town": "Ridgway",
+    "summary": "Ridgway's PK-12 public school district (R-2) in Ouray County, serving the Ridgway area with academic, arts, and athletic programs.",
+    "website": "https://www.ridgway.k12.co.us/",
+    "social": {
+      "facebook": "https://www.facebook.com/RidgwaySchoolDistrict/",
+      "instagram": "https://www.instagram.com/ridgwayschooldistrictr2/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ridgway%20School.png"
+  },
+  {
+    "name": "Trust for Land Restoration",
+    "category": "nonprofits",
+    "town": "Ridgway",
+    "summary": "Ridgway-based land conservation nonprofit working to preserve scenic landscapes and historic sites in the San Juan Mountains and to restore lands degraded by mining across Ouray, San Miguel, and San Juan counties.",
+    "website": "https://restorationtrust.org/",
+    "donate": "https://restorationtrust.org/donation/",
+    "logo": "https://livabletelluride.org/logo/Ridgway%20Land%20Trust.gif"
+  },
+  {
+    "name": "Ridgway Fire Protection District",
+    "category": "nonprofits",
+    "town": "Ridgway",
+    "summary": "Volunteer fire protection district covering about 80 square miles of Ouray County including the town of Ridgway, with members trained in structural and wildland firefighting plus emergency medical, hazmat, and vehicle extrication.",
+    "website": "https://ridgwayfire.org/",
+    "social": {
+      "facebook": "https://www.facebook.com/RidgwayFire/",
+      "instagram": "https://www.instagram.com/ridgwayfire21"
+    },
+    "logo": "https://livabletelluride.org/logo/Ridgway%20Fire.png"
+  },
+  {
+    "name": "Ridgway Community Church",
+    "category": "churches",
+    "town": "Ridgway",
+    "summary": "A Bible-preaching, Bible-teaching church in Ridgway with Sunday worship at 10:15 AM, centered on Scripture and \"Giving All to Christ & Christ to All.\"",
+    "website": "https://ridgwaychurch.com/",
+    "donate": "https://ridgwaychurch.com/giving/",
+    "social": {
+      "facebook": "https://www.facebook.com/ridgwaycommunitychurch/",
+      "instagram": "https://www.instagram.com/ridgwaycommunitychurch/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ridgway%20Com%20Church.webp"
+  },
+  {
+    "name": "United Church of the San Juans",
+    "category": "churches",
+    "town": "Ridgway",
+    "summary": "An ecumenical united church in Ridgway affiliated with four mainline denominations (ELCA Lutheran, United Methodist, Presbyterian USA, and United Church of Christ), with Sunday worship at 10 AM in person and on Facebook livestream.",
+    "website": "https://ucsjridgway.org/",
+    "donate": "https://tithe.ly/give?c=722193",
+    "social": {
+      "facebook": "https://www.facebook.com/ucsjridgway"
+    },
+    "logo": "https://livabletelluride.org/logo/Ridgway%20United%20Church.jpg"
+  },
+  {
+    "name": "Voyager Youth Program",
+    "category": "youth",
+    "town": "Ouray",
+    "summary": "Ouray County youth nonprofit offering after-school enrichment for elementary students, summer programs for kids and tweens, and the H.U.B.B. teen program with events, volunteering, and internships.",
+    "website": "https://www.voyageryouth.org/our-history",
+    "donate": "https://www.paypal.com/donate/?hosted_button_id=LVGG2YTMFAP9J",
+    "social": {
+      "facebook": "https://www.facebook.com/voyageryouth/",
+      "instagram": "https://www.instagram.com/voyageryouth/"
+    },
+    "logo": "https://livabletelluride.org/logo/Ouray%20Voyager%20Youth.jpg"
+  }
+]

@@ -60,6 +60,8 @@ const MIRROR_GOVDATA_ARRAYS = [
   'FIRE_CACHED_DATA', 'RIDGWAY_CACHED_DATA', 'AIRPORT_CACHED_DATA',
   // deep-dive page index (hand-edited config; redesign reads the JSON)
   'DEEP_DIVE_PAGES',
+  // local orgs directory (hand-edited config; redesign local-orgs reads the JSON)
+  'LOCAL_ORGS',
 ];
 
 // HAND-EDITED config objects in gov-data.js, mirrored for the redesign's

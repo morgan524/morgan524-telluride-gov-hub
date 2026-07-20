@@ -79,6 +79,8 @@ const CONTRACTS = {
   'blog-posts.json': { required: ['title', 'date'], minCount: 1 },
   // — redesign (Phase 2) —
   'week-meetings.json': { required: ['title', 'date', 'sourceLabel'], minCount: 1 },  // bot-aggregated, 14-day window
+  'events-index.json': { required: ['title', 'date', 'source', 'img'], minCount: 1 }, // bot-aggregated, 60-day window
+  'local-orgs.json': { required: ['name', 'category'], minCount: 1 },                 // hand-edited directory
   'housing-listings.json': { required: ['title', 'type', 'url'], minCount: 0 },       // seasonal/for-sale inventory varies
   'deep-dive-pages.json': { required: ['label', 'href'], minCount: 1 },
 };

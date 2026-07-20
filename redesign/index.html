@@ -102,7 +102,7 @@
       <h3>Find your people</h3>
       <p>Find the organizations, groups, and conversations that make up the community.</p>
       <div class="links">
-        <a href="/local-orgs.html">Local Orgs &rarr;</a>
+        <a href="local-orgs.html">Local Orgs &rarr;</a>
         <a href="/hub-bub.html">Hub-Bub &rarr;</a>
         <a href="/hub-bub.html">Community Pulse &rarr;</a>
       </div>
@@ -112,15 +112,15 @@
       <h3>Make it count</h3>
       <p>Show up where it counts. Meetings, agendas, and how to make your voice heard before a vote.</p>
       <div class="links">
-        <a href="/gov-hub.html">Gov-Hub &amp; meetings &rarr;</a>
-        <a href="/gov-hub.html">Agendas &amp; packets &rarr;</a>
-        <a href="/gov-hub.html">How to comment &rarr;</a>
+        <a href="gov-hub.html">Gov-Hub &amp; meetings &rarr;</a>
+        <a href="gov-hub.html">Agendas &amp; packets &rarr;</a>
+        <a href="gov-hub.html">How to comment &rarr;</a>
       </div>
     </div>
   </div>
   <div class="mini-grid">
     <div class="mini"><span class="ico">&#9750;</span><h4>Housing</h4><p>Affordable &amp; deed-restricted listings, data, and resources.</p><a href="housing.html" class="meta" style="color:var(--rust)">Browse listings &rarr;</a></div>
-    <div class="mini"><span class="ico">&#9745;</span><h4>Meetings &amp; Events</h4><p>A shared calendar of public meetings and community happenings.</p><a href="/events.html" class="meta" style="color:var(--rust)">See the calendar &rarr;</a></div>
+    <div class="mini"><span class="ico">&#9745;</span><h4>Meetings &amp; Events</h4><p>A shared calendar of public meetings and community happenings.</p><a href="events.html" class="meta" style="color:var(--rust)">See the calendar &rarr;</a></div>
     <div class="mini"><span class="ico">&#9829;</span><h4>Support Us</h4><p>Independent, ad-free, and always free. Keep it that way.</p><a href="donate.html" class="meta" style="color:var(--rust)">Donate &rarr;</a></div>
   </div>
 </section>
@@ -128,7 +128,7 @@
 <section class="prior">
   <div class="prior-head">
     <div><span class="eyebrow" id="prior-week">This week</span><h2 class="section-h">Top priorities</h2></div>
-    <a class="all" href="/gov-hub.html">All meetings &amp; events &rarr;</a>
+    <a class="all" href="gov-hub.html">All meetings &amp; events &rarr;</a>
   </div>
   <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
 </section>
@@ -179,7 +179,7 @@
     if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No public meetings scheduled this week.</p>'; return; }
     list.innerHTML = rows.map(function (r) {
       var meta = [LTData.fmtDate(r.key, { weekday: 'short' }), r.time, r.loc || r.src].filter(Boolean).join(' · ');
-      return '<a class="row" href="/gov-hub.html" style="color:inherit">' +
+      return '<a class="row" href="gov-hub.html" style="color:inherit">' +
         '<div><div class="d-mon">' + MON[r.d.getMonth()] + '</div><div class="d-day">' + r.d.getDate() + '</div></div>' +
         '<div><span class="tag">' + LTData.esc(r.src) + '</span><h3>' + LTData.esc(r.title) + '</h3>' +
         '<div class="meta">' + LTData.esc(meta) + '</div></div>' +
