@@ -341,7 +341,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
-    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1921","sv":4},
+    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1922","sv":4},
 
   "county|2026-08-19|Board of County Commissioners Meeting":
     {"sv":4}
@@ -460,7 +460,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -538,7 +538,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -553,7 +553,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -3884,6 +3884,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52994152710848/huge/60f4db1fcb885114d605529698b88efd2744461c.jpg"
   },
   {
+    title: "Free Show | Adah Hannelore & Corey Hooker | Floating Lotus Mainstage",
+    link: "https://events.ourayridgwayevents.com/event/free-show-adah-hannelore-corey-hooker-floating-lotus-mainstage",
+    description: "🎶 Introducing: Floating Lotus Mainstage 🎶 We're excited to launch a new chapter in Ridgway's local music scene. Floating Lotus Mainstage is our new live music series dedicated to showcasing the incredible musicians who have grown through our Open Mic community. Our goal is simple: provide free live music for the community, support local artists, and create a path for performers to take the next step—from solo open mic sets to full featured performances and bands. We believe local musicians deserve a place to develop their craft, build an audience, and promote their original work. Floating Lotus is committed to being that place. Whether you're an experienced performer or someone who's been thinking about stepping onto the Open Mic stage for the first time, this is your invitation. Every great band starts somewhere. …",
+    pubDate: "2026-07-26T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53479911973011/huge/3579e167dfcf97cf098fbe7ee5a676f0ced3deaa.jpg"
+  },
+  {
     title: "Ouray Open Air Market",
     link: "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
     description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM. View on site | Email this event",
@@ -4908,11 +4919,11 @@ const NORWOOD_EVENTS = [
   },
   {
     title: "Music On The Mesa The Burroughs",
-    link: "https://www.norwoodtown.com/2026-08-08-music-on-the-mesa-the-burroughs",
+    link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
     description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
-    sourceLabel: "Town of Norwood",
+    sourceLabel: "Norwood Park & Recreation District",
     category: "Community Event",
     location: "Norwood, CO",
     imageUrl: ""
@@ -5748,12 +5759,12 @@ const TELLURIDE_COM_EVENTS = [
   },
   {
     title: "Music on the Mesa",
-    link: "https://www.telluride.com/event/music-on-the-mesa/",
+    link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
     description: "Music on the Mesa is a FREE outdoor concert series presented two Saturdays a summer by Norwood Park & Rec District, …",
     pubDate: "2026-06-13",
     endDate: "2026-08-08",
     source: "telluride-com",
-    sourceLabel: "Telluride.com",
+    sourceLabel: "Norwood Park & Recreation District",
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62177/screenshot_2026-04-09_at_2_09_57_pm.800x533.webp"
