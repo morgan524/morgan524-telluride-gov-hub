@@ -45,6 +45,27 @@ still exist), browser-verify identical render, ship. Once a page no longer reads
 a JS global at all, it can drop the gov-helpers.js/gov-data.js load entirely.
 Then, once every reader of an array is flipped, delete that JS literal (Phase 6).
 
+**2026-07-20 — Phase 2 is now coupled to the site REDESIGN** (Learn·Connect·Act,
+`assets/Redesign/`): each redesigned page ships as a JSON-first reader, so the
+redesign rollout IS the reader-flip. Prep landed:
+- `docs/redesign/page-inventory.md` — full page×data matrix (which globals each
+  page reads, mirror coverage, per-page heuristics + keep/move/kill notes,
+  rebuild order). Read it before flipping any page.
+- `scripts/test/json-contract.test.js` (CI) — SHAPE contracts for the mirrors
+  (required fields per family, min-count for never-empty sources, and a global
+  "no literal \"undefined\"/\"NaN\" string values" rule — the endDate bug class).
+  Rebuilt pages may only assume what these contracts assert.
+- `js/lt-data.js` (+ `scripts/test/lt-data.test.js`) — shared loader for rebuilt
+  pages: parallel mirror fetch w/ 10-min bucket, LOUD failure (visible error
+  state via `LTData.showError`, no silent fallbacks), MT-anchored date helpers,
+  `esc`/`safeUrl`.
+- Known gaps (see inventory §Gaps): `HOUSING_LISTINGS` + `MEETING_RECAPS` have
+  no mirrors yet (⚠ adding them to MIRROR_ARRAYS requires wiring the mirror
+  hook into housing-refresh.js / meeting-recaps.js too, or CI will flag drift
+  on their next run), and the hand-edited config consts (`LOCAL_ORGS`,
+  `LAND_USE_ISSUES`, zoom links, …) need config exports before local-orgs /
+  deep-dives / gov-hub can flip.
+
 ## Why
 
 `js/gov-helpers.js` is bot-managed data stored as JS `const` literals. The bot
