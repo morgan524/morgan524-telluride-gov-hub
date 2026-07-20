@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "livable-telluride",
+      "name": "static-site",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8000", "--bind", "127.0.0.1"],
-      "port": 8000
+      "runtimeArgs": ["-m", "http.server", "8321", "--bind", "127.0.0.1"],
+      "port": 8321
     }
   ]
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Livable Telluride — a civic information hub for the whole county</title>
+<meta name="description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
+<!-- STAGING: remove noindex at cutover -->
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lt.css">
+<link rel="icon" href="uploads/lt-logo.png">
+<style>
+  /* page-only layout (shared components live in lt.css) */
+  .tagline-strip { text-align: center; font: italic 500 14.5px/1.4 var(--serif); color: var(--muted); padding: 12px var(--pad-x); border-bottom: 1px solid var(--hairline); }
+  .hero { text-align: center; padding: 64px var(--pad-x) 40px; }
+  .hero h1 { font: 500 58px/1.06 var(--serif); letter-spacing: -.02em; max-width: 840px; margin: 18px auto 0; text-wrap: balance; }
+  .hero .sub { font: 400 18px/1.65 var(--sans); color: var(--body2); max-width: 660px; margin: 20px auto 0; }
+  .hero .ctas { display: flex; gap: 14px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
+  .photo-strip { max-width: var(--maxw); margin: 8px auto 0; padding: 0 var(--pad-x); }
+  .photo-strip .frame { position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-media); }
+  .photo-strip img { width: 100%; height: 100%; object-fit: cover; }
+  .photo-strip .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 20px 12px; font: 500 12.5px/1 var(--sans); color: rgba(255,255,255,.92); background: linear-gradient(180deg, transparent, rgba(20,34,29,.62)); }
+  .ways { padding: 56px var(--pad-x) 8px; max-width: var(--maxw); margin: 0 auto; }
+  .ways-head { border-bottom: 2px solid var(--forest); padding-bottom: 14px; margin-bottom: 28px; }
+  .ways-head h2 { margin-top: 8px; }
+  .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .way { padding: 26px 24px; display: flex; flex-direction: column; }
+  .way .g-label { font: 800 11px/1 var(--sans); text-transform: uppercase; letter-spacing: .09em; color: var(--rust); }
+  .way h3 { font: 600 26px/1.15 var(--serif); margin: 10px 0 8px; }
+  .way p { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; flex: 1; }
+  .way .links a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 6px 0; border-top: 1px solid var(--hairline); }
+  .way .links a:hover { color: var(--rust); }
+  .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
+  .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
+  .mini .ico { font-size: 20px; color: var(--forest); }
+  .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }
+  .mini p { font: 400 13.5px/1.55 var(--sans); color: var(--body2); margin: 0; }
+  .prior { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 8px; }
+  .prior-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--forest); padding-bottom: 14px; flex-wrap: wrap; }
+  .prior-head h2 { margin-top: 8px; }
+  .prior-head .all { font: 600 14px/1 var(--sans); }
+  .prior-list .row { display: grid; grid-template-columns: 58px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+  .prior-list .d-mon { font: 800 10.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); }
+  .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
+  .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
+  .prior-list .chev { font-size: 22px; color: var(--rust); }
+  .about-band { max-width: var(--maxw); margin: 56px auto 0; padding: 0 var(--pad-x); }
+  .about-inner { border-top: 2px solid var(--forest); padding-top: 28px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+  .about-inner h2 { font: 500 30px/1.2 var(--serif); margin: 10px 0 14px; }
+  .about-inner .body { font: 400 16.5px/1.7 var(--serif); color: var(--body2); }
+  .about-inner .body p { margin: 0 0 14px; }
+  .about-ctas { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+  @media (max-width: 900px) {
+    .hero h1 { font-size: 38px; }
+    .ways-grid, .mini-grid { grid-template-columns: 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .prior-list .row { grid-template-columns: 48px 1fr; }
+    .prior-list .chev { display: none; }
+  }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<div class="tagline-strip">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole county.</div>
+
+<section class="hero">
+  <span class="eyebrow">Before the decisions are final</span>
+  <h1>Everything happening in our community &mdash; in one place.</h1>
+  <p class="sub">Local news, deep dives, government meetings, housing data, community organizations, and events &mdash; gathered, explained, and always linked back to the original source.</p>
+  <div class="ctas">
+    <a class="btn btn-forest" href="#explore">Explore the hub</a>
+    <a class="btn btn-outline" href="about.html">Why we exist</a>
+  </div>
+</section>
+
+<div class="photo-strip">
+  <div class="frame">
+    <img src="uploads/diamond-ridge.jpg" alt="The Wilson range above San Miguel County">
+    <div class="cap">The Wilson range &mdash; San Miguel County</div>
+  </div>
+</div>
+
+<section class="ways" id="explore">
+  <div class="ways-head">
+    <span class="eyebrow">What you'll find here</span>
+    <h2 class="section-h">Three ways in</h2>
+  </div>
+  <div class="ways-grid">
+    <div class="way card hub-card">
+      <span class="g-label">Learn</span>
+      <h3>Understand it</h3>
+      <p>Understand what's happening and why &mdash; from daily headlines to the full story behind a project.</p>
+      <div class="links">
+        <a href="/local-news.html">Local News &rarr;</a>
+        <a href="/deep-dives.html">Deep Dives &rarr;</a>
+        <a href="/zoning-map/">Zoning &amp; Project Maps &rarr;</a>
+      </div>
+    </div>
+    <div class="way card hub-card">
+      <span class="g-label">Connect</span>
+      <h3>Find your people</h3>
+      <p>Find the organizations, groups, and conversations that make up the community.</p>
+      <div class="links">
+        <a href="/local-orgs.html">Local Orgs &rarr;</a>
+        <a href="/hub-bub.html">Hub-Bub &rarr;</a>
+        <a href="/hub-bub.html">Community Pulse &rarr;</a>
+      </div>
+    </div>
+    <div class="way card hub-card">
+      <span class="g-label">Act</span>
+      <h3>Make it count</h3>
+      <p>Show up where it counts. Meetings, agendas, and how to make your voice heard before a vote.</p>
+      <div class="links">
+        <a href="/gov-hub.html">Gov-Hub &amp; meetings &rarr;</a>
+        <a href="/gov-hub.html">Agendas &amp; packets &rarr;</a>
+        <a href="/gov-hub.html">How to comment &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <div class="mini-grid">
+    <div class="mini"><span class="ico">&#9750;</span><h4>Housing</h4><p>Affordable &amp; deed-restricted listings, data, and resources.</p><a href="/housing.html" class="meta" style="color:var(--rust)">Browse listings &rarr;</a></div>
+    <div class="mini"><span class="ico">&#9745;</span><h4>Meetings &amp; Events</h4><p>A shared calendar of public meetings and community happenings.</p><a href="/events.html" class="meta" style="color:var(--rust)">See the calendar &rarr;</a></div>
+    <div class="mini"><span class="ico">&#9829;</span><h4>Support Us</h4><p>Independent, ad-free, and always free. Keep it that way.</p><a href="donate.html" class="meta" style="color:var(--rust)">Donate &rarr;</a></div>
+  </div>
+</section>
+
+<section class="prior">
+  <div class="prior-head">
+    <div><span class="eyebrow" id="prior-week">This week</span><h2 class="section-h">Top priorities</h2></div>
+    <a class="all" href="/gov-hub.html">All meetings &amp; events &rarr;</a>
+  </div>
+  <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
+</section>
+
+<div class="about-band">
+  <div class="about-inner">
+    <div>
+      <span class="eyebrow">About Livable Telluride</span>
+      <h2>Ensuring thoughtful processes result in a livable community for all.</h2>
+      <div class="body">
+        <p>Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.</p>
+        <p>Livable Telluride grew out of &ldquo;Let the People Decide,&rdquo; a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home.</p>
+      </div>
+    </div>
+    <div class="about-ctas">
+      <a class="btn btn-outline" href="about.html">Read our full story</a>
+      <a class="btn btn-forest" href="donate.html">Donate</a>
+    </div>
+  </div>
+</div>
+
+<div id="lt-footer"></div>
+<script src="site.js"></script>
+<script src="/js/lt-data.js"></script>
+<script>
+/* Top priorities — this week's public meetings, straight from the JSON
+   mirrors (no gov-data/gov-helpers globals; loud failure per standing rule). */
+(function () {
+  var list = document.getElementById('prior-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var SOURCES = {
+    'telluride-board-meetings': 'Town of Telluride',
+    'county-cached-data': 'San Miguel County',
+    'fire-cached-data': 'Fire District',
+    'mv-cached-data': 'Mountain Village',
+    'school-cached-data': 'School District',
+    'med-cached-data': 'Hospital District'
+  };
+  var names = Object.keys(SOURCES);
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+  LTData.load(names).then(function (data) {
+    var today = LTData.todayMT();
+    var end = LTData.mtDateKey(new Date(LTData.parseDateKey(today).getTime() + 6 * 86400000));
+    var rows = [];
+    names.forEach(function (n) {
+      (data[n] || []).forEach(function (m) {
+        if (!m || !m.title || !m.date) return;
+        var d = new Date(String(m.date) + ' 12:00:00');
+        if (isNaN(d)) return;
+        var key = LTData.mtDateKey(d);
+        if (key < today || key > end) return;
+        rows.push({ key: key, d: d, title: m.title, time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: SOURCES[n] });
+      });
+    });
+    rows.sort(function (a, b) { return a.key < b.key ? -1 : a.key > b.key ? 1 : 0; });
+    rows = rows.slice(0, 6);
+    document.getElementById('prior-week').textContent = 'This week · ' +
+      LTData.fmtDate(today, { month: 'short', day: 'numeric' }) + '–' +
+      LTData.fmtDate(end, { month: 'short', day: 'numeric' });
+    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No public meetings scheduled this week.</p>'; return; }
+    list.innerHTML = rows.map(function (r) {
+      var meta = [LTData.fmtDate(r.key, { weekday: 'short' }), r.time, r.loc || r.src].filter(Boolean).join(' · ');
+      return '<a class="row" href="/gov-hub.html" style="color:inherit">' +
+        '<div><div class="d-mon">' + MON[r.d.getMonth()] + '</div><div class="d-day">' + r.d.getDate() + '</div></div>' +
+        '<div><span class="tag">' + LTData.esc(r.src) + '</span><h3>' + LTData.esc(r.title) + '</h3>' +
+        '<div class="meta">' + LTData.esc(meta) + '</div></div>' +
+        '<div class="chev">&rsaquo;</div></a>';
+    }).join('');
+  }).catch(function (err) { LTData.showError(list, err); });
+})();
+</script>
+</body>
+</html>
