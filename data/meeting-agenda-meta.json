@@ -336,5 +336,12 @@
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
     "sv": 4
+  },
+  "county|2026-07-21|SMC Historical Commission Meeting": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1921",
+    "sv": 4
+  },
+  "county|2026-08-19|Board of County Commissioners Meeting": {
+    "sv": 4
   }
 }

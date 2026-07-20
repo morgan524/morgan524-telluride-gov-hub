@@ -1,18 +1,18 @@
 {
-  "hash": "7ecbd1edb360ba110c9668fd4cb605663bae4e67",
-  "lede": "Tuesday is the week's heaviest lift: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would lock wildfire-resilient landscaping and historic-review standards into the Land Use Code — a real vote with real consequences for property owners. That same day, the Telluride Housing Authority considers a new primary-residency policy for dependents of multiple custodial parents, and Thursday's Planning & Zoning session digs into subdivision and concept-plan applications for the Town-owned Carhenge redevelopment on West Pacific.",
+  "hash": "44bfb8dfc9b96a85d3087c448a86f170339e05ed",
+  "lede": "Tuesday is the week's heaviest lift: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into Telluride's Land Use Code — that's a real vote with lasting consequences for how properties are built and maintained here. The same day, the Telluride Housing Authority considers a new primary-residency policy for dependents in split-custody households, and Thursday's Planning & Zoning session digs into the Carhenge redevelopment and other Town-owned projects in the Accommodations 2 zone.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changes to Land Use Code landscaping and historic review."
+      "stake": "Second-reading vote on wildfire code amending Land Use, landscaping, and historic-review rules."
     },
     {
       "id": 3,
-      "stake": "New primary-residency policy for dependents of split-custody households could affect deed-restricted eligibility."
+      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility determinations."
     },
     {
-      "id": 6,
-      "stake": "Town-owned Carhenge site faces subdivision and concept-plan hearings — public land use decision."
+      "id": 7,
+      "stake": "Public review of Carhenge redevelopment subdivision and concept plans on Town-owned land."
     }
   ]
 }

@@ -338,7 +338,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4},
+
+  "county|2026-07-21|SMC Historical Commission Meeting":
+    {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1921","sv":4},
+
+  "county|2026-08-19|Board of County Commissioners Meeting":
+    {"sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -547,13 +553,19 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet."
+    "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-07-21|SMC Historical Commission Meeting":
+    "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
+
+  "county|2026-08-19|Board of County Commissioners Meeting":
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1696,8 +1708,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Colorado Sun",
     date: "July 19, 2026",
     firstSeen: "2026-07-19",
-    newsTopic: "land-use",
-    copy: "The mudslides stranded 21 people, blocked roads and flooded Main Street, a school and a historic theater in Telluride.",
+    newsTopic: "infrastructure",
+    copy: "The mudslides stranded 21 people, blocked roads and flooded Main Street, a school and a theater in Telluride.",
     claudeSummary: false,
     href: "https://coloradosun.com/2026/07/19/colorado-cleanup-western-slope-mudslide-telluride/",
     img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/07/749239217_1502046648336300_5312063395861243888_n.jpg?fit=640%2C481&amp;ssl=1"
@@ -4911,17 +4923,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
-    title: "HAHA Little Giggles",
-    link: "https://townofmountainvillage.com/explore/events/all-events/haha-little-giggles/",
-    description: "Sunday morning provides access to the entire HAHA Experience for families, children and teens ages 3-17, who must be accompanied by a Little Giggles ticketed",
-    pubDate: "2026-07-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49341/haha_sunday_photo_76.jpeg"
-  },
-  {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
@@ -5415,6 +5416,39 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Sunset Concert Series",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunset-concert-series/",
+    description: "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
+    pubDate: "2026-08-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/41147/scs_event_thumbnail.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-08-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-08-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   }
 ];
 

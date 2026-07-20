@@ -22,17 +22,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
   },
   {
-    "title": "HAHA Little Giggles",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/haha-little-giggles/",
-    "description": "Sunday morning provides access to the entire HAHA Experience for families, children and teens ages 3-17, who must be accompanied by a Little Giggles ticketed",
-    "pubDate": "2026-07-19T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49341/haha_sunday_photo_76.jpeg"
-  },
-  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
@@ -526,5 +515,38 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    "title": "Sunset Concert Series",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/sunset-concert-series/",
+    "description": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
+    "pubDate": "2026-08-19T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/41147/scs_event_thumbnail.png"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "pubDate": "2026-08-19T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Wine and Wickets",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    "description": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "pubDate": "2026-08-19T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   }
 ]
