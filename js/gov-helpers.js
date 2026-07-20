@@ -588,6 +588,14 @@ const MEETING_RECAPS = [
   {
     sourceKey: "telluride",
     sourceLabel: "Town of Telluride",
+    date: "2026-07-15",
+    title: "HARC — Jul 15, 2026",
+    recap: "HARC held its first public hearing on the Carhenge redevelopment project at 700 West Pacific, a large mixed-use affordable housing proposal encompassing buildings A–E on town-owned land. After extensive presentations, public comment, and deliberations focused on mass and scale, the board voted to continue all three applications (buildings A/B/C, D1/D2, and E1/E2/E3) to the August 19, 2026 meeting, each with multiple conditions centered on significantly reducing perceived mass and scale, stepping down facades toward the river and roads, breaking up continuous roof ridges, reducing low-slope roof areas, and adding a dedicated pedestrian and bicycle bridge. The board also continued a work session on the Shandoka Lot L redevelopment, offering preliminary design feedback with no formal action taken. One individual-property item was decided: HARC approved, with one condition regarding perimeter landscaping, a demolition and small-scale new construction application at 726 East Columbia. Separately, HARC approved an amendment to a previously issued certificate of appropriateness at 239 North Aspen to raise the contributing primary structure 11.75 inches to meet flood-plane compliance requirements; the vote was 4–1.",
+    videoUrl: "https://www.youtube.com/watch?v=mW_65sJwquY"
+  },
+  {
+    sourceKey: "telluride",
+    sourceLabel: "Town of Telluride",
     date: "2026-06-30",
     title: "Town Council — Jun 30, 2026",
     recap: "Council held two executive sessions (deputy municipal court judge personnel matter; town manager check-in). On action items, the Black Hills Energy gas franchise was renewed for 10 years (unanimous, second reading). A 50% tap-fee waiver and payment plan for the Telluride School District's employee housing project passed 5-1, with one dissent favoring a full waiver. Ordinances authorizing sale of two town-employee housing units (907 East Colorado and Longwill 16-B3) passed unanimously. An emergency Stage 2 fire-restrictions ordinance was adopted unanimously. Ronald Carlson was appointed deputy municipal court judge unanimously. A land use code amendment to implement Colorado Wildfire Resiliency Code passed unanimously on first reading. The town authorized purchase of Spruce House Unit H unanimously. Stephanie Hatcher was reappointed to CCASE unanimously. The Telluride Housing Authority appointed seven resident advisory committee members unanimously. Work sessions covered updates to the Telluride Energy Mitigation Program (TEMP) and presentation of the 2026 community survey, which showed declining confidence in local government and economic health alongside improving marks for public safety and mobility. Substantial public comment opposed converting the Town Park Oval green space to a hard-surface sports court.",
