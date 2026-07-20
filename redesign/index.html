@@ -7,9 +7,6 @@
 <meta name="description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
 <!-- STAGING: remove noindex at cutover -->
 <meta name="robots" content="noindex">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="lt.css">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
@@ -157,37 +154,24 @@
 <script src="site.js"></script>
 <script src="/js/lt-data.js"></script>
 <script>
-/* Top priorities — this week's public meetings, straight from the JSON
-   mirrors (no gov-data/gov-helpers globals; loud failure per standing rule). */
+/* Top priorities — this week's public meetings from the precomputed
+   data/week-meetings.json (ALL sources aggregated by the pipeline, incl.
+   CivicClerk-config meetings; loud failure per standing rule). */
 (function () {
   var list = document.getElementById('prior-list');
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
-  var SOURCES = {
-    'telluride-board-meetings': 'Town of Telluride',
-    'county-cached-data': 'San Miguel County',
-    'fire-cached-data': 'Fire District',
-    'mv-cached-data': 'Mountain Village',
-    'school-cached-data': 'School District',
-    'med-cached-data': 'Hospital District'
-  };
-  var names = Object.keys(SOURCES);
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
 
-  LTData.load(names).then(function (data) {
+  LTData.load(['week-meetings']).then(function (data) {
     var today = LTData.todayMT();
     var end = LTData.mtDateKey(new Date(LTData.parseDateKey(today).getTime() + 6 * 86400000));
     var rows = [];
-    names.forEach(function (n) {
-      (data[n] || []).forEach(function (m) {
-        if (!m || !m.title || !m.date) return;
-        var d = new Date(String(m.date) + ' 12:00:00');
-        if (isNaN(d)) return;
-        var key = LTData.mtDateKey(d);
-        if (key < today || key > end) return;
-        rows.push({ key: key, d: d, title: m.title, time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: SOURCES[n] });
-      });
+    (data['week-meetings'] || []).forEach(function (m) {
+      if (!m || !m.title || !m.date) return;
+      if (m.date < today || m.date > end) return;
+      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title,
+        time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: m.sourceLabel || m.source });
     });
-    rows.sort(function (a, b) { return a.key < b.key ? -1 : a.key > b.key ? 1 : 0; });
     rows = rows.slice(0, 6);
     document.getElementById('prior-week').textContent = 'This week · ' +
       LTData.fmtDate(today, { month: 'short', day: 'numeric' }) + '–' +

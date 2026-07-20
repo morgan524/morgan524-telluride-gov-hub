@@ -3106,7 +3106,7 @@ function readJsFile(filePath) {
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
-const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, writeMirror } = require('./lib/json-mirror.js');
+const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, writeMirror } = require('./lib/json-mirror.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -6828,6 +6828,15 @@ async function main() {
     try { writeMirror(name, extractJsArray(govDataSrc, name) || [], _dataDir); }
     catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
   }
+  for (const name of MIRROR_GOVDATA_OBJECTS) {  // hand-edited config objects in gov-data.js
+    try { writeMirror(name, extractJsObject(govDataSrc, name) || {}, _dataDir); }
+    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
+  }
+  // Precomputed week-meetings.json: all sources aggregated via the shared
+  // getters (incl. CivicClerk-config meetings the raw seeds miss), so the
+  // homepage/gov-hub read ONE file. Runs after the data files are written.
+  try { require('./build-week-meetings.js').run(REPO_ROOT); }
+  catch (e) { console.warn('  week-meetings build failed: ' + e.message); }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
   // retired (2026-05-18). Everything that used to live in gov-helpers.js + be

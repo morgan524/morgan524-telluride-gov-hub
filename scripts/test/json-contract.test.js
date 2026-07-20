@@ -77,11 +77,16 @@ const CONTRACTS = {
   'legal-notices.json': { required: ['title', 'entity', 'url'], minCount: 1 },
   'humane-society-animals.json': { required: ['name', 'species', 'profileUrl'], minCount: 0 },
   'blog-posts.json': { required: ['title', 'date'], minCount: 1 },
+  // — redesign (Phase 2) —
+  'week-meetings.json': { required: ['title', 'date', 'sourceLabel'], minCount: 1 },  // bot-aggregated, 14-day window
+  'housing-listings.json': { required: ['title', 'type', 'url'], minCount: 0 },       // seasonal/for-sale inventory varies
+  'deep-dive-pages.json': { required: ['label', 'href'], minCount: 1 },
 };
 
 // Object-map mirrors: values must be non-empty strings (or objects), keys non-empty.
 const OBJECT_FILES = ['manual-summaries.json', 'meeting-agenda-meta.json',
-  'ridgway-agenda-map.json', 'rico-agenda-map.json'];
+  'ridgway-agenda-map.json', 'rico-agenda-map.json',
+  'land-use-issues.json', 'gondola-data.json'];
 
 // ---- helpers ------------------------------------------------------------
 const BAD_LITERALS = new Set(['undefined', 'NaN']);

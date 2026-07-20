@@ -24,6 +24,7 @@ const http  = require('http');
 const fs    = require('fs');
 const path  = require('path');
 const { assertParses } = require('./lib/write-guard.js');
+const { writeMirror } = require('./lib/json-mirror.js');
 
 const REPO_ROOT   = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS  = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -332,6 +333,10 @@ async function main() {
   // Compile-check before writing so a bad serialize never ships a broken file.
   assertParses('gov-helpers.js', updated);
   fs.writeFileSync(GOV_HELPERS_JS, updated, 'utf8');
+  // Dual-write the JSON mirror in the same run (json-mirror CI asserts parity;
+  // the redesign's housing page reads data/housing-listings.json directly).
+  try { writeMirror('HOUSING_LISTINGS', merged, path.join(path.dirname(GOV_HELPERS_JS), '..', 'data')); }
+  catch (e) { console.warn('  HOUSING_LISTINGS JSON mirror failed: ' + e.message); }
 
   console.log('\n✅ Updated HOUSING_LISTINGS:');
   console.log('   ' + freshSmrha.length + ' SMRHA for-sale + ' + keepListings.length + ' other = ' + merged.length + ' total');

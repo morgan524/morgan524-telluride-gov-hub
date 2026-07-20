@@ -33,7 +33,12 @@ function loadDataArrays(repoRoot) {
     // Data-layer functions exposed for golden tests (all read back via `captured`;
     // absent names resolve to undefined so this is safe across versions):
     'getMeetingSummary', 'getCountyCachedMeetings', 'meetingBoardToken',
-    'getTellurideMeetings', 'resolveEventImage'];
+    'getTellurideMeetings', 'resolveEventImage',
+    // The full meeting-getter set (build-week-meetings.js aggregates them all):
+    'getMVMeetings', 'getSchoolMeetings', 'getFireMeetings', 'getMedMeetings',
+    'getNorwoodMeetings', 'getOphirMeetings', 'getAirportMeetings', 'getSmartMeetings',
+    'getRidgwayMeetings', 'getRicoMeetings', 'getOurayMeetings',
+    'getMeetingZoomLink', 'getMeetingPasscode'];
   const captureNames = [...constNames, ...helperNames];
 
   const epilogue =

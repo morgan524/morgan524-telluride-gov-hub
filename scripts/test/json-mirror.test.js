@@ -9,7 +9,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { extractJsArray, extractJsObject } = require('../lib/extract.js');
-const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, mirrorPath } = require('../lib/json-mirror.js');
+const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, mirrorPath } = require('../lib/json-mirror.js');
 
 const REPO = path.resolve(__dirname, '..', '..');
 const DATA = path.join(REPO, 'data');
@@ -49,6 +49,18 @@ for (const name of MIRROR_OBJECTS) {
 for (const name of MIRROR_GOVDATA_ARRAYS) {
   test(`data mirror for ${name} matches the JS literal in gov-DATA.js`, () => {
     const fromJs = extractJsArray(govDataSrc, name) || [];
+    const p = mirrorPath(name, DATA);
+    assert.ok(fs.existsSync(p),
+      `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);
+    const fromJson = JSON.parse(fs.readFileSync(p, 'utf8'));
+    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(fromJs)),
+      `${name}: data/${path.basename(p)} drifted from the gov-data.js literal — run: node scripts/mirror-json.js`);
+  });
+}
+
+for (const name of MIRROR_GOVDATA_OBJECTS) {
+  test(`data mirror for ${name} (object) matches the JS literal in gov-DATA.js`, () => {
+    const fromJs = extractJsObject(govDataSrc, name) || {};
     const p = mirrorPath(name, DATA);
     assert.ok(fs.existsSync(p),
       `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);

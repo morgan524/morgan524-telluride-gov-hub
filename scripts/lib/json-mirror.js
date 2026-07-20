@@ -38,6 +38,9 @@ const MIRROR_ARRAYS = [
   'TELLURIDE_BOARD_MEETINGS', 'LEGAL_NOTICES', 'HUMANE_SOCIETY_ANIMALS',
   // blog
   'BLOG_POSTS', 'LOCAL_NEWS_FEATURED',
+  // housing — written by housing-refresh.js (which also writes this mirror);
+  // content-refresh re-mirrors from the current JS each run as a self-heal.
+  'HOUSING_LISTINGS',
 ];
 
 // Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted
@@ -55,7 +58,16 @@ const MIRROR_GOVDATA_ARRAYS = [
   'COUNTY_CACHED_DATA', 'NORWOOD_CACHED_DATA', 'OPHIR_CACHED_DATA', 'SCHOOL_CACHED_DATA',
   'TELLURIDE_CACHED_DATA', 'MV_CACHED_DATA', 'MED_CACHED_DATA', 'SMART_CACHED_DATA',
   'FIRE_CACHED_DATA', 'RIDGWAY_CACHED_DATA', 'AIRPORT_CACHED_DATA',
+  // deep-dive page index (hand-edited config; redesign reads the JSON)
+  'DEEP_DIVE_PAGES',
 ];
+
+// HAND-EDITED config objects in gov-data.js, mirrored for the redesign's
+// JSON-first pages (deep-dive detail/index read land-use-issues.json). Unlike
+// the bot arrays these change only by human edit — after editing gov-data.js,
+// run `node scripts/mirror-json.js` and commit, or the json-mirror CI test
+// fails. content-refresh also re-mirrors them each run as a self-heal.
+const MIRROR_GOVDATA_OBJECTS = ['LAND_USE_ISSUES', 'GONDOLA_DATA'];
 
 // BLOG_POSTS -> blog-posts.json
 function mirrorFileName(varName) {
@@ -77,4 +89,4 @@ function writeMirror(varName, data, dataDir) {
   return p;
 }
 
-module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, mirrorFileName, mirrorPath, writeMirror };
+module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, mirrorFileName, mirrorPath, writeMirror };

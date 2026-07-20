@@ -5,6 +5,23 @@
    their own layout. Change the look once, it changes everywhere.
    ============================================================ */
 
+/* ---- self-hosted fonts (variable, latin subset) — no Google Fonts dependency ---- */
+@font-face {
+  font-family: 'Newsreader'; font-style: normal; font-weight: 400 700;
+  font-stretch: normal; font-display: swap;
+  src: url('fonts/newsreader-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Newsreader'; font-style: italic; font-weight: 400 500;
+  font-stretch: normal; font-display: swap;
+  src: url('fonts/newsreader-italic-var.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter'; font-style: normal; font-weight: 400 900;
+  font-display: swap;
+  src: url('fonts/inter-var.woff2') format('woff2');
+}
+
 :root {
   /* Color tokens (handoff §Design Tokens) */
   --forest: #24483f;          /* headings, primary buttons, footer, nav */
