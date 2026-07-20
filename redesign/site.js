@@ -18,8 +18,8 @@
   // ---- Information architecture (approved 2026-07-20) ----
   var NAV = [
     { key: 'learn', label: 'Learn', items: [
-      { href: 'local-news.html',   label: 'Local News',    built: false },
-      { href: 'deep-dives.html',   label: 'Deep Dives',    built: false },
+      { href: 'local-news.html',   label: 'Local News',    built: true },
+      { href: 'deep-dives.html',   label: 'Deep Dives',    built: true },
       { href: '/zoning-map/',      label: 'Zoning Map',    built: true  },   // existing app (kept)
       { href: '/projects-map/',    label: 'Projects Map',  built: true  }    // existing app (kept)
     ]},
@@ -27,15 +27,15 @@
       { href: 'events.html',       label: 'Events',        built: false },
       { href: 'local-orgs.html',   label: 'Local Orgs',    built: false },
       { href: 'hub-bub.html',      label: 'Hub-Bub',       built: false },
-      { href: 'housing.html',      label: 'Housing',       built: false }
+      { href: 'housing.html',      label: 'Housing',       built: true }
     ]},
     { key: 'act', label: 'Act', items: [
       { href: 'gov-hub.html',      label: 'Gov-Hub',       built: false },
       { href: 'vote-tracker.html', label: 'Vote Tracker',  built: false },
-      { href: 'legal-notices.html',label: 'Legal Notices', built: false }
+      { href: 'legal-notices.html',label: 'Legal Notices', built: true }
     ]}
   ];
-  var ABOUT = { href: 'about.html', label: 'About', built: false };
+  var ABOUT = { href: 'about.html', label: 'About', built: true };
   var LOGIN_HREF = '/hub-bub.html';   // Firebase auth entry (root-absolute until Hub-Bub rebuilds)
 
   // Pages not in the nav inherit a parent's active state.
