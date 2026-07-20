@@ -129,7 +129,22 @@ rebuild rides on — Phase 1 dual-write LIVE, Phase 2 first reader flipped),
 
 - Fetch `data/*.json` — never the JS globals. No `typeof X !== 'undefined'`
   silent fallbacks: failures render a visible error state + `console.error`.
-- Shared nav/footer/date/esc helpers from the shared module — no per-page copies.
+- **Nav + footer live in shared files, never in the page** (Morgan, 2026-07-20).
+  Pages contain only `<div id="lt-header"></div>` / `<div id="lt-footer"></div>`
+  placeholders; the markup is defined once in the shared `site.js` (the
+  redesign prototype's pattern) so an edit shows on every page. Rules that keep
+  this safe:
+  - Load `site.js` with a **plain `<script>` tag placed after both placeholder
+    divs** (end of `<body>`). Never inject it dynamically without a
+    `readyState` guard — the DCL-race footgun.
+  - A nav/footer change ships to users only after the **`sw.js` `CACHE_NAME`
+    bump** (the `/js/` path is stale-while-revalidate) — same rule as any
+    hand-edited `/js/` file. Revisit if we retire the SW during the rebuild.
+  - Give the tag a `?v=` cache-buster like other shared JS.
+  - The daily nav review check (maintenance.js `reviewNav`) should assert the
+    placeholders + site.js include instead of per-page link lists once pages
+    flip.
+- Shared date/esc helpers from `js/lt-data.js` — no per-page copies.
 - Heuristics live in the pipeline (testable, run once) unless they're pure
   render concerns.
 - Each shipped page gets added to the daily deterministic review + a
