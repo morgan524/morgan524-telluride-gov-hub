@@ -260,7 +260,7 @@ $("linkbtn").onclick=()=>{
   let html=doc.documentElement.outerHTML;
   // Style only freshly-created bare anchors (every pre-existing digest link
   // already carries an inline style=, so this leaves them untouched).
-  html=html.replace(/<a (?![^>]*\bstyle=)([^>]*?href=)/gi,'<a style="color:#2f7a5f;text-decoration:underline;" $1');
+  html=html.replace(/<a (?![^>]*\bstyle=)([^>]*?href=)/gi,'<a style="color:#a0531f;text-decoration:underline;" $1');
   html=Array.from(html).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
   const dt=state[cur].html.match(/^\s*<!doctype[^>]*>/i);
   state[cur].html=(dt?dt[0]+"\n":"")+html;
@@ -320,7 +320,7 @@ function currentLede(html){
 function encodeLede(s){
   s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   s=Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
-  s=s.replace(/\[([^\]]+)\]\(\s*([^)\s]+)\s*\)/g,(m,txt,url)=> /^https?:\/\//i.test(url) ? '<a href="'+url+'" style="color:#2f7a5f;text-decoration:underline;">'+txt+'</a>' : m);
+  s=s.replace(/\[([^\]]+)\]\(\s*([^)\s]+)\s*\)/g,(m,txt,url)=> /^https?:\/\//i.test(url) ? '<a href="'+url+'" style="color:#a0531f;text-decoration:underline;">'+txt+'</a>' : m);
   return s.replace(/\*\*([\s\S]+?)\*\*/g,"<b>$1</b>");
 }
 function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro paragraph to update.",true); return; }
