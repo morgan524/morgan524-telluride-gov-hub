@@ -26,6 +26,10 @@
   .main-wrap { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; display: grid; grid-template-columns: 1.7fr 1fr; gap: 44px; align-items: start; }
   .river-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
   .river-item .img-frame { aspect-ratio: 4/3; border-radius: 8px; }
+  /* No-photo gov announcements show the issuing entity's logo instead */
+  .img-frame.logo-fill { display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--hairline); }
+  .img-frame.logo-fill img { object-fit: contain; width: 72%; height: 72%; }
+  .story:hover .img-frame.logo-fill img { transform: none; }
   .river-item h3 { font: 600 24px/1.15 var(--serif); margin: 5px 0 6px; }
   .river-item h3 a { color: var(--forest); }
   .river-item .dek { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 6px; }
@@ -119,9 +123,23 @@
     var t = TOPIC_LABELS[s.topic] || (s.isLetter ? 'Letter' : 'News');
     return '<span class="tag' + (s.isLetter ? ' rust-tint' : '') + '">' + LTData.esc(t) + '</span>';
   }
+  // Government announcements arrive without photos — show the issuing
+  // entity's logo instead (source name → LTData.ENTITY_LOGOS key).
+  var SOURCE_LOGO_KEY = {
+    'San Miguel County': 'county', 'Town of Telluride': 'telluride',
+    'Town of Ridgway': 'ridgway', 'Town of Norwood': 'norwood',
+    'Mountain Village': 'mv', 'Town of Ophir': 'ophir', 'Town of Rico': 'rico',
+    'Telluride Times': 'ttimes'
+  };
   function imgFrame(s, linkWrap) {
-    if (!s.img) return '';
-    var img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"></div>';
+    var img;
+    if (s.img) {
+      img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"></div>';
+    } else {
+      var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
+      if (!logo) return '';
+      img = '<div class="img-frame logo-fill"><img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
+    }
     return linkWrap ? '<a href="' + LTData.esc(LTData.safeUrl(s.href)) + '" target="_blank" rel="noopener">' + img + '</a>' : img;
   }
   function storyLink(s, tagName, cls) {
