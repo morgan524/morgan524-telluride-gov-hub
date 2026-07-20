@@ -538,7 +538,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -553,7 +553,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -565,7 +565,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -3241,15 +3241,6 @@ const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
-  {
-    title: "The Courtyard at 610 Presents: Heather & Douglas",
-    href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas/",
-    date: "2026-07-19 19:30:00",
-    endDate: "2026-07-19 21:00:00",
-    location: "The Courtyard at 610, Ridgway",
-    copy: "@ Gates: 7:00 || Show: 7:30pm || $15 Advance / $20 at gates  Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || This show is generously supported by Dave and Julie Duff Want Tickets to a Sold Out Courtyard Show? For Courtyard shows we have a maximum seated capacity of 50.  If a show is sold out, we may be able to sell a few more tickets at Doors.  These few tickets are standing room / “agility seating” room.  The ‘Agility seating’ means it takes a little leg swing over a handrail to get to or the option is to stand.  Please come to Doors if this sounds like a good option for you, and we may be able to sell a few tickets if space is available. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/Heather-Douglas-banner-july-19.png"
-  },
   {
     title: "The Courtyard at 610 Presents: Hiroya Tsukamoto",
     href: "https://sherbino.org/event/hiroya-tsukamoto-courtyard-610-july-25-2026/",
