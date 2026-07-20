@@ -1,6 +1,6 @@
 name: Digest Scheduled Send
 
-# Sends an APPROVED digest at 6:00 AM America/Denver:
+# Sends an APPROVED digest at 9:00 AM America/Denver:
 #   - Monday   → the "Week Ahead" (weekly) digest
 #   - Thursday → the "Weekend Ahead" (weekend) digest (events only)
 #
@@ -14,10 +14,10 @@ name: Digest Scheduled Send
 # explicit human override for an off-cycle send.
 on:
   schedule:
-    - cron: '0 12 * * 1'   # Mon 12:00 UTC = 06:00 MDT (summer)
-    - cron: '0 13 * * 1'   # Mon 13:00 UTC = 06:00 MST (winter)
-    - cron: '0 12 * * 4'   # Thu 12:00 UTC = 06:00 MDT (summer)
-    - cron: '0 13 * * 4'   # Thu 13:00 UTC = 06:00 MST (winter)
+    - cron: '0 15 * * 1'   # Mon 15:00 UTC = 09:00 MDT (summer)
+    - cron: '0 16 * * 1'   # Mon 16:00 UTC = 09:00 MST (winter)
+    - cron: '0 15 * * 4'   # Thu 15:00 UTC = 09:00 MDT (summer)
+    - cron: '0 16 * * 4'   # Thu 16:00 UTC = 09:00 MST (winter)
   workflow_dispatch:
     inputs:
       digest:
@@ -53,17 +53,17 @@ jobs:
             echo "override=true" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          # Scheduled: only proceed at 06:00 America/Denver (so exactly one of the
+          # Scheduled: only proceed at 09:00 America/Denver (so exactly one of the
           # summer/winter cron pair fires), and map the weekday to a digest.
           HOUR="$(TZ='America/Denver' date +%H)"
           DOW="$(TZ='America/Denver' date +%u)"   # 1=Mon … 7=Sun
-          if [ "$HOUR" != "06" ]; then echo "Denver hour=$HOUR (not 06) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "$HOUR" != "09" ]; then echo "Denver hour=$HOUR (not 09) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           case "$DOW" in
             1) DIGEST=weekly ;;
             4) DIGEST=weekend ;;
             *) echo "Denver weekday=$DOW (not Mon/Thu) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
-          echo "scheduled send — digest=$DIGEST at 06:00 MT"
+          echo "scheduled send — digest=$DIGEST at 09:00 MT"
           echo "go=true" >> "$GITHUB_OUTPUT"
           echo "digest=$DIGEST" >> "$GITHUB_OUTPUT"
           echo "override=false" >> "$GITHUB_OUTPUT"
@@ -111,7 +111,7 @@ jobs:
           # A browser User-Agent is REQUIRED: Cloudflare's bot protection on the
           # Worker rejects the default "Python-urllib/x.y" UA with HTTP 403
           # error 1010, so every prior scheduled send silently failed at this
-          # step (the Monday 6 AM auto-send never actually went out). curl-based
+          # step (the Monday morning auto-send never actually went out). curl-based
           # sends worked only because they carried a browser UA.
           req = urllib.request.Request(
               os.environ["WORKER_BASE"] + "/send", data=payload,

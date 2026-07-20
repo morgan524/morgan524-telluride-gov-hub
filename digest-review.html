@@ -88,7 +88,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, or write a link as <b>[text](https://…)</b>); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 6:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 6:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, write a link as <b>[text](https://…)</b>, or type <b>&lt;p&gt;</b> — or leave a blank line — to start a new paragraph); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 9:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 9:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
@@ -111,8 +111,8 @@ const $ = (id) => document.getElementById(id);
 let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
-// When each approved digest auto-sends (the scheduled job fires at 6:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 6:00 AM", weekend: "Thursday 6:00 AM" };
+// When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
+const SEND_WHEN = { weekly: "Monday 9:00 AM", weekend: "Thursday 9:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
@@ -299,32 +299,43 @@ $("aisend").onclick=()=>aiSend($("aiin").value);
 $("aiin").addEventListener("keydown",e=>{ if(e.key==="Enter") aiSend($("aiin").value); });
 
 // ---- intro (lede) edit ----
-// The intro is the one <p> with this exact style in the rendered email.
-const LEDE_RE=/(<p style="margin:11px 0 0;font-size:15\.5px;line-height:1\.65;color:#2c3b35;">)([\s\S]*?)(<\/p>)/;
+// The intro is one or more consecutive <p> paragraphs with this exact style.
+// In the edit box: **double asterisks** = bold, [text](https://…) = link, and a
+// literal <p> token (or a blank line) starts a NEW paragraph. All round-trip:
+// bold<->**, <a href><->[text](url), and each rendered paragraph comes back as a
+// blank-line-separated block in the textarea.
+const LEDE_STYLE = 'margin:11px 0 0;font-size:15.5px;line-height:1.65;color:#2c3b35;';
+const LEDE_OPEN = '<p style="'+LEDE_STYLE+'">';
+const LEDE_RE = /<p style="margin:11px 0 0;font-size:15\.5px;line-height:1\.65;color:#2c3b35;">[\s\S]*?<\/p>(?:\s*<p style="margin:11px 0 0;font-size:15\.5px;line-height:1\.65;color:#2c3b35;">[\s\S]*?<\/p>)*/;
 function decodeEntities(s){ const t=document.createElement("textarea"); t.innerHTML=s; return t.value; }
-// Bold in the edit box is written as **double asterisks** — real <b>/<strong>
-// tags in the email map to ** on the way in and back to <b> on the way out,
-// so a bold applied in the preview survives an intro edit (and you can type
-// **word** to bold in the intro directly).
-// Links round-trip as [text](url) markdown, bold as **double asterisks** — a real
-// <a href> in the email maps to [text](url) on the way in and back on the way out
-// (bold inside link text is preserved), so a link applied in the preview survives
-// an intro edit, and you can type [text](https://…) in the intro directly.
-function currentLede(html){
-  const m=(html||"").match(LEDE_RE); if(!m) return "";
-  let s=m[2].replace(/<a\b[^>]*?href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi,(mm,url,txt)=>"["+txt.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")+"]("+url.replace(/&amp;/gi,"&")+")");
-  return decodeEntities(s.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**"));
+// One rendered lede <p>'s inner HTML -> plain edit-box text (links -> [text](url),
+// bold -> **…**, entities decoded).
+function ledeInnerToText(inner){
+  const s=inner.replace(/<a\b[^>]*?href="([^"]*)"[^>]*>([\s\S]*?)<\/a>/gi,(mm,url,txt)=>"["+txt.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")+"]("+url.replace(/&amp;/gi,"&")+")");
+  return decodeEntities(s.replace(/<\/?(?:b|strong)\b[^>]*>/gi,"**")).trim();
 }
-// Match the email's pure-ASCII encoding: escape <,>,& then numeric-entity the rest,
-// then convert [text](https://…) links (http/https only) and **bold**.
-function encodeLede(s){
+function currentLede(html){
+  const block=(html||"").match(LEDE_RE); if(!block) return "";
+  const paras=block[0].match(/<p style="[^"]*">[\s\S]*?<\/p>/g)||[];
+  return paras.map(p=>ledeInnerToText(p.replace(/^<p[^>]*>/,"").replace(/<\/p>\s*$/,""))).join("\n\n");
+}
+// One edit-box paragraph -> email-safe inner HTML: escape <,>,& then numeric-entity
+// the rest, then convert [text](https://…) links (http/https only) and **bold**.
+function encodeLedeInner(s){
   s=String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   s=Array.from(s).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
   s=s.replace(/\[([^\]]+)\]\(\s*([^)\s]+)\s*\)/g,(m,txt,url)=> /^https?:\/\//i.test(url) ? '<a href="'+url+'" style="color:#a0531f;text-decoration:underline;">'+txt+'</a>' : m);
   return s.replace(/\*\*([\s\S]+?)\*\*/g,"<b>$1</b>");
 }
-function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro paragraph to update.",true); return; }
-  const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,(m,a,b,c)=>a+encodeLede(txt)+c); renderPreview(); showStatus("Intro updated in the preview."); }
+// Split the edit box into paragraphs on a literal <p> token OR a blank line, then
+// wrap each in the lede <p> style. Typing <p> anywhere starts a new paragraph.
+function encodeLede(s){
+  const parts=String(s).split(/\s*<p>\s*|\n[ \t]*\n/i).map(t=>t.trim()).filter(Boolean);
+  if(!parts.length) return LEDE_OPEN+"</p>";
+  return parts.map(t=>LEDE_OPEN+encodeLedeInner(t)+"</p>").join("");
+}
+function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro to update.",true); return; }
+  const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,()=>encodeLede(txt)); renderPreview(); showStatus("Intro updated in the preview."); }
 $("applyLede").onclick=applyLede;
 $("lede").addEventListener("blur",applyLede);
 
