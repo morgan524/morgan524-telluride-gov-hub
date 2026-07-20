@@ -17,7 +17,6 @@
   .feat h2 a { color: var(--forest); }
   .feat:hover h2 a { color: var(--rust); }
   .feat .dek { font: 400 16.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 12px; }
-  .feat .inside { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 12px; }
   .whats { max-width: var(--maxw); margin: 40px auto 0; padding: 0 var(--pad-x); }
   .whats-card { border: 1px solid var(--hairline-strong); border-radius: 12px; display: grid; grid-template-columns: repeat(3, 1fr); }
   .whats-card > div { padding: 22px 24px; border-left: 1px solid var(--hairline); }
@@ -110,10 +109,6 @@
         '<div><span class="tag rust-tint">Featured dive</span> <span class="tag">' + LTData.esc(feat.cat) + '</span>' +
         '<h2><a href="' + href(feat) + '">' + LTData.esc(fi.label) + '</a></h2>' +
         '<p class="dek">' + LTData.esc(clip(fi.intro, 300)) + '</p>' +
-        '<div class="inside">' +
-        '<span class="chip">&#128336; Full timeline</span>' +
-        '<span class="chip">&#128196; ' + (fi.docs ? fi.docs.length : 0) + ' source documents</span>' +
-        '<span class="chip">&#9878; Key players &amp; votes</span></div>' +
         '<a class="btn btn-forest" href="' + href(feat) + '">Read the deep dive &rarr;</a></div>' +
         (fi.heroImage ? '<a href="' + href(feat) + '"><div class="img-frame"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
         '</article>';
