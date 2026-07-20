@@ -14,26 +14,28 @@
 //
 // Record shape (contract-checked in test/json-contract.test.js):
 //   { source, sourceLabel, title, date: 'YYYY-MM-DD', time, location,
-//     agendaUrl, link, hasAgenda, summary, zoomLink, zoomPasscode, commentEmail }
+//     agendaUrl, packetUrl, link, hasAgenda, summary, zoomLink, zoomPasscode,
+//     livestream, commentEmail }
 
 const path = require('path');
 const { loadDataArrays } = require('./lib/load-data.js');
 const { writeMirror } = require('./lib/json-mirror.js');
 
+// Labels match the live Gov-Hub "Public Entities" sidebar.
 const GETTERS = [
-  ['telluride', 'Town of Telluride',   'getTellurideMeetings'],
-  ['county',    'San Miguel County',   'getCountyCachedMeetings'],
-  ['mv',        'Mountain Village',    'getMVMeetings'],
-  ['school',    'School District',     'getSchoolMeetings'],
-  ['fire',      'Fire District',       'getFireMeetings'],
-  ['med',       'Hospital District',   'getMedMeetings'],
-  ['norwood',   'Town of Norwood',     'getNorwoodMeetings'],
-  ['ophir',     'Town of Ophir',       'getOphirMeetings'],
-  ['ridgway',   'Town of Ridgway',     'getRidgwayMeetings'],
-  ['rico',      'Town of Rico',        'getRicoMeetings'],
-  ['ouray',     'Ouray County',        'getOurayMeetings'],
-  ['smart',     'SMART',               'getSmartMeetings'],
-  ['airport',   'Airport Authority',   'getAirportMeetings'],
+  ['telluride', 'Town of Telluride',                'getTellurideMeetings'],
+  ['county',    'San Miguel County',                'getCountyCachedMeetings'],
+  ['mv',        'Mountain Village',                 'getMVMeetings'],
+  ['school',    'School District R-1',              'getSchoolMeetings'],
+  ['fire',      'Fire Protection',                  'getFireMeetings'],
+  ['med',       'Telluride Regional Medical Center','getMedMeetings'],
+  ['norwood',   'Town of Norwood',                  'getNorwoodMeetings'],
+  ['ophir',     'Town of Ophir',                    'getOphirMeetings'],
+  ['ridgway',   'Town of Ridgway',                  'getRidgwayMeetings'],
+  ['rico',      'Town of Rico',                     'getRicoMeetings'],
+  ['ouray',     'Ouray County',                     'getOurayMeetings'],
+  ['smart',     'SMART Transit',                    'getSmartMeetings'],
+  ['airport',   'Telluride Regional Airport',       'getAirportMeetings'],
 ];
 const WINDOW_DAYS = 14;
 
@@ -65,6 +67,9 @@ function commentEmailFor(source, title) {
 function buildWeekMeetings(repoRoot) {
   const { captured } = loadDataArrays(repoRoot);
   const getSummary = captured.getMeetingSummary;
+  // Per-entity livestream URLs (gov-data ENTITY_REMOTE — e.g. the towns' and
+  // county's YouTube stream pages, MV's AV Capture portal).
+  const remote = captured.ENTITY_REMOTE || {};
   const pad = (n) => String(n).padStart(2, '0');
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const end = new Date(today.getTime() + WINDOW_DAYS * 86400000);
@@ -93,17 +98,19 @@ function buildWeekMeetings(repoRoot) {
       try { zoomPasscode = (captured.getMeetingPasscode && captured.getMeetingPasscode(m)) || ''; } catch (e) { /* none */ }
       out.push({
         source: source,
-        sourceLabel: m.sourceLabel || sourceLabel,
+        sourceLabel: sourceLabel,   // the canonical entity label (GETTERS), not per-record variants — filters group on it
         title: String(m.title || '').trim(),
         date: date,
         time: String(m.time || '').trim(),
         location: String(m.location || '').trim(),
         agendaUrl: m.agendaLink || '',
+        packetUrl: m.packetUrl || '',
         link: m.link || '',
         hasAgenda: !!(m.agendaLink || m.hasAgenda),
         summary: String(summary || '').trim(),
         zoomLink: String(zoomLink || ''),
         zoomPasscode: String(zoomPasscode || ''),
+        livestream: (remote[source] && remote[source].livestream) || '',
         commentEmail: commentEmailFor(source, m.title),
       });
     }

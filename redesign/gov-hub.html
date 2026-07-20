@@ -10,23 +10,38 @@
 <link rel="stylesheet" href="lt.css">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
-  .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; }
+  /* Public Entities filter — logo + name + count, All Meetings first */
+  .ents { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 10px; }
+  .ent { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: var(--card); border: 1px solid var(--hairline); border-radius: 10px; cursor: pointer; transition: background .12s, border-color .12s; }
+  .ent:hover { background: var(--sage2); }
+  .ent.active { background: var(--sage); border-color: var(--forest); }
+  .ent .e-logo { width: 34px; height: 34px; border-radius: 6px; background: #fff; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; padding: 2px; flex-shrink: 0; }
+  .ent .e-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .ent .e-name { flex: 1; font: 600 13.5px/1.25 var(--sans); color: var(--forest); }
+  .ent .e-count { font: 700 12px/1 var(--sans); color: var(--forest); background: rgba(36,72,63,.1); border-radius: 999px; padding: 5px 9px; }
+  .ent.active .e-count { background: var(--forest); color: #fff; }
   .meet-wrap { max-width: 900px; margin: 0 auto; padding: 10px var(--pad-x) 20px; }
   .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
   .m-card { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
   .m-date { text-align: center; }
   .m-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
   .m-date .d { font: 600 34px/1.05 var(--serif); color: var(--forest); }
+  .m-date .e-logo { width: 44px; height: 44px; margin: 10px auto 0; border-radius: 8px; background: #fff; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; padding: 3px; }
+  .m-date .e-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .m-card .src { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
   .m-card h3 { font: 600 23px/1.2 var(--serif); margin: 7px 0 6px; }
   .m-card .summ { font: 400 15.5px/1.62 var(--sans); color: var(--body2); margin: 0 0 10px; }
-  .m-card .acts { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .m-card .acts { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
   .m-card .acts .cbtn { display: inline-block; background: var(--forest); color: #fff; font: 600 12px/1 var(--sans); padding: 7px 14px; border-radius: 5px; }
   .m-card .acts .cbtn:hover { background: #1c3a33; color: #fff; }
-  .m-card .acts a.txt { font: 600 13px/1 var(--sans); color: var(--rust); text-decoration: underline; }
-  .zoomline { font: 500 12.5px/1.6 var(--sans); color: var(--muted); margin-top: 6px; }
-  .zoomline a { text-decoration: underline; }
-  @media (max-width: 900px) { .m-card { grid-template-columns: 50px 1fr; } }
+  .m-card .acts .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
+  .m-card .acts .abtn:hover { background: var(--sage2); color: var(--forest); }
+  .m-card .acts .abtn.zoom { border-color: #2d64a8; color: #2d64a8; }
+  .m-card .acts .abtn.zoom:hover { background: #eef3fa; }
+  .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
+  .m-card .acts .abtn.live:hover { background: #f9efee; }
+  .zoomline { font: 500 12.5px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
+  @media (max-width: 900px) { .m-card { grid-template-columns: 50px 1fr; } .m-date .e-logo { width: 38px; height: 38px; } }
 </style>
 </head>
 <body>
@@ -42,7 +57,7 @@
   </div>
 </header>
 
-<div class="chips" id="src-chips"><span class="chip active" data-src="">All bodies</span></div>
+<div class="ents" id="ent-filter" aria-label="Filter by public entity"></div>
 
 <main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>
 
@@ -56,6 +71,27 @@
   var esc = LTData.esc, safe = LTData.safeUrl;
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   var meetings = [], srcFilter = '';
+
+  // Public Entities — always ALL listed (even zero-count), logos from /logo/.
+  // Keys match week-meetings.json `source`; labels match its sourceLabel.
+  var LOGO = 'https://livabletelluride.org/logo/';
+  var ENTITIES = [
+    { key: 'fire',      label: 'Fire Protection',                  logo: LOGO + 'Telluride%20Fire.png' },
+    { key: 'mv',        label: 'Mountain Village',                 logo: LOGO + 'Mountain%20village%20Town.jpg' },
+    { key: 'ouray',     label: 'Ouray County',                     logo: LOGO + 'Ouray%20Town.png' },
+    { key: 'county',    label: 'San Miguel County',                logo: LOGO + 'San%20Miguel%20County.png' },
+    { key: 'school',    label: 'School District R-1',              logo: LOGO + 'School%20District%20Telluride.png' },
+    { key: 'smart',     label: 'SMART Transit',                    logo: LOGO + 'SMART.png' },
+    { key: 'airport',   label: 'Telluride Regional Airport',       logo: LOGO + 'Airport.png' },
+    { key: 'med',       label: 'Telluride Regional Medical Center',logo: LOGO + 'Telluride%20Hospital%20Dist.jpeg' },
+    { key: 'norwood',   label: 'Town of Norwood',                  logo: LOGO + 'Norwood%20Town.jpeg' },
+    { key: 'ophir',     label: 'Town of Ophir',                    logo: LOGO + 'Ophir.jpeg' },
+    { key: 'rico',      label: 'Town of Rico',                     logo: LOGO + 'Rico%20Town.png' },
+    { key: 'ridgway',   label: 'Town of Ridgway',                  logo: LOGO + 'Ridgway%20Town.png' },
+    { key: 'telluride', label: 'Town of Telluride',                logo: LOGO + 'Telluride%20Town.png' }
+  ];
+  var LOGO_BY_KEY = {};
+  ENTITIES.forEach(function (e) { LOGO_BY_KEY[e.key] = e.logo; });
 
   /* Bold proper-noun runs + standalone street addresses in summaries — the
      same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
@@ -92,8 +128,12 @@
     return 'mailto:' + encodeURIComponent(m.commentEmail) + '?subject=' + encodeURIComponent(subject);
   }
   function render() {
-    var rows = meetings.filter(function (m) { return !srcFilter || m.sourceLabel === srcFilter; });
-    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings match this filter.</p>'; return; }
+    var rows = meetings.filter(function (m) { return !srcFilter || m.source === srcFilter; });
+    if (!rows.length) {
+      var name = (ENTITIES.filter(function (e) { return e.key === srcFilter; })[0] || {}).label || 'this entity';
+      list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings scheduled for ' + esc(name) + ' in the next two weeks.</p>';
+      return;
+    }
     var html = '', lastDate = '';
     rows.forEach(function (m) {
       if (m.date !== lastDate) {
@@ -101,39 +141,59 @@
         lastDate = m.date;
       }
       var d = LTData.parseDateKey(m.date);
+      var logo = LOGO_BY_KEY[m.source]
+        ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[m.source]) + '" alt="' + esc(m.sourceLabel) + '" loading="lazy"></div>' : '';
+      // Action row: Comment · agenda · packet · Zoom · Livestream — each shown
+      // whenever its data exists (the standing always-visible rule).
       var acts = '';
       if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">Comment</a>';
-      if (m.agendaUrl) acts += '<a class="txt" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View agenda &rarr;</a>';
-      else if (m.link) acts += '<a class="txt" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info &rarr;</a>';
-      var zoom = '';
-      if (m.zoomLink) {
-        zoom = '<div class="zoomline"><strong>Zoom:</strong> <a href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">Join remotely</a>' +
-          (m.zoomPasscode ? ' &middot; Passcode: ' + esc(m.zoomPasscode) : '') + '</div>';
-      }
+      if (m.agendaUrl) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">&#128196; Agenda</a>';
+      if (m.packetUrl) acts += '<a class="abtn" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">&#128230; Agenda packet</a>';
+      if (m.zoomLink) acts += '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
+      if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
+      if (!m.agendaUrl && m.link) acts += '<a class="abtn" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+      var zoomline = m.zoomPasscode
+        ? '<div class="zoomline"><strong>Zoom passcode:</strong> ' + esc(m.zoomPasscode) + '</div>' : '';
       html += '<article class="m-card">' +
-        '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div></div>' +
+        '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
         '<h3>' + esc(m.title) + '</h3>' +
         (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
-        (m.location ? '<div class="meta" style="margin-bottom:8px">&#128205; ' + esc(m.location) + '</div>' : '') +
-        zoom + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
+        (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
+        zoomline + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
     });
     list.innerHTML = html;
   }
 
+  function renderEntityFilter() {
+    var counts = {};
+    meetings.forEach(function (m) { counts[m.source] = (counts[m.source] || 0) + 1; });
+    var bar = document.getElementById('ent-filter');
+    var all = { key: '', label: 'All Meetings', logo: 'uploads/lt-logo.png', count: meetings.length };
+    var items = [all].concat(ENTITIES.map(function (e) {
+      return { key: e.key, label: e.label, logo: e.logo, count: counts[e.key] || 0 };
+    }));
+    bar.innerHTML = items.map(function (e) {
+      return '<div class="ent' + (e.key === srcFilter ? ' active' : '') + '" data-key="' + esc(e.key) + '" role="button" tabindex="0">' +
+        '<div class="e-logo"><img src="' + esc(e.logo) + '" alt="" loading="lazy"></div>' +
+        '<div class="e-name">' + esc(e.label) + '</div>' +
+        '<div class="e-count">' + e.count + '</div></div>';
+    }).join('');
+    function pick(el) {
+      srcFilter = el.dataset.key || '';
+      bar.querySelectorAll('.ent').forEach(function (x) { x.classList.toggle('active', x === el); });
+      render();
+    }
+    bar.addEventListener('click', function (e) { var el = e.target.closest('.ent'); if (el) pick(el); });
+    bar.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target.closest('.ent'); if (el) { e.preventDefault(); pick(el); }
+    });
+  }
+
   LTData.load(['week-meetings']).then(function (data) {
     meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
-    var chips = document.getElementById('src-chips'); var seen = {};
-    meetings.forEach(function (m) { seen[m.sourceLabel] = 1; });
-    Object.keys(seen).sort().forEach(function (s) {
-      var c = document.createElement('span'); c.className = 'chip'; c.dataset.src = s; c.textContent = s;
-      chips.appendChild(c);
-    });
-    chips.addEventListener('click', function (e) {
-      var c = e.target.closest('.chip'); if (!c) return;
-      chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
-      c.classList.add('active'); srcFilter = c.dataset.src || ''; render();
-    });
+    renderEntityFilter();
     render();
   }).catch(function (err) { LTData.showError(list, err); });
 })();
