@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 03:40:04 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 09:29:22 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Mon, Jul 20] Telluride Baseball Festival</title>
@@ -33,6 +33,19 @@ The Gondola Advisory Committee meets virtually to receive the project team's eco
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Mon, Jul 20] Savvy Seniors - Open Tech</title>
+      <link>https://telluridelibrary.libcal.com/event/17029819?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/savvy%20seniors%20open%20tech%7C2026-07-20</guid>
+      <pubDate>Mon, 20 Jul 2026 19:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_10_15_00_37.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #6 - large
+
+1:30 PM – 2:30 PM · Join us every Monday for "Savvy Seniors," an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_10_15_00_37.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Meeting] Board of Directors Meeting — 2026-07-21</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/fire%7C2026-07-21%7CBoard%20of%20Directors%20Meeting</guid>
@@ -52,7 +65,7 @@ The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.
 
 A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado Wildfire Resiliency Code (CWRC) — amendments to the Land Use Code covering historic/architectural review and landscaping/tree standards that bring the town in line with state wildfire resiliency requirements. A public hearing follows on a temporary patio tent structure at 221 S. Oak Street (R/C zone, Gondola Corridor Overlay). The long-running Stender Residence HARC appeal — continued repeatedly since December 2025 — is continued again. Afternoon work sessions cover the Telluride Tourism Board contract, updates to the Telluride Energy Mitigation Program (TEMP) offset calculations and fees, and a Colorado Ave East End speed study. Manager's reports include updates on Carhenge, The Oval, Canyonlands/Tower House, and parking. The Housing Authority and Block 23 Housing Corporation hold sequential meetings at the back end of the day.
 
-⚡ Why it matters: Second reading vote on wildfire code changing landscaping and historic-review rules.]]></description>
+⚡ Why it matters: Second reading vote on wildfire code changes to Land Use Code landscaping and historic review.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -65,7 +78,7 @@ A newly seated Council opens with a swearing-in and executive session on San Mig
 
 The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.
 
-⚡ Why it matters: New residency policy for dependents in split-custody households could affect deed restrictions.]]></description>
+⚡ Why it matters: New primary-residency policy for dependents of split-custody households could affect deed-restricted eligibility.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -155,19 +168,6 @@ A free outdoor reggae concert featuring Selasee, part of the Oak Street Park Sum
       <category>Sheridan Opera House</category>
     </item>
     <item>
-      <title>[Thu, Jul 23] Chill With Chamber Music</title>
-      <link>https://www.telluride.com/event/chill-with-chamber-music/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/chill%20with%20chamber%20music%7C2026-07-23</guid>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Telluride Chamber Music is bringing music to the West End of the county with Community Concerts at the beautiful Livery …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>⚡ [Meeting] Planning &amp; Zoning Commission - Jul 23 2026 — 2026-07-23</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-23%7CPlanning%20%26%20Zoning%20Commission%20-%20Jul%2023%202026</guid>
@@ -176,7 +176,7 @@ Telluride Chamber Music is bringing music to the West End of the county with Com
 
 Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project gets two bites of the apple: a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B at 700 W Pacific Ave into a single parcel over 15,000 sq ft, and a Conceptual PUD for new construction on that consolidated lot (carried over from May). Separately, the Shandoka Lot at 860 Black Bear Rd gets its own Conceptual PUD hearing for proposed new construction on the Town's 4.07-acre parcel. Both sites sit at the center of the ongoing question about what Telluride does with its open-space-adjacent Town properties. Also on: a Minor Subdivision at 238 N Pine Street in the Historic Residential zone — a 7,500 sq ft or smaller parcel proposed to be split into two lots, a request that has been continued multiple times since February.
 
-⚡ Why it matters: Three Town-owned projects, including Carhenge redevelopment, face subdivision and concept review.]]></description>
+⚡ Why it matters: Town-owned Carhenge site faces subdivision and concept-plan hearings — public land use decision.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

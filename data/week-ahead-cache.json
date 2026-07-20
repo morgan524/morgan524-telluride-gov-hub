@@ -1,18 +1,18 @@
 {
-  "hash": "6189070d7ec15284ae7fb4595cb196d636a41f80",
-  "lede": "Tuesday is the heavy lift this week: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code — a vote that actually changes the rules here. The same day, the Housing Authority weighs a new primary-residency policy for dependents in multi-custodial households, and Thursday's Planning & Zoning session puts three Town-owned development projects, including the Carhenge redevelopment at 700 W Pacific, through subdivision and concept review.",
+  "hash": "7ecbd1edb360ba110c9668fd4cb605663bae4e67",
+  "lede": "Tuesday is the week's heaviest lift: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would lock wildfire-resilient landscaping and historic-review standards into the Land Use Code — a real vote with real consequences for property owners. That same day, the Telluride Housing Authority considers a new primary-residency policy for dependents of multiple custodial parents, and Thursday's Planning & Zoning session digs into subdivision and concept-plan applications for the Town-owned Carhenge redevelopment on West Pacific.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changing landscaping and historic-review rules."
+      "stake": "Second reading vote on wildfire code changes to Land Use Code landscaping and historic review."
     },
     {
       "id": 3,
-      "stake": "New residency policy for dependents in split-custody households could affect deed restrictions."
+      "stake": "New primary-residency policy for dependents of split-custody households could affect deed-restricted eligibility."
     },
     {
       "id": 6,
-      "stake": "Three Town-owned projects, including Carhenge redevelopment, face subdivision and concept review."
+      "stake": "Town-owned Carhenge site faces subdivision and concept-plan hearings — public land use decision."
     }
   ]
 }
