@@ -46,6 +46,33 @@
   .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
   .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
   .prior-list .chev { font-size: 22px; color: var(--rust); }
+  /* About Livable Telluride — mission/story cards + photo, directors, what-livable
+     (layout mirrors the live homepage about section, per Morgan) */
+  .lt-about { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 0; }
+  .lt-about .a-head { text-align: center; max-width: 720px; margin: 0 auto 30px; }
+  .lt-about .a-head h2 { font: 500 36px/1.15 var(--serif); margin-top: 8px; }
+  .lt-about .a-head p { font: 400 16px/1.65 var(--sans); color: var(--body2); margin: 12px 0 0; }
+  .mission-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
+  .mission-col { display: flex; flex-direction: column; gap: 24px; }
+  .info-card { padding: 28px 30px; }
+  .info-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 12px; }
+  .info-card p { font: 400 15.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .info-card p:last-child { margin-bottom: 0; }
+  .photo-col { border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-media); min-height: 460px;
+    background: url('/images/about-hero-telluride.jpg') no-repeat center center / cover; }
+  .directors-card { margin-top: 24px; padding: 28px 30px; }
+  .directors-card h3 { font: 600 27px/1.2 var(--serif); margin-bottom: 8px; }
+  .directors-card .intro { font: 400 15.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .director-chips { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
+  .director-chips span { font: 600 15px/1 var(--sans); color: var(--ink); background: var(--paper); border: 1px solid var(--hairline); border-radius: 8px; padding: 13px 18px; }
+  .directors-card .reach { font: 400 14px/1.6 var(--sans); color: var(--muted); margin: 0; }
+  .livable-panel { margin-top: 24px; text-align: center; padding: 36px 40px; border-radius: 16px;
+    border: 1px solid var(--hairline); background: linear-gradient(135deg, rgba(36,72,63,.04), rgba(216,169,77,.05)); }
+  .livable-panel h3 { font: 600 30px/1.2 var(--serif); margin-bottom: 12px; }
+  .livable-panel .lead-p { font: 400 16.5px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto 20px; }
+  .question-chips { display: flex; gap: 10px 12px; flex-wrap: wrap; justify-content: center; max-width: 760px; margin: 0 auto 20px; }
+  .question-chips .qc { font: 600 14.5px/1 var(--sans); color: var(--body2); background: var(--sage2); border-radius: 999px; padding: 12px 18px; }
+  .livable-panel .tail { font: 400 15px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto; }
   .about-band { max-width: var(--maxw); margin: 56px auto 0; padding: 0 var(--pad-x); }
   .about-inner { border-top: 2px solid var(--forest); padding-top: 28px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
   .about-inner h2 { font: 500 30px/1.2 var(--serif); margin: 10px 0 14px; }
@@ -59,6 +86,9 @@
     .prior-list .row { grid-template-columns: 48px 48px 1fr; }
     .prior-list .p-logo { width: 48px; height: 48px; }
     .prior-list .chev { display: none; }
+    .mission-row { grid-template-columns: 1fr; }
+    .photo-col { min-height: 320px; }
+    .livable-panel { padding: 26px 22px; }
   }
 </style>
 </head>
@@ -135,6 +165,59 @@
   <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
 </section>
 
+<section class="lt-about" id="mission">
+  <div class="a-head">
+    <span class="eyebrow">About Livable Telluride</span>
+    <h2>A civic information hub for every resident &mdash; before the decisions are final.</h2>
+    <p>Independent, ad-free, and built for the whole region: West End to Mountain Village, across the full political spectrum.</p>
+  </div>
+
+  <div class="mission-row">
+    <div class="mission-col">
+      <div class="info-card card">
+        <h3>Our Mission</h3>
+        <p>In <em>Bowling Alone</em>, Robert Putnam documented what happens when people stop showing up to civic life. Local governments grow less accountable. Decisions on budgets, land use, debt, and zoning move forward with little public scrutiny. The voices that stay at the table are typically those with a direct financial stake in the outcome &mdash; not because anyone is acting in bad faith, but because everyone else has tuned out.</p>
+        <p>Livable Telluride exists to close that gap. We are a civic information hub for the whole county &mdash; West End to Mountain Village, across the full political spectrum &mdash; bringing government meetings, local news, and community information together in one place, always linked back to original sources. As an IRS-approved 501(c)(3) educational nonprofit, we will never charge for access and rely solely on tax-deductible donations.</p>
+      </div>
+      <div class="info-card card">
+        <h3>Our Story</h3>
+        <p>We grew out of &ldquo;Let the People Decide,&rdquo; the grassroots effort behind Measure 300 in November 2025. During that campaign, the same concern surfaced repeatedly: residents cared deeply, but felt they were learning about major decisions late &mdash; through fragments and social media arguments &mdash; after the important planning work was already final.</p>
+        <p>The Society Turn PUD was a clear example. Most residents knew about the planned hospital at the site. Far fewer knew it was only a small part of a much larger development &mdash; roughly 300,000 square feet of free-market commercial space and a 125-room hotel. The question wasn't what to think about it. It was simpler: how can residents meaningfully participate if they don't know what's actually being proposed? Livable Telluride is our ongoing answer to that question.</p>
+      </div>
+    </div>
+    <div class="photo-col" role="img" aria-label="Mt Wilson above the Telluride valley — aspens turning along the highway"></div>
+  </div>
+
+  <div class="directors-card card">
+    <h3>Meet Our Directors</h3>
+    <p class="intro">Livable Telluride, Inc. is a 501(c)(3)-approved organization. Our board of directors:</p>
+    <div class="director-chips">
+      <span>David Lavender</span>
+      <span>John Metzger</span>
+      <span>Keith Hill</span>
+      <span>Emily Masson</span>
+      <span>Morgan Smith</span>
+    </div>
+    <p class="reach">Any board member can be reached through <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a> &mdash; please include their name in the subject line.</p>
+  </div>
+
+  <div class="livable-panel">
+    <h3>What &ldquo;Livable&rdquo; Means</h3>
+    <p class="lead-p">&ldquo;Livable&rdquo; is not code for no growth, or for drawing a line between locals and newcomers. It means asking the self-government questions that deserve answers <em>before</em> decisions are finalized &mdash; not after.</p>
+    <div class="question-chips">
+      <span class="qc">What kind of growth?</span>
+      <span class="qc">For whose benefit?</span>
+      <span class="qc">Who can afford it when done?</span>
+      <span class="qc">What infrastructure is required?</span>
+      <span class="qc">How much water?</span>
+      <span class="qc">How much traffic?</span>
+      <span class="qc">What long-term public debt?</span>
+      <span class="qc">Through what public process?</span>
+    </div>
+    <p class="tail">These are not anti-growth questions. They are self-government questions &mdash; the kind a functioning community asks of itself, across the full range of political views, before the future is already decided.</p>
+  </div>
+</section>
+
 <div class="about-band">
   <div class="about-inner">
     <div>
@@ -142,7 +225,7 @@
       <h2>Ensuring thoughtful processes result in a livable community for all.</h2>
       <div class="body">
         <p>Our mission is to preserve the heart of Telluride by advocating for sustainable growth and transparent decision-making that prioritizes the long-term well-being of our residents. We work to safeguard the unique character of our box canyon home while fostering an inclusive and vibrant future for generations to come.</p>
-        <p>Livable Telluride grew out of &ldquo;Let the People Decide,&rdquo; a grassroots effort built around Measure 300 in November 2024. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home.</p>
+        <p>Livable Telluride grew out of &ldquo;Let the People Decide,&rdquo; a grassroots effort built around Measure 300 in November 2025. After that chapter closed, the organization evolved to focus on the broader, ongoing work of keeping Telluride functional, welcoming, and worth living in for the people who call it home.</p>
       </div>
     </div>
     <div class="about-ctas">
