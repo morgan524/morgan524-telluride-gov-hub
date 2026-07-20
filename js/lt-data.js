@@ -95,6 +95,27 @@
       Object.assign({ timeZone: 'America/Denver' }, opts || {}));
   }
 
+  // ---- public-entity logos -----------------------------------------------
+  // Keyed by week-meetings.json `source`. Single source of truth for every
+  // page that shows a meeting's jurisdiction mark (gov-hub, homepage).
+  var LOGO_BASE = 'https://livabletelluride.org/logo/';
+  var ENTITY_LOGOS = {
+    telluride: LOGO_BASE + 'Telluride%20Town.png',
+    county:    LOGO_BASE + 'San%20Miguel%20County.png',
+    mv:        LOGO_BASE + 'Mountain%20village%20Town.jpg',
+    school:    LOGO_BASE + 'School%20District%20Telluride.png',
+    smart:     LOGO_BASE + 'SMART.png',
+    fire:      LOGO_BASE + 'Telluride%20Fire.png',
+    med:       LOGO_BASE + 'Telluride%20Hospital%20Dist.jpeg',
+    norwood:   LOGO_BASE + 'Norwood%20Town.jpeg',
+    ophir:     LOGO_BASE + 'Ophir.jpeg',
+    rico:      LOGO_BASE + 'Rico%20Town.png',
+    ridgway:   LOGO_BASE + 'Ridgway%20Town.png',
+    ouray:     LOGO_BASE + 'Ouray%20Town.png',
+    airport:   LOGO_BASE + 'Airport.png'
+  };
+  function entityLogo(source) { return ENTITY_LOGOS[source] || ''; }
+
   // ---- misc shared helpers ------------------------------------------------
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -108,7 +129,8 @@
 
   const api = { load: load, loadOne: loadOne, showError: showError,
     todayMT: todayMT, mtDateKey: mtDateKey, parseDateKey: parseDateKey,
-    fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, _bucket: bucket };
+    fmtDate: fmtDate, esc: esc, safeUrl: safeUrl,
+    ENTITY_LOGOS: ENTITY_LOGOS, entityLogo: entityLogo, _bucket: bucket };
 
   root.LTData = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

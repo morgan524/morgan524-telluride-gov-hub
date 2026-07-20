@@ -39,7 +39,9 @@
   .prior-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; border-bottom: 2px solid var(--forest); padding-bottom: 14px; flex-wrap: wrap; }
   .prior-head h2 { margin-top: 8px; }
   .prior-head .all { font: 600 14px/1 var(--sans); }
-  .prior-list .row { display: grid; grid-template-columns: 58px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+  .prior-list .row { display: grid; grid-template-columns: 58px 64px 1fr auto; gap: 18px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+  .prior-list .p-logo { width: 64px; height: 64px; background: #fff; border: 1px solid var(--hairline); border-radius: 9px; display: flex; align-items: center; justify-content: center; padding: 4px; }
+  .prior-list .p-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .prior-list .d-mon { font: 800 10.5px/1 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); }
   .prior-list .d-day { font: 600 36px/1 var(--serif); color: var(--forest); }
   .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
@@ -54,7 +56,8 @@
     .hero h1 { font-size: 38px; }
     .ways-grid, .mini-grid { grid-template-columns: 1fr; }
     .about-inner { grid-template-columns: 1fr; }
-    .prior-list .row { grid-template-columns: 48px 1fr; }
+    .prior-list .row { grid-template-columns: 48px 48px 1fr; }
+    .prior-list .p-logo { width: 48px; height: 48px; }
     .prior-list .chev { display: none; }
   }
 </style>
@@ -65,7 +68,6 @@
 <div class="tagline-strip">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole county.</div>
 
 <section class="hero">
-  <span class="eyebrow">Before the decisions are final</span>
   <h1>Everything happening in our community &mdash; in one place.</h1>
   <p class="sub">Local news, deep dives, government meetings, housing data, community organizations, and events &mdash; gathered, explained, and always linked back to the original source.</p>
   <div class="ctas">
@@ -169,7 +171,7 @@
     (data['week-meetings'] || []).forEach(function (m) {
       if (!m || !m.title || !m.date) return;
       if (m.date < today || m.date > end) return;
-      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title,
+      rows.push({ key: m.date, d: LTData.parseDateKey(m.date), title: m.title, srcKey: m.source,
         time: (m.time || '').split('-')[0].trim(), loc: m.location || '', src: m.sourceLabel || m.source });
     });
     rows = rows.slice(0, 6);
@@ -181,6 +183,7 @@
       var meta = [LTData.fmtDate(r.key, { weekday: 'short' }), r.time, r.loc || r.src].filter(Boolean).join(' · ');
       return '<a class="row" href="gov-hub.html" style="color:inherit">' +
         '<div><div class="d-mon">' + MON[r.d.getMonth()] + '</div><div class="d-day">' + r.d.getDate() + '</div></div>' +
+        (LTData.entityLogo(r.srcKey) ? '<div class="p-logo"><img src="' + LTData.esc(LTData.entityLogo(r.srcKey)) + '" alt="' + LTData.esc(r.src) + '" loading="lazy"></div>' : '<div></div>') +
         '<div><span class="tag">' + LTData.esc(r.src) + '</span><h3>' + LTData.esc(r.title) + '</h3>' +
         '<div class="meta">' + LTData.esc(meta) + '</div></div>' +
         '<div class="chev">&rsaquo;</div></a>';

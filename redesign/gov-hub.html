@@ -72,24 +72,23 @@
 
   // Public Entities — always ALL listed (even zero-count), logos from /logo/.
   // Keys match week-meetings.json `source`; labels match its sourceLabel.
-  var LOGO = 'https://livabletelluride.org/logo/';
+  // Labels/order for the filter; logo URLs come from the shared LTData map.
   var ENTITIES = [
-    { key: 'fire',      label: 'Fire Protection',                  logo: LOGO + 'Telluride%20Fire.png' },
-    { key: 'mv',        label: 'Mountain Village',                 logo: LOGO + 'Mountain%20village%20Town.jpg' },
-    { key: 'ouray',     label: 'Ouray County',                     logo: LOGO + 'Ouray%20Town.png' },
-    { key: 'county',    label: 'San Miguel County',                logo: LOGO + 'San%20Miguel%20County.png' },
-    { key: 'school',    label: 'School District R-1',              logo: LOGO + 'School%20District%20Telluride.png' },
-    { key: 'smart',     label: 'SMART Transit',                    logo: LOGO + 'SMART.png' },
-    { key: 'airport',   label: 'Telluride Regional Airport',       logo: LOGO + 'Airport.png' },
-    { key: 'med',       label: 'Telluride Regional Medical Center',logo: LOGO + 'Telluride%20Hospital%20Dist.jpeg' },
-    { key: 'norwood',   label: 'Town of Norwood',                  logo: LOGO + 'Norwood%20Town.jpeg' },
-    { key: 'ophir',     label: 'Town of Ophir',                    logo: LOGO + 'Ophir.jpeg' },
-    { key: 'rico',      label: 'Town of Rico',                     logo: LOGO + 'Rico%20Town.png' },
-    { key: 'ridgway',   label: 'Town of Ridgway',                  logo: LOGO + 'Ridgway%20Town.png' },
-    { key: 'telluride', label: 'Town of Telluride',                logo: LOGO + 'Telluride%20Town.png' }
+    { key: 'fire',      label: 'Fire Protection' },
+    { key: 'mv',        label: 'Mountain Village' },
+    { key: 'ouray',     label: 'Ouray County' },
+    { key: 'county',    label: 'San Miguel County' },
+    { key: 'school',    label: 'School District R-1' },
+    { key: 'smart',     label: 'SMART Transit' },
+    { key: 'airport',   label: 'Telluride Regional Airport' },
+    { key: 'med',       label: 'Telluride Regional Medical Center' },
+    { key: 'norwood',   label: 'Town of Norwood' },
+    { key: 'ophir',     label: 'Town of Ophir' },
+    { key: 'rico',      label: 'Town of Rico' },
+    { key: 'ridgway',   label: 'Town of Ridgway' },
+    { key: 'telluride', label: 'Town of Telluride' }
   ];
-  var LOGO_BY_KEY = {};
-  ENTITIES.forEach(function (e) { LOGO_BY_KEY[e.key] = e.logo; });
+  var LOGO_BY_KEY = LTData.ENTITY_LOGOS;
 
   /* Bold proper-noun runs + standalone street addresses in summaries — the
      same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
