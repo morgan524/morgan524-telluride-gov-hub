@@ -1,18 +1,18 @@
 {
-  "hash": "44bfb8dfc9b96a85d3087c448a86f170339e05ed",
-  "lede": "Tuesday is the week's heaviest lift: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into Telluride's Land Use Code — that's a real vote with lasting consequences for how properties are built and maintained here. The same day, the Telluride Housing Authority considers a new primary-residency policy for dependents in split-custody households, and Thursday's Planning & Zoning session digs into the Carhenge redevelopment and other Town-owned projects in the Accommodations 2 zone.",
+  "hash": "d2b7e4fa6931f24eaa7ed28b26967687fb4d8481",
+  "lede": "Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend land use rules covering historic review and landscaping standards for the whole town. That same Tuesday, the Telluride Housing Authority considers a new primary residency policy for dependents of multiple custodial parents, and Planning & Zoning tackles the Carhenge Redevelopment on Thursday with subdivision and concept review for Town-owned land on West Pacific.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second-reading vote on wildfire code amending Land Use, landscaping, and historic-review rules."
+      "stake": "Second reading vote on wildfire code changes to land use and landscaping rules."
     },
     {
       "id": 3,
-      "stake": "New primary-residency policy for split-custody dependents could affect housing eligibility determinations."
+      "stake": "New primary residency policy for dependents could affect housing eligibility determinations."
     },
     {
       "id": 7,
-      "stake": "Public review of Carhenge redevelopment subdivision and concept plans on Town-owned land."
+      "stake": "Public review of subdivision and concept plans for Carhenge and other Town-owned sites."
     }
   ]
 }
