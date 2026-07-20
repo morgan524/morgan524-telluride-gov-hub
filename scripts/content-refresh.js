@@ -4240,6 +4240,30 @@ async function syncAlibiEvents() {
 
 
 // ══════════════════════════════════════════════════════════════
+// ── Per-event source/link overrides (hand-maintained corrections) ──
+// Some scraped events carry the wrong producer or a dead link. First matching
+// rule wins; applied by the Norwood + telluride.com builders before returning.
+// Music on the Mesa (per NPRD email, 2026-07-20): the norwoodtown.com sitemap
+// pages are empty and the Town is only a presenting sponsor — Norwood Park &
+// Recreation District produces the series and submits it to calendars.
+const EVENT_SOURCE_OVERRIDES = [
+  { match: /music on the mesa/i,
+    sourceLabel: 'Norwood Park & Recreation District',
+    link: 'https://www.norwoodparkandrec.org/music-on-the-mesa-2026' },
+];
+function applyEventOverrides(events) {
+  for (const ev of events || []) {
+    const rule = EVENT_SOURCE_OVERRIDES.find(r => r.match.test(ev.title || ''));
+    if (!rule) continue;
+    if (rule.sourceLabel) ev.sourceLabel = rule.sourceLabel;
+    if (rule.link) {
+      if ('link' in ev) ev.link = rule.link;   // RSS-shaped records
+      if ('href' in ev) ev.href = rule.link;   // href-shaped records
+    }
+  }
+  return events;
+}
+
 // ── Task 19 (REPLACED): Telluride.com fcEventsData parser ──
 // ══════════════════════════════════════════════════════════════
 //
@@ -4337,7 +4361,7 @@ async function syncTelluridComEventsFast() {
   }
   events.sort((a, b) => a.pubDate.localeCompare(b.pubDate));
   console.log(`  Kept ${events.length} telluride.com event(s) within 60 days (recurring series collapsed by URL)`);
-  return events;
+  return applyEventOverrides(events);
 }
 
 
@@ -5420,7 +5444,7 @@ async function syncNorwoodEvents() {
 
   events.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
   console.log(`  Norwood: ${events.length} events/notices from sitemap`);
-  return events;
+  return applyEventOverrides(events);
 }
 
 // ══════════════════════════════════════════════════════════════════
