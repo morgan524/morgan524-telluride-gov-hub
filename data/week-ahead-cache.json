@@ -1,18 +1,18 @@
 {
-  "hash": "8b804818f2eb413761a6717964eff18a1ab1662b",
-  "lede": "Tuesday is the week's heaviest day for anyone paying attention to how this town is governed: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code — a real vote on land-use amendments affecting landscaping and historic review — while the Telluride Housing Authority meets to hash out primary residency policy for dependents in split-custody households, a quiet but consequential question for working families here. Thursday, Planning and Zoning digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment, which involves a large-scale subdivision and concept plan review at 700 W Pacific.",
+  "hash": "6189070d7ec15284ae7fb4595cb196d636a41f80",
+  "lede": "Tuesday is the heavy lift this week: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code — a vote that actually changes the rules here. The same day, the Housing Authority weighs a new primary-residency policy for dependents in multi-custodial households, and Thursday's Planning & Zoning session puts three Town-owned development projects, including the Carhenge redevelopment at 700 W Pacific, through subdivision and concept review.",
   "notable": [
     {
       "id": 2,
-      "stake": "Second reading vote on wildfire code changes to land use, landscaping, and historic review."
+      "stake": "Second reading vote on wildfire code changing landscaping and historic-review rules."
     },
     {
       "id": 3,
-      "stake": "New residency policy for split-custody dependents could affect housing eligibility for local families."
+      "stake": "New residency policy for dependents in split-custody households could affect deed restrictions."
     },
     {
       "id": 6,
-      "stake": "P&Z reviews subdivision and concept plans for three Town-owned development sites, including Carhenge."
+      "stake": "Three Town-owned projects, including Carhenge redevelopment, face subdivision and concept review."
     }
   ]
 }

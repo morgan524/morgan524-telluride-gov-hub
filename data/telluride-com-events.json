@@ -856,5 +856,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp"
+  },
+  {
+    "title": "Telluride Blues & Brews Festival",
+    "link": "https://www.telluride.com/event/telluride-blues-brews-festival/",
+    "description": "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
+    "pubDate": "2026-09-18",
+    "endDate": "2026-09-21",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp"
   }
 ]

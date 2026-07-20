@@ -326,7 +326,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8295","zoomUrl":"https://gbsm.zoom.us/j/82559576086","phone":"719-359-4580","sv":4},
 
   "county|2026-07-27|Housing Code Update SSR":
-    {"sv":4}
+    {"sv":4},
+
+  "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
+    {"sv":4},
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021","sv":4},
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4},
+
+  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4}
 };
 
 const MANUAL_SUMMARIES = {
@@ -529,7 +541,19 @@ const MANUAL_SUMMARIES = {
     "The Gondola Advisory Committee meets virtually to receive the project team's economic and fiscal impact analysis of the gondola — the central item on this agenda. The analysis ties gondola operations to visitation patterns, retail spending, and sales tax across Telluride and Mountain Village, finding that 30% of Telluride visitors and 45% of Mountain Village visitors ride it at least once per trip, and that restaurant sales in particular track closely with ridership. Growth projections are being revised downward over the next 20 years, driven by rising costs of living, accelerating home values, infrastructure limits, and demographic shifts. The committee will also review materials for the July 28 Leadership Committee meeting, which will cover the FTA Capital Investment Grants program and local funding strategy — a consequential topic given that the hypothetical funding scenario puts the project at $140M total, with $20M each expected from the Town of Telluride and the Mountain Village Entity. August's Gsub meeting is set to examine traffic, parking, and bus-replacement scenarios in the event of a prolonged gondola outage.",
 
   "county|2026-07-27|Housing Code Update SSR":
-    "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet."
+    "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet.",
+
+  "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
+    "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
+    "The August 19, 2026 HARC agenda hasn't been posted yet.",
+
+  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
+    "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1566,18 +1590,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Dry thunderstorms could complicate firefighting efforts",
-    source: "Telluride Times",
-    date: "July 6, 2026",
-    firstSeen: "2026-07-06",
-    newsTopic: "public-safety",
-    copy: "The Gold Mountain Fire near Ouray has grown to nearly 30,000 acres with just 3% containment, while the Ferris Fire near Dolores has reached 50,000 acres at 21% contained. San Miguel County is under an air quality health advisory through at least Tuesday due to smoke. No active fires are currently burning in San Miguel County, which is under Stage 2 fire restrictions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8e9913c5-3691-468d-a3ae-eaa7ca037c48.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/47/a47d7dfb-9699-46ee-8b6e-87a921969428/6a4c0938939c5.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2380,17 +2392,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-07-19/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-07-19T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Shakespeare in the Park: \"Henry V\"",
     link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-19/",
     description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
@@ -2840,6 +2841,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Mountain Village Electronics Recycling event",
+    link: "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-28/",
+    description: "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep electronic waste out of landfills while ensuring devices and batteries are handled properly. Residents are encouraged to clear out old or unused electronics and drop them off during the two-day collection window. A wide range of electronic items will be accepted, including old computers, televisions and household appliances. Residents are also invited to bring in batteries for recycling, though only certain types and sizes will be accepted. …",
+    pubDate: "2026-07-28T18:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Summer SketchBook Club w/Annie",
+    link: "https://koto.org/event/summer-sketchbook-club-w-annie/",
+    description: "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
+    pubDate: "2026-07-28T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Town Talk: The Dual Challenge – Climate and Energy",
+    link: "https://koto.org/event/town-talk-the-dual-challenge-climate-and-energy/",
+    description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. This event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. This special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.",
+    pubDate: "2026-07-29T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg"
+  },
+  {
+    title: "Native Plant Walk & Talk",
+    link: "https://koto.org/event/native-plant-walk-talk/",
+    description: "Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet at the the country park and ride lot in Lawson Hill near the bus stop; we will walk on the valley floor. Adults and teens only please!",
+    pubDate: "2026-07-29T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -2930,7 +2975,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-19"
+    lastSeen: "2026-07-20"
   }
 ];
 
@@ -3199,31 +3244,12 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
-    href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-07-14/",
-    date: "2026-07-14 10:00:00",
-    endDate: "2026-07-14 12:00:00",
-    location: "Ridgway, CO",
-    copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A monthly gathering at the Sherbino in Ridgway for veterans through the Welcome Home Alliance, offering a casual coffee meetup and a chance to connect with fellow veterans and community members. The event is part of a recurring series supporting veteran community and fellowship in the region."
-  },
-  {
-    title: "The Sherbino presents: From Intention to Impact; Planned Giving Essentials",
-    href: "https://sherbino.org/event/from-intention-to-impact-planned-giving-essentials-ridgway/",
-    date: "2026-07-14 18:30:00",
-    endDate: "2026-07-14 20:00:00",
-    location: "Ridgway, CO",
-    copy: "Join The Sherbino on Tuesday, July 14, from 6:30–8 p.m. for “From Intention to Impact: Planned Giving Essentials,” an evening conversation about legacy giving, community impact, and supporting the future of arts and culture in Ridgway.\n\n\n\n\n\n\t\n\t\t\n\t\t\t\t\t\n\n\t\t\t\t\t\n\t\t\t\t @ \t\t\t\n\t\t\t\n\t\t\t\t\t\t\t\n\t\t\n\t\t\t\n\n\n\n\nDoors at 6:00 PM ||  Presentation at 6:30 ||  Entry by donation\n\n\n\nSetting: seated || Registration is free but required \n\n\n\n\nJoin Attorney Lincoln Anderson and Investment Advisor Michael Murphy as they explain ways to manage your retirement accounts for the benefit of causes you care about. In this session they will provide information about Qualified Charitable Distributions (QCD's) and appreciated stock donations, and will cover other estate planning tips.  Learn in one evening how to give now and reduce your taxes!\n\n\n\n\n\n\n\n\n\n\n\n\t\n\t\t\n\t\n\n\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\tAdd to calendar\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\n\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tGoogle Calendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tiCalendar\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook 365\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tOutlook Live",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/ChatGPT-Image-May-15-2026-03_07_26-PM.png"
-  },
-  {
     title: "The Courtyard at 610 Presents: Heather & Douglas",
     href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas/",
     date: "2026-07-19 19:30:00",
     endDate: "2026-07-19 21:00:00",
     location: "The Courtyard at 610, Ridgway",
-    copy: "@ Gates: 7:00 || Show: 7:30pm || $15 Advance / $20 at gates  Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. Enter through the alleyway behind the Sherbino and 610 Gallery for a magical summer night. Beloved regional duo Heather & Douglas return to The Courtyard for a relaxed, intimate concert filled with heartfelt ballads, spontaneous fun, and harmonies that hit just right. …",
+    copy: "@ Gates: 7:00 || Show: 7:30pm || $15 Advance / $20 at gates  Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || This show is generously supported by Dave and Julie Duff Want Tickets to a Sold Out Courtyard Show? For Courtyard shows we have a maximum seated capacity of 50.  If a show is sold out, we may be able to sell a few more tickets at Doors.  These few tickets are standing room / “agility seating” room.  The ‘Agility seating’ means it takes a little leg swing over a handrail to get to or the option is to stand.  Please come to Doors if this sounds like a good option for you, and we may be able to sell a few tickets if space is available. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/05/Heather-Douglas-banner-july-19.png"
   },
   {
@@ -3251,8 +3277,16 @@ const SHERBINO_EVENTS = [
     endDate: "2026-08-11 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+  },
+  {
+    title: "Celebration of Life for David Leigh Houtz",
+    href: "https://sherbino.org/event/celebration-of-life-for-david-leigh-houtz/",
+    date: "2026-08-17 15:00:00",
+    endDate: "2026-08-17 18:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Celebration of Life for David Leigh Houtz. Friends, family, and the Ridgway community are invited to gather on Monday, August 17, from 3–6 p.m. at The Sherbino to share memories and celebrate David's life. @ 3-6 pm || Sherbino Celebration of Life for David Leigh Houtz David Leigh Houtz was a familiar presence in Ridgway for decades. Many knew him through his jewelry shop and workshop at 147 N. Cora, where he crafted, repaired, and sold jewelry since the 1990s. Others knew him through his years of service as a firefighter, his artistic talents, his independent spirit, and his unmistakable personality. David's daughter and family invite friends, neighbors, former customers, and all who knew him to join them in celebrating his life. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-52.png"
   }
 ];
 
@@ -3655,7 +3689,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/thirsty-thursday-game-night-at-floating-lotus",
     description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week View on site | Email this event",
     pubDate: "2026-07-24T01:00:00.000Z",
-    endDate: "2026-09-11",
+    endDate: "2026-09-18",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4878,28 +4912,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-07-18T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Girl Scout Cookie Booth",
     link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
@@ -6288,6 +6300,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp"
+  },
+  {
+    title: "Telluride Blues & Brews Festival",
+    link: "https://www.telluride.com/event/telluride-blues-brews-festival/",
+    description: "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
+    pubDate: "2026-09-18",
+    endDate: "2026-09-21",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp"
   }
 ];
 
