@@ -209,6 +209,47 @@ async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
   return callClaude({ model: MODEL, max_tokens: 700, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
 }
 
+/* ── Vote-tracker drafts ─────────────────────────────────────────────
+   For boards the Vote Tracker covers, run a SECOND pass over the same
+   transcript extracting substantive votes into the pending-JSON format
+   used by extract-votes.mjs. NOTHING is inserted automatically — drafts
+   land in scripts/pending/ and the workflow opens a review issue. The
+   human review + insert-votes.mjs step stays (transcript tallies need
+   eyes; that gate is by design). */
+const VT_CONFIG = (() => {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, 'vote-tracker-config.json'), 'utf8')); }
+  catch (e) { return {}; }
+})();
+function trackerEntityFor(sourceKey, title) {
+  if (sourceKey === 'county' && /county commissioners|BOCC/i.test(title)) return 'bocc';
+  if (sourceKey === 'county' && /planning commission/i.test(title)) return 'pc';
+  if (sourceKey === 'mv' && /design review/i.test(title)) return 'drb';
+  if (sourceKey === 'mv' && /town council/i.test(title)) return 'tomv';
+  if (sourceKey === 'rico' && /trustees/i.test(title)) return 'rico';
+  return '';  // telluride council: no roster in vote-tracker-config yet
+}
+async function draftVotes(entityKey, isoDate, title, transcript) {
+  const entity = VT_CONFIG[entityKey];
+  if (!entity || !entity.roster) return null;
+  const rosterIds = (entity.roster || []).map((r) => r.id || r).join(', ');
+  const sys = `You are extracting substantive recorded votes from a government meeting TRANSCRIPT (auto-captions — noisy) for ${entity.label || entityKey}. ` +
+    `Substantive = ordinances, resolutions, IGAs, variances/CUPs/PUDs, code amendments, contracts, appointments. NOT procedural (agenda/minutes approval, adjournment). ` +
+    `Roster member ids: ${rosterIds}. Return ONLY JSON: {"votes":[{"title":"<short motion title>","category":"<one of: Land Use, Housing, Budget & Finance, Public Safety, Appointments, Intergovernmental, Other>","outcome":"Passed|Failed|Tabled|Continued","tally":"<e.g. 6-0>","detail":"<one sentence>","memberVotes":{"<id>":"Yes|No|Abstain|Absent"}}]} ` +
+    `Use ONLY what the transcript supports; if member-by-member votes are unclear, omit memberVotes rather than guessing. If no substantive votes, return {"votes":[]}.`;
+  const body = {
+    model: MODEL, max_tokens: 2000, system: sys,
+    messages: [{ role: 'user', content: `MEETING: ${title} (${isoDate})\n\nTRANSCRIPT:\n"""\n${transcript.slice(0, 600000)}\n"""\n\nReturn ONLY the JSON object.` }]
+  };
+  const parsed = await callClaude(body);   // callClaude returns parsed JSON
+  if (!parsed || !parsed.votes || !parsed.votes.length) return null;
+  const dir = path.join(__dirname, 'pending');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  const file = path.join(dir, `${entityKey}-${isoDate}.json`);
+  fs.writeFileSync(file, JSON.stringify({ entity: entityKey, date: isoDate, meeting: title,
+    source: 'transcript-auto-draft (meeting-recaps.js) — REVIEW BEFORE INSERTING', votes: parsed.votes }, null, 2) + '\n');
+  return file;
+}
+
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY && !DRY) { console.error('  ✗ ANTHROPIC_API_KEY not set'); process.exit(1); }
 
@@ -248,6 +289,15 @@ async function main() {
       added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
       console.log(`      ✓ ${out.title}`);
+
+      // Vote-tracker draft from the same transcript (tracked boards only).
+      const vtEntity = trackerEntityFor(ch.sourceKey, v.title);
+      if (vtEntity) {
+        try {
+          const vf = await draftVotes(vtEntity, date, v.title, transcript);
+          if (vf) console.log(`      🗳 vote draft → ${vf.replace(/^.*scripts\//, 'scripts/')}`);
+        } catch (e) { console.log(`      ⚠ vote draft failed (recap unaffected): ${e.message}`); }
+      }
     }
     if (added.length >= LIMIT) break;
   }

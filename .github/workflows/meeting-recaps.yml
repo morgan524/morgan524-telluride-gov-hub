@@ -59,13 +59,33 @@ jobs:
         run: |
           git config user.name "Gov Hub Bot"
           git config user.email "bot@livabletelluride.org"
-          if [ -n "$(git status --porcelain js/gov-helpers.js)" ]; then
-            git add js/gov-helpers.js
+          if [ -n "$(git status --porcelain js/gov-helpers.js scripts/pending/)" ]; then
+            git add js/gov-helpers.js scripts/pending/
             git commit -m "📝 Auto meeting recaps $(date -u +%Y-%m-%d)"
             # Rebase onto any commits the content bot pushed meanwhile, then push.
-            # Only MEETING_RECAPS changes here, so the rebase is conflict-free.
+            # Only MEETING_RECAPS + pending vote drafts change here.
             git pull --rebase origin main
             git push
           else
             echo "No new recaps."
+          fi
+
+      # New transcript-drafted vote files → open/refresh a review issue.
+      # Drafts are NEVER inserted automatically; review + insert-votes.mjs
+      # is the human step (see scripts/EXTRACT_VOTES_README.md).
+      - name: Vote-draft review issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          NEW=$(git diff --name-only HEAD~1 HEAD -- scripts/pending/ 2>/dev/null || true)
+          [ -z "$NEW" ] && { echo "No new vote drafts."; exit 0; }
+          BODY="Transcript-drafted vote files from meeting-recaps (review, then insert with scripts/insert-votes.mjs):
+
+          $(echo "$NEW" | sed 's/^/- /')"
+          EXISTING=$(gh issue list --label vote-tracker --state open --json number --jq '.[0].number' || true)
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "🗳 Vote tracker: transcript drafts to review" --label vote-tracker --body "$BODY" || \
+            gh issue create --title "🗳 Vote tracker: transcript drafts to review" --body "$BODY"
           fi

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Meetings — Livable Telluride</title>
+<meta name="description" content="Plain-English recaps of recent government meetings across the Telluride region — written from the official video transcripts, with links to the Vote Tracker.">
+<!-- STAGING: remove noindex at cutover -->
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="lt.css?v=7">
+<link rel="icon" href="uploads/lt-logo.png">
+<style>
+  .gh-toggle-wrap { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; }
+  .gh-toggle { display: inline-flex; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px; gap: 4px; }
+  .gh-toggle .gt { font: 600 15px/1 var(--sans); color: var(--forest); padding: 9px 18px; border-radius: 999px; }
+  .gh-toggle .gt.active { background: var(--forest); color: #fff; }
+  .gh-toggle a.gt:hover { background: var(--sage); color: var(--forest); }
+  .gh-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+  .gh-side { position: sticky; top: 96px; }
+  .side-filter { padding: 20px 22px; }
+  .side-filter h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 10px; }
+  .ents { display: block; }
+  .ent { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; padding: 9px 2px; border-top: 1px solid var(--hairline); cursor: pointer; }
+  .ent:first-child { border-top: 0; }
+  .ent .e-name { font: 600 15px/1.25 var(--sans); color: var(--forest); }
+  .ent:hover .e-name, .ent.active .e-name { color: var(--rust); }
+  .ent .e-count { font: 700 11.5px/1 var(--sans); color: var(--muted2); background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 5px 9px; }
+  .ent.active .e-count { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .meet-wrap { min-width: 0; }
+  .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
+  .r-card { display: grid; grid-template-columns: 96px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+  .r-date { text-align: center; }
+  .r-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
+  .r-date .d { font: 600 34px/1.05 var(--serif); color: var(--forest); }
+  .r-date .y { font: 500 11px/1.4 var(--sans); color: var(--muted2); }
+  .r-date .e-logo { width: 88px; height: 88px; margin: 12px auto 0; border-radius: 10px; background: #fff; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; padding: 6px; }
+  .r-date .e-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .r-card .src { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
+  .r-card h3 { font: 600 23px/1.2 var(--serif); margin: 7px 0 6px; }
+  .r-card .recap { font: 400 15.5px/1.62 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .r-card .acts { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .r-card .acts .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
+  .r-card .acts .abtn:hover { background: var(--sage2); color: var(--forest); }
+  @media (max-width: 900px) {
+    .gh-layout { grid-template-columns: 1fr; gap: 0; }
+    .gh-side { position: static; order: -1; }
+    .side-filter { padding: 14px 16px; }
+    .ents { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ent { width: auto; border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 8px 7px 13px; }
+    .ent:first-child { border-top: 1px solid var(--hairline); }
+    .ent.active { background: var(--sage); border-color: var(--forest); }
+    .r-card { grid-template-columns: 72px 1fr; }
+    .r-date .e-logo { width: 64px; height: 64px; }
+  }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub <span class="sep">&rsaquo;</span> Past Meetings</div>
+    <h1>Past Meetings</h1>
+    <p class="sub">What actually happened &mdash; plain-English recaps written automatically from each meeting's official video transcript, refreshed daily.</p>
+  </div>
+</header>
+
+<div class="gh-toggle-wrap">
+  <div class="gh-toggle" role="tablist">
+    <a class="gt" href="gov-hub.html">Upcoming meetings</a>
+    <span class="gt active">Past meetings &amp; recaps</span>
+  </div>
+</div>
+
+<div class="gh-layout">
+  <main class="meet-wrap" id="recap-list"><p class="meta" style="padding:18px 0">Loading recaps&hellip;</p></main>
+  <aside class="gh-side">
+    <div class="side-filter card">
+      <h3>Public entities</h3>
+      <div class="ents" id="ent-filter" aria-label="Filter by public entity"></div>
+    </div>
+  </aside>
+</div>
+
+<div id="lt-footer"></div>
+<script src="site.js?v=7"></script>
+<script src="/js/lt-data.js?v=4"></script>
+<script>
+(function () {
+  var list = document.getElementById('recap-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var esc = LTData.esc;
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var recaps = [], srcFilter = '';
+
+  // Entity label + logo by sourceKey (same keys as week-meetings/gov-hub).
+  var LOGO_BY_KEY = {};
+  Object.keys(LTData.ENTITY_LOGOS || {}).forEach(function (k) { LOGO_BY_KEY[k] = LTData.entityLogo(k); });
+
+  // Vote Tracker covers these bodies — match on the recap title.
+  function voteTrackerFor(r) {
+    var t = (r.title || '');
+    if (r.sourceKey === 'telluride' && /town council/i.test(t)) return 'telluride';
+    if (r.sourceKey === 'county' && /county commissioners|BOCC/i.test(t)) return 'bocc';
+    if (r.sourceKey === 'county' && /planning commission/i.test(t)) return 'planning';
+    if (r.sourceKey === 'mv' && /design review/i.test(t)) return 'drb';
+    if (r.sourceKey === 'mv') return 'tomv';
+    if (r.sourceKey === 'rico') return 'rico';
+    return '';
+  }
+
+  function render() {
+    var rows = recaps.filter(function (r) { return !srcFilter || r.sourceKey === srcFilter; });
+    if (!rows.length) { list.innerHTML = '<p class="meta" style="padding:18px 0">No recaps for this filter yet.</p>'; return; }
+    var html = '', lastMonth = '';
+    rows.forEach(function (r) {
+      var d = LTData.parseDateKey(r.date);
+      var monthH = d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      if (monthH !== lastMonth) { html += '<div class="day-h">' + esc(monthH) + '</div>'; lastMonth = monthH; }
+      var logo = LOGO_BY_KEY[r.sourceKey]
+        ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[r.sourceKey]) + '" alt="' + esc(r.sourceLabel || '') + '" loading="lazy"></div>' : '';
+      var vt = voteTrackerFor(r);
+      var acts = vt
+        ? '<div class="acts"><a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a></div>' : '';
+      html += '<article class="r-card">' +
+        '<div class="r-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="y">' + d.getFullYear() + '</div>' + logo + '</div>' +
+        '<div><span class="tag">' + esc(r.sourceLabel || '') + '</span>' +
+        '<h3>' + esc(r.title || '') + '</h3>' +
+        '<p class="recap">' + esc(r.recap || '') + '</p>' + acts + '</div></article>';
+    });
+    list.innerHTML = html;
+  }
+
+  LTData.load(['meeting-recaps']).then(function (data) {
+    recaps = (data['meeting-recaps'] || []).slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+    // entity filter from the live data (All first)
+    var counts = {}, labels = {};
+    recaps.forEach(function (r) { counts[r.sourceKey] = (counts[r.sourceKey] || 0) + 1; labels[r.sourceKey] = r.sourceLabel || r.sourceKey; });
+    var bar = document.getElementById('ent-filter');
+    var items = [{ key: '', label: 'All recaps', count: recaps.length }].concat(
+      Object.keys(counts).sort().map(function (k) { return { key: k, label: labels[k], count: counts[k] }; }));
+    bar.innerHTML = items.map(function (e) {
+      return '<div class="ent' + (e.key === srcFilter ? ' active' : '') + '" data-key="' + esc(e.key) + '" role="button" tabindex="0">' +
+        '<div class="e-name">' + esc(e.label) + '</div><div class="e-count">' + e.count + '</div></div>';
+    }).join('');
+    bar.addEventListener('click', function (ev) {
+      var el = ev.target.closest('.ent'); if (!el) return;
+      srcFilter = el.dataset.key || '';
+      bar.querySelectorAll('.ent').forEach(function (x) { x.classList.toggle('active', x === el); });
+      render();
+    });
+    render();
+  }).catch(function (err) { LTData.showError(list, err); });
+})();
+</script>
+</body>
+</html>

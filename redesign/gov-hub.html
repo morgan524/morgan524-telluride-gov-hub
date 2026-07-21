@@ -10,6 +10,12 @@
 <link rel="stylesheet" href="lt.css?v=7">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
+  /* Upcoming | Past toggle */
+  .gh-toggle-wrap { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; }
+  .gh-toggle { display: inline-flex; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px; gap: 4px; }
+  .gh-toggle .gt { font: 600 15px/1 var(--sans); color: var(--forest); padding: 9px 18px; border-radius: 999px; }
+  .gh-toggle .gt.active { background: var(--forest); color: #fff; }
+  .gh-toggle a.gt:hover { background: var(--sage); color: var(--forest); }
   /* Two-column shell: meeting list + right entity-filter sidebar */
   .gh-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
   .gh-side { position: sticky; top: 96px; }
@@ -73,6 +79,13 @@
     <p class="sub">Every public meeting in the region for the next two weeks &mdash; agendas, plain-English summaries, Zoom links, and how to make your voice heard.</p>
   </div>
 </header>
+
+<div class="gh-toggle-wrap">
+  <div class="gh-toggle" role="tablist">
+    <span class="gt active">Upcoming meetings</span>
+    <a class="gt" href="gov-hub-past.html">Past meetings &amp; recaps</a>
+  </div>
+</div>
 
 <div class="gh-layout">
   <main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>

@@ -24,6 +24,8 @@ const path = require('path');
 const MIRROR_ARRAYS = [
   // deep dives
   'DEEP_DIVE_UPDATES',
+  // past-meeting recaps (meeting-recaps.yml, yt-dlp + Claude)
+  'MEETING_RECAPS',
   // news
   'TELLURIDE_TIMES_ARTICLES', 'SMB_FORUM_ARTICLES', 'KOTO_NEWSCASTS', 'KOTO_FEATURED_STORIES',
   // events (bot-synced)

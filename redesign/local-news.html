@@ -48,9 +48,9 @@
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
   .letters-banner { margin-bottom: 8px; }
   .letters-banner img { max-width: 260px; width: 100%; display: block; }
-  #pets-list .item { grid-template-columns: 44px 1fr; align-items: center; }
-  #pets-list .pet-photo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
-  #pets-list .sub { font: 400 13px/1.4 var(--sans); color: var(--muted2); }
+  #pets-list .item { grid-template-columns: 72px 1fr; align-items: center; }
+  #pets-list .pet-photo { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; }
+  #pets-list .sub, #koto-list .sub { font: 400 13px/1.45 var(--sans); color: var(--muted2); margin-top: 3px; }
   .side-tip h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 6px; }
   .side-tip p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 12px; }
   @media (max-width: 900px) {
@@ -215,11 +215,23 @@
       return true;
     }).slice(0, 4);
     if (!pets.length) return;
+    // Dogs first, then cats, then anyone else; each links to the THS species page.
+    var speciesRank = { Dog: 0, Cat: 1 };
+    pets.sort(function (a, b) {
+      var ra = speciesRank[a.species] !== undefined ? speciesRank[a.species] : 2;
+      var rb = speciesRank[b.species] !== undefined ? speciesRank[b.species] : 2;
+      return ra - rb || String(a.name).localeCompare(String(b.name));
+    });
+    function thsUrl(a) {
+      if (a.species === 'Dog') return 'https://telluridehumanesociety.com/dogs/';
+      if (a.species === 'Cat') return 'https://telluridehumanesociety.com/cats/';
+      return 'https://www.telluridehumanesociety.org/';
+    }
     document.getElementById('pets-card').hidden = false;
     document.getElementById('pets-list').innerHTML = pets.map(function (a) {
       var name = (a.name || '').replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
       return '<div class="item"><img class="pet-photo" src="' + LTData.esc(a.photo) + '" alt="' + LTData.esc(name) + '" loading="lazy">' +
-        '<div><a href="' + LTData.esc(safeHref(a.profileUrl)) + '" target="_blank" rel="noopener">' + LTData.esc(name) + '</a>' +
+        '<div><a href="' + LTData.esc(thsUrl(a)) + '" target="_blank" rel="noopener">' + LTData.esc(name) + '</a>' +
         '<div class="sub">' + LTData.esc(a.summary || a.breed || a.species || '') + '</div></div></div>';
     }).join('');
   }
@@ -261,7 +273,9 @@
       if (koto.length) {
         document.getElementById('koto-card').hidden = false;
         document.getElementById('koto-list').innerHTML = koto.map(function (k, i) {
-          return '<div class="item"><div class="num">0' + (i + 1) + '</div><a href="' + LTData.esc(safeHref(k.href)) + '" target="_blank" rel="noopener">' + LTData.esc(k.title || '') + '</a></div>';
+          return '<div class="item"><div class="num">0' + (i + 1) + '</div>' +
+            '<div><a href="' + LTData.esc(safeHref(k.href)) + '" target="_blank" rel="noopener">' + LTData.esc(k.title || '') + '</a>' +
+            (k.copy ? '<div class="sub">' + LTData.esc(k.copy) + '</div>' : '') + '</div></div>';
         }).join('');
       }
       render();
