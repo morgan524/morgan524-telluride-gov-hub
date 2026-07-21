@@ -54,12 +54,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .main{flex:1;padding:20px 24px;overflow-x:hidden}
 
 /* ─── Sidebar controls ──────────────────────────────────────── */
-.filter-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--text-light);margin-bottom:8px;display:block}
+.sidebar-filter-head{font-size:15px;font-weight:800;color:var(--green-dark,#21443c);margin-bottom:4px}
+.sidebar-filter-sub{font-size:12px;color:var(--text-light);margin-bottom:14px;line-height:1.4}
+.filter-label{font-size:11.5px;font-weight:800;text-transform:uppercase;letter-spacing:.6px;color:var(--green-dark,#21443c);margin-bottom:8px;display:block}
 .search-box{width:100%;padding:8px 10px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;outline:none;background:var(--gray-100);margin-bottom:16px}
 .search-box:focus{border-color:var(--green-light);background:#fff;box-shadow:0 0 0 3px rgba(42,148,104,.12)}
 .filter-group{margin-bottom:18px}
-.filter-select{width:100%;padding:7px 10px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;background:#fff;outline:none;cursor:pointer}
-.filter-select:focus{border-color:var(--green-light)}
+.filter-select{width:100%;padding:11px 12px;border:2px solid var(--green-dark,#21443c);border-radius:8px;font-size:14.5px;font-weight:600;color:var(--green-dark,#21443c);background:#fff;outline:none;cursor:pointer;box-shadow:0 1px 4px rgba(33,68,60,.10);transition:box-shadow .12s,border-color .12s}
+.filter-select:hover{box-shadow:0 2px 10px rgba(33,68,60,.18)}
+.filter-select:focus{border-color:var(--green-light);box-shadow:0 0 0 3px rgba(42,148,104,.18)}
 
 .member-filter{display:flex;flex-direction:column;gap:5px}
 .member-chip{display:flex;align-items:center;gap:7px;padding:5px 8px;border-radius:5px;cursor:pointer;transition:background .1s;font-size:12px;color:var(--text-mid)}
@@ -250,6 +253,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
   <!-- Sidebar filters -->
   <aside class="sidebar">
+    <div class="sidebar-filter-head">&#128269; Filter the votes</div>
+    <div class="sidebar-filter-sub">Choose a government body and a year &mdash; the tracker updates instantly.</div>
     <div class="filter-group">
       <label class="filter-label">Entity</label>
       <select class="filter-select" id="filter-entity" onchange="switchEntity()">

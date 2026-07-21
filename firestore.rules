@@ -297,6 +297,27 @@ service cloud.firestore {
       allow update, delete: if isAdmin();
     }
 
+    // ── legal_notice_alerts/{id} ──────────────────────────────────────
+    // Email-alert signups from legal-notices.html ("notify me when a
+    // matching notice is published"). Write-only for the public: anyone
+    // signed-in (incl. anonymous) may CREATE a signup; nobody but the
+    // admin can read the email list. The alert-sender bot (not yet
+    // built) will read via the Admin SDK, which bypasses these rules.
+    match /legal_notice_alerts/{id} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn()
+        && request.resource.data.status == 'active'
+        && request.resource.data.email is string
+        && request.resource.data.email.size() >= 6
+        && request.resource.data.email.size() <= 254
+        && request.resource.data.email.matches('.+@.+\\..+')
+        && request.resource.data.entity is string
+        && request.resource.data.entity.size() <= 100
+        && request.resource.data.type is string
+        && request.resource.data.type.size() <= 100;
+      allow update, delete: if isAdmin();
+    }
+
     // ── article_drafts/{id} ───────────────────────────────────────────
     // Editorial-layer meeting-article drafts. These are written and decided
     // EXCLUSIVELY by the editorial Cloudflare Worker using the service
