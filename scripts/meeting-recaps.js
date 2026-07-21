@@ -172,7 +172,7 @@ WHAT TO WRITE — the recap is about what ACTUALLY HAPPENED:
   for HARC), return an EMPTY recap — {"title": "<body — date>", "recap": ""}.
   An empty recap means the meeting correctly gets NO card; do NOT pad it with the
   very items you were told to omit.
-- Around 100 words. One paragraph. No headers, no lists, no markdown.
+- Around 100 words. Separate distinct topics with a BLANK LINE (\\n\\n) — two to four short paragraphs. No headers, no lists, no markdown.
 
 HARD RULES:
 - Use ONLY what the transcript supports. Do NOT invent vote tallies, names, numbers, or outcomes. If the transcript is unclear on an outcome, describe it without a fabricated tally.
@@ -180,7 +180,10 @@ HARD RULES:
 - Never speculate about motives or what comes next.
 
 OUTPUT — return ONLY valid JSON, no prose, no code fence:
-{ "title": "Body — Mon D, YYYY  (e.g. \\"Town Council — Jun 9, 2026\\")", "recap": "~100 words, one paragraph" }`;
+{ "title": "Body — Mon D, YYYY  (e.g. \\"Town Council — Jun 9, 2026\\")",
+  "recap": "~100 words, short paragraphs separated by blank lines",
+  "votes": [ { "item": "<what was voted on, max 50 chars>", "outcome": "Passed|Failed|Tabled|Continued", "tally": "<e.g. 6-0, 4-3; empty string if not stated>" } ] }
+VOTES RULES — substantive votes ONLY: ordinances/readings, resolutions, approvals/denials of applications, contracts/IGAs, money allocated, appointments. EXCLUDE administrative/procedural votes: minutes, agenda, consent-agenda approval, adjournment, entering/leaving executive session, continuances of omitted individual-property items. Same no-invention rule: only votes the transcript clearly supports; leave tally "" when unstated. Empty array when none.`;
 
 function callClaude(body) {
   return new Promise((resolve, reject) => {
@@ -286,7 +289,7 @@ async function main() {
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
       if (!out || !out.recap) { console.log('      ✗ empty recap'); continue; }
 
-      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), videoUrl });
+      added.push({ sourceKey: ch.sourceKey, sourceLabel: ch.sourceLabel, date, title: (out.title || v.title).trim(), recap: out.recap.trim(), votes: Array.isArray(out.votes) ? out.votes.slice(0, 8) : [], videoUrl });
       seenVideo.add(videoUrl); seenMeeting.add(meetKey);
       console.log(`      ✓ ${out.title}`);
 

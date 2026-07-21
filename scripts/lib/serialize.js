@@ -37,11 +37,17 @@ function serializeArray(varName, arr) {
     // misclassifying single-day events as weekly. See docs/content-review.md.
     const props = Object.entries(item).filter(([, v]) => v !== undefined).map(([k, v]) => {
       if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-        const inner = Object.entries(v).map(([ik, iv]) => `${safeKey(ik)}: ${JSON.stringify(String(iv))}`).join(', ');
+        // Nested values may themselves be objects — raw JSON.stringify, never
+        // String() (which coerces to the literal "[object Object]").
+        const inner = Object.entries(v).map(([ik, iv]) =>
+          `${safeKey(ik)}: ${typeof iv === 'object' && iv !== null ? JSON.stringify(iv) : JSON.stringify(String(iv))}`).join(', ');
         return `    ${safeKey(k)}: { ${inner} }`;
       }
       if (Array.isArray(v)) {
-        return `    ${safeKey(k)}: [${v.map(i => JSON.stringify(String(i))).join(', ')}]`;
+        // Arrays of OBJECTS (e.g. MEETING_RECAPS votes[]) must serialize as
+        // JSON — String() on an object is "[object Object]" (bug class this
+        // module exists to prevent; bitten 2026-07-21).
+        return `    ${safeKey(k)}: [${v.map(i => typeof i === 'object' && i !== null ? JSON.stringify(i) : JSON.stringify(String(i))).join(', ')}]`;
       }
       if (typeof v === 'boolean' || typeof v === 'number') {
         return `    ${safeKey(k)}: ${v}`;

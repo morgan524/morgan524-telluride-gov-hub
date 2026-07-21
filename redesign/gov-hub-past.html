@@ -38,6 +38,14 @@
   .r-card .src { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
   .r-card h3 { font: 600 23px/1.2 var(--serif); margin: 7px 0 6px; }
   .r-card .recap { font: 400 15.5px/1.62 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .r-card .recap p { margin: 0 0 10px; }
+  .r-card .recap p:last-child { margin-bottom: 0; }
+  /* mini vote tally — substantive votes only, small */
+  .vt { margin: 2px 0 10px; }
+  .vt .vt-h { font: 700 10.5px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted2); margin-right: 6px; }
+  .vt .vtag { display: inline-block; font: 600 12px/1.5 var(--sans); color: var(--forest); background: var(--sage2); border: 1px solid var(--hairline); border-radius: 5px; padding: 3px 8px; margin: 2px 4px 2px 0; }
+  .vt .vtag .oc { color: var(--rust); }
+  .vt .vtag.failed .oc { color: #a0463d; }
   .r-card .acts { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
   .r-card .acts .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
   .r-card .acts .abtn:hover { background: var(--sage2); color: var(--forest); }
@@ -92,6 +100,35 @@
   var list = document.getElementById('recap-list');
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc;
+  /* Bold proper-noun runs + standalone street addresses in summaries — the
+     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
+  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
+  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
+  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
+  function emphasizeNames(raw) {
+    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
+    var html = '', last = 0, m;
+    while ((m = re.exec(raw)) !== null) {
+      html += esc(raw.slice(last, m.index));
+      if (m[1]) {
+        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
+        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
+        last = m.index + m[1].length; continue;
+      }
+      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
+      var tail = run.slice(trimmed.length), leadThe = '';
+      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+      var multi = /\s/.test(trimmed);
+      var before = raw.slice(0, m.index).replace(/\s+$/, '');
+      var sentenceStart = before === '' || /[.!?]$/.test(before);
+      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
+      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
+      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
+      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+      last = m.index + run.length;
+    }
+    return html + esc(raw.slice(last));
+  }
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
   var recaps = [], srcFilter = '';
 
@@ -124,11 +161,21 @@
       var vt = voteTrackerFor(r);
       var acts = vt
         ? '<div class="acts"><a class="abtn" href="/v2/vote-tracker.html" target="_blank" rel="noopener">&#128499;&#65039; See the votes &mdash; Vote Tracker</a></div>' : '';
+      var paras = String(r.recap || '').split(/\n{2,}/).filter(Boolean)
+        .map(function (t) { return '<p>' + emphasizeNames(t) + '</p>'; }).join('');
+      var tally = '';
+      if (r.votes && r.votes.length) {
+        tally = '<div class="vt"><span class="vt-h">&#128499;&#65039; Votes</span>' + r.votes.map(function (v) {
+          var oc = (v.outcome || '') + (v.tally ? ' ' + v.tally : '');
+          return '<span class="vtag' + (v.outcome === 'Failed' ? ' failed' : '') + '">' + esc(v.item || '') +
+            ' &mdash; <span class="oc">' + esc(oc) + '</span></span>';
+        }).join('') + '</div>';
+      }
       html += '<article class="r-card">' +
         '<div class="r-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div><div class="y">' + d.getFullYear() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(r.sourceLabel || '') + '</span>' +
         '<h3>' + esc(r.title || '') + '</h3>' +
-        '<p class="recap">' + esc(r.recap || '') + '</p>' + acts + '</div></article>';
+        '<div class="recap">' + paras + '</div>' + tally + acts + '</div></article>';
     });
     list.innerHTML = html;
   }

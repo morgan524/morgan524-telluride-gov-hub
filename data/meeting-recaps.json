@@ -4,40 +4,94 @@
     "sourceLabel": "San Miguel County",
     "date": "2026-07-16",
     "title": "Strategic Stakeholders Roundtable — Jul 16, 2026",
-    "recap": "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses. A side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent. Discussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
-    "videoUrl": "https://www.youtube.com/watch?v=T8SXtsAOB70"
+    "recap": "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses.\n\nA side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent.\n\nDiscussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
+    "videoUrl": "https://www.youtube.com/watch?v=T8SXtsAOB70",
+    "votes": []
   },
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-07-15",
     "title": "HARC — Jul 15, 2026",
-    "recap": "HARC held its first public hearing on the Carhenge redevelopment project at 700 West Pacific, a large mixed-use affordable housing proposal encompassing buildings A–E on town-owned land. After extensive presentations, public comment, and deliberations focused on mass and scale, the board voted to continue all three applications (buildings A/B/C, D1/D2, and E1/E2/E3) to the August 19, 2026 meeting, each with multiple conditions centered on significantly reducing perceived mass and scale, stepping down facades toward the river and roads, breaking up continuous roof ridges, reducing low-slope roof areas, and adding a dedicated pedestrian and bicycle bridge. The board also continued a work session on the Shandoka Lot L redevelopment, offering preliminary design feedback with no formal action taken. One individual-property item was decided: HARC approved, with one condition regarding perimeter landscaping, a demolition and small-scale new construction application at 726 East Columbia. Separately, HARC approved an amendment to a previously issued certificate of appropriateness at 239 North Aspen to raise the contributing primary structure 11.75 inches to meet flood-plane compliance requirements; the vote was 4–1.",
-    "videoUrl": "https://www.youtube.com/watch?v=mW_65sJwquY"
+    "recap": "HARC held its first public hearing on the Carhenge redevelopment project at 700 West Pacific, a large mixed-use affordable housing proposal encompassing buildings A–E on town-owned land.\n\nAfter extensive presentations, public comment, and deliberations focused on mass and scale, the board voted to continue all three applications (buildings A/B/C, D1/D2, and E1/E2/E3) to the August 19, 2026 meeting, each with multiple conditions centered on significantly reducing perceived mass and scale, stepping down facades toward the river and roads, breaking up continuous roof ridges, reducing low-slope roof areas, and adding a dedicated pedestrian and bicycle bridge.\n\nThe board also continued a work session on the Shandoka Lot L redevelopment, offering preliminary design feedback with no formal action taken.",
+    "videoUrl": "https://www.youtube.com/watch?v=mW_65sJwquY",
+    "votes": [
+      {
+        "item": "Carhenge buildings A–E design review",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-06-30",
     "title": "Town Council — Jun 30, 2026",
-    "recap": "Council held two executive sessions (deputy municipal court judge personnel matter; town manager check-in). On action items, the Black Hills Energy gas franchise was renewed for 10 years (unanimous, second reading). A 50% tap-fee waiver and payment plan for the Telluride School District's employee housing project passed 5-1, with one dissent favoring a full waiver. Ordinances authorizing sale of two town-employee housing units (907 East Colorado and Longwill 16-B3) passed unanimously. An emergency Stage 2 fire-restrictions ordinance was adopted unanimously. Ronald Carlson was appointed deputy municipal court judge unanimously. A land use code amendment to implement Colorado Wildfire Resiliency Code passed unanimously on first reading. The town authorized purchase of Spruce House Unit H unanimously. Stephanie Hatcher was reappointed to CCASE unanimously. The Telluride Housing Authority appointed seven resident advisory committee members unanimously. Work sessions covered updates to the Telluride Energy Mitigation Program (TEMP) and presentation of the 2026 community survey, which showed declining confidence in local government and economic health alongside improving marks for public safety and mobility. Substantial public comment opposed converting the Town Park Oval green space to a hard-surface sports court.",
-    "videoUrl": "https://www.youtube.com/watch?v=I4t6u53slF8"
+    "recap": "Council held two executive sessions (deputy municipal court judge personnel matter; town manager check-in). On action items, the Black Hills Energy gas franchise was renewed for 10 years (unanimous, second reading). A 50% tap-fee waiver and payment plan for the Telluride School District's employee housing project passed 5-1, with one dissent favoring a full waiver.\n\nOrdinances authorizing sale of two town-employee housing units (907 East Colorado and Longwill 16-B3) passed unanimously. An emergency Stage 2 fire-restrictions ordinance was adopted unanimously. Ronald Carlson was appointed deputy municipal court judge unanimously. A land use code amendment to implement Colorado Wildfire Resiliency Code passed unanimously on first reading. The town authorized purchase of Spruce House Unit H unanimously. Stephanie Hatcher was reappointed to CCASE unanimously. The Telluride Housing Authority appointed seven resident advisory committee members unanimously.\n\nWork sessions covered updates to the Telluride Energy Mitigation Program (TEMP) and presentation of the 2026 community survey, which showed declining confidence in local government and economic health alongside improving marks for public safety and mobility. Substantial public comment opposed converting the Town Park Oval green space to a hard-surface sports court.",
+    "videoUrl": "https://www.youtube.com/watch?v=I4t6u53slF8",
+    "votes": [
+      {
+        "item": "Black Hills gas franchise, 2nd reading",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "School District tap-fee waiver (50%)",
+        "outcome": "Passed",
+        "tally": "5-1"
+      },
+      {
+        "item": "Sale of two town-employee housing units",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Stage 2 fire restrictions (emergency)",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Wildfire Resiliency Code LUC amendment, 1st",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Purchase of Spruce House Unit H",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-06-25",
     "title": "Planning & Zoning — Jun 25, 2026",
-    "recap": "The commission continued the 238 North Pine Street minor subdivision application to its July 23 meeting without discussion. The bulk of the meeting was a work session on the Shandoka Lot redevelopment project — a town-owned 4-acre parcel at 860 Black Bear Road proposed for a large-scale PUD that would include roughly 50–60 housing units (mostly affordable, with a limited free-market share), approximately 300 net new public parking spaces within a structured garage, neighborhood-serving commercial uses (daycare, food bank, restaurant, retail, fitness), and a transit center. No votes were taken on the project; commissioners raised extensive questions about parking demand calculations, water-table and flood-zone risks for below-grade construction, traffic impacts, green space adequacy, building massing and solar access along the river trail, and EV charging. The commission also voted to recommend that Town Council adopt land use code amendments to Section 3-505 (tree removal/maintenance) to align with the Colorado Wildfire Resiliency Code, with several wording revisions directed by the commission; the ordinance is scheduled for council consideration June 30.",
-    "videoUrl": "https://www.youtube.com/watch?v=m0qjXC2TCfo"
+    "recap": "The commission continued the 238 North Pine Street minor subdivision application to its July 23 meeting without discussion.\n\nThe bulk of the meeting was a work session on the Shandoka Lot redevelopment project — a town-owned 4-acre parcel at 860 Black Bear Road proposed for a large-scale PUD that would include roughly 50–60 housing units (mostly affordable, with a limited free-market share), approximately 300 net new public parking spaces within a structured garage, neighborhood-serving commercial uses (daycare, food bank, restaurant, retail, fitness), and a transit center. No votes were taken on the project; commissioners raised extensive questions about parking demand calculations, water-table and flood-zone risks for below-grade construction, traffic impacts, green space adequacy, building massing and solar access along the river trail, and EV charging.\n\nThe commission also voted to recommend that Town Council adopt land use code amendments to Section 3-505 (tree removal/maintenance) to align with the Colorado Wildfire Resiliency Code, with several wording revisions directed by the commission; the ordinance is scheduled for council consideration June 30.",
+    "videoUrl": "https://www.youtube.com/watch?v=m0qjXC2TCfo",
+    "votes": [
+      {
+        "item": "Tree-removal LUC amendment (recommend)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-06-17",
     "title": "HARC — Jun 17, 2026",
-    "recap": "HARC voted to continue the flood-elevation raise request for 239 North Aspen (5-1) to the July 15 meeting, directing staff to provide a detailed written explanation of which flood-plain code interpretation changed to require the structure to be lifted. For 566 West Columbia, HARC approved a certificate-of-appropriateness amendment allowing the contributing primary structure to be raised an additional 3¼ inches to meet the flood-protection elevation (4-1). For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials. Two individual-property items were continued to the August 19 meeting.",
-    "videoUrl": "https://www.youtube.com/watch?v=3naByhxnyjE"
+    "recap": "For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials.",
+    "videoUrl": "https://www.youtube.com/watch?v=3naByhxnyjE",
+    "votes": [
+      {
+        "item": "208 S Fir commercial — preliminary approval",
+        "outcome": "Passed",
+        "tally": "4-1"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
@@ -45,7 +99,34 @@
     "date": "2026-06-09",
     "title": "Town Council — Jun 9, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=vxrKceCqXaM",
-    "recap": "A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise. The fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board. The one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed."
+    "recap": "A housing-heavy June meeting. Council gave first-reading approval to selling two more deed-restricted units (907 East Colorado and Longwell 16), accepted the 2025 audit, and approved a first reading of the Black Hills gas franchise.\n\nThe fire-restriction ordinance passed on second reading. Three residents were reappointed to commissions and the airport board.\n\nThe one split vote was a partial waiver of school-district tap fees for teacher housing, which passed 4-2 with Stark and Enright opposed.",
+    "votes": [
+      {
+        "item": "Sale of two deed-restricted units, 1st",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "2025 audit accepted",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Black Hills gas franchise, 1st reading",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Fire-restriction ordinance, 2nd reading",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "School tap-fee partial waiver",
+        "outcome": "Passed",
+        "tally": "4-2"
+      }
+    ]
   },
   {
     "sourceKey": "county",
@@ -53,15 +134,49 @@
     "date": "2026-06-03",
     "title": "Board of County Commissioners — Jun 3, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=3nSAqRc0Cpk",
-    "recap": "A land-and-housing day for the BOCC. They approved an additional $100,000 to the Telluride Foundation's Housing Opportunity Fund and renamed their new fast-track development rule from 'Accelerated' to 'Prioritized' Housing Review. A bouldering gym in Illium received a PUD amendment, accessory-dwelling-unit sizing was clarified, and new on-site wastewater regulations were adopted. All votes passed 3-0."
+    "recap": "A land-and-housing day for the BOCC. They approved an additional $100,000 to the Telluride Foundation's Housing Opportunity Fund and renamed their new fast-track development rule from 'Accelerated' to 'Prioritized' Housing Review.\n\nA bouldering gym in Illium received a PUD amendment, accessory-dwelling-unit sizing was clarified, and new on-site wastewater regulations were adopted. All votes passed 3-0.",
+    "votes": [
+      {
+        "item": "Housing Opportunity Fund +$100,000",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Illium bouldering gym PUD amendment",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "ADU sizing clarification",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "On-site wastewater regulations",
+        "outcome": "Passed",
+        "tally": "3-0"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-05-28",
     "title": "Planning & Zoning Commission — May 28, 2026",
-    "recap": "The commission took action on two public hearing items and one work session. On the minor subdivision application for 238 North Pine Street — which would split a 7,500-square-foot corner lot into two 25-foot lots — the commission voted unanimously to continue the hearing to June 25, directing staff to analyze grounds for a potential denial motion and to examine setback and height implications. On the Carhenge lot conceptual PUD (700 West Pacific Avenue, proposing roughly 220–230 affordable units with height and site-coverage variations), the commission voted unanimously to continue to July 23, directing the applicant to consider reductions in height, maximum floor area, and site coverage, and to provide preliminary flood-plain and traffic studies. The Shandoka lot work session was continued without discussion to June 25.",
-    "videoUrl": "https://www.youtube.com/watch?v=ies_4xRTogs"
+    "recap": "The commission took action on two public hearing items and one work session. On the minor subdivision application for 238 North Pine Street — which would split a 7,500-square-foot corner lot into two 25-foot lots — the commission voted unanimously to continue the hearing to June 25, directing staff to analyze grounds for a potential denial motion and to examine setback and height implications.\n\nOn the Carhenge lot conceptual PUD (700 West Pacific Avenue, proposing roughly 220–230 affordable units with height and site-coverage variations), the commission voted unanimously to continue to July 23, directing the applicant to consider reductions in height, maximum floor area, and site coverage, and to provide preliminary flood-plain and traffic studies.\n\nThe Shandoka lot work session was continued without discussion to June 25.",
+    "videoUrl": "https://www.youtube.com/watch?v=ies_4xRTogs",
+    "votes": [
+      {
+        "item": "238 N Pine minor subdivision",
+        "outcome": "Continued",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Carhenge conceptual PUD",
+        "outcome": "Continued",
+        "tally": "Unanimous"
+      }
+    ]
   },
   {
     "sourceKey": "county",
@@ -69,7 +184,24 @@
     "date": "2026-05-27",
     "title": "Board of County Commissioners — May 27, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=CkFxc1DpoNM",
-    "recap": "The commissioners approved two Ophir septic setback variances, released a 2024 deed-restriction settlement on a Lawson Hill lot, and accepted a state (DOLA) housing-planning grant. All votes were unanimous. An earlier Placerville session that day was a work session with no votes."
+    "recap": "The commissioners approved two Ophir septic setback variances, released a 2024 deed-restriction settlement on a Lawson Hill lot, and accepted a state (DOLA) housing-planning grant. All votes were unanimous.\n\nAn earlier Placerville session that day was a work session with no votes.",
+    "votes": [
+      {
+        "item": "Two Ophir septic setback variances",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Lawson Hill deed-restriction settlement",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "DOLA housing-planning grant",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      }
+    ]
   },
   {
     "sourceKey": "county",
@@ -77,7 +209,39 @@
     "date": "2026-05-20",
     "title": "Board of County Commissioners — May 20, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=xDE7B7x2C5U",
-    "recap": "The commissioners approved the consent agenda and appointed two residents to community boards — Jackie Kenik to the Lone Tree Cemetery board and Marcus Kirkwood to the San Miguel Basin Fairboard. They updated the County's drug-and-alcohol policy and approved a conduit-and-fiber exchange with Clear Networks. Two land-use hearings followed: a lot-line vacation near Sawpit and a multi-year logging and wildfire-mitigation permit on Wilson Mesa. They also adopted the state's septic Regulation 43 Appendix A, keeping variance authority at the county level. All votes were 3-0."
+    "recap": "The commissioners approved the consent agenda and appointed two residents to community boards — Jackie Kenik to the Lone Tree Cemetery board and Marcus Kirkwood to the San Miguel Basin Fairboard. They updated the County's drug-and-alcohol policy and approved a conduit-and-fiber exchange with Clear Networks.\n\nTwo land-use hearings followed: a lot-line vacation near Sawpit and a multi-year logging and wildfire-mitigation permit on Wilson Mesa.\n\nThey also adopted the state's septic Regulation 43 Appendix A, keeping variance authority at the county level. All votes were 3-0.",
+    "votes": [
+      {
+        "item": "Two community-board appointments",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Drug-and-alcohol policy update",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Clear Networks conduit-fiber exchange",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Sawpit lot-line vacation",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Wilson Mesa logging & mitigation permit",
+        "outcome": "Passed",
+        "tally": "3-0"
+      },
+      {
+        "item": "Septic Regulation 43 Appendix A",
+        "outcome": "Passed",
+        "tally": "3-0"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
@@ -85,7 +249,29 @@
     "date": "2026-05-19",
     "title": "Town Council — May 19, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=U3QyzfSWDlE",
-    "recap": "Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040. They authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission. They also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. All votes were 6-0."
+    "recap": "Council adopted the federal Safe Streets and Roads for All regional transportation safety plan and a Vision Zero resolution targeting no traffic deaths by 2040.\n\nThey authorized acquisition of a town employee unit at Mandota, approved a first reading of new fire-restriction rules, and reappointed Carly Shaw to the Election Commission.\n\nThey also granted a seasonal rooftop shade structure for the National building on Colorado Avenue, with conditions. All votes were 6-0.",
+    "votes": [
+      {
+        "item": "Safe Streets plan + Vision Zero resolution",
+        "outcome": "Passed",
+        "tally": "6-0"
+      },
+      {
+        "item": "Mandota employee-unit acquisition",
+        "outcome": "Passed",
+        "tally": "6-0"
+      },
+      {
+        "item": "Fire-restriction rules, 1st reading",
+        "outcome": "Passed",
+        "tally": "6-0"
+      },
+      {
+        "item": "National building rooftop shade structure",
+        "outcome": "Passed",
+        "tally": "6-0"
+      }
+    ]
   },
   {
     "sourceKey": "county",
@@ -93,7 +279,24 @@
     "date": "2026-05-14",
     "title": "Planning Commission — May 14, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=R9nnXLvOGCY",
-    "recap": "The two contested public hearings — the Garlock and Crockett applications on the Mesas — were tabled and withdrawn. The Commission recommended approval of a PUD amendment for a climbing gym in the former Illium tire shop and a code amendment defining 'footprint' and clarifying ADU maximum size. It also recommended adopting an accelerated review process for affordable housing to keep San Miguel eligible for Prop 123 funding. All recommendations go to the BOCC."
+    "recap": "The two contested public hearings — the Garlock and Crockett applications on the Mesas — were tabled and withdrawn.\n\nThe Commission recommended approval of a PUD amendment for a climbing gym in the former Illium tire shop and a code amendment defining 'footprint' and clarifying ADU maximum size.\n\nIt also recommended adopting an accelerated review process for affordable housing to keep San Miguel eligible for Prop 123 funding. All recommendations go to the BOCC.",
+    "votes": [
+      {
+        "item": "Illium climbing-gym PUD amendment (rec.)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Footprint / ADU-size code amendment (rec.)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Accelerated affordable-housing review (rec.)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ]
   },
   {
     "sourceKey": "county",
@@ -101,7 +304,19 @@
     "date": "2026-05-13",
     "title": "Board of County Commissioners — May 13, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=Q6xLvyjwDgs",
-    "recap": "A special session focused on presentations and public comment. The board heard from a Rights Mesa resident about an HOA and code-enforcement dispute, reviewed the parks and open space work plan, and discussed housing funding with the Telluride Association of Realtors, including a proposed state vacancy tax that failed at the Legislature. The formal votes were unanimous: green grants, a letter of support for a street-safety grant, and gift cards for spring-cleanup volunteers."
+    "recap": "A special session focused on presentations and public comment. The board heard from a Rights Mesa resident about an HOA and code-enforcement dispute, reviewed the parks and open space work plan, and discussed housing funding with the Telluride Association of Realtors, including a proposed state vacancy tax that failed at the Legislature.\n\nThe formal votes were unanimous: green grants, a letter of support for a street-safety grant, and gift cards for spring-cleanup volunteers.",
+    "votes": [
+      {
+        "item": "Green grants",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      },
+      {
+        "item": "Street-safety grant support letter",
+        "outcome": "Passed",
+        "tally": "Unanimous"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
@@ -109,6 +324,23 @@
     "date": "2026-04-28",
     "title": "Town Council — Apr 28, 2026",
     "videoUrl": "https://www.youtube.com/watch?v=vWaP0Ba4GYY",
-    "recap": "A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request. Council reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners. Sitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies."
+    "recap": "A housing-focused meeting. The Stender HARC appeal was continued at the appellant's request.\n\nCouncil reappointed Peter Sante to the Planning & Zoning Commission and adopted second readings authorizing the sale of two deed-restricted units — the Element 52 unit on South Davis and the Silverjack unit on West Pacific — to lottery winners.\n\nSitting as the Housing Authority, they adopted a policy temporarily suspending certain waitlist rules, with a set sunset date, to reduce vacancies.",
+    "votes": [
+      {
+        "item": "Sale of Element 52 + Silverjack units, 2nd",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Waitlist-rule suspension (with sunset)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Stender HARC appeal",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ]
   }
 ]

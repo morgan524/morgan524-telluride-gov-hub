@@ -35,3 +35,11 @@ test('serializeObject emits nested objects as inline JSON', () => {
   const out = serializeObject('M', { 'k|1': { zoomUrl: 'https://z', id: '1' } });
   assert.match(out, /"zoomUrl":"https:\/\/z"/);
 });
+
+test('serializeArray: arrays of objects survive round-trip (votes[] bug 2026-07-21)', () => {
+  const arr = [{ title: 'x', votes: [{ item: 'STR ordinance', outcome: 'Passed', tally: '6-0' }] }];
+  const src = serializeArray('T', arr);
+  assert.ok(!src.includes('[object Object]'), 'nested objects must not stringify to [object Object]');
+  const roundTrip = new Function(src + '; return T;')();
+  assert.deepStrictEqual(roundTrip[0].votes[0], { item: 'STR ordinance', outcome: 'Passed', tally: '6-0' });
+});
