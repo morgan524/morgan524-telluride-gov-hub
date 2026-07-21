@@ -8295,7 +8295,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
     hasAgenda: true,
     location: "Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    packetUrl: "https://telluride-co.civicweb.net/document/441930/"
   },
   {
     date: "July 21, 2026",
@@ -8303,7 +8304,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    packetUrl: "https://telluride-co.civicweb.net/document/441920/"
   },
   {
     date: "July 23, 2026",
@@ -8311,7 +8313,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100",
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    packetUrl: "https://telluride-co.civicweb.net/document/442289/"
   },
   {
     date: "July 27, 2026",
@@ -8319,7 +8322,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    packetUrl: "https://telluride-co.civicweb.net/document/442029/"
   },
   {
     date: "August 5, 2026",
@@ -8451,7 +8455,8 @@ function getTellurideMeetings() {
       category: 'HARC Meeting',
       canceled: false,
       hasAgenda,
-      agendaLink
+      agendaLink,
+      packetUrl: m.packetUrl || null
     };
   });
 
@@ -8462,6 +8467,7 @@ function getTellurideMeetings() {
   const board = list.map(m => {
     const agendaLink = m.agendaUrl || '';
     return {
+      packetUrl: m.packetUrl || null,
       title: m.title,
       link: agendaLink || (typeof TOWN_CIVICWEB_FALLBACK !== 'undefined' ? TOWN_CIVICWEB_FALLBACK : agendaLink),
       description: '',

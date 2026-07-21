@@ -49,6 +49,11 @@ function serializeArray(varName, arr) {
         // module exists to prevent; bitten 2026-07-21).
         return `    ${safeKey(k)}: [${v.map(i => typeof i === 'object' && i !== null ? JSON.stringify(i) : JSON.stringify(String(i))).join(', ')}]`;
       }
+      if (v === null) {
+        // null must stay a literal — String(null) is the truthy string "null"
+        // (same coercion family as the [object Object] and "undefined" bugs).
+        return `    ${safeKey(k)}: null`;
+      }
       if (typeof v === 'boolean' || typeof v === 'number') {
         return `    ${safeKey(k)}: ${v}`;
       }

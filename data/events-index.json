@@ -356,19 +356,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-22",
-    "time": "4:00 PM - 5:30 PM",
-    "location": "Wilkinson Public Library, Telluride Room, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
-  },
-  {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
     "date": "2026-07-22",
@@ -594,19 +581,6 @@
     "type": "Community"
   },
   {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-23",
-    "time": "1:00 PM - 2:30 PM",
-    "location": "Lone Cone Library Conference Room, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
-  },
-  {
     "title": "DIY Condiments with Kayla",
     "href": "https://koto.org/event/diy-condiments-with-kayla/",
     "date": "2026-07-23",
@@ -631,6 +605,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
+  },
+  {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-23",
+    "time": "4:00 PM - 5:30 PM",
+    "location": "Wilkinson Public Library, Telluride Room, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Party in the Park",
@@ -780,6 +767,19 @@
     "endDate": "2026-08-07"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-24",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Lone Cone Library Conference Room, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-24/",
     "date": "2026-07-24",
@@ -833,6 +833,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-07-24",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Free Youth Tennis & Pickleball Program",
     "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-24/",
     "date": "2026-07-24",
@@ -870,6 +883,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ouray's Fellin Park Tour Led by Jenny Hart View on site | Email this event",
     "type": "Community"
+  },
+  {
+    "title": "Jon Stickley Trio — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-07-24",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Jon Stickley Trio.",
+    "type": "Music"
   },
   {
     "title": "Art Opening and Pilates Studio Tour",
@@ -1515,19 +1541,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "The Dual Challenge: Climate and Energy",
-    "href": "https://telluridefoundation.org/tf-events/",
-    "date": "2026-07-28",
-    "time": "12:30 PM",
-    "location": "Telluride Innovation Center, Telluride, CO",
-    "town": "Telluride",
-    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
-    "category": "Community Event",
-    "source": "Telluride Foundation",
-    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-2560",
     "date": "2026-07-28",
@@ -1578,6 +1591,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "The Dual Challenge: Climate and Energy",
+    "href": "https://telluridefoundation.org/tf-events/",
+    "date": "2026-07-28",
+    "time": "6:30 PM",
+    "location": "Telluride Innovation Center, Telluride, CO",
+    "town": "Telluride",
+    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
+    "category": "Community Event",
+    "source": "Telluride Foundation",
+    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
     "type": "Talks & Classes"
   },
   {
@@ -1831,6 +1857,19 @@
     "endDate": "2026-08-02"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-07-31",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "The Brass Family — Kids' Concert",
     "href": "https://telluridechambermusic.org/concert/brass-family",
     "date": "2026-07-31",
@@ -1868,6 +1907,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Historic Walking Tour of Ouray's Government buildings including the Courthouse, City Hall. Ouray School, OCHS Museum. Led by Jenny Hart View on site | Email this event",
     "type": "Community"
+  },
+  {
+    "title": "South Austin Moonlighters — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-07-31",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: South Austin Moonlighters.",
+    "type": "Music"
   },
   {
     "title": "Final Friday: Crafts for Critters",
@@ -2275,6 +2327,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-08-05",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Mountain Lodge, 457 Mountain Village Blvd, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Live Music- Jack Haight Red Mountain Revival",
     "href": "https://events.ourayridgwayevents.com/event/jack-haight-red-mountain-revival",
     "date": "2026-08-05",
@@ -2407,6 +2472,19 @@
     "type": "Music"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-08-07",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "RED MOUNTAIN REVIVAL",
     "href": "https://events.ourayridgwayevents.com/event/jack-haight-5810",
     "date": "2026-08-07",
@@ -2417,6 +2495,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Logan Metz — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-08-07",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Logan Metz.",
     "type": "Music"
   },
   {
@@ -2884,19 +2975,6 @@
     "endDate": "2026-09-10"
   },
   {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-12",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
-  },
-  {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
     "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     "date": "2026-08-12",
@@ -2936,6 +3014,19 @@
     "type": "Music"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-13",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Ouray Economic Development Committee",
     "href": "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
     "date": "2026-08-13",
@@ -2963,6 +3054,19 @@
     "type": "Music"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-08-14",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "TYLER SIMMONS",
     "href": "https://events.ourayridgwayevents.com/event/tyler-simmons-9384",
     "date": "2026-08-14",
@@ -2973,6 +3077,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Ben Musser & Walker Young — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-08-14",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Ben Musser & Walker Young.",
     "type": "Music"
   },
   {
@@ -3290,6 +3407,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-08-19",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Announced Telluride location",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Live Music- Emilio Gonzalez",
     "href": "https://events.ourayridgwayevents.com/event/live-music-emilio-gonzalez",
     "date": "2026-08-19",
@@ -3343,6 +3473,19 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-08-21",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "RIDGWAY WRECKING CREW",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-9105",
     "date": "2026-08-21",
@@ -3353,6 +3496,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Ray Wylie Hubbard — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-08-21",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Ray Wylie Hubbard.",
     "type": "Music"
   },
   {
@@ -3581,6 +3737,19 @@
     "endDate": "2026-08-30"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-08-28",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "OLD MAN POLLY",
     "href": "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     "date": "2026-08-28",
@@ -3591,6 +3760,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Cristina Vane — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-08-28",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Cristina Vane.",
     "type": "Music"
   },
   {
@@ -3672,6 +3854,19 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-09-02",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Mountain Lodge, 457 Mountain Village Blvd, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Telluride Film Festival",
     "href": "https://www.telluride.com/event/telluride-film-festival/",
     "date": "2026-09-03",
@@ -3686,6 +3881,19 @@
     "endDate": "2026-09-08"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-09-04",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "RIDGWAY WRECKING CREW",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-2643",
     "date": "2026-09-04",
@@ -3696,6 +3904,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Daniel Rodriguez — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-09-04",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Daniel Rodriguez.",
     "type": "Music"
   },
   {
@@ -3817,6 +4038,19 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-09-11",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "RED MOUNTAIN REVIVAL",
     "href": "https://events.ourayridgwayevents.com/event/red-mountain-revival",
     "date": "2026-09-11",
@@ -3827,6 +4061,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Danno Simpson — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-09-11",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Danno Simpson.",
     "type": "Music"
   },
   {
@@ -3934,6 +4181,19 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-09-16",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Announced Telluride location",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
     "href": "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday",
     "date": "2026-09-16",
@@ -3961,6 +4221,19 @@
     "endDate": "2026-09-21"
   },
   {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-09-18",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "OLD MAN POLLY",
     "href": "https://events.ourayridgwayevents.com/event/old-man-polly-6979",
     "date": "2026-09-18",
@@ -3971,6 +4244,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Leon Timbo — Music on the Green",
+    "href": "https://sunsetconcertseries.com/music-on-the-green",
+    "date": "2026-09-18",
+    "time": "5:00 – 7:00 PM",
+    "location": "Reflection Plaza (next to Hotel Madeline), Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "",
+    "source": "Music on the Green",
+    "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Leon Timbo.",
     "type": "Music"
   },
   {

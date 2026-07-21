@@ -5149,11 +5149,62 @@ async function syncTellurideBoardMeetings() {
       hasAgenda: m.Published === true,
       location: (m.MeetingLocation || '').trim(),
       time,
+      civicwebId: m.Id,
     });
   }
   out.sort((a, b) => (new Date(a.date) - new Date(b.date)));
-  console.log(`  Found ${out.length} Telluride board meeting(s) on CivicWeb`);
+  // Agenda PACKAGE detection: CivicWeb's per-meeting documents API lists the
+  // full agenda package as DocumentType 4 (the agenda itself is type 1).
+  // packetUrl → the direct /document/<id>/ PDF, which lights up the green
+  // "Agenda Packet" button on Gov-Hub.
+  for (const rec of out) {
+    if (!rec.hasAgenda || !rec.civicwebId) continue;
+    try {
+      const dr = await fetch(`https://telluride-co.civicweb.net/Services/MeetingsService.svc/meetings/${rec.civicwebId}/meetingDocuments`);
+      if (dr.status !== 200) continue;
+      const docs = JSON.parse(dr.text);
+      const pkg = (Array.isArray(docs) ? docs : []).find((d) => d && d.DocumentType === 4 && d.Id);
+      if (pkg) rec.packetUrl = `https://telluride-co.civicweb.net/document/${pkg.Id}/`;
+    } catch (e) { /* packet detection is best-effort */ }
+  }
+  const nPkg = out.filter((r) => r.packetUrl).length;
+  console.log(`  Found ${out.length} Telluride board meeting(s) on CivicWeb (${nPkg} with agenda packages)`);
   return out;
+}
+
+// HARC lives in TELLURIDE_CACHED_DATA (hand-curated schedule) — same
+// DocumentType-4 package detection, returned as {"Month D, YYYY": packetUrl}
+// for patchAgendaUrls(..., 'packetUrl').
+async function syncTellurideHarcPackets() {
+  const now = new Date();
+  const horizon = new Date(now.getTime() + 90 * 86400000);
+  const url = `${AGENDA_SOURCES.telluride.meetingsApiBase}` +
+    `?from=${now.toISOString().split('T')[0]}&to=${horizon.toISOString().split('T')[0]}`;
+  const map = {};
+  let resp;
+  try { resp = await fetch(url); } catch (e) { return map; }
+  if (resp.status !== 200) return map;
+  let items;
+  try { const p = JSON.parse(resp.text); items = Array.isArray(p) ? p : (p && (p.d || p.value)) || []; }
+  catch (e) { return map; }
+  const months = ['January','February','March','April','May','June',
+                  'July','August','September','October','November','December'];
+  for (const m of items) {
+    if (!m || m.Published !== true || !m.Id) continue;
+    if (!/historic\s*(?:&|and)\s*architectural|\bharc\b/i.test(m.Name || '')) continue;
+    if (/chair/i.test(m.Name || '')) continue;
+    const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
+    if (isNaN(d)) continue;
+    try {
+      const dr = await fetch(`https://telluride-co.civicweb.net/Services/MeetingsService.svc/meetings/${m.Id}/meetingDocuments`);
+      if (dr.status !== 200) continue;
+      const docs = JSON.parse(dr.text);
+      const pkg = (Array.isArray(docs) ? docs : []).find((x) => x && x.DocumentType === 4 && x.Id);
+      if (pkg) map[`${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`] = `https://telluride-co.civicweb.net/document/${pkg.Id}/`;
+    } catch (e) { /* best-effort */ }
+  }
+  if (Object.keys(map).length) console.log(`  Found ${Object.keys(map).length} HARC agenda package(s)`);
+  return map;
 }
 
 // Patches gov-data.js in place: for each (date → url) in `agendaMap`, finds
@@ -6281,6 +6332,16 @@ async function main() {
       console.warn(`  ${arrName} agenda sync error: ${e.message}`);
     }
   }
+
+  // HARC agenda PACKAGES (DocumentType 4) → packetUrl on TELLURIDE_CACHED_DATA
+  // (green "Agenda Packet" button; requested 2026-07-21).
+  try {
+    const harcPackets = await syncTellurideHarcPackets();
+    if (harcPackets && Object.keys(harcPackets).length > 0) {
+      const { src, changed: n } = patchAgendaUrls(govDataSrc, 'TELLURIDE_CACHED_DATA', harcPackets, 'packetUrl');
+      if (n > 0) { govDataSrc = src; govDataChanged = true; console.log(`  TELLURIDE_CACHED_DATA: patched ${n} packetUrl field(s)`); }
+    }
+  } catch (e) { console.warn('  HARC packet sync failed:', e.message); }
 
   // ── 0b. SMART: rebuild SMART_CACHED_DATA from the live board-meetings page ──
   // syncSmartAgendas() now returns a freshly-generated stub array (2nd-Thursday

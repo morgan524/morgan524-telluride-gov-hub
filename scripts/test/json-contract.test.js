@@ -85,6 +85,7 @@ const CONTRACTS = {
   'deep-dive-pages.json': { required: ['label', 'href'], minCount: 1 },
   'deep-dive-updates.json': { required: ['topic', 'addedDate'], minCount: 0 },  // Haiku-triaged; usually sparse
   'meeting-recaps.json': { required: ['date', 'title', 'recap'], minCount: 1 },      // transcript recaps, 45-day window
+  'telluride-festivals.json': { required: ['name', 'url'], minCount: 1 },            // hand-curated festival season
 };
 
 // Object-map mirrors: values must be non-empty strings (or objects), keys non-empty.

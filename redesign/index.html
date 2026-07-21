@@ -7,7 +7,7 @@
 <meta name="description" content="Local news, deep dives, government meetings, housing data, community organizations, and events — gathered, explained, and always linked back to the original source.">
 <!-- STAGING: remove noindex at cutover -->
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="lt.css?v=7">
+<link rel="stylesheet" href="lt.css?v=8">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
   /* page-only layout (shared components live in lt.css) */
@@ -157,6 +157,8 @@
   </div>
 </section>
 
+<div style="max-width:var(--maxw);margin:44px auto 0;padding:0 var(--pad-x)"><div id="lt-weather"></div></div>
+
 <section class="prior">
   <div class="prior-head">
     <div><span class="eyebrow" id="prior-week">This week</span><h2 class="section-h">Top priorities</h2></div>
@@ -222,6 +224,7 @@
 <div id="lt-footer"></div>
 <script src="site.js?v=7"></script>
 <script src="/js/lt-data.js?v=4"></script>
+<script src="/js/lt-weather.js?v=1" defer></script>
 <script>
 /* Top priorities — this week's public meetings from the precomputed
    data/week-meetings.json (ALL sources aggregated by the pipeline, incl.

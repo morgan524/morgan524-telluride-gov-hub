@@ -18,6 +18,17 @@
 const fs = require('fs');
 const path = require('path');
 const { writeMirror } = require('./lib/json-mirror.js');
+const { loadDataArrays } = require('./lib/load-data.js');
+
+// These consts are COMPUTED in gov-helpers.js (IIFEs), so the literal-extract
+// JSON mirrors are permanently empty — pull them from the runtime loader.
+// (Bug found 2026-07-21: Music on the Green / Farmers Market / Rotary events
+// were silently absent from the redesign events page.)
+const RUNTIME_SOURCES = {
+  'music-on-the-green':        'MUSIC_ON_THE_GREEN',
+  'telluride-farmers-market':  'TELLURIDE_FARMERS_MARKET',
+  'telluride-rotary-meetings': 'TELLURIDE_ROTARY_MEETINGS',
+};
 
 // mirror file (sans .json) → display source label
 const SOURCES = {
@@ -155,10 +166,18 @@ function buildEventsIndex(repoRoot) {
 
   const seen = new Map();   // normTitle|date → record (first source wins)
   const out = [];
+  let runtime = null;
   for (const [file, label] of Object.entries(SOURCES)) {
     let arr = [];
-    try { arr = JSON.parse(fs.readFileSync(path.join(DATA, file + '.json'), 'utf8')); }
-    catch (e) { console.warn(`  events-index: ${file}.json unreadable — skipped`); continue; }
+    if (RUNTIME_SOURCES[file]) {
+      try {
+        if (!runtime) runtime = loadDataArrays(repoRoot);
+        arr = runtime.arrays[RUNTIME_SOURCES[file]] || runtime.captured[RUNTIME_SOURCES[file]] || [];
+      } catch (e) { console.warn(`  events-index: runtime const ${RUNTIME_SOURCES[file]} failed — skipped`); continue; }
+    } else {
+      try { arr = JSON.parse(fs.readFileSync(path.join(DATA, file + '.json'), 'utf8')); }
+      catch (e) { console.warn(`  events-index: ${file}.json unreadable — skipped`); continue; }
+    }
     for (const e of arr || []) {
       if (!e || !e.title) continue;
       const title = String(e.title).trim();

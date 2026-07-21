@@ -43,3 +43,9 @@ test('serializeArray: arrays of objects survive round-trip (votes[] bug 2026-07-
   const roundTrip = new Function(src + '; return T;')();
   assert.deepStrictEqual(roundTrip[0].votes[0], { item: 'STR ordinance', outcome: 'Passed', tally: '6-0' });
 });
+
+test('serializeArray: null values stay null literals (SMART packetUrl bug 2026-07-21)', () => {
+  const src = serializeArray('T', [{ a: 'x', packetUrl: null }]);
+  const roundTrip = new Function(src + '; return T;')();
+  assert.strictEqual(roundTrip[0].packetUrl, null);
+});

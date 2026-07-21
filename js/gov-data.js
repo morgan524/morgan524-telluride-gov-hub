@@ -225,8 +225,8 @@ const SMART_CACHED_DATA = [
     time: "4:00 PM",
     title: "SMART Board of Directors",
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",
-    agendaUrl: "null",
-    packetUrl: "null"
+    agendaUrl: null,
+    packetUrl: null
   }
 ];
 

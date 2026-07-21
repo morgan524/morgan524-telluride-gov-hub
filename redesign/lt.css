@@ -324,3 +324,21 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
   .dd-side { position: static; }
   .dd-hero-text h1 { font-size: 36px; }
 }
+
+/* ── Weather card (js/lt-weather.js → #lt-weather) ─────────────────── */
+.ltw { display: grid; grid-template-columns: auto 1fr; gap: 26px; align-items: center; padding: 22px 26px; background: linear-gradient(135deg, #eef3ec, #f2f0e4); position: relative; }
+.ltw-now { display: flex; align-items: center; gap: 16px; }
+.ltw-big-i { font-size: 52px; line-height: 1; }
+.ltw-k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--forest); }
+.ltw-temp { font: 700 38px/1.1 var(--sans); color: var(--ink); margin: 4px 0 2px; }
+.ltw-cond { font: 500 16px/1.35 var(--sans); color: var(--forest); }
+.ltw-meta { font: 400 13.5px/1.5 var(--sans); color: var(--muted); margin-top: 3px; }
+.ltw-days { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+.ltw-day { background: rgba(255,255,255,.65); border: 1px solid var(--hairline); border-radius: 10px; padding: 10px 14px; text-align: center; min-width: 86px; }
+.ltw-day .ltw-d { font: 700 11px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ltw-day .ltw-i { font-size: 22px; margin: 6px 0 4px; }
+.ltw-day .ltw-t { font: 500 14.5px/1.3 var(--sans); color: var(--muted); }
+.ltw-day .ltw-t strong { color: var(--ink); }
+.ltw-day .ltw-p { font: 600 12.5px/1.4 var(--sans); color: var(--forest); margin-top: 2px; }
+.ltw-src { position: absolute; right: 14px; bottom: 8px; font: 400 11.5px/1 var(--sans); color: var(--muted2); }
+@media (max-width: 900px) { .ltw { grid-template-columns: 1fr; } .ltw-days { justify-content: flex-start; } }
