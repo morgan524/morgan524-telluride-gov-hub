@@ -133,9 +133,12 @@
       if (/^https?:\/\//.test(photo)) {
         media = '<div class="media"><img src="' + LTData.esc(photo) + '" alt="' + LTData.esc(l.title || 'Listing photo') + '" loading="lazy"></div>';
       } else if (l.address || (l.lat && l.lng)) {
-        // lat/lng first — geocoding the address string can miss (Element 52
-        // resolved to the wrong neighborhood); coordinates never do.
-        var q = encodeURIComponent((l.lat && l.lng) ? (l.lat + ',' + l.lng) : l.address);
+        // Street address first, with the "Unit …" segment stripped — unit
+        // numbers send Google's geocoder astray, and the pipeline's lat/lng
+        // are rough per-street guesses (one landed mid-mountain). Coordinates
+        // only when there's no address at all.
+        var cleanAddr = String(l.address || '').replace(/,?\s*(Unit|Apt|#)\s*[^,]+/i, '');
+        var q = encodeURIComponent(cleanAddr || (l.lat + ',' + l.lng));
         media = '<div class="media"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
           'title="Map of ' + LTData.esc(l.address || 'listing location') + '" ' +
           'src="https://maps.google.com/maps?q=' + q + '&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe></div>';

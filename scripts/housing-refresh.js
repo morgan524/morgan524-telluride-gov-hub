@@ -194,8 +194,8 @@ function parseSmrhaPost(post) {
   let lat = 37.9375, lng = -107.8123;
   if (/\bNorwood\b/i.test(raw + address))              { lat = 38.1297; lng = -108.2867; }
   else if (/Mountain\s+Village/i.test(raw + address))  { lat = 37.9325; lng = -107.8497; }
-  else if (/South\s+Davis/i.test(address))             { lat = 37.9281; lng = -107.8145; }
-  else if (/Pacific\s+Ave/i.test(address))             { lat = 37.9352; lng = -107.8138; }
+  else if (/South\s+Davis/i.test(address))             { lat = 37.9360; lng = -107.8205; }
+  else if (/Pacific\s+Ave/i.test(address))             { lat = 37.9366; lng = -107.8135; }
 
   return {
     title:     '🏠 ' + title,
