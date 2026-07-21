@@ -239,6 +239,17 @@ const MV_CACHE_DATE = '2026-03-24';
 const MV_CACHED_DATA = [
   // ── Town Council ──
   {
+    date: 'August 20, 2026',
+    time: '2:00 PM',
+    title: 'Town Council Meeting',
+    board: 'tc',
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: 'Town Hall, 455 Mountain Village Blvd, Suite A',
+    note: 'Next scheduled meeting -- agenda posted the Friday before.'
+  },
+  {
     date: 'April 23, 2026',
     time: '2:00 PM - 7:00 PM',
     title: 'Town Council Meeting',
@@ -564,94 +575,15 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-03-24';
+const NORWOOD_CACHE_DATE = '2026-07-21';
 
 const NORWOOD_CACHED_DATA = [
   // ── Board of Trustees ──
   {
-    date: 'April 8, 2026',
-    title: 'Board of Trustees Meeting',
+    date: 'July 15, 2026',
+    title: 'Board of Trustees  Special Meeting',
     board: 'bot',
-    agendaUrl: null,
-    note: 'Next scheduled meeting -- agenda posted before the meeting.'
-  },
-  {
-    date: 'May 12, 2026',
-    title: 'Board of Trustees Meeting',
-    board: 'bot',
-    agendaUrl: null
-  },
-  {
-    date: 'June 9, 2026',
-    title: 'Board of Trustees Meeting',
-    board: 'bot',
-    agendaUrl: null
-  },
-  {
-    date: 'March 11, 2026',
-    title: 'Board of Trustees Meeting',
-    board: 'bot',
-    agendaUrl: 'https://www.norwoodtown.com/files/89dac45c4/03.11.2026+Board+of+Trustee+Agenda+ADA.pdf'
-  },
-  // ── Planning & Zoning Commission ──
-  {
-    date: 'June 15, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: null,
-    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
-  },
-  {
-    date: 'May 18, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings#docaccess-5850a6d289f0a356a61967ed2c3082e8'
-  },
-  {
-    date: 'April 20, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/files/9f7d271ce/04.20.2026+P%26Z+BOA+AGENDA.pdf'
-  },
-  {
-    date: 'March 16, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/files/cef2273a3/03.16.2026+P%26Z+BOA+AGENDA.pdf'
-  },
-  {
-    date: 'February 23, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://www.norwoodtown.com/files/b5e6f3c90/02.23.2026+P%26Z+BOA+AGENDA.pdf'
-  },
-  // ── Water Commission ──
-  {
-    date: 'April 14, 2026',
-    title: 'Norwood Water Commission Meeting',
-    board: 'nwc',
-    agendaUrl: null,
-    note: 'Next scheduled NWC meeting -- agenda posted before the meeting.'
-  },
-  {
-    date: 'March 10, 2026',
-    title: 'Norwood Water Commission Meeting',
-    board: 'nwc',
-    agendaUrl: 'https://www.norwoodtown.com/nwc-meetings'
-  },
-  // ── Sanitation District ──
-  {
-    date: 'April 9, 2026',
-    title: 'Norwood Sanitation District Meeting',
-    board: 'san',
-    agendaUrl: null,
-    note: 'Next scheduled Sanitation District meeting -- agenda posted before the meeting.'
-  },
-  {
-    date: 'March 12, 2026',
-    title: 'Norwood Sanitation District Meeting',
-    board: 'san',
-    agendaUrl: 'https://www.norwoodtown.com/norwood-sanitation-district-meeting'
+    agendaUrl: 'https://www.norwoodtown.com/files/71d4a24f1/07.15.26+BOT+Special+MeetingAgenda+ADA.pdf'
   }
 ];
 

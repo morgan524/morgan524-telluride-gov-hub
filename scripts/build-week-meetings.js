@@ -41,7 +41,7 @@ const GETTERS = [
   ['smart',     'SMART Transit',                    'getSmartMeetings'],
   ['airport',   'Telluride Regional Airport',       'getAirportMeetings'],
 ];
-const WINDOW_DAYS = 14;
+const WINDOW_DAYS = 30;  // one month out — small towns meet monthly, 14d hid them between cycles
 
 // Public-comment inboxes by body (same map the digest uses — weekly-email.js
 // COMMENT_MAP; keep in sync). Bodies without a recipient resolve to ''.

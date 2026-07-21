@@ -4733,13 +4733,19 @@ async function syncNorwoodMeetings() {
       const html = resp.text;
       // Extract meeting entries via aria-label: "View [title] on YYYY-MM-DD"
       const viewRe = /aria-label="View ([^"]+) on (\d{4}-\d{2}-\d{2})"/g;
+      // The site has used both attribute orders (aria-label…href and
+      // href…aria-label) — match either, or agenda links silently vanish.
       const agendaRe = /aria-label="Agenda attachment for (\d{4}-\d{2}-\d{2}) [^"]*"[^>]*href="([^"]+)"/g;
+      const agendaRe2 = /href="([^"]+)"[^>]*aria-label="Agenda attachment for (\d{4}-\d{2}-\d{2}) [^"]*"/g;
 
       // Build agenda map by date
       const agendaMap = {};
       let am;
       while ((am = agendaRe.exec(html)) !== null) {
         if (!agendaMap[am[1]]) agendaMap[am[1]] = 'https://www.norwoodtown.com' + am[2];
+      }
+      while ((am = agendaRe2.exec(html)) !== null) {
+        if (!agendaMap[am[2]]) agendaMap[am[2]] = 'https://www.norwoodtown.com' + am[1];
       }
 
       let vm;
@@ -6648,13 +6654,16 @@ async function main() {
   }
 
   // ── Norwood meetings ──
+  // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. (It was
+  // patched against gov-helpers.js where the const doesn't exist, so every
+  // Norwood update silently no-opped from mid-June until 2026-07-21.)
   const newNorwoodData = await syncNorwoodMeetings();
   if (newNorwoodData !== null) {
-    const existingNorwood = extractJsArray(govHubSrc, 'NORWOOD_CACHED_DATA') || [];
+    const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
     if (JSON.stringify(newNorwoodData) !== JSON.stringify(existingNorwood)) {
-      govHubSrc = replaceJsValue(govHubSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
-      govHubSrc = replaceConstString(govHubSrc, 'NORWOOD_CACHE_DATE', today());
-      changed = true;
+      govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
+      govDataSrc = replaceConstString(govDataSrc, 'NORWOOD_CACHE_DATE', today());
+      govDataChanged = true;
     }
   }
 
