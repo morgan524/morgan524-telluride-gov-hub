@@ -15,6 +15,17 @@
   .prose h2 { font: 500 30px/1.2 var(--serif); margin: 34px 0 12px; }
   .prose p { font: 400 16.5px/1.7 var(--sans); color: var(--body2); margin: 0 0 16px; }
   .prose .ctas { display: flex; gap: 14px; margin-top: 26px; flex-wrap: wrap; }
+  .nc-row { max-width: var(--maxw); margin: 44px auto 0; padding: 0 var(--pad-x); display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .nc-card { border-radius: 12px; padding: 30px; }
+  .nc-news { background: var(--forest); color: rgba(255,255,255,.9); }
+  .nc-news h2 { color: #fff; font: 500 26px/1.2 var(--serif); margin: 0 0 10px; }
+  .nc-news p { font: 400 15.5px/1.65 var(--sans); margin: 0 0 18px; }
+  .nc-contact { background: var(--sage2); border: 1px solid var(--hairline); }
+  .nc-contact h2 { font: 500 26px/1.2 var(--serif); margin: 0 0 10px; }
+  .nc-contact p { font: 400 15.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 16px; }
+  .contact-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; font: 500 15.5px/1.4 var(--sans); }
+  .contact-row svg { width: 20px; height: 20px; stroke: var(--forest); fill: none; stroke-width: 2; flex-shrink: 0; }
+  @media (max-width: 900px) { .nc-row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -43,6 +54,30 @@
     <a class="btn btn-outline" href="index.html#explore">Explore the hub</a>
   </div>
 </main>
+
+<section class="nc-row">
+  <div class="nc-card nc-news">
+    <h2>Get Our Newsletter</h2>
+    <p>Stay up to date on what matters most in the region. The Week Ahead Outlook covers government decisions, development updates, housing news, and community events &mdash; curated for residents who care about the future of their town.</p>
+    <a class="btn btn-gold" href="/hub-bub.html#signup">&#128238; Subscribe Now</a>
+  </div>
+  <div class="nc-card nc-contact">
+    <h2>Contact Us</h2>
+    <p>Have a question, tip, or want to get involved? We'd love to hear from you.</p>
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      <a href="mailto:info@livabletelluride.org">info@livabletelluride.org</a>
+    </div>
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Telluride, Colorado</span>
+    </div>
+    <div class="contact-row">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <a href="https://livabletelluride.org" target="_blank" rel="noopener">livabletelluride.org</a>
+    </div>
+  </div>
+</section>
 
 <div id="lt-footer"></div>
 <script src="site.js?v=6"></script>

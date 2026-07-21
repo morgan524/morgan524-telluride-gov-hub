@@ -65,6 +65,11 @@
 <div id="lt-footer"></div>
 <script src="site.js?v=6"></script>
 <script src="/js/lt-data.js?v=4"></script>
+<!-- Firebase (compat) — read-only merge of approved community org submissions.
+     Same project/pattern as the live page; SITE_CONFIG carries the config. -->
+<script src="/js/site-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
 (function () {
   var grid = document.getElementById('org-grid');
@@ -111,6 +116,65 @@
     }).join('');
   }
 
+  /* ── Approved community submissions (Firestore org_submissions) ──
+     Read-only merge, de-duped by case-insensitive name so a submission
+     later hand-curated into LOCAL_ORGS doesn't double up. Any failure
+     leaves the curated directory rendered (never blocks the page). */
+  var ORG_CAT_MAP = {
+    'service club': 'clubs', 'clubs': 'clubs', 'recreation': 'recreation',
+    'church': 'churches', 'churches': 'churches', 'youth': 'youth',
+    'business': 'business', 'nonprofit': 'nonprofits', 'nonprofits': 'nonprofits'
+  };
+  function parseSocialText(text) {
+    var t = ' ' + String(text || '') + ' ';
+    function grab(re) { var m = t.match(re); return m ? m[0].trim().replace(/[)\].,;]+$/, '') : null; }
+    var social = {};
+    var fb = grab(/https?:\/\/(www\.)?facebook\.com\/[^\s,]+/i);
+    var ig = grab(/https?:\/\/(www\.)?instagram\.com\/[^\s,]+/i);
+    var tw = grab(/https?:\/\/(www\.)?(x|twitter)\.com\/[^\s,]+/i);
+    var yt = grab(/https?:\/\/(www\.)?(youtube\.com|youtu\.be)\/[^\s,]+/i);
+    if (fb) social.facebook = fb;
+    if (ig) social.instagram = ig;
+    if (tw) social.twitter = tw;
+    if (yt) social.youtube = yt;
+    return Object.keys(social).length ? social : null;
+  }
+  function submissionToOrg(d) {
+    return {
+      name: d.name || '',
+      category: ORG_CAT_MAP[String(d.category || '').toLowerCase().trim()] || 'nonprofits',
+      town: (d.town || '').trim(),
+      summary: d.description || '',
+      website: /^https?:\/\//i.test(d.website || '') ? d.website : '',
+      donate: /^https?:\/\//i.test(d.donate || '') ? d.donate : '',
+      social: parseSocialText(d.social),
+      logo: /^https?:\/\//i.test(d.logoUrl || '') ? d.logoUrl : ''
+    };
+  }
+  function mergeApprovedOrgs() {
+    try {
+      if (typeof firebase === 'undefined' || !window.SITE_CONFIG || !SITE_CONFIG.FIREBASE) return;
+      if (!firebase.apps.length) firebase.initializeApp(SITE_CONFIG.FIREBASE);
+      firebase.firestore().collection('org_submissions').where('status', '==', 'approved').get()
+        .then(function (snap) {
+          if (snap.empty) return;
+          var seen = {};
+          orgs.forEach(function (o) { seen[String(o.name || '').toLowerCase().trim()] = 1; });
+          var extra = [];
+          snap.forEach(function (doc) {
+            var o = submissionToOrg(doc.data() || {});
+            var key = o.name.toLowerCase().trim();
+            if (!o.name || seen[key]) return;
+            seen[key] = 1; extra.push(o);
+          });
+          if (!extra.length) return;
+          orgs = orgs.concat(extra).sort(function (a, b) { return String(a.name).localeCompare(String(b.name)); });
+          render();
+        })
+        .catch(function (err) { console.warn('[local-orgs] approved-submissions merge failed:', err); });
+    } catch (err) { console.warn('[local-orgs] Firebase unavailable:', err); }
+  }
+
   LTData.load(['local-orgs']).then(function (data) {
     orgs = (data['local-orgs'] || []).slice().sort(function (a, b) { return String(a.name).localeCompare(String(b.name)); });
     var chips = document.getElementById('cat-chips'); var seen = {};
@@ -125,6 +189,7 @@
       c.classList.add('active'); catFilter = c.dataset.cat || ''; render();
     });
     render();
+    mergeApprovedOrgs();
   }).catch(function (err) { LTData.showError(grid, err); });
 })();
 </script>

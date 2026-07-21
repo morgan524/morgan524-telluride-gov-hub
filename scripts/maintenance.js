@@ -471,7 +471,7 @@ const CANONICAL_NAV = ['Local News','Gov-Hub','Deep Dives','Events','Hub-Bub','L
 // Every .html that can carry the public top-nav (root + known subdirs).
 function reviewHtmlFiles() {
   const out = [];
-  for (const d of ['.', 'projects-map', 'v2']) {
+  for (const d of ['.', 'projects-map', 'v2', 'zoning-map', 'redesign', 'redesign/zoning-map', 'redesign/projects-map']) {
     const dir = path.join(REPO_ROOT, d);
     if (!fs.existsSync(dir)) continue;
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -485,7 +485,7 @@ function reviewHtmlFiles() {
 //    declaration in gov-data.js/gov-helpers.js silently breaks the site.
 function reviewJsSyntax() {
   console.log('\n🔎 Review: JS syntax (node --check)');
-  for (const d of ['js', 'scripts']) {
+  for (const d of ['js', 'scripts', 'redesign']) {
     const dir = path.join(REPO_ROOT, d);
     if (!fs.existsSync(dir)) continue;
     for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.js'))) {
@@ -566,10 +566,31 @@ function reviewDeepDiveStale() {
   }
 }
 
+// 3b. Shared-shell consistency — pages on the site.js shell (redesign now,
+//     the whole site after cutover) must have the #lt-header placeholder with
+//     a plain <script> tag AFTER it (DCL-race rule), and an #lt-footer
+//     placeholder unless <body data-no-footer> opts out (full-viewport maps).
+function reviewShellNav() {
+  console.log('\n🔎 Review: shared-shell (site.js) consistency');
+  for (const fp of reviewHtmlFiles()) {
+    const src = fs.readFileSync(fp, 'utf8');
+    const rel = path.relative(REPO_ROOT, fp);
+    const headerIdx = src.indexOf('id="lt-header"');
+    if (headerIdx === -1) continue; // not a shell page (legacy nav handled by reviewNav)
+    const m = src.match(/<script src="[^"]*site\.js[^"]*"><\/script>/);
+    if (!m) { reviewFindings.push(`Shell page ${rel} has #lt-header but never loads site.js`); continue; }
+    if (m.index < headerIdx) reviewFindings.push(`Shell page ${rel} loads site.js BEFORE #lt-header (DCL-race rule)`);
+    if (src.indexOf('id="lt-footer"') === -1 && !/data-no-footer/.test(src)) {
+      reviewFindings.push(`Shell page ${rel} missing #lt-footer placeholder (add data-no-footer to <body> if intentional)`);
+    }
+  }
+}
+
 function runDailyReview() {
   reviewJsSyntax();
   reviewBrokenAssets();
   reviewNav();
+  reviewShellNav();
   reviewDeepDiveStale();
   if (reviewFindings.length > 0) {
     console.log(`\n🔎 Daily review: ${reviewFindings.length} finding(s):`);

@@ -1679,7 +1679,7 @@
        js/gov-data.js + js/gov-helpers.js) so a fresh hub-bub.js gets
        picked up at most ~10 minutes after a push, regardless of what
        the browser's cache policy would do. Without this, the bare
-       `<script src="js/hub-bub.js">` was being cached indefinitely and
+       a bare hub-bub.js script tag was being cached indefinitely and
        bug fixes (e.g. the 2026-05-25 Forgot-Password view-swap) didn't
        reach users until they hard-refreshed. -->
   <script>

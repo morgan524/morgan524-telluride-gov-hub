@@ -46,6 +46,11 @@
   .side-koto .item a { font: 500 15.5px/1.35 var(--serif); color: var(--forest); }
   .side-koto .item a:hover { color: var(--rust); }
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
+  .letters-banner { margin-bottom: 8px; }
+  .letters-banner img { max-width: 260px; width: 100%; display: block; }
+  #pets-list .item { grid-template-columns: 44px 1fr; align-items: center; }
+  #pets-list .pet-photo { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+  #pets-list .sub { font: 400 13px/1.4 var(--sans); color: var(--muted2); }
   .side-tip h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 6px; }
   .side-tip p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 12px; }
   @media (max-width: 900px) {
@@ -87,6 +92,11 @@
       <h3>KOTO Newscasts</h3>
       <div id="koto-list"></div>
     </div>
+    <div class="side-koto card" id="pets-card" hidden>
+      <h3>Adoptable pets</h3>
+      <div id="pets-list"></div>
+      <div style="margin-top:12px"><a class="btn btn-outline" href="https://www.telluridehumanesociety.org/" target="_blank" rel="noopener">Telluride Humane Society &rarr;</a></div>
+    </div>
     <div class="side-tip">
       <h3>Have a tip?</h3>
       <p>See something happening in the county we should look into? We read everything.</p>
@@ -106,6 +116,9 @@
     'public-safety': 'Public Safety', 'education': 'Education', 'health': 'Health', 'arts-culture': 'Arts & Culture',
     'recreation': 'Recreation', 'infrastructure': 'Infrastructure' };
   var RIVER_PAGE = 12;
+  // Letters/pins can link to our own pages ('/Blog%20Posts/…') — allow
+  // root-relative alongside absolute http(s) (LTData.safeUrl is absolute-only).
+  function safeHref(u) { return /^(https?:\/\/|\/(?!\/))/i.test(u || '') ? u : '#'; }
   var stories = [], topicFilter = '', shown = RIVER_PAGE;
 
   // Standing rule: an obituary must NEVER be the featured story.
@@ -114,7 +127,8 @@
   function normalize(a, srcLabel) {
     return { title: a.title || '', href: a.href || '', img: a.img || a.imageUrl || '',
       dek: a.copy || a.claudeSummary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
-      date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured };
+      date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
+      letterAuthor: a.letterAuthor || '' };
   }
   function metaLine(s) {
     return [s.src, s.date].filter(Boolean).join(' · ');
@@ -135,19 +149,30 @@
     var img;
     if (s.img) {
       img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"></div>';
+    } else if (s.isLetter) {
+      // Letters without their own photo use the Letters artwork (live-site parity)
+      img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor.png" alt="Letter to the editor" loading="lazy"></div>';
     } else {
       var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
       if (!logo) return '';
       img = '<div class="img-frame logo-fill"><img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
     }
-    return linkWrap ? '<a href="' + LTData.esc(LTData.safeUrl(s.href)) + '" target="_blank" rel="noopener">' + img + '</a>' : img;
+    return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + img + '</a>' : img;
+  }
+  // "Letters to Livable Telluride" banner above our own letters (isLetter pins).
+  function letterBanner(s) {
+    return s.isLetter ? '<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>' : '';
+  }
+  function metaWithAuthor(s) {
+    var base = metaLine(s);
+    return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
   }
   function storyLink(s, tagName, cls) {
     return '<' + tagName + ' class="' + cls + ' story">' + imgFrame(s, true) +
-      '<div>' + tagFor(s) +
-      '<h3><a href="' + LTData.esc(LTData.safeUrl(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
+      '<div>' + letterBanner(s) + tagFor(s) +
+      '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
       (s.dek ? '<p class="dek">' + LTData.esc(s.dek) + '</p>' : '') +
-      '<div class="meta">' + LTData.esc(metaLine(s)) + '</div></div></' + tagName + '>';
+      '<div class="meta">' + LTData.esc(metaWithAuthor(s)) + '</div></div></' + tagName + '>';
   }
 
   function render() {
@@ -163,10 +188,10 @@
 
     document.getElementById('lead-slot').innerHTML = lead
       ? '<article class="lead story">' + imgFrame(lead, true) +
-        '<div><span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
-        '<h2><a href="' + LTData.esc(LTData.safeUrl(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
+        '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
+        '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
         (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
-        '<div class="meta">' + LTData.esc(metaLine(lead)) + '</div></div></article>'
+        '<div class="meta">' + LTData.esc(metaWithAuthor(lead)) + '</div></div></article>'
       : '';
     document.getElementById('sec-slot').innerHTML = secondary.map(function (s) { return storyLink(s, 'article', 'sec-item'); }).join('');
     var slice = riverItems.slice(0, shown);
@@ -176,8 +201,32 @@
     if (more) more.addEventListener('click', function () { shown += RIVER_PAGE; render(); });
   }
 
-  LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured'])
+  // Adoptable pets (Telluride Humane Society via Shelterluv). Same guards as
+  // the live page: skip photo-less, pre-weaning, and name-marked-unavailable
+  // animals (the sync script already filters most of these — defense in depth).
+  var UNAVAILABLE_NAME = /\b(adoption\s+pending|adopted|on\s+hold|pending\s+adoption|not\s+available|coming\s+soon|in\s+foster|foster\s+only)\b/i;
+  function renderPets(animals) {
+    var today = LTData.mtDateKey ? LTData.mtDateKey(new Date()) : '';
+    var pets = (animals || []).filter(function (a) {
+      if (!a || !a.id || !a.photo) return false;
+      if (a.revealDate && today && a.revealDate > today) return false;
+      if (/^(unweaned|nursing)$/i.test((a.ageGroup || '').trim())) return false;
+      if (UNAVAILABLE_NAME.test(a.name || '')) return false;
+      return true;
+    }).slice(0, 4);
+    if (!pets.length) return;
+    document.getElementById('pets-card').hidden = false;
+    document.getElementById('pets-list').innerHTML = pets.map(function (a) {
+      var name = (a.name || '').replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
+      return '<div class="item"><img class="pet-photo" src="' + LTData.esc(a.photo) + '" alt="' + LTData.esc(name) + '" loading="lazy">' +
+        '<div><a href="' + LTData.esc(safeHref(a.profileUrl)) + '" target="_blank" rel="noopener">' + LTData.esc(name) + '</a>' +
+        '<div class="sub">' + LTData.esc(a.summary || a.breed || a.species || '') + '</div></div></div>';
+    }).join('');
+  }
+
+  LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured', 'humane-society-animals'])
     .then(function (data) {
+      renderPets(data['humane-society-animals']);
       var pins = (data['local-news-featured'] || []).map(function (a) { var s = normalize(a, a.sourceKey || 'Featured'); s.featured = a.featured === true; return s; });
       var pinHrefs = {};
       pins.forEach(function (p) { if (p.href) pinHrefs[p.href] = 1; });
@@ -212,7 +261,7 @@
       if (koto.length) {
         document.getElementById('koto-card').hidden = false;
         document.getElementById('koto-list').innerHTML = koto.map(function (k, i) {
-          return '<div class="item"><div class="num">0' + (i + 1) + '</div><a href="' + LTData.esc(LTData.safeUrl(k.href)) + '" target="_blank" rel="noopener">' + LTData.esc(k.title || '') + '</a></div>';
+          return '<div class="item"><div class="num">0' + (i + 1) + '</div><a href="' + LTData.esc(safeHref(k.href)) + '" target="_blank" rel="noopener">' + LTData.esc(k.title || '') + '</a></div>';
         }).join('');
       }
       render();
