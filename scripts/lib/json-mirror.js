@@ -22,6 +22,8 @@ const path = require('path');
 // JSON in lockstep. (gov-data.js arrays and object-maps like MANUAL_SUMMARIES are
 // later phases: they need file-aware / object-aware mirroring.)
 const MIRROR_ARRAYS = [
+  // deep dives
+  'DEEP_DIVE_UPDATES',
   // news
   'TELLURIDE_TIMES_ARTICLES', 'SMB_FORUM_ARTICLES', 'KOTO_NEWSCASTS', 'KOTO_FEATURED_STORIES',
   // events (bot-synced)

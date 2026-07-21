@@ -19,7 +19,20 @@
     return '<section class="dd-sect"><div class="eyebrow" style="margin-bottom:10px">' + esc(label) + '</div>' + inner + '</section>';
   }
 
-  LTData.load(['land-use-issues', 'gondola-data']).then(function (data) {
+  function fmtDate(iso) { // 'YYYY-MM-DD' → 'Thu, Jul 23' (noon guard avoids TZ backslide)
+    var d = new Date(iso + 'T12:00:00');
+    return isNaN(d) ? iso : d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  }
+
+  Promise.all([
+    LTData.load(['land-use-issues', 'gondola-data']),
+    // Live gov-hub cross-reference (built by content-refresh). Optional by
+    // design: if it ever fails to build, the dive still renders (hand-curated
+    // issue.meetings becomes the fallback below).
+    LTData.load(['deep-dive-watch']).catch(function () { return { 'deep-dive-watch': null }; })
+  ]).then(function (results) {
+    var data = results[0];
+    var watch = ((results[1]['deep-dive-watch'] || {}).topics || {})[key] || null;
     var issues = data['land-use-issues'] || {};
     if (data['gondola-data'] && data['gondola-data'].label) issues.gondola = data['gondola-data'];
     var issue = issues[key];
@@ -99,12 +112,45 @@
           (d.copy ? '<p>' + esc(d.copy) + '</p>' : '') + '</div>';
       }).join('') + '</div>';
     }
-    if (issue.meetings && issue.meetings.length) {
+    // Upcoming meetings: live gov-hub matches when available (auto-refreshed
+    // every 6h), otherwise the topic's hand-curated list.
+    if (watch && watch.upcoming && watch.upcoming.length) {
+      side += '<div class="dd-card card"><h4>On upcoming agendas</h4>' + watch.upcoming.map(function (m) {
+        var links = [];
+        if (m.agendaUrl) links.push('<a href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">Agenda</a>');
+        if (m.zoomLink) links.push('<a href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>');
+        if (m.livestream) links.push('<a href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">Livestream</a>');
+        if (!links.length && m.link) links.push('<a href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Details</a>');
+        return '<div class="dd-doc"><span class="tag rust-tint">' + esc(fmtDate(m.date)) + (m.time ? ' · ' + esc(m.time) : '') + '</span>' +
+          '<strong style="display:block;margin:4px 0 2px">' + esc(m.sourceLabel || '') + '</strong>' +
+          '<span>' + esc(m.title || '') + '</span>' +
+          (links.length ? '<span class="dd-links">' + links.join('<span>&middot;</span>') + '</span>' : '') + '</div>';
+      }).join('') + '<p class="meta" style="margin-top:6px">Auto-matched from this week’s Gov-Hub agendas.</p></div>';
+    } else if (issue.meetings && issue.meetings.length) {
       side += '<div class="dd-card card"><h4>Upcoming meetings</h4>' + issue.meetings.map(function (m) {
         return '<div class="dd-doc"><span class="tag rust-tint">' + esc(m.date || '') + (m.time ? ' · ' + esc(m.time) : '') + '</span>' +
           '<a href="' + esc(safe(m.href)) + '" target="_blank" rel="noopener">' + esc(m.title || '') + '</a>' +
           (m.location ? '<p>' + esc(m.location) + '</p>' : '') + '</div>';
       }).join('') + '</div>';
+    }
+    // Recently in meetings: past-14-day gov-hub summaries that mention the topic.
+    if (watch && watch.recent && watch.recent.length) {
+      side += '<div class="dd-card card"><h4>Recently in meetings</h4>' + watch.recent.slice(0, 4).map(function (r) {
+        return '<div class="dd-doc"><span class="tag">' + esc(fmtDate(r.date)) + '</span>' +
+          '<strong style="display:block;margin:4px 0 2px">' + esc(r.title || '') + '</strong>' +
+          (r.snippet ? '<p>' + esc(r.snippet) + '</p>' : '') + '</div>';
+      }).join('') + '</div>';
+    }
+    // Latest developments: Haiku-triaged town/county news items for this topic.
+    if (watch && watch.developments && watch.developments.length) {
+      var news = watch.developments.filter(function (u) { return u.type === 'news' && u.title; });
+      if (news.length) {
+        side += '<div class="dd-card card"><h4>Latest developments</h4>' + news.slice(0, 4).map(function (u) {
+          return '<div class="dd-news"><div class="meta">' + esc(u.source || '') + (u.articleDate ? ' · ' + esc(u.articleDate) : '') + '</div>' +
+            (u.href ? '<a href="' + esc(safe(u.href)) + '" target="_blank" rel="noopener">' + esc(u.title) + '</a>' : '<strong>' + esc(u.title) + '</strong>') +
+            (u.copy ? '<p>' + esc(u.copy) + '</p>' : '') + '</div>';
+        }).join('') + '</div>';
+      }
     }
 
     root.innerHTML = hero +

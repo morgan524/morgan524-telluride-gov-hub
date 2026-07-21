@@ -551,10 +551,26 @@ function reviewNav() {
   }
 }
 
+// 4. Deep-dive staleness — build-deep-dive-watch.js (content-refresh) flags
+//    topics where a watched meeting happened after the dive's last hand-edit,
+//    or a timeline entry is still marked upcoming after its date passed.
+function reviewDeepDiveStale() {
+  console.log('\n🔎 Review: deep-dive staleness');
+  const fp = path.join(REPO_ROOT, 'data', 'deep-dive-watch.json');
+  if (!fs.existsSync(fp)) return; // first runs before content-refresh has built it
+  let watch;
+  try { watch = JSON.parse(fs.readFileSync(fp, 'utf8')); }
+  catch (e) { reviewFindings.push('deep-dive-watch.json unreadable: ' + e.message); return; }
+  for (const t of Object.values(watch.topics || {})) {
+    for (const msg of t.stale || []) reviewFindings.push('Deep dive stale — ' + msg);
+  }
+}
+
 function runDailyReview() {
   reviewJsSyntax();
   reviewBrokenAssets();
   reviewNav();
+  reviewDeepDiveStale();
   if (reviewFindings.length > 0) {
     console.log(`\n🔎 Daily review: ${reviewFindings.length} finding(s):`);
     reviewFindings.forEach(f => console.log(`  - ${f}`));

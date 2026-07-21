@@ -1104,6 +1104,7 @@ const MEETING_PASSCODES = {};
 
 const LAND_USE_ISSUES = {
   carhenge: {
+    lastUpdated: '2026-07-19',  // bump when hand-editing this topic
     label: 'Carhenge / Shandoka',
     heroImage: 'https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200',
     heroAlt: 'Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections',
@@ -1160,6 +1161,7 @@ const LAND_USE_ISSUES = {
     ]
   },
   society: {
+    lastUpdated: '2026-06-01',  // bump when hand-editing this topic
     label: 'Society Turn / Valley Floor Entrance',
     heroImage: 'https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true',
     heroAlt: 'Aerial view of the Society Turn development site along Highway 145 between Telluride and Mountain Village',
@@ -1193,6 +1195,7 @@ const LAND_USE_ISSUES = {
     ]
   },
   code: {
+    lastUpdated: '2026-07-19',  // bump when hand-editing this topic
     label: 'Code Changes & Accelerated Review',
     heroImage: 'assets/ssr/SMC-Housing-Code-Update-infographic.jpg',
     heroAlt: 'San Miguel County Housing Code Update infographic showing Phase 1 Project Foundation (Fall/Winter 2025), Phase 2 Issue Identification & Analysis (Spring 2026), and Phase 3 Final Audit Report and Code Drafting (Summer 2026).',
@@ -1323,6 +1326,7 @@ const LAND_USE_ISSUES = {
     }
   },
   wildfire: {
+    lastUpdated: '2026-06-01',  // bump when hand-editing this topic
     label: 'Wildfire Resiliency',
     intro: 'The Town of Telluride, San Miguel County, and the Telluride Fire Protection District are all considering adoption of Colorado\'s Wildfire Resiliency Code and the International Wildland Urban Interface (WUI) Code -- setting construction and land management standards in fire-prone areas.',
     statusTitle: 'Multiple bodies are simultaneously weighing wildfire code adoption.',
@@ -1352,6 +1356,7 @@ const LAND_USE_ISSUES = {
     ]
   },
   diamond: {
+    lastUpdated: '2026-06-01',  // bump when hand-editing this topic
     label: 'Diamond Ridge',
     heroImage: '/images/Diamond%20Ridge.jpg',
     intro: 'Diamond Ridge is a 105-acre property on Deep Creek Mesa near the Telluride Airport that San Miguel County and the Town of Telluride purchased for $7.2M with plans for high-density affordable housing using a newly created high-density zone district called the CH Zone that allows for 20 units per acre. Neighboring landowners challenged the rezoning and won twice in court -- first on due process and illegal spot zoning grounds, then on a PUD interpretation that further restricts development. A $5M state grant expired due to the County\'s failed legal strategy. Despite neighboring landowners and many community members requesting discussions about the property\'s future, the Town and County have not held public discussions, and the land remains idle.',
@@ -1411,6 +1416,7 @@ const LAND_USE_ISSUES = {
 };
 
 const GONDOLA_DATA = {
+  lastUpdated: '2026-07-19',  // bump when hand-editing this topic
   label: 'Gondola 3A',
   legalSummary: 'This case involved a challenge to the 3A campaign claiming that SMART failed to provide adequate TABOR notice because voters were not told where, when, or how to submit opposing comments for inclusion in the ballot notice. Additionally, the 3A campaign was claimed to be misleading in suggesting the measure would meaningfully fund a new gondola. The district court rejected the plaintiff\'s election claims. However, rather than let the matter rest, the public entities of Mountain Village, Town of Telluride, and SMART brought motions seeking attorney fees for just over $100,000. Plaintiff is currently appealing such award in court. The fee award is now fully briefed before the Colorado Court of Appeals (Case No. 2026CA391): the Towns and SMART filed answer briefs July 2, 2026, and Masson\'s reply briefs answer them -- arguing the trial court never made the findings Colorado\'s fee-shifting statutes require, never addressed the actual claims, and awarded fees under an election statute that requires a judgment no Town obtained.',
   intro: 'Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But the current gondola (built 1996) has a replacement cost estimated at $120-150M+, leaving a significant funding gap. CORA records revealed roughly $125K in campaign consulting before the ballot was referred.',

@@ -454,7 +454,12 @@ async function main() {
   process.exit(0);
 }
 
-main().catch(err => {
-  console.error('Fatal: ' + err.message);
-  process.exit(1);
-});
+// TOPICS is shared with build-deep-dive-watch.js (agenda/meeting matching).
+module.exports = { TOPICS };
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Fatal: ' + err.message);
+    process.exit(1);
+  });
+}

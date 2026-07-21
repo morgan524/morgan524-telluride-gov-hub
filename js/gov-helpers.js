@@ -347,6 +347,11 @@ const MEETING_AGENDA_META = {
     {"sv":4}
 };
 
+// Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
+// triage of Town/County news + agendas). Seeded 2026-07-20 — the writer
+// existed for months but this const was missing, so writes never landed.
+const DEEP_DIVE_UPDATES = [];
+
 const MANUAL_SUMMARIES = {
   "county|2026-06-22|Open Space Commission Meeting":
     "The Open Space Commission meets June 22 to work through several active trail and open space projects. On the table: a NEPA process update for the Perimeter Trail, new signage for the Keystone Gorge Loop Trail, and a conversation about future goals for the San Juan Skyway Scenic Byway Corridor. Conceptual plans for Mill Creek Park and an update on the Down Valley Connector Trail through Sawpit are also on the agenda. The commission will also address two vacancies — one regular seat and one alternate — plus a Northwest Mountain seasonal slot.",

@@ -289,6 +289,8 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
 .dd-player p { color: var(--muted); margin: 3px 0 0; }
 .dd-doc { padding: 10px 0; border-top: 1px solid var(--hairline); font: 400 15px/1.5 var(--sans); }
 .dd-doc a { display: block; margin-top: 5px; font-weight: 600; }
+.dd-doc .dd-links { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 5px; }
+.dd-doc .dd-links a { display: inline; margin: 0; }
 .dd-doc p { color: var(--muted); margin: 4px 0 0; }
 .dd-correct { margin: 36px 0 0; padding: 22px 26px; text-align: center; font: 400 15px/1.6 var(--sans); color: var(--body2); }
 

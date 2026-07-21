@@ -6841,6 +6841,10 @@ async function main() {
   // filtered, town-pinned, with category-fallback images (redesign events page).
   try { require('./build-events-index.js').run(REPO_ROOT); }
   catch (e) { console.warn('  events-index build failed: ' + e.message); }
+  // Deep-dive ⇄ gov-hub cross-reference: which upcoming/recent meetings touch
+  // each deep-dive topic, plus staleness flags (data/deep-dive-watch.json).
+  try { require('./build-deep-dive-watch.js').run(REPO_ROOT); }
+  catch (e) { console.warn('  deep-dive-watch build failed: ' + e.message); }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
   // retired (2026-05-18). Everything that used to live in gov-helpers.js + be

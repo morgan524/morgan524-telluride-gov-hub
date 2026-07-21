@@ -99,6 +99,33 @@ longer load-bearing for the site. The order is deliberate: pages first
 (visible win, low risk), writer-flip last (highest risk, done when everything
 else is proven).
 
+## Deep-dive ⇄ Gov-Hub watch system (added 2026-07-20)
+
+`scripts/build-deep-dive-watch.js` (runs at the end of content-refresh, after
+build-week-meetings) cross-references every deep-dive topic against the
+gov-hub pipeline and writes `data/deep-dive-watch.json`:
+
+- **upcoming** — this week's meetings whose title/summary/hook match the
+  topic's keywords → rendered by redesign/deep-dive.js as the live
+  "On upcoming agendas" sidebar (hand-curated `issue.meetings` is now only a
+  fallback when there are no live matches)
+- **recent** — past-14-day meeting summaries mentioning the topic →
+  "Recently in meetings" sidebar card
+- **developments** — DEEP_DIVE_UPDATES entries (the Haiku news-triage in
+  deep-dive-refresh.js; its missing target const was seeded 2026-07-20 and
+  mirrored to data/deep-dive-updates.json)
+- **stale** — flags when a watched meeting happened AFTER the topic's
+  `lastUpdated` stamp in gov-data.js, or a `future:true` timeline entry's
+  date has passed → surfaced in maintenance.js's daily findings issue
+  (reviewDeepDiveStale)
+
+Keywords live in deep-dive-refresh.js TOPICS (single map, both consumers);
+WATCH_OVERRIDES in the builder tightens them for deterministic matching
+('.*' clamped to within-sentence; society/gondola get narrower phrases; the
+code topic is limited to telluride+county sources). **When hand-editing a
+deep-dive topic, bump its `lastUpdated`** — that's what silences its stale
+flag.
+
 ## Cutover checklist (Phase 4 — pending)
 
 - ~~Re-shell zoning-map + projects-map~~ DONE 2026-07-20: staged copies at

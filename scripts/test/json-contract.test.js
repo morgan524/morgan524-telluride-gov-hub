@@ -83,12 +83,13 @@ const CONTRACTS = {
   'local-orgs.json': { required: ['name', 'category'], minCount: 1 },                 // hand-edited directory
   'housing-listings.json': { required: ['title', 'type', 'url'], minCount: 0 },       // seasonal/for-sale inventory varies
   'deep-dive-pages.json': { required: ['label', 'href'], minCount: 1 },
+  'deep-dive-updates.json': { required: ['topic', 'addedDate'], minCount: 0 },  // Haiku-triaged; usually sparse
 };
 
 // Object-map mirrors: values must be non-empty strings (or objects), keys non-empty.
 const OBJECT_FILES = ['manual-summaries.json', 'meeting-agenda-meta.json',
   'ridgway-agenda-map.json', 'rico-agenda-map.json',
-  'land-use-issues.json', 'gondola-data.json'];
+  'land-use-issues.json', 'gondola-data.json', 'deep-dive-watch.json'];
 
 // ---- helpers ------------------------------------------------------------
 const BAD_LITERALS = new Set(['undefined', 'NaN']);
