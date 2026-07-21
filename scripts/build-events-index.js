@@ -96,6 +96,28 @@ function fallbackImg(title) {
   return FB('community');
 }
 
+// User-facing event-type filter groups (events page "type" chips). Derived
+// from the same keyword patterns as the fallback images; title matched first
+// (most reliable), then the description. Everything else → Community.
+const SLUG_TYPE = {
+  baseball: 'Outdoors & Sports', hiking: 'Outdoors & Sports', cycling: 'Outdoors & Sports',
+  film: 'Arts & Film', art: 'Arts & Film', theater: 'Arts & Film',
+  livemusic: 'Music', food: 'Food & Drink', family: 'Family & Kids',
+  wellness: 'Wellness', talk: 'Talks & Classes', festival: 'Festivals'
+};
+// Description text is looser than titles ("the art of fermentation", "a
+// celebration of local food") — drop the most idiom-prone words for that pass.
+const DESC_PATTERNS = CATEGORY_FALLBACKS.map(([re, slug]) => {
+  if (slug === 'art') return [/gallery|exhibit|painting|sculpture|\bartist\b|open studio|mural/i, slug];
+  if (slug === 'festival') return [/festival|parade|\bfair\b|fireworks|\bgala\b|jubilee/i, slug];
+  return [re, slug];
+});
+function typeOf(title, desc) {
+  for (const [re, slug] of CATEGORY_FALLBACKS) if (re.test(title || '')) return SLUG_TYPE[slug];
+  for (const [re, slug] of DESC_PATTERNS) if (re.test(desc || '')) return SLUG_TYPE[slug];
+  return 'Community';
+}
+
 // Calendar-date key in America/Denver for an ISO datetime (pubDate) — never
 // UTC-slice (the MT-anchored rule).
 function mtKey(iso) {
@@ -148,6 +170,14 @@ function buildEventsIndex(repoRoot) {
       if (seen.has(key)) continue;
       const href = e.link || e.href || '';
       const rawImg = e.imageUrl || e.img || '';
+      // Short description for the events page cards: strip any HTML, collapse
+      // whitespace, drop leading date/venue boilerplate echoes, cut at a word
+      // boundary. Empty when the source has none.
+      let desc = String(e.description || e.summary || '')
+        .replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
+        .replace(/&#?\w+;/g, ' ').replace(/\s+/g, ' ').trim();
+      if (normTitle(desc).slice(0, 40) === normTitle(title).slice(0, 40)) desc = '';  // desc that just repeats the title
+      if (desc.length > 240) desc = desc.slice(0, 240).replace(/\s+\S*$/, '') + '…';
       const rec = {
         title: title,
         href: href,
@@ -158,6 +188,8 @@ function buildEventsIndex(repoRoot) {
         img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg)) ? rawImg : fallbackImg(title),
         category: String(e.category || '').trim(),
         source: label,
+        desc: desc,
+        type: typeOf(title, desc),
       };
       if (/^\d{4}-\d{2}-\d{2}/.test(e.endDate || '') && String(e.endDate).slice(0, 10) > date) {
         rec.endDate = String(e.endDate).slice(0, 10);   // multi-day: listed on first day only

@@ -10,29 +10,35 @@
 <link rel="stylesheet" href="lt.css?v=5">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
-  .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; }
-  .feat-wrap { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; }
-  .feat { display: grid; grid-template-columns: 1fr 1.15fr; gap: 34px; align-items: center; background: var(--forest); border-radius: 14px; overflow: hidden; }
-  .feat .img-frame { border-radius: 0; height: 100%; min-height: 300px; }
-  .feat .body { padding: 30px 34px 30px 0; color: rgba(255,255,255,.9); }
+  .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .chips + .chips { padding-top: 12px; }
+  .chips .chips-label { font: 700 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-right: 2px; }
+  /* Featured card: compact single-row banner aligned with the list column */
+  .feat-wrap { max-width: 940px; margin: 0 auto; padding: 26px var(--pad-x) 0; }
+  .feat { display: grid; grid-template-columns: 220px 1fr; gap: 22px; align-items: center; background: var(--forest); border-radius: 12px; overflow: hidden; }
+  .feat .img-frame { border-radius: 0; height: 100%; min-height: 150px; }
+  .feat .body { padding: 18px 22px 18px 0; color: rgba(255,255,255,.9); }
   .feat .k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
-  .feat h2 { font: 600 34px/1.1 var(--serif); color: #fff; margin: 10px 0 8px; }
-  .feat .meta-l { font: 500 15px/1.6 var(--sans); color: rgba(255,255,255,.75); margin-bottom: 14px; }
+  .feat h2 { font: 600 24px/1.15 var(--serif); color: #fff; margin: 7px 0 5px; }
+  .feat .meta-l { font: 500 14px/1.5 var(--sans); color: rgba(255,255,255,.75); margin-bottom: 10px; }
   .ev-wrap { max-width: 940px; margin: 0 auto; padding: 12px var(--pad-x) 20px; }
   .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
-  .ev { display: grid; grid-template-columns: 92px 1fr auto; gap: 18px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--hairline); }
-  .ev .img-frame { width: 92px; height: 92px; border-radius: 8px; }
-  .ev h3 { font: 600 21px/1.2 var(--serif); margin: 5px 0 4px; }
+  .ev { display: grid; grid-template-columns: 128px 1fr auto; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .ev .img-frame { width: 128px; height: 128px; border-radius: 8px; }
+  .ev h3 { font: 600 23px/1.2 var(--serif); margin: 6px 0 4px; }
   .ev h3 a { color: var(--forest); }
-  .ev .chev { font-size: 22px; color: var(--rust); }
+  .ev .dek { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 6px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .ev .chev { font-size: 22px; color: var(--rust); align-self: center; }
   .ev .badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .load-more { margin: 26px 0; text-align: center; }
   @media (max-width: 900px) {
     .feat { grid-template-columns: 1fr; }
-    .feat .body { padding: 22px 24px; }
-    .ev { grid-template-columns: 64px 1fr; }
-    .ev .img-frame { width: 64px; height: 64px; }
+    .feat .img-frame { min-height: 170px; }
+    .feat .body { padding: 18px 20px; }
+    .ev { grid-template-columns: 84px 1fr; }
+    .ev .img-frame { width: 84px; height: 84px; }
     .ev .chev { display: none; }
+    .ev .dek { -webkit-line-clamp: 3; }
   }
 </style>
 </head>
@@ -49,7 +55,8 @@
   </div>
 </header>
 
-<div class="chips" id="town-chips"><span class="chip active" data-town="">Everywhere</span></div>
+<div class="chips" id="town-chips"><span class="chips-label">Where</span><span class="chip active" data-town="">Everywhere</span></div>
+<div class="chips" id="type-chips"><span class="chips-label">What</span><span class="chip active" data-type="">All types</span></div>
 
 <div class="feat-wrap" id="feat-slot"></div>
 
@@ -64,8 +71,9 @@
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc, safe = LTData.safeUrl;
   var TOWN_ORDER = ['Telluride', 'Mountain Village', 'Norwood', 'Ridgway', 'Ouray', 'West End', 'Rico', 'Ophir'];
+  var TYPE_ORDER = ['Music', 'Arts & Film', 'Festivals', 'Outdoors & Sports', 'Food & Drink', 'Family & Kids', 'Talks & Classes', 'Wellness', 'Community'];
   var DAYS_PAGE = 7;
-  var events = [], townFilter = '', shownDays = DAYS_PAGE;
+  var events = [], townFilter = '', typeFilter = '', shownDays = DAYS_PAGE;
 
   // Featured pick: today's most compelling event (real photo > fallback,
   // evening > daytime, music/festival keywords boosted) — the featuredScore idea.
@@ -83,7 +91,9 @@
   }
   function render() {
     var today = LTData.todayMT();
-    var pool = events.filter(function (e) { return !townFilter || e.town === townFilter; });
+    var pool = events.filter(function (e) {
+      return (!townFilter || e.town === townFilter) && (!typeFilter || e.type === typeFilter);
+    });
 
     // featured = best-scored TODAY event (falls back to next day with events)
     var todays = pool.filter(function (e) { return e.date === today; });
@@ -107,9 +117,11 @@
         var multi = e.endDate ? '<span class="tag rust-tint">Thru ' + LTData.fmtDate(e.endDate, { month: 'short', day: 'numeric' }) + '</span>' : '';
         html += '<article class="ev story">' +
           '<a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener"><div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div></a>' +
-          '<div><div class="badges">' + (e.town ? '<span class="tag">' + esc(e.town) + '</span>' : '') + multi + '</div>' +
+          '<div><div class="badges">' + (e.town ? '<span class="tag">' + esc(e.town) + '</span>' : '') +
+          (e.type && e.type !== 'Community' ? '<span class="tag rust-tint">' + esc(e.type) + '</span>' : '') + multi + '</div>' +
           '<h3><a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
-          '<div class="meta">' + esc(metaLine(e)) + '</div></div>' +
+          '<div class="meta">' + esc(metaLine(e)) + '</div>' +
+          (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') + '</div>' +
           '<div class="chev">&rsaquo;</div></article>';
       });
     });
@@ -134,6 +146,19 @@
       var c = e.target.closest('.chip'); if (!c) return;
       chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
       c.classList.add('active'); townFilter = c.dataset.town || ''; shownDays = DAYS_PAGE; render();
+    });
+
+    // type chips (What)
+    var typeChips = document.getElementById('type-chips'); var seenTypes = {};
+    events.forEach(function (e) { if (e.type) seenTypes[e.type] = 1; });
+    TYPE_ORDER.filter(function (t) { return seenTypes[t]; }).forEach(function (t) {
+      var c = document.createElement('span'); c.className = 'chip'; c.dataset.type = t; c.textContent = t;
+      typeChips.appendChild(c);
+    });
+    typeChips.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      typeChips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+      c.classList.add('active'); typeFilter = c.dataset.type || ''; shownDays = DAYS_PAGE; render();
     });
     render();
   }).catch(function (err) { LTData.showError(list, err); });

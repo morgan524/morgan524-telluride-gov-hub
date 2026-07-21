@@ -9,6 +9,8 @@
     "img": "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the…",
+    "type": "Community",
     "endDate": "2026-08-06"
   },
   {
@@ -21,6 +23,8 @@
     "img": "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational,…",
+    "type": "Arts & Film",
     "endDate": "2026-08-28"
   },
   {
@@ -32,7 +36,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
+    "type": "Family & Kids"
   },
   {
     "title": "Kombucha and Kefir w/ Kayla",
@@ -43,7 +49,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Kombucha & Kefir with Kayla Wexelberg",
@@ -54,7 +62,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_35_47.png",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "12:00 PM – 2:00 PM · Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and…",
+    "type": "Community"
   },
   {
     "title": "Teen Cook",
@@ -65,7 +75,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    "type": "Community"
   },
   {
     "title": "I Heart Art with SMRC",
@@ -76,7 +88,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_22.png",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 3:30 PM",
+    "type": "Arts & Film"
   },
   {
     "title": "TYLER SIMMONS",
@@ -87,7 +101,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Stories & Poems Telluride",
@@ -98,7 +114,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry…",
+    "type": "Community"
   },
   {
     "title": "Punk Science with Pinhead",
@@ -109,7 +127,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "5:15 PM – 6:00 PM",
+    "type": "Talks & Classes"
   },
   {
     "title": "Talking Gourds Presents: Stories and Poems - Peter Waldor",
@@ -120,7 +140,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet…",
+    "type": "Community"
   },
   {
     "title": "Forest Health Talk w/Jason Sibold",
@@ -131,7 +153,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study here:…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Spanish Happy Hour",
@@ -142,7 +166,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but…",
+    "type": "Community"
   },
   {
     "title": "Forest Health Talk with Dr. Jason Sibold",
@@ -153,7 +179,9 @@
     "town": "Telluride",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg",
     "category": "Library Event",
-    "source": "Wilkinson Public Library"
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
@@ -165,6 +193,8 @@
     "img": "https://localist-images.azureedge.net/photos/52305506266326/huge/6f7fb94915fd0e9d2c59d779c91e1ffdf9538f60.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
+    "type": "Community",
     "endDate": "2026-09-15"
   },
   {
@@ -176,7 +206,9 @@
     "town": "Telluride",
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg",
     "category": "Concert / Performance",
-    "source": "Sheridan Opera House"
+    "source": "Sheridan Opera House",
+    "desc": "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in…",
+    "type": "Arts & Film"
   },
   {
     "title": "Josh Abbott",
@@ -187,7 +219,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Spend an unforgettable evening with Josh Abbott, the acclaimed Texas singer-songwriter and frontman of the Josh Abbott …",
+    "type": "Music"
   },
   {
     "title": "When the Cure is a Virus: Reprogramming a Killer to Fight Cancer",
@@ -198,7 +232,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.25.14-PM-scaled.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "Can a virus be turned into a cure? Clodagh O'Shea, of the Salk Institute will present \"When the Cure Is a Virus: Reprogramming a Killer to Fight Cancer.\" O'Shea, who holds the Wicklow Chair at Salk and has been named an HHMI Faculty…",
+    "type": "Community"
   },
   {
     "title": "Evenings of History 2026 @ the Wright",
@@ -210,6 +246,8 @@
     "img": "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray,…",
+    "type": "Arts & Film",
     "endDate": "2026-08-05"
   },
   {
@@ -221,7 +259,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52995362986557/huge/25e52220c3805dcb26431782a3eab968f37ccbf7.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Participants will take part in a guided canyoning trip through Portland Creek. Professional canyoning guides will provide instruction and all technical equipment, including wetsuits, harnesses, helmets, and belay devices. Along the route,…",
+    "type": "Family & Kids"
   },
   {
     "title": "Shakespeare in the Park: \"Henry V\"",
@@ -232,7 +272,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned…",
+    "type": "Arts & Film"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -244,6 +286,8 @@
     "img": "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
+    "type": "Arts & Film",
     "endDate": "2026-09-17"
   },
   {
@@ -255,7 +299,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Mahjongg for Independent Players",
@@ -266,7 +312,9 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
   },
   {
     "title": "Market on the Plaza",
@@ -277,7 +325,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
+    "type": "Community"
   },
   {
     "title": "Camp Wildflower - A Women's Wellness Retreat",
@@ -288,7 +338,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52799317043664/huge/1714c75173a9eaf2aedc61c49a369db10de46721.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Camp Wildflower is four-day women's wellness retreat in the heart of the San Juan Mountains July 22-26, 2026. This retreat is designed as a space to slow down, breathe deeper, and be fully supported - physically, mentally, and emotionally.…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "True Grit Historic Walking Tours",
@@ -300,18 +352,9 @@
     "img": "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen…",
+    "type": "Arts & Film",
     "endDate": "2026-08-28"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-22",
-    "time": "4:00 PM - 5:30 PM",
-    "location": "Wilkinson Public Library, Telluride Room, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
   },
   {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -322,7 +365,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
+    "type": "Community"
   },
   {
     "title": "Plant Party -You Buggin Me",
@@ -333,7 +378,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Who's Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
+    "type": "Community"
   },
   {
     "title": "White Buffalo, Voyager & Tyler Simmons - Live Music Fundraiser!",
@@ -344,7 +391,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53427639472690/huge/531b33824d528fc929d7ff8e1895f9d8f5cdac5d.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Help us GIVE BACK! Join us for LIVE MUSIC with Tyler Simmons on Wednesday, 7/22, on the Rooftop at White Buffalo Restaurant + Bar at Chipeta Lodge. 10% of all non-alcoholic proceeds go to the Voyager Youth Program. Stay for SUNSET on the…",
+    "type": "Music"
   },
   {
     "title": "Wine and Wickets",
@@ -355,7 +404,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "type": "Food & Drink"
   },
   {
     "title": "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
@@ -366,7 +417,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Concert / Performance",
-    "source": "Sheridan Opera House"
+    "source": "Sheridan Opera House",
+    "desc": "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
+    "type": "Music"
   },
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -378,6 +431,8 @@
     "img": "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic…",
+    "type": "Music",
     "endDate": "2026-09-17"
   },
   {
@@ -390,6 +445,8 @@
     "img": "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike…",
+    "type": "Wellness",
     "endDate": "2026-09-17"
   },
   {
@@ -401,7 +458,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "TMtC's annual Party in the Park is happening July 23 at Telluride Town Park! This community celebration supports our …",
+    "type": "Community"
   },
   {
     "title": "Chill With Chamber Music",
@@ -413,6 +472,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Telluride Chamber Music is bringing music to the West End of the county with Community Concerts at the beautiful Livery …",
+    "type": "Music",
     "endDate": "2026-08-27"
   },
   {
@@ -424,7 +485,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/hiking.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Museum for Power of Place: Hike into History! Ted Wilson, President of the San Miguel County …",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Live Music- The Mammoths",
@@ -435,7 +498,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53126480827602/huge/ad9c458a18ae1762a30aad207d0196671b64e012.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for a summer of live music, craft cocktails, mountain views, and unforgettable nights on the St. Elmo Tavern patio. Every Wednesday, we host live music for you to enjoy all season long. Join us on Wednesday, July 22nd as we welcome…",
+    "type": "Music"
   },
   {
     "title": "The Shining: CO-150 Film Festival Screening — Movie Night @ the Wright",
@@ -446,7 +511,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52932610792631/huge/bdcda0258ebbcde0120b61212637e686361ed88a.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Red Mountain Pass\"",
@@ -457,7 +524,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52806799570561/huge/ec3cb91778c8921ae65c74f916960dc0cfbd0584.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Shakespeare in the Park: \"Henry V\"",
@@ -468,7 +537,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned…",
+    "type": "Arts & Film"
   },
   {
     "title": "On Display: Roots & Rhythms",
@@ -480,6 +551,8 @@
     "img": "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection…",
+    "type": "Arts & Film",
     "endDate": "2026-08-03"
   },
   {
@@ -491,7 +564,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "CPR World Wilderness First Aid course",
@@ -502,18 +577,9 @@
     "town": "",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-23",
-    "time": "1:00 PM - 2:30 PM",
-    "location": "Lone Cone Library Conference Room, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
+    "source": "KOTO Community Calendar",
+    "desc": "CPR World is offering a 2-day Wilderness First Aid course July 22 & 23 in Telluride. For information and registration, visit cprworld.com or call (970) 729-2779.",
+    "type": "Community"
   },
   {
     "title": "DIY Condiments with Kayla",
@@ -524,7 +590,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Skip the store-bought bottles and discover how easy—and delicious—it is to make your own flavorful condiments from scratch. Join fermentation educator and local food advocate Kayla Wexelberg of Taste Your Roots for a hands-on workshop…",
+    "type": "Food & Drink"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -535,7 +603,22 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-23",
+    "time": "4:00 PM - 5:30 PM",
+    "location": "Wilkinson Public Library, Telluride Room, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Party in the Park",
@@ -546,7 +629,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "We hope you will join the Telluride Mountain Club for our annual party and membership drive in Telluride Town Park! This event supports our annual trail maintenance and new trail planning and implementation projects. Thank you to our…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Emotional Regualtion Workshop w/Betsy Lamberson",
@@ -557,7 +642,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -568,7 +655,9 @@
     "town": "Norwood",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A relaxed chamber music concert in Norwood, presented by Telluride Chamber Music.",
+    "type": "Music"
   },
   {
     "title": "FREE SHOW! Summer Spectacular: The Music Man",
@@ -579,7 +668,9 @@
     "town": "Telluride",
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Summer-Music-man.png",
     "category": "Concert / Performance",
-    "source": "Sheridan Opera House"
+    "source": "Sheridan Opera House",
+    "desc": "A free performance of *The Music Man* at the Sheridan Opera House, part of the venue's Summer Spectacular series. This classic American musical story comes to Telluride's historic stage for an evening of live theatrical entertainment at no…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ridgway Concert Series",
@@ -591,6 +682,8 @@
     "img": "https://localist-images.azureedge.net/photos/52696447609647/huge/b28c8601f5e3e0db939bf8de5f0e8929fe11dc2b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Town of Ridgway & Pickin’ Productions Present THE 19TH ANNUAL 2026 RIDGWAY CONCERT SERIES FOOD - VENDORS - BEER - WINE & MARGARITAS JULY 2 LEVI PLATERO Shelby Means JULY 9 BLACK UHURU Psylo JULY 16 SAM GRISMAN PROJECT Tanasi JULY 23…",
+    "type": "Music",
     "endDate": "2026-07-31"
   },
   {
@@ -602,7 +695,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
+    "type": "Community"
   },
   {
     "title": "THIRSTY THURSDAY - Game Night at Floating Lotus",
@@ -614,6 +709,8 @@
     "img": "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who…",
+    "type": "Food & Drink",
     "endDate": "2026-09-18"
   },
   {
@@ -625,7 +722,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/f3b34692-955d-43ed-b4f0-86e03c1a7e53/-/crop/4064x2033/0,252/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Big Violet is an alternative rock band from Taos, New Mexico known for emotional...",
+    "type": "Music"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -636,7 +735,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Pilates Mat",
@@ -648,6 +749,8 @@
     "img": "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly.…",
+    "type": "Wellness",
     "endDate": "2026-08-27"
   },
   {
@@ -660,7 +763,22 @@
     "img": "https://localist-images.azureedge.net/photos/53198530879947/huge/403c155aa2c93ade83d633e106dcb10f0e69f9d8.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Join us in Ouray Library from 1:00 pm to 2:00 pm for the new Paw Prints Book Club! This is an animal themed graphic novel book club ran by a kid, for kids. There will be four book club meetings over 4 weeks, where there will be discussion…",
+    "type": "Talks & Classes",
     "endDate": "2026-08-07"
+  },
+  {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-24",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Lone Cone Library Conference Room, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -671,7 +789,9 @@
     "town": "Norwood",
     "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
   },
   {
     "title": "Ridgway Farmer's Market",
@@ -682,7 +802,9 @@
     "town": "Ridgway",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
   },
   {
     "title": "Ridgway Farmers Market",
@@ -694,6 +816,8 @@
     "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
+    "type": "Food & Drink",
     "endDate": "2026-09-18"
   },
   {
@@ -705,7 +829,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
   },
   {
     "title": "Free Youth Tennis & Pickleball Program",
@@ -716,7 +842,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
+    "type": "Family & Kids"
   },
   {
     "title": "FLANNEL FEEDBACK",
@@ -727,7 +855,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Historic Walking Tour at Meet",
@@ -738,7 +868,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52462532106186/huge/0536f4893a793517b7a283c0b091239ca0a84dcf.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray's Fellin Park Tour Led by Jenny Hart View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "Art Opening and Pilates Studio Tour",
@@ -749,7 +881,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53478808592713/huge/36d726421bf2d100964e314f16b042c56092bac9.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Tour Ridgway Pilates’ new location in the historic bank building on Clinton while sipping bubbly and immersing yourself in the artwork of local painter, Rita Pacheco. Friday, July 24, 5-7pm. All are welcome! View on site | Email this event",
+    "type": "Arts & Film"
   },
   {
     "title": "Music on the Green Presents Jon Stickley Trio",
@@ -760,7 +894,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48855/jon_stickley_trio_1800x900px.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present Music on the Green with Jon Stickley Trio on Friday,",
+    "type": "Music"
   },
   {
     "title": "Literary Trivia Night Fundraiser",
@@ -771,7 +907,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53392493014538/huge/52ba9ab9f56db44dbc53b4f28d88d9300d5bc082.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Do you have what it takes? The Ouray Public Library is hosting their 3rd Annual Literary Trivia Night on Friday, July 24th, starting at 6 p.m. at the Ouray Community Center. Create your teams of max 6 or go solo to have a fun night with…",
+    "type": "Community"
   },
   {
     "title": "Box Canyon Races",
@@ -782,7 +920,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Come run in the high alpine! Sign up for the Bridal Veil 30k or the Bear Creek 10mi races for an exhilarating and …",
+    "type": "Community"
   },
   {
     "title": "The Nugget: A Telluride Restoration Story",
@@ -793,7 +933,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Music Bingo @ the Wright",
@@ -804,7 +946,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52932681761806/huge/503cf299242bead1eaad98eb39ce7773c58c581f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo @ the Wright WHEN? Friday, July 24 Doors at 6:30 pm • Event at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Part trivia, part sing-along, part musical chaos, Music Bingo turns your favorite…",
+    "type": "Arts & Film"
   },
   {
     "title": "The Secret Lives of Colorado’s Native Fishes - Ridgway State Park Summer Program Series",
@@ -815,7 +959,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454822317775/huge/a828c03aa36625634901dfc870f5570c653e2644.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Think you know what’s swimming in our waters? Go beneath the surface for an evening of discovery with professor Derek Houston. From the high-altitude streams to our deep-water reservoirs, Colorado is home to a fascinating array of native…",
+    "type": "Community"
   },
   {
     "title": "Shakespeare in the Park: \"Henry V\"",
@@ -826,7 +972,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned…",
+    "type": "Arts & Film"
   },
   {
     "title": "Steps Tavern Presents Karaoke Night",
@@ -838,6 +986,8 @@
     "img": "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    "type": "Community",
     "endDate": "2026-09-19"
   },
   {
@@ -849,7 +999,9 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv…",
+    "type": "Wellness"
   },
   {
     "title": "Historic Corkscrew Railroad Bed & Turntable Hike",
@@ -860,7 +1012,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52278124487184/huge/345c89f1bce55647f7f354d7df2841d9b503e493.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Hiking tour of the Corkscrew Railroad Bed & Turntable in the Red Mountain Mining District led by Bobbie & Mark Johnson $20.00 per person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "High Country Hustle",
@@ -871,7 +1025,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/656ff21a-f248-4773-bd89-1ce49203874c/-/crop/3674x1471/0,691/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "High Country Hustle is a bluegrass band from Durango, Colorado, formed in 2017 a...",
+    "type": "Music"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -882,7 +1038,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Zumba with Gisela",
@@ -893,7 +1051,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Music"
   },
   {
     "title": "Lake Appreciation Day! at Ridgway State Park",
@@ -904,7 +1064,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454849302438/huge/80c5277278dca1232cf1ee9667ded6407614ae5f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us to celebrate our most vital resource, blending outdoor recreation with community stewardship. Visitors can explore the reservoir via free 30 minute boat tours or test their balance with complimentary paddleboarding. It’s a day…",
+    "type": "Community"
   },
   {
     "title": "“MAKING FRIENDS WITH YOUR PENCIL” WITH MARY PAT ETTINGER",
@@ -915,7 +1077,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53071990246481/huge/194d3a988c5385dedd7558e69f0f52df8571e58b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Community Open House",
@@ -926,7 +1090,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53427267435930/huge/c7ba3e8f42ac3ee121e752e3d8deb8ef4b84ead2.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "RACC, Citizens State Bank and the West Region Wildfire Council are hosting an open house on July 25 from 3-5pm. The purpose is to support Ridgway businesses, share knowledge of wildfire preparedness and how to fund it, learn how our…",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -937,7 +1103,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Pinyons, Petals, and Prickles: High-Desert Botany - Ridgway State Park Summer Program Series",
@@ -948,7 +1116,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454865677544/huge/fbccc2afb1a322aaeaad2f318da97530087f41a5.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us to explore the fascinating world of our local flora, tracing the incredible journey from majestic pinyon pines to resilient blooming cacti. Whether you're an avid hiker wanting to identify trail plants or simply a curious nature…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ridgway Rocks",
@@ -959,7 +1129,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52745952398222/huge/28560e07fb06ec4aa6d7c068a8219aa5945f2d93.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live music in Town Park. Old Man Polly, Organtic, and PSYLO. View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "The National Summer School: Taste Like a Master",
@@ -970,7 +1142,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Step into the shoes of a Master Sommelier in this highly interactive, educational series session. Featuring a blind …",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -981,7 +1155,9 @@
     "town": "Mountain Village",
     "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
+    "type": "Arts & Film"
   },
   {
     "title": "The Courtyard at 610 Presents: Hiroya Tsukamoto at The Courtyard",
@@ -992,7 +1168,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994152710848/huge/60f4db1fcb885114d605529698b88efd2744461c.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Gates: 7 (behind the 610 Gallery and Sherbino) || Show: 7:30 || $20 – Online / $25 – At Door General Admission Seating || Limited Bar The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on…",
+    "type": "Arts & Film"
   },
   {
     "title": "Shakespeare in the Park: \"Henry V\"",
@@ -1003,7 +1181,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned…",
+    "type": "Arts & Film"
   },
   {
     "title": "All Day Geology Tour",
@@ -1014,7 +1194,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53082440669906/huge/f9b15107b816e9da5bfff982f98a0735e575b8c4.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Dive deeper into the incredible geology of the Ouray area! 🏔️ Spend the day exploring the landscapes surrounding Ouray alongside local geologists. This extended tour includes additional stops and a closer look at the rich geologic history…",
+    "type": "Community"
   },
   {
     "title": "Saturday Yoga",
@@ -1026,6 +1208,8 @@
     "img": "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment,…",
+    "type": "Wellness",
     "endDate": "2026-09-12"
   },
   {
@@ -1037,7 +1221,9 @@
     "town": "Ridgway",
     "img": "https://sherbino.org/wp-content/uploads/2026/04/ChatGPT-Image-Apr-30-2026-02_34_08-PM.png",
     "category": "",
-    "source": "Sherbino Theater"
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Drop In Tech Time with Oliver",
@@ -1048,7 +1234,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "type": "Community"
   },
   {
     "title": "Pickleball Open Play",
@@ -1059,7 +1247,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/theater.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Open Air Market",
@@ -1071,6 +1261,8 @@
     "img": "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering…",
+    "type": "Arts & Film",
     "endDate": "2026-09-06"
   },
   {
@@ -1082,7 +1274,9 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
+    "type": "Wellness"
   },
   {
     "title": "Tea and Tarot",
@@ -1093,7 +1287,9 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
   },
   {
     "title": "Funky Ouray: Reggae music in Fellin Park",
@@ -1104,7 +1300,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us in Fellin Park every Sunday in July for Funky Ouray, a free, all-ages reggae DJ set hosted by Night Nurse Sound System. Bring a blanket, gather your friends, and kick back to reggae rhythms. View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Girl Scout Cookie Booth",
@@ -1115,7 +1313,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab: Apres Edition",
@@ -1126,7 +1326,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -1137,7 +1339,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "Free Show | Adah Hannelore & Corey Hooker | Floating Lotus Mainstage",
@@ -1148,7 +1352,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53479911973011/huge/3579e167dfcf97cf098fbe7ee5a676f0ced3deaa.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "🎶 Introducing: Floating Lotus Mainstage 🎶 We're excited to launch a new chapter in Ridgway's local music scene. Floating Lotus Mainstage is our new live music series dedicated to showcasing the incredible musicians who have grown through…",
+    "type": "Music"
   },
   {
     "title": "Desserts and Documentary-Bathtubs Over Broadway",
@@ -1159,7 +1365,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Enjoy a dessert while watching Bathtubs Over Broadway. When he started as a comedy writer for the LATE SHOW WITH DAVID LETTERMAN, Steve Young had few interests outside of his day job. But while gathering material for a segment on the show,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mountain Village Electronics Recycling event",
@@ -1170,7 +1378,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/cycling.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Senior Lunch by Neighbor to Neighbor",
@@ -1182,6 +1392,8 @@
     "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    "type": "Community",
     "endDate": "2026-09-14"
   },
   {
@@ -1193,7 +1405,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Town Talk: The Dual Challenge - Climate and Energy",
@@ -1204,7 +1418,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. …",
+    "type": "Talks & Classes"
   },
   {
     "title": "Book Signing With Micheline Klagsbrun",
@@ -1215,7 +1431,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Join Fringe for a book signing with Telluride artist Micheline Klagsbrun on Tuesday, July 28th, from 4:30 p.m. - 6 p.m. …",
+    "type": "Arts & Film"
   },
   {
     "title": "Breathe Together",
@@ -1227,6 +1445,8 @@
     "img": "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of…",
+    "type": "Community",
     "endDate": "2026-09-15"
   },
   {
@@ -1239,6 +1459,8 @@
     "img": "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building…",
+    "type": "Wellness",
     "endDate": "2026-08-31"
   },
   {
@@ -1250,7 +1472,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52806871795839/huge/2b4a1f1e03bf8526d92866007630f4a159e579d5.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30…",
+    "type": "Family & Kids"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -1261,7 +1485,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Mountain Village Electronics Recycling event",
@@ -1272,18 +1498,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/cycling.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
-  },
-  {
-    "title": "The Dual Challenge: Climate and Energy",
-    "href": "https://telluridefoundation.org/tf-events/",
-    "date": "2026-07-28",
-    "time": "12:30 PM",
-    "location": "Telluride Innovation Center, Telluride, CO",
-    "town": "Telluride",
-    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
-    "category": "Community Event",
-    "source": "Telluride Foundation"
+    "source": "KOTO Community Calendar",
+    "desc": "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "CORAL SKYE",
@@ -1294,7 +1511,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Summer SketchBook Club w/Annie",
@@ -1305,7 +1524,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Tourism Advisory Committee",
@@ -1317,6 +1538,8 @@
     "img": "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor…",
+    "type": "Community",
     "endDate": "2026-08-25"
   },
   {
@@ -1328,7 +1551,22 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "The Dual Challenge: Climate and Energy",
+    "href": "https://telluridefoundation.org/tf-events/",
+    "date": "2026-07-28",
+    "time": "6:30 PM",
+    "location": "Telluride Innovation Center, Telluride, CO",
+    "town": "Telluride",
+    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
+    "category": "Community Event",
+    "source": "Telluride Foundation",
+    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Womens Empowerment Group",
@@ -1339,7 +1577,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will…",
+    "type": "Community"
   },
   {
     "title": "Vitalant Blood Drive",
@@ -1350,7 +1590,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53118762580384/huge/4437c796577c7be0ca11f4cc87ac95d07477f6d6.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come help save lives by donating blood at this year's blood drive! View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "The Mammoths",
@@ -1361,7 +1603,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/e85f9702-e225-45cd-9c77-3b9d939c883b/-/crop/4096x2049/0,547/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychedeli...",
+    "type": "Community"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -1372,7 +1616,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Mahjongg for Independent Players",
@@ -1383,7 +1629,9 @@
     "town": "Telluride",
     "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
   },
   {
     "title": "Market on the Plaza",
@@ -1394,7 +1642,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
+    "type": "Community"
   },
   {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -1405,7 +1655,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
+    "type": "Community"
   },
   {
     "title": "America 250/Colorado 150 Book Club",
@@ -1416,7 +1668,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Wine and Wickets",
@@ -1427,7 +1681,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "type": "Food & Drink"
   },
   {
     "title": "Telluride Reserve",
@@ -1439,6 +1695,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
+    "type": "Community",
     "endDate": "2026-08-02"
   },
   {
@@ -1450,7 +1708,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52806828827371/huge/ae218c9c6c9de549ec730577c3289f68e83e9fd1.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Live Music- The Bramblers",
@@ -1461,7 +1721,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53126545358753/huge/d388db0353cbf06b2a73e8eded661e2e68cf7809.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us on Wednesday, July 29th as we savor the sounds of the Bramblers! The Bramblers are a five-piece Americana and jam-grass band based out of Fort Collins, Colorado. Known for a genre-blurring sound blending folk, psych-rock, funk, and…",
+    "type": "Music"
   },
   {
     "title": "Native Plant Walk & Talk",
@@ -1472,7 +1734,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Nik Parr & the Selfless Lovers",
@@ -1483,7 +1747,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/5e2a35ce-6185-49b8-9c47-4f5ecdbf4b5b/-/crop/1080x541/0,225/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Nik Parr & The Selfless Lovers are a high-energy, piano-driven roots rock band h...",
+    "type": "Music"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -1494,7 +1760,9 @@
     "town": "Mountain Village",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "San Miguel Basin Fair and Rodeo",
@@ -1506,6 +1774,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "The San Miguel Basin Fair takes place every summer at the San Miguel County Fairgrounds in Norwood. Livestock shows …",
+    "type": "Festivals",
     "endDate": "2026-08-02"
   },
   {
@@ -1517,7 +1787,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players …",
+    "type": "Community"
   },
   {
     "title": "The Brass Family",
@@ -1528,7 +1800,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "“The Brass Family” – with the New York Philharmonic Principal Brass Quintet Learn all about brass instruments in …",
+    "type": "Family & Kids"
   },
   {
     "title": "Summer Spectacular: The Jungle Book",
@@ -1539,7 +1813,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
+    "type": "Community"
   },
   {
     "title": "Love’s Labors Lost: Theatre @ the Wright",
@@ -1551,6 +1827,8 @@
     "img": "https://localist-images.azureedge.net/photos/52932868603734/huge/c25eaff592f203a10ece3ae8a5f406fca147da0f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Love’s Labors Lost: Theatre @ the Wright Presented by UpstART Theatre WHEN? Thursday, July 30 Doors at 7:00 pm • Show at 7:30 pm Friday, July 31 Doors at 7:00 pm • Show at 7:30 pm Saturday, August 1 Doors at 7:00 pm • Show at 7:30 pm…",
+    "type": "Arts & Film",
     "endDate": "2026-08-02"
   },
   {
@@ -1562,7 +1840,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar"
+    "source": "KOTO Community Calendar",
+    "desc": "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson…",
+    "type": "Community"
   },
   {
     "title": "The Brass Family — Kids' Concert",
@@ -1573,7 +1853,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A family-friendly kids' concert presented by Telluride Chamber Music.",
+    "type": "Family & Kids"
   },
   {
     "title": "OLD MAN POLLY",
@@ -1584,7 +1866,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Historic Walking Tour at Meet",
@@ -1595,7 +1879,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52462553145158/huge/147bc715c72ab517c614f260fa4d426fda89f316.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Historic Walking Tour of Ouray's Government buildings including the Courthouse, City Hall. Ouray School, OCHS Museum. Led by Jenny Hart View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "Final Friday: Crafts for Critters",
@@ -1606,7 +1892,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53428193270953/huge/6a3c9c5a31bf4a7b3359a5c95b660171d698a5e8.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "🐾CALLING ALL ANIMAL LOVERS!🐾 Join us at the end of July to make some crafts for critters (dogs and cats), learn from a local behaviorist, and practice some agility with Maple. 🐶 For Middle & High School Students, Final Friday is…",
+    "type": "Community"
   },
   {
     "title": "Chant to Calm the Fires",
@@ -1617,7 +1905,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53402739211819/huge/2ab8aa4a78efc06e0ce0ce5f4e0fe11912525a89.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Flora Zenit and Elisabeth \"Lava\" for an evening of chanting to calm our hearts, our minds, and the fires. Flora is an experienced kirtan leader from Venezuela, with an opening act for Sam Garrett under her belt. As an international…",
+    "type": "Community"
   },
   {
     "title": "New York Philharmonic Brass Quintet",
@@ -1628,7 +1918,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48609/nyp_brass.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players in the country in what promises to be a",
+    "type": "Community"
   },
   {
     "title": "The Brass Family",
@@ -1639,7 +1931,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48614/nyp_education.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "“The Brass Family” – with the New York Philharmonic Principal Brass Quintet Learn all about brass instruments in this fun and interactive show with the",
+    "type": "Family & Kids"
   },
   {
     "title": "Music on the Green Presents South Austin Moonlighters",
@@ -1650,7 +1944,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48857/south_austin_moonlighters_1800x900_px_1740x870.jpeg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Beyond The Groove and TMVOA (tmvoa.org) present South Austin Moonlighters at Reflection Plaza in Mountain Village. The Friday shows are free,",
+    "type": "Music"
   },
   {
     "title": "The Mysteries of the Shavano Valley Petroglyphs - Ridgway State Park Summer Program Series",
@@ -1661,7 +1957,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454885809272/huge/52a587a8eeea848445a01561517e6366c998ef07.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Uncover the ancient stories etched into the red rock of the Uncompahgre Valley. Kellie Carroll will take you on an illuminating journey through one of Western Colorado’s most significant archaeological treasures. These sacred carvings…",
+    "type": "Community"
   },
   {
     "title": "Top Chef and Taste of Telluride",
@@ -1672,7 +1970,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, …",
+    "type": "Food & Drink"
   },
   {
     "title": "The Casual Enormity of Adam Palmer Film Screening and Panel Discusson",
@@ -1683,7 +1983,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer …",
+    "type": "Arts & Film"
   },
   {
     "title": "New York Philharmonic Principal Brass Quintet",
@@ -1694,7 +1996,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A concert by the New York Philharmonic Principal Brass Quintet, presented by Telluride Chamber Music.",
+    "type": "Music"
   },
   {
     "title": "Natalie Brooke",
@@ -1705,7 +2009,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/b150a182-60cb-4116-bccf-81a27439a381/-/crop/1080x432/0,36/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -1716,7 +2022,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1727,7 +2035,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Paul McDonald and the Mourning Doves - Live",
@@ -1738,7 +2048,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994214092717/huge/5ca35ae90d85f2fb14751906e32874146836548f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors: 7:00 pm | Show: 7:30 pm *$25 advance | $30 day of show – to buy GA tickets, select from the ticket option BELOW the seating chart *Limited reserved tables available – to purchase a reserved table, hover over the tables on the…",
+    "type": "Community"
   },
   {
     "title": "Nature in Four Seasons: Summer Blooms",
@@ -1749,7 +2061,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52948850400901/huge/0e4358f37156f3815966be295143aa2d6dda3bc0.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for our third exploration hike of the Nature in Four-Season series.…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Reel Success: Kids Fishing Clinic!",
@@ -1760,7 +2074,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454902247603/huge/7bce538dbae7921813e646ebdd0f1f93fa7dd5bb.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Calling all young explorers and future fishing pros! Are you ready to trade your screen time for some \"pond time\" and land your very first catch? Whether you've never touched a fishing pole before or you just want to become a pro this is…",
+    "type": "Family & Kids"
   },
   {
     "title": "Paul McDonald and the Mourning Doves",
@@ -1771,7 +2087,9 @@
     "town": "Ridgway",
     "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-22.png",
     "category": "",
-    "source": "Sherbino Theater"
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Home Trust of Ouray County - Home Tour & House Show",
@@ -1782,7 +2100,9 @@
     "town": "Ridgway",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Ouray County"
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3769",
+    "type": "Community"
   },
   {
     "title": "Home Tour & House Show with Emily Scott Robinson",
@@ -1793,7 +2113,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53314328176075/huge/f297998422c8d9c4e8e57b3f8553c07441bc20bd.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway's Dallas Meadows neighborhood while…",
+    "type": "Community"
   },
   {
     "title": "Girl Scout Cookie Booth",
@@ -1804,7 +2126,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab: Apres Edition",
@@ -1815,7 +2139,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -1826,7 +2152,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -1838,6 +2166,8 @@
     "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
+    "type": "Community",
     "endDate": "2026-09-07"
   },
   {
@@ -1849,7 +2179,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "DAVE MENSCH",
@@ -1860,7 +2192,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Town Talk: single molecule views of Nature’s nanomachines",
@@ -1871,7 +2205,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Parks and Recreation Committee (PARC)",
@@ -1883,6 +2219,8 @@
     "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together.…",
+    "type": "Family & Kids",
     "endDate": "2026-09-02"
   },
   {
@@ -1894,7 +2232,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
+    "type": "Arts & Film"
   },
   {
     "title": "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
@@ -1905,7 +2245,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
+    "type": "Family & Kids"
   },
   {
     "title": "Ice Park Advisory Team",
@@ -1916,7 +2258,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Market on the Plaza",
@@ -1927,7 +2271,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "Wine and Wickets",
@@ -1938,7 +2284,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "type": "Food & Drink"
   },
   {
     "title": "Live Music- Jack Haight Red Mountain Revival",
@@ -1949,7 +2297,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53119160417727/huge/ec41c6d94b323d25f94fef4ac166f82aefc428a4.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for our Grand Opening on June 10 with Jack Haight’s Red Mountain Revival! Kicking off a summer of live music, craft cocktails, mountain views, and unforgettable nights at the St. Elmo Tavern patio EVERY WEDNESDAY! Western Slope…",
+    "type": "Music"
   },
   {
     "title": "Beautification Committee (OBC)",
@@ -1961,6 +2311,8 @@
     "img": "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have…",
+    "type": "Community",
     "endDate": "2026-09-02"
   },
   {
@@ -1972,7 +2324,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52487582547065/huge/563a405a9c9cafe377d9fb833f1a4084535fcf25.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market NOTE: This week, the Market is on a Thursday, since folks will be setting up on Friday for the Ridgway Rendezvous. WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community…",
+    "type": "Food & Drink"
   },
   {
     "title": "Theo Croker - Telluride Jazz Fest After Dark",
@@ -1983,7 +2337,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/0cb46769-06f4-4294-84d6-a2e85873e599/-/crop/1295x1296/152,0/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "With trumpeter, vocalist, composer and record producer, Theo Croker, we will beh...",
+    "type": "Music"
   },
   {
     "title": "Opening Show for Telluride Jazz Festival",
@@ -1994,7 +2350,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49400/mtn-village-event-image-opening-show.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Join us on Thursday, August 6, from 5:00–7:00 PM for the Telluride Jazz Festival Opening Show at Reflection Plaza in Mountain Village (Music on the Green",
+    "type": "Festivals"
   },
   {
     "title": "Telluride Jazz Festival",
@@ -2006,6 +2364,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Since 1977, Telluride’s majestic perch high in the San Juan Mountains of southwestern Colorado has been the site of …",
+    "type": "Festivals",
     "endDate": "2026-08-09"
   },
   {
@@ -2017,7 +2377,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …",
+    "type": "Community"
   },
   {
     "title": "Ouray Youth Summer Programs: Water Sports at Ridgway State Park",
@@ -2028,7 +2390,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994829548404/huge/1b35bf736db2ace8de36b37a504f763702f48af8.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Participants will learn the basics of paddle boarding and water safety with instruction and equipment provided by Ridgway State Park staff. Please meet at the Dutch Charlie Marina office at Ridgway State Park and ring snacks, water,…",
+    "type": "Family & Kids"
   },
   {
     "title": "The Crawdaddy Diaries: Crawfishing 101 - Ridgway State Park Summer Program Series",
@@ -2039,7 +2403,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454939598506/huge/cdf1531947b7f763f759fb4b8cdf5f6619f36bc9.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Get ready to splash into the secret world hiding just beneath the surface! Join Park Naturalist Shelby Martinez at the Pa-Co-Chu-Puk Ponds for a hands-on adventure exploring the fascinating lives of crawfish: the hidden creatures at the…",
+    "type": "Community"
   },
   {
     "title": "Endea Owens & The Cookout",
@@ -2050,7 +2416,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/2340e518-38e2-471f-802f-0183b7f67cbb/-/crop/1069x1068/235,0/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Endea Owens is all about jazz. This phenomenal bassist, composer and performer h...",
+    "type": "Music"
   },
   {
     "title": "RED MOUNTAIN REVIVAL",
@@ -2061,7 +2429,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "First Friday Art Walk",
@@ -2073,6 +2443,8 @@
     "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming…",
+    "type": "Arts & Film",
     "endDate": "2026-09-04"
   },
   {
@@ -2085,6 +2457,8 @@
     "img": "https://localist-images.azureedge.net/photos/53312391289791/huge/00a6a9e1834a357256b5925d35f6a6525ff06493.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes…",
+    "type": "Arts & Film",
     "endDate": "2026-09-04"
   },
   {
@@ -2096,7 +2470,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53427873595934/huge/e8c4d0f511d41ca1fb1cab0e28187e4cfb436345.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music, mountains, and a little First Friday magic are coming to Fabula! Old Man Polly will bring high-energy vocals and a genre-spanning mix of familiar songs, drawing from both contemporary and traditional music. Led by powerhouse…",
+    "type": "Community"
   },
   {
     "title": "Music on the Green Presents Logan Metz",
@@ -2107,7 +2483,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48859/logan_metz_1800x900px.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Logan Metz at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    "type": "Music"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -2119,6 +2497,8 @@
     "img": "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
+    "type": "Community",
     "endDate": "2026-09-12"
   },
   {
@@ -2130,7 +2510,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53444356689862/huge/ac92e28117fe69a241a729e8065ab23d70be8daf.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Used Book Sale hosted by Friends of the Ridgway Library on Saturday August 8th, 10am-2pm. Tote bags and t-shirts will be available for purchase. Want to volunteer? Sign up at the Ridgway Library front desk. Have books to donate? Call:…",
+    "type": "Community"
   },
   {
     "title": "Happy Little Trees: Classes @ the Wright",
@@ -2142,6 +2524,8 @@
     "img": "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff…",
+    "type": "Arts & Film",
     "endDate": "2026-09-12"
   },
   {
@@ -2153,7 +2537,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53444478649232/huge/46383f7cbeab4425648f3e6bf6e4e504e8371d0c.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides! View on site | Email this event",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Music On The Mesa The Burroughs",
@@ -2164,7 +2550,9 @@
     "town": "Norwood",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Town of Norwood"
+    "source": "Town of Norwood",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Movies Under the Stars",
@@ -2175,7 +2563,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2186,7 +2576,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Electric Showcase",
@@ -2197,7 +2589,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53443481081189/huge/1c29ff615fd2208e8a6eab9017bb24268cd815b5.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Experience electrification hands on! Visit the Electric Showcase booth at the southeast corner of the Ridgway Rendezvous. Check out electric yard equipmentLearn about financial incentivevsDiscover how you can win an E-Bike with SMPA!…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "The Hummingbird’s Secret Mission - Ridgway State Park Summer Program Series",
@@ -2208,7 +2602,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53454953293581/huge/2ed5e2f2553f1fe9c9d5f804b87b8743269c7c9d.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come explore the astonishing world of nature's smallest high-performance pilots. Led by experts from the Black Canyon Audubon Society, this program reveals the \"superpowers\" behind the hummingbird’s impossible flight patterns and epic…",
+    "type": "Community"
   },
   {
     "title": "Girl Scout Cookie Booth",
@@ -2219,7 +2615,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab: Apres Edition",
@@ -2230,7 +2628,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -2241,7 +2641,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "Jazz Brunch",
@@ -2252,7 +2654,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49398/jazz-brunch-9x16.jpeg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "New for 2026, Telluride Jazz Festival and the Madeline Hotel present the Jazz Brunch—a relaxed mountain gathering featuring great food, beautiful views,",
+    "type": "Food & Drink"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2263,7 +2667,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Max & Heather Stalling",
@@ -2274,7 +2680,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/2f8a6c97-33f7-43f4-a134-b385a801631a/-/crop/5464x2727/0,1365/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
+    "type": "Music"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -2286,6 +2694,8 @@
     "img": "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Community",
     "endDate": "2026-09-08"
   },
   {
@@ -2297,7 +2707,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Mountain Village Merchant Meeting",
@@ -2308,7 +2720,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    "type": "Community"
   },
   {
     "title": "Telluride Mushroom Festival",
@@ -2320,6 +2734,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
+    "type": "Festivals",
     "endDate": "2026-08-17"
   },
   {
@@ -2331,7 +2747,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "This Town Talk will be presented by Joonhoo Lee from Harvard University. Lee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival",
@@ -2342,7 +2760,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Set against the electric backdrop of the Telluride Mushroom Festival—a legendary...",
+    "type": "Festivals"
   },
   {
     "title": "Live Music- Will Overman Band",
@@ -2353,7 +2773,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53126579046378/huge/120d7418d3aa1bc413c65d9a7d9d153b96c66963.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Please note this is our only show of the summer on a Tuesday, not a Wednesday! Don’t let that throw a wrench in your plans — the Will Overman Band is coming and you won’t want to miss it! Will Overman is a Virginia-raised singer-songwriter…",
+    "type": "Music"
   },
   {
     "title": "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -2364,7 +2786,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52995424083753/huge/88db51cfef3002c24116bc73023e6692962fc971.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Participants will spend the morning in the Fellin Park area learning and practicing mountain biking skills, including balance, riding technique, and basic bike maintenance. Participants should bring their bike, helmet, gloves, and any…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Dark Sky Meteor Watch at Top of the Pines",
@@ -2375,7 +2799,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53479059131388/huge/cdee948af3d591689db27804e9cdb54fd09e359f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "As a celebration of Dark Skies in Ouray County, a Perseid Meteor Watch, Stargazing with binoculars, and a Laser Guided Constellation Tour will be held at Top of the Pines a DarkSky International designated Dark Sky Park, on Tuesday August…",
+    "type": "Community"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -2386,7 +2812,9 @@
     "town": "Ridgway",
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
-    "source": "Sherbino Theater"
+    "source": "Sherbino Theater",
+    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "type": "Community"
   },
   {
     "title": "August Book Club- \"Welcome to the Monkey House\"",
@@ -2397,7 +2825,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53453974758694/huge/c63328ec0cf2437eaccff89802415cf1f2bc5f52.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us on Wednesday, August 12th at 5:00 p.m. to discuss our August Book Club Book, Welcome to the Monkey House, by Kurt Vonnegut. View on site | Email this event",
+    "type": "Talks & Classes"
   },
   {
     "title": "Zumba Fitness with Tamra",
@@ -2409,6 +2839,8 @@
     "img": "https://localist-images.azureedge.net/photos/52277881680293/huge/e3b37a55dafe3e5ac88f6f7359fdef186311fd9b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
+    "type": "Arts & Film",
     "endDate": "2026-09-16"
   },
   {
@@ -2420,7 +2852,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "Wine and Wickets",
@@ -2431,7 +2865,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "type": "Food & Drink"
   },
   {
     "title": "Community Concert",
@@ -2443,18 +2879,9 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
+    "type": "Music",
     "endDate": "2026-09-10"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-12",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community"
   },
   {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
@@ -2465,7 +2892,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "The Copper Children are a diverse blend of styles and influences that span from ...",
+    "type": "Family & Kids"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -2476,7 +2905,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Community Concert — August",
@@ -2487,7 +2918,22 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A community concert presented by Telluride Chamber Music.",
+    "type": "Music"
+  },
+  {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-13",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -2499,6 +2945,8 @@
     "img": "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve…",
+    "type": "Community",
     "endDate": "2026-09-10"
   },
   {
@@ -2510,7 +2958,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Telluride Mushroom Fest After Party",
+    "type": "Music"
   },
   {
     "title": "TYLER SIMMONS",
@@ -2521,7 +2971,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Music on the Green Presents Ben Musser & Walker Young",
@@ -2532,7 +2984,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48861/ben_musser_walker_young_1800x900px.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Ben Musser & Walker Young at Reflection Plaza in Mountain Village. The Friday shows are free,",
+    "type": "Music"
   },
   {
     "title": "EDIE: Theatre @ the Wright Presented by UpstART Theatre",
@@ -2543,7 +2997,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53366893046907/huge/7d1ae27186d2776e5040699812057cb6188e9a6a.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Thom LaFond + DROS",
@@ -2554,7 +3010,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Ouray County Pride",
@@ -2565,7 +3023,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Small towns. Big mountains. Bigger pride. Ouray County PRIDE returns Saturday, August 15th, 2026. View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "AJ FULLERTON",
@@ -2576,7 +3036,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Movies Under the Stars",
@@ -2587,7 +3049,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -2598,7 +3062,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
   },
   {
     "title": "Teen Pride Karaoke Night",
@@ -2609,7 +3075,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53435902153115/huge/f4a7c1ac8c55f57a55ad821679d80f9d354f233f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This…",
+    "type": "Community"
   },
   {
     "title": "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
@@ -2620,7 +3088,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52674560472756/huge/c1188397f0f07c4e5309cfbb599077161cdc7cc6.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Foot Race-26th Year annual fundraising event for the Mount Sneffels Education Foundation. View on site | Email this event",
+    "type": "Family & Kids"
   },
   {
     "title": "Ouray County Pride After Party @ the Wright presented by SMAC",
@@ -2631,7 +3101,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53251445737216/huge/4f015d7791637ae1f1a70b8b9d1b65f12312407b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Bullseye Beginners: Archery at the Park - Ridgway State Park Summer Program Series",
@@ -2642,7 +3114,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53471176747260/huge/13058b48d3167871df0880c9045d9735fa1b9c13.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "This program is an engaging, hands-on introduction to a timeless outdoor sport. Led by CPW staff and certified volunteer instructors, this free clinic provides children with the unique opportunity to learn archery skills. The program…",
+    "type": "Family & Kids"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -2653,7 +3127,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53471216560394/huge/574183965a0056eaee8b515c5347a414162855ad.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "This program offers a unique opportunity to explore the wonders of the night sky through the expert lens of the Black Canyon Astronomical Society. This free program removes the guesswork of stargazing by providing high-powered telescopes…",
+    "type": "Community"
   },
   {
     "title": "Girl Scout Cookie Booth",
@@ -2664,7 +3140,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab: Apres Edition",
@@ -2675,7 +3153,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -2686,7 +3166,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2697,7 +3179,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Movie Mondays in Hartwell Park",
@@ -2708,7 +3192,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52922424426850/huge/1e180755c642fe19893a7caee0beacbf99e967d3.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Enjoy free movies under the stars in Ridgway's Hartwell Park. They'll start at 8:30pm. Bring your own chairs, blankets and snacks. Brought to you by the Ridgway Youth Advisory Council. Here's the line-up: June 15th - Ferris Bueller's Day…",
+    "type": "Arts & Film"
   },
   {
     "title": "Celebration of Life for David Leigh Houtz",
@@ -2719,7 +3205,9 @@
     "town": "Ridgway",
     "img": "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-52.png",
     "category": "",
-    "source": "Sherbino Theater"
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Festivals"
   },
   {
     "title": "JAMIE & THE DREAMERS",
@@ -2730,7 +3218,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Decker Room New Volunteer Orientation",
@@ -2742,6 +3232,8 @@
     "img": "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the…",
+    "type": "Arts & Film",
     "endDate": "2026-09-15"
   },
   {
@@ -2753,7 +3245,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/41147/scs_event_thumbnail.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
+    "type": "Music"
   },
   {
     "title": "Market on the Plaza",
@@ -2764,7 +3258,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "Wine and Wickets",
@@ -2775,7 +3271,9 @@
     "town": "Mountain Village",
     "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
     "category": "Community Event",
-    "source": "Mountain Village"
+    "source": "Mountain Village",
+    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "type": "Food & Drink"
   },
   {
     "title": "Live Music- Emilio Gonzalez",
@@ -2786,7 +3284,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53126599615246/huge/97aedc5531194289457c49a360d9af1390f0938d.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Hailing from Nashville, TN, Emilio Gonzalez is gracing the St. Elmo patio to close out our 2026 Summer Sound Series. We can’t wait to share and enjoy his raw talent and authentic presence with you. Emilio is a singer / songwriter /…",
+    "type": "Music"
   },
   {
     "title": "A League of Their Own: CO-150 Film Festival @ the Wright",
@@ -2797,7 +3297,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53259464395794/huge/7fdca250f8fbc225136fb161d79ef1df818a7b74.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Burlesque Buffet",
@@ -2809,6 +3311,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Presented by Telluride Theatre's Professional Burlesque Troupe: THE HOUSE OF SHIMMY SHAKE! HOSS returns for a …",
+    "type": "Arts & Film",
     "endDate": "2026-08-23"
   },
   {
@@ -2820,7 +3324,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Join Tri-County Health Network for a Night of Light, Celebrating our Community in Bloom! A Vibrant Celebration of …",
+    "type": "Community"
   },
   {
     "title": "RIDGWAY WRECKING CREW",
@@ -2831,7 +3337,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Telluride Mountain Run",
@@ -2842,7 +3350,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
+    "type": "Community"
   },
   {
     "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble at The Courtyard",
@@ -2853,7 +3363,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994270870445/huge/daf9e9efd8da0f386a5f5b85b8847791c2588a2f.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Gates: 6:30 || Show: 7:00 || $25 advance / $30 – day of show General Admission Seating || Limited Bar || The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is…",
+    "type": "Arts & Film"
   },
   {
     "title": "Wax Monkey",
@@ -2864,7 +3376,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
+    "type": "Music"
   },
   {
     "title": "Highgraders Holiday & Mining History",
@@ -2876,6 +3390,8 @@
     "img": "https://localist-images.azureedge.net/photos/52092594380571/huge/dd4fc50c3832545339cb376e1b3c66326236ee56.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Watch the Hardrock mining competition and learn the history of mining in Ouray. View on site | Email this event",
+    "type": "Community",
     "endDate": "2026-08-23"
   },
   {
@@ -2887,7 +3403,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/53481231331209/huge/0f98224078eed909fdc030676f38cbd8272aff8d.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Celebrate our community at Ouray Day, an afternoon of fun hosted by the City of Ouray Parks and Recreation Department. Bring your friends, family, and neighbors for activities for all ages. This year's celebration will be held alongside…",
+    "type": "Family & Kids"
   },
   {
     "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
@@ -2898,7 +3416,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53426340345256/huge/41f8f3856c62b8da4427d53a7b71309c0268ddc5.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "August 23 @ 1:00 pm – 3:00 pm Rocky Horror Picture Show — Live Shadowcast Edition Directed by Erin Cawley Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast…",
+    "type": "Community"
   },
   {
     "title": "11th Annual Log Hill Hustle",
@@ -2909,7 +3429,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52250073410263/huge/0c5c647e572d5a4c1c7a05677aec7057f5312338.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Fortuna Tierra Club is hosting the 11th Annual Log Hill Hustle, Fun Run and fundraiser on Sunday, August 23 at 8 AM starting and finishing at the Divide Ranch and Club Clubhouse at 151 Divide Ranch Circle, Ridgway, CO 81432. The 5k…",
+    "type": "Community"
   },
   {
     "title": "The Last Wild Buffalo w/ Hunter Archer",
@@ -2920,7 +3442,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/80e2e21e-674b-4121-b683-5081a143cca8/-/crop/1308x1310/67,0/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
+    "type": "Music"
   },
   {
     "title": "DAVE JORDAN",
@@ -2931,7 +3455,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
@@ -2942,7 +3468,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps…",
+    "type": "Talks & Classes"
   },
   {
     "title": "San Juan Chamber MusicFest",
@@ -2954,6 +3482,8 @@
     "img": "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of…",
+    "type": "Music",
     "endDate": "2026-08-30"
   },
   {
@@ -2965,7 +3495,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the Decker Room. Stay and socialize with creatives afterward!…",
+    "type": "Arts & Film"
   },
   {
     "title": "Dumb and Dumber: CO-150 Film Festival @ the Wright",
@@ -2976,7 +3508,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53259548444843/huge/23e7eee7a5733b674e4f9932b58f78da3e273dc9.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "THE ONLIES - Live at The Sherbino",
@@ -2987,7 +3521,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994337466169/huge/c00e4314e46ffb42f048810ccb67e832be842847.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets: $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in…",
+    "type": "Community"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -2998,7 +3534,9 @@
     "town": "Norwood",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A relaxed chamber music concert in Norwood, presented by Telluride Chamber Music.",
+    "type": "Music"
   },
   {
     "title": "Camp Alderwild",
@@ -3010,6 +3548,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
+    "type": "Arts & Film",
     "endDate": "2026-08-30"
   },
   {
@@ -3021,7 +3561,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Final Friday: Clowning Around",
@@ -3032,7 +3574,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "CLOWN SCHOOL IS NOW IN SESSION! Join us at the end of the first week back at school to be a little less serious and a little more silly. For Middle & High School Students, Final Friday is reclaiming Voyager as the Teen Center it used to…",
+    "type": "Community"
   },
   {
     "title": "DARRELL SCOTT - Live at The Sherbino",
@@ -3043,7 +3587,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Darrell Scott Darrell…",
+    "type": "Community"
   },
   {
     "title": "Big Blitz",
@@ -3054,7 +3600,9 @@
     "town": "Telluride",
     "img": "https://ucarecdn.com/d2998c5f-69ce-4db7-bee5-9c0a3e1ded0c/-/crop/2048x1024/0,158/-/preview/",
     "category": "Live Music",
-    "source": "The Alibi"
+    "source": "The Alibi",
+    "desc": "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
+    "type": "Music"
   },
   {
     "title": "CORAL SKYE",
@@ -3065,7 +3613,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
@@ -3076,7 +3626,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53426262588908/huge/71a55615f11bffa976395d1cf0776b9aea0970bd.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "September 1 @ 6:30 pm – 8:00 pm Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women’s health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim…",
+    "type": "Arts & Film"
   },
   {
     "title": "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
@@ -3087,7 +3639,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
+    "type": "Community"
   },
   {
     "title": "Telluride Film Festival",
@@ -3099,6 +3653,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
+    "type": "Arts & Film",
     "endDate": "2026-09-08"
   },
   {
@@ -3110,7 +3666,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Ongoing: Social Justice Travel Exhibition",
@@ -3122,6 +3680,8 @@
     "img": "https://localist-images.azureedge.net/photos/53048149260541/huge/415b9339ce946074e5105384e5293b0f6acdedee.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
+    "type": "Arts & Film",
     "endDate": "2026-09-17"
   },
   {
@@ -3133,7 +3693,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53048140307438/huge/ecf8324adca38749b7b4d7aaf5963ab93afc2b0d.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
+    "type": "Arts & Film"
   },
   {
     "title": "The Sherbino Presents: Donny Morales – First Friday Show",
@@ -3144,7 +3706,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Friday, September 4th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for…",
+    "type": "Music"
   },
   {
     "title": "Music and Makers Fest",
@@ -3155,7 +3719,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the highly anticipated Ouray Made's Annual Music and Makers Fest, a celebration of creativity, community, and culture set against the breathtaking San Juan Mountains! This year, immerse yourself in a vibrant atmosphere filled with…",
+    "type": "Community"
   },
   {
     "title": "DAVE MENSCH",
@@ -3166,7 +3732,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -3177,7 +3745,9 @@
     "town": "Telluride",
     "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
     "category": "",
-    "source": "Telluride Science"
+    "source": "Telluride Science",
+    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Community Concert — September",
@@ -3188,7 +3758,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A community concert presented by Telluride Chamber Music.",
+    "type": "Music"
   },
   {
     "title": "The Meditations",
@@ -3199,7 +3771,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
+    "type": "Wellness"
   },
   {
     "title": "Jolie Holland - Live at The Sherbino",
@@ -3210,7 +3784,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53306519672947/huge/94dbb34c3a7f806ee827594137fa43bd0c00bfb2.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie…",
+    "type": "Community"
   },
   {
     "title": "RED MOUNTAIN REVIVAL",
@@ -3221,7 +3797,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Imogene Pass Run",
@@ -3232,7 +3810,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "What began as a way to train for the Pike's Peak marathon in 1974 is now a full-fledged race. The race ventures from …",
+    "type": "Community"
   },
   {
     "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
@@ -3243,7 +3823,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/theater.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
+    "type": "Arts & Film"
   },
   {
     "title": "Balourdet Quartet",
@@ -3254,7 +3836,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "A concert by the multi-award winning Balourdet String Quartet. One of the most inspiring quartets of their generation. …",
+    "type": "Music"
   },
   {
     "title": "Young & Dead - Live at The Sherbino",
@@ -3265,7 +3849,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables…",
+    "type": "Community"
   },
   {
     "title": "Balourdet Quartet",
@@ -3276,7 +3862,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Concert",
-    "source": "Telluride Chamber Music"
+    "source": "Telluride Chamber Music",
+    "desc": "A concert by the Balourdet Quartet, presented by Telluride Chamber Music.",
+    "type": "Music"
   },
   {
     "title": "Woman's Club of Ouray County monthly meeting",
@@ -3287,7 +3875,9 @@
     "town": "Ouray",
     "img": "https://localist-images.azureedge.net/photos/52338847179921/huge/a804a495547d393d16494cf6fdbbd49572b64a68.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "All Ouray County women are invited to attend the monthly meeting for the Woman's Club of Ouray County (WCOC). The WCOC, created in 1897, is a local philanthropic and community focused nonprofit organization. Monthly meetings include local…",
+    "type": "Community"
   },
   {
     "title": "TYLER SIMMONS",
@@ -3298,7 +3888,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "TASP Bob Miller Memorial Golf Classic",
@@ -3309,7 +3901,9 @@
     "town": "Telluride",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
-    "source": "Telluride.com"
+    "source": "Telluride.com",
+    "desc": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
+    "type": "Community"
   },
   {
     "title": "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
@@ -3320,7 +3914,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/53426396696874/huge/27241d9ecc4f078cbc6939a2d11aa90a4705a5f0.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S.…",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Blues & Brews Festival",
@@ -3332,6 +3928,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
+    "type": "Festivals",
     "endDate": "2026-09-21"
   },
   {
@@ -3343,7 +3941,9 @@
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
@@ -3355,6 +3955,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Community Event",
     "source": "Telluride.com",
+    "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
+    "type": "Festivals",
     "endDate": "2026-09-21"
   }
 ]
