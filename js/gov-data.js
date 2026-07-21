@@ -1197,7 +1197,7 @@ const LAND_USE_ISSUES = {
   code: {
     lastUpdated: '2026-07-19',  // bump when hand-editing this topic
     label: 'Code Changes & Accelerated Review',
-    heroImage: 'assets/ssr/SMC-Housing-Code-Update-infographic.jpg',
+    heroImage: '/assets/ssr/SMC-Housing-Code-Update-infographic.jpg',
     heroAlt: 'San Miguel County Housing Code Update infographic showing Phase 1 Project Foundation (Fall/Winter 2025), Phase 2 Issue Identification & Analysis (Spring 2026), and Phase 3 Final Audit Report and Code Drafting (Summer 2026).',
     heroCredit: 'Source: San Miguel County Housing Code Update project page',
     heroAspect: 'tall',
@@ -1327,6 +1327,8 @@ const LAND_USE_ISSUES = {
   },
   wildfire: {
     lastUpdated: '2026-06-01',  // bump when hand-editing this topic
+    heroImage: '/images/blog/telluride-paradise-fire.jpg',
+    heroAlt: 'Wildfire burning above a mountain town at dusk',
     label: 'Wildfire Resiliency',
     intro: 'The Town of Telluride, San Miguel County, and the Telluride Fire Protection District are all considering adoption of Colorado\'s Wildfire Resiliency Code and the International Wildland Urban Interface (WUI) Code -- setting construction and land management standards in fire-prone areas.',
     statusTitle: 'Multiple bodies are simultaneously weighing wildfire code adoption.',

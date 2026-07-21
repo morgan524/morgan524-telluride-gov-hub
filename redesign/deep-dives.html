@@ -79,9 +79,10 @@
     return s.slice(0, n).replace(/\s+\S*$/, '') + '…';
   }
   function card(t, issue) {
-    var src = (issue && issue.heroImage) || t.img || '';
+    // Every card gets an image — box-canyon stock when a topic has none.
+    var src = (issue && issue.heroImage) || t.img || '/img/box-canyon.jpg';
     var cls = 'img-frame' + (t.contain ? ' contain' : '');
-    var img = src ? '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>' : '';
+    var img = '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>';
     var dek = (issue && issue.intro) ? issue.intro : (t.dek || '');
     var docs = issue && issue.docs ? issue.docs.length + ' source documents' : '';
     var tl = issue && issue.timeline ? issue.timeline.length + ' timeline entries' : '';
