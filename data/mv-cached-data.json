@@ -1,5 +1,16 @@
 [
   {
+    "date": "August 20, 2026",
+    "time": "2:00 PM",
+    "title": "Town Council Meeting",
+    "board": "tc",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Next scheduled meeting -- agenda posted the Friday before."
+  },
+  {
     "date": "April 23, 2026",
     "time": "2:00 PM - 7:00 PM",
     "title": "Town Council Meeting",
