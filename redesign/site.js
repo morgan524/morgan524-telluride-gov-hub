@@ -42,7 +42,7 @@
       { href: 'legal-notices.html',label: 'Legal Notices', built: true }
     ]}
   ];
-  var ABOUT = { href: 'about.html', label: 'About', built: true };
+  // About left the top nav 2026-07-21 (lives on the homepage + footer now).
   var LOGIN_HREF = ROOT + 'hub-bub.html';   // Firebase auth entry (re-shelled Hub-Bub)
 
   // Pages not in the nav inherit a parent's active state.
@@ -76,14 +76,11 @@
         '<a href="#" aria-haspopup="true" aria-expanded="false" data-nav-group>' + esc(g.label) + ' &#9662;</a>' +
         '<div class="lt-drop">' + drop + '</div></div>';
     }).join('');
-    links += '<a class="lt-top' + (ABOUT.href === activeItem ? ' active' : '') + '" href="' +
-      esc(resolveHref(ABOUT)) + '">About</a>';
 
     var drawer = NAV.map(function (g) {
       return '<div class="grp">' + esc(g.label) + '</div>' +
         g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
     }).join('') +
-      '<div class="grp">More</div><a href="' + esc(resolveHref(ABOUT)) + '">About</a>' +
       '<div class="drawer-cta">' +
       '<a class="lt-pill-donate" href="' + (activeItem === 'donate.html' ? '#' : esc(ROOT + 'donate.html')) + '">Donate</a>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button>' +
