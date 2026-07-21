@@ -1,22 +1,22 @@
 {
-  "hash": "bb3f2df70418002323ff83f011061d80c0eea5c9",
-  "lede": "The biggest item this week is Town Council's second reading of the Colorado Wildfire Resiliency Code on Monday — this is the vote that would actually change Telluride's Land Use Code on landscaping, trees, and historic review to meet state wildfire standards, so it counts. The same day, the Housing Authority takes up a real policy question about primary residency rules for dependents of multiple custodial parents, and Wednesday's Planning and Zoning meeting puts three Town-owned development projects through formal subdivision and concept review in the Accommodations 2 zone.",
+  "hash": "0d55adc930aeeb4255ee3022416556b274f5088c",
+  "lede": "Tuesday is a full day at Town Hall — the newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code, and the Telluride Housing Authority meets to hammer out a primary-residency policy for dependents in split-custody households, a gap that's tripped up real families. Wednesday the County Commissioners convene a special meeting with no agenda posted yet, and Thursday P&Z weighs in on three Town-owned development projects in the A2 zone, including the Carhenge redevelopment at 700 W Pacific.",
   "notable": [
     {
       "id": 1,
-      "stake": "Second-reading vote on wildfire code changes to Land Use Code landscaping and historic review."
+      "stake": "Second reading vote on wildfire code changes to landscaping and historic review rules."
     },
     {
       "id": 2,
-      "stake": "New primary-residency policy for dependents of multiple custodial parents could reset eligibility rules."
+      "stake": "New policy on primary residency for split-custody dependents could affect deed-restricted households."
     },
     {
       "id": 6,
-      "stake": "Formal subdivision and concept review for three Town-owned development projects on Town land."
+      "stake": "P&Z reviews subdivision and concept plans for Town-owned Carhenge and two other A2 projects."
     },
     {
       "id": 11,
-      "stake": "Public hearing on KOTO's special event liquor permit — residents may comment."
+      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — residents may comment."
     }
   ]
 }

@@ -184,20 +184,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
-    "href": "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
-    "date": "2026-07-21",
-    "time": "5:30 PM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52305506266326/huge/6f7fb94915fd0e9d2c59d779c91e1ffdf9538f60.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
-    "type": "Community",
-    "endDate": "2026-09-15"
-  },
-  {
     "title": "An Evening with Josh Abbott",
     "href": "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
     "date": "2026-07-21",
@@ -249,6 +235,19 @@
     "desc": "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray,…",
     "type": "Arts & Film",
     "endDate": "2026-08-05"
+  },
+  {
+    "title": "Home Tour & House Show with Emily Scott Robinson",
+    "href": "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson/",
+    "date": "2026-07-21",
+    "time": "8:00 AM",
+    "location": "783 N. Laura Street, Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while…",
+    "type": "Community"
   },
   {
     "title": "Ouray Youth Summer Programs: Canyoning",
@@ -1043,6 +1042,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Experience Washing Laundry The Old-Fashioned Way",
+    "href": "https://events.ourayridgwayevents.com/event/experience-washing-laundry-the-old-fashioned-way",
+    "date": "2026-07-25",
+    "time": "1:00 PM",
+    "location": "Ouray County Ranch History Museum",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53488588327025/huge/25963643e303a8450e9dce8f5a2dce9b1dc5f0b1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Free and Fun for All Ages -Getting wet guaranteed (!) -OUTSIDE at the OC Ranch History Museum -Hands on History series Saturday, July 25, 1-4pm 321 Sherman St. Ridgway 970-316-1085 View on site | Email this event",
+    "type": "Community"
+  },
+  {
     "title": "Zumba with Gisela",
     "href": "https://koto.org/event/zumba-with-gisela/2026-07-25/",
     "date": "2026-07-25",
@@ -1660,19 +1672,6 @@
     "type": "Community"
   },
   {
-    "title": "America 250/Colorado 150 Book Club",
-    "href": "https://koto.org/event/america-250-colorado-150-book-club/",
-    "date": "2026-07-29",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Wine and Wickets",
     "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
     "date": "2026-07-29",
@@ -1830,19 +1829,6 @@
     "desc": "Love’s Labors Lost: Theatre @ the Wright Presented by UpstART Theatre WHEN? Thursday, July 30 Doors at 7:00 pm • Show at 7:30 pm Friday, July 31 Doors at 7:00 pm • Show at 7:30 pm Saturday, August 1 Doors at 7:00 pm • Show at 7:30 pm…",
     "type": "Arts & Film",
     "endDate": "2026-08-02"
-  },
-  {
-    "title": "Coffee and Climate Conversations",
-    "href": "https://koto.org/event/coffee-and-climate-conversations-2/",
-    "date": "2026-07-30",
-    "time": "8:30 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson…",
-    "type": "Community"
   },
   {
     "title": "The Brass Family — Kids' Concert",
@@ -2581,6 +2567,20 @@
     "type": "Community"
   },
   {
+    "title": "Ouray: Echoes in the Canyon — Screening @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-screening-the-wright",
+    "date": "2026-08-08",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53375404981466/huge/b6ac805d7cab9956501ae2d370b3c2d63385e823.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film",
+    "endDate": "2026-09-17"
+  },
+  {
     "title": "Electric Showcase",
     "href": "https://events.ourayridgwayevents.com/event/electric-showcase",
     "date": "2026-08-08",
@@ -3237,6 +3237,20 @@
     "endDate": "2026-09-15"
   },
   {
+    "title": "Ridgway FUSE Creative Main Street - Committee Meeting",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
+    "date": "2026-08-18",
+    "time": "5:30 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
+    "type": "Community",
+    "endDate": "2026-09-15"
+  },
+  {
     "title": "Sunset Concert Series",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunset-concert-series/",
     "date": "2026-08-19",
@@ -3390,8 +3404,8 @@
     "img": "https://localist-images.azureedge.net/photos/52092594380571/huge/dd4fc50c3832545339cb376e1b3c66326236ee56.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Watch the Hardrock mining competition and learn the history of mining in Ouray. View on site | Email this event",
-    "type": "Community",
+    "desc": "Watch the Hardrock mining competition and learn about the history of mining in Ouray. There will be a full bar, and food vendors. Miner’s Heritage Park is on the southwest corner of Fellin Park. Friday, Aug. 21 | Fellin Park Horseshoe…",
+    "type": "Food & Drink",
     "endDate": "2026-08-23"
   },
   {
