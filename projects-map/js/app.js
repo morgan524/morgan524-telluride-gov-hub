@@ -60,7 +60,7 @@ async function init() {
 
   // Load data
   try {
-    const resp = await fetch('data/projects.json');
+    const resp = await fetch('/projects-map/data/projects.json');
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     allProjects = await resp.json();
   } catch (e) {

@@ -101,13 +101,22 @@ else is proven).
 
 ## Cutover checklist (Phase 4 — pending)
 
-- Re-shell Hub-Bub + zoning-map + projects-map with the new nav/footer
+- ~~Re-shell zoning-map + projects-map~~ DONE 2026-07-20: staged copies at
+  `redesign/zoning-map/index.html` + `redesign/projects-map/index.html` reuse
+  the live apps' css/js/data via root-absolute paths (zoning map's inline
+  module resolves `DATA_BASE = /zoning-map/`); `<body data-no-footer>` skips
+  the footer on full-viewport apps. At cutover each staged copy replaces the
+  live `index.html` in place — the app folders themselves never move.
+  `site.js` now computes a ROOT mount prefix from location.pathname
+  ('/redesign/' staged, '/' at root) so one file serves nested pages too.
+- Re-shell Hub-Bub with the new nav/footer (still pending)
+- ~~Cloudflare Web Analytics~~ DONE 2026-07-20: site.js injects the beacon on
+  every page (http/https only), same token as the live site
 - Firestore approved-orgs merge on local-orgs.html
 - Parity review: review-page.js against every page, old vs new
 - Move `redesign/*` to root in one commit (URLs already match); keep old pages
   renamed `*-legacy.html` for ~1 week
-- Remove the `noindex` meta from every page
+- Remove the `noindex` meta from every page (including both map copies)
 - Retire (or CACHE_NAME-bump) the service worker
-- Flip `site.js` root-absolute links (hub-bub, vote-tracker, maps) to their
-  final locations if any move
+- Retarget maintenance.js reviewNav() to the placeholder+site.js pattern
 - Point the digest's links/UTMs nowhere new — URLs are unchanged by design

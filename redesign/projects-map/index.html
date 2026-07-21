@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valley Project Map — Livable Telluride</title>
+  <meta name="description" content="An interactive map showing how separate public decisions add up across San Miguel County, Colorado.">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.4.0/mapbox-gl.js"></script>
+  <meta name="robots" content="noindex"><!-- STAGING: remove at cutover -->
+  <link rel="stylesheet" href="../lt.css?v=4">
+  <link rel="stylesheet" href="/projects-map/css/styles.css?v=20260624">
+<style>
+  /* ── Redesign shell overrides ── */
+  .lt-nav { flex-shrink:0; }
+  #main { min-height:0; flex:1 1 auto; }
+  #header-left h1 { color:#fff; }  /* lt.css paints h1 forest; header bar is forest */
+  body { height:100vh; min-height:0; }
+</style>
+</head>
+<body data-no-footer>
+<div id="lt-header"></div>
+
+
+<!-- Page-specific header (project map title + Submit Missing button) -->
+<div id="header">
+  <div id="header-left">
+    <h1>Valley Project Map</h1>
+    <p>How separate public decisions add up · San Miguel County, CO</p>
+  </div>
+  <a id="submit-missing"
+     href="mailto:info@livabletelluride.org?subject=Missing%20project%20for%20the%20Valley%20Map&body=Project%20name%3A%0ALocation%3A%0AWhat's%20happening%3A%0ASource%20or%20link%3A"
+     target="_blank">
+    + Submit Missing Project
+  </a>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+
+  <!-- Mobile-only: backdrop that closes the left panel when tapped -->
+  <div id="mobile-panel-backdrop" aria-hidden="true"></div>
+
+  <!-- Mobile-only: floating button on the map that opens the left panel -->
+  <button id="mobile-filter-toggle" type="button" aria-label="Open filters and project list" aria-controls="left-panel" aria-expanded="false">
+    <span aria-hidden="true">☰</span> Filters &amp; Projects
+  </button>
+
+  <!-- LEFT PANEL -->
+  <div id="left-panel">
+
+    <!-- Mobile-only: close button inside the panel -->
+    <button id="mobile-panel-close" type="button" aria-label="Close filters and project list">✕</button>
+
+    <!-- Search -->
+    <div id="search-box">
+      <input id="search-input" type="search" placeholder="Search projects, issues, locations…" autocomplete="off">
+    </div>
+
+    <!-- Project List -->
+    <div id="project-list">
+      <div class="no-results">Loading projects…</div>
+    </div>
+
+  </div><!-- /left-panel -->
+
+  <!-- MAP AREA -->
+  <div id="map-wrapper">
+    <div id="map"></div>
+
+    <!-- Preset View Buttons -->
+    <div id="preset-buttons"></div>
+
+    <!-- 3D Massing Toggle -->
+    <div id="massing-toggle-bar">
+      <label class="massing-toggle-label">
+        <input type="checkbox" id="toggleMassing">
+        <span class="massing-toggle-icon">🏗</span>
+        Show 3D proposed massing
+      </label>
+      <div id="massing-disclaimer">
+        Approximate massing — not architectural plans. See source confidence in each project.
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div id="legend">
+      <h4>Pin Status</h4>
+      <div id="legend-items"></div>
+      <div id="massing-legend-section" style="display:none">
+        <h4 style="margin-top:10px;margin-bottom:4px;font-size:0.7rem;text-transform:uppercase;letter-spacing:.05em;color:#64748b">3D Massing</h4>
+      </div>
+    </div>
+
+    <!-- Right Drawer (populated by JS) -->
+    <div id="drawer"></div>
+
+  </div><!-- /map-wrapper -->
+
+</div><!-- /main -->
+
+<!-- js/app.js loaded with a dynamic cache-buster (Math.floor(Date.now()/600000)
+     → bumps every ~10 min) so edits to app.js reach users within that window
+     instead of being held back by browser cache. Matches the pattern used by
+     gov-hub.html / hub-bub.html / deep-dive-*.html across the rest of the site. -->
+<script>
+  (function() {
+    var s = document.createElement('script');
+    s.src = '/projects-map/js/app.js?v=' + Math.floor(Date.now() / 600000);
+    document.head.appendChild(s);
+  })();
+</script>
+
+
+<script src="../site.js?v=5"></script>
+</body>
+</html>

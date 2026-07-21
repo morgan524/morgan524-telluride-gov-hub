@@ -6,22 +6,29 @@
    dynamically — DCL-race rule). Nav/footer edits happen HERE only.
 
    Link rule:
-   - Pages that exist in this redesign → page-relative hrefs (work on
-     file://, on /redesign/ staging, and at root after cutover).
+   - Pages that exist in this redesign → ROOT-prefixed hrefs. ROOT is the
+     redesign mount point, computed from location.pathname ('/redesign/'
+     on staging, '/' after cutover, the file path on file://). This lets
+     nested pages (zoning-map/, projects-map/) share this same file.
    - Existing apps not yet rebuilt → root-absolute hrefs (staging users
      land on the live page; still correct after cutover).
    Move a page from PENDING to BUILT by flipping `built: true`.
+   Map-style full-viewport pages may omit the footer by putting
+   data-no-footer on <body>.
    ============================================================ */
 (function () {
   'use strict';
+
+  // Mount point of this site copy ('/redesign/' staged, '/' at root).
+  var ROOT = (location.pathname.match(/^(.*\/redesign\/)/) || [null, '/'])[1];
 
   // ---- Information architecture (approved 2026-07-20) ----
   var NAV = [
     { key: 'learn', label: 'Learn', items: [
       { href: 'local-news.html',   label: 'Local News',    built: true },
       { href: 'deep-dives.html',   label: 'Deep Dives',    built: true },
-      { href: '/zoning-map/',      label: 'Zoning Map',    built: true  },   // existing app (kept)
-      { href: '/projects-map/',    label: 'Projects Map',  built: true  }    // existing app (kept)
+      { href: 'zoning-map/index.html',   label: 'Zoning Map',   built: true },   // re-shelled app
+      { href: 'projects-map/index.html', label: 'Projects Map', built: true }    // re-shelled app
     ]},
     { key: 'connect', label: 'Connect', items: [
       { href: 'events.html',       label: 'Events',        built: true },
@@ -39,14 +46,18 @@
   var LOGIN_HREF = '/hub-bub.html';   // Firebase auth entry (root-absolute until Hub-Bub rebuilds)
 
   // Pages not in the nav inherit a parent's active state.
-  var PROXY = { 'deep-dive.html': 'deep-dives.html', 'index.html': '' };
+  var PROXY = {
+    'deep-dive.html': 'deep-dives.html', 'index.html': '',
+    'zoning-map/': 'zoning-map/index.html', 'projects-map/': 'projects-map/index.html'
+  };
 
-  var page = (location.pathname.split('/').pop() || 'index.html');
+  // ROOT-relative path of this page ('gov-hub.html', 'zoning-map/index.html', …).
+  var page = location.pathname.indexOf(ROOT) === 0 ? location.pathname.slice(ROOT.length) : (location.pathname.split('/').pop() || '');
   var activeItem = PROXY.hasOwnProperty(page) ? PROXY[page] : page;
 
   function resolveHref(item) {
     if (item.href.charAt(0) === '/') return item.href;               // root-absolute (existing app)
-    return item.built ? item.href : '/' + item.href;                 // pending pages → live site
+    return item.built ? ROOT + item.href : '/' + item.href;          // pending pages → live site
   }
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -74,17 +85,17 @@
     }).join('') +
       '<div class="grp">More</div><a href="' + esc(resolveHref(ABOUT)) + '">About</a>' +
       '<div class="drawer-cta">' +
-      '<a class="lt-pill-donate" href="' + (activeItem === 'donate.html' ? '#' : 'donate.html') + '">Donate</a>' +
+      '<a class="lt-pill-donate" href="' + (activeItem === 'donate.html' ? '#' : esc(ROOT + 'donate.html')) + '">Donate</a>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button>' +
       '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a></div>';
 
     return '<nav class="lt-nav" aria-label="Main">' +
       '<div class="lt-nav-row">' +
-      '<a class="lt-nav-logo" href="index.html" aria-label="Livable Telluride home">' +
-      '<img src="uploads/lt-logo.png" alt="Livable Telluride"></a>' +
+      '<a class="lt-nav-logo" href="' + esc(ROOT + 'index.html') + '" aria-label="Livable Telluride home">' +
+      '<img src="' + esc(ROOT + 'uploads/lt-logo.png') + '" alt="Livable Telluride"></a>' +
       '<div class="lt-nav-links">' + links + '</div>' +
       '<div class="lt-nav-cta">' +
-      '<a class="lt-pill-donate" href="donate.html">Donate</a>' +
+      '<a class="lt-pill-donate" href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle title="Cambiar idioma / Switch language">Espa&ntilde;ol</button>' +
       '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a>' +
       '</div>' +
@@ -99,11 +110,11 @@
       '<div><div class="brand">Livable Telluride</div>' +
       '<div class="tagline">Inform. Connect. Engage. Together.</div></div>' +
       '<div class="lt-footer-links">' +
-      '<a href="local-news.html">Learn</a>' +
-      '<a href="events.html">Connect</a>' +
-      '<a href="gov-hub.html">Act</a>' +
-      '<a href="about.html">About</a>' +
-      '<a href="donate.html">Donate</a>' +
+      '<a href="' + esc(ROOT + 'local-news.html') + '">Learn</a>' +
+      '<a href="' + esc(ROOT + 'events.html') + '">Connect</a>' +
+      '<a href="' + esc(ROOT + 'gov-hub.html') + '">Act</a>' +
+      '<a href="' + esc(ROOT + 'about.html') + '">About</a>' +
+      '<a href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
       '</div></div></footer>';
   }
 
@@ -113,7 +124,16 @@
   else console.error('[site.js] #lt-header placeholder missing on ' + page);
   var f = document.getElementById('lt-footer');
   if (f) f.outerHTML = footerHTML();
-  else console.error('[site.js] #lt-footer placeholder missing on ' + page);
+  else if (!document.body.hasAttribute('data-no-footer')) console.error('[site.js] #lt-footer placeholder missing on ' + page);
+
+  // Cloudflare Web Analytics (same beacon as the live site; skipped on file://).
+  if (/^https?:$/.test(location.protocol)) {
+    var cf = document.createElement('script');
+    cf.defer = true;
+    cf.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    cf.setAttribute('data-cf-beacon', '{"token": "6500d02421bc4da1bebfad6099e6027c"}');
+    document.body.appendChild(cf);
+  }
 
   // ---- dropdown a11y: tap/click toggles on touch (hover/focus handled in CSS) ----
   document.querySelectorAll('[data-nav-group]').forEach(function (label) {

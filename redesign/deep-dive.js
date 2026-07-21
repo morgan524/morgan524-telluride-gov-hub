@@ -60,7 +60,8 @@
       }).join(''));
     }
     if (issue.timeline && issue.timeline.length) {
-      body += section('How we got here', '<div class="tl">' + issue.timeline.map(function (t) {
+      // Newest events first (data is stored oldest→newest; live site reverses too).
+      body += section('How we got here', '<div class="tl">' + issue.timeline.slice().reverse().map(function (t) {
         return '<div class="tl-item' + (t.future ? ' future' : '') + '"><div class="tl-dot"></div>' +
           '<div class="tl-date">' + esc(t.date || '') + (t.future ? ' · Upcoming' : '') + '</div>' +
           '<h4>' + esc(t.title || '') + '</h4>' + (t.copy ? '<p>' + esc(t.copy) + '</p>' : '') + '</div>';
