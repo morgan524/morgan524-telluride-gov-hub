@@ -34,6 +34,10 @@
   .m-card .acts .cbtn:hover { background: #1c3a33; color: #fff; }
   .m-card .acts .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
   .m-card .acts .abtn:hover { background: var(--sage2); color: var(--forest); }
+  /* Solid green = a real agenda/packet is posted; grey ghost = not yet */
+  .m-card .acts .abtn.primary { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .m-card .acts .abtn.primary:hover { background: #1c3a33; color: #fff; }
+  .m-card .acts .abtn.empty { border-color: var(--hairline); color: var(--muted2); background: var(--sage2); cursor: default; }
   .m-card .acts .abtn.zoom { border-color: #2d64a8; color: #2d64a8; }
   .m-card .acts .abtn.zoom:hover { background: #eef3fa; }
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
@@ -121,7 +125,8 @@
   }
 
   function commentMailto(m) {
-    var subject = 'Re: the ' + LTData.fmtDate(m.date, { month: 'long', day: 'numeric' }) + ' ' + m.title;
+    // Same subject format as the live Gov-Hub so clerks see a consistent inbox.
+    var subject = 'Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || '');
     return 'mailto:' + encodeURIComponent(m.commentEmail) + '?subject=' + encodeURIComponent(subject);
   }
   function render() {
@@ -140,12 +145,16 @@
       var d = LTData.parseDateKey(m.date);
       var logo = LOGO_BY_KEY[m.source]
         ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[m.source]) + '" alt="' + esc(m.sourceLabel) + '" loading="lazy"></div>' : '';
-      // Action row: Comment · agenda · packet · Zoom · Livestream — each shown
-      // whenever its data exists (the standing always-visible rule).
+      // Action row — live-Gov-Hub parity: View Agenda goes solid green when a
+      // real agenda is posted (m.hasAgenda), outline when the link is just a
+      // calendar page; Agenda Packet is always present — solid green download
+      // when posted, grey non-clickable ghost when not yet.
       var acts = '';
-      if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">Comment</a>';
-      if (m.agendaUrl) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">&#128196; Agenda</a>';
-      if (m.packetUrl) acts += '<a class="abtn" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">&#128230; Agenda packet</a>';
+      if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
+      if (m.agendaUrl) acts += '<a class="abtn' + (m.hasAgenda ? ' primary' : '') + '" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>';
+      acts += m.packetUrl
+        ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
+        : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
       if (m.zoomLink) acts += '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
       if (!m.agendaUrl && m.link) acts += '<a class="abtn" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
