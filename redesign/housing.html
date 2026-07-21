@@ -133,12 +133,17 @@
       if (/^https?:\/\//.test(photo)) {
         media = '<div class="media"><img src="' + LTData.esc(photo) + '" alt="' + LTData.esc(l.title || 'Listing photo') + '" loading="lazy"></div>';
       } else if (l.address || (l.lat && l.lng)) {
-        // Street address first, with the "Unit …" segment stripped — unit
-        // numbers send Google's geocoder astray, and the pipeline's lat/lng
-        // are rough per-street guesses (one landed mid-mountain). Coordinates
-        // only when there's no address at all.
+        // Hand-verified building pins first (Google's geocoder misplaces some
+        // Telluride addresses); then the street address with the "Unit …"
+        // segment stripped; raw coordinates only when there's no address.
+        var KNOWN_PINS = [
+          [/silver jack/i, '37.93685,-107.81455'],           // 155 W Pacific, north of the gondola station
+          [/virginia placer/i, '37.93983,-107.82840']        // Virginia Placer Boarding House (OSM)
+        ];
+        var pin = null, hay = (l.title || '') + ' ' + (l.address || '');
+        for (var i = 0; i < KNOWN_PINS.length; i++) { if (KNOWN_PINS[i][0].test(hay)) { pin = KNOWN_PINS[i][1]; break; } }
         var cleanAddr = String(l.address || '').replace(/,?\s*(Unit|Apt|#)\s*[^,]+/i, '');
-        var q = encodeURIComponent(cleanAddr || (l.lat + ',' + l.lng));
+        var q = encodeURIComponent(pin || cleanAddr || (l.lat + ',' + l.lng));
         media = '<div class="media"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
           'title="Map of ' + LTData.esc(l.address || 'listing location') + '" ' +
           'src="https://maps.google.com/maps?q=' + q + '&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe></div>';
