@@ -1,22 +1,22 @@
 {
-  "hash": "437cb205be6d3c4b50375c41bddc66cba0a5bce9",
-  "lede": "The biggest thing on the government calendar this week is Monday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code is up for a vote — amendments to the Land Use Code on landscaping, trees, and historic review that would lock in the town's wildfire standards going forward. The Housing Authority also meets Monday to work through a tricky primary-residency policy question for dependents of multiple custodial parents, and Wednesday's Planning and Zoning session takes up three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment at 700 W Pacific. Around it all, Shakespeare in the Park runs through Thursday and the free Oak Street Park summer show series kicks off Thursday night.",
+  "hash": "bb3f2df70418002323ff83f011061d80c0eea5c9",
+  "lede": "The biggest item this week is Town Council's second reading of the Colorado Wildfire Resiliency Code on Monday — this is the vote that would actually change Telluride's Land Use Code on landscaping, trees, and historic review to meet state wildfire standards, so it counts. The same day, the Housing Authority takes up a real policy question about primary residency rules for dependents of multiple custodial parents, and Wednesday's Planning and Zoning meeting puts three Town-owned development projects through formal subdivision and concept review in the Accommodations 2 zone.",
   "notable": [
     {
       "id": 1,
-      "stake": "Final vote on wildfire code changes to landscaping and historic review standards."
+      "stake": "Second-reading vote on wildfire code changes to Land Use Code landscaping and historic review."
     },
     {
       "id": 2,
-      "stake": "New policy on primary residency for dependents of multiple custodial parents."
+      "stake": "New primary-residency policy for dependents of multiple custodial parents could reset eligibility rules."
     },
     {
       "id": 6,
-      "stake": "Public review of three Town-owned development projects, including Carhenge redevelopment."
+      "stake": "Formal subdivision and concept review for three Town-owned development projects on Town land."
     },
     {
       "id": 11,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — anyone can comment."
+      "stake": "Public hearing on KOTO's special event liquor permit — residents may comment."
     }
   ]
 }
