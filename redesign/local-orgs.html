@@ -39,10 +39,13 @@
   .org .acts .site { color: var(--rust); text-decoration: underline; }
   .org .acts .donate { border: 1.5px solid var(--rust); color: var(--rust); border-radius: 4px; padding: 6px 11px; }
   .org .acts .donate:hover { background: #f5e4d9; }
-  .org .soc { display: inline-flex; gap: 6px; align-items: center; }
-  .org .soc a { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--sage2); border: 1px solid var(--hairline); transition: background .12s; }
-  .org .soc a:hover { background: var(--sage); }
-  .org .soc svg { width: 14px; height: 14px; fill: var(--forest); display: block; }
+  /* social icons — shared by the directory cards AND the featured band */
+  .soc { display: inline-flex; gap: 6px; align-items: center; }
+  .soc a { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--sage2); border: 1px solid var(--hairline); transition: background .12s; }
+  .soc a:hover { background: var(--sage); }
+  .soc svg { width: 14px; height: 14px; fill: var(--forest); display: block; }
+  .feat-org .soc a { width: 34px; height: 34px; }
+  .feat-org .soc svg { width: 17px; height: 17px; }
   .add-band { max-width: var(--maxw); margin: 40px auto 0; padding: 0 var(--pad-x); }
   .add-card { background: var(--sage2); border: 1px solid var(--hairline); border-radius: 12px; padding: 26px; text-align: center; }
   .add-card h2 { font: 500 25px/1.25 var(--serif); margin-bottom: 8px; }
