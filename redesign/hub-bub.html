@@ -111,7 +111,7 @@
       min-height: 0;
       border: 1px solid var(--lt-line);
       border-radius: var(--lt-radius-xl);
-      padding: clamp(18px, 2.8vw, 26px);
+      padding: clamp(14px, 2vw, 20px);
       background:
         linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
         radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
@@ -769,7 +769,7 @@
       border: 1px solid var(--lt-line);
       background: #fff;
       box-shadow: var(--lt-shadow-soft);
-      padding: 20px 20px 18px;
+      padding: 16px 16px 14px;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -1035,7 +1035,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 1024px) {
-      .hb-intro { grid-template-columns: 1fr; }
+      .hb-intro { grid-template-columns: minmax(0, 1fr) 260px; }
       .hb-board { grid-template-columns: 260px minmax(0,1fr); gap: 16px; }
     }
     @media (max-width: 768px) {
@@ -1146,23 +1146,29 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
 <style>
   /* ── Redesign shell overrides ── */
-  .hb-shell-authbar { max-width: 1280px; margin: 12px auto -4px; padding: 0 32px; display: flex; justify-content: flex-end; }
   .lt-pill-login { display: none !important; }
+  /* Auth widget lives at the top of the account panel; the signup pitch
+     below it disappears once the visitor is signed in. */
+  .hb-account-panel .topnav-auth { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; }
+  .hb-account-panel .topnav-auth[data-auth="out"] + .hb-account-signup { margin-top: 14px; }
+  #hbTopnavAuth[data-auth="in"] + .hb-account-signup { display: none; }
 </style>
 </head>
 <body>
 
   <!-- ════════════════════ NAV ════════════════════ -->
 <div id="lt-header"></div>
-<div class="hb-shell-authbar"><div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div></div>
 
-  <!-- ════════════════════ HERO ════════════════════ -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>💬 Hub-Bub</h1>
-      <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+  <!-- ════════════════════ MASTHEAD (shared pattern — Wilson Peak art) ════════════════════ -->
+  <header class="masthead">
+    <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+    <div class="masthead-fade"></div>
+    <div class="masthead-inner">
+      <div class="crumb">Connect <span class="sep">&rsaquo;</span> Hub-Bub</div>
+      <h1>Hub-Bub</h1>
+      <p class="sub">Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
     </div>
-  </section>
+  </header>
 
   <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
   <div class="hb-wrap" style="display:none;" aria-hidden="true">
@@ -1226,20 +1232,22 @@
           </div>
         </div>
 
-        <aside class="hb-account-panel" aria-label="Create a free account">
-          <h2 class="hb-account-heading">Commenting requires a free account</h2>
-          <div class="hb-account-perks">
-            <div class="hb-account-perk">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Post questions, sources &amp; meeting takeaways
+        <aside class="hb-account-panel" aria-label="Your account">
+          <div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div>
+          <div class="hb-account-signup">
+            <h2 class="hb-account-heading">Commenting requires a free account</h2>
+            <div class="hb-account-perks">
+              <div class="hb-account-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Post questions, sources &amp; meeting takeaways
+              </div>
+              <div class="hb-account-perk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Reply to neighbors &amp; follow discussions
+              </div>
             </div>
-            <div class="hb-account-perk">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              Reply to neighbors &amp; follow discussions
-            </div>
+            <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
           </div>
-          <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
-          <p class="hb-account-login-note">Already have an account?<br><a href="javascript:void(0)" id="hbOpenLogin">Log in</a></p>
         </aside>
       </section>
 
