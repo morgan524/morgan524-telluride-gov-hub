@@ -148,11 +148,13 @@ flag.
   real desktop browser on staging.
 - ~~Cloudflare Web Analytics~~ DONE 2026-07-20: site.js injects the beacon on
   every page (http/https only), same token as the live site
-- Firestore approved-orgs merge on local-orgs.html
+- ~~Firestore approved-orgs merge~~ DONE 2026-07-21 (read-only, name-deduped)
+- ~~About newsletter/contact, Local News pets + letters banner~~ DONE 2026-07-21
+- ~~Retarget maintenance.js reviewNav~~ DONE 2026-07-21: reviewShellNav +
+  sweep covers redesign/; legacy reviewNav still guards old pages until they die
 - Parity review: review-page.js against every page, old vs new
 - Move `redesign/*` to root in one commit (URLs already match); keep old pages
   renamed `*-legacy.html` for ~1 week
 - Remove the `noindex` meta from every page (including both map copies)
 - Retire (or CACHE_NAME-bump) the service worker
-- Retarget maintenance.js reviewNav() to the placeholder+site.js pattern
 - Point the digest's links/UTMs nowhere new — URLs are unchanged by design
