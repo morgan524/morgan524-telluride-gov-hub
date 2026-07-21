@@ -338,8 +338,12 @@
     "sv": 4
   },
   "county|2026-07-21|SMC Historical Commission Meeting": {
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1922",
-    "sv": 4
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926",
+    "sv": 4,
+    "zoomUrl": "https://us02web.zoom.us/j/85010485711",
+    "meetingId": "850 1048 5711",
+    "passcode": "333002",
+    "phone": "970-728-3844"
   },
   "county|2026-08-19|Board of County Commissioners Meeting": {
     "sv": 4
