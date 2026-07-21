@@ -67,40 +67,16 @@
         "href": "https://engagetelluride.org/32089/widgets/113355/documents/83231"
       },
       {
-        "title": "Carhenge P&Z Work Session Application (Mar 26, 2026)",
-        "copy": "Full application package for the Planning & Zoning work session.",
-        "tag": "Carhenge",
-        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79175"
-      },
-      {
-        "title": "Carhenge Site Plan (Mar 26, 2026)",
-        "copy": "Site plan drawings for the proposed redevelopment.",
-        "tag": "Carhenge",
-        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79180"
-      },
-      {
-        "title": "Carhenge Application Narrative",
-        "copy": "Project narrative describing the redevelopment concept and entitlement approach.",
-        "tag": "Carhenge",
-        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79178"
-      },
-      {
-        "title": "Letter of Authorization (Town of Telluride)",
-        "copy": "Signed authorization letter for the application.",
-        "tag": "Carhenge",
-        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79181"
-      },
-      {
-        "title": "Shandoka Lot Redevelopment -- Alternative 2 (PDF)",
-        "copy": "Full concept package for the Council-endorsed Alternative 2 design (29.5 MB).",
-        "tag": "Shandoka",
-        "href": "https://engagetelluride.org/32023/widgets/113083/documents/78970"
-      },
-      {
         "title": "C7CC — Summary of Legal Issues (June 2026)",
         "copy": "Chair 7 Community Coalition overview of the seven legal letters its counsel (Diane Wolfson, Sphere Law Firm) filed opposing the Carhenge and Shandoka PUD applications — covering parking, traffic, flood and groundwater hazards, and the Backman Village Plat restrictions.",
         "tag": "C7CC",
         "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-summary-of-legal-issues.pdf?alt=media&token=36937ed8-1f92-447f-b520-16cf94d56aa6"
+      },
+      {
+        "title": "C7CC — Shandoka: Traffic (Letter to P&Z, May 28 2026)",
+        "copy": "Identifies trip generators the existing studies never modeled — a transit center and a childcare facility with high, concentrated peak-hour traffic — and asks the Commission to decline a favorable circulation finding without a development-specific traffic study.",
+        "tag": "C7CC",
+        "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-traffic.pdf?alt=media&token=26c50b31-37e2-476f-bddc-ceedcba8b784"
       },
       {
         "title": "C7CC — Carhenge: Parking (Letter to P&Z, May 27 2026)",
@@ -133,10 +109,34 @@
         "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-backman-plat.pdf?alt=media&token=43ec3390-a003-4fc5-8961-e6fc0e762af1"
       },
       {
-        "title": "C7CC — Shandoka: Traffic (Letter to P&Z, May 28 2026)",
-        "copy": "Identifies trip generators the existing studies never modeled — a transit center and a childcare facility with high, concentrated peak-hour traffic — and asks the Commission to decline a favorable circulation finding without a development-specific traffic study.",
-        "tag": "C7CC",
-        "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fchair-7%2Fchair7-shandoka-traffic.pdf?alt=media&token=26c50b31-37e2-476f-bddc-ceedcba8b784"
+        "title": "Carhenge P&Z Work Session Application (Mar 26, 2026)",
+        "copy": "Full application package for the Planning & Zoning work session.",
+        "tag": "Carhenge",
+        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79175"
+      },
+      {
+        "title": "Carhenge Site Plan (Mar 26, 2026)",
+        "copy": "Site plan drawings for the proposed redevelopment.",
+        "tag": "Carhenge",
+        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79180"
+      },
+      {
+        "title": "Carhenge Application Narrative",
+        "copy": "Project narrative describing the redevelopment concept and entitlement approach.",
+        "tag": "Carhenge",
+        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79178"
+      },
+      {
+        "title": "Letter of Authorization (Town of Telluride)",
+        "copy": "Signed authorization letter for the application.",
+        "tag": "Carhenge",
+        "href": "https://engagetelluride.org/32089/widgets/113355/documents/79181"
+      },
+      {
+        "title": "Shandoka Lot Redevelopment -- Alternative 2 (PDF)",
+        "copy": "Full concept package for the Council-endorsed Alternative 2 design (29.5 MB).",
+        "tag": "Shandoka",
+        "href": "https://engagetelluride.org/32023/widgets/113083/documents/78970"
       }
     ],
     "meetings": [
@@ -481,64 +481,10 @@
         "href": "assets/ssr/Accelerated-Housing-Review-LUCA-redline-SSR-vs-County.pdf"
       },
       {
-        "title": "San Miguel County Housing Code Update (project page)",
-        "copy": "Official SMC project page -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.",
-        "tag": "SMC Project Page",
-        "href": "https://www.sanmiguelcountyco.gov/882/Housing-Code-Update"
-      },
-      {
-        "title": "San Miguel County Land Use Code (Accelerated Housing Review)",
-        "copy": "The current Land Use Code language that the Accelerated Housing Review draft would amend. Useful for comparing existing rules against the proposed changes.",
-        "tag": "Existing Code",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14055"
-      },
-      {
-        "title": "BOCC Presentation -- Community Engagement Plan",
-        "copy": "Presentation given to the Board of County Commissioners describing the Housing Code Update community engagement strategy.",
-        "tag": "BOCC",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13339/BOCC-Presentation-Community-Engagement-Plan-PDF?bidId="
-      },
-      {
-        "title": "Community Engagement Plan",
-        "copy": "Full Community Engagement Plan describing how the County intends to gather public input throughout the code update.",
-        "tag": "Plan",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13340/Community-Engagement-Plan-PDF?bidId="
-      },
-      {
-        "title": "October SSR No. 1 Meeting Packet",
-        "copy": "First SSR meeting packet (October 2025). Typically the largest packet because it sets up baseline existing-code review.",
-        "tag": "SSR No. 1",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13732/October-SSR-No-1-Meeting-Packet"
-      },
-      {
-        "title": "October SSR No. 1 Meeting High-Level Summary",
-        "copy": "Short summary of what was discussed and decided at SSR No. 1.",
-        "tag": "SSR No. 1 Summary",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13734/October-SSR-No-1-Meeting-High-Level-Summary"
-      },
-      {
-        "title": "December SSR No. 2 Meeting Packet",
-        "copy": "Second SSR meeting packet (December 2025).",
-        "tag": "SSR No. 2",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13733/December-SSR-No-2-Meeting-Packet"
-      },
-      {
-        "title": "December SSR No. 2 Meeting High-Level Summary",
-        "copy": "Short summary of what was discussed and decided at SSR No. 2.",
-        "tag": "SSR No. 2 Summary",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13810/December-SSR-No-Meeting-High-Level-Summary"
-      },
-      {
-        "title": "January SSR No. 3 Meeting Packet",
-        "copy": "Third SSR meeting packet (January 2026).",
-        "tag": "SSR No. 3",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13846/January-SSR-No-3-Meeting-Packet"
-      },
-      {
-        "title": "January SSR No. 3 Meeting High-Level Summary",
-        "copy": "Short summary of what was discussed and decided at SSR No. 3.",
-        "tag": "SSR No. 3 Summary",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13883/January-SSR-No-3-High-Level-Summary"
+        "title": "April SSR No. 5 Meeting Packet",
+        "copy": "Fifth and most recent SSR meeting packet (April 2026). High-level summary not yet posted by SMC at the time of writing.",
+        "tag": "SSR No. 5",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet"
       },
       {
         "title": "March SSR No. 4 Meeting Packet",
@@ -553,10 +499,64 @@
         "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14065/March-SSR-No-4-Meeting-High-Level-Summary"
       },
       {
-        "title": "April SSR No. 5 Meeting Packet",
-        "copy": "Fifth and most recent SSR meeting packet (April 2026). High-level summary not yet posted by SMC at the time of writing.",
-        "tag": "SSR No. 5",
-        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14206/April-SSR-No-5-Meeting-Packet"
+        "title": "January SSR No. 3 Meeting Packet",
+        "copy": "Third SSR meeting packet (January 2026).",
+        "tag": "SSR No. 3",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13846/January-SSR-No-3-Meeting-Packet"
+      },
+      {
+        "title": "January SSR No. 3 Meeting High-Level Summary",
+        "copy": "Short summary of what was discussed and decided at SSR No. 3.",
+        "tag": "SSR No. 3 Summary",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13883/January-SSR-No-3-High-Level-Summary"
+      },
+      {
+        "title": "December SSR No. 2 Meeting Packet",
+        "copy": "Second SSR meeting packet (December 2025).",
+        "tag": "SSR No. 2",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13733/December-SSR-No-2-Meeting-Packet"
+      },
+      {
+        "title": "December SSR No. 2 Meeting High-Level Summary",
+        "copy": "Short summary of what was discussed and decided at SSR No. 2.",
+        "tag": "SSR No. 2 Summary",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13810/December-SSR-No-Meeting-High-Level-Summary"
+      },
+      {
+        "title": "October SSR No. 1 Meeting Packet",
+        "copy": "First SSR meeting packet (October 2025). Typically the largest packet because it sets up baseline existing-code review.",
+        "tag": "SSR No. 1",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13732/October-SSR-No-1-Meeting-Packet"
+      },
+      {
+        "title": "October SSR No. 1 Meeting High-Level Summary",
+        "copy": "Short summary of what was discussed and decided at SSR No. 1.",
+        "tag": "SSR No. 1 Summary",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13734/October-SSR-No-1-Meeting-High-Level-Summary"
+      },
+      {
+        "title": "BOCC Presentation -- Community Engagement Plan",
+        "copy": "Presentation given to the Board of County Commissioners describing the Housing Code Update community engagement strategy.",
+        "tag": "BOCC",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13339/BOCC-Presentation-Community-Engagement-Plan-PDF?bidId="
+      },
+      {
+        "title": "Community Engagement Plan",
+        "copy": "Full Community Engagement Plan describing how the County intends to gather public input throughout the code update.",
+        "tag": "Plan",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/13340/Community-Engagement-Plan-PDF?bidId="
+      },
+      {
+        "title": "San Miguel County Housing Code Update (project page)",
+        "copy": "Official SMC project page -- timeline, listening sessions, SSR roster, document center, and Spanish-language information. The canonical entry point for everything happening in this code audit.",
+        "tag": "SMC Project Page",
+        "href": "https://www.sanmiguelcountyco.gov/882/Housing-Code-Update"
+      },
+      {
+        "title": "San Miguel County Land Use Code (Accelerated Housing Review)",
+        "copy": "The current Land Use Code language that the Accelerated Housing Review draft would amend. Useful for comparing existing rules against the proposed changes.",
+        "tag": "Existing Code",
+        "href": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14055"
       },
       {
         "title": "San Miguel County CivicClerk Portal",
@@ -869,28 +869,16 @@
         "href": "/assets/Diamond%20Ridge/diamond-order-judgment-2026.pdf"
       },
       {
+        "title": "Plaintiffs' Opening Brief in Support of Declaratory Relief (with Exhibits)",
+        "copy": "Landowners' opening brief seeking declaratory relief, filed Dec 16, 2024, including the full exhibit record (large file).",
+        "tag": "Brief Dec 2024",
+        "href": "/assets/Diamond%20Ridge/diamond-declaratory-opening-brief-2024.pdf"
+      },
+      {
         "title": "Order RE: Petition for Review — Aldasoro PUD (June 2024)",
         "copy": "Court rules in favor of landowners: Diamond Ranch lots are part of the 1991 Aldasoro PUD unified plan of development. BOCC's contrary interpretation vacated. Case No. 23CV30044.",
         "tag": "Court Order 2024",
         "href": "/assets/Diamond%20Ridge/diamond-order-petition-review-2024.pdf"
-      },
-      {
-        "title": "Order RE: Rule 106(a)(4) Review — Rezoning (Dec 2022)",
-        "copy": "Court rules in favor of landowners: BOCC's rezoning of Diamond Ridge vacated on two grounds -- Commissioner Cooper's participation violated due process, and the rezone constituted illegal spot zoning inconsistent with the Master Plan. Case No. 22CV30023.",
-        "tag": "Court Order 2022",
-        "href": "/assets/Diamond%20Ridge/diamond-order-106a-review-2022.pdf"
-      },
-      {
-        "title": "Plaintiffs' Opening Brief (Rule 106 Review)",
-        "copy": "Landowners' opening brief in the C.R.C.P. 106(a)(4) review of the BOCC's Diamond Ridge rezone (Case No. 23CV30044), April 4, 2024.",
-        "tag": "Brief Apr 2024",
-        "href": "/assets/Diamond%20Ridge/diamond-opening-brief-2024.pdf"
-      },
-      {
-        "title": "County's Answer Brief",
-        "copy": "San Miguel County's answer brief responding to the landowners' Rule 106 petition (Case No. 23CV30044), May 6, 2024.",
-        "tag": "Answer May 2024",
-        "href": "/assets/Diamond%20Ridge/diamond-answer-brief-2024.pdf"
       },
       {
         "title": "Plaintiffs' Reply Brief (C.R.C.P. 106(a) Relief)",
@@ -899,10 +887,22 @@
         "href": "/assets/Diamond%20Ridge/diamond-reply-brief-2024.pdf"
       },
       {
-        "title": "Plaintiffs' Opening Brief in Support of Declaratory Relief (with Exhibits)",
-        "copy": "Landowners' opening brief seeking declaratory relief, filed Dec 16, 2024, including the full exhibit record (large file).",
-        "tag": "Brief Dec 2024",
-        "href": "/assets/Diamond%20Ridge/diamond-declaratory-opening-brief-2024.pdf"
+        "title": "County's Answer Brief",
+        "copy": "San Miguel County's answer brief responding to the landowners' Rule 106 petition (Case No. 23CV30044), May 6, 2024.",
+        "tag": "Answer May 2024",
+        "href": "/assets/Diamond%20Ridge/diamond-answer-brief-2024.pdf"
+      },
+      {
+        "title": "Plaintiffs' Opening Brief (Rule 106 Review)",
+        "copy": "Landowners' opening brief in the C.R.C.P. 106(a)(4) review of the BOCC's Diamond Ridge rezone (Case No. 23CV30044), April 4, 2024.",
+        "tag": "Brief Apr 2024",
+        "href": "/assets/Diamond%20Ridge/diamond-opening-brief-2024.pdf"
+      },
+      {
+        "title": "Order RE: Rule 106(a)(4) Review — Rezoning (Dec 2022)",
+        "copy": "Court rules in favor of landowners: BOCC's rezoning of Diamond Ridge vacated on two grounds -- Commissioner Cooper's participation violated due process, and the rezone constituted illegal spot zoning inconsistent with the Master Plan. Case No. 22CV30023.",
+        "tag": "Court Order 2022",
+        "href": "/assets/Diamond%20Ridge/diamond-order-106a-review-2022.pdf"
       },
       {
         "title": "San Miguel County CivicClerk Portal",
