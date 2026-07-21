@@ -10,15 +10,20 @@
 <link rel="stylesheet" href="lt.css?v=5">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
-  /* Public Entities filter — name + count pills, All Meetings first */
-  .ents { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; flex-wrap: wrap; gap: 8px; }
-  .ent { display: inline-flex; align-items: center; gap: 8px; padding: 6px 6px 6px 13px; background: var(--card); border: 1px solid var(--hairline); border-radius: 999px; cursor: pointer; transition: background .12s, border-color .12s; }
-  .ent:hover { background: var(--sage2); }
-  .ent.active { background: var(--sage); border-color: var(--forest); }
-  .ent .e-name { font: 600 15px/1.2 var(--sans); color: var(--forest); }
-  .ent .e-count { font: 700 11.5px/1 var(--sans); color: var(--forest); background: rgba(36,72,63,.1); border-radius: 999px; padding: 5px 8px; }
-  .ent.active .e-count { background: var(--forest); color: #fff; }
-  .meet-wrap { max-width: 900px; margin: 0 auto; padding: 10px var(--pad-x) 20px; }
+  /* Two-column shell: meeting list + right entity-filter sidebar */
+  .gh-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+  .gh-side { position: sticky; top: 96px; }
+  .side-filter { padding: 20px 22px; }
+  .side-filter h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 10px; }
+  .ents { display: block; }
+  .ent { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; padding: 9px 2px; border-top: 1px solid var(--hairline); cursor: pointer; }
+  .ent:first-child { border-top: 0; }
+  .ent .e-name { font: 600 15px/1.25 var(--sans); color: var(--forest); }
+  .ent:hover .e-name { color: var(--rust); }
+  .ent.active .e-name { color: var(--rust); }
+  .ent .e-count { font: 700 11.5px/1 var(--sans); color: var(--muted2); background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 5px 9px; }
+  .ent.active .e-count { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .meet-wrap { min-width: 0; }
   .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
   .m-card { display: grid; grid-template-columns: 96px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
   .m-date { text-align: center; }
@@ -43,7 +48,17 @@
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
   .m-card .acts .abtn.live:hover { background: #f9efee; }
   .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
-  @media (max-width: 900px) { .m-card { grid-template-columns: 72px 1fr; } .m-date .e-logo { width: 64px; height: 64px; } }
+  @media (max-width: 900px) {
+    .gh-layout { grid-template-columns: 1fr; gap: 0; }
+    .gh-side { position: static; order: -1; }
+    .side-filter { padding: 14px 16px; }
+    .ents { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ent { width: auto; border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 8px 7px 13px; }
+    .ent:first-child { border-top: 1px solid var(--hairline); }
+    .ent.active { background: var(--sage); border-color: var(--forest); }
+    .m-card { grid-template-columns: 72px 1fr; }
+    .m-date .e-logo { width: 64px; height: 64px; }
+  }
 </style>
 </head>
 <body>
@@ -59,9 +74,15 @@
   </div>
 </header>
 
-<div class="ents" id="ent-filter" aria-label="Filter by public entity"></div>
-
-<main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>
+<div class="gh-layout">
+  <main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>
+  <aside class="gh-side">
+    <div class="side-filter card">
+      <h3>Public entities</h3>
+      <div class="ents" id="ent-filter" aria-label="Filter by public entity"></div>
+    </div>
+  </aside>
+</div>
 
 <div id="lt-footer"></div>
 <script src="site.js?v=6"></script>
