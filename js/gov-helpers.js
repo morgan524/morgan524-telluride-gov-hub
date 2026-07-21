@@ -350,7 +350,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8144","sv":4},
 
   "mv|2026-08-20|Town Council Meeting":
-    {"sv":4}
+    {"sv":4},
+
+  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296","zoomUrl":"https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -549,7 +552,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -576,13 +579,16 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "mv|2026-08-20|Town Council Meeting":
-    "The August 20, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet."
+    "The August 20, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
+    "SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -723,6 +729,164 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Palm, school clean-up continues apace after last Friday’s flood",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "education",
+    copy: "Mudslides from the Jud Wiebe area on July 17 sent water, mud, and debris through the Palm Theatre and adjacent schools, buckling the stage, flooding the orchestra pit, and depositing an estimated 10,000–15,000 lbs of mud. The goal is to have school spaces and Palm support areas ready by the Aug. 18 school opening. The main theater will take longer, though seating replacement is the top priority to allow Film Festival to proceed Sept. 4–7.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_24fa27f5-c902-452e-9879-6dd2717e1a17.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/17/917acda0-cd83-4d5f-be02-3fe89b58cfc7/6a5fb73da93a1.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Grateful for Green Grant program",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "EcoAction Partners and San Miguel County's Green Grant program helped a Lawson Hill household replace two aging west-facing windows, with the homeowners reporting noticeable gains in comfort and energy efficiency. The 40-year-old windows had long needed updating.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Jeremy",
+    imgHiRes: true
+  },
+  {
+    title: "The art of being",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "arts-culture",
+    copy: "A local finds a quiet moment of stillness on a mesa walk — elk grazing, a hidden pond, a tended forest clearing with a picnic table and campfire ring. Simple surroundings, no agenda. The kind of morning this place still offers if you take a different turn.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_4024128f-535d-4c2b-a336-c0bd6c3daabc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/fb/0fbd29c7-33f3-4edd-bc35-ba1fa07333a7/6a5fdca1bdc9f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "How to fix our broken housing programs",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "housing",
+    copy: "San Miguel County recently fixed a legal issue requiring deed-restricted buyers to sign new covenants at closing — a process involving outside counsel and public meetings. A local homeowner argues Telluride's program has similar and deeper problems: asset limits tied to original purchase price push out long-term residents, while ever-changing guidelines spanning 70 pages leave even town attorneys confused.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_8bcac1cf-be30-4f0f-9cd5-9bf05882a7d4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Beautiful windows, beautiful efficiency",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "A Norwood homeowner used a Regional Green Grant from EcoAction Partners to replace half the aging single-pane windows in a late-1950s house. The upgrade should cut heating and electricity costs, with plans to finish the remaining windows next year.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_f9cb36d9-a8f6-47a5-aae2-fb6bb5bc6f2a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Kerry Welch",
+    imgHiRes: true
+  },
+  {
+    title: "Desensitizing bathtime",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "Anxious about bath time with your dog? Second Chance Humane Society recommends gradual desensitization — start with treats in the bathroom, work up to the tub, then water slowly over multiple short sessions. Most dogs do fine bathing every four to six weeks; when in doubt, check with your vet.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_07aceefb-041d-4513-97a4-46c6010427f4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ea/7ea33f08-ecb7-4bfd-ac51-07a31f2e5b11/6a5fdbd1ebbc1.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "When the land that heals us turns toxic",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "Wildfire smoke has made outdoor activity — long the primary stress relief for many Telluride residents — a health calculation rather than a given this summer. A local therapist notes that losing access to trails, lakes, and clean air hits harder here than most places, since nature is central to how people cope. Research backs up what many are already feeling: smoke exposure is linked to increased anxiety, depression, and reactivated trauma.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_e29f4037-700b-485a-be15-716cdee2f545.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Happy accidents",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "public-safety",
+    copy: "A Telluride local shares a few of those hard-to-explain moments — running into a wedding couple 2,000 miles from town, a message bottle found in Bermuda by a family with the same dog's name, a daughter born on her great-great-grandmother's 100th birthday. The kind of stories that make you pause.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_300e6f97-c37e-4e31-9066-8930608f4e28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/47/047217d6-3892-4274-811c-5d511543d118/6a5fdb420a985.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Where is the next Valley Floor?",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "Federal cuts to the Forest Service and BLM are opening public San Juan lands to private development pressures — something the Valley Floor fight only partially addressed. The column argues that defending individual parcels isn't enough; the whole mountain ecosystem needs coordinated stewardship. A regional rethink, from Gunnison to Cortez, may be overdue.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_6a7660a4-a11c-4f33-900d-ff6aa110751b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b3/1b30faef-00f2-4390-8531-111c5feec239/6a5fda0653aab.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Documentary honoring sustainability leader Adam Palmer comes to Telluride",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "A documentary on the life and legacy of Eagle County sustainability leader Adam Palmer screens at the Sheridan Opera House on Saturday, Aug. 1, doors at 6:30 p.m., film at 7. A community discussion follows. Tickets at apsfund.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_dd45309e-10d6-4390-abf4-0e3c97dea8e8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/88/588dbfcb-cf65-4908-b5ef-7c45b42d2175/6a5fd919cee74.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Tourism Board announces new board",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "government",
+    copy: "The Telluride Tourism Board has added three new members — Buck Smith, Andrés Vargas-Johnson, and Ashley Von Spreecken — bringing the full board to seven. Huascar Gomez was elected chair, with Danny Craft as vice chair. The board draws from lodging, brewing, retail, local government, and hospitality.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_7453a8a7-7fb1-440e-9b5c-51625d398514.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/d8/3d80f09d-f809-4fd5-b036-4708c4b6cd52/6a5fd7a73e6a0.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Where's Waldo?",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "The annual Where's Waldo town hunt returns to Telluride this July, with Waldo hidden in 25+ locations across town. Grab a playing card at Between the Covers or Bruno Coffee to get started. Prizes, free posters, and a grand prize drawing wrap up at month's end.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/featured/article_42ab2b1c-c142-402a-85b8-22eab7fd3b72.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5d/95d78762-93a8-419e-bb4d-02ac62eeb04c/6a5fd6c0c8078.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The dual challenge: climate and energy",
+    source: "Telluride Times",
+    date: "July 21, 2026",
+    firstSeen: "2026-07-21",
+    newsTopic: "community",
+    copy: "Climate scientists, oil executives, utility leaders, and investors gather in Telluride July 27–31 for a Telluride Science workshop aimed at finding common ground between energy demand and climate stability. A free public Town Talk follows July 28 at 6:30 p.m. at the Sheridan Opera House.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_ebdd9221-7fc0-4ace-b501-3a9c4b0c1279.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6a/c6a9f0c4-5d2e-410e-8e8f-c9933badf732/6a5fd51da4a9e.image.png",
+    imgHiRes: true
+  },
   {
     title: "Telski amends lawsuit against Prohaska, Wisor and Fee",
     source: "Telluride Times",
@@ -1677,21 +1841,21 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
+    title: "Tomboy Road reopens Weds 7/22 8AM",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
+    img: ""
+  },
+  {
     title: "Lower Tomboy Road Closed to All Traffic",
     source: "San Miguel County",
     date: "July 18, 2026",
     newsTopic: "infrastructure",
     copy: "Due to hazardous conditions, lower Tomboy Road is closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below the Town of Tomboy.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Lower Tomboy Road is closed to all traffic!",
-    source: "San Miguel County",
-    date: "July 18, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
     img: ""
   },
   {
@@ -2325,6 +2489,16 @@ const TELLURIDE_SCIENCE_EVENTS = [
     sourceLabel: "Telluride Science"
   },
   {
+    title: "Top Chef & Taste of Telluride",
+    date: "2026-08-01",
+    time: "5:30 PM – 10:00 PM",
+    location: "Telluride Innovation Center, Telluride",
+    description: "Top Chef & Taste of Telluride serves up delicious food, creative cocktails, a chef competition, and more—all to support One to One Mentoring and its mission to empower local youth through trusted, caring relationships.\nIndulge in delectable dishes prepared by local chefs while enjoying the stunning views of Telluride. This event is designed to celebrate the rich local food culture of Telluride and to showcase three amazing chefs in a \"Top Chef\" style competition. Don't miss out on this unique opportunity to savor the flavors of Telluride!\nBuy tickets HERE.\n ",
+    link: "https://telluridescience.org/event/top-chef-taste-of-telluride-2026/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/August-1-top-chef.png",
+    sourceLabel: "Telluride Science"
+  },
+  {
     title: "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     date: "2026-08-04",
     time: "6:30 PM – 7:30 PM",
@@ -2426,28 +2600,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "783 N. Laura Street, Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-21/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-21T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Kombucha and Kefir w/ Kayla",
-    link: "https://koto.org/event/kombucha-and-kefir-w-kayla/",
-    description: "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you'll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you're a longtime fermentation enthusiast or completely new to the world of cultured foods, you'll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
-    pubDate: "2026-07-21T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3418,6 +3570,18 @@ const OURAY_COUNTY_EVENTS = [
 
 const OURAY_RIDGWAY_EVENTS = [
   {
+    title: "Fall Registration is NOW OPEN",
+    link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
+    description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
+    pubDate: "2026-07-21T06:00:00.000Z",
+    endDate: "2026-08-23",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Dance & Aerial!",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
+  },
+  {
     title: "Ouray Youth Summer Programs: Canyoning",
     link: "https://events.ourayridgwayevents.com/event/ouray-youth-summer-programs-canyoning",
     description: "Participants will take part in a guided canyoning trip through Portland Creek. Professional canyoning guides will provide instruction and all technical equipment, including wetsuits, harnesses, helmets, and belay devices. Along the route, participants will rappel down several smaller waterfalls while safely secured on belay by a guide. Participants should bring bathing suits, water, and snacks for the day. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
@@ -3685,17 +3849,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
-    title: "FLANNEL FEEDBACK",
-    link: "https://events.ourayridgwayevents.com/event/flannel-feedback-9717",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-07-24T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
     title: "Historic Walking Tour at Meet",
     link: "https://events.ourayridgwayevents.com/event/historic-walking-tour-153",
     description: "Ouray's Fellin Park Tour Led by Jenny Hart View on site | Email this event",
@@ -3797,15 +3950,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53454849302438/huge/80c5277278dca1232cf1ee9667ded6407614ae5f.jpg"
   },
   {
-    title: "“MAKING FRIENDS WITH YOUR PENCIL” WITH MARY PAT ETTINGER",
-    link: "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger",
-    description: "Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have been excited to learn that \"Yes! Anyone can draw.\" It just takes a brain 'reset' and guidance from the instructor. Come prepared to learn and to enjoy your newfound skill. All supplies included in the class fee. View on site | Email this event",
+    title: "\"Making Friends with Your Pencil\" with Mary Pat Ettinger",
+    link: "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger-9913",
+    description: "Adults: Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have been excited to learn that \"Yes! Anyone can draw.\" It just takes a brain 'reset' and guidance from the instructor. Come prepared to learn and to enjoy your newfound skill. All supplies included in the class fee. If you're having issues with registration, please email lexi@weehawkenarts.org . Activity meeting dates Jul 25, 2026 Sat11:00 AM - 3:00 PM At the (air conditioned) Sherbino! View on site | Email this event",
     pubDate: "2026-07-25T17:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/53071990246481/huge/194d3a988c5385dedd7558e69f0f52df8571e58b.jpg"
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483756678694/huge/0fb484d78930759478e3f5a82536376e9b5bbfb8.jpg"
   },
   {
     title: "Experience Washing Laundry The Old-Fashioned Way",
@@ -4282,6 +4435,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53443481081189/huge/1c29ff615fd2208e8a6eab9017bb24268cd815b5.jpg"
   },
   {
+    title: "The 41st Annual Ridgway Rendezvous Arts Festival",
+    link: "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
+    description: "Ridgway Rendezvous Arts Festival (41st Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 41st year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest Colorado. Hosted by Weehawken Creative Arts, this highly regarded juried festival is known for exceptional craftsmanship, original design, and high-quality handmade work not easily found elsewhere in the region. Artists consistently call it “one of the best shows of the year,” citing strong sales and a welcoming, well-organized atmosphere. Set in the heart of Ridgway along the scenic Million Dollar Highway, the festival attracts an engaged audience of collectors, second homeowners, and visitors from across the country—and coincides with the nearby Telluride Jazz Festival, expanding its reach and energy. Enjoy live music throughout the day both days, featuring a diverse lineup of talented regional and touring musicians. …",
+    pubDate: "2026-08-08T15:00:00.000Z",
+    endDate: "2026-08-09",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52597541791172/huge/0dc02f916413850382610dca39e894ab3e0c73f8.jpg"
+  },
+  {
     title: "The Hummingbird’s Secret Mission - Ridgway State Park Summer Program Series",
     link: "https://events.ourayridgwayevents.com/event/the-hummingbirds-secret-mission-ridgway-state-park-summer-program-series",
     description: "Come explore the astonishing world of nature's smallest high-performance pilots. Led by experts from the Black Canyon Audubon Society, this program reveals the \"superpowers\" behind the hummingbird’s impossible flight patterns and epic seasonal migrations. You will learn to identify local species during their peak summer activity and discover the native plants that fuel their high-speed survival. Whether you are a dedicated birdwatcher or a family looking for a magical morning in the park, this event offers a front-row seat to the aerial acrobatics of these shimmering \"flying gems\". View on site | Email this event",
@@ -4349,6 +4514,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53375404981466/huge/b6ac805d7cab9956501ae2d370b3c2d63385e823.jpg"
+  },
+  {
+    title: "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
+    link: "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
+    description: "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP APPLICATIONS IS 5 PM ON MONDAY, AUGUST 10TH, 2026 Weehawken Dance Scholarships Overview Our scholarship fund, generously supported by donations, fluctuates each season, enabling us to offer varying levels of financial assistance. To ensure you don't miss out on these opportunities, please note the strict deadlines for each semester and adhere to them diligently. Weehawken Dance scholarships applicants may apply for scholarships covering 5-100% of tuition fees. For the Fall semester, we have limited Aerial Scholarships available exclusively for Montrose students attending classes at the FlexRec. It's essential for applicants to disclose any enrollment in classes with other programs during the same semester they plan to attend Weehawken classes on scholarship or financial assistance. …",
+    pubDate: "2026-08-10T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -4462,6 +4638,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Ridges & Reservoir: The Ridgway Landscape Art Session - Ridgway State Park Summer Program Series",
+    link: "https://events.ourayridgwayevents.com/event/ridges-reservoir-the-ridgway-landscape-art-session-ridgway-state-park-summer-program-series",
+    description: "Unleash your inner artist and let the breathtaking peaks of the San Juans and crystal-clear waters of Ridgway Reservoir be your muse! Join us for an evening of creativity where we swap the studio for the great outdoors. This program is all about slowing down and translating the stunning natural surroundings of the park into art. View on site | Email this event",
+    pubDate: "2026-08-14T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway State Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/166d3c96e56e2bb0031eacfdaa2df4e609116108.jpg"
   },
   {
     title: "EDIE: Theatre @ the Wright Presented by UpstART Theatre",
@@ -8296,6 +8483,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     hasAgenda: true,
     location: "Rebekah Hall, 113 W Columbia Ave",
     time: "",
+    civicwebId: 8289,
     packetUrl: "https://telluride-co.civicweb.net/document/441930/"
   },
   {
@@ -8305,6 +8493,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
+    civicwebId: 8040,
     packetUrl: "https://telluride-co.civicweb.net/document/441920/"
   },
   {
@@ -8314,6 +8503,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
+    civicwebId: 8100,
     packetUrl: "https://telluride-co.civicweb.net/document/442289/"
   },
   {
@@ -8323,6 +8513,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
+    civicwebId: 8294,
     packetUrl: "https://telluride-co.civicweb.net/document/442029/"
   },
   {
@@ -8331,7 +8522,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8162
   },
   {
     date: "August 6, 2026",
@@ -8339,7 +8531,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
     hasAgenda: false,
     location: "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
-    time: ""
+    time: "",
+    civicwebId: 8050
   },
   {
     date: "August 11, 2026",
@@ -8347,7 +8540,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8041
   },
   {
     date: "August 27, 2026",
@@ -8355,7 +8549,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8102
   },
   {
     date: "September 1, 2026",
@@ -8363,7 +8558,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8042
   },
   {
     date: "September 2, 2026",
@@ -8371,7 +8567,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8163
   },
   {
     date: "September 10, 2026",
@@ -8379,7 +8576,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8052
   },
   {
     date: "September 22, 2026",
@@ -8387,7 +8585,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8043
   },
   {
     date: "September 24, 2026",
@@ -8395,7 +8594,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8104
   },
   {
     date: "October 1, 2026",
@@ -8403,7 +8603,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8053
   },
   {
     date: "October 6, 2026",
@@ -8411,7 +8612,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8044
   },
   {
     date: "October 7, 2026",
@@ -8419,7 +8621,8 @@ const TELLURIDE_BOARD_MEETINGS = [
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
     hasAgenda: false,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: ""
+    time: "",
+    civicwebId: 8164
   }
 ];
 

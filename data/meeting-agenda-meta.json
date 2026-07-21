@@ -354,5 +354,10 @@
   },
   "mv|2026-08-20|Town Council Meeting": {
     "sv": 4
+  },
+  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296",
+    "zoomUrl": "https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1",
+    "sv": 4
   }
 }

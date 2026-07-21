@@ -6,6 +6,7 @@
     "hasAgenda": true,
     "location": "Rebekah Hall, 113 W Columbia Ave",
     "time": "",
+    "civicwebId": 8289,
     "packetUrl": "https://telluride-co.civicweb.net/document/441930/"
   },
   {
@@ -15,6 +16,7 @@
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
+    "civicwebId": 8040,
     "packetUrl": "https://telluride-co.civicweb.net/document/441920/"
   },
   {
@@ -24,6 +26,7 @@
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
+    "civicwebId": 8100,
     "packetUrl": "https://telluride-co.civicweb.net/document/442289/"
   },
   {
@@ -33,6 +36,7 @@
     "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
+    "civicwebId": 8294,
     "packetUrl": "https://telluride-co.civicweb.net/document/442029/"
   },
   {
@@ -41,7 +45,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8162
   },
   {
     "date": "August 6, 2026",
@@ -49,7 +54,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
     "hasAgenda": false,
     "location": "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
-    "time": ""
+    "time": "",
+    "civicwebId": 8050
   },
   {
     "date": "August 11, 2026",
@@ -57,7 +63,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8041
   },
   {
     "date": "August 27, 2026",
@@ -65,7 +72,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8102
   },
   {
     "date": "September 1, 2026",
@@ -73,7 +81,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8042
   },
   {
     "date": "September 2, 2026",
@@ -81,7 +90,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8163
   },
   {
     "date": "September 10, 2026",
@@ -89,7 +99,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8052
   },
   {
     "date": "September 22, 2026",
@@ -97,7 +108,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8043",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8043
   },
   {
     "date": "September 24, 2026",
@@ -105,7 +117,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8104",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8104
   },
   {
     "date": "October 1, 2026",
@@ -113,7 +126,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8053",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8053
   },
   {
     "date": "October 6, 2026",
@@ -121,7 +135,8 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8044",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8044
   },
   {
     "date": "October 7, 2026",
@@ -129,6 +144,7 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8164",
     "hasAgenda": false,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": ""
+    "time": "",
+    "civicwebId": 8164
   }
 ]

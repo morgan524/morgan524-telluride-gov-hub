@@ -1,21 +1,25 @@
 {
-  "hash": "0d55adc930aeeb4255ee3022416556b274f5088c",
-  "lede": "Tuesday is a full day at Town Hall — the newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code, and the Telluride Housing Authority meets to hammer out a primary-residency policy for dependents in split-custody households, a gap that's tripped up real families. Wednesday the County Commissioners convene a special meeting with no agenda posted yet, and Thursday P&Z weighs in on three Town-owned development projects in the A2 zone, including the Carhenge redevelopment at 700 W Pacific.",
+  "hash": "a29655a9a33db86341aff57ef3d7cf6932158851",
+  "lede": "Tuesday is the heaviest day on the civic calendar: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code — a real vote on rules that affect nearly every property in town. The Housing Authority meets the same day to hash out a primary-residency policy for dependents in multi-custodial households, and Wednesday the BOCC holds a special meeting with no agenda posted yet, which is worth watching. Thursday, Planning and Zoning digs into the Carhenge redevelopment and SMART's board votes on two gondola structural-analysis contracts.",
   "notable": [
     {
       "id": 1,
-      "stake": "Second reading vote on wildfire code changes to landscaping and historic review rules."
+      "stake": "Second-reading vote on wildfire code changing land-use and landscaping rules townwide."
     },
     {
       "id": 2,
-      "stake": "New policy on primary residency for split-custody dependents could affect deed-restricted households."
+      "stake": "New primary-residency policy for dependents of multi-custodial households up for adoption."
     },
     {
       "id": 6,
-      "stake": "P&Z reviews subdivision and concept plans for Town-owned Carhenge and two other A2 projects."
+      "stake": "Public review of Carhenge redevelopment subdivision and concept plans on Town-owned land."
     },
     {
-      "id": 11,
+      "id": 9,
+      "stake": "Board votes on two gondola structural-analysis contracts critical to the gondola's future."
+    },
+    {
+      "id": 12,
       "stake": "Public hearing on KOTO's Live at the Drive liquor permit — residents may comment."
     }
   ]

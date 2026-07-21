@@ -41,19 +41,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Kombucha and Kefir w/ Kayla",
-    "href": "https://koto.org/event/kombucha-and-kefir-w-kayla/",
-    "date": "2026-07-21",
-    "time": "12:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Kombucha & Kefir with Kayla Wexelberg",
     "href": "https://telluridelibrary.libcal.com/event/16410705?hs=a",
     "date": "2026-07-21",
@@ -290,17 +277,18 @@
     "endDate": "2026-09-17"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-21/",
+    "title": "Fall Registration is NOW OPEN",
+    "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-07-21",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
+    "time": "",
+    "location": "Weehawken Dance & Aerial!",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Family & Kids"
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken…",
+    "type": "Music",
+    "endDate": "2026-08-23"
   },
   {
     "title": "Mahjongg for Independent Players",
@@ -354,6 +342,19 @@
     "desc": "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen…",
     "type": "Arts & Film",
     "endDate": "2026-08-28"
+  },
+  {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-22",
+    "time": "4:00 PM - 5:30 PM",
+    "location": "Wilkinson Public Library, Telluride Room, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -581,6 +582,19 @@
     "type": "Community"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-23",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Lone Cone Library Conference Room, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "DIY Condiments with Kayla",
     "href": "https://koto.org/event/diy-condiments-with-kayla/",
     "date": "2026-07-23",
@@ -605,19 +619,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-23",
-    "time": "4:00 PM - 5:30 PM",
-    "location": "Wilkinson Public Library, Telluride Room, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Party in the Park",
@@ -765,19 +766,6 @@
     "desc": "Join us in Ouray Library from 1:00 pm to 2:00 pm for the new Paw Prints Book Club! This is an animal themed graphic novel book club ran by a kid, for kids. There will be four book club meetings over 4 weeks, where there will be discussion…",
     "type": "Talks & Classes",
     "endDate": "2026-08-07"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-24",
-    "time": "1:00 PM - 2:30 PM",
-    "location": "Lone Cone Library Conference Room, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -1107,16 +1095,16 @@
     "type": "Community"
   },
   {
-    "title": "“MAKING FRIENDS WITH YOUR PENCIL” WITH MARY PAT ETTINGER",
-    "href": "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger",
+    "title": "\"Making Friends with Your Pencil\" with Mary Pat Ettinger",
+    "href": "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger-9913",
     "date": "2026-07-25",
     "time": "11:00 AM",
-    "location": "The Annex on Cora",
+    "location": "The Sherbino",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53071990246481/huge/194d3a988c5385dedd7558e69f0f52df8571e58b.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53483756678694/huge/0fb484d78930759478e3f5a82536376e9b5bbfb8.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have…",
+    "desc": "Adults: Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who…",
     "type": "Talks & Classes"
   },
   {
@@ -1541,6 +1529,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "The Dual Challenge: Climate and Energy",
+    "href": "https://telluridefoundation.org/tf-events/",
+    "date": "2026-07-28",
+    "time": "12:30 PM",
+    "location": "Telluride Innovation Center, Telluride, CO",
+    "town": "Telluride",
+    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
+    "category": "Community Event",
+    "source": "Telluride Foundation",
+    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-2560",
     "date": "2026-07-28",
@@ -1591,19 +1592,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "The Dual Challenge: Climate and Energy",
-    "href": "https://telluridefoundation.org/tf-events/",
-    "date": "2026-07-28",
-    "time": "6:30 PM",
-    "location": "Telluride Innovation Center, Telluride, CO",
-    "town": "Telluride",
-    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
-    "category": "Community Event",
-    "source": "Telluride Foundation",
-    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
     "type": "Talks & Classes"
   },
   {
@@ -2050,6 +2038,19 @@
     "source": "The Alibi",
     "desc": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
     "type": "Community"
+  },
+  {
+    "title": "Top Chef & Taste of Telluride",
+    "href": "https://telluridescience.org/event/top-chef-taste-of-telluride-2026/",
+    "date": "2026-08-01",
+    "time": "5:30 PM – 10:00 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "town": "Telluride",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/07/August-1-top-chef.png",
+    "category": "",
+    "source": "Telluride Science",
+    "desc": "Top Chef & Taste of Telluride serves up delicious food, creative cocktails, a chef competition, and more—all to support One to One Mentoring and its mission to empower local youth through trusted, caring relationships. Indulge in…",
+    "type": "Food & Drink"
   },
   {
     "title": "Movies Under the Stars",
@@ -2685,6 +2686,20 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "The 41st Annual Ridgway Rendezvous Arts Festival",
+    "href": "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
+    "date": "2026-08-08",
+    "time": "9:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52597541791172/huge/0dc02f916413850382610dca39e894ab3e0c73f8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Rendezvous Arts Festival (41st Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 41st year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest…",
+    "type": "Festivals",
+    "endDate": "2026-08-09"
+  },
+  {
     "title": "The Hummingbird’s Secret Mission - Ridgway State Park Summer Program Series",
     "href": "https://events.ourayridgwayevents.com/event/the-hummingbirds-secret-mission-ridgway-state-park-summer-program-series",
     "date": "2026-08-08",
@@ -2773,6 +2788,19 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
+    "type": "Music"
+  },
+  {
+    "title": "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
+    "href": "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
+    "date": "2026-08-10",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP…",
     "type": "Music"
   },
   {
@@ -2975,6 +3003,19 @@
     "endDate": "2026-09-10"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-12",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
     "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     "date": "2026-08-12",
@@ -3012,19 +3053,6 @@
     "source": "Telluride Chamber Music",
     "desc": "A community concert presented by Telluride Chamber Music.",
     "type": "Music"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-13",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -3091,6 +3119,19 @@
     "source": "Music on the Green",
     "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Ben Musser & Walker Young.",
     "type": "Music"
+  },
+  {
+    "title": "Ridges & Reservoir: The Ridgway Landscape Art Session - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/ridges-reservoir-the-ridgway-landscape-art-session-ridgway-state-park-summer-program-series",
+    "date": "2026-08-14",
+    "time": "5:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53471158193175/huge/166d3c96e56e2bb0031eacfdaa2df4e609116108.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Unleash your inner artist and let the breathtaking peaks of the San Juans and crystal-clear waters of Ridgway Reservoir be your muse! Join us for an evening of creativity where we swap the studio for the great outdoors. This program is all…",
+    "type": "Arts & Film"
   },
   {
     "title": "Music on the Green Presents Ben Musser & Walker Young",
