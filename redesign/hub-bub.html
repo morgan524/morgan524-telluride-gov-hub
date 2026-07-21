@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/js/site-config.js"></script>
+  <title>Hub-Bub — Livable Telluride</title>
+  <meta name="description" content="Hub-Bub — the community forum for residents of the Telluride, Colorado region to discuss local government, housing, land use, and events.">
+
+  <!-- Hub-Bub forum styles (legacy overrides in css/hub-bub.css still load for hub-bub.js compat) -->
+  <meta name="robots" content="noindex"><!-- STAGING: remove at cutover -->
+  <link rel="stylesheet" href="lt.css?v=5">
+  <link rel="stylesheet" href="/css/hub-bub.css">
+
+  <style>
+    /* ── Design-system tokens ── */
+    :root {
+      --forest: #21443c;
+      --forest-soft: #2a5347;
+      --forest-3: #2f6b5b;
+      --lt-cream: #fbf7ef;
+      --lt-cream-2: #f4eddf;
+      --lt-paper: #fffdf8;
+      --lt-ink: #172c26;
+      --lt-muted: #61736d;
+      --lt-soft: rgba(23, 61, 52, 0.10);
+      --lt-line: rgba(23, 61, 52, 0.16);
+      --lt-gold: #b98b34;
+      --lt-gold-soft: rgba(185, 139, 52, 0.14);
+      --lt-blue-soft: rgba(55, 105, 128, 0.12);
+      --lt-red-soft: rgba(180, 75, 60, 0.12);
+      --lt-shadow: 0 18px 55px rgba(20, 40, 34, 0.11);
+      --lt-shadow-soft: 0 8px 24px rgba(20, 40, 34, 0.07);
+      --lt-radius-xl: 28px;
+      --lt-radius-lg: 18px;
+      --lt-radius-md: 12px;
+      --lt-heading: Georgia, "Times New Roman", serif;
+      --lt-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      /* legacy aliases used by hub-bub.js UI */
+      --accent-green: #2f7a5f;
+      --accent-green-soft: rgba(47, 122, 95, 0.12);
+      --text-primary: #1a2e29;
+      --text-secondary: #4a5e57;
+      --text-muted: #5f7169;
+      --border-soft: rgba(33, 68, 60, 0.12);
+      --font-heading: 'Georgia', 'Times New Roman', serif;
+      --font-main: var(--lt-sans);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--lt-cream); color: var(--lt-ink); font-family: var(--lt-sans); line-height: 1.5; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; }
+    a { color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    /* ── Top nav ── */
+    .topnav { background: #fff; border-bottom: 1px solid var(--lt-line); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
+    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
+    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--lt-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
+    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
+    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; flex-wrap: wrap; }
+    .topnav-links a {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--lt-ink); text-decoration: none; font-weight: 600; font-size: 0.85rem; white-space: nowrap; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
+    .topnav-links a:hover { color: var(--forest); }
+    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
+    .topnav-cta { display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; white-space: nowrap; cursor: pointer; border: none; }
+    .topnav-cta-secondary { background: #a8d5b5; color: #1a3a2e; }
+    /* Topnav auth area: stacks the Log Out button with the signed-in
+       user's first name beneath it. */
+    .topnav-auth { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+    .topnav-auth-name { font-size: 0.68rem; font-weight: 700; color: var(--text-muted, #7a8a85); line-height: 1; max-width: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .topnav-auth-profile { font-size: 0.8rem; font-weight: 600; color: var(--forest); text-decoration: none; line-height: 1; display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; padding: 6px 14px; border: 1.5px solid var(--forest); border-radius: 999px; }
+    .topnav-auth-profile:hover { background: var(--forest); color: #fff; }
+
+    /* ── Hero ── */
+    .hero {
+      background:
+        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
+        url('img/wilson-peak.png') no-repeat center center / cover,
+        #efe9dc;
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--lt-line);
+      min-height: 180px;
+    }
+    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
+    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
+    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+    .hero h1 { margin: 0 0 8px; font-family: var(--lt-heading); font-size: 2.6rem; color: var(--lt-ink); }
+    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
+
+    /* ── Shell ── */
+    .hb-shell {
+      background:
+        radial-gradient(circle at 5% 0%, rgba(185,139,52,0.14), transparent 32rem),
+        radial-gradient(circle at 92% 8%, rgba(47,107,91,0.14), transparent 34rem),
+        linear-gradient(180deg, #fffdf8 0%, var(--lt-cream) 52%, #f7f0e5 100%);
+      padding: 32px 0 72px;
+    }
+    .hb-container { width: min(1220px, calc(100% - 32px)); margin: 0 auto; }
+
+    /* ── Intro two-col ── */
+    .hb-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 22px;
+    }
+    .hb-intro-main {
+      min-height: 0;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      padding: clamp(18px, 2.8vw, 26px);
+      background:
+        linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
+        radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
+      box-shadow: var(--lt-shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    .hb-intro-main::after {
+      content: "";
+      position: absolute;
+      right: -80px; bottom: -110px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 42px solid rgba(23,61,52,0.055);
+      pointer-events: none;
+    }
+    .hb-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(23,61,52,0.08);
+      color: var(--forest);
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-intro h1 {
+      margin: 0;
+      max-width: 820px;
+      font-family: var(--lt-heading);
+      font-size: clamp(1.35rem, 2.4vw, 2rem);
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-intro p {
+      margin: 10px 0 0;
+      max-width: 760px;
+      color: var(--lt-muted);
+      font-size: 0.92rem;
+    }
+    .hb-intro-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-intro-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-intro-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
+    .hb-intro-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--forest);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.92rem;
+    }
+    .hb-action.primary {
+      background: var(--forest);
+      color: #fff;
+      border-color: var(--forest);
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+    }
+    .hb-how {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: var(--forest);
+      color: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      position: relative;
+    }
+    .hb-how::before {
+      content: "";
+      position: absolute;
+      top: -70px; right: -70px;
+      width: 190px; height: 190px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .hb-how h2 {
+      margin: 0 0 12px;
+      font-family: var(--lt-heading);
+      font-size: 1.45rem;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+    }
+    .hb-how ol {
+      margin: 0; padding-left: 20px;
+      color: rgba(255,255,255,0.82);
+      position: relative; z-index: 1;
+    }
+    .hb-how li { margin: 10px 0; }
+    .hb-how strong { color: #fff; }
+    .hb-status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.92rem;
+      position: relative; z-index: 1;
+    }
+
+    /* ── Board grid ── */
+    .hb-board {
+      display: grid;
+      grid-template-columns: 288px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .hb-sidebar-col {
+      position: sticky;
+      top: 90px;
+      display: grid;
+      gap: 14px;
+    }
+    .hb-card {
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-filter-card { padding: 16px; }
+    .hb-card-title {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-card-note { margin: 0 0 12px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-filter-group {
+      padding-top: 14px;
+      margin-top: 14px;
+      border-top: 1px solid var(--lt-line);
+    }
+    .hb-filter-group:first-of-type { padding-top: 0; margin-top: 0; border-top: 0; }
+    .hb-filter-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+      margin: 0 0 8px;
+      color: var(--lt-muted);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hb-search-input {
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid var(--lt-line);
+      border-radius: 12px;
+      background: #fff;
+      color: var(--lt-ink);
+      outline: none;
+      font-weight: 600;
+      font-size: 0.91rem;
+    }
+    .hb-search-input:focus { border-color: rgba(33,68,60,0.48); box-shadow: 0 0 0 4px rgba(33,68,60,0.08); }
+    .hb-chip-list { display: grid; gap: 6px; }
+    .hb-filter-chip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      width: 100%;
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      color: var(--lt-ink);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: left;
+      transition: background 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-filter-chip:hover { border-color: rgba(33,68,60,0.35); background: #f4faf4; }
+    .hb-filter-chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
+    .hb-clear-btn {
+      width: 100%;
+      margin-top: 12px;
+      border: 1px solid var(--lt-line);
+      background: rgba(255,255,255,0.65);
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 9px 14px;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+    .hb-clear-btn:hover { background: #fff; }
+    .hb-sidebox { padding: 16px; }
+    .hb-sidebox.dark {
+      background: linear-gradient(180deg, var(--forest-soft), #122f29);
+      color: #fff;
+      border-color: rgba(255,255,255,0.08);
+    }
+    .hb-sidebox.dark .hb-card-title { color: #fff; }
+    .hb-sidebox p { margin: 0 0 10px; color: var(--lt-muted); font-size: 0.88rem; }
+    .hb-sidebox.dark p { color: rgba(255,255,255,0.82); }
+    .hb-mini-list { display: grid; gap: 9px; margin-top: 10px; }
+    .hb-mini-item {
+      padding-top: 9px;
+      border-top: 1px solid var(--lt-line);
+      color: var(--lt-ink);
+      font-size: 0.88rem;
+      font-weight: 650;
+    }
+    .hb-mini-item:first-child { border-top: 0; padding-top: 0; }
+    .hb-sidebox.dark .hb-mini-item { border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.88); }
+
+    /* ── Main content area ── */
+    .hb-content { min-width: 0; }
+
+    /* ── Auth bar (compact, above composer) ── */
+    .hb-auth-strip {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-lg);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+      font-size: 0.9rem;
+    }
+    .hb-auth-strip a { font-weight: 700; }
+    .hb-auth-strip .hb-auth-user { font-weight: 700; color: var(--forest); }
+    .hb-auth-strip button {
+      border: 1.5px solid rgba(33,68,60,0.35);
+      background: #fff;
+      color: var(--forest);
+      border-radius: 999px;
+      padding: 5px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.13s ease, color 0.13s ease;
+    }
+    .hb-auth-strip button:hover {
+      background: var(--forest);
+      color: #fff;
+    }
+
+    /* ── Toolbar ── */
+    .hb-toolbar {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: center;
+      margin-bottom: 14px;
+      padding: 12px 16px;
+      border-radius: var(--lt-radius-lg);
+      border: 1px solid var(--lt-line);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft);
+    }
+    .hb-results { display: flex; align-items: baseline; gap: 8px; }
+    .hb-results strong { font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-results span { color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-sort-wrap { display: flex; align-items: center; gap: 8px; }
+    .hb-sort-wrap label { color: var(--lt-muted); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; }
+    .hb-sort-select {
+      height: 38px;
+      border: 1px solid var(--lt-line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--lt-ink);
+      padding: 0 12px;
+      font-weight: 700;
+      outline: none;
+      font-size: 0.88rem;
+    }
+
+    /* ── Composer (new shell around existing composer) ── */
+    .hb-composer-shell {
+      margin-bottom: 16px;
+      border: 2px solid var(--forest);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.92);
+      box-shadow: var(--lt-shadow-soft), 0 0 0 4px rgba(33,68,60,0.08);
+      overflow: hidden;
+    }
+    .hb-composer-shell-head {
+      padding: 18px 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .hb-composer-shell-title { margin: 0; font-family: var(--lt-heading); font-size: 1.45rem; letter-spacing: -0.03em; }
+    .hb-composer-shell-sub { margin: 3px 0 0; color: var(--lt-muted); font-size: 0.9rem; }
+    .hb-composer-shell-inner { padding: 0 18px 18px; }
+
+    /* ── Post cards ── */
+    .hb-posts-feed { display: grid; gap: 14px; }
+    .hb-post-card {
+      padding: 18px;
+      border: 1px solid var(--lt-line);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.94);
+      box-shadow: var(--lt-shadow-soft);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+    .hb-post-card:hover { transform: translateY(-2px); box-shadow: var(--lt-shadow); border-color: rgba(33,68,60,0.22); }
+    .hb-post-type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(33,68,60,0.08);
+      color: var(--forest);
+      font-size: 0.74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .hb-post-type-badge.source { background: var(--lt-blue-soft); }
+    .hb-post-type-badge.debrief { background: var(--lt-gold-soft); }
+    .hb-post-type-badge.solution { background: rgba(47,107,91,0.12); }
+    .hb-post-type-badge.need { background: var(--lt-red-soft); }
+    .hb-tag-pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #fff;
+      border: 1px solid var(--lt-line);
+      color: var(--forest);
+      font-size: 0.76rem;
+      font-weight: 750;
+    }
+
+    /* ── Empty / loading ── */
+    .hb-empty-state {
+      padding: 42px 24px;
+      text-align: center;
+      border: 1px dashed rgba(33,68,60,0.28);
+      border-radius: var(--lt-radius-xl);
+      background: rgba(255,253,248,0.8);
+    }
+    .hb-empty-state h2 { margin: 0; font-family: var(--lt-heading); font-size: 1.6rem; letter-spacing: -0.03em; }
+    .hb-empty-state p { margin: 8px auto 0; max-width: 520px; color: var(--lt-muted); }
+
+    /* ── Legacy hub-bub.js element resets (so they work inside new layout) ── */
+    .hb-wrap { display: contents; }
+    .hb-auth-bar { display: none !important; } /* replaced by hb-auth-strip */
+    .hb-mode-bar { display: none !important; } /* mode filter moved to sidebar */
+    .hb-topic-bar { display: none !important; } /* topic chips moved to sidebar */
+    .hb-sort-bar { display: none !important; }  /* sort moved to toolbar */
+    .hb-grid { display: contents; }
+    /* Composer: strip its own borders/bg since it's inside our shell */
+    .hb-compose {
+      box-shadow: none !important;
+      border: none !important;
+      background: transparent !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    /* Subject + body inputs: visible grey border so fields stand out clearly */
+    #hbComposeTitle {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 1rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeTitle:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
+    #hbComposeBody {
+      border: 1.5px solid #c8c8c4 !important;
+      border-radius: 8px !important;
+      padding: 10px 13px !important;
+      background: #fff !important;
+      font-size: 0.95rem !important;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    #hbComposeBody:focus {
+      border-color: rgba(33,68,60,0.55) !important;
+      box-shadow: 0 0 0 3px rgba(33,68,60,0.08) !important;
+      outline: none !important;
+    }
+    /* Tag buttons: grey stroke so they read as distinct interactive boxes */
+    .hb-compose-tag {
+      border: 1.5px solid #c8c8c4 !important;
+      background: #fff !important;
+      color: #444 !important;
+      border-radius: 7px !important;
+      padding: 5px 11px !important;
+      font-size: 0.83rem !important;
+      font-weight: 600 !important;
+      cursor: pointer;
+      transition: border-color 0.13s ease, background 0.13s ease, color 0.13s ease;
+    }
+    .hb-compose-tag:hover {
+      border-color: rgba(33,68,60,0.45) !important;
+      background: rgba(33,68,60,0.05) !important;
+    }
+    .hb-compose-tag.selected,
+    .hb-compose-tag.auto-suggested {
+      border-color: #21443c !important;
+      background: #21443c !important;
+      color: #fff !important;
+    }
+    /* Attached document chips: forest green pill with white text */
+    .hb-attach-item {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 6px !important;
+      background: #21443c !important;
+      color: #fff !important;
+      border: none !important;
+      border-radius: 999px !important;
+      padding: 5px 12px !important;
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      margin: 4px 4px 0 0 !important;
+    }
+    .hb-attach-item .hb-remove-attach {
+      cursor: pointer;
+      opacity: 0.75;
+      font-size: 0.78rem;
+      margin-left: 2px;
+    }
+    .hb-attach-item .hb-remove-attach:hover { opacity: 1; }
+    /* Document icon-only link on post cards */
+    .hb-post-attach-icon {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 1.45rem !important;
+      text-decoration: none !important;
+      line-height: 1 !important;
+      padding: 2px !important;
+      border-radius: 6px !important;
+      transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+    .hb-post-attach-icon:hover { opacity: 0.75; transform: scale(1.12); }
+    /* ── Post body layout: image+attachments left, text right ─────
+       When a post has a featured photo, image attachment, or doc
+       attachment, the body becomes a two-column flex. Left column
+       holds visuals (photo on top, PDF tiles below). Right column
+       holds title/tags/body/etc. Falls back to single column when
+       the left has nothing. */
+    .hb-post-content-wrap {
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+      align-items: flex-start;
+      margin-top: 4px;
+    }
+    .hb-post-left-col {
+      flex: 0 0 280px;
+      max-width: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hb-post-content-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    /* Stack to single column on narrow viewports — photo stays on top */
+    @media (max-width: 640px) {
+      .hb-post-content-wrap { flex-direction: column; }
+      .hb-post-left-col { flex: 0 0 auto; max-width: 100%; }
+    }
+
+    .hb-post-attach-image {
+      display: block;
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(36, 49, 46, 0.12);
+      border: 1px solid rgba(33, 68, 60, 0.08);
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .hb-post-attach-image:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(36, 49, 46, 0.18);
+    }
+    .hb-post-attach-image img {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+    }
+    /* PDF/doc tiles stacked under the image. .hb-post-attach-docs is the
+       column wrapper; each .hb-post-attach-doc is a full-width tile so
+       the column reads top-down clean. */
+    .hb-post-attach-docs {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .hb-post-attach-docs .hb-post-attach-doc {
+      max-width: 100%;
+      width: 100%;
+    }
+    /* Document attachments on post cards — tile card with icon + name +
+       CTA. PDF opens in a new tab (browser handles rendering); other
+       docs route through hbOpenDocModal (Google Docs Viewer iframe). */
+    .hb-post-attach-doc {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #f7f3ea;
+      border: 1px solid rgba(33, 68, 60, 0.12);
+      border-radius: 10px;
+      text-decoration: none;
+      color: #21443c;
+      font-size: 0.88rem;
+      transition: background 0.12s, transform 0.12s;
+      max-width: 280px;
+    }
+    .hb-post-attach-doc:hover {
+      background: #ede5d2;
+      transform: translateY(-1px);
+    }
+    .hb-post-attach-doc .hb-attach-icon { font-size: 1.4rem; line-height: 1; }
+    .hb-post-attach-doc .hb-attach-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .hb-post-attach-doc .hb-attach-cta {
+      font-size: 0.75rem;
+      color: #2f7a5f;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    /* Admin delete button — top-right of card header, subtle until hovered */
+    .hb-admin-delete-btn {
+      margin-left: auto !important;
+      background: none !important;
+      border: none !important;
+      cursor: pointer !important;
+      font-size: 1.1rem !important;
+      opacity: 0.75 !important;
+      padding: 2px 4px !important;
+      border-radius: 5px !important;
+      transition: opacity 0.15s ease, background 0.15s ease;
+      line-height: 1 !important;
+      align-self: flex-start !important;
+    }
+    .hb-admin-delete-btn:hover {
+      opacity: 1 !important;
+      background: rgba(197,48,48,0.10) !important;
+    }
+    /* Author/admin action cluster (edit + delete), top-right of card header */
+    .hb-post-actions { margin-left: auto; display: flex; gap: 2px; align-self: flex-start; }
+    .hb-post-action-btn {
+      background: none; border: none; cursor: pointer;
+      font-size: 1rem; opacity: 0.75; padding: 2px 5px;
+      border-radius: 5px; line-height: 1;
+      transition: opacity 0.15s ease, background 0.15s ease;
+    }
+    .hb-post-action-btn:hover { opacity: 1; background: rgba(33,68,60,0.10); }
+    .hb-post-actions .hb-admin-delete-btn { margin-left: 0 !important; align-self: center !important; }
+    /* Inline edit form — hides the read-only title/body while open */
+    .hb-post.editing .hb-post-title,
+    .hb-post.editing .hb-post-body,
+    .hb-post.editing .hb-read-more { display: none; }
+    .hb-edit-form {
+      margin: 10px 0 4px; padding: 12px;
+      border: 1px solid var(--border-soft, #d8e0db);
+      border-radius: 10px; background: #f7faf8;
+    }
+    .hb-edit-label {
+      display: block; font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      color: #6a7a73; margin: 0 0 4px;
+    }
+    .hb-edit-title, .hb-edit-body {
+      width: 100%; box-sizing: border-box; padding: 8px 10px; margin-bottom: 10px;
+      border: 1px solid #ccc; border-radius: 6px; font-family: inherit; font-size: 0.9rem;
+    }
+    .hb-edit-body { resize: vertical; min-height: 90px; line-height: 1.5; }
+    .hb-edit-title:focus, .hb-edit-body:focus { outline: none; border-color: #21443c; }
+    .hb-edit-actions { display: flex; align-items: center; gap: 8px; }
+    .hb-edit-save {
+      background: var(--forest, #21443c); color: #fff; border: none; cursor: pointer;
+      padding: 7px 14px; border-radius: 6px; font-weight: 600; font-size: 0.85rem;
+    }
+    .hb-edit-save:disabled { opacity: 0.6; cursor: default; }
+    .hb-edit-cancel {
+      background: #fff; color: #555; border: 1px solid #ccc; cursor: pointer;
+      padding: 7px 12px; border-radius: 6px; font-size: 0.85rem;
+    }
+    .hb-edit-msg { font-size: 0.8rem; color: #a33; }
+    /* Posts feed: strip its top padding so hb-posts-feed grid controls spacing */
+    #hbPostsFeed { margin-top: 0 !important; }
+    /* Loading spinner stays in feed */
+    .hb-loading { padding: 24px; text-align: center; }
+    .hb-empty { padding: 36px 24px; text-align: center; }
+
+    /* ── Footer ── */
+    .hb-footer { text-align: center; color: var(--lt-muted); font-size: 0.82rem; padding: 28px 0 0; margin-top: 40px; border-top: 1px solid var(--lt-line); }
+
+    /* ── Account panel (replaces hb-how) ── */
+    .hb-account-panel {
+      border-radius: var(--lt-radius-xl);
+      border: 1px solid var(--lt-line);
+      background: #fff;
+      box-shadow: var(--lt-shadow-soft);
+      padding: 20px 20px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .hb-account-icon { display: none; }
+    .hb-account-heading {
+      margin: 0 0 10px;
+      font-family: var(--lt-heading);
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--lt-ink);
+    }
+    .hb-account-sub { display: none; }
+    .hb-account-perks {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .hb-account-perk {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--lt-ink);
+    }
+    .hb-account-perk svg { width: 14px; height: 14px; color: var(--forest); flex-shrink: 0; }
+    .hb-account-cta {
+      display: block;
+      width: 100%;
+      padding: 11px 16px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 0.93rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(33,68,60,0.22);
+      transition: background 0.15s;
+      margin-bottom: 10px;
+    }
+    .hb-account-cta:hover { background: var(--forest-soft); }
+    .hb-account-login-note {
+      margin: 0;
+      text-align: center;
+      font-size: 0.84rem;
+      color: var(--lt-muted);
+    }
+    .hb-account-login-note a { color: var(--forest); font-weight: 700; }
+
+    /* ── Signup / Login modal ── */
+    .hb-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(20,35,30,0.55);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .hb-modal-overlay.open { display: flex; }
+    .hb-modal {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 24px 72px rgba(20,40,34,0.22);
+      width: 100%;
+      max-width: 480px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 32px;
+      position: relative;
+    }
+    .hb-modal-close {
+      position: absolute;
+      top: 16px; right: 18px;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      color: var(--lt-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 8px;
+    }
+    .hb-modal-close:hover { background: var(--lt-cream); color: var(--lt-ink); }
+    .hb-modal h2 {
+      margin: 0 0 4px;
+      font-family: var(--lt-heading);
+      font-size: 1.5rem;
+      letter-spacing: -0.03em;
+      color: var(--lt-ink);
+    }
+    .hb-modal-sub {
+      margin: 0 0 22px;
+      color: var(--lt-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .hb-modal-field { margin-bottom: 14px; }
+    .hb-modal-field label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-modal-field input,
+    .hb-modal-field select {
+      width: 100%;
+      height: 44px;
+      padding: 0 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      background: var(--lt-cream);
+      color: var(--lt-ink);
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .hb-modal-field select {
+      appearance: none; -webkit-appearance: none; font-family: inherit;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2321443c' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 14px center; padding-right: 36px;
+    }
+    .hb-modal-field input:focus,
+    .hb-modal-field select:focus { border-color: var(--forest); box-shadow: 0 0 0 4px rgba(33,68,60,0.10); background: #fff; }
+    .hb-modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .hb-freq-group {
+      margin-bottom: 18px;
+    }
+    .hb-freq-label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--lt-muted);
+    }
+    .hb-freq-options { display: flex; flex-direction: column; gap: 8px; }
+    .hb-freq-opt {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 14px;
+      border: 1.5px solid var(--lt-line);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: border-color 0.13s, background 0.13s;
+    }
+    .hb-freq-opt:has(input:checked) { border-color: var(--forest); background: rgba(33,68,60,0.05); }
+    .hb-freq-opt input[type=checkbox] { margin-top: 2px; accent-color: var(--forest); flex-shrink: 0; width: 16px; height: 16px; }
+    .hb-freq-opt-text strong { display: block; font-size: 0.9rem; font-weight: 700; color: var(--lt-ink); }
+    .hb-freq-opt-text span { font-size: 0.8rem; color: var(--lt-muted); line-height: 1.4; }
+    .hb-modal-notice {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: rgba(33,68,60,0.06);
+      border: 1px solid rgba(33,68,60,0.12);
+      font-size: 0.8rem;
+      color: var(--lt-muted);
+      line-height: 1.5;
+      margin-bottom: 18px;
+    }
+    .hb-modal-submit {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      background: var(--forest);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.15s;
+    }
+    .hb-modal-submit:hover { background: var(--forest-soft); }
+    .hb-modal-submit:disabled { background: #aaa; cursor: default; }
+    .hb-modal-switch {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--lt-muted);
+    }
+    .hb-modal-switch a { color: var(--forest); font-weight: 700; cursor: pointer; }
+    .hb-modal-msg {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: none;
+    }
+    .hb-modal-msg.success { background: rgba(33,68,60,0.08); color: var(--forest); border: 1px solid rgba(33,68,60,0.18); }
+    .hb-modal-msg.error   { background: rgba(180,75,60,0.08); color: #a33; border: 1px solid rgba(180,75,60,0.20); }
+      /* ── og:image link-preview card (posts + replies) ─────────────────── */
+      .hb-og-preview {
+        display: flex; flex-direction: column; text-decoration: none; color: inherit;
+        border: 1px solid #ddd; border-radius: 8px; overflow: hidden;
+        margin-top: 10px; background: #fafafa; transition: box-shadow .15s;
+      }
+      .hb-og-preview:hover { box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+      .hb-og-img { width: 100%; max-height: 220px; object-fit: cover; display: block; border-bottom: 1px solid #eee; }
+      .hb-og-text { padding: 10px 12px; }
+      .hb-og-title { font-weight: 700; font-size: .92rem; color: #1a1a1a; margin-bottom: 3px; }
+      .hb-og-desc  { font-size: .82rem; color: #555; margin-bottom: 4px;
+                     overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+      /* Full URL shown as a blue underlined link (the whole card is already an
+         <a> to this URL, so it navigates on click). word-break wraps long URLs. */
+      .hb-og-domain { font-size: .76rem; color: #1a6fd6; font-weight: 600; text-decoration: underline; word-break: break-all; }
+      /* og:image fallback card (no preview image available) renders text-only */
+      .hb-og-preview.hb-og-textonly { background: #f5f5f3; }
+      /* ── Social-media warning + live composer link preview ─────────────── */
+      .hb-link-warning {
+        font-size: .76rem; color: #8a6d1f; background: #fdf6e3;
+        border: 1px solid #f0e3bf; border-radius: 6px;
+        padding: 6px 9px; margin-top: 6px; line-height: 1.35;
+      }
+      .hb-compose-link-preview { margin-top: 8px; }
+      .hb-clp-loading, .hb-clp-empty { font-size: .8rem; color: #777; padding: 6px 2px; }
+      .hb-clp-card {
+        display: flex; gap: 10px; align-items: center;
+        border: 1px solid #ddd; border-radius: 8px; background: #fafafa; padding: 8px;
+      }
+      .hb-clp-card img {
+        width: 64px; height: 64px; object-fit: cover; border-radius: 6px;
+        flex: 0 0 auto; background: #eee;
+      }
+      .hb-clp-text { min-width: 0; flex: 1; }
+      .hb-clp-title {
+        font-weight: 700; font-size: .85rem; color: #1a1a1a;
+        overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      }
+      .hb-clp-domain { font-size: .74rem; color: #21443c; font-weight: 600; margin-top: 2px; }
+      .hb-clp-note { font-size: .74rem; color: #777; margin-top: 3px; line-height: 1.3; }
+      .hb-clp-note.ok { color: #2f7a5f; }
+      .hb-clp-note.warn { color: #8a6d1f; }
+      .hb-clp-remove {
+        flex: 0 0 auto; background: none; border: none; color: #a33;
+        font-size: 1.2rem; cursor: pointer; padding: 0 4px; line-height: 1;
+      }
+      /* ── Reply compose URL row ─────────────────────────────────────────── */
+      .hb-reply-url-row { margin: 4px 0; }
+      .hb-reply-url-input {
+        width: 100%; box-sizing: border-box; padding: 7px 10px;
+        border: 1px solid #ccc; border-radius: 6px; font-size: .85rem; font-family: inherit;
+      }
+      .hb-reply-url-input:focus { outline: none; border-color: #21443c; }
+      .hb-reply-actions { display: flex; gap: 6px; align-items: center; margin-top: 6px; }
+      .hb-reply-link-btn {
+        padding: 5px 10px; font-size: .82rem; border: 1px solid #ccc;
+        border-radius: 6px; background: #fff; cursor: pointer; transition: background .15s;
+      }
+      .hb-reply-link-btn:hover { background: #e8f0e8; }
+
+
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 260px minmax(0,1fr); gap: 16px; }
+    }
+    @media (max-width: 768px) {
+      .topnav-links { display: none; }
+      .hero h1 { font-size: 1.9rem; }
+      .hb-intro { grid-template-columns: 1fr; }
+      .hb-board { grid-template-columns: 1fr; }
+      .hb-sidebar-col { position: static; }
+      .hb-toolbar { grid-template-columns: 1fr; }
+      .hb-container { width: calc(100% - 24px); }
+      .hb-modal-row { grid-template-columns: 1fr; }
+    }
+  
+    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
+    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
+    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
+    .topnav-translate .goog-te-gadget-simple {
+      background: transparent !important;
+      border: 1px solid #d4dad0 !important;
+      border-radius: 999px !important;
+      padding: 7px 14px !important;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      font-size: 0.82rem !important;
+      cursor: pointer;
+      line-height: 1.2 !important;
+    }
+    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
+    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
+    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
+    .topnav-translate-reset {
+      display: none; background: transparent; border: 1px solid #d4dad0;
+      border-radius: 999px; padding: 7px 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
+      margin-right: 10px; line-height: 1.2;
+    }
+    .topnav-translate-reset:hover { background: #f3f5ef; }
+    body.translated-ltr .topnav-translate-reset,
+    body.translated-rtl .topnav-translate-reset { display: inline-block; }
+    body { top: 0 !important; }
+    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
+    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+    .goog-text-highlight { background: none !important; box-shadow: none !important; }
+
+    .topnav-hamburger {
+      display: none; background: none; border: none; cursor: pointer;
+      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
+    }
+    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
+
+    @media (max-width: 860px) {
+      .topnav-inner { position: relative; flex-wrap: nowrap; }
+      .topnav-links {
+        display: none !important;
+        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
+        background: #fff; flex-direction: column !important; gap: 0 !important;
+        padding: 8px 0; margin: 0 !important;
+        border-top: 1px solid #d4dad0;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        z-index: 60;
+      }
+      .topnav-links.open { display: flex !important; }
+      .topnav-links a {
+        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
+        font-size: 1rem !important;
+      }
+      .topnav-links a:last-child { border-bottom: none !important; }
+      .topnav-hamburger { display: block; }
+      .topnav-translate { margin-right: 6px; }
+      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
+      .topnav-cta { white-space: nowrap; padding: 7px 12px !important; font-size: 0.8rem !important; }
+    }
+
+  </style>
+
+  <!-- Firebase SDK (modular) -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';
+    import { getFirestore, collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp }
+      from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js';
+    import { getAuth, signInWithEmailAndPassword, onAuthStateChanged }
+      from 'https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js';
+
+    const firebaseConfig = SITE_CONFIG.FIREBASE;
+
+    try {
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      const auth = getAuth(app);
+      window._FIREBASE_DB = db;
+      window._FIREBASE_AUTH = auth;
+      window._FB = { collection, addDoc, setDoc, query, where, orderBy, onSnapshot, doc, updateDoc, deleteDoc, getDocs, increment, serverTimestamp, Timestamp };
+      window._FB_AUTH = { signInWithEmailAndPassword, onAuthStateChanged };
+      window._FIREBASE_READY = true;
+    } catch (e) {
+      window._FIREBASE_READY = false;
+      console.warn('Firebase not configured — Hub-Bub will use localStorage fallback.', e.message);
+    }
+  </script>
+
+  <!-- EmailJS for comment notification emails -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Firebase compat SDK — ALL four packages required by hub-bub.js -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<style>
+  /* ── Redesign shell overrides ── */
+  .hb-shell-authbar { max-width: 1280px; margin: 12px auto -4px; padding: 0 32px; display: flex; justify-content: flex-end; }
+  .lt-pill-login { display: none !important; }
+</style>
+</head>
+<body>
+
+  <!-- ════════════════════ NAV ════════════════════ -->
+<div id="lt-header"></div>
+<div class="hb-shell-authbar"><div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div></div>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>💬 Hub-Bub</h1>
+      <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
+  <div class="hb-wrap" style="display:none;" aria-hidden="true">
+    <!-- Auth bar — hub-bub.js updates these spans; we mirror them into #hbAuthStripInner -->
+    <div class="hb-auth-bar" id="hbAuthBar">
+      <span id="hbAuthStatus">Join the conversation — <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);font-weight:700;">Sign up</a> or <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);font-weight:700;">Log in</a> to post.</span>
+      <span id="hbAuthUser" style="display:none;" class="hb-user"></span>
+      <button id="hbLogoutBtn" style="display:none;" onclick="hbLogout()">Sign Out</button>
+    </div>
+    <!-- Mode bar — hub-bub.js reads these buttons -->
+    <div class="hb-mode-bar" id="hbModeBar">
+      <button class="hb-mode-btn active" data-hb-mode="all">All Posts</button>
+      <button class="hb-mode-btn" data-hb-mode="question">Questions</button>
+      <button class="hb-mode-btn" data-hb-mode="what-happened">What Happened</button>
+      <button class="hb-mode-btn" data-hb-mode="ideas">Ideas &amp; Solutions</button>
+    </div>
+    <!-- Topic bar — hub-bub.js reads these chips -->
+    <div class="hb-topic-bar" id="hbTopicBar">
+      <button class="hb-topic-chip active" data-hb-topic="all">All</button>
+      <button class="hb-topic-chip" data-hb-topic="government">Government</button>
+      <button class="hb-topic-chip" data-hb-topic="events">Events</button>
+      <button class="hb-topic-chip" data-hb-topic="housing">Housing</button>
+      <button class="hb-topic-chip" data-hb-topic="land-use">Land Use</button>
+      <button class="hb-topic-chip" data-hb-topic="transit">Transit</button>
+      <button class="hb-topic-chip" data-hb-topic="gondola">Gondola</button>
+      <button class="hb-topic-chip" data-hb-topic="budgets">Budgets</button>
+      <button class="hb-topic-chip" data-hb-topic="environment">Environment</button>
+      <button class="hb-topic-chip" data-hb-topic="schools">Schools</button>
+      <button class="hb-topic-chip" data-hb-topic="good-news">Good News</button>
+      <button class="hb-topic-chip" data-hb-topic="other">Other</button>
+    </div>
+    <!-- Sort bar — hub-bub.js reads these buttons -->
+    <div class="hb-sort-bar">
+      <span>Sort:</span>
+      <button class="hb-sort-opt active" data-hb-sort="newest" onclick="hbSortPosts('newest')">Newest</button>
+      <button class="hb-sort-opt" data-hb-sort="most-discussed" onclick="hbSortPosts('most-discussed')">Most Discussed</button>
+      <button class="hb-sort-opt" data-hb-sort="most-useful" onclick="hbSortPosts('most-useful')">Most Useful</button>
+    </div>
+  </div>
+  <!-- END HIDDEN LEGACY ELEMENTS -->
+
+  <!-- ════════════════════ SHELL ════════════════════ -->
+  <div class="hb-shell">
+    <div class="hb-container">
+
+      <!-- ── Intro two-col ── -->
+      <section class="hb-intro" aria-labelledby="hub-bub-heading">
+        <div class="hb-intro-main">
+          <div class="hb-eyebrow">Hub-Bub civic forum</div>
+          <h1 id="hub-bub-heading">Find the local conversation without digging through the noise.</h1>
+          <p>Use Hub-Bub to ask a precise question, share a public document, summarize a meeting, or propose a practical solution.</p>
+          <div class="hb-intro-perks">
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-intro-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+          </div>
+        </div>
+
+        <aside class="hb-account-panel" aria-label="Create a free account">
+          <h2 class="hb-account-heading">Commenting requires a free account</h2>
+          <div class="hb-account-perks">
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
+            </div>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
+          </div>
+          <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
+          <p class="hb-account-login-note">Already have an account?<br><a href="javascript:void(0)" id="hbOpenLogin">Log in</a></p>
+        </aside>
+      </section>
+
+      <!-- ── Board: sidebar + main ── -->
+      <section class="hb-board">
+
+        <!-- ── Sidebar ── -->
+        <aside class="hb-sidebar-col" aria-label="Hub-Bub filters">
+
+          <!-- Filter card -->
+          <section class="hb-card hb-filter-card">
+            <h2 class="hb-card-title">Filter discussions</h2>
+            <p class="hb-card-note">Narrow by topic, type, or action.</p>
+
+            <div class="hb-filter-group">
+              <label class="hb-filter-label" for="hbSideSearch">Search</label>
+              <input id="hbSideSearch" class="hb-search-input" type="search" placeholder="Try "water," "PUD," "budget"">
+            </div>
+
+            <div class="hb-filter-group">
+              <div class="hb-filter-label">Topic</div>
+              <div class="hb-chip-list" id="hbSideTopics">
+                <button class="hb-filter-chip active" data-side-topic="all">All topics</button>
+                <button class="hb-filter-chip" data-side-topic="government">Government</button>
+                <button class="hb-filter-chip" data-side-topic="events">Events</button>
+                <button class="hb-filter-chip" data-side-topic="housing">Housing</button>
+                <button class="hb-filter-chip" data-side-topic="land-use">Land Use</button>
+                <button class="hb-filter-chip" data-side-topic="transit">Transit</button>
+                <button class="hb-filter-chip" data-side-topic="gondola">Gondola</button>
+                <button class="hb-filter-chip" data-side-topic="budgets">Budgets</button>
+                <button class="hb-filter-chip" data-side-topic="environment">Environment</button>
+                <button class="hb-filter-chip" data-side-topic="schools">Schools</button>
+                <button class="hb-filter-chip" data-side-topic="good-news">Good News</button>
+                <button class="hb-filter-chip" data-side-topic="other">Other</button>
+              </div>
+            </div>
+
+
+            <button class="hb-clear-btn" id="hbSideClear" type="button">Clear filters</button>
+          </section>
+
+          <!-- Activity stats -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Activity</h2>
+            <div style="font-size:0.85rem;color:var(--lt-muted);line-height:1.8;margin-top:6px;">
+              <div style="display:flex;justify-content:space-between;"><span>Posts today</span><strong id="hbStatToday">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>This week</span><strong id="hbStatWeek">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Total discussions</span><strong id="hbStatTotal">0</strong></div>
+              <div style="display:flex;justify-content:space-between;"><span>Contributors</span><strong id="hbStatUsers">0</strong></div>
+            </div>
+          </div>
+
+          <!-- Most useful this week -->
+          <div class="hb-card hb-sidebox">
+            <h2 class="hb-card-title">Most useful this week</h2>
+            <div id="hbMostUseful" class="hb-mini-list" style="margin-top:4px;">
+              <div style="font-size:0.82rem;color:var(--lt-muted);">Loading…</div>
+            </div>
+          </div>
+
+          <!-- Guidelines (dark) -->
+          <section class="hb-card hb-sidebox dark" id="hb-guidelines-anchor">
+            <h2 class="hb-card-title">Forum guidelines</h2>
+            <div class="hb-mini-list">
+              <div class="hb-mini-item">Ask clear questions — good questions lead to better answers.</div>
+              <div class="hb-mini-item">Share sources — attach documents, link to meeting minutes.</div>
+              <div class="hb-mini-item">Attack ideas, not people — disagree vigorously but constructively.</div>
+              <div class="hb-mini-item">Propose solutions — practical ideas move the conversation forward.</div>
+              <div class="hb-mini-item">This is a public record — posts may be cited in formal public comment.</div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- ── Main content ── -->
+        <main class="hb-content" id="hb-feed-anchor">
+
+          <!-- Auth strip: shown when logged in, hidden otherwise -->
+          <div class="hb-auth-strip" id="hbAuthStripBar">
+            <span id="hbAuthStripMsg">
+              <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);">Create a free account</a>
+              &nbsp;or&nbsp;
+              <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);">log in</a>
+              to join the conversation.
+            </span>
+            <span id="hbAuthStripUser" style="display:none;" class="hb-auth-user"></span>
+            <button id="hbAuthStripLogout" style="display:none;" onclick="hbLogout()">Sign Out</button>
+          </div>
+
+          <!-- Toolbar: result count + sort -->
+          <div class="hb-toolbar" role="toolbar" aria-label="Sort discussions">
+            <div class="hb-results">
+              <strong id="hbResultCount">—</strong>
+              <span id="hbResultLabel">discussions</span>
+            </div>
+            <div class="hb-sort-wrap">
+              <label for="hbSortSelect">Sort</label>
+              <select id="hbSortSelect" class="hb-sort-select" onchange="hbSortPosts(this.value); document.querySelectorAll('.hb-sort-opt').forEach(b=>b.classList.toggle('active', b.dataset.hbSort===this.value));">
+                <option value="newest">Newest first</option>
+                <option value="most-discussed">Most discussed</option>
+                <option value="most-useful">Most useful</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Composer shell -->
+          <div class="hb-composer-shell" id="hb-composer-anchor">
+            <div class="hb-composer-shell-head">
+              <div>
+                <h2 class="hb-composer-shell-title">Start a discussion</h2>
+                <p class="hb-composer-shell-sub">A good post makes the issue easier for neighbors to understand.</p>
+              </div>
+            </div>
+            <div class="hb-composer-shell-inner">
+              <!-- Existing hub-bub.js composer (all IDs preserved) -->
+              <div class="hb-compose" id="hbCompose">
+                <!-- Category type bar hidden — auto-tag handles type selection -->
+                <div class="hb-post-type-bar" id="hbPostTypeBar" style="display:none;">
+                  <button class="hb-post-type-btn" data-hb-ptype="question">Ask a Question</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="source">Share a Source</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="debrief">Meeting Takeaway</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="solution">Suggest a Solution</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="need">Community Need</button>
+                  <button class="hb-post-type-btn" data-hb-ptype="volunteer">Volunteer / Join In</button>
+                </div>
+                <div class="hb-compose-header">
+                  <div class="hb-compose-avatar" id="hbComposeAvatar">?</div>
+                  <input type="text" id="hbComposeTitle" placeholder="Subject" onfocus="hbExpandCompose()">
+                </div>
+                <div class="hb-compose-expanded">
+                  <textarea id="hbComposeBody" placeholder="Share your thoughts, concerns, or ideas with the community..."></textarea>
+                  <div class="hb-source-fields" id="hbSourceFields">
+                    <div class="hb-compose-field-label">Source link</div>
+                    <input type="url" id="hbSourceUrl" placeholder="https://...">
+                    <div class="hb-compose-field-label">Why it matters</div>
+                    <textarea id="hbSourceWhy" placeholder="What does this source say and why should others read it?" style="min-height:50px;"></textarea>
+                    <div class="hb-compose-field-label">Question it raises</div>
+                    <input type="text" id="hbSourceQuestion" placeholder="What question does this raise for the community?">
+                  </div>
+                  <div class="hb-debrief-fields" id="hbDebriefFields">
+                    <div class="hb-compose-field-label">Meeting name</div>
+                    <input type="text" id="hbDebriefMeeting" placeholder="e.g., Town Council Regular Meeting">
+                    <div class="hb-compose-field-label">Meeting date</div>
+                    <input type="text" id="hbDebriefDate" placeholder="e.g., March 25, 2026">
+                    <div class="hb-compose-field-label">Key takeaways (up to 3)</div>
+                    <textarea id="hbDebriefTakeaways" placeholder="1. &#10;2. &#10;3. " style="min-height:60px;"></textarea>
+                    <div class="hb-compose-field-label">What changed</div>
+                    <textarea id="hbDebriefChanged" placeholder="What decisions were made or what shifted?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">What remains unresolved</div>
+                    <textarea id="hbDebriefUnresolved" placeholder="What still needs to be decided or figured out?" style="min-height:40px;"></textarea>
+                    <div class="hb-compose-field-label">Link to agenda / packet / recording (optional)</div>
+                    <input type="url" id="hbDebriefLink" placeholder="https://...">
+                    <div class="hb-compose-field-label">One question for the community</div>
+                    <input type="text" id="hbDebriefQuestion" placeholder="What should neighbors be thinking about?">
+                  </div>
+                  <div style="font-size:0.78rem;font-weight:600;color:#888;margin-bottom:4px;margin-top:10px;">Tag your post: <span style="color:#c0392b;">Required.</span></div>
+                  <div class="hb-compose-tags" id="hbComposeTags">
+                    <button class="hb-compose-tag" data-hb-tag="government">Government</button>
+                    <button class="hb-compose-tag" data-hb-tag="events">Events</button>
+                    <button class="hb-compose-tag" data-hb-tag="housing">Housing</button>
+                    <button class="hb-compose-tag" data-hb-tag="land-use">Land Use</button>
+                    <button class="hb-compose-tag" data-hb-tag="transit">Transit</button>
+                    <button class="hb-compose-tag" data-hb-tag="gondola">Gondola</button>
+                    <button class="hb-compose-tag" data-hb-tag="budgets">Budgets</button>
+                    <button class="hb-compose-tag" data-hb-tag="environment">Environment</button>
+                    <button class="hb-compose-tag" data-hb-tag="schools">Schools</button>
+                    <button class="hb-compose-tag" data-hb-tag="good-news">Good News</button>
+                    <button class="hb-compose-tag" data-hb-tag="other">Other</button>
+                  </div>
+                  <!-- Next-step chips hidden to simplify the compose form -->
+                  <div class="hb-nextstep-bar" id="hbNextStepBar" style="display:none;">
+                    <button class="hb-nextstep-chip" data-hb-step="attend">Attend</button>
+                    <button class="hb-nextstep-chip" data-hb-step="read">Read</button>
+                    <button class="hb-nextstep-chip" data-hb-step="ask">Ask</button>
+                    <button class="hb-nextstep-chip" data-hb-step="volunteer">Volunteer</button>
+                    <button class="hb-nextstep-chip" data-hb-step="email">Email</button>
+                    <button class="hb-nextstep-chip" data-hb-step="watch">Watch</button>
+                  </div>
+                  <div class="hb-attach-preview" id="hbAttachPreview"></div>
+                  <div class="hb-tone-nudge" id="hbToneNudge">
+                    <div class="hb-tone-nudge-title">Heads up — this might come across as a personal attack</div>
+                    <div class="hb-tone-original" id="hbToneOriginal"></div>
+                    <div style="font-size:0.82rem;color:#555;margin:4px 0;">Here's a way to make the same point without targeting someone personally:</div>
+                    <div class="hb-tone-suggested" id="hbToneSuggested"></div>
+                    <div class="hb-tone-actions">
+                      <button class="hb-tone-btn-use" onclick="hbUseSuggested()">Use suggested version</button>
+                      <button class="hb-tone-btn-keep" onclick="hbKeepOriginal()">Post as written</button>
+                      <button class="hb-tone-btn-edit" onclick="hbEditMore()">Let me edit more</button>
+                    </div>
+                  </div>
+                  <!-- URL input row (hidden until 🔗 Add Link is clicked) -->
+                  <div id="hbComposeLinkRow" style="display:none;margin:6px 0 2px;">
+                    <input type="url" id="hbComposeLinkUrl"
+                           placeholder="https://... — the page’s hero image will appear on your post"
+                           style="width:100%;box-sizing:border-box;padding:7px 10px;border:1px solid #ccc;border-radius:6px;font-size:0.88rem;">
+                    <div class="hb-link-warning">⚠️ Social media links won’t show any image from the post, but you can add the link if you like.</div>
+                    <div id="hbComposeLinkPreview" class="hb-compose-link-preview"></div>
+                  </div>
+                  <div class="hb-compose-actions">
+                    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+                      <!-- Photo button — moved here from above the tags -->
+                      <button type="button" class="hb-attach-btn hb-photo-upload-btn" onclick="hbTriggerPhoto()" title="Add a photo (JPG, PNG, GIF, WebP · max 5 MB)">📷 Add Photo</button>
+                      <input type="file" id="hbPhotoInput" accept="image/png,image/jpeg,image/gif,image/webp" style="display:none;" onchange="hbHandlePhoto(this)">
+                      <!-- Document / file attachment -->
+                      <button class="hb-attach-btn" onclick="hbTriggerAttach()" title="Attach a document (PDF, image · max 10 MB per file)">📄 Attach Document</button>
+                      <!-- URL link button — adds a link preview (og:image) to the post -->
+                      <button type="button" class="hb-attach-btn" onclick="hbToggleComposeLink()" id="hbComposeLinkBtn" title="Add a URL — the page’s image will appear on your post">🔗 Add Link</button>
+                      <input type="file" id="hbFileInput" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg,.gif,.webp" multiple style="display:none;" onchange="hbHandleFiles(this)">
+                      <!-- Inline photo preview (was in its own block above) -->
+                      <div class="hb-photo-preview" id="hbPhotoPreview">
+                        <img id="hbPhotoPreviewImg" src="" alt="Photo preview">
+                        <div class="hb-photo-preview-actions">
+                          <button type="button" onclick="hbReplacePhoto()">Replace</button>
+                          <button type="button" onclick="hbRemovePhoto()">Remove</button>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="hb-post-btn" id="hbPostBtn" onclick="hbSubmitPost()" disabled>Post to Hub-Bub</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Posts feed (populated by hub-bub.js) -->
+          <div id="hbPostsFeed" class="hb-posts-feed">
+            <div class="hb-loading" id="hbLoading"><div class="hb-spinner"></div></div>
+            <div class="hb-empty" id="hbEmpty" style="display:none;">
+              <div class="hb-empty-icon">💬</div>
+              <div class="hb-empty-text">No discussions yet</div>
+              <div class="hb-empty-sub">Be the first to start a constructive conversation about what matters to Telluride.</div>
+            </div>
+          </div>
+
+        </main>
+      </section>
+
+      <!-- ── Community guidelines + moderation policy (formal footer) ──
+           Livable Telluride reserves the right to remove any post that does
+           not meet these guidelines. The quick-reference tile in the sidebar
+           ("Forum guidelines") still lives at #hb-guidelines-anchor; this
+           block is the full rules + the moderation reservation. -->
+      <style>
+        .hb-site-footer { background: var(--lt-cream); border-top: 1px solid var(--lt-line); margin: 28px 0 0; padding: 40px 0 32px; }
+        .hb-site-footer .hb-footer-inner { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+        .hb-site-footer .hb-footer-head h2 { font-family: Georgia, "Times New Roman", serif; color: var(--forest); font-size: 1.5rem; margin: 0 0 10px; letter-spacing: -0.2px; }
+        .hb-site-footer .hb-footer-head p  { font-size: 0.95rem; color: var(--lt-ink); line-height: 1.65; margin: 0 0 26px; max-width: 940px; }
+        .hb-site-footer .hb-footer-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin: 0 0 22px; }
+        .hb-site-footer .hb-footer-col  { background: var(--lt-paper); border: 1px solid var(--lt-line); border-radius: 12px; padding: 22px 24px; }
+        .hb-site-footer .hb-footer-col h3 { font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; margin: 0 0 12px; }
+        .hb-site-footer .hb-footer-col-ok h3 { color: var(--forest); }
+        .hb-site-footer .hb-footer-col-no h3 { color: #8d3d2f; }
+        .hb-site-footer .hb-footer-col ul { padding-left: 18px; margin: 0; }
+        .hb-site-footer .hb-footer-col li { font-size: 0.9rem; color: var(--lt-ink); line-height: 1.6; margin: 0 0 10px; }
+        .hb-site-footer .hb-footer-col li:last-child { margin-bottom: 0; }
+        .hb-site-footer .hb-footer-col-ok li strong { color: var(--forest); }
+        .hb-site-footer .hb-footer-col-no li strong { color: #8d3d2f; }
+        .hb-site-footer .hb-footer-legal { border-top: 1px solid var(--lt-line); padding-top: 22px; }
+        .hb-site-footer .hb-footer-legal h3 { font-family: Georgia, "Times New Roman", serif; color: var(--forest); font-size: 1.05rem; margin: 0 0 8px; }
+        .hb-site-footer .hb-footer-legal p { font-size: 0.9rem; color: var(--lt-ink); line-height: 1.6; margin: 0 0 12px; max-width: 940px; }
+        .hb-site-footer .hb-footer-legal a { color: var(--forest); font-weight: 600; }
+        .hb-site-footer .hb-footer-fineprint { font-size: 0.82rem !important; color: var(--lt-muted) !important; }
+        .hb-site-footer .hb-footer-copy { font-size: 0.8rem !important; color: var(--lt-muted) !important; margin-top: 18px !important; }
+        @media (max-width: 820px) {
+          .hb-site-footer .hb-footer-cols { grid-template-columns: 1fr; }
+          .hb-site-footer { padding: 32px 0 28px; }
+        }
+      </style>
+      <footer class="hb-site-footer" id="hb-community-guidelines">
+        <div class="hb-footer-inner">
+          <div class="hb-footer-head">
+            <h2>Community guidelines &amp; moderation policy</h2>
+            <p>Hub-Bub is a public civic-discussion forum hosted by Livable Telluride. By posting, replying, or attaching a file here, you agree to our community guidelines. <strong>Livable Telluride reserves the right, at its sole discretion, to remove any post, reply, comment, or attached file that does not meet these guidelines, and to suspend or remove accounts for repeated or serious violations.</strong></p>
+            <p class="hb-footer-policy-link">Our full policy and guidelines can be found <a href="/community-guidelines.html" target="_blank" rel="noopener">here</a>.</p>
+          </div>
+
+          <div class="hb-footer-legal">
+            <p class="hb-footer-fineprint" style="margin-bottom:10px;">Already subscribed? <a href="/profile.html" style="color:var(--forest);font-weight:700;">Update your info &amp; preferences</a> — add your name, region, or change which emails you get.</p>
+            <p class="hb-footer-fineprint">Hub-Bub is a community discussion forum and is not legal, financial, medical, or professional advice. Views expressed by users are their own and do not represent Livable Telluride. See also our <a href="/terms-of-use.html">Terms of Use</a>, <a href="/privacy-policy.html">Privacy Policy</a>, and <a href="/data-deletion.html">Data Deletion</a> pages.</p>
+            <p class="hb-footer-copy">© 2025–2026 Livable Telluride. All rights reserved. Original content, design, and code are the property of Livable Telluride; news, logos, photos, public records, and user submissions remain the property of their respective owners.</p>
+          </div>
+        </div>
+      </footer>
+    </div><!-- /.hb-container -->
+  </div><!-- /.hb-shell -->
+
+  <!-- ════════════════════ SIGNUP / LOGIN MODAL ════════════════════ -->
+  <div class="hb-modal-overlay" id="hbModalOverlay" role="dialog" aria-modal="true" aria-labelledby="hbModalTitle">
+    <div class="hb-modal" id="hbModalBox">
+      <button class="hb-modal-close" id="hbModalClose" aria-label="Close">×</button>
+
+      <!-- ── SIGNUP panel ── -->
+      <div id="hbSignupPanel">
+        <h2 id="hbModalTitle">Create your free account</h2>
+        <p class="hb-modal-sub">Join the Livable Telluride community. Your account lets you post, comment, and choose how you stay informed.</p>
+
+        <div class="hb-modal-row">
+          <div class="hb-modal-field">
+            <label for="hbSignupFirst">First name</label>
+            <input type="text" id="hbSignupFirst" autocomplete="given-name" placeholder="Jane">
+          </div>
+          <div class="hb-modal-field">
+            <label for="hbSignupLast">Last name</label>
+            <input type="text" id="hbSignupLast" autocomplete="family-name" placeholder="Smith">
+          </div>
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupEmail">Email address</label>
+          <input type="email" id="hbSignupEmail" autocomplete="email" placeholder="jane@example.com">
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupPassword">Create a password</label>
+          <input type="password" id="hbSignupPassword" autocomplete="new-password" placeholder="At least 8 characters">
+        </div>
+
+        <div class="hb-modal-field">
+          <label for="hbSignupRegion">Your region</label>
+          <select id="hbSignupRegion">
+            <option value="">— Select your region —</option>
+            <option value="East End">East End (Telluride, Mountain Village, Ophir)</option>
+            <option value="West End">West End (Norwood, Nucla, Naturita)</option>
+            <option value="Ridgway/Ouray">Ridgway / Ouray</option>
+          </select>
+        </div>
+
+        <div class="hb-freq-group">
+          <span class="hb-freq-label">Stay informed — choose what you'd like to receive</span>
+          <div class="hb-freq-options">
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqWeekly" value="weekly" checked>
+              <div class="hb-freq-opt-text">
+                <strong>Weekly look-ahead</strong>
+                <span>A weekly summary of upcoming meetings — agendas, comment deadlines, and what's worth watching.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" id="hbFreqNewsletter" value="newsletter" checked>
+              <div class="hb-freq-opt-text">
+                <strong>Livable Telluride newsletter</strong>
+                <span>Longer-form posts and analysis, sent when published.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="hb-freq-group" id="hbTopicGroup">
+          <span class="hb-freq-label">Event topics — added to your weekly email (optional)</span>
+          <div id="hbTopicGateNote" style="display:none;font-size:0.82rem;line-height:1.45;color:#7a5a2a;background:#fdf3e7;border:1px solid #e8c9a0;border-radius:8px;padding:9px 12px;margin:2px 0 10px;">
+            ⚠ Event topics are delivered inside the <strong>Weekly look-ahead</strong> email. Re-check it above to choose topics — without the weekly summary, we have no email in which to send your event notices.
+          </div>
+          <div class="hb-freq-options">
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="arts">
+              <div class="hb-freq-opt-text">
+                <strong>Music, Arts &amp; Festivals</strong>
+                <span>Concerts, film, theater, gallery openings, and festivals.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="civic">
+              <div class="hb-freq-opt-text">
+                <strong>Government Meetings</strong>
+                <span>Council, commission, and board meetings — with comment deadlines.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="family">
+              <div class="hb-freq-opt-text">
+                <strong>Family &amp; Kids</strong>
+                <span>Storytime, youth programs, and all-ages activities.</span>
+              </div>
+            </label>
+            <label class="hb-freq-opt">
+              <input type="checkbox" class="hb-topic-cb" value="outdoors">
+              <div class="hb-freq-opt-text">
+                <strong>Outdoors &amp; Recreation</strong>
+                <span>Hikes, races, ski events, and stewardship days.</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div class="hb-modal-notice">
+          🔒 A free account lets you post and comment on Hub-Bub.
+        </div>
+
+        <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Create account &amp; join Hub-Bub</button>
+        <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
+        <div class="hb-modal-msg" id="hbSignupMsg"></div>
+      </div>
+
+      <!-- ── LOGIN panel ── -->
+      <div id="hbLoginPanel" style="display:none;">
+        <h2>Log in to Hub-Bub</h2>
+        <p class="hb-modal-sub">Use the email and password you set when you created your account.</p>
+
+        <div id="hbLoginFields">
+          <!-- Real <form> with username/current-password autocomplete so the
+               browser's password manager offers to save + autofill the login
+               on this device. The submit logic runs on the form's submit
+               event (preventDefault), which is what triggers the save prompt. -->
+          <form id="hbLoginForm" novalidate>
+          <div class="hb-modal-field">
+            <label for="hbLoginEmail">Email address</label>
+            <input type="email" id="hbLoginEmail" name="username" autocomplete="username" placeholder="jane@example.com">
+          </div>
+
+          <div class="hb-modal-field">
+            <label for="hbLoginPassword" style="display:flex;justify-content:space-between;align-items:baseline;">
+              Password
+              <a href="javascript:void(0)" onclick="hbForgotPassword()" style="font-size:0.8rem;font-weight:600;color:var(--forest);text-decoration:underline;">Forgot password?</a>
+            </label>
+            <input type="password" id="hbLoginPassword" name="password" autocomplete="current-password" placeholder="Your password">
+          </div>
+
+          <button class="hb-modal-submit" id="hbLoginSubmit" type="submit">Log in</button>
+          </form>
+          <div class="hb-modal-switch">Don't have an account? <a id="hbSwitchToSignup">Create one free</a></div>
+          <div class="hb-modal-msg" id="hbLoginMsg"></div>
+          <div class="hb-modal-msg" id="hbLoginError" style="display:none;color:#c0392b;font-size:0.87rem;margin-top:8px;padding:10px 12px;background:#fdf0f0;border-radius:8px;border:1px solid #f5c6c6;"></div>
+        </div>
+        <!-- Password reset confirmation — shown alone after forgot-password success -->
+        <div id="hbLoginResetView" style="display:none;">
+          <div id="hbLoginInfo" style="color:#555;font-size:0.87rem;padding:14px 16px;background:#f0f7f4;border-radius:10px;border:1px solid #c5ddd5;"></div>
+          <div style="text-align:center;margin-top:18px;">
+            <a href="javascript:void(0)" onclick="hbShowLoginFields()" style="font-size:0.85rem;color:var(--forest);text-decoration:underline;">← Back to log in</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- hub-bub.js handles Firebase auth, post loading, and all interactions.
+       Loaded with a dynamic cache-buster (same pattern as gov-hub.html for
+       js/gov-data.js + js/gov-helpers.js) so a fresh hub-bub.js gets
+       picked up at most ~10 minutes after a push, regardless of what
+       the browser's cache policy would do. Without this, the bare
+       `<script src="js/hub-bub.js">` was being cached indefinitely and
+       bug fixes (e.g. the 2026-05-25 Forgot-Password view-swap) didn't
+       reach users until they hard-refreshed. -->
+  <script>
+    (function() {
+      var s = document.createElement('script');
+      s.src = '/js/hub-bub.js?v=' + Math.floor(Date.now() / 600000);
+      document.head.appendChild(s);
+    })();
+  </script>
+
+  <!-- ════════ MODAL WIRING — signup + Mailchimp + Firebase Auth ════════ -->
+  <script>
+  (function () {
+    /* ── Newsletter signup ──
+       Mailchimp was retired 2026-07-06 in favor of Customer.io. The actual
+       subscription write now happens in the signup handler's callback below,
+       via the Worker POST /update-profile (which upserts the Customer.io
+       contact + subscription attributes by name — the same reliable path the
+       Event Topics already used). This shim keeps mcSubscribe's async
+       callback contract so the signup control flow (subscribe → create
+       Firebase account → sign in) is unchanged; it just no longer contacts
+       Mailchimp. */
+    function mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, cb) {
+      // No external call — the Customer.io write is the /update-profile POST in
+      // the callback. Invoke asynchronously to preserve the original timing.
+      setTimeout(function () { cb(true, ''); }, 0);
+    }
+
+    /* ── Firebase Auth helper ── */
+    // Accept EITHER Firebase SDK path as "ready":
+    //   compat:  window.firebase.auth   (set up by js/hub-bub.js, the
+    //            canonical init for this page)
+    //   modular: window._FIREBASE_READY + window._FIREBASE_AUTH (an
+    //            alternate init path the inline login/signup handlers
+    //            were designed to handle as a fallback)
+    //
+    // Until 2026-05-25 this only checked the modular flags, which
+    // js/hub-bub.js never sets — waitForFirebase timed out after 6s
+    // and the inline login handler silently never invoked fn(). User
+    // would click "Log in", see "Logging in…" for a moment, then
+    // nothing. Accepting compat too makes the click flow through
+    // immediately. On timeout we now surface a visible error instead
+    // of failing silently.
+    function waitForFirebase(fn) {
+      function isReady() {
+        return (window.firebase && window.firebase.auth) ||
+               (window._FIREBASE_READY && window._FIREBASE_AUTH);
+      }
+      if (isReady()) return fn();
+      let tries = 0;
+      const t = setInterval(() => {
+        tries++;
+        if (isReady()) { clearInterval(t); fn(); }
+        else if (tries > 40) {
+          clearInterval(t);
+          // Surface the failure so the user isn't left staring at a
+          // "Logging in…" button forever.
+          showMsg('hbLoginMsg', 'Firebase didn\'t finish loading. Refresh the page and try again.', 'error');
+          var btn = document.getElementById('hbLoginSubmit');
+          if (btn) { btn.disabled = false; btn.textContent = 'Log in'; }
+        }
+      }, 150);
+    }
+
+    /* ── Modal open/close ── */
+    const overlay    = document.getElementById('hbModalOverlay');
+    const signupPanel = document.getElementById('hbSignupPanel');
+    const loginPanel  = document.getElementById('hbLoginPanel');
+
+    function openModal(panel) {
+      overlay.classList.add('open');
+      signupPanel.style.display = panel === 'signup' ? '' : 'none';
+      loginPanel.style.display  = panel === 'login'  ? '' : 'none';
+      clearMsgs();
+    }
+    function closeModal() { overlay.classList.remove('open'); }
+    function clearMsgs() {
+      ['hbSignupMsg','hbLoginMsg'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.display = 'none'; el.textContent = '';
+        el.className = 'hb-modal-msg';
+      });
+    }
+    function showMsg(id, text, type) {
+      const el = document.getElementById(id);
+      el.textContent = text;
+      el.className = 'hb-modal-msg ' + type;
+      el.style.display = 'block';
+    }
+
+    /* Daily digest was retired 2026-05-25 — only the Weekly look-ahead
+       and the Newsletter remain. No mutually-exclusive pairing needed
+       because the two remaining options are independent (you can want
+       both, or neither). */
+
+    /* hbSendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
+
+    /* Open triggers */
+    document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
+    document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
+    document.getElementById('hbModalClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    /* Switch panels */
+    document.getElementById('hbSwitchToLogin').addEventListener('click', () => {
+      signupPanel.style.display = 'none';
+      loginPanel.style.display  = '';
+      clearMsgs();
+    });
+    document.getElementById('hbSwitchToSignup').addEventListener('click', () => {
+      loginPanel.style.display  = 'none';
+      signupPanel.style.display = '';
+      clearMsgs();
+    });
+
+    /* Also wire legacy hbShowAuth calls from hub-bub.js */
+    window.hbShowAuth = function(mode) { openModal(mode === 'login' ? 'login' : 'signup'); };
+
+    /* ── Deep-link entry points ──
+       Other pages' "Subscribe" / "Sign Up" CTAs link to
+       /hub-bub.html#signup (or #login). Auto-open the matching modal on
+       load. If an ?email= query param is present (passed by the homepage
+       subscribe form), pre-fill the signup email field so the visitor
+       doesn't retype it. */
+    /* Toggle the URL-link row in the main composer */
+    window.hbToggleComposeLink = function() {
+      var row = document.getElementById('hbComposeLinkRow');
+      var btn = document.getElementById('hbComposeLinkBtn');
+      if (!row) return;
+      var open = row.style.display === 'none';
+      row.style.display = open ? '' : 'none';
+      if (btn) btn.style.background = open ? '#d0e8d0' : '';
+      if (open) { var inp = document.getElementById('hbComposeLinkUrl'); if (inp) inp.focus(); }
+    };
+
+    (function deepLinkOpen() {
+      try {
+        var params = new URLSearchParams(location.search);
+        var emailParam = params.get('email');
+        if (emailParam) {
+          var emailField = document.getElementById('hbSignupEmail');
+          if (emailField) emailField.value = emailParam;
+        }
+        var hash = (location.hash || '').toLowerCase();
+        if (hash === '#signup' || (emailParam && hash !== '#login')) {
+          openModal('signup');
+        } else if (hash === '#login') {
+          openModal('login');
+        }
+      } catch (e) { /* non-fatal */ }
+    })();
+
+    /* ── Event-topic gating ──
+       Event topics ride inside the weekly look-ahead email, so they're only
+       selectable when "Weekly look-ahead" is checked. Unchecking it clears +
+       disables the topic boxes and explains why (per product rule: no weekly
+       summary → no event notices). */
+    (function topicGating() {
+      const weekly   = document.getElementById('hbFreqWeekly');
+      const group    = document.getElementById('hbTopicGroup');
+      const note     = document.getElementById('hbTopicGateNote');
+      const topicCbs = document.querySelectorAll('.hb-topic-cb');
+      if (!weekly || !topicCbs.length) return;
+      function sync() {
+        const on = weekly.checked;
+        topicCbs.forEach(function (cb) { if (!on) cb.checked = false; cb.disabled = !on; });
+        if (group) group.style.opacity = on ? '' : '0.55';
+        if (note)  note.style.display  = on ? 'none' : '';
+      }
+      weekly.addEventListener('change', sync);
+      sync();
+    })();
+
+    /* ── SIGNUP submit ── */
+    document.getElementById('hbSignupSubmit').addEventListener('click', function () {
+      const btn       = this;
+      const firstName = document.getElementById('hbSignupFirst').value.trim();
+      const lastName  = document.getElementById('hbSignupLast').value.trim();
+      const email     = document.getElementById('hbSignupEmail').value.trim();
+      const password  = document.getElementById('hbSignupPassword').value;
+      // Daily digest retired 2026-05-25; only 'weekly' or '' (none) now.
+      const digestFreq = document.getElementById('hbFreqWeekly').checked ? 'weekly' : '';
+      const includeNewsletter = document.getElementById('hbFreqNewsletter').checked;
+      const region = document.getElementById('hbSignupRegion').value;
+      // Event Topics opt-ins (arts/civic/family/outdoors) — set via the Worker
+      // (name-based) AFTER the member is created, since the JSONP form-embed
+      // path would need each group's numeric web ID.
+      const topics = Array.prototype.map.call(
+        document.querySelectorAll('.hb-topic-cb:checked'), function (c) { return c.value; });
+
+      if (!firstName || !lastName) return showMsg('hbSignupMsg', 'Please enter your first and last name.', 'error');
+      if (!email || !email.includes('@')) return showMsg('hbSignupMsg', 'Please enter a valid email address.', 'error');
+      if (password.length < 8)  return showMsg('hbSignupMsg', 'Password must be at least 8 characters.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Creating account…';
+
+      // Step 1: newsletter subscribe — BEST EFFORT, never blocks account
+      // creation. The subscription write is the Worker /update-profile POST in
+      // the callback below (Customer.io); mcSubscribe is now a shim. A
+      // mailing-list hiccup must never stop someone from getting their Hub-Bub
+      // account and being logged in, so failures are logged, not surfaced.
+      showMsg('hbSignupMsg', 'Creating your account…', 'info');
+
+      mcSubscribe(email, firstName, lastName, digestFreq, includeNewsletter, region, function (ok, msg) {
+        // The subscribe shim above never fails; kept best-effort + non-blocking
+        // so a subscription hiccup can never stop Firebase account creation.
+        if (!ok) console.warn('Hub-Bub signup: subscribe (' + (msg||'unknown') + ') — proceeding to Firebase.');
+
+        // Subscriptions + Event Topics — ALL set by NAME via the Worker
+        // /update-profile call below, which upserts the Customer.io contact and
+        // its subscription attributes by name (weekly / newsletter / the four
+        // Event Topics). Always sent (not just when topics are chosen) so
+        // Newsletter/Weekly Update actually attach. Event topics ride along only
+        // when the weekly email is on.
+        const subs = {
+          weekly: digestFreq === 'weekly',
+          newsletter: includeNewsletter,
+        };
+        if (digestFreq === 'weekly') topics.forEach(function (t) { subs[t] = true; });
+        // Name + region ride along as fields → Customer.io first_name / last_name
+        // / region attributes.
+        var profFields = { FNAME: firstName, LNAME: lastName };
+        if (region) profFields.MMERGE6 = region;
+        try {
+          fetch(SITE_CONFIG.RSS_PROXY_BASE + '/update-profile', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email, fields: profFields, subs: subs })
+          }).catch(function () {});
+        } catch (e) {}
+
+        // Step 2: Firebase Auth — create account (auto-signs the user in)
+        waitForFirebase(function () {
+          const { createUserWithEmailAndPassword, updateProfile } =
+            window.firebase?.auth ? {} : {};
+
+          // Use compat SDK if available
+          if (window.firebase && window.firebase.auth) {
+            window.firebase.auth().createUserWithEmailAndPassword(email, password)
+              .then(cred => {
+                const u = cred.user;
+                // Email verification dropped 2026-05-28 — just set the name.
+                return u.updateDisplayName ? u.updateDisplayName(firstName + ' ' + lastName) : Promise.resolve();
+              })
+              .then(() => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                setTimeout(closeModal, 2200);
+              })
+              .catch(err => {
+                btn.disabled = false;
+                btn.textContent = 'Create account & join Hub-Bub';
+                const friendly = err.code === 'auth/email-already-in-use'
+                  ? 'An account with this email already exists. Try logging in instead.'
+                  : err.message;
+                showMsg('hbSignupMsg', friendly, 'error');
+              });
+          } else {
+            // Modular SDK path
+            import('https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js').then(m => {
+              m.createUserWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+                .then(cred => m.updateProfile(cred.user, { displayName: firstName + ' ' + lastName }))
+                .then(() => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  showMsg('hbSignupMsg', '✓ Account created! You can now post and comment on Hub-Bub.', 'success');
+                  setTimeout(closeModal, 2200);
+                })
+                .catch(err => {
+                  btn.disabled = false;
+                  btn.textContent = 'Create account & join Hub-Bub';
+                  const friendly = err.code === 'auth/email-already-in-use'
+                    ? 'An account with this email already exists. Try logging in instead.'
+                    : err.message;
+                  showMsg('hbSignupMsg', friendly, 'error');
+                });
+            });
+          }
+        });
+      });
+    });
+
+    /* ── LOGIN submit ── */
+    document.getElementById('hbLoginForm').addEventListener('submit', function (e) {
+      e.preventDefault();   // SPA login — no navigation; the submit event still
+                            // fires the browser's "save password?" prompt.
+      const btn      = document.getElementById('hbLoginSubmit');
+      const email    = document.getElementById('hbLoginEmail').value.trim();
+      const password = document.getElementById('hbLoginPassword').value;
+
+      if (!email) return showMsg('hbLoginMsg', 'Please enter your email.', 'error');
+      if (!password) return showMsg('hbLoginMsg', 'Please enter your password.', 'error');
+
+      btn.disabled = true;
+      btn.textContent = 'Logging in…';
+
+      waitForFirebase(function () {
+        if (window.firebase && window.firebase.auth) {
+          window.firebase.auth().signInWithEmailAndPassword(email, password)
+            .then((cred) => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              // Email verification no longer required (dropped 2026-05-28) —
+              // any signed-in user can post.
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              const friendly = (err.code === 'auth/wrong-password' || err.code === 'auth/user-not-found' || err.code === 'auth/invalid-credential')
+                ? 'Incorrect email or password.'
+                : err.message;
+              showMsg('hbLoginMsg', friendly, 'error');
+            });
+        } else if (window._FIREBASE_AUTH && window._FB_AUTH) {
+          window._FB_AUTH.signInWithEmailAndPassword(window._FIREBASE_AUTH, email, password)
+            .then(() => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', '✓ Logged in!', 'success');
+              setTimeout(closeModal, 1200);
+            })
+            .catch(err => {
+              btn.disabled = false;
+              btn.textContent = 'Log in';
+              showMsg('hbLoginMsg', 'Incorrect email or password.', 'error');
+            });
+        }
+      });
+    });
+
+    /* hbResendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
+
+    /* Enter key submit (signup only — the login form submits natively on
+       Enter now that it's a real <form>; binding a click here too would
+       double-fire the submit handler). */
+    document.getElementById('hbSignupPassword').addEventListener('keydown', e => {
+      if (e.key === 'Enter') document.getElementById('hbSignupSubmit').click();
+    });
+  })();
+  </script>
+
+  <!-- Sidebar filter wiring — syncs sidebar chips with hub-bub.js's hidden topic/mode bars -->
+  <script>
+  (function () {
+    // Sync auth strip with hidden auth bar state (hub-bub.js updates hbAuthStatus/hbAuthUser)
+    function syncAuthStrip() {
+      const hiddenStatus  = document.getElementById('hbAuthStatus');
+      const hiddenUser    = document.getElementById('hbAuthUser');
+      const hiddenLogout  = document.getElementById('hbLogoutBtn');
+      const stripMsg      = document.getElementById('hbAuthStripMsg');
+      const stripUser     = document.getElementById('hbAuthStripUser');
+      const stripLogout   = document.getElementById('hbAuthStripLogout');
+      if (!hiddenStatus || !stripMsg) return;
+      const isLoggedIn = hiddenUser && hiddenUser.style.display !== 'none';
+      if (isLoggedIn) {
+        stripMsg.style.display    = 'none';
+        stripUser.style.display   = '';
+        stripUser.textContent     = hiddenUser.textContent;
+        stripLogout.style.display = '';
+      } else {
+        stripMsg.style.display    = '';
+        stripUser.style.display   = 'none';
+        stripLogout.style.display = 'none';
+      }
+    }
+    // Topnav login indicator. Shows the logged-in user's FIRST NAME (so they
+    // know they're signed in) whenever Firebase has a current user — verified
+    // or not, since "am I logged in" is separate from "can I post" (posting
+    // needs a verified email). Reads currentUser directly rather than the
+    // verified-gated hidden auth bar.
+    function currentFirebaseUser() {
+      try {
+        if (window.firebase && window.firebase.auth) return window.firebase.auth().currentUser;
+        if (window._FIREBASE_AUTH) return window._FIREBASE_AUTH.currentUser;
+      } catch (e) {}
+      return null;
+    }
+    function syncTopnavAuth() {
+      var el = document.getElementById('hbTopnavAuth');
+      if (!el) return;
+      var u = currentFirebaseUser();
+      var first = u ? (u.displayName || u.email || 'Account').trim().split(/[\s@]/)[0] : '';
+      // Only rebuild when the state actually changes (avoids clobbering the
+      // button every 1s poll tick).
+      var key = u ? ('in:' + first) : 'out';
+      if (el.dataset.renderKey === key) return;
+      el.dataset.renderKey = key;
+      if (u) {
+        el.dataset.auth = 'in';
+        // Log Out button with a Profile button beneath it.
+        el.innerHTML =
+          '<button class="topnav-cta" type="button" onclick="hbTopnavLogout()">Log Out</button>' +
+          '<a class="topnav-auth-profile" href="/profile.html" title="Your profile & email preferences">' +
+            '<span aria-hidden="true">⚙</span> Profile</a>';
+      } else {
+        el.dataset.auth = 'out';
+        el.innerHTML = '<a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth(\'login\')">Log In</a>';
+      }
+    }
+    window.hbTopnavLogout = function () {
+      try {
+        if (typeof window.hbLogout === 'function') window.hbLogout();
+        else if (window.firebase && window.firebase.auth) window.firebase.auth().signOut();
+        else if (window._FIREBASE_AUTH && window._FB_AUTH && window._FB_AUTH.signOut) window._FB_AUTH.signOut(window._FIREBASE_AUTH);
+      } catch (e) {}
+      // Force an immediate re-render to the logged-out state.
+      var el = document.getElementById('hbTopnavAuth');
+      if (el) el.dataset.renderKey = '';
+      syncTopnavAuth();
+    };
+    // Attach an auth listener so the topnav flips instantly on login/logout.
+    // NB: waitForFirebase() lives in a separate (earlier) <script> block and
+    // is NOT in scope here — calling it threw a ReferenceError that halted
+    // this block (killing the poll + observer below). Attach inline, guarded;
+    // the 1s poll is the backstop if Firebase isn't ready yet.
+    try {
+      if (window.firebase && window.firebase.auth) {
+        window.firebase.auth().onAuthStateChanged(syncTopnavAuth);
+      } else if (window._FIREBASE_AUTH && window._FB_AUTH && window._FB_AUTH.onAuthStateChanged) {
+        window._FB_AUTH.onAuthStateChanged(window._FIREBASE_AUTH, syncTopnavAuth);
+      }
+    } catch (e) {}
+    syncTopnavAuth();
+
+    // Poll auth state every second as a backstop (hub-bub.js updates the
+    // hidden auth bar asynchronously)…
+    setInterval(function () { syncAuthStrip(); syncTopnavAuth(); }, 1000);
+    // …but also react INSTANTLY: watch the hidden auth bar for changes so
+    // the visible strip flips the moment login/logout lands, instead of
+    // lagging up to a full second (which read as "login didn't work").
+    (function () {
+      const hiddenUser   = document.getElementById('hbAuthUser');
+      const hiddenStatus = document.getElementById('hbAuthStatus');
+      if (window.MutationObserver) {
+        const obs = new MutationObserver(syncAuthStrip);
+        const opts = { attributes: true, attributeFilter: ['style'], childList: true, characterData: true, subtree: true };
+        if (hiddenUser)   obs.observe(hiddenUser, opts);
+        if (hiddenStatus) obs.observe(hiddenStatus, opts);
+      }
+      syncAuthStrip();
+    })();
+
+    // Sidebar topic chips → mirror clicks to hidden hbTopicBar
+    document.getElementById('hbSideTopics').addEventListener('click', function (e) {
+      const chip = e.target.closest('[data-side-topic]');
+      if (!chip) return;
+      const topic = chip.dataset.sideTopic;
+      // Update visual state
+      this.querySelectorAll('.hb-filter-chip').forEach(c => c.classList.toggle('active', c === chip));
+      // Fire matching hidden chip
+      const hidden = document.querySelector('[data-hb-topic="' + topic + '"]');
+      if (hidden) hidden.click();
+    });
+
+
+    // Clear button
+    document.getElementById('hbSideClear').addEventListener('click', function () {
+      // Reset sidebar visuals
+      document.querySelectorAll('#hbSideTopics .hb-filter-chip').forEach((c,i) => c.classList.toggle('active', i===0));
+      document.getElementById('hbSideSearch').value = '';
+      // Fire reset on hidden topic bar
+      const allTopic = document.querySelector('[data-hb-topic="all"]');
+      if (allTopic) allTopic.click();
+    });
+
+    // Search field → filter visible posts by text
+    document.getElementById('hbSideSearch').addEventListener('input', function () {
+      const q = this.value.trim().toLowerCase();
+      document.querySelectorAll('#hbPostsFeed .hb-post').forEach(post => {
+        post.style.display = (!q || post.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+      // Update result count
+      const visible = document.querySelectorAll('#hbPostsFeed .hb-post:not([style*="none"])').length;
+      const rc = document.getElementById('hbResultCount');
+      if (rc) rc.textContent = visible;
+    });
+
+    // Sort select → keep hb-sort-opt buttons in sync (hub-bub.js watches those)
+    // (wired via onchange inline above)
+
+    // Update result count when posts change (MutationObserver)
+    const feed = document.getElementById('hbPostsFeed');
+    if (feed && window.MutationObserver) {
+      new MutationObserver(function () {
+        const posts = feed.querySelectorAll('.hb-post');
+        const rc = document.getElementById('hbResultCount');
+        const rl = document.getElementById('hbResultLabel');
+        if (rc) rc.textContent = posts.length || '—';
+        if (rl) rl.textContent = posts.length === 1 ? 'discussion' : 'discussions';
+      }).observe(feed, { childList: true, subtree: true });
+    }
+  })();
+  </script>
+
+  <!-- ════════ Reply tone-nudge modal ════════
+       Shown when hbAnalyzeTone flags a reply as a possible personal
+       attack. Custom-labeled buttons because native confirm() can't
+       be re-labeled. JS handler: js/hub-bub.js → hbShowReplyToneModal. -->
+  <div id="hbReplyToneModal" style="
+    display:none; position:fixed; inset:0; z-index:10000;
+    background:rgba(0,0,0,0.55); align-items:center; justify-content:center;
+    padding:20px;
+  ">
+    <div style="
+      background:#fff; border-radius:14px; max-width:520px; width:100%;
+      padding:24px 26px 20px; box-shadow:0 12px 40px rgba(0,0,0,0.25);
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      color:#1a2e29;
+    ">
+      <div style="font-family:Georgia,serif;font-size:1.15rem;font-weight:700;color:#21443c;margin-bottom:10px;">
+        This reply may come across as a personal attack
+      </div>
+      <div style="font-size:0.88rem;color:#4a5e57;margin-bottom:6px;font-weight:600;">
+        Suggested alternative:
+      </div>
+      <div id="hbReplyToneSuggested" style="
+        background:#f7f3ea; border-left:3px solid #2f7a5f;
+        padding:12px 14px; border-radius:6px; font-size:0.95rem;
+        line-height:1.5; color:#1a2e29; margin-bottom:18px; font-style:italic;
+      "></div>
+      <div style="font-size:0.93rem;color:#1a2e29;margin-bottom:16px;font-weight:600;">
+        Post as Revised
+      </div>
+      <div style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap;">
+        <button id="hbReplyToneOriginal" style="
+          padding:10px 18px; border:1px solid rgba(33,68,60,0.25);
+          background:#fff; color:#21443c; border-radius:999px;
+          font-weight:600; font-size:0.9rem; cursor:pointer;
+        ">Post Original</button>
+        <button id="hbReplyToneAccept" style="
+          padding:10px 18px; border:none; background:#21443c; color:#fff;
+          border-radius:999px; font-weight:700; font-size:0.9rem; cursor:pointer;
+        ">Accept Revision</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════ PDF / Document Viewer Modal ════════
+       Opens when a user clicks a PDF or .doc attachment link in a post.
+       Uses Google Docs Viewer (free, handles multi-page PDFs, no install).
+       Firebase Storage download URLs are publicly accessible signed URLs,
+       so Google Docs Viewer can fetch them directly.
+  ══════════════════════════════════════════════════ -->
+  <div id="hbDocModal" style="
+    display:none; position:fixed; inset:0; z-index:9999;
+    background:rgba(0,0,0,0.72); align-items:center; justify-content:center;
+  ">
+    <div style="
+      background:#fff; border-radius:14px; overflow:hidden;
+      width:min(92vw,960px); height:min(88vh,780px);
+      display:flex; flex-direction:column; box-shadow:0 24px 64px rgba(0,0,0,0.4);
+    ">
+      <div style="
+        display:flex; align-items:center; justify-content:space-between;
+        padding:14px 20px; border-bottom:1px solid #e5e5e5;
+        background:#f9f9f7;
+      ">
+        <div style="font-weight:700;font-size:0.95rem;color:#21443c;" id="hbDocModalTitle">Document</div>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <a id="hbDocModalDownload" href="#" target="_blank" rel="noopener"
+             style="font-size:0.82rem;color:#21443c;font-weight:600;text-decoration:none;
+                    padding:5px 12px;border:1px solid rgba(33,68,60,0.25);border-radius:999px;">
+            ↓ Open / Download
+          </a>
+          <button onclick="hbCloseDocModal()" style="
+            background:none;border:none;cursor:pointer;font-size:1.4rem;
+            color:#666;line-height:1;padding:2px 6px;
+          " title="Close">✕</button>
+        </div>
+      </div>
+      <!-- iframe is injected here by hbOpenDocModal() -->
+      <div id="hbDocModalBody" style="flex:1;overflow:hidden;background:#f0ece4;"></div>
+    </div>
+  </div>
+  <script>
+    window.hbOpenDocModal = function(url, name) {
+      var modal   = document.getElementById('hbDocModal');
+      var body    = document.getElementById('hbDocModalBody');
+      var title   = document.getElementById('hbDocModalTitle');
+      var dlLink  = document.getElementById('hbDocModalDownload');
+      var isPdf   = /\.pdf(\?|$)/i.test(url) || /application\/pdf/i.test(url);
+      var isImage = /\.(png|jpe?g|gif|webp)(\?|$)/i.test(url);
+
+      title.textContent = name || 'Document';
+      dlLink.href = url;
+
+      body.innerHTML = '';
+      if (isImage) {
+        // Show images directly
+        body.innerHTML =
+          '<div style="height:100%;overflow:auto;display:flex;align-items:center;justify-content:center;padding:16px;">' +
+          '<img src="' + url.replace(/"/g,'%22') + '" style="max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.2);" alt="' + (name||'').replace(/"/g,'') + '">' +
+          '</div>';
+      } else if (isPdf) {
+        // Use Google Docs Viewer for multi-page PDFs — renders all pages, no plugin needed
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>' +
+          '<div style="position:absolute;bottom:10px;right:14px;font-size:0.72rem;color:#aaa;">Powered by Google Docs Viewer</div>';
+      } else {
+        // Word docs / other — also route through Google Docs Viewer
+        var viewerUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(url) + '&embedded=true';
+        body.innerHTML =
+          '<iframe src="' + viewerUrl + '" style="width:100%;height:100%;border:none;" allow="fullscreen" title="' + (name||'Document').replace(/"/g,'') + '">' +
+          '</iframe>';
+      }
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.hbCloseDocModal = function() {
+      var modal = document.getElementById('hbDocModal');
+      var body  = document.getElementById('hbDocModalBody');
+      modal.style.display = 'none';
+      body.innerHTML = ''; // destroy iframe so it stops loading
+      document.body.style.overflow = '';
+    };
+
+    // Close on backdrop click
+    document.getElementById('hbDocModal').addEventListener('click', function(e) {
+      if (e.target === this) hbCloseDocModal();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') hbCloseDocModal();
+    });
+  </script>
+
+
+<!-- "Update your info" pop-up (footer link + /?profile=1). -->
+<script src="/js/lt-profile.js?v=2026-06-09" defer></script>
+<div id="lt-footer"></div>
+<script src="site.js?v=6"></script>
+</body>
+</html>

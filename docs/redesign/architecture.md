@@ -136,7 +136,16 @@ flag.
   live `index.html` in place — the app folders themselves never move.
   `site.js` now computes a ROOT mount prefix from location.pathname
   ('/redesign/' staged, '/' at root) so one file serves nested pages too.
-- Re-shell Hub-Bub with the new nav/footer (still pending)
+- ~~Re-shell Hub-Bub~~ DONE 2026-07-21: `redesign/hub-bub.html` — old topnav +
+  translate/hamburger JS stripped, shared shell injected, page's live
+  Firebase auth widget (#hbTopnavAuth) relocated to a slim strip under the
+  nav (site.js's static Log In pill hidden on this page via
+  `.lt-pill-login{display:none}`); app js/css/data load root-absolute from
+  the live site. site.js: Hub-Bub built:true, LOGIN_HREF = ROOT+'hub-bub.html'.
+  NOTE: the embedded preview pane blanks desktop screenshots of this page
+  when scrolled (mobile fine, DOM/hit-testing fine, all other pages fine) —
+  believed to be a pane compositor quirk; confirm scrolling visually in a
+  real desktop browser on staging.
 - ~~Cloudflare Web Analytics~~ DONE 2026-07-20: site.js injects the beacon on
   every page (http/https only), same token as the live site
 - Firestore approved-orgs merge on local-orgs.html

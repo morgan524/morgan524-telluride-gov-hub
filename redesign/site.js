@@ -33,7 +33,7 @@
     { key: 'connect', label: 'Connect', items: [
       { href: 'events.html',       label: 'Events',        built: true },
       { href: 'local-orgs.html',   label: 'Local Orgs',    built: true },
-      { href: 'hub-bub.html',      label: 'Hub-Bub',       built: false },
+      { href: 'hub-bub.html',      label: 'Hub-Bub',       built: true },    // re-shelled app
       { href: 'housing.html',      label: 'Housing',       built: true }
     ]},
     { key: 'act', label: 'Act', items: [
@@ -43,7 +43,7 @@
     ]}
   ];
   var ABOUT = { href: 'about.html', label: 'About', built: true };
-  var LOGIN_HREF = '/hub-bub.html';   // Firebase auth entry (root-absolute until Hub-Bub rebuilds)
+  var LOGIN_HREF = ROOT + 'hub-bub.html';   // Firebase auth entry (re-shelled Hub-Bub)
 
   // Pages not in the nav inherit a parent's active state.
   var PROXY = {
