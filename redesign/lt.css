@@ -153,11 +153,16 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
   min-width: 210px; background: var(--paper);
   border: 1px solid var(--hairline-strong); border-radius: 9px;
   box-shadow: var(--shadow-drop); padding: 7px;
-  opacity: 0; visibility: hidden; transition: opacity .16s ease, transform .16s ease;
+  opacity: 0; visibility: hidden;
+  /* generous close delay so a wobble or scroll doesn't snap the menu shut */
+  transition: opacity .16s ease .28s, visibility 0s linear .44s, transform .16s ease .28s;
   z-index: 60;
 }
+/* invisible hover bridge across the gap between the button and the menu */
+.lt-drop::before { content: ''; position: absolute; top: -14px; left: -10px; right: -10px; height: 16px; }
 .lt-nav-item:hover .lt-drop, .lt-nav-item:focus-within .lt-drop, .lt-nav-item.open .lt-drop {
   opacity: 1; visibility: visible; transform: translateX(-50%) translateY(3px);
+  transition: opacity .16s ease, visibility 0s, transform .16s ease;   /* open instantly */
 }
 .lt-drop a {
   display: block; padding: 9px 13px; border-radius: 6px;

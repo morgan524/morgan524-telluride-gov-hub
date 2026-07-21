@@ -7,7 +7,7 @@
 <meta name="description" content="Deed-restricted ownership opportunities, income-qualified rentals, and housing-program information for Telluride, Mountain Village, and the surrounding region.">
 <!-- STAGING: remove noindex at cutover -->
 <meta name="robots" content="noindex">
-<link rel="stylesheet" href="lt.css?v=6">
+<link rel="stylesheet" href="lt.css?v=7">
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
   .note { max-width: var(--maxw); margin: 24px auto 0; padding: 0 var(--pad-x); }
@@ -16,15 +16,18 @@
   .sect-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 22px; }
   .sect-head h2 { margin-top: 6px; }
   .listings { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .listing { padding: 20px 22px; }
+  .listing { padding: 0 0 20px; border: 1.5px solid var(--forest); overflow: hidden; }
+  .listing .media { aspect-ratio: 16/7; background: var(--sage2); border-bottom: 1px solid var(--hairline); }
+  .listing .media img, .listing .media iframe { width: 100%; height: 100%; object-fit: cover; border: 0; display: block; }
+  .listing .body { padding: 16px 22px 0; }
   .listing h3 { font: 600 21px/1.25 var(--serif); margin: 8px 0 4px; }
   .listing .addr { font: 500 15px/1.5 var(--sans); color: var(--muted); }
   .listing .specs { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 8px 0 4px; }
   .listing .price { font: 600 16px/1.4 var(--sans); color: var(--forest); }
   .listing .note-line { font: 400 15px/1.5 var(--sans); color: var(--muted2); margin-top: 4px; }
   .listing .cta { margin-top: 10px; }
-  .mgr-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .mgr { padding: 24px; }
+  .mgr-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; }
+  .mgr { padding: 24px; border: 1.5px solid var(--forest); }
   .mgr h3 { font: 600 23px/1.2 var(--serif); margin: 8px 0 8px; }
   .mgr p { font: 400 15px/1.65 var(--sans); color: var(--body2); margin: 0 0 10px; }
   .mgr ul { margin: 0 0 12px; padding-left: 18px; font: 400 15px/1.7 var(--sans); color: var(--body2); }
@@ -75,8 +78,8 @@
     </div>
     <div class="mgr card">
       <span class="tag">Rentals</span>
-      <h3>Town-managed rentals</h3>
-      <p>Rentals are managed by the towns, not SMRHA. The Telluride Housing Department manages the Town of Telluride's rental properties:</p>
+      <h3>Town of Telluride</h3>
+      <p>Rentals are managed by the towns, not SMRHA. The <strong>Telluride Housing Department</strong> manages the Town of Telluride's rental properties:</p>
       <ul>
         <li>Shandoka</li>
         <li>Virginia Placer Tiny Homes</li>
@@ -86,7 +89,15 @@
       </ul>
       <div class="links">
         <a href="https://www.telluride.gov/745/Town-Owned-Rental-Properties" target="_blank" rel="noopener">Telluride town-owned rental housing &#8599;</a>
-        <a href="https://townofmountainvillage.com/community/housing/village-court-apartments/" target="_blank" rel="noopener">Village Court Apartments (Mountain Village) &#8599;</a>
+      </div>
+    </div>
+    <div class="mgr card">
+      <span class="tag">Rentals</span>
+      <h3>Town of Mountain Village</h3>
+      <p>Mountain Village runs its own rental housing. The town owns and operates <strong>Village Court Apartments</strong> &mdash; income-qualified rentals in the heart of Mountain Village &mdash; with its own waitlist and application process.</p>
+      <div class="links">
+        <a href="https://townofmountainvillage.com/community/housing/village-court-apartments/" target="_blank" rel="noopener">Village Court Apartments &#8599;</a>
+        <a href="https://townofmountainvillage.com/community/housing/" target="_blank" rel="noopener">Mountain Village housing programs &#8599;</a>
       </div>
     </div>
   </div>
@@ -115,7 +126,21 @@
     grid.innerHTML = rows.map(function (l) {
       var contact = (l.contact && (l.contact.phone || l.contact.email)) ?
         '<div class="note-line">Contact: ' + LTData.esc([l.contact.phone, l.contact.email].filter(Boolean).join(' · ')) + '</div>' : '';
-      return '<article class="listing card story">' +
+      // Card media: listing photo when the data has one; otherwise a map of
+      // the address (all current SMRHA listings carry lat/lng + address).
+      var media = '';
+      var photo = l.photo || l.img || l.imageUrl || '';
+      if (/^https?:\/\//.test(photo)) {
+        media = '<div class="media"><img src="' + LTData.esc(photo) + '" alt="' + LTData.esc(l.title || 'Listing photo') + '" loading="lazy"></div>';
+      } else if (l.address || (l.lat && l.lng)) {
+        // lat/lng first — geocoding the address string can miss (Element 52
+        // resolved to the wrong neighborhood); coordinates never do.
+        var q = encodeURIComponent((l.lat && l.lng) ? (l.lat + ',' + l.lng) : l.address);
+        media = '<div class="media"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
+          'title="Map of ' + LTData.esc(l.address || 'listing location') + '" ' +
+          'src="https://maps.google.com/maps?q=' + q + '&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe></div>';
+      }
+      return '<article class="listing card story">' + media + '<div class="body">' +
         '<span class="tag rust-tint">' + LTData.esc(TYPE_LABEL[l.type] || l.type || 'Listing') + '</span>' +
         '<h3>' + LTData.esc(String(l.title || '').replace(/^🏠\s*/, '')) + '</h3>' +
         '<div class="addr">' + LTData.esc(l.address || '') + '</div>' +
@@ -123,7 +148,7 @@
         '<div class="price">' + LTData.esc(l.price || '') + '</div>' +
         (l.note ? '<div class="note-line">' + LTData.esc(l.note) + '</div>' : '') + contact +
         '<div class="cta"><a class="btn btn-outline" href="' + LTData.esc(LTData.safeUrl(l.url, 'https://smrha.org/property-listings/')) + '" target="_blank" rel="noopener">View listing &rarr;</a></div>' +
-        '</article>';
+        '</div></article>';
     }).join('');
   }).catch(function (err) { LTData.showError(grid, err); });
 })();
