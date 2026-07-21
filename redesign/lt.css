@@ -161,7 +161,8 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
 }
 .lt-drop a {
   display: block; padding: 9px 13px; border-radius: 6px;
-  font: 400 16px/1.3 var(--serif); text-transform: none; letter-spacing: normal;
+  /* same family as the top-level buttons (Inter), a step lighter */
+  font: 500 15.5px/1.3 var(--sans); text-transform: none; letter-spacing: .01em;
   color: var(--forest); white-space: nowrap;
 }
 .lt-drop a:hover { background: var(--sage); color: var(--forest); }
