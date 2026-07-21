@@ -1,18 +1,22 @@
 {
-  "hash": "e9ee7f7857185f9783a44222e25cafe00d68e34b",
-  "lede": "Tuesday's Town Council meeting is the one to watch this week — a newly seated Council takes up second reading of the Colorado Wildfire Resiliency Code, which would amend the Land Use Code on landscaping, trees, and historic review to meet state wildfire standards, and that vote matters for anyone who owns or rents in town. Also on Tuesday, the Housing Authority tackles a new primary-residency policy for dependents of multiple custodial households, and Thursday's Planning and Zoning Commission digs into three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment at 700 W Pacific.",
+  "hash": "437cb205be6d3c4b50375c41bddc66cba0a5bce9",
+  "lede": "The biggest thing on the government calendar this week is Monday's Town Council meeting, where second reading of the Colorado Wildfire Resiliency Code is up for a vote — amendments to the Land Use Code on landscaping, trees, and historic review that would lock in the town's wildfire standards going forward. The Housing Authority also meets Monday to work through a tricky primary-residency policy question for dependents of multiple custodial parents, and Wednesday's Planning and Zoning session takes up three Town-owned development projects in the Accommodations 2 zone, including the Carhenge Redevelopment at 700 W Pacific. Around it all, Shakespeare in the Park runs through Thursday and the free Oak Street Park summer show series kicks off Thursday night.",
   "notable": [
     {
+      "id": 1,
+      "stake": "Final vote on wildfire code changes to landscaping and historic review standards."
+    },
+    {
       "id": 2,
-      "stake": "Council votes second reading on wildfire code changes to Land Use Code."
+      "stake": "New policy on primary residency for dependents of multiple custodial parents."
     },
     {
-      "id": 3,
-      "stake": "Housing Authority sets new primary-residency policy affecting multi-custodial households."
+      "id": 6,
+      "stake": "Public review of three Town-owned development projects, including Carhenge redevelopment."
     },
     {
-      "id": 7,
-      "stake": "P&Z reviews Town-owned Carhenge and two other major development projects."
+      "id": 11,
+      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — anyone can comment."
     }
   ]
 }

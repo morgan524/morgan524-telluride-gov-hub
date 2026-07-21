@@ -396,29 +396,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/51687/thunder_tix_600x375px.800x533.webp"
   },
   {
-    "title": "The Saint Cecilia",
-    "link": "https://www.telluride.com/event/the-saint-cecilia/",
-    "description": "From the outside, The Saint Cecilia is a collection of emotional images, love, art, power, passion, lust and verve. …",
-    "pubDate": "2026-07-17",
-    "endDate": "2026-07-19",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/60544/the_saint_cecelia.800x533.webp"
-  },
-  {
-    "title": "Young and Dead",
-    "link": "https://www.telluride.com/event/young-and-dead/",
-    "description": "Young and Dead is an exciting culmination of musicians in their early 20's from Boulder, Colorado. With a unique …",
-    "pubDate": "2026-07-19",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62657/screenshot_2026-06-01_at_3_22_58_pm.800x533.webp"
-  },
-  {
     "title": "Telluride Baseball Festival",
     "link": "https://www.telluride.com/event/telluride-baseball-festival/",
     "description": "The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …",
@@ -868,5 +845,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp"
+  },
+  {
+    "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
+    "link": "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
+    "description": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
+    "pubDate": "2026-09-19",
+    "endDate": "2026-09-21",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   }
 ]

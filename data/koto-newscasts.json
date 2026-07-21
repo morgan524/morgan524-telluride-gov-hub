@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-20-26",
+    "source": "KOTO Community Radio",
+    "date": "July 21, 2026",
+    "newsTopic": "health",
+    "copy": "Palm Theatre Floods in Major Rainstorm; Coming Up Next, Telluride; Forest Health with Jason Sibold",
+    "href": "https://koto.org/news/newscast-7-20-26/"
+  },
+  {
     "title": "Newscast 7-17-26",
     "source": "KOTO Community Radio",
     "date": "July 18, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "Gold Mountain Fire Evacuees Return Home; Mountain Village Looks for New Town Manager; AVID Dance Brings a Universal Language",
     "href": "https://koto.org/news/newscast-7-8-26/"
-  },
-  {
-    "title": "Newscast 7-6-26",
-    "source": "KOTO Community Radio",
-    "date": "July 7, 2026",
-    "newsTopic": "public-safety",
-    "copy": "A Gold Mountain Fire Update; Smoke Fills the San Juans",
-    "href": "https://koto.org/news/newscast-7-6-26/"
   }
 ]

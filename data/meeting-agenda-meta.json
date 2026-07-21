@@ -141,7 +141,7 @@
   },
   "county|2026-07-22|Board of County Commissioners Special Meeting": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1919",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1924",
     "zoomUrl": "https://us02web.zoom.us/meeting/register/o_8OplehSy6kph_vj5KITw",
     "meetingId": "836 0680 9358",
     "passcode": "535472",
@@ -342,6 +342,10 @@
     "sv": 4
   },
   "county|2026-08-19|Board of County Commissioners Meeting": {
+    "sv": 4
+  },
+  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8144",
     "sv": 4
   }
 }

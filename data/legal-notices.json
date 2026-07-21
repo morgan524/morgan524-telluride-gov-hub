@@ -101,47 +101,6 @@
     "smcBidID": "187"
   },
   {
-    "title": "Name Change Petition -- Kendal Dawn Oakleaf Smith (Case 26C11)",
-    "entity": "San Miguel County Court",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County Court published notice of a petition filed April 28, 2026 to change the name of Kendal Dawn Oakleaf Smith to Kendal Dawn Oakleaf Smith. The petition was filed with the San Miguel County Court.",
-    "deadline": "",
-    "expires": "2026-07-20",
-    "dates": "5/21",
-    "papers": [
-      "ttimes_0521"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    "address": "San Miguel County",
-    "noticeKey": "name-change-26c11",
-    "caseNumber": "26C11"
-  },
-  {
-    "title": "Semi-Annual Treasurer Report -- July-December 2025",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County Treasurer's Semi-Annual Report for July-December 2025 is prepared and available for viewing at www.sanmiguelcountyco.gov/661/Agendas-and-Minutes under the Wednesday, May 6, 2026/Notice.",
-    "deadline": "",
-    "expires": "2026-07-20",
-    "dates": "5/21",
-    "papers": [
-      "ttimes_0521"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d3659378-b06b-4e27-9b53-ec57d83a4b86.html",
-    "address": "San Miguel County",
-    "noticeKey": "treasurer-report-2025-jul-dec"
-  },
-  {
     "title": "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
     "entity": "San Miguel County Public Trustee",
     "entityClass": "ent-county",
