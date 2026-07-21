@@ -11,17 +11,27 @@
 <link rel="icon" href="uploads/lt-logo.png">
 <style>
   .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
-  .chips + .chips { padding-top: 12px; }
   .chips .chips-label { font: 700 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-right: 2px; }
-  /* Featured card: compact single-row banner aligned with the list column */
-  .feat-wrap { max-width: 940px; margin: 0 auto; padding: 26px var(--pad-x) 0; }
+  /* Two-column shell: event list + right filter sidebar */
+  .ev-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 264px; gap: 40px; align-items: start; }
+  .ev-side { position: sticky; top: 96px; }
+  .side-filter { padding: 20px 22px; }
+  .side-filter h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 10px; }
+  .tbtn { display: flex; justify-content: space-between; align-items: center; width: 100%; text-align: left; font: 600 15px/1.2 var(--sans); color: var(--forest); background: none; border: 0; border-top: 1px solid var(--hairline); padding: 10px 2px; cursor: pointer; }
+  .tbtn:first-of-type { border-top: 0; }
+  .tbtn .n { font: 600 12px/1 var(--sans); color: var(--muted2); background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px 8px; }
+  .tbtn.active { color: var(--rust); }
+  .tbtn.active .n { background: var(--forest); border-color: var(--forest); color: #fff; }
+  /* Featured card: compact banner at the top of the list column */
+  .feat-wrap { padding: 14px 0 0; }
   .feat { display: grid; grid-template-columns: 220px 1fr; gap: 22px; align-items: center; background: var(--forest); border-radius: 12px; overflow: hidden; }
   .feat .img-frame { border-radius: 0; height: 100%; min-height: 150px; }
   .feat .body { padding: 18px 22px 18px 0; color: rgba(255,255,255,.9); }
   .feat .k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
   .feat h2 { font: 600 24px/1.15 var(--serif); color: #fff; margin: 7px 0 5px; }
   .feat .meta-l { font: 500 14px/1.5 var(--sans); color: rgba(255,255,255,.75); margin-bottom: 10px; }
-  .ev-wrap { max-width: 940px; margin: 0 auto; padding: 12px var(--pad-x) 20px; }
+  .feat .dek { font: 400 14.5px/1.55 var(--sans); color: rgba(255,255,255,.85); margin: 0 0 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .ev-wrap { min-width: 0; }
   .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
   .ev { display: grid; grid-template-columns: 128px 1fr auto; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
   .ev .img-frame { width: 128px; height: 128px; border-radius: 8px; }
@@ -32,6 +42,13 @@
   .ev .badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
   .load-more { margin: 26px 0; text-align: center; }
   @media (max-width: 900px) {
+    .ev-layout { grid-template-columns: 1fr; gap: 0; }
+    /* sidebar becomes a chip row above the list on small screens */
+    .ev-side { position: static; order: -1; }
+    .side-filter { padding: 14px 16px; }
+    .side-filter .types { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tbtn { width: auto; border: 1px solid var(--hairline); border-radius: 999px; padding: 8px 14px; gap: 8px; }
+    .tbtn:first-of-type { border-top: 1px solid var(--hairline); }
     .feat { grid-template-columns: 1fr; }
     .feat .img-frame { min-height: 170px; }
     .feat .body { padding: 18px 20px; }
@@ -56,11 +73,19 @@
 </header>
 
 <div class="chips" id="town-chips"><span class="chips-label">Where</span><span class="chip active" data-town="">Everywhere</span></div>
-<div class="chips" id="type-chips"><span class="chips-label">What</span><span class="chip active" data-type="">All types</span></div>
 
-<div class="feat-wrap" id="feat-slot"></div>
-
-<main class="ev-wrap" id="ev-list"><p class="meta" style="padding:18px 0">Loading events&hellip;</p></main>
+<div class="ev-layout">
+  <div>
+    <div class="feat-wrap" id="feat-slot"></div>
+    <main class="ev-wrap" id="ev-list"><p class="meta" style="padding:18px 0">Loading events&hellip;</p></main>
+  </div>
+  <aside class="ev-side">
+    <div class="side-filter card">
+      <h3>What kind of event</h3>
+      <div class="types" id="type-chips"></div>
+    </div>
+  </aside>
+</div>
 
 <div id="lt-footer"></div>
 <script src="site.js?v=6"></script>
@@ -102,6 +127,7 @@
       ? '<article class="feat story"><a href="' + esc(safe(feat.href)) + '" target="_blank" rel="noopener"><div class="img-frame"><img src="' + esc(feat.img) + '" alt=""></div></a>' +
         '<div class="body"><div class="k">Featured today</div><h2>' + esc(feat.title) + '</h2>' +
         '<div class="meta-l">' + esc(metaLine(feat)) + '</div>' +
+        (feat.desc ? '<p class="dek">' + esc(feat.desc) + '</p>' : '') +
         '<a class="btn btn-gold" href="' + esc(safe(feat.href)) + '" target="_blank" rel="noopener">Details &rarr;</a></div></article>'
       : '';
 
@@ -148,16 +174,18 @@
       c.classList.add('active'); townFilter = c.dataset.town || ''; shownDays = DAYS_PAGE; render();
     });
 
-    // type chips (What)
-    var typeChips = document.getElementById('type-chips'); var seenTypes = {};
-    events.forEach(function (e) { if (e.type) seenTypes[e.type] = 1; });
-    TYPE_ORDER.filter(function (t) { return seenTypes[t]; }).forEach(function (t) {
-      var c = document.createElement('span'); c.className = 'chip'; c.dataset.type = t; c.textContent = t;
-      typeChips.appendChild(c);
-    });
+    // type filter sidebar (What kind of event) — with per-type counts
+    var typeChips = document.getElementById('type-chips'); var typeCounts = {};
+    events.forEach(function (e) { if (e.type) typeCounts[e.type] = (typeCounts[e.type] || 0) + 1; });
+    var typeRows = [['', 'All types', events.length]].concat(
+      TYPE_ORDER.filter(function (t) { return typeCounts[t]; }).map(function (t) { return [t, t, typeCounts[t]]; }));
+    typeChips.innerHTML = typeRows.map(function (r, i) {
+      return '<button type="button" class="tbtn' + (i === 0 ? ' active' : '') + '" data-type="' + esc(r[0]) + '">' +
+        '<span>' + esc(r[1]) + '</span><span class="n">' + r[2] + '</span></button>';
+    }).join('');
     typeChips.addEventListener('click', function (e) {
-      var c = e.target.closest('.chip'); if (!c) return;
-      typeChips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+      var c = e.target.closest('.tbtn'); if (!c) return;
+      typeChips.querySelectorAll('.tbtn').forEach(function (x) { x.classList.remove('active'); });
       c.classList.add('active'); typeFilter = c.dataset.type || ''; shownDays = DAYS_PAGE; render();
     });
     render();
