@@ -16,7 +16,8 @@
   .hero2 { position: relative; overflow: hidden; background: #fdf4ee; }
   /* Lone Cone at sunset anchors the left (alpha fade baked into the webp);
      the Telluride road photo keeps the right; copy sits between the fades. */
-  .hero2 .ph-left { position: absolute; left: 0; top: 0; width: 30%; height: 100%; object-fit: cover; object-position: left center; }
+  /* right-anchored so the baked right-edge fade survives the cover crop */
+  .hero2 .ph-left { position: absolute; left: 0; top: 0; width: 30%; height: 100%; object-fit: cover; object-position: right center; }
   .hero2 .ph { position: absolute; right: 0; top: 0; width: 46%; height: 100%; object-fit: cover; object-position: center; }
   .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(253,244,238,0) 22%, #fdf4ee 32%, #fdf4ee 58%, rgba(253,244,238,.5) 72%, rgba(253,244,238,0) 88%); }
   .hero2-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 76px var(--pad-x) 230px; }
