@@ -14,9 +14,13 @@
   /* Hero — text left, photo bleeding in from the right (live-homepage layout),
      with the three ways-in cards overlapping the bottom edge. */
   .hero2 { position: relative; overflow: hidden; background: #fdf4ee; }
-  .hero2 .ph { position: absolute; right: 0; top: 0; width: 72%; height: 100%; object-fit: cover; object-position: center; }
-  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, #fdf4ee 30%, rgba(253,244,238,.55) 52%, rgba(253,244,238,0) 74%); }
+  /* Lone Cone at sunset anchors the left (alpha fade baked into the webp);
+     the Telluride road photo keeps the right; copy sits between the fades. */
+  .hero2 .ph-left { position: absolute; left: 0; top: 0; width: 30%; height: 100%; object-fit: cover; object-position: left center; }
+  .hero2 .ph { position: absolute; right: 0; top: 0; width: 46%; height: 100%; object-fit: cover; object-position: center; }
+  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(253,244,238,0) 22%, #fdf4ee 32%, #fdf4ee 58%, rgba(253,244,238,.5) 72%, rgba(253,244,238,0) 88%); }
   .hero2-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 76px var(--pad-x) 230px; }
+  .hero2-copy { margin-left: 30%; max-width: 560px; }
   .hero2 .kicker { font: 700 15px/1.4 var(--sans); color: var(--gold); letter-spacing: .01em; }
   .hero2 h1 { font: 600 64px/1.04 var(--serif); letter-spacing: -.02em; color: var(--forest); max-width: 480px; margin: 16px 0 0; }
   .hero2 .sub { font: 400 17px/1.7 var(--sans); color: var(--body2); max-width: 490px; margin: 22px 0 0; }
@@ -82,8 +86,10 @@
     .photo-col { min-height: 320px; }
     .livable-panel { padding: 26px 22px; }
     .hero2 .ph { width: 100%; opacity: .18; }
+    .hero2 .ph-left { display: none; }
     .hero2 .fade { display: none; }
     .hero2-inner { padding: 48px var(--pad-x) 60px; }
+    .hero2-copy { margin-left: 0; }
     .hero2 h1 { font-size: 40px; }
     .overlap { margin-top: -20px; }
   }
@@ -93,12 +99,15 @@
 <div id="lt-header"></div>
 
 <section class="hero2">
+  <img class="ph-left" src="/images/lonecone-hero.webp" alt="Lone Cone at sunset above golden aspen forests">
   <img class="ph" src="/img/telluride-125.jpeg" alt="The road into Telluride under Mt Wilson, aspens turning">
   <div class="fade"></div>
   <div class="hero2-inner">
-    <div class="kicker">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole tri-county.</div>
-    <h1>Your Community. All in One Place.</h1>
-    <p class="sub">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
+    <div class="hero2-copy">
+      <div class="kicker">Inform. Connect. Engage. Together. &mdash; a civic information hub for the whole tri-county.</div>
+      <h1>Your Community. All in One Place.</h1>
+      <p class="sub">Livable Telluride brings together meetings, events, news, resources, and local voices to keep our mountain communities informed, connected, and empowered.</p>
+    </div>
   </div>
 </section>
 
