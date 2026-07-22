@@ -46,3 +46,31 @@ test('updateBaseline enrolls a brand-new source', () => {
   sh.updateBaseline(baseline, { New: new Array(12).fill({}) }, '2026-06-22');
   assert.equal(baseline.sources.New.dailyMax['2026-06-22'], 12);
 });
+
+test('detectStaleData: flags a *_CACHED_DATA list with 0 upcoming, not one with upcoming', () => {
+  const localDate = v => { const d = new Date(v); return isNaN(d) ? null : d; };
+  const today = '2026-07-16';
+  const captured = {
+    // all past, no future summary → should flag High (the MV/Med/School/Ophir failure)
+    MV_CACHED_DATA: [{ date: 'June 17, 2026' }, { date: 'May 21, 2026' }],
+    // has a future entry → must NOT flag (the Airport case)
+    AIRPORT_CACHED_DATA: [{ date: 'May 1, 2026' }, { date: 'November 19, 2026' }],
+    // all past in the array, BUT a future summary exists → renders upcoming via
+    // MANUAL_SUMMARIES (getCountyCachedMeetings), so must NOT flag.
+    COUNTY_CACHED_DATA: [{ date: 'July 9, 2026' }],
+    MANUAL_SUMMARIES: { 'county|2026-07-22|BOCC regular meeting': 'summary text' },
+    // fresh cache date so signal-1 stays quiet; isolates signal-3
+    MV_CACHE_DATE: '2026-07-16',
+    AIRPORT_CACHE_DATE: '2026-07-16',
+    COUNTY_CACHE_DATE: '2026-07-16',
+  };
+  const findings = sh.detectStaleData(captured, localDate, today);
+  const empty = findings.filter(f => /0 upcoming meetings/.test(f.message));
+  assert.equal(empty.length, 1, 'exactly one empty-upcoming finding');
+  assert.equal(empty[0].name, 'MV_CACHED_DATA');
+  assert.equal(empty[0].severity, 'High');
+  assert.ok(!empty.some(f => f.name === 'AIRPORT_CACHED_DATA'),
+    'a list with an upcoming meeting must not be flagged');
+  assert.ok(!empty.some(f => f.name === 'COUNTY_CACHED_DATA'),
+    'a list that renders upcoming via a future summary must not be flagged');
+});

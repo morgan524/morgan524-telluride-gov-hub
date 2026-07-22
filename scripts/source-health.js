@@ -133,6 +133,49 @@ function detectStaleData(captured, localDate, today) {
     }
   }
 
+  // 1b) Empty-upcoming: a *_CACHED_DATA meeting list with NO entry dated today
+  //     or later AND no future summary for that source. This is the precise,
+  //     resident-visible failure — the section shows nothing upcoming — and it
+  //     is what actually bit Mountain Village (the July 16 agenda was scraped
+  //     every run but discarded because no stub existed to attach it to).
+  //     Complements the cache-date-age check above, which false-positives on
+  //     sources like the Airport (old snapshot but real far-future meetings)
+  //     and so tends to get tuned out.
+  //
+  //     The summary check matters: some getters (getCountyCachedMeetings,
+  //     getOurayMeetings) render upcoming meetings straight from MANUAL_SUMMARIES
+  //     when their cached list lags, so a stale array alone does NOT mean the
+  //     section is empty. Credit any source token with a future summary.
+  const futureSummaryTokens = new Set();
+  {
+    const ms2 = captured.MANUAL_SUMMARIES;
+    if (ms2 && typeof ms2 === 'object' && !Array.isArray(ms2)) {
+      for (const key of Object.keys(ms2)) {
+        const seg = key.split('|');
+        if (seg.length < 2) continue;
+        const d = calDay(localDate, seg[1]);
+        if (d && d >= today) futureSummaryTokens.add(seg[0].toLowerCase());
+      }
+    }
+  }
+  for (const [name, val] of Object.entries(captured)) {
+    if (!/_CACHED_DATA$/.test(name) || !Array.isArray(val) || val.length === 0) continue;
+    const days = val
+      .map(row => calDay(localDate, row && (row.date || row.eventDate)))
+      .filter(Boolean);
+    if (days.length === 0) continue;                 // no parseable dates → not a dated meeting list
+    if (days.some(d => d >= today)) continue;        // has an upcoming row → fine
+    const token = name.replace(/_CACHED_DATA$/, '').toLowerCase();
+    if (futureSummaryTokens.has(token)) continue;    // renders upcoming via MANUAL_SUMMARIES
+    const newest = days.sort().slice(-1)[0];
+    const age = Math.round((todayMs - Date.parse(newest + 'T00:00:00Z')) / 86400000);
+    out.push({ name, severity: 'High',
+      message: `${name}: 0 upcoming meetings — newest entry is ${newest} (${age}d ago). ` +
+        `The list has run dry: whatever feeds it (its rebuild in content-refresh.js, or a hand-added ` +
+        `schedule) has stopped adding meetings, so residents see an empty section even though the body ` +
+        `still meets. Fix its sync/rebuild or add the upcoming meeting dates.` });
+  }
+
   // 2) Orphan future summaries: a summary dated >= today with no cached list row
   //    on that date. Source-agnostic (coarse) to stay low-noise; a precise
   //    per-body check belongs to the list+summary unification (overhaul Phase 2).

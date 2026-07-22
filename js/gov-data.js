@@ -586,7 +586,46 @@ const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district
 const NORWOOD_CACHE_DATE = '2026-07-22';
 
 const NORWOOD_CACHED_DATA = [
-
+  {
+    date: "August 12, 2026",
+    time: null,
+    title: "Board of Trustees Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "bot",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    date: "August 17, 2026",
+    time: null,
+    title: "Planning and Zoning Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "pz",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    date: "September 9, 2026",
+    time: null,
+    title: "Board of Trustees Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "bot",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    date: "September 21, 2026",
+    time: null,
+    title: "Planning and Zoning Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "pz",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  }
 ];
 
 const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';

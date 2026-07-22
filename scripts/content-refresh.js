@@ -4786,36 +4786,95 @@ async function fetchPage(url, label) {
 
 // Mountain Village — PDFs at townofmountainvillage.com/site/assets/files/<id>/
 // Filename pattern: <month>_<dd>-_<yyyy>_town_council_meeting_agenda(?:-N)?.pdf
+// Rebuilds MV_CACHED_DATA from the live Town-Council + Design-Review-Board
+// pages every run (SMART-style true rebuild, NOT a URL patch). The old
+// patch-only approach could attach agenda URLs to entries that already
+// existed, but never ADD a meeting — so once the hand-curated list ran past
+// its newest date, MV silently showed zero upcoming meetings even while the
+// town kept posting agendas (the July 16 2026 meeting was being scraped and
+// then discarded for exactly this reason). Both MV pages expose upcoming
+// meetings as `content-cards` carrying the date + time range even before an
+// agenda posts, so we mirror the page and match each card to its agenda/
+// packet PDF by date. Returns null (preserve existing) on any fetch/parse
+// anomaly so a site outage or markup change never blanks the section.
 async function syncMVAgendas() {
-  console.log('\n⛰  Syncing Mountain Village agenda PDFs...');
-  const PAGE = 'https://townofmountainvillage.com/government/town-council/town-council/';
-  const html = await fetchPage(PAGE, 'MV town-council page');
-  if (!html) return null;
+  console.log('\n⛰  Rebuilding Mountain Village meeting stubs...');
+  const ORIGIN = 'https://townofmountainvillage.com/';
+  const LOCATION = 'Town Hall, 455 Mountain Village Blvd, Suite A';
+  const PAGES = [
+    { url: ORIGIN + 'government/town-council/town-council/', board: 'tc',  title: 'Town Council Meeting' },
+    { url: ORIGIN + 'business/planning/design-review-board/', board: 'drb', title: 'Design Review Board' }
+  ];
+  const now = new Date();
+  const lookback = new Date(now.getTime() - 14 * 86400000); // keep a just-passed meeting briefly
+  const stubs = [];
 
-  // Match every site/assets/files/<id>/<slug>.pdf that looks like an agenda
-  const pdfRe = /site\/assets\/files\/(\d+)\/([a-z0-9_-]+)\.pdf/gi;
-  const map = {};
-  let m;
-  while ((m = pdfRe.exec(html)) !== null) {
-    const slug = m[2].toLowerCase();
-    if (!/agenda/.test(slug)) continue;
-    // Match filenames like  "may_21-_2026_town_council_meeting_agenda(-1)"
-    // or "01_january_28-_2026_special_town_council_meeting_agenda".
-    const sm = /(?:^|_)([a-z]+)_(\d{1,2})[-_]+(\d{4})_/.exec(slug);
-    if (!sm) continue;
-    const mIdx = MONTH_LOOKUP[sm[1]];
-    if (mIdx === undefined) continue;
-    const key = dateKeyFromYMD(sm[3], mIdx, sm[2]);
-    const url = 'https://townofmountainvillage.com/' + m[0];
-    // Prefer agenda over packet; prefer most-recent (highest file id) variant
-    if (!map[key] || parseInt(m[1], 10) > parseInt(map[key].id, 10)) {
-      map[key] = { url, id: m[1], slug };
+  for (const pg of PAGES) {
+    const html = await fetchPage(pg.url, `MV ${pg.board} page`);
+    // Correlated-host failure: if either page can't be fetched, bail entirely
+    // rather than half-rebuild and wipe the other board's meetings.
+    if (!html) { console.warn(`  MV ${pg.board}: fetch failed — preserving existing MV_CACHED_DATA`); return null; }
+
+    // 1. Agenda / packet PDFs on the page, keyed by "Month D, YYYY" from the
+    //    filename slug. Prefer the highest file-id variant of each kind.
+    const docs = {};
+    const pdfRe = /site\/assets\/files\/(\d+)\/([a-z0-9_-]+)\.pdf/gi;
+    let pm;
+    while ((pm = pdfRe.exec(html)) !== null) {
+      const id = parseInt(pm[1], 10);
+      const slug = pm[2].toLowerCase();
+      const kind = /packet/.test(slug) ? 'packet' : /agenda/.test(slug) ? 'agenda' : null;
+      if (!kind) continue;
+      // e.g. "may_21-_2026_town_council_meeting_agenda(-1)" or
+      // "01_january_28-_2026_special_town_council_meeting_agenda".
+      const sm = /(?:^|_)([a-z]+)_(\d{1,2})[-_]+(\d{4})_/.exec(slug);
+      if (!sm) continue;
+      const mIdx = MONTH_LOOKUP[sm[1]];
+      if (mIdx === undefined) continue;
+      const key = dateKeyFromYMD(sm[3], mIdx, sm[2]);
+      docs[key] = docs[key] || {};
+      if (!docs[key][kind] || id > docs[key][kind].id) docs[key][kind] = { url: ORIGIN + pm[0], id };
     }
+
+    // 2. Meeting cards: date + time range live in the `content-cards__pre-heading`
+    //    block, present even before an agenda posts. e.g.
+    //    ...pre-heading>July 16th 2026<br>2:00 pm - 7:00 pm<h3...><a href=/...>Town Council Meeting...
+    const cardRe = /content-cards__pre-heading["']?\s*>\s*([A-Za-z]+\s+\d{1,2}(?:st|nd|rd|th)?\s+\d{4})\s*<br\s*\/?>\s*([^<]*?)\s*<h3[^>]*>\s*<a\s+href=["']?([^\s>"']+)["']?\s*>\s*([^<]*)/gi;
+    let cm, cardCount = 0;
+    while ((cm = cardRe.exec(html)) !== null) {
+      cardCount++;
+      const dm = /([A-Za-z]+)\s+(\d{1,2})(?:st|nd|rd|th)?\s+(\d{4})/.exec(cm[1]);
+      if (!dm) continue;
+      const mIdx = MONTH_LOOKUP[dm[1].toLowerCase()];
+      if (mIdx === undefined) continue;
+      const dateKey = dateKeyFromYMD(dm[3], mIdx, dm[2]);
+      const mDate = new Date(dateKey);
+      if (isNaN(mDate) || mDate < lookback) continue;
+      const time = (cm[2] || '').replace(/\b(am|pm)\b/gi, s => s.toUpperCase()).replace(/\s+/g, ' ').trim();
+      const special = /special/i.test(cm[4] || '') || /special/i.test(cm[3] || '');
+      const d = docs[dateKey] || {};
+      const stub = {
+        date: dateKey,
+        time: time || null,
+        title: pg.title,
+        board: pg.board,
+        agendaUrl: d.agenda ? d.agenda.url : null,
+        packetUrl: d.packet ? d.packet.url : null,
+        special,
+        location: LOCATION
+      };
+      if (!d.agenda) stub.note = 'Agenda typically posted the Friday before.';
+      stubs.push(stub);
+    }
+    console.log(`  MV ${pg.board}: ${cardCount} card(s), ${Object.keys(docs).length} date(s) with docs`);
   }
-  const result = {};
-  Object.keys(map).forEach(k => { result[k] = map[k].url; });
-  console.log(`  Found ${Object.keys(result).length} MV agenda PDF(s)`);
-  return result;
+
+  // Safety floor: never publish an empty rebuild (would blank the section).
+  if (!stubs.length) { console.warn('  MV: 0 stubs parsed — preserving existing MV_CACHED_DATA'); return null; }
+
+  stubs.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`  MV: rebuilt ${stubs.length} stub(s) (${stubs.filter(s => s.agendaUrl).length} with agenda)`);
+  return stubs;
 }
 
 // Shared parser for the Traction Rec CMS used by both Fire and Hospital
@@ -4876,6 +4935,132 @@ async function syncMedAgendas() {
   const map = parseTractionRecAgendas(html, 'www.tellmed.org');
   console.log(`  Found ${Object.keys(map).length} Hospital District agenda PDF(s)`);
   return map;
+}
+
+// ── Generate + reconcile: shared meeting-list rebuild ─────────────────────────
+// Merges real scraped meetings (authoritative dates + agenda URLs) with a few
+// FORWARD cadence placeholders, so a board's section shows an upcoming date even
+// in the gap before its next agenda posts. This is the fix for the static-list
+// failure class: a patch-only sync could attach a URL to an existing stub but
+// never ADD a meeting, so once a hand-curated list ran past its newest date the
+// section silently went empty. Rules come from lib/schedule.js and were verified
+// from each board's own meeting history — never guessed. Real scraped dates
+// always win on a collision, and we project only a couple ahead, so a cadence
+// that ever drifts self-corrects the moment the next real agenda is scraped (and
+// the source-health "0 upcoming" alarm backstops a total miss).
+//
+//   scraped: [{ date:'Month D, YYYY', agendaUrl?, packetUrl?, title?, board?, time?, special? }]
+//   cadence: { nth, weekday } | null   (null ⇒ scraped-only, no placeholder)
+//   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
+// Returns a sorted stub array, or null when there's nothing to publish (so the
+// caller preserves the existing array rather than blanking the section).
+const { nextOccurrences: _nextOccurrences } = require('./lib/schedule.js');
+function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
+  const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
+  const lookback = new Date(now.getTime() - lookbackDays * 86400000);
+  const byDate = new Map();
+  for (const s of (scraped || [])) {
+    const d = new Date(s.date);
+    if (isNaN(d) || d < lookback) continue;
+    const stub = {
+      date: s.date,
+      time: s.time || opts.time || null,
+      title: s.title || opts.title,
+      agendaUrl: s.agendaUrl || null,
+      packetUrl: s.packetUrl || null,
+      special: !!s.special,
+      location: s.location || opts.location
+    };
+    const bd = s.board || opts.board;
+    if (bd) stub.board = bd;
+    byDate.set(s.date + '|' + (bd || ''), stub);
+  }
+  if (cadence) {
+    const placeholders = opts.placeholders == null ? 2 : opts.placeholders;
+    for (const occ of _nextOccurrences(cadence, now, placeholders, opts.skipMonths || [])) {
+      const key = occ.date + '|' + (opts.board || '');
+      if (byDate.has(key)) continue;
+      const stub = {
+        date: occ.date, time: opts.time || null, title: opts.title,
+        agendaUrl: null, packetUrl: null, special: false, location: opts.location
+      };
+      if (opts.board) stub.board = opts.board;
+      if (opts.note) stub.note = opts.note;
+      byDate.set(key, stub);
+    }
+  }
+  const out = [...byDate.values()].sort((a, b) => new Date(a.date) - new Date(b.date));
+  return out.length ? out : null;
+}
+
+// Rebuild MED_CACHED_DATA: real Traction-Rec agendas + 4th-Thursday regulars.
+// (Verified cadence: the regular board meeting is the 4th Thursday every month.)
+async function rebuildMedMeetings() {
+  console.log('\n🏥 Rebuilding Hospital District meetings...');
+  const map = await syncMedAgendas();               // { 'Month D, YYYY': url } or null
+  if (map === null) { console.warn('  Med: fetch failed — preserving existing MED_CACHED_DATA'); return null; }
+  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  return assembleBoardStubs(scraped, { nth: 4, weekday: 4 }, {
+    title: 'Regular Board Meeting',
+    time: '8:30 AM - 11:30 AM',
+    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted before the meeting.'
+  });
+}
+
+// Rebuild SCHOOL_CACHED_DATA: scraped-only (no weekday placeholder). The Board
+// of Education's meeting dates are set by the academic calendar and land on the
+// 2nd / 3rd / last Tuesday depending on the month — there is NO reliable weekday
+// cadence to project, so we never fabricate a date. Instead we rebuild straight
+// from the posted agendas (syncSchoolAgendas already parses date + type from each
+// PDF link), so School self-heals when the fall agendas post. During the summer
+// recess gap it shows nothing upcoming — which is correct, and the source-health
+// alarm covers it.
+async function rebuildSchoolMeetings() {
+  console.log('\n🏫 Rebuilding Board of Education meetings...');
+  const items = await syncSchoolAgendas();          // [{ date, type, url }] or null
+  if (items === null) { console.warn('  School: fetch failed — preserving existing SCHOOL_CACHED_DATA'); return null; }
+  const TITLES = {
+    monthly: 'Telluride Board of Education Monthly Meeting',
+    work:    'Telluride Board of Education Work Session',
+    special: 'Telluride Board of Education Special Meeting'
+  };
+  const scraped = items.map(it => ({
+    date: it.date,
+    agendaUrl: it.url,
+    title: TITLES[it.type] || 'Telluride Board of Education Meeting'
+  }));
+  return assembleBoardStubs(scraped, null, {
+    title: 'Telluride Board of Education Meeting',
+    location: 'Bridal Veil District Conference Room / Zoom',
+    placeholders: 0
+  });
+}
+
+// Ophir: project the General Assembly's 3rd-Tuesday meetings forward (verified
+// cadence). Existing recent entries are preserved; P&Z is as-needed (no reliable
+// cadence, and its agenda filenames carry no day) so it gets no placeholder.
+// Agenda URLs for the new GA stubs are attached by the existing Ophir agenda
+// sync step (patchAgendaUrls, Task 0c) which runs after this.
+function rebuildOphirMeetings(existing, now = new Date()) {
+  return assembleBoardStubs(existing, { nth: 3, weekday: 2 }, {
+    title: 'General Assembly Meeting', board: 'ga',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted closer to the date.'
+  }, now);
+}
+
+// Ridgway: project the Town Council's 2nd-Wednesday regular meetings forward
+// ("second Wednesday of the month", per the town's own page). Planning
+// Commission is as-needed (no placeholder). Agenda URLs resolve from
+// RIDGWAY_AGENDA_MAP by date at render time, so placeholders need none here.
+function rebuildRidgwayMeetings(existing, now = new Date()) {
+  return assembleBoardStubs(existing, { nth: 2, weekday: 3 }, {
+    title: 'Ridgway Town Council Regular Meeting', board: 'council', time: '6:00 PM',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda posted the week before.'
+  }, now);
 }
 
 // SMART (Telluride regional transit) — its colorado.gov board-meetings page
@@ -6292,9 +6477,7 @@ async function main() {
   // PDF URLs. Runs BEFORE summary generation so any agenda detected this
   // run can be summarized in the same run.
   for (const [arrName, syncFn] of [
-    ['MV_CACHED_DATA',        syncMVAgendas],
     ['FIRE_CACHED_DATA',      syncFireAgendas],
-    ['MED_CACHED_DATA',       syncMedAgendas],
     ['COUNTY_CACHED_DATA',    syncCountyAgendas],
     ['TELLURIDE_CACHED_DATA', syncTellurideAgendas]
   ]) {
@@ -6322,6 +6505,90 @@ async function main() {
       if (n > 0) { govDataSrc = src; govDataChanged = true; console.log(`  TELLURIDE_CACHED_DATA: patched ${n} packetUrl field(s)`); }
     }
   } catch (e) { console.warn('  HARC packet sync failed:', e.message); }
+
+  // ── 0a. Mountain Village: rebuild MV_CACHED_DATA from the live TC + DRB pages ──
+  // syncMVAgendas() now returns a freshly-generated stub array (upcoming
+  // Town-Council + Design-Review-Board meetings, each matched to its agenda/
+  // packet PDF) instead of a URL-patch map, so MV never goes stale. Bump
+  // MV_CACHE_DATE so the source-health staleness check stays green.
+  try {
+    const mvStubs = await syncMVAgendas();
+    if (mvStubs && mvStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'MV_CACHED_DATA') || [];
+      if (JSON.stringify(mvStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'MV_CACHED_DATA', mvStubs, false);
+        govDataChanged = true;
+        console.log(`  MV_CACHED_DATA: rebuilt (${mvStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'MV_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) {
+    console.warn(`  MV agenda sync error: ${e.message}`);
+  }
+
+  // ── 0a2. Hospital District: rebuild MED_CACHED_DATA (real agendas + 4th-Thu) ──
+  try {
+    const medStubs = await rebuildMedMeetings();
+    if (medStubs && medStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'MED_CACHED_DATA') || [];
+      if (JSON.stringify(medStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'MED_CACHED_DATA', medStubs, false);
+        govDataChanged = true;
+        console.log(`  MED_CACHED_DATA: rebuilt (${medStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'MED_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Med rebuild error: ${e.message}`); }
+
+  // ── 0a3. Board of Education: rebuild SCHOOL_CACHED_DATA from posted agendas ──
+  try {
+    const schoolStubs = await rebuildSchoolMeetings();
+    if (schoolStubs && schoolStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'SCHOOL_CACHED_DATA') || [];
+      if (JSON.stringify(schoolStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'SCHOOL_CACHED_DATA', schoolStubs, false);
+        govDataChanged = true;
+        console.log(`  SCHOOL_CACHED_DATA: rebuilt (${schoolStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'SCHOOL_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  School rebuild error: ${e.message}`); }
+
+  // ── 0a4. Ophir: project General Assembly (3rd-Tue) meetings forward ──
+  //   Runs BEFORE the Ophir agenda sync (0c) so patchAgendaUrls can attach
+  //   agendas to the freshly-projected GA stubs.
+  try {
+    const existing = extractJsArray(govDataSrc, 'OPHIR_CACHED_DATA') || [];
+    const ophirStubs = rebuildOphirMeetings(existing);
+    if (ophirStubs && ophirStubs.length) {
+      if (JSON.stringify(ophirStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'OPHIR_CACHED_DATA', ophirStubs, false);
+        govDataChanged = true;
+        console.log(`  OPHIR_CACHED_DATA: rebuilt (${ophirStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'OPHIR_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Ophir rebuild error: ${e.message}`); }
+
+  // ── 0a5. Ridgway: project Town Council (2nd-Wed) meetings forward ──
+  //   Agenda URLs resolve from RIDGWAY_AGENDA_MAP by date at render time.
+  try {
+    const existing = extractJsArray(govDataSrc, 'RIDGWAY_CACHED_DATA') || [];
+    const ridgwayStubs = rebuildRidgwayMeetings(existing);
+    if (ridgwayStubs && ridgwayStubs.length) {
+      if (JSON.stringify(ridgwayStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'RIDGWAY_CACHED_DATA', ridgwayStubs, false);
+        govDataChanged = true;
+        console.log(`  RIDGWAY_CACHED_DATA: rebuilt (${ridgwayStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'RIDGWAY_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
 
   // ── 0b. SMART: rebuild SMART_CACHED_DATA from the live board-meetings page ──
   // syncSmartAgendas() now returns a freshly-generated stub array (2nd-Thursday
@@ -6358,19 +6625,10 @@ async function main() {
     console.warn(`  Ophir agenda sync error: ${e.message}`);
   }
 
-  // ── 0d. Telluride Board of Education agenda URLs (date + meeting type) ──
-  try {
-    const schoolItems = await syncSchoolAgendas();
-    if (schoolItems && schoolItems.length) {
-      const r = patchSchoolAgendas(govDataSrc, schoolItems);
-      if (r.changed > 0) {
-        govDataSrc = r.src; govDataChanged = true;
-        console.log(`  SCHOOL_CACHED_DATA: patched ${r.changed} agendaUrl field(s)`);
-      }
-    }
-  } catch (e) {
-    console.warn(`  School agenda sync error: ${e.message}`);
-  }
+  // ── 0d. Telluride Board of Education — now handled by the 0a3 rebuild above,
+  //   which regenerates SCHOOL_CACHED_DATA from the posted agendas (date + type
+  //   + URL all come straight from syncSchoolAgendas), so the old patch-only
+  //   step (patchSchoolAgendas) is no longer needed.
 
   // ── 1. Meeting Summaries + Agenda-derived Zoom info ──
   // refreshSummaries now also parses Zoom URL / Meeting ID / Passcode /
@@ -6692,15 +6950,35 @@ async function main() {
   // (AGENDA_SOURCES.ouray above) — so the dead write path and its redundant
   // syncOurayMeetings() AgendaCenter fetch are removed rather than resurrected.
 
-  // ── Norwood meetings ──
-  // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. (It was
-  // patched against gov-helpers.js where the const doesn't exist, so every
-  // Norwood update silently no-opped from mid-June until 2026-07-21.)
+  // ── Norwood meetings: rebuild (scraped agendas + cadence placeholders) ──
+  // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. The town's
+  // meeting pages list only PAST meetings (each posts with its agenda shortly
+  // before the date), so a scrape-only rebuild goes empty in the gap between
+  // agenda postings — that's what wiped the list on 2026-07-22. Cadences
+  // verified from the town's own 2026 history (never guessed): Board of
+  // Trustees = 2nd Wednesday (1/14, 2/11, 3/11, 4/8, 5/13, 6/10, 7/8); P&Z =
+  // 3rd Monday (3/16, 4/20, 5/18, 6/15 — shifts when that Monday is a
+  // holiday, and the real agenda wins on reconcile when it posts).
   const newNorwoodData = await syncNorwoodMeetings();
-  if (newNorwoodData !== null) {
-    const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
-    if (JSON.stringify(newNorwoodData) !== JSON.stringify(existingNorwood)) {
-      govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
+  if (newNorwoodData === null) {
+    console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
+  } else {
+    const norwoodNote = 'Next scheduled meeting -- agenda posted before the meeting.';
+    const botStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'bot'),
+      { nth: 2, weekday: 3 },
+      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote });
+    const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
+      { nth: 3, weekday: 1 },
+      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
+    const norwoodStubs = [...(botStubs || []), ...(pzStubs || [])]
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+    if (norwoodStubs.length) {
+      const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
+      if (JSON.stringify(norwoodStubs) !== JSON.stringify(existingNorwood)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', norwoodStubs, false);
+        govDataChanged = true;
+        console.log(`  NORWOOD_CACHED_DATA: rebuilt (${norwoodStubs.length} meetings)`);
+      }
       govDataSrc = replaceConstString(govDataSrc, 'NORWOOD_CACHE_DATE', today());
       govDataChanged = true;
     }
