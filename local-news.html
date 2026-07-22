@@ -137,8 +137,11 @@
   function isObituary(s) { return /obituar|in memoriam|celebration of life|passed away/i.test((s.title || '') + ' ' + (s.dek || '')); }
   function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
   function normalize(a, srcLabel) {
+    // dek: copy (scraped articles) or summary (LOCAL_NEWS_FEATURED pins store
+    // their text there — unmapped until 2026-07-22, so featured leads rendered
+    // with NO summary). NOTE claudeSummary is a boolean flag, never dek text.
     return { title: a.title || '', href: a.href || '', img: a.img || a.imageUrl || '',
-      dek: a.copy || a.claudeSummary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
+      dek: a.copy || a.summary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
       date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
       letterAuthor: a.letterAuthor || '', imgPos: a.imgPos || '' };
   }
@@ -205,11 +208,15 @@
 
   function render() {
     var pool = stories.filter(function (s) { return !topicFilter || s.topic === topicFilter; });
+    // Lead pick: the featured slot ALWAYS needs a summary (Morgan 2026-07-22),
+    // so candidates without a dek are passed over; the dek-less fallback pass
+    // only runs if literally nothing qualifies.
     var lead = null;
     for (var i = 0; i < pool.length; i++) {
-      if (pool[i].featured && !isObituary(pool[i])) { lead = pool[i]; break; }
+      if (pool[i].featured && pool[i].dek && !isObituary(pool[i])) { lead = pool[i]; break; }
     }
-    if (!lead) { for (var j = 0; j < pool.length; j++) { if (pool[j].img && !isObituary(pool[j])) { lead = pool[j]; break; } } }
+    if (!lead) { for (var j = 0; j < pool.length; j++) { if (pool[j].img && pool[j].dek && !isObituary(pool[j])) { lead = pool[j]; break; } } }
+    if (!lead) { for (var k = 0; k < pool.length; k++) { if ((pool[k].featured || pool[k].img) && !isObituary(pool[k])) { lead = pool[k]; break; } } }
     var rest = pool.filter(function (s) { return s !== lead; });
     var secondary = rest.filter(function (s) { return s.img; }).slice(0, 3);
     var riverItems = rest.filter(function (s) { return secondary.indexOf(s) === -1; });
