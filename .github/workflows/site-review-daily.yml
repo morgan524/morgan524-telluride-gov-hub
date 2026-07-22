@@ -39,3 +39,14 @@ jobs:
         run: |
           set -o pipefail
           node scripts/review/review-site.js --no-ai --issue-title "🔎 Daily site review" 2>&1 | tee /tmp/site-review-daily.log
+
+      # 2026-07-22 audit P0-4: a crashed review run previously died silently —
+      # indistinguishable from "reviewed, found nothing".
+      - name: CI Health issue (open on failure / close on recovery)
+        if: always() && github.event_name == 'schedule'
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Daily site review workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

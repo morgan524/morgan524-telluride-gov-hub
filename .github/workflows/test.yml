@@ -5,18 +5,28 @@ name: Tests
 # Runs on any change to the scripts or the bot-managed data files, so a bad
 # edit (or a malformed bot data write) fails CI instead of reaching the live
 # site. The load-data test parses js/gov-*.js, so a syntax error there is caught.
+#
+# SCHEDULED run (2026-07-22 audit P0-4): pushes made with the workflow
+# GITHUB_TOKEN — i.e. every bot commit — can NOT trigger `on: push`, so the
+# contract tests never ran against the data the bots actually ship (the
+# Norwood wipe sat undetected). The nightly run covers bot-written data, and
+# the CI Health step turns a red run into an issue instead of a silent ✗.
 on:
   push:
     paths:
       - 'scripts/**'
       - 'js/gov-data.js'
       - 'js/gov-helpers.js'
+      - 'data/**'
       - '.github/workflows/test.yml'
   pull_request:
+  schedule:
+    - cron: '30 8 * * *'   # nightly 08:30 UTC ≈ 2:30am MT, after the day's bot runs
   workflow_dispatch:
 
 permissions:
   contents: read
+  issues: write
 
 jobs:
   test:
@@ -28,3 +38,11 @@ jobs:
           node-version: '24'
       - name: Run unit tests
         run: cd scripts && npm test
+      - name: CI Health issue (open on failure / close on recovery)
+        if: always() && github.event_name == 'schedule'
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Nightly test suite is failing (bot data contracts)'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

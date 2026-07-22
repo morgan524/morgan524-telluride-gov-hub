@@ -23,6 +23,7 @@ on:
 
 permissions:
   contents: read
+  issues: write   # ci-health-issue failure tracker
 
 jobs:
   pulse:
@@ -43,3 +44,13 @@ jobs:
         run: |
           set -o pipefail
           node scripts/pulse/run-pulse.js ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run) && '--dry-run' || '' }} 2>&1 | tee /tmp/pulse.log
+
+      # 2026-07-22 audit P0-4: a dead pulse schedule was previously silent.
+      - name: CI Health issue (open on failure / close on recovery)
+        if: always() && github.event_name == 'schedule'
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Hub-Bub Pulse workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
