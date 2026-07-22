@@ -751,14 +751,15 @@ Return ONLY valid JSON matching the format specified.`;
 }
 
 // ── Lightweight Claude call — returns plain text (not JSON) ──
-async function callClaudeRaw(prompt) {
+async function callClaudeRaw(prompt, opts = {}) {
   if (!ANTHROPIC_API_KEY) {
     console.warn('  ⚠ No ANTHROPIC_API_KEY — skipping Claude preview generation');
     return null;
   }
   const body = JSON.stringify({
     model: CLAUDE_MODEL,
-    max_tokens: 256,
+    max_tokens: opts.maxTokens || 256,
+    ...(opts.system ? { system: opts.system } : {}),
     messages: [{ role: 'user', content: prompt }]
   });
   return new Promise((resolve, reject) => {
@@ -6446,6 +6447,143 @@ async function syncEventDescriptions(eventArrays) {
   return generated;
 }
 
+// ══════════════════════════════════════════════════════════════
+// ── Task 24: Hub-Bub Question of the Day ──
+// ══════════════════════════════════════════════════════════════
+//
+// One Rick-voiced discussion question per Mountain-Time day for the Hub-Bub
+// board, distilled from the freshest civic material this run already gathered
+// (meeting previews + summaries + Telluride Times articles). Voice and
+// no-invented-facts discipline are salvaged from the retired Pulse writer
+// (scripts/pulse/write-prompt.js, removed in de3ef72), with one addition:
+// 2-4 short poll choices so readers can react with one tap. This task only
+// writes the question (DAILY_QUESTIONS in gov-helpers.js → mirrored to
+// data/daily-questions.json); votes live client-side in Firestore
+// (daily_questions/{date}). Runs at most once per MT day — the 06:00 UTC run
+// (midnight MT) normally generates it, so the question is up by morning.
+
+const DAILY_QUESTION_SYSTEM_PROMPT = `You are "Rick", the single named voice behind Livable Telluride, a civic site for the Telluride, Colorado region. "Rick" is an internal persona name ONLY — never sign it, name it, or refer to it in the output. You are writing today's QUESTION OF THE DAY for the community board (Hub-Bub): one short discussion prompt that invites residents to weigh in.
+
+THE VOICE — dry, wry, plainspoken old-timer:
+You've lived in the box canyon for years and watched the cycles. You still love it; you're just not surprised. Short sentences. Em-dashes fine. One lived-in detail at most ("the box canyon," "up here") — more is costume. Never flowery, never a press release, never cynical.
+
+THE JOB — surface the tension, DON'T take a side (this is non-negotiable):
+- From the numbered CANDIDATES, PICK the single item most likely to get neighbors talking — a real local tension, decision, or change. Prefer items where reasonable people will genuinely disagree.
+- Lay out what's happening and WHY people will have opinions — present BOTH sides fairly.
+- Never advocate, never say what should happen, never tell people what to think. You name the disagreement; you do not settle it.
+- End the body on a genuine OPEN QUESTION back to the community.
+
+THE HARD RULES on facts (do not violate):
+- EVERY concrete fact — a date, a number, a dollar figure, a name, a vote, a fee — must come from the candidate text you picked. If it isn't there, leave it out. NEVER invent a figure, name, vote count, fee, cap, statute, or attribution.
+- Don't state outcomes that haven't happened: a work session or recommendation is not a final vote. If nothing's binding yet, say so plainly.
+
+THE POLL CHOICES:
+- 2 to 4 short first-person stances a resident could tap (each under 40 characters). They must be distinct, mutually exclusive answers to your closing question — e.g. "Worth it", "Bad trade", "Need more info". A hedge option ("It's complicated") is allowed as the last one. Plain sentence case, no punctuation at the end.
+
+SHAPE:
+- title: short, plain, a little wry is fine, no clickbait, no colon-stuffing.
+- body: 60-100 words. Opens by laying out the item, turns to the tension, presents the sides, closes with a short open question. Plain text, normal paragraph breaks (\\n\\n), no markup, no citations in the body.
+
+OUTPUT — return ONLY valid JSON, no prose, no code fence:
+{
+  "pick": <number of the candidate you chose>,
+  "title": "",
+  "body": "…60-100 words ending on an open question…",
+  "choices": ["", ""]
+}`;
+
+// Pure calendar-date shift on a YYYY-MM-DD string (no timezone involved).
+function shiftISODate(iso, days) {
+  const [y, m, d] = iso.split('-').map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d + days));
+  return `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, '0')}-${String(dt.getUTCDate()).padStart(2, '0')}`;
+}
+
+async function refreshDailyQuestion(govHubSrc, existingQuestions) {
+  console.log('\n❓ Task 24: Hub-Bub Question of the Day...');
+  if (!ANTHROPIC_API_KEY) { console.log('  Skipped (no ANTHROPIC_API_KEY).'); return null; }
+
+  // MT calendar day — the bot runs on UTC runners (see time_handling memory).
+  const todayMT = new Date().toLocaleDateString('en-CA', { timeZone: 'America/Denver' });
+  if (existingQuestions.some(q => q && q.date === todayMT)) {
+    console.log(`  Already have a question for ${todayMT} — skipping.`);
+    return null;
+  }
+
+  // ── Gather candidates from data already refreshed earlier this run ──
+  const candidates = [];
+  const seenMeetingKeys = new Set();
+  const addMeetingItem = (key, text, kind) => {
+    if (!text || typeof text !== 'string' || text.trim().length < 120) return;
+    const parts = key.split('|');
+    if (parts.length !== 3) return;
+    const [, date, title] = parts;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return;
+    // Previews look ahead; summaries may also cover just-held meetings.
+    const lo = kind === 'summary' ? shiftISODate(todayMT, -5) : todayMT;
+    if (date < lo || date > shiftISODate(todayMT, 10)) return;
+    if (seenMeetingKeys.has(date + '|' + title)) return;   // preview + summary of the same meeting
+    seenMeetingKeys.add(date + '|' + title);
+    candidates.push({ label: `Meeting — ${title} (${date})`, text: text.trim(), url: '/gov-hub.html', topics: ['meeting'] });
+  };
+  const previews = extractJsObject(govHubSrc, 'MEETING_PREVIEWS') || {};
+  for (const [k, v] of Object.entries(previews)) addMeetingItem(k, v, 'preview');
+  const summaries = extractJsObject(govHubSrc, 'MANUAL_SUMMARIES') || {};
+  for (const [k, v] of Object.entries(summaries)) addMeetingItem(k, v, 'summary');
+
+  const ttArticles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
+  for (const a of ttArticles) {
+    if (!a || !a.copy || String(a.copy).trim().length < 120) continue;
+    if (!a.firstSeen || a.firstSeen < shiftISODate(todayMT, -3)) continue;
+    if (/obituar|in memoriam|celebration of life/i.test(a.title || '')) continue;
+    candidates.push({ label: `News — ${a.title} (${a.source || 'Telluride Times'})`, text: String(a.copy).trim(), url: a.href || '', topics: [a.newsTopic || 'news'] });
+  }
+
+  if (candidates.length === 0) { console.log('  No fresh candidates today — no question.'); return null; }
+  const shortlist = candidates.slice(0, 10);
+
+  const recentTitles = existingQuestions.slice(0, 7).map(q => q && q.title).filter(Boolean);
+  let userPrompt = `Write today's Question of the Day. Pick ONE candidate and build ONLY from its text.\n`;
+  if (recentTitles.length) {
+    userPrompt += `\nRecent questions — do NOT repeat these topics:\n${recentTitles.map(t => `- ${t}`).join('\n')}\n`;
+  }
+  userPrompt += `\nCANDIDATES:\n`;
+  shortlist.forEach((c, i) => { userPrompt += `\n[${i + 1}] ${c.label}\n"""\n${c.text.slice(0, 1500)}\n"""\n`; });
+  userPrompt += `\nReturn ONLY the JSON object.`;
+
+  let parsed;
+  try {
+    const raw = await callClaudeRaw(userPrompt, { maxTokens: 1024, system: DAILY_QUESTION_SYSTEM_PROMPT });
+    if (!raw) return null;
+    parsed = JSON.parse(raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/, ''));
+  } catch (e) {
+    console.warn(`  ✗ Daily question generation failed: ${e.message}`);
+    return null;
+  }
+
+  // ── Validate hard before anything ships ──
+  const picked = shortlist[(parsed.pick | 0) - 1];
+  const title = typeof parsed.title === 'string' ? parsed.title.trim() : '';
+  const body = typeof parsed.body === 'string' ? parsed.body.trim() : '';
+  const words = body ? body.split(/\s+/).length : 0;
+  const choices = Array.isArray(parsed.choices)
+    ? [...new Set(parsed.choices.filter(c => typeof c === 'string').map(c => c.trim()).filter(c => c && c.length <= 40))]
+    : [];
+  const problems = [];
+  if (!picked) problems.push(`bad pick (${parsed.pick})`);
+  if (!title || title.length > 120) problems.push('bad title');
+  if (words < 30 || words > 140) problems.push(`body ${words} words`);
+  if (isRefusalSummary(body)) problems.push('refusal body');
+  if (choices.length < 2 || choices.length > 4) problems.push(`${choices.length} usable choices`);
+  if (problems.length) {
+    console.warn(`  ✗ Daily question rejected (${problems.join('; ')}) — no question today.`);
+    return null;
+  }
+
+  console.log(`  ✓ "${title}" (from: ${picked.label})`);
+  return { date: todayMT, title, body, choices, sourceUrl: picked.url || '', topics: picked.topics || [] };
+}
+
 async function main() {
   console.log('═══════════════════════════════════════════════');
   console.log('  Telluride Gov Hub — Content Refresh');
@@ -7111,6 +7249,21 @@ async function main() {
       console.log(`  Trust reconcile: dropped ${dropped.length} wrong-date copy(ies) from ${name}:`);
       for (const d of dropped) console.log(`    - "${d.title}" ${d.mvDate} vs trusted ${d.trustedDate}`);
     }
+  }
+
+  // ── Task 24: Hub-Bub Question of the Day ──
+  // Runs after previews/summaries/news are final in govHubSrc so the question
+  // is built from what this run will actually ship. At most one per MT day.
+  try {
+    const existingQuestions = extractJsArray(govHubSrc, 'DAILY_QUESTIONS') || [];
+    const newQuestion = await refreshDailyQuestion(govHubSrc, existingQuestions);
+    if (newQuestion) {
+      govHubSrc = replaceJsValue(govHubSrc, 'DAILY_QUESTIONS', [newQuestion, ...existingQuestions].slice(0, 30), false);
+      changed = true;
+      console.log(`  DAILY_QUESTIONS: "${newQuestion.title}" queued for ${newQuestion.date}`);
+    }
+  } catch (e) {
+    console.warn('  Daily question task failed (non-fatal):', e.message);
   }
 
   // ── Guard: never ship a data file that won't parse ──

@@ -367,6 +367,22 @@ const MEETING_AGENDA_META = {
 // existed for months but this const was missing, so writes never landed.
 const DEEP_DIVE_UPDATES = [];
 
+// Hub-Bub Question of the Day, written by content-refresh.js (Task 24) on the
+// first run of each Mountain-Time day. Newest first, capped at 30. Each entry:
+// { date: 'YYYY-MM-DD' (MT), title, body, choices: [2-4 short strings],
+//   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
+// (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
+const DAILY_QUESTIONS = [
+  {
+    "date": "2026-07-22",
+    "title": "Healing centers, meet the Land Use Code",
+    "body": "Town Council takes up a Land Use Code amendment August 11 that would add new regulations for natural medicine businesses — a fresh Section 5-31 — with an intergovernmental worksession alongside the county the day before.\n\nSome will read this as sensible groundwork: write the rules before anyone opens a door. Others will ask why a town this size needs a new chapter of code before there's a business to regulate. Nothing's decided yet — the amendment still has to get through Council.\n\nGood groundwork, or code creep?",
+    "choices": ["Write the rules first", "Wait for a real applicant", "It's complicated"],
+    "sourceUrl": "/gov-hub.html",
+    "topics": ["meeting"]
+  }
+];
+
 // ── Seeds for bot writers whose targets were lost in the May 2026
 // gov-hub.js/data-only.js retirement (2026-07-22 audit P0-3). Each of these
 // had a content-refresh.js write path that silently no-opped because the

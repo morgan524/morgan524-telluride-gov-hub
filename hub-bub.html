@@ -1456,6 +1456,41 @@
             </div>
           </div>
 
+          <!-- Question of the Day (populated by hub-bub.js from
+               data/daily-questions.json — content-refresh Task 24; votes in
+               Firestore daily_questions/{date}). Hidden until data loads.
+               Styles live inline here, NOT in css/hub-bub.css — that file is
+               served without a cache-buster, so new rules there can sit stale
+               in browsers for a long time. -->
+          <style>
+            .hb-dailyq {
+              background: linear-gradient(135deg, #f4f8f5 0%, #eef4ef 100%);
+              border: 1px solid var(--forest, #1f4d3a); border-radius: 12px;
+              padding: 18px 20px; margin-bottom: 18px;
+            }
+            .hb-dq-kicker { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--forest, #1f4d3a); margin-bottom: 6px; }
+            .hb-dq-title { font-size: 1.15rem; font-weight: 700; color: #1a2b22; margin-bottom: 8px; line-height: 1.3; }
+            .hb-dq-body p { margin: 0 0 10px; font-size: 0.95rem; line-height: 1.55; color: #33443b; }
+            .hb-dq-choices { display: flex; flex-direction: column; gap: 8px; margin: 12px 0 10px; }
+            .hb-dq-choice {
+              -webkit-appearance: none; appearance: none; position: relative; overflow: hidden;
+              display: flex; align-items: center; justify-content: space-between;
+              width: 100%; text-align: left; padding: 10px 14px;
+              background: #fff; border: 1.5px solid #c9d8ce; border-radius: 8px;
+              font-size: 0.93rem; font-weight: 600; color: #1a2b22; cursor: pointer;
+              transition: border-color 0.15s, background 0.15s;
+            }
+            .hb-dq-choice:hover { border-color: var(--forest, #1f4d3a); }
+            .hb-dq-choice.picked { border-color: var(--forest, #1f4d3a); background: #f0f7f2; }
+            .hb-dq-bar { position: absolute; left: 0; top: 0; bottom: 0; background: rgba(74, 144, 121, 0.16); pointer-events: none; transition: width 0.4s ease; }
+            .hb-dq-choice-label, .hb-dq-pct { position: relative; }
+            .hb-dq-pct { font-weight: 700; color: var(--forest, #1f4d3a); margin-left: 10px; }
+            .hb-dq-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; font-size: 0.82rem; color: #5a6c61; }
+            .hb-dq-foot a { color: var(--forest, #1f4d3a); font-weight: 600; text-decoration: none; }
+            .hb-dq-foot a:hover { text-decoration: underline; }
+          </style>
+          <div id="hbDailyQ" class="hb-dailyq" style="display:none;"></div>
+
           <!-- Posts feed (populated by hub-bub.js) -->
           <div id="hbPostsFeed" class="hb-posts-feed">
             <div class="hb-loading" id="hbLoading"><div class="hb-spinner"></div></div>
@@ -1770,10 +1805,16 @@
 
     /* hbSendVerification removed 2026-05-31 — email verification dropped 2026-05-28 */
 
-    /* Open triggers */
-    document.getElementById('hbOpenSignup').addEventListener('click', () => openModal('signup'));
-    document.getElementById('hbOpenLogin').addEventListener('click',  () => openModal('login'));
-    document.getElementById('hbModalClose').addEventListener('click', closeModal);
+    /* Open triggers. Null-safe: the redesign removed some of these trigger
+       elements (hbOpenLogin), and an unguarded getElementById(...).addEventListener
+       here threw and KILLED the rest of this script — window.hbShowAuth was
+       never assigned (hub-bub.js's silent legacy fallback won instead), so
+       every signed-out gate (composer, reactions, #signup deep links) became
+       a no-op. Found 2026-07-22 while wiring the Question of the Day card. */
+    const hbWire = (id, fn) => { const el = document.getElementById(id); if (el) el.addEventListener('click', fn); };
+    hbWire('hbOpenSignup', () => openModal('signup'));
+    hbWire('hbOpenLogin',  () => openModal('login'));
+    hbWire('hbModalClose', closeModal);
     overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 

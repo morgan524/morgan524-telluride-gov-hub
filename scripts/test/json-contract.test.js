@@ -86,6 +86,7 @@ const CONTRACTS = {
   'deep-dive-updates.json': { required: ['topic', 'addedDate'], minCount: 0 },  // Haiku-triaged; usually sparse
   'meeting-recaps.json': { required: ['date', 'title', 'recap'], minCount: 1 },      // transcript recaps, 45-day window
   'telluride-festivals.json': { required: ['name', 'url'], minCount: 1 },            // hand-curated festival season
+  'daily-questions.json': { required: ['date', 'title', 'body'], minCount: 0 },      // Hub-Bub Question of the Day; empty until Task 24's first run
 };
 
 // Object-map mirrors: values must be non-empty strings (or objects), keys non-empty.

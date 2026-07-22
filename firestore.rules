@@ -349,6 +349,31 @@ service cloud.firestore {
       allow read, write: if false;
     }
 
+    // ── daily_questions/{dateId} ──────────────────────────────────────
+    // One-tap poll votes for the Hub-Bub Question of the Day. Doc id is the
+    // question's MT date (YYYY-MM-DD); the question TEXT ships in
+    // data/daily-questions.json (content-refresh Task 24) — Firestore holds
+    // only the votes. Each choiceN_voters array holds the uids that picked
+    // that choice; counts are derived from array lengths client-side.
+    // Same trust model as reactions/{docId} above: any signed-in user
+    // (anonymous included) may create/update as long as the post-write state
+    // includes their own uid in one of the choice arrays; one-vote-per-user
+    // and vote-switching (arrayRemove old + arrayUnion new) are client-
+    // managed, matching the site's established pattern.
+    match /daily_questions/{dateId} {
+      allow read: if true;
+
+      allow create, update: if isSignedIn()
+        && (
+          (request.resource.data.get('choice0_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('choice1_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('choice2_voters', []).hasAll([request.auth.uid]))
+          || (request.resource.data.get('choice3_voters', []).hasAll([request.auth.uid]))
+        );
+
+      allow delete: if isAdmin();
+    }
+
     // ── Default deny ──────────────────────────────────────────────────
     // Any path NOT explicitly matched above is denied. This is the
     // important part — Firestore rules are deny-by-default at root, but

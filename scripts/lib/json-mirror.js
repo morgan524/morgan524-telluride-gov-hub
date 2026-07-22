@@ -45,6 +45,9 @@ const MIRROR_ARRAYS = [
   // housing — written by housing-refresh.js (which also writes this mirror);
   // content-refresh re-mirrors from the current JS each run as a self-heal.
   'HOUSING_LISTINGS',
+  // Hub-Bub Question of the Day (content-refresh Task 24); hub-bub.html reads
+  // the JSON mirror directly.
+  'DAILY_QUESTIONS',
 ];
 
 // Bot-managed OBJECT maps (keyed data, not arrays) — same dual-write, extracted
