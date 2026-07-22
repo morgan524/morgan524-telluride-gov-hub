@@ -21,7 +21,7 @@
   .chips .chips-label { font: 700 11px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--muted2); margin-right: 2px; }
   /* Two-column shell: event list + right filter sidebar */
   .ev-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 264px; gap: 40px; align-items: start; }
-  .ev-side { position: sticky; top: 96px; }
+  .ev-side { position: sticky; top: 96px; max-height: calc(100vh - 116px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; padding-right: 2px; }
   .side-filter { padding: 20px 22px; }
   .side-filter h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 10px; }
   .tbtn { display: flex; justify-content: space-between; align-items: center; width: 100%; text-align: left; font: 600 15px/1.2 var(--sans); color: var(--forest); background: none; border: 0; border-top: 1px solid var(--hairline); padding: 10px 2px; cursor: pointer; }
