@@ -1603,9 +1603,10 @@ const ENTITY_LOGOS = {
   airport: '<img src="/logo/Airport.png" alt="Telluride Regional Airport" style="width:100%;height:100%;object-fit:contain;">',
   clubs: '<img src="/logo/clubs-icon.png" alt="Local Organizations" style="width:100%;height:100%;object-fit:contain;">',
   'telluride-com': '<div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#1a3a5c,#2a5a8c);display:flex;align-items:center;justify-content:center;font-size:1.1rem;" title="Telluride.com">🎪</div>',
-  // San Miguel Basin Forum — masthead logo at /logo/San Miguel Basin.jpg
-  // (new emblem logo, 2026-07-02; replaced the old "San Miguel Basis Logo.jpg").
-  smb: '<img src="/logo/San%20Miguel%20Basin.jpg" alt="San Miguel Basin Forum" style="width:100%;height:100%;object-fit:contain;">'
+  // San Miguel Basin Forum — transparent PNG at /logo/San Miguel Basin.png
+  // (upgraded 2026-07-22 from the white-boxed .jpg, which itself replaced the
+  // old "San Miguel Basis Logo.jpg" on 2026-07-02).
+  smb: '<img src="/logo/San%20Miguel%20Basin.png" alt="San Miguel Basin Forum" style="width:100%;height:100%;object-fit:contain;">'
 };
 
 const TOWN_IMAGES = {
