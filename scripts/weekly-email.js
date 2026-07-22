@@ -112,7 +112,7 @@ const IMG_FALLBACKS = [
 // usable image and no specific fallback matches, classify by keyword and use a
 // representative, freely-licensed (CC0 / public-domain) photo we host ourselves
 // under /assets/digest/fallbacks/<slug>.jpg (400x400, email-safe JPG). Ordered
-// most-specific first; first match wins; DEFAULT_FALLBACK_IMG ('community')
+// most-specific first; first match wins; the community-N rotation
 // catches anything unmatched. To expand: add a {match, slug} row and commit the
 // matching assets/digest/fallbacks/<slug>.jpg. (Meetings intentionally excluded.)
 const FB = (slug) => SITE_URL + '/assets/digest/fallbacks/' + slug + '.jpg';
@@ -126,16 +126,26 @@ const CATEGORY_FALLBACKS = [
   { match: /farmers market|\bfood\b|dinner|brunch|tasting|brewery|\bbeer\b|\bwine\b|chef|culinary|bbq|barbecue|potluck|harvest/i, slug: 'food' },
   { match: /\bkids?\b|\bfamily\b|children|story ?time|\byouth\b|playgroup|toddler|puppet/i, slug: 'family' },
   { match: /\byoga\b|meditation|wellness|pilates|breathwork|sound bath|tai chi|qigong/i, slug: 'wellness' },
-  { match: /lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club/i, slug: 'talk' },
+  { match: /lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club|training|\bclinic\b|registration|\bclass\b|info session/i, slug: 'talk' },
   { match: /festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i,           slug: 'festival' },
   { match: /concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, slug: 'livemusic' },
 ];
-const DEFAULT_FALLBACK_IMG = FB('community');   // box-canyon / mountain-town default
+// Catch-all "community" events rotate through six licensed regional photos
+// (Adobe Stock, Enhanced license — see assets/digest/fallbacks/SOURCES.json),
+// deterministic by title hash so an event keeps its photo across sends. Same
+// scheme as build-events-index.js — keep the two in sync.
+const COMMUNITY_COUNT = 6;
+const communityImg = (title) => {
+  let h = 0;
+  const s = String(title || '');
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return FB('community-' + ((h % COMMUNITY_COUNT) + 1));
+};
 const imgFallback = (title) => {
   const t = title || '';
   for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
   for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) return FB(c.slug);
-  return DEFAULT_FALLBACK_IMG;
+  return communityImg(t);
 };
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so
 // the events page and the email agree on which image an event gets. Email needs
