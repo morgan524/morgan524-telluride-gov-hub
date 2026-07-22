@@ -53,8 +53,11 @@
   .side-koto .item a { font: 500 15.5px/1.35 var(--serif); color: var(--forest); }
   .side-koto .item a:hover { color: var(--rust); }
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
-  .letters-banner { margin-bottom: 8px; }
-  .letters-banner img { max-width: 260px; width: 100%; display: block; }
+  /* Letters: no side image; the banner is the card's only art, centered
+     across the full box (Morgan, 2026-07-22). */
+  .letters-banner { margin-bottom: 10px; display: flex; justify-content: center; }
+  .letters-banner img { max-height: 170px; max-width: 100%; width: auto; display: block; }
+  .lead.no-media, .river-item.no-media { grid-template-columns: 1fr; }
   /* Pet photo on its own line above the name, card-width (per Morgan 2026-07-22) */
   #pets-list .item { grid-template-columns: 1fr; }
   #pets-list .pet-photo { width: 100%; height: auto; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; margin-bottom: 8px; }
@@ -90,20 +93,21 @@
 <div class="main-wrap">
   <main id="river"><p class="meta" style="padding:16px 0">Loading stories&hellip;</p></main>
   <aside class="sidebar">
-    <div class="side-news">
-      <div class="k">Newsletter</div>
-      <h3>The week, explained. Every Monday.</h3>
-      <p>The Week Ahead Outlook &mdash; meetings, events, and what to watch, free by email.</p>
-      <a class="btn btn-gold" href="/hub-bub.html#signup">Subscribe</a>
+    <!-- Pets ↔ Newsletter positions swapped per Morgan 2026-07-22 -->
+    <div class="side-koto card" id="pets-card" hidden>
+      <h3>Adoptable pets</h3>
+      <div id="pets-list"></div>
+      <div style="margin-top:12px"><a class="btn btn-outline" href="https://www.telluridehumanesociety.org/" target="_blank" rel="noopener">Telluride Humane Society &rarr;</a></div>
     </div>
     <div class="side-koto card" id="koto-card" hidden>
       <h3>KOTO Newscasts</h3>
       <div id="koto-list"></div>
     </div>
-    <div class="side-koto card" id="pets-card" hidden>
-      <h3>Adoptable pets</h3>
-      <div id="pets-list"></div>
-      <div style="margin-top:12px"><a class="btn btn-outline" href="https://www.telluridehumanesociety.org/" target="_blank" rel="noopener">Telluride Humane Society &rarr;</a></div>
+    <div class="side-news">
+      <div class="k">Newsletter</div>
+      <h3>The week, explained. Every Monday.</h3>
+      <p>The Week Ahead Outlook &mdash; meetings, events, and what to watch, free by email.</p>
+      <a class="btn btn-gold" href="/hub-bub.html#signup">Subscribe</a>
     </div>
     <div class="side-tip">
       <h3>Have a tip?</h3>
@@ -162,15 +166,12 @@
       var pos = (s.imgPos && /^[a-z0-9% .-]+$/i.test(s.imgPos)) ? ' style="object-position:' + s.imgPos + '"' : '';
       img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"' + pos + '></div>';
     } else if (s.isLetter) {
-      // Letters without their own photo use per-publication artwork
-      // (Morgan's logos, 2026-07-22): Telluride Times letters get the TT art
-      // (full-bleed rectangle → normal cover frame), everything else gets the
-      // circular Livable Telluride badge (logo-fill contain on white).
-      if (s.src === 'Telluride Times') {
-        img = '<div class="img-frame"><img src="/logo/Letter%20to%20Editor%20TT.png" alt="Letter to the editor — Telluride Times" loading="lazy"></div>';
-      } else {
-        img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor%20LT.png" alt="Letter to the editor — Livable Telluride" loading="lazy"></div>';
-      }
+      // Letters without their own photo carry NO side image — their only art
+      // is the centered per-publication banner from letterBanner() (Morgan,
+      // 2026-07-22: "remove the logo on the left"). Returning '' here (not
+      // falling through) keeps the source-logo branch from re-adding the
+      // TT masthead; the card gets the .no-media single-column grid.
+      return '';
     } else {
       var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
       if (!logo) return '';
@@ -180,13 +181,21 @@
   }
   // "Letters to Livable Telluride" banner above our own letters (isLetter pins).
   function letterBanner(s) {
-    return s.isLetter ? '<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>' : '';
+    // Per-publication letters art, centered across the card (the card's only
+    // artwork — letters carry no side image). TT opinion pieces get Morgan's
+    // TT letters logo; our own letters keep the LT banner.
+    if (!s.isLetter) return '';
+    var tt = s.src === 'Telluride Times';
+    var art = tt ? '/logo/Letter%20to%20Editor%20TT.png' : '/logo/letters-banner.png';
+    var alt = tt ? 'Letter to the Editor — Telluride Times' : 'Letters to Livable Telluride';
+    return '<div class="letters-banner"><img src="' + art + '" alt="' + alt + '"></div>';
   }
   function metaWithAuthor(s) {
     var base = metaLine(s);
     return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
   }
   function storyLink(s, tagName, cls) {
+    if (s.isLetter && !s.img) cls += ' no-media';   // letters: banner-only, single column
     return '<' + tagName + ' class="' + cls + ' story">' + imgFrame(s, true) +
       '<div>' + letterBanner(s) + tagFor(s) +
       '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
@@ -206,7 +215,7 @@
     var riverItems = rest.filter(function (s) { return secondary.indexOf(s) === -1; });
 
     document.getElementById('lead-slot').innerHTML = lead
-      ? '<article class="lead story">' + imgFrame(lead, true) +
+      ? '<article class="lead story' + (lead.isLetter && !lead.img ? ' no-media' : '') + '">' + imgFrame(lead, true) +
         '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
         '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
         (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
