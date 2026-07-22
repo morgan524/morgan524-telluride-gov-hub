@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="/js/site-config.js"></script>
+  <script src="js/site-config.js"></script>
   <title>Hub-Bub — Livable Telluride</title>
   <meta name="description" content="Hub-Bub — the community forum for residents of the Telluride, Colorado region to discuss local government, housing, land use, and events.">
 
   <!-- Hub-Bub forum styles (legacy overrides in css/hub-bub.css still load for hub-bub.js compat) -->
-  <meta name="robots" content="noindex"><!-- STAGING: remove at cutover -->
-  <link rel="stylesheet" href="lt.css?v=8">
   <link rel="stylesheet" href="/css/hub-bub.css">
 
   <style>
@@ -104,14 +102,14 @@
       display: grid;
       grid-template-columns: minmax(0, 1fr) 290px;
       gap: 18px;
-      align-items: stretch;
+      align-items: start;
       margin-bottom: 22px;
     }
     .hb-intro-main {
       min-height: 0;
       border: 1px solid var(--lt-line);
       border-radius: var(--lt-radius-xl);
-      padding: clamp(14px, 2vw, 20px);
+      padding: clamp(18px, 2.8vw, 26px);
       background:
         linear-gradient(135deg, rgba(255,253,248,0.96), rgba(255,253,248,0.78)),
         radial-gradient(circle at top right, rgba(185,139,52,0.15), transparent 26rem);
@@ -769,7 +767,7 @@
       border: 1px solid var(--lt-line);
       background: #fff;
       box-shadow: var(--lt-shadow-soft);
-      padding: 16px 16px 14px;
+      padding: 20px 20px 18px;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -1035,7 +1033,7 @@
 
     /* ── Responsive ── */
     @media (max-width: 1024px) {
-      .hb-intro { grid-template-columns: minmax(0, 1fr) 260px; }
+      .hb-intro { grid-template-columns: 1fr; }
       .hb-board { grid-template-columns: 260px minmax(0,1fr); gap: 16px; }
     }
     @media (max-width: 768px) {
@@ -1144,29 +1142,40 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
-<style>
-  /* ── Redesign shell overrides ── */
-  .lt-pill-login { display: none !important; }
-  /* Auth widget lives at the top of the account panel, signup pitch below. */
-  .hb-account-panel .topnav-auth { display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 10px; }
-  .hb-account-panel .topnav-auth + .hb-account-signup { margin-top: 14px; }
-</style>
 </head>
 <body>
 
   <!-- ════════════════════ NAV ════════════════════ -->
-<div id="lt-header"></div>
-
-  <!-- ════════════════════ MASTHEAD (shared pattern — Wilson Peak art) ════════════════════ -->
-  <header class="masthead">
-    <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
-    <div class="masthead-fade"></div>
-    <div class="masthead-inner">
-      <div class="crumb">Connect <span class="sep">&rsaquo;</span> Hub-Bub</div>
-      <h1>Hub-Bub</h1>
-      <p class="sub">Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+  <header class="topnav">
+    <div class="topnav-inner">
+      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
+        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
+      </a>
+      <nav class="topnav-links">
+        <a href="/local-news.html">Local News</a>
+        <a href="/gov-hub.html">Gov-Hub</a>
+        <a href="/deep-dives.html">Deep Dives</a>
+        <a href="/events.html">Events</a>
+        <a href="/hub-bub.html" class="active">Hub-Bub</a>
+        <a href="/local-orgs.html">Local Orgs</a>
+        <a href="/projects-map/">Projects Map</a>
+        <a href="/about.html">About</a>
+        <a href="/donate.html">Donate</a>
+      </nav>
+      <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
+      <div id="lvLangWidget" aria-hidden="true"></div>
+      <div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div>
+      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
     </div>
   </header>
+
+  <!-- ════════════════════ HERO ════════════════════ -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>💬 Hub-Bub</h1>
+      <p>Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+    </div>
+  </section>
 
   <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
   <div class="hb-wrap" style="display:none;" aria-hidden="true">
@@ -1230,22 +1239,20 @@
           </div>
         </div>
 
-        <aside class="hb-account-panel" aria-label="Your account">
-          <div class="topnav-auth" id="hbTopnavAuth" data-auth="out"><a class="topnav-cta" href="javascript:void(0)" onclick="hbShowAuth('login')">Log In</a></div>
-          <div class="hb-account-signup">
-            <h2 class="hb-account-heading">Commenting requires a free account</h2>
-            <div class="hb-account-perks">
-              <div class="hb-account-perk">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Post questions, sources &amp; meeting takeaways
-              </div>
-              <div class="hb-account-perk">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                Reply to neighbors &amp; follow discussions
-              </div>
+        <aside class="hb-account-panel" aria-label="Create a free account">
+          <h2 class="hb-account-heading">Commenting requires a free account</h2>
+          <div class="hb-account-perks">
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Post questions, sources &amp; meeting takeaways
             </div>
-            <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
+            <div class="hb-account-perk">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Reply to neighbors &amp; follow discussions
+            </div>
           </div>
+          <button class="hb-account-cta" id="hbOpenSignup" type="button">Create Free Account</button>
+          <p class="hb-account-login-note">Already have an account?<br><a href="javascript:void(0)" id="hbOpenLogin">Log in</a></p>
         </aside>
       </section>
 
@@ -1321,6 +1328,18 @@
 
         <!-- ── Main content ── -->
         <main class="hb-content" id="hb-feed-anchor">
+
+          <!-- Auth strip: shown when logged in, hidden otherwise -->
+          <div class="hb-auth-strip" id="hbAuthStripBar">
+            <span id="hbAuthStripMsg">
+              <a href="javascript:void(0)" onclick="hbShowAuth('signup')" style="color:var(--forest);">Create a free account</a>
+              &nbsp;or&nbsp;
+              <a href="javascript:void(0)" onclick="hbShowAuth('login')" style="color:var(--forest);">log in</a>
+              to join the conversation.
+            </span>
+            <span id="hbAuthStripUser" style="display:none;" class="hb-auth-user"></span>
+            <button id="hbAuthStripLogout" style="display:none;" onclick="hbLogout()">Sign Out</button>
+          </div>
 
           <!-- Toolbar: result count + sort -->
           <div class="hb-toolbar" role="toolbar" aria-label="Sort discussions">
@@ -1673,13 +1692,13 @@
        js/gov-data.js + js/gov-helpers.js) so a fresh hub-bub.js gets
        picked up at most ~10 minutes after a push, regardless of what
        the browser's cache policy would do. Without this, the bare
-       a bare hub-bub.js script tag was being cached indefinitely and
+       `<script src="js/hub-bub.js">` was being cached indefinitely and
        bug fixes (e.g. the 2026-05-25 Forgot-Password view-swap) didn't
        reach users until they hard-refreshed. -->
   <script>
     (function() {
       var s = document.createElement('script');
-      s.src = '/js/hub-bub.js?v=' + Math.floor(Date.now() / 600000);
+      s.src = 'js/hub-bub.js?v=' + Math.floor(Date.now() / 600000);
       document.head.appendChild(s);
     })();
   </script>
@@ -2309,9 +2328,98 @@
   </script>
 
 
+<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<script>
+// ── EN/ES language toggle (replaced Google Translate's 24-lang
+//   dropdown 2026-05-29). Google Translate is still the engine doing
+//   the translation when the cookie is set; we just hide its UI
+//   chrome (banner + dropdown) and expose a single binary pill in the
+//   topnav. Cookie format: googtrans=/en/<lang>; deleting it reverts
+//   to English. ────────────────────────────────────────────────── */
+function lvCurrentLang() {
+  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
+  return m ? m[1] : 'en';
+}
+function lvSetTransCookie(value) {
+  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+  var domains = ['', '.' + location.hostname, location.hostname];
+  domains.forEach(function(d){
+    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
+    if (d) c += '; domain=' + d;
+    document.cookie = c;
+  });
+}
+function lvToggleLang() {
+  var cur = lvCurrentLang();
+  lvSetTransCookie(cur === 'es' ? '' : 'es');
+  location.reload();
+}
+function googleTranslateElementInit() {
+  // includedLanguages is just 'es' now — the visible toggle only
+  // offers Spanish, but Google Translate still needs an init call
+  // to act on the cookie.
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'es',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'lvLangWidget');
+}
+(function(){
+  // Inject CSS for the pill + hide all Google Translate UI chrome
+  var hideCss = document.createElement('style');
+  hideCss.textContent = [
+    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
+    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
+    '.goog-te-banner-frame { display: none !important; }',
+    '.goog-te-gadget { display: none !important; }',
+    'body { top: 0 !important; }',
+    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
+    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
+    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
+    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
+  ].join('\n');
+  document.head.appendChild(hideCss);
+  // Set initial button label based on current state
+  function setLabel() {
+    var btn = document.getElementById('lvLangToggle');
+    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setLabel);
+  } else { setLabel(); }
+  // Load Google Translate
+  var s = document.createElement('script');
+  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+  s.async = true;
+  document.head.appendChild(s);
+})();
+(function(){
+  function init(){
+    var btn = document.getElementById('topnavHamburger');
+    if (!btn) return;
+    var links = document.querySelector('.topnav-links');
+    if (!links) return;
+    btn.addEventListener('click', function(){
+      var open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? '✕' : '☰';
+    });
+    links.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        links.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.textContent = '☰';
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else { init(); }
+})();
+</script>
 <!-- "Update your info" pop-up (footer link + /?profile=1). -->
 <script src="/js/lt-profile.js?v=2026-06-09" defer></script>
-<div id="lt-footer"></div>
-<script src="site.js?v=7"></script>
+<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

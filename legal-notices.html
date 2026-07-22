@@ -1,1120 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legal Notices — Livable Telluride</title>
-  <meta name="description" content="Legal Notices — public notices and legal announcements for the Telluride and San Miguel County, Colorado region.">
-  <style>
-    :root {
-      --forest: #21443c;
-      --forest-soft: #2a5347;
-      --accent-green: #2f7a5f;
-      --bg-warm: #fdfbf6;
-      --bg-hero: #efe9dc;
-      --bg-paper: #fffdf9;
-      --text-primary: #1a2e29;
-      --text-secondary: #4a5e57;
-      --text-muted: #5f7169;
-      --border-soft: rgba(33, 68, 60, 0.12);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
-      --warn-amber: #8c5e0e;
-      --warn-amber-bg: rgba(178, 122, 20, 0.10);
-      --font-heading: 'Georgia', 'Times New Roman', serif;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0; padding: 0;
-      font-family: var(--font-main);
-      color: var(--text-primary);
-      background: var(--bg-warm);
-      line-height: 1.5;
-    }
-
-    /* Top nav (shared) */
-    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
-    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
-    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 14px; margin-left: 12px; flex: 1; }
-    .topnav-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.85rem; white-space: nowrap; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-    .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta { white-space: nowrap; display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
-
-    /* Hero */
-    .hero {
-      background:
-        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
-      min-height: 200px;
-    }
-    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
-    .hero p { text-shadow: 0 1px 2px rgba(255,255,255,0.5); margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 720px; }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-
-    /* Page layout — sidebar + main */
-    .page-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 28px 32px 48px;
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    /* Left sidebar */
-    .sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 16px; }
-    .filter-panel {
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      border-radius: 16px;
-      padding: 20px;
-      box-shadow: var(--shadow-card);
-    }
-    .filter-panel-heading {
-      font-size: 0.72rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-      margin: 0 0 12px;
-    }
-    .filter-group { display: flex; flex-direction: column; gap: 4px; }
-    .filter-opt {
-      display: block;
-      padding: 9px 14px;
-      border-radius: 10px;
-      background: transparent;
-      border: none;
-      text-align: left;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-secondary);
-      cursor: pointer;
-      transition: background 0.13s, color 0.13s;
-      width: 100%;
-    }
-    .filter-opt:hover { background: var(--bg-hero); color: var(--text-primary); }
-    .filter-opt.active { background: var(--forest); color: #fff; }
-
-    /* Notice card grid */
-    .notice-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    /* ── LEGAL NOTICE CARD ── */
-    .notice-card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      overflow: hidden;
-    }
-    /* Strip across the top — type icon + category, entity badge, optional flags */
-    .notice-strip {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 12px 22px;
-      background: var(--bg-paper);
-      border-bottom: 1px solid var(--border-soft);
-    }
-    .notice-strip-left {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-    }
-    .notice-strip-logo {
-      flex-shrink: 0;
-      width: 72px;
-      height: 72px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      overflow: hidden;
-      background: transparent;
-    }
-    .notice-strip-logo img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .notice-strip-logo svg {
-      width: 48px;
-      height: 48px;
-    }
-    .type-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 12px;
-      background: var(--forest);
-      color: #fff;
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-    .type-pill svg { width: 14px; height: 14px; }
-    .deadline-flag {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 5px 12px;
-      background: var(--warn-amber-bg);
-      color: var(--warn-amber);
-      border-radius: 999px;
-      font-size: 0.78rem;
-      font-weight: 700;
-    }
-    .deadline-flag svg { width: 13px; height: 13px; }
-
-    /* Card body: single column. With 2-up cards each is ~600px wide —
-       not enough for body + map side-by-side, so the address/map block
-       sits below the facts list. */
-    .notice-body {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      padding: 22px;
-    }
-
-    .notice-card h2 {
-      margin: 0 0 10px;
-      font-family: var(--font-heading);
-      font-size: 1.35rem;
-      line-height: 1.3;
-      color: var(--text-primary);
-    }
-    .notice-summary {
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-      line-height: 1.55;
-      margin: 0 0 16px;
-    }
-
-    /* Definition list of facts — every value is a quotable fact, no editorial prose */
-    .notice-facts {
-      display: grid;
-      grid-template-columns: 130px minmax(0, 1fr);
-      column-gap: 16px;
-      row-gap: 8px;
-      font-size: 0.86rem;
-      margin: 0 0 18px;
-    }
-    .notice-facts dt {
-      color: var(--text-muted);
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 700;
-      padding-top: 2px;
-    }
-    .notice-facts dd { margin: 0; color: var(--text-primary); }
-    .notice-facts dd .case-num,
-    .notice-facts dd .file-num { font-family: 'SF Mono', Monaco, monospace; font-size: 0.82rem; }
-
-    /* Address + map column */
-    .location-col {
-      background: var(--bg-paper);
-      border: 1px solid var(--border-soft);
-      border-radius: 14px;
-      padding: 12px 14px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .location-label {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-muted);
-    }
-    .location-label svg { width: 13px; height: 13px; flex-shrink: 0; }
-    .location-address {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      line-height: 1.35;
-      padding-left: 19px; /* aligns under the label text, past the pin icon */
-    }
-    .map-thumb {
-      width: 100%;
-      aspect-ratio: 16 / 6;
-      border-radius: 10px;
-      overflow: hidden;
-      border: 1px solid var(--border-soft);
-      background: #e0ddd4;
-      margin-top: 6px;
-    }
-    .map-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
-    .map-link {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: var(--accent-green);
-      text-decoration: none;
-      white-space: nowrap;
-      display: inline-block;
-      margin-top: 2px;
-    }
-    .map-link:hover { text-decoration: underline; }
-
-    /* Action row at bottom of card */
-    .notice-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      padding: 14px 22px;
-      border-top: 1px solid var(--border-soft);
-      background: var(--bg-paper);
-    }
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      background: rgba(47, 122, 95, 0.12);
-      border: 1px solid rgba(47, 122, 95, 0.18);
-      color: var(--forest);
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .btn-primary:hover { background: rgba(47, 122, 95, 0.22); border-color: rgba(47, 122, 95, 0.32); }
-    .btn-primary svg { width: 13px; height: 13px; }
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      color: var(--text-primary);
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 600;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .btn-secondary:hover { background: var(--bg-paper); border-color: rgba(33, 68, 60, 0.22); }
-    .btn-secondary svg { width: 13px; height: 13px; }
-    .actions-meta {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.74rem;
-      color: var(--text-muted);
-    }
-
-    /* Address modal */
-    .addr-modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(20,35,30,0.52);
-      z-index: 200;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .addr-modal-overlay.open { display: flex; }
-    .addr-modal {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 24px 72px rgba(20,40,34,0.20);
-      width: 100%;
-      max-width: 440px;
-      padding: 28px;
-      position: relative;
-    }
-    .addr-modal-close {
-      position: absolute;
-      top: 14px; right: 16px;
-      border: none;
-      background: none;
-      font-size: 1.4rem;
-      line-height: 1;
-      color: var(--text-muted);
-      cursor: pointer;
-      padding: 4px 8px;
-      border-radius: 8px;
-    }
-    .addr-modal-close:hover { background: var(--bg-hero); }
-    .addr-modal h2 {
-      margin: 0 0 6px;
-      font-family: var(--font-heading);
-      font-size: 1.3rem;
-      color: var(--text-primary);
-    }
-    .addr-modal p { margin: 0 0 18px; font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
-    .addr-modal-field { margin-bottom: 14px; }
-    .addr-modal-field label {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-    }
-    .addr-modal-field input {
-      width: 100%;
-      height: 44px;
-      padding: 0 14px;
-      border: 1.5px solid var(--border-soft);
-      border-radius: 12px;
-      background: var(--bg-warm);
-      color: var(--text-primary);
-      font-size: 0.95rem;
-      outline: none;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-    .addr-modal-field input:focus {
-      border-color: var(--forest);
-      box-shadow: 0 0 0 4px rgba(33,68,60,0.10);
-      background: #fff;
-    }
-    .addr-modal-hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 5px; }
-    .addr-modal-submit {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: var(--forest);
-      color: #fff;
-      border: none;
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 6px;
-      transition: background 0.15s;
-    }
-    .addr-modal-submit:hover { background: #2a5347; }
-    .addr-modal-clear {
-      display: block;
-      width: 100%;
-      margin-top: 8px;
-      padding: 10px;
-      background: none;
-      border: 1px solid var(--border-soft);
-      border-radius: 999px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-    }
-    .addr-modal-clear:hover { color: var(--text-primary); border-color: rgba(33,68,60,0.3); }
-
-    /* Responsive */
-    @media (max-width: 1100px) {
-      .page-wrap { grid-template-columns: 220px 1fr; gap: 20px; }
-      .notice-list { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 860px) {
-      .page-wrap { grid-template-columns: 1fr; padding: 20px 18px 40px; }
-      .sidebar { position: static; flex-direction: row; flex-wrap: wrap; }
-      .filter-panel, .following-card { flex: 1 1 240px; }
-    }
-    @media (max-width: 640px) {
-      .topnav-links { display: none; }
-      .hero h1 { font-size: 2rem; }
-    }
-  
-    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
-    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
-    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
-    .topnav-translate .goog-te-gadget-simple {
-      background: transparent !important;
-      border: 1px solid #d4dad0 !important;
-      border-radius: 999px !important;
-      padding: 7px 14px !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-      font-size: 0.82rem !important;
-      cursor: pointer;
-      line-height: 1.2 !important;
-    }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
-    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
-    .topnav-translate-reset {
-      display: none; background: transparent; border: 1px solid #d4dad0;
-      border-radius: 999px; padding: 7px 12px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
-      margin-right: 10px; line-height: 1.2;
-    }
-    .topnav-translate-reset:hover { background: #f3f5ef; }
-    body.translated-ltr .topnav-translate-reset,
-    body.translated-rtl .topnav-translate-reset { display: inline-block; }
-    body { top: 0 !important; }
-    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
-    .goog-text-highlight { background: none !important; box-shadow: none !important; }
-
-    .topnav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
-    }
-    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
-
-    @media (max-width: 860px) {
-      .topnav-inner { position: relative; flex-wrap: nowrap; }
-      .topnav-links {
-        display: none !important;
-        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
-        background: #fff; flex-direction: column !important; gap: 0 !important;
-        padding: 8px 0; margin: 0 !important;
-        border-top: 1px solid #d4dad0;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        z-index: 60;
-      }
-      .topnav-links.open { display: flex !important; }
-      .topnav-links a {
-        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
-        font-size: 1rem !important;
-      }
-      .topnav-links a:last-child { border-bottom: none !important; }
-      .topnav-hamburger { display: block; }
-      .topnav-translate { margin-right: 6px; }
-      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
-      .topnav-cta { display: none !important; }
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legal Notices — Livable Telluride</title>
+<meta name="description" content="Official public notices from local governments and districts — hearings, ordinances, budgets, and bids — gathered here and linked back to the issuing agency.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/legal-notices.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/legal-notices.html">
+<meta property="og:title" content="Legal Notices — Livable Telluride">
+<meta property="og:description" content="Official public notices from local governments and districts — hearings, ordinances, budgets, and bids — gathered here and linked back to the issuing agency.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<style>
+  .filters { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .filters select { font: 600 15px/1 var(--sans); color: var(--forest); background: var(--card); border: 1px solid rgba(36,72,63,.2); border-radius: 999px; padding: 8px 14px; }
+  .why { max-width: var(--maxw); margin: 22px auto 0; padding: 0 var(--pad-x); }
+  .why-card { background: var(--sage2); border-left: 4px solid var(--gold); border-radius: 8px; padding: 14px 18px; font: 400 15px/1.6 var(--sans); color: var(--body2); }
+  .notices { max-width: var(--maxw); margin: 0 auto; padding: 10px var(--pad-x) 20px; }
+  .n-row { display: grid; grid-template-columns: 64px 1fr auto; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .n-date { text-align: center; }
+  .n-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
+  .n-date .d { font: 600 30px/1.05 var(--serif); color: var(--forest); }
+  .n-date .y { font: 500 11px/1.4 var(--sans); color: var(--muted2); }
+  .n-row .ent { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
+  .n-row h3 { font: 600 21px/1.25 var(--serif); margin: 7px 0 5px; }
+  .n-row h3 a { color: var(--forest); }
+  .n-row:hover h3 a { color: var(--rust); }
+  .n-row .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 7px; }
+  .n-row .chev { font-size: 22px; color: var(--rust); align-self: center; }
+  .n-empty { padding: 26px 0; }
+  /* location + embedded map (shown when the notice names a specific place) */
+  .n-loc { font: 600 14px/1.5 var(--sans); color: var(--forest); margin: 6px 0 4px; }
+  .map-thumb { max-width: 560px; aspect-ratio: 16/6; border-radius: 10px; overflow: hidden; border: 1px solid var(--hairline); background: var(--sage2); margin: 6px 0 4px; }
+  .map-thumb iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .map-link { font: 600 13px/1.4 var(--sans); }
+  /* email-alerts signup */
+  .alerts { max-width: var(--maxw); margin: 22px auto 0; padding: 0 var(--pad-x); }
+  .alerts-card { border: 1.5px solid var(--forest); border-radius: 12px; background: #fff; padding: 22px 26px; }
+  .alerts-card h3 { font: 600 22px/1.2 var(--serif); margin: 0 0 6px; }
+  .alerts-card p { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; }
+  .alerts-form { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .alerts-form input[type=email] { flex: 1 1 220px; font: 500 15px/1.2 var(--sans); padding: 10px 13px; border: 1px solid var(--hairline); border-radius: 8px; }
+  .alerts-form select { font: 600 14.5px/1.2 var(--sans); color: var(--forest); padding: 10px 12px; border: 1px solid rgba(36,72,63,.25); border-radius: 8px; background: #fff; }
+  .alerts-msg { font: 600 14.5px/1.5 var(--sans); margin-top: 10px; }
+  .alerts-msg.ok { color: var(--forest); }
+  .alerts-msg.err { color: #a0463d; }
+  @media (max-width: 900px) { .n-row { grid-template-columns: 52px 1fr; } .n-row .chev { display: none; } }
+</style>
 </head>
 <body>
-  <header class="topnav">
-    <div class="topnav-inner">
-      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
-      </a>
-      <nav class="topnav-links">
-        <a href="/local-news.html">Local News</a>
-        <a href="/gov-hub.html">Gov-Hub</a>
-        <a href="/deep-dives.html">Deep Dives</a>
-        <a href="/events.html">Events</a>
-        <a href="/hub-bub.html">Hub-Bub</a>
-        <a href="/local-orgs.html">Local Orgs</a>
-        <a href="/projects-map/">Projects Map</a>
-        <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-      </nav>
-      <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-      <div id="lvLangWidget" aria-hidden="true"></div>
-      <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
-    </div>
-  </header>
+<div id="lt-header"></div>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Legal Notices</h1>
-      <p>Public notices from Telluride, San Miguel County, Mountain Village, and the surrounding region — including hearings, permits, water rights, foreclosures, and probate.</p>
-    </div>
-  </section>
-
-  <main class="page-wrap">
-
-    <!-- Left sidebar -->
-    <aside class="sidebar">
-      <div class="filter-panel">
-        <p class="filter-panel-heading">Filter by type</p>
-        <div class="filter-group" id="chipRow"><!-- populated by JS --></div>
-      </div>
-
-    </aside>
-
-    <!-- Main content -->
-    <div>
-      <div class="notice-list" id="noticeList">
-        <div class="loading-state" style="text-align:center;padding:48px;color:var(--text-muted);">Loading legal notices&hellip;</div>
-      </div>
-    </div>
-
-  </main>
-
-
-  <!-- Address modal -->
-  <div class="addr-modal-overlay" id="addrModalOverlay" role="dialog" aria-modal="true" aria-labelledby="addrModalTitle">
-    <div class="addr-modal">
-      <button class="addr-modal-close" id="addrModalClose" aria-label="Close">×</button>
-      <h2 id="addrModalTitle">
-        <svg style="width:18px;height:18px;vertical-align:-3px;margin-right:6px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Notices near you
-      </h2>
-      <p>Enter your address and we'll show legal notices filed within 0.5 miles of your property.</p>
-      <div class="addr-modal-field">
-        <label for="addrInput">Your address</label>
-        <input type="text" id="addrInput" placeholder="e.g. 123 Main St, Telluride, CO" autocomplete="street-address">
-        <div class="addr-modal-hint">Include street, city, and state for best results.</div>
-      </div>
-      <button class="addr-modal-submit" id="addrModalSubmit" type="button">Show nearby notices</button>
-      <button class="addr-modal-clear" id="addrModalClear" type="button">Clear address &amp; show all</button>
-    </div>
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Act <span class="sep">&rsaquo;</span> Legal Notices</div>
+    <h1>Legal Notices</h1>
+    <p class="sub">Official public notices from local governments and districts &mdash; hearings, ordinances, budgets, and bids &mdash; gathered here and linked back to the issuing agency.</p>
   </div>
+</header>
 
-  <script>
-    /* ── Filter taxonomy — matches the live LEGAL_NOTICES `filterTag` values
-       exactly. The richer taxonomy in the design (Public Hearings, Bids/RFPs,
-       Bonds/Finance, Elections, Liens) is parked for a future enhancement
-       once notices have richer tagging. ─────────────────────────────────── */
-    const FILTERS = [
-      { key: 'all',           label: 'All Notices' },
-      { key: 'land-use',      label: 'Land Use',                    special: 'land-use' },
-      { key: 'rfp',           label: 'Bids / RFP' },
-      { key: 'public-entity', label: 'Public Entity' },
-      { key: 'water-court',   label: 'Water Court' },
-      { key: 'housing',       label: 'Housing' },
-      { key: 'ordinance',     label: 'Ordinance' },
-      { key: 'estate',        label: 'Estate / Creditors' },
-      { key: 'tax-finance',   label: 'Tax &amp; Finance' },
-      { key: 'utilities',     label: 'Utilities' },
-      { key: 'nearby',        label: 'Within 0.5 mi of my address', special: 'nearby' }
-    ];
-    let activeFilter = 'all';
-    let userAddress = '';      /* set when user enters address for nearby filter */
-    let userLatLng  = null;    /* { lat, lng } once geocoded */
-    let geocodeCache = {};     /* address → { lat, lng } to avoid redundant API calls */
+<div class="filters" id="type-chips"><span class="chip active" data-type="">All</span></div>
+<div class="filters" style="padding-top:12px">
+  <select id="agency-sel" aria-label="Filter by agency"><option value="">All agencies</option></select>
+</div>
 
-    /* ── Haversine distance (miles) between two lat/lng points ── */
-    function haversineMiles(lat1, lng1, lat2, lng2) {
-      const R = 3958.8; // Earth radius in miles
-      const dLat = (lat2 - lat1) * Math.PI / 180;
-      const dLng = (lng2 - lng1) * Math.PI / 180;
-      const a = Math.sin(dLat/2)**2
-              + Math.cos(lat1 * Math.PI/180) * Math.cos(lat2 * Math.PI/180) * Math.sin(dLng/2)**2;
-      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    }
+<div class="why">
+  <div class="why-card"><strong>Why this matters:</strong> Legal notices are the official, often-overlooked announcements that start the clock on public comment and appeals. We surface them so deadlines don't pass unnoticed &mdash; always confirm details with the issuing agency.</div>
+</div>
 
-    /* ── Nominatim geocode (free, no key, 1 req/s limit) ── */
-    function geocode(address) {
-      if (geocodeCache[address]) return Promise.resolve(geocodeCache[address]);
-      const url = 'https://nominatim.openstreetmap.org/search?format=json&limit=1&q='
-                  + encodeURIComponent(address);
-      return fetch(url, { headers: { 'Accept': 'application/json' } })
-        .then(r => r.json())
-        .then(results => {
-          if (!results || !results.length) return null;
-          const pt = { lat: parseFloat(results[0].lat), lng: parseFloat(results[0].lon) };
-          geocodeCache[address] = pt;
-          return pt;
-        })
-        .catch(() => null);
-    }
+<div class="alerts">
+  <div class="alerts-card">
+    <h3>&#128238; Get notified about new notices</h3>
+    <p>Tell us what to watch and we'll email you when a matching legal notice is published. Alerts are launching soon &mdash; sign up now and you'll be included from day one.</p>
+    <form class="alerts-form" id="alerts-form">
+      <input type="email" id="alert-email" placeholder="you@example.com" required autocomplete="email">
+      <select id="alert-entity" aria-label="Which agency"><option value="">Any agency</option></select>
+      <select id="alert-type" aria-label="Which notice type"><option value="">Any notice type</option></select>
+      <button class="btn btn-forest" type="submit">Sign me up</button>
+    </form>
+    <div class="alerts-msg" id="alerts-msg" hidden></div>
+  </div>
+</div>
 
-    /* ── Sequential geocode with 1s delay between calls (Nominatim policy) ── */
-    function geocodeSequential(addresses, delayMs) {
-      return addresses.reduce((chain, addr) => {
-        return chain.then(results =>
-          new Promise(resolve => setTimeout(resolve, delayMs))
-            .then(() => geocode(addr))
-            .then(pt => { results.push({ addr, pt }); return results; })
-        );
-      }, Promise.resolve([]));
-    }
+<main class="notices" id="notice-list"><p class="meta n-empty">Loading notices&hellip;</p></main>
 
-    /* ── Helpers ── */
-    function escapeHtml(s) {
-      if (s == null) return '';
-      return String(s)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
-    }
-    /* Compute a short countdown badge from notice.expires (ISO date string). */
-    function formatExpiryFlag(expiresStr) {
-      if (!expiresStr) return '';
-      const exp = new Date(expiresStr + 'T23:59:59');
-      if (isNaN(exp)) return '';
-      const now = new Date();
-      const days = Math.ceil((exp - now) / 86400000);
-      if (days < 0)  return '';
-      if (days === 0) return 'Expires today';
-      if (days === 1) return 'Expires tomorrow';
-      if (days <= 30) return 'Expires in ' + days + ' days';
-      if (days <= 60) return 'Expires in ' + Math.round(days / 7) + ' weeks';
-      const mo = Math.round(days / 30);
-      return 'Expires in ' + mo + ' mo';
-    }
-    /* Pick a small emoji to lead the entity-pill, based on entityClass. */
-    function entityEmoji(entityClass) {
-      const map = {
-        'ent-county':    '🏛',
-        'ent-assessor':  '🏠',
-        'ent-court':     '⚖️',
-        'ent-water':     '💧',
-        'ent-utility':   '🔌',
-        'ent-school':    '🏫'
-      };
-      return map[entityClass] || '📄';
-    }
-    /* Format paper-key list ("ttimes", "npost", "ttimes_0506") into a human label.
-       Date-stamped variants (ttimes_MMDD, npost_MMDD) resolve to the paper name. */
-    const PAPER_NAMES = {
-      'ttimes':      'Telluride Times',
-      'npost':       'Norwood Post',
-      'county_web':  'County website',
-      'mv_web':      'Mountain Village website'
-    };
-    function paperLabel(k) {
-      if (PAPER_NAMES[k]) return PAPER_NAMES[k];
-      if (/^ttimes/i.test(k)) return 'Telluride Times';
-      if (/^npost/i.test(k))  return 'Norwood Post';
-      return k;
-    }
-    function formatPapers(papers) {
-      if (!Array.isArray(papers) || papers.length === 0) return '';
-      const names = [];
-      const seen = new Set();
-      papers.forEach(k => {
-        const n = paperLabel(k);
-        if (!seen.has(n)) { seen.add(n); names.push(n); }
-      });
-      return names.join(', ');
-    }
-    /* True only for real street addresses — skips maps for legal land descriptions. */
-    function isStreetAddr(addr) {
-      if (!addr) return false;
-      return /\d{1,5}\s+[A-Z]/i.test(addr) && !/Section\s+\d|T\d+[NS]\s*R\d+[EW]|Township|Condominiums?,\s*San Miguel/i.test(addr);
-    }
-
-    /* ── Render a single notice card from a LEGAL_NOTICES entry ── */
-    function renderNoticeCard(notice) {
-      const hasAddress = isStreetAddr(notice.address);
-      const flag = formatExpiryFlag(notice.expires);
-      const linkUrl = notice.url || '#';
-      const papersLabel = formatPapers(notice.papers);
-      /* Derive display type: titles starting with "RFP" show "RFP" not "Public Notice" */
-      const displayType = /^rfp\b/i.test(notice.title) ? 'RFP' : (notice.type || 'Notice');
-
-      const flagHtml = flag
-        ? '<span class="deadline-flag">'
-          + '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> '
-          + escapeHtml(flag) + '</span>'
-        : '';
-
-      const factsHtml =
-        '<dl class="notice-facts">'
-        + (displayType     ? '<dt>Type</dt><dd>' + escapeHtml(displayType) + '</dd>' : '')
-        + (notice.deadline ? '<dt>Deadline</dt><dd>' + escapeHtml(notice.deadline) + '</dd>' : '')
-        + (notice.dates    ? '<dt>Published</dt><dd>' + escapeHtml(notice.dates) + '</dd>' : '')
-        + (papersLabel     ? '<dt>In</dt><dd>' + escapeHtml(papersLabel) + '</dd>' : '')
-        + '</dl>';
-
-      let locationHtml = '';
-      if (hasAddress) {
-        const addrEnc = encodeURIComponent(notice.address);
-        locationHtml = '<aside class="location-col">'
-          + '<div class="location-label">'
-          +   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>'
-          +   ' Subject Property'
-          + '</div>'
-          + '<div class="location-address">' + escapeHtml(notice.address) + '</div>'
-          + '<div class="map-thumb">'
-          +   '<iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" '
-          +     'title="Map of ' + escapeHtml(notice.address) + '" '
-          +     'src="https://maps.google.com/maps?q=' + addrEnc + '&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>'
-          + '</div>'
-          + '<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=' + addrEnc + '" target="_blank" rel="noopener">Open in Google Maps &rarr;</a>'
-          + '</aside>';
-      }
-
-      const logoHtml = (typeof LEGAL_ENTITY_LOGOS !== 'undefined' && LEGAL_ENTITY_LOGOS[notice.entityLogo])
-        ? '<div class="notice-strip-logo">' + LEGAL_ENTITY_LOGOS[notice.entityLogo] + '</div>'
-        : '<div class="notice-strip-logo" style="font-size:0.72rem;font-weight:600;color:var(--text-secondary);text-align:center;word-break:break-word;">' + escapeHtml(notice.entity || '') + '</div>';
-
-      return '<article class="notice-card' + (hasAddress ? '' : ' no-location')
-        + '" data-filter-tag="' + escapeHtml(notice.filterTag || '') + '"'
-        + (hasAddress ? ' data-address="' + escapeHtml(notice.address) + '"' : '') + '>'
-        +  '<div class="notice-strip">'
-        +    '<div class="notice-strip-left">'
-        +      '<span class="type-pill">'
-        +        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>'
-        +        ' ' + escapeHtml(displayType)
-        +      '</span>'
-        +      flagHtml
-        +    '</div>'
-        +    logoHtml
-        +  '</div>'
-        +  '<div class="notice-body">'
-        +    '<div>'
-        +      '<h2>' + escapeHtml(notice.title) + '</h2>'
-        +      '<p class="notice-summary">' + escapeHtml(notice.summary) + '</p>'
-        +      factsHtml
-        +    '</div>'
-        +    locationHtml
-        +  '</div>'
-        +  '<div class="notice-actions">'
-        +    '<a class="btn-primary" href="' + linkUrl + '" target="_blank" rel="noopener">'
-        +      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>'
-        +      ' Read Full Notice'
-        +    '</a>'
-        +    (notice.dates ? '<div class="actions-meta">Published <strong>' + escapeHtml(notice.dates) + '</strong></div>' : '')
-        +  '</div>'
-        + '</article>';
-    }
-
-    /* ── Filter render + apply ── */
-    function renderChips() {
-      const row = document.getElementById('chipRow');
-      // Only show a chip when at least one current notice carries its tag, so
-      // we never render a chip that filters to an empty list (e.g. Bids/RFP,
-      // Estate, Utilities with no matching notices). "All Notices" and the
-      // "Within 0.5 mi" proximity tool always show; "Land Use" matches
-      // land-use OR ordinance, mirroring applyFilter(). Re-runs after the
-      // notices load, so chips appear automatically when matching data exists.
-      const present = new Set(
-        Array.from(document.querySelectorAll('#noticeList .notice-card'))
-          .map(c => c.getAttribute('data-filter-tag') || '')
-      );
-      const hasMatches = (f) => {
-        if (f.key === 'all' || f.special === 'nearby') return true;
-        if (f.key === 'land-use') return present.has('land-use') || present.has('ordinance');
-        return present.has(f.key);
-      };
-      row.innerHTML = FILTERS.filter(hasMatches).map(f => {
-        const isActive = f.key === activeFilter;
-        const nearbyLabel = (f.special === 'nearby' && userAddress)
-          ? 'Within 0.5 mi: ' + userAddress.split(',')[0]
-          : f.label;
-        return '<button class="filter-opt' + (isActive ? ' active' : '') + '" data-filter="' + f.key + '">' + nearbyLabel + '</button>';
-      }).join('');
-      row.querySelectorAll('.filter-opt').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const f = FILTERS.find(x => x.key === btn.dataset.filter);
-          if (f && f.special === 'nearby') {
-            openAddressModal();
-            return;
-          }
-          activeFilter = btn.dataset.filter;
-          renderChips();
-          applyFilter();
-        });
-      });
-    }
-    function applyFilter() {
-      const cards = Array.from(document.querySelectorAll('#noticeList .notice-card'));
-
-      if (activeFilter === 'nearby' && userLatLng) {
-        applyNearbyFilter(cards);
-        return;
-      }
-
-      cards.forEach(card => {
-        const tag = card.getAttribute('data-filter-tag') || '';
-        let show = false;
-        if (activeFilter === 'all') {
-          show = true;
-        } else if (activeFilter === 'land-use') {
-          show = tag === 'land-use' || tag === 'ordinance';
-        } else if (activeFilter === 'nearby') {
-          show = true; /* no address yet — show all until user sets one */
-        } else {
-          show = tag === activeFilter;
-        }
-        card.style.display = show ? '' : 'none';
-        card.removeAttribute('data-nearby-status');
-      });
-    }
-
-    /* ── Proximity filter — geocodes each notice address vs. userLatLng ── */
-    function applyNearbyFilter(cards) {
-      const RADIUS_MI = 0.5;
-
-      /* Show a "Checking distances…" notice while we work */
-      const list = document.getElementById('noticeList');
-      const spinner = document.createElement('div');
-      spinner.id = 'nearbySpinner';
-      spinner.style.cssText = 'text-align:center;padding:16px 0;color:var(--text-muted);font-size:0.88rem;grid-column:1/-1;';
-      spinner.textContent = 'Checking distances…';
-      list.appendChild(spinner);
-
-      /* Collect cards that have a geocodable address */
-      const toGeocode = [];
-      cards.forEach(card => {
-        const addr = card.getAttribute('data-address') || '';
-        if (addr) toGeocode.push({ card, addr });
-        else {
-          /* No address → can't determine proximity; hide it */
-          card.style.display = 'none';
-        }
-      });
-
-      /* Geocode addresses sequentially (1 per second per Nominatim policy) */
-      geocodeSequential(toGeocode.map(x => x.addr), 1100)
-        .then(results => {
-          results.forEach(({ addr, pt }, i) => {
-            const card = toGeocode[i].card;
-            if (!pt) {
-              /* Geocode failed — show the card (benefit of the doubt) */
-              card.style.display = '';
-              return;
-            }
-            const dist = haversineMiles(userLatLng.lat, userLatLng.lng, pt.lat, pt.lng);
-            card.style.display = dist <= RADIUS_MI ? '' : 'none';
-            if (dist <= RADIUS_MI) {
-              /* Optional: show distance badge */
-              let badge = card.querySelector('.nearby-badge');
-              if (!badge) {
-                badge = document.createElement('span');
-                badge.className = 'nearby-badge';
-                badge.style.cssText = 'display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(33,68,60,0.10);color:var(--forest);font-size:0.74rem;font-weight:700;';
-                const strip = card.querySelector('.notice-strip-left');
-                if (strip) strip.appendChild(badge);
-              }
-              badge.textContent = (dist < 0.1 ? (dist * 5280).toFixed(0) + ' ft' : dist.toFixed(2) + ' mi') + ' away';
-            } else {
-              const badge = card.querySelector('.nearby-badge');
-              if (badge) badge.remove();
-            }
-          });
-
-          /* Remove spinner */
-          const s = document.getElementById('nearbySpinner');
-          if (s) s.remove();
-
-          /* If nothing matched, show a message */
-          const visible = cards.filter(c => c.style.display !== 'none').length;
-          if (visible === 0) {
-            const msg = document.createElement('div');
-            msg.style.cssText = 'text-align:center;padding:48px;color:var(--text-muted);grid-column:1/-1;';
-            msg.innerHTML = '<strong>No notices found within 0.5 miles</strong><br><span style="font-size:0.88rem;">Try a different address, or choose "All Notices" to see everything.</span>';
-            list.appendChild(msg);
-          }
-        });
-    }
-    renderChips();
-
-    /* ── Address modal ── */
-    function openAddressModal() {
-      document.getElementById('addrModalOverlay').classList.add('open');
-      const inp = document.getElementById('addrInput');
-      inp.value = userAddress;
-      setTimeout(() => inp.focus(), 80);
-    }
-    function closeAddressModal() {
-      document.getElementById('addrModalOverlay').classList.remove('open');
-    }
-
-    /* Wire modal buttons after DOM is ready */
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('addrModalClose').addEventListener('click', closeAddressModal);
-      document.getElementById('addrModalOverlay').addEventListener('click', function (e) {
-        if (e.target === this) closeAddressModal();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeAddressModal();
-      });
-
-      document.getElementById('addrModalSubmit').addEventListener('click', function () {
-        const val = document.getElementById('addrInput').value.trim();
-        if (!val) return;
-
-        const btn = this;
-        btn.textContent = 'Locating address…';
-        btn.disabled = true;
-
-        geocode(val).then(pt => {
-          btn.textContent = 'Show nearby notices';
-          btn.disabled = false;
-
-          if (!pt) {
-            /* Show error inside modal */
-            let err = document.getElementById('addrModalErr');
-            if (!err) {
-              err = document.createElement('p');
-              err.id = 'addrModalErr';
-              err.style.cssText = 'color:#a33;font-size:0.84rem;margin-top:8px;';
-              btn.parentNode.insertBefore(err, btn.nextSibling);
-            }
-            err.textContent = 'Address not found — try adding city and state (e.g. "123 Main St, Telluride, CO").';
-            return;
-          }
-
-          userAddress = val;
-          userLatLng  = pt;
-          activeFilter = 'nearby';
-          closeAddressModal();
-          renderChips();
-          applyFilter();
-        });
-      });
-
-      document.getElementById('addrInput').addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') document.getElementById('addrModalSubmit').click();
-      });
-
-      document.getElementById('addrModalClear').addEventListener('click', function () {
-        userAddress = '';
-        userLatLng  = null;
-        activeFilter = 'all';
-        /* Remove any distance badges */
-        document.querySelectorAll('.nearby-badge').forEach(b => b.remove());
-        closeAddressModal();
-        renderChips();
-        applyFilter();
-      });
-    });
-
-    /* ── Live data: load gov-hub.js, prune expired, render cards ── */
-    function loadLiveNotices() {
-
-
-      const day = Math.floor(Date.now()/600000);
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + day;
-      dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
-        s.onload = () => {
-          try {
-            if (typeof LEGAL_NOTICES === 'undefined' || !Array.isArray(LEGAL_NOTICES)) {
-              return showError('Notice data unavailable.');
-            }
-            const today = new Date(); today.setHours(0, 0, 0, 0);
-            const active = LEGAL_NOTICES.filter(n => {
-              if (!n.expires) return true;
-              const exp = new Date(n.expires + 'T23:59:59');
-              return !isNaN(exp) && exp >= today;
-            });
-            if (active.length === 0) {
-              return showError('No active legal notices at this time.');
-            }
-            const list = document.getElementById('noticeList');
-            list.innerHTML = active.map(renderNoticeCard).join('');
-            renderChips();   // re-render chips now that cards (and their tags) exist
-            applyFilter();
-          } catch (err) {
-            console.warn('loadLiveNotices failed:', err);
-            showError('Could not load legal notices.');
-          }
-        };
-        s.onerror = () => showError('Could not load /js/gov-helpers.js.');
-        document.head.appendChild(s);
-      };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
-      document.head.appendChild(dataScript);
-    }
-    function showError(msg) {
-      const list = document.getElementById('noticeList');
-      if (!list) return;
-      list.innerHTML = '<div class="loading-state" style="text-align:center;padding:48px;color:var(--text-muted);">' + escapeHtml(msg) + '</div>';
-    }
-    loadLiveNotices();
-  </script>
-
-<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<div id="lt-footer"></div>
+<script src="site.js?v=7"></script>
+<script src="/js/lt-data.js?v=4"></script>
+<!-- Firebase (compat) — stores alert signups in legal_notice_alerts.
+     The alert-sender bot isn't built yet; signups accumulate until it is. -->
+<script src="/js/site-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
-// ── EN/ES language toggle (replaced Google Translate's 24-lang
-//   dropdown 2026-05-29). Google Translate is still the engine doing
-//   the translation when the cookie is set; we just hide its UI
-//   chrome (banner + dropdown) and expose a single binary pill in the
-//   topnav. Cookie format: googtrans=/en/<lang>; deleting it reverts
-//   to English. ────────────────────────────────────────────────── */
-function lvCurrentLang() {
-  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-  return m ? m[1] : 'en';
-}
-function lvSetTransCookie(value) {
-  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  var domains = ['', '.' + location.hostname, location.hostname];
-  domains.forEach(function(d){
-    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
-    if (d) c += '; domain=' + d;
-    document.cookie = c;
-  });
-}
-function lvToggleLang() {
-  var cur = lvCurrentLang();
-  lvSetTransCookie(cur === 'es' ? '' : 'es');
-  location.reload();
-}
-function googleTranslateElementInit() {
-  // includedLanguages is just 'es' now — the visible toggle only
-  // offers Spanish, but Google Translate still needs an init call
-  // to act on the cookie.
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'lvLangWidget');
-}
-(function(){
-  // Inject CSS for the pill + hide all Google Translate UI chrome
-  var hideCss = document.createElement('style');
-  hideCss.textContent = [
-    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
-    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame { display: none !important; }',
-    '.goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; }',
-    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
-    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
-    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
-    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
-  ].join('\n');
-  document.head.appendChild(hideCss);
-  // Set initial button label based on current state
-  function setLabel() {
-    var btn = document.getElementById('lvLangToggle');
-    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+(function () {
+  var list = document.getElementById('notice-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var notices = [], typeFilter = '', agencyFilter = '';
+
+  function expiryBits(n) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(n.expires || '')) return null;
+    return { d: LTData.parseDateKey(n.expires), key: n.expires };
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setLabel);
-  } else { setLabel(); }
-  // Load Google Translate
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async = true;
-  document.head.appendChild(s);
-})();
-(function(){
-  function init(){
-    var btn = document.getElementById('topnavHamburger');
-    if (!btn) return;
-    var links = document.querySelector('.topnav-links');
-    if (!links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? '✕' : '☰';
+  function render() {
+    var today = LTData.todayMT();
+    var rows = notices.filter(function (n) {
+      var e = expiryBits(n);
+      if (e && e.key < today) return false;                       // expired
+      if (typeFilter && (n.type || '') !== typeFilter) return false;
+      if (agencyFilter && (n.entity || '') !== agencyFilter) return false;
+      return true;
     });
-    // close drawer when a link is clicked
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = '☰';
+    if (!rows.length) { list.innerHTML = '<p class="meta n-empty">No notices match this filter.</p>'; return; }
+    list.innerHTML = rows.map(function (n) {
+      var e = expiryBits(n);
+      var dateHtml = e
+        ? '<div class="n-date"><div class="m">' + MON[e.d.getMonth()] + '</div><div class="d">' + e.d.getDate() + '</div><div class="y">' + e.d.getFullYear() + '</div></div>'
+        : '<div class="n-date"><div class="m">Open</div></div>';
+      var deadline = e ? 'Expires ' + LTData.fmtDate(e.key, { month: 'short', day: 'numeric', year: 'numeric' }) + ' &middot; ' : '';
+      // Location + embedded map whenever the notice names a specific place
+      // (same Google embed as the live page; lazy so 20+ maps stay cheap).
+      var mapHtml = '';
+      if (n.address) {
+        var addrEnc = encodeURIComponent(n.address);
+        mapHtml = '<div class="n-loc">&#128205; ' + LTData.esc(n.address) + '</div>' +
+          '<div class="map-thumb"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
+          'title="Map of ' + LTData.esc(n.address) + '" ' +
+          'src="https://maps.google.com/maps?q=' + addrEnc + '&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div>' +
+          '<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=' + addrEnc + '" target="_blank" rel="noopener">Open in Google Maps &rarr;</a> ';
+      }
+      return '<article class="n-row story">' + dateHtml +
+        '<div><span class="tag">' + LTData.esc(n.type || 'Notice') + '</span><span class="ent">' + LTData.esc(n.entity || '') + '</span>' +
+        '<h3><a href="' + LTData.esc(LTData.safeUrl(n.url)) + '" target="_blank" rel="noopener">' + LTData.esc(n.title || '') + '</a></h3>' +
+        '<p class="dek">' + LTData.esc(n.summary || '') + '</p>' + mapHtml +
+        '<span class="meta">' + deadline + '</span><a class="doc-link" href="' + LTData.esc(LTData.safeUrl(n.url)) + '" target="_blank" rel="noopener">View notice &rsaquo;</a></div>' +
+        '<div class="chev">&rsaquo;</div></article>';
+    }).join('');
+  }
+
+  LTData.load(['legal-notices']).then(function (data) {
+    notices = (data['legal-notices'] || []).slice().sort(function (a, b) {
+      // soonest deadline first; open-ended (no expiry) notices last
+      var ea = /^\d{4}-\d{2}-\d{2}$/.test(a.expires || '') ? a.expires : '9999';
+      var eb = /^\d{4}-\d{2}-\d{2}$/.test(b.expires || '') ? b.expires : '9999';
+      return ea < eb ? -1 : ea > eb ? 1 : 0;
+    });
+    // chips + agency options derive from the live data
+    var types = {}; var ents = {};
+    notices.forEach(function (n) { if (n.type) types[n.type] = 1; if (n.entity) ents[n.entity] = 1; });
+    var chips = document.getElementById('type-chips');
+    Object.keys(types).sort().forEach(function (t) {
+      var s = document.createElement('span'); s.className = 'chip'; s.dataset.type = t; s.textContent = t;
+      chips.appendChild(s);
+    });
+    chips.addEventListener('click', function (e) {
+      var c = e.target.closest('.chip'); if (!c) return;
+      chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+      c.classList.add('active'); typeFilter = c.dataset.type || ''; render();
+    });
+    var sel = document.getElementById('agency-sel');
+    Object.keys(ents).sort().forEach(function (a) {
+      var o = document.createElement('option'); o.value = a; o.textContent = a; sel.appendChild(o);
+    });
+    sel.addEventListener('change', function () { agencyFilter = sel.value; render(); });
+    // alert-signup selects share the same live lists
+    var aEnt = document.getElementById('alert-entity'), aType = document.getElementById('alert-type');
+    Object.keys(ents).sort().forEach(function (a) {
+      var o = document.createElement('option'); o.value = a; o.textContent = a; aEnt.appendChild(o);
+    });
+    Object.keys(types).sort().forEach(function (t) {
+      var o = document.createElement('option'); o.value = t; o.textContent = t; aType.appendChild(o);
+    });
+    render();
+  }).catch(function (err) { LTData.showError(list, err); });
+
+  /* ── Email-alert signups → Firestore legal_notice_alerts ──────────────
+     Storage only for now: the sender bot reads this collection once built.
+     Anonymous Firebase auth (same pattern as event/org submissions). */
+  var form = document.getElementById('alerts-form');
+  var msg = document.getElementById('alerts-msg');
+  function say(text, ok) { msg.hidden = false; msg.className = 'alerts-msg ' + (ok ? 'ok' : 'err'); msg.textContent = text; }
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var email = document.getElementById('alert-email').value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { say('Please enter a valid email address.', false); return; }
+    if (typeof firebase === 'undefined' || !window.SITE_CONFIG || !SITE_CONFIG.FIREBASE) {
+      say('Sign-up is unavailable right now — please try again in a minute.', false); return;
+    }
+    try {
+      if (!firebase.apps.length) firebase.initializeApp(SITE_CONFIG.FIREBASE);
+      var auth = firebase.auth();
+      var signIn = auth.currentUser ? Promise.resolve() : auth.signInAnonymously();
+      signIn.then(function () {
+        return firebase.firestore().collection('legal_notice_alerts').add({
+          email: email,
+          entity: document.getElementById('alert-entity').value || '',   // '' = any
+          type: document.getElementById('alert-type').value || '',       // '' = any
+          status: 'active',
+          createdAt: firebase.firestore.FieldValue.serverTimestamp()
+        });
+      }).then(function () {
+        form.reset();
+        say('You’re on the list — we’ll email you when matching notices are published.', true);
+      }).catch(function (err) {
+        console.warn('[legal-notices] alert signup failed:', err);
+        say('Something went wrong saving your sign-up — please try again.', false);
       });
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+    } catch (err) { say('Something went wrong — please try again.', false); }
+  });
 })();
 </script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
-  <script defer src="/js/site-footer.js?v=20260618"></script>
 </body>
 </html>
