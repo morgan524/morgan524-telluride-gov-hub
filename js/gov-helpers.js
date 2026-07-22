@@ -474,7 +474,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -513,7 +513,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -579,7 +579,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -729,6 +729,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Fast and furious fun",
+    source: "Telluride Times",
+    date: "July 22, 2026",
+    firstSeen: "2026-07-22",
+    newsTopic: "arts-culture",
+    copy: "The Sheridan Arts Foundation's Young People's Theater is staging *The Music Man* as part of its Summer Spectacular program — a five-day sprint from first rehearsal to full production, with 25 kids aged 8–14. Shows are free to the public on July 24 at 2pm and 4pm at the Sheridan.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_67f14313-ffd6-40ac-9e0a-0bf21a107cff.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5e/95e82843-a06e-4203-a2be-1bd051e32c48/6a601b9a2aed5.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Grateful for Green Grant program",
     source: "Telluride Times",
