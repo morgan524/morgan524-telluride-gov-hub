@@ -87,6 +87,30 @@
   </div>
 </header>
 
+<!-- Featured Action — IDENTICAL card to the homepage's (per Morgan
+     2026-07-22): same markup/styles/loader, same data/featured-action.json.
+     If you change one, change both. Hidden when empty/stale. -->
+<section class="wrap" style="padding-top:0">
+  <style>
+    .fa-card { display: none; background: var(--sage2); border: 1px solid var(--forest); border-radius: 12px; padding: 24px 26px; margin-top: 22px; }
+    .fa-eyebrow { font: 700 12px/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--rust); margin-bottom: 10px; }
+    .fa-card h3 { font: 600 24px/1.25 var(--serif); color: var(--forest); margin: 0 0 8px; }
+    .fa-meta { font: 500 14px/1.5 var(--sans); color: var(--body2); margin-bottom: 10px; }
+    .fa-blurb { font: 400 15px/1.6 var(--sans); color: var(--body); margin: 0 0 14px; max-width: 72ch; }
+    .fa-acts { display: flex; flex-wrap: wrap; gap: 10px; }
+    .fa-acts a { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; text-decoration: none; }
+    .fa-acts .fa-dive { background: var(--forest); color: #fff; }
+    .fa-acts .fa-plain { border: 1.5px solid var(--forest); color: var(--forest); background: #fff; }
+  </style>
+  <div class="fa-card" id="featured-action">
+    <div class="fa-eyebrow">&#9733; Featured Action</div>
+    <h3 id="fa-headline"></h3>
+    <div class="fa-meta" id="fa-meta"></div>
+    <p class="fa-blurb" id="fa-blurb"></p>
+    <div class="fa-acts" id="fa-acts"></div>
+  </div>
+</section>
+
 <div class="gh-toggle-wrap">
   <div class="gh-toggle" role="tablist">
     <span class="gt active">Upcoming meetings</span>
@@ -107,6 +131,29 @@
 <div id="lt-footer"></div>
 <script src="site.js?v=7"></script>
 <script src="/js/lt-data.js?v=7"></script>
+<script>
+/* Featured Action — identical loader to index.html's (keep in sync). Loaded
+   separately from the meeting list so a miss just hides the card. */
+(function () {
+  var card = document.getElementById('featured-action');
+  if (!window.LTData || !card) return;
+  LTData.load(['featured-action']).then(function (data) {
+    var fa = data['featured-action'] || {};
+    var m = fa.meeting;
+    if (!fa.headline || !m || !m.date || m.date < LTData.todayMT()) return;   // stale or empty → stay hidden
+    document.getElementById('fa-headline').textContent = fa.headline;
+    document.getElementById('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location].filter(Boolean).join(' · ');
+    document.getElementById('fa-blurb').innerHTML = LTData.emphasizeNames(fa.blurb || '');
+    var esc = LTData.esc, safe = LTData.safeUrl, acts = '';
+    if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
+    if (m.agendaUrl) acts += '<a class="fa-plain" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>';
+    if (m.packetUrl) acts += '<a class="fa-plain" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">Agenda Packet</a>';
+    if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
+    document.getElementById('fa-acts').innerHTML = acts;
+    card.style.display = 'block';
+  }).catch(function () { /* stays hidden */ });
+})();
+</script>
 <script>
 (function () {
   var list = document.getElementById('meet-list');
