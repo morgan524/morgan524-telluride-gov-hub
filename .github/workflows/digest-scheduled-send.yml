@@ -69,6 +69,7 @@ jobs:
           echo "override=false" >> "$GITHUB_OUTPUT"
 
       - name: Send the approved digest to its broadcast
+        id: send
         if: steps.guard.outputs.go == 'true'
         env:
           DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
@@ -80,6 +81,16 @@ jobs:
           test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
           python3 - <<'PY'
           import json, os, sys, urllib.request, urllib.error
+
+          # Record the outcome for the tripwire step below (2026-07-22 audit
+          # P0-5): a gate-skip used to exit 0 with only a log line — the
+          # Thursday Weekend digest silently never went out for weeks because
+          # no one ever approved it and nothing said so.
+          def outcome(sent, reason=""):
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write(f"sent={'true' if sent else 'false'}\n")
+                  f.write(f"skip-reason={reason}\n")
+
           key = os.environ["DIGEST_KIND"]
           override = os.environ.get("OVERRIDE") == "true"
           if key not in ("weekly", "weekend"):
@@ -95,9 +106,11 @@ jobs:
               # 1) Approval gate: the human must have approved (locked) THIS week's digest.
               lock_path = f"digest/{key}.lock.json"
               if not os.path.exists(lock_path):
+                  outcome(False, f"no approval lock ({lock_path}) — the digest was never approved on the Review Desk")
                   print(f"No approval lock ({lock_path}) — nothing was approved for this {key} digest. Skipping."); sys.exit(0)
               lock = json.load(open(lock_path))
               if lock.get("weekStart") and week_start and lock["weekStart"] != week_start:
+                  outcome(False, f"stale approval lock (lock weekStart {lock.get('weekStart')} vs manifest {week_start})")
                   print(f"Approval lock is for weekStart {lock.get('weekStart')} but manifest is {week_start} — stale approval. Skipping."); sys.exit(0)
               # 2) Duplicate gate: never send a subject already in the sent archive.
               try:
@@ -105,6 +118,7 @@ jobs:
               except Exception:
                   sent = []
               if any(s.get("subject") == subject for s in sent):
+                  outcome(True, "already sent earlier (duplicate gate)")
                   print(f"Already sent this subject ({subject!r}) — skipping to avoid a duplicate."); sys.exit(0)
 
           payload = json.dumps({"emailHtml": html, "subject": subject, "test": False, "key": key}).encode()
@@ -129,11 +143,53 @@ jobs:
           print("response:", body)
           if not json.loads(body).get("ok"):
               raise SystemExit("Send did not return ok: " + body)
+          outcome(True)
           print(f"SENT {key} broadcast — subject: {subject}")
           PY
 
+      # ── Tripwire (2026-07-22 audit P0-5) ──
+      # The send step above succeeds even when it skipped (no/stale approval
+      # lock) — by design, so an unapproved digest never goes out. But the
+      # skip must be LOUD: this opens/updates a "did not send" issue when a
+      # real send window passed without a send, and auto-closes it the next
+      # time that digest kind actually goes out. Hard failures are covered by
+      # the CI health step below; this catches the silent-skip class.
+      - name: Tripwire — send window passed without a send
+        if: always() && steps.guard.outputs.go == 'true' && steps.send.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIGEST_KIND: ${{ steps.guard.outputs.digest }}
+          SENT: ${{ steps.send.outputs.sent }}
+          SKIP_REASON: ${{ steps.send.outputs.skip-reason }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set +e
+          TITLE="📭 ${DIGEST_KIND} digest did not send"
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          NOW=$(date -u +'%Y-%m-%d %H:%M UTC')
+          if [ "$SENT" = "true" ]; then
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "Resolved: the ${DIGEST_KIND} digest went out at $NOW. Run: $RUN_URL"
+            fi
+          else
+            BODY="The ${DIGEST_KIND} digest's scheduled send window (9:00 AM MT) passed without a send.
+
+          Reason: ${SKIP_REASON:-unknown}
+          Run: $RUN_URL
+
+          If this was intentional, close this issue. Otherwise: approve the digest on the Digest Review Desk (https://livabletelluride.org/digest-review.html), then either wait for the next window or fire the send manually (Actions → Digest Scheduled Send → Run workflow → confirm=SEND).
+
+          This issue auto-closes the next time the ${DIGEST_KIND} digest actually sends."
+            if [ -n "$NUM" ]; then
+              gh issue comment "$NUM" --body "Another missed window at $NOW — reason: ${SKIP_REASON:-unknown}. Run: $RUN_URL"
+            else
+              gh issue create --title "$TITLE" --body "$BODY"
+            fi
+          fi
+          exit 0
+
       - name: CI health issue
-        if: failure()
+        if: always() && steps.guard.outputs.go == 'true'
         uses: ./.github/actions/ci-health-issue
         with:
           title: '🚨 Digest scheduled send failed'
