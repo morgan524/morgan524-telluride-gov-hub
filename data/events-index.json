@@ -63,7 +63,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A farmers market event at Mountain Village Market, presented by Wilkinson Public Library. This midday program runs from 11:00 AM to noon and brings a library presence to the local market setting.",
+    "desc": "11:00 AM – 12:00 PM",
     "type": "Food & Drink"
   },
   {
@@ -2525,7 +2525,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2974,7 +2974,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -3065,8 +3065,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Ouray County Pride",

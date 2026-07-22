@@ -1,17 +1,5 @@
 [
   {
-    "title": "Palm, school clean-up continues apace after last Friday’s flood",
-    "source": "Telluride Times",
-    "date": "July 21, 2026",
-    "firstSeen": "2026-07-21",
-    "newsTopic": "education",
-    "copy": "Mudslides from the Jud Wiebe area on July 17 sent water, mud, and debris through the Palm Theatre and adjacent schools, buckling the stage, flooding the orchestra pit, and depositing an estimated 10,000–15,000 lbs of mud. The goal is to have school spaces and Palm support areas ready by the Aug. 18 school opening. The main theater will take longer, though seating replacement is the top priority to allow Film Festival to proceed Sept. 4–7.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_24fa27f5-c902-452e-9879-6dd2717e1a17.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/17/917acda0-cd83-4d5f-be02-3fe89b58cfc7/6a5fb73da93a1.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Grateful for Green Grant program",
     "source": "Telluride Times",
     "date": "July 21, 2026",
@@ -22,6 +10,18 @@
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "letterAuthor": "Jeremy",
+    "imgHiRes": true
+  },
+  {
+    "title": "Palm, school clean-up continues apace after last Friday’s flood",
+    "source": "Telluride Times",
+    "date": "July 21, 2026",
+    "firstSeen": "2026-07-21",
+    "newsTopic": "education",
+    "copy": "Mudslides from the Jud Wiebe area on July 17 sent water, mud, and debris through the Palm Theatre and adjacent schools, buckling the stage, flooding the orchestra pit, and depositing an estimated 10,000–15,000 lbs of mud. The goal is to have school spaces and Palm support areas ready by the Aug. 18 school opening. The main theater will take longer, though seating replacement is the top priority to allow Film Festival to proceed Sept. 4–7.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_24fa27f5-c902-452e-9879-6dd2717e1a17.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/17/917acda0-cd83-4d5f-be02-3fe89b58cfc7/6a5fb73da93a1.image.jpg",
     "imgHiRes": true
   },
   {
