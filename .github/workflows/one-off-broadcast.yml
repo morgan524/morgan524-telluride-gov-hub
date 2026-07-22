@@ -1,0 +1,90 @@
+name: One-off Broadcast
+
+# Sends a hand-built newsletter (committed HTML file) through the digest
+# Worker's /send endpoint — the same production Customer.io broadcast path the
+# weekly digest uses. Manual-dispatch ONLY, and the real broadcast additionally
+# requires typing confirm=SEND, so nothing can fire by accident.
+#
+#   mode=test      → single transactional email to `to` (subject gets " (test)")
+#   mode=broadcast → the REAL send to the Weekly Update segment (needs confirm=SEND)
+on:
+  workflow_dispatch:
+    inputs:
+      html_path:
+        description: 'Repo path of the newsletter HTML (e.g. digest/one-off/carhenge-2026-07-22.html)'
+        required: true
+      subject:
+        description: 'Email subject line'
+        required: true
+      mode:
+        description: 'test or broadcast'
+        required: true
+        default: 'test'
+      to:
+        description: 'Recipient for mode=test'
+        required: false
+        default: 'info@livabletelluride.org'
+      confirm:
+        description: 'Type SEND to allow mode=broadcast'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Send via digest Worker
+        env:
+          DIGEST_KEY: ${{ secrets.DIGEST_KEY }}
+          WORKER_BASE: https://livabletelluride-digest.morgan-8f0.workers.dev
+          HTML_PATH: ${{ github.event.inputs.html_path }}
+          SUBJECT: ${{ github.event.inputs.subject }}
+          MODE: ${{ github.event.inputs.mode }}
+          TO: ${{ github.event.inputs.to }}
+          CONFIRM: ${{ github.event.inputs.confirm }}
+        run: |
+          set -eo pipefail
+          test -n "$DIGEST_KEY" || { echo "DIGEST_KEY secret is empty"; exit 1; }
+          python3 - <<'PY'
+          import json, os, sys, urllib.request, urllib.error
+          mode = os.environ["MODE"].strip()
+          if mode not in ("test", "broadcast"):
+              raise SystemExit(f"mode must be 'test' or 'broadcast', got {mode!r}")
+          if mode == "broadcast" and os.environ.get("CONFIRM", "").strip() != "SEND":
+              raise SystemExit("mode=broadcast requires confirm=SEND — refusing.")
+          path = os.environ["HTML_PATH"].strip()
+          html = open(path, encoding="utf-8").read()
+          if len(html) < 2000:
+              raise SystemExit(f"{path} looks too small ({len(html)} bytes) — aborting")
+          subject = os.environ["SUBJECT"].strip()
+          if not subject:
+              raise SystemExit("Empty subject — aborting")
+          payload = {"emailHtml": html, "subject": subject}
+          if mode == "test":
+              payload.update({"test": True, "to": os.environ.get("TO", "").strip()})
+          else:
+              payload.update({"test": False, "key": "weekly"})
+          # Browser UA required: Cloudflare bot protection rejects default UAs (error 1010).
+          req = urllib.request.Request(
+              os.environ["WORKER_BASE"] + "/send", data=json.dumps(payload).encode(),
+              headers={
+                  "Content-Type": "application/json",
+                  "x-digest-key": os.environ["DIGEST_KEY"],
+                  "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15",
+                  "Accept": "application/json",
+              }, method="POST")
+          try:
+              with urllib.request.urlopen(req) as r:
+                  body = r.read().decode()
+          except urllib.error.HTTPError as e:
+              raise SystemExit(f"HTTP {e.code}: {e.read().decode()[:400]}")
+          print("response:", body)
+          if not json.loads(body).get("ok"):
+              raise SystemExit("Send did not return ok: " + body)
+          print(f"{mode.upper()} OK — subject: {subject}")
+          PY
