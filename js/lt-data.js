@@ -129,9 +129,42 @@
     return /^https?:\/\//i.test(u || '') ? u : (fallback || '#');
   }
 
+  // Bold proper-noun runs + standalone street addresses in meeting summaries —
+  // THE shared copy of the emphasizeNames heuristic (same rules as the
+  // gov-hub.html cards and weekly-email.js digest; keep the three in sync).
+  // Escapes internally: input is raw text, output is safe HTML.
+  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
+  var EMPH_ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
+  var EMPH_RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
+  function emphasizeNames(raw) {
+    raw = String(raw || '');
+    var re = new RegExp('(' + EMPH_ADDR + ')|(' + EMPH_RUN + ')', 'g');
+    var html = '', last = 0, m;
+    while ((m = re.exec(raw)) !== null) {
+      html += esc(raw.slice(last, m.index));
+      if (m[1]) {
+        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
+        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
+        last = m.index + m[1].length; continue;
+      }
+      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
+      var tail = run.slice(trimmed.length), leadThe = '';
+      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+      var multi = /\s/.test(trimmed);
+      var before = raw.slice(0, m.index).replace(/\s+$/, '');
+      var sentenceStart = before === '' || /[.!?]$/.test(before);
+      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
+      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
+      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
+      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+      last = m.index + run.length;
+    }
+    return html + esc(raw.slice(last));
+  }
+
   const api = { load: load, loadOne: loadOne, showError: showError,
     todayMT: todayMT, mtDateKey: mtDateKey, parseDateKey: parseDateKey,
-    fmtDate: fmtDate, esc: esc, safeUrl: safeUrl,
+    fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, emphasizeNames: emphasizeNames,
     ENTITY_LOGOS: ENTITY_LOGOS, entityLogo: entityLogo, _bucket: bucket };
 
   root.LTData = api;
