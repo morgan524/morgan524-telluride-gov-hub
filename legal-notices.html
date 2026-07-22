@@ -126,17 +126,45 @@
       var dateHtml = e
         ? '<div class="n-date"><div class="m">' + MON[e.d.getMonth()] + '</div><div class="d">' + e.d.getDate() + '</div><div class="y">' + e.d.getFullYear() + '</div></div>'
         : '<div class="n-date"><div class="m">Open</div></div>';
+      // Decide what (if anything) to geocode for a notice address.
+      // Returns '' when nothing on the line is a real, mappable place.
+      function mappableAddress(addr) {
+        var a = String(addr || '').trim();
+        if (!a) return '';
+        // A street address hidden in parentheses after a legal description wins.
+        var par = a.match(/\(([^()]*\d+[^()]*)\)/);
+        if (par && /\d+\s+\S+/.test(par[1]) && !/\b(lot|block|unit|filing|reception)\b/i.test(par[1])) {
+          return par[1].trim();
+        }
+        var base = a.replace(/\([^)]*\)/g, ' ').replace(/\s+/g, ' ').trim();
+        // Never map: courts, PO boxes, countywide/administrative scopes,
+        // and bare PLSS legal descriptions (Section/Township/Range).
+        if (/district court|p\.?o\.?\s*box|countywide/i.test(base)) return '';
+        if (/\b(section|township|range)\b/i.test(base)) return '';
+        // County-only or bare town names aren't specific enough for a pin.
+        if (/^san miguel county(,? (co|colorado))?\.?$/i.test(base)) return '';
+        if (/^(town of )?(telluride|mountain village|norwood|ophir|rico|ridgway|placerville|sawpit|ouray)(,? (co|colorado))?( \d{5})?\.?$/i.test(base)) return '';
+        // Strip vacant-lot boilerplate that confuses geocoding.
+        base = base.replace(/^TBD\b\s*/i, '').trim();
+        return base;
+      }
       var deadline = e ? 'Expires ' + LTData.fmtDate(e.key, { month: 'short', day: 'numeric', year: 'numeric' }) + ' &middot; ' : '';
-      // Location + embedded map whenever the notice names a specific place
-      // (same Google embed as the live page; lazy so 20+ maps stay cheap).
+      // Location line shows for every address; the embedded map only when the
+      // address is actually geocodable — county-only notices, courts, PO boxes,
+      // and bare PLSS legal descriptions (Section/Township/Range) get no map
+      // box. A street address tucked in parentheses after a legal description
+      // ("Section 27 … (1730 Grand Avenue, Norwood, CO 81423)") is preferred.
       var mapHtml = '';
       if (n.address) {
-        var addrEnc = encodeURIComponent(n.address);
-        mapHtml = '<div class="n-loc">&#128205; ' + LTData.esc(n.address) + '</div>' +
-          '<div class="map-thumb"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
-          'title="Map of ' + LTData.esc(n.address) + '" ' +
-          'src="https://maps.google.com/maps?q=' + addrEnc + '&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div>' +
-          '<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=' + addrEnc + '" target="_blank" rel="noopener">Open in Google Maps &rarr;</a> ';
+        var mapQ = mappableAddress(n.address);
+        mapHtml = '<div class="n-loc">&#128205; ' + LTData.esc(n.address) + '</div>';
+        if (mapQ) {
+          var addrEnc = encodeURIComponent(mapQ);
+          mapHtml += '<div class="map-thumb"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
+            'title="Map of ' + LTData.esc(mapQ) + '" ' +
+            'src="https://maps.google.com/maps?q=' + addrEnc + '&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div>' +
+            '<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=' + addrEnc + '" target="_blank" rel="noopener">Open in Google Maps &rarr;</a> ';
+        }
       }
       return '<article class="n-row story">' + dateHtml +
         '<div><span class="tag">' + LTData.esc(n.type || 'Notice') + '</span><span class="ent">' + LTData.esc(n.entity || '') + '</span>' +
