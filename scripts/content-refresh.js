@@ -5323,7 +5323,7 @@ async function syncTellurideAgendas() {
 // to render, or null on fetch/parse failure (so a transient error never wipes the
 // committed list). HARC stays in TELLURIDE_CACHED_DATA and is excluded here.
 async function syncTellurideBoardMeetings() {
-  console.log('\n🏛  Syncing Town of Telluride board meetings (Council, P&Z, Housing Authority, Ethics, joint) from CivicWeb...');
+  console.log('\n🏛  Syncing Town of Telluride board meetings (Council, P&Z, Housing Authority, Ethics, Parks & Rec, joint) from CivicWeb...');
   const now = new Date();
   const horizon = new Date(now.getTime() + 90 * 86400000);
   const fromStr = now.toISOString().split('T')[0];
@@ -5341,7 +5341,7 @@ async function syncTellurideBoardMeetings() {
                   'July','August','September','October','November','December'];
   // Bodies to surface (HARC handled separately). The joint P&Z/HARC subcommittee
   // is caught by the Planning & Zoning pattern.
-  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission/i;
+  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec/i;
   const out = [];
   const seen = new Set();
   for (const m of items) {
@@ -5354,7 +5354,10 @@ async function syncTellurideBoardMeetings() {
     const d = new Date(m.MeetingDate || m.MeetingDateTime || '');
     if (isNaN(d)) continue;
     const dateKey = `${months[d.getUTCMonth()]} ${d.getUTCDate()}, ${d.getUTCFullYear()}`;
-    const title = name.replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '').trim();  // drop CivicWeb date suffix
+    const title = name
+      .replace(/\s*-\s*[A-Za-z]{3,9}\.?\s+\d{1,2}\s+\d{4}\s*$/, '')   // drop CivicWeb date suffix
+      .replace(/^\(?rescheduled\)?:?\s*/i, '')                        // "(RESCHEDULED) Parks & Rec…" — card shows the clean name; the date field is already the new date
+      .trim();
     const dedup = dateKey + '|' + title.toLowerCase();
     if (seen.has(dedup)) continue;
     seen.add(dedup);

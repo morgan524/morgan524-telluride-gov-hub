@@ -120,6 +120,26 @@
     "hook": "Liquor permit hearing for KOTO's Live at the Drive"
   },
   {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Parks & Recreation Commission",
+    "date": "2026-07-29",
+    "time": "",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
+    "hasAgenda": true,
+    "summary": "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
+  },
+  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Planning Commission and Board of County Commissioners Joint Work Session",
