@@ -10,6 +10,7 @@
 <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
 <link rel="manifest" href="/manifest.json">
 <link rel="canonical" href="https://livabletelluride.org/events.html">
+<script src="/js/site-config.js"></script>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Livable Telluride">
 <meta property="og:url" content="https://livabletelluride.org/events.html">
@@ -57,6 +58,19 @@
   .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
   .ev { display: grid; grid-template-columns: 128px 1fr auto; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
   .ev .img-frame { width: 128px; height: 128px; border-radius: 8px; }
+  .more-link { display: inline-block; margin-top: 6px; font: 600 13.5px/1 var(--sans); color: var(--rust); }
+  .more-link:hover { text-decoration: underline; }
+  /* Submit-an-event form */
+  .sf-wrap { max-width: 760px; margin: 0 auto; padding: 46px var(--pad-x) 26px; }
+  .sf-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sf-grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .sf-field label { display: block; font: 600 13px/1.3 var(--sans); color: var(--forest); margin-bottom: 4px; }
+  .sf-field input, .sf-field textarea { width: 100%; padding: 10px 13px; border: 1px solid var(--line); border-radius: 9px; font: 400 15px/1.4 var(--sans); color: var(--body); background: #fff; box-sizing: border-box; }
+  .sf-field input:focus, .sf-field textarea:focus { outline: 2px solid var(--forest); outline-offset: 0; }
+  .sf-note { font: 400 12.5px/1.5 var(--sans); color: var(--body2); margin-top: 4px; }
+  #eventSubmitForm { display: grid; gap: 14px; }
+  #ef-status { font: 600 16px/1.5 var(--sans); text-align: center; min-height: 1.3em; }
+  @media (max-width: 700px) { .sf-grid2, .sf-grid3 { grid-template-columns: 1fr; } }
   .ev h3 { font: 600 23px/1.2 var(--serif); margin: 6px 0 4px; }
   .ev h3 a { color: var(--forest); }
   .ev .dek { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 6px 0 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -116,10 +130,173 @@
     <div class="side-filter card submit-card">
       <h3>Have an event?</h3>
       <p class="meta" style="margin:0 0 10px">Free listing &mdash; tell us what's happening and we'll add it to the calendar.</p>
-      <a class="btn btn-forest" href="/events-legacy.html#submit-event">Submit an event &rarr;</a>
+      <a class="btn btn-forest" href="#submit-event">Submit an event &rarr;</a>
     </div>
   </aside>
 </div>
+
+<section id="submit-event" class="sf-wrap">
+  <div class="card" style="padding:28px 30px;">
+    <span class="eyebrow">Free community listing</span>
+    <h2 class="section-h" style="margin:6px 0 6px">Submit an Event</h2>
+    <p class="meta" style="margin:0 0 20px">Share a community event with Livable Telluride. We&rsquo;ll review it and post it to the calendar once it&rsquo;s approved.</p>
+    <form id="eventSubmitForm">
+      <div class="sf-grid2">
+        <div class="sf-field"><label for="ef-title">Event Title *</label><input id="ef-title" type="text" required placeholder="e.g. Wildflower Walk &amp; Talk"></div>
+        <div class="sf-field"><label for="ef-date">Date *</label><input id="ef-date" type="date" required></div>
+      </div>
+      <div class="sf-grid2">
+        <div class="sf-field"><label for="ef-time">Time</label><input id="ef-time" type="text" placeholder="e.g. 10:00 AM – 12:00 PM"></div>
+        <div class="sf-field"><label for="ef-location">Location</label><input id="ef-location" type="text" placeholder="e.g. Wilkinson Public Library"></div>
+      </div>
+      <div class="sf-field"><label for="ef-desc">Description *</label><textarea id="ef-desc" required rows="4" placeholder="Tell people what the event is about&hellip;"></textarea></div>
+      <div class="sf-field"><label for="ef-url">Event URL / More Info</label><input id="ef-url" type="text" inputmode="url" placeholder="livabletelluride.org or https://&hellip;"></div>
+      <div class="sf-field">
+        <label for="ef-image">Event Flyer or Logo (optional)</label>
+        <input id="ef-image" type="file" accept="image/png,image/jpeg,image/gif,image/webp">
+        <div id="ef-image-preview" style="display:none;align-items:center;gap:12px;margin-top:10px;">
+          <img id="ef-image-preview-img" src="" alt="Flyer preview" style="max-width:140px;max-height:140px;border-radius:9px;border:1px solid var(--line);object-fit:contain;background:#fff;">
+          <button type="button" id="ef-image-remove" style="padding:6px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:#a33;font:600 12.5px var(--sans);cursor:pointer;">Remove</button>
+        </div>
+        <div class="sf-note">A flyer or logo helps your event stand out on the calendar. Max 10&nbsp;MB &middot; PNG, JPG, GIF, or WebP.</div>
+      </div>
+      <div class="sf-grid3">
+        <div class="sf-field"><label for="ef-name">Your Name</label><input id="ef-name" type="text" placeholder="First Last"></div>
+        <div class="sf-field"><label for="ef-email">Your Email *</label><input id="ef-email" type="email" required placeholder="you@example.com"></div>
+        <div class="sf-field"><label for="ef-org">Organization</label><input id="ef-org" type="text" placeholder="Optional"></div>
+      </div>
+      <button type="submit" class="btn btn-forest" style="width:100%;justify-content:center;font-size:16px;padding:13px;">Send Submission &rarr;</button>
+      <div id="ef-status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- Firebase compat SDK — used only for the submit-event flow (anonymous auth
+     gates the optional flyer upload; the submission is written to Firestore). -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+(function () {
+  // ── Submit-an-Event (ported from the pre-redesign page 2026-07-22):
+  //    optional flyer → Firebase Storage, submission → Firestore
+  //    event_submissions (status 'pending', reviewed at /event-review.html),
+  //    fire-and-forget Apps Script POST that emails info@ an Approve/Deny
+  //    summary, and an on-page thank-you as the submitter's confirmation. ──
+  const FB_CONFIG = SITE_CONFIG.FIREBASE;
+  let _storage = null, _auth = null, _db = null;
+  function ensureFirebase() {
+    if (_db) return Promise.resolve();
+    if (typeof firebase === 'undefined') return Promise.reject(new Error('Firebase failed to load'));
+    if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+    _storage = firebase.storage();
+    _auth = firebase.auth();
+    _db = firebase.firestore();
+    return Promise.resolve();
+  }
+  function signIn() {
+    if (_auth.currentUser) return Promise.resolve(_auth.currentUser);
+    return _auth.signInAnonymously().then(c => c.user);
+  }
+  const NOTIFY_WEBAPP_URL = SITE_CONFIG.APPS_SCRIPT_EXEC;
+  function notifyAdmin(sub) {
+    if (!NOTIFY_WEBAPP_URL) return;
+    try {
+      fetch(NOTIFY_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(sub)
+      }).catch(function () {});
+    } catch (e) { /* never block the thank-you */ }
+  }
+
+  const v = id => (document.getElementById(id).value || '').trim();
+  const normUrl = u => (u && !/^https?:\/\//i.test(u)) ? 'https://' + u : u;
+  const fileInput   = document.getElementById('ef-image');
+  const previewWrap = document.getElementById('ef-image-preview');
+  const previewImg  = document.getElementById('ef-image-preview-img');
+  const removeBtn   = document.getElementById('ef-image-remove');
+  const form        = document.getElementById('eventSubmitForm');
+  const statusEl    = document.getElementById('ef-status');
+  const submitBtn   = form.querySelector('button[type="submit"]');
+  let selectedFile = null;
+
+  fileInput.addEventListener('change', function () {
+    const f = this.files && this.files[0];
+    if (!f) { selectedFile = null; previewWrap.style.display = 'none'; return; }
+    if (f.size > 10 * 1024 * 1024) { alert('That image is larger than 10 MB — please pick a smaller file.'); this.value = ''; return; }
+    selectedFile = f;
+    previewImg.src = URL.createObjectURL(f);
+    previewWrap.style.display = 'flex';
+  });
+  removeBtn.addEventListener('click', function () {
+    selectedFile = null; fileInput.value = ''; previewWrap.style.display = 'none';
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!v('ef-title') || !v('ef-date') || !v('ef-desc') || !v('ef-email')) {
+      statusEl.style.color = '#a33';
+      statusEl.textContent = 'Please fill in the event title, date, description, and your email.';
+      return;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(v('ef-email'))) {
+      statusEl.style.color = '#a33';
+      statusEl.textContent = 'Please enter a valid email address.';
+      return;
+    }
+    submitBtn.disabled = true;
+    submitBtn.textContent = selectedFile ? 'Uploading…' : 'Submitting…';
+    statusEl.style.color = 'var(--body2)';
+    statusEl.textContent = selectedFile ? 'Uploading your flyer…' : 'Submitting…';
+    ensureFirebase()
+      .then(signIn)
+      .then(user => {
+        if (!selectedFile) return '';
+        const safe = selectedFile.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+        const path = 'event-submissions/' + user.uid + '/' + Date.now() + '_' + safe;
+        return _storage.ref(path).put(selectedFile).then(snap => snap.ref.getDownloadURL());
+      })
+      .then(imgUrl => {
+        const submission = {
+          title: v('ef-title'),
+          date: v('ef-date'),
+          time: v('ef-time'),
+          location: v('ef-location'),
+          description: v('ef-desc'),
+          url: normUrl(v('ef-url')),
+          name: v('ef-name'),
+          email: v('ef-email'),
+          org: v('ef-org'),
+          imageUrl: imgUrl || '',
+          status: 'pending',
+          authorUid: (_auth.currentUser && _auth.currentUser.uid) || ''
+        };
+        return _db.collection('event_submissions').add(
+          Object.assign({}, submission, {
+            createdAt: firebase.firestore.FieldValue.serverTimestamp()
+          })
+        ).then(() => submission);
+      })
+      .then(submission => {
+        notifyAdmin(submission);
+        form.reset();
+        selectedFile = null; previewWrap.style.display = 'none';
+        submitBtn.disabled = false; submitBtn.innerHTML = 'Send Submission &rarr;';
+        statusEl.style.color = 'var(--forest)';
+        statusEl.textContent = '✓ Thank you! Your event was submitted for review. We’ll add it to the calendar once it’s approved.';
+      })
+      .catch(err => {
+        console.warn('Event submission failed:', err);
+        submitBtn.disabled = false; submitBtn.innerHTML = 'Send Submission &rarr;';
+        statusEl.style.color = '#a33';
+        statusEl.textContent = 'Sorry — could not submit your event (' + (err.message || err) + '). Please try again.';
+      });
+  });
+})();
+</script>
 
 <div id="lt-footer"></div>
 <script src="site.js?v=7"></script>
@@ -182,7 +359,8 @@
           (e.type && e.type !== 'Community' ? '<span class="tag rust-tint">' + esc(e.type) + '</span>' : '') + multi + '</div>' +
           '<h3><a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
           '<div class="meta">' + esc(metaLine(e)) + '</div>' +
-          (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') + '</div>' +
+          (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') +
+          '<a class="more-link" href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">More details here &rarr;</a></div>' +
           '<div class="chev">&rsaquo;</div></article>';
       });
     });
