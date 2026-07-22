@@ -161,8 +161,15 @@
       var pos = (s.imgPos && /^[a-z0-9% .-]+$/i.test(s.imgPos)) ? ' style="object-position:' + s.imgPos + '"' : '';
       img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"' + pos + '></div>';
     } else if (s.isLetter) {
-      // Letters without their own photo use the Letters artwork (live-site parity)
-      img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor.png" alt="Letter to the editor" loading="lazy"></div>';
+      // Letters without their own photo use per-publication artwork
+      // (Morgan's logos, 2026-07-22): Telluride Times letters get the TT art
+      // (full-bleed rectangle → normal cover frame), everything else gets the
+      // circular Livable Telluride badge (logo-fill contain on white).
+      if (s.src === 'Telluride Times') {
+        img = '<div class="img-frame"><img src="/logo/Letter%20to%20Editor%20TT.png" alt="Letter to the editor — Telluride Times" loading="lazy"></div>';
+      } else {
+        img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor%20LT.png" alt="Letter to the editor — Livable Telluride" loading="lazy"></div>';
+      }
     } else {
       var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
       if (!logo) return '';
