@@ -53,11 +53,11 @@
   .side-koto .item a { font: 500 15.5px/1.35 var(--serif); color: var(--forest); }
   .side-koto .item a:hover { color: var(--rust); }
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
-  /* Letters: no side image; the banner is the card's only art, centered
-     across the full box (Morgan, 2026-07-22). */
-  .letters-banner { margin-bottom: 10px; display: flex; justify-content: center; }
-  .letters-banner img { max-height: 170px; max-width: 100%; width: auto; display: block; }
-  .lead.no-media, .river-item.no-media { grid-template-columns: 1fr; }
+  /* Letters: per-publication art in the side-image slot, borderless on the
+     page background (transparent PNGs) — Morgan's 2026-07-22 mock. */
+  .img-frame.letter-art { background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; }
+  .img-frame.letter-art img { object-fit: contain; width: 92%; height: 92%; }
+  .story:hover .img-frame.letter-art img { transform: none; }
   /* Pet photo on its own line above the name, card-width (per Morgan 2026-07-22) */
   #pets-list .item { grid-template-columns: 1fr; }
   #pets-list .pet-photo { width: 100%; height: auto; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; margin-bottom: 8px; }
@@ -169,12 +169,14 @@
       var pos = (s.imgPos && /^[a-z0-9% .-]+$/i.test(s.imgPos)) ? ' style="object-position:' + s.imgPos + '"' : '';
       img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"' + pos + '></div>';
     } else if (s.isLetter) {
-      // Letters without their own photo carry NO side image — their only art
-      // is the centered per-publication banner from letterBanner() (Morgan,
-      // 2026-07-22: "remove the logo on the left"). Returning '' here (not
-      // falling through) keeps the source-logo branch from re-adding the
-      // TT masthead; the card gets the .no-media single-column grid.
-      return '';
+      // Letters without their own photo: per-publication letters art in the
+      // side-image slot, borderless on the page background (both PNGs are
+      // transparent-backed) — Morgan's 2026-07-22 mock. No banner above the
+      // text; this is the card's only art.
+      var tt = s.src === 'Telluride Times';
+      var art = tt ? '/logo/Letter%20to%20Editor%20TT.png' : '/logo/Letter%20to%20Editor%20LT.png';
+      var alt = tt ? 'Letter to the Editor — Telluride Times' : 'Letter to the Editor — Livable Telluride';
+      img = '<div class="img-frame letter-art"><img src="' + art + '" alt="' + alt + '" loading="lazy"></div>';
     } else {
       var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
       if (!logo) return '';
@@ -183,22 +185,14 @@
     return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener" aria-label="Read: ' + LTData.esc(s.title || s.src || 'story') + '">' + img + '</a>' : img;
   }
   // "Letters to Livable Telluride" banner above our own letters (isLetter pins).
-  function letterBanner(s) {
-    // Per-publication letters art, centered across the card (the card's only
-    // artwork — letters carry no side image). TT opinion pieces get Morgan's
-    // TT letters logo; our own letters keep the LT banner.
-    if (!s.isLetter) return '';
-    var tt = s.src === 'Telluride Times';
-    var art = tt ? '/logo/Letter%20to%20Editor%20TT.png' : '/logo/letters-banner.png';
-    var alt = tt ? 'Letter to the Editor — Telluride Times' : 'Letters to Livable Telluride';
-    return '<div class="letters-banner"><img src="' + art + '" alt="' + alt + '"></div>';
-  }
+  // Letters art lives in the side-image slot (imgFrame) — no banner above the
+  // text (Morgan's 2026-07-22 mock replaced the earlier banner treatment).
+  function letterBanner() { return ''; }
   function metaWithAuthor(s) {
     var base = metaLine(s);
     return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
   }
   function storyLink(s, tagName, cls) {
-    if (s.isLetter && !s.img) cls += ' no-media';   // letters: banner-only, single column
     return '<' + tagName + ' class="' + cls + ' story">' + imgFrame(s, true) +
       '<div>' + letterBanner(s) + tagFor(s) +
       '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
@@ -222,7 +216,7 @@
     var riverItems = rest.filter(function (s) { return secondary.indexOf(s) === -1; });
 
     document.getElementById('lead-slot').innerHTML = lead
-      ? '<article class="lead story' + (lead.isLetter && !lead.img ? ' no-media' : '') + '">' + imgFrame(lead, true) +
+      ? '<article class="lead story">' + imgFrame(lead, true) +
         '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
         '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
         (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
