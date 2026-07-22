@@ -20,9 +20,10 @@
     "copy": "EcoAction Partners and San Miguel County's Green Grant program helped a Lawson Hill household replace two aging west-facing windows, with the homeowners reporting noticeable gains in comfort and energy efficiency. The 40-year-old windows had long needed updating.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Jeremy",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Palm, school clean-up continues apace after last Friday’s flood",
@@ -46,7 +47,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_4024128f-535d-4c2b-a336-c0bd6c3daabc.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/fb/0fbd29c7-33f3-4edd-bc35-ba1fa07333a7/6a5fdca1bdc9f.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "How to fix our broken housing programs",
@@ -57,8 +59,9 @@
     "copy": "San Miguel County recently fixed a legal issue requiring deed-restricted buyers to sign new covenants at closing — a process involving outside counsel and public meetings. A local homeowner argues Telluride's program has similar and deeper problems: asset limits tied to original purchase price push out long-term residents, while ever-changing guidelines spanning 70 pages leave even town attorneys confused.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/editorials/article_8bcac1cf-be30-4f0f-9cd5-9bf05882a7d4.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
+    "img": "",
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Beautiful windows, beautiful efficiency",
@@ -69,9 +72,10 @@
     "copy": "A Norwood homeowner used a Regional Green Grant from EcoAction Partners to replace half the aging single-pane windows in a late-1950s house. The upgrade should cut heating and electricity costs, with plans to finish the remaining windows next year.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_f9cb36d9-a8f6-47a5-aae2-fb6bb5bc6f2a.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Kerry Welch",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Desensitizing bathtime",
@@ -94,8 +98,9 @@
     "copy": "Wildfire smoke has made outdoor activity — long the primary stress relief for many Telluride residents — a health calculation rather than a given this summer. A local therapist notes that losing access to trails, lakes, and clean air hits harder here than most places, since nature is central to how people cope. Research backs up what many are already feeling: smoke exposure is linked to increased anxiety, depression, and reactivated trauma.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/editorials/article_e29f4037-700b-485a-be15-716cdee2f545.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
+    "img": "",
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Happy accidents",
@@ -107,7 +112,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_300e6f97-c37e-4e31-9066-8930608f4e28.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/47/047217d6-3892-4274-811c-5d511543d118/6a5fdb420a985.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Where is the next Valley Floor?",
@@ -119,7 +125,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_6a7660a4-a11c-4f33-900d-ff6aa110751b.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b3/1b30faef-00f2-4390-8531-111c5feec239/6a5fda0653aab.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Documentary honoring sustainability leader Adam Palmer comes to Telluride",
@@ -167,7 +174,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/editorials/article_ebdd9221-7fc0-4ace-b501-3a9c4b0c1279.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6a/c6a9f0c4-5d2e-410e-8e8f-c9933badf732/6a5fd51da4a9e.image.png",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Telski amends lawsuit against Prohaska, Wisor and Fee",
@@ -443,7 +451,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_8e22fbcf-5504-466d-a27a-d86bdcd81bb8.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/de/ede435f0-ee44-47a3-a78f-93606816902f/6a56ae47c7c91.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "BF Deal",
@@ -515,7 +524,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_6628b1e5-34db-4c20-bfc5-751e692a85eb.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a0/8a02af43-dff7-4bc9-b5f2-30872ac66c2f/6a56ab4170bd2.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Friends don't leave friends in hot cars",
@@ -550,8 +560,9 @@
     "copy": "Two of the original builders of Telluride Town Park — who laid the sod and shaped those six acres starting in 1980 — are weighing in against paving the Oval for courts. They watched kids fill that grass during Bluegrass and say hardscape isn't the right trade-off. They're suggesting the indoor hockey arena and high school gym get a second look first.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/editorials/article_5de44ae8-c964-4dd9-af23-ec624d5e7782.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
+    "img": "",
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "A community, not just a destination",
@@ -562,8 +573,9 @@
     "copy": "A Democratic candidate for San Miguel County Commissioner is making workforce housing, economic diversification, and transparent government the center of his campaign. He argues that when workers can't afford to live where they work, schools thin out, businesses struggle to keep staff, and longtime residents quietly leave. The election is November 3.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_eff6f5ee-f9a1-4021-bbbd-927e0c953039.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
+    "img": "",
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Death, rebirth and morels",
@@ -575,7 +587,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/columnists/article_558a094b-2688-4cb2-92bf-a322bdfd5b43.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/06/a066739c-ff2a-462b-a5b9-67b0793e6e62/6a56a442a7441.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Looking for a ‘unicorn buyer’",
@@ -598,9 +611,10 @@
     "copy": "A resident letter to the editor raises concerns about pickleball sharing space with tennis at Town Park, citing noise carrying into the East End neighborhoods, nets left on courts, and players gathering early during reserved tennis time. The writer suggests the Hanley Rink could serve as a dedicated pickleball venue. Strong turnout at the June 30 Town Council meeting apparently opposed cementing the park oval for pickleball and basketball.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_09674367-044f-4f2f-90a0-72d04793246d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Mary Sama-Brown",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Democracy depends on participation",
@@ -611,9 +625,10 @@
     "copy": "San Miguel County Democrats held a community picnic July 5th, introducing local candidates including Lane Masters for sheriff, Paul Reich for commissioner, and incumbents Emil Sante, Michael Wyszynski, Brandi Hatfield, and Dave Foley. State House District 58 candidate Alec Lindeman also attended.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_b2b08b03-551a-4eb2-b42f-bf9522e89821.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "San Miguel County Democrats",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "What to know about Trump's order shrinking the size of 2 national monuments in Utah",
@@ -685,7 +700,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_6310f37d-7581-438e-b29b-a5bc02d37cb7.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/f8/df8b9a4c-e85d-4703-97a7-a10050e7ea0a/6a4e91a47b78d.image.png",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Heroes with a half shell",
@@ -757,7 +773,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_d8e5537a-4415-4593-a7c6-9f45c4536fa6.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/79/b79c3730-41f1-4811-bc9a-1340561db544/6a4e901bf17fb.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "County discusses forestry amendments",
@@ -889,7 +906,8 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/article_1c001e43-9a15-4c53-aa99-71a15dfaa0bb.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/62/9625db20-cb96-4e42-98a4-2e709c28de62/6a4e8ef37beb7.image.jpg",
-    "imgHiRes": true
+    "imgHiRes": true,
+    "isLetter": true
   },
   {
     "title": "Here comes the judge",

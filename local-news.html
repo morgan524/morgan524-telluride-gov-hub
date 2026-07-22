@@ -55,8 +55,9 @@
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
   .letters-banner { margin-bottom: 8px; }
   .letters-banner img { max-width: 260px; width: 100%; display: block; }
-  #pets-list .item { grid-template-columns: 72px 1fr; align-items: center; }
-  #pets-list .pet-photo { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; }
+  /* Pet photo on its own line above the name, card-width (per Morgan 2026-07-22) */
+  #pets-list .item { grid-template-columns: 1fr; }
+  #pets-list .pet-photo { width: 100%; height: auto; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; margin-bottom: 8px; }
   #pets-list .sub, #koto-list .sub { font: 400 13px/1.45 var(--sans); color: var(--muted2); margin-top: 3px; }
   .side-tip h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 6px; }
   .side-tip p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 12px; }

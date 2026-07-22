@@ -1960,7 +1960,16 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           !String(cachedHit.copy || '').trim());
         if (existingByHref.has(href) && cachedHit.claudeSummary && !cachedRetry) {
           const cached = cachedHit;
-          const isLetterCached = /\/letters_to_editor\//i.test(href);
+          // Any /opinion/ piece (letters_to_editor, editorials, guest columns)
+          // gets the Letters treatment (per Morgan 2026-07-22). Self-heal
+          // cached records: set the flag and drop TT's shared generic opinion
+          // graphic (tncms/custom/image) so the Letters artwork renders —
+          // isLetter was computed here for months but never persisted.
+          const isLetterCached = /\/opinion\//i.test(href);
+          if (isLetterCached) {
+            if (!cached.isLetter) cached.isLetter = true;
+            if (/\/tncms\/custom\/image\//i.test(cached.img || '')) cached.img = '';
+          }
           if (isLetterCached && !cached.letterAuthor && TT_AUTH_COOKIE) {
             try {
               const result = await fetchTTArticleDirect(href);
@@ -1986,7 +1995,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
         let copy = rssCopy;
         let claudeSummary = false;
         let letterAuthor = '';
-        let isLetter = /\/letters_to_editor\//i.test(href);
+        let isLetter = /\/opinion\//i.test(href);
         // Letters are public (no paywall), and their RSS lead is usually just
         // the "Dear Editor," salutation — so always fetch+summarize letters,
         // even when no TT auth cookie is configured.
@@ -2048,10 +2057,17 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
           copy,
           claudeSummary,
           href,
-          img: (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, ''),
+          // Letters/opinion pieces drop TT's shared generic opinion graphic
+          // (tncms/custom/image) so the Letters artwork renders instead;
+          // article-specific photos (tncms/assets) are kept.
+          img: (() => {
+            const u = (enclosure?.$.url || '').replace(/[?&]resize=[^&]*/i, '');
+            return (isLetter && /\/tncms\/custom\/image\//i.test(u)) ? '' : u;
+          })(),
           // Only set when populated — keeps serialized output clean for
           // non-letter articles where the field would always be ''.
           ...(letterAuthor ? { letterAuthor } : {}),
+          ...(isLetter ? { isLetter: true } : {}),
         });
       }
       if (newCount > 0) console.log(`  Summarized ${newCount} new TT article(s) from full text`);
