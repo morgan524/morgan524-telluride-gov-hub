@@ -88,11 +88,12 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, write a link as <b>[text](https://…)</b>, or type <b>&lt;p&gt;</b> — or leave a blank line — to start a new paragraph); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 9:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 9:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, write a link as <b>[text](https://…)</b>, or type <b>&lt;p&gt;</b> — or leave a blank line — to start a new paragraph); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. To swap a photo, <b>click it in the preview</b> and then <b>&#128247; Replace photo</b> — your upload is resized and hosted automatically and becomes part of this version. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 9:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 9:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
-    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button><button class="btn ghost tiny" id="linkbtn" style="margin-left:6px" title="Select text in the preview below, then click to turn it into a link">&#128279; Link selection</button></div>
+    <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button><button class="btn ghost tiny" id="linkbtn" style="margin-left:6px" title="Select text in the preview below, then click to turn it into a link">&#128279; Link selection</button><button class="btn ghost tiny" id="photobtn" style="margin-left:6px" title="Click a photo in the preview below, then click to upload a replacement">&#128247; Replace photo</button></div>
+    <input type="file" id="photofile" accept="image/*" style="display:none">
     <iframe class="frame" id="frame"></iframe>
   </div>
 
@@ -226,6 +227,7 @@ $("boldbtn").onclick=()=>{
   } finally { doc.designMode="off"; }
   // Serialize the edited DOM back to the stored HTML (outerHTML drops the
   // doctype — carry it over from the current version).
+  stripSelOutline(doc);   // photo-selection outline must never reach the email
   let html=doc.documentElement.outerHTML;
   html=Array.from(html).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
   const dt=state[cur].html.match(/^\s*<!doctype[^>]*>/i);
@@ -257,6 +259,7 @@ $("linkbtn").onclick=()=>{
     const s2=win.getSelection(); s2.removeAllRanges(); s2.addRange(range);
     doc.execCommand("createLink",false,url);
   } finally { doc.designMode="off"; }
+  stripSelOutline(doc);   // photo-selection outline must never reach the email
   let html=doc.documentElement.outerHTML;
   // Style only freshly-created bare anchors (every pre-existing digest link
   // already carries an inline style=, so this leaves them untouched).
@@ -267,6 +270,88 @@ $("linkbtn").onclick=()=>{
   $("lede").value=currentLede(state[cur].html);
   showStatus("Link added — it's part of this version now.");
 };
+
+// ---- replace a photo in the preview ----
+// Click a photo in the preview to select it (gold outline), then 📷 Replace
+// photo → pick a file. The Desk resizes it client-side (canvas → JPEG ≤1200px),
+// the Worker commits it to assets/digest/uploads/ on livabletelluride.org, and
+// the selected <img>'s src swaps to the hosted URL in this version's HTML. The
+// preview shows the new photo instantly (local copy); the hosted copy publishes
+// within ~2 minutes — long before any scheduled send.
+let selImg = null;                       // the <img> element selected in the iframe (per-load)
+function hookFrameImgs(){
+  const doc=$("frame").contentDocument; if(!doc) return;
+  selImg=null;
+  doc.querySelectorAll("img").forEach(img=>{
+    img.style.cursor="pointer";
+    img.title="Click to select this photo, then use 📷 Replace photo";
+    img.addEventListener("click",e=>{
+      e.preventDefault(); e.stopPropagation();
+      if(selImg) selImg.style.outline="";
+      selImg=img; img.style.outline="4px solid #b58a2c";
+      showStatus("Photo selected — click <b>📷 Replace photo</b> to upload a new one for this spot.");
+    });
+  });
+}
+$("frame").addEventListener("load",hookFrameImgs);
+// The selection outline is a live inline style — strip it before ANY
+// serialization so it can never leak into the saved email HTML.
+function stripSelOutline(doc){ doc.querySelectorAll("img").forEach(i=>{ if(i.style.outline) i.style.removeProperty("outline"); }); }
+
+// File → resized JPEG base64 (no data: prefix). Max 1200w / 1600h, q0.82.
+function resizeToJpeg(file){
+  return new Promise((resolve,reject)=>{
+    const url=URL.createObjectURL(file);
+    const im=new Image();
+    im.onload=()=>{
+      URL.revokeObjectURL(url);
+      let w=im.naturalWidth,h=im.naturalHeight;
+      if(!w||!h){ reject(new Error("Couldn't read that image.")); return; }
+      const scale=Math.min(1, 1200/w, 1600/h);
+      w=Math.round(w*scale); h=Math.round(h*scale);
+      const c=document.createElement("canvas"); c.width=w; c.height=h;
+      const ctx=c.getContext("2d");
+      ctx.fillStyle="#fff"; ctx.fillRect(0,0,w,h);   // flatten transparency for JPEG
+      ctx.drawImage(im,0,0,w,h);
+      const dataUrl=c.toDataURL("image/jpeg",0.82);
+      resolve({ b64:dataUrl.split(",")[1], dataUrl, w, h });
+    };
+    im.onerror=()=>{ URL.revokeObjectURL(url); reject(new Error("That file doesn't look like an image.")); };
+    im.src=url;
+  });
+}
+
+$("photobtn").onclick=()=>{
+  if(!selImg || !$("frame").contentDocument || !$("frame").contentDocument.contains(selImg)){
+    showStatus("First <b>click the photo in the preview</b> you want to replace, then click 📷 Replace photo.",true); return;
+  }
+  $("photofile").value=""; $("photofile").click();
+};
+$("photofile").addEventListener("change",async function(){
+  const file=this.files && this.files[0]; if(!file) return;
+  const target=selImg;
+  if(!target){ showStatus("The photo selection was lost — click the photo again.",true); return; }
+  showStatus('<span class="spin" style="border-color:rgba(0,0,0,.2);border-top-color:var(--gold)"></span> Resizing & uploading '+file.name+'…');
+  $("photobtn").disabled=true;
+  try{
+    const r=await resizeToJpeg(file);
+    const res=await api("/upload-image",{ name:file.name, dataBase64:r.b64 });
+    if(!res.ok||!res.url){ showStatus("⚠ "+(res.error||"upload failed"),true); return; }
+    // Hosted URL into the saved HTML…
+    const doc=$("frame").contentDocument;
+    target.src=res.url; target.removeAttribute("srcset");
+    stripSelOutline(doc);
+    let html=doc.documentElement.outerHTML;
+    html=Array.from(html).map(ch=>{const c=ch.codePointAt(0);return c>127?"&#"+c+";":ch;}).join("");
+    const dt=state[cur].html.match(/^\s*<!doctype[^>]*>/i);
+    state[cur].html=(dt?dt[0]+"\n":"")+html;
+    // …then the local copy for an instant preview (display only, not saved).
+    target.src=r.dataUrl;
+    selImg=null;
+    showStatus("✓ Photo replaced ("+r.w+"&times;"+r.h+") — it's part of this version now. The hosted copy publishes within ~2 minutes; the preview may show a broken image if you Reset before then.");
+  }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
+  finally{ $("photobtn").disabled=false; }
+});
 
 // ---- Ask Claude ----
 function renderLog(){

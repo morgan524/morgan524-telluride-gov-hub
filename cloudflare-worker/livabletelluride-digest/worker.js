@@ -9,6 +9,9 @@
 //   POST /save   (auth) → {key, html, subject, weekStart}
 //                         → commits the approved digest + a lock marker to the
 //                           repo so the daily bot render can't change it
+//   POST /upload-image (auth) → {name, dataBase64 (JPEG)}
+//                         → commits the photo to assets/digest/uploads/ and
+//                           returns {ok, url} for use in the email
 // Auth: header  x-digest-key: <DIGEST_KEY passphrase>.
 // Secrets (set via deploy-digest-worker.yml): ANTHROPIC_API_KEY,
 //   CUSTOMERIO_APP_API_KEY, CUSTOMERIO_BROADCAST_ID (optional until CIO is
@@ -270,6 +273,12 @@ function b64(str) {
 }
 
 async function ghPutFile(env, path, contentStr, message) {
+  return ghPutB64(env, path, b64(contentStr), message);
+}
+
+// Same commit flow but the content is ALREADY base64 (binary uploads — the
+// /upload-image photos — must not round-trip through TextEncoder).
+async function ghPutB64(env, path, contentB64, message) {
   const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
   const base = "https://api.github.com/repos/" + repo + "/contents/" + path;
   const headers = {
@@ -284,12 +293,33 @@ async function ghPutFile(env, path, contentStr, message) {
   const put = await fetch(base, {
     method: "PUT",
     headers,
-    body: JSON.stringify({ message, content: b64(contentStr), branch: "main", ...(sha ? { sha } : {}) }),
+    body: JSON.stringify({ message, content: contentB64, branch: "main", ...(sha ? { sha } : {}) }),
   });
   if (!put.ok) {
     const t = await put.text();
     throw new Error("GitHub " + put.status + " on " + path + ": " + t.slice(0, 200));
   }
+}
+
+// ── /upload-image — host a Desk-uploaded photo on livabletelluride.org ──
+// The Desk resizes client-side (canvas → JPEG ≤1200px) and sends base64; we
+// commit it to assets/digest/uploads/<YYYY-MM>/ and return the public URL the
+// email will use. GitHub Pages serves the file ~1-2 min after the commit —
+// well before any scheduled send.
+async function uploadImage(body, env) {
+  if (!env.GITHUB_TOKEN) return { error: "Uploads aren't configured — the Worker needs its GITHUB_TOKEN secret." };
+  const dataB64 = String(body.dataBase64 || "");
+  if (!dataB64 || dataB64.length < 100) return { error: "No image data received." };
+  if (dataB64.length > 4_200_000) return { error: "Image too large after resize (max ~3 MB) — try a smaller photo." };
+  if (!/^[A-Za-z0-9+/=]+$/.test(dataB64)) return { error: "Bad image encoding." };
+  // JPEG magic bytes (/9j/) — the Desk always converts to JPEG before upload.
+  if (!dataB64.startsWith("/9j/")) return { error: "Only JPEG uploads are accepted (the Desk converts automatically — is the file an image?)." };
+  const slug = String(body.name || "photo").toLowerCase()
+    .replace(/\.[a-z0-9]+$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "photo";
+  const ym = new Date().toISOString().slice(0, 7);
+  const path = "assets/digest/uploads/" + ym + "/" + slug + "-" + Date.now() + ".jpg";
+  await ghPutB64(env, path, dataB64, "Digest: photo upload " + slug + " (Review Desk)");
+  return { ok: true, url: "https://livabletelluride.org/" + path };
 }
 
 async function saveDigest(body, env) {
@@ -328,6 +358,7 @@ export default {
       if (url.pathname === "/chat") return json(await chat(body, env), 200, origin);
       if (url.pathname === "/send") return json(await send(body, env), 200, origin);
       if (url.pathname === "/save") return json(await saveDigest(body, env), 200, origin);
+      if (url.pathname === "/upload-image") return json(await uploadImage(body, env), 200, origin);
       return json({ error: "not found" }, 404, origin);
     } catch (e) {
       return json({ error: String((e && e.message) || e) }, 500, origin);
