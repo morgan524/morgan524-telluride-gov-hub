@@ -135,7 +135,7 @@
     return { title: a.title || '', href: a.href || '', img: a.img || a.imageUrl || '',
       dek: a.copy || a.claudeSummary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
       date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
-      letterAuthor: a.letterAuthor || '' };
+      letterAuthor: a.letterAuthor || '', imgPos: a.imgPos || '' };
   }
   function metaLine(s) {
     return [s.src, s.date].filter(Boolean).join(' · ');
@@ -155,7 +155,11 @@
   function imgFrame(s, linkWrap) {
     var img;
     if (s.img) {
-      img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"></div>';
+      // Optional per-article crop focus (imgPos on the data record, e.g.
+      // "center 22%") for photos whose subject sits off-center — cover-crop
+      // would otherwise cut them out. Whitelisted chars only (inline style).
+      var pos = (s.imgPos && /^[a-z0-9% .-]+$/i.test(s.imgPos)) ? ' style="object-position:' + s.imgPos + '"' : '';
+      img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"' + pos + '></div>';
     } else if (s.isLetter) {
       // Letters without their own photo use the Letters artwork (live-site parity)
       img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor.png" alt="Letter to the editor" loading="lazy"></div>';

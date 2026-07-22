@@ -117,6 +117,13 @@ const IMG_FALLBACKS = [
 // matching assets/digest/fallbacks/<slug>.jpg. (Meetings intentionally excluded.)
 const FB = (slug) => SITE_URL + '/assets/digest/fallbacks/' + slug + '.jpg';
 const CATEGORY_FALLBACKS = [
+  // Morgan's local stock photos (added 2026-07-22) — before the broader
+  // categories they'd otherwise fall into. Keep in sync with
+  // build-events-index.js CATEGORY_FALLBACKS.
+  { match: /farmers'? market/i,                                                         slug: 'farmersmarket' },
+  { match: /\btennis\b|pickleball/i,                                                    slug: 'tennis' },
+  { match: /\bhockey\b|ice.?skat/i,                                                     slug: 'hockey' },
+  { match: /\bvot(?:e|ing|ers?)\b|election|ballot/i,                                    slug: 'voting' },
   { match: /\bbaseball\b|softball|little league|t-?ball/i,                              slug: 'baseball' },
   { match: /\bfilm\b|\bmovie\b|cinema|screening|documentary/i,                          slug: 'film' },
   { match: /\bhike\b|hiking|\btrail\b|\btrek\b|summit|wildflower|nature walk|backpack/i, slug: 'hiking' },
@@ -130,21 +137,27 @@ const CATEGORY_FALLBACKS = [
   { match: /festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i,           slug: 'festival' },
   { match: /concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, slug: 'livemusic' },
 ];
-// Catch-all "community" events rotate through six licensed regional photos
-// (Adobe Stock, Enhanced license — see assets/digest/fallbacks/SOURCES.json),
-// deterministic by title hash so an event keeps its photo across sends. Same
-// scheme as build-events-index.js — keep the two in sync.
-const COMMUNITY_COUNT = 6;
-const communityImg = (title) => {
+// Catch-all "community" events rotate through licensed/owned regional photos
+// (1-6 Adobe Stock Enhanced license, 7-10 Morgan's own town photos — see
+// assets/digest/fallbacks/SOURCES.json), deterministic by title hash so an
+// event keeps its photo across sends. Same scheme as build-events-index.js —
+// keep the two in sync (incl. ROTATING_SLUGS).
+const COMMUNITY_COUNT = 10;
+const ROTATING_SLUGS = { farmersmarket: 3, tennis: 3, voting: 3 };
+const titleHash = (title) => {
   let h = 0;
   const s = String(title || '');
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return FB('community-' + ((h % COMMUNITY_COUNT) + 1));
+  return h;
 };
+const communityImg = (title) => FB('community-' + ((titleHash(title) % COMMUNITY_COUNT) + 1));
 const imgFallback = (title) => {
   const t = title || '';
   for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
-  for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) return FB(c.slug);
+  for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) {
+    const n = ROTATING_SLUGS[c.slug];
+    return n ? FB(c.slug + '-' + ((titleHash(t) % n) + 1)) : FB(c.slug);
+  }
   return communityImg(t);
 };
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so

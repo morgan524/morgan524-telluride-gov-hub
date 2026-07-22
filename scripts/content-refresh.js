@@ -1695,6 +1695,26 @@ const SMBF_DECODE = (s) => s
   // behind the render-site escaping).
   .replace(/<[^>]*>/g, '');
 
+// SMBF landing "lead" blocks often embed the KICKER + HEADLINE + BYLINE ahead
+// of the body ("WILDFIRE A day in the life… By NATASHA HESSLER, Forum Intern
+// The town of Ridgway…") — rendered verbatim that reads as garbage on a card
+// (2026-07-22 report from Morgan). Strip those prefixes deterministically:
+// anchor on the known title (most reliable), then peel an all-caps byline.
+// This is the no-API fallback; new articles get a real Claude summary below.
+function cleanSmbLead(lead, title) {
+  let s = String(lead || '').replace(/\s+/g, ' ').trim();
+  const t = String(title || '').replace(/\s+/g, ' ').trim();
+  if (t) {
+    const i = s.toLowerCase().indexOf(t.toLowerCase());
+    if (i >= 0 && i <= 60) s = s.slice(i + t.length).trim();   // kicker + headline gone
+  }
+  // Byline: name in CAPS ("By REGAN TUTTLE"), optional mixed-case role
+  // (", Editor", ", Forum Intern"). Role list is closed — the body itself
+  // starts with a capitalized word, so a free-form role match would eat it.
+  s = s.replace(/^By\s+(?:[A-Z][A-Z.'’\-]*\s*){1,4}(?:,\s*(?:Editor|Publisher|Staff Writer|Staff Reporter|Reporter|Correspondent|Contributor|Columnist|Forum Intern|Intern)\b)?\s*/, '').trim();
+  return s;
+}
+
 async function pullSmbForum(existingSmbArticles = []) {
   console.log('\n🌄 San Miguel Basin Forum: scraping category pages...');
   const cutoffMs = Date.now() - SMBF_MAX_AGE_DAYS * 86400000;
@@ -1749,13 +1769,21 @@ async function pullSmbForum(existingSmbArticles = []) {
       // Skip the Spanish translation twins SMBF publishes beside each story.
       if (isSpanishTitle(title)) continue;
 
-      // Resolve the real publish date (cache -> detail-page fetch).
+      // Resolve the real publish date (cache -> detail-page fetch). The same
+      // detail page also feeds the Claude summary, so fetch it when either is
+      // missing (a record that already has a claudeSummary never re-fetches).
+      const cachedRec = existingByHref.get(fullHref);
+      const needSummary = ANTHROPIC_API_KEY && !(cachedRec && cachedRec.claudeSummary);
       let iso = cachedDate(fullHref);
-      if (!iso) {
+      let detailHtml = null;
+      if (!iso || needSummary) {
         try {
           const d = await fetch(fullHref);
           fetchedDetails++;
-          if (d.status === 200) iso = extractSmbDate(d.text);
+          if (d.status === 200) {
+            detailHtml = d.text;
+            if (!iso) iso = extractSmbDate(d.text);
+          }
         } catch (e) { /* undated -> skip below */ }
       }
       if (!iso) continue; // no date -> don't risk surfacing stale content
@@ -1768,12 +1796,30 @@ async function pullSmbForum(existingSmbArticles = []) {
 
       const leadM = /<div\s+class=['"]lead['"][^>]*>\s*<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
       const lead = leadM
-        ? SMBF_DECODE(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+        ? cleanSmbLead(SMBF_DECODE(leadM[1].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()), title)
         : '';
       const imgM = /<img[^>]*class=["'][^"']*photo[^"']*["'][^>]*src=["']([^"']+)["']/i.exec(block);
       const img = imgM ? imgM[1] : '';
-      const cached = existingByHref.get(fullHref);
-      if (!cached) newCount++;
+      if (!cachedRec) newCount++;
+
+      // Summary: keep a cached Claude summary forever; otherwise try to
+      // generate one from the detail page (SMBF is the same Creative Circle
+      // CMS as TT, so the TT text extractor works). Fall back to the cleaned
+      // landing lead. claudeSummary flips true only when Claude actually
+      // produced text, so a failed attempt retries on a later run.
+      let copy = lead || (cachedRec && cachedRec.copy) || '';
+      let claudeSummary = !!(cachedRec && cachedRec.claudeSummary);
+      if (claudeSummary) {
+        copy = cachedRec.copy;
+      } else if (detailHtml) {
+        const fullText = extractTTArticleText(detailHtml);
+        if (fullText) {
+          const sum = await summarizeTTArticle(title, fullText, '', 'San Miguel Basin Forum');
+          if (sum && sum.length > 40) { copy = sum; claudeSummary = true; }
+          await new Promise(r => setTimeout(r, 800));   // be polite to SMBF
+        }
+      }
+      copy = String(copy).replace(/\s+/g, ' ').trim();
 
       out.push({
         title,
@@ -1782,10 +1828,13 @@ async function pullSmbForum(existingSmbArticles = []) {
         date: formatDate(new Date(iso + 'T12:00:00Z')),
         firstSeen: iso,          // = the article's real publish date
         dateSource: 'article',   // marks the date as trustworthy for next run
-        newsTopic: classifyNewsTopic(title, lead),
-        copy: (lead || (cached && cached.copy) || '').slice(0, 300),
+        newsTopic: classifyNewsTopic(title, copy),
+        copy: claudeSummary ? copy : copy.slice(0, 300),
+        claudeSummary,
         href: fullHref,
-        img: img || (cached && cached.img) || '',
+        img: img || (cachedRec && cachedRec.img) || '',
+        // Hand-set presentation overrides survive the per-run rebuild.
+        ...(cachedRec && cachedRec.imgPos ? { imgPos: cachedRec.imgPos } : {}),
       });
     }
   }
@@ -2460,10 +2509,10 @@ function isRefusalSummary(text) {
  * Falls back to rssFallback if the API call fails; returns '' (blank) if the
  * model produces a refusal/meta-summary rather than a real one.
  */
-async function summarizeTTArticle(title, fullText, rssFallback) {
+async function summarizeTTArticle(title, fullText, rssFallback, sourceName = 'Telluride Times') {
   if (!ANTHROPIC_API_KEY || !fullText) return rssFallback;
 
-  const prompt = `Summarize the following Telluride Times article in 2-3 sentences for a community news card. Write in the voice of "Rick" — the single named persona behind every AI summary on livabletelluride.org: a long-time local who has watched all the cycles, loves this region, and is not cynical but wary of major changes. Observational, factual, plainspoken, no advocacy or editorializing. ("Rick" is an internal persona name — NEVER name, sign, or refer to "Rick" in the output.) Do not start with the article title. Do not use phrases like "The article says" or "This piece covers." Just deliver the key facts in plain language. Keep it under 280 characters if possible.
+  const prompt = `Summarize the following ${sourceName} article in 2-3 sentences for a community news card. Write in the voice of "Rick" — the single named persona behind every AI summary on livabletelluride.org: a long-time local who has watched all the cycles, loves this region, and is not cynical but wary of major changes. Observational, factual, plainspoken, no advocacy or editorializing. ("Rick" is an internal persona name — NEVER name, sign, or refer to "Rick" in the output.) Do not start with the article title. Do not use phrases like "The article says" or "This piece covers." Just deliver the key facts in plain language. Keep it under 280 characters if possible.
 
 TITLE: ${title}
 

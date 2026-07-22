@@ -7,12 +7,11 @@
   "image_url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3B4MTAyOTYwOS1pbWFnZS1rejJkem91Ny5qcGc.jpg"
  },
  "baseball": {
-  "license": "cc0",
-  "source": "rawpixel",
-  "title": "Kids baseball game",
-  "page": "https://www.rawpixel.com/image/6040251/kids-baseball-game-free-public-domain-cc0-photo",
-  "image_url": "https://images.rawpixel.com/editor_1024/cHJpdmF0ZS9zdGF0aWMvaW1hZ2Uvd2Vic2l0ZS8yMDIyLTA0L2xyL2ZyY2hpbGRfc3BvcnRfc29mdGJhbGxfZmllbGRfMC1pbWFnZS1reWJlNDUxOS5qcGc.jpg",
-  "note": "kids/little-league baseball (matches youth-baseball events)"
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Kids baseball, Telluride (replaces the CC0 rawpixel photo)",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
  },
  "cycling": {
   "license": "pdm",
@@ -139,5 +138,103 @@
   "file_id": 358592498,
   "title": "Telluride main street village (Aug 14 2019)",
   "note": "by Kristina Blokhin; EDITORIAL USE ONLY restriction"
+ },
+ "farmersmarket-1": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Telluride Farmers Market 1",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "farmersmarket-2": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Telluride Farmers Market 2",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "farmersmarket-3": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Telluride Farmers Market 3",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "tennis-1": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Tennis, Town Park",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "tennis-2": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Tennis 2",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "tennis-3": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Kids tennis",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "hockey": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Kids hockey",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "voting-1": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Vote",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "voting-2": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Voter stock",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "voting-3": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Voter registration",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "community-7": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Town of Telluride",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "community-8": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Town of Telluride 2",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "community-9": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Town of Telluride 3",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "community-10": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Telluride Town Park",
+  "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
  }
 }

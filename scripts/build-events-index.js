@@ -89,6 +89,13 @@ function townFor(e, label) {
 const SITE = 'https://livabletelluride.org';
 const FB = (slug) => SITE + '/assets/digest/fallbacks/' + slug + '.jpg';
 const CATEGORY_FALLBACKS = [
+  // Morgan's local stock photos (images/Stock, added 2026-07-22) — matched
+  // before the broader categories they'd otherwise fall into (farmers market
+  // → food, voter registration → talk's "registration").
+  [/farmers'? market/i, 'farmersmarket'],
+  [/\btennis\b|pickleball/i, 'tennis'],
+  [/\bhockey\b|ice.?skat/i, 'hockey'],
+  [/\bvot(?:e|ing|ers?)\b|election|ballot/i, 'voting'],
   [/\bbaseball\b|softball|little league|t-?ball/i, 'baseball'],
   [/\bfilm\b|\bmovie\b|cinema|screening|documentary/i, 'film'],
   [/\bhike\b|hiking|\btrail\b|\btrek\b|summit|wildflower|nature walk|backpack/i, 'hiking'],
@@ -102,19 +109,28 @@ const CATEGORY_FALLBACKS = [
   [/festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i, 'festival'],
   [/concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, 'livemusic'],
 ];
-// Catch-all "community" events rotate through six licensed regional photos
-// (Adobe Stock, Enhanced license, morgan@ex1creative.com plan — see
+// Catch-all "community" events rotate through licensed/owned regional photos
+// (1-6 Adobe Stock Enhanced license, 7-10 Morgan's own town photos — see
 // assets/digest/fallbacks/SOURCES.json) instead of repeating one image.
 // Deterministic by title hash: the same event always keeps the same photo.
-const COMMUNITY_COUNT = 6;
-function communityImg(title) {
+// Other multi-image slugs rotate the same way (ROTATING_SLUGS).
+const COMMUNITY_COUNT = 10;
+const ROTATING_SLUGS = { farmersmarket: 3, tennis: 3, voting: 3 };
+function titleHash(title) {
   let h = 0;
   const s = String(title || '');
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return FB('community-' + ((h % COMMUNITY_COUNT) + 1));
+  return h;
+}
+function communityImg(title) {
+  return FB('community-' + ((titleHash(title) % COMMUNITY_COUNT) + 1));
 }
 function fallbackImg(title) {
-  for (const [re, slug] of CATEGORY_FALLBACKS) if (re.test(title || '')) return FB(slug);
+  for (const [re, slug] of CATEGORY_FALLBACKS) {
+    if (!re.test(title || '')) continue;
+    const n = ROTATING_SLUGS[slug];
+    return n ? FB(slug + '-' + ((titleHash(title) % n) + 1)) : FB(slug);
+  }
   return communityImg(title);
 }
 
@@ -123,9 +139,12 @@ function fallbackImg(title) {
 // (most reliable), then the description. Everything else → Community.
 const SLUG_TYPE = {
   baseball: 'Outdoors & Sports', hiking: 'Outdoors & Sports', cycling: 'Outdoors & Sports',
+  tennis: 'Outdoors & Sports', hockey: 'Outdoors & Sports',
   film: 'Arts & Film', art: 'Arts & Film', theater: 'Arts & Film',
-  livemusic: 'Music', food: 'Food & Drink', family: 'Family & Kids',
-  wellness: 'Wellness', talk: 'Talks & Classes', festival: 'Festivals'
+  livemusic: 'Music', food: 'Food & Drink', farmersmarket: 'Food & Drink',
+  family: 'Family & Kids',
+  wellness: 'Wellness', talk: 'Talks & Classes', festival: 'Festivals',
+  voting: 'Community'
 };
 // Description text is looser than titles ("the art of fermentation", "a
 // celebration of local food") — drop the most idiom-prone words for that pass.
