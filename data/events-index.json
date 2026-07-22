@@ -93,16 +93,16 @@
     "type": "Music"
   },
   {
-    "title": "Stories & Poems Telluride",
-    "href": "https://koto.org/event/stories-poems-telluride/",
+    "title": "Home Tour & House Show with Emily Scott Robinson",
+    "href": "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
     "date": "2026-07-21",
-    "time": "5:15 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
+    "time": "5:00 PM",
+    "location": "",
+    "town": "",
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry…",
+    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while…",
     "type": "Community"
   },
   {
@@ -130,19 +130,6 @@
     "source": "Wilkinson Public Library",
     "desc": "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet…",
     "type": "Community"
-  },
-  {
-    "title": "Forest Health Talk w/Jason Sibold",
-    "href": "https://koto.org/event/forest-health-talk-w-jason-sibold/",
-    "date": "2026-07-21",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study here:…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Spanish Happy Hour",
@@ -222,19 +209,6 @@
     "desc": "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray,…",
     "type": "Arts & Film",
     "endDate": "2026-08-05"
-  },
-  {
-    "title": "Home Tour & House Show with Emily Scott Robinson",
-    "href": "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson/",
-    "date": "2026-07-21",
-    "time": "8:00 AM",
-    "location": "783 N. Laura Street, Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while…",
-    "type": "Community"
   },
   {
     "title": "Ouray Youth Summer Programs: Canyoning",
@@ -1686,6 +1660,19 @@
     "type": "Community"
   },
   {
+    "title": "America 250/Colorado 150 Book Club",
+    "href": "https://koto.org/event/america-250-colorado-150-book-club/",
+    "date": "2026-07-29",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Wine and Wickets",
     "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
     "date": "2026-07-29",
@@ -1778,6 +1765,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
+    "date": "2026-07-30",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
     "title": "San Miguel Basin Fair and Rodeo",
     "href": "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
     "date": "2026-07-30",
@@ -1843,6 +1843,32 @@
     "desc": "Love’s Labors Lost: Theatre @ the Wright Presented by UpstART Theatre WHEN? Thursday, July 30 Doors at 7:00 pm • Show at 7:30 pm Friday, July 31 Doors at 7:00 pm • Show at 7:30 pm Saturday, August 1 Doors at 7:00 pm • Show at 7:30 pm…",
     "type": "Arts & Film",
     "endDate": "2026-08-02"
+  },
+  {
+    "title": "Coffee and Climate Conversations",
+    "href": "https://koto.org/event/coffee-and-climate-conversations-2/",
+    "date": "2026-07-30",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson…",
+    "type": "Community"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-30/",
+    "date": "2026-07-30",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Family & Kids"
   },
   {
     "title": "Telluride Farmers Market",

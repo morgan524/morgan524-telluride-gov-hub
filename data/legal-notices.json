@@ -325,26 +325,6 @@
     "noticeKey": "COL-000178-cboe-2026"
   },
   {
-    "title": "RFP -- Custodial Services for Telluride School District R-1",
-    "entity": "Telluride School District R-1",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Telluride School District R-1 is requesting proposals from vendors to provide year-round custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. Services include trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; vendors may bid on all or part of the contract. Requests for full specifications must be received by 4:00 PM on July 14, 2026, and complete proposals are due by 4:00 PM on July 21, 2026.",
-    "deadline": "2026-07-21",
-    "expires": "2026-07-21",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, Colorado",
-    "noticeKey": "COL-000180-tsd-custodial-rfp"
-  },
-  {
     "title": "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     "entity": "Estate of Gerald D. Wilson",
     "entityClass": "ent-county",
@@ -405,26 +385,6 @@
     "address": "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     "noticeKey": "foreclosure-sale-202604-lot166ar2-mountain-village",
     "caseNumber": "202604"
-  },
-  {
-    "title": "RFP -- Custodial Services for School Facilities (COL-000178)",
-    "entity": "Telluride School District R-1",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Telluride School District R-1 is soliciting proposals for custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. The contract is year-round and covers trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; bidders may bid on all or portions of the work. Vendors must request full specifications by email by 4:00 PM on July 14, 2026, and submit completed proposals by 4:00 PM on July 21, 2026.",
-    "deadline": "2026-07-21T16:00:00",
-    "expires": "2026-07-21",
-    "dates": "7/9",
-    "papers": [
-      "ttimes_0709"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    "address": "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
-    "noticeKey": "rfp-tsd-custodial-2026"
   },
   {
     "title": "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",

@@ -217,9 +217,17 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-07-21';
+const SMART_CACHE_DATE = '2026-07-22';
 
 const SMART_CACHED_DATA = [
+  {
+    date: "July 9, 2026",
+    time: "4:00 PM",
+    title: "SMART Board of Directors",
+    location: "SMART Office, Lawson Hill (also virtual — see agenda)",
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Agenda_July-23rd-2026_distributed.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-meeting-packet_July-23rd-2026.pdf"
+  },
   {
     date: "August 13, 2026",
     time: "4:00 PM",
@@ -575,7 +583,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-07-21';
+const NORWOOD_CACHE_DATE = '2026-07-22';
 
 const NORWOOD_CACHED_DATA = [
   {

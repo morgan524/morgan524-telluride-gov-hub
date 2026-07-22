@@ -1,26 +1,18 @@
 {
-  "hash": "a29655a9a33db86341aff57ef3d7cf6932158851",
-  "lede": "Tuesday is the heaviest day on the civic calendar: a newly seated Town Council takes up second reading of the Colorado Wildfire Resiliency Code, which would write new landscaping and historic-review standards into the Land Use Code — a real vote on rules that affect nearly every property in town. The Housing Authority meets the same day to hash out a primary-residency policy for dependents in multi-custodial households, and Wednesday the BOCC holds a special meeting with no agenda posted yet, which is worth watching. Thursday, Planning and Zoning digs into the Carhenge redevelopment and SMART's board votes on two gondola structural-analysis contracts.",
+  "hash": "bf0b19f2a1082528d562858739636c0d55a4463f",
+  "lede": "The most consequential action this week happens Wednesday, when SMART's board votes on two vendor contracts — one for gondola structural analysis, one for cabin structural analysis — that will shape whether the aging gondola has a future. That same day, Town Planning and Zoning takes up the Carhenge Redevelopment Project, a large-scale subdivision consolidation on Town-owned land at 700 W Pacific, along with other Town-initiated development concepts in the Accommodations 2 zone. Rounding out the week, the Town Council sits as Liquor Licensing Authority Sunday to hear KOTO Radio's permit request for its Live at the Drive event.",
   "notable": [
     {
       "id": 1,
-      "stake": "Second-reading vote on wildfire code changing land-use and landscaping rules townwide."
+      "stake": "Town-owned Carhenge site up for subdivision consolidation and concept review."
     },
     {
-      "id": 2,
-      "stake": "New primary-residency policy for dependents of multi-custodial households up for adoption."
+      "id": 4,
+      "stake": "Two vendor contract votes decide who analyzes the gondola's structural future."
     },
     {
-      "id": 6,
-      "stake": "Public review of Carhenge redevelopment subdivision and concept plans on Town-owned land."
-    },
-    {
-      "id": 9,
-      "stake": "Board votes on two gondola structural-analysis contracts critical to the gondola's future."
-    },
-    {
-      "id": 12,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — residents may comment."
+      "id": 7,
+      "stake": "Public hearing on KOTO's special event liquor permit for July 30 concert."
     }
   ]
 }

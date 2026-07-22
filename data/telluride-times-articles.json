@@ -1000,81 +1000,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Aldasoro Ranch turns 100",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "community",
-    "copy": "The Aldasoro Ranch, founded in 1926 when Joaquin Aldasoro bought 1,400 acres on Deep Creek Mesa, turns 100 this year. The family is marking the milestone with a public celebration Sunday, July 12, 11 a.m.–3 p.m. at 5605 Last Dollar Rd. Free shuttles run every 30 minutes from the county courthouse.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_92132a6f-84c7-4cf5-8194-30f9c965f8ed.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/93/493cf380-3382-4640-9817-6a2042523f39/6a4ea04ecc377.image.png",
-    "imgHiRes": true
-  },
-  {
-    "title": "A 100% rating for Max Silverman",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "community",
-    "copy": "A letter to the editor from Mike Ritchey of Gunnison praises Max Silverman's film \"Rebuilding,\" calling it a well-crafted, low-key cinematic work with perfectly chosen actors. Ritchey also acknowledges Max's father Rick, noting the film's dedication to his parents.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "letterAuthor": "Mike Ritchey Gunnison",
-    "imgHiRes": true
-  },
-  {
-    "title": "On paving the oval",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "community",
-    "copy": "Telluride's beloved grass oval may be eyed for pickleball courts, and not everyone's on board. Tom Sokolowski put it plainly with a nod to Joni Mitchell. Some places, once changed, don't come back.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "letterAuthor": "Tom “Socko” Sokolowski",
-    "imgHiRes": true
-  },
-  {
-    "title": "Playing with fire",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "public-safety",
-    "copy": "A Telluride resident is asking town officials to clarify the evacuation plan when festivals bring thousands of visitors into town. It's a fair question — the canyon geography doesn't change when the crowds show up.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "letterAuthor": "Eliot Brown",
-    "imgHiRes": true
-  },
-  {
-    "title": "Support Allen Highfield for TMVOA board",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "government",
-    "copy": "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Coffee Camp dispute sparks petition",
-    "source": "Telluride Times",
-    "date": "July 8, 2026",
-    "firstSeen": "2026-07-08",
-    "newsTopic": "housing",
-    "copy": "Neighbors near Coffee Camp in Norwood's mixed-use business district raised concerns at the June 10 Town Board meeting over noise, wildlife, and highway parking tied to the food truck operation. Town staff noted no evidence linking the business to a broader skunk problem in town, and supporters pushed back, comparing Coffee Camp's cooking to a nearby market. Norwood's land use code doesn't currently address food trucks specifically.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/norwood_post/article_edbdf11b-8bad-4aac-ab0d-bb6b8de98f1d.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/39/53975440-28ca-4f51-ad6d-34c7b1faf5be/6a4e7fc74523f.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     "source": "Town of Telluride",
     "date": "June 30, 2026",
@@ -1111,21 +1036,30 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
+    "title": "Numerous Highway Closures",
+    "source": "San Miguel County",
+    "date": "July 22, 2026",
+    "newsTopic": "community",
+    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road",
+    "source": "San Miguel County",
+    "date": "July 21, 2026",
+    "newsTopic": "housing",
+    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    "img": ""
+  },
+  {
     "title": "Tomboy Road reopens Weds 7/22 8AM",
     "source": "San Miguel County",
     "date": "July 21, 2026",
     "newsTopic": "infrastructure",
     "copy": "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
-    "img": ""
-  },
-  {
-    "title": "Lower Tomboy Road Closed to All Traffic",
-    "source": "San Miguel County",
-    "date": "July 18, 2026",
-    "newsTopic": "infrastructure",
-    "copy": "Due to hazardous conditions, lower Tomboy Road is closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below the Town of Tomboy.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
     "img": ""
   },
   {

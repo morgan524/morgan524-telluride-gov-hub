@@ -552,7 +552,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -579,7 +579,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1730,81 +1730,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Aldasoro Ranch turns 100",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "community",
-    copy: "The Aldasoro Ranch, founded in 1926 when Joaquin Aldasoro bought 1,400 acres on Deep Creek Mesa, turns 100 this year. The family is marking the milestone with a public celebration Sunday, July 12, 11 a.m.–3 p.m. at 5605 Last Dollar Rd. Free shuttles run every 30 minutes from the county courthouse.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_92132a6f-84c7-4cf5-8194-30f9c965f8ed.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/93/493cf380-3382-4640-9817-6a2042523f39/6a4ea04ecc377.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "A 100% rating for Max Silverman",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "community",
-    copy: "A letter to the editor from Mike Ritchey of Gunnison praises Max Silverman's film \"Rebuilding,\" calling it a well-crafted, low-key cinematic work with perfectly chosen actors. Ritchey also acknowledges Max's father Rick, noting the film's dedication to his parents.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_9ac98b6e-9fed-4cd0-ba76-8809c36437b7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Mike Ritchey Gunnison",
-    imgHiRes: true
-  },
-  {
-    title: "On paving the oval",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "community",
-    copy: "Telluride's beloved grass oval may be eyed for pickleball courts, and not everyone's on board. Tom Sokolowski put it plainly with a nod to Joni Mitchell. Some places, once changed, don't come back.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_311da385-6055-41dd-8db0-16b525fb375a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Tom “Socko” Sokolowski",
-    imgHiRes: true
-  },
-  {
-    title: "Playing with fire",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "public-safety",
-    copy: "A Telluride resident is asking town officials to clarify the evacuation plan when festivals bring thousands of visitors into town. It's a fair question — the canyon geography doesn't change when the crowds show up.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_89a63ad4-966c-4c30-8191-1ed55c722fb8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    letterAuthor: "Eliot Brown",
-    imgHiRes: true
-  },
-  {
-    title: "Support Allen Highfield for TMVOA board",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "government",
-    copy: "Allen Highfield is running for the Class B seat on the TMVOA board, backed by a colleague who cites his 30+ years in luxury hospitality with Ritz-Carlton, Montage, and Auberge. Voting is electronic via ElectionBuddy and closes July 22 at 11:59 p.m. MT.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_c3efb107-36da-478b-8799-ab46a9dfa4bd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Coffee Camp dispute sparks petition",
-    source: "Telluride Times",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    newsTopic: "housing",
-    copy: "Neighbors near Coffee Camp in Norwood's mixed-use business district raised concerns at the June 10 Town Board meeting over noise, wildlife, and highway parking tied to the food truck operation. Town staff noted no evidence linking the business to a broader skunk problem in town, and supporters pushed back, comparing Coffee Camp's cooking to a nearby market. Norwood's land use code doesn't currently address food trucks specifically.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_edbdf11b-8bad-4aac-ab0d-bb6b8de98f1d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/39/53975440-28ca-4f51-ad6d-34c7b1faf5be/6a4e7fc74523f.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -1841,21 +1766,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "community",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "housing",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
     title: "Tomboy Road reopens Weds 7/22 8AM",
     source: "San Miguel County",
     date: "July 21, 2026",
     newsTopic: "infrastructure",
     copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
-    img: ""
-  },
-  {
-    title: "Lower Tomboy Road Closed to All Traffic",
-    source: "San Miguel County",
-    date: "July 18, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to hazardous conditions, lower Tomboy Road is closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below the Town of Tomboy.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
     img: ""
   },
   {
@@ -2155,6 +2089,15 @@ const LOCAL_NEWS_FEATURED = [
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "Speak Up by Noon Wednesday: the Carhenge Subdivision and Backman Village P&Z Meeting",
+    date: "Jul 21, 2026",
+    href: "https://livabletelluride.org/digest/archive/2026-07-22-weekly.html",
+    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
+    excerpt: "Livable Telluride Inform Connect Engage Together Speak Up July 23 Hearing Speak Up by Noon Wednesday: the Carhenge Subdivision and Backman Village P Z Meeting By Morgan Smith July 22, 2026 This Thursday, July 23, the Town of Telluride s Planning and Zoning Commission takes up an application that deserves more attention than it s received. It s called the Carhenge Preliminary Large-Scale Subdivisio",
+    category: "Newsletter",
+    source: "customerio"
+  },
   {
     title: "When the Town Judges Its Own Projects",
     date: "Jun 30, 2026",
@@ -2593,17 +2536,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Home Tour & House Show with Emily Scott Robinson",
-    link: "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson/",
-    description: "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …",
-    pubDate: "2026-07-21T14:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "783 N. Laura Street, Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Home Tour & House Show with Emily Scott Robinson",
     link: "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
     description: "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …",
     pubDate: "2026-07-21T23:00:00.000Z",
@@ -2611,28 +2543,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Stories & Poems Telluride",
-    link: "https://koto.org/event/stories-poems-telluride/",
-    description: "Durango Poet Laureate Esther Belin will be the featured presenter at the Talking Gourds’ Stories & Poems series at the Wilkinson Public Library on Tuesday July 21 at 5:15 pm. “Esther just directed the successful Four Corners Poetry Festival at the Durango Public Library,” explained Talking Gourds Director Art Goodtimes. “We are delighted she’s willing to make the drive up into the mountains to share her Indigenous poetry with us.”",
-    pubDate: "2026-07-21T23:15:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Forest Health Talk w/Jason Sibold",
-    link: "https://koto.org/event/forest-health-talk-w-jason-sibold/",
-    description: "Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek. More info about Dr. Sibold and his study here: https://www.libarts.colostate.edu/people/sibold/ https://www.instagram.com/p/DIUD7GZSrVL/ And join us the next day for a walk and talk in Bear Creek! Sign up is required. Please go to the listing here: https://telluridelibrary.libcal.com/event/17105410 Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way! Meet at the library and wear sturdy shoes.",
-    pubDate: "2026-07-21T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3074,6 +2984,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "America 250/Colorado 150 Book Club",
+    link: "https://koto.org/event/america-250-colorado-150-book-club/",
+    description: "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state and USA's 250th year as an independent country. We will will start will a discussion of Jill Lepore's 2026 Pulitzer Prize winning history of the constitution, We The People: A History of the U.S. Constitution. Check out this interview to learn more about Jill Lepore and her book: https://www.pbs.org/newshour/show/historian-jill-lepore-explores-the-constitution-and-its-interpretations-in-we-the-people The discussion will be lead by by attorney and current San Miguel County Court Judge, Melanie Morgan. You can check out of copy of the book (physical or ebook) from the library or purchase your own copy for 10% off at Between the Covers Bookstore! …",
+    pubDate: "2026-07-29T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Coffee and Climate Conversations",
+    link: "https://koto.org/event/coffee-and-climate-conversations-2/",
+    description: "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson Public Library for a community conversation exploring what it means to diversify our local energy sources from renewable options to grid resilience, and what that path forward could look like for our community. We're excited to have representatives from San Miguel Power Association on hand, alongside local energy experts, to share insights, answer questions, and hear your ideas for our local energy future. We hope you’ll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. As always, coffee, tea and pastries kindly provided.",
+    pubDate: "2026-07-30T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-30/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-30T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-30T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3186,7 +3140,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-21"
+    lastSeen: "2026-07-22"
   }
 ];
 
@@ -5213,17 +5167,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    pubDate: "2026-07-20T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -6057,18 +6000,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
-    title: "Village Film Nights",
-    link: "https://www.telluride.com/event/village-film-nights/",
-    description: "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
-    pubDate: "2026-07-05",
-    endDate: "2026-07-20",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58512/vfn-theinvite-_banner1800x900_870x435.800x533.webp"
-  },
-  {
     title: "Alpine Chapel Outdoor Service",
     link: "https://www.telluride.com/event/alpine-chapel-outdoor-service/",
     description: "The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage in Mountain Village at 9:30 a.m.",
@@ -6091,30 +6022,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
-  },
-  {
-    title: "Tom Gullikson Tennis Clinic",
-    link: "https://www.telluride.com/event/tom-gullikson-tennis-clinic/",
-    description: "Join the Gully Tennis Clinic @ TRC! Tom is a decorated Tennis coach and playing professional. Come out and enjoy some …",
-    pubDate: "2026-07-11",
-    endDate: "2026-07-20",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62315/img_5733.800x533.webp"
-  },
-  {
-    title: "Ah Haa HAHA",
-    link: "https://www.telluride.com/event/ah-haa-haha/",
-    description: "The HAHA is a community art event unlike you’ve ever experienced! \n\nHAHA is the immersive art installation event of …",
-    pubDate: "2026-07-17",
-    endDate: "2026-07-20",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44841/screenshot_2023-03-23_at_4_39_19_pm.800x533.webp"
   },
   {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
@@ -6949,24 +6856,6 @@ const LEGAL_NOTICES = [
     noticeKey: "COL-000178-cboe-2026"
   },
   {
-    title: "RFP -- Custodial Services for Telluride School District R-1",
-    entity: "Telluride School District R-1",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Telluride School District R-1 is requesting proposals from vendors to provide year-round custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. Services include trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; vendors may bid on all or part of the contract. Requests for full specifications must be received by 4:00 PM on July 14, 2026, and complete proposals are due by 4:00 PM on July 21, 2026.",
-    deadline: "2026-07-21",
-    expires: "2026-07-21",
-    dates: "7/2",
-    papers: ["ttimes_0702"],
-    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    address: "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, Colorado",
-    noticeKey: "COL-000180-tsd-custodial-rfp"
-  },
-  {
     title: "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     entity: "Estate of Gerald D. Wilson",
     entityClass: "ent-county",
@@ -7021,24 +6910,6 @@ const LEGAL_NOTICES = [
     address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     noticeKey: "foreclosure-sale-202604-lot166ar2-mountain-village",
     caseNumber: "202604"
-  },
-  {
-    title: "RFP -- Custodial Services for School Facilities (COL-000178)",
-    entity: "Telluride School District R-1",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Telluride School District R-1 is soliciting proposals for custodial services at Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School. The contract is year-round and covers trash removal, vacuuming, floor scrubbing, disinfecting, and window cleaning; bidders may bid on all or portions of the work. Vendors must request full specifications by email by 4:00 PM on July 14, 2026, and submit completed proposals by 4:00 PM on July 21, 2026.",
-    deadline: "2026-07-21T16:00:00",
-    expires: "2026-07-21",
-    dates: "7/9",
-    papers: ["ttimes_0709"],
-    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    address: "Telluride Elementary School, Telluride Intermediate School, and Telluride Middle/High School, Telluride, CO",
-    noticeKey: "rfp-tsd-custodial-2026"
   },
   {
     title: "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",
@@ -8476,26 +8347,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "July 21, 2026",
-    title: "Telluride Housing Authority",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289",
-    hasAgenda: true,
-    location: "Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8289,
-    packetUrl: "https://telluride-co.civicweb.net/document/441930/"
-  },
-  {
-    date: "July 21, 2026",
-    title: "Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8040,
-    packetUrl: "https://telluride-co.civicweb.net/document/441920/"
-  },
   {
     date: "July 23, 2026",
     title: "Planning & Zoning Commission",
