@@ -203,4 +203,116 @@
     s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(s);
   }
+
+  /* ---- "Add to Home Screen" install prompt --------------------------------
+     Nudges visitors to save Livable Telluride as an installable web app (a
+     standalone icon on the phone home screen — the manifest is already wired
+     up). Two paths, because the platforms differ:
+       • Chromium (Android / desktop) fires `beforeinstallprompt`; we defer it
+         and show a one-tap Install button. These installs honor the manifest
+         start_url ('/'), so the button may appear on ANY page.
+       • iOS Safari never fires that event, so we show the manual
+         Share ▸ "Add to Home Screen" instruction instead. iOS bookmarks the
+         CURRENT page (not start_url), so we only show it on the homepage —
+         the whole point is saving the homepage.
+     Suppressed when already installed, on file://, or after a recent dismissal
+     (30-day cooldown in localStorage). Lives here so every page inherits it
+     from one source, same as the header/footer. */
+  (function () {
+    if (!/^https?:$/.test(location.protocol)) return;                    // dev/file:// → skip
+    var standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+      window.navigator.standalone === true;
+    if (standalone) return;                                              // already installed
+
+    var KEY = 'lt-a2hs-dismissed-until';
+    function suppressed() {
+      try { return Date.now() < (parseInt(localStorage.getItem(KEY), 10) || 0); } catch (e) { return false; }
+    }
+    function suppress(days) {
+      try { localStorage.setItem(KEY, String(Date.now() + days * 86400000)); } catch (e) {}
+    }
+    if (suppressed()) return;
+
+    var ua = navigator.userAgent || '';
+    var isIOS = /iP(hone|ad|od)/.test(ua) ||
+      (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);   // iPadOS 13+ reports as Mac
+    var isSafari = /safari/i.test(ua) && !/(crios|fxios|edgios|chrome|android)/i.test(ua);
+    var onHome = (page === '' || page === 'index.html');
+    var deferred = null;
+
+    function remove() {
+      var el = document.getElementById('lt-a2hs');
+      if (el) el.parentNode.removeChild(el);
+    }
+
+    // iOS share glyph (box + up-arrow) so the instruction points at the real button.
+    var SHARE_SVG = '<svg class="lt-a2hs-share" width="15" height="15" viewBox="0 0 24 24" aria-hidden="true" ' +
+      'fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' +
+      '<path d="M12 15V3"/><path d="M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-7"/></svg>';
+
+    function show(mode) {
+      if (document.getElementById('lt-a2hs')) return;
+      var msg = mode === 'ios'
+        ? 'Tap ' + SHARE_SVG + ' below, then <b>Add to Home&nbsp;Screen</b>.'
+        : 'Save it to your home screen for one-tap access.';
+      var action = mode === 'native'
+        ? '<button class="lt-a2hs-go" type="button" data-a2hs-install>Install</button>'
+        : '';
+      var el = document.createElement('div');
+      el.id = 'lt-a2hs';
+      el.setAttribute('role', 'dialog');
+      el.setAttribute('aria-label', 'Add Livable Telluride to your home screen');
+      el.innerHTML =
+        '<img class="lt-a2hs-icon" src="' + esc(ROOT + 'logo/icon-192.png') + '" alt="">' +
+        '<div class="lt-a2hs-body"><strong>Add Livable Telluride</strong><span>' + msg + '</span></div>' +
+        action +
+        '<button class="lt-a2hs-x" type="button" data-a2hs-close aria-label="Dismiss">&times;</button>';
+      document.body.appendChild(el);
+
+      var close = el.querySelector('[data-a2hs-close]');
+      if (close) close.addEventListener('click', function () { remove(); suppress(30); });
+      var go = el.querySelector('[data-a2hs-install]');
+      if (go) go.addEventListener('click', function () {
+        if (!deferred) { remove(); return; }
+        deferred.prompt();
+        deferred.userChoice.then(function (choice) {
+          suppress(choice && choice.outcome === 'accepted' ? 3650 : 30);   // installed → don't nag again
+          deferred = null; remove();
+        });
+      });
+    }
+
+    // Chromium (Android / desktop): capture the native mini-infobar, offer our own.
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferred = e;
+      show('native');
+    });
+    window.addEventListener('appinstalled', function () { remove(); suppress(3650); });
+
+    // iOS Safari never fires beforeinstallprompt → manual instructions, homepage
+    // only, delayed a few seconds so it doesn't compete with first paint.
+    if (isIOS && isSafari && onHome) setTimeout(function () { show('ios'); }, 3500);
+
+    // Styles (light-only, matching lt.css — the site has no dark scheme).
+    var css = document.createElement('style');
+    css.textContent =
+      '#lt-a2hs{position:fixed;left:12px;right:12px;bottom:12px;z-index:9000;max-width:440px;margin:0 auto;' +
+      'display:flex;align-items:center;gap:12px;padding:11px 12px;background:#fff;color:var(--forest,#24483f);' +
+      'border:1.5px solid var(--forest,#24483f);border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.20);' +
+      "font:400 14px/1.4 var(--sans,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif);" +
+      'animation:lt-a2hs-in .28s ease both}' +
+      '@keyframes lt-a2hs-in{from{transform:translateY(18px);opacity:0}to{transform:none;opacity:1}}' +
+      '.lt-a2hs-icon{width:42px;height:42px;border-radius:9px;flex:none}' +
+      '.lt-a2hs-body{flex:1 1 auto;min-width:0}' +
+      '.lt-a2hs-body strong{display:block;font-weight:700}' +
+      '.lt-a2hs-body span{display:block;color:var(--body2,#3d4b47);font-size:13px;margin-top:1px}' +
+      '.lt-a2hs-body b{font-weight:700;color:var(--forest,#24483f)}' +
+      '.lt-a2hs-share{vertical-align:-3px;color:var(--rust,#a04f24)}' +
+      '.lt-a2hs-go{flex:none;border:0;cursor:pointer;background:var(--forest,#24483f);color:#fff;' +
+      'font:700 13px/1 inherit;padding:10px 15px;border-radius:9px}' +
+      '.lt-a2hs-x{flex:none;border:0;background:transparent;cursor:pointer;color:#9aa8a1;' +
+      'font-size:22px;line-height:1;padding:0 2px}';
+    document.head.appendChild(css);
+  })();
 })();
