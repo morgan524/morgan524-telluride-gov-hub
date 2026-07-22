@@ -58,6 +58,8 @@
   .img-frame.letter-art { background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; }
   .img-frame.letter-art img { object-fit: contain; width: 92%; height: 92%; }
   .story:hover .img-frame.letter-art img { transform: none; }
+  /* No art at all → single-column card (never squeeze text into the image column) */
+  .lead.no-media, .river-item.no-media { grid-template-columns: 1fr; }
   /* Pet photo on its own line above the name, card-width (per Morgan 2026-07-22) */
   #pets-list .item { grid-template-columns: 1fr; }
   #pets-list .pet-photo { width: 100%; height: auto; aspect-ratio: 4/3; border-radius: 12px; object-fit: cover; margin-bottom: 8px; }
@@ -119,7 +121,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=7"></script>
-<script src="/js/lt-data.js?v=4"></script>
+<script src="/js/lt-data.js?v=5"></script>
 <script>
 (function () {
   var river = document.getElementById('river');
@@ -158,7 +160,7 @@
     'San Miguel County': 'county', 'Town of Telluride': 'telluride',
     'Town of Ridgway': 'ridgway', 'Town of Norwood': 'norwood',
     'Mountain Village': 'mv', 'Town of Ophir': 'ophir', 'Town of Rico': 'rico',
-    'Telluride Times': 'ttimes'
+    'Telluride Times': 'ttimes', 'San Miguel Basin Forum': 'smb'
   };
   function imgFrame(s, linkWrap) {
     var img;
@@ -193,7 +195,12 @@
     return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
   }
   function storyLink(s, tagName, cls) {
-    return '<' + tagName + ' class="' + cls + ' story">' + imgFrame(s, true) +
+    // A story with no art at all (no photo, no letters art, no source logo)
+    // must span the full card — otherwise the text div lands in the narrow
+    // image column of the grid (Morgan's "strange layout" report 2026-07-22).
+    var media = imgFrame(s, true);
+    if (!media) cls += ' no-media';
+    return '<' + tagName + ' class="' + cls + ' story">' + media +
       '<div>' + letterBanner(s) + tagFor(s) +
       '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
       (s.dek ? '<p class="dek">' + LTData.esc(s.dek) + '</p>' : '') +
@@ -215,8 +222,9 @@
     var secondary = rest.filter(function (s) { return s.img; }).slice(0, 3);
     var riverItems = rest.filter(function (s) { return secondary.indexOf(s) === -1; });
 
+    var leadMedia = lead ? imgFrame(lead, true) : '';
     document.getElementById('lead-slot').innerHTML = lead
-      ? '<article class="lead story">' + imgFrame(lead, true) +
+      ? '<article class="lead story' + (leadMedia ? '' : ' no-media') + '">' + leadMedia +
         '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
         '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
         (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
