@@ -1,1489 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Government Hub — Livable Telluride</title>
-  <meta name="description" content="Government Hub — upcoming and past meeting agendas, summaries, and livestreams for the Telluride region's town, county, and special-district boards.">
-  <style>
-    :root {
-      --forest: #21443c;
-      --forest-soft: #2a5347;
-      --accent-green: #2f7a5f;
-      --accent-green-soft: rgba(47, 122, 95, 0.12);
-      --accent-green-border: rgba(47, 122, 95, 0.25);
-      --bg-warm: #fdfbf6;
-      --bg-hero: #efe9dc;
-      --bg-paper: #fffdf9;
-      --bg-sidebar: #f5f0e3;
-      --text-primary: #1a2e29;
-      --text-secondary: #4a5e57;
-      --text-muted: #5f7169;
-      --border-soft: rgba(33, 68, 60, 0.12);
-      --border-card: rgba(33, 68, 60, 0.10);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
-      --font-heading: 'Georgia', 'Times New Roman', serif;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; padding: 0; font-family: var(--font-main); color: var(--text-primary); background: var(--bg-warm); line-height: 1.5; }
-
-    /* ── Top nav (shared with other v2 pages) ── */
-    .topnav { background: #fff; border-bottom: 1px solid var(--border-soft); padding: 14px 0; position: sticky; top: 0; z-index: 50; }
-    .topnav-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; gap: 24px; }
-    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--forest); font-family: var(--font-heading); font-weight: 700; font-size: 1.15rem; line-height: 1.1; }
-    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; }
-    .topnav-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text-primary); text-decoration: none; font-weight: 600; font-size: 0.85rem; white-space: nowrap; padding: 6px 2px; border-bottom: 2px solid transparent; transition: color 0.15s, border-color 0.15s; }
-    .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta { white-space: nowrap; display: inline-block; background: var(--forest); color: #fff; text-decoration: none; padding: 8px 14px; border-radius: 999px; font-weight: 600; font-size: 0.9rem; }
-
-    /* ── Hero ── shared cream/warm overlay treatment, matches Local News */
-    .hero {
-      background:
-        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
-      min-height: 200px;
-    }
-    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
-    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-    .hero h1 { margin: 0 0 8px; font-family: var(--font-heading); font-size: 2.6rem; color: var(--text-primary); }
-    .hero p { margin: 0; color: var(--text-secondary); font-size: 1.05rem; max-width: 760px; }
-
-    /* ── Filter chips bar (top) ── */
-    .chip-bar { background: #fff; border-bottom: 1px solid var(--border-soft); }
-    .chip-bar-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 14px 32px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      align-items: center;
-      overflow-x: auto;
-    }
-    .chip {
-      display: inline-block;
-      padding: 7px 16px;
-      border-radius: 999px;
-      background: #fff;
-      color: var(--text-primary);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 1px solid var(--border-card);
-      white-space: nowrap;
-      transition: all 0.15s;
-    }
-    .chip:hover { background: var(--accent-green-soft); border-color: var(--accent-green-border); color: var(--forest); }
-    .chip.active { background: var(--forest); color: #fff; border-color: var(--forest); }
-
-    /* ── Main page layout ── */
-    .page-wrap {
-      max-width: 1280px;
-      margin: 32px auto;
-      padding: 0 32px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    /* ── Left sidebar: Public Entities filters + Vote Tracker + Sign Up,
-       sticky on the side of the meetings. On mobile (≤880px) the whole
-       sidebar drops to the END of the meeting list (see media query). ── */
-    .sidebar { display: flex; flex-direction: column; gap: 18px; position: sticky; top: 110px; }
-    /* Right column holds the past-summaries + upcoming-meetings sections. */
-    .content-col { display: block; min-width: 0; }
-
-    .side-card {
-      background: #fff;
-      border: 1px solid var(--border-card);
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: var(--shadow-card);
-    }
-    .side-card h3 {
-      font-family: var(--font-heading);
-      color: var(--forest);
-      font-size: 1.05rem;
-      margin: 0 0 12px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid var(--border-card);
-    }
-
-    /* Entity list rows */
-    .entity-list { display: flex; flex-direction: column; gap: 4px; }
-    .entity-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 8px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--text-primary);
-      font-size: 0.86rem;
-      font-weight: 500;
-      transition: background 0.12s;
-    }
-    .entity-row:hover { background: var(--accent-green-soft); }
-    .entity-row.active { background: var(--accent-green-soft); color: var(--forest); font-weight: 600; }
-    .entity-logo {
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      object-fit: contain;
-      background: #fff;
-      flex-shrink: 0;
-    }
-    .entity-count {
-      margin-left: auto;
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      background: var(--accent-green-soft);
-      padding: 2px 8px;
-      border-radius: 999px;
-      min-width: 22px;
-      text-align: center;
-    }
-
-    /* Helpful links */
-    .helpful-links { display: flex; flex-direction: column; gap: 6px; }
-    .helpful-links a {
-      display: block;
-      padding: 6px 8px;
-      color: var(--accent-green);
-      text-decoration: none;
-      font-size: 0.86rem;
-      font-weight: 500;
-      border-radius: 6px;
-    }
-    .helpful-links a:hover { background: var(--accent-green-soft); }
-
-    /* Subscribe card */
-    .sub-card {
-      background: linear-gradient(180deg, #2a5347 0%, var(--forest) 100%);
-      color: #fff;
-      border: none;
-      text-align: center;
-    }
-    .sub-card h3 { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
-    .sub-card p { font-size: 0.85rem; opacity: 0.9; margin: 0 0 14px; }
-    .sub-card a {
-      display: inline-block;
-      background: #fff;
-      color: var(--forest);
-      padding: 9px 18px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* ── Main meeting grid ── */
-    .meet-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .meet-card {
-      background: #fff;
-      border: 1px solid var(--border-card);
-      border-radius: 12px;
-      padding: 18px;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    /* Highlight cards that touch a code amendment or high-level land-use issue */
-    .meet-card.has-wtm {
-      border: 2px solid #2d6a4f;
-      box-shadow: 0 0 0 1px rgba(45,106,79,0.12), var(--shadow-card);
-    }
-    /* Section headings separating past summaries from upcoming meetings */
-    .meet-section-heading {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #1b4332;
-      margin: 4px 0 14px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid var(--border-card);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    #recapSection { margin-bottom: 32px; }
-    /* Upcoming / Past meetings toggle (segmented control) */
-    .meet-toggle {
-      display: inline-flex;
-      gap: 3px;
-      background: #eef2ef;
-      border: 1px solid var(--border-card);
-      border-radius: 999px;
-      padding: 3px;
-      margin: 0 0 18px;
-    }
-    .meet-tab {
-      border: 0;
-      background: transparent;
-      color: #4a5c54;
-      font-family: inherit;
-      font-weight: 600;
-      font-size: 0.92rem;
-      padding: 7px 16px;
-      border-radius: 999px;
-      cursor: pointer;
-    }
-    .meet-tab.active { background: var(--forest); color: #fff; }
-    .meet-tab:hover:not(.active) { color: var(--forest); }
-    /* Past-meeting recap cards: a warm amber stroke distinguishes a
-       completed meeting (what happened) from upcoming meetings (green). */
-    .meet-card.recap-card {
-      border: 2px solid #b07a2c;
-      box-shadow: 0 0 0 1px rgba(176,122,44,0.10), var(--shadow-card);
-      background: #fffdf8;
-    }
-    .recap-tag {
-      display: inline-block;
-      background: #b07a2c;
-      color: #fff;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 999px;
-    }
-    .recap-body { font-size: 0.95rem; line-height: 1.55; color: #333; margin: 4px 0 0; }
-    .recap-body + .recap-body { margin-top: 0.7em; }   /* space between recap paragraphs */
-    .recap-byline { font-size: 0.78rem; color: #8a6d3b; font-style: italic; margin-top: 6px; }
-    .meet-card-head {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-    }
-    .meet-date {
-      flex-shrink: 0;
-      width: 60px;
-      text-align: center;
-      background: var(--bg-sidebar);
-      border-radius: 8px;
-      padding: 8px 4px;
-      border: 1px solid var(--border-card);
-    }
-    .meet-date .month {
-      font-family: var(--font-main);
-      font-weight: 700;
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: var(--accent-green);
-      text-transform: uppercase;
-    }
-    .meet-date .day {
-      font-family: var(--font-heading);
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--forest);
-      line-height: 1;
-      margin: 2px 0;
-    }
-    .meet-date .year {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-    .meet-info { flex: 1; min-width: 0; }
-    .meet-tag {
-      display: inline-block;
-      background: var(--accent-green-soft);
-      color: var(--forest);
-      padding: 3px 10px;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
-    .meet-title {
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      color: var(--text-primary);
-      margin: 0;
-      line-height: 1.25;
-    }
-    .meet-entity-logo {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
-      flex-shrink: 0;
-      background: #fff;
-      border-radius: 8px;
-      padding: 4px;
-      border: 1px solid var(--border-card);
-    }
-    /* The summary is the focus of the card — show it in full (no line clamp),
-       a touch larger, with comfortable line-height. */
-    .meet-summary {
-      font-size: 0.96rem;
-      line-height: 1.55;
-      color: var(--text-secondary);
-      margin: 2px 0 2px;
-    }
-    .meet-meta {
-      font-size: 0.76rem;
-      color: var(--text-muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px 12px;
-      padding-top: 6px;
-      border-top: 1px solid var(--border-card);
-    }
-    .meet-meta span { display: inline-flex; align-items: center; gap: 4px; }
-
-    /* Zoom Access panel — sits between meta and action buttons. */
-    .zoom-panel {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      padding: 7px 10px;
-      background: var(--accent-green-soft);
-      border: 1px solid var(--accent-green-border);
-      border-radius: 8px;
-      font-size: 0.76rem;
-      color: var(--text-primary);
-    }
-    .zoom-panel .zoom-info { display: flex; flex-wrap: wrap; gap: 3px 12px; align-items: baseline; }
-    .zoom-panel .zoom-info span { display: inline-flex; gap: 4px; }
-    .zoom-panel .zoom-label { color: var(--forest); font-weight: 700; margin-right: 6px; }
-    .zoom-panel .zoom-buttons { display: flex; gap: 6px; flex-wrap: wrap; }
-    /* Join Zoom + Livestream buttons share the same "is the meeting
-       happening RIGHT NOW?" coloring scheme:
-         FUTURE (default): darker brown so it doesn't compete with the
-           active look — signals "available, but not happening yet."
-         ACTIVE (.active): brick red, full saturation — signals "live now."
-       isLivestreamActive(m) in zoomPanel toggles the .active class on
-       both buttons together (a meeting being live makes both relevant). */
-    .zoom-panel .btn-action.zoom    { background: #5c3a2e; color: #fff; border-color: #4a2d23; }
-    .zoom-panel .btn-action.zoom:hover { background: #4a2d23; }
-    .zoom-panel .btn-action.zoom.active { background: #a0463d; border-color: #823831; }
-    .zoom-panel .btn-action.zoom.active:hover { background: #823831; }
-    .zoom-panel .btn-action.youtube { background: #5c3a2e; color: #fff; border-color: #4a2d23; }
-    .zoom-panel .btn-action.youtube:hover { background: #4a2d23; }
-    .zoom-panel .btn-action.youtube.active { background: #a0463d; border-color: #823831; }
-    .zoom-panel .btn-action.youtube.active:hover { background: #823831; }
-
-    .meet-actions {
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin-top: 4px;
-    }
-    .btn-action {
-      display: inline-block;
-      background: var(--accent-green-soft);
-      color: var(--forest);
-      padding: 4px 10px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.72rem;
-      border: 1px solid var(--accent-green-border);
-      transition: background 0.15s;
-    }
-    .btn-action:hover { background: rgba(47, 122, 95, 0.20); }
-    .btn-action.primary { background: var(--forest); color: #fff; border-color: var(--forest); font-weight: 700; box-shadow: 0 1px 3px rgba(0,0,0,0.18); }
-    .btn-action.primary:hover { background: #1a332c; }
-    /* Light-green placeholder state for the Agenda Packet button when no
-       packet is posted yet — looks like a btn-action but isn't clickable. */
-    .btn-action.btn-action-empty { cursor: default; opacity: 0.75; }
-    .btn-action.btn-action-empty:hover { background: var(--accent-green-soft); }
-    /* Second action row (comment / why-this-matters / recording) sits on
-       its own line below the two agenda buttons. */
-    .meet-actions-secondary { margin-top: 6px; }
-    .btn-action.comment { background: var(--gold-soft); color: #7a5c10; border-color: rgba(181,138,44,0.35); }
-    .btn-action.comment:hover { background: rgba(181,138,44,0.26); }
-    .btn-action.wtm { background: #fff; color: #8b7250; border-color: #8b7250; font-weight: 700; }
-    .btn-action.wtm:hover { background: #8b7250; color: #fff; }
-
-    /* "Why This Matters" modal */
-    #wtm-modal { display:none; position:fixed; inset:0; z-index:9000; align-items:center; justify-content:center; }
-    #wtm-modal.open { display:flex; }
-    .wtm-modal-overlay { position:absolute; inset:0; background:rgba(15,25,20,0.55); backdrop-filter:blur(3px); }
-    .wtm-modal-box { position:relative; z-index:1; background:#fff; border-radius:16px; box-shadow:0 24px 64px rgba(10,20,15,0.22); max-width:480px; width:calc(100% - 40px); padding:28px 28px 26px; animation:wtmSlideUp 0.22s ease-out; }
-    .wtm-modal-header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
-    .wtm-modal-icon { width:18px; height:18px; flex-shrink:0; color:#8b7250; }
-    .wtm-modal-label { font-size:0.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; color:#8b7250; flex:1; }
-    .wtm-modal-close { background:none; border:none; cursor:pointer; font-size:1rem; color:#7a8a85; padding:2px 4px; border-radius:4px; transition:color .15s; }
-    .wtm-modal-close:hover { color:#1a2e29; }
-    .wtm-modal-meeting { font-size:0.88rem; font-weight:700; color:#1a2e29; margin-bottom:14px; line-height:1.35; padding-bottom:12px; border-bottom:1px solid rgba(139,114,80,0.15); }
-    .wtm-modal-body { margin:0; font-size:0.92rem; line-height:1.7; color:#4a5e57; white-space:pre-wrap; }
-    @keyframes wtmSlideUp { from { opacity:0; transform:translateY(12px) scale(0.97); } to { opacity:1; transform:translateY(0) scale(1); } }
-
-    /* Comment deadline note */
-    .comment-deadline {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 8px;
-      padding: 6px 10px;
-      background: var(--bg-cream);
-      border-radius: 6px;
-      border-left: 3px solid var(--gold);
-    }
-
-    /* Empty / loading state */
-    .empty {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 48px 16px;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 1080px) {
-      .meet-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 880px) {
-      .topnav-links { display: none; }
-      .hero h1 { font-size: 1.9rem; }
-      .page-wrap { grid-template-columns: 1fr; }
-      /* On mobile the whole sidebar (filters + Vote Tracker + Sign Up) drops
-         to the END, below the meetings — not the top. */
-      .sidebar { position: static; order: 2; }
-      .content-col { order: 1; }
-    }
-  
-    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
-    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
-    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
-    .topnav-translate .goog-te-gadget-simple {
-      background: transparent !important;
-      border: 1px solid #d4dad0 !important;
-      border-radius: 999px !important;
-      padding: 7px 14px !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-      font-size: 0.82rem !important;
-      cursor: pointer;
-      line-height: 1.2 !important;
-    }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
-    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
-    .topnav-translate-reset {
-      display: none; background: transparent; border: 1px solid #d4dad0;
-      border-radius: 999px; padding: 7px 12px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
-      margin-right: 10px; line-height: 1.2;
-    }
-    .topnav-translate-reset:hover { background: #f3f5ef; }
-    body.translated-ltr .topnav-translate-reset,
-    body.translated-rtl .topnav-translate-reset { display: inline-block; }
-    body { top: 0 !important; }
-    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
-    .goog-text-highlight { background: none !important; box-shadow: none !important; }
-
-    .topnav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
-    }
-    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
-
-    @media (max-width: 860px) {
-      .topnav-inner { position: relative; flex-wrap: nowrap; }
-      .topnav-links {
-        display: none !important;
-        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
-        background: #fff; flex-direction: column !important; gap: 0 !important;
-        padding: 8px 0; margin: 0 !important;
-        border-top: 1px solid #d4dad0;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        z-index: 60;
-      }
-      .topnav-links.open { display: flex !important; }
-      .topnav-links a {
-        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
-        font-size: 1rem !important;
-      }
-      .topnav-links a:last-child { border-bottom: none !important; }
-      .topnav-hamburger { display: block; }
-      .topnav-translate { margin-right: 6px; }
-      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
-      .topnav-cta { display: none !important; }
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gov-Hub — Livable Telluride</title>
+<meta name="description" content="Every public meeting in the region — agendas, plain-English summaries, Zoom links, and how to comment — for the next month.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/gov-hub.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/gov-hub.html">
+<meta property="og:title" content="Gov-Hub — Livable Telluride">
+<meta property="og:description" content="Every public meeting in the region — agendas, plain-English summaries, Zoom links, and how to comment — for the next month.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<style>
+  /* Upcoming | Past toggle */
+  .gh-toggle-wrap { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; }
+  .gh-toggle { display: inline-flex; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 4px; gap: 4px; }
+  .gh-toggle .gt { font: 600 15px/1 var(--sans); color: var(--forest); padding: 9px 18px; border-radius: 999px; }
+  .gh-toggle .gt.active { background: var(--forest); color: #fff; }
+  .gh-toggle a.gt:hover { background: var(--sage); color: var(--forest); }
+  /* Two-column shell: meeting list + right entity-filter sidebar */
+  .gh-layout { max-width: var(--maxw); margin: 0 auto; padding: 12px var(--pad-x) 20px; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 40px; align-items: start; }
+  .gh-side { position: sticky; top: 96px; }
+  .side-filter { padding: 20px 22px; }
+  .side-filter h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 10px; }
+  .ents { display: block; }
+  .ent { display: flex; justify-content: space-between; align-items: center; gap: 10px; width: 100%; padding: 9px 2px; border-top: 1px solid var(--hairline); cursor: pointer; }
+  .ent:first-child { border-top: 0; }
+  .ent .e-name { font: 600 15px/1.25 var(--sans); color: var(--forest); }
+  .ent:hover .e-name { color: var(--rust); }
+  .ent.active .e-name { color: var(--rust); }
+  .ent .e-count { font: 700 11.5px/1 var(--sans); color: var(--muted2); background: var(--sage2); border: 1px solid var(--hairline); border-radius: 999px; padding: 5px 9px; }
+  .ent.active .e-count { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .meet-wrap { min-width: 0; }
+  .day-h { font: italic 500 21px/1.3 var(--serif); color: var(--muted); margin: 30px 0 4px; padding-bottom: 8px; border-bottom: 2px solid var(--forest); }
+  .m-card { display: grid; grid-template-columns: 96px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--hairline); }
+  .m-date { text-align: center; }
+  .m-date .m { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; }
+  .m-date .d { font: 600 34px/1.05 var(--serif); color: var(--forest); }
+  .m-date .e-logo { width: 88px; height: 88px; margin: 12px auto 0; border-radius: 10px; background: #fff; border: 1px solid var(--hairline); display: flex; align-items: center; justify-content: center; padding: 6px; }
+  .m-date .e-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .m-card .src { font: 600 12px/1.4 var(--sans); color: var(--muted); margin-left: 8px; }
+  .m-card h3 { font: 600 23px/1.2 var(--serif); margin: 7px 0 6px; }
+  .m-card .summ { font: 400 15.5px/1.62 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .m-card .acts { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .m-card .acts .cbtn { display: inline-block; background: var(--forest); color: #fff; font: 600 12px/1 var(--sans); padding: 7px 14px; border-radius: 5px; }
+  .m-card .acts .cbtn:hover { background: #1c3a33; color: #fff; }
+  .m-card .acts .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
+  .m-card .acts .abtn:hover { background: var(--sage2); color: var(--forest); }
+  /* Solid green = a real agenda/packet is posted; grey ghost = not yet */
+  .m-card .acts .abtn.primary { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .m-card .acts .abtn.primary:hover { background: #1c3a33; color: #fff; }
+  .m-card .acts .abtn.empty { border-color: var(--hairline); color: var(--muted2); background: var(--sage2); cursor: default; }
+  .m-card .acts .abtn.zoom { border-color: #2d64a8; color: #2d64a8; }
+  .m-card .acts .abtn.zoom:hover { background: #eef3fa; }
+  .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
+  .m-card .acts .abtn.live:hover { background: #f9efee; }
+  .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
+  @media (max-width: 900px) {
+    .gh-layout { grid-template-columns: 1fr; gap: 0; }
+    .gh-side { position: static; order: -1; }
+    .side-filter { padding: 14px 16px; }
+    .ents { display: flex; flex-wrap: wrap; gap: 8px; }
+    .ent { width: auto; border: 1px solid var(--hairline); border-radius: 999px; padding: 7px 8px 7px 13px; }
+    .ent:first-child { border-top: 1px solid var(--hairline); }
+    .ent.active { background: var(--sage); border-color: var(--forest); }
+    .m-card { grid-template-columns: 72px 1fr; }
+    .m-date .e-logo { width: 64px; height: 64px; }
+  }
+</style>
 </head>
 <body>
-  <header class="topnav">
-    <div class="topnav-inner">
-      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
-      </a>
-      <nav class="topnav-links">
-        <a href="/local-news.html">Local News</a>
-        <a href="/gov-hub.html" class="active">Gov-Hub</a>
-        <a href="/deep-dives.html">Deep Dives</a>
-        <a href="/events.html">Events</a>
-        <a href="/hub-bub.html">Hub-Bub</a>
-        <a href="/local-orgs.html">Local Orgs</a>
-        <a href="/projects-map/">Projects Map</a>
-        <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-      </nav>
-      <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-      <div id="lvLangWidget" aria-hidden="true"></div>
-      <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Act <span class="sep">&rsaquo;</span> Gov-Hub</div>
+    <h1>Gov-Hub</h1>
+    <p class="sub">Every public meeting in the region for the next month &mdash; agendas, plain-English summaries, Zoom links, and how to make your voice heard.</p>
+  </div>
+</header>
+
+<div class="gh-toggle-wrap">
+  <div class="gh-toggle" role="tablist">
+    <span class="gt active">Upcoming meetings</span>
+    <a class="gt" href="gov-hub-past.html">Past meetings &amp; recaps</a>
+  </div>
+</div>
+
+<div class="gh-layout">
+  <main class="meet-wrap" id="meet-list"><p class="meta" style="padding:18px 0">Loading meetings&hellip;</p></main>
+  <aside class="gh-side">
+    <div class="side-filter card">
+      <h3>Public entities</h3>
+      <div class="ents" id="ent-filter" aria-label="Filter by public entity"></div>
     </div>
-  </header>
+  </aside>
+</div>
 
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Government Hub</h1>
-      <p>Public meetings, agendas, and generated summaries from the entities that govern Telluride, Mountain Village, San Miguel County, Norwood, Ouray, Ridgway, and the special districts that serve our region.</p>
-    </div>
-  </section>
-
-  <main class="page-wrap">
-    <aside class="sidebar">
-      <div class="side-card">
-        <h3>Public Entities</h3>
-        <div class="entity-list" id="entityList"></div>
-      </div>
-
-      <a class="side-card vote-tracker-card" href="/v2/vote-tracker.html" style="text-decoration:none;color:inherit;text-align:center;transition:transform 0.18s, box-shadow 0.18s;">
-        <img src="/logo/Vote%20Tracker%20Logo.png" alt="Vote Tracker" style="width:100%;height:auto;display:block;margin:0 auto 12px;object-fit:contain;">
-        <p style="font-size:0.88rem;color:var(--text-primary);margin:0 0 14px;line-height:1.45;">Every recorded vote by your elected officials — Telluride, Mountain Village, San Miguel County — searchable by member, year, and topic.</p>
-        <span style="display:inline-block;background:var(--accent-green,#21443c);color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;font-size:0.9rem;">View Vote Tracker →</span>
-      </a>
-
-      <div class="side-card sub-card">
-        <h3>Never Miss an Update</h3>
-        <p>Get a weekly digest of every public meeting, agenda, and summary in your inbox.</p>
-        <a href="/hub-bub.html#signup">Sign Up</a>
-      </div>
-    </aside>
-
-    <div class="content-col">
-      <div class="meet-toggle" role="tablist" aria-label="Meetings view">
-        <button type="button" id="tabUpcoming" class="meet-tab active" role="tab" aria-selected="true">📅 Upcoming Meetings</button>
-        <button type="button" id="tabPast" class="meet-tab" role="tab" aria-selected="false">📝 Past Meetings</button>
-      </div>
-      <section id="upcomingSection">
-        <div class="meet-grid" id="meetGrid"></div>
-      </section>
-      <section id="recapSection" style="display:none">
-        <div class="meet-grid" id="recapGrid"></div>
-      </section>
-    </div>
-  </main>
-
-  <script>
-    /* ── Sample data — falls back to this if /js/gov-helpers.js isn't loaded.
-       Real data is wired via loadLiveMeetings() at the bottom. ───────── */
-    const SAMPLE_MEETINGS = [
-      {
-        date: '2026-05-12', time: '6:00 PM',
-        title: 'San Miguel County: Entrepreneurial Work Session',
-        sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-        category: 'Work Session',
-        summary: 'Joint work session with Town Councils of Norwood and Ophir Sites on regional housing, land-use planning, emergency preparedness, and affordable-housing strategies.',
-        location: 'County Annex • Telluride',
-        agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/'
-      },
-      {
-        date: '2026-05-13', time: '5:30 PM',
-        title: 'Telluride Planning & Zoning Commission Meeting',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-        category: 'Planning Commission',
-        summary: 'Public hearing on a major lodging-redevelopment proposal at 200 W Pacific Ave; review of short-term rental enforcement updates; staff briefing on the Comprehensive Plan refresh.',
-        location: 'Rebekah Hall • Telluride',
-        agendaUrl: 'https://telluride.gov/'
-      },
-      {
-        date: '2026-05-14', time: '7:00 PM',
-        title: 'Town of Telluride: Town Council',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-        category: 'Council Meeting',
-        summary: 'First reading of the FY2027 budget; discussion of Lawson Hill annexation timeline; public comment on parking-program changes; consent agenda routine items.',
-        location: 'Rebekah Hall • Telluride',
-        agendaUrl: 'https://telluride.gov/'
-      },
-      {
-        date: '2026-05-15', time: '8:30 AM',
-        title: 'San Miguel County Board of Commissioners',
-        sourceKey: 'county', sourceLabel: 'San Miguel County',
-        entityLogo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-        category: 'BOCC Meeting',
-        summary: 'Quarterly review of the Open Space program; presentation from Public Health on regional vaccination clinics; discussion of regional broadband expansion grant applications.',
-        location: 'County Courthouse • Telluride',
-        agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/'
-      },
-      {
-        date: '2026-05-19', time: '5:30 PM',
-        title: 'Telluride R-1 School District: Board of Education',
-        sourceKey: 'school', sourceLabel: 'Telluride School District',
-        entityLogo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png',
-        category: 'School Board',
-        summary: 'Adoption of the FY2027 budget; Superintendent’s report on enrollment projections; review of construction-bond project status; public comment.',
-        location: 'TMHS Library • Telluride',
-        agendaUrl: 'https://www.tellurideschool.org/'
-      },
-      {
-        date: '2026-05-20', time: '4:00 PM',
-        title: 'SMART Board of Directors Meeting',
-        sourceKey: 'smart', sourceLabel: 'SMART',
-        entityLogo: 'https://livabletelluride.org/logo/SMART.png',
-        category: 'SMART',
-        summary: 'Approval of summer service schedule changes; quarterly ridership and farebox report; preliminary discussion of the Mountain Village–Telluride frequency upgrade.',
-        location: 'SMART Office • Lawson Hill',
-        agendaUrl: 'https://www.smartbus.org/'
-      },
-      {
-        date: '2026-05-21', time: '6:00 PM',
-        title: 'Mountain Village Town Council',
-        sourceKey: 'mv', sourceLabel: 'Mountain Village',
-        entityLogo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
-        category: 'Council Meeting',
-        summary: 'Second reading of short-term rental cap ordinance; review of Town Plaza activation pilot; staff update on Sunset Plaza redevelopment partner selection.',
-        location: 'Town Hall • Mountain Village',
-        agendaUrl: 'https://townofmountainvillage.com/'
-      },
-      {
-        date: '2026-05-26', time: '6:00 PM',
-        title: 'Telluride Fire Protection District Board',
-        sourceKey: 'fire', sourceLabel: 'Fire District',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Fire.png',
-        category: 'Fire District',
-        summary: 'Wildfire-season readiness briefing; review of mutual-aid agreements with Norwood and Ouray; budget amendment for new wildland engine procurement.',
-        location: 'Telluride Fire Station',
-        agendaUrl: 'https://www.telluridefire.org/'
-      },
-      {
-        date: '2026-05-20', time: '5:00 PM',
-        title: 'HARC Meeting',
-        sourceKey: 'telluride', sourceLabel: 'Town of Telluride',
-        entityLogo: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-        category: 'HARC Meeting',
-        summary: 'Worksessions on Carhenge (Lot L area sculpture installation) and Shandoka (proposed large-scale development on the west side of Telluride).',
-        location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-        agendaUrl: 'https://telluride.civicweb.net/filepro/documents/6869'
-      }
-    ];
-
-    /* ── Entity catalog (sidebar list) ──
-       Entries should match keys returned by the get*Meetings() fetchers in
-       gov-helpers.js. Town of Telluride, Ouray, Ridgway, and SMRHA are
-       deferred until their meeting data exists in cached form (currently
-       only available via live RSS/API on the legacy single-page site). */
-    // 'all' is pinned first (it's the select-all, not an entity); every
-    // other tracked entity follows in alphabetical order by name. Keep this
-    // list in sync with the loadLiveMeetings fetchers below — every entity
-    // we track should appear here even when it has zero current meetings.
-    const ENTITIES = [
-      { key: 'all',       name: 'All Meetings',                        logo: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png' },
-      { key: 'fire',      name: 'Fire Protection',                     logo: 'https://livabletelluride.org/logo/Telluride%20Fire.png' },
-      { key: 'mv',        name: 'Mountain Village',                    logo: 'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg' },
-      { key: 'county',    name: 'San Miguel County',                   logo: 'https://livabletelluride.org/logo/San%20Miguel%20County.png' },
-      { key: 'school',    name: 'School District R-1',                 logo: 'https://livabletelluride.org/logo/School%20District%20Telluride.png' },
-      { key: 'smart',     name: 'SMART Transit',                       logo: 'https://livabletelluride.org/logo/SMART.png' },
-      { key: 'airport',   name: 'Telluride Regional Airport',          logo: 'https://livabletelluride.org/logo/Airport.png' },
-      { key: 'med',       name: 'Telluride Regional Medical Center',   logo: 'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg' },
-      { key: 'norwood',   name: 'Town of Norwood',                     logo: 'https://livabletelluride.org/logo/Norwood%20Town.jpeg' },
-      { key: 'ophir',     name: 'Town of Ophir',                       logo: 'https://livabletelluride.org/logo/Ophir.jpeg' },
-      { key: 'rico',      name: 'Town of Rico',                        logo: 'https://livabletelluride.org/logo/Rico%20Town.png' },
-      { key: 'ridgway',   name: 'Town of Ridgway',                     logo: 'https://livabletelluride.org/logo/Ridgway%20Town.png' },
-      { key: 'telluride', name: 'Town of Telluride',                   logo: 'https://livabletelluride.org/logo/Telluride%20Town.png' }
-    ];
-
-    let MEETINGS = SAMPLE_MEETINGS.slice();
-    let activeFilter = 'all';
-
-    /* ── Render top chip filter bar (subset of sidebar entities) ── */
-    function chipsHtml() {
-      const TOP_CHIPS = ['all', 'mv', 'telluride', 'county', 'norwood', 'school', 'fire', 'med', 'smart'];
-      return TOP_CHIPS.map(key => {
-        const e = ENTITIES.find(x => x.key === key);
-        if (!e) return '';
-        const cls = key === activeFilter ? 'chip active' : 'chip';
-        const label = key === 'all' ? 'All'
-          : e.name.replace(/^Town of /, '').replace(/ District R-1$/, '').replace(' Protection', '');
-        return '<span class="' + cls + '" data-filter="' + key + '">' + label + '</span>';
-      }).join('');
-    }
-
-    /* ── Render sidebar entity list ── */
-    function entitiesHtml() {
-      return ENTITIES.map(e => {
-        const cls = e.key === activeFilter ? 'entity-row active' : 'entity-row';
-        const count = e.key === 'all'
-          ? MEETINGS.length
-          : MEETINGS.filter(m => (m.sourceKey || '').toLowerCase() === e.key).length;
-        return '<a class="' + cls + '" data-filter="' + e.key + '" href="#">'
-             + '<img class="entity-logo" src="' + e.logo + '" alt="" onerror="this.style.visibility=\'hidden\'">'
-             + '<span>' + e.name + '</span>'
-             + '<span class="entity-count">' + count + '</span>'
-             + '</a>';
-      }).join('');
-    }
-
-    /* ── Comment email map ── */
-    const COMMENT_MAP = {
-      telluride: { email: 'townclerk@telluride.gov',                      deadline: 'Written comments must be received by Wednesday at noon prior to the meeting.' },
-      'telluride-harc': { email: 'dcandelaria@telluride.gov',             deadline: 'Written comments should be submitted before the meeting. Contact the Historic Preservation Planner for agenda packets.' },
-      county:    { email: 'bocc@sanmiguelcountyco.gov',                   deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
-      'county-planning': { email: 'planningcommission@sanmiguelcountyco.gov', deadline: 'Written comments must be received by Monday at 4:00 pm prior to the meeting.' },
-      mv:        { email: 'council@mtnvillage.org',                       deadline: 'Written comments must be received by Thursday prior to the meeting.' },
-      'mv-planning': { email: 'planning@mtnvillage.org',                  deadline: 'Written comments must be received by Thursday prior to the meeting.' },
-      fire:      { email: 'pdasaro@telluridefire.com',                    deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      med:       { email: 'bodadmin@tellmed.org',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      norwood:   { email: 'cross@norwoodtown.com',                        deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      ophir:     { email: 'clerk@ophir.us',                               deadline: 'Written comments should be submitted 48 hours before the meeting.' },
-      rico:      { email: 'townclerk@ricocolorado.gov',                   deadline: 'Written comments may be submitted to the Town Clerk before the meeting.' },
-      airport:   { email: 'info@tellurideairport.com',                    deadline: 'Written comments may be submitted to the Airport Authority prior to the meeting.' },
-      smrha:     { email: 'admin@smrha.org',                              deadline: 'Written comments should be submitted prior to the meeting.' },
-    };
-
-    function commentInfo(m) {
-      const title = (m.title || '').toLowerCase();
-      let key = m.sourceKey;
-      // Detect planning/design-review sub-type for county and MV, and HARC for Telluride
-      if (key === 'county'    && /planning|design review/.test(title)) key = 'county-planning';
-      if (key === 'mv'        && /planning|design review/.test(title)) key = 'mv-planning';
-      if (key === 'telluride' && /harc|historic|architectural review/.test(title)) key = 'telluride-harc';
-      return COMMENT_MAP[key] || null;
-    }
-
-    /* ── Render meeting cards ── */
-    function fmtDateBadge(iso) {
-      const d = new Date(iso + 'T00:00:00');
-      const month = d.toLocaleString('en', { month: 'short' });
-      const day = d.getDate();
-      const year = d.getFullYear();
-      return '<div class="meet-date"><div class="month">' + month + '</div>'
-           + '<div class="day">' + day + '</div>'
-           + '<div class="year">' + year + '</div></div>';
-    }
-    /**
-     * True when right now is within the meeting's live window — used to
-     * paint the Livestream button in the bright "live" color (brick red)
-     * instead of the default darker brown. Heuristic, tuned for the gov
-     * hub's actual data:
-     *
-     *   1. The meeting date (YYYY-MM-DD) must equal local today.
-     *   2. If the title contains a parseable time RANGE (e.g.
-     *      "2:00 pm - 6:30 pm"), use that window + 15min grace at the end
-     *      to forgive late joiners.
-     *   3. If the title has only a START time ("9:30 AM"), assume the
-     *      meeting runs ~3h from that point.
-     *   4. If no time is parseable, treat the whole meeting-day from 8am
-     *      to 10pm local as "active" — better than going completely dark
-     *      on the user when our title-parsing misses a quirky format.
-     */
-    function isLivestreamActive(m) {
-      if (!m || !m.date) return false;
-      const now = new Date();
-      const todayLocal = now.getFullYear() + '-' +
-        String(now.getMonth() + 1).padStart(2, '0') + '-' +
-        String(now.getDate()).padStart(2, '0');
-      if (m.date !== todayLocal) return false;
-
-      function toMinutes(h, mm, ap) {
-        let H = parseInt(h, 10);
-        const M = parseInt(mm || '0', 10);
-        const isPM = /^p/i.test(ap || '');
-        if (isPM && H !== 12) H += 12;
-        if (!isPM && H === 12) H = 0;
-        return H * 60 + M;
-      }
-
-      const title = String(m.title || '');
-      let startMin = 8 * 60;   // default: 8am
-      let endMin = 22 * 60;    // default: 10pm
-
-      const rangeRe = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?\s*[-–]\s*(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?/i;
-      const rangeMatch = title.match(rangeRe);
-      if (rangeMatch) {
-        startMin = toMinutes(rangeMatch[1], rangeMatch[2], rangeMatch[3]);
-        endMin   = toMinutes(rangeMatch[4], rangeMatch[5], rangeMatch[6]) + 15;
-      } else {
-        const singleRe = /(\d{1,2})(?::(\d{2}))?\s*([ap])\.?m\.?/i;
-        const single = title.match(singleRe);
-        if (single) {
-          startMin = toMinutes(single[1], single[2], single[3]);
-          endMin = startMin + 3 * 60;
-        }
-      }
-
-      const nowMin = now.getHours() * 60 + now.getMinutes();
-      return nowMin >= startMin && nowMin <= endMin;
-    }
-
-    /* ── Zoom Access panel (Meeting ID + passcode + phone + Join Zoom +
-       optional YouTube/livestream button). Reads MEETING_ZOOM_LINKS /
-       MEETING_PASSCODES / SCHOOL_ZOOM_LINK from gov-data.js and
-       ENTITY_REMOTE for the per-entity livestream URL. Helpers
-       getMeetingZoomLink / getMeetingPasscode are pulled in via
-       gov-helpers.js (extracted from gov-hub.js by extract-gov-helpers.js). ── */
-    function zoomPanel(m) {
-      const item = { source: m.sourceKey, eventDate: new Date(m.date + 'T00:00:00'), title: m.title };
-
-      // Per-meeting Zoom info parsed from the agenda PDF (preferred,
-      // because it's automatically current). Falls back to the static
-      // MEETING_ZOOM_LINKS / MEETING_PASSCODES config for sources
-      // without an agenda PDF (most non-Telluride / non-CivicClerk
-      // entities). Key shape matches MANUAL_SUMMARIES: source|date|title.
-      //
-      // Exact-title lookup is brittle because COUNTY_CACHED_DATA.title
-      // (what shows on the card, e.g. "Board of County Commissioners
-      // Meeting") often differs from the CivicClerk eventName used as
-      // the storage key (e.g. "...Special Meeting in Telluride 2:00 pm -
-      // 2:45 pm"). Fall back to a source|date prefix match when exact
-      // fails AND there's only one such entry on that day — that
-      // uniquely identifies the meeting in practice.
-      let agendaMeta = null;
-      if (typeof MEETING_AGENDA_META !== 'undefined') {
-        const exact = MEETING_AGENDA_META[m.sourceKey + '|' + m.date + '|' + m.title];
-        if (exact) {
-          agendaMeta = exact;
-        } else {
-          const prefix = m.sourceKey + '|' + m.date + '|';
-          const matches = Object.keys(MEETING_AGENDA_META).filter((k) => k.startsWith(prefix));
-          if (matches.length === 1) agendaMeta = MEETING_AGENDA_META[matches[0]];
-        }
-      }
-
-      const staticZoomUrl = (typeof getMeetingZoomLink === 'function') ? getMeetingZoomLink(item) : '';
-      const staticInfo    = (typeof getMeetingPasscode === 'function') ? getMeetingPasscode(item) : null;
-
-      const zoomUrl = (agendaMeta && agendaMeta.zoomUrl) || staticZoomUrl;
-      const info = {
-        id:       (agendaMeta && agendaMeta.meetingId) || (staticInfo && staticInfo.id)       || '',
-        passcode: (agendaMeta && agendaMeta.passcode)  || (staticInfo && staticInfo.passcode) || '',
-        phone:    (agendaMeta && agendaMeta.phone)     || (staticInfo && staticInfo.phone)    || '',
-      };
-      if (!info.id && !info.passcode && !info.phone) {
-        // Preserve old "no info" semantics for the bail-out check below.
-        info.id = info.passcode = info.phone = '';
-      }
-
-      const remote  = (typeof ENTITY_REMOTE !== 'undefined') ? (ENTITY_REMOTE[m.sourceKey] || {}) : {};
-      const showLivestream = !!remote.livestream;
-      if (!info.passcode && !info.id && !zoomUrl && !showLivestream) return '';
-
-      let parts = '';
-      if (info && info.id)       parts += '<span><strong>Meeting ID:</strong> ' + info.id + '</span>';
-      if (info && info.passcode) parts += '<span><strong>Passcode:</strong> ' + info.passcode + '</span>';
-      if (info && info.phone)    parts += '<span><strong>Phone:</strong> ' + info.phone + '</span>';
-
-      // Both buttons share the same active/upcoming color state — one
-      // call to isLivestreamActive(m) drives both classes. Push order
-      // matters: Zoom on the LEFT, Livestream on the RIGHT when both
-      // are present. (.zoom-buttons is `display: flex` so they sit
-      // side by side; flex-wrap kicks in only at very narrow widths.)
-      const activeClass = isLivestreamActive(m) ? ' active' : '';
-      const buttons = [];
-      if (zoomUrl) {
-        buttons.push('<a class="btn-action zoom' + activeClass + '" href="' + zoomUrl + '" target="_blank" rel="noopener">📹 Join Zoom</a>');
-      }
-      if (showLivestream) {
-        buttons.push('<a class="btn-action youtube' + activeClass + '" href="' + remote.livestream + '" target="_blank" rel="noopener">▶️ ' + (remote.livestreamLabel || 'Livestream') + '</a>');
-      }
-
-      return '<div class="zoom-panel">'
-           +   (parts ? '<div class="zoom-info"><strong class="zoom-label">Zoom Access</strong>' + parts + '</div>' : '')
-           +   (buttons.length ? '<div class="zoom-buttons">' + buttons.join('') + '</div>' : '')
-           + '</div>';
-    }
-
-    // ── "Why This Matters" popup lookup ──
-    // Scans the meeting's title + summary against the WHY_THIS_MATTERS array
-    // in gov-data.js. Each entry has a regex (`match`) that fires on a
-    // specific code-amendment or high-level land-use topic (Comp Plan,
-    // wildfire code, Society Turn, Carhenge, etc.) — not on individual
-    // residential project reviews. Returns the entry's `popup` text (or
-    // `decision` as fallback), or null if no entry matches.
-    function getWTMEntry(m) {
-      if (typeof WHY_THIS_MATTERS === 'undefined') return null;
-      const text = (m.title || '') + ' | ' + (m.summary || '') + ' | ' + (m.description || '');
-      for (let i = 0; i < WHY_THIS_MATTERS.length; i++) {
-        const entry = WHY_THIS_MATTERS[i];
-        if (entry.match && entry.match.test(text)) return entry;
-      }
-      return null;
-    }
-
-    function ensureWTMModal() {
-      if (document.getElementById('wtm-modal')) return;
-      const el = document.createElement('div');
-      el.id = 'wtm-modal';
-      el.setAttribute('role', 'dialog');
-      el.setAttribute('aria-modal', 'true');
-      el.innerHTML =
-        '<div class="wtm-modal-overlay" onclick="closeWTMModal()"></div>' +
-        '<div class="wtm-modal-box">' +
-          '<div class="wtm-modal-header">' +
-            '<svg class="wtm-modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>' +
-            '<span class="wtm-modal-label">Why This Matters</span>' +
-            '<button class="wtm-modal-close" onclick="closeWTMModal()" aria-label="Close">✕</button>' +
-          '</div>' +
-          '<div id="wtm-modal-title" class="wtm-modal-meeting"></div>' +
-          '<div id="wtm-modal-body" class="wtm-modal-body"></div>' +
-        '</div>';
-      document.body.appendChild(el);
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeWTMModal(); });
-    }
-    // Map a WHY_THIS_MATTERS entry to its Deep Dive page (by topic keywords in
-    // the entry's match regex) so the modal can link out to the fuller context
-    // + the source documents we already host on the deep-dive pages.
-    function deepDiveFor(entry) {
-      const src = (entry && entry.match && entry.match.source || '').toLowerCase();
-      if (/carhenge|shandoka|chair\s*7/.test(src))                 return '/deep-dive-carhenge.html';
-      if (/society|jensen|healthcare|facility|hospital/.test(src)) return '/deep-dive-society.html';
-      if (/accelerated|comprehensive|forestry/.test(src))          return '/deep-dive-code.html';
-      if (/wildfire|wui/.test(src))                                return '/deep-dive-wildfire.html';
-      if (/gondola|smart/.test(src))                               return '/deep-dive-gondola.html';
-      if (/lucarelli|aldasoro|diamond/.test(src))                  return '/deep-dive-diamond.html';
-      return null;
-    }
-    function openWTMModal(title, idx) {
-      ensureWTMModal();
-      const entry = (typeof WHY_THIS_MATTERS !== 'undefined' && WHY_THIS_MATTERS[idx]) || null;
-      document.getElementById('wtm-modal-title').textContent = title;
-      const body = document.getElementById('wtm-modal-body');
-      if (entry) {
-        // ~100 words of context + history: the current stakes (popup/impact)
-        // plus the historical background, then a link to the Deep Dive and the
-        // source documents we already host there.
-        const now = entry.popup || entry.impact || entry.decision || '';
-        const history = entry.context || '';
-        const dd = deepDiveFor(entry);
-        body.innerHTML =
-          (now ? '<p style="margin:0 0 12px;">' + now + '</p>' : '') +
-          (history ? '<p style="margin:0 0 12px;"><strong>Background &amp; history:</strong> ' + history + '</p>' : '') +
-          (dd ? '<a href="' + dd + '" style="display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-weight:700;color:var(--forest,#21443c);text-decoration:none;">📄 Read the full Deep Dive — context &amp; source documents →</a>' : '');
-      } else {
-        body.textContent = '';
-      }
-      document.getElementById('wtm-modal').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeWTMModal() {
-      const el = document.getElementById('wtm-modal');
-      if (el) el.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    window.openWTMModal = openWTMModal;
-    window.closeWTMModal = closeWTMModal;
-
-    // Returns a title that always leads with the entity name.
-    // Skips the prefix if a distinctive label word already appears in the title
-    // (handles "Mountain Village Town Council", "San Miguel County Board…", etc.)
-    function buildDisplayTitle(m) {
-      const label = (m.sourceLabel || '').trim();
-      const title = (m.title || '').trim();
-      if (!label || title.toLowerCase().startsWith(label.toLowerCase())) return title;
-      // Skip common words that appear in many titles and aren't entity-distinctive
-      const COMMON = new Set(['town','city','of','the','and','board','meeting',
-                              'commission','committee','district','village','regional',
-                              'county','council','center']);
-      const labelWords = label.toLowerCase().split(/\s+/).filter(w => w.length >= 4 && !COMMON.has(w));
-      const titleLc = title.toLowerCase();
-      if (labelWords.length && labelWords.some(w => titleLc.includes(w))) return title;
-      return label + ' — ' + title;
-    }
-
-    // Escape bot-written meeting/recap text before it enters innerHTML. Summaries
-    // and recaps are Claude-generated from scraped agendas/transcripts, so their
-    // content is attacker-influenceable and must be escaped at every sink.
-    function esc(s) {
-      return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
-        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
-      ));
-    }
-
-    function meetingCard(m) {
-      const dateBadge = fmtDateBadge(m.date);
-      const logo = m.entityLogo
-        ? '<img class="meet-entity-logo" src="' + m.entityLogo + '" alt="' + (m.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
-        : '';
-      const tagLabel = /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || '');
-      const tag = tagLabel ? '<span class="meet-tag">' + tagLabel + '</span>' : '';
-      // Bold proper nouns (names, places, projects) like the past-meeting recaps —
-      // but no paragraph splitting here (keep the upcoming card compact).
-      const summary = m.summary ? '<p class="meet-summary">' + emphasizeNames(m.summary) + '</p>' : '';
-      const loc = m.location ? '<span>📍 ' + esc(m.location) + '</span>' : '';
-      const time = m.time ? '<span>🕐 ' + esc(m.time) + '</span>' : '';
-      const meta = (loc || time) ? '<div class="meet-meta">' + time + loc + '</div>' : '';
-      const zoom = zoomPanel(m);
-      const agendaBtn = m.agendaUrl
-        ? '<a class="btn-action' + (m.hasAgenda ? ' primary' : '') + '" href="' + m.agendaUrl + '" target="_blank" rel="noopener">View Agenda →</a>'
-        : '';
-      // Agenda Packet: always shown. Dark green (primary) + downloads when a
-      // packet PDF is posted; light green, non-clickable placeholder when not.
-      // `download` works for same-origin packets; cross-origin PDFs (most
-      // gov sites) ignore it and open in a new tab — still the right result.
-      const packetBtn = m.packetUrl
-        ? '<a class="btn-action primary" href="' + m.packetUrl + '" download target="_blank" rel="noopener">📦 Agenda Packet ↓</a>'
-        : '<span class="btn-action btn-action-empty" title="Agenda packet not yet posted" aria-disabled="true">📦 Agenda Packet</span>';
-      const recordBtn = m.recordingUrl
-        ? '<a class="btn-action" href="' + m.recordingUrl + '" target="_blank" rel="noopener">Recording</a>'
-        : '';
-      // "Full article →" — only when this meeting's draft was approved + published.
-      const _art = articleFor(m);
-      const fullArticleBtn = _art
-        ? '<a class="btn-action primary" href="' + _art.url + '">📰 Full article →</a>'
-        : '';
-
-      // "Why This Matters" button + card highlight when the meeting touches
-      // a code amendment or high-level land-use issue.
-      const wtm = getWTMEntry(m);
-      const wtmIdx = wtm ? WHY_THIS_MATTERS.indexOf(wtm) : -1;
-      const safeTitle = (m.title || '').replace(/'/g, "\\'").replace(/"/g, '&quot;');
-      const wtmBtn = wtm
-        ? '<button class="btn-action wtm" onclick="openWTMModal(\'' + safeTitle + '\',' + wtmIdx + ')">ℹ Why This Matters</button>'
-        : '';
-      const cardClass = wtm ? 'meet-card has-wtm' : 'meet-card';
-
-      // Comment button
-      const ci = commentInfo(m);
-      let commentBtn = '';
-      if (ci) {
-        const subject = encodeURIComponent('Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || ''));
-        commentBtn = '<a class="btn-action comment" href="mailto:' + ci.email + '?subject=' + subject + '">✉️ Submit Comment</a>';
-      }
-
-      return '<article class="' + cardClass + '">'
-           + '<div class="meet-card-head">' + dateBadge
-           + '<div class="meet-info">' + tag + '<h2 class="meet-title">' + buildDisplayTitle(m) + '</h2></div>'
-           + logo + '</div>'
-           + summary + meta
-           + zoom
-           // Row 1: the two agenda buttons (View Agenda + Agenda Packet).
-           // Row 2: everything else (Submit Comment, Why This Matters,
-           // Recording) on the line below.
-           + '<div class="meet-actions meet-actions-agenda">' + agendaBtn + packetBtn + '</div>'
-           + ((commentBtn || wtmBtn || recordBtn || fullArticleBtn)
-               ? '<div class="meet-actions meet-actions-secondary">' + fullArticleBtn + commentBtn + wtmBtn + recordBtn + '</div>'
-               : '')
-           + '</article>';
-    }
-
-    // Past-meeting "Rick" recap card. Shown in the Past Meeting Summaries
-    // section for 3 days after the meeting, then drops off automatically.
-    // Recaps arrive as one long blob (no line breaks). Split into readable
-    // paragraphs: break at sentence boundaries, then group sentences into
-    // ~length-balanced paragraphs (a short trailing bit merges into the last).
-    function paragraphize(text) {
-      const clean = String(text || '').replace(/\s+/g, ' ').trim();
-      if (!clean) return [];
-      const sentences = clean.split(/(?<=[.!?])\s+(?=["'“(]?[A-Z0-9])/).map(s => s.trim()).filter(Boolean);
-      const paras = [];
-      let cur = '';
-      const MAX = 260;   // start a new paragraph before a sentence pushes past this
-      for (const s of sentences) {
-        if (cur && cur.length + 1 + s.length > MAX) { paras.push(cur); cur = s; }
-        else cur = cur ? cur + ' ' + s : s;
-      }
-      if (cur) {
-        if (paras.length && cur.length < 90) paras[paras.length - 1] += ' ' + cur;  // no orphan scrap
-        else paras.push(cur);
-      }
-      return paras.length ? paras : [clean];
-    }
-
-    // Emphasize proper nouns (people, places, projects like "Shandoka") in a recap
-    // so they're easy to scan. Heuristic: bold Title-Case word runs; a LONE
-    // Title-Case word is bolded only when it's NOT sentence-initial and NOT a
-    // generic civic/temporal word (Council, Board, months, Section, …). Operates
-    // on the raw text and escapes as it goes.
-    const NAME_STOP = new Set(('The A An On In At As It This That These Those Its Their And But Or If '
-      + 'After Before During While Also Both Two Three Four Five Several Additional Other Following New '
-      + 'Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session '
-      + 'Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda '
-      + 'Work Executive Regular Special Substantial Councilors '
-      + 'January February March April May June July August September October November December '
-      + 'Monday Tuesday Wednesday Thursday Friday Saturday Sunday '
-      + 'Section Stage Phase Article Item Step Unit No Yes '
-      // Low-value planning/zoning words that don't identify anything on their own.
-      + 'Accommodations Building Buildings Preliminary Large Scale').split(/\s+/));
-    // Street-address matcher: a number followed by EITHER a direction-led street
-    // (700 W Pacific Ave, 239 N Aspen) OR a suffix-terminated street (860 Black
-    // Bear Rd). Requiring a direction or a street suffix keeps plain "2026
-    // Performance Report"-style number+Title-case runs from registering as
-    // addresses.
-    const _ADDR_DIR = '(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?';
-    const _ADDR_SUF = '(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway)';
-    const _ADDR_W = "[A-Z][A-Za-z'’]*";
-    const _ADDR_SRC = '\\d+\\s+(?:' + _ADDR_DIR + '\\s+' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*(?:\\s+' + _ADDR_SUF + ')?|' + _ADDR_W + '(?:\\s+' + _ADDR_W + ')*\\s+' + _ADDR_SUF + ')';
-    const _RUN_SRC = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
-    function emphasizeNames(raw) {
-      // Scan for addresses first, then proper-noun runs (they can't overlap: one
-      // starts with a digit, the other with a capital letter).
-      const scanRe = new RegExp('(' + _ADDR_SRC + ')|(' + _RUN_SRC + ')', 'g');
-      let html = '', last = 0, m;
-      while ((m = scanRe.exec(raw)) !== null) {
-        const start = m.index;
-        html += esc(raw.slice(last, start));
-        if (m[1]) {
-          // A street address. Bold it in full (number included) UNLESS it merely
-          // locates a named project — i.e. it's introduced by "at"/"on" (e.g.
-          // "Carhenge … at 700 W Pacific Ave" / "Shandoka … at 860 Black Bear
-          // Rd"), where the project name carries the emphasis. A standalone
-          // address (e.g. "for 239 N Aspen") is the identifier, so it's bolded.
-          const addr = m[1];
-          const locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, start));
-          html += locates ? esc(addr) : '<strong>' + esc(addr) + '</strong>';
-          last = start + addr.length;
-          continue;
-        }
-        const run = m[2];
-        let trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');   // drop trailing connectors
-        const tail = run.slice(trimmed.length);
-        let leadThe = '';                                       // keep a leading "The" outside the bold
-        if (/\s/.test(trimmed)) { const t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
-        const multi = /\s/.test(trimmed);
-        const before = raw.slice(0, start).replace(/\s+$/, '');
-        const sentenceStart = before === '' || /[.!?]$/.test(before);
-        // Suppress low-value words even inside a multi-word run when EVERY
-        // significant word is a stop word (e.g. "Preliminary Large-Scale").
-        const sig = trimmed.split(/\s+/).filter((w) => !/^(?:of|the)$/i.test(w));
-        const allStop = sig.length > 0 && sig.every((w) => NAME_STOP.has(w));
-        const bold = !allStop && (multi || (!sentenceStart && !NAME_STOP.has(trimmed)));
-        html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
-        last = start + run.length;
-      }
-      html += esc(raw.slice(last));
-      return html;
-    }
-
-    function recapCard(r) {
-      const dateBadge = fmtDateBadge(r.date);
-      const logos = {
-        telluride: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-        county:    'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-        mv:        'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg',
-        ridgway:   'https://livabletelluride.org/logo/Ridgway%20Town.png',
-        rico:      'https://livabletelluride.org/logo/Rico%20Town.png'
-      };
-      const logoSrc = logos[r.sourceKey] || '';
-      const logo = logoSrc
-        ? '<img class="meet-entity-logo" src="' + logoSrc + '" alt="' + (r.sourceLabel || '') + '" onerror="this.style.display=\'none\'">'
-        : '';
-      const watch = r.videoUrl
-        ? '<a class="btn-action" href="' + r.videoUrl + '" target="_blank" rel="noopener">▶ Watch Recording</a>'
-        : '';
-      return '<article class="meet-card recap-card">'
-           + '<div class="meet-card-head">' + dateBadge
-           + '<div class="meet-info"><span class="recap-tag">Recap</span>'
-           + '<h2 class="meet-title">' + esc(r.title || '') + '</h2></div>'
-           + logo + '</div>'
-           + paragraphize(r.recap).map(p => '<p class="recap-body">' + emphasizeNames(p) + '</p>').join('')
-           + (watch ? '<div class="meet-actions meet-actions-secondary">' + watch + '</div>' : '')
-           + '</article>';
-    }
-
-    // ── Upcoming / Past meetings toggle (default: upcoming) ──────────────────
-    let meetView = 'upcoming';
-    function applyMeetView() {
-      const up = meetView === 'upcoming';
-      const upSec = document.getElementById('upcomingSection');
-      const pastSec = document.getElementById('recapSection');
-      if (upSec) upSec.style.display = up ? '' : 'none';
-      if (pastSec) pastSec.style.display = up ? 'none' : '';
-      const tu = document.getElementById('tabUpcoming');
-      const tp = document.getElementById('tabPast');
-      if (tu) { tu.classList.toggle('active', up); tu.setAttribute('aria-selected', String(up)); }
-      if (tp) { tp.classList.toggle('active', !up); tp.setAttribute('aria-selected', String(!up)); }
-    }
-
-    function render() {
-      const chipRowEl = document.getElementById('chipRow');
-      if (chipRowEl) chipRowEl.innerHTML = chipsHtml();
-      document.getElementById('entityList').innerHTML = entitiesHtml();
-
-      // Past-meeting recaps (visible for 3 days after each meeting). Shown in the
-      // "Past" tab; the Upcoming/Past toggle (applyMeetView) controls visibility.
-      const recapGrid = document.getElementById('recapGrid');
-      let recaps = [];
-      if (typeof MEETING_RECAPS !== 'undefined' && Array.isArray(MEETING_RECAPS)) {
-        // Show up to FOUR recaps (two rows on desktop) so multiple recent
-        // meetings can sit side by side. Town of Telluride and San Miguel
-        // County get priority — they fill slots first (newest within each),
-        // and smaller entities (e.g. Rico) only appear if slots remain.
-        // Respects the active entity filter.
-        const RECAP_PRIORITY = new Set(['telluride', 'county']);
-        const pool = MEETING_RECAPS.filter(r => {
-          if (!r || !r.date) return false;
-          if (activeFilter !== 'all' && (r.sourceKey || '').toLowerCase() !== activeFilter) return false;
-          return true;
-        }).sort((a, b) => {
-          const pa = RECAP_PRIORITY.has((a.sourceKey || '').toLowerCase()) ? 0 : 1;
-          const pb = RECAP_PRIORITY.has((b.sourceKey || '').toLowerCase()) ? 0 : 1;
-          if (pa !== pb) return pa - pb;               // priority entities first
-          return b.date.localeCompare(a.date);          // then newest first
-        });
-        // Pick 4 (priority-weighted), then show them newest-first.
-        recaps = pool.slice(0, 4).sort((a, b) => b.date.localeCompare(a.date));
-      }
-      if (recapGrid) recapGrid.innerHTML = recaps.length
-        ? recaps.map(recapCard).join('')
-        : '<div class="empty">No recent meeting summaries yet — check back after the next meeting.</div>';
-
-      const filtered = activeFilter === 'all'
-        ? MEETINGS
-        : MEETINGS.filter(m => (m.sourceKey || '').toLowerCase() === activeFilter);
-      const sorted = filtered.slice().sort((a, b) => a.date.localeCompare(b.date));
-
-      const grid = document.getElementById('meetGrid');
-      grid.innerHTML = sorted.length
-        ? sorted.map(meetingCard).join('')
-        : '<div class="empty">No meetings found for this entity in the next 30 days.</div>';
-
-      // Wire chip + entity-row clicks
-      document.querySelectorAll('.chip[data-filter], .entity-row[data-filter]').forEach(el => {
-        el.addEventListener('click', (ev) => {
-          ev.preventDefault();
-          activeFilter = el.dataset.filter;
-          render();
-          const chipBar = document.querySelector('.chip-bar');
-          if (chipBar) window.scrollTo({ top: chipBar.offsetTop - 70, behavior: 'smooth' });
-        });
-      });
-      applyMeetView();
-    }
-
-    // Published editorial articles (meetingKey → {url,title,...}), written by
-    // the Editorial Publish workflow. Drives the "📰 Full article →" button on
-    // any meeting card whose draft was approved + published. Empty = no buttons.
-    let PUBLISHED_ARTICLES = {};
-    function articleFor(m) {
-      if (!m || !m.eventDate || !PUBLISHED_ARTICLES) return null;
-      try {
-        const dk = m.eventDate.toISOString().slice(0, 10);
-        const ct = (m.title || '').replace(/ -- CANCELED$/, '');
-        // 1. exact key (source|date|title)
-        if (PUBLISHED_ARTICLES[m.source + '|' + dk + '|' + ct]) return PUBLISHED_ARTICLES[m.source + '|' + dk + '|' + ct];
-        // 2. tolerant match: card titles are often the clean form ("Town
-        //    Council") while the published key carries a suffix ("Town Council
-        //    - Jun 30 2026"). Mirror getMeetingSummary's source|date| prefix
-        //    fallback, plus a title-overlap guard so two same-day meetings of
-        //    the same body don't cross-match.
-        const prefix = m.source + '|' + dk + '|';
-        const ctl = ct.toLowerCase();
-        for (const k in PUBLISHED_ARTICLES) {
-          if (k.indexOf(prefix) !== 0) continue;
-          const kt = k.slice(prefix.length).toLowerCase();
-          if (kt === ctl || kt.indexOf(ctl) === 0 || ctl.indexOf(kt) === 0) return PUBLISHED_ARTICLES[k];
-        }
-        return null;
-      } catch (e) { return null; }
-    }
-    fetch('/data/published-articles.json?v=' + Math.floor(Date.now() / 600000))
-      .then(r => (r.ok ? r.json() : {}))
-      .then(d => { PUBLISHED_ARTICLES = d || {}; render(); })
-      .catch(() => {});
-
-    render();
-    // Upcoming / Past toggle — wired once (the tab buttons are static markup).
-    const _tabUp = document.getElementById('tabUpcoming');
-    const _tabPast = document.getElementById('tabPast');
-    if (_tabUp) _tabUp.addEventListener('click', () => { meetView = 'upcoming'; applyMeetView(); });
-    if (_tabPast) _tabPast.addEventListener('click', () => { meetView = 'past'; applyMeetView(); });
-
-    /* ── Live data: pulls meetings from the deployed gov-hub.js. ───────
-       The deployed file exposes get*Meetings() functions per entity,
-       each returning items with {title, eventDate, location, source,
-       sourceLabel, category, hasAgenda, agendaLink, ...}. We call them,
-       normalize to our card schema, and replace MEETINGS. ── */
-    function loadLiveMeetings() {
-
-
-      const dataScript = document.createElement('script');
-      dataScript.src = 'https://livabletelluride.org/js/gov-data.js?v=' + Math.floor(Date.now()/600000);
-      dataScript.onload = () => {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + Math.floor(Date.now()/600000);
-        s.onload = () => {
-          try {
-            // Stub AI_SUMMARIES so getMeetingSummary() doesn't throw.
-            // The live site populates this from Firestore at runtime; v2
-            // doesn't (yet), so summaries fall through to MANUAL_SUMMARIES
-            // (which IS in gov-helpers.js) or to the meeting's description.
-            if (typeof AI_SUMMARIES === 'undefined') window.AI_SUMMARIES = {};
-
-            const fetchers = [
-              ['getCountyCachedMeetings', 'county',    'San Miguel County',     'https://livabletelluride.org/logo/San%20Miguel%20County.png'],
-              ['getMVMeetings',           'mv',        'Mountain Village',      'https://livabletelluride.org/logo/Mountain%20village%20Town.jpg'],
-              ['getSchoolMeetings',       'school',    'School District R-1',   'https://livabletelluride.org/logo/School%20District%20Telluride.png'],
-              ['getFireMeetings',         'fire',      'Fire District',         'https://livabletelluride.org/logo/Telluride%20Fire.png'],
-              ['getMedMeetings',          'med',       'Telluride Regional Medical Center',     'https://livabletelluride.org/logo/Telluride%20Hospital%20Dist.jpeg'],
-              ['getRidgwayMeetings',      'ridgway',   'Town of Ridgway',       'https://livabletelluride.org/logo/Ridgway%20Town.png'],
-              ['getNorwoodMeetings',      'norwood',   'Town of Norwood',       'https://livabletelluride.org/logo/Norwood%20Town.jpeg'],
-              ['getOphirMeetings',        'ophir',     'Town of Ophir',         'https://livabletelluride.org/logo/Ophir.jpeg'],
-              ['getRicoMeetings',         'rico',      'Town of Rico',          'https://livabletelluride.org/logo/Rico%20Town.png'],
-              ['getSmartMeetings',        'smart',     'SMART',                 'https://livabletelluride.org/logo/SMART.png'],
-              ['getAirportMeetings',      'airport',   'Telluride Regional Airport', 'https://livabletelluride.org/logo/Airport.png'],
-              ['getTellurideMeetings',    'telluride', 'Town of Telluride',     'https://livabletelluride.org/logo/Telluride%20Town.png']
-            ];
-            const live = [];
-            const today = new Date(); today.setHours(0,0,0,0);
-            const horizon = new Date(today.getTime() + 30 * 86400000);
-            fetchers.forEach(fn => {
-              const [name, key, label, logo] = fn;
-              if (typeof window[name] !== 'function') return;
-              try {
-                const arr = window[name]() || [];
-                arr.forEach(m => {
-                  if (!m || !m.eventDate) return;
-                  const d = m.eventDate;
-                  if (d < today || d > horizon) return;
-                  // m.eventDate was constructed at LOCAL midnight by localDate().
-                  // Read the calendar date back via LOCAL components — using
-                  // toISOString() would shift to the previous day for any
-                  // viewer east of UTC (e.g. Europe/Asia).
-                  const _pad = n => String(n).padStart(2, '0');
-                  live.push({
-                    date: d.getFullYear() + '-' + _pad(d.getMonth() + 1) + '-' + _pad(d.getDate()),
-                    time: m.eventTimes || '',
-                    title: m.title,
-                    sourceKey: key,
-                    sourceLabel: m.sourceLabel || label,
-                    entityLogo: logo,
-                    category: /board/i.test(m.title || '') ? 'Board Meeting' : (m.category || 'Meeting'),
-                    summary: (typeof getMeetingSummary === 'function' ? (getMeetingSummary(m) || '') : '')
-                             || (m.description || ''),
-                    location: m.location || '',
-                    agendaUrl: m.agendaLink || m.link || '',
-                    hasAgenda: !!m.hasAgenda,
-                    packetUrl: m.packetUrl || ''
-                  });
-                });
-              } catch (e) { console.warn(name + ' failed:', e); }
-            });
-            if (live.length > 0) {
-              MEETINGS = live.slice().sort((a, b) => a.date.localeCompare(b.date));
-              render();
-            }
-          } catch (err) { console.warn('loadLiveMeetings failed:', err); }
-        };
-        s.onerror = () => console.warn('Could not load /js/gov-helpers.js for live meetings');
-        document.head.appendChild(s);
-      };
-      dataScript.onerror = () => console.warn('Could not load gov-data.js');
-      document.head.appendChild(dataScript);
-    }
-    loadLiveMeetings();
-  </script>
-
-<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<div id="lt-footer"></div>
+<script src="site.js?v=7"></script>
+<script src="/js/lt-data.js?v=4"></script>
 <script>
-// ── EN/ES language toggle (replaced Google Translate's 24-lang
-//   dropdown 2026-05-29). Google Translate is still the engine doing
-//   the translation when the cookie is set; we just hide its UI
-//   chrome (banner + dropdown) and expose a single binary pill in the
-//   topnav. Cookie format: googtrans=/en/<lang>; deleting it reverts
-//   to English. ────────────────────────────────────────────────── */
-function lvCurrentLang() {
-  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-  return m ? m[1] : 'en';
-}
-function lvSetTransCookie(value) {
-  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  var domains = ['', '.' + location.hostname, location.hostname];
-  domains.forEach(function(d){
-    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
-    if (d) c += '; domain=' + d;
-    document.cookie = c;
-  });
-}
-function lvToggleLang() {
-  var cur = lvCurrentLang();
-  lvSetTransCookie(cur === 'es' ? '' : 'es');
-  location.reload();
-}
-function googleTranslateElementInit() {
-  // includedLanguages is just 'es' now — the visible toggle only
-  // offers Spanish, but Google Translate still needs an init call
-  // to act on the cookie.
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'lvLangWidget');
-}
-(function(){
-  // Inject CSS for the pill + hide all Google Translate UI chrome
-  var hideCss = document.createElement('style');
-  hideCss.textContent = [
-    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
-    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame { display: none !important; }',
-    '.goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; }',
-    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
-    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
-    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
-    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
-  ].join('\n');
-  document.head.appendChild(hideCss);
-  // Set initial button label based on current state
-  function setLabel() {
-    var btn = document.getElementById('lvLangToggle');
-    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+(function () {
+  var list = document.getElementById('meet-list');
+  if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var esc = LTData.esc, safe = LTData.safeUrl;
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  var meetings = [], srcFilter = '';
+
+  // Public Entities — always ALL listed (even zero-count), logos from /logo/.
+  // Keys match week-meetings.json `source`; labels match its sourceLabel.
+  // Labels/order for the filter; logo URLs come from the shared LTData map.
+  var ENTITIES = [
+    { key: 'fire',      label: 'Fire Protection' },
+    { key: 'mv',        label: 'Mountain Village' },
+    { key: 'ouray',     label: 'Ouray County' },
+    { key: 'county',    label: 'San Miguel County' },
+    { key: 'school',    label: 'School District R-1' },
+    { key: 'smart',     label: 'SMART Transit' },
+    { key: 'airport',   label: 'Telluride Regional Airport' },
+    { key: 'med',       label: 'Telluride Regional Medical Center' },
+    { key: 'norwood',   label: 'Town of Norwood' },
+    { key: 'ophir',     label: 'Town of Ophir' },
+    { key: 'rico',      label: 'Town of Rico' },
+    { key: 'ridgway',   label: 'Town of Ridgway' },
+    { key: 'telluride', label: 'Town of Telluride' }
+  ];
+  var LOGO_BY_KEY = LTData.ENTITY_LOGOS;
+
+  /* Bold proper-noun runs + standalone street addresses in summaries — the
+     same emphasizeNames heuristic as the live Gov-Hub cards and the digest. */
+  var NAME_STOP = {}; ('The A An On In At As It This That These Those Its Their And But Or If After Before During While Also Both Two Three Four Five Several Additional Other Following New Council Board Commission Committee Ordinance Ordinances Resolution Resolutions Meeting Session Sessions Town County City District State Chair Mayor Public Staff Members Member Consent Agenda Work Executive Regular Special Substantial Councilors January February March April May June July August September October November December Monday Tuesday Wednesday Thursday Friday Saturday Sunday Section Stage Phase Article Item Step Unit No Yes Accommodations Building Buildings Preliminary Large Scale').split(' ').forEach(function (w) { NAME_STOP[w] = 1; });
+  var ADDR = '\\d+\\s+(?:(?:N|S|E|W|NE|NW|SE|SW|North|South|East|West)\\.?\\s+[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*(?:\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))?|[A-Z][A-Za-z’\']*(?:\\s+[A-Z][A-Za-z’\']*)*\\s+(?:Ave|Avenue|St|Street|Rd|Road|Dr|Drive|Blvd|Boulevard|Ln|Lane|Way|Ct|Court|Pl|Place|Cir|Circle|Trail|Trl|Pkwy|Parkway|Hwy|Highway))';
+  var RUN = "[A-Z][a-z]+(?:['’][A-Za-z]+)?(?:\\s+(?:of|the|[A-Z][a-z]+(?:['’][A-Za-z]+)?))*";
+  function emphasizeNames(raw) {
+    var re = new RegExp('(' + ADDR + ')|(' + RUN + ')', 'g');
+    var html = '', last = 0, m;
+    while ((m = re.exec(raw)) !== null) {
+      html += esc(raw.slice(last, m.index));
+      if (m[1]) {
+        var locates = /\b(?:at|on)\s+$/i.test(raw.slice(0, m.index));
+        html += locates ? esc(m[1]) : '<strong>' + esc(m[1]) + '</strong>';
+        last = m.index + m[1].length; continue;
+      }
+      var run = m[2], trimmed = run.replace(/(?:\s+(?:of|the))+$/, '');
+      var tail = run.slice(trimmed.length), leadThe = '';
+      if (/\s/.test(trimmed)) { var t = trimmed.match(/^(The\s+)(?=[A-Z])/); if (t) { leadThe = t[1]; trimmed = trimmed.slice(leadThe.length); } }
+      var multi = /\s/.test(trimmed);
+      var before = raw.slice(0, m.index).replace(/\s+$/, '');
+      var sentenceStart = before === '' || /[.!?]$/.test(before);
+      var sig = trimmed.split(/\s+/).filter(function (w) { return !/^(?:of|the)$/i.test(w); });
+      var allStop = sig.length > 0 && sig.every(function (w) { return NAME_STOP[w]; });
+      var bold = !allStop && (multi || (!sentenceStart && !NAME_STOP[trimmed]));
+      html += esc(leadThe) + (bold ? '<strong>' + esc(trimmed) + '</strong>' : esc(trimmed)) + esc(tail);
+      last = m.index + run.length;
+    }
+    return html + esc(raw.slice(last));
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setLabel);
-  } else { setLabel(); }
-  // Load Google Translate
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async = true;
-  document.head.appendChild(s);
-})();
-(function(){
-  function init(){
-    var btn = document.getElementById('topnavHamburger');
-    if (!btn) return;
-    var links = document.querySelector('.topnav-links');
-    if (!links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? '✕' : '☰';
+
+  function commentMailto(m) {
+    // Same subject format as the live Gov-Hub so clerks see a consistent inbox.
+    var subject = 'Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || '');
+    return 'mailto:' + encodeURIComponent(m.commentEmail) + '?subject=' + encodeURIComponent(subject);
+  }
+  function render() {
+    var rows = meetings.filter(function (m) { return !srcFilter || m.source === srcFilter; });
+    if (!rows.length) {
+      var name = (ENTITIES.filter(function (e) { return e.key === srcFilter; })[0] || {}).label || 'this entity';
+      list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings scheduled for ' + esc(name) + ' in the next two weeks.</p>';
+      return;
+    }
+    var html = '', lastDate = '';
+    rows.forEach(function (m) {
+      if (m.date !== lastDate) {
+        html += '<div class="day-h">' + LTData.fmtDate(m.date, { weekday: 'long', month: 'long', day: 'numeric' }) + '</div>';
+        lastDate = m.date;
+      }
+      var d = LTData.parseDateKey(m.date);
+      var logo = LOGO_BY_KEY[m.source]
+        ? '<div class="e-logo"><img src="' + esc(LOGO_BY_KEY[m.source]) + '" alt="' + esc(m.sourceLabel) + '" loading="lazy"></div>' : '';
+      // Action row — live-Gov-Hub parity: View Agenda goes solid green when a
+      // real agenda is posted (m.hasAgenda), outline when the link is just a
+      // calendar page; Agenda Packet is always present — solid green download
+      // when posted, grey non-clickable ghost when not yet.
+      var acts = '';
+      if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
+      if (m.agendaUrl) acts += '<a class="abtn' + (m.hasAgenda ? ' primary' : '') + '" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>';
+      acts += m.packetUrl
+        ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
+        : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
+      if (m.zoomLink) acts += '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
+      if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
+      if (!m.agendaUrl && m.link) acts += '<a class="abtn" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+      // Zoom access details inline whenever present (Meeting ID + Passcode + Phone).
+      var zoomBits = [];
+      if (m.zoomMeetingId) zoomBits.push('<strong>Meeting ID:</strong> ' + esc(m.zoomMeetingId));
+      if (m.zoomPasscode) zoomBits.push('<strong>Passcode:</strong> ' + esc(String(m.zoomPasscode).replace(/\.$/, '')));
+      if (m.zoomPhone) zoomBits.push('<strong>Phone:</strong> ' + esc(m.zoomPhone));
+      var zoomline = zoomBits.length ? '<div class="zoomline">' + zoomBits.join(' &middot; ') + '</div>' : '';
+      html += '<article class="m-card">' +
+        '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
+        '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
+        '<h3>' + esc(m.title) + '</h3>' +
+        (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
+        (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
+        zoomline + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
     });
-    // close drawer when a link is clicked
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = '☰';
-      });
+    list.innerHTML = html;
+  }
+
+  function renderEntityFilter() {
+    var counts = {};
+    meetings.forEach(function (m) { counts[m.source] = (counts[m.source] || 0) + 1; });
+    var bar = document.getElementById('ent-filter');
+    var all = { key: '', label: 'All Meetings', logo: 'uploads/lt-logo.png', count: meetings.length };
+    var items = [all].concat(ENTITIES.map(function (e) {
+      return { key: e.key, label: e.label, logo: e.logo, count: counts[e.key] || 0 };
+    }));
+    bar.innerHTML = items.map(function (e) {
+      return '<div class="ent' + (e.key === srcFilter ? ' active' : '') + '" data-key="' + esc(e.key) + '" role="button" tabindex="0">' +
+        '<div class="e-name">' + esc(e.label) + '</div>' +
+        '<div class="e-count">' + e.count + '</div></div>';
+    }).join('');
+    function pick(el) {
+      srcFilter = el.dataset.key || '';
+      bar.querySelectorAll('.ent').forEach(function (x) { x.classList.toggle('active', x === el); });
+      render();
+    }
+    bar.addEventListener('click', function (e) { var el = e.target.closest('.ent'); if (el) pick(el); });
+    bar.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target.closest('.ent'); if (el) { e.preventDefault(); pick(el); }
     });
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+
+  LTData.load(['week-meetings']).then(function (data) {
+    meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
+    renderEntityFilter();
+    render();
+  }).catch(function (err) { LTData.showError(list, err); });
 })();
 </script>
-<!-- lt-subscribe.js removed 2026-05-29 — Sign Up navigates to
-     /hub-bub.html#signup, unified signup popup everywhere. -->
-  <script defer src="/js/site-footer.js?v=20260618"></script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

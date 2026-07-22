@@ -1,906 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deep Dives — Livable Telluride</title>
-  <meta name="description" content="In-depth research on the land use issues, ballot measures, and development projects shaping the Telluride region — with timelines, documents, and public meeting records.">
-  <style>
-    /* ─── Shared base — keep in sync with events.html / local-news.html ─── */
-    :root {
-      --forest: #21443c;
-      --forest-soft: #2a5347;
-      --accent-green: #2f7a5f;
-      --bg-warm: #fdfbf6;
-      --bg-hero: #efe9dc;
-      --bg-paper: #fffdf9;
-      --text-primary: #1a2e29;
-      --text-secondary: #4a5e57;
-      --text-muted: #5f7169;
-      --border-soft: rgba(33, 68, 60, 0.12);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
-      --font-heading: 'Georgia', 'Times New Roman', serif;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0; padding: 0;
-      font-family: var(--font-main);
-      color: var(--text-primary);
-      background: var(--bg-warm);
-      line-height: 1.5;
-    }
-
-    /* Top nav */
-    .topnav {
-      background: #fff;
-      border-bottom: 1px solid var(--border-soft);
-      padding: 14px 0;
-      position: sticky; top: 0; z-index: 50;
-    }
-    .topnav-inner {
-      max-width: 1280px; margin: 0 auto; padding: 0 32px;
-      display: flex; align-items: center; gap: 24px;
-    }
-    .topnav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-links { display: flex; gap: 14px; margin-left: 16px; flex: 1; flex-wrap: wrap; }
-    .topnav-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text-primary); text-decoration: none;
-      font-weight: 600; font-size: 0.85rem; white-space: nowrap;
-      padding: 6px 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta {
-      display: inline-block;
-      background: var(--forest); color: #fff;
-      text-decoration: none;
-      padding: 8px 14px; border-radius: 999px;
-      font-weight: 600; font-size: 0.9rem;
-      white-space: nowrap;
-    }
-
-    /* Hero */
-    .hero {
-      background:
-        linear-gradient(180deg, rgba(239,233,220,0.78) 0%, rgba(239,233,220,0.45) 55%, rgba(239,233,220,0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 40px 0 32px;
-      border-bottom: 1px solid var(--border-soft);
-    }
-    .hero-inner { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
-    .hero h1 {
-      margin: 0 0 10px;
-      font-family: var(--font-heading);
-      font-size: 2.6rem; color: var(--text-primary);
-      text-shadow: 0 1px 2px rgba(255,255,255,0.6);
-    }
-    .hero p {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 1.05rem; max-width: 640px;
-      text-shadow: 0 1px 2px rgba(255,255,255,0.5);
-    }
-
-    /* Page content */
-    .page-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 36px 32px 64px;
-    }
-
-    /* Section label */
-    .section-intro {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-    .section-intro h2 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.4rem;
-      color: var(--text-primary);
-    }
-    .section-intro p {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 0.92rem;
-    }
-
-    /* Card grid — 3 columns */
-    .dive-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 26px;
-    }
-
-    /* Individual card */
-    .dive-card {
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .dive-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(36, 49, 46, 0.13);
-    }
-
-    /* Card image */
-    .dive-card .img-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: #d4d0c8;
-    }
-    .dive-card .img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block;
-    }
-    /* Card image is a link to the deep-dive page (wrapped by JS at load).
-       The anchor must fill the wrap so the image keeps its 16:9 size. */
-    .dive-card .img-wrap a.img-link {
-      display: block; width: 100%; height: 100%;
-    }
-    .dive-card .img-wrap a.img-link img { transition: transform 0.25s ease; }
-    .dive-card .img-wrap a.img-link:hover img { transform: scale(1.04); }
-
-    /* Topic badge overlaid on image */
-    .topic-badge {
-      position: absolute;
-      top: 14px; left: 14px;
-      background: rgba(33, 68, 60, 0.88);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 5px 12px;
-      border-radius: 999px;
-      backdrop-filter: blur(4px);
-    }
-
-    /* Card body */
-    .dive-card .body {
-      padding: 22px 22px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      flex: 1;
-    }
-    .dive-card h3 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.22rem;
-      line-height: 1.3;
-      color: var(--text-primary);
-    }
-    .dive-card .status-line {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--accent-green);
-      letter-spacing: 0.02em;
-    }
-    .dive-card .status-line::before {
-      content: '';
-      display: inline-block;
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--accent-green);
-      flex-shrink: 0;
-    }
-    .dive-card .intro-text {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
-      flex: 1;
-    }
-
-    /* Card footer */
-    .dive-card .card-footer {
-      padding: 0 22px 22px;
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .btn-explore {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: var(--forest);
-      color: #fff;
-      text-decoration: none;
-      padding: 9px 20px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 0.88rem;
-      transition: background 0.15s;
-    }
-    .btn-explore:hover { background: var(--forest-soft); }
-    .btn-explore .arrow { font-style: normal; transition: transform 0.15s; }
-    .btn-explore:hover .arrow { transform: translateX(3px); }
-
-    /* Info strip at bottom of page */
-    .info-strip {
-      background: var(--bg-hero);
-      border-top: 1px solid var(--border-soft);
-      margin-top: 56px;
-      padding: 36px 0;
-    }
-    .info-strip-inner {
-      max-width: 1280px; margin: 0 auto; padding: 0 32px;
-      display: flex; gap: 40px; align-items: center;
-      flex-wrap: wrap;
-    }
-    .info-strip-text { flex: 1; min-width: 280px; }
-    .info-strip-text h3 {
-      margin: 0 0 8px;
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      color: var(--text-primary);
-    }
-    .info-strip-text p {
-      margin: 0;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: var(--text-secondary);
-    }
-    .info-strip-links {
-      display: flex; gap: 12px; flex-wrap: wrap;
-    }
-    .strip-btn {
-      display: inline-block;
-      padding: 10px 22px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-decoration: none;
-      border: 1.5px solid var(--forest);
-      color: var(--forest);
-      transition: all 0.15s;
-    }
-    .strip-btn:hover { background: var(--forest); color: #fff; }
-    .strip-btn.filled { background: var(--forest); color: #fff; }
-    .strip-btn.filled:hover { background: var(--forest-soft); }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .dive-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 580px) {
-      .dive-grid { grid-template-columns: 1fr; }
-      .topnav-links { display: none; }
-      .hero h1 { font-size: 1.9rem; }
-      .page-wrap { padding: 24px 16px 48px; }
-    }
-  
-    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
-    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
-    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
-    .topnav-translate .goog-te-gadget-simple {
-      background: transparent !important;
-      border: 1px solid #d4dad0 !important;
-      border-radius: 999px !important;
-      padding: 7px 14px !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-      font-size: 0.82rem !important;
-      cursor: pointer;
-      line-height: 1.2 !important;
-    }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
-    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
-    .topnav-translate-reset {
-      display: none; background: transparent; border: 1px solid #d4dad0;
-      border-radius: 999px; padding: 7px 12px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
-      margin-right: 10px; line-height: 1.2;
-    }
-    .topnav-translate-reset:hover { background: #f3f5ef; }
-    body.translated-ltr .topnav-translate-reset,
-    body.translated-rtl .topnav-translate-reset { display: inline-block; }
-    body { top: 0 !important; }
-    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
-    .goog-text-highlight { background: none !important; box-shadow: none !important; }
-
-    .topnav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
-    }
-    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
-
-    @media (max-width: 860px) {
-      .topnav-inner { position: relative; flex-wrap: nowrap; }
-      .topnav-links {
-        display: none !important;
-        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
-        background: #fff; flex-direction: column !important; gap: 0 !important;
-        padding: 8px 0; margin: 0 !important;
-        border-top: 1px solid #d4dad0;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        z-index: 60;
-      }
-      .topnav-links.open { display: flex !important; }
-      .topnav-links a {
-        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
-        font-size: 1rem !important;
-      }
-      .topnav-links a:last-child { border-bottom: none !important; }
-      .topnav-hamburger { display: block; }
-      .topnav-translate { margin-right: 6px; }
-      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
-      .topnav-cta { white-space: nowrap; display: none !important; }
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Dives — Livable Telluride</title>
+<meta name="description" content="Long-form, source-linked explainers on the projects and policies shaping Telluride and San Miguel County — timelines, original documents, and key votes.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/deep-dives.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/deep-dives.html">
+<meta property="og:title" content="Deep Dives — Livable Telluride">
+<meta property="og:description" content="Long-form, source-linked explainers on the projects and policies shaping Telluride and San Miguel County — timelines, original documents, and key votes.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<style>
+  .feat-wrap { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; }
+  .feat { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
+  .feat .img-frame { aspect-ratio: 4/3; border-radius: 10px; box-shadow: var(--shadow-media); }
+  .img-frame.contain { background: linear-gradient(150deg, #e7efe7, #f7f2e6); }
+  .img-frame.contain img { object-fit: contain; padding: 10px; }
+  .story:hover .img-frame.contain img { transform: none; }
+  .feat h2 { font: 600 42px/1.08 var(--serif); letter-spacing: -.015em; margin: 12px 0 10px; }
+  .feat h2 a { color: var(--forest); }
+  .feat:hover h2 a { color: var(--rust); }
+  .feat .dek { font: 400 16.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 12px; }
+  .all-wrap { max-width: var(--maxw); margin: 0 auto; padding: 44px var(--pad-x) 0; }
+  .all-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 24px; }
+  .dive-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .dive-card .img-frame { aspect-ratio: 16/9; border-radius: 10px; margin-bottom: 12px; }
+  .dive-card h3 { font: 600 26px/1.15 var(--serif); margin: 8px 0 6px; }
+  .dive-card h3 a { color: var(--forest); }
+  .dive-card .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 8px; }
+  @media (max-width: 900px) { .feat, .dive-grid { grid-template-columns: 1fr; } }
+  .blog-wrap { max-width: var(--maxw); margin: 0 auto; padding: 52px var(--pad-x) 0; }
+  .blog-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 24px; }
+  .blog-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; }
+  .blog-card .img-frame { aspect-ratio: 16/9; border-radius: 10px; margin-bottom: 10px; background: linear-gradient(150deg, #e7efe7, #f7f2e6); }
+  .blog-card h3 { font: 600 19px/1.25 var(--serif); margin: 6px 0 6px; }
+  .blog-card h3 a { color: var(--forest); }
+  .blog-card:hover h3 a { color: var(--rust); }
+  .blog-card .dek { font: 400 14px/1.6 var(--sans); color: var(--body2); margin: 0 0 6px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr; } }
+  @media (min-width: 901px) and (max-width: 1100px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+</style>
 </head>
 <body>
+<div id="lt-header"></div>
 
-  <!-- Nav -->
-  <header class="topnav">
-    <div class="topnav-inner">
-      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-        <img src="logo/Livable Telluride Logo.png" alt="Livable Telluride">
-      </a>
-      <nav class="topnav-links">
-        <a href="/local-news.html">Local News</a>
-        <a href="/gov-hub.html">Gov-Hub</a>
-        <a href="/deep-dives.html" class="active">Deep Dives</a>
-        <a href="/events.html">Events</a>
-        <a href="/hub-bub.html">Hub-Bub</a>
-        <a href="/local-orgs.html">Local Orgs</a>
-        <a href="/projects-map/">Projects Map</a>
-        <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-      </nav>
-      <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-      <div id="lvLangWidget" aria-hidden="true"></div>
-      <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
-    </div>
-  </header>
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Learn <span class="sep">&rsaquo;</span> Deep Dives</div>
+    <h1>Deep Dives</h1>
+    <p class="sub">Long-form, source-linked explainers on the projects and policies shaping the region &mdash; timelines, original documents, and key votes.</p>
+  </div>
+</header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Deep Dives</h1>
-      <p>Research-backed explanation on the land use decisions, and development projects that will shape the Telluride region for decades.</p>
-    </div>
-  </section>
-
-  <!-- Cards -->
-  <main class="page-wrap">
-
-    <div class="section-intro">
-      <h2>Active topics</h2>
-      <p>Updated as new filings, meetings, and records become available.</p>
-    </div>
-
-    <div class="dive-grid">
-
-      <!-- 1. Carhenge / Shandoka -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=800"
-            alt="Carhenge / Shandoka redevelopment site"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">In-Town Development</span>
-        </div>
-        <div class="body">
-          <h3>Carhenge / Shandoka</h3>
-          <div class="status-line">Entering formal land use review</div>
-          <p class="intro-text">Two of the most significant in-town redevelopment projects advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-carhenge.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 2. Society Turn -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="https://img1.wsimg.com/isteam/ip/3f388f66-602e-4c3d-940c-27e48680fdb9/Society%20Turn%20Aerial.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1200,cg:true"
-            alt="Society Turn aerial view"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Valley Floor Entrance</span>
-        </div>
-        <div class="body">
-          <h3>Society Turn / Valley Floor Entrance</h3>
-          <div class="status-line">High-consequence regional issue — active scrutiny</div>
-          <p class="intro-text">A 19.7-acre mixed-use PUD by Genesee Properties along Highway 145. The project bundles a regional hospital site, employee housing, medical offices, retail, hotel, and conference facilities — raising questions about total scale, traffic, wildfire evacuation, and the valley's single entry/exit point.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-society.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 3. Gondola 3A -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="images/blog/gondola-station.png"
-            alt="Telluride gondola station"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Ballot Measure · SMART District</span>
-        </div>
-        <div class="body">
-          <h3>Gondola 3A</h3>
-          <div class="status-line">Funding gap — agreement expires 2027</div>
-          <p class="intro-text">Ballot Issue 3A approved ~$8.2M/year in new SMART district tax revenue marketed as funding a new gondola. But replacement cost is estimated at $120–150M+. CORA records revealed over $175,000 in consultant spending before the ballot referral, including polling and campaign management funded in part by the Four Seasons developer.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-gondola.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 4. Diamond Ridge -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="images/Diamond Ridge.jpg"
-            alt="Diamond Ridge — 105-acre site on Deep Creek Mesa"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Courts · Zoning · Housing</span>
-        </div>
-        <div class="body">
-          <h3>Diamond Ridge</h3>
-          <div class="status-line">Courts ruled the County broke its own rules — twice</div>
-          <p class="intro-text">A 105-acre property on Deep Creek Mesa near the Telluride Airport that San Miguel County purchased for $7.2M with plans for high-density affordable housing. Neighboring landowners challenged the rezoning and won twice in court — first on due process and illegal spot zoning grounds, then on a PUD interpretation confirming 35-acre lot restrictions.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-diamond.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 5. The Growing Weight of Telluride's Debt
-           Links to the long-form spending tracker at
-           /Blog%20Posts/the-growing-weight-of-tellurides-debt/, which
-           covers the 2024 $103M budget allocation + the Telluride
-           Housing Authority enterprise/debt-structure questions.
-           Replaced the Wildfire Resiliency card here on 2026-05-25 at
-           user request; the wildfire deep-dive page still exists at
-           /deep-dive-wildfire.html if we want to surface it again later. -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="logo/Telluride Town.png"
-            alt="Town of Telluride"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Budget · Bonds · Spending</span>
-        </div>
-        <div class="body">
-          <h3>The Growing Weight of Telluride's Debt</h3>
-          <div class="status-line">$32M (2015) → ~$100M today; debt is the engine</div>
-          <p class="intro-text">Telluride's annual budget grew from $32M in 2015 to roughly $100M today, with much of that expansion tied to bond debt and Housing Authority obligations. A spending tracker of the 2024 $103M allocation across housing, infrastructure, and water — plus structural questions about THA debt: four of five projects appear to have pre-known revenue deficits, with rental income covering only 35–66% of debt service and the gap filled by tax revenue.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/Blog%20Posts/the-growing-weight-of-tellurides-debt/">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 6. VooDoo — THA debt case study (added 2026-05-29) -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="logo/Telluride Town.png"
-            alt="Town of Telluride / Telluride Housing Authority"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Affordable Housing · THA Debt</span>
-        </div>
-        <div class="body">
-          <h3>VooDoo</h3>
-          <div class="status-line">$20M in bonds · $23M balloon due Dec 2032 · DSCR 0.66×</div>
-          <p class="intro-text">27 deed-restricted units and the Coffee Cowboy commercial space, completed in 2024. The most financially exposed of the Telluride Housing Authority's five projects: three series of NBH Bank revenue bonds all mature simultaneously in December 2032, rent covers about two-thirds of annual debt service, and no sinking fund has been identified in the Town budget to absorb the $23M balloon.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-voodoo.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 7. Field Paving at Town Park (added 2026-05-29) -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="/img/deep-dives/town-park-oval-site-plan.jpg"
-            alt="CCA illustrative site plan for the Town Park Oval and Warner Field improvements"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Town Park · Capital Project</span>
-        </div>
-        <div class="body">
-          <h3>Field Paving at Town Park</h3>
-          <div class="status-line">Permitting / pre-bid — Fall 2026 + Spring 2027</div>
-          <p class="intro-text">The Town Park Oval and Warner Field improvements would convert the Oval into a more formal all-season recreation and event surface (sports court / ice rink, wall ball, pickleball, basketball, festival use) and add outfield fencing on Warner Field. The two-phase $2.13M capital project raises questions about impervious surface, park character, event intensity, and long-term operating costs in Telluride's central public park.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-field-paving-town-park.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 6. Code Changes & Accelerated Review -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="assets/ssr/SMC-Housing-Code-Update-infographic.jpg"
-            alt="SMC Housing Code Update infographic"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Land Use Code · County Policy</span>
-        </div>
-        <div class="body">
-          <h3>Code Changes &amp; Accelerated Review</h3>
-          <div class="status-line">15-month code audit underway — SSR shaping amendments</div>
-          <p class="intro-text">Code reform is often where the biggest long-term land-use changes happen, because one ordinance affects every future project. San Miguel County is undertaking a comprehensive land use code audit funded by a Colorado Proposition 123 grant, with a Stakeholder Strategic Roundtable shaping draft amendments through September 2026.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-code.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-      <!-- 7. Wildfire Resiliency (re-added 2026-05-29 — restored from
-           commit 08fc8b6 which had moved it aside for the Debt card) -->
-      <article class="dive-card">
-        <div class="img-wrap">
-          <img
-            src="logo/Telluride Fire.png"
-            alt="Telluride Fire Protection District"
-            loading="lazy"
-            onerror="this.style.display='none'"
-          >
-          <span class="topic-badge">Fire Code · WUI · Safety</span>
-        </div>
-        <div class="body">
-          <h3>Wildfire Resiliency</h3>
-          <div class="status-line">Multiple bodies weighing adoption simultaneously</div>
-          <p class="intro-text">The Town, San Miguel County, and the Telluride Fire Protection District are all considering Colorado's Wildfire Resiliency Code and the International Wildland Urban Interface (WUI) Code. In a box canyon with one primary exit road, wildfire preparedness is an existential community concern — and no evacuation analysis has been completed for the Society Turn PUD.</p>
-        </div>
-        <div class="card-footer">
-          <a class="btn-explore" href="/deep-dive-wildfire.html">
-            Explore <span class="arrow">→</span>
-          </a>
-        </div>
-      </article>
-
-    </div><!-- /.dive-grid -->
-
-    <!-- ── Blog / Newsletter posts ── -->
-    <div class="section-intro" style="margin-top:56px;">
-      <h2 class="section-title">Newsletter &amp; Blog Posts</h2>
-      <span class="section-count" id="blogCount"></span>
-    </div>
-    <p style="color:var(--text-secondary);margin:0 0 28px;font-size:0.95rem;">
-      Long-form posts, financial analyses, and newsletters from Livable Telluride — including each newsletter edition as it's sent.
-    </p>
-    <div class="blog-grid" id="blogGrid">
-      <p style="color:var(--text-muted);font-size:0.9rem;">Loading posts…</p>
-    </div>
-
-  </main><!-- /.page-wrap -->
-
-  <!-- Info strip -->
-  <section class="info-strip">
-    <div class="info-strip-inner">
-      <div class="info-strip-text">
-        <h3>Follow along on Gov-Hub</h3>
-        <p>Each deep dive is updated automatically when new agendas, filings, and meeting summaries come in. The Gov-Hub tracks meetings for Town Council, Planning &amp; Zoning, the BOCC, SMART, school board, and more — refreshed every 6 hours.</p>
-      </div>
-      <div class="info-strip-links">
-        <a class="strip-btn filled" href="/gov-hub.html">Open Gov-Hub →</a>
-        <a class="strip-btn" href="/local-news.html">Local News</a>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    /* ── Blog post mini-cards ── */
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    @media (max-width: 1100px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
-    @media (max-width: 740px)  { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 480px)  { .blog-grid { grid-template-columns: 1fr; } }
-
-    .blog-card {
-      background: var(--bg-paper);
-      border: 1px solid var(--border-soft);
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(36,49,46,0.07);
-      display: flex;
-      flex-direction: column;
-      transition: box-shadow 0.15s, transform 0.15s;
-    }
-    .blog-card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
-
-    .blog-card-img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-      display: block;
-      background: var(--bg-hero);
-    }
-    .blog-card-img-placeholder {
-      width: 100%; height: 120px;
-      background: linear-gradient(135deg, var(--forest) 0%, var(--accent-green) 100%);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2rem;
-    }
-    /* Anchor wrapping the image makes the card visual clickable in addition
-       to the "Read post →" link below. display:block so it doesn't add an
-       inline baseline gap under the image. */
-    .blog-card-img-link { display: block; }
-    .blog-card-body {
-      padding: 12px 14px 14px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .blog-card-meta {
-      font-size: 0.72rem;
-      color: var(--text-muted);
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-    .blog-card-meta .sep { opacity: 0.4; }
-    .blog-card h4 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 0.88rem;
-      line-height: 1.35;
-      color: var(--text-primary);
-    }
-    .blog-card-excerpt {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      line-height: 1.45;
-      flex: 1;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .blog-card-link {
-      font-size: 0.76rem;
-      font-weight: 600;
-      color: var(--forest);
-      text-decoration: none;
-      margin-top: 6px;
-    }
-    .blog-card-link:hover { text-decoration: underline; }
-  </style>
-
-  <script>
-    (function () {
-      const grid = document.getElementById('blogGrid');
-      const countEl = document.getElementById('blogCount');
-
-      function renderBlog(posts) {
-        if (!posts || !posts.length) {
-          grid.innerHTML = '<p style="color:var(--text-muted)">No posts yet.</p>';
-          return;
-        }
-        // Sort newest first
-        const sorted = posts.slice().sort((a, b) => {
-          return new Date(b.date || 0) - new Date(a.date || 0);
-        });
-        if (countEl) countEl.textContent = sorted.length + ' post' + (sorted.length !== 1 ? 's' : '');
-        grid.innerHTML = sorted.map(p => {
-          const href   = p.href || p.url || '#';
-          const title  = p.title || 'Untitled';
-          const date   = p.date || '';
-          const rt     = p.readTime || '';
-          const excerpt = p.excerpt || p.summary || '';
-          const img    = p.image || p.img || '';
-          const safeTitle = title.replace(/"/g,'&quot;');
-          // Wrap the image (or placeholder) in an anchor so the card visual is
-          // clickable, matching the "Read post →" link below. onerror replaces
-          // just the <img> (this.outerHTML) with the placeholder — the previous
-          // `this.parentNode.innerHTML = …` would wipe the entire article body.
-          const imgHtml = img
-            ? `<a class="blog-card-img-link" href="${href}" target="_blank" rel="noopener" aria-label="${safeTitle}"><img class="blog-card-img" src="${img}" alt="${safeTitle}" loading="lazy" onerror="this.outerHTML='<div class=blog-card-img-placeholder>📝</div>'"></a>`
-            : `<a class="blog-card-img-link" href="${href}" target="_blank" rel="noopener" aria-label="${safeTitle}"><div class="blog-card-img-placeholder">📝</div></a>`;
-          const metaParts = [date, rt ? rt + ' read' : ''].filter(Boolean);
-          return `
-            <article class="blog-card">
-              ${imgHtml}
-              <div class="blog-card-body">
-                <div class="blog-card-meta">${metaParts.join('<span class="sep">·</span>')}</div>
-                <h4>${title}</h4>
-                ${excerpt ? `<p class="blog-card-excerpt">${excerpt}</p>` : ''}
-                <a class="blog-card-link" href="${href}" target="_blank" rel="noopener">Read post →</a>
-              </div>
-            </article>`;
-        }).join('');
-      }
-
-      // Blog posts now come from the JSON mirror data/blog-posts.json (~10 KB)
-      // instead of loading the full ~511 KB gov-helpers.js just for this list.
-      // JS→JSON migration: both exist and are CI-verified identical, so on ANY
-      // fetch failure we fall back to the old path (load gov-helpers.js + read
-      // the BLOG_POSTS global) — the render is identical either way.
-      const day = Math.floor(Date.now()/600000);
-      function blogFromGlobal() {
-        const s = document.createElement('script');
-        s.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
-        s.onload = function () {
-          if (typeof BLOG_POSTS !== 'undefined') renderBlog(BLOG_POSTS);
-          else grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>';
-        };
-        s.onerror = function () { grid.innerHTML = '<p style="color:var(--text-muted)">Could not load posts.</p>'; };
-        document.body.appendChild(s);
-      }
-      fetch('https://livabletelluride.org/data/blog-posts.json?v=' + day)
-        .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-        .then(function (posts) { if (Array.isArray(posts) && posts.length) renderBlog(posts); else blogFromGlobal(); })
-        .catch(blogFromGlobal);
-    })();
-
-    /* Make each deep-dive card's image a hyperlink to that card's page.
-       The destination is derived from the card's existing "Explore →"
-       button so there's a single source of truth and any future card is
-       covered automatically. */
-    (function linkifyCardImages() {
-      document.querySelectorAll('.dive-card').forEach(function (card) {
-        var explore = card.querySelector('.btn-explore');
-        var img = card.querySelector('.img-wrap img');
-        if (!explore || !img || img.closest('a')) return;
-        var a = document.createElement('a');
-        a.href = explore.getAttribute('href');
-        a.className = 'img-link';
-        var title = card.querySelector('h3');
-        a.setAttribute('aria-label', title ? title.textContent.trim() : 'Open deep dive');
-        img.parentNode.insertBefore(a, img);
-        a.appendChild(img);
-      });
-    })();
-  </script>
+<div class="feat-wrap" id="feat-slot"></div>
 
 
-<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<div class="all-wrap">
+  <div class="all-head"><span class="eyebrow">The library</span><h2 class="section-h">All deep dives</h2></div>
+  <div class="dive-grid" id="dive-grid"><p class="meta">Loading&hellip;</p></div>
+</div>
+
+<div class="blog-wrap">
+  <div class="blog-head"><span class="eyebrow">From the newsletter</span><h2 class="section-h">The Livable Telluride blog</h2></div>
+  <div class="blog-grid" id="blog-grid"><p class="meta">Loading&hellip;</p></div>
+</div>
+
+<div id="lt-footer"></div>
+<script src="site.js?v=7"></script>
+<script src="/js/lt-data.js?v=4"></script>
 <script>
-// ── EN/ES language toggle (replaced Google Translate's 24-lang
-//   dropdown 2026-05-29). Google Translate is still the engine doing
-//   the translation when the cookie is set; we just hide its UI
-//   chrome (banner + dropdown) and expose a single binary pill in the
-//   topnav. Cookie format: googtrans=/en/<lang>; deleting it reverts
-//   to English. ────────────────────────────────────────────────── */
-function lvCurrentLang() {
-  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-  return m ? m[1] : 'en';
-}
-function lvSetTransCookie(value) {
-  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  var domains = ['', '.' + location.hostname, location.hostname];
-  domains.forEach(function(d){
-    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
-    if (d) c += '; domain=' + d;
-    document.cookie = c;
-  });
-}
-function lvToggleLang() {
-  var cur = lvCurrentLang();
-  lvSetTransCookie(cur === 'es' ? '' : 'es');
-  location.reload();
-}
-function googleTranslateElementInit() {
-  // includedLanguages is just 'es' now — the visible toggle only
-  // offers Spanish, but Google Translate still needs an init call
-  // to act on the cookie.
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'lvLangWidget');
-}
-(function(){
-  // Inject CSS for the pill + hide all Google Translate UI chrome
-  var hideCss = document.createElement('style');
-  hideCss.textContent = [
-    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
-    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame { display: none !important; }',
-    '.goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; }',
-    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
-    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
-    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
-    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
-  ].join('\n');
-  document.head.appendChild(hideCss);
-  // Set initial button label based on current state
-  function setLabel() {
-    var btn = document.getElementById('lvLangToggle');
-    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+(function () {
+  var grid = document.getElementById('dive-grid');
+  if (!window.LTData) { grid.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  // Per-topic presentation config (order = display order; first = featured).
+  // Standalone dives (own pages, not LAND_USE_ISSUES-driven) are listed as extras.
+  // contain:true = image carries baked-in text; never crop it.
+  var TOPICS = [
+    { key: 'carhenge', cat: 'Land Use', contain: true },
+    { key: 'skigate',  cat: 'Governance' },
+    { key: 'society',  cat: 'Land Use' },
+    { key: 'code',     cat: 'Policy' },
+    { key: 'wildfire', cat: 'Environment' },
+    { key: 'diamond',  cat: 'Land Use' }
+  ];
+  var EXTRAS = [
+    { label: 'The Gondola', cat: 'Transportation', href: 'deep-dive-gondola.html', img: '/images/blog/gondola-station.png',
+      dek: 'The free gondola’s funding fight — SMART’s ballot measure, the cost-sharing IGA, and what happens when the money runs out.' },
+    { label: 'VooDoo', cat: 'Housing Finance', href: '/deep-dive-voodoo.html', img: '/images/blog/voodoo-project.png',
+      dek: 'A $20M debt stack on one housing project — the $23M balloon due in 2032, and the rent-vs-debt-service shortfall.' }
+  ];
+  function clip(s, n) {
+    s = String(s || ''); if (s.length <= n) return s;
+    return s.slice(0, n).replace(/\s+\S*$/, '') + '…';
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setLabel);
-  } else { setLabel(); }
-  // Load Google Translate
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async = true;
-  document.head.appendChild(s);
-})();
-(function(){
-  function init(){
-    var btn = document.getElementById('topnavHamburger');
-    if (!btn) return;
-    var links = document.querySelector('.topnav-links');
-    if (!links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? '✕' : '☰';
-    });
-    // close drawer when a link is clicked
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = '☰';
-      });
-    });
+  function card(t, issue) {
+    // Every card gets an image — box-canyon stock when a topic has none.
+    var src = (issue && issue.heroImage) || t.img || '/img/box-canyon.jpg';
+    // heroImage may be site-root-relative ('assets/…') — resolve absolutely
+    // so cards work from the staged /redesign/ mount too (same as deep-dive.js).
+    if (src && !/^https?:\/\//.test(src) && src.charAt(0) !== '/') src = '/' + src;
+    var cls = 'img-frame' + (t.contain ? ' contain' : '');
+    var img = '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>';
+    var dek = (issue && issue.intro) ? issue.intro : (t.dek || '');
+    var docs = issue && issue.docs ? issue.docs.length + ' source documents' : '';
+    var tl = issue && issue.timeline ? issue.timeline.length + ' timeline entries' : '';
+    return '<article class="dive-card story">' + img +
+      '<div><span class="tag">' + LTData.esc(t.cat) + '</span>' +
+      '<h3><a href="' + href(t) + '">' + LTData.esc(issue ? issue.label : t.label) + '</a></h3>' +
+      '<p class="dek">' + LTData.esc(clip(dek, 220)) + '</p>' +
+      '<div class="meta">' + LTData.esc([docs, tl].filter(Boolean).join(' · ')) + '</div></div></article>';
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+  function href(t) { return t.href || ('deep-dive-' + t.key + '.html'); }
+
+  LTData.load(['land-use-issues']).then(function (data) {
+    var issues = data['land-use-issues'] || {};
+    var feat = TOPICS[0]; var fi = issues[feat.key];
+    if (fi) {
+      document.getElementById('feat-slot').innerHTML =
+        '<article class="feat story">' +
+        '<div><span class="tag rust-tint">Featured dive</span> <span class="tag">' + LTData.esc(feat.cat) + '</span>' +
+        '<h2><a href="' + href(feat) + '">' + LTData.esc(fi.label) + '</a></h2>' +
+        '<p class="dek">' + LTData.esc(clip(fi.intro, 300)) + '</p>' +
+        '<a class="btn btn-forest" href="' + href(feat) + '">Read the deep dive &rarr;</a></div>' +
+        (fi.heroImage ? '<a href="' + href(feat) + '"><div class="img-frame' + (feat.contain ? ' contain' : '') + '"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
+        '</article>';
+    }
+    var cards = TOPICS.slice(1).map(function (t) { return card(t, issues[t.key]); })
+      .concat(EXTRAS.map(function (t) { return card(t, null); }));
+    grid.innerHTML = cards.join('');
+  }).catch(function (err) { LTData.showError(grid, err); });
+
+  // ── The Livable Telluride blog — every newsletter/post, newest first.
+  // Loaded separately so a blog-data hiccup never blanks the dives library.
+  var blogGrid = document.getElementById('blog-grid');
+  LTData.loadOne('blog-posts').then(function (posts) {
+    if (!Array.isArray(posts) || !posts.length) { blogGrid.innerHTML = '<p class="meta">No posts yet.</p>'; return; }
+    var sorted = posts.slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
+    blogGrid.innerHTML = sorted.map(function (p) {
+      var link = p.href || p.url || '#';
+      // Strip the zero-width preheader padding Mailchimp leaves in excerpts.
+      var dek = String(p.excerpt || p.summary || '').replace(/[​-‍﻿͏­]/g, '').trim();
+      var img = p.image || p.img || '';
+      var imgHtml = '<a href="' + LTData.esc(link) + '" target="_blank" rel="noopener"><div class="img-frame">' +
+        (img ? '<img src="' + LTData.esc(img) + '" alt="" loading="lazy">' : '') + '</div></a>';
+      return '<article class="blog-card story">' + imgHtml +
+        '<div><span class="tag">' + LTData.esc(p.category || 'Newsletter') + '</span>' +
+        '<h3><a href="' + LTData.esc(link) + '" target="_blank" rel="noopener">' + LTData.esc(p.title || 'Untitled') + '</a></h3>' +
+        (dek ? '<p class="dek">' + LTData.esc(clip(dek, 200)) + '</p>' : '') +
+        '<div class="meta">' + LTData.esc(p.date || '') + '</div></div></article>';
+    }).join('');
+  }).catch(function (err) { LTData.showError(blogGrid, err); });
 })();
 </script>
-  <script defer src="/js/site-footer.js?v=20260618"></script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

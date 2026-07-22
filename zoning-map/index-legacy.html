@@ -6,8 +6,6 @@
 <title>San Miguel County Zoning and Parcel Development Map</title>
 <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
-<meta name="robots" content="noindex"><!-- STAGING: remove at cutover -->
-<link rel="stylesheet" href="../lt.css?v=8">
 <style>
 :root {
   --green:#24483d;
@@ -61,16 +59,9 @@ ul.legend-notes li { margin:3px 0; }
   #sidebar { order:2; border-right:0; border-top:1px solid var(--line); }
   #map { order:1; }
 }
-
-/* ── Redesign shell: shared nav sits above the full-height app ── */
-body { display:flex; flex-direction:column; }
-.lt-nav { flex-shrink:0; }
-#app { flex:1 1 auto; height:auto; min-height:0; }
-#sidebar header h1 { color:#fff; }  /* lt.css paints h1 forest; header is forest-on-forest without this */
 </style>
 </head>
-<body data-no-footer>
-<div id="lt-header"></div>
+<body>
 <div id="app">
 <aside id="sidebar">
   <header>
@@ -727,40 +718,37 @@ body { display:flex; flex-direction:column; }
 </div>
 
 <script type="module">
-/* Staged copy under /redesign/ — data stays in the live app folder. */
-const DATA_BASE = new URL('/zoning-map/', location.origin);
-
 /* ── Data loader (split out of the monolith; fetched in parallel) ── */
 let aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data, steepSlopesData;
 try {
   [aldasoroPudData, butcherCreekPudData, backmanVillageSubdivisionData, meadowsAtDeepCreekPudData, sunnysideRanchesPudData, deepCreekMesaRanchPudData, millCreekPudData, skyfieldPudData, westMeadowsPudData, lawsonHillPudData, lawsonHillIliumPudData, twoRiversPudData, lastDollarPudData, zoningData, subdivisionData, addressData, countyOutlineData, troutLakePudData, wilsonMesaRanchesPudData, societyTurnPudData, parcelCData, eastEndFluData, wrightsMesaFluData, conservationEasementsData, municipalBoundariesData, part77Data, steepSlopesData] = await Promise.all([
-    fetch(new URL('./data/aldasoro-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/butcher-creek-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/backman-village-subdivision.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/meadows-at-deep-creek-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('meadows-at-deep-creek-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/sunnyside-ranches-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('sunnyside-ranches-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/deep-creek-mesa-ranch-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('deep-creek-mesa-ranch-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/mill-creek-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('mill-creek-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/skyfield-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('skyfield-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/west-meadows-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('west-meadows-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/lawson-hill-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('lawson-hill-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/lawson-hill-ilium-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('lawson-hill-ilium-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/two-rivers-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('two-rivers-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/last-dollar-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('last-dollar-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/zoning.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('zoning.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/subdivision.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('subdivision.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/address.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('address.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/county-outline.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('county-outline.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/trout-lake-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('trout-lake-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/wilson-mesa-ranches-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('wilson-mesa-ranches-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/society-turn-pud.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/parcel-c.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('parcel-c.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/east-end-flu.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/wrights-mesa-flu.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('wrights-mesa-flu.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/conservation-easements.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/municipal-boundaries.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('municipal-boundaries.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/part77-surfaces.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('part77-surfaces.json HTTP ' + r.status); return r.json(); }),
-    fetch(new URL('./data/steep-slopes.json', DATA_BASE)).then(r => { if (!r.ok) throw new Error('steep-slopes.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/aldasoro-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('aldasoro-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/butcher-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('butcher-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/backman-village-subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('backman-village-subdivision.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/meadows-at-deep-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('meadows-at-deep-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/sunnyside-ranches-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('sunnyside-ranches-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/deep-creek-mesa-ranch-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('deep-creek-mesa-ranch-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/mill-creek-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('mill-creek-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/skyfield-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('skyfield-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/west-meadows-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('west-meadows-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/lawson-hill-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('lawson-hill-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/lawson-hill-ilium-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('lawson-hill-ilium-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/two-rivers-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('two-rivers-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/last-dollar-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('last-dollar-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/zoning.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('zoning.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/subdivision.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('subdivision.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/address.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('address.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/county-outline.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('county-outline.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/trout-lake-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('trout-lake-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/wilson-mesa-ranches-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wilson-mesa-ranches-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/society-turn-pud.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('society-turn-pud.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/parcel-c.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('parcel-c.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/east-end-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('east-end-flu.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/wrights-mesa-flu.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('wrights-mesa-flu.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/conservation-easements.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('conservation-easements.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/municipal-boundaries.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('municipal-boundaries.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/part77-surfaces.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('part77-surfaces.json HTTP ' + r.status); return r.json(); }),
+    fetch(new URL('./data/steep-slopes.json', import.meta.url)).then(r => { if (!r.ok) throw new Error('steep-slopes.json HTTP ' + r.status); return r.json(); }),
   ]);
 } catch (err) {
   const el = document.getElementById('map');
@@ -1159,7 +1147,7 @@ function airportNote(props, p77, lng, lat, groundFt, token) {
     ? 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface'
     : 'roughly a <b>9,220&nbsp;ft&nbsp;MSL</b> ceiling under the inner (horizontal) surface, rising to ~<b>9,420&nbsp;ft&nbsp;MSL</b> across the conical surface, with lower sloping limits under the runway approach paths';
   return '<div class="field" style="margin-top:8px;font-weight:800;color:#8a3b1f">✈︎ Airport height restriction (Telluride Regional Airport)</div>'
-    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="/zoning-map/faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>'
+    + '<div class="field" style="font-size:11px;color:#555;line-height:1.45">This land is under the airport\'s FAA <b>FAR&nbsp;Part&nbsp;77</b> airspace surfaces, which cap how tall buildings, trees, and equipment can be so they don\'t penetrate protected airspace &mdash; ' + ceiling + ' (airport elevation 9,070&nbsp;ft). Exterior <b>lighting/glare</b> may also be restricted to protect pilots. These surfaces are <b>approximate</b>; confirm a specific site under <b>SMC Land Use Code §5-418</b>. <a href="faa-part77-tex-2016.pdf" target="_blank" rel="noopener">View the Part&nbsp;77 airspace map →</a></div>'
     + ((surf !== "flag" && typeof lng === "number")
         ? '<span class="p77h p77h-' + token + '">'
           + (groundFt != null ? airportHeightRows(lng, lat, surf, groundFt)
@@ -3107,6 +3095,5 @@ document.querySelectorAll(".legend-item button").forEach(btn => {
 <!-- Built land effective counts: {'built': 8205, 'empty': 1947, 'unknown': 598}; original counts: {'built': 7201, 'empty': 2948, 'unknown': 601}; promoted_by_same_owner_contiguous=1004; owner_groups=755 -->
 <!-- Built land effective counts with federal forest/public land gray: {'built': 8171, 'empty': 1854, 'unknown': 725}; original counts: {'built': 7201, 'empty': 2948, 'unknown': 601}; promoted_by_same_owner_contiguous=991; federal_forest_public_gray=465; forest_pre_override_built=21; owner_groups=751 -->
 <!-- Buildable w/o Restrictions candidates: 749; excludes PUD/subdivision overlap, federal forest/public, and built-effective parcels. -->
-<script src="../site.js?v=7"></script>
 </body>
 </html>

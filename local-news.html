@@ -1,1422 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local News — Livable Telluride</title>
-  <meta name="description" content="Local News from across the Telluride, Colorado region — gathered from the Telluride Times, KOTO, the San Miguel Basin Forum, and local government.">
-  <style>
-    /* ─────────────────────────────────────────
-       Base + nav (matches the live site's tone)
-       ───────────────────────────────────────── */
-    :root {
-      --forest: #21443c;
-      --forest-soft: #2a5347;
-      --accent-green: #2f7a5f;
-      --bg-warm: #fdfbf6;     /* page body — lighter, near-white cream */
-      --bg-hero: #efe9dc;     /* hero band — slightly darker warm beige */
-      --bg-paper: #fffdf9;
-      --text-primary: #1a2e29;
-      --text-secondary: #4a5e57;
-      --text-muted: #5f7169;
-      --border-soft: rgba(33, 68, 60, 0.12);
-      --shadow-card: 0 4px 18px rgba(36, 49, 46, 0.10);
-      --font-heading: 'Georgia', 'Times New Roman', serif;
-      --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: var(--font-main);
-      color: var(--text-primary);
-      background: var(--bg-warm);
-      line-height: 1.5;
-    }
-
-    /* Top nav */
-    .topnav {
-      background: #fff;
-      border-bottom: 1px solid var(--border-soft);
-      padding: 14px 0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-    .topnav-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-    }
-    .topnav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      color: var(--forest);
-      font-family: var(--font-heading);
-      font-weight: 700;
-      font-size: 1.15rem;
-      line-height: 1.1;
-    }
-    .topnav-logo img { height: 80px; width: auto; object-fit: contain; }
-    .topnav-logo small {
-      display: block;
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      color: var(--text-muted);
-      font-weight: 600;
-      margin-top: 2px;
-      font-family: var(--font-main);
-    }
-    .topnav-links {
-      display: flex;
-      gap: 14px;
-      margin-left: 28px;
-      flex: 1;
-    }
-    .topnav-links a {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text-primary);
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      padding: 6px 2px;
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
-    }
-    .topnav-links a:hover { color: var(--forest); }
-    .topnav-links a.active { color: var(--forest); border-bottom-color: var(--forest); }
-    .topnav-cta { white-space: nowrap;
-      display: inline-block;
-      background: var(--forest);
-      color: #fff;
-      text-decoration: none;
-      padding: 9px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-
-    /* Hero — Wilson Peak panorama as masthead.
-       Wilson Peak photo is 5267x724 (~7:1 panorama). Use `cover` so it fills
-       the full hero width on any viewport, anchored bottom-center to keep
-       the iconic peak silhouette in frame as the hero height shrinks on
-       narrower screens. Soft cream→transparent gradient on top so the
-       heading text stays readable over the lighter sky regions. */
-    .hero {
-      /* Photo is 5267x724 (~7.3:1). Hero stays close to that natural
-         ratio so the full panorama shows with minimal cropping. Warm
-         beige overlay + base color tint the header darker than the page
-         body so the masthead reads as its own band, like the sample
-         design (Local News page). */
-      background:
-        linear-gradient(180deg, rgba(239, 233, 220, 0.78) 0%, rgba(239, 233, 220, 0.45) 55%, rgba(239, 233, 220, 0.20) 100%),
-        url('img/wilson-peak.png') no-repeat center center / cover,
-        var(--bg-hero);
-      padding: 28px 0 24px;
-      border-bottom: 1px solid var(--border-soft);
-      min-height: 200px;
-    }
-    .hero h1 { text-shadow: 0 1px 2px rgba(255,255,255,0.6); }
-    .hero p  { text-shadow: 0 1px 2px rgba(255,255,255,0.5); }
-    .hero-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-    .hero h1 {
-      margin: 0 0 8px;
-      font-family: var(--font-heading);
-      font-size: 2.6rem;
-      color: var(--text-primary);
-    }
-    .hero p {
-      margin: 0;
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      max-width: 640px;
-    }
-
-    /* Page layout: main + sidebar */
-    .page-wrap {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 32px;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) 280px;
-      gap: 32px;
-      align-items: start;
-    }
-
-    /* Filter chips row */
-    .filter-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-    .chip {
-      display: inline-block;
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: #fff;
-      border: 1px solid var(--border-soft);
-      color: var(--text-secondary);
-      font-size: 0.88rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-    .chip:hover { background: var(--bg-paper); }
-    .chip.active {
-      background: var(--forest);
-      color: #fff;
-      border-color: var(--forest);
-    }
-
-    /* Featured card */
-    .featured-card {
-      background: #fff;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      display: grid;
-      grid-template-columns: minmax(280px, 1fr) 1.4fr;
-      align-items: center; /* center the photo vertically next to taller text */
-      margin-bottom: 28px;
-    }
-    /* Letters-to-the-Editor banner across the top of letter cards */
-    .letters-banner { width: 100%; line-height: 0; }
-    .letters-banner img { width: 100%; height: auto; display: block; }
-    /* Banner sits above the photo, matching the photo column's width (not full card). */
-    .featured-card .featured-media { display: flex; flex-direction: column; }
-    .featured-card .corner-logo { height: 30px; width: auto; object-fit: contain; margin-left: auto; opacity: 0.9; }
-    /* .featured-card .img replaced by .img-wrap-featured for blur-bg treatment */
-    .featured-card .body {
-      padding: 28px 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      position: relative;
-    }
-    .featured-tag {
-      align-self: flex-start;
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      background: var(--bg-warm);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-    .featured-card h2 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.65rem;
-      line-height: 1.25;
-      color: var(--text-primary);
-    }
-    .featured-card .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.85rem;
-    }
-    .featured-card .meta .src-logo { width: 22px; height: 22px; object-fit: contain; }
-    .featured-card .meta .sep { color: var(--border-soft); }
-    .featured-card .summary {
-      color: var(--text-secondary);
-      font-size: 0.96rem;
-      line-height: 1.55;
-    }
-    .featured-card .actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-    }
-    /* Read-more button — picks up the soft sage-green palette of the
-       category tags in the sample design (pale green fill, darker green
-       text). Hover deepens the fill slightly. */
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      background: rgba(47, 122, 95, 0.12);
-      border: 1px solid rgba(47, 122, 95, 0.18);
-      border-radius: 999px;
-      color: var(--forest);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
-      transition: background 0.15s, border-color 0.15s;
-    }
-    .read-more:hover {
-      background: rgba(47, 122, 95, 0.22);
-      border-color: rgba(47, 122, 95, 0.32);
-    }
-
-    /* Card grid */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      border: 1px solid var(--border-soft);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.15s, box-shadow 0.15s;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
-    }
-    .card .img-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #e8e5de;
-    }
-    .card .img-wrap img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    /* KOTO brand-logo fallback — render as a contained logo on a warm
-       cream backdrop, not a cropped photo. The Letters-to-the-Editor
-       icon uses the same class so it's contained (not cropped) too. */
-    .card .img-wrap img.koto-fallback,
-    .featured-card .img-wrap-featured img.koto-fallback {
-      object-fit: contain;
-      padding: 18px;
-      background: #f4ead0;
-    }
-
-    /* Byline for Letters to the Editor — sits directly between the icon
-       image and the title. Subdued so the title still leads. */
-    .letter-author {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: #6b6b6b;
-      margin-bottom: 6px;
-    }
-    .featured-card .letter-author { font-size: 0.95rem; }
-    /* Portrait images: switch to contain so the whole image shows, and
-       fill the letterboxed side bars with a blurred copy of the same
-       image (Apple Music / Spotify treatment). The portrait class is
-       added by JS in handlePortrait() when naturalHeight > naturalWidth. */
-    .card .img-wrap.portrait::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: center;
-      filter: blur(22px) brightness(0.85) saturate(1.1);
-      /* Scale up so blurred edges don't reveal the underlying bg color */
-      transform: scale(1.18);
-    }
-    .card .img-wrap.portrait img {
-      object-fit: contain;
-    }
-    /* Same treatment on the featured card */
-    .featured-card .img-wrap-featured {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: #ddd;
-    }
-    .featured-card .img-wrap-featured img {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .featured-card .img-wrap-featured.portrait::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background-image: var(--bg-img);
-      background-size: cover;
-      background-position: center;
-      filter: blur(28px) brightness(0.82) saturate(1.1);
-      transform: scale(1.18);
-    }
-    .featured-card .img-wrap-featured.portrait img {
-      object-fit: contain;
-    }
-    .card .body {
-      padding: 18px 20px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      flex: 1;
-    }
-    .card h3 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.2rem;
-      line-height: 1.3;
-      color: var(--text-primary);
-    }
-    .card .meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--text-muted);
-      font-size: 0.78rem;
-    }
-    .card .meta .src-logo { width: 18px; height: 18px; object-fit: contain; }
-    .card .summary {
-      color: var(--text-secondary);
-      font-size: 0.86rem;
-      line-height: 1.5;
-      /* Cap each card to ~5 lines so heights stay uniform */
-      display: -webkit-box;
-      -webkit-line-clamp: 5;
-      line-clamp: 5;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .card .actions {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 6px;
-    }
-    .card .actions .read-more {
-      padding: 6px 12px;
-      font-size: 0.8rem;
-    }
-    .card .source-logo-corner {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
-      opacity: 0.85;
-    }
-    /* KOTO logo runs visually small — bump it 50% in every spot it appears.
-       TT and other source logos keep their default size. */
-    .card .src-logo[src*="koto"]            { width: 27px; height: 27px; }
-    .card .source-logo-corner[src*="koto"]  { width: 42px; height: 42px; }
-    .featured-card .src-logo[src*="koto"]   { width: 33px; height: 33px; }
-
-    /* Sidebar */
-    .sidebar {
-      position: sticky;
-      top: 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    /* Support card — sits at the top of the sidebar, links to donate page.
-       Pale beige body, green community badge up top, mountain silhouette
-       at the bottom. */
-    .support-card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: var(--bg-hero);
-      border: 1px solid var(--border-soft);
-      border-radius: 18px;
-      padding: 24px 22px 0;
-      box-shadow: var(--shadow-card);
-      overflow: hidden;
-      position: relative;
-      text-align: center;
-      transition: transform 0.18s, box-shadow 0.18s;
-    }
-    .support-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(36, 49, 46, 0.10);
-    }
-    .support-icon {
-      width: 56px;
-      height: 56px;
-      margin: 0 auto 14px;
-      border-radius: 50%;
-      background: var(--forest);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .support-icon svg { width: 28px; height: 28px; color: #fff; }
-    .support-card h3 {
-      margin: 0 0 12px;
-      font-family: var(--font-heading);
-      font-size: 1.18rem;
-      line-height: 1.25;
-      color: var(--text-primary);
-    }
-    .support-card p {
-      margin: 0 0 18px;
-      font-size: 0.86rem;
-      line-height: 1.55;
-      color: var(--text-secondary);
-    }
-    .support-cta {
-      display: inline-block;
-      margin-bottom: 18px;
-      color: var(--accent-green);
-      font-weight: 700;
-      font-size: 0.92rem;
-    }
-    .support-card:hover .support-cta { text-decoration: underline; }
-    .support-mountains {
-      display: block;
-      margin: 0 -22px;  /* extend to card edges */
-      width: calc(100% + 44px);
-      height: 70px;
-      opacity: 0.55;
-    }
-    .support-mountains svg { width: 100%; height: 100%; display: block; }
-    .sidebar-placeholder {
-      background: repeating-linear-gradient(45deg,
-        rgba(33, 68, 60, 0.04),
-        rgba(33, 68, 60, 0.04) 12px,
-        rgba(33, 68, 60, 0.07) 12px,
-        rgba(33, 68, 60, 0.07) 24px);
-      border: 2px dashed rgba(33, 68, 60, 0.25);
-      border-radius: 16px;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-muted);
-      min-height: 320px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .sidebar-placeholder h3 {
-      margin: 0;
-      font-family: var(--font-heading);
-      font-size: 1.1rem;
-      color: var(--forest);
-    }
-    .sidebar-placeholder p {
-      margin: 0;
-      font-size: 0.85rem;
-      max-width: 220px;
-      line-height: 1.5;
-    }
-
-    /* Responsive */
-    @media (max-width: 1100px) {
-      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 900px) {
-      .page-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .featured-card { grid-template-columns: 1fr; }
-      .featured-card .img-wrap-featured { aspect-ratio: 16 / 9; }
-      .topnav-links { display: none; }
-      .hero h1 { font-size: 2rem; }
-    }
-    @media (max-width: 640px) {
-      .card-grid { grid-template-columns: 1fr; }
-    }
-
-  
-    /* ── Translate widget + mobile nav (added 2026-05-18) ── */
-    .topnav-translate { display: inline-flex; align-items: center; margin-right: 10px; }
-    .topnav-translate .goog-te-gadget { font-size: 0 !important; line-height: 1; }
-    .topnav-translate .goog-te-gadget-simple {
-      background: transparent !important;
-      border: 1px solid #d4dad0 !important;
-      border-radius: 999px !important;
-      padding: 7px 14px !important;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-      font-size: 0.82rem !important;
-      cursor: pointer;
-      line-height: 1.2 !important;
-    }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value { color: #2d4a3e !important; }
-    .topnav-translate .goog-te-gadget-simple .goog-te-menu-value span { color: #2d4a3e !important; border: none !important; }
-    .topnav-translate img.goog-te-gadget-icon { display: none !important; }
-    .topnav-translate-reset {
-      display: none; background: transparent; border: 1px solid #d4dad0;
-      border-radius: 999px; padding: 7px 12px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      font-size: 0.78rem; cursor: pointer; color: #2d4a3e;
-      margin-right: 10px; line-height: 1.2;
-    }
-    .topnav-translate-reset:hover { background: #f3f5ef; }
-    body.translated-ltr .topnav-translate-reset,
-    body.translated-rtl .topnav-translate-reset { display: inline-block; }
-    body { top: 0 !important; }
-    .goog-te-banner-frame, .skiptranslate iframe.goog-te-banner-frame { display: none !important; visibility: hidden !important; }
-    .goog-tooltip, .goog-tooltip:hover { display: none !important; }
-    .goog-text-highlight { background: none !important; box-shadow: none !important; }
-
-    .topnav-hamburger {
-      display: none; background: none; border: none; cursor: pointer;
-      font-size: 1.5rem; line-height: 1; padding: 4px 8px; color: #2d4a3e;
-    }
-    .topnav-hamburger:focus { outline: 2px solid #2d4a3e; outline-offset: 2px; }
-
-    @media (max-width: 860px) {
-      .topnav-inner { position: relative; flex-wrap: nowrap; }
-      .topnav-links {
-        display: none !important;
-        position: absolute; top: calc(100% + 1px); left: 0; right: 0;
-        background: #fff; flex-direction: column !important; gap: 0 !important;
-        padding: 8px 0; margin: 0 !important;
-        border-top: 1px solid #d4dad0;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-        z-index: 60;
-      }
-      .topnav-links.open { display: flex !important; }
-      .topnav-links a {
-        padding: 14px 24px !important; border-bottom: 1px solid #f0f0ec !important;
-        font-size: 1rem !important;
-      }
-      .topnav-links a:last-child { border-bottom: none !important; }
-      .topnav-hamburger { display: block; }
-      .topnav-translate { margin-right: 6px; }
-      .topnav-translate .goog-te-gadget-simple { padding: 5px 10px !important; font-size: 0.75rem !important; }
-      .topnav-cta { display: none !important; }
-    }
-
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local News — Livable Telluride</title>
+<meta name="description" content="Short, useful civic reporting for Telluride, Mountain Village, and San Miguel County — always linked back to the original source.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/local-news.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/local-news.html">
+<meta property="og:title" content="Local News — Livable Telluride">
+<meta property="og:description" content="Short, useful civic reporting for Telluride, Mountain Village, and San Miguel County — always linked back to the original source.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png">
+<style>
+  .chips { max-width: var(--maxw); margin: 0 auto; padding: 26px var(--pad-x) 0; display: flex; gap: 10px; flex-wrap: wrap; }
+  .lead-wrap { max-width: var(--maxw); margin: 0 auto; padding: 28px var(--pad-x) 0; }
+  .lead { display: grid; grid-template-columns: 1.25fr 1fr; gap: 34px; align-items: center; }
+  .lead .img-frame { aspect-ratio: 16/10; border-radius: 10px; box-shadow: var(--shadow-media); }
+  .lead h2 { font: 600 38px/1.08 var(--serif); letter-spacing: -.015em; margin: 12px 0 10px; }
+  .lead h2 a { color: var(--forest); }
+  .lead:hover h2 a { color: var(--rust); }
+  .lead .dek { font: 400 16.5px/1.65 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .sec-row { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; }
+  .sec-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding-bottom: 30px; border-bottom: 3px double var(--forest); }
+  .sec-grid .img-frame { aspect-ratio: 16/10; border-radius: 8px; margin-bottom: 10px; }
+  .sec-grid h3 { font: 600 22px/1.15 var(--serif); margin: 6px 0 6px; }
+  .sec-grid h3 a { color: var(--forest); }
+  .main-wrap { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; display: grid; grid-template-columns: 1.7fr 1fr; gap: 44px; align-items: start; }
+  .river-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .river-item .img-frame { aspect-ratio: 4/3; border-radius: 8px; }
+  /* No-photo gov announcements show the issuing entity's logo instead */
+  .img-frame.logo-fill { display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--hairline); }
+  .img-frame.logo-fill img { object-fit: contain; width: 72%; height: 72%; }
+  .story:hover .img-frame.logo-fill img { transform: none; }
+  .river-item h3 { font: 600 24px/1.15 var(--serif); margin: 5px 0 6px; }
+  .river-item h3 a { color: var(--forest); }
+  .river-item .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 6px; }
+  .load-more { margin: 24px 0; text-align: center; }
+  .sidebar { position: sticky; top: 96px; display: flex; flex-direction: column; gap: 20px; }
+  .side-news { background: var(--forest); border-radius: 12px; padding: 26px; color: rgba(255,255,255,.9); }
+  .side-news .k { font: 700 11px/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
+  .side-news h3 { font: 500 22px/1.25 var(--serif); color: #fff; margin: 10px 0 8px; }
+  .side-news p { font: 400 15px/1.6 var(--sans); margin: 0 0 14px; }
+  .side-koto { padding: 22px 24px; }
+  .side-koto h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 4px; }
+  .side-koto .item { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 11px 0; border-top: 1px solid var(--hairline); }
+  .side-koto .num { font: 600 24px/1 var(--serif); color: var(--gold); }
+  .side-koto .item a { font: 500 15.5px/1.35 var(--serif); color: var(--forest); }
+  .side-koto .item a:hover { color: var(--rust); }
+  .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
+  .letters-banner { margin-bottom: 8px; }
+  .letters-banner img { max-width: 260px; width: 100%; display: block; }
+  #pets-list .item { grid-template-columns: 72px 1fr; align-items: center; }
+  #pets-list .pet-photo { width: 72px; height: 72px; border-radius: 12px; object-fit: cover; }
+  #pets-list .sub, #koto-list .sub { font: 400 13px/1.45 var(--sans); color: var(--muted2); margin-top: 3px; }
+  .side-tip h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 6px; }
+  .side-tip p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 12px; }
+  @media (max-width: 900px) {
+    .lead, .main-wrap { grid-template-columns: 1fr; }
+    .sec-grid { grid-template-columns: 1fr; }
+    .river-item { grid-template-columns: 1fr; }
+    .sidebar { position: static; }
+  }
+</style>
 </head>
 <body>
-  <header class="topnav">
-    <div class="topnav-inner">
-      <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-        <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
-      </a>
-      <nav class="topnav-links">
-        <a href="/local-news.html" class="active">Local News</a>
-        <a href="/gov-hub.html">Gov-Hub</a>
-        <a href="/deep-dives.html">Deep Dives</a>
-        <a href="/events.html">Events</a>
-        <a href="/hub-bub.html">Hub-Bub</a>
-        <a href="/local-orgs.html">Local Orgs</a>
-        <a href="/projects-map/">Projects Map</a>
-        <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-      </nav>
-      <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-      <div id="lvLangWidget" aria-hidden="true"></div>
-      <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-      <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Learn <span class="sep">&rsaquo;</span> Local News</div>
+    <h1>Local News</h1>
+    <p class="sub">Short, useful reporting on the decisions shaping the region &mdash; always linked back to the original source.</p>
+  </div>
+</header>
+
+<div class="chips" id="topic-chips"><span class="chip active" data-topic="">All</span></div>
+
+<div class="lead-wrap" id="lead-slot"></div>
+<div class="sec-row"><div class="sec-grid" id="sec-slot"></div></div>
+
+<div class="main-wrap">
+  <main id="river"><p class="meta" style="padding:16px 0">Loading stories&hellip;</p></main>
+  <aside class="sidebar">
+    <div class="side-news">
+      <div class="k">Newsletter</div>
+      <h3>The week, explained. Every Monday.</h3>
+      <p>The Week Ahead Outlook &mdash; meetings, events, and what to watch, free by email.</p>
+      <a class="btn btn-gold" href="/hub-bub.html#signup">Subscribe</a>
     </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Local News</h1>
-      <p>The latest local news and updates from Telluride and the surrounding region.</p>
+    <div class="side-koto card" id="koto-card" hidden>
+      <h3>KOTO Newscasts</h3>
+      <div id="koto-list"></div>
     </div>
-  </section>
-
-  <main class="page-wrap">
-    <div>
-      <div class="filter-chips" id="chipRow">
-        <!-- chips populated by JS -->
-      </div>
-
-      <article class="featured-card" id="featuredCard"><!-- populated by JS --></article>
-
-      <div class="card-grid" id="cardGrid"><!-- populated by JS --></div>
+    <div class="side-koto card" id="pets-card" hidden>
+      <h3>Adoptable pets</h3>
+      <div id="pets-list"></div>
+      <div style="margin-top:12px"><a class="btn btn-outline" href="https://www.telluridehumanesociety.org/" target="_blank" rel="noopener">Telluride Humane Society &rarr;</a></div>
     </div>
+    <div class="side-tip">
+      <h3>Have a tip?</h3>
+      <p>See something happening in the county we should look into? We read everything.</p>
+      <a class="btn btn-outline" href="mailto:info@livabletelluride.org?subject=News%20tip">Send a tip</a>
+    </div>
+  </aside>
+</div>
 
-    <aside class="sidebar">
-
-      <!-- Legal Notices sidebar card -->
-      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
-        <a href="/legal-notices.html" aria-label="View Legal Notices" style="display:block;"><img src="/logo/Legal Notices.png" alt="Legal Notices" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;"></a>
-        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Public notices, RFPs, and government filings required by law to be publicly posted.</p>
-        <a href="/legal-notices.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Legal Notices →</a>
-      </div>
-
-      <!-- Housing sidebar card -->
-      <div class="sidebar-placeholder" style="border:1px solid #ddd;border-radius:14px;background:#fff;padding:20px;text-align:center;box-shadow:0 2px 8px rgba(0,0,0,0.06);margin-top:18px;">
-        <a href="/housing.html" aria-label="View Housing" style="display:block;"><img src="/logo/Housing Search.png" alt="Housing" style="width:100%;max-width:200px;height:auto;margin:0 auto 14px;display:block;object-fit:contain;"></a>
-        <p style="font-size:0.85rem;color:#666;margin:0 0 14px;line-height:1.5;">Local rentals, deed-restricted opportunities, lottery listings, and regional housing programs.</p>
-        <a href="/housing.html" style="display:block;background:#21443c;color:#fff;text-decoration:none;padding:10px 16px;border-radius:999px;font-weight:700;font-size:0.9rem;">View Housing →</a>
-      </div>
-
-      <!-- Support / Donate card — sits at the bottom of the sidebar -->
-      <a class="support-card" href="#donate" aria-label="Learn how to support Livable Telluride" style="margin-top:18px;">
-        <div class="support-icon" aria-hidden="true">
-          <!-- 'group of people' icon (Lucide-style users-2) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="8.5" cy="7" r="4"/>
-            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3>Strong community.</h3>
-        <p>Livable Telluride is a nonprofit community hub. Your support helps us keep local information accessible to all.</p>
-        <span class="support-cta">Learn how to support →</span>
-        <!-- Soft mountain + tree silhouette — pure SVG, no extra image asset needed -->
-        <div class="support-mountains" aria-hidden="true">
-          <svg viewBox="0 0 280 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- back mountains -->
-            <path fill="#a4b3a8" d="M0,55 L40,28 L72,46 L110,18 L150,42 L188,22 L228,40 L260,30 L280,52 L280,70 L0,70 Z"/>
-            <!-- front mountains, slightly darker -->
-            <path fill="#7a8d80" d="M0,62 L24,46 L60,58 L96,38 L138,55 L174,42 L210,55 L246,44 L280,58 L280,70 L0,70 Z"/>
-            <!-- a few trees -->
-            <g fill="#5b6f64">
-              <polygon points="118,46 122,38 126,46"/>
-              <polygon points="122,52 127,42 132,52"/>
-              <polygon points="160,50 164,40 168,50"/>
-              <polygon points="165,56 170,44 175,56"/>
-              <polygon points="200,52 204,42 208,52"/>
-              <polygon points="205,58 210,46 215,58"/>
-            </g>
-          </svg>
-        </div>
-      </a>
-    </aside>
-  </main>
-
-  <script>
-    /* ──────────────────────────────────────────────────────────
-       Detect portrait images and apply the blurred-background treatment.
-       Triggered by each <img>'s onload. Adds .portrait class to the
-       wrapping div and sets the --bg-img CSS variable to the same image.
-       ────────────────────────────────────────────────────────── */
-    function handlePortrait(img) {
-      if (!img || !img.naturalHeight || !img.naturalWidth) return;
-      // Only treat images where height clearly exceeds width
-      if (img.naturalHeight > img.naturalWidth * 1.05) {
-        const wrap = img.parentElement;
-        if (!wrap) return;
-        wrap.classList.add('portrait');
-        // Set the same image as a blurred backdrop. Quote escaped because
-        // the URL may contain special chars; CSS handles unquoted URLs too
-        // but this is safer.
-        wrap.style.setProperty('--bg-img', 'url("' + img.src.replace(/"/g, '\\"') + '")');
-      }
-    }
-    window.handlePortrait = handlePortrait;
-
-    /* ──────────────────────────────────────────────────────────
-       Source logos — same paths as ENTITY_LOGOS in js/gov-data.js,
-       resolved against the live site so this file works from anywhere.
-       ────────────────────────────────────────────────────────── */
-    const SOURCE_LOGOS = {
-      ttimes:    'https://livabletelluride.org/logo/TT%20Logo.png',
-      koto:      'https://livabletelluride.org/logo/koto-fm-logo.webp',
-      wilkinson: 'https://livabletelluride.org/logo/Wilkenson.png',
-      tjc:       'https://livabletelluride.org/logo/Telluride%20Jewish.webp',
-      tf:        'https://livabletelluride.org/logo/Telluride%20Foundation.png',
-      eco:       'https://livabletelluride.org/logo/Eco%20Action.webp',
-      telluride: 'https://livabletelluride.org/logo/Telluride%20Town.png',
-      county:    'https://livabletelluride.org/logo/San%20Miguel%20County.png',
-      fire:      'https://livabletelluride.org/logo/Telluride%20Fire.png',
-      med:       'https://livabletelluride.org/logo/Medical.jpeg',
-      norwood:   'https://livabletelluride.org/logo/Norwood.jpeg',
-      community: 'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png',
-      letter:    'https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png'
-    };
-
-    /* ──────────────────────────────────────────────────────────
-       Sample articles — REAL data hand-pulled from your live site.
-       Replace/extend freely; the layout doesn't care how many.
-       Shape: { title, source, sourceKey, date, summary, href, img, category }
-       ────────────────────────────────────────────────────────── */
-    const ARTICLES = []; // populated by loadLiveData() — no hardcoded fallback to avoid stale data
-
-    /* ────────── Render ────────── */
-    const CATEGORIES = ['All News', 'Community', 'Education', 'Public Safety', 'Land Use', 'Environment', 'Local Business', 'Events'];
-    let activeCategory = 'All News';
-
-    /* ──────────────────────────────────────────────────────────
-       Sort each story into one of the filter-chip categories.
-
-       The filter chips were inert because every article was being
-       stamped 'Community' (or a pet category that isn't a chip), so
-       clicking Education / Public Safety / etc. matched nothing.
-
-       Strategy, in order:
-       1. Trust the bot's `newsTopic` when it maps cleanly and
-          specifically to a chip (education / public-safety / land-use
-          / housing). These tags are reliable.
-       2. Otherwise keyword-scan the title + summary. This is the ONLY
-          way to populate Environment / Local Business / Events, which
-          the bot's newsTopic taxonomy doesn't cover at all.
-       3. Otherwise fall back to the "soft" newsTopic default
-          (community/government/health → Community, recreation →
-          Environment, infrastructure → Land Use, arts-culture → Events).
-       4. If nothing matches, return null — the story still appears under
-          "All News" but is NOT sorted into any specific tag (per request:
-          "for articles outside of the tags, they will not be sorted").
-       ────────────────────────────────────────────────────────── */
-    // Most-specific first; first match wins.
-    const CATEGORY_KEYWORDS = [
-      ['Public Safety',  /\b(wildfire|fire district|firefighter|fire department|structure fire|police|sheriff|deput(?:y|ies)|marshal|arrested?|\bcrime\b|burglary|theft|robbery|assault|homicide|shooting|search[ -]and[ -]rescue|\bsar\b|evacuat\w*|\bemergenc\w+|ambulance|paramedic|\bems\b|first responder|avalanche|missing (?:person|hiker|skier|man|woman)|\brescue\b|fatal\w*|\bcrash\b|collision|\bdui\b|overdose|public safety)\b/i],
-      ['Education',      /\b(schools?|students?|teachers?|classroom|board of education|superintendent|\bcollege\b|universit\w+|scholarship|graduat\w+|kindergarten|preschool|curriculum|tuition|pinhead institute|telluride mountain school|after-?school|early childhood)\b/i],
-      ['Environment',    /\b(wildlife|\bbears?\b|\belk\b|\bdeer\b|\blynx\b|beavers?|\btrout\b|\briver\b|watershed|water quality|snowpack|drought|\bforests?\b|conservation|\bclimate\b|\bcarbon\b|recycl\w+|compost\w*|open space|ecosystem|pollution|air quality|reclamation|superfund|tailings|\bsolar\b|renewable|wetlands?|habitat|endangered|\btrails?\b|trailhead|backcountry)\b/i],
-      ['Land Use',       /\b(zoning|rezon\w+|\bdevelopment\b|planning commission|land[ -]use|subdivision|building permit|\bconstruction\b|\bhousing\b|affordable housing|deed[- ]restrict\w*|short[- ]term rental|\bstrs?\b|variance|setbacks?|master plan|comprehensive plan|\bdensity\b|annexation|easement|\bparcel\b|workforce housing|condos?|apartments?)\b/i],
-      ['Local Business', /\b(restaurants?|\bcaf[eé]\b|coffee shop|brewer\w+|distiller\w+|\bshops?\b|\bstores?\b|retail|\bbusiness(?:es)?\b|grand opening|re-?open\w*|storefront|chamber of commerce|economic development|\btourism\b|entrepreneur\w*|start-?ups?|boutique|\bhotels?\b|\blodges?\b|\binns?\b|ski resort|telski)\b/i],
-      ['Events',         /\b(festival|\bconcerts?\b|\bgala\b|fundraiser|\bbenefit\b|performances?|\bexhibits?\b|gallery (?:show|opening)|screening|\bfilms?\b|mountainfilm|bluegrass|\bjazz\b|\bblues\b|symphony|theatre|theater|\bopera\b|art walk|\bparade\b|celebration|premiere|showcase|live music|\bcomedy\b)\b/i],
-    ];
-    const HARD_TOPIC_MAP = {
-      'education': 'Education',
-      'public-safety': 'Public Safety',
-      'land-use': 'Land Use',
-      'housing': 'Land Use',
-    };
-    const SOFT_TOPIC_DEFAULT = {
-      'community': 'Community',
-      'government': 'Community',
-      'health': 'Community',
-      'recreation': 'Environment',
-      'infrastructure': 'Land Use',
-      'arts-culture': 'Events',
-    };
-    function categorizeArticle(a) {
-      // Humane Society adoptable-pet cards → Community (closest chip).
-      if (a.sourceKey === 'humane-society') return 'Community';
-      const topic = (a.newsTopic || '').toLowerCase();
-      // 1. Reliable bot tag wins outright.
-      if (HARD_TOPIC_MAP[topic]) return HARD_TOPIC_MAP[topic];
-      // 2. Keyword scan (fills Environment / Local Business / Events).
-      const text = ((a.title || '') + ' ' + (a.summary || '')).toLowerCase();
-      for (const [cat, re] of CATEGORY_KEYWORDS) {
-        if (re.test(text)) return cat;
-      }
-      // 3. Soft newsTopic default.
-      if (SOFT_TOPIC_DEFAULT[topic]) return SOFT_TOPIC_DEFAULT[topic];
-      // 4. Uncategorized — shows only under "All News".
-      return null;
-    }
-
-    function chipsHtml() {
-      return CATEGORIES.map(c => {
-        const cls = c === activeCategory ? 'chip active' : 'chip';
-        return `<span class="${cls}" data-cat="${c}">${c}</span>`;
-      }).join('');
-    }
-
-    function logoTag(srcKey, cls) {
-      const url = SOURCE_LOGOS[srcKey];
-      if (!url) return '';
-      return `<img class="${cls}" src="${url}" alt="" onerror="this.style.display='none'">`;
-    }
-
-    /* Image to render in the card visual area.
-       - Letters to the Editor: TT's RSS returns the site-default masthead
-         image as the enclosure, which produces three identical-looking
-         cards in a row whenever a few letters publish on the same day.
-         Override with our own letter icon for visual distinction.
-       - KOTO: no enclosure → cow brand-logo fallback.
-       - Everything else: enclosure image (a.img). */
-    // Escape bot-scraped text before it goes into innerHTML template literals.
-    // Article titles/summaries/authors are scraped from external feeds (Telluride
-    // Times, KOTO, San Miguel Basin Forum) and are attacker-influenceable, so
-    // every interpolation of them must be escaped to prevent stored XSS.
-    function escapeHtml(s) {
-      return String(s == null ? '' : s).replace(/[&<>"']/g, c => (
-        { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
-      ));
-    }
-    // Only allow http(s) hrefs (blocks javascript:/data: URIs) and escape quotes
-    // so a scraped URL can't break out of the attribute.
-    function safeHref(u) {
-      const s = String(u == null ? '' : u).trim();
-      return /^https?:\/\//i.test(s) ? s.replace(/["'<>]/g, encodeURIComponent) : '#';
-    }
-
-    function isLetterToEditor(a) {
-      return !!(a && (a.isLetter === true || (a.href && /\/letters_to_editor\//i.test(a.href))));
-    }
-    // Editorial rule (permanent): never let an obituary be the featured story.
-    // Match on structured fields (URL section / category / topic) — not the
-    // headline/summary — so a normal story that merely mentions a death isn't
-    // wrongly excluded.
-    function isObituary(a) {
-      if (!a) return false;
-      return /obituar/i.test((a.href || '') + ' ' + (a.category || '') + ' ' + (a.newsTopic || ''));
-    }
-    function imgFor(a) {
-      // Our own letters (LOCAL_NEWS_FEATURED, isLetter:true) use their supplied
-      // photo as the hero. Telluride Times letters only carry a masthead
-      // placeholder image, so they ALWAYS fall back to the Letter-to-the-Editor
-      // logo regardless of what the scrape attached.
-      if (a.isLetter === true) return a.img || '/logo/Letter%20to%20Editor.png';
-      if (isLetterToEditor(a)) return '/logo/Letter%20to%20Editor.png';
-      if (a.img) return a.img;
-      if (a.sourceKey === 'koto') return 'img/koto-cow.webp';
-      // SMBF: fall back to the masthead logo when the article didn't have
-      // a photo on the landing page. Matches the KOTO cow pattern.
-      if (a.sourceKey === 'smb') return '/logo/San%20Miguel%20Basin.jpg';
-      // Telluride Humane Society: photos always come from Shelterluv,
-      // but cover the edge case where the API returns an animal without
-      // one by falling back to the THS shield.
-      if (a.sourceKey === 'humane-society') return '/logo/Telluride%20Humane-400x400.png';
-      return '';
-    }
-
-    function featuredHtml(a) {
-      const src = imgFor(a);
-      const isKotoFallback = !a.img && a.sourceKey === 'koto';
-      const isSmbFallback = !a.img && a.sourceKey === 'smb';
-      const isLetter = isLetterToEditor(a);
-      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
-      const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
-      const imgEl = src
-        ? `<img src="${escapeHtml(src)}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.background='#ddd'">`
-        : '';
-      const authorLine = (isLetter && a.letterAuthor)
-        ? `<div class="letter-author">By ${escapeHtml(a.letterAuthor)}</div>`
-        : '';
-      const letterLogo = isLetter
-        ? `<img class="src-logo" src="/logo/Letter%20to%20Editor.png" alt="Letter to the Editor" onerror="this.style.display='none'">`
-        : '';
-      const banner = a.isLetter === true
-        ? `<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>`
-        : '';
-      const cornerLogo = a.isLetter === true
-        ? `<img class="corner-logo" src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">`
-        : '';
-      const media = banner
-        ? `<div class="featured-media">${banner}<div class="img-wrap-featured">${imgEl}</div></div>`
-        : `<div class="img-wrap-featured">${imgEl}</div>`;
-      return `
-        ${media}
-        <div class="body">
-          <span class="featured-tag">Featured</span>
-          ${authorLine}
-          <h2><a href="${safeHref(a.href)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${escapeHtml(a.title)}</a></h2>
-          <div class="meta">
-            ${letterLogo}
-            <span>${escapeHtml(a.source)}</span>
-            <span class="sep">·</span>
-            <span>${escapeHtml(a.date)}</span>
-          </div>
-          <div class="summary">${escapeHtml(a.summary)}</div>
-          <div class="actions">
-            <a class="read-more" href="${safeHref(a.href)}" target="_blank" rel="noopener">Read more →</a>
-            ${cornerLogo}
-          </div>
-        </div>
-      `;
-    }
-
-    function cardHtml(a) {
-      const src = imgFor(a);
-      const isKotoFallback = !a.img && a.sourceKey === 'koto';
-      const isSmbFallback = !a.img && a.sourceKey === 'smb';
-      const isLetter = isLetterToEditor(a);
-      // Use the koto-fallback `object-fit:contain` styling for letter
-      // icons and the SMB masthead fallback too so they aren't cropped
-      // by the 4:3 cover crop.
-      const imgClass = isKotoFallback || isSmbFallback || (isLetter && !(a.isLetter === true && a.img)) ? 'class="koto-fallback"' : '';
-      const onload = imgClass ? '' : 'onload="handlePortrait(this)"';
-      const imgEl = src
-        ? `<img src="${escapeHtml(src)}" alt="" loading="lazy" ${imgClass} ${onload} onerror="this.style.opacity=0.3">`
-        : '';
-      // Author byline for Letters to the Editor — sits directly under the
-      // image (above the title). a.letterAuthor populated by content-refresh
-      // for newly-fetched letters; older entries omit the byline gracefully.
-      const authorLine = (isLetter && a.letterAuthor)
-        ? `<div class="letter-author">By ${escapeHtml(a.letterAuthor)}</div>`
-        : '';
-      const banner = a.isLetter === true
-        ? `<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>`
-        : '';
-      return `
-        <article class="card">
-          ${banner}
-          <div class="img-wrap">${imgEl}</div>
-          <div class="body">
-            ${authorLine}
-            <h3><a href="${safeHref(a.href)}" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">${escapeHtml(a.title)}</a></h3>
-            <div class="meta">
-              <span>${escapeHtml(a.source)}</span>
-              <span class="sep">·</span>
-              <span>${escapeHtml(a.date)}</span>
-            </div>
-            <div class="summary">${escapeHtml(a.summary)}</div>
-            <div class="actions">
-              <a class="read-more" href="${safeHref(a.href)}" target="_blank" rel="noopener">Read more →</a>
-              ${logoTag(a.sourceKey, 'source-logo-corner')}
-            </div>
-          </div>
-        </article>
-      `;
-    }
-
-    function render() {
-      document.getElementById('chipRow').innerHTML = chipsHtml();
-
-      const filtered = activeCategory === 'All News'
-        ? ARTICLES
-        : ARTICLES.filter(a => a.category === activeCategory);
-
-      // The hero is the newest non-obituary story by default. A hand-pinned
-      // story (LOCAL_NEWS_FEATURED featured:true) overrides it — but ONLY while
-      // it's still current (within ~1.5 days of the newest story). Otherwise a
-      // pin would freeze the hero on a stale story while fresh news piles up
-      // below (the "didn't update this morning" bug). Stale pins auto-release.
-      const newest = filtered.find(a => !isObituary(a)) || filtered[0];
-      const pin = filtered.find(a => a.featured);
-      let featured = newest;
-      if (pin) {
-        const dp = new Date(pin.date).getTime();
-        const dn = newest ? new Date(newest.date).getTime() : NaN;
-        const pinIsCurrent = isFinite(dp) && (!isFinite(dn) || (dn - dp) <= 1.5 * 86400000);
-        if (pinIsCurrent) featured = pin;
-      }
-      featured = featured || filtered[0];
-      const rest = filtered.filter(a => a !== featured);
-
-      document.getElementById('featuredCard').innerHTML = featured ? featuredHtml(featured) : '';
-      document.getElementById('cardGrid').innerHTML = rest.map(cardHtml).join('');
-
-      // Wire chip clicks
-      document.querySelectorAll('.chip[data-cat]').forEach(chip => {
-        chip.addEventListener('click', () => {
-          activeCategory = chip.dataset.cat;
-          render();
-        });
-      });
-    }
-
-    // Show loading state before live data arrives
-    document.getElementById('featuredCard').innerHTML =
-      '<div style="padding:40px 20px;text-align:center;color:#6b7a6b;font-size:1rem;">' +
-      '<div style="font-size:2rem;margin-bottom:12px;">📰</div>' +
-      'Loading latest news…</div>';
-    document.getElementById('cardGrid').innerHTML = '';
-
-    // Shared failure UI so the page never sits on "Loading latest news…" — used
-    // for a network error, a broken/undefined data file, and a render exception.
-    function showNewsError() {
-      const fc = document.getElementById('featuredCard');
-      if (fc) fc.innerHTML =
-        '<div style="padding:40px 20px;text-align:center;color:#b44;">' +
-        "We couldn't load the latest news right now. " +
-        '<a href="" style="color:#21443c;">Reload</a></div>';
-      const cg = document.getElementById('cardGrid');
-      if (cg) cg.innerHTML = '';
-    }
-
-        function loadLiveData() {
-      // Use a daily cache buster so browsers always pick up today's bot commit.
-      // 10-minute cache buster — matches GitHub Pages CDN TTL so bot commits appear within 10 min
-      const day = Math.floor(Date.now() / 600000);
-      // gov-helpers.js is the purpose-built v2 data file regenerated from gov-hub.js every 6 hours.
-      // It contains TELLURIDE_TIMES_ARTICLES, KOTO_NEWSCASTS, etc. without the full app code
-      // that would throw errors when loaded outside the main single-page app context.
-      // JSON-first: read the small data/*.json mirrors instead of the ~511 KB
-      // gov-helpers.js. This page reads ONLY data (no helper functions), so on a
-      // successful fetch it never loads gov-helpers.js. On ANY fetch failure it
-      // falls back to the old path (load gov-helpers.js + read the globals). Both
-      // sources are CI-verified identical during the dual-write phase.
-      function applyNewsData() {
-        try {
-            // A syntactically-broken gov-helpers.js still fires onload (only a
-            // network failure hits onerror), so if the expected global is missing
-            // the data file failed to define it — show an error instead of
-            // leaving "Loading latest news…" spinning forever.
-            if (typeof TELLURIDE_TIMES_ARTICLES === 'undefined') { showNewsError(); return; }
-
-            // ── Redundancy filters (port of live site behavior) ──
-            //
-            // 1. Drop "Legals and Public Notices for ..." roundups — these
-            //    have a dedicated tab.
-            // 2. Drop government-meeting announcement articles ("County
-            //    Planning Commission 5/14 Meeting in TELLURIDE") — already
-            //    on Gov-Hub. Detected via GOV_MEETING_PATTERN (loaded from
-            //    gov-data.js) plus a date pattern in the title.
-            // 3. Drop state/national stories that don't reference any local
-            //    geography. See isStatewideOrNationalNews().
-            // 4. Drop concert/show announcements at local venues
-            //    ("The Dirty Turkeys at The Alibi") — already on the
-            //    Events tab via SHERIDAN_EVENTS / ALIBI_EVENTS / etc.
-            //    Detected by venue mention + announcement verbiage.
-            const LEGAL_ROUNDUP_RE = /^Legals?\b.*Notices?\b/i;
-            const HAS_DATE_RE = /\b\d{1,2}\/\d{1,2}(\/\d{2,4})?\b/;
-            function isGovMeetingAnnouncement(title) {
-              if (!title) return false;
-              if (typeof GOV_MEETING_PATTERN === 'undefined') return false;
-              if (!GOV_MEETING_PATTERN.test(title)) return false;
-              // Require a date/time hint OR explicit "Meeting" word so we
-              // don't accidentally drop news ARTICLES about councils.
-              return HAS_DATE_RE.test(title) || /\bmeeting\b/i.test(title);
-            }
-            /**
-             * Detect concert / show / live-music announcements at known
-             * Telluride-region venues. These are duplicated on the Events
-             * tab (Sheridan/Alibi/Sherbino/KOTO/Wilkinson have their own
-             * scrapers), so showing them on Local News too is noise.
-             *
-             * Strategy: match a venue mention combined with announcement
-             * verbiage ("at The Alibi" / "plays Sheridan" / "live at" /
-             * "concert at" / "NIGHTGRASS - …"). News ARTICLES about a
-             * venue (renovations, fundraisers without a single performer
-             * named, hires, etc.) still pass through because they don't
-             * match this performer-at-venue shape.
-             */
-            function isVenueEventAnnouncement(title) {
-              if (!title) return false;
-              var t = String(title);
-              // <X> at (the) Alibi / Sheridan / Sherbino / Palm / etc.
-              if (/\bat\s+(the\s+)?(alibi|sheridan(\s+opera(\s+house)?)?|sherbino(\s+theater)?|palm\s+theatre|telluride\s+theatre|new\s+sheridan|club\s+red|fly\s+me\s+to\s+the\s+moon)\b/i.test(t)) return true;
-              // <X> plays Alibi / Sheridan / etc.
-              if (/\bplays?\s+(the\s+)?(alibi|sheridan|sherbino|palm|telluride\s+theatre|club\s+red)\b/i.test(t)) return true;
-              // <X> live at / live in concert / live in concert at
-              if (/\blive\s+(at|in\s+concert)\b/i.test(t)) return true;
-              // <X> concert at / show at / set at / gig at — tight pattern
-              if (/\b(concert|show|gig|set|performance|dj\s+set)\s+(at|in)\b/i.test(t)) return true;
-              // Sheridan late-night series & similar branded recurring slots
-              if (/\b(nightgrass|telluride\s+jazz|noon\s+tunes|sunset\s+concert)\b/i.test(t)) return true;
-              // "Tonight at the X" / "Friday night at the X" style
-              if (/\b(tonight|tomorrow|friday|saturday|sunday|monday|tuesday|wednesday|thursday)\s+(night\s+)?at\s+(the\s+)?(alibi|sheridan|sherbino|palm|telluride\s+theatre|club\s+red)\b/i.test(t)) return true;
-              return false;
-            }
-            function isStatewideOrNationalNews(item) {
-              const title = (item.title || '').toLowerCase();
-              const href = (item.href || '').toLowerCase();
-              if (!title.trim()) return false;
-              if (/\/news\/(state|nation|national|world|international)\//.test(href)) return true;
-              const local = [
-                /\btelluride\b/, /\bmountain village\b/, /\bmtn village\b/,
-                /\bnorwood\b/, /\bophir\b/, /\bplacerville\b/, /\bridgway\b/,
-                // West End + Ouray-County towns in our coverage range (2026-07-02).
-                /\bouray\b/, /\bnucla\b/, /\bnaturita\b/, /\bredvale\b/, /\bbedrock\b/,
-                /\brico\b/, /\bsan miguel\b/, /\bsheridan opera\b/, /\bwilkinson\b/,
-                /\btown park\b/, /\bkoto\b/, /\bmountainfilm\b/, /\bbluegrass festival\b/,
-                /\blone cone\b/, /\blawson hill\b/, /\baldasoro\b/, /\bgondola\b/,
-                /\bbear creek\b/, /\btrout lake\b/, /\blizard head\b/, /\bhighway 145\b/,
-                /\bhwy 145\b/, /\bwright's mesa\b/, /\bpalm theatre\b/, /\bah haa\b/,
-                /\btransfer warehouse\b/, /\btellski\b/, /\btelluride ski\b/,
-                /\bpinhead\b/, /\begnar\b/, /\bsociety turn\b/, /\btri-county\b/,
-                /\bdown valley\b/, /\bwest end\b/
-              ];
-              for (const r of local) { if (r.test(title)) return false; }
-              const nonLocal = [
-                /\bdenver\b/, /\bboulder\b/, /\bcolorado springs\b/, /\baurora\b/,
-                /\bfort collins\b/, /\bpueblo\b/, /\bgrand junction\b/,
-                /\bdurango\b/, /\baspen\b/, /\bvail\b/,
-                /colorado (state|lawmaker|legislat|supreme|attorney|governor|department|residents|demonstrators|man|woman|boy|girl|teen|firebomb|plan)/,
-                /\bin colorado\b/, /\bacross colorado\b/, /\bcolorado-wide\b/, /\bstatewide\b/,
-                /\bcongress(ional)?\b/, /\bu\.s\. senate\b/, /\bu\.s\. house\b/,
-                /\bfederal court\b/, /\bsupreme court\b/, /\bscotus\b/, /\bwhite house\b/,
-                /\bpresident (biden|trump|harris|obama)\b/, /\bpentagon\b/, /\bnasa\b/,
-                /\bfbi\b/, /\bcia\b/, /\bdepartment of justice\b/, /\bcapitol hill\b/,
-                /\btrump\b/, /\bbiden\b/, /\bharris\b/, /\bvance\b/, /\blindsey vonn\b/,
-                /\bcalifornia\b/, /\btexas\b/, /\bflorida\b/, /\bnew york\b/,
-                /\barizona\b/, /\bnew mexico\b/, /\butah\b/, /\bwyoming\b/,
-                /\bnebraska\b/, /\bkansas\b/, /\bphiladelphia\b/, /\bchicago\b/,
-                /\bnationwide\b/, /\bacross the country\b/, /\bunited states\b/,
-                /\bacross america\b/, /\bnation's\b/, /\btariffs?\b/, /\boverseas\b/,
-                /\beach state\b/, /\bacross the (west|western)\b/, /\bcanada-us\b/,
-                /\bantisemit/, /\bthe ap\b/,
-                /\bisrael(i|is)?\b/, /\bpalestin/, /\bgaza\b/, /\bukraine\b/,
-                /\brussia\b/, /\bchina\b/, /\btaiwan\b/, /\biran\b/, /\bnorth korea\b/
-              ];
-              for (const r of nonLocal) { if (r.test(title)) return true; }
-              return false;
-            }
-            function shouldKeep(article) {
-              const t = article.title || '';
-              if (LEGAL_ROUNDUP_RE.test(t)) return false;
-              if (isGovMeetingAnnouncement(t)) return false;
-              if (isStatewideOrNationalNews(article)) return false;
-              if (isVenueEventAnnouncement(t)) return false;
-              return true;
-            }
-
-            // Meta-summary / refusal detector — defined INLINE here (not taken
-            // from gov-helpers.js) because this page's fast path reads only the
-            // data file and never loads gov-helpers' functions, so the shared
-            // isRefusalSummary would be undefined here. Keep in sync with the
-            // copy in js/gov-helpers.js + scripts/content-refresh.js. Never show
-            // an AI "can't summarize this" apology — blank it.
-            const isRefusalSummary = (text) => {
-              if (!text) return false;
-              const t = String(text);
-              return /\b(?:article|article text|text|content|source)\b[^.!?]{0,60}\b(?:corrupt(?:ed)?|garbl(?:ed)?|unreadable|not readable|no readable content|isn'?t accessible|is not accessible|not accessible|(?:login\/)?paywall|boilerplate)\b/i.test(t)
-                  || /\b(?:can'?t|cannot|could ?n'?t|couldn'?t|unable to)\b[^.!?]{0,40}\b(?:produce|generate|summar\w*|extract|access|read|be produced)\b/i.test(t)
-                  || /\bresubmit\b|check the source article|based on what'?s visible|no reliable summary/i.test(t);
-            };
-
-            // ── Collect from sources, then filter, then dedup by title ──
-            const live = [];
-            // Hand-curated featured items (bot-safe) come first so a pinned
-            // letter/feature with `featured:true` wins the featured slot.
-            if (typeof LOCAL_NEWS_FEATURED !== 'undefined' && Array.isArray(LOCAL_NEWS_FEATURED)) {
-              LOCAL_NEWS_FEATURED.forEach(a => live.push(Object.assign({}, a)));
-            }
-            // Filter with shouldKeep BEFORE capping. The cap used to run on
-            // the raw array (slice(0,30)), so a burst of soon-to-be-filtered
-            // content — e.g. the June 2026 primary dumped ~15 statewide
-            // "X wins nomination" results, plus legals/obituaries/venue
-            // listings — consumed the whole window and starved the page of
-            // local Telluride news (only ~14 of the top 30 survived shouldKeep).
-            // Filtering first guarantees the cap counts real local articles.
-            TELLURIDE_TIMES_ARTICLES.filter(shouldKeep).slice(0, 45).forEach(a => live.push({
-              title: a.title, source: a.source, sourceKey: 'ttimes',
-              date: a.date, summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy, href: a.href, img: a.img,
-              newsTopic: a.newsTopic || ''
-            }));
-            if (typeof KOTO_NEWSCASTS !== 'undefined') {
-              KOTO_NEWSCASTS.slice(0, 15).forEach(a => live.push({
-                title: a.title, source: 'KOTO', sourceKey: 'koto',
-                date: a.date, summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy, href: a.href, img: a.img || '',
-                newsTopic: a.newsTopic || ''
-              }));
-            }
-            // San Miguel Basin Forum — West End paper (Norwood/Nucla/Naturita).
-            // Populated by content-refresh.js Task 2 → pullSmbForum().
-            //
-            // Two filters:
-            //   1. firstSeen must be within the last 35 days. Older entries
-            //      live in the array as "known" (so the bot doesn't
-            //      re-detect them on every run) but don't display. SMBF
-            //      is print-first; the display date = the day WE first
-            //      saw the article on the website, NOT the byline date.
-            //   2. The .slice(0, 15) cap stops the list from blowing up
-            //      if a long stretch of new articles all land in-window.
-            //
-            // Defensive: pre-bot rollout the const may still be undefined
-            // on older cached gov-helpers.js copies.
-            if (typeof SMB_FORUM_ARTICLES !== 'undefined') {
-              const smbCutoffIso = (() => {
-                const d = new Date();
-                d.setDate(d.getDate() - 35);
-                return d.toISOString().slice(0, 10);
-              })();
-              SMB_FORUM_ARTICLES
-                .filter(a => a && a.firstSeen && a.firstSeen >= smbCutoffIso)
-                .slice(0, 15)
-                .forEach(a => live.push({
-                  title: a.title,
-                  source: 'San Miguel Basin Forum',
-                  sourceKey: 'smb',
-                  date: a.date,
-                  summary: (typeof isRefusalSummary === 'function' && isRefusalSummary(a.copy)) ? '' : a.copy,
-                  href: a.href,
-                  img: a.img || '',
-                  newsTopic: a.newsTopic || ''
-                }));
-            }
-            // Telluride Humane Society — adoptable dogs and cats.
-            // Populated by content-refresh.js Task 7. Each entry carries a
-            // `revealDate` (ISO YYYY-MM-DD) that tells us when the card
-            // becomes eligible to show. Per the staggering rules, when
-            // multiple same-species animals are first-seen on the same
-            // day only the first reveals immediately; siblings are
-            // queued +2 / +4 / +6 days. Cards drop when (a) revealDate
-            // is more than 30 days ago or (b) the animal disappears
-            // from the Shelterluv API; both are enforced bot-side.
-            if (typeof HUMANE_SOCIETY_ANIMALS !== 'undefined') {
-              const todayIso = new Date().toISOString().slice(0, 10);
-              const isoToHuman = (iso) => {
-                if (!iso) return '';
-                const [y, m, d] = iso.split('-').map(Number);
-                if (!y) return '';
-                const months = ['January','February','March','April','May','June',
-                                'July','August','September','October','November','December'];
-                return `${months[m-1]} ${d}, ${y}`;
-              };
-              const UNAVAILABLE_NAME = /\b(adoption\s+pending|adopted|on\s+hold|pending\s+adoption|not\s+available|coming\s+soon|in\s+foster|foster\s+only)\b/i;
-              HUMANE_SOCIETY_ANIMALS.forEach(a => {
-                if (!a || !a.id) return;
-                if (a.revealDate && a.revealDate > todayIso) return; // queued — not yet
-                // Defense in depth (the sync script already filters these):
-                // skip animals with no real photo (the card would otherwise
-                // show the THS logo as a placeholder), pre-weaning animals,
-                // and any whose name marks them as pending/adopted/on-hold.
-                if (!a.photo) return;
-                if (/^(unweaned|nursing)$/i.test((a.ageGroup || '').trim())) return;
-                if (UNAVAILABLE_NAME.test(a.name || '')) return;
-                const cleanName = (a.name || '').replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
-                if (!cleanName) return;
-                const isDog = a.species === 'Dog';
-                const speciesNoun = isDog ? 'dog' : (a.species === 'Cat' ? 'cat' : 'pet');
-                // Use revealDate as the article date so the card sorts in
-                // alongside news from the day the animal first appeared.
-                live.push({
-                  title: `Meet ${cleanName} — adoptable ${speciesNoun} at Telluride Humane Society`,
-                  source: 'Telluride Humane Society',
-                  sourceKey: 'humane-society',
-                  date: isoToHuman(a.revealDate || a.firstSeen) || '',
-                  summary: a.summary || `${cleanName} is available for adoption at Telluride Humane Society.`,
-                  href: a.profileUrl || `https://telluridehumanesociety.com/${speciesNoun}s/`,
-                  img: a.photo || '',
-                  newsTopic: ''  // category assigned below via categorizeArticle (sourceKey)
-                });
-              });
-            }
-            // Sort every story into a filter-chip category (or null →
-            // appears under All News only). Done after collection so all
-            // sources go through the same categorizer.
-            live.forEach(a => { a.category = categorizeArticle(a); });
-
-            const seen = new Set();
-            const filtered = live.filter(a => {
-              if (!shouldKeep(a)) return false;
-              const k = (a.title || '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 40);
-              if (seen.has(k)) return false;
-              seen.add(k);
-              return true;
-            });
-
-            // Sort by date descending (newest first), interleaved across sources
-            // — NOT grouped by source. Articles without a parseable date sink
-            // to the bottom.
-            filtered.sort((a, b) => {
-              const da = a.date ? new Date(a.date).getTime() : 0;
-              const db = b.date ? new Date(b.date).getTime() : 0;
-              return db - da;
-            });
-
-            ARTICLES.length = 0;
-            filtered.forEach(a => ARTICLES.push(a));
-            // Honor a hand-pinned featured item (LOCAL_NEWS_FEATURED); otherwise
-            // feature the newest-dated article.
-            if (!ARTICLES.some(a => a.featured)) {
-              // Auto-feature the newest article, but NEVER an obituary (rule).
-              const auto = ARTICLES.find(a => !isObituary(a)) || ARTICLES[0];
-              if (auto) auto.featured = true;
-            }
-            render();
-        } catch (err) { console.warn('loadLiveData filter pass failed:', err); showNewsError(); }
-      }
-      // Fallback: load the full gov-helpers.js and read the globals (old path).
-      function loadFromGovHelpers() {
-        const dataScript = document.createElement('script');
-        dataScript.src = 'https://livabletelluride.org/js/gov-helpers.js?v=' + day;
-        dataScript.onload = applyNewsData;
-        dataScript.onerror = () => { console.warn('Could not load gov-helpers.js'); showNewsError(); };
-        document.head.appendChild(dataScript);
-      }
-      const _files = ['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'humane-society-animals', 'local-news-featured'];
-      const _globals = ['TELLURIDE_TIMES_ARTICLES', 'KOTO_NEWSCASTS', 'SMB_FORUM_ARTICLES', 'HUMANE_SOCIETY_ANIMALS', 'LOCAL_NEWS_FEATURED'];
-      Promise.all(_files.map(function (f) {
-        return fetch('/data/' + f + '.json?v=' + day).then(function (r) { if (!r.ok) throw new Error(f + ' HTTP ' + r.status); return r.json(); });
-      })).then(function (datas) {
-        datas.forEach(function (d, i) { window[_globals[i]] = d; });   // set globals the render reads
-        applyNewsData();
-      }).catch(loadFromGovHelpers);
-    }
-    loadLiveData();
-  </script>
-
-<!-- Google Translate widget + mobile nav toggle (added 2026-05-18) -->
+<div id="lt-footer"></div>
+<script src="site.js?v=7"></script>
+<script src="/js/lt-data.js?v=4"></script>
 <script>
-// ── EN/ES language toggle (replaced Google Translate's 24-lang
-//   dropdown 2026-05-29). Google Translate is still the engine doing
-//   the translation when the cookie is set; we just hide its UI
-//   chrome (banner + dropdown) and expose a single binary pill in the
-//   topnav. Cookie format: googtrans=/en/<lang>; deleting it reverts
-//   to English. ────────────────────────────────────────────────── */
-function lvCurrentLang() {
-  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-  return m ? m[1] : 'en';
-}
-function lvSetTransCookie(value) {
-  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  var domains = ['', '.' + location.hostname, location.hostname];
-  domains.forEach(function(d){
-    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
-    if (d) c += '; domain=' + d;
-    document.cookie = c;
-  });
-}
-function lvToggleLang() {
-  var cur = lvCurrentLang();
-  lvSetTransCookie(cur === 'es' ? '' : 'es');
-  location.reload();
-}
-function googleTranslateElementInit() {
-  // includedLanguages is just 'es' now — the visible toggle only
-  // offers Spanish, but Google Translate still needs an init call
-  // to act on the cookie.
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'lvLangWidget');
-}
-(function(){
-  // Inject CSS for the pill + hide all Google Translate UI chrome
-  var hideCss = document.createElement('style');
-  hideCss.textContent = [
-    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: inherit; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
-    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame { display: none !important; }',
-    '.goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; }',
-    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
-    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
-    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
-    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
-  ].join('\n');
-  document.head.appendChild(hideCss);
-  // Set initial button label based on current state
-  function setLabel() {
-    var btn = document.getElementById('lvLangToggle');
-    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
+(function () {
+  var river = document.getElementById('river');
+  if (!window.LTData) { river.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
+  var TOPIC_LABELS = { 'housing': 'Housing', 'land-use': 'Land Use', 'government': 'Government', 'community': 'Community',
+    'public-safety': 'Public Safety', 'education': 'Education', 'health': 'Health', 'arts-culture': 'Arts & Culture',
+    'recreation': 'Recreation', 'infrastructure': 'Infrastructure' };
+  var RIVER_PAGE = 12;
+  // Letters/pins can link to our own pages ('/Blog%20Posts/…') — allow
+  // root-relative alongside absolute http(s) (LTData.safeUrl is absolute-only).
+  function safeHref(u) { return /^(https?:\/\/|\/(?!\/))/i.test(u || '') ? u : '#'; }
+  var stories = [], topicFilter = '', shown = RIVER_PAGE;
+
+  // Standing rule: an obituary must NEVER be the featured story.
+  function isObituary(s) { return /obituar|in memoriam|celebration of life|passed away/i.test((s.title || '') + ' ' + (s.dek || '')); }
+  function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
+  function normalize(a, srcLabel) {
+    return { title: a.title || '', href: a.href || '', img: a.img || a.imageUrl || '',
+      dek: a.copy || a.claudeSummary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
+      date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
+      letterAuthor: a.letterAuthor || '' };
   }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setLabel);
-  } else { setLabel(); }
-  // Load Google Translate
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async = true;
-  document.head.appendChild(s);
-})();
-(function(){
-  function init(){
-    var btn = document.getElementById('topnavHamburger');
-    if (!btn) return;
-    var links = document.querySelector('.topnav-links');
-    if (!links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? '✕' : '☰';
+  function metaLine(s) {
+    return [s.src, s.date].filter(Boolean).join(' · ');
+  }
+  function tagFor(s) {
+    var t = TOPIC_LABELS[s.topic] || (s.isLetter ? 'Letter' : 'News');
+    return '<span class="tag' + (s.isLetter ? ' rust-tint' : '') + '">' + LTData.esc(t) + '</span>';
+  }
+  // Government announcements arrive without photos — show the issuing
+  // entity's logo instead (source name → LTData.ENTITY_LOGOS key).
+  var SOURCE_LOGO_KEY = {
+    'San Miguel County': 'county', 'Town of Telluride': 'telluride',
+    'Town of Ridgway': 'ridgway', 'Town of Norwood': 'norwood',
+    'Mountain Village': 'mv', 'Town of Ophir': 'ophir', 'Town of Rico': 'rico',
+    'Telluride Times': 'ttimes'
+  };
+  function imgFrame(s, linkWrap) {
+    var img;
+    if (s.img) {
+      img = '<div class="img-frame"><img src="' + LTData.esc(s.img) + '" alt="" loading="lazy"></div>';
+    } else if (s.isLetter) {
+      // Letters without their own photo use the Letters artwork (live-site parity)
+      img = '<div class="img-frame logo-fill"><img src="/logo/Letter%20to%20Editor.png" alt="Letter to the editor" loading="lazy"></div>';
+    } else {
+      var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
+      if (!logo) return '';
+      img = '<div class="img-frame logo-fill"><img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
+    }
+    return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + img + '</a>' : img;
+  }
+  // "Letters to Livable Telluride" banner above our own letters (isLetter pins).
+  function letterBanner(s) {
+    return s.isLetter ? '<div class="letters-banner"><img src="/logo/letters-banner.png" alt="Letters to Livable Telluride"></div>' : '';
+  }
+  function metaWithAuthor(s) {
+    var base = metaLine(s);
+    return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
+  }
+  function storyLink(s, tagName, cls) {
+    return '<' + tagName + ' class="' + cls + ' story">' + imgFrame(s, true) +
+      '<div>' + letterBanner(s) + tagFor(s) +
+      '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
+      (s.dek ? '<p class="dek">' + LTData.esc(s.dek) + '</p>' : '') +
+      '<div class="meta">' + LTData.esc(metaWithAuthor(s)) + '</div></div></' + tagName + '>';
+  }
+
+  function render() {
+    var pool = stories.filter(function (s) { return !topicFilter || s.topic === topicFilter; });
+    var lead = null;
+    for (var i = 0; i < pool.length; i++) {
+      if (pool[i].featured && !isObituary(pool[i])) { lead = pool[i]; break; }
+    }
+    if (!lead) { for (var j = 0; j < pool.length; j++) { if (pool[j].img && !isObituary(pool[j])) { lead = pool[j]; break; } } }
+    var rest = pool.filter(function (s) { return s !== lead; });
+    var secondary = rest.filter(function (s) { return s.img; }).slice(0, 3);
+    var riverItems = rest.filter(function (s) { return secondary.indexOf(s) === -1; });
+
+    document.getElementById('lead-slot').innerHTML = lead
+      ? '<article class="lead story">' + imgFrame(lead, true) +
+        '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
+        '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
+        (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
+        '<div class="meta">' + LTData.esc(metaWithAuthor(lead)) + '</div></div></article>'
+      : '';
+    document.getElementById('sec-slot').innerHTML = secondary.map(function (s) { return storyLink(s, 'article', 'sec-item'); }).join('');
+    var slice = riverItems.slice(0, shown);
+    river.innerHTML = (slice.map(function (s) { return storyLink(s, 'article', 'river-item'); }).join('') || '<p class="meta" style="padding:16px 0">No stories in this topic yet.</p>') +
+      (riverItems.length > shown ? '<div class="load-more"><button class="btn btn-outline" id="more-btn">Load older stories</button></div>' : '');
+    var more = document.getElementById('more-btn');
+    if (more) more.addEventListener('click', function () { shown += RIVER_PAGE; render(); });
+  }
+
+  // Adoptable pets (Telluride Humane Society via Shelterluv). Same guards as
+  // the live page: skip photo-less, pre-weaning, and name-marked-unavailable
+  // animals (the sync script already filters most of these — defense in depth).
+  var UNAVAILABLE_NAME = /\b(adoption\s+pending|adopted|on\s+hold|pending\s+adoption|not\s+available|coming\s+soon|in\s+foster|foster\s+only)\b/i;
+  function renderPets(animals) {
+    var today = LTData.mtDateKey ? LTData.mtDateKey(new Date()) : '';
+    var pets = (animals || []).filter(function (a) {
+      if (!a || !a.id || !a.photo) return false;
+      if (a.revealDate && today && a.revealDate > today) return false;
+      if (/^(unweaned|nursing)$/i.test((a.ageGroup || '').trim())) return false;
+      if (UNAVAILABLE_NAME.test(a.name || '')) return false;
+      return true;
+    }).slice(0, 4);
+    if (!pets.length) return;
+    // Dogs first, then cats, then anyone else; each links to the THS species page.
+    var speciesRank = { Dog: 0, Cat: 1 };
+    pets.sort(function (a, b) {
+      var ra = speciesRank[a.species] !== undefined ? speciesRank[a.species] : 2;
+      var rb = speciesRank[b.species] !== undefined ? speciesRank[b.species] : 2;
+      return ra - rb || String(a.name).localeCompare(String(b.name));
     });
-    // close drawer when a link is clicked
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = '☰';
+    function thsUrl(a) {
+      if (a.species === 'Dog') return 'https://telluridehumanesociety.com/dogs/';
+      if (a.species === 'Cat') return 'https://telluridehumanesociety.com/cats/';
+      return 'https://www.telluridehumanesociety.org/';
+    }
+    document.getElementById('pets-card').hidden = false;
+    document.getElementById('pets-list').innerHTML = pets.map(function (a) {
+      var name = (a.name || '').replace(/^\s*(adoption\s+pending!?|adopted|on\s+hold|pending)\s*[-:!]*\s*/i, '').trim();
+      return '<div class="item"><img class="pet-photo" src="' + LTData.esc(a.photo) + '" alt="' + LTData.esc(name) + '" loading="lazy">' +
+        '<div><a href="' + LTData.esc(thsUrl(a)) + '" target="_blank" rel="noopener">' + LTData.esc(name) + '</a>' +
+        '<div class="sub">' + LTData.esc(a.summary || a.breed || a.species || '') + '</div></div></div>';
+    }).join('');
+  }
+
+  LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured', 'humane-society-animals'])
+    .then(function (data) {
+      renderPets(data['humane-society-animals']);
+      var pins = (data['local-news-featured'] || []).map(function (a) { var s = normalize(a, a.sourceKey || 'Featured'); s.featured = a.featured === true; return s; });
+      var pinHrefs = {};
+      pins.forEach(function (p) { if (p.href) pinHrefs[p.href] = 1; });
+      stories = pins.concat(
+        (data['telluride-times-articles'] || []).map(function (a) { return normalize(a, 'Telluride Times'); }),
+        (data['smb-forum-articles'] || []).map(function (a) { return normalize(a, 'San Miguel Basin Forum'); })
+      ).filter(function (s, i, arr) {
+        if (!s.title || !s.href) return false;
+        if (!s.featured && pinHrefs[s.href] && pins.indexOf(s) === -1) return false;   // pin wins over duplicate
+        return true;
       });
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
+      stories.forEach(function (s) { s.when = parseWhen(s); });
+      // pins (featured first) stay at top; everything else newest-first
+      stories.sort(function (a, b) { return (b.featured - a.featured) || (b.when - a.when); });
+
+      // topic chips from the live data
+      var chips = document.getElementById('topic-chips');
+      var seen = {};
+      stories.forEach(function (s) { if (s.topic && TOPIC_LABELS[s.topic]) seen[s.topic] = 1; });
+      Object.keys(seen).sort().forEach(function (t) {
+        var c = document.createElement('span'); c.className = 'chip'; c.dataset.topic = t; c.textContent = TOPIC_LABELS[t];
+        chips.appendChild(c);
+      });
+      chips.addEventListener('click', function (e) {
+        var c = e.target.closest('.chip'); if (!c) return;
+        chips.querySelectorAll('.chip').forEach(function (x) { x.classList.remove('active'); });
+        c.classList.add('active'); topicFilter = c.dataset.topic || ''; shown = RIVER_PAGE; render();
+      });
+
+      // KOTO newscasts sidebar
+      var koto = (data['koto-newscasts'] || []).slice(0, 4);
+      if (koto.length) {
+        document.getElementById('koto-card').hidden = false;
+        document.getElementById('koto-list').innerHTML = koto.map(function (k, i) {
+          return '<div class="item"><div class="num">0' + (i + 1) + '</div>' +
+            '<div><a href="' + LTData.esc(safeHref(k.href)) + '" target="_blank" rel="noopener">' + LTData.esc(k.title || '') + '</a>' +
+            (k.copy ? '<div class="sub">' + LTData.esc(k.copy) + '</div>' : '') + '</div></div>';
+        }).join('');
+      }
+      render();
+    })
+    .catch(function (err) { LTData.showError(river, err); });
 })();
 </script>
-  <script defer src="/js/site-footer.js?v=20260618"></script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
