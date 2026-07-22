@@ -1,6 +1,6 @@
 {
-  "hash": "2a557db171548559006423221c83ad6a815babac",
-  "lede": "The big one this week is Wednesday's Planning and Zoning hearing, where the Town's own Carhenge Redevelopment Project goes before the commission — a preliminary subdivision and concept review for a 15,000-plus square-foot parcel at 700 W Pacific Ave that could reshape that end of town. On the same day, SMART's board takes up two vendor contracts tied to the gondola structural analysis, which is as close to a make-or-break infrastructure decision as this valley sees. A special Town Council session Sunday adds a public hearing on a liquor permit for KOTO's Live at the Drive event.",
+  "hash": "58b07f2ced84b87a21982bf77fb5de918ca5883e",
+  "lede": "The biggest thing on the civic calendar this week is Wednesday's Planning and Zoning meeting, where the Town's own Carhenge Redevelopment Project — a lot consolidation and concept review at 700 W Pacific Ave — goes before the commission for the first time. The same day, SMART's board takes up two vendor-contract votes tied directly to the gondola structural analysis, which means the bridge-or-bust question on that project moves another step. Town Council also convenes a special session Sunday to hold a public hearing on KOTO Radio's Live at the Drive liquor permit.",
   "notable": [
     {
       "id": 1,
@@ -8,11 +8,11 @@
     },
     {
       "id": 4,
-      "stake": "Two gondola structural-analysis contracts up for board approval."
+      "stake": "Two gondola structural-analysis contracts up for binding board votes."
     },
     {
       "id": 8,
-      "stake": "Public hearing on KOTO's Live at the Drive special-event liquor permit."
+      "stake": "Public hearing on KOTO's special event liquor permit — comment welcome."
     }
   ]
 }

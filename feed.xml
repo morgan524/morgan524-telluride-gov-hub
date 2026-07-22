@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 19:33:01 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 22:12:43 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 22–28</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-28</guid>
-      <pubDate>Wed, 22 Jul 2026 19:33:01 GMT</pubDate>
-      <description><![CDATA[The big one this week is Wednesday's Planning and Zoning hearing, where the Town's own Carhenge Redevelopment Project goes before the commission — a preliminary subdivision and concept review for a 15,000-plus square-foot parcel at 700 W Pacific Ave that could reshape that end of town. On the same day, SMART's board takes up two vendor contracts tied to the gondola structural analysis, which is as close to a make-or-break infrastructure decision as this valley sees. A special Town Council session Sunday adds a public hearing on a liquor permit for KOTO's Live at the Drive event.]]></description>
+      <pubDate>Wed, 22 Jul 2026 22:12:43 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the civic calendar this week is Wednesday's Planning and Zoning meeting, where the Town's own Carhenge Redevelopment Project — a lot consolidation and concept review at 700 W Pacific Ave — goes before the commission for the first time. The same day, SMART's board takes up two vendor-contract votes tied directly to the gondola structural analysis, which means the bridge-or-bust question on that project moves another step. Town Council also convenes a special session Sunday to hold a public hearing on KOTO Radio's Live at the Drive liquor permit.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -91,18 +91,6 @@ CPR World is offering a 2-day Wilderness First Aid course July 22 & 23 in Tellur
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Wed, Jul 22] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-22/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Wed, Jul 22] Mountain Village Farmers Marketshow: magic mountain Puppet Show</title>
       <link>https://telluridelibrary.libcal.com/event/15564458?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/mountain%20village%20farmers%20marketshow%7C2026-07-22</guid>
@@ -114,18 +102,6 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_09_39_46.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Wed, Jul 22] Market on the Plaza</title>
-      <link>https://koto.org/event/market-on-the-plaza/2026-07-22/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Heritage Plaza, Mountain Village
-
-Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Wed, Jul 22] Radio Biblioteca</title>
@@ -235,7 +211,7 @@ The July 23, 2026 Planning & Zoning Commission Chair meeting has been cancelled.
 
 SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters.
 
-⚡ Why it matters: Two gondola structural-analysis contracts up for board approval.]]></description>
+⚡ Why it matters: Two gondola structural-analysis contracts up for binding board votes.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -401,6 +377,33 @@ A free performance of *The Music Man* at the Sheridan Opera House, part of the v
       <category>Sheridan Opera House</category>
     </item>
     <item>
+      <title>[Fri, Jul 24] Big Violet</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=big-violet</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/big%20violet%7C2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/f3b34692-955d-43ed-b4f0-86e03c1a7e53/-/crop/4064x2033/0,252/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Big Violet is an alternative rock band from Taos, New Mexico known for emotional...]]></description>
+      <media:content url="https://ucarecdn.com/f3b34692-955d-43ed-b4f0-86e03c1a7e53/-/crop/4064x2033/0,252/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 24] Voter Registration Group Training</title>
+      <link>https://smcdemocrats.org/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/voter%20registration%20group%20training%7C2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 San Miguel County Democrats
+📍 Lone Cone Library Conference Room, Norwood
+🕒 1:00 PM - 2:30 PM
+
+San Miguel County Democrats voter-registration training. Bring a personal laptop or iPad. RSVP to Cindy at mtnmama70@gmail.com.]]></description>
+      <category>Community Event</category>
+      <category>San Miguel County Democrats</category>
+    </item>
+    <item>
       <title>[Meeting] Open Space Commission - Jul 26 2026 — 2026-07-26</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-26%7COpen%20Space%20Commission%20-%20Jul%2026%202026</guid>
@@ -431,7 +434,7 @@ The July 27 San Miguel County Open Space Commission agenda hasn't been posted ye
 
 A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.
 
-⚡ Why it matters: Public hearing on KOTO's Live at the Drive special-event liquor permit.]]></description>
+⚡ Why it matters: Public hearing on KOTO's special event liquor permit — comment welcome.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

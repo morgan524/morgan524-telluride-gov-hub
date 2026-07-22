@@ -761,16 +761,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Please join us for an evening with fellowship, prayer, and personal reflection on Monday, July 20 at 5:30 pm. See flyer below. Contact Katrina @ 970-417-9096 or Judy @ 970-708-1521 for questions. RSVP by Friday, July 17.Come to Me Wome...",
     href: "https://stpatrickstelluride.com/2026/parish-news/an-invitation-to-all-women-join-monday-july-20/",
     img: ""
-  },
-  {
-    title: "Gold Mountain Fire Community Resources",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "July 8, 2026",
-    newsTopic: "public-safety",
-    copy: "Links to Donation/Volunteer Form, Community Needs Request Form, and other Community Resources",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=950",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22786"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -984,7 +974,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1023,7 +1013,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1218,6 +1208,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride Preschool to change hands",
+    source: "Telluride Times",
+    date: "July 22, 2026",
+    firstSeen: "2026-07-22",
+    newsTopic: "education",
+    copy: "Stephanie Baye is stepping down after 30 years directing Telluride Preschool, with Cale Cramer — a local who graduated from Telluride Middle/High School and has been running BeeHive daycare since 2023 — taking over in September. Cramer holds a child psychology degree and is currently in graduate school studying early childhood mental health.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_e2e19d5e-7c29-4c24-9db8-3c57f4302dda.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/af/4af9f358-778c-4840-87fc-5fea5ce2c2ba/6a607449a1b61.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Fast and furious fun",
     source: "Telluride Times",
@@ -2990,39 +2992,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-22/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-22T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-07-22/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-07-22T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-22/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-22T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
     description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
@@ -4280,15 +4249,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53454849302438/huge/80c5277278dca1232cf1ee9667ded6407614ae5f.jpg"
   },
   {
-    title: "\"Making Friends with Your Pencil\" with Mary Pat Ettinger",
-    link: "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger-9913",
-    description: "Adults: Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have been excited to learn that \"Yes! Anyone can draw.\" It just takes a brain 'reset' and guidance from the instructor. Come prepared to learn and to enjoy your newfound skill. All supplies included in the class fee. If you're having issues with registration, please email lexi@weehawkenarts.org . Activity meeting dates Jul 25, 2026 Sat11:00 AM - 3:00 PM At the (air conditioned) Sherbino! View on site | Email this event",
+    title: "“MAKING FRIENDS WITH YOUR PENCIL” WITH MARY PAT ETTINGER",
+    link: "https://events.ourayridgwayevents.com/event/making-friends-with-your-pencil-with-mary-pat-ettinger",
+    description: "Think you can't draw? Think again! In this thoughtful 4 hour workshop, Mary Pat will lead you through different proven exercises to open the doors to drawing what you see! Mary Pat has taught this class to hundreds of students who have been excited to learn that \"Yes! Anyone can draw.\" It just takes a brain 'reset' and guidance from the instructor. Come prepared to learn and to enjoy your newfound skill. All supplies included in the class fee. View on site | Email this event",
     pubDate: "2026-07-25T17:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/53483756678694/huge/0fb484d78930759478e3f5a82536376e9b5bbfb8.jpg"
+    location: "The Annex on Cora",
+    imageUrl: "https://localist-images.azureedge.net/photos/53071990246481/huge/194d3a988c5385dedd7558e69f0f52df8571e58b.jpg"
   },
   {
     title: "Experience Washing Laundry The Old-Fashioned Way",
@@ -5002,17 +4971,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Ridges & Reservoir: The Ridgway Landscape Art Session - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/ridges-reservoir-the-ridgway-landscape-art-session-ridgway-state-park-summer-program-series",
-    description: "Unleash your inner artist and let the breathtaking peaks of the San Juans and crystal-clear waters of Ridgway Reservoir be your muse! Join us for an evening of creativity where we swap the studio for the great outdoors. This program is all about slowing down and translating the stunning natural surroundings of the park into art. View on site | Email this event",
-    pubDate: "2026-08-14T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/166d3c96e56e2bb0031eacfdaa2df4e609116108.jpg"
   },
   {
     title: "EDIE: Theatre @ the Wright Presented by UpstART Theatre",
@@ -8803,6 +8761,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     civicwebId: 8041
   },
   {
+    date: "August 19, 2026",
+    title: "Parks & Recreation Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8081
+  },
+  {
     date: "August 27, 2026",
     title: "Planning & Zoning Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
@@ -8837,6 +8804,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8052
+  },
+  {
+    date: "September 16, 2026",
+    title: "Parks & Recreation Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8082
   },
   {
     date: "September 22, 2026",
