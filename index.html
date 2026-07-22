@@ -26,9 +26,11 @@
   /* right-anchored so the baked right-edge fade survives the cover crop */
   .hero2 .ph-left { position: absolute; left: 0; top: 0; width: 30%; height: 100%; object-fit: cover; object-position: right center; }
   .hero2 .ph { position: absolute; right: 0; top: 0; width: 46%; height: 100%; object-fit: cover; object-position: center; }
-  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(253,244,238,0) 22%, #fdf4ee 32%, #fdf4ee 58%, rgba(253,244,238,.5) 72%, rgba(253,244,238,0) 88%); }
+  /* Solid band widened + copy centered (was margin-left:30%), so the hero
+     text centers over the three cards below (Morgan, 2026-07-22). */
+  .hero2 .fade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(253,244,238,0) 16%, #fdf4ee 28%, #fdf4ee 70%, rgba(253,244,238,.5) 80%, rgba(253,244,238,0) 92%); }
   .hero2-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 76px var(--pad-x) 230px; }
-  .hero2-copy { margin-left: 30%; max-width: 660px; text-align: center; }
+  .hero2-copy { margin: 0 auto; max-width: 660px; text-align: center; }
   .hero2 .kicker { font: 700 31px/1.15 var(--sans); color: var(--gold); letter-spacing: .005em; }
   .hero2 h1 { font: 600 64px/1.04 var(--serif); letter-spacing: -.02em; color: var(--forest); max-width: 660px; margin: 16px auto 0; }
   .hero2 .sub { font: 400 17px/1.7 var(--sans); color: var(--body2); max-width: 490px; margin: 22px auto 0; }
