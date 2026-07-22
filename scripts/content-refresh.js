@@ -6950,15 +6950,35 @@ async function main() {
   // (AGENDA_SOURCES.ouray above) — so the dead write path and its redundant
   // syncOurayMeetings() AgendaCenter fetch are removed rather than resurrected.
 
-  // ── Norwood meetings ──
-  // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. (It was
-  // patched against gov-helpers.js where the const doesn't exist, so every
-  // Norwood update silently no-opped from mid-June until 2026-07-21.)
+  // ── Norwood meetings: rebuild (scraped agendas + cadence placeholders) ──
+  // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. The town's
+  // meeting pages list only PAST meetings (each posts with its agenda shortly
+  // before the date), so a scrape-only rebuild goes empty in the gap between
+  // agenda postings — that's what wiped the list on 2026-07-22. Cadences
+  // verified from the town's own 2026 history (never guessed): Board of
+  // Trustees = 2nd Wednesday (1/14, 2/11, 3/11, 4/8, 5/13, 6/10, 7/8); P&Z =
+  // 3rd Monday (3/16, 4/20, 5/18, 6/15 — shifts when that Monday is a
+  // holiday, and the real agenda wins on reconcile when it posts).
   const newNorwoodData = await syncNorwoodMeetings();
-  if (newNorwoodData !== null) {
-    const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
-    if (JSON.stringify(newNorwoodData) !== JSON.stringify(existingNorwood)) {
-      govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', newNorwoodData, false);
+  if (newNorwoodData === null) {
+    console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
+  } else {
+    const norwoodNote = 'Next scheduled meeting -- agenda posted before the meeting.';
+    const botStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'bot'),
+      { nth: 2, weekday: 3 },
+      { title: 'Board of Trustees Meeting', board: 'bot', placeholders: 2, note: norwoodNote });
+    const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
+      { nth: 3, weekday: 1 },
+      { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
+    const norwoodStubs = [...(botStubs || []), ...(pzStubs || [])]
+      .sort((a, b) => new Date(a.date) - new Date(b.date));
+    if (norwoodStubs.length) {
+      const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
+      if (JSON.stringify(norwoodStubs) !== JSON.stringify(existingNorwood)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'NORWOOD_CACHED_DATA', norwoodStubs, false);
+        govDataChanged = true;
+        console.log(`  NORWOOD_CACHED_DATA: rebuilt (${norwoodStubs.length} meetings)`);
+      }
       govDataSrc = replaceConstString(govDataSrc, 'NORWOOD_CACHE_DATE', today());
       govDataChanged = true;
     }
