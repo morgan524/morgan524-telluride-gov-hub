@@ -1,3 +1,3 @@
-Maintenance Issues — 2026-07-01T14:41:09.433Z
+Maintenance Issues — 2026-07-22T14:33:38.720Z
 
-No "Telluride Times" articles in TELLURIDE_TIMES_ARTICLES — the TT scrape may be failing (TT_AUTH_COOKIE expired, or the TT feed/host changed). Check the latest content-refresh "[feed] Telluride Times HTTP …" log line; refresh the TT_AUTH_COOKIE secret if it's 401/empty.
+Dead link: https://forms.gle/RLxaexLJar4Vpnhp7 (timeout)
