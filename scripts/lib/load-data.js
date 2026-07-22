@@ -72,7 +72,12 @@ function loadDataArrays(repoRoot) {
   const arrays = {};
   for (const name of constNames) {
     const v = captured[name];
-    if (Array.isArray(v) && v.length && v.every(x => x && typeof x === 'object' && !Array.isArray(x))) {
+    // Empty arrays are KEPT (an empty array trivially passes .every) — the
+    // source-health zero-drop detector needs to see a source at 0, not have
+    // it silently vanish from the map. (2026-07-22 audit P0-1: the old
+    // `v.length &&` guard made the "0 items now" alarm structurally
+    // unreachable — the exact failure it was built to catch.)
+    if (Array.isArray(v) && v.every(x => x && typeof x === 'object' && !Array.isArray(x))) {
       arrays[name] = v;
     }
   }

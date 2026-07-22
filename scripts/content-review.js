@@ -122,10 +122,12 @@ function loadData() {
 
   // Keep only the captured values that are arrays of objects (event/meeting/
   // news/notice collections) plus a couple of keyed-object maps we check.
+  // Empty arrays are KEPT so the source-health zero-drop alarm can fire
+  // (2026-07-22 audit P0-1 — mirrors the same fix in lib/load-data.js).
   const arrays = {};
   for (const name of constNames) {
     const v = captured[name];
-    if (Array.isArray(v) && v.length && v.every(x => x && typeof x === 'object' && !Array.isArray(x))) {
+    if (Array.isArray(v) && v.every(x => x && typeof x === 'object' && !Array.isArray(x))) {
       arrays[name] = v;
     }
   }
