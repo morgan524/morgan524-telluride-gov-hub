@@ -54,16 +54,16 @@
     "type": "Community"
   },
   {
-    "title": "Mountain Village Farmers Marketshow",
+    "title": "Mountain Village Farmers Marketshow: magic mountain Puppet Show",
     "href": "https://telluridelibrary.libcal.com/event/15564458?hs=a",
     "date": "2026-07-22",
     "time": "11:00 AM",
     "location": "Mountain Village Market",
     "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_09_39_46.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "11:00 AM – 12:00 PM",
+    "desc": "A farmers market event at Mountain Village Market featuring the Magic Mountain Puppet Show, presented by Wilkinson Public Library. The performance is scheduled for an hour in the late morning, offering family-friendly entertainment…",
     "type": "Food & Drink"
   },
   {
@@ -951,6 +951,19 @@
     "type": "Community"
   },
   {
+    "title": "Poetry in the Round",
+    "href": "https://events.ourayridgwayevents.com/event/poetry-in-the-round",
+    "date": "2026-07-25",
+    "time": "3:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53491850843436/huge/5736e0c7b20419c5265a78e5a99b0a6c261575b0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "📖✨ Poetry has a way of bringing people together, one word at a time. Join us for Poetry in the Round at Chloe’s Charcuterie & Wine on Saturday, July 26, from 3:00–5:00 PM for an afternoon of shared stories, heartfelt verses, and creative…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-07-25",
@@ -1133,6 +1146,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also…",
     "type": "Wellness"
+  },
+  {
+    "title": "Chloe's Secret Garden Grand Opening",
+    "href": "https://events.ourayridgwayevents.com/event/chloes-secret-garden-grand-opening",
+    "date": "2026-07-26",
+    "time": "2:00 PM",
+    "location": "Chloe's Charcuterie & Wine",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53491865115071/huge/bff2f232eb493287091d70d7c435baac2f6d6e45.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Welcome to Chloe’s Secret Garden 🌿🍷 We’ve been working behind the scenes to create a beautiful new outdoor space, and we can’t wait to share it with you. This is just a glimpse of what’s to come! 🌸 Grand Opening: Sunday, July 26, 2 PM -…",
+    "type": "Community"
   },
   {
     "title": "Tea and Tarot",
@@ -1710,7 +1736,7 @@
     "img": "https://localist-images.azureedge.net/photos/52932868603734/huge/c25eaff592f203a10ece3ae8a5f406fca147da0f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Love’s Labors Lost: Theatre @ the Wright Presented by UpstART Theatre WHEN? Thursday, July 30 Doors at 7:00 pm • Show at 7:30 pm Friday, July 31 Doors at 7:00 pm • Show at 7:30 pm Saturday, August 1 Doors at 7:00 pm • Show at 7:30 pm…",
+    "desc": "Presented by UpstART Theatre ABOUT THE SHOW Love, language, mistaken identities, and youthful ambition collide in William Shakespeare’s Love’s Labors Lost, one of the Bard’s most playful and fast-moving comedies. When a king and his…",
     "type": "Arts & Film",
     "endDate": "2026-08-02"
   },
@@ -2525,7 +2551,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Community"
   },
   {
@@ -2974,7 +3000,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -3065,8 +3091,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",

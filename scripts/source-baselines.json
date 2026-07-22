@@ -130,7 +130,7 @@
         "2026-07-19": 13,
         "2026-07-20": 13,
         "2026-07-21": 13,
-        "2026-07-22": 1
+        "2026-07-22": 4
       }
     },
     "OPHIR_CACHED_DATA": {
@@ -764,7 +764,7 @@
         "2026-07-19": 129,
         "2026-07-20": 136,
         "2026-07-21": 139,
-        "2026-07-22": 138
+        "2026-07-22": 140
       }
     },
     "NORWOOD_EVENTS": {
@@ -931,6 +931,51 @@
         "2026-07-20": 5,
         "2026-07-21": 4,
         "2026-07-22": 4
+      }
+    },
+    "LOCAL_GROUP_SCHEDULES": {
+      "dailyMax": {
+        "2026-07-22": 0
+      }
+    },
+    "DEEP_DIVE_UPDATES": {
+      "dailyMax": {
+        "2026-07-22": 0
+      }
+    },
+    "REGIONAL_NEWS_ARTICLES": {
+      "dailyMax": {
+        "2026-07-22": 30
+      }
+    },
+    "SMC_ALERTS": {
+      "dailyMax": {
+        "2026-07-22": 4
+      }
+    },
+    "ENGAGE_MEETINGS": {
+      "dailyMax": {
+        "2026-07-22": 1
+      }
+    },
+    "TELLURIDE_VENTURE_EVENTS": {
+      "dailyMax": {
+        "2026-07-22": 0
+      }
+    },
+    "NUCLA_NATURITA_EVENTS": {
+      "dailyMax": {
+        "2026-07-22": 0
+      }
+    },
+    "CLUB_RED_SHOWS": {
+      "dailyMax": {
+        "2026-07-22": 0
+      }
+    },
+    "FRESH_FOOD_HUB_EVENTS": {
+      "dailyMax": {
+        "2026-07-22": 0
       }
     }
   }

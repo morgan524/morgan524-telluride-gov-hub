@@ -1,31 +1,40 @@
 [
   {
-    "date": "June 10, 2026",
-    "time": "6:00 PM",
-    "title": "Ridgway Town Council Regular Meeting",
-    "board": "council",
-    "agendaUrl": null
-  },
-  {
     "date": "July 8, 2026",
     "time": "6:00 PM",
     "title": "Ridgway Town Council Regular Meeting",
-    "board": "council",
     "agendaUrl": null,
-    "note": "Agenda typically posted the Friday before."
-  },
-  {
-    "date": "June 16, 2026",
-    "title": "Ridgway Town Council Special Meeting",
-    "board": "council",
-    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---June-16%2C-2026.pdf",
-    "note": "Special meeting -- see the agenda packet for items."
+    "packetUrl": null,
+    "special": false,
+    "board": "council"
   },
   {
     "date": "July 15, 2026",
     "time": "5:30 PM",
     "title": "Ridgway Planning Commission Meeting",
-    "board": "pc",
-    "agendaUrl": null
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "pc"
+  },
+  {
+    "date": "August 12, 2026",
+    "time": "6:00 PM",
+    "title": "Ridgway Town Council Regular Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
+  },
+  {
+    "date": "September 9, 2026",
+    "time": "6:00 PM",
+    "title": "Ridgway Town Council Regular Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
   }
 ]

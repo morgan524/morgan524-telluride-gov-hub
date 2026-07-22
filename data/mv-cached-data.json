@@ -1,94 +1,68 @@
 [
   {
-    "date": "August 20, 2026",
-    "time": "2:00 PM",
-    "title": "Town Council Meeting",
-    "board": "tc",
+    "date": "August 6, 2026",
+    "time": "10:00 AM - 3:00 PM",
+    "title": "Design Review Board",
+    "board": "drb",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
     "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
-    "note": "Next scheduled meeting -- agenda posted the Friday before."
+    "note": "Agenda typically posted the Friday before."
   },
   {
-    "date": "April 23, 2026",
-    "time": "2:00 PM - 7:00 PM",
-    "title": "Town Council Meeting",
-    "board": "tc",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/48629/april_23-_2026_town_council_meeting_agenda.pdf",
-    "packetUrl": null,
-    "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
-    "note": "Next scheduled meeting -- agenda posted the Friday before."
-  },
-  {
-    "date": "May 21, 2026",
+    "date": "August 20, 2026",
     "time": "2:00 PM - 8:00 PM",
     "title": "Town Council Meeting",
     "board": "tc",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/48835/may_21-_2026_town_council_meeting_agenda.pdf",
-    "packetUrl": "https://townofmountainvillage.com/site/assets/files/48814/may_21-_2026_town_council_meeting_packet-1.pdf",
-    "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
-    "date": "June 17, 2026",
-    "time": "8:30 AM - 4:00 PM",
-    "title": "Town Council Meeting",
-    "board": "tc",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49108/june_17-_2026_town_council_meeting_agenda-1.pdf",
+    "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
   },
   {
-    "date": "March 19, 2026",
-    "time": "2:00 PM",
-    "title": "Town Council Meeting",
-    "board": "tc",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/48429/march_19-_2026_town_council_meeting_agenda.pdf",
-    "packetUrl": "https://townofmountainvillage.com/site/assets/files/48439/march_19-_2026_town_council_meeting_packet.pdf",
-    "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
-    "date": "April 2, 2026",
-    "time": "10:00 AM - 2:00 PM",
-    "title": "Design Review Board",
-    "board": "drb",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/48456/april_2-_2026_design_review_board_meeting_agenda.pdf",
-    "packetUrl": null,
-    "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
-  {
-    "date": "May 7, 2026",
+    "date": "September 3, 2026",
     "time": "10:00 AM - 3:00 PM",
     "title": "Design Review Board",
     "board": "drb",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
   },
   {
-    "date": "June 4, 2026",
+    "date": "September 17, 2026",
+    "time": "2:00 PM - 7:45 PM",
+    "title": "Town Council Meeting",
+    "board": "tc",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
+  },
+  {
+    "date": "October 1, 2026",
     "time": "10:00 AM - 3:00 PM",
     "title": "Design Review Board",
     "board": "drb",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
   },
   {
-    "date": "March 5, 2026",
-    "time": "10:00 AM",
-    "title": "Design Review Board",
-    "board": "drb",
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/48270/march_5-_2026_design_review_board_meeting_agenda.pdf",
-    "packetUrl": "https://townofmountainvillage.com/site/assets/files/48363/march_5-_2026_design_review_board_meeting_packet_reduced.pdf",
+    "date": "October 7, 2026",
+    "time": "10:00 AM - 5:00 PM",
+    "title": "Town Council Meeting",
+    "board": "tc",
+    "agendaUrl": null,
+    "packetUrl": null,
     "special": false,
-    "location": "Town Hall, 455 Mountain Village Blvd, Suite A"
+    "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+    "note": "Agenda typically posted the Friday before."
   }
 ]

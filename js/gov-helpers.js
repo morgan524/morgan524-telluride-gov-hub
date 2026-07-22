@@ -353,7 +353,13 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296","zoomUrl":"https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296","zoomUrl":"https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1","sv":4},
+
+  "norwood|2026-08-12|Board of Trustees Meeting":
+    {"sv":4},
+
+  "norwood|2026-08-17|Planning and Zoning Commission Meeting":
+    {"sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -367,10 +373,434 @@ const DEEP_DIVE_UPDATES = [];
 // const no longer existed anywhere; the writers now THROW on a missing
 // target, and these seeds let the data start landing again. No page renders
 // them yet — restoring (or retiring) the reader UIs is tracked separately.
-const MEETING_PREVIEWS = {};        // pre-meeting agenda previews (Claude)
-const REGIONAL_NEWS_ARTICLES = [];  // 7 regional feeds (West End, Ouray, …)
-const SMC_ALERTS = [];              // SMC AlertCenter items
-const ENGAGE_MEETINGS = [];         // Engage Telluride project key dates
+const MEETING_PREVIEWS = {
+  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
+    "The Telluride Liquor Licensing Authority is expected to review liquor license applications or changes requiring local approval. As the local licensing authority, the hearing officer will consider matters brought before the board, with new licenses and appeals handled separately by Town Council.",
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
+    "The Historic & Architectural Review Commission is expected to convene for its regular August 2026 session. No specific agenda items are detailed in the available materials, but as a standing body, the Commission typically reviews proposed construction, renovation, or development projects for compliance with Telluride's historic preservation and architectural standards.",
+
+  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
+    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs within Telluride. The commission may also address matters concerning historic designations, preservation standards, or updates to inventories of architecturally and historically significant properties.",
+
+  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
+    "The Parks & Recreation Commission is expected to meet to discuss community parks and recreation needs and services for the Town of Telluride. Specific agenda items have not been published, but the commission regularly interprets community desires to guide parks and recreation programming and planning.",
+
+  "telluride|2026-08-11|Town Council - Aug 11 2026":
+    "Council is expected to consider a Land Use Code amendment adding new regulations for Natural Medicine Businesses (Section 5-31). The meeting may also address a request to replace a lost share certificate for the Farmers' Water Development Company.",
+
+  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
+    "Council is expected to meet in an intergovernmental worksession with San Miguel County representatives to discuss proposed Land Use Code amendments, including new regulations for Natural Medicine Businesses, changes to the \"Qualified Owner\" definition, and updates to Wildfire Area standards. A lost water share certificate replacement may also be addressed.",
+
+  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
+    "Council is expected to gather for a retreat session on August 6, 2026. Related legal notices indicate ongoing San Miguel County discussions around natural medicine businesses, wildfire area regulations, qualified owner definitions, and a water share certificate replacement, though the retreat's specific agenda items were not fully disclosed.",
+
+  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
+    "The Telluride Ecology Commission is expected to meet on August 5, 2026, to address human-wildlife interactions and related public safety concerns, consistent with its mandate under the Telluride Municipal Code. Specific agenda items have not been detailed, but discussions typically focus on reducing threats to both wildlife and residents.",
+
+  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
+    "The Commission for Community Assistance, Arts & Special Events is expected to discuss funding allocations for community support and arts organizations, review special events applications, and consider street closure and banner requests as part of its regular monthly agenda.",
+
+  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
+    "The Telluride Housing Authority Subcommittee is expected to convene its regular monthly meeting on August 5, 2026. No specific agenda items have been publicly detailed, but the subcommittee typically addresses local affordable housing matters, consistent with its ongoing oversight responsibilities for the Telluride Housing Authority.",
+
+  "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
+    "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance within the Town of Telluride. The meeting may also include review of open space elements from relevant planning documents and potential recommendations to Town Council regarding open-space-related matters.",
+
+  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
+    "The Town of Telluride Parks & Recreation Commission is expected to meet in a rescheduled session to address community parks and recreation needs. A related proposal for Telluride Town Park Oval improvements and Warner Field fencing and safety netting improvements may also be discussed.",
+
+  "telluride|2026-07-27|Special Town Council - Jul 27 2026":
+    "Council is expected to act as the Liquor Licensing Authority to hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for a live outdoor event on North Pine Street on July 30, 2026.",
+
+  "telluride|2026-07-26|Open Space Commission - Jul 26 2026":
+    "The Open Space Commission is expected to meet to review priorities and criteria related to open space acquisition, management, and maintenance. Agenda details are limited, but the commission may also consider open space elements of local plans and make recommendations to Town Council on related matters.",
+
+  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
+    "Board will consider selecting vendors for gondola structural analysis projects, discuss Gondola Advisory Committee composition, and receive a gondola project update. Additional items include a fiscal year 2026 budget amendment introduction and second quarter performance and operations reports.",
+
+  "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
+    "The Planning & Zoning Commission is expected to approve June meeting minutes, appoint members to the Ethics Commission and Vending Subcommittee, and hold a public hearing. The hybrid meeting takes place July 23 at 5:30 PM at Rebekah Hall.",
+
+  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
+    "The Planning & Zoning Commission Chair meeting scheduled for July 23, 2026 has been cancelled. No agenda items will be heard.",
+
+  "county|2026-07-27|Housing Code Update SSR":
+    "Board will consider updates to the housing code as part of a Staff Summary Report (SSR). The meeting may also touch on related county business, including ongoing procurement activities and financial matters being addressed across San Miguel County during this period.",
+
+  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
+    "The Planning Commission and Board of County Commissioners will hold a joint work session covering land use and planning matters. Related county business includes infrastructure projects, foreclosure proceedings, property tax exemptions, and the Board of Equalization's ongoing review of taxpayer appeals of property valuations.",
+
+  "county|2026-08-05|Board of County Commissioners Meeting":
+    "Board will consider procurement matters including material hauling, soil preparation at Mill Creek Park, foundation repairs at the Placerville Schoolhouse, and roofing at the Trout Lake Water Tank. Commissioners will also sit as the Board of Equalization to hear taxpayer appeals of Assessor property valuations through August 5.",
+
+  "county|2026-08-12|Board of County Commissioners Work Session":
+    "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices also cover property tax exemption programs for seniors, disabled veterans, and gold star spouses, as well as upcoming foreclosure sales on two Mountain Village properties.",
+
+  "county|2026-08-13|Planning Commission Meeting":
+    "The Planning Commission is expected to meet on August 13, 2026. Related notices include requests for proposals for foundation repairs at the Placerville Schoolhouse and Trout Lake Water Tank roofing, property tax exemption notices for seniors and veterans, and two foreclosure sale auctions in Telluride Mountain Village.",
+
+  "county|2026-08-19|Board of County Commissioners Meeting":
+    "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices include property tax exemption information for seniors, disabled veterans, and gold star spouses, along with foreclosure and probate matters in the county."
+};        // pre-meeting agenda previews (Claude)
+const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, July",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "July 24, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-july/",
+    img: ""
+  },
+  {
+    title: "Invitation to Prayer/Fellowship Wednesday Morning",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 21, 2026",
+    newsTopic: "community",
+    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 22nd...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....",
+    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-2/",
+    img: ""
+  },
+  {
+    title: "July 20th Women’s Retreat Reminder",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 19, 2026",
+    newsTopic: "community",
+    copy: "It is not too late to join us for a Spirit-filled evening with fellowship, scripture and personal reflection tomorrow (MONDAY, JULY 20th) The theme of the evening is \"Come to Me...\"Potluck begins at 5:30pm at Carroll Mueller's home (address provided up...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/july-20th-womens-retreat-reminder/",
+    img: ""
+  },
+  {
+    title: "Monday Women’s Retreat Location Changed",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 19, 2026",
+    newsTopic: "community",
+    copy: "The 'COME TO ME' Women's Retreat Evening, July 20th has been moved to Carroll Mueller's home in Telluride!Bring your Bible and a potluck dish to share. It begins at 5:30.Text Katrina for the address or if you have questions (970) 417-9096.",
+    href: "https://stpatrickstelluride.com/2026/parish-news/monday-womens-retreat-location-changed/",
+    img: ""
+  },
+  {
+    title: "St Pats Telluride Parish Bulletin for July 19th",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 18, 2026",
+    newsTopic: "arts-culture",
+    copy: "Attached as PDF is the St Pats Telluride Parish Bulletin for July 19th. Please see the Parish Calendar on the website for any updates to the schedule.Please join us for praying the Holy Rosary on Sundays before 9:00 AM Holy Mass. It starts at 8:30...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/st-pats-telluride-parish-bulletin-for-july-19th/",
+    img: ""
+  },
+  {
+    title: "Changes in evacuation zones 25 and 300",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 17, 2026",
+    newsTopic: "public-safety",
+    copy: "Changes in evacuation zones 25 and 300 on July 17, 2026",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=954",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22817"
+  },
+  {
+    title: "Fire crews aim to draw ‘big box’ around blaze",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 17, 2026",
+    newsTopic: "public-safety",
+    copy: "Surveying a sprawling map of the northern San Juans on Wednesday, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – who assumed the role of incident commander over Gold Mountain Fire operations on July 14 – said firefighters are working to draw a “big box” aro",
+    href: "https://www.ouraynews.com/2026/07/17/fire-crews-aim-draw-big-box-around-blaze/",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County Remains in Stage 2 Fire Restrictions",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=953",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22782"
+  },
+  {
+    title: "Pilot dies in reservoir crash",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "An experienced firefighting pilot who was pulling water from Silver Jack Reservoir to battle the Gold Mountain Fire died Sunday when his helicopter plunged into the reservoir northeast of Ridgway. Nicholas Dale, 56, of Sooke, British Columbia, was found deceased inside the helicopter by members of t",
+    href: "https://www.ouraynews.com/2026/07/15/pilot-dies-reservoir-crash/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Heights, heat add to firefighters’ strain",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Hotshot Jesse Eaves calls it “The Great Race.” At the small tent city along U.S. Highway 550, Eaves starts each day with a 5 a.m. wakeup call. Thus begins an eight-minute sprint for him and his California-based crew to pack their gear and load their trucks, in what Eaves said is often the most harri",
+    href: "https://www.ouraynews.com/2026/07/15/heights-heat-add-firefighters-strain/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County approves hiring fire recovery manager — if it can find funding",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County intends to hire an employee who can help lead the county’s efforts to recover from the Gold Mountain Fire — assuming it can find funding. County commissioners on Tuesday unanimously agreed to County Manager Antonio Mendez’s plan to bring aboard a recovery manager. The approval comes wit",
+    href: "https://www.ouraynews.com/2026/07/15/county-approves-hiring-fire-recovery-manager-can-find-funding/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Trust, county close to conserving open space park",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "recreation",
+    copy: "Ouray County is much closer to getting a new open space park on the Silver Mountain Mine property. The Trust for Land Restoration has received a $180,000 Great Outdoors Colorado grant. Couple that with $215,000 from Colorado’s Idarado Natural Resource Damage Fund and donations from private citizens,",
+    href: "https://www.ouraynews.com/2026/07/15/trust-county-close-conserving-open-space-park/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Man gets probation, community service in sex assault case",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "A former Ouray County man was sentenced Monday to one year of unsupervised probation for providing alcohol to a then-17-year-old girl who said she was sexually assaulted by two others at the former Ouray police chief s home. Ashton Whittington, 21, was also ordered to perform 48 hours of useful publ",
+    href: "https://www.ouraynews.com/2026/07/15/man-gets-probation-community-service-sex-assault-case/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Thank you, helpers",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: A word of gratitude: These last days since the Gold Mountain Fire started on June 27 have been hard for us, individually and as a community. During times of strife and difficulty a wise man, Fred Rogers, has taught us to “look for the helpers. A sea of helpers is indeed here, both our l",
+    href: "https://www.ouraynews.com/2026/07/15/thank-you-helpers/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Thank you, firefighters",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: Thank you is a simple phrase most of us use every day. However, now thank you just doesn’t seem adequate for our firefighters and first responders. Thank you for saving our town, our homes and possibly our lives. Our gratitude will never be enough. Kathy Hall Ouray",
+    href: "https://www.ouraynews.com/2026/07/15/thank-you-firefighters/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Dead trees need removal",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: On the evening of June 27 my wife, Lori, and I evacuated our home in unincorporated Ouray County and drove to Montrose due to the Gold Mountain Fire. All afternoon we watched from my front porch as the fire on the canyon wall consumed many acres. The wind was fierce and changing directi",
+    href: "https://www.ouraynews.com/2026/07/15/dead-trees-need-removal/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "City has known issues with gym for years",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 16, 2026",
+    newsTopic: "arts-culture",
+    copy: "Dear Editor: I would like to clarify some points made in the Plaindealer s article, “Following outcry, Ouray seeks gym solutions, from the July 9 edition. First, it was “acknowledged that the city didn’t communicate well enough with gym members about the removal of the equipment but said it needed t",
+    href: "https://www.ouraynews.com/2026/07/15/city-known-issues-gym-years/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Invitation to prayer/fellowship-Wednesday morning",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 14, 2026",
+    newsTopic: "community",
+    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 15...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. (If you are only available for fellowship and i...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning/",
+    img: ""
+  },
+  {
+    title: "Parish bulletin for July 12",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 11, 2026",
+    newsTopic: "community",
+    copy: "Attached is our parish bulletin for Sunday, July 12. As a reminder, the Parish Calendar has the most up-to-date information. Join us before the 9 am Sunday Holy Mass to pray the Holy Rosary. We begin at 8:30 am. After the 9...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-july-12/",
+    img: ""
+  },
+  {
+    title: "An Invitation to all women–Join Monday, July 20",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 9, 2026",
+    newsTopic: "community",
+    copy: "Please join us for an evening with fellowship, prayer, and personal reflection on Monday, July 20 at 5:30 pm. See flyer below. Contact Katrina @ 970-417-9096 or Judy @ 970-708-1521 for questions. RSVP by Friday, July 17.Come to Me Wome...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/an-invitation-to-all-women-join-monday-july-20/",
+    img: ""
+  },
+  {
+    title: "Gold Mountain Fire Community Resources",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 8, 2026",
+    newsTopic: "public-safety",
+    copy: "Links to Donation/Volunteer Form, Community Needs Request Form, and other Community Resources",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=950",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22786"
+  }
+];  // 7 regional feeds (West End, Ouray, …)
+const SMC_ALERTS = [
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-07-22",
+    pubDate: "2026-07-22T00:17:58.000Z",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-07-21",
+    pubDate: "2026-07-21T23:12:00.000Z",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Tomboy Road reopens Weds 7/22 8AM",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-07-21",
+    pubDate: "2026-07-21T23:10:29.000Z",
+    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-07-14",
+    pubDate: "2026-07-14T15:17:10.000Z",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  }
+];              // SMC AlertCenter items
+const ENGAGE_MEETINGS = [
+  {
+    projectName: "Town Park Oval Warner Field Improvements",
+    projectUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements",
+    title: "P&R Commission Phase II Design Review",
+    date: "2026-07-29",
+    board: "other",
+    dateUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements/widgets/106633/key_dates#41038"
+  }
+];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-22';
 const LEGAL_NOTICES_CACHE_DATE = '2026-07-22';
 
@@ -487,7 +917,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -526,7 +956,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -601,7 +1031,13 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
-    "SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters."
+    "SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters.",
+
+  "norwood|2026-08-12|Board of Trustees Meeting":
+    "The August 12, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
+
+  "norwood|2026-08-17|Planning and Zoning Commission Meeting":
+    "The August 17, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1755,6 +2191,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -1797,6 +2269,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass and Tomboy Road are closed to all vehicle and pedestrian traffic following mudslides and flooding on Friday, July 17. The duration of the closure is unknown.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=70",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -2931,15 +3421,15 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
   },
   {
-    title: "Mountain Village Farmers Marketshow",
+    title: "Mountain Village Farmers Marketshow: magic mountain Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/15564458?hs=a",
-    description: "11:00 AM – 12:00 PM",
+    description: "A farmers market event at Mountain Village Market featuring the Magic Mountain Puppet Show, presented by Wilkinson Public Library. The performance is scheduled for an hour in the late morning, offering family-friendly entertainment alongside the market.",
     pubDate: "2026-07-22T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Mountain Village Market",
-    imageUrl: ""
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_09_39_46.png"
   },
   {
     title: "Radio Biblioteca",
@@ -3140,7 +3630,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3152,7 +3642,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3779,6 +4269,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53427267435930/huge/c7ba3e8f42ac3ee121e752e3d8deb8ef4b84ead2.jpg"
   },
   {
+    title: "Poetry in the Round",
+    link: "https://events.ourayridgwayevents.com/event/poetry-in-the-round",
+    description: "📖✨ Poetry has a way of bringing people together, one word at a time. Join us for Poetry in the Round at Chloe’s Charcuterie & Wine on Saturday, July 26, from 3:00–5:00 PM for an afternoon of shared stories, heartfelt verses, and creative expression. Whether you’re bringing an original poem, sharing a favorite piece by another author, or simply coming to listen, everyone is welcome. Enjoy an inspiring afternoon in great company with delicious food, wine, and a space to celebrate the beauty of the written word. We can’t wait to hear what speaks to your heart. ❤️ 📍 616 Clinton St., Ridgway, CO 🕒 3:00–5:00 PM Tag someone who loves poetry, storytelling, or a cozy afternoon at Chloe’s! ✒️🍷 #PoetryInTheRound #RidgwayCO #OurayCounty #WesternColorado #ChloesCharcuterieAndWine View on site | Email this event",
+    pubDate: "2026-07-25T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53491850843436/huge/5736e0c7b20419c5265a78e5a99b0a6c261575b0.jpg"
+  },
+  {
     title: "Pinyons, Petals, and Prickles: High-Desert Botany - Ridgway State Park Summer Program Series",
     link: "https://events.ourayridgwayevents.com/event/pinyons-petals-and-prickles-high-desert-botany-ridgway-state-park-summer-program-series",
     description: "Join us to explore the fascinating world of our local flora, tracing the incredible journey from majestic pinyon pines to resilient blooming cacti. Whether you're an avid hiker wanting to identify trail plants or simply a curious nature lover, Zoe Debenedette's expert insights will give you a whole new appreciation for our rugged landscape. Come discover the amazing plants that call Ridgway home! View on site | Email this event",
@@ -3833,6 +4334,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Billy Goats Gruff Patio",
     imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
+  },
+  {
+    title: "Chloe's Secret Garden Grand Opening",
+    link: "https://events.ourayridgwayevents.com/event/chloes-secret-garden-grand-opening",
+    description: "Welcome to Chloe’s Secret Garden 🌿🍷 We’ve been working behind the scenes to create a beautiful new outdoor space, and we can’t wait to share it with you. This is just a glimpse of what’s to come! 🌸 Grand Opening: Sunday, July 26, 2 PM - 6 PM Join us as we officially open Chloe’s Secret Garden with an afternoon and evening of great food, wine, and live music on our brand-new outdoor stage. 🎶 Music by 2:00 PM Old Man Polly 3:30 PM Donny Morales & Coral Skye This is just the beginning! We have so many exciting events planned for this space, and we can’t wait to celebrate with our amazing community. View on site | Email this event",
+    pubDate: "2026-07-26T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Chloe's Charcuterie & Wine",
+    imageUrl: "https://localist-images.azureedge.net/photos/53491865115071/huge/bff2f232eb493287091d70d7c435baac2f6d6e45.jpg"
   },
   {
     title: "Funky Ouray: Reggae music in Fellin Park",
@@ -3963,7 +4475,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Love’s Labors Lost: Theatre @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/loves-labours-lost-theatre-the-wright",
-    description: "Love’s Labors Lost: Theatre @ the Wright Presented by UpstART Theatre WHEN? Thursday, July 30 Doors at 7:00 pm • Show at 7:30 pm Friday, July 31 Doors at 7:00 pm • Show at 7:30 pm Saturday, August 1 Doors at 7:00 pm • Show at 7:30 pm Sunday, August 2 — Matinee Doors at 3:30 pm • Show at 4:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Love, language, mistaken identities, and youthful ambition collide in William Shakespeare’s Love’s Labors Lost, one of the Bard’s most playful and fast-moving comedies. When a king and his companions swear off romance in pursuit of scholarship and discipline, their noble intentions are quickly tested by the arrival of a group of equally clever and charismatic visitors. What follows is a whirlwind of wit, flirtation, misunderstandings, and delightfully complicated attempts at self-control. …",
+    description: "Presented by UpstART Theatre ABOUT THE SHOW Love, language, mistaken identities, and youthful ambition collide in William Shakespeare’s Love’s Labors Lost, one of the Bard’s most playful and fast-moving comedies. When a king and his companions swear off romance in pursuit of scholarship and discipline, their noble intentions are quickly tested by the arrival of a group of equally clever and charismatic visitors. What follows is a whirlwind of wit, flirtation, misunderstandings, and delightfully complicated attempts at self-control. Presented by UpstART Theatre, this fresh staging brings Shakespeare’s comedy to life with humor, heart, and a reminder that even the best plans have a habit of unraveling. In-person performance at the historic Wright Opera House This show is part of our ongoing mission to partner with diverse organizations to bring arts, conversation, and community to downtown Ouray, since 1889. View on site | Email this event",
     pubDate: "2026-07-31T01:30:00.000Z",
     endDate: "2026-08-02",
     source: "oray",
@@ -4954,7 +5466,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4965,7 +5477,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -4976,7 +5488,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4987,7 +5499,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -4998,7 +5510,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

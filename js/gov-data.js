@@ -242,102 +242,74 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-03-24';
+const MV_CACHE_DATE = '2026-07-22';
 
 const MV_CACHED_DATA = [
-  // ── Town Council ──
   {
-    date: 'August 20, 2026',
-    time: '2:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
+    date: "August 6, 2026",
+    time: "10:00 AM - 3:00 PM",
+    title: "Design Review Board",
+    board: "drb",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A',
-    note: 'Next scheduled meeting -- agenda posted the Friday before.'
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
   },
   {
-    date: 'April 23, 2026',
-    time: '2:00 PM - 7:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48629/april_23-_2026_town_council_meeting_agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A',
-    note: 'Next scheduled meeting -- agenda posted the Friday before.'
-  },
-  {
-    date: 'May 21, 2026',
-    time: '2:00 PM - 8:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48835/may_21-_2026_town_council_meeting_agenda.pdf',
-    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48814/may_21-_2026_town_council_meeting_packet-1.pdf',
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
-  {
-    date: 'June 17, 2026',
-    time: '8:30 AM - 4:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/49108/june_17-_2026_town_council_meeting_agenda-1.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
-  {
-    date: 'March 19, 2026',
-    time: '2:00 PM',
-    title: 'Town Council Meeting',
-    board: 'tc',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48429/march_19-_2026_town_council_meeting_agenda.pdf',
-    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48439/march_19-_2026_town_council_meeting_packet.pdf',
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
-  // ── Design Review Board ──
-  {
-    date: 'April 2, 2026',
-    time: '10:00 AM - 2:00 PM',
-    title: 'Design Review Board',
-    board: 'drb',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48456/april_2-_2026_design_review_board_meeting_agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
-  },
-  {
-    date: 'May 7, 2026',
-    time: '10:00 AM - 3:00 PM',
-    title: 'Design Review Board',
-    board: 'drb',
+    date: "August 20, 2026",
+    time: "2:00 PM - 8:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
   },
   {
-    date: 'June 4, 2026',
-    time: '10:00 AM - 3:00 PM',
-    title: 'Design Review Board',
-    board: 'drb',
+    date: "September 3, 2026",
+    time: "10:00 AM - 3:00 PM",
+    title: "Design Review Board",
+    board: "drb",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
   },
   {
-    date: 'March 5, 2026',
-    time: '10:00 AM',
-    title: 'Design Review Board',
-    board: 'drb',
-    agendaUrl: 'https://townofmountainvillage.com/site/assets/files/48270/march_5-_2026_design_review_board_meeting_agenda.pdf',
-    packetUrl: 'https://townofmountainvillage.com/site/assets/files/48363/march_5-_2026_design_review_board_meeting_packet_reduced.pdf',
+    date: "September 17, 2026",
+    time: "2:00 PM - 7:45 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: null,
+    packetUrl: null,
     special: false,
-    location: 'Town Hall, 455 Mountain Village Blvd, Suite A'
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
+    date: "October 1, 2026",
+    time: "10:00 AM - 3:00 PM",
+    title: "Design Review Board",
+    board: "drb",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
+  },
+  {
+    date: "October 7, 2026",
+    time: "10:00 AM - 5:00 PM",
+    title: "Town Council Meeting",
+    board: "tc",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
+    note: "Agenda typically posted the Friday before."
   }
 ];
 
@@ -491,87 +463,28 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-03-31';
+const MED_CACHE_DATE = '2026-07-22';
 
 const MED_CACHED_DATA = [
-  // ── Upcoming ──
   {
-    date: 'April 23, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/29fb007a9/THD+Reg+BOD+Mtg+4.23.26+Agenda.pdf',
+    date: "July 23, 2026",
+    time: "8:30 AM - 11:30 AM",
+    title: "Regular Board Meeting",
+    agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: 'Next scheduled meeting -- agenda posted before the meeting.'
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: 'May 28, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/7296984b8/THD+Reg+BOD+Mtg+5.28.26+Agenda.pdf',
+    date: "August 27, 2026",
+    time: "8:30 AM - 11:30 AM",
+    title: "Regular Board Meeting",
+    agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: null
-  },
-  {
-    date: 'June 25, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/bab17808c/THD+Reg+BOD+Mtg+6.25.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: null
-  },
-  // ── Recent ──
-  {
-    date: 'March 26, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/651140033/THD+Reg+BOD+Mtg+3.26.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom',
-    note: null
-  },
-  // ── Recent ──
-  {
-    date: 'March 9, 2026',
-    time: '1:00 PM - 2:00 PM',
-    title: 'Special Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/a6a367fff/THD+Special+Bd+Mtg+Agenda+3.9.25.pdf',
-    packetUrl: null,
-    special: true,
-    location: 'TMC Wellness Annex / Zoom'
-  },
-  {
-    date: 'March 5, 2026',
-    time: '8:00 AM - 8:30 AM',
-    title: 'Special Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/5e604df7f/THD+Special+Bd+Mtg+Agenda+3.5.25.pdf',
-    packetUrl: null,
-    special: true,
-    location: 'TMC Wellness Annex / Zoom'
-  },
-  {
-    date: 'February 26, 2026',
-    time: '8:30 AM - 11:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/06f7d8cca/THD+Reg+BOD+Mtg+2.26.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
-  },
-  {
-    date: 'January 22, 2026',
-    time: '8:30 AM',
-    title: 'Regular Board Meeting',
-    agendaUrl: 'https://www.tellmed.org/files/3252b5faf/THD+BOD+Mtg+1.22.26+Agenda.pdf',
-    packetUrl: null,
-    special: false,
-    location: '333 W Colorado Ave (2nd Floor), Telluride / Zoom'
+    location: "333 W Colorado Ave (2nd Floor), Telluride / Zoom",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
   }
 ];
 
@@ -632,72 +545,28 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-03-24';
+const OPHIR_CACHE_DATE = '2026-07-22';
 
 const OPHIR_CACHED_DATA = [
-  // ── General Assembly ──
   {
-    date: 'April 21, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/April-21%2C-2026-Regular-GA-Meeting-Packet.pdf',
-    note: 'Next scheduled General Assembly -- agenda posted before the meeting.'
-  },
-  {
-    date: 'May 19, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/May-19%2C-2026-Agenda.pdf'
-  },
-  {
-    date: 'June 16, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/June-16%2C-2026-GA-Meeting-Packet.pdf'
-  },
-  {
-    date: 'March 17, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacketMaterials-March17%2C2026-%282%29.pdf'
-  },
-  {
-    date: 'February 17, 2026',
-    title: 'General Assembly Meeting',
-    board: 'ga',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/GAMeetingPacket-February17%2C2026.pdf'
-  },
-  // ── Planning & Zoning Commission ──
-  {
-    date: 'April 9, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
+    date: "August 18, 2026",
+    time: null,
+    title: "General Assembly Meeting",
     agendaUrl: null,
-    note: 'Next scheduled P&Z meeting -- agenda posted before the meeting.'
+    packetUrl: null,
+    special: false,
+    board: "ga",
+    note: "Next scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: 'May 14, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: null
-  },
-  {
-    date: 'March 11, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_March2026_packet.pdf'
-  },
-  {
-    date: 'February 12, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/Feb2026_OphirPZ_packet.pdf'
-  },
-  {
-    date: 'January 15, 2026',
-    title: 'Planning and Zoning Commission Meeting',
-    board: 'pz',
-    agendaUrl: 'https://townofophir.colorado.gov/sites/g/files/lrnvjt831/files/documents/OphirPZ_Jan26_packet.pdf'
+    date: "September 15, 2026",
+    time: null,
+    title: "General Assembly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "ga",
+    note: "Next scheduled meeting -- agenda posted closer to the date."
   }
 ];
 
@@ -712,7 +581,7 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
-const RIDGWAY_CACHE_DATE = '2026-05-11';
+const RIDGWAY_CACHE_DATE = '2026-07-22';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
@@ -720,37 +589,43 @@ const RIDGWAY_CACHE_DATE = '2026-05-11';
 // from the two colorado.gov board pages every 6h. Keep a couple of future stubs
 // ahead of today so upcoming meetings render before their agenda is posted.
 const RIDGWAY_CACHED_DATA = [
-  // ── Town Council (2nd Wednesday of each month, 6:00 PM) ──
   {
-    date: 'June 10, 2026',
-    time: '6:00 PM',
-    title: 'Ridgway Town Council Regular Meeting',
-    board: 'council',
-    agendaUrl: null
-  },
-  {
-    date: 'July 8, 2026',
-    time: '6:00 PM',
-    title: 'Ridgway Town Council Regular Meeting',
-    board: 'council',
+    date: "July 8, 2026",
+    time: "6:00 PM",
+    title: "Ridgway Town Council Regular Meeting",
     agendaUrl: null,
-    note: 'Agenda typically posted the Friday before.'
+    packetUrl: null,
+    special: false,
+    board: "council"
   },
-  // ── Town Council special meeting (one-off; confirmed via posted packet 2026-06-13) ──
   {
-    date: 'June 16, 2026',
-    title: 'Ridgway Town Council Special Meeting',
-    board: 'council',
-    agendaUrl: 'https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Special-Meeting-Packet---June-16%2C-2026.pdf',
-    note: 'Special meeting -- see the agenda packet for items.'
+    date: "July 15, 2026",
+    time: "5:30 PM",
+    title: "Ridgway Planning Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "pc"
   },
-  // ── Planning Commission (3rd Wednesday of each month, 5:30 PM) ──
   {
-    date: 'July 15, 2026',
-    time: '5:30 PM',
-    title: 'Ridgway Planning Commission Meeting',
-    board: 'pc',
-    agendaUrl: null
+    date: "August 12, 2026",
+    time: "6:00 PM",
+    title: "Ridgway Town Council Regular Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "council",
+    note: "Next scheduled meeting -- agenda posted the week before."
+  },
+  {
+    date: "September 9, 2026",
+    time: "6:00 PM",
+    title: "Ridgway Town Council Regular Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "council",
+    note: "Next scheduled meeting -- agenda posted the week before."
   }
 ];
 
