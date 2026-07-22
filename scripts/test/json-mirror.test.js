@@ -8,64 +8,39 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { extractJsArray, extractJsObject } = require('../lib/extract.js');
+const { loadDataArrays } = require('../lib/load-data.js');
 const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, mirrorPath } = require('../lib/json-mirror.js');
 
 const REPO = path.resolve(__dirname, '..', '..');
 const DATA = path.join(REPO, 'data');
-const jsSrc = fs.readFileSync(path.join(REPO, 'js', 'gov-helpers.js'), 'utf8');
-const govDataSrc = fs.readFileSync(path.join(REPO, 'js', 'gov-data.js'), 'utf8');
+// EVALUATED values (not string extraction): the writer (mirrorAll) evaluates,
+// so the test must compare against the same view — and a const that fails to
+// evaluate/exist must FAIL here, never silently compare as empty (audit P0-2).
+const { captured } = loadDataArrays(REPO);
 
 test('MIRROR_ARRAYS is non-empty (the migration set)', () => {
   assert.ok(Array.isArray(MIRROR_ARRAYS) && MIRROR_ARRAYS.length > 0);
 });
 
-for (const name of MIRROR_ARRAYS) {
-  test(`data mirror for ${name} matches the JS literal in gov-helpers.js`, () => {
-    const fromJs = extractJsArray(jsSrc, name) || [];
+function checkMirror(name, wantArray, origin) {
+  test(`data mirror for ${name} matches the evaluated const (${origin})`, () => {
+    const v = captured[name];
+    assert.ok(v !== undefined,
+      `${name} not found in evaluated data files — a renamed/deleted const would have been mirrored as empty`);
+    assert.ok(wantArray ? Array.isArray(v) : (typeof v === 'object' && !Array.isArray(v)),
+      `${name} is not ${wantArray ? 'an array' : 'an object'}`);
     const p = mirrorPath(name, DATA);
     assert.ok(fs.existsSync(p),
       `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);
     const fromJson = JSON.parse(fs.readFileSync(p, 'utf8'));
-    // Compare the JSON views of both sides (the mirror IS the JSON view of the
-    // JS literal). deepEqual on JSON-normalized data ignores key order.
-    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(fromJs)),
-      `${name}: data/${path.basename(p)} drifted from the JS literal — run: node scripts/mirror-json.js`);
+    // Compare the JSON views of both sides. deepEqual on JSON-normalized data
+    // ignores key order.
+    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(v)),
+      `${name}: data/${path.basename(p)} drifted from the evaluated const — run: node scripts/mirror-json.js`);
   });
 }
 
-for (const name of MIRROR_OBJECTS) {
-  test(`data mirror for ${name} (object) matches the JS literal in gov-helpers.js`, () => {
-    const fromJs = extractJsObject(jsSrc, name) || {};
-    const p = mirrorPath(name, DATA);
-    assert.ok(fs.existsSync(p),
-      `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);
-    const fromJson = JSON.parse(fs.readFileSync(p, 'utf8'));
-    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(fromJs)),
-      `${name}: data/${path.basename(p)} drifted from the JS literal — run: node scripts/mirror-json.js`);
-  });
-}
-
-for (const name of MIRROR_GOVDATA_ARRAYS) {
-  test(`data mirror for ${name} matches the JS literal in gov-DATA.js`, () => {
-    const fromJs = extractJsArray(govDataSrc, name) || [];
-    const p = mirrorPath(name, DATA);
-    assert.ok(fs.existsSync(p),
-      `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);
-    const fromJson = JSON.parse(fs.readFileSync(p, 'utf8'));
-    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(fromJs)),
-      `${name}: data/${path.basename(p)} drifted from the gov-data.js literal — run: node scripts/mirror-json.js`);
-  });
-}
-
-for (const name of MIRROR_GOVDATA_OBJECTS) {
-  test(`data mirror for ${name} (object) matches the JS literal in gov-DATA.js`, () => {
-    const fromJs = extractJsObject(govDataSrc, name) || {};
-    const p = mirrorPath(name, DATA);
-    assert.ok(fs.existsSync(p),
-      `${path.relative(REPO, p)} is missing — run: node scripts/mirror-json.js`);
-    const fromJson = JSON.parse(fs.readFileSync(p, 'utf8'));
-    assert.deepEqual(fromJson, JSON.parse(JSON.stringify(fromJs)),
-      `${name}: data/${path.basename(p)} drifted from the gov-data.js literal — run: node scripts/mirror-json.js`);
-  });
-}
+for (const name of MIRROR_ARRAYS) checkMirror(name, true, 'gov-helpers');
+for (const name of MIRROR_OBJECTS) checkMirror(name, false, 'gov-helpers object');
+for (const name of MIRROR_GOVDATA_ARRAYS) checkMirror(name, true, 'gov-data');
+for (const name of MIRROR_GOVDATA_OBJECTS) checkMirror(name, false, 'gov-data object');

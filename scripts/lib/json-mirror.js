@@ -96,4 +96,46 @@ function writeMirror(varName, data, dataDir) {
   return p;
 }
 
-module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, mirrorFileName, mirrorPath, writeMirror };
+// Mirror EVERY name in the four lists from the EVALUATED data files (via
+// lib/load-data.js, which executes gov-data.js + gov-helpers.js in a sandbox).
+// Evaluation — not string extraction — because three event consts are IIFEs
+// (`const X = (function(){...})()`): extractJsArray can never match those, and
+// the old `extractJsArray(...) || []` fallback silently wrote a VALID empty
+// mirror in their place (2026-07-22 audit P0-2 — the exact silent-wipe class
+// the mirrors were supposed to prevent).
+//
+// A name that is missing or has the wrong shape is a FAILURE, not a fallback:
+// nothing is written for it, and it's reported in `failures` so callers can
+// abort the run loudly instead of shipping an empty mirror over live data.
+function mirrorAll(repoRoot) {
+  const { loadDataArrays } = require('./load-data.js');
+  const { captured } = loadDataArrays(repoRoot);
+  const dataDir = path.join(repoRoot, 'data');
+  const written = [];
+  const failures = [];
+  const doSet = (names, wantArray, origin) => {
+    for (const name of names) {
+      const v = captured[name];
+      const ok = wantArray
+        ? Array.isArray(v)
+        : (v && typeof v === 'object' && !Array.isArray(v));
+      if (!ok) {
+        failures.push(`${name} (${origin}): ${v === undefined ? 'const not found in evaluated data files' : 'not ' + (wantArray ? 'an array' : 'an object')}`);
+        continue;
+      }
+      try {
+        writeMirror(name, v, dataDir);
+        written.push({ name, count: wantArray ? v.length : Object.keys(v).length });
+      } catch (e) {
+        failures.push(`${name} (${origin}): write failed — ${e.message}`);
+      }
+    }
+  };
+  doSet(MIRROR_ARRAYS, true, 'gov-helpers array');
+  doSet(MIRROR_OBJECTS, false, 'gov-helpers object');
+  doSet(MIRROR_GOVDATA_ARRAYS, true, 'gov-data array');
+  doSet(MIRROR_GOVDATA_OBJECTS, false, 'gov-data object');
+  return { written, failures };
+}
+
+module.exports = { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, mirrorFileName, mirrorPath, writeMirror, mirrorAll };

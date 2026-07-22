@@ -3106,7 +3106,7 @@ function readJsFile(filePath) {
 // (scripts/lib/extract.js, scripts/test/extract.test.js).
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
-const { MIRROR_ARRAYS, MIRROR_OBJECTS, MIRROR_GOVDATA_ARRAYS, MIRROR_GOVDATA_OBJECTS, writeMirror } = require('./lib/json-mirror.js');
+const { mirrorAll } = require('./lib/json-mirror.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -6885,22 +6885,17 @@ async function main() {
   // alongside the JS literal (write-if-different, so no-op on a no-change run).
   // No client reads these yet; test/json-mirror.test.js asserts they match the
   // JS. Runs regardless of `changed` so the mirror self-heals if it ever drifts.
-  const _dataDir = path.join(REPO_ROOT, 'data');
-  for (const name of MIRROR_ARRAYS) {
-    try { writeMirror(name, extractJsArray(govHubSrc, name) || [], _dataDir); }
-    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
-  }
-  for (const name of MIRROR_OBJECTS) {
-    try { writeMirror(name, extractJsObject(govHubSrc, name) || {}, _dataDir); }
-    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
-  }
-  for (const name of MIRROR_GOVDATA_ARRAYS) {   // meeting-seed arrays live in gov-data.js
-    try { writeMirror(name, extractJsArray(govDataSrc, name) || [], _dataDir); }
-    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
-  }
-  for (const name of MIRROR_GOVDATA_OBJECTS) {  // hand-edited config objects in gov-data.js
-    try { writeMirror(name, extractJsObject(govDataSrc, name) || {}, _dataDir); }
-    catch (e) { console.warn(`  JSON mirror ${name} failed: ${e.message}`); }
+  // Mirrors come from the EVALUATED on-disk files (mirrorAll → lib/load-data.js),
+  // which handles IIFE consts string-extraction can't. A missing/mistyped const
+  // is FATAL: the run aborts (nothing commits, CI Health issue opens) instead of
+  // shipping a valid-but-empty mirror over live data (2026-07-22 audit P0-2).
+  // Runs after the JS files are written so it always mirrors what will ship.
+  {
+    const { written, failures } = mirrorAll(REPO_ROOT);
+    console.log(`  JSON mirrors: ${written.length} written/verified.`);
+    if (failures.length) {
+      throw new Error('JSON mirror FAILED — refusing to ship (a missing const would be mirrored as empty and wipe live data):\n  ' + failures.join('\n  '));
+    }
   }
   // Precomputed week-meetings.json: all sources aggregated via the shared
   // getters (incl. CivicClerk-config meetings the raw seeds miss), so the
