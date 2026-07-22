@@ -81,6 +81,33 @@
     "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using."
   },
 
+  "telluride": {
+    "label": "Telluride Town Council",
+    "meetingPrefix": "Town Council",
+    "idPrefix": "v",
+    "rosters": [
+      {
+        "start": "2024-01-01",
+        "end":   "2025-11-11",
+        "members": ["errico", "fee", "arguelles", "enright", "shaunette", "levin", "svs"],
+        "_note": "COUNCIL_2024 / COUNCIL_2025_EARLY in v2/vote-tracker.html. Errico Mayor, Fee Mayor Pro Tem."
+      },
+      {
+        "start": "2025-11-12",
+        "end":   "2026-01-13",
+        "members": ["errico", "fee", "enright", "levin", "svs", "permakoff", "stark"],
+        "_note": "COUNCIL_2025_LATE: Permakoff (Nov 2025) and Stark (Dec 2025) replaced Arguelles and Shaunette. Boundary dates are APPROXIMATE (from the page's era labels, not sworn-in minutes) — verify against minutes before backfilling a meeting within a week of a boundary."
+      },
+      {
+        "start": "2026-01-14",
+        "end":   null,
+        "members": ["errico", "enright", "levin", "svs", "permakoff", "stark"],
+        "_note": "Fee resigned Jan 2026; Levin became Mayor Pro Tem. The page's COUNCIL_2026 era array still lists fee so early-Jan votes render — for NEW extractions Fee is out (per standing editorial rule she is omitted going forward). Verify the exact resignation-effective date before backfilling Jan 2026."
+      }
+    ],
+    "_note": "Vote items live in the un-prefixed VOTE_ITEMS array in v2/vote-tracker.html with ids like 'v2024-01' (idPrefix 'v' + year + sequence). Minutes: telluride-co.civicweb.net /document/<ID>."
+  },
+
   "rico": {
     "label": "Town of Rico Board of Trustees",
     "meetingPrefix": "Rico Board of Trustees",
