@@ -91,5 +91,53 @@
   "page": "https://www.rawpixel.com/image/6043139/photo-image-public-domain-art-room",
   "image_url": "https://images.rawpixel.com/editor_1024/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvZmwxMDgxMDUwNzcyNi1pbWFnZS1reWJlbDV6OS5qcGc.jpg"
  },
- "_note": "Category fallback photos for the weekly/weekend digest (scripts/weekly-email.js CATEGORY_FALLBACKS). All CC0 / Public Domain Mark -- no attribution required. Re-sourced via Openverse."
+ "_note": "Category fallback photos for the weekly/weekend digest (scripts/weekly-email.js CATEGORY_FALLBACKS). All CC0 / Public Domain Mark -- no attribution required. Re-sourced via Openverse.",
+ "community-1": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 445927649,
+  "title": "Main Street Telluride Colorado (Bridal Veil view)",
+  "note": "by skostep; commercial use"
+ },
+ "community-2": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 394017116,
+  "title": "Telluride Gondola Car - Autumn aerial with Telluride homes",
+  "note": "by Jon Camrud; commercial use"
+ },
+ "community-3": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 1111462754,
+  "title": "Telluride aerial Main Street autumn (Oct 14 2023)",
+  "note": "by spiritofamerica; commercial use"
+ },
+ "community-4": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 633027969,
+  "title": "View over Ouray at the Million Dollar Highway",
+  "note": "by mikesch112; commercial use"
+ },
+ "community-5": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 1691758675,
+  "title": "San Juan mountains autumn super-panorama",
+  "note": "by SNEHIT PHOTO; commercial use"
+ },
+ "community-6": {
+  "license": "adobe-stock-enhanced",
+  "source": "adobe-stock",
+  "licensee": "morgan@ex1creative.com",
+  "file_id": 358592498,
+  "title": "Telluride main street village (Aug 14 2019)",
+  "note": "by Kristina Blokhin; EDITORIAL USE ONLY restriction"
+ }
 }

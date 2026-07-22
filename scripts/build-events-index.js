@@ -98,13 +98,24 @@ const CATEGORY_FALLBACKS = [
   [/farmers market|\bfood\b|dinner|brunch|tasting|brewery|\bbeer\b|\bwine\b|chef|culinary|bbq|barbecue|potluck|harvest/i, 'food'],
   [/\bkids?\b|\bfamily\b|children|story ?time|\byouth\b|playgroup|toddler|puppet/i, 'family'],
   [/\byoga\b|meditation|wellness|pilates|breathwork|sound bath|tai chi|qigong/i, 'wellness'],
-  [/lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club/i, 'talk'],
+  [/lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club|training|\bclinic\b|registration|\bclass\b|info session/i, 'talk'],
   [/festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i, 'festival'],
   [/concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, 'livemusic'],
 ];
+// Catch-all "community" events rotate through six licensed regional photos
+// (Adobe Stock, Enhanced license, morgan@ex1creative.com plan — see
+// assets/digest/fallbacks/SOURCES.json) instead of repeating one image.
+// Deterministic by title hash: the same event always keeps the same photo.
+const COMMUNITY_COUNT = 6;
+function communityImg(title) {
+  let h = 0;
+  const s = String(title || '');
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
+  return FB('community-' + ((h % COMMUNITY_COUNT) + 1));
+}
 function fallbackImg(title) {
   for (const [re, slug] of CATEGORY_FALLBACKS) if (re.test(title || '')) return FB(slug);
-  return FB('community');
+  return communityImg(title);
 }
 
 // User-facing event-type filter groups (events page "type" chips). Derived
