@@ -361,6 +361,19 @@ const MEETING_AGENDA_META = {
 // existed for months but this const was missing, so writes never landed.
 const DEEP_DIVE_UPDATES = [];
 
+// ── Seeds for bot writers whose targets were lost in the May 2026
+// gov-hub.js/data-only.js retirement (2026-07-22 audit P0-3). Each of these
+// had a content-refresh.js write path that silently no-opped because the
+// const no longer existed anywhere; the writers now THROW on a missing
+// target, and these seeds let the data start landing again. No page renders
+// them yet — restoring (or retiring) the reader UIs is tracked separately.
+const MEETING_PREVIEWS = {};        // pre-meeting agenda previews (Claude)
+const REGIONAL_NEWS_ARTICLES = [];  // 7 regional feeds (West End, Ouray, …)
+const SMC_ALERTS = [];              // SMC AlertCenter items
+const ENGAGE_MEETINGS = [];         // Engage Telluride project key dates
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-22';
+const LEGAL_NOTICES_CACHE_DATE = '2026-07-22';
+
 const MANUAL_SUMMARIES = {
   "county|2026-06-22|Open Space Commission Meeting":
     "The Open Space Commission meets June 22 to work through several active trail and open space projects. On the table: a NEPA process update for the Perimeter Trail, new signage for the Keystone Gorge Loop Trail, and a conversation about future goals for the San Juan Skyway Scenic Byway Corridor. Conceptual plans for Mill Creek Park and an update on the Down Valley Connector Trail through Sawpit are also on the agenda. The commission will also address two vacancies — one regular seat and one alternate — plus a Northwest Mountain seasonal slot.",

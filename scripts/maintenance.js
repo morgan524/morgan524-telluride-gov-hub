@@ -19,7 +19,6 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 const { execSync } = require('child_process');
-const { serializeArray } = require('./lib/serialize.js');
 const { extractJsArray } = require('./lib/extract.js');
 const { assertParses } = require('./lib/write-guard.js');
 
@@ -84,36 +83,11 @@ function fetchText(url, timeoutMs = 10000, headers = {}) {
 // ── JS file parsing helpers ──
 // extractJsArray comes from ./lib/extract.js (string-aware bracket matcher).
 
-function replaceJsArray(source, varName, arr) {
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*\\[`);
-  const match = startRe.exec(source);
-  if (!match) return source;
-  let depth = 0, braceStart = match.index + match[0].length - 1;
-  for (let i = braceStart; i < source.length; i++) {
-    if (source[i] === '[') depth++;
-    else if (source[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        let end = i + 1;
-        while (end < source.length && source[end] !== ';') end++;
-        if (source[end] === ';') end++;
-        // Serialize via the shared, unit-tested serializer (JSON.stringify-based)
-        // rather than the old apostrophe-only escaper that lived here — that one
-        // emitted raw newlines/backslashes and produced unterminated string
-        // literals, corrupting gov-helpers.js (the 2026-07-01 outage). See
-        // lib/serialize.js and lib/write-guard.js.
-        const block = serializeArray(varName, arr);
-        return source.slice(0, match.index) + block + source.slice(end);
-      }
-    }
-  }
-  return source;
-}
-
-function replaceConstString(source, varName, newValue) {
-  const re = new RegExp(`(const\\s+${varName}\\s*=\\s*)'[^']*'`);
-  return source.replace(re, `$1'${newValue}'`);
-}
+// STRICT shared replacers (2026-07-22 audit P0-3): throw on a missing target
+// const instead of silently returning the source unchanged, and use the
+// string-aware bracket walk. Serialization stays the shared unit-tested
+// serializer (the 2026-07-01 outage fix). See lib/replace.js.
+const { replaceJsArrayStrict: replaceJsArray, replaceConstStringStrict: replaceConstString } = require('./lib/replace.js');
 
 function today() { return new Date().toISOString().split('T')[0]; }
 

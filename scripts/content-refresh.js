@@ -3132,60 +3132,41 @@ function assertSerializedSafe(varName, serialized) {
 /**
  * Replace a const declaration's value in the source string.
  * Works for both objects and arrays.
+ *
+ * STRICT (2026-07-22 audit P0-3): a missing target const THROWS — the old
+ * warn-and-continue silently dropped every update when a const was renamed or
+ * targeted the wrong file (the Norwood/SMC_ALERTS bug shape). The bracket walk
+ * (lib/replace.js locateConst) is string-aware, so brackets inside scraped
+ * text can't mis-place the splice.
  */
 function replaceJsValue(source, varName, newValue, isObject = false) {
-  const bracket = isObject ? '{' : '[';
-  const closeBracket = isObject ? '}' : ']';
-  const escapedBracket = bracket === '[' ? '\\[' : '\\{';
-  const startRe = new RegExp(`const\\s+${varName}\\s*=\\s*${escapedBracket}`);
-  const match = startRe.exec(source);
-  if (!match) {
-    console.warn(`  Could not find ${varName} in source for replacement`);
-    return source;
-  }
+  const { start, end } = locateConst(source, varName, isObject);
 
-  let depth = 0;
-  let start = match.index;
-  let braceStart = match.index + match[0].length - 1;
-  for (let i = braceStart; i < source.length; i++) {
-    if (source[i] === bracket) depth++;
-    else if (source[i] === closeBracket) {
-      depth--;
-      if (depth === 0) {
-        // Find the semicolon after closing bracket
-        let end = i + 1;
-        while (end < source.length && source[end] !== ';') end++;
-        if (source[end] === ';') end++;
-
-        let serialized;
-        if (isObject) {
-          serialized = serializeObject(varName, newValue);
-        } else {
-          // Funnel: normalize (sanitize) → validate (quarantine broken records)
-          // → serialize. Quarantines are logged, not silent. A whole source
-          // going malformed shrinks the array and trips source-health.
-          const sane = sanitizeRecords(newValue);
-          const { kept, quarantined } = validateRecords(sane);
-          if (quarantined.length) {
-            console.warn(`  ⚠ ${varName}: quarantined ${quarantined.length} malformed record(s) before write:`);
-            for (const q of quarantined.slice(0, 10)) {
-              console.warn(`      ${q.reason} — ${JSON.stringify(q.record).slice(0, 120)}`);
-            }
-          }
-          serialized = serializeArray(varName, kept);
-        }
-
-        try {
-          assertSerializedSafe(varName, serialized);
-        } catch (e) {
-          console.error(`  ✖ ${e.message} — ABORTING write of ${varName}, keeping previous value.`);
-          return source;
-        }
-        return source.slice(0, start) + serialized + source.slice(end);
+  let serialized;
+  if (isObject) {
+    serialized = serializeObject(varName, newValue);
+  } else {
+    // Funnel: normalize (sanitize) → validate (quarantine broken records)
+    // → serialize. Quarantines are logged, not silent. A whole source
+    // going malformed shrinks the array and trips source-health.
+    const sane = sanitizeRecords(newValue);
+    const { kept, quarantined } = validateRecords(sane);
+    if (quarantined.length) {
+      console.warn(`  ⚠ ${varName}: quarantined ${quarantined.length} malformed record(s) before write:`);
+      for (const q of quarantined.slice(0, 10)) {
+        console.warn(`      ${q.reason} — ${JSON.stringify(q.record).slice(0, 120)}`);
       }
     }
+    serialized = serializeArray(varName, kept);
   }
-  return source;
+
+  try {
+    assertSerializedSafe(varName, serialized);
+  } catch (e) {
+    console.error(`  ✖ ${e.message} — ABORTING write of ${varName}, keeping previous value.`);
+    return source;
+  }
+  return source.slice(0, start) + serialized + source.slice(end);
 }
 
 // Serialization + data sanitization live in unit-tested lib modules now
@@ -3194,14 +3175,13 @@ function replaceJsValue(source, varName, newValue, isObject = false) {
 const { serializeObject, serializeArray } = require('./lib/serialize.js');
 const { sanitizeRecords } = require('./lib/sanitize.js');
 const { validateRecords } = require('./lib/validate.js');
+const { locateConst, replaceConstStringStrict } = require('./lib/replace.js');
 
 /**
  * Replace a simple const string value like: const FOO = '2026-04-22';
+ * Strict — throws if the const is missing (lib/replace.js).
  */
-function replaceConstString(source, varName, newValue) {
-  const re = new RegExp(`(const\\s+${varName}\\s*=\\s*)'[^']*'`);
-  return source.replace(re, `$1'${newValue}'`);
-}
+const replaceConstString = replaceConstStringStrict;
 
 // ══════════════════════════════════════════════════════════════
 // ── Main ──
@@ -6704,15 +6684,13 @@ async function main() {
   const newSherbinoEvents = await syncSherbinoEvents();
 
   // ── Ouray County meetings ──
-  const newOurayData = await syncOurayMeetings();
-  if (newOurayData !== null) {
-    const existingOuray = extractJsArray(govHubSrc, 'OURAY_CACHED_DATA') || [];
-    if (JSON.stringify(newOurayData) !== JSON.stringify(existingOuray)) {
-      govHubSrc = replaceJsValue(govHubSrc, 'OURAY_CACHED_DATA', newOurayData, false);
-      govHubSrc = replaceConstString(govHubSrc, 'OURAY_CACHE_DATE', today());
-      changed = true;
-    }
-  }
+  // REMOVED (2026-07-22 audit P0-3): the write here targeted OURAY_CACHED_DATA /
+  // OURAY_CACHE_DATE, consts that don't exist in any live file — it silently
+  // no-opped since the May 2026 gov-hub.js retirement. Ouray meetings actually
+  // surface via getOurayMeetings() in gov-helpers.js, which reads the
+  // 'ouray|<date>|…' MANUAL_SUMMARIES keys written by the agenda/summary task
+  // (AGENDA_SOURCES.ouray above) — so the dead write path and its redundant
+  // syncOurayMeetings() AgendaCenter fetch are removed rather than resurrected.
 
   // ── Norwood meetings ──
   // NORWOOD_CACHED_DATA lives in gov-data.js — patch THAT buffer. (It was

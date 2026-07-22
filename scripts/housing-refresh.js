@@ -76,52 +76,12 @@ function extractJsArray(source, varName) {
   return null;
 }
 
-function serializeArray(varName, arr) {
-  const safeKey = (k) => /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(k) ? k : JSON.stringify(k);
-  const items = arr.map(item => {
-    const props = Object.entries(item).map(([k, v]) => {
-      if (typeof v === 'object' && v !== null && !Array.isArray(v)) {
-        const inner = Object.entries(v)
-          .map(([ik, iv]) => safeKey(ik) + ': ' + JSON.stringify(String(iv)))
-          .join(', ');
-        return '    ' + safeKey(k) + ': { ' + inner + ' }';
-      }
-      if (Array.isArray(v)) {
-        return '    ' + safeKey(k) + ': [' + v.map(i => JSON.stringify(String(i))).join(', ') + ']';
-      }
-      if (typeof v === 'boolean' || typeof v === 'number') {
-        return '    ' + safeKey(k) + ': ' + v;
-      }
-      return '    ' + safeKey(k) + ': ' + JSON.stringify(String(v));
-    });
-    return '  {\n' + props.join(',\n') + '\n  }';
-  });
-  return 'const ' + varName + ' = [\n' + items.join(',\n') + '\n];';
-}
+// (The hand-rolled serializeArray that lived here is gone — lib/replace.js
+// serializes via the shared, unit-tested lib/serialize.js.)
 
-function replaceJsArray(source, varName, newArr) {
-  const startRe = new RegExp('const\\s+' + varName + '\\s*=\\s*\\[');
-  const match = startRe.exec(source);
-  if (!match) {
-    console.warn('  ⚠ Could not find ' + varName + ' in source');
-    return source;
-  }
-  let depth = 0;
-  const braceStart = match.index + match[0].length - 1;
-  for (let i = braceStart; i < source.length; i++) {
-    if (source[i] === '[') depth++;
-    else if (source[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        let end = i + 1;
-        while (end < source.length && source[end] !== ';') end++;
-        if (source[end] === ';') end++;
-        return source.slice(0, match.index) + serializeArray(varName, newArr) + source.slice(end);
-      }
-    }
-  }
-  return source;
-}
+// STRICT shared replacer (2026-07-22 audit P0-3): throws on a missing target
+// const instead of warn-and-continue; string-aware bracket walk. lib/replace.js.
+const { replaceJsArrayStrict: replaceJsArray } = require('./lib/replace.js');
 
 // ── HTML / text helpers ───────────────────────────────────────
 function stripHtml(html) {

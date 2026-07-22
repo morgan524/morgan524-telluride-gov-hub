@@ -287,24 +287,13 @@ function serializeUpdates(arr) {
   return 'const DEEP_DIVE_UPDATES = [\n' + items.join(',\n') + '\n];';
 }
 
+// STRICT (2026-07-22 audit P0-3): a missing DEEP_DIVE_UPDATES const now THROWS
+// via lib/replace.js instead of warn-and-continue — exactly this write silently
+// no-opped for months before the const was seeded on 2026-07-20. The custom
+// serializeUpdates (JSON-quoted keys AND values) is kept for the splice.
 function patchDeepDiveUpdates(src, newArr) {
-  const re = /const DEEP_DIVE_UPDATES\s*=\s*\[/;
-  const m  = re.exec(src);
-  if (!m) { console.warn('DEEP_DIVE_UPDATES not found in gov-helpers.js'); return src; }
-  let depth = 0, start = m.index;
-  for (let i = m.index + m[0].length - 1; i < src.length; i++) {
-    if (src[i] === '[') depth++;
-    else if (src[i] === ']') {
-      depth--;
-      if (depth === 0) {
-        let end = i + 1;
-        while (end < src.length && src[end] !== ';') end++;
-        if (src[end] === ';') end++;
-        return src.slice(0, start) + serializeUpdates(newArr) + src.slice(end);
-      }
-    }
-  }
-  return src;
+  const { spliceConst } = require('./lib/replace.js');
+  return spliceConst(src, 'DEEP_DIVE_UPDATES', serializeUpdates(newArr), false);
 }
 
 // ── Deduplicate by title similarity ──────────────────────────────────────────
