@@ -1568,6 +1568,15 @@ const DEEP_DIVE_PAGES = [
   { label: 'Telluride Debt', href: '/Blog%20Posts/the-growing-weight-of-tellurides-debt/' }
 ];
 
+// Featured Action of the Week (homepage) — hand override for the automatic
+// pick in scripts/build-featured-action.js. Empty {} = automatic (the next
+// upcoming meeting that touches a deep-dive topic, earliest first, topic
+// priority tie-break). To pin, use STRICT JSON values, e.g.:
+//   { "topic": "carhenge", "date": "2026-07-23",
+//     "headline": "…optional…", "blurb": "…optional…" }
+// The pin is ignored once its date has passed (falls back to automatic).
+const FEATURED_ACTION_PIN = {};
+
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
   county: '<img src="/logo/San Miguel County.png" alt="San Miguel County" style="width:100%;height:100%;object-fit:contain;">',

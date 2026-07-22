@@ -7375,6 +7375,10 @@ async function main() {
   // each deep-dive topic, plus staleness flags (data/deep-dive-watch.json).
   try { require('./build-deep-dive-watch.js').run(REPO_ROOT); }
   catch (e) { console.warn('  deep-dive-watch build failed: ' + e.message); }
+  // Featured Action of the Week (homepage) — picks the top upcoming
+  // deep-dive-linked meeting from the watch + week-meetings just built.
+  try { require('./build-featured-action.js').run(REPO_ROOT); }
+  catch (e) { console.warn('  featured-action build failed: ' + e.message); }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
   // retired (2026-05-18). Everything that used to live in gov-helpers.js + be
