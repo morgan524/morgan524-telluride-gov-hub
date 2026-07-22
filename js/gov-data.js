@@ -1345,6 +1345,242 @@ const LAND_USE_ISSUES = {
       { source: 'Telluride News', date: 'Apr 22, 2022', title: 'Planning board narrowly OKs zoning change', href: 'https://www.telluridenews.com/news/article_f9e1393c-c1cc-11ec-8a85-9fd77399946c.html', copy: 'Planning Commission narrowly approves the rezone over significant opposition, sending the controversial decision to the BOCC for final action.' },
       { source: 'Telluride News', date: 'Apr 21, 2022', title: 'County planning commission begins Diamond Ridge rezoning process', href: 'https://www.telluridenews.com/news/article_ac75ddb0-c0f5-11ec-b7c9-c7819ef15cd3.html', copy: 'Formal review begins on the application to convert protected open space into high-density housing, prompting immediate concern from Deep Creek Mesa residents.' }
     ]
+  },
+  skigate: {
+    "ctaTitle": "Follow the case",
+    "ctaCopy": "This fight is in the courts, not at a public hearing — the best way to follow it is the filings themselves. Start with the operative complaint, then the dueling dismissal briefs.",
+    "ctaLabel": "Read the complaint",
+    "ctaHref": "/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf",
+    "lastUpdated": "2026-07-21",
+    "category": "Governance",
+    "label": "Ski-Gate: Telski v. Former Officials",
+    "heroImage": "assets/Ski-Gate/telluride-ski-resort-hero.jpg",
+    "heroAlt": "Winter view over the Mountain Village base area of Telluride Ski Resort, seen from the gondola",
+    "heroCredit": "Photo: Murray Foubister via Wikimedia Commons, CC BY-SA 2.0",
+    "intro": "In late December 2025, at the height of a ski patrol strike that closed the resort during the holiday peak, two sitting elected officials — Telluride's mayor pro tem and Mountain Village's mayor — traveled to California and presented Telski owner Chuck Horning with a signed offer to buy a 51% controlling stake in the resort for $127.5 million on behalf of undisclosed investors. When the trip became public in January, both resigned, both towns commissioned independent investigations, and Telski sued the two former officials and Mountain Village's former town manager. The case the community has dubbed “Ski-Gate” now turns on a hard question: where is the line between public office and private dealmaking?",
+    "statusTitle": "Where it stands now",
+    "statusCopy": "Three motions are fully briefed and awaiting a ruling in San Miguel County District Court (case 2026CV30011). All three defendants have moved to dismiss, arguing the amended complaint does not plausibly allege they did anything to prolong the strike — pointing to the meeting transcript itself, which they say shows the proposed deal would have ended it. Fee has separately moved to strike the secretly recorded meeting transcript, arguing the recording violated California's all-party-consent law. Telski responds that the signed offer's own terms — official acts listed as “Additional Consideration” — plausibly plead an abuse of public office.",
+    "nextStep": "The court's ruling on the motions to dismiss and the motion to strike. If the case survives, it moves into discovery; if it is dismissed, Telski can seek leave to amend or appeal.",
+    "metrics": [
+      {
+        "label": "The offer",
+        "value": "$127.5M for 51%",
+        "sub": "Signed “Offer to Purchase” presented to Telski's owner on Dec 29, 2025, on behalf of the “Telluride Ski Resort Fund”"
+      },
+      {
+        "label": "The strike",
+        "value": "Dec 27 – Jan 7",
+        "sub": "Ski patrol strike closed the resort at the height of the 2025–26 holiday season; Telski estimates losses of several million dollars"
+      },
+      {
+        "label": "Officials out",
+        "value": "3",
+        "sub": "Two resigned in January 2026; the former town manager separated from employment May 1"
+      },
+      {
+        "label": "Investigations",
+        "value": "2",
+        "sub": "Independent reports commissioned by Mountain Village (309 pages) and Telluride"
+      }
+    ],
+    "legalIssuesTitle": "The legal questions in play",
+    "legalIssues": [
+      {
+        "title": "Tortious interference",
+        "copy": "Telski alleges the defendants interfered with its business by representing they could end — and by implication prolong — the strike unless Horning sold a controlling stake. The defendants counter that the complaint alleges no act that prolonged the strike, and that the transcript shows the deal was framed as a way to end it."
+      },
+      {
+        "title": "Civil conspiracy",
+        "copy": "The complaint alleges the three coordinated on the offer and related documents, including a draft NDA that Telluride's own CORA production shows was authored by Wisor on January 3, 2026. The defense calls the conspiracy claim derivative and unsupported by any unlawful agreement or overt act."
+      },
+      {
+        "title": "The secret recording",
+        "copy": "Telski's key exhibit is a partial transcript of the Newport Beach meeting, recorded by a Telski representative without the officials' knowledge. Fee argues California's all-party-consent law (Cal. Penal Code § 632) makes the recording unlawful and inadmissible; Telski opposes striking it."
+      },
+      {
+        "title": "Public office vs. private gain",
+        "copy": "The signed offer's Appendix B listed official public acts — brokering an end to the strike, holding snowmaking water prices, town housing partnerships, regional flight spending — as “Additional Consideration.” Both towns' ethics codes restrict officials from trading on their offices; the two independent investigations reached nuanced conclusions about whether lines were crossed."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "Dec 26, 2025",
+        "title": "A meeting is arranged",
+        "copy": "One day before the ski patrol strike begins, Fee and Prohaska contact Telski owner Chuck Horning to arrange a California meeting, saying they have something that could resolve the looming patrol impasse."
+      },
+      {
+        "date": "Dec 27, 2025",
+        "title": "Ski patrol strike closes the resort",
+        "copy": "The Telluride Ski Patrol strike shuts the mountain at the height of the holiday season. The closure runs through January 7 and, by Telski's estimate, costs the resort and local businesses millions."
+      },
+      {
+        "date": "Dec 28–29, 2025",
+        "title": "The Newport Beach offer",
+        "copy": "Fee and Prohaska meet Telski representatives, then Horning. They sign an “Offer to Purchase”: 51% of Telski's assets for $127.5 million via the “Telluride Ski Resort Fund,” with both officials as managing partners. Appendix B lists “Additional Consideration” — official acts including brokering an end to the strike, holding water prices, housing partnerships, and flight spending. Telski does not accept. A Telski representative records the meeting without the officials' knowledge."
+      },
+      {
+        "date": "Jan 7, 2026",
+        "title": "The strike ends",
+        "copy": "Ski patrol and Telski reach agreement; the resort reopens after roughly ten days dark."
+      },
+      {
+        "date": "Jan 13–14, 2026",
+        "title": "The story breaks",
+        "copy": "Telski files a CORA request. A Mountain Village executive session about the trip is accidentally livestreamed, and town manager Paul Wisor reveals previously undisclosed details. Prohaska resigns within hours of learning the town wants an outside investigation."
+      },
+      {
+        "date": "Jan 20–26, 2026",
+        "title": "Investigations open; Fee resigns",
+        "copy": "Telluride's council votes to investigate Fee; Mountain Village hires an independent investigator. Fee resigns as mayor pro tem and councilmember on January 26, writing that “it is impossible to ignore the rift that this episode has caused in our community.”"
+      },
+      {
+        "date": "Feb 24, 2026",
+        "title": "Telski sues",
+        "copy": "TSG Ski and Golf, LLC files suit in San Miguel County District Court against Fee, Prohaska, and Wisor, claiming tortious interference and civil conspiracy and seeking damages estimated at several million dollars."
+      },
+      {
+        "date": "May 1, 2026",
+        "title": "Wisor separates from the town",
+        "copy": "After an investigation into his behind-the-scenes role — including drafting transaction documents — Wisor's employment as Mountain Village town manager ends. “Though difficult, this decision is being made in what I believe is the best interest of the organization and the community as a whole,” he says."
+      },
+      {
+        "date": "May 8, 2026",
+        "title": "Amended complaint adds the receipts",
+        "copy": "Telski files a First Amended Complaint attaching the signed Offer to Purchase, a partial transcript of the recorded Newport Beach meeting, and the Wisor-drafted NDA produced under CORA."
+      },
+      {
+        "date": "Jun 2, 2026",
+        "title": "Mountain Village's investigation reports",
+        "copy": "The town releases a 309-page independent report: Prohaska “technically” violated no ethics-code provision, but her conduct was “inconsistent with her ethical obligations”; Wisor did not act contrary to code and had negotiated a clause requiring his termination if the deal closed."
+      },
+      {
+        "date": "Jun 10, 2026",
+        "title": "Telluride's investigation reports",
+        "copy": "The ILG report finds Fee “failed to maintain the line between personal and governmental roles” — noting she used her official email and title to obtain a flight voucher for the trip — while crediting that she may have believed she was acting personally."
+      },
+      {
+        "date": "Jun 5 – Jul 6, 2026",
+        "title": "Dismissal fight fully briefed",
+        "copy": "All three defendants move to dismiss; Fee also moves to strike the recorded transcript under California's all-party-consent law. Telski responds; the defendants reply. The motions now await the court's ruling."
+      }
+    ],
+    "docs": [
+      {
+        "title": "Defendants' Joint Reply in Support of Motions to Dismiss (Jul 6, 2026)",
+        "copy": "The defense's last word on dismissal: the complaint pleads no act that prolonged the strike, and its own exhibits contradict it.",
+        "tag": "Defense",
+        "href": "/assets/Ski-Gate/joint-reply-iso-dismissal-2026-07-06.pdf"
+      },
+      {
+        "title": "Fee's Reply in Support of Motion to Strike (Jul 6, 2026)",
+        "copy": "Closing brief on whether the secretly recorded meeting transcript should be struck from the case.",
+        "tag": "Defense",
+        "href": "/assets/Ski-Gate/fee-reply-iso-strike-2026-07-06.pdf"
+      },
+      {
+        "title": "Telski's Combined Response to Motions to Dismiss (Jun 26, 2026)",
+        "copy": "Telski's counter: the signed offer's own terms plausibly plead that public powers were leveraged for a private acquisition.",
+        "tag": "Telski",
+        "href": "/assets/Ski-Gate/telski-combined-response-2026-06-26.pdf"
+      },
+      {
+        "title": "Telski's Opposition to the Motion to Strike (Jun 26, 2026)",
+        "copy": "Why Telski says the transcript of the Newport Beach meeting should stay in the record.",
+        "tag": "Telski",
+        "href": "/assets/Ski-Gate/telski-opposition-to-strike-2026-06-26.pdf"
+      },
+      {
+        "title": "Fee's Motion to Dismiss (Jun 5, 2026)",
+        "copy": "Fee's separate dismissal motion directed at the First Amended Complaint.",
+        "tag": "Defense",
+        "href": "/assets/Ski-Gate/fee-motion-to-dismiss-2026-06-05.pdf"
+      },
+      {
+        "title": "Fee's Motion to Strike the Recording (Jun 5, 2026)",
+        "copy": "Argues the meeting was recorded without consent in violation of Cal. Penal Code § 632, an all-party-consent state, and the transcript is inadmissible and scandalous.",
+        "tag": "Defense",
+        "href": "/assets/Ski-Gate/fee-motion-to-strike-2026-06-05.pdf"
+      },
+      {
+        "title": "Prohaska & Wisor's Motion to Dismiss (Jun 5, 2026)",
+        "copy": "Argues the transcript shows the proposed deal would have ended the strike, not prolonged it, and no plausible claim is stated under Colorado's Twombly/Iqbal standard.",
+        "tag": "Defense",
+        "href": "/assets/Ski-Gate/prohaska-wisor-motion-to-dismiss-2026-06-05.pdf"
+      },
+      {
+        "title": "First Amended Complaint (May 8, 2026)",
+        "copy": "The operative complaint — the $127.5M offer, Appendix B's “Additional Consideration,” the recorded-meeting transcript excerpts, and the two claims for relief.",
+        "tag": "Telski",
+        "href": "/assets/Ski-Gate/first-amended-complaint-2026-05-08.pdf"
+      }
+    ],
+    "players": [
+      {
+        "title": "TSG Ski and Golf, LLC (Telski)",
+        "copy": "The independently owned resort operator, and the plaintiff. Owner Chuck Horning received — and declined — the offer; a Telski representative recorded the December meeting."
+      },
+      {
+        "title": "Julie Meehan Fee",
+        "copy": "Former Telluride mayor pro tem and councilmember; resigned January 26, 2026. Maintains she acted as a private citizen and that the offer's terms were aspirational; her motions argue the claims fail as a matter of law."
+      },
+      {
+        "title": "Martinique “Marti” Prohaska",
+        "copy": "Former Mountain Village mayor (and ski patroller); resigned January 14, 2026. MV's independent report found no technical code violation but conduct “inconsistent with her ethical obligations.”"
+      },
+      {
+        "title": "Paul Wisor",
+        "copy": "Former Mountain Village town manager; drafted transaction documents including an NDA. Separated from town employment May 1, 2026. MV's report found he did not act contrary to code."
+      },
+      {
+        "title": "The two towns",
+        "copy": "Telluride and Mountain Village are not parties to the lawsuit. Each commissioned an independent investigation and released its report in June 2026."
+      }
+    ],
+    "news": [
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Jul 21, 2026",
+        "title": "Telski amends lawsuit against Prohaska, Wisor and Fee",
+        "href": "https://www.telluridenews.com/news/article_fdd6316f-fb0f-4629-87d0-6ae9800e4251.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Jun 10, 2026",
+        "title": "Fee failed to maintain line between personal, governmental roles",
+        "href": "https://www.telluridenews.com/news/article_7f2f7f97-cfba-4bba-8e22-5cedb5539f85.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Jun 2, 2026",
+        "title": "Investigation finds Prohaska 'technically' free of ethics violations",
+        "href": "https://www.telluridenews.com/news/article_2fcca626-62fb-459c-9c24-a3ca6915d695.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "May 1, 2026",
+        "title": "Wisor resigns as Mountain Village town manager",
+        "href": "https://www.telluridenews.com/news/article_2c1cc16d-5e4a-4543-86bd-1faadf9f7028.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Mar 6, 2026",
+        "title": "Telski lawsuit claims 'civil conspiracy' in 'self-serving scheme'",
+        "href": "https://www.telluridenews.com/news/article_dfa5dfbb-25c4-44af-a45f-91b182c88ee0.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Jan 26, 2026",
+        "title": "Telluride Mayor Pro Tem Meehan Fee resigns",
+        "href": "https://www.telluridenews.com/news/article_ed2fc3f8-8a43-480e-9183-84ea4db0d28c.html"
+      },
+      {
+        "source": "Telluride Daily Planet",
+        "date": "Jan 25, 2026",
+        "title": "MV opens investigation into former Mayor Marti Prohaska's resignation",
+        "href": "https://www.telluridenews.com/news/article_a76bcdfd-ee6f-4be7-b849-c0bc84c01ecc.html"
+      }
+    ],
+    "meetings": []
   }
 };
 

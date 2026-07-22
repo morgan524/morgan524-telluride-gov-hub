@@ -25,7 +25,7 @@ def run(*a):
 
 PAGES = ['index', 'about', 'donate', 'events', 'gov-hub', 'gov-hub-past', 'deep-dives',
          'deep-dive-carhenge', 'deep-dive-code', 'deep-dive-diamond', 'deep-dive-gondola',
-         'deep-dive-society', 'deep-dive-wildfire', 'housing', 'hub-bub',
+         'deep-dive-skigate', 'deep-dive-society', 'deep-dive-wildfire', 'housing', 'hub-bub',
          'legal-notices', 'local-news', 'local-orgs']
 
 # 1+2+3: moves (legacy fallbacks first)

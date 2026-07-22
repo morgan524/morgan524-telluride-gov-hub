@@ -79,6 +79,7 @@
   // contain:true = image carries baked-in text; never crop it.
   var TOPICS = [
     { key: 'carhenge', cat: 'Land Use', contain: true },
+    { key: 'skigate',  cat: 'Governance' },
     { key: 'society',  cat: 'Land Use' },
     { key: 'code',     cat: 'Policy' },
     { key: 'wildfire', cat: 'Environment' },
@@ -97,6 +98,9 @@
   function card(t, issue) {
     // Every card gets an image — box-canyon stock when a topic has none.
     var src = (issue && issue.heroImage) || t.img || '/img/box-canyon.jpg';
+    // heroImage may be site-root-relative ('assets/…') — resolve absolutely
+    // so cards work from the staged /redesign/ mount too (same as deep-dive.js).
+    if (src && !/^https?:\/\//.test(src) && src.charAt(0) !== '/') src = '/' + src;
     var cls = 'img-frame' + (t.contain ? ' contain' : '');
     var img = '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>';
     var dek = (issue && issue.intro) ? issue.intro : (t.dek || '');

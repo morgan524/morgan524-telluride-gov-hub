@@ -50,7 +50,7 @@
       (tall ? '' : '<div class="dd-hero-grad"></div>') + '<div class="dd-hero-text">' +
       '<div class="crumb" style="color:rgba(255,255,255,.8)"><a href="deep-dives.html" style="color:rgba(255,255,255,.8)">Deep Dives</a> <span class="sep">&rsaquo;</span> ' + esc(issue.label || key) + '</div>' +
       '<div style="margin:10px 0"><span class="tag" style="background:var(--gold);color:var(--forest)">Deep Dive</span> ' +
-      '<span class="tag" style="background:rgba(255,255,255,.18);color:#fff">Land Use</span></div>' +
+      '<span class="tag" style="background:rgba(255,255,255,.18);color:#fff">' + esc(issue.category || 'Land Use') + '</span></div>' +
       '<h1>' + esc(issue.label || key) + '</h1>' +
       (issue.heroCredit ? '<div class="dd-credit">' + esc(issue.heroCredit) + '</div>' : '') +
       '</div></header>';
@@ -89,9 +89,11 @@
     }
 
     // ---- sidebar ----
-    var side = '<div class="dd-cta card-forest"><div class="k">Act before it’s final</div>' +
-      '<p>Public comment shapes these decisions most before the votes happen.</p>' +
-      '<a class="btn btn-gold" href="mailto:info@livabletelluride.org?subject=' + encodeURIComponent('Comment: ' + (issue.label || key)) + '">How to comment &rarr;</a></div>';
+    // Topics can override the sidebar CTA (courts-not-hearings topics need
+    // different framing than land-use ones); defaults preserve the old copy.
+    var side = '<div class="dd-cta card-forest"><div class="k">' + esc(issue.ctaTitle || 'Act before it’s final') + '</div>' +
+      '<p>' + esc(issue.ctaCopy || 'Public comment shapes these decisions most before the votes happen.') + '</p>' +
+      '<a class="btn btn-gold" href="' + (issue.ctaHref ? esc(safe(issue.ctaHref)) : 'mailto:info@livabletelluride.org?subject=' + encodeURIComponent('Comment: ' + (issue.label || key))) + '">' + esc(issue.ctaLabel || 'How to comment') + ' &rarr;</a></div>';
     var facts = issue.snapshot || issue.metrics;
     if (facts && facts.length) {
       side += '<div class="dd-card card"><h4>Key facts</h4>' + facts.map(function (m) {
