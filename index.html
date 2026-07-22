@@ -57,6 +57,13 @@
   .prior-list h3 { font: 600 20px/1.25 var(--serif); margin: 6px 0 4px; }
   .prior-list .hook { font: 400 15px/1.5 var(--sans); color: var(--body2); margin: 0 0 3px; }
   .prior-list .chev { font-size: 22px; color: var(--rust); }
+  .prior-cols { display: grid; grid-template-columns: 1.12fr 1fr; gap: 46px; align-items: start; }
+  .prior-col-h { font: 700 13px/1.2 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: var(--rust); padding: 16px 0 2px; }
+  .pe-list .row { display: grid; grid-template-columns: 58px 64px 1fr; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--hairline); }
+  .pe-list .p-img { width: 64px; height: 64px; border-radius: 9px; overflow: hidden; background: #eee; }
+  .pe-list .p-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pe-list h3 { font: 600 17.5px/1.25 var(--serif); margin: 2px 0 3px; }
+  .pe-list .meta { font: 400 13.5px/1.45 var(--sans); }
   /* About Livable Telluride — mission/story cards + photo, directors, what-livable
      (layout mirrors the live homepage about section, per Morgan) */
   .lt-about { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--pad-x) 0; }
@@ -90,6 +97,9 @@
     .prior-list .row { grid-template-columns: 48px 48px 1fr; }
     .prior-list .p-logo { width: 48px; height: 48px; }
     .prior-list .chev { display: none; }
+    .prior-cols { grid-template-columns: 1fr; gap: 10px; }
+    .pe-list .row { grid-template-columns: 48px 48px 1fr; }
+    .pe-list .p-img { width: 48px; height: 48px; }
     .mission-row { grid-template-columns: 1fr; }
     .photo-col { min-height: 320px; }
     .livable-panel { padding: 26px 22px; }
@@ -171,7 +181,16 @@
     <div><span class="eyebrow" id="prior-week">This week</span><h2 class="section-h">Top priorities</h2></div>
     <a class="all" href="gov-hub.html">All meetings &amp; events &rarr;</a>
   </div>
-  <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
+  <div class="prior-cols">
+    <div>
+      <div class="prior-col-h">Government meetings</div>
+      <div class="prior-list" id="prior-list"><p class="meta" style="padding:18px 0">Loading this week's meetings&hellip;</p></div>
+    </div>
+    <div>
+      <div class="prior-col-h">Events this week</div>
+      <div class="pe-list" id="prior-events"><p class="meta" style="padding:18px 0">Loading this week's events&hellip;</p></div>
+    </div>
+  </div>
 </section>
 
 <section class="lt-about" id="mission">
@@ -267,6 +286,39 @@
         '<div class="chev">&rsaquo;</div></a>';
     }).join('');
   }).catch(function (err) { LTData.showError(list, err); });
+
+  /* Right column: top events over the same 7 days, from the events index.
+     One per day where possible; real photos and detail beat bare listings. */
+  var evList = document.getElementById('prior-events');
+  LTData.load(['events-index']).then(function (data) {
+    var raw = data['events-index'];
+    var evs = (raw && raw.events) ? raw.events : (Array.isArray(raw) ? raw : []);
+    var today = LTData.todayMT();
+    var end = LTData.mtDateKey(new Date(LTData.parseDateKey(today).getTime() + 6 * 86400000));
+    function score(e) {
+      var s = 0;
+      if (e.img && e.img.indexOf('/assets/digest/fallbacks/') === -1) s += 5;
+      if (e.desc) s += 2;
+      if (e.type === 'Festivals') s += 3;
+      if (e.type === 'Music') s += 1;
+      return s;
+    }
+    var pool = evs.filter(function (e) { return e && e.title && e.date >= today && e.date <= end; });
+    // Best event per day (by score), then top 6 days chronologically.
+    var byDay = {};
+    pool.forEach(function (e) { if (!byDay[e.date] || score(e) > score(byDay[e.date])) byDay[e.date] = e; });
+    var picks = Object.keys(byDay).sort().slice(0, 6).map(function (d) { return byDay[d]; });
+    if (!picks.length) { evList.innerHTML = '<p class="meta" style="padding:18px 0">No events listed this week.</p>'; return; }
+    evList.innerHTML = picks.map(function (e) {
+      var d = LTData.parseDateKey(e.date);
+      var meta = [LTData.fmtDate(e.date, { weekday: 'short' }), (e.time || '').split('-')[0].trim(), e.town].filter(Boolean).join(' · ');
+      return '<a class="row" href="events.html" style="color:inherit">' +
+        '<div><div class="d-mon">' + MON[d.getMonth()] + '</div><div class="d-day">' + d.getDate() + '</div></div>' +
+        (e.img ? '<div class="p-img"><img src="' + LTData.esc(e.img) + '" alt="" loading="lazy"></div>' : '<div></div>') +
+        '<div><h3>' + LTData.esc(e.title) + '</h3>' +
+        '<div class="meta">' + LTData.esc(meta) + '</div></div></a>';
+    }).join('');
+  }).catch(function (err) { LTData.showError(evList, err); });
 })();
 </script>
 </body>
