@@ -29,7 +29,10 @@
   --body2: #3d4b47;           /* lead paragraphs */
   --muted: #53615c;           /* captions, meta */
   --muted2: #65706b;          /* dek, secondary meta */
-  --rust: #b86132;            /* links, active nav, CTAs, tags */
+  /* #b86132 was 3.89:1 on --paper — below WCAG AA 4.5:1; axe flagged the
+     Donate pill + active nav on 33 pages (2026-07-22 site review). #a04f24
+     is 5.1:1 on paper and keeps the hover (#93471f, 5.8:1) darker still. */
+  --rust: #a04f24;            /* links, active nav, CTAs, tags */
   --rust-hover: #93471f;
   --gold: #d8a94d;            /* highlights, timeline dots, donate-on-dark */
   --sage: #dfe8df;            /* tag pills, chips */
@@ -259,6 +262,8 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
 
 /* ---- deep-dive detail (shared by deep-dive-*.html via deep-dive.js) ---- */
 .dd-hero { position: relative; min-height: 440px; display: flex; align-items: flex-end; background: var(--forest); overflow: hidden; }
+/* No hero image (e.g. gondola) → text-only header, not a 440px empty block */
+.dd-hero.no-img { min-height: 0; }
 .dd-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .dd-hero-grad { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,34,29,.15), rgba(20,34,29,.35) 50%, rgba(20,34,29,.86)); }
 /* tall heroes (portrait infographics w/ baked text): never crop — full image
@@ -323,6 +328,21 @@ a.doc-link:hover { color: var(--doc-blue-hover); }
   .dd-wrap { grid-template-columns: 1fr; }
   .dd-side { position: static; }
   .dd-hero-text h1 { font-size: 36px; }
+}
+@media (max-width: 640px) {
+  /* Deep-dive heroes: STACK the image above the text instead of overlaying.
+     Hero graphics often carry their own baked-in titles (Carhenge lot header,
+     SMC code infographic) — overlaying our H1 + gradient over them clipped
+     both to unreadability on phones (2026-07-22 site review). */
+  .dd-hero, .dd-hero.tall { display: block; min-height: 0; }
+  .dd-hero-img, .dd-hero.tall .dd-hero-img {
+    position: static; display: block; width: 100%; height: auto;
+    max-height: 300px; object-fit: contain; object-position: center;
+  }
+  .dd-hero-grad { display: none; }
+  .dd-hero-text, .dd-hero.tall .dd-hero-text { padding: 18px var(--pad-x) 22px; }
+  .dd-hero.tall .dd-hero-text { padding-right: var(--pad-x); }
+  .dd-hero-text h1 { font-size: 30px; overflow-wrap: break-word; }
 }
 
 /* ── Weather card (js/lt-weather.js → #lt-weather) ─────────────────── */

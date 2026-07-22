@@ -109,7 +109,7 @@
     // so cards work from the staged /redesign/ mount too (same as deep-dive.js).
     if (src && !/^https?:\/\//.test(src) && src.charAt(0) !== '/') src = '/' + src;
     var cls = 'img-frame' + (t.contain ? ' contain' : '');
-    var img = '<a href="' + href(t) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>';
+    var img = '<a href="' + href(t) + '" aria-label="Read deep dive: ' + LTData.esc(issue ? issue.label : t.label) + '"><div class="' + cls + '"><img src="' + LTData.esc(src) + '" alt="" loading="lazy"></div></a>';
     var dek = (issue && issue.intro) ? issue.intro : (t.dek || '');
     var docs = issue && issue.docs ? issue.docs.length + ' source documents' : '';
     var tl = issue && issue.timeline ? issue.timeline.length + ' timeline entries' : '';
@@ -131,7 +131,7 @@
         '<h2><a href="' + href(feat) + '">' + LTData.esc(fi.label) + '</a></h2>' +
         '<p class="dek">' + LTData.esc(clip(fi.intro, 300)) + '</p>' +
         '<a class="btn btn-forest" href="' + href(feat) + '">Read the deep dive &rarr;</a></div>' +
-        (fi.heroImage ? '<a href="' + href(feat) + '"><div class="img-frame' + (feat.contain ? ' contain' : '') + '"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
+        (fi.heroImage ? '<a href="' + href(feat) + '" aria-label="Read deep dive: ' + LTData.esc(fi.label) + '"><div class="img-frame' + (feat.contain ? ' contain' : '') + '"><img src="' + LTData.esc(fi.heroImage) + '" alt=""></div></a>' : '') +
         '</article>';
     }
     var cards = TOPICS.slice(1).map(function (t) { return card(t, issues[t.key]); })
@@ -150,7 +150,7 @@
       // Strip the zero-width preheader padding Mailchimp leaves in excerpts.
       var dek = String(p.excerpt || p.summary || '').replace(/[​-‍﻿͏­]/g, '').trim();
       var img = p.image || p.img || '';
-      var imgHtml = '<a href="' + LTData.esc(link) + '" target="_blank" rel="noopener"><div class="img-frame">' +
+      var imgHtml = '<a href="' + LTData.esc(link) + '" target="_blank" rel="noopener" aria-label="Read post: ' + LTData.esc(p.title || 'Untitled') + '"><div class="img-frame">' +
         (img ? '<img src="' + LTData.esc(img) + '" alt="" loading="lazy">' : '') + '</div></a>';
       return '<article class="blog-card story">' + imgHtml +
         '<div><span class="tag">' + LTData.esc(p.category || 'Newsletter') + '</span>' +

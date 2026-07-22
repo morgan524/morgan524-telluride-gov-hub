@@ -164,7 +164,7 @@
       if (!logo) return '';
       img = '<div class="img-frame logo-fill"><img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
     }
-    return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + img + '</a>' : img;
+    return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener" aria-label="Read: ' + LTData.esc(s.title || s.src || 'story') + '">' + img + '</a>' : img;
   }
   // "Letters to Livable Telluride" banner above our own letters (isLetter pins).
   function letterBanner(s) {

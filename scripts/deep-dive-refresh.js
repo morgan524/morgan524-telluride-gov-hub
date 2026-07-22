@@ -39,6 +39,12 @@ const TOPICS = {
     keywords: ['carhenge', 'shandoka', 'lot l', 'chair 7', 'c7cc',
                '700 w pacific', 'lift 7 neighborhood', 'southwest area plan', 'swap'],
   },
+  skigate: {
+    label: 'Ski-Gate: Telski v. Former Officials',
+    keywords: ['ski-gate', 'skigate', 'telski.*investigation', 'horning',
+               'resort.*purchase offer', 'controlling stake.*resort',
+               'independent investigation.*resign', 'mayor pro tem.*resign'],
+  },
   society: {
     label: 'Society Turn / Valley Floor Entrance',
     keywords: ['society turn', 'valley floor', 'genesee', 'roundabout.*develop',

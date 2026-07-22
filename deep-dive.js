@@ -45,7 +45,7 @@
     // resolve them absolutely so they work from any mount point.
     var heroSrc = issue.heroImage || '';
     if (heroSrc && !/^https?:\/\//.test(heroSrc) && heroSrc.charAt(0) !== '/') heroSrc = '/' + heroSrc;
-    var hero = '<header class="dd-hero' + (tall ? ' tall' : '') + '">' +
+    var hero = '<header class="dd-hero' + (tall ? ' tall' : '') + (heroSrc ? '' : ' no-img') + '">' +
       (heroSrc ? '<img class="dd-hero-img" src="' + esc(heroSrc) + '" alt="' + esc(issue.heroAlt || '') + '">' : '') +
       (tall ? '' : '<div class="dd-hero-grad"></div>') + '<div class="dd-hero-text">' +
       '<div class="crumb" style="color:rgba(255,255,255,.8)"><a href="deep-dives.html" style="color:rgba(255,255,255,.8)">Deep Dives</a> <span class="sep">&rsaquo;</span> ' + esc(issue.label || key) + '</div>' +

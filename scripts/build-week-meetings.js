@@ -215,6 +215,13 @@ function run(repoRoot) {
   const cache = loadHookCache(dataDir);
   const misses = applyCachedHooks(meetings, cache);
   const p = writeMirror('WEEK_MEETINGS', meetings, dataDir);
+  // Freshness stamp (day-granular, MT) — content-review alerts if this build
+  // stops running. Sidecar file so the index stays a plain array for readers.
+  const stamp = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(new Date());
+  const metaPath = path.join(dataDir, 'week-meetings-meta.json');
+  const metaStr = JSON.stringify({ generatedAt: stamp, count: meetings.length }) + '\n';
+  try { if (fs.readFileSync(metaPath, 'utf8') !== metaStr) fs.writeFileSync(metaPath, metaStr); }
+  catch (_) { fs.writeFileSync(metaPath, metaStr); }
   console.log(`  week-meetings: ${meetings.length} meetings (next ${WINDOW_DAYS} days, ${misses.length} hook miss${misses.length === 1 ? '' : 'es'}) → ${path.relative(root, p)}`);
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (misses.length && apiKey) {

@@ -336,7 +336,7 @@
     var todays = pool.filter(function (e) { return e.date === today; });
     var feat = todays.sort(function (a, b) { return score(b) - score(a); })[0] || null;
     document.getElementById('feat-slot').innerHTML = feat
-      ? '<article class="feat story"><a href="' + esc(safe(feat.href)) + '" target="_blank" rel="noopener"><div class="img-frame"><img src="' + esc(feat.img) + '" alt=""></div></a>' +
+      ? '<article class="feat story"><a href="' + esc(safe(feat.href)) + '" target="_blank" rel="noopener" aria-label="Details: ' + esc(feat.title) + '"><div class="img-frame"><img src="' + esc(feat.img) + '" alt=""></div></a>' +
         '<div class="body"><div class="k">Featured today</div><h2>' + esc(feat.title) + '</h2>' +
         '<div class="meta-l">' + esc(metaLine(feat)) + '</div>' +
         (feat.desc ? '<p class="dek">' + esc(feat.desc) + '</p>' : '') +
@@ -354,7 +354,7 @@
       byDay[d].forEach(function (e) {
         var multi = e.endDate ? '<span class="tag rust-tint">Thru ' + LTData.fmtDate(e.endDate, { month: 'short', day: 'numeric' }) + '</span>' : '';
         html += '<article class="ev story">' +
-          '<a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener"><div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div></a>' +
+          '<a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener" aria-label="Details: ' + esc(e.title) + '"><div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div></a>' +
           '<div><div class="badges">' + (e.town ? '<span class="tag">' + esc(e.town) + '</span>' : '') +
           (e.type && e.type !== 'Community' ? '<span class="tag rust-tint">' + esc(e.type) + '</span>' : '') + multi + '</div>' +
           '<h3><a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +

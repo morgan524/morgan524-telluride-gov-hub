@@ -604,6 +604,19 @@ function checkSourceHealth(ctx) {
   for (const a of sourceHealth.detectStaleData(ctx.captured, ctx.localDate, today)) {
     add(a.severity, 'Stale data / orphan summary', a.name, a.message);
   }
+  // Precomputed-index freshness (2026-07-22 audit Phase 2): events-index.json /
+  // week-meetings.json feed the events page and homepage; their builders stamp
+  // data/<name>-meta.json with the MT build date. A stamp >2 days old means the
+  // build has silently stopped even though the underlying data may look alive.
+  for (const name of ['events-index', 'week-meetings']) {
+    let meta = null;
+    try { meta = JSON.parse(fs.readFileSync(path.join(REPO_ROOT, 'data', `${name}-meta.json`), 'utf8')); } catch { continue; }
+    const age = Math.round((Date.parse(today) - Date.parse(meta.generatedAt || '1970-01-01')) / 86400000);
+    if (age > 2) {
+      add('High', 'Precomputed index stale', name,
+        `data/${name}.json was last built ${meta.generatedAt} (${age}d ago) — the ${name} build in content-refresh has stopped running or failing silently; the page is serving old data.`);
+    }
+  }
 }
 
 // ════════════════════════════════════════════════════════════════

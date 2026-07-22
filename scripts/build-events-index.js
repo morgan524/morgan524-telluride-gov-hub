@@ -215,7 +215,10 @@ function buildEventsIndex(repoRoot) {
         time: timeOf(e),
         location: String(e.location || '').trim(),
         town: townFor(e, label),
-        img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg)) ? rawImg : fallbackImg(title),
+        // koto.org/wp-content sends Cross-Origin-Resource-Policy: same-origin —
+        // hotlinks are blocked by the browser (ERR_BLOCKED_BY_RESPONSE), so
+        // treat them like webp: unusable → category fallback (2026-07-22 review).
+        img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title),
         category: String(e.category || '').trim(),
         source: label,
         desc: desc,
@@ -236,6 +239,13 @@ function run(repoRoot) {
   const root = repoRoot || path.resolve(__dirname, '..');
   const events = buildEventsIndex(root);
   const p = writeMirror('EVENTS_INDEX', events, path.join(root, 'data'));
+  // Freshness stamp (day-granular, MT) — content-review alerts if this build
+  // stops running. Sidecar file so the index stays a plain array for readers.
+  const stamp = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(new Date());
+  const metaPath = path.join(root, 'data', 'events-index-meta.json');
+  const meta = JSON.stringify({ generatedAt: stamp, count: events.length }) + '\n';
+  try { if (fs.readFileSync(metaPath, 'utf8') !== meta) fs.writeFileSync(metaPath, meta); }
+  catch (_) { fs.writeFileSync(metaPath, meta); }
   console.log(`  events-index: ${events.length} events (60-day window) → ${path.relative(root, p)}`);
   return events;
 }
