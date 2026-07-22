@@ -120,6 +120,19 @@
     "endDate": "2026-08-28"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-22",
+    "time": "4:00 PM - 5:30 PM",
+    "location": "Wilkinson Public Library, Telluride Room, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
     "date": "2026-07-22",
@@ -385,6 +398,19 @@
     "endDate": "2026-08-23"
   },
   {
+    "title": "Voter Registration Group Training",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-07-23",
+    "time": "1:00 PM - 2:30 PM",
+    "location": "Lone Cone Library Conference Room, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "DIY Condiments with Kayla",
     "href": "https://koto.org/event/diy-condiments-with-kayla/",
     "date": "2026-07-23",
@@ -409,19 +435,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-23",
-    "time": "4:00 PM - 5:30 PM",
-    "location": "Wilkinson Public Library, Telluride Room, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Talks & Classes"
   },
   {
     "title": "Party in the Park",
@@ -583,19 +596,6 @@
     "desc": "Join us in Ouray Library from 1:00 pm to 2:00 pm for the new Paw Prints Book Club! This is an animal themed graphic novel book club ran by a kid, for kids. There will be four book club meetings over 4 weeks, where there will be discussion…",
     "type": "Talks & Classes",
     "endDate": "2026-08-07"
-  },
-  {
-    "title": "Voter Registration Group Training",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-07-24",
-    "time": "1:00 PM - 2:30 PM",
-    "location": "Lone Cone Library Conference Room, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Talks & Classes"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -1359,6 +1359,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "The Dual Challenge: Climate and Energy",
+    "href": "https://telluridefoundation.org/tf-events/",
+    "date": "2026-07-28",
+    "time": "12:30 PM",
+    "location": "Telluride Innovation Center, Telluride, CO",
+    "town": "Telluride",
+    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
+    "category": "Community Event",
+    "source": "Telluride Foundation",
+    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-2560",
     "date": "2026-07-28",
@@ -1409,19 +1422,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "The Dual Challenge: Climate and Energy",
-    "href": "https://telluridefoundation.org/tf-events/",
-    "date": "2026-07-28",
-    "time": "6:30 PM",
-    "location": "Telluride Innovation Center, Telluride, CO",
-    "town": "Telluride",
-    "img": "https://telluridefoundation.org/wp-content/uploads/2026/06/0728-TT_320-x-212-TF.jpg",
-    "category": "Community Event",
-    "source": "Telluride Foundation",
-    "desc": "A Town Talk panel discussion on what meeting humanity's energy needs while keeping a healthy planet actually requires, featuring climate and energy experts. Free; presented in partnership with Telluride Science.",
     "type": "Talks & Classes"
   },
   {
@@ -2899,6 +2899,19 @@
     "endDate": "2026-09-10"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-12",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
     "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     "date": "2026-08-12",
@@ -2936,19 +2949,6 @@
     "source": "Telluride Chamber Music",
     "desc": "A community concert presented by Telluride Chamber Music.",
     "type": "Music"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-13",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Ouray Economic Development Committee",
