@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-22T03:03:51.108Z",
+ "generated": "2026-07-22T06:03:06.528Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -21,13 +21,21 @@
    "recent": [
     {
      "source": "telluride",
+     "date": "2026-07-21",
+     "title": "Town Council - Jul 21 2026",
+     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
+    },
+    {
+     "source": "telluride",
      "date": "2026-07-15",
      "title": "Historic & Architectural Review Commission - Jul 15 2026",
      "snippet": "The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2,…"
     }
    ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Carhenge / Shandoka: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19."
+   ]
   },
   "society": {
    "label": "Society Turn / Valley Floor Entrance",
@@ -56,6 +64,12 @@
    ],
    "recent": [
     {
+     "source": "telluride",
+     "date": "2026-07-21",
+     "title": "Town Council - Jul 21 2026",
+     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
+    },
+    {
      "source": "county",
      "date": "2026-07-16",
      "title": "Housing Code Update SSR",
@@ -75,15 +89,26 @@
     }
    ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19."
+   ]
   },
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-07-21",
+     "title": "Town Council - Jul 21 2026",
+     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Wildfire Resiliency: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-06-01."
+   ]
   },
   "diamond": {
    "label": "Diamond Ridge",

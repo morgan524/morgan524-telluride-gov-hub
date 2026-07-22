@@ -1,90 +1,79 @@
 [
   {
-    "title": "Storytime / Hora de Cuentos",
-    "link": "https://telluridelibrary.libcal.com/event/16772768?hs=a",
-    "description": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    "pubDate": "2026-07-21T16:30:00.000Z",
+    "title": "Bear Creek Walk & Talk with Dr. Jason Sibold",
+    "link": "https://telluridelibrary.libcal.com/event/17105410?hs=a",
+    "description": "8:30 AM – 10:30 AM · Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way!  Meet in front of the library and wear sturdy shoes. https://www.libarts.colostate.edu/people/sibold/",
+    "pubDate": "2026-07-22T14:30:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
-    "location": "Lower Terrace - outdoors",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    "location": "Wilkinson Public Library",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg"
   },
   {
-    "title": "Kombucha & Kefir with Kayla Wexelberg",
-    "link": "https://telluridelibrary.libcal.com/event/16410705?hs=a",
-    "description": "12:00 PM – 2:00 PM · Kombucha & Kefir: Fermentation Made Simple Curious about making your own probiotic drinks at home? Join fermentation educator and founder of Taste Your Roots, Kayla Wexelberg, for a hands-on introduction to the art and science of kombucha and kefir. In this interactive workshop, you&#39;ll learn how these traditional fermented beverages are made, explore their unique flavors and potential health benefits, and gain the confidence to start brewing your own at home. Kayla will guide participants through the fermentation process, share tips for successful brewing, and answer questions along the way. Whether you&#39;re a longtime fermentation enthusiast or completely new to the world of cultured foods, you&#39;ll leave with practical knowledge, inspiration, and a deeper appreciation for the tiny microbes that help transform simple ingredients into delicious, living foods. Space is limited. Registration is required.",
-    "pubDate": "2026-07-21T18:00:00.000Z",
+    "title": "Baby Bop",
+    "link": "https://telluridelibrary.libcal.com/event/16610077?hs=a",
+    "description": "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    "pubDate": "2026-07-22T15:00:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Program Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_35_47.png"
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
   },
   {
-    "title": "Teen Cook",
-    "link": "https://telluridelibrary.libcal.com/event/16935716?hs=a",
-    "description": "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    "pubDate": "2026-07-21T20:00:00.000Z",
+    "title": "Mountain Village Farmers Marketshow",
+    "link": "https://telluridelibrary.libcal.com/event/15564458?hs=a",
+    "description": "A farmers market event at Mountain Village Market, presented by Wilkinson Public Library. This midday program runs from 11:00 AM to noon and brings a library presence to the local market setting.",
+    "pubDate": "2026-07-22T17:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Mountain Village Market",
+    "imageUrl": ""
+  },
+  {
+    "title": "Radio Biblioteca",
+    "link": "https://telluridelibrary.libcal.com/event/17021873?hs=a",
+    "description": "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    "pubDate": "2026-07-22T18:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "KOTO Radio Station",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png"
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://telluridelibrary.libcal.com/event/16767658?hs=a",
+    "description": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-07-22T19:00:00.000Z",
+    "source": "wilkinson",
+    "sourceLabel": "Wilkinson Public Library",
+    "category": "Library Event",
+    "location": "Lower Terrace - outdoors",
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    "title": "Teen Movie and Ice Cream Club",
+    "link": "https://telluridelibrary.libcal.com/event/16935736?hs=a",
+    "description": "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    "pubDate": "2026-07-22T21:00:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Teen Area",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_55_40.png"
   },
   {
-    "title": "I Heart Art with SMRC",
-    "link": "https://telluridelibrary.libcal.com/event/16574856?hs=a",
-    "description": "2:30 PM – 3:30 PM",
-    "pubDate": "2026-07-21T20:30:00.000Z",
+    "title": "Plant Party-You Buggin Me",
+    "link": "https://telluridelibrary.libcal.com/event/16593979?hs=a",
+    "description": "5:30 PM – 7:00 PM · Who&#39;s Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
+    "pubDate": "2026-07-22T23:30:00.000Z",
     "source": "wilkinson",
     "sourceLabel": "Wilkinson Public Library",
     "category": "Library Event",
     "location": "Lower Terrace - outdoors",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_22.png"
-  },
-  {
-    "title": "Punk Science with Pinhead",
-    "link": "https://telluridelibrary.libcal.com/event/16297535?hs=a",
-    "description": "5:15 PM – 6:00 PM",
-    "pubDate": "2026-07-21T23:15:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Lower Terrace - outdoors",
-    "imageUrl": ""
-  },
-  {
-    "title": "Talking Gourds Presents: Stories and Poems - Peter Waldor",
-    "link": "https://telluridelibrary.libcal.com/event/15798225?hs=a",
-    "description": "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
-    "pubDate": "2026-07-21T23:15:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Telluride Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
-  },
-  {
-    "title": "Spanish Happy Hour",
-    "link": "https://telluridelibrary.libcal.com/event/16008001?hs=a",
-    "description": "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
-    "pubDate": "2026-07-21T23:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "La Cocina de Luz Restaurant",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
-  },
-  {
-    "title": "Forest Health Talk with Dr. Jason Sibold",
-    "link": "https://telluridelibrary.libcal.com/event/16361753?hs=a",
-    "description": "5:30 PM – 7:00 PM · Dr. Jason Sibold of CSU will give a talk about the current health of the forests in the Telluride region and share data from his multi-year study of the trees in Bear Creek.   More info about Dr. Sibold and his study here: https://www.libarts.colostate.edu/people/sibold/ https://www.instagram.com/p/DIUD7GZSrVL/ And join us the next day for a walk and talk in Bear Creek! Sign up is required.  Please go to the listing here:  https://telluridelibrary.libcal.com/event/17105410 Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way!  Meet at the library and wear sturdy shoes.",
-    "pubDate": "2026-07-21T23:30:00.000Z",
-    "source": "wilkinson",
-    "sourceLabel": "Wilkinson Public Library",
-    "category": "Library Event",
-    "location": "Program Room",
-    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg"
+    "imageUrl": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_01_14_27_53.png"
   }
 ]

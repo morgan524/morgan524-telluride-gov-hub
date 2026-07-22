@@ -1,18 +1,18 @@
 {
-  "hash": "bf0b19f2a1082528d562858739636c0d55a4463f",
-  "lede": "The most consequential action this week happens Wednesday, when SMART's board votes on two vendor contracts — one for gondola structural analysis, one for cabin structural analysis — that will shape whether the aging gondola has a future. That same day, Town Planning and Zoning takes up the Carhenge Redevelopment Project, a large-scale subdivision consolidation on Town-owned land at 700 W Pacific, along with other Town-initiated development concepts in the Accommodations 2 zone. Rounding out the week, the Town Council sits as Liquor Licensing Authority Sunday to hear KOTO Radio's permit request for its Live at the Drive event.",
+  "hash": "23419a8e874619cfed91e3c3785f275901dba7ab",
+  "lede": "The biggest action this week happens Wednesday when the Town's Planning and Zoning Commission takes up the Carhenge Redevelopment Project — a preliminary large-scale subdivision on Town-owned land at 700 W Pacific Ave — alongside other Town-initiated development proposals in the Accommodations 2 zone. Thursday, SMART's board votes on two vendor contracts central to the gondola structural analysis work, which is about as consequential as regional transit decisions get. Council also convenes Sunday for a public hearing on a liquor permit for KOTO's Live at the Drive event.",
   "notable": [
     {
       "id": 1,
-      "stake": "Town-owned Carhenge site up for subdivision consolidation and concept review."
+      "stake": "Town votes on Carhenge lot consolidation and other Town-owned development concepts."
     },
     {
       "id": 4,
-      "stake": "Two vendor contract votes decide who analyzes the gondola's structural future."
+      "stake": "SMART votes to award two gondola structural analysis contracts — key bridge-or-bust step."
     },
     {
       "id": 7,
-      "stake": "Public hearing on KOTO's special event liquor permit for July 30 concert."
+      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — residents may comment."
     }
   ]
 }

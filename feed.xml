@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 03:03:59 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 06:03:15 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 22–28</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-28</guid>
-      <pubDate>Wed, 22 Jul 2026 03:03:59 GMT</pubDate>
-      <description><![CDATA[The most consequential action this week happens Wednesday, when SMART's board votes on two vendor contracts — one for gondola structural analysis, one for cabin structural analysis — that will shape whether the aging gondola has a future. That same day, Town Planning and Zoning takes up the Carhenge Redevelopment Project, a large-scale subdivision consolidation on Town-owned land at 700 W Pacific, along with other Town-initiated development concepts in the Accommodations 2 zone. Rounding out the week, the Town Council sits as Liquor Licensing Authority Sunday to hear KOTO Radio's permit request for its Live at the Drive event.]]></description>
+      <pubDate>Wed, 22 Jul 2026 06:03:15 GMT</pubDate>
+      <description><![CDATA[The biggest action this week happens Wednesday when the Town's Planning and Zoning Commission takes up the Carhenge Redevelopment Project — a preliminary large-scale subdivision on Town-owned land at 700 W Pacific Ave — alongside other Town-initiated development proposals in the Accommodations 2 zone. Thursday, SMART's board votes on two vendor contracts central to the gondola structural analysis work, which is about as consequential as regional transit decisions get. Council also convenes Sunday for a public hearing on a liquor permit for KOTO's Live at the Drive event.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -54,19 +54,6 @@ Spend an unforgettable evening with Josh Abbott, the acclaimed Texas singer-song
       <category>Telluride.com</category>
     </item>
     <item>
-      <title>[Wed, Jul 22] Shakespeare in the Park: &quot;Henry V&quot;</title>
-      <link>https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-21/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/shakespeare%20in%20the%20park%7C2026-07-22</guid>
-      <pubDate>Wed, 22 Jul 2026 02:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Town Park
-
-Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; "The game's afoot!" Youth & "Pay-What-You-Can" discounts available!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Wed, Jul 22] CPR World Wilderness First Aid course</title>
       <link>https://koto.org/event/cpr-world-wilderness-first-aid-course/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/cpr%20world%20wilderness%20first%7C2026-07-22</guid>
@@ -76,6 +63,32 @@ Join us ON the Town Park Stage for one of our town’s most beloved traditions: 
 CPR World is offering a 2-day Wilderness First Aid course July 22 & 23 in Telluride. For information and registration, visit cprworld.com or call (970) 729-2779.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 22] Bear Creek Walk &amp; Talk with Dr. Jason Sibold</title>
+      <link>https://telluridelibrary.libcal.com/event/17105410?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bear%20creek%20walk%20and%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 14:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Wilkinson Public Library
+
+8:30 AM – 10:30 AM · Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way! Meet in front of the library and wear sturdy shoes. https://www.libarts.colostate.edu/people/sibold/]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 22] Baby Bop</title>
+      <link>https://telluridelibrary.libcal.com/event/16610077?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/baby%20bop%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Jul 22] Youth Tennis &amp; Pickleball Camp</title>
@@ -90,6 +103,18 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Jul 22] Mountain Village Farmers Marketshow</title>
+      <link>https://telluridelibrary.libcal.com/event/15564458?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mountain%20village%20farmers%20marketshow%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 Wilkinson Public Library
+📍 Mountain Village Market
+
+A farmers market event at Mountain Village Market, presented by Wilkinson Public Library. This midday program runs from 11:00 AM to noon and brings a library presence to the local market setting.]]></description>
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Wed, Jul 22] Market on the Plaza</title>
       <link>https://koto.org/event/market-on-the-plaza/2026-07-22/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-07-22</guid>
@@ -102,17 +127,43 @@ Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Wed, Jul 22] Radio Biblioteca</title>
+      <link>https://telluridelibrary.libcal.com/event/17021873?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/radio%20biblioteca%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 KOTO Radio Station
+
+12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Wed, Jul 22] Mahjongg for Independent Players</title>
-      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-07-22/</link>
+      <link>https://telluridelibrary.libcal.com/event/16767658?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-07-22</guid>
       <pubDate>Wed, 22 Jul 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
 
-Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 22] Teen Movie and Ice Cream Club</title>
+      <link>https://telluridelibrary.libcal.com/event/16935736?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/teen%20movie%20and%20ice%7C2026-07-22</guid>
+      <pubDate>Wed, 22 Jul 2026 21:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_55_40.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Teen Area
+
+3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_55_40.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Wed, Jul 22] Tennis Clinic | 105 | 3.0+ | Golden Hour</title>
@@ -127,16 +178,17 @@ Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point 
       <category>KOTO</category>
     </item>
     <item>
-      <title>[Wed, Jul 22] Plant Party -You Buggin Me</title>
-      <link>https://koto.org/event/plant-party-you-buggin-me/</link>
+      <title>[Wed, Jul 22] Plant Party-You Buggin Me</title>
+      <link>https://telluridelibrary.libcal.com/event/16593979?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/plant%20party%20you%20buggin%7C2026-07-22</guid>
       <pubDate>Wed, 22 Jul 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_01_14_27_53.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
 
-Who's Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.]]></description>
+5:30 PM – 7:00 PM · Who&#39;s Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_01_14_27_53.png" medium="image" />
       <category>Community Event</category>
-      <category>KOTO</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>⚡ [Meeting] Planning &amp; Zoning Commission - Jul 23 2026 — 2026-07-23</title>
@@ -147,7 +199,7 @@ Who's Buggin you and what can you do about it? We will discuss common plant ailm
 
 Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project gets two bites of the apple: a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B at 700 W Pacific Ave into a single parcel over 15,000 sq ft, and a Conceptual PUD for new construction on that consolidated lot (carried over from May). Separately, the Shandoka Lot at 860 Black Bear Rd gets its own Conceptual PUD hearing for proposed new construction on the Town's 4.07-acre parcel. Both sites sit at the center of the ongoing question about what Telluride does with its open-space-adjacent Town properties. Also on: a Minor Subdivision at 238 N Pine Street in the Historic Residential zone — a 7,500 sq ft or smaller parcel proposed to be split into two lots, a request that has been continued multiple times since February.
 
-⚡ Why it matters: Town-owned Carhenge site up for subdivision consolidation and concept review.]]></description>
+⚡ Why it matters: Town votes on Carhenge lot consolidation and other Town-owned development concepts.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -182,7 +234,7 @@ The July 23, 2026 Planning & Zoning Commission Chair meeting has been cancelled.
 
 SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters.
 
-⚡ Why it matters: Two vendor contract votes decide who analyzes the gondola's structural future.]]></description>
+⚡ Why it matters: SMART votes to award two gondola structural analysis contracts — key bridge-or-bust step.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -338,59 +390,6 @@ A free performance of *The Music Man* at the Sheridan Opera House, part of the v
       <category>Sheridan Opera House</category>
     </item>
     <item>
-      <title>[Fri, Jul 24] Big Violet</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=big-violet</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/big%20violet%7C2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/f3b34692-955d-43ed-b4f0-86e03c1a7e53/-/crop/4064x2033/0,252/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 9:00 PM
-
-Big Violet is an alternative rock band from Taos, New Mexico known for emotional...]]></description>
-      <media:content url="https://ucarecdn.com/f3b34692-955d-43ed-b4f0-86e03c1a7e53/-/crop/4064x2033/0,252/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 24] Voter Registration Group Training</title>
-      <link>https://smcdemocrats.org/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/voter%20registration%20group%20training%7C2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 San Miguel County Democrats
-📍 Lone Cone Library Conference Room, Norwood
-🕒 1:00 PM - 2:30 PM
-
-San Miguel County Democrats voter-registration training. Bring a personal laptop or iPad. RSVP to Cindy at mtnmama70@gmail.com.]]></description>
-      <category>Community Event</category>
-      <category>San Miguel County Democrats</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 24] Summer Spectacular: The Music Man</title>
-      <link>https://www.telluride.com/event/summer-spectacular-the-music-man/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/summer%20spectacular%20the%20music%7C2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62637/ypt-summer-music-man.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62637/ypt-summer-music-man.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 24] Yoga For All with Jay and Jane</title>
-      <link>https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-24/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Meeting] Open Space Commission - Jul 26 2026 — 2026-07-26</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-26%7COpen%20Space%20Commission%20-%20Jul%2026%202026</guid>
@@ -421,7 +420,7 @@ The July 27 San Miguel County Open Space Commission agenda hasn't been posted ye
 
 A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.
 
-⚡ Why it matters: Public hearing on KOTO's special event liquor permit for July 30 concert.]]></description>
+⚡ Why it matters: Public hearing on KOTO's Live at the Drive liquor permit — residents may comment.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
