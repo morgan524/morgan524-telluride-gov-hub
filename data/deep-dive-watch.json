@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-22T16:29:15.246Z",
+ "generated": "2026-07-22T19:32:55.184Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -36,6 +36,14 @@
    "stale": [
     "Carhenge / Shandoka: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19."
    ]
+  },
+  "skigate": {
+   "label": "Ski-Gate: Telski v. Former Officials",
+   "lastUpdated": "2026-07-21",
+   "upcoming": [],
+   "recent": [],
+   "developments": [],
+   "stale": []
   },
   "society": {
    "label": "Society Turn / Valley Floor Entrance",

@@ -24,8 +24,7 @@
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council",
-    "note": "Next scheduled meeting -- agenda posted the week before."
+    "board": "council"
   },
   {
     "date": "September 9, 2026",
@@ -34,7 +33,6 @@
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council",
-    "note": "Next scheduled meeting -- agenda posted the week before."
+    "board": "council"
   }
 ]

@@ -7,7 +7,8 @@
     "firstSeen": "2026-07-22",
     "dateSource": "article",
     "newsTopic": "public-safety",
-    "copy": "The town of Ridgway, population 1,183 at the last census, has a new neighbor: the …",
+    "copy": "At the Gold Mountain Fire's Incident Command Post in Ridgway, nearly 1,000 personnel from 37 states were operating out of the 4-H fairgrounds — 16-hour days, tent camps, and a rotating crew every 14 days. The fire stood at 37,809 acres and 13% contained as of Sunday. The morning briefing also paused to note that crews would begin recovering the helicopter lost July 12, when pilot Nicholas Dale died at Silver Jack Reservoir.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/untitled,123273",
     "img": ""
   },
@@ -19,7 +20,8 @@
     "firstSeen": "2026-07-22",
     "dateSource": "article",
     "newsTopic": "education",
-    "copy": "Sawyer Wareham, a freshman at Norwood High School, will represent the 2026 San Miguel …",
+    "copy": "Sawyer Wareham, a Norwood High School freshman, has been named the 2026 San Miguel Basin Rodeo queen. She's been riding since age 5 and will represent the community on a 3-year-old Palomino mare named Prim. The rodeo runs July 31–Aug. 1 at the San Miguel Basin Fairgrounds in Norwood.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/sawyer-wareham-is-the-2026-san-miguel-basin-rodeo-queen,123269",
     "img": "https://zeta.creativecirclecdn.com/smb/original/20260721-140645-a35-A81D3D4F-FE35-4EB3-8A12-7ED59DAC0559.JPG",
     "imgPos": "center 22%"
@@ -32,7 +34,8 @@
     "firstSeen": "2026-07-15",
     "dateSource": "article",
     "newsTopic": "public-safety",
-    "copy": "Many know or remember Brenda Wright and Coen Dexter, former Nucla residents, who for years maintained an impressive food-producing garden off 5th Avenue. The couple first came to the West End …",
+    "copy": "Brenda Wright and Coen Dexter, former Nucla residents and published bird experts, recently spoke about how hotter, drier conditions are driving Ips beetle damage through pinion forests — directly threatening the Pinion Jay, which depends on pinion seeds to survive. They also explained how crown fires, unlike low brush fires, can wipe out entire bird habitats. CPW advises keeping feeders down April 15–Nov. 15 and leaving displaced wildlife alone.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/wright-dexter-share-wisdom-on-birds-fire,122305",
     "img": ""
   },
@@ -43,8 +46,9 @@
     "date": "July 15, 2026",
     "firstSeen": "2026-07-15",
     "dateSource": "article",
-    "newsTopic": "community",
-    "copy": "The San Miguel Basin Fair’s annual dessert contest runs on procedure. There are judges, who remain secret until the event is over, who are given specific categories to judge. Those categories …",
+    "newsTopic": "education",
+    "copy": "The San Miguel Basin Fair dessert contest drew 87 entries and 310 guests to Norwood School on July 11, with secret judges scoring numbered — not named — entries across ice cream, cookie, cake, and pie categories in youth, amateur, and professional divisions. Grand champion honors went to entries including Melissa Richardson's lemon pie, Amanda Pierce's hot fudge chocolate cake, Dawna Morris's sugar cookie, and Aimee Snyder's coffee toffee ice cream, among others.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/dessert-contest-had-87-entries-310-guests,122303",
     "img": "https://zeta.creativecirclecdn.com/smb/original/20260713-235341-51b-F3%20-%20front%20page%20pic.jpg"
   },
@@ -56,7 +60,8 @@
     "firstSeen": "2026-07-08",
     "dateSource": "article",
     "newsTopic": "public-safety",
-    "copy": "On June 27, Elle Borsari was close to completing her shift at Action Horseback Adventures. It had been a regular day, busy like most at the property, but after five years of working there she was …",
+    "copy": "The Gold Mountain Fire started June 27 near Ouray and has burned over 31,400 acres in steep, hard-to-reach terrain on the Cimarron Range — tough enough that it's now a top national priority with 800+ firefighters deployed. Evacuations along U.S. 550 hit during what's normally Ouray's busiest week, and local businesses are reporting cancellations up 30–50%, with one KOA owner estimating $75,000–$100,000 in losses.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/ouray-locals-reflect-on-impacts-of-fire,121620",
     "img": ""
   },
@@ -67,8 +72,9 @@
     "date": "July 1, 2026",
     "firstSeen": "2026-07-01",
     "dateSource": "article",
-    "newsTopic": "community",
-    "copy": "Katie Alexander, superintendent of the decades-old dessert contest, is getting ready for the big day July 11, a Saturday, kicking off the San Miguel Basin Fair. What used to be a pie contest for the …",
+    "newsTopic": "education",
+    "copy": "The San Miguel Basin Fair's annual dessert contest returns July 11 at Norwood School, with drop-off starting at 2 p.m. and judging at 5 p.m. Open to pros, non-pros, youth, and non-residents, the contest spans 18+ categories. The public is welcome to taste afterward.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/its-time-to-bake-annual-dessert-contest-is-july-11,120634",
     "img": ""
   },
@@ -80,7 +86,8 @@
     "firstSeen": "2026-07-01",
     "dateSource": "article",
     "newsTopic": "arts-culture",
-    "copy": "Every Friday morning, from May 22 to Oct. 16, Ridgway’s Hartwell Park is filled with vendors and buyers attending the local farmers market. As the market celebrates its 26th anniversary, it …",
+    "copy": "Three West End producers ��� Cypress Roots (Nucla), L Bar Bell Ranch (Norwood), and Hank's Hens (Norwood) — are among the vendors at Ridgway's Hartwell Park Farmers Market, now in its 26th year. The market runs Fridays through October 16. This summer's heat and drought are putting pressure on livestock and pasture across the area.",
+    "claudeSummary": true,
     "href": "https://www.sanmiguelbasinforum.com/stories/west-end-producers-sell-at-ridgway-markets,120637",
     "img": ""
   }

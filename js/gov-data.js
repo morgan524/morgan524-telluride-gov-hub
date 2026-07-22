@@ -555,8 +555,7 @@ const OPHIR_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "ga",
-    note: "Next scheduled meeting -- agenda posted closer to the date."
+    board: "ga"
   },
   {
     date: "September 15, 2026",
@@ -565,8 +564,7 @@ const OPHIR_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "ga",
-    note: "Next scheduled meeting -- agenda posted closer to the date."
+    board: "ga"
   }
 ];
 
@@ -614,8 +612,7 @@ const RIDGWAY_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "council",
-    note: "Next scheduled meeting -- agenda posted the week before."
+    board: "council"
   },
   {
     date: "September 9, 2026",
@@ -624,8 +621,7 @@ const RIDGWAY_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    board: "council",
-    note: "Next scheduled meeting -- agenda posted the week before."
+    board: "council"
   }
 ];
 

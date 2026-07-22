@@ -6,8 +6,7 @@
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "ga",
-    "note": "Next scheduled meeting -- agenda posted closer to the date."
+    "board": "ga"
   },
   {
     "date": "September 15, 2026",
@@ -16,7 +15,6 @@
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "ga",
-    "note": "Next scheduled meeting -- agenda posted closer to the date."
+    "board": "ga"
   }
 ]

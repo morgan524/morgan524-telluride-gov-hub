@@ -359,6 +359,18 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "norwood|2026-08-17|Planning and Zoning Commission Meeting":
+    {"sv":4},
+
+  "mv|2026-08-06|Design Review Board":
+    {"sv":4},
+
+  "med|2026-07-23|Regular Board Meeting":
+    {"sv":4},
+
+  "ophir|2026-08-18|General Assembly Meeting":
+    {"sv":4},
+
+  "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
     {"sv":4}
 };
 
@@ -933,7 +945,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1011,7 +1023,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1053,7 +1065,19 @@ const MANUAL_SUMMARIES = {
     "The August 12, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
 
   "norwood|2026-08-17|Planning and Zoning Commission Meeting":
-    "The August 17, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet."
+    "The August 17, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
+
+  "mv|2026-08-06|Design Review Board":
+    "The August 6, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
+
+  "med|2026-07-23|Regular Board Meeting":
+    "The July 23, 2026 Mountain Village Metropolitan District Regular Board Meeting agenda hasn't been posted yet.",
+
+  "ophir|2026-08-18|General Assembly Meeting":
+    "The August 18, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
+
+  "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
+    "The August 12, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2468,7 +2492,8 @@ const SMB_FORUM_ARTICLES = [
     firstSeen: "2026-07-22",
     dateSource: "article",
     newsTopic: "public-safety",
-    copy: "The town of Ridgway, population 1,183 at the last census, has a new neighbor: the …",
+    copy: "At the Gold Mountain Fire's Incident Command Post in Ridgway, nearly 1,000 personnel from 37 states were operating out of the 4-H fairgrounds — 16-hour days, tent camps, and a rotating crew every 14 days. The fire stood at 37,809 acres and 13% contained as of Sunday. The morning briefing also paused to note that crews would begin recovering the helicopter lost July 12, when pilot Nicholas Dale died at Silver Jack Reservoir.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/untitled,123273",
     img: ""
   },
@@ -2480,7 +2505,8 @@ const SMB_FORUM_ARTICLES = [
     firstSeen: "2026-07-22",
     dateSource: "article",
     newsTopic: "education",
-    copy: "Sawyer Wareham, a freshman at Norwood High School, will represent the 2026 San Miguel …",
+    copy: "Sawyer Wareham, a Norwood High School freshman, has been named the 2026 San Miguel Basin Rodeo queen. She's been riding since age 5 and will represent the community on a 3-year-old Palomino mare named Prim. The rodeo runs July 31–Aug. 1 at the San Miguel Basin Fairgrounds in Norwood.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/sawyer-wareham-is-the-2026-san-miguel-basin-rodeo-queen,123269",
     img: "https://zeta.creativecirclecdn.com/smb/original/20260721-140645-a35-A81D3D4F-FE35-4EB3-8A12-7ED59DAC0559.JPG",
     imgPos: "center 22%"
@@ -2493,7 +2519,8 @@ const SMB_FORUM_ARTICLES = [
     firstSeen: "2026-07-15",
     dateSource: "article",
     newsTopic: "public-safety",
-    copy: "Many know or remember Brenda Wright and Coen Dexter, former Nucla residents, who for years maintained an impressive food-producing garden off 5th Avenue. The couple first came to the West End …",
+    copy: "Brenda Wright and Coen Dexter, former Nucla residents and published bird experts, recently spoke about how hotter, drier conditions are driving Ips beetle damage through pinion forests — directly threatening the Pinion Jay, which depends on pinion seeds to survive. They also explained how crown fires, unlike low brush fires, can wipe out entire bird habitats. CPW advises keeping feeders down April 15–Nov. 15 and leaving displaced wildlife alone.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/wright-dexter-share-wisdom-on-birds-fire,122305",
     img: ""
   },
@@ -2504,8 +2531,9 @@ const SMB_FORUM_ARTICLES = [
     date: "July 15, 2026",
     firstSeen: "2026-07-15",
     dateSource: "article",
-    newsTopic: "community",
-    copy: "The San Miguel Basin Fair’s annual dessert contest runs on procedure. There are judges, who remain secret until the event is over, who are given specific categories to judge. Those categories …",
+    newsTopic: "education",
+    copy: "The San Miguel Basin Fair dessert contest drew 87 entries and 310 guests to Norwood School on July 11, with secret judges scoring numbered — not named — entries across ice cream, cookie, cake, and pie categories in youth, amateur, and professional divisions. Grand champion honors went to entries including Melissa Richardson's lemon pie, Amanda Pierce's hot fudge chocolate cake, Dawna Morris's sugar cookie, and Aimee Snyder's coffee toffee ice cream, among others.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/dessert-contest-had-87-entries-310-guests,122303",
     img: "https://zeta.creativecirclecdn.com/smb/original/20260713-235341-51b-F3%20-%20front%20page%20pic.jpg"
   },
@@ -2517,7 +2545,8 @@ const SMB_FORUM_ARTICLES = [
     firstSeen: "2026-07-08",
     dateSource: "article",
     newsTopic: "public-safety",
-    copy: "On June 27, Elle Borsari was close to completing her shift at Action Horseback Adventures. It had been a regular day, busy like most at the property, but after five years of working there she was …",
+    copy: "The Gold Mountain Fire started June 27 near Ouray and has burned over 31,400 acres in steep, hard-to-reach terrain on the Cimarron Range — tough enough that it's now a top national priority with 800+ firefighters deployed. Evacuations along U.S. 550 hit during what's normally Ouray's busiest week, and local businesses are reporting cancellations up 30–50%, with one KOA owner estimating $75,000–$100,000 in losses.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/ouray-locals-reflect-on-impacts-of-fire,121620",
     img: ""
   },
@@ -2528,8 +2557,9 @@ const SMB_FORUM_ARTICLES = [
     date: "July 1, 2026",
     firstSeen: "2026-07-01",
     dateSource: "article",
-    newsTopic: "community",
-    copy: "Katie Alexander, superintendent of the decades-old dessert contest, is getting ready for the big day July 11, a Saturday, kicking off the San Miguel Basin Fair. What used to be a pie contest for the …",
+    newsTopic: "education",
+    copy: "The San Miguel Basin Fair's annual dessert contest returns July 11 at Norwood School, with drop-off starting at 2 p.m. and judging at 5 p.m. Open to pros, non-pros, youth, and non-residents, the contest spans 18+ categories. The public is welcome to taste afterward.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/its-time-to-bake-annual-dessert-contest-is-july-11,120634",
     img: ""
   },
@@ -2541,7 +2571,8 @@ const SMB_FORUM_ARTICLES = [
     firstSeen: "2026-07-01",
     dateSource: "article",
     newsTopic: "arts-culture",
-    copy: "Every Friday morning, from May 22 to Oct. 16, Ridgway’s Hartwell Park is filled with vendors and buyers attending the local farmers market. As the market celebrates its 26th anniversary, it …",
+    copy: "Three West End producers ��� Cypress Roots (Nucla), L Bar Bell Ranch (Norwood), and Hank's Hens (Norwood) — are among the vendors at Ridgway's Hartwell Park Farmers Market, now in its 26th year. The market runs Fridays through October 16. This summer's heat and drought are putting pressure on livestock and pasture across the area.",
+    claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/west-end-producers-sell-at-ridgway-markets,120637",
     img: ""
   }
@@ -2806,16 +2837,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "When the Cure is a Virus: Reprogramming a Killer to Fight Cancer",
-    date: "2026-07-21",
-    time: "6:30 PM – 7:30 PM",
-    location: "Telluride Conference Center, Telluride",
-    description: "Can a virus be turned into a cure? Clodagh O'Shea, of the Salk Institute will present \"When the Cure Is a Virus: Reprogramming a Killer to Fight Cancer.\" O'Shea, who holds the Wicklow Chair at Salk and has been named an HHMI Faculty Scholar and an Allen Distinguished Investigator, will share how her lab reengineers viruses to seek out and destroy cancer cells while leaving healthy tissue unharmed—research she is now advancing toward patients as scientific founder of the biotech company IconOVir Bio. A conversation with Emmy- and Peabody Award-winning journalists Judy Muller and George Lewis and an audience Q&A will follow. Town Talks will be held on Tuesdays at the Telluride Conference Center in Mountain Village June 9 to August 11 (please note the July 28 talk will be at the Sheridan Opera House). Doors open at 6 pm and the program starts at 6:30 pm. …",
-    link: "https://telluridescience.org/event/clodagh-oshea/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-14-at-3.25.14-PM-scaled.png",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "The Dual Challenge: Climate and Energy",
     date: "2026-07-28",
     time: "6:30 PM – 7:30 PM",
@@ -2981,7 +3002,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+    imageUrl: ""
   },
   {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -3014,7 +3035,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
+    imageUrl: ""
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3080,7 +3101,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
+    imageUrl: ""
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3102,7 +3123,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    imageUrl: ""
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3146,7 +3167,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
+    imageUrl: ""
   },
   {
     title: "Zumba with Gisela",
@@ -3168,7 +3189,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Conference Center Plaza Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+    imageUrl: ""
   },
   {
     title: "Shakespeare in the Park: \"Henry V\"",
@@ -3179,7 +3200,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
+    imageUrl: ""
   },
   {
     title: "Pickleball Open Play",
@@ -3201,7 +3222,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+    imageUrl: ""
   },
   {
     title: "Drop In Tech Time with Oliver",
@@ -3223,7 +3244,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+    imageUrl: ""
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3311,7 +3332,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Sheridan Opera House, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg"
+    imageUrl: ""
   },
   {
     title: "Native Plant Walk & Talk",
@@ -3355,7 +3376,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+    imageUrl: ""
   },
   {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -3440,7 +3461,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Mountain Village Farmers Marketshow: magic mountain Puppet Show",
     link: "https://telluridelibrary.libcal.com/event/15564458?hs=a",
-    description: "A farmers market event at Mountain Village Market featuring the Magic Mountain Puppet Show, presented by Wilkinson Public Library. The performance is scheduled for an hour in the late morning, offering family-friendly entertainment alongside the market.",
+    description: "11:00 AM – 12:00 PM",
     pubDate: "2026-07-22T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3647,7 +3668,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3659,7 +3680,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4057,18 +4078,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
-    title: "Pilates Mat",
-    link: "https://events.ourayridgwayevents.com/event/pilates-mat",
-    description: "All Levels Pilates Mat class. Classical sequence Int to challenge, strengthen and stretch you wehole body. Every Thursday at 9:30am. Pricing Four lessons for $120 Eight lessons for $200 Become a member and pay $100/month to attend weekly. Purchase a pass here: https://ridgwaypilates.punchpass.com/catalogs/300 Class is limited to six people. Mats are included. Please wear socks, put your hair up and choose clothing free of metal. View on site | Email this event",
-    pubDate: "2026-07-23T15:30:00.000Z",
-    endDate: "2026-08-27",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Pilates",
-    imageUrl: "https://localist-images.azureedge.net/photos/52576058290647/huge/ab41effebba96d758d6c4061ee6bdc28e09bd4e0.jpg"
   },
   {
     title: "Ridgway Concert Series",
@@ -5483,7 +5492,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5494,7 +5503,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5505,7 +5514,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5516,7 +5525,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5527,7 +5536,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
