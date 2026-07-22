@@ -25,7 +25,9 @@ if (!APP_KEY) { console.error('Missing CUSTOMERIO_APP_API_KEY'); process.exit(1)
 if (!TO || !TO.includes('@')) { console.error('Missing/invalid CIO_TEST_TO'); process.exit(1); }
 
 let html = fs.readFileSync(HTML_FILE, 'utf8');
-html = html.replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
+html = html.replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '')
+           .replace(/\{\{\s*unsubscribe_url\s*\}\}/g, '#')
+           .replace(/\{\{\s*customer\.[^}]*\}\}/g, '');
 
 (async () => {
   let res, text = '';

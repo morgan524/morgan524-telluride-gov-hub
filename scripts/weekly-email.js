@@ -828,12 +828,13 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
-    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="*|UNSUB|*" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email=*|EMAIL|*&amp;fname=*|FNAME|*&amp;town=*|MMERGE6|*" style="color:#7a8a85;">Update preferences</a></div></td></tr>
+    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="{{ unsubscribe_url }}" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email={{ customer.email | url_encode }}&amp;fname={{ customer.first_name | url_encode }}&amp;town={{ customer.region | url_encode }}" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 
 // In preview mode, render an info@ review copy: a banner at the top, every topic
 // section shown inline (subscribers only see the ones they opted into), and the
-// Mailchimp merge tags neutralised so the footer/links aren't left broken.
+// personalization tags (Customer.io Liquid; legacy Mailchimp merge tags)
+// neutralised so the footer/links aren't left broken.
 let out = html;
 if (PREVIEW) {
   // Where the reviewer edits this draft (edit with Claude + send): the hosted,
@@ -847,7 +848,9 @@ if (PREVIEW) {
     : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this week&rsquo;s meetings and events. To override it, reply with the new text (week-key ${WEEK_START}).</span>${editLink}</td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')
-           .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '');
+           .replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '')
+           .replace(/\{\{\s*unsubscribe_url\s*\}\}/g, '#')
+           .replace(/\{\{\s*customer\.[^}]*\}\}/g, '');
 }
 // Tag INTERNAL (livabletelluride.org) links with UTM params so newsletter-driven
 // visits are attributable in Cloudflare Web Analytics (shows the ?utm_ pages) and
