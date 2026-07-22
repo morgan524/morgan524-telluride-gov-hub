@@ -28,6 +28,17 @@
   .dive-card h3 a { color: var(--forest); }
   .dive-card .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 8px; }
   @media (max-width: 900px) { .feat, .dive-grid { grid-template-columns: 1fr; } }
+  .blog-wrap { max-width: var(--maxw); margin: 0 auto; padding: 52px var(--pad-x) 0; }
+  .blog-head { border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin-bottom: 24px; }
+  .blog-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; }
+  .blog-card .img-frame { aspect-ratio: 16/9; border-radius: 10px; margin-bottom: 10px; background: linear-gradient(150deg, #e7efe7, #f7f2e6); }
+  .blog-card h3 { font: 600 19px/1.25 var(--serif); margin: 6px 0 6px; }
+  .blog-card h3 a { color: var(--forest); }
+  .blog-card:hover h3 a { color: var(--rust); }
+  .blog-card .dek { font: 400 14px/1.6 var(--sans); color: var(--body2); margin: 0 0 6px;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  @media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr; } }
+  @media (min-width: 901px) and (max-width: 1100px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
 <body>
@@ -49,6 +60,11 @@
 <div class="all-wrap">
   <div class="all-head"><span class="eyebrow">The library</span><h2 class="section-h">All deep dives</h2></div>
   <div class="dive-grid" id="dive-grid"><p class="meta">Loading&hellip;</p></div>
+</div>
+
+<div class="blog-wrap">
+  <div class="blog-head"><span class="eyebrow">From the newsletter</span><h2 class="section-h">The Livable Telluride blog</h2></div>
+  <div class="blog-grid" id="blog-grid"><p class="meta">Loading&hellip;</p></div>
 </div>
 
 <div id="lt-footer"></div>
@@ -111,6 +127,27 @@
       .concat(EXTRAS.map(function (t) { return card(t, null); }));
     grid.innerHTML = cards.join('');
   }).catch(function (err) { LTData.showError(grid, err); });
+
+  // ── The Livable Telluride blog — every newsletter/post, newest first.
+  // Loaded separately so a blog-data hiccup never blanks the dives library.
+  var blogGrid = document.getElementById('blog-grid');
+  LTData.loadOne('blog-posts').then(function (posts) {
+    if (!Array.isArray(posts) || !posts.length) { blogGrid.innerHTML = '<p class="meta">No posts yet.</p>'; return; }
+    var sorted = posts.slice().sort(function (a, b) { return new Date(b.date || 0) - new Date(a.date || 0); });
+    blogGrid.innerHTML = sorted.map(function (p) {
+      var link = p.href || p.url || '#';
+      // Strip the zero-width preheader padding Mailchimp leaves in excerpts.
+      var dek = String(p.excerpt || p.summary || '').replace(/[​-‍﻿͏­]/g, '').trim();
+      var img = p.image || p.img || '';
+      var imgHtml = '<a href="' + LTData.esc(link) + '" target="_blank" rel="noopener"><div class="img-frame">' +
+        (img ? '<img src="' + LTData.esc(img) + '" alt="" loading="lazy">' : '') + '</div></a>';
+      return '<article class="blog-card story">' + imgHtml +
+        '<div><span class="tag">' + LTData.esc(p.category || 'Newsletter') + '</span>' +
+        '<h3><a href="' + LTData.esc(link) + '" target="_blank" rel="noopener">' + LTData.esc(p.title || 'Untitled') + '</a></h3>' +
+        (dek ? '<p class="dek">' + LTData.esc(clip(dek, 200)) + '</p>' : '') +
+        '<div class="meta">' + LTData.esc(p.date || '') + '</div></div></article>';
+    }).join('');
+  }).catch(function (err) { LTData.showError(blogGrid, err); });
 })();
 </script>
 </body>
