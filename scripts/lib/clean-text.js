@@ -20,4 +20,19 @@ function stripDescPreamble(s) {
   return s.trim();
 }
 
-module.exports = { stripDescPreamble };
+// A "placeholder" summary is the stub written when an agenda isn't posted yet
+// ("…agenda hasn't been posted yet." / "Agenda not yet available" / "agenda
+// TBD/pending"). Shared by content-refresh (regenerate stubs when the real
+// agenda lands) and build-week-meetings (hasAgenda derives from the summary so
+// the card's button can never contradict its text — 2026-07-23). Patterns stay
+// ANCHORED to the word "agenda" so a real summary mentioning a "pending
+// application" isn't mistaken for a stub.
+function isPlaceholderSummary(s) {
+  if (!s || typeof s !== 'string') return true;
+  // "agenda … hasn't been posted yet" tolerates intervening words ("The
+  // agenda for this July 29 joint work session hasn't been posted yet") but
+  // stays within one sentence ([^.]{0,140}) so a real summary can't match.
+  return /agenda[^.]{0,140}?\b(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))|meeting information unavailable|meeting scheduled for|list of past meetings|agenda content for this/i.test(s);
+}
+
+module.exports = { stripDescPreamble, isPlaceholderSummary };

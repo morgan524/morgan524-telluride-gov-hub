@@ -22,6 +22,7 @@ const fs = require('fs');
 const https = require('https');
 const crypto = require('crypto');
 const { loadDataArrays } = require('./lib/load-data.js');
+const { isPlaceholderSummary } = require('./lib/clean-text.js');
 const { writeMirror } = require('./lib/json-mirror.js');
 const { HAIKU } = require('./lib/claude-model.js');
 
@@ -137,7 +138,18 @@ function buildWeekMeetings(repoRoot) {
         agendaUrl: m.agendaLink || meta.agendaUrl || '',
         packetUrl: m.packetUrl || meta.packetUrl || '',
         link: m.link || '',
-        hasAgenda: !!(m.agendaLink || meta.agendaUrl || m.hasAgenda),
+        // A LINK is not an AGENDA (Morgan's 2026-07-23 report: green "View
+        // Agenda" beside "agenda hasn't been posted yet"). Neither
+        // m.agendaLink, meta.agendaUrl, nor most getters' hasAgenda are
+        // reliable — they all count "a meeting PAGE exists". The one signal
+        // that always matches what the card SAYS is the summary itself:
+        // a placeholder stub means the bot looked and found no agenda; a
+        // real summary means it summarized one. Deriving the flag from the
+        // same source of truth as the sentence makes contradiction
+        // impossible. No summary at all → the getter's judgment stands.
+        hasAgenda: summary
+          ? !isPlaceholderSummary(summary)
+          : !!m.hasAgenda,
         summary: String(summary || '').trim(),
         zoomLink: String(meta.zoomUrl || zoomLink || ''),
         zoomMeetingId: String(meta.meetingId || ''),

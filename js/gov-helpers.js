@@ -8794,7 +8794,11 @@ function getTellurideMeetings() {
       ? TOWN_CIVICWEB_BASE + m.civicWebId
       : getTownAgendaLink(m.title, eventDate);
     const agendaLink = m.agendaUrl || civicWebLink;
-    const hasAgenda = !!agendaLink;
+    // A CivicWeb meeting PAGE existing does not mean the agenda is POSTED —
+    // only an explicit hand/bot-set agendaUrl counts (2026-07-23 fix; the
+    // bot-scraped MEETING_AGENDA_META rescues posted agendas downstream in
+    // build-week-meetings, so real agendas still go green).
+    const hasAgenda = !!m.agendaUrl;
     const link = agendaLink || TELLURIDE_HARC_URL;
 
     let description = '';

@@ -1291,10 +1291,9 @@ async function fetchSmcCountyMeetings(now, horizon) {
 // TBD" even after its agenda + packet were posted to CivicClerk.
 // Keep these patterns ANCHORED to the word "agenda" so a real summary that
 // merely mentions a "pending application" or "TBD" date isn't mistaken for a stub.
-function isPlaceholderSummary(s) {
-  if (!s || typeof s !== 'string') return true;
-  return /agenda\s+(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))|meeting information unavailable|meeting scheduled for|list of past meetings|agenda content for this/i.test(s);
-}
+// (moved to lib/clean-text.js 2026-07-23 so build-week-meetings shares the
+// exact same predicate — hasAgenda now derives from the summary there.)
+const { isPlaceholderSummary } = require('./lib/clean-text.js');
 
 async function refreshSummaries(existingSummaries, existingAgendaMeta) {
   console.log('\n📋 Task 1: Refreshing meeting summaries...');

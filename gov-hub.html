@@ -61,6 +61,8 @@
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
   .m-card .acts .abtn.live:hover { background: #f9efee; }
   .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
+  /* Zoom row under the button row: Join button + Meeting ID/Passcode inline */
+  .m-card .acts.zoomrow { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
   @media (max-width: 900px) {
     .gh-layout { grid-template-columns: 1fr; gap: 0; }
     .gh-side { position: static; order: -1; }
@@ -239,32 +241,42 @@
       // when posted, grey non-clickable ghost when not yet.
       var acts = '';
       if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
-      // View Agenda mirrors the packet button's three states (per Morgan
-      // 2026-07-23): solid green when posted, outline link when only a
-      // calendar/meeting page exists, grey non-clickable ghost when there's
-      // no agenda link at all yet.
-      acts += m.agendaUrl
-        ? '<a class="abtn' + (m.hasAgenda ? ' primary' : '') + '" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
+      // View Agenda mirrors the packet button's two states (per Morgan
+      // 2026-07-23): solid green ONLY when an agenda is actually posted
+      // (hasAgenda now derives from the summary in build-week-meetings, so
+      // this can never contradict the card text); otherwise a grey
+      // non-clickable ghost — the meeting PAGE link, when one exists, shows
+      // as "Meeting info" below instead of masquerading as an agenda.
+      acts += (m.hasAgenda && m.agendaUrl)
+        ? '<a class="abtn primary" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
         : '<span class="abtn empty" title="Agenda not yet posted" aria-disabled="true">View Agenda</span>';
       acts += m.packetUrl
         ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
         : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
-      if (m.zoomLink) acts += '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>';
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
-      if (!m.agendaUrl && m.link) acts += '<a class="abtn" href="' + esc(safe(m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
-      // Zoom access details inline whenever present (Meeting ID + Passcode + Phone).
+      if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+      // Zoom block BELOW the button row (per Morgan 2026-07-23): the Join
+      // button + Meeting ID + Passcode (+ Phone) together on their own line,
+      // rendered ONLY when we actually have the data (no empty shells).
+      // class="acts zoomrow" keeps the existing .acts .abtn button styling.
       var zoomBits = [];
       if (m.zoomMeetingId) zoomBits.push('<strong>Meeting ID:</strong> ' + esc(m.zoomMeetingId));
       if (m.zoomPasscode) zoomBits.push('<strong>Passcode:</strong> ' + esc(String(m.zoomPasscode).replace(/\.$/, '')));
       if (m.zoomPhone) zoomBits.push('<strong>Phone:</strong> ' + esc(m.zoomPhone));
-      var zoomline = zoomBits.length ? '<div class="zoomline">' + zoomBits.join(' &middot; ') + '</div>' : '';
+      var zoomRow = '';
+      if (m.zoomLink || zoomBits.length) {
+        zoomRow = '<div class="acts zoomrow">' +
+          (m.zoomLink ? '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>' : '') +
+          (zoomBits.length ? '<span class="zoomline" style="margin:0">' + zoomBits.join(' &middot; ') + '</span>' : '') +
+          '</div>';
+      }
       html += '<article class="m-card">' +
         '<div class="m-date"><div class="m">' + MON[d.getMonth()] + '</div><div class="d">' + d.getDate() + '</div>' + logo + '</div>' +
         '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
         '<h3>' + esc(m.title) + '</h3>' +
         (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
         (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
-        zoomline + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
+        '<div class="acts" style="margin-top:10px">' + acts + '</div>' + zoomRow + '</div></article>';
     });
     list.innerHTML = html;
   }
