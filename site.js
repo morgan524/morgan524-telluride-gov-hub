@@ -43,7 +43,7 @@
     ]}
   ];
   // About left the top nav 2026-07-21 (lives on the homepage + footer now).
-  var LOGIN_HREF = ROOT + 'hub-bub.html';   // Firebase auth entry (re-shelled Hub-Bub)
+  // (Log In left the nav 2026-07-23 — Hub-Bub, the only login surface, has its own.)
 
   // Pages not in the nav inherit a parent's active state.
   var PROXY = {
@@ -82,10 +82,10 @@
         g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
     }).join('') +
       '<div class="drawer-cta">' +
-      '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">&#128269; Search</button>' +
-      '<a class="lt-pill-donate" href="' + (activeItem === 'donate.html' ? '#' : esc(ROOT + 'donate.html')) + '">Donate</a>' +
-      '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button>' +
-      '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a></div>';
+      '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">' +
+      '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
+      'Search</button>' +
+      '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button></div>';
 
     return '<nav class="lt-nav" aria-label="Main">' +
       '<div class="lt-nav-row">' +
@@ -93,10 +93,14 @@
       '<img src="' + esc(ROOT + 'uploads/lt-logo.png') + '" alt="Livable Telluride"></a>' +
       '<div class="lt-nav-links">' + links + '</div>' +
       '<div class="lt-nav-cta">' +
-      '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">&#128269;</button>' +
-      '<a class="lt-pill-donate" href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
+      // Nav CTA slimmed 2026-07-23 (per Morgan): Donate left the nav for a
+      // homepage section (footer link remains); Log In left because the only
+      // login surface is Hub-Bub, which has its own. Search takes the
+      // prominent slot; Español stays.
+      '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">' +
+      '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
+      'Search</button>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle title="Cambiar idioma / Switch language">Espa&ntilde;ol</button>' +
-      '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a>' +
       '</div>' +
       '<button class="lt-burger" type="button" aria-label="Menu" data-burger>&#9776;</button>' +
       '</div><div class="lt-drawer">' + drawer + '</div></nav>' +
@@ -217,9 +221,11 @@
 
   var searchCss = document.createElement('style');
   searchCss.textContent =
-    '.lt-pill-search{border:0;background:transparent;font-size:17px;cursor:pointer;padding:6px 8px;border-radius:8px;line-height:1;}' +
-    '.lt-pill-search:hover{background:rgba(0,0,0,.06);}' +
-    '.lt-drawer .lt-pill-search{font:600 14px/1 inherit;padding:10px 14px;border:1px solid #ccc;border-radius:999px;background:#fff;}' +
+    // Prominent solid pill — Search took over the nav's primary-CTA slot
+    // when Donate/Log In left it (2026-07-23).
+    '.lt-pill-search{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--sans,-apple-system,sans-serif);color:#fff;background:var(--forest,#24483f);border:0;border-radius:999px;padding:13px 24px;cursor:pointer;transition:background .12s;}' +
+    '.lt-pill-search:hover{background:#1c3a33;}' +
+    '.lt-drawer .lt-pill-search{font:700 14px/1 var(--sans,-apple-system,sans-serif);padding:11px 18px;}' +
     '.lt-search-overlay{position:fixed;inset:0;background:rgba(26,46,41,.55);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;}' +
     '.lt-search-overlay.open{display:flex;}' +
     '.lt-search-box{background:#fdfbf6;border-radius:14px;width:640px;max-width:100%;box-shadow:0 18px 60px rgba(0,0,0,.35);overflow:hidden;display:flex;flex-direction:column;max-height:78vh;}' +
