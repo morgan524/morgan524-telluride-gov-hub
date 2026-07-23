@@ -297,6 +297,35 @@ service cloud.firestore {
       allow update, delete: if isAdmin();
     }
 
+    // ── letter_submissions/{id} ───────────────────────────────────────
+    // Letters to the editor from /submit-letter.html. Same model as
+    // event_submissions: anyone signed-in (incl. anonymous) may CREATE
+    // with status 'pending'; APPROVED letters are world-readable so
+    // local-news.html / region hubs / letter.html can render them;
+    // pending/denied are admin-only. Admin approves/denies at
+    // /event-review.html (update) and deletes. The submitter's name +
+    // email ride along on the record; email is only readable by admin
+    // (the whole doc is admin-only until it flips to 'approved').
+    match /letter_submissions/{id} {
+      // Public read of APPROVED letters; admin reads all (incl. pending).
+      allow read: if resource.data.status == 'approved' || isAdmin();
+
+      // Create: signed-in, must start 'pending', a name is required, and
+      // the letter body (cleanedText/originalText) is size-bounded.
+      allow create: if isSignedIn()
+        && request.resource.data.status == 'pending'
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 200
+        && (!('cleanedText' in request.resource.data)
+            || request.resource.data.cleanedText.size() <= 12000)
+        && (!('originalText' in request.resource.data)
+            || request.resource.data.originalText.size() <= 12000);
+
+      // Approve / deny / edit + delete: admin only.
+      allow update, delete: if isAdmin();
+    }
+
     // ── legal_notice_alerts/{id} ──────────────────────────────────────
     // Email-alert signups from legal-notices.html ("notify me when a
     // matching notice is published"). Write-only for the public: anyone

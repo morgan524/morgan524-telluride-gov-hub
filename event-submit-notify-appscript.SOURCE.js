@@ -55,6 +55,7 @@ var REVIEW_URL     = 'https://livabletelluride.org/event-review.html';
 var SENDER_NAME    = 'Livable Telluride';
 var EVENTS_URL     = 'https://livabletelluride.org/events.html';
 var ORGS_URL       = 'https://livabletelluride.org/local-orgs.html';
+var LOCAL_NEWS_URL = 'https://livabletelluride.org/local-news.html';
 
 /** Web-app entry point — the browser POSTs the submission JSON here. */
 function doPost(e) {
@@ -64,10 +65,17 @@ function doPost(e) {
       data = JSON.parse(e.postData.contents);
     }
     if (data && data.action === 'approval') {
-      // Submitter thank-you, sent from event-review.html / org-review.html on Approve.
+      // Submitter thank-you, sent from event-review.html on Approve (events,
+      // orgs, and letters).
       sendApprovalThankYou(data);
+    } else if (data && data.action === 'denial') {
+      // Gracious "not this time" note to the writer (letters). No reason given.
+      sendDenialNote(data);
+    } else if (data && data.action === 'letter-submit') {
+      // New letter-to-the-editor heads-up to the admin, incl. the word count.
+      sendLetterHeadsUp(data);
     } else {
-      // New-submission heads-up to the admin (the original behavior).
+      // New event/org submission heads-up to the admin (the original behavior).
       sendNotification(data);
     }
     return _json({ ok: true });
@@ -177,19 +185,49 @@ function sendNotification(d) {
 function sendApprovalThankYou(d) {
   var email = (d && d.email ? String(d.email) : '').trim();
   if (!/\S+@\S+\.\S+/.test(email)) return;   // no/invalid submitter email → nothing to send
-  var isOrg   = (d.kind === 'org');
+  var kind    = (d.kind || 'event');
+  var isOrg   = (kind === 'org');
+  var isLetter= (kind === 'letter');
   var name    = (d.name ? String(d.name).trim() : '');
-  var title   = (d.title ? String(d.title).trim() : (isOrg ? 'your organization' : 'your event'));
-  var where   = isOrg ? 'the Local Organizations directory' : 'the community events calendar';
-  var pageUrl = isOrg ? ORGS_URL : EVENTS_URL;
+  var title   = (d.title ? String(d.title).trim() : (isOrg ? 'your organization' : isLetter ? 'your letter' : 'your event'));
+  var where   = isOrg ? 'the Local Organizations directory' : isLetter ? 'Local News' : 'the community events calendar';
+  var pageUrl = isOrg ? ORGS_URL : isLetter ? LOCAL_NEWS_URL : EVENTS_URL;
   // Pure-ASCII subject: Subject headers can't use HTML entities, and raw
   // non-ASCII (emoji, curly quotes, em dash) is what got mis-decoded as MacRoman
   // on recipients' mail clients.
   var subject = isOrg
     ? "You're in the directory - thanks for posting to Livable Telluride"
+    : isLetter
+    ? "Your letter to the editor has been approved for publication"
     : "You're on the calendar - thanks for posting to Livable Telluride";
   var greeting = name ? ('Hi ' + name + ',') : 'Hi there,';
-  var cta = isOrg ? 'See the directory' : 'See it on the calendar';
+  var cta = isOrg ? 'See the directory' : isLetter ? 'Read it on Local News' : 'See it on the calendar';
+
+  // Letters get their own warmer body; events/orgs keep the original wording.
+  if (isLetter) {
+    var lhtml = ''
+      + '<div style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#1a2e29;line-height:1.6;max-width:560px;">'
+      + '<p style="margin:0 0 14px;">' + _esc(greeting) + '</p>'
+      + '<p style="margin:0 0 14px;">Thank you for submitting your letter to the editor to Livable Telluride. '
+      + 'We&#8217;re pleased to say it has been <strong>approved for publication</strong> and will be on the website shortly '
+      + '(usually within a few minutes).</p>'
+      + '<p style="margin:0 0 20px;"><a href="' + _esc(pageUrl) + '" '
+      + 'style="display:inline-block;background:#1f5130;color:#ffffff;text-decoration:none;padding:11px 22px;border-radius:999px;'
+      + 'font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:14px;">' + _esc(cta) + ' &#8594;</a></p>'
+      + '<p style="margin:0 0 14px;">Thank you for taking the time to share your perspective with the community. '
+      + 'We&#8217;d welcome another letter anytime.</p>'
+      + '<p style="margin:18px 0 0;color:#5a6b64;">With gratitude,<br><strong>Livable Telluride</strong><br>'
+      + '<a href="https://livabletelluride.org" style="color:#5a6b64;">livabletelluride.org</a></p>'
+      + '</div>';
+    var lplain = greeting + '\n\n'
+      + 'Thank you for submitting your letter to the editor to Livable Telluride. We are pleased to say it has been '
+      + 'approved for publication and will be on the website shortly (usually within a few minutes).\n\n'
+      + cta + ': ' + pageUrl + '\n\n'
+      + 'Thank you for sharing your perspective with the community. We would welcome another letter anytime.\n\n'
+      + 'With gratitude,\nLivable Telluride\nhttps://livabletelluride.org';
+    MailApp.sendEmail({ to: email, subject: subject, name: SENDER_NAME, htmlBody: lhtml, body: lplain, replyTo: NOTIFY_TO });
+    return;
+  }
 
   var html = ''
     + '<div style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#1a2e29;line-height:1.6;max-width:560px;">'
@@ -223,10 +261,96 @@ function sendApprovalThankYou(d) {
   });
 }
 
+/**
+ * ADMIN heads-up when a Letter to the Editor is submitted (/submit-letter.html
+ * POSTs { action:'letter-submit', name, email, title, wordCount, needsManual,
+ * hasPhoto, hasDoc } right after the Firestore write). Emails info@ a summary —
+ * with the WORD COUNT shown outside the letter text — and a link to the review
+ * desk. The letter body itself is reviewed on /event-review.html, not here.
+ */
+function sendLetterHeadsUp(d) {
+  var wc = (d && d.wordCount != null) ? String(d.wordCount) : '';
+  var flag = d && d.needsManual
+    ? 'Auto-copyedit was unavailable - read the original / uploaded document on the review desk.'
+    : 'Auto-copyedit ran; a cleaned draft is ready to review.';
+  var rows = [
+    ['Headline',   d.title],
+    ['From',       d.name],
+    ['Email',      d.email],
+    ['Word count', wc + (wc && (Number(wc) < 500 || Number(wc) > 750) ? '  (outside the 500-750 range)' : '')],
+    ['Photo',      d.hasPhoto ? 'Yes' : 'No'],
+    ['Document',   d.hasDoc ? 'Yes (uploaded)' : 'No (typed)'],
+    ['Review note', flag]
+  ];
+  var html = '<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;line-height:1.5;">';
+  html += '<h2 style="margin:0 0 4px;color:#1f5130;">New letter to the editor</h2>';
+  html += '<p style="margin:0 0 16px;color:#555;">Submitted on livabletelluride.org. Read, edit, and approve or deny it here:</p>';
+  html += '<p style="margin:0 0 18px;"><a href="' + _esc(REVIEW_URL) + '" '
+        + 'style="display:inline-block;background:#1f5130;color:#fff;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:700;">Review the letter &#8594;</a></p>';
+  html += '<table style="border-collapse:collapse;width:100%;max-width:560px;">';
+  rows.forEach(function (r) {
+    var val = (r[1] == null ? '' : String(r[1])).trim();
+    if (!val) return;
+    html += '<tr><td style="padding:6px 10px;border:1px solid #e2e2e2;background:#f7f7f5;font-weight:700;white-space:nowrap;vertical-align:top;">'
+          + _esc(r[0]) + '</td><td style="padding:6px 10px;border:1px solid #e2e2e2;">' + _esc(val) + '</td></tr>';
+  });
+  html += '</table></div>';
+  var plain = rows.filter(function (r) { return r[1] != null && String(r[1]).trim(); })
+    .map(function (r) { return r[0] + ': ' + r[1]; }).join('\n') + '\n\nReview: ' + REVIEW_URL;
+  MailApp.sendEmail({
+    to: NOTIFY_TO,
+    subject: 'New letter to the editor: ' + (d.title || ('from ' + (d.name || 'a reader'))),
+    name: SENDER_NAME, htmlBody: html, body: plain,
+    replyTo: (d.email && /\S+@\S+\.\S+/.test(d.email)) ? String(d.email) : undefined
+  });
+}
+
+/**
+ * Gracious "not this time" note to a letter writer when the admin denies a
+ * letter (event-review.html POSTs { action:'denial', kind:'letter', email,
+ * name, title }). Intentionally warm and NON-specific — it never states a
+ * reason. Only sends when a valid writer email is present.
+ */
+function sendDenialNote(d) {
+  var email = (d && d.email ? String(d.email) : '').trim();
+  if (!/\S+@\S+\.\S+/.test(email)) return;
+  var name = (d.name ? String(d.name).trim() : '');
+  var greeting = name ? ('Hi ' + name + ',') : 'Hi there,';
+  var subject = 'Thank you for your letter to Livable Telluride';
+  var html = ''
+    + '<div style="font-family:Georgia,\'Times New Roman\',serif;font-size:15px;color:#1a2e29;line-height:1.6;max-width:560px;">'
+    + '<p style="margin:0 0 14px;">' + _esc(greeting) + '</p>'
+    + '<p style="margin:0 0 14px;">Thank you for taking the time to write to Livable Telluride and for sharing your '
+    + 'perspective with us. We read every letter carefully.</p>'
+    + '<p style="margin:0 0 14px;">After review, we&#8217;re not able to publish this particular letter. Please know this '
+    + 'is not a judgment of you or the effort you put in &#8212; we simply can&#8217;t run everything we receive.</p>'
+    + '<p style="margin:0 0 14px;">We genuinely hope you&#8217;ll write again. Community voices matter to us, and we&#8217;d '
+    + 'welcome hearing from you on this or another topic down the road.</p>'
+    + '<p style="margin:18px 0 0;color:#5a6b64;">With appreciation,<br><strong>Livable Telluride</strong><br>'
+    + '<a href="https://livabletelluride.org" style="color:#5a6b64;">livabletelluride.org</a></p>'
+    + '</div>';
+  var plain = greeting + '\n\n'
+    + 'Thank you for taking the time to write to Livable Telluride and for sharing your perspective with us. We read every letter carefully.\n\n'
+    + 'After review, we are not able to publish this particular letter. Please know this is not a judgment of you or the effort you put in - we simply cannot run everything we receive.\n\n'
+    + 'We genuinely hope you will write again. Community voices matter to us, and we would welcome hearing from you down the road.\n\n'
+    + 'With appreciation,\nLivable Telluride\nhttps://livabletelluride.org';
+  MailApp.sendEmail({ to: email, subject: subject, name: SENDER_NAME, htmlBody: html, body: plain, replyTo: NOTIFY_TO });
+}
+
 /** Run this manually from the editor to test the SUBMITTER thank-you (sends to
- *  NOTIFY_TO so you see it yourself). Flip kind to 'org' to test that variant. */
+ *  NOTIFY_TO so you see it yourself). Flip kind to 'org' or 'letter' to test. */
 function testApproval() {
   sendApprovalThankYou({ action: 'approval', kind: 'event', email: NOTIFY_TO, name: 'Jane', title: 'TEST — Community Potluck' });
+}
+/** Manual tests for the letter flows (each sends to NOTIFY_TO so you see it). */
+function testLetterHeadsUp() {
+  sendLetterHeadsUp({ action: 'letter-submit', name: 'Sam Reader', email: NOTIFY_TO, title: 'TEST — Why the plan matters', wordCount: 612, needsManual: false, hasPhoto: true, hasDoc: false });
+}
+function testLetterApproval() {
+  sendApprovalThankYou({ action: 'approval', kind: 'letter', email: NOTIFY_TO, name: 'Sam', title: 'TEST — Why the plan matters' });
+}
+function testLetterDenial() {
+  sendDenialNote({ action: 'denial', kind: 'letter', email: NOTIFY_TO, name: 'Sam', title: 'TEST — Why the plan matters' });
 }
 
 /** Run this manually from the editor to test EVENT deliverability. */

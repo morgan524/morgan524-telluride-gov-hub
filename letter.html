@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Letter to the Editor — Livable Telluride</title>
+<meta name="description" content="A reader's letter to the editor, published by Livable Telluride.">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="stylesheet" href="/lt.css?v=8">
+<script src="/js/site-config.js"></script>
+<style>
+  .lt-wrap { max-width: 720px; margin: 0 auto; padding: 34px var(--pad-x) 60px; }
+  .lt-back { display: inline-block; font: 600 15.5px/1 var(--sans); color: var(--rust); text-decoration: none; margin-bottom: 20px; }
+  .lt-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .lt-eyebrow img { width: 46px; height: auto; }
+  .lt-eyebrow span { font: 800 12px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--rust); }
+  .lt-title { font: 600 40px/1.1 var(--serif); color: var(--forest); letter-spacing: -.01em; margin: 0 0 10px; }
+  .lt-byline { font: 500 16px/1.5 var(--sans); color: var(--muted); margin: 0 0 22px; }
+  .lt-photo { width: 100%; border-radius: 12px; margin: 0 0 24px; object-fit: cover; box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
+  .lt-body p { font: 400 18px/1.7 var(--sans); color: var(--body); margin: 0 0 18px; }
+  .lt-foot { margin-top: 34px; padding-top: 20px; border-top: 1px solid var(--hairline); font: 400 15.5px/1.6 var(--sans); color: var(--muted); }
+  .lt-foot a { color: var(--rust); font-weight: 600; }
+  .lt-msg { font: 400 17px/1.6 var(--sans); color: var(--muted); padding: 40px 0; }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<main class="lt-wrap">
+  <a class="lt-back" href="/local-news.html">&larr; Back to Local News</a>
+  <div id="letter-slot"><p class="lt-msg">Loading&hellip;</p></div>
+</main>
+
+<div id="lt-footer"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="/site.js?v=10"></script>
+<script>
+(function () {
+  'use strict';
+  var slot = document.getElementById('letter-slot');
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]; }); }
+  function msg(t) { slot.innerHTML = '<p class="lt-msg">' + esc(t) + '</p>'; }
+
+  var id = new URLSearchParams(location.search).get('id') || '';
+  if (!id) { msg('That letter could not be found.'); return; }
+  if (typeof firebase === 'undefined' || !window.SITE_CONFIG || !SITE_CONFIG.FIREBASE) { msg('This page failed to load — please refresh in a minute.'); return; }
+  if (!firebase.apps.length) firebase.initializeApp(SITE_CONFIG.FIREBASE);
+
+  firebase.firestore().collection('letter_submissions').doc(id).get()
+    .then(function (doc) {
+      var d = doc.exists ? (doc.data() || {}) : null;
+      if (!d || d.status !== 'approved') { msg('That letter is not available.'); return; }
+      var title = d.title || 'Letter to the Editor';
+      document.title = title + ' — Livable Telluride';
+      var body = (d.cleanedText || d.originalText || '').trim();
+      var paras = body.split(/\n{2,}/).map(function (p) { return p.trim(); }).filter(Boolean);
+      var photo = /^https?:\/\//i.test(d.photoUrl || '') ? d.photoUrl : '';
+      var html = ''
+        + '<div class="lt-eyebrow"><img src="/logo/Letter%20to%20Editor%20LT2.png" alt="" aria-hidden="true"><span>Letter to the Editor</span></div>'
+        + '<h1 class="lt-title">' + esc(title) + '</h1>'
+        + '<p class="lt-byline">By ' + esc(d.name || 'a reader') + (d.publishedDate ? ' &middot; ' + esc(d.publishedDate) : '') + '</p>'
+        + (photo ? '<img class="lt-photo" src="' + esc(photo) + '" alt="">' : '')
+        + '<div class="lt-body">' + (paras.length ? paras.map(function (p) { return '<p>' + esc(p) + '</p>'; }).join('') : '<p>' + esc(body) + '</p>') + '</div>'
+        + '<div class="lt-foot">This is a reader-submitted letter to the editor. The views are the writer&rsquo;s own. '
+        + '<a href="/submit-letter.html">Write your own letter &rarr;</a></div>';
+      slot.innerHTML = html;
+    })
+    .catch(function (err) { console.warn('[letter] load failed:', err); msg('That letter could not be loaded.'); });
+})();
+</script>
+</body>
+</html>

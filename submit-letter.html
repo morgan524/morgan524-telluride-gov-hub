@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Submit a Letter to the Editor — Livable Telluride</title>
+<meta name="description" content="Send a thoughtful letter to the editor to Livable Telluride. Type it or upload a Word/PDF, add an optional photo, and we'll review it for publication.">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="stylesheet" href="/lt.css?v=8">
+<script src="/js/site-config.js"></script>
+<style>
+  .sf-wrap { max-width: 760px; margin: 0 auto; padding: 40px var(--pad-x) 30px; }
+  .sf-intro { display: flex; align-items: center; gap: 20px; margin-bottom: 22px; }
+  .sf-intro img { width: 92px; height: auto; flex: 0 0 auto; }
+  .sf-intro p { font: 400 16px/1.6 var(--sans); color: var(--body2); margin: 6px 0 0; }
+  .sf-field { margin-bottom: 16px; }
+  .sf-field label { display: block; font: 600 15.5px/1.3 var(--sans); color: var(--forest); margin-bottom: 5px; }
+  .sf-field input, .sf-field textarea { width: 100%; padding: 11px 13px; border: 1px solid var(--hairline); border-radius: 9px; font: 400 16px/1.5 var(--sans); color: var(--body); background: #fff; box-sizing: border-box; }
+  .sf-field input:focus, .sf-field textarea:focus { outline: 2px solid var(--forest); outline-offset: 0; }
+  .sf-field textarea { min-height: 300px; resize: vertical; }
+  .sf-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .sf-note { font: 400 15.5px/1.5 var(--sans); color: var(--body2); margin-top: 5px; }
+  /* Tabs */
+  .sf-tabs { display: flex; gap: 6px; margin-bottom: 14px; border-bottom: 1px solid var(--hairline); }
+  .sf-tab { appearance: none; background: none; border: 0; border-bottom: 3px solid transparent; margin-bottom: -1px; padding: 10px 16px; font: 600 15.5px/1 var(--sans); color: var(--body2); cursor: pointer; }
+  .sf-tab.active { color: var(--forest); border-bottom-color: var(--forest); }
+  .sf-panel { display: none; }
+  .sf-panel.active { display: block; }
+  /* Word counter */
+  .wc { font: 600 15.5px/1.4 var(--sans); margin-top: 6px; }
+  .wc .n { font-variant-numeric: tabular-nums; }
+  .wc.ok { color: var(--forest); }
+  .wc.bad { color: #a33; }
+  /* Photo preview */
+  .sf-photo-preview { display: none; align-items: center; gap: 12px; margin-top: 10px; }
+  .sf-photo-preview img { max-width: 140px; max-height: 140px; border-radius: 9px; border: 1px solid var(--hairline); object-fit: contain; background: #fff; }
+  .sf-photo-remove { padding: 7px 13px; border: 1px solid var(--hairline); border-radius: 8px; background: #fff; color: #a33; font: 600 14px var(--sans); cursor: pointer; }
+  #lf-status { font: 600 16px/1.5 var(--sans); text-align: center; min-height: 1.3em; margin-top: 14px; }
+  @media (max-width: 700px) { .sf-grid2 { grid-template-columns: 1fr; } .sf-intro { flex-direction: column; text-align: center; } }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="crumb">Learn <span class="sep">&rsaquo;</span> Local News <span class="sep">&rsaquo;</span> Letters</div>
+    <h1>Submit a Letter to the Editor</h1>
+    <p class="sub">Have something thoughtful to say about the region? We&rsquo;d love to read it &mdash; and share it.</p>
+  </div>
+</header>
+
+<section class="sf-wrap">
+  <div class="card" style="padding:28px 30px;">
+    <div class="sf-intro">
+      <img src="/logo/Letter%20to%20Editor%20LT2.png" alt="Letters to Livable Telluride" loading="lazy">
+      <p>Write to us about an issue facing the region. We publish thoughtful letters, aiming for <strong>500&ndash;750 words</strong>. Every submission is reviewed before it goes on the site.</p>
+    </div>
+
+    <form id="letterForm" novalidate>
+      <div class="sf-tabs" role="tablist">
+        <button type="button" class="sf-tab active" id="tab-write" role="tab" aria-selected="true">Write your letter</button>
+        <button type="button" class="sf-tab" id="tab-upload" role="tab" aria-selected="false">Upload a document</button>
+      </div>
+
+      <!-- Panel A: type the letter -->
+      <div class="sf-panel active" id="panel-write">
+        <div class="sf-field">
+          <label for="lf-text">Your letter *</label>
+          <textarea id="lf-text" placeholder="Share your perspective&hellip;"></textarea>
+          <div class="wc" id="lf-wc"><span class="n">0</span> words &middot; aim for 500&ndash;750</div>
+        </div>
+      </div>
+
+      <!-- Panel B: upload a document -->
+      <div class="sf-panel" id="panel-upload">
+        <div class="sf-field">
+          <label for="lf-doc">Upload your letter</label>
+          <input id="lf-doc" type="file" accept=".doc,.docx,.pdf,.txt,.rtf,.odt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain">
+          <div class="sf-note">Word, PDF, or plain text. We&rsquo;ll read it and check the length (aim for 500&ndash;750 words). Max 10&nbsp;MB.</div>
+        </div>
+      </div>
+
+      <div class="sf-field">
+        <label for="lf-title">Letter title / headline (optional)</label>
+        <input id="lf-title" type="text" placeholder="e.g. Why the East End needs a plan">
+      </div>
+
+      <div class="sf-field">
+        <label for="lf-photo">Photo of you or your subject (optional)</label>
+        <input id="lf-photo" type="file" accept="image/png,image/jpeg,image/gif,image/webp">
+        <div class="sf-photo-preview" id="lf-photo-preview">
+          <img id="lf-photo-preview-img" src="" alt="Photo preview">
+          <button type="button" class="sf-photo-remove" id="lf-photo-remove">Remove</button>
+        </div>
+        <div class="sf-note">A photo helps your letter stand out. Max 10&nbsp;MB &middot; PNG, JPG, GIF, or WebP.</div>
+      </div>
+
+      <div class="sf-grid2">
+        <div class="sf-field"><label for="lf-name">Your name *</label><input id="lf-name" type="text" placeholder="First Last" autocomplete="name"></div>
+        <div class="sf-field"><label for="lf-email">Your email *</label><input id="lf-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
+      </div>
+
+      <button type="submit" class="btn btn-forest" style="width:100%;justify-content:center;font-size:16px;padding:14px;">Send my letter &rarr;</button>
+      <div id="lf-status"></div>
+      <p class="sf-note" style="text-align:center;margin-top:12px">By submitting, you agree we may edit lightly for spelling and grammar (never for meaning) and publish your letter with your name.</p>
+    </form>
+  </div>
+</section>
+
+<div id="lt-footer"></div>
+
+<!-- Firebase compat SDK — anonymous auth gates the optional photo/doc upload;
+     the submission is written to Firestore letter_submissions (status
+     'pending', reviewed at /event-review.html). Mirrors the Submit-an-Event
+     flow in events.html. -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="/site.js?v=10"></script>
+<script>
+(function () {
+  'use strict';
+  var CFG = window.SITE_CONFIG || {};
+  var FB_CONFIG = CFG.FIREBASE;
+  var REVIEW_URL = (CFG.RSS_PROXY_BASE || '') + '/review-letter';
+  var NOTIFY_URL = CFG.APPS_SCRIPT_EXEC || '';
+  var _storage = null, _auth = null, _db = null;
+
+  function ensureFirebase() {
+    if (_db) return Promise.resolve();
+    if (typeof firebase === 'undefined') return Promise.reject(new Error('Firebase failed to load'));
+    if (!firebase.apps.length) firebase.initializeApp(FB_CONFIG);
+    _storage = firebase.storage(); _auth = firebase.auth(); _db = firebase.firestore();
+    return Promise.resolve();
+  }
+  function signIn() {
+    if (_auth.currentUser) return Promise.resolve(_auth.currentUser);
+    return _auth.signInAnonymously().then(function (c) { return c.user; });
+  }
+  function notifyAdmin(sub) {
+    if (!NOTIFY_URL) return;
+    try {
+      fetch(NOTIFY_URL, { method: 'POST', mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(sub) }).catch(function () {});
+    } catch (e) { /* never block the thank-you */ }
+  }
+  function countWords(s) { return (s || '').trim() ? (s.trim().split(/\s+/).filter(Boolean).length) : 0; }
+  var v = function (id) { return (document.getElementById(id).value || '').trim(); };
+
+  // ---- Tabs ----
+  var tabWrite = document.getElementById('tab-write'), tabUpload = document.getElementById('tab-upload');
+  var panelWrite = document.getElementById('panel-write'), panelUpload = document.getElementById('panel-upload');
+  var mode = 'write';
+  function setMode(m) {
+    mode = m;
+    var w = m === 'write';
+    tabWrite.classList.toggle('active', w); tabUpload.classList.toggle('active', !w);
+    tabWrite.setAttribute('aria-selected', w ? 'true' : 'false'); tabUpload.setAttribute('aria-selected', !w ? 'true' : 'false');
+    panelWrite.classList.toggle('active', w); panelUpload.classList.toggle('active', !w);
+  }
+  tabWrite.addEventListener('click', function () { setMode('write'); });
+  tabUpload.addEventListener('click', function () { setMode('upload'); });
+
+  // ---- Live word counter ----
+  var textEl = document.getElementById('lf-text'), wcEl = document.getElementById('lf-wc');
+  function updateWc() {
+    var n = countWords(textEl.value);
+    wcEl.querySelector('.n').textContent = n;
+    var inRange = n >= 500 && n <= 750;
+    wcEl.classList.toggle('ok', inRange && n > 0);
+    wcEl.classList.toggle('bad', n > 0 && !inRange);
+  }
+  textEl.addEventListener('input', updateWc);
+
+  // ---- Photo preview ----
+  var photoInput = document.getElementById('lf-photo'), photoWrap = document.getElementById('lf-photo-preview'),
+      photoImg = document.getElementById('lf-photo-preview-img'), photoRemove = document.getElementById('lf-photo-remove');
+  var selectedPhoto = null, selectedDoc = null;
+  photoInput.addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    if (!f) { selectedPhoto = null; photoWrap.style.display = 'none'; return; }
+    if (f.size > 10 * 1024 * 1024) { alert('That image is larger than 10 MB — please pick a smaller file.'); this.value = ''; return; }
+    selectedPhoto = f; photoImg.src = URL.createObjectURL(f); photoWrap.style.display = 'flex';
+  });
+  photoRemove.addEventListener('click', function () { selectedPhoto = null; photoInput.value = ''; photoWrap.style.display = 'none'; });
+
+  var docInput = document.getElementById('lf-doc');
+  docInput.addEventListener('change', function () {
+    var f = this.files && this.files[0];
+    if (f && f.size > 10 * 1024 * 1024) { alert('That document is larger than 10 MB — please pick a smaller file.'); this.value = ''; selectedDoc = null; return; }
+    selectedDoc = f || null;
+  });
+
+  var form = document.getElementById('letterForm'), statusEl = document.getElementById('lf-status'),
+      submitBtn = form.querySelector('button[type="submit"]');
+
+  function fail(msg) { statusEl.style.color = '#a33'; statusEl.textContent = msg; }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = v('lf-name'), email = v('lf-email');
+    if (!name) return fail('Please add your name — we publish letters with a byline.');
+    if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid email address.');
+
+    var text = '', wc = 0;
+    if (mode === 'write') {
+      text = v('lf-text');
+      wc = countWords(text);
+      if (!text) return fail('Please write your letter, or switch to the “Upload a document” tab.');
+      if (wc < 500 || wc > 750) return fail('Letters should be between 500 and 750 words — yours is ' + wc + '. Please adjust.');
+    } else {
+      if (!selectedDoc) return fail('Please choose a document to upload, or switch to the “Write your letter” tab.');
+    }
+
+    submitBtn.disabled = true; submitBtn.textContent = 'Sending…';
+    statusEl.style.color = 'var(--body2)'; statusEl.textContent = 'Uploading and reviewing your letter…';
+
+    var uid = '', photoUrl = '', docUrl = '', docName = '';
+    ensureFirebase()
+      .then(signIn)
+      .then(function (user) {
+        uid = user.uid;
+        var jobs = [];
+        if (selectedPhoto) {
+          var ps = 'letter-submissions/' + uid + '/' + Date.now() + '_' + selectedPhoto.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+          jobs.push(_storage.ref(ps).put(selectedPhoto).then(function (s) { return s.ref.getDownloadURL(); }).then(function (u) { photoUrl = u; }));
+        }
+        if (selectedDoc) {
+          docName = selectedDoc.name;
+          var ds = 'letter-submissions/' + uid + '/' + Date.now() + '_' + selectedDoc.name.replace(/[^a-zA-Z0-9._-]/g, '_');
+          jobs.push(_storage.ref(ds).put(selectedDoc).then(function (s) { return s.ref.getDownloadURL(); }).then(function (u) { docUrl = u; }));
+        }
+        return Promise.all(jobs);
+      })
+      // Claude pre-review (spelling/grammar/completeness, preserving the
+      // writer's views) + word count. Best-effort: if the Worker is
+      // unreachable, we still store the submission and flag it for manual
+      // review so nothing is ever lost.
+      .then(function () {
+        if (!REVIEW_URL) return null;
+        return fetch(REVIEW_URL, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: mode === 'write' ? text : '', docUrl: docUrl, title: v('lf-title'), name: name })
+        }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+      })
+      .then(function (review) {
+        var cleaned = (review && review.cleanedText) || text || '';
+        var finalWc = (review && typeof review.wordCount === 'number' && review.wordCount) || wc || 0;
+        var sub = {
+          type: 'letter',
+          title: v('lf-title') || '',
+          name: name,
+          email: email,
+          originalText: text || '',
+          cleanedText: cleaned,
+          reviewNotes: (review && review.notes) || '',
+          wordCount: finalWc,
+          photoUrl: photoUrl,
+          docUrl: docUrl,
+          docName: docName,
+          needsManual: !review || review.needsManual === true,
+          status: 'pending',
+          authorUid: uid
+        };
+        return _db.collection('letter_submissions').add(
+          Object.assign({}, sub, { createdAt: firebase.firestore.FieldValue.serverTimestamp() })
+        ).then(function () { return sub; });
+      })
+      .then(function (sub) {
+        // action:'letter-submit' → Apps Script emails info@/letters@ a heads-up
+        // with the word count (outside the text) + a link to the review desk.
+        notifyAdmin({ action: 'letter-submit', name: sub.name, email: sub.email, title: sub.title,
+          wordCount: sub.wordCount, needsManual: sub.needsManual, hasPhoto: !!sub.photoUrl, hasDoc: !!sub.docUrl });
+        form.reset(); selectedPhoto = null; selectedDoc = null; photoWrap.style.display = 'none'; updateWc();
+        submitBtn.disabled = false; submitBtn.innerHTML = 'Send my letter &rarr;';
+        statusEl.style.color = 'var(--forest)';
+        statusEl.textContent = '✓ Thank you, ' + sub.name.split(' ')[0] + '! Your letter was submitted for review. We’ll be in touch by email.';
+      })
+      .catch(function (err) {
+        console.warn('Letter submission failed:', err);
+        submitBtn.disabled = false; submitBtn.innerHTML = 'Send my letter &rarr;';
+        fail('Sorry — could not submit your letter (' + (err.message || err) + '). Please try again.');
+      });
+  });
+})();
+</script>
+</body>
+</html>

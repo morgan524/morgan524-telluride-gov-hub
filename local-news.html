@@ -57,6 +57,14 @@
   .side-koto .item a { font: 500 15.5px/1.35 var(--serif); color: var(--forest); }
   .side-koto .item a:hover { color: var(--rust); }
   .side-tip { background: var(--sage); border-radius: 12px; padding: 22px 24px; }
+  /* Letter byline — the writer's full name, at the top of every letter card. */
+  .byline { font: 600 15.5px/1.4 var(--sans); color: var(--rust); margin: 0 0 6px; }
+  /* Letters-to-the-editor call to action (sidebar, above adoptable pets). */
+  .side-letters { background: var(--sage2, #f3f6f1); border: 1px solid var(--forest); border-radius: 12px; padding: 24px; text-align: center; }
+  .side-letters img { width: 96px; height: auto; margin: 0 auto 10px; display: block; }
+  .side-letters h3 { font: 600 20px/1.25 var(--serif); color: var(--forest); margin: 0 0 8px; }
+  .side-letters p { font: 400 15.5px/1.55 var(--sans); color: var(--body2); margin: 0 0 16px; }
+  .side-letters .btn { font-size: 15.5px; }
   /* Letters: per-publication art in the side-image slot, borderless on the
      page background (transparent PNGs) — Morgan's 2026-07-22 mock. */
   .img-frame.letter-art { background: transparent; border: none; box-shadow: none; display: flex; align-items: center; justify-content: center; }
@@ -99,6 +107,13 @@
 <div class="main-wrap">
   <main id="river"><p class="meta" style="padding:16px 0">Loading stories&hellip;</p></main>
   <aside class="sidebar">
+    <!-- Letters to the editor CTA sits above adoptable pets (Morgan 2026-07-23). -->
+    <div class="side-letters card">
+      <img src="/logo/Letter%20to%20Editor%20LT2.png" alt="Letters to Livable Telluride" loading="lazy">
+      <h3>Write a letter to the editor</h3>
+      <p>We love to publish thoughtful letters to the editor written to us. Share your perspective with the community.</p>
+      <a class="btn btn-forest" href="/submit-letter.html">Submit a letter &rarr;</a>
+    </div>
     <!-- Pets ↔ Newsletter positions swapped per Morgan 2026-07-22 -->
     <div class="side-koto card" id="pets-card" hidden>
       <h3>Adoptable pets</h3>
@@ -126,6 +141,11 @@
 <div id="lt-footer"></div>
 <script src="site.js?v=10"></script>
 <script src="/js/lt-data.js?v=9"></script>
+<!-- site-config + Firebase (read-only): merge approved reader letters, like
+     local-orgs merges approved org submissions. -->
+<script src="/js/site-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script>
 (function () {
   var river = document.getElementById('river');
@@ -189,7 +209,7 @@
       // transparent-backed) — Morgan's 2026-07-22 mock. No banner above the
       // text; this is the card's only art.
       var tt = s.src === 'Telluride Times';
-      var art = tt ? '/logo/Letter%20to%20Editor%20TT.png' : '/logo/Letter%20to%20Editor%20LT.png';
+      var art = tt ? '/logo/Letter%20to%20Editor%20TT.png' : '/logo/Letter%20to%20Editor%20LT2.png';
       var alt = tt ? 'Letter to the Editor — Telluride Times' : 'Letter to the Editor — Livable Telluride';
       img = '<div class="img-frame letter-art"><img src="' + art + '" alt="' + alt + '" loading="lazy"></div>';
     } else {
@@ -203,10 +223,14 @@
   // Letters art lives in the side-image slot (imgFrame) — no banner above the
   // text (Morgan's 2026-07-22 mock replaced the earlier banner treatment).
   function letterBanner() { return ''; }
-  function metaWithAuthor(s) {
-    var base = metaLine(s);
-    return s.isLetter && s.letterAuthor ? ('By ' + s.letterAuthor + (base ? ' · ' + base : '')) : base;
+  // Every letter to the editor carries the writer's byline at the TOP of the
+  // card, under the headline (Morgan 2026-07-23) — the FULL name as given,
+  // including multi-writer names like "Jeremy and Dawn Katz".
+  function bylineHtml(s) {
+    return (s.isLetter && s.letterAuthor) ? '<p class="byline">By ' + LTData.esc(s.letterAuthor) + '</p>' : '';
   }
+  // Byline moved to the top, so the meta line is just source · date.
+  function metaWithAuthor(s) { return metaLine(s); }
   function storyLink(s, tagName, cls) {
     // A story with no art at all (no photo, no letters art, no source logo)
     // must span the full card — otherwise the text div lands in the narrow
@@ -216,6 +240,7 @@
     return '<' + tagName + ' class="' + cls + ' story">' + media +
       '<div>' + letterBanner(s) + tagFor(s) +
       '<h3><a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener">' + LTData.esc(s.title) + '</a></h3>' +
+      bylineHtml(s) +
       (s.dek ? '<p class="dek">' + LTData.esc(s.dek) + '</p>' : '') +
       '<div class="meta">' + LTData.esc(metaWithAuthor(s)) + '</div></div></' + tagName + '>';
   }
@@ -240,6 +265,7 @@
       ? '<article class="lead story' + (leadMedia ? '' : ' no-media') + '">' + leadMedia +
         '<div>' + letterBanner(lead) + '<span class="tag rust-tint">Lead story</span> ' + tagFor(lead) +
         '<h2><a href="' + LTData.esc(safeHref(lead.href)) + '" target="_blank" rel="noopener">' + LTData.esc(lead.title) + '</a></h2>' +
+        bylineHtml(lead) +
         (lead.dek ? '<p class="dek">' + LTData.esc(lead.dek) + '</p>' : '') +
         '<div class="meta">' + LTData.esc(metaWithAuthor(lead)) + '</div></div></article>'
       : '';
@@ -330,8 +356,51 @@
         }).join('');
       }
       render();
+      mergeApprovedLetters();
     })
     .catch(function (err) { LTData.showError(river, err); });
+
+  // Approved reader letters (Firestore letter_submissions, world-readable when
+  // status=='approved') → merged into the river as isLetter cards, newest
+  // first. Mirrors local-orgs' mergeApprovedOrgs. Best-effort: any failure is
+  // silent and the curated river still renders.
+  function excerpt(s, n) {
+    s = String(s || '').replace(/\s+/g, ' ').trim();
+    return s.length > n ? s.slice(0, n).replace(/\s+\S*$/, '') + '…' : s;
+  }
+  function mergeApprovedLetters() {
+    try {
+      if (typeof firebase === 'undefined' || !window.SITE_CONFIG || !SITE_CONFIG.FIREBASE) return;
+      if (!firebase.apps.length) firebase.initializeApp(SITE_CONFIG.FIREBASE);
+      firebase.firestore().collection('letter_submissions').where('status', '==', 'approved').get()
+        .then(function (snap) {
+          if (snap.empty) return;
+          var have = {}; stories.forEach(function (s) { if (s.href) have[s.href] = 1; });
+          var extra = [];
+          snap.forEach(function (doc) {
+            var d = doc.data() || {};
+            var body = d.cleanedText || d.originalText || '';
+            var href = '/letter.html?id=' + doc.id;
+            if (isLegalNotice({ title: d.title || '' }) || have[href]) return;
+            extra.push({
+              title: d.title || 'Letter to the Editor',
+              href: href,
+              img: /^https?:\/\//i.test(d.photoUrl || '') ? d.photoUrl : '',
+              dek: excerpt(body, 220),
+              topic: '', src: 'Letter to the Editor',
+              date: d.publishedDate || '',
+              when: (d.reviewedAt && d.reviewedAt.seconds ? d.reviewedAt.seconds * 1000 : (d.createdAt && d.createdAt.seconds ? d.createdAt.seconds * 1000 : 0)),
+              isLetter: true, featured: false, letterAuthor: d.name || '', imgPos: ''
+            });
+          });
+          if (!extra.length) return;
+          stories = stories.concat(extra);
+          stories.sort(function (a, b) { return (b.featured - a.featured) || (b.when - a.when); });
+          render();
+        })
+        .catch(function (err) { console.warn('[local-news] approved-letters merge failed:', err); });
+    } catch (err) { console.warn('[local-news] Firebase unavailable:', err); }
+  }
 })();
 </script>
 </body>

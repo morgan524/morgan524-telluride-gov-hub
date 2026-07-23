@@ -425,6 +425,96 @@ async function handleSummarizeFlyer(request, env) {
   return json({ ok: true, summary });
 }
 
+// POST /review-letter { text?, docUrl?, title?, name? } → { ok, cleanedText,
+// wordCount, notes, needsManual }. Runs a copyedit pass over a submitted
+// Letter to the Editor: fixes spelling/grammar/completeness WITHOUT changing
+// the writer's views, and returns a clean word count. Called at submit time
+// by /submit-letter.html so the admin review desk shows a polished draft.
+//   - typed letter  → review the text directly
+//   - .txt upload    → fetch + review
+//   - .pdf upload    → Claude reads the PDF (document block) + reviews
+//   - other docs     → needsManual:true (admin reviews the file by hand)
+// Best-effort: any failure returns needsManual so the submission is never lost.
+const LETTER_SYS = "You are copyediting a reader's Letter to the Editor for a "
+  + "community news site in the Telluride, Colorado region. Fix spelling, grammar, "
+  + "punctuation, and obvious typos, and lightly smooth wording ONLY where needed "
+  + "for clarity or completeness of thought. You MUST NOT change the writer's "
+  + "opinions, arguments, claims, tone, or meaning — preserve their voice and views "
+  + "exactly. Do not add new points or remove their points. Return ONLY minified "
+  + "JSON, no preamble, no markdown: {\"cleanedText\":\"<the corrected letter as "
+  + "plain text, paragraphs separated by \\n\\n>\",\"notes\":\"<one short line on what "
+  + "you changed, or 'No changes needed'>\"}.";
+
+function countWords(s) { s = String(s || "").trim(); return s ? s.split(/\s+/).filter(Boolean).length : 0; }
+function isOurStorageUrl(u) {
+  try { const h = new URL(u).hostname.toLowerCase();
+    return h === "firebasestorage.googleapis.com" || h.endsWith(".firebasestorage.app") || h === "storage.googleapis.com";
+  } catch { return false; }
+}
+function parseFirstJson(s) {
+  const t = String(s || "");
+  const i = t.indexOf("{"), j = t.lastIndexOf("}");
+  if (i === -1 || j <= i) return null;
+  try { return JSON.parse(t.slice(i, j + 1)); } catch { return null; }
+}
+
+async function handleReviewLetter(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  // Never block the submission: if the reviewer is unconfigured, ask the
+  // client to store the letter and flag it for manual review.
+  if (!env.ANTHROPIC_API_KEY) return json({ ok: true, needsManual: true, cleanedText: "", wordCount: 0, notes: "" });
+
+  let data;
+  try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  const text = String(data.text || "").trim();
+  const docUrl = String(data.docUrl || "").trim();
+
+  // Build the Claude message content: prefer typed text; else a supported doc.
+  let content = null, manual = false;
+  if (text) {
+    content = [{ type: "text", text: "Copyedit this Letter to the Editor:\n\n" + text.slice(0, 20000) }];
+  } else if (docUrl && isOurStorageUrl(docUrl)) {
+    const lower = docUrl.toLowerCase();
+    if (/\.txt(\?|$)/.test(lower)) {
+      let raw = "";
+      try { const r = await fetch(docUrl); if (r.ok) raw = (await r.text()).slice(0, 20000); } catch {}
+      if (raw.trim()) content = [{ type: "text", text: "Copyedit this Letter to the Editor:\n\n" + raw }];
+      else manual = true;
+    } else if (/\.pdf(\?|$)/.test(lower)) {
+      content = [
+        { type: "document", source: { type: "url", url: docUrl } },
+        { type: "text", text: "Extract the letter text from this document, then apply the copyedit rules." },
+      ];
+    } else {
+      manual = true;   // .docx/.rtf/.odt — no reliable in-Worker extraction
+    }
+  } else {
+    manual = true;
+  }
+  if (manual || !content) return json({ ok: true, needsManual: true, cleanedText: "", wordCount: 0, notes: "" });
+
+  let resp;
+  try {
+    resp = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-api-key": env.ANTHROPIC_API_KEY, "anthropic-version": "2023-06-01" },
+      body: JSON.stringify({ model: "claude-opus-4-8", max_tokens: 2500, system: LETTER_SYS, messages: [{ role: "user", content }] }),
+    });
+  } catch (e) {
+    return json({ ok: true, needsManual: true, cleanedText: "", wordCount: 0, notes: "" });
+  }
+  if (!resp.ok) return json({ ok: true, needsManual: true, cleanedText: "", wordCount: 0, notes: "" });
+  const out = await resp.json().catch(() => ({}));
+  const raw = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("").trim();
+  const parsed = parseFirstJson(raw);
+  const cleaned = parsed && typeof parsed.cleanedText === "string" ? parsed.cleanedText.trim() : "";
+  if (!cleaned) return json({ ok: true, needsManual: true, cleanedText: "", wordCount: countWords(text), notes: "" });
+  return json({ ok: true, needsManual: false, cleanedText: cleaned, wordCount: countWords(cleaned), notes: (parsed.notes || "").toString().slice(0, 300) });
+}
+
 // ════════════════════ HUB-BUB POST MODERATION ════════════════════
 // /moderate  — POST {postId,title,body,authorName}. Claude judges the post; if
 //   it's a personal attack/harassment/threat/slur (NOT mere criticism of
@@ -633,6 +723,9 @@ export default {
     }
     if (url.pathname === "/summarize-flyer") {
       return handleSummarizeFlyer(request, env);
+    }
+    if (url.pathname === "/review-letter") {
+      return handleReviewLetter(request, env);
     }
     if (url.pathname === "/moderate") {
       return handleModerate(request, env);

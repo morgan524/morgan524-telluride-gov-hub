@@ -1969,19 +1969,31 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
             if (!cached.isLetter) cached.isLetter = true;
             if (/\/tncms\/custom\/image\//i.test(cached.img || '')) cached.img = '';
           }
-          if (isLetterCached && !cached.letterAuthor && TT_AUTH_COOKIE) {
+          // A one-word byline ("Jeremy") is usually a name the OLD signature
+          // regex cut at a lowercase "and" — re-extract once with the fixed
+          // regex so co-signed letters get both names. `authorChecked` bounds
+          // it to a single retry, so a genuinely one-name signature doesn't
+          // re-fetch every run.
+          const authorLooksPartial = !!cached.letterAuthor
+            && !/\s/.test(String(cached.letterAuthor).trim())
+            && !cached.authorChecked;
+          if (isLetterCached && (!cached.letterAuthor || authorLooksPartial) && TT_AUTH_COOKIE) {
             try {
               const result = await fetchTTArticleDirect(href);
               if (result && result.status === 200) {
                 const fullText = extractTTArticleText(result.text);
                 const author = fullText ? extractLetterAuthor(fullText) : '';
                 if (author) {
-                  articles.push({ ...cached, letterAuthor: author });
+                  articles.push({ ...cached, letterAuthor: author, authorChecked: true });
                   await new Promise(r => setTimeout(r, 800));
                   continue;
                 }
               }
               await new Promise(r => setTimeout(r, 800));
+              if (authorLooksPartial) {   // checked once; keep what we have
+                articles.push({ ...cached, authorChecked: true });
+                continue;
+              }
             } catch (e) {
               console.warn(`  Could not backfill letterAuthor for ${href}: ${e.message}`);
             }
@@ -2391,11 +2403,15 @@ function extractLetterAuthor(fullText) {
   const tail = fullText.slice(-700);
   // Take the LAST sign-off in the tail — a "Thanks, Max." mid-letter must not
   // shadow the real "Sincerely, <author>" signature at the end.
-  const sigRe = /(?:Sincerely|Yours(?:\s+truly)?|Best(?:\s+regards)?|Thanks|Thank\s+you|Regards|Cheers|Respectfully)[,. ]+\s*([A-Z][A-Za-z'’\-.]+(?:\s+(?:[A-Z][A-Za-z'’\-.]+|[“"][^”"]{1,20}[”"])){0,3})/g;
+  // The name run allows lowercase joiners ("and", "&") so co-signed letters
+  // keep BOTH writers — "Sincerely, Jeremy and Dawn Katz" used to capture just
+  // "Jeremy", because the lowercase "and" ended the run (Morgan 2026-07-23).
+  const sigRe = /(?:Sincerely|Yours(?:\s+truly)?|Best(?:\s+regards)?|Thanks|Thank\s+you|Regards|Cheers|Respectfully)[,. ]+\s*([A-Z][A-Za-z'’\-.]+(?:\s+(?:and|&|[A-Z][A-Za-z'’\-.]+|[“"][^”"]{1,20}[”"])){0,5})/g;
   let sig = null, sm;
   while ((sm = sigRe.exec(tail)) !== null) sig = sm;
   if (sig) {
-    let author = sig[1].trim();
+    // Never end on a dangling joiner ("Jeremy and" → "Jeremy").
+    let author = sig[1].trim().replace(/\s+(?:and|&)$/i, '').trim();
     // Look at what immediately follows the name — often a title/role
     // ("Director, Rainbow Preschool") on its own short line.
     const after = tail.slice(sig.index + sig[0].length).trim();
@@ -2408,8 +2424,8 @@ function extractLetterAuthor(fullText) {
   // Fallback: scan the last ~5 short lines for a Title-Case name line.
   const lines = tail.split(/[\n.]+/).map(s => s.trim()).filter(s => s && s.length < 80);
   for (let i = lines.length - 1; i >= Math.max(0, lines.length - 6); i--) {
-    const m = lines[i].match(/^([A-Z][A-Za-z'’\-.]+(?:\s+[A-Z][A-Za-z'’\-.]+){1,3})\s*$/);
-    if (m) return m[1];
+    const m = lines[i].match(/^([A-Z][A-Za-z'’\-.]+(?:\s+(?:and|&|[A-Z][A-Za-z'’\-.]+)){1,5})\s*$/);
+    if (m) return m[1].trim().replace(/\s+(?:and|&)$/i, '').trim();
   }
   return '';
 }
