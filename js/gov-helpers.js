@@ -573,9 +573,9 @@ const REGIONAL_NEWS_ARTICLES = [
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/?ta_paidstory",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/",
     img: ""
   },
   {
@@ -585,7 +585,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
-    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/",
     img: ""
   },
   {
@@ -605,7 +605,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "A joint wildfire mitigation effort to remove dead or diseased trees from the city of Ouray’s perimeter is expected to move forward next spring, though with a potentially more limited scope. Officials told the Plaindealer that the Ouray Forest Resilience Project, which was first floated several years",
-    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/",
     img: ""
   },
   {
@@ -615,17 +615,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "land-use",
     copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
-    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/",
     img: ""
   },
   {
-    title: "Looking Back",
+    title: "60 Years Ago",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
     newsTopic: "government",
     copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
-    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/",
     img: ""
   },
   {
@@ -635,7 +635,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "The 109th annual Ouray County Fair is scheduled to proceed as planned, even if the fairgrounds remain the headquarters for the Gold Mountain Fire operations. The fair is scheduled from Aug. 13-15 at the Ouray County 4-H Center and the fairgrounds, which has been home to more than 900 fire personnel ",
-    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/",
     img: ""
   },
   {
@@ -645,7 +645,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "government",
     copy: "I m not a Jeep enthusiast or an off-highway vehicle user, but I am a hiker and photographer who cares deeply about our high-country environment. After recent discussions at county commissioners meetings about closing the upper part of Yankee Boy Basin to motorized travel, I wanted to see the area th",
-    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/",
     img: ""
   },
   {
@@ -655,7 +655,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "arts-culture",
     copy: "When Heather Toth moved to Ouray County in 2013, her first question was, “Where’s the theater; where’s the art space?” The arts are a necessity, not a luxury, according to Toth. She values third spaces, especially those with a connection to the arts. “I think they’re vital,” she said. “I think they’",
-    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/",
     img: ""
   },
   {
@@ -665,7 +665,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "community",
     copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/",
     img: ""
   },
   {
@@ -996,7 +996,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1023,7 +1023,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1191,6 +1191,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Chef showdown",
+    source: "Telluride Times",
+    date: "July 23, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "community",
+    copy: "This year’s Top Chef and Taste of Telluride event takes place Saturday, Aug. 1, at the Telluride Innovation Center.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_4c8665b3-858d-4ef0-a484-adf343c93e92.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/47/147805a2-1f96-4d3e-a5ae-996fa67f66dd/6a607cb5acd38.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Legals and Public Notices for July 23-29, 2026",
     source: "Telluride Times",
@@ -3514,7 +3526,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3526,7 +3538,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3586,17 +3598,6 @@ const ALIBI_EVENTS = [
  * Bot overwrites this on first run. */
 const SHERIDAN_EVENTS = [
   {
-    title: "An Evening with Josh Abbott",
-    link: "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
-    description: "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.",
-    pubDate: "2026-07-22",
-    source: "sheridan",
-    sourceLabel: "Sheridan Opera House",
-    category: "Concert / Performance",
-    location: "Sheridan Opera House • Telluride, CO",
-    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg"
-  },
-  {
     title: "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
     link: "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
     description: "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
@@ -3617,6 +3618,17 @@ const SHERIDAN_EVENTS = [
     category: "Concert / Performance",
     location: "Sheridan Opera House • Telluride, CO",
     imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Summer-Music-man.png"
+  },
+  {
+    title: "The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum",
+    link: "https://sheridanoperahouse.com/events/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum/",
+    description: "A documentary screening and benefit event at the Sheridan Opera House, telling the restoration story of the Nugget as a fundraiser for the Telluride Historical Museum. The program brings together local history and community support in one of Telluride's most storied performing arts venues.",
+    pubDate: "2026-07-25",
+    source: "sheridan",
+    sourceLabel: "Sheridan Opera House",
+    category: "Concert / Performance",
+    location: "Sheridan Opera House • Telluride, CO",
+    imageUrl: "https://sheridanoperahouse.com/wp-content/uploads/2026/05/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.png"
   }
 ];
 
@@ -5272,7 +5284,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5283,7 +5295,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5294,7 +5306,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5305,7 +5317,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5316,7 +5328,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

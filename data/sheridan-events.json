@@ -1,16 +1,5 @@
 [
   {
-    "title": "An Evening with Josh Abbott",
-    "link": "https://sheridanoperahouse.com/events/an-evening-with-josh-abbott/",
-    "description": "Josh Abbott performs at the historic Sheridan Opera House in Telluride. The Texas country singer-songwriter is known for his blend of traditional country sounds and heartfelt storytelling, delivering an intimate evening of live music in one of the region's most beloved and storied venues.",
-    "pubDate": "2026-07-22",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Josh-Abbot-Website.jpg"
-  },
-  {
     "title": "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
     "link": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
     "description": "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
@@ -31,5 +20,16 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Summer-Music-man.png"
+  },
+  {
+    "title": "The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum",
+    "link": "https://sheridanoperahouse.com/events/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum/",
+    "description": "A documentary screening and benefit event at the Sheridan Opera House, telling the restoration story of the Nugget as a fundraiser for the Telluride Historical Museum. The program brings together local history and community support in one of Telluride's most storied performing arts venues.",
+    "pubDate": "2026-07-25",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.png"
   }
 ]

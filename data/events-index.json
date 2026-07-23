@@ -464,6 +464,19 @@
     "type": "Music"
   },
   {
+    "title": "The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum",
+    "href": "https://sheridanoperahouse.com/events/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum/",
+    "date": "2026-07-24",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.png",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A documentary screening and benefit event at the Sheridan Opera House, telling the restoration story of the Nugget as a fundraiser for the Telluride Historical Museum. The program brings together local history and community support in one…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Literary Trivia Night Fundraiser",
     "href": "https://events.ourayridgwayevents.com/event/literary-trivia-night",
     "date": "2026-07-24",
@@ -2406,7 +2419,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Community"
   },
   {
@@ -2855,7 +2868,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2933,8 +2946,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",
