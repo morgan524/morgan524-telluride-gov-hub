@@ -239,7 +239,13 @@
       // when posted, grey non-clickable ghost when not yet.
       var acts = '';
       if (m.commentEmail) acts += '<a class="cbtn" href="' + esc(commentMailto(m)) + '">&#9993;&#65039; Submit Comment</a>';
-      if (m.agendaUrl) acts += '<a class="abtn' + (m.hasAgenda ? ' primary' : '') + '" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>';
+      // View Agenda mirrors the packet button's three states (per Morgan
+      // 2026-07-23): solid green when posted, outline link when only a
+      // calendar/meeting page exists, grey non-clickable ghost when there's
+      // no agenda link at all yet.
+      acts += m.agendaUrl
+        ? '<a class="abtn' + (m.hasAgenda ? ' primary' : '') + '" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
+        : '<span class="abtn empty" title="Agenda not yet posted" aria-disabled="true">View Agenda</span>';
       acts += m.packetUrl
         ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet &darr;</a>'
         : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
