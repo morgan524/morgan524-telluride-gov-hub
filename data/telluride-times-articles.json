@@ -1,5 +1,17 @@
 [
   {
+    "title": "Errico: ‘The State of the Town is strong and engaging’",
+    "source": "Telluride Times",
+    "date": "July 23, 2026",
+    "firstSeen": "2026-07-23",
+    "newsTopic": "community",
+    "copy": "Mayor Errico's mid-year State of the Town address shifted from January's \"ongoing disruption\" framing to \"strong and engaging,\" crediting residents, staff, and visitors rather than government. He highlighted completed infrastructure work — repaved bike paths, park improvements, housing programs — while calling for earlier civic involvement instead of last-minute pushback on decisions. The mudslides and wildfires still weigh on the region.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_ea5e5200-39e4-49fb-af23-33fe1f7dbfb3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b2/fb2dc9e0-020a-4ec4-9e31-330b8c8d14c1/6a6248857dc0c.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Summer sounds at The Yard",
     "source": "Telluride Times",
     "date": "July 23, 2026",
@@ -1017,6 +1029,17 @@
     "newsTopic": "public-safety",
     "copy": "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    "img": ""
+  },
+  {
+    "title": "Notice of Vacancy on Sustainability Advisory Board",
+    "source": "Town of Ridgway",
+    "date": "July 23, 2026",
+    "firstSeen": "2026-07-23",
+    "newsTopic": "government",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/07-2926-Vacancy-on-SAB-Notice.pdf",
     "img": ""
   },
   {

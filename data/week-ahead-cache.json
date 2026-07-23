@@ -1,18 +1,22 @@
 {
-  "hash": "60c4a9e090a4a57a43ca17ba1fc5526c0000530e",
-  "lede": "The big one this week is Thursday's Planning and Zoning Commission meeting, where three Town-owned development projects in the Accommodations 2 zone — including the Carhenge Redevelopment at 700 W Pacific Ave — are up for preliminary subdivision and concept review. Also on Thursday, SMART's board votes on two vendor contracts tied to the gondola structural analysis, which is about as close to a bridge-or-bust decision as this valley gets. A Special Town Council session Sunday takes up a public hearing on KOTO Radio's Live at the Drive liquor permit for July 30.",
+  "hash": "13e4e38a41ab58c73462d2dd937fb019bf6ddce2",
+  "lede": "The big one this week is Thursday's Planning and Zoning Commission meeting, where three Town-owned development projects — including the Carhenge Redevelopment at 700 W Pacific Ave — are up for subdivision and concept review, all in the Accommodations 2 zone. Same day, SMART's board votes on two vendor contracts tied to the gondola structural analysis, which keeps that bridge-or-bust project moving. Later in the week, the Gondola Leadership Committee meets Monday on funding commitments and next steps, and Town Council convenes a special session to hear a liquor permit request for KOTO's Live at the Drive event.",
   "notable": [
     {
       "id": 0,
-      "stake": "Three Town-owned projects, including Carhenge redevelopment, face subdivision and concept votes."
+      "stake": "Town votes on Carhenge subdivision and two other Town-owned development concept reviews."
     },
     {
       "id": 3,
-      "stake": "Board votes on two gondola structural-analysis contracts — critical step for the gondola's future."
+      "stake": "Board votes to award gondola structural analysis contracts — key to project's future."
     },
     {
       "id": 7,
-      "stake": "Public hearing on KOTO's Live at the Drive special event liquor permit — you can weigh in."
+      "stake": "Public hearing on KOTO's Live at the Drive liquor permit; public may attend."
+    },
+    {
+      "id": 9,
+      "stake": "Gondola committee takes action on CIG funding commitments and project direction."
     }
   ]
 }
