@@ -31,8 +31,12 @@
   .sec-grid h3 { font: 600 22px/1.15 var(--serif); margin: 6px 0 6px; }
   .sec-grid h3 a { color: var(--forest); }
   .main-wrap { max-width: var(--maxw); margin: 0 auto; padding: 34px var(--pad-x) 0; display: grid; grid-template-columns: 1.7fr 1fr; gap: 44px; align-items: start; }
-  .river-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .river-item { display: grid; grid-template-columns: 180px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--hairline); align-items: center; }
   .river-item .img-frame { aspect-ratio: 4/3; border-radius: 8px; }
+  /* Crop card photos toward the top so faces (not torsos) show on portraits —
+     applies to every current + future news photo (Morgan, 2026-07-23). A
+     per-article imgPos still overrides this via inline style. */
+  .river-item .img-frame img, .sec-grid .img-frame img { object-position: center 20%; }
   /* No-photo gov announcements show the issuing entity's logo instead */
   .img-frame.logo-fill { display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--hairline); }
   .img-frame.logo-fill img { object-fit: contain; width: 72%; height: 72%; }
@@ -137,6 +141,15 @@
 
   // Standing rule: an obituary must NEVER be the featured story.
   function isObituary(s) { return /obituar|in memoriam|celebration of life|passed away/i.test((s.title || '') + ' ' + (s.dek || '')); }
+  // Standing rule (Morgan, 2026-07-23): legal / public notices belong on the
+  // Legal Notices page ONLY — never in the News river. (Region hubs like
+  // Norwood may still surface them for content; that's a separate section.)
+  function isLegalNotice(s) {
+    var t = s.title || '';
+    // Match the legals roundup / notice postings — NOT ordinary news that
+    // merely contains the word "legal" (e.g. "Legal battle over water rights").
+    return /\bpublic\s+notices?\b/i.test(t) || /^\s*legal\s+notices?\b/i.test(t) || /^\s*legals\b/i.test(t);
+  }
   function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
   function normalize(a, srcLabel) {
     // dek: copy (scraped articles) or summary (LOCAL_NEWS_FEATURED pins store
@@ -284,6 +297,7 @@
         (data['smb-forum-articles'] || []).map(function (a) { return normalize(a, 'San Miguel Basin Forum'); })
       ).filter(function (s, i, arr) {
         if (!s.title || !s.href) return false;
+        if (isLegalNotice(s)) return false;   // legal notices live on /legal-notices.html only
         if (!s.featured && pinHrefs[s.href] && pins.indexOf(s) === -1) return false;   // pin wins over duplicate
         return true;
       });
