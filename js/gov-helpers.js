@@ -368,6 +368,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
+    {"sv":4},
+
+  "norwood|2026-08-11|Norwood Water Commission Meeting":
     {"sv":4}
 };
 
@@ -915,10 +918,10 @@ const MANUAL_SUMMARIES = {
     "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and Board of County Commissioners hasn't been posted yet beyond the meeting title itself.",
+    "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet beyond the meeting notice itself.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29 (RESCHEDULED) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1050,7 +1053,10 @@ const MANUAL_SUMMARIES = {
     "The August 18, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet.",
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    "The August 12, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet."
+    "The August 12, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet.",
+
+  "norwood|2026-08-11|Norwood Water Commission Meeting":
+    "The August 11, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1191,6 +1197,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Summer sounds at The Yard",
+    source: "Telluride Times",
+    date: "July 23, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "education",
+    copy: "Telluride Chamber Music returns to The Yard at NPRD's Norwood campus for two free outdoor concerts — July 23 featuring a San Juan Symphony string quartet playing Mozart and Dvořák, and Aug. 27 with a jazzier set from keyboardist Kenny Goldman and saxophonist Yaz Ishikawa. Gates open 5:30 p.m., music runs 6–7 p.m. Bring a picnic and a blanket; rain moves things inside The Livery.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_fe7a2edf-4f4c-4e85-865f-8ab4d184b496.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/65/c655494b-791c-4ec8-a023-5fecb122c984/6a6240f29e76a.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of July 23-29",
+    source: "Telluride Times",
+    date: "July 23, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "government",
+    copy: "Community birthdays run July 23–29, and regular weekly events continue — Norwood Farmers Market Thursdays 2–6 p.m., Senior Meals Mondays and Thursdays at noon, Food Pantry Sundays 3–6 p.m. Free chamber music at The Livery on July 23, 6–7 p.m.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_90dc97b8-f5f6-4ef1-bbe1-f053707152d2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d8/8d85fcc6-d6d8-4992-8da7-93889651880e/6a622ba032bbf.image.png",
+    imgHiRes: true
+  },
   {
     title: "Chef showdown",
     source: "Telluride Times",
@@ -2089,6 +2119,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -2131,6 +2197,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass and Tomboy Road are closed to all vehicle and pedestrian traffic following mudslides and flooding on Friday, July 17. The duration of the closure is unknown.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=70",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -3309,7 +3393,7 @@ const WILKINSON_EVENTS = [
   {
     title: "How to Stop White-Knuckling: Emotional Regulation During Troubling Times",
     link: "https://telluridelibrary.libcal.com/event/17099290?hs=a",
-    description: "5:30 PM – 7:00 PM · In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps them to navigate stress and identify what measures could be restorative to their nervous systems.  There will be a mix of presentation, writing prompts, and group discussion. Betsy Lamberson is a parenting educator and nervous system coach who helps caregivers and professionals better understand behavior through the lens of stress and connection. Through her work at New Roots Parenting, she offers practical, neuroscience-informed tools rooted in co-regulation, self-awareness, and relationship repair. www.newrootsparenting.com",
+    description: "5:30 PM – 7:30 PM · In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps them to navigate stress and identify what measures could be restorative to their nervous systems.  There will be a mix of presentation, writing prompts, and group discussion. Betsy Lamberson is a parenting educator and nervous system coach who helps caregivers and professionals better understand behavior through the lens of stress and connection. Through her work at New Roots Parenting, she offers practical, neuroscience-informed tools rooted in co-regulation, self-awareness, and relationship repair. www.newrootsparenting.com",
     pubDate: "2026-07-23T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -5096,7 +5180,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-17",
+    endDate: "2026-09-21",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5647,6 +5731,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Pristine Bins Demonstration",
+    link: "https://townofmountainvillage.com/explore/events/all-events/meadow-parking-lot-pristine-bins-demonstration/",
+    description: "Join Pristine Bins for a live demonstration of our eco-friendly trash bin cleaning system on Monday, August 10 5:30-6:30 p.m.",
+    pubDate: "2026-08-10T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49434/pristine_bins_event_1800x900_1.png"
   },
   {
     title: "Mountain Village Merchant Meeting",
