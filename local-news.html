@@ -243,15 +243,23 @@
     }).join('');
   }
 
-  LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured', 'humane-society-animals'])
+  LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'regional-news-articles', 'local-news-featured', 'humane-society-animals'])
     .then(function (data) {
       renderPets(data['humane-society-animals']);
       var pins = (data['local-news-featured'] || []).map(function (a) { var s = normalize(a, a.sourceKey || 'Featured'); s.featured = a.featured === true; return s; });
       var pinHrefs = {};
       pins.forEach(function (p) { if (p.href) pinHrefs[p.href] = 1; });
+      // Regional feeds occasionally emit future-dated posts (event
+      // announcements) — a news river shows what happened, so skip them.
+      var tomorrow = Date.now() + 86400000;
+      var regional = (data['regional-news-articles'] || []).filter(function (a) {
+        var d = new Date(a.date || '');
+        return isNaN(d) || d.getTime() <= tomorrow;
+      });
       stories = pins.concat(
         (data['telluride-times-articles'] || []).map(function (a) { return normalize(a, 'Telluride Times'); }),
-        (data['smb-forum-articles'] || []).map(function (a) { return normalize(a, 'San Miguel Basin Forum'); })
+        (data['smb-forum-articles'] || []).map(function (a) { return normalize(a, 'San Miguel Basin Forum'); }),
+        regional.map(function (a) { return normalize(a, a.source || 'Regional'); })
       ).filter(function (s, i, arr) {
         if (!s.title || !s.href) return false;
         if (!s.featured && pinHrefs[s.href] && pins.indexOf(s) === -1) return false;   // pin wins over duplicate

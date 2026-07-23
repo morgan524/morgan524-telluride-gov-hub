@@ -2,6 +2,28 @@
 
 _Split out of CLAUDE.md 2026-06-22. Everything that renders on the Local News tab: San Miguel Basin Forum, Telluride Humane Society, plus card overrides / filtering / logo alignment._
 
+## Regional news feeds (restored 2026-07-23)
+
+`REGIONAL_NEWS_ARTICLES` in `js/gov-helpers.js` (mirror:
+`data/regional-news-articles.json`) — ~11 regional RSS feeds
+(`REGIONAL_NEWS_FEEDS` in content-refresh.js: Ouray County + Plaindealer,
+Telluride Foundation, Norwood blog, CSU Extension, Mountain Club,
+St. Patrick's, Fresh Food Hub, Nucla-Naturita Chamber, Telluride Academy,
+Tri-County Health). The reader UI was lost in the May 2026 gov-hub.js
+retirement and restored on `local-news.html` 2026-07-23: merged into the
+story river with a **future-date guard** (regional feeds sometimes emit
+future-dated event posts; a news river skips anything dated after
+tomorrow). The `norwoodcolorado.com/events/feed` entry was removed from
+the feed list for the same reason — events have their own pipeline.
+
+Two sibling consts from the same 2026-07-22 P0-3 re-seed were **retired
+outright** (write paths deleted): `MEETING_PREVIEWS` (redundant — every
+preview's meeting already had a `MANUAL_SUMMARIES` entry, and it burned
+Claude tokens every run) and `SMC_ALERTS` (the identical AlertCenter RSS
+already flows into `TELLURIDE_TIMES_ARTICLES` via `NEWS_FEEDS`, so alerts
+reach Local News regardless). `ENGAGE_MEETINGS` was restored on
+gov-hub.html (see the "engage" annotation there).
+
 ## San Miguel Basin Forum — West End news on Local News
 
 Live at /#local-news and refreshed every 6 hours alongside TT/KOTO.

@@ -133,8 +133,8 @@ section goes stale for days with nobody noticing.
   into the same issue + exception email. Alerting lives where the owner already
   looks; baseline-writing lives where there's commit access.
 - **Thresholds:** 0 items when the 14-day max was ≥3 → `High`; current < 20% of
-  a ≥15 baseline → `Medium`. `LEGAL_NOTICES` and `SMC_ALERTS` are excluded
-  (legitimately sporadic). New sources auto-enroll once they first return data.
+  a ≥15 baseline → `Medium`. `LEGAL_NOTICES` is excluded (legitimately
+  sporadic). New sources auto-enroll once they first return data.
 - **Shared loader:** both scripts evaluate the data files via
   `scripts/lib/load-data.js` (one copy of the eval-and-capture logic).
 

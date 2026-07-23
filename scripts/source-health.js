@@ -32,7 +32,7 @@ const PARTIAL_FLOOR = 15;   // only flag a partial drop when the baseline is siz
 const PARTIAL_RATIO = 0.2;  // …and the current count is < 20% of it
 
 // Arrays that legitimately go to zero (sporadic by nature) — never alarm on these.
-const EXCLUDE = new Set(['LEGAL_NOTICES', 'SMC_ALERTS']);
+const EXCLUDE = new Set(['LEGAL_NOTICES']);
 
 function baselineFile(repoRoot) { return path.join(repoRoot, 'scripts', 'source-baselines.json'); }
 

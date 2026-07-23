@@ -367,82 +367,12 @@ const MEETING_AGENDA_META = {
 // existed for months but this const was missing, so writes never landed.
 const DEEP_DIVE_UPDATES = [];
 
-// ── Seeds for bot writers whose targets were lost in the May 2026
-// gov-hub.js/data-only.js retirement (2026-07-22 audit P0-3). Each of these
-// had a content-refresh.js write path that silently no-opped because the
-// const no longer existed anywhere; the writers now THROW on a missing
-// target, and these seeds let the data start landing again. No page renders
-// them yet — restoring (or retiring) the reader UIs is tracked separately.
-const MEETING_PREVIEWS = {
-  "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    "The Telluride Liquor Licensing Authority is expected to review liquor license applications or changes requiring local approval. As the local licensing authority, the hearing officer will consider matters brought before the board, with new licenses and appeals handled separately by Town Council.",
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The Historic & Architectural Review Commission is expected to convene for its regular August 2026 session. No specific agenda items are detailed in the available materials, but as a standing body, the Commission typically reviews proposed construction, renovation, or development projects for compliance with Telluride's historic preservation and architectural standards.",
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs within Telluride. The commission may also address matters concerning historic designations, preservation standards, or updates to inventories of architecturally and historically significant properties.",
-
-  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    "The Parks & Recreation Commission is expected to meet to discuss community parks and recreation needs and services for the Town of Telluride. Specific agenda items have not been published, but the commission regularly interprets community desires to guide parks and recreation programming and planning.",
-
-  "telluride|2026-08-11|Town Council - Aug 11 2026":
-    "Council is expected to consider a Land Use Code amendment adding new regulations for Natural Medicine Businesses (Section 5-31). The meeting may also address a request to replace a lost share certificate for the Farmers' Water Development Company.",
-
-  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
-    "Council is expected to meet in an intergovernmental worksession with San Miguel County representatives to discuss proposed Land Use Code amendments, including new regulations for Natural Medicine Businesses, changes to the \"Qualified Owner\" definition, and updates to Wildfire Area standards. A lost water share certificate replacement may also be addressed.",
-
-  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    "Council is expected to gather for a retreat session on August 6, 2026. Related legal notices indicate ongoing San Miguel County discussions around natural medicine businesses, wildfire area regulations, qualified owner definitions, and a water share certificate replacement, though the retreat's specific agenda items were not fully disclosed.",
-
-  "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    "The Telluride Ecology Commission is expected to meet on August 5, 2026, to address human-wildlife interactions and related public safety concerns, consistent with its mandate under the Telluride Municipal Code. Specific agenda items have not been detailed, but discussions typically focus on reducing threats to both wildlife and residents.",
-
-  "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    "The Commission for Community Assistance, Arts & Special Events is expected to discuss funding allocations for community support and arts organizations, review special events applications, and consider street closure and banner requests as part of its regular monthly agenda.",
-
-  "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
-    "The Telluride Housing Authority Subcommittee is expected to convene its regular monthly meeting on August 5, 2026. No specific agenda items have been publicly detailed, but the subcommittee typically addresses local affordable housing matters, consistent with its ongoing oversight responsibilities for the Telluride Housing Authority.",
-
-  "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance within the Town of Telluride. The meeting may also include review of open space elements from relevant planning documents and potential recommendations to Town Council regarding open-space-related matters.",
-
-  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The Town of Telluride Parks & Recreation Commission is expected to meet in a rescheduled session to address community parks and recreation needs. A related proposal for Telluride Town Park Oval improvements and Warner Field fencing and safety netting improvements may also be discussed.",
-
-  "telluride|2026-07-27|Special Town Council - Jul 27 2026":
-    "Council is expected to act as the Liquor Licensing Authority to hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for a live outdoor event on North Pine Street on July 30, 2026.",
-
-  "telluride|2026-07-26|Open Space Commission - Jul 26 2026":
-    "The Open Space Commission is expected to meet to review priorities and criteria related to open space acquisition, management, and maintenance. Agenda details are limited, but the commission may also consider open space elements of local plans and make recommendations to Town Council on related matters.",
-
-  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
-    "Board will consider selecting vendors for gondola structural analysis projects, discuss Gondola Advisory Committee composition, and receive a gondola project update. Additional items include a fiscal year 2026 budget amendment introduction and second quarter performance and operations reports.",
-
-  "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
-    "The Planning & Zoning Commission is expected to approve June meeting minutes, appoint members to the Ethics Commission and Vending Subcommittee, and hold a public hearing. The hybrid meeting takes place July 23 at 5:30 PM at Rebekah Hall.",
-
-  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
-    "The Planning & Zoning Commission Chair meeting scheduled for July 23, 2026 has been cancelled. No agenda items will be heard.",
-
-  "county|2026-07-27|Housing Code Update SSR":
-    "Board will consider updates to the housing code as part of a Staff Summary Report (SSR). The meeting may also touch on related county business, including ongoing procurement activities and financial matters being addressed across San Miguel County during this period.",
-
-  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The Planning Commission and Board of County Commissioners will hold a joint work session covering land use and planning matters. Related county business includes infrastructure projects, foreclosure proceedings, property tax exemptions, and the Board of Equalization's ongoing review of taxpayer appeals of property valuations.",
-
-  "county|2026-08-05|Board of County Commissioners Meeting":
-    "Board will consider procurement matters including material hauling, soil preparation at Mill Creek Park, foundation repairs at the Placerville Schoolhouse, and roofing at the Trout Lake Water Tank. Commissioners will also sit as the Board of Equalization to hear taxpayer appeals of Assessor property valuations through August 5.",
-
-  "county|2026-08-12|Board of County Commissioners Work Session":
-    "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices also cover property tax exemption programs for seniors, disabled veterans, and gold star spouses, as well as upcoming foreclosure sales on two Mountain Village properties.",
-
-  "county|2026-08-13|Planning Commission Meeting":
-    "The Planning Commission is expected to meet on August 13, 2026. Related notices include requests for proposals for foundation repairs at the Placerville Schoolhouse and Trout Lake Water Tank roofing, property tax exemption notices for seniors and veterans, and two foreclosure sale auctions in Telluride Mountain Village.",
-
-  "county|2026-08-19|Board of County Commissioners Meeting":
-    "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices include property tax exemption information for seniors, disabled veterans, and gold star spouses, along with foreclosure and probate matters in the county."
-};        // pre-meeting agenda previews (Claude)
+// ── Bot-written arrays restored after the May 2026 gov-hub.js retirement
+// (2026-07-22 audit P0-3 → 2026-07-23 reader-UI decision). REGIONAL_NEWS_ARTICLES
+// renders on local-news.html; ENGAGE_MEETINGS annotates gov-hub.html meeting
+// cards. Their siblings MEETING_PREVIEWS (redundant with MANUAL_SUMMARIES) and
+// SMC_ALERTS (already in the TELLURIDE_TIMES_ARTICLES merge via NEWS_FEEDS)
+// were retired outright — write paths deleted from content-refresh.js.
 const REGIONAL_NEWS_ARTICLES = [
   {
     title: "West End Parade of Lights & Elfin Eve",
@@ -745,59 +675,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22786"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
-const SMC_ALERTS = [
-  {
-    title: "Numerous Highway Closures",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-07-22",
-    pubDate: "2026-07-22T00:17:58.000Z",
-    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
-    img: ""
-  },
-  {
-    title: "Tomboy Road",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-07-21",
-    pubDate: "2026-07-21T23:12:00.000Z",
-    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Tomboy Road reopens Weds 7/22 8AM",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-07-21",
-    pubDate: "2026-07-21T23:10:29.000Z",
-    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-07-14",
-    pubDate: "2026-07-14T15:17:10.000Z",
-    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  }
-];              // SMC AlertCenter items
 const ENGAGE_MEETINGS = [
   {
     projectName: "Town Park Oval Warner Field Improvements",
     projectUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements",
     title: "P&R Commission Phase II Design Review",
     date: "2026-07-29",
-    board: "other",
+    board: "parks",
     dateUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements/widgets/106633/key_dates#41038"
   }
 ];         // Engage Telluride project key dates

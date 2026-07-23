@@ -61,6 +61,10 @@
   .m-card .acts .abtn.live { border-color: #a0463d; color: #a0463d; }
   .m-card .acts .abtn.live:hover { background: #f9efee; }
   .zoomline { font: 500 15px/1.6 var(--sans); color: var(--muted); margin-top: 8px; }
+  /* "On the agenda via Engage Telluride" project links (data/engage-meetings.json) */
+  .engage { font: 500 14px/1.55 var(--sans); color: var(--body2); background: var(--sage2); border-left: 3px solid var(--forest); border-radius: 0 6px 6px 0; padding: 8px 12px; margin: 8px 0 2px; }
+  .engage a { color: var(--forest); text-decoration: underline; }
+  .engage a:hover { color: var(--rust); }
   @media (max-width: 900px) {
     .gh-layout { grid-template-columns: 1fr; gap: 0; }
     .gh-side { position: static; order: -1; }
@@ -165,6 +169,33 @@
     return html + esc(raw.slice(last));
   }
 
+  // ── Engage Telluride project key dates (data/engage-meetings.json) ──
+  // Annotate a meeting card when a published Engage project lists a key date
+  // for the same day and body. Town platform → Telluride meetings only, and
+  // 'other' board keys never match (fail-safe: no annotation beats a wrong one).
+  var engageMeetings = [];
+  function meetingBoard(m) {
+    var t = ((m.title || '') + ' ' + (m.sourceLabel || '')).toLowerCase();
+    return /\bharc\b|historic/.test(t) ? 'harc'
+      : /planning\s*&?\s*zoning|p\s*&?\s*z\b/.test(t) ? 'pz'
+      : /council/.test(t) ? 'council'
+      : /ccaase/.test(t) ? 'ccaase'
+      : /parks|p\s*&\s*r\b/.test(t) ? 'parks'
+      : /liquor/.test(t) ? 'liquor'
+      : 'other';
+  }
+  function engageHtml(m) {
+    if (m.source !== 'telluride' || !engageMeetings.length) return '';
+    var board = meetingBoard(m);
+    if (board === 'other') return '';
+    var hits = engageMeetings.filter(function (e) { return e.date === m.date && e.board === board; });
+    if (!hits.length) return '';
+    return '<div class="engage">&#128204; On the agenda via <a href="https://engagetelluride.org/projects" target="_blank" rel="noopener">Engage Telluride</a>: ' +
+      hits.map(function (e) {
+        return '<a href="' + esc(safe(e.dateUrl || e.projectUrl)) + '" target="_blank" rel="noopener">' + esc(e.projectName) + '</a>';
+      }).join(' &middot; ') + '</div>';
+  }
+
   function commentMailto(m) {
     // Same subject format as the live Gov-Hub so clerks see a consistent inbox.
     var subject = 'Written comments: ' + (m.title || 'Meeting') + ' — ' + (m.date || '');
@@ -210,6 +241,7 @@
         '<div><span class="tag">' + esc(m.sourceLabel) + '</span>' + (m.time ? '<span class="src">' + esc(m.time) + '</span>' : '') +
         '<h3>' + esc(m.title) + '</h3>' +
         (m.summary ? '<p class="summ">' + emphasizeNames(m.summary) + '</p>' : '') +
+        engageHtml(m) +
         (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
         zoomline + '<div class="acts" style="margin-top:10px">' + acts + '</div></div></article>';
     });
@@ -241,8 +273,9 @@
     });
   }
 
-  LTData.load(['week-meetings']).then(function (data) {
+  LTData.load(['week-meetings', 'engage-meetings']).then(function (data) {
     meetings = (data['week-meetings'] || []).filter(function (m) { return m.date >= LTData.todayMT(); });
+    engageMeetings = data['engage-meetings'] || [];
     renderEntityFilter();
     render();
   }).catch(function (err) { LTData.showError(list, err); });

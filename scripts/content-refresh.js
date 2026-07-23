@@ -177,12 +177,9 @@ const REGIONAL_NEWS_FEEDS = [
     sourceKey: 'norwood',
     category: 'News'
   },
-  {
-    url: 'https://norwoodcolorado.com/events/feed/',
-    source: 'Norwood Colorado',
-    sourceKey: 'norwood',
-    category: 'Events'
-  },
+  // norwoodcolorado.com/events/feed deliberately NOT here: it emits
+  // future-dated event posts that don't belong in a news river (events
+  // have their own pipeline → norwood-events.json).
   {
     url: 'https://extension.colostate.edu/san-miguel/feed/',
     source: 'CSU Extension San Miguel',
@@ -1443,149 +1440,6 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
 
   console.log(`  Summary refresh complete: ${newCount} new summaries, ${Object.keys(updated).length} total; ${Object.keys(meta).length} agenda-meta entries`);
   return { summaries: updated, agendaMeta: meta };
-}
-
-// ══════════════════════════════════════════════════════════════
-// ── Task 1b: Pre-Meeting Previews (from legal notices + agendas) ──
-// ══════════════════════════════════════════════════════════════
-
-// Entity key mapping: legal notice entityLogo → meeting source key
-const NOTICE_ENTITY_TO_SOURCE = {
-  telluride: 'telluride',
-  county:    'county',
-  mv:        'mv',
-  norwood:   'norwood',
-  ophir:     'ophir',
-  school:    'school',
-  fire:      'fire',
-  med:       'med',
-  smart:     'smart',
-  airport:   'airport',
-  smrha:     'smrha',
-  assessor:  'county',  // assessor notices → county meetings
-};
-
-async function refreshMeetingPreviews(existingPreviews, govHubSrc) {
-  console.log('\n📋 Task 1b: Refreshing meeting previews from legal notices...');
-
-  // Extract current LEGAL_NOTICES from gov-helpers.js source
-  let legalNotices = [];
-  try {
-    legalNotices = extractJsArray(govHubSrc, 'LEGAL_NOTICES') || [];
-  } catch (e) {
-    console.warn('  Could not parse LEGAL_NOTICES:', e.message);
-  }
-  console.log(`  Found ${legalNotices.length} legal notices to scan`);
-
-  const meetings = await fetchUpcomingMeetings();
-  console.log(`  Found ${meetings.length} upcoming meetings`);
-
-  if (meetings.length === 0) {
-    console.log('  No upcoming meetings found — skipping preview generation');
-    // Prune expired entries but keep the rest
-    const pruned = {};
-    const now = new Date();
-    for (const [key, val] of Object.entries(existingPreviews)) {
-      const datePart = key.split('|')[1];
-      if (datePart && new Date(datePart) >= now) pruned[key] = val;
-    }
-    return pruned;
-  }
-
-  const updated = {};
-  // Carry forward previews for meetings still in the future
-  const now = new Date();
-  for (const [key, val] of Object.entries(existingPreviews)) {
-    const datePart = key.split('|')[1];
-    if (datePart && new Date(datePart) >= now) updated[key] = val;
-  }
-
-  let newCount = 0;
-
-  for (const m of meetings) {
-    const key = `${m.source}|${m.date}|${m.title}`;
-
-    // Skip if we already have a preview for this meeting
-    if (updated[key]) {
-      console.log(`  ✓ Already have preview for: ${key}`);
-      continue;
-    }
-
-    const meetingDate = new Date(m.date + 'T00:00:00');
-
-    // Find legal notices from the same entity that are likely related to this meeting
-    // A notice is "related" if:
-    //   (a) its entityLogo maps to the meeting's source, AND
-    //   (b) its expiry date is within 60 days of the meeting date (i.e., recently published)
-    const relatedNotices = legalNotices.filter(notice => {
-      const noticeSource = NOTICE_ENTITY_TO_SOURCE[notice.entityLogo];
-      if (noticeSource !== m.source) return false;
-      if (!notice.expires) return false;
-      const expiresDate = new Date(notice.expires + 'T00:00:00');
-      const daysDiff = (expiresDate - meetingDate) / 86400000;
-      // Notice expires within 60 days after meeting OR up to 5 days before meeting
-      return daysDiff >= -5 && daysDiff <= 60;
-    });
-
-    if (relatedNotices.length === 0) {
-      // Also check agenda text for description-based preview
-      if (!m.agendaUrl) {
-        console.log(`  ⊘ No notices or agenda for: ${key}`);
-        continue;
-      }
-    }
-
-    console.log(`  → Generating preview for: ${key} (${relatedNotices.length} notices, agenda: ${!!m.agendaUrl})`);
-
-    try {
-      // Build context from legal notices + agenda text
-      const noticeContext = relatedNotices.map(n =>
-        `[${n.type || 'Notice'}] ${n.title}: ${(n.summary || '').slice(0, 200)}`
-      ).join('\n');
-
-      // extractAgendaText now returns { text, urls } — we only need the
-      // text portion here. urls are consumed by refreshSummaries' zoom-meta
-      // extraction path, not by previews.
-      const { text: agendaText } = m.agendaUrl
-        ? await extractAgendaText(m.agendaUrl)
-        : { text: '' };
-
-      if (!noticeContext && !agendaText) {
-        console.log(`    Skipped (no context available)`);
-        continue;
-      }
-
-      const contextBlock = [
-        noticeContext ? `RELATED LEGAL NOTICES:
-${noticeContext}` : '',
-        agendaText ? `AGENDA TEXT (excerpt):
-${agendaText.slice(0, 1500)}` : ''
-      ].filter(Boolean).join('\n\n');
-
-      const prompt = `You are summarizing what a local government body is expected to discuss at an upcoming meeting.
-
-Meeting: ${AGENDA_SOURCES[m.source]?.label || m.source} — ${m.title}
-Date: ${m.date}
-
-${contextBlock}
-
-Write a plain-text preview of 50 words or less describing the key issues or agenda items expected at this meeting. Use a neutral, factual tone. No bullet points. No headers. Start directly with the content (e.g., "Council is expected to..." or "Board will consider...").`;
-
-      const response = await callClaudeRaw(prompt);
-      if (response && response.trim()) {
-        updated[key] = response.trim().slice(0, 400); // cap at 400 chars
-        newCount++;
-        console.log(`    ✓ Generated preview (${response.trim().length} chars)`);
-      }
-    } catch (e) {
-      console.warn(`    ✗ Preview generation error: ${e.message}`);
-    }
-
-    await new Promise(r => setTimeout(r, 1200));
-  }
-
-  console.log(`  Preview refresh complete: ${newCount} new, ${Object.keys(updated).length} total`);
-  return updated;
 }
 
 // ══════════════════════════════════════════════════════════════
@@ -5444,51 +5298,6 @@ function patchAgendaUrls(govDataSrc, arrayName, agendaMap, field = 'agendaUrl') 
 }
 
 
-// ── SMC AlertCenter: fetch active alerts and store as event-shaped objects ──
-async function refreshSmcAlerts(existingAlerts = []) {
-  console.log('\n🚨 SMC AlertCenter: Refreshing active alerts...');
-  const RSS_URL = 'https://www.sanmiguelcountyco.gov/RSSFeed.aspx?ModID=63&CID=All-0';
-  const cutoff = new Date(Date.now() - 30 * 86400000); // 30-day window
-  const existingByHref = new Map((existingAlerts || []).map(a => [a.href, a]));
-  const alerts = [];
-  try {
-    const resp = await fetch(RSS_URL);
-    if (resp.status !== 200) {
-      console.warn(`  SMC AlertCenter RSS HTTP ${resp.status} — carrying forward existing`);
-      return existingAlerts;
-    }
-    const xml = await parseXml(resp.text);
-    const items = xml?.rss?.channel?.item;
-    const arr = Array.isArray(items) ? items : (items ? [items] : []);
-    for (const item of arr) {
-      const pubDate = new Date(item.pubDate || '');
-      if (isNaN(pubDate) || pubDate < cutoff) continue;
-      const href = (item.link || '').trim();
-      const title = (item.title || '').trim();
-      const desc = (item.description || '').replace(/<[^>]+>/g, ' ')
-        .replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ')
-        .replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 600);
-      alerts.push({
-        title,
-        source: 'San Miguel County',
-        sourceLabel: 'San Miguel County',
-        category: 'Alert',
-        date: pubDate.toISOString().slice(0, 10),
-        pubDate: pubDate.toISOString(),
-        copy: desc,
-        href,
-        img: ''
-      });
-    }
-    console.log(`  SMC AlertCenter: ${alerts.length} active alert(s)`);
-  } catch (e) {
-    console.warn(`  SMC AlertCenter RSS error: ${e.message} — carrying forward existing`);
-    return existingAlerts;
-  }
-  return alerts;
-}
-
-
 // ── Engage Telluride — daily scrape of published project key dates ──
 async function refreshEngageMeetings(existing = []) {
   const BASE = 'https://engagetelluride.org';
@@ -5553,7 +5362,7 @@ async function refreshEngageMeetings(existing = []) {
                 : /planning\s*&?\s*zoning|p\s*&?\s*z\b/.test(tl) ? 'pz'
                 : /town\s*council/.test(tl) ? 'council'
                 : /ccaase/.test(tl) ? 'ccaase'
-                : /parks/.test(tl) ? 'parks'
+                : /parks|p\s*&\s*r\b/.test(tl) ? 'parks'
                 : /liquor/.test(tl) ? 'liquor'
                 : 'other';
 
@@ -6669,14 +6478,6 @@ async function main() {
     console.warn(`  Telluride board meetings sync error: ${e.message}`);
   }
 
-  // ── 1b. Meeting Previews (from legal notices + agendas) ──
-  const existingPreviews = extractJsObject(govHubSrc, 'MEETING_PREVIEWS') || {};
-  const newPreviews = await refreshMeetingPreviews(existingPreviews, govHubSrc);
-  if (JSON.stringify(newPreviews) !== JSON.stringify(existingPreviews)) {
-    govHubSrc = replaceJsValue(govHubSrc, 'MEETING_PREVIEWS', newPreviews, true);
-    changed = true;
-  }
-
   // ── 2. News ──
   const existingTtArticles = extractJsArray(govHubSrc, 'TELLURIDE_TIMES_ARTICLES') || [];
   // SMBF lives in its own array — kept isolated from TT so a future TT
@@ -6715,15 +6516,7 @@ async function main() {
     changed = true;
   }
 
-  // ── 2c. SMC AlertCenter ──
-  const existingSmcAlerts = extractJsArray(govHubSrc, 'SMC_ALERTS') || [];
-  const freshSmcAlerts = await refreshSmcAlerts(existingSmcAlerts);
-  if (JSON.stringify(freshSmcAlerts) !== JSON.stringify(existingSmcAlerts)) {
-    govHubSrc = replaceJsValue(govHubSrc, 'SMC_ALERTS', freshSmcAlerts, false);
-    changed = true;
-  }
-
-  // ── 2d. Engage Telluride project meeting key dates (daily) ──
+  // ── 2c. Engage Telluride project meeting key dates (daily) ──
   const existingEngageMeetings = extractJsArray(govHubSrc, 'ENGAGE_MEETINGS') || [];
   const freshEngageMeetings = await refreshEngageMeetings(existingEngageMeetings);
   if (JSON.stringify(freshEngageMeetings) !== JSON.stringify(existingEngageMeetings)) {
