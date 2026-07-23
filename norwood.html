@@ -139,7 +139,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=10"></script>
-<script src="/js/lt-data.js?v=8"></script>
+<script src="/js/lt-data.js?v=9"></script>
 <script>
 (function () {
   'use strict';
@@ -196,31 +196,48 @@
       }).join('') : '<p class="th-empty">No town meetings on the calendar in the next month &mdash; agendas usually post a few days ahead on the <a href="https://www.norwoodtown.com/" target="_blank" rel="noopener" style="color:var(--rust)">town site</a>.</p>';
 
       // ── Events: next 5 days shown, "See more" reveals the rest. Full-date
-      //    meta ("7:00 PM Friday, July 24 · Venue · Source"), detail + calendar. ──
+      //    meta ("7:00 PM Friday, July 24 · Venue · Source"), detail + calendar.
+      //    TOWN-HUB RULE (Morgan 2026-07-23; applies to every regional page):
+      //    the full events page lists a multi-day run on its FIRST day only,
+      //    but a town hub is quieter, so a currently-RUNNING exhibition
+      //    (endDate >= today even if it started earlier) stays visible here,
+      //    shown once near the top as "Now through <end>". Effective date =
+      //    max(start, today) so running items sort to the front. ──
+      var today = LTData.todayMT();
       var allEvs = (data['events-index'] || []).filter(function (e) {
-        return e && TOWN.eventTowns.indexOf(e.town) !== -1 && e.date >= LTData.todayMT();
-      });
+        if (!e || TOWN.eventTowns.indexOf(e.town) === -1) return false;
+        return e.date >= today || (e.endDate && e.endDate >= today);   // upcoming OR currently running
+      }).map(function (e) {
+        e._eff = e.date >= today ? e.date : today;        // effective sort date
+        e._running = e.endDate && e.date < today && e.endDate >= today;
+        return e;
+      }).sort(function (a, b) { return a._eff < b._eff ? -1 : a._eff > b._eff ? 1 : 0; });
       function evCard(e) {
-        var img = e.img ? '<div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div>' : '<div class="img-frame"></div>';
-        var when = [e.time, LTData.fmtDate(e.date, { weekday: 'long', month: 'long', day: 'numeric' })].filter(Boolean).join(' ');
+        var link = esc(safe(e.href, '/events.html'));
+        var imgInner = e.img ? '<img src="' + esc(e.img) + '" alt="" loading="lazy">' : '';
+        // Image hyperlinked to the event, same as the title (Morgan 2026-07-23).
+        var img = '<a href="' + link + '" target="_blank" rel="noopener" aria-label="Details: ' + esc(e.title) + '"><div class="img-frame">' + imgInner + '</div></a>';
+        var when = e._running
+          ? 'Now through ' + LTData.fmtDate(e.endDate, { weekday: 'long', month: 'long', day: 'numeric' })
+          : [e.time, LTData.fmtDate(e.date, { weekday: 'long', month: 'long', day: 'numeric' })].filter(Boolean).join(' ');
         var meta = [when, e.location || e.town, e.source].filter(Boolean).join(' · ');
         return '<article class="th-ev story">' + img + '<div>' +
-          '<h3><a href="' + esc(safe(e.href, '/events.html')) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
+          '<h3><a href="' + link + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
           '<div class="meta">' + esc(meta) + '</div>' +
           (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') +
           '<div class="ev-acts">' +
-          '<a class="more-link" href="' + esc(safe(e.href, '/events.html')) + '" target="_blank" rel="noopener">More details here &rarr;</a>' +
+          '<a class="more-link" href="' + link + '" target="_blank" rel="noopener">More details here &rarr;</a>' +
           '<a class="cal-link" href="' + LTData.icsDataUri({ title: e.title, date: e.date, time: e.time, location: e.location, description: e.desc, url: e.href }) + '" download="' + esc(LTData.icsFilename(e.title, e.date)) + '">&#128197; Add to calendar</a>' +
           '</div></div></article>';
       }
       var evWrap = document.getElementById('th-events');
       if (!allEvs.length) { evWrap.innerHTML = '<p class="th-empty">Nothing on the West End calendar right now.</p>'; }
       else {
-        // Days with events, first 5 shown initially.
-        var evDays = allEvs.map(function (e) { return e.date; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+        // Distinct effective days, first 5 shown initially.
+        var evDays = allEvs.map(function (e) { return e._eff; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
         var renderEvents = function (showAll) {
           var cut = evDays[Math.min(4, evDays.length - 1)];
-          var shown = showAll ? allEvs : allEvs.filter(function (e) { return e.date <= cut; });
+          var shown = showAll ? allEvs : allEvs.filter(function (e) { return e._eff <= cut; });
           var hidden = allEvs.length - shown.length;
           var h = shown.map(evCard).join('');
           if (!showAll && hidden > 0) h += '<div class="th-more"><button class="btn btn-outline" id="ev-more">See ' + hidden + ' more event' + (hidden === 1 ? '' : 's') + ' &darr;</button></div>';

@@ -223,7 +223,13 @@
         "copy": "Active community discussion group with 180+ members tracking Chair 7, Carhenge, and Shandoka development concerns.",
         "href": "https://www.facebook.com/groups/1076276483955655"
       }
-    ]
+    ],
+    "sideBox": {
+      "title": "What is it costing us?",
+      "copy": "Carhenge is a Town-funded project. Follow the public dollars — construction, debt service, and subsidy — in the cost & debt tracker.",
+      "label": "Open the cost tracker",
+      "href": "/projects-map/cost-tracker.html?project=Carhenge"
+    }
   },
   "society": {
     "lastUpdated": "2026-06-01",
@@ -1398,6 +1404,58 @@
       }
     ],
     "news": [],
-    "category": "Water"
+    "category": "Water",
+    "chart": {
+      "title": "When the 300-acre-foot contract runs out",
+      "yLabel": "Water demand (acre-feet / year)",
+      "xs": [
+        2022,
+        2030,
+        2036,
+        2042
+      ],
+      "cap": 300,
+      "capLabel": "300 AF — the full Gurley contract",
+      "series": [
+        {
+          "label": "2% growth",
+          "values": [
+            201.6,
+            236.2,
+            266,
+            299.6
+          ]
+        },
+        {
+          "label": "3% growth",
+          "values": [
+            203.6,
+            257.9,
+            307.9,
+            367.7
+          ]
+        },
+        {
+          "label": "4% growth",
+          "values": [
+            205.6,
+            281.3,
+            356,
+            450.4
+          ]
+        }
+      ],
+      "markers": [
+        {
+          "x": 2036,
+          "label": "3% hits the cap ~2036"
+        },
+        {
+          "x": 2042,
+          "label": "2% hits the cap ~2042"
+        }
+      ],
+      "caption": "Projected annual water demand vs. the Norwood Water Commission's firm 300 acre-foot/year Gurley Reservoir supply, at three growth rates. Once demand crosses the dashed line, the town has no firm water left for new taps without a second source. Source: SGM 2022 Water Supply Adequacy Memo, Table 3."
+    }
   }
 }
