@@ -46,6 +46,14 @@ const CHANNELS = [
   { sourceKey: 'telluride', sourceLabel: 'Town of Telluride', url: 'https://www.youtube.com/@townoftelluridecolorado8739/streams' },
   { sourceKey: 'county',    sourceLabel: 'San Miguel County', url: 'https://www.youtube.com/@sanmiguelcountyco/streams' },
   { sourceKey: 'rico',      sourceLabel: 'Rico',              url: 'https://www.youtube.com/@townofrico/streams' },
+  // Mountain Village does NOT use YouTube — it publishes to an AV Capture All
+  // portal that exposes, per meeting, a direct .mp4 AND a .vtt caption file.
+  // The .vtt is a ready-made transcript (no yt-dlp, no download, no
+  // transcription) and it is not IP-blocked, so unlike the YouTube channels
+  // this one would also work from CI. Added 2026-07-23 — MV had been in the
+  // Vote Tracker with NO ingest path at all since March.
+  { sourceKey: 'mv', sourceLabel: 'Mountain Village', kind: 'avcapture',
+    url: 'https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06&target=foo&view=thumbs&tabs=past%7Ctoday%7Cupcoming' },
 ];
 
 const args = process.argv.slice(2);
@@ -104,6 +112,77 @@ const SKIP_TITLE = /\bchair\b/i;
 
 function yt(argv) {
   return execFileSync('yt-dlp', argv, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+}
+
+// ── AV Capture All (Mountain Village) ────────────────────────────────
+// The portal is a Blazor WASM app, so the meeting list only exists after the
+// client renders. Playwright (already a dependency) loads it and we read the
+// per-meeting download links straight out of the DOM. Each meeting yields a
+// .vtt caption file we use as the transcript.
+async function listAvCapture(url) {
+  const { chromium } = require('playwright');
+  const browser = await chromium.launch();
+  try {
+    // A real Chrome UA is required: with Playwright's default (which says
+    // "HeadlessChrome") the Blazor app never renders — the DOM stays ~10 chars
+    // and no meeting rows appear. Verified 2026-07-23.
+    const page = await browser.newPage({ userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36' });
+    // 'networkidle' fires BEFORE the Blazor WASM runtime finishes booting —
+    // the DOM is still ~10 chars at that point. Wait on the rendered meeting
+    // rows themselves, then a beat for the asset links to attach.
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 90000 });
+    // state:'attached' — the rows exist in the DOM but are not all VISIBLE
+    // (collapsed cards), so the default visibility wait times out.
+    await page.waitForSelector('a[href^="/meeting/"]', { state: 'attached', timeout: 90000 });
+    await page.waitForTimeout(3000);
+    // Collect one row per meeting GUID with its .vtt URL. Do NOT try to read
+    // the date out of the surrounding DOM — closest() lands on a tiny cell
+    // ("05:47:58") and the date isn't in it. The asset FILENAME encodes both
+    // the body and the date reliably:
+    //   "Town Council Meeting_2026-07-16_02-24-34 PM.vtt"
+    const raw = await page.evaluate(() => {
+      const seen = new Set(); const out = [];
+      for (const a of document.querySelectorAll('a[href^="/meeting/"]')) {
+        const guid = (a.getAttribute('href') || '').split('/').pop();
+        if (!guid || seen.has(guid)) continue;
+        const vtt = [...document.querySelectorAll(`a[href*="/meetings/${guid}/"]`)]
+          .map((x) => x.getAttribute('href')).find((h) => /\.vtt(\?|$)/i.test(h));
+        if (!vtt) continue;
+        seen.add(guid); out.push({ id: guid, vtt });
+      }
+      return out;
+    });
+    const parsed = [];
+    for (const r of raw) {
+      let base = '';
+      try { base = decodeURIComponent(r.vtt.split('/').pop().split('?')[0]); } catch { continue; }
+      const m = base.match(/^(.*?)_(\d{4}-\d{2}-\d{2})_/);
+      if (!m) continue;
+      const rawTitle = m[1].replace(/\s*Merged\s*$/i, '').trim();
+      parsed.push({
+        id: r.id, vtt: r.vtt, date: m[2],
+        title: /design review/i.test(rawTitle) ? 'Design Review Board Meeting' : rawTitle,
+        merged: /merged/i.test(base),
+      });
+    }
+    return parsed;
+  } finally { await browser.close(); }
+}
+
+// WebVTT → plain text: drop the header, cue numbers and timing lines, and
+// collapse the rolling-caption duplicates the same way the yt-dlp path does.
+function vttToText(vtt) {
+  const lines = String(vtt || '').split(/\r?\n/)
+    .filter((l) => l.trim() && l.trim() !== 'WEBVTT' && !l.includes('-->') && !/^\d+$/.test(l.trim()));
+  const dedup = [];
+  for (const ln of lines) if (ln !== dedup[dedup.length - 1]) dedup.push(ln);
+  return dedup.join(' ').replace(/\s+/g, ' ').trim();
+}
+
+async function fetchVtt(url) {
+  const res = await fetch(url);
+  if (!res.ok) return '';
+  return vttToText(await res.text());
 }
 
 function listChannel(url) {
@@ -352,12 +431,32 @@ async function main() {
   const added = [];
 
   for (const ch of channels) {
-    const vids = listChannel(ch.url);
+    const isAv = ch.kind === 'avcapture';
+    let vids = isAv ? await listAvCapture(ch.url) : listChannel(ch.url);
+    if (isAv) {
+      // The portal often holds several recordings of the same body on the same
+      // day (a short fragment plus the full session, plus a "Merged" file).
+      // Keep the LONGEST per body+date so we never recap a 2-minute stub.
+      // Several recordings often exist for one body on one day (a short stub,
+      // the full session, and a "Merged" file). Prefer Merged, else keep the
+      // first; a stub that slips through is caught by the <500-char transcript
+      // guard below.
+      const best = new Map();
+      for (const v of vids) {
+        if (!v.date) continue;
+        const k = `${v.date}|${bodyToken(v.title)}`;
+        const cur = best.get(k);
+        if (!cur || (v.merged && !cur.merged)) best.set(k, v);
+      }
+      vids = [...best.values()].sort((a, b) => b.date.localeCompare(a.date));
+    }
     for (const v of vids) {
       if (ONLY_VIDEO && v.id !== ONLY_VIDEO) continue;
       if (!FORCE && SKIP_TITLE.test(v.title)) continue;
-      const videoUrl = `https://www.youtube.com/watch?v=${v.id}`;
-      const date = parseDateFromTitle(v.title);
+      const videoUrl = isAv
+        ? `https://media.avcaptureall.cloud/meeting/${v.id}`
+        : `https://www.youtube.com/watch?v=${v.id}`;
+      const date = v.date || parseDateFromTitle(v.title);
       if (!date) { continue; }
       const age = daysSince(date);
       if (!FORCE && (age > DAYS || age < 0)) continue;
@@ -368,7 +467,7 @@ async function main() {
       console.log(`  ★ ${ch.sourceKey}  ${date}  ${v.title}`);
       if (DRY) { added.push({ sourceKey: ch.sourceKey, date, title: v.title, videoUrl }); continue; }
 
-      const transcript = fetchTranscript(v.id);
+      const transcript = isAv ? await fetchVtt(v.vtt) : fetchTranscript(v.id);
       if (!transcript || transcript.length < 500) { console.log(`      ⚠ no usable transcript (${transcript.length} chars) — skipping`); continue; }
       console.log(`      transcript ${transcript.length} chars → drafting recap…`);
       let out;
