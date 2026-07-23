@@ -110,7 +110,7 @@
     "packetUrl": "",
     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
     "hasAgenda": false,
-    "summary": "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "summary": "The July 29 (RESCHEDULED) Parks & Recreation Commission agenda hasn't been posted yet.",
     "zoomLink": "",
     "zoomMeetingId": "",
     "zoomPasscode": "",
@@ -130,14 +130,14 @@
     "packetUrl": "",
     "link": "https://sanmiguelcoco.portal.civicclerk.com",
     "hasAgenda": false,
-    "summary": "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
+    "summary": "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and Board of County Commissioners hasn't been posted yet beyond the meeting title itself.",
     "zoomLink": "",
     "zoomMeetingId": "",
     "zoomPasscode": "",
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
     "commentEmail": "planningcommission@sanmiguelcountyco.gov",
-    "hook": "Agenda not posted yet"
+    "hook": ""
   },
   {
     "source": "county",
