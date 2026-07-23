@@ -41,6 +41,13 @@
   .img-frame.logo-fill { display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid var(--hairline); }
   .img-frame.logo-fill img { object-fit: contain; width: 72%; height: 72%; }
   .story:hover .img-frame.logo-fill img { transform: none; }
+  /* Logos that are genuinely transparent (no baked-in white) sit straight on
+     the page background instead of a white tile, and render larger since they
+     don't need the tile's breathing room. Most source logos are NOT
+     transparent — they'd show as white rectangles on cream — so this is
+     opt-in per entity via BARE_LOGOS below (Morgan, 2026-07-23). */
+  .img-frame.logo-fill.bare { background: transparent; border: none; }
+  .img-frame.logo-fill.bare img { width: 94%; height: 94%; }
   .river-item h3 { font: 600 24px/1.15 var(--serif); margin: 5px 0 6px; }
   .river-item h3 a { color: var(--forest); }
   .river-item .dek { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 6px; }
@@ -200,6 +207,12 @@
     'Mountain Village': 'mv', 'Town of Ophir': 'ophir', 'Town of Rico': 'rico',
     'Telluride Times': 'ttimes', 'San Miguel Basin Forum': 'smb'
   };
+  // Entities whose logo PNG is genuinely transparent (verified by sampling the
+  // alpha channel — no opaque-white background). These skip the white tile and
+  // sit on the page background. Everything else keeps the tile: their art has
+  // white baked in and would render as a white rectangle on the cream page.
+  // Re-check with a canvas alpha sample before adding a key here.
+  var BARE_LOGOS = { smb: 1, rico: 1, tjc: 1 };
   function imgFrame(s, linkWrap) {
     var img;
     if (s.img) {
@@ -218,9 +231,11 @@
       var alt = tt ? 'Letter to the Editor — Telluride Times' : 'Letter to the Editor — Livable Telluride';
       img = '<div class="img-frame letter-art"><img src="' + art + '" alt="' + alt + '" loading="lazy"></div>';
     } else {
-      var logo = LTData.entityLogo(SOURCE_LOGO_KEY[s.src] || '');
+      var logoKey = SOURCE_LOGO_KEY[s.src] || '';
+      var logo = LTData.entityLogo(logoKey);
       if (!logo) return '';
-      img = '<div class="img-frame logo-fill"><img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
+      img = '<div class="img-frame logo-fill' + (BARE_LOGOS[logoKey] ? ' bare' : '') + '">' +
+        '<img src="' + LTData.esc(logo) + '" alt="' + LTData.esc(s.src) + '" loading="lazy"></div>';
     }
     return linkWrap ? '<a href="' + LTData.esc(safeHref(s.href)) + '" target="_blank" rel="noopener" aria-label="Read: ' + LTData.esc(s.title || s.src || 'story') + '">' + img + '</a>' : img;
   }
