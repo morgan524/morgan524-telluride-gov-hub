@@ -107,14 +107,13 @@ const CATEGORY_FALLBACKS = [
   [/\byoga\b|meditation|wellness|pilates|breathwork|sound bath|tai chi|qigong/i, 'wellness'],
   [/lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club|training|\bclinic\b|registration|\bclass\b|info session/i, 'talk'],
   [/festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i, 'festival'],
-  [/concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, 'livemusic'],
+  [/concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|music on the mesa|chamber music|\bDJ\b|dance party|\bdance\b/i, 'livemusic'],
 ];
 // Catch-all "community" events rotate through licensed/owned regional photos
 // (1-6 Adobe Stock Enhanced license, 7-10 Morgan's own town photos — see
 // assets/digest/fallbacks/SOURCES.json) instead of repeating one image.
 // Deterministic by title hash: the same event always keeps the same photo.
 // Other multi-image slugs rotate the same way (ROTATING_SLUGS).
-const COMMUNITY_COUNT = 10;
 const ROTATING_SLUGS = { farmersmarket: 3, tennis: 3, voting: 3 };
 function titleHash(title) {
   let h = 0;
@@ -122,16 +121,28 @@ function titleHash(title) {
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
   return h;
 }
-function communityImg(title) {
-  return FB('community-' + ((titleHash(title) % COMMUNITY_COUNT) + 1));
+// PERMANENT RULE (Morgan 2026-07-23): photos of Telluride may back TELLURIDE
+// events ONLY — a Norwood card wearing Telluride's main street is wrong.
+// Pool scenes: 1-3,6 Adobe Telluride; 7-10 Morgan's town-of-Telluride photos;
+// 4 = Ouray/Million Dollar Hwy; 5 = generic San Juans panorama (any town).
+const COMMUNITY_POOLS = {
+  telluride: [1, 2, 3, 5, 6, 7, 8, 9, 10],
+  ouray:     [4, 5],
+  generic:   [5],
+};
+function communityImg(title, town) {
+  const pool = town === 'Telluride' ? COMMUNITY_POOLS.telluride
+    : (town === 'Ouray' || town === 'Ridgway') ? COMMUNITY_POOLS.ouray
+    : COMMUNITY_POOLS.generic;
+  return FB('community-' + pool[titleHash(title) % pool.length]);
 }
-function fallbackImg(title) {
+function fallbackImg(title, town) {
   for (const [re, slug] of CATEGORY_FALLBACKS) {
     if (!re.test(title || '')) continue;
     const n = ROTATING_SLUGS[slug];
     return n ? FB(slug + '-' + ((titleHash(title) % n) + 1)) : FB(slug);
   }
-  return communityImg(title);
+  return communityImg(title, town);
 }
 
 // User-facing event-type filter groups (events page "type" chips). Derived
@@ -227,17 +238,18 @@ function buildEventsIndex(repoRoot) {
         .replace(/&#?\w+;/g, ' ').replace(/\s+/g, ' ').trim();
       if (normTitle(desc).slice(0, 40) === normTitle(title).slice(0, 40)) desc = '';  // desc that just repeats the title
       if (desc.length > 240) desc = desc.slice(0, 240).replace(/\s+\S*$/, '') + '…';
+      const town = townFor(e, label);
       const rec = {
         title: title,
         href: href,
         date: date,
         time: timeOf(e),
         location: String(e.location || '').trim(),
-        town: townFor(e, label),
+        town: town,
         // koto.org/wp-content sends Cross-Origin-Resource-Policy: same-origin —
         // hotlinks are blocked by the browser (ERR_BLOCKED_BY_RESPONSE), so
         // treat them like webp: unusable → category fallback (2026-07-22 review).
-        img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title),
+        img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title, town),
         category: String(e.category || '').trim(),
         source: label,
         desc: desc,

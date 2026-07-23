@@ -135,14 +135,13 @@ const CATEGORY_FALLBACKS = [
   { match: /\byoga\b|meditation|wellness|pilates|breathwork|sound bath|tai chi|qigong/i, slug: 'wellness' },
   { match: /lecture|\btalk\b|\bauthor\b|\breading\b|\bpanel\b|workshop|seminar|science|discussion|presentation|\bforum\b|book club|training|\bclinic\b|registration|\bclass\b|info session/i, slug: 'talk' },
   { match: /festival|parade|celebration|\bfair\b|fireworks|\bgala\b|jubilee/i,           slug: 'festival' },
-  { match: /concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|\bDJ\b|dance party|\bdance\b/i, slug: 'livemusic' },
+  { match: /concert|live music|\bband\b|reggae|bluegrass|\bjazz\b|acoustic|singer|songwriter|music on the green|music on the mesa|chamber music|\bDJ\b|dance party|\bdance\b/i, slug: 'livemusic' },
 ];
 // Catch-all "community" events rotate through licensed/owned regional photos
 // (1-6 Adobe Stock Enhanced license, 7-10 Morgan's own town photos — see
 // assets/digest/fallbacks/SOURCES.json), deterministic by title hash so an
 // event keeps its photo across sends. Same scheme as build-events-index.js —
 // keep the two in sync (incl. ROTATING_SLUGS).
-const COMMUNITY_COUNT = 10;
 const ROTATING_SLUGS = { farmersmarket: 3, tennis: 3, voting: 3 };
 const titleHash = (title) => {
   let h = 0;
@@ -150,15 +149,28 @@ const titleHash = (title) => {
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
   return h;
 };
-const communityImg = (title) => FB('community-' + ((titleHash(title) % COMMUNITY_COUNT) + 1));
-const imgFallback = (title) => {
+// PERMANENT RULE (Morgan 2026-07-23): Telluride photos back TELLURIDE events
+// ONLY. Pools mirror build-events-index.js COMMUNITY_POOLS — keep in sync.
+// (1-3,6 Adobe Telluride; 7-10 Morgan's town photos; 4 Ouray; 5 generic
+// San Juans, safe for any town.) townHint = whatever location/town text the
+// event carries; anything not clearly Telluride gets the conservative pool.
+const COMMUNITY_POOLS = { telluride: [1, 2, 3, 5, 6, 7, 8, 9, 10], ouray: [4, 5], generic: [5] };
+const communityImg = (title, townHint) => {
+  const h = String(townHint || '');
+  const pool = /mountain\s+village/i.test(h) ? COMMUNITY_POOLS.generic
+    : /telluride/i.test(h) ? COMMUNITY_POOLS.telluride
+    : /\b(ouray|ridgway)\b/i.test(h) ? COMMUNITY_POOLS.ouray
+    : COMMUNITY_POOLS.generic;
+  return FB('community-' + pool[titleHash(title) % pool.length]);
+};
+const imgFallback = (title, townHint) => {
   const t = title || '';
   for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
   for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) {
     const n = ROTATING_SLUGS[c.slug];
     return n ? FB(c.slug + '-' + ((titleHash(t) % n) + 1)) : FB(c.slug);
   }
-  return communityImg(t);
+  return communityImg(t, townHint);
 };
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so
 // the events page and the email agree on which image an event gets. Email needs
@@ -175,12 +187,12 @@ const resolveEmailImg = (e) => {
   if (typeof resolveEventImage === 'function') {
     const r = resolveEventImage(e, { origin: SITE_URL, exists: (p) => fs.existsSync('.' + p) });
     const primary = emailUsableImg(r.primary) ? r.primary : '';
-    return primary || (emailUsableImg(r.fallback) ? r.fallback : '') || imgFallback(e.title);
+    return primary || (emailUsableImg(r.fallback) ? r.fallback : '') || imgFallback(e.title, [e.town, e.location].filter(Boolean).join(' '));
   }
   const raw = e.img || e.imageUrl || '';   // graceful degrade if the shared helper is absent
   if (emailUsableImg(raw)) return raw;
   if (/^\/img\//.test(raw) && fs.existsSync('.' + raw)) return SITE_URL + raw;
-  return imgFallback(e.title);
+  return imgFallback(e.title, [e.town, e.location].filter(Boolean).join(' '));
 };
 
 // ── Collect events from the source arrays ──
