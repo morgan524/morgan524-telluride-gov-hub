@@ -8,8 +8,10 @@ name: Weekend Email Preview
 # ready HTML as an artifact. (Revived 2026-07-13 per Morgan; Wed-review/Thu-send.)
 on:
   schedule:
-    - cron: '0 20 * * 3'   # Wed 20:00 UTC = 2:00 PM MDT (summer)
-    - cron: '0 21 * * 3'   # Wed 21:00 UTC = 2:00 PM MST (winter)
+    - cron: '0 20 * * 4'   # Thu 20:00 UTC = 2:00 PM MDT (summer)
+    - cron: '0 21 * * 4'   # Thu 21:00 UTC = 2:00 PM MST (winter)
+    # Moved Wed→Thu 2026-07-23 to keep the review one day before the send,
+    # which shifted from Thursday to Friday (per Morgan).
   workflow_dispatch:
     inputs:
       week_start:

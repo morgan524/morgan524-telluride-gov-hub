@@ -1,8 +1,10 @@
 name: Digest Scheduled Send
 
 # Sends an APPROVED digest at 9:00 AM America/Denver:
-#   - Monday   → the "Week Ahead" (weekly) digest
-#   - Thursday → the "Weekend Ahead" (weekend) digest (events only)
+#   - Monday → the "Week Ahead" (weekly) digest
+#   - Friday → the "Weekend Ahead" (weekend) digest (events only)
+#     (moved from Thursday 2026-07-23 per Morgan; the weekStart is anchored to
+#      "the coming Friday, today if Friday" so an approved lock still matches.)
 #
 # "Approved" means a human clicked Approve & Schedule on the Digest Review Desk,
 # which writes digest/<key>.lock.json. This job sends ONLY when that lock exists
@@ -16,8 +18,8 @@ on:
   schedule:
     - cron: '0 15 * * 1'   # Mon 15:00 UTC = 09:00 MDT (summer)
     - cron: '0 16 * * 1'   # Mon 16:00 UTC = 09:00 MST (winter)
-    - cron: '0 15 * * 4'   # Thu 15:00 UTC = 09:00 MDT (summer)
-    - cron: '0 16 * * 4'   # Thu 16:00 UTC = 09:00 MST (winter)
+    - cron: '0 15 * * 5'   # Fri 15:00 UTC = 09:00 MDT (summer)
+    - cron: '0 16 * * 5'   # Fri 16:00 UTC = 09:00 MST (winter)
   workflow_dispatch:
     inputs:
       digest:
@@ -60,8 +62,8 @@ jobs:
           if [ "$HOUR" != "09" ]; then echo "Denver hour=$HOUR (not 09) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           case "$DOW" in
             1) DIGEST=weekly ;;
-            4) DIGEST=weekend ;;
-            *) echo "Denver weekday=$DOW (not Mon/Thu) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
+            5) DIGEST=weekend ;;
+            *) echo "Denver weekday=$DOW (not Mon/Fri) — skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0 ;;
           esac
           echo "scheduled send — digest=$DIGEST at 09:00 MT"
           echo "go=true" >> "$GITHUB_OUTPUT"

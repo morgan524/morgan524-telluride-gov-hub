@@ -26,13 +26,13 @@ const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
 const OUT = process.argv[6] || 'weekly-email.html';
 const PREVIEW = !!process.env.WEEKLY_PREVIEW;   // render an info@ review draft (banner + topic sections shown inline, merge tags neutralised) instead of the paste-ready Mailchimp HTML
-// WEEKEND mode (WEEKEND=1): render the Thursday "Weekend Ahead" events email
+// WEEKEND mode (WEEKEND=1): render the Friday "Weekend Ahead" events email
 // instead of the Monday "Week Ahead". Same data/render machinery, but a shorter
 // 3-day window (Fri–Sun; Thursday excluded), NO meetings section, and a curated best-of-the-weekend
 // events list (top events by featuredScore, not one-per-day). WEEK_START is the
 // Thursday the email covers. Everything below is unchanged for the weekly path.
 const WEEKEND = !!process.env.WEEKEND;
-const WINDOW_DAYS = WEEKEND ? 3 : 7;   // weekend email covers Fri–Sun (sent Thursday)
+const WINDOW_DAYS = WEEKEND ? 3 : 7;   // weekend email covers Fri–Sun (sent Friday)
 const EMAIL_TITLE = WEEKEND ? 'The Weekend Ahead Outlook' : 'The Week Ahead Outlook';
 const KICKER = WEEKEND ? 'Livable Telluride · Weekend Ahead Outlook' : 'Livable Telluride · Weekly Update';
 const EVENTS_HEADING = WEEKEND ? 'Good Events This Weekend' : 'What to Attend';
@@ -913,7 +913,7 @@ if (PREVIEW) {
   const EDIT_URL = 'https://livabletelluride.org/digest-review.html';
   const editLink = `<br><a href="${EDIT_URL}" style="color:#ffe4c4;font-weight:700;text-decoration:underline;">Edit or send this draft at the Review Desk &rarr;</a>`;
   const banner = WEEKEND
-    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Thursday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this weekend&rsquo;s events. To pin a specific intro instead, add a "${WEEK_START}" entry to data/weekend-ahead-lede.json and re-run the workflow.</span>${editLink}</td></tr>\n`
+    ? `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — this Friday's "Weekend Outlook" events email. Look it over, then approve to send.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this weekend&rsquo;s events. To pin a specific intro instead, add a "${WEEK_START}" entry to data/weekend-ahead-lede.json and re-run the workflow.</span>${editLink}</td></tr>\n`
     : `  <tr><td style="background:#a8401f;padding:13px 34px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;font-size:13px;font-weight:700;color:#fff;line-height:1.5;">REVIEW DRAFT — the upcoming weekly email. Look it over, then send the saved copy through Mailchimp. The topic sections below show in full here; each subscriber only sees the ones they opted into.<br><span style="font-weight:400;">The intro is auto-written in Rick&rsquo;s voice from this week&rsquo;s meetings and events. To override it, reply with the new text (week-key ${WEEK_START}).</span>${editLink}</td></tr>\n`;
   out = out.replace('  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">', banner + '  <tr><td class="sec-pad" style="background:#21443c;padding:26px 34px;">')
            .replace(/\*\|INTERESTED:[^|]*\|\*/g, '').replace(/\*\|END:INTERESTED\|\*/g, '')

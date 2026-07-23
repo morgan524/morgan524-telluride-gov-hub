@@ -357,4 +357,71 @@
     }
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
   });
+
+  /* ---- "Save to your phone" hint (mobile A2HS discoverability) -----------
+     The site has a valid manifest + icons but no service worker (retired),
+     so neither iOS nor Chrome shows an automatic install prompt. This is a
+     dismissible, instructions-only banner (no SW required) that simply tells
+     mobile visitors the option exists and how — iOS via the Share sheet,
+     Android via the browser menu. Shows once per device until dismissed;
+     never shows when already installed (standalone) or on desktop. */
+  (function () {
+    // Skip: desktop, already-installed (home-screen launch), or dismissed before.
+    var isStandalone = window.matchMedia && window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    var ua = navigator.userAgent || '';
+    var isIOS = /iPhone|iPad|iPod/i.test(ua) && !window.MSStream;
+    var isAndroid = /Android/i.test(ua);
+    if (isStandalone || (!isIOS && !isAndroid)) return;
+    try { if (localStorage.getItem('lt_a2hs_dismissed') === '1') return; } catch (e) {}
+    // iPadOS 13+ reports as desktop Safari; treat touch Macs conservatively —
+    // only show for clearly mobile UAs above, so no false banner on laptops.
+
+    var a2hsCss = document.createElement('style');
+    a2hsCss.textContent =
+      '.lt-a2hs{position:fixed;left:12px;right:12px;bottom:12px;z-index:180;background:#fdfbf6;border:1px solid var(--forest,#24483f);border-radius:14px;box-shadow:0 10px 34px rgba(26,46,41,.28);padding:14px 16px;display:flex;gap:12px;align-items:flex-start;font-family:var(--sans,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif);animation:ltA2 .3s ease-out;}' +
+      '@keyframes ltA2{from{transform:translateY(20px);opacity:0}to{transform:none;opacity:1}}' +
+      '.lt-a2hs .ic{flex:0 0 auto;width:40px;height:40px;border-radius:9px;background:#eef1ee;display:flex;align-items:center;justify-content:center;font-size:22px;}' +
+      '.lt-a2hs .bd{flex:1 1 auto;min-width:0;}' +
+      '.lt-a2hs .t{font:700 15px/1.3 inherit;color:#1a2e29;margin:1px 0 3px;}' +
+      '.lt-a2hs .s{font:400 13.5px/1.5 inherit;color:#5a6c61;}' +
+      '.lt-a2hs .s b{color:var(--forest,#24483f);}' +
+      '.lt-a2hs .shareglyph{display:inline-block;vertical-align:-2px;}' +
+      '.lt-a2hs .x{flex:0 0 auto;border:0;background:transparent;color:#9aa8a2;font-size:20px;line-height:1;cursor:pointer;padding:2px 4px;}' +
+      '@media (min-width:560px){.lt-a2hs{left:auto;right:16px;max-width:380px;}}';
+    document.head.appendChild(a2hsCss);
+
+    var iosShare = '<svg class="shareglyph" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#24483f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M8 8l4-4 4 4"></path><path d="M6 12v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-7"></path></svg>';
+    var body = isIOS
+      ? 'Tap the Share button <span aria-hidden="true">' + iosShare + '</span> below, then <b>Add to Home Screen</b>.'
+      : 'Open your browser menu <b>&#8942;</b>, then tap <b>Add to Home screen</b> (or <b>Install app</b>).';
+
+    var bar = document.createElement('div');
+    bar.className = 'lt-a2hs';
+    bar.setAttribute('role', 'complementary');
+    bar.setAttribute('aria-label', 'Save Livable Telluride to your phone');
+    bar.innerHTML =
+      '<div class="ic" aria-hidden="true">📲</div>' +
+      '<div class="bd"><div class="t">Keep Livable Telluride one tap away</div>' +
+      '<div class="s">' + body + '</div></div>' +
+      '<button class="x" type="button" aria-label="Dismiss">&times;</button>';
+
+    function dismiss() {
+      try { localStorage.setItem('lt_a2hs_dismissed', '1'); } catch (e) {}
+      bar.remove();
+    }
+    bar.querySelector('.x').addEventListener('click', dismiss);
+
+    // Show after a short delay so it doesn't fight the first paint, and only
+    // once the visitor has stuck around (scrolled or ~6s) — a returning-intent
+    // signal, not an instant nag.
+    var shown = false;
+    function show() {
+      if (shown) return; shown = true;
+      document.body.appendChild(bar);
+      window.removeEventListener('scroll', onScroll);
+    }
+    function onScroll() { if (window.scrollY > 400) show(); }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    setTimeout(show, 6000);
+  })();
 })();

@@ -3,18 +3,19 @@ name: Digest Refresh
 # Regenerates the Digest Review Desk's content from live site data and commits
 # it, so digest-review.html always shows the UPCOMING sends:
 #   - weekly  = the coming Mon–Sun (the Monday "Week Ahead")
-#   - weekend = the coming Fri–Sun (the Thursday "Weekend Ahead", events only)
+#   - weekend = the coming Fri–Sun (the Friday "Weekend Ahead", events only)
 # Runs daily; also dispatchable. Commits only when the rendered output changes.
 on:
   schedule:
     - cron: '0 13 * * *'   # daily 13:00 UTC (~7am Mountain)
     - cron: '45 15 * * 0'  # Sunday 15:45 UTC — freshen the Review Desk draft
                            # right before the 10:00 AM Sunday weekly review email
-    - cron: '45 19 * * 3'  # Wed 19:45 UTC (1:45 PM MDT) — freshen right before
-    - cron: '45 20 * * 3'  # Wed 20:45 UTC (1:45 PM MST)   the 2:00 PM Wed weekend
+    - cron: '45 19 * * 4'  # Thu 19:45 UTC (1:45 PM MDT) — freshen right before
+    - cron: '45 20 * * 4'  # Thu 20:45 UTC (1:45 PM MST)   the 2:00 PM Thu weekend
                            #   review email (weekend-preview.yml). Idempotent:
                            #   commits only if the render changed, so running
-                           #   both DST twins is harmless.
+                           #   both DST twins is harmless. (Wed→Thu 2026-07-23
+                           #   with the weekend send moving Thu→Fri.)
   workflow_dispatch:
 
 permissions:

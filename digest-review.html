@@ -88,7 +88,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
     <div class="status" id="status"></div>
-    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, write a link as <b>[text](https://…)</b>, or type <b>&lt;p&gt;</b> — or leave a blank line — to start a new paragraph); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. To swap a photo, <b>click it in the preview</b> and then <b>&#128247; Replace photo</b> — your upload is resized and hosted automatically and becomes part of this version. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 9:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Thursday 9:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
+    <div class="note">Edit the <b>intro</b> here and Apply (wrap words in <b>**double asterisks**</b> to bold them, write a link as <b>[text](https://…)</b>, or type <b>&lt;p&gt;</b> — or leave a blank line — to start a new paragraph); to bold or link anything else, select it in the preview and click <b>B Bold selection</b> or <b>&#128279; Link selection</b>. To swap a photo, <b>click it in the preview</b> and then <b>&#128247; Replace photo</b> — your upload is resized and hosted automatically and becomes part of this version. For anything deeper — add/remove/rewrite events — use <b>Ask Claude</b> below. Preview it and <b>Send test</b> to yourself. When it's right, click <b>✓ Approve &amp; Schedule</b> — that freezes this exact version and sends it automatically at its scheduled time (the <b>Week Ahead</b> goes out <b>Monday 9:00 AM</b>, the <b>Weekend Ahead</b> goes out <b>Friday 9:00 AM</b>). <b>Nothing sends when you approve</b> — the scheduled job does the send, and only if you've approved. (Approval clears when the week rolls over.)</div>
   </div>
 
   <div class="panel">
@@ -113,7 +113,7 @@ let KEY = sessionStorage.getItem("digestKey") || "";
 let manifest = null, cur = "weekly";
 const state = {};   // key -> { name, subject, covers, audience, baseHtml, html, history:[] }
 // When each approved digest auto-sends (the scheduled job fires at 9:00 AM MT).
-const SEND_WHEN = { weekly: "Monday 9:00 AM", weekend: "Thursday 9:00 AM" };
+const SEND_WHEN = { weekly: "Monday 9:00 AM", weekend: "Friday 9:00 AM" };
 const sendWhen = () => SEND_WHEN[cur] || "its scheduled time";
 
 // ---- auth gate ----
