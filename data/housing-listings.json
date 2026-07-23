@@ -3,8 +3,8 @@
     "title": "🏠 Element 52 SW-102",
     "type": "deed-sale",
     "address": "398 South Davis Street, Unit SW-102, Telluride, CO 81435",
-    "lat": 37.9281,
-    "lng": -107.8145,
+    "lat": 37.93676,
+    "lng": -107.81787,
     "beds": "2 Bedroom, 1 Bath, ~988 sq ft",
     "price": "$352,529 (deed-restricted)",
     "source": "SMRHA",
@@ -14,14 +14,15 @@
     },
     "url": "https://smrha.org/element-52-sw-102/",
     "smrhaSlug": "element-52-sw-102",
-    "note": "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details."
+    "note": "Tier 2 Mitigation Unit. HOA $420.28/mo. Contact SMRHA for eligibility and application details.",
+    "org": "telluride"
   },
   {
     "title": "🏠 Silver Jack 202",
     "type": "deed-sale",
     "address": "155 West Pacific Avenue, Unit 202, Telluride, CO 81435",
-    "lat": 37.9352,
-    "lng": -107.8138,
+    "lat": 37.93658,
+    "lng": -107.81173,
     "beds": "3 Bedroom, 2 Bath, ~1330 sq ft",
     "price": "$405,507 (deed-restricted)",
     "source": "SMRHA",
@@ -31,14 +32,15 @@
     },
     "url": "https://smrha.org/silver-jack-202/",
     "smrhaSlug": "silver-jack-202",
-    "note": "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details."
+    "note": "Tier 1 Town Constructed Unit. HOA $307.64/mo. Contact SMRHA for eligibility and application details.",
+    "org": "telluride"
   },
   {
     "title": "🏠 Silver Jack 205",
     "type": "deed-sale",
     "address": "155 West Pacific Avenue, Unit 205, Telluride, CO 81435",
-    "lat": 37.9352,
-    "lng": -107.8138,
+    "lat": 37.93658,
+    "lng": -107.81173,
     "beds": "2 Bedroom, 1 Bath, ~935 sq ft",
     "price": "$368,620 (deed-restricted)",
     "source": "SMRHA",
@@ -48,7 +50,8 @@
     },
     "url": "https://smrha.org/silver-jack-205/",
     "smrhaSlug": "silver-jack-205",
-    "note": "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details."
+    "note": "Tier 1 Town Constructed Unit. HOA $218.42/mo. Contact SMRHA for eligibility and application details.",
+    "org": "telluride"
   },
   {
     "title": "Room for Rent — In-Town 2BR Condo",
@@ -64,14 +67,15 @@
       "email": "admin@smrha.org"
     },
     "url": "https://smrha.org/property/in-town-room-for-rent-telluride-co-81435/",
-    "note": "Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility."
+    "note": "Deed-restricted room rental in shared 2BR condo. Contact SMRHA for eligibility.",
+    "org": "telluride"
   },
   {
     "title": "Village Court Apartments — Waitlist",
     "type": "deed-rental",
     "address": "455 Mountain Village Blvd, Mountain Village, CO 81435",
-    "lat": 37.9325,
-    "lng": -107.8497,
+    "lat": 37.93253,
+    "lng": -107.85398,
     "beds": "Studio–3 Bedroom",
     "price": "Income-based (deed-restricted)",
     "source": "Town of Mountain Village",
@@ -80,14 +84,15 @@
       "email": ""
     },
     "url": "https://townofmountainvillage.com/community/housing/village-court-apartments/",
-    "note": "Waitlist is currently capped — not accepting new applications. Check back periodically."
+    "note": "Waitlist is currently capped — not accepting new applications. Check back periodically.",
+    "org": "mv"
   },
   {
     "title": "Shandoka Townhomes — Waitlist",
     "type": "deed-rental",
     "address": "820 Black Bear Rd, Telluride, CO 81435",
-    "lat": 37.9363,
-    "lng": -107.8198,
+    "lat": 37.93766,
+    "lng": -107.82303,
     "beds": "1–3 Bedroom",
     "price": "Income-based (deed-restricted)",
     "source": "Town of Telluride",
@@ -96,14 +101,15 @@
       "email": "housing@telluride.gov"
     },
     "url": "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
-    "note": "Waitlist-based. Town employee priority. Apply through the Town of Telluride."
+    "note": "Waitlist-based. Town employee priority. Apply through the Town of Telluride.",
+    "org": "telluride"
   },
   {
     "title": "Virginia Placer Apartments — Waitlist",
     "type": "deed-rental",
     "address": "Virginia Placer, Telluride, CO 81435",
-    "lat": 37.938,
-    "lng": -107.826,
+    "lat": 37.93983,
+    "lng": -107.8284,
     "beds": "Studio–2 Bedroom",
     "price": "Income-based (deed-restricted)",
     "source": "Town of Telluride",
@@ -112,6 +118,7 @@
       "email": "housing@telluride.gov"
     },
     "url": "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
-    "note": "Waitlist-based. Apply through the Town of Telluride Rental Housing division."
+    "note": "Waitlist-based. Apply through the Town of Telluride Rental Housing division.",
+    "org": "telluride"
   }
 ]

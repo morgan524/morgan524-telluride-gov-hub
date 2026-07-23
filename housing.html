@@ -33,6 +33,10 @@
   .listing .price { font: 600 16px/1.4 var(--sans); color: var(--forest); }
   .listing .note-line { font: 400 15px/1.5 var(--sans); color: var(--muted2); margin-top: 4px; }
   .listing .cta { margin-top: 10px; }
+  /* Overseeing org's logo, top-right of the card body */
+  .listing .body { position: relative; }
+  .listing .org-badge { position: absolute; top: 12px; right: 20px; width: 52px; height: 52px; background: #fff; border: 1px solid var(--hairline); border-radius: 9px; display: flex; align-items: center; justify-content: center; padding: 4px; }
+  .listing .org-badge img { max-width: 100%; max-height: 100%; object-fit: contain; }
   .mgr-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 22px; }
   .mgr { padding: 24px; border: 1.5px solid var(--forest); }
   .mgr h3 { font: 600 23px/1.2 var(--serif); margin: 8px 0 8px; }
@@ -139,23 +143,25 @@
       var photo = l.photo || l.img || l.imageUrl || '';
       if (/^https?:\/\//.test(photo)) {
         media = '<div class="media"><img src="' + LTData.esc(photo) + '" alt="' + LTData.esc(l.title || 'Listing photo') + '" loading="lazy"></div>';
-      } else if (l.address || (l.lat && l.lng)) {
-        // Hand-verified building pins first (Google's geocoder misplaces some
-        // Telluride addresses); then the street address with the "Unit …"
-        // segment stripped; raw coordinates only when there's no address.
-        var KNOWN_PINS = [
-          [/silver jack/i, '37.93685,-107.81455'],           // 155 W Pacific, north of the gondola station
-          [/virginia placer/i, '37.93983,-107.82840']        // Virginia Placer Boarding House (OSM)
-        ];
-        var pin = null, hay = (l.title || '') + ' ' + (l.address || '');
-        for (var i = 0; i < KNOWN_PINS.length; i++) { if (KNOWN_PINS[i][0].test(hay)) { pin = KNOWN_PINS[i][1]; break; } }
-        var cleanAddr = String(l.address || '').replace(/,?\s*(Unit|Apt|#)\s*[^,]+/i, '');
-        var q = encodeURIComponent(pin || cleanAddr || (l.lat + ',' + l.lng));
+      } else if (l.lat && l.lng) {
+        // The data's lat/lng are house-number-verified (housing-refresh
+        // BUILDING_PINS, 2026-07-23) — pin the coordinates directly.
+        // Address-string geocoding is what put pins up to a km off before;
+        // never go back to it.
+        var q = encodeURIComponent(l.lat + ',' + l.lng);
         media = '<div class="media"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" ' +
           'title="Map of ' + LTData.esc(l.address || 'listing location') + '" ' +
           'src="https://maps.google.com/maps?q=' + q + '&t=&z=16&ie=UTF8&iwloc=&output=embed"></iframe></div>';
       }
-      return '<article class="listing card story">' + media + '<div class="body">' +
+      // Overseeing organization's logo (per Morgan 2026-07-23): l.org is an
+      // ENTITY_LOGOS key set by housing-refresh (telluride/mv/norwood).
+      var ORG_LABEL = { telluride: 'Town of Telluride', mv: 'Town of Mountain Village', norwood: 'Town of Norwood', county: 'San Miguel County' };
+      var orgLogo = LTData.entityLogo(l.org || 'telluride');
+      var orgBadge = orgLogo
+        ? '<div class="org-badge" title="Overseen by ' + LTData.esc(ORG_LABEL[l.org] || l.org || '') + '">' +
+          '<img src="' + LTData.esc(orgLogo) + '" alt="' + LTData.esc(ORG_LABEL[l.org] || '') + '" loading="lazy"></div>'
+        : '';
+      return '<article class="listing card story">' + media + '<div class="body">' + orgBadge +
         '<span class="tag rust-tint">' + LTData.esc(TYPE_LABEL[l.type] || l.type || 'Listing') + '</span>' +
         '<h3>' + LTData.esc(String(l.title || '').replace(/^🏠\s*/, '')) + '</h3>' +
         '<div class="addr">' + LTData.esc(l.address || '') + '</div>' +

@@ -47,8 +47,10 @@
   @media (max-width: 900px) { .mini-grid.four { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .mini-grid.four { grid-template-columns: 1fr; } }
   .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
-  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; transition: border-color .15s; }
-  a.mini-link:hover { border-color: var(--forest); }
+  /* Thin forest stroke (Morgan 2026-07-23); hover = a ring, not a width
+     change, so the layout never shifts. */
+  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; border: 1px solid var(--forest); transition: box-shadow .15s; }
+  a.mini-link:hover { box-shadow: 0 0 0 1px var(--forest); }
   a.mini-link p { flex: 1; margin-bottom: 10px; }
   .mini .ico { font-size: 20px; color: var(--forest); }
   .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }

@@ -150,12 +150,24 @@ function parseSmrhaPost(post) {
   noteParts.push('Contact SMRHA for eligibility and application details.');
   const note = noteParts.join(' ');
 
-  // ── Coordinates ───────────────────────────────────────────────
-  let lat = 37.9375, lng = -107.8123;
-  if (/\bNorwood\b/i.test(raw + address))              { lat = 38.1297; lng = -108.2867; }
-  else if (/Mountain\s+Village/i.test(raw + address))  { lat = 37.9325; lng = -107.8497; }
-  else if (/South\s+Davis/i.test(address))             { lat = 37.9360; lng = -107.8205; }
-  else if (/Pacific\s+Ave/i.test(address))             { lat = 37.9366; lng = -107.8135; }
+  // ── Coordinates + overseeing org ──────────────────────────────
+  // House-number-verified pins (Nominatim/OSM, checked 2026-07-23) — the old
+  // block-level guesses put pins up to ~1 km off (Morgan's report). `org` is
+  // the entity whose program oversees the unit (LTData.ENTITY_LOGOS key),
+  // rendered as a logo on the housing card.
+  const BUILDING_PINS = [
+    [/\bNorwood\b/i,            38.1297,   -108.2867,   'norwood'],
+    [/Mountain\s+Village/i,     37.93253,  -107.85398,  'mv'],       // Village Court area
+    [/South\s+Davis/i,          37.93676,  -107.81787,  'telluride'],// Element 52, 398 S Davis
+    [/West\s+Pacific|W\.?\s+Pacific/i, 37.93658, -107.81173, 'telluride'], // Silver Jack, 155 W Pacific
+    [/Black\s+Bear/i,           37.93766,  -107.82303,  'telluride'],// Shandoka
+    [/Virginia\s+Placer/i,      37.93983,  -107.82840,  'telluride'],
+  ];
+  let lat = 37.9375, lng = -107.8123, org = 'telluride';
+  const hay = raw + ' ' + address;
+  for (const [re, la, ln, o] of BUILDING_PINS) {
+    if (re.test(hay)) { lat = la; lng = ln; org = o; break; }
+  }
 
   return {
     title:     '🏠 ' + title,
@@ -163,6 +175,7 @@ function parseSmrhaPost(post) {
     address:   address || 'Telluride area, CO 81435',
     lat,
     lng,
+    org,
     beds,
     price,
     source:    'SMRHA',
