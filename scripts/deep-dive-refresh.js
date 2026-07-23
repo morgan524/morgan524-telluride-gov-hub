@@ -74,6 +74,15 @@ const TOPICS = {
                'mountain village.*gondola', 'new gondola', 'second gondola',
                'gondola.*project', 'gondola.*study', 'gondola.*agreement'],
   },
+  norwoodwater: {
+    label: 'Norwood Water',
+    // Distinctive phrases only — bare "water" would false-positive on every
+    // Telluride water-rights item. "norwood water commission" catches the
+    // NWC meeting cards (title: "Norwood Water Commission Meeting").
+    keywords: ['norwood water commission', 'nwc meeting', 'gurley reservoir',
+               'norwood.*water supply', 'water supply.*norwood',
+               'wright\'?s mesa.*water', 'pinon park'],
+  },
 };
 
 // ── Sources — Town + County only, as Morgan specified ────────────────────────

@@ -72,7 +72,7 @@ function run(repoRoot) {
   // Deep dives (LAND_USE_ISSUES-driven pages)
   const issues = readJson(dataDir, 'land-use-issues.json') || {};
   for (const [key, v] of Object.entries(issues)) {
-    out.push({ t: (v.label || key) + ' (deep dive)', s: clip(v.summary || v.dek || v.subtitle || 'The full story behind ' + (v.label || key) + '.'), u: '/deep-dive-' + key + '.html', k: 'dive' });
+    out.push({ t: (v.label || key) + ' (deep dive)', s: clip(v.summary || v.intro || v.dek || v.subtitle || 'The full story behind ' + (v.label || key) + '.'), u: '/deep-dive-' + key + '.html', k: 'dive' });
   }
 
   // News (three sources; newest ~90 days is all the mirrors hold anyway)

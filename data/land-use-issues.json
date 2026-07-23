@@ -1279,5 +1279,125 @@
       }
     ],
     "meetings": []
+  },
+  "norwoodwater": {
+    "lastUpdated": "2026-07-23",
+    "label": "Norwood Water",
+    "heroImage": "/images/deep-dives/norwood-water-system.jpg",
+    "heroAlt": "Map of the Norwood Water Commission's water system across Wright's Mesa",
+    "heroCredit": "Water system overview -- SGM, 2022 Water Supply Adequacy Memo",
+    "intro": "Norwood's water is run by the Norwood Water Commission (NWC), a rural system serving the town, Redvale, and the farms and homes of Wright's Mesa through roughly 20 miles of pipe. Nearly all of its firm supply is a single contract: 300 acre-feet a year of raw water from Gurley Reservoir, and Gurley only delivers from April to November -- the winter runs on two small raw-water reservoirs filled each fall. The town's own engineers have warned twice, in the 2020 Water Master Plan and again in a 2022 supply-adequacy memo, that the supply has no redundancy, that drought can threaten it, and that the growth Norwood is approving is on pace to consume the entire allocation within a decade or two. On Wright's Mesa, every subdivision approval draws down the same fixed bucket of water.",
+    "statusTitle": "Growth is on pace to use up the whole water contract.",
+    "statusCopy": "The 2022 SGM memo puts hard numbers on it: the system was using roughly 198 of its 300 acre-feet, and at the 2% growth rate assumed in the Master Plan the full allocation is reached around 2042 -- at 3% growth, around 2036. Development already approved or in early planning (the 24-lot Pinon Park Subdivision and the 75-100 lot Mountain Village Employee Housing Project) adds an estimated 124 taps and about 310 people, an 11.6% population jump that by itself matches the plan's growth assumptions. The treatment plant faces the same clock: maximum-day demand is projected to hit 92% of its capacity by 2042, and the engineers recommend planning for a new plant in the early 2030s with rate-structure work starting about a decade ahead. Their repeated recommendation is to firm up a second, year-round source -- the San Miguel River diversion the NWC already holds a decreed right for -- and to consider a water-rights dedication ordinance so new development brings water with it.",
+    "nextStep": "The Water Commission meets the second Tuesday of each month (tracked on Gov-Hub and the Norwood hub). Watch for movement on the San Miguel River supply project, a water-rights dedication ordinance, rate-structure changes, and how each new subdivision application squares with the 300 acre-foot math.",
+    "metrics": [
+      {
+        "label": "Firm supply",
+        "value": "300 acre-feet a year -- one contract, one reservoir",
+        "sub": "A perpetual 2005 agreement for Gurley Reservoir raw water, deliverable only April-November. Single watershed, drought-vulnerable, no redundant source."
+      },
+      {
+        "label": "The math",
+        "value": "Full allocation reached around 2036-2042",
+        "sub": "Roughly 198 AF already in use (2022). Approved and planned projects add ~124 taps; 3% growth exhausts the contract by 2036, 2% by 2042."
+      },
+      {
+        "label": "The pipe",
+        "value": "One 10-inch line feeds the whole system",
+        "sub": "The only transmission line from the treatment plant to town has failed repeatedly and is past the end of its useful life; rural lines are undersized, with low pressure and no fire flows."
+      },
+      {
+        "label": "Treatment",
+        "value": "92% of plant capacity by 2042",
+        "sub": "The 0.56 million-gallon-per-day plant handles today's demand but engineers recommend planning its replacement in the early 2030s -- financing alone can take a decade."
+      }
+    ],
+    "timeline": [
+      {
+        "date": "1993",
+        "title": "The NWC is created",
+        "copy": "Town and rural Wright's Mesa water service -- historically provided by the San Miguel Water Conservancy District -- is consolidated into the Norwood Water Commission. The Town owns the in-town infrastructure; the NWC operates the entire system as one."
+      },
+      {
+        "date": "1994-2006",
+        "title": "Early master plans",
+        "copy": "Westwater Engineering prepares the original distribution master plan (1994), a raw-water feasibility report (1995), and a master plan update (2006). Some recommendations are implemented; others are not."
+      },
+      {
+        "date": "April 2005",
+        "title": "The 300 acre-foot Gurley contract",
+        "copy": "The NWC and the Farmers Water Development Commission sign a perpetual agreement for 300 acre-feet per year of raw, untreated Gurley Reservoir water for domestic use -- the supply the whole system still runs on."
+      },
+      {
+        "date": "2018",
+        "title": "A drought exposes the risk",
+        "copy": "Water levels drop significantly in Gurley Reservoir and the NWC's raw-water reservoirs. Engineers later conclude that a second consecutive drought year would have left the system unable to supply adequate drinking water without restrictions."
+      },
+      {
+        "date": "November 2020",
+        "title": "The SGM Water Master Plan",
+        "copy": "A full system study: GIS mapping, a hydraulic model, and a hard look at infrastructure. Findings include undersized and un-looped distribution lines, low pressures and missing fire flows in rural areas, a failing single transmission line, and water-quality compliance tensions. It recommends pursuing the San Miguel River as a second supply and raising service fees gradually to fund aging-infrastructure replacement."
+      },
+      {
+        "date": "August 2022",
+        "title": "The supply-adequacy warning",
+        "copy": "With Pinon Park approved and the Mountain Village Employee Housing Project in early planning, SGM re-runs the numbers: growth is tracking the high end, the full 300 AF is reached between 2036 and 2042, and the treatment plant nears capacity on the same horizon. The memo urges the NWC to firm up its decreed San Miguel River diversion and consider a water-rights dedication ordinance."
+      },
+      {
+        "date": "July 2026",
+        "title": "NWC meetings join Gov-Hub",
+        "copy": "Livable Telluride begins tracking the Water Commission's second-Tuesday meetings alongside Norwood's Trustees and P&Z -- agendas, packets, and plain-English summaries as they post."
+      }
+    ],
+    "docs": [
+      {
+        "title": "Water Supply Adequacy Memo (SGM, August 2022)",
+        "copy": "The growth-versus-supply math: current use against the 300 AF Gurley contract, tap projections for Pinon Park and the Mountain Village Employee Housing Project, treatment-plant capacity timing, and the recommendation to firm up the San Miguel River right.",
+        "tag": "Engineering memo",
+        "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fnorwoodwater%2FNWC-2022-Water-Supply-Adequacy-Memo.pdf?alt=media&token=b73ca267-3332-460d-9cb0-41ceb0bbb708"
+      },
+      {
+        "title": "NWC Water Master Plan (SGM, November 2020)",
+        "copy": "The full system study behind the memo: supply and water rights, treatment and storage, the hydraulic model, infrastructure priorities, and the San Miguel River diversion feasibility work. Large file (~80 MB).",
+        "tag": "Master plan",
+        "href": "https://firebasestorage.googleapis.com/v0/b/telluride-gov-hub.firebasestorage.app/o/deep-dive-docs%2Fnorwoodwater%2FNWC-2020-Water-Master-Plan.pdf?alt=media&token=81157ef6-a29d-4511-9dd3-c055eda6dad8"
+      }
+    ],
+    "legalIssues": [
+      {
+        "icon": "⚖️",
+        "title": "A decreed river right, not yet a real supply",
+        "copy": "The NWC holds a decreed San Miguel River diversion right (5 cfs -- Case No. 94CW244, diligence Case No. 08CW55) near the confluence with Beaver Creek. Engineers have urged the commission to firm it up as a second, year-round source; building the intake, pump station, and transmission line is a major capital project, and water-court proceedings in a contested basin can take years."
+      },
+      {
+        "icon": "💧",
+        "title": "Agricultural rights can't simply become tap water",
+        "copy": "Converting agricultural water rights to domestic use requires a change case in water court. A water-rights dedication ordinance -- used by other Western Slope providers -- would require future development or annexations to dedicate rights that offset their demand on the potable system."
+      }
+    ],
+    "players": [
+      {
+        "icon": "🚰",
+        "title": "Norwood Water Commission",
+        "copy": "Operates the entire system -- supply, treatment, storage, and 20 miles of distribution -- for the town and rural Wright's Mesa. Meets the second Tuesday of each month."
+      },
+      {
+        "icon": "🏛️",
+        "title": "Town of Norwood -- Trustees & P&Z",
+        "copy": "Approve the growth that draws on the fixed water supply. The Town owns the in-town infrastructure; every subdivision decision is also a water decision."
+      },
+      {
+        "icon": "🌾",
+        "title": "Farmers Water Development Commission",
+        "copy": "The counterparty on the perpetual 2005 Gurley Reservoir contract that supplies the NWC's 300 acre-feet per year."
+      },
+      {
+        "icon": "📐",
+        "title": "SGM (town engineers)",
+        "copy": "Authors of the 2020 Water Master Plan and the 2022 supply-adequacy memo -- the two documents that lay out the system's risks and the path to a second source."
+      }
+    ],
+    "news": [],
+    "category": "Water"
   }
 }
