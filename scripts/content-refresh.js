@@ -3901,10 +3901,11 @@ async function syncKotoCommunityEvents() {
     let imageUrl = '';
     if (e.image && typeof e.image === 'object' && e.image.url) imageUrl = e.image.url;
     else if (typeof e.image === 'string') imageUrl = e.image;
-    // koto.org/wp-content serves Cross-Origin-Resource-Policy: same-origin, so
-    // browsers block the hotlink on our pages — don't store an image that can
-    // never render (consumers fall back to category art). 2026-07-22 review.
-    if (/koto\.org\/wp-content/i.test(imageUrl)) imageUrl = '';
+    // NOTE (2026-07-23): koto.org/wp-content images ARE embeddable — they serve
+    // access-control-allow-origin:* and NO Cross-Origin-Resource-Policy header,
+    // so <img> hotlinks render fine. The earlier same-origin/ERR_BLOCKED
+    // assumption (2026-07-22) no longer holds (KOTO's headers are open), so we
+    // keep the real event image instead of dropping it to category art.
     let venueName = '';
     if (e.venue && typeof e.venue === 'object') {
       venueName = e.venue.venue || '';

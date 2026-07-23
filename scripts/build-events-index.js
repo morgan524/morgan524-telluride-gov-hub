@@ -253,13 +253,12 @@ function buildEventsIndex(repoRoot) {
         time: timeOf(e),
         location: String(e.location || '').trim(),
         town: town,
-        // Keep the source image when it's a usable hotlink. koto.org/wp-content
-        // sends Cross-Origin-Resource-Policy: same-origin, so the browser blocks
-        // it (ERR_BLOCKED_BY_RESPONSE) → fall back. webp IS kept here: browsers
-        // render it fine (the webp block lives only in the EMAIL path, where
-        // Outlook/old iOS Mail can't show it). Otherwise → venue/category
-        // fallback (Morgan 2026-07-23: recover the real webp concert photos).
-        img: (/^https?:\/\//.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title, town, e.location),
+        // Keep the source image whenever it's an absolute URL. Both prior
+        // exclusions are gone (2026-07-23): webp renders in browsers (the webp
+        // block lives only in the EMAIL path), and koto.org/wp-content is
+        // embeddable after all (ACAO:*, no CORP header). Otherwise → venue/
+        // category fallback.
+        img: (/^https?:\/\//.test(rawImg)) ? rawImg : fallbackImg(title, town, e.location),
         category: String(e.category || '').trim(),
         source: label,
         desc: desc,

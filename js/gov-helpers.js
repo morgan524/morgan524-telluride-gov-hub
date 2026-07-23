@@ -2954,7 +2954,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -2976,7 +2977,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Lone Cone Library Norwood",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3042,7 +3044,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Conference Center Plaza Mountain Village",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
   },
   {
     title: "Shakespeare in the Park: \"Henry V\"",
@@ -3075,7 +3078,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
   },
   {
     title: "Drop In Tech Time with Oliver",
@@ -3097,7 +3101,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3229,7 +3234,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -3317,7 +3323,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Lone Cone Library Norwood",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3361,7 +3368,8 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -5406,7 +5414,8 @@ const NORWOOD_EVENTS = [
     sourceLabel: "Norwood Park & Recreation District",
     category: "Community Event",
     location: "Norwood, CO",
-    imageUrl: ""
+    imageUrl: "",
+    img: "https://streamline.imgix.net/56210050-a5c1-4003-868e-c365673996fa/a9cbee90-30ef-43f6-8dae-b863f32d33b3/MotM-2026-Poster-11x17-2-NB.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=9b0648217c9acc254a616a2d2415871d"
   },
   {
     title: "NWC Meeting",
