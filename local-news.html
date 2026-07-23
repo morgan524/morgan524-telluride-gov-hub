@@ -170,6 +170,11 @@
     // merely contains the word "legal" (e.g. "Legal battle over water rights").
     return /\bpublic\s+notices?\b/i.test(t) || /^\s*legal\s+notices?\b/i.test(t) || /^\s*legals\b/i.test(t);
   }
+  // Standing rule (Morgan, 2026-07-23): the Telluride Times "CHALKBOARD" weekly
+  // roundup is an aggregator — it re-lists recurring items (farmers market,
+  // senior meals, food pantry, birthdays) we already carry as events — so it
+  // never runs as a news card.
+  function isAggregatorRoundup(s) { return /\bchalkboard\b/i.test(s.title || ''); }
   function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
   function normalize(a, srcLabel) {
     // dek: copy (scraped articles) or summary (LOCAL_NEWS_FEATURED pins store
@@ -324,6 +329,7 @@
       ).filter(function (s, i, arr) {
         if (!s.title || !s.href) return false;
         if (isLegalNotice(s)) return false;   // legal notices live on /legal-notices.html only
+        if (isAggregatorRoundup(s)) return false;   // CHALKBOARD = aggregator, never posted
         if (!s.featured && pinHrefs[s.href] && pins.indexOf(s) === -1) return false;   // pin wins over duplicate
         return true;
       });
