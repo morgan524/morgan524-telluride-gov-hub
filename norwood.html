@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norwood &amp; the West End — Livable Telluride</title>
+<meta name="description" content="Everything civic in Norwood and the West End on one page — town meetings, events, San Miguel Basin Forum news, notices, and local groups.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://livabletelluride.org/norwood.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Livable Telluride">
+<meta property="og:url" content="https://livabletelluride.org/norwood.html">
+<meta property="og:title" content="Norwood &amp; the West End — Livable Telluride">
+<meta property="og:description" content="Town meetings, events, West End news, notices, and local groups — one page for Norwood.">
+<meta property="og:image" content="https://livabletelluride.org/logo/Norwood%20Town.jpeg">
+<style>
+  /* ── Town-hub layout (first instance: Norwood; the TOWN config below is
+       what future town hubs swap out) ─────────────────────────────────── */
+  .th-wrap { max-width: var(--maxw); margin: 0 auto; padding: 30px var(--pad-x) 0; }
+  .th-h { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin: 40px 0 4px; flex-wrap: wrap; }
+  .th-h h2 { margin: 0; }
+  .th-h .all { font: 600 14.5px/1 var(--sans); color: var(--rust); white-space: nowrap; }
+  /* meetings */
+  .th-meet { display: grid; grid-template-columns: 84px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
+  .th-meet .d-mon { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; text-align: center; }
+  .th-meet .d-day { font: 600 32px/1.05 var(--serif); color: var(--forest); text-align: center; }
+  .th-meet h3 { font: 600 21px/1.25 var(--serif); margin: 2px 0 6px; }
+  .th-meet .summ { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 10px; }
+  .th-meet .acts { display: flex; gap: 9px; flex-wrap: wrap; }
+  .th-meet .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
+  .th-meet .abtn.primary { background: var(--forest); border-color: var(--forest); color: #fff; }
+  .th-meet .abtn.empty { border-color: var(--hairline); color: var(--muted2); background: var(--sage2); cursor: default; }
+  /* events */
+  .th-ev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px; }
+  .th-ev { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; background: #fff; }
+  .th-ev .img-frame { aspect-ratio: 16/9; }
+  .th-ev .b { padding: 12px 16px 14px; }
+  .th-ev h3 { font: 600 17.5px/1.25 var(--serif); margin: 4px 0 4px; }
+  .th-ev h3 a { color: var(--forest); }
+  .th-ev .meta { font: 400 13.5px/1.5 var(--sans); }
+  /* news */
+  .th-news { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+  .th-news.no-media { grid-template-columns: 1fr; }
+  .th-news .img-frame { aspect-ratio: 4/3; border-radius: 8px; }
+  .th-news h3 { font: 600 20px/1.25 var(--serif); margin: 3px 0 5px; }
+  .th-news h3 a { color: var(--forest); }
+  .th-news h3 a:hover { color: var(--rust); }
+  .th-news .dek { font: 400 14.5px/1.6 var(--sans); color: var(--body2); margin: 0 0 5px; }
+  /* orgs + resources */
+  .th-two { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+  .th-org { padding: 13px 0; border-bottom: 1px solid var(--hairline); }
+  .th-org a { font: 600 16.5px/1.3 var(--serif); color: var(--forest); }
+  .th-org a:hover { color: var(--rust); }
+  .th-org .sub { font: 400 13.5px/1.5 var(--sans); color: var(--muted2); margin-top: 2px; }
+  .th-res { background: var(--sage2); border: 1px solid var(--hairline); border-radius: 12px; padding: 20px 24px; }
+  .th-res h3 { font: 600 20px/1.2 var(--serif); margin: 0 0 6px; }
+  .th-res a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 8px 0; border-top: 1px solid var(--hairline); }
+  .th-res a:first-of-type { border-top: 0; }
+  .th-res a:hover { color: var(--rust); }
+  .th-empty { font: 400 15px/1.6 var(--sans); color: var(--muted); padding: 16px 0; }
+  @media (max-width: 900px) {
+    .th-ev-grid { grid-template-columns: 1fr; }
+    .th-two { grid-template-columns: 1fr; }
+    .th-news { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<header class="masthead">
+  <img class="masthead-art" src="/images/lonecone-hero.webp" alt="" aria-hidden="true">
+  <div class="masthead-fade"></div>
+  <div class="masthead-inner">
+    <div class="crumb">Towns <span class="sep">&rsaquo;</span> Norwood</div>
+    <h1>Norwood &amp; the West End</h1>
+    <p class="sub">Wright's Mesa's town, under Lone Cone &mdash; trustees meetings, the fair and rodeo, Forum news, and everything else happening on the West End, in one place.</p>
+  </div>
+</header>
+
+<div class="th-wrap">
+  <div class="th-h"><h2 class="section-h">Town meetings</h2><a class="all" href="/gov-hub.html">All meetings on Gov-Hub &rarr;</a></div>
+  <div id="th-meetings"><p class="meta" style="padding:16px 0">Loading meetings&hellip;</p></div>
+
+  <div class="th-h"><h2 class="section-h">Happening nearby</h2><a class="all" href="/events.html">Full events calendar &rarr;</a></div>
+  <div class="th-ev-grid" id="th-events"><p class="meta">Loading events&hellip;</p></div>
+
+  <div class="th-h"><h2 class="section-h">West End news</h2><a class="all" href="/local-news.html">All Local News &rarr;</a></div>
+  <div id="th-news"><p class="meta" style="padding:16px 0">Loading news&hellip;</p></div>
+
+  <div id="th-notices-wrap" hidden>
+    <div class="th-h"><h2 class="section-h">Town notices</h2><a class="all" href="/legal-notices.html">All legal notices &rarr;</a></div>
+    <div id="th-notices"></div>
+  </div>
+
+  <div class="th-h"><h2 class="section-h">Groups &amp; resources</h2><a class="all" href="/local-orgs.html">Full directory &rarr;</a></div>
+  <div class="th-two">
+    <div id="th-orgs"><p class="meta" style="padding:14px 0">Loading&hellip;</p></div>
+    <div class="th-res">
+      <h3>Town links</h3>
+      <!-- Hand-curated; every URL verified from the site's own data. -->
+      <a href="https://www.norwoodtown.com/" target="_blank" rel="noopener">Town of Norwood official site &#8599;</a>
+      <a href="https://www.norwoodtown.com/board-of-trustees-meetings" target="_blank" rel="noopener">Board of Trustees agendas &#8599;</a>
+      <a href="https://www.norwoodtown.com/planning-and-zoning-commission-meetings" target="_blank" rel="noopener">Planning &amp; Zoning agendas &#8599;</a>
+      <a href="https://norwoodcolorado.com/" target="_blank" rel="noopener">Norwood Chamber of Commerce &#8599;</a>
+      <a href="https://www.sanmiguelbasinforum.com/" target="_blank" rel="noopener">San Miguel Basin Forum &#8599;</a>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:44px 0 10px">
+    <p class="meta" style="margin:0 0 14px">Want the week's West End meetings and events by email?</p>
+    <a class="btn btn-gold" href="/hub-bub.html#signup">Subscribe to the Week Ahead</a>
+  </div>
+</div>
+
+<div id="lt-footer"></div>
+<script src="site.js?v=9"></script>
+<script src="/js/lt-data.js?v=7"></script>
+<script>
+(function () {
+  'use strict';
+  if (!window.LTData) return;
+  var esc = LTData.esc, safe = LTData.safeUrl;
+
+  // ── Town config — the ONLY block a future town hub changes ──
+  var TOWN = {
+    meetingSource: 'norwood',                                  // week-meetings `source`
+    eventTowns: ['Norwood', 'Nucla', 'Naturita', 'Redvale'],   // events-index `town`
+    orgTowns: ['Norwood', 'Nucla/Naturita'],                   // local-orgs `town`
+    noticeEntity: /Norwood/i,                                  // legal-notices `entity`
+    newsFile: 'smb-forum-articles'                             // the town's paper
+  };
+  var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+  LTData.load(['week-meetings', 'events-index', TOWN.newsFile, 'legal-notices', 'local-orgs'])
+    .then(function (data) {
+
+      // ── Meetings ──
+      var meets = (data['week-meetings'] || []).filter(function (m) {
+        return m && m.source === TOWN.meetingSource && m.date >= LTData.todayMT();
+      });
+      document.getElementById('th-meetings').innerHTML = meets.length ? meets.map(function (m) {
+        var d = LTData.parseDateKey(m.date);
+        // Same honesty rules as Gov-Hub: green only when the agenda is
+        // actually posted; grey ghost + "Meeting info" link otherwise.
+        var acts = '';
+        acts += (m.hasAgenda && m.agendaUrl)
+          ? '<a class="abtn primary" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
+          : '<span class="abtn empty" title="Agenda not yet posted">View Agenda</span>';
+        if (m.packetUrl) acts += '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">&#128230; Agenda Packet</a>';
+        if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+        return '<div class="th-meet">' +
+          '<div><div class="d-mon">' + MON[d.getMonth()] + '</div><div class="d-day">' + d.getDate() + '</div></div>' +
+          '<div><h3>' + esc(m.title) + '</h3>' +
+          (m.summary ? '<p class="summ">' + esc(m.summary) + '</p>' : '') +
+          (m.location ? '<div class="meta" style="margin-bottom:8px">&#128205; ' + esc(m.location) + '</div>' : '') +
+          '<div class="acts">' + acts + '</div></div></div>';
+      }).join('') : '<p class="th-empty">No town meetings on the calendar in the next month &mdash; agendas usually post a few days ahead on the <a href="https://www.norwoodtown.com/" target="_blank" rel="noopener" style="color:var(--rust)">town site</a>.</p>';
+
+      // ── Events (next 6 in the area) ──
+      var evs = (data['events-index'] || []).filter(function (e) {
+        return e && TOWN.eventTowns.indexOf(e.town) !== -1 && e.date >= LTData.todayMT();
+      }).slice(0, 6);
+      document.getElementById('th-events').innerHTML = evs.length ? evs.map(function (e) {
+        var img = e.img ? '<div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div>' : '';
+        var when = [LTData.fmtDate(e.date, { weekday: 'short', month: 'short', day: 'numeric' }), e.time].filter(Boolean).join(' · ');
+        return '<article class="th-ev story">' + img + '<div class="b">' +
+          '<h3><a href="' + esc(safe(e.href, '/events.html')) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
+          '<div class="meta">' + esc(when) + (e.location ? ' · ' + esc(e.location) : '') + '</div>' +
+          '</div></article>';
+      }).join('') : '<p class="th-empty">Nothing on the West End calendar right now.</p>';
+
+      // ── News (SMBF = the West End paper) ──
+      var news = (data[TOWN.newsFile] || []).slice(0, 6);
+      document.getElementById('th-news').innerHTML = news.length ? news.map(function (a) {
+        var img = a.img ? '<div class="img-frame"><img src="' + esc(a.img) + '" alt="" loading="lazy"></div>' : '';
+        return '<article class="th-news story' + (a.img ? '' : ' no-media') + '">' + img + '<div>' +
+          '<h3><a href="' + esc(safe(a.href)) + '" target="_blank" rel="noopener">' + esc(a.title) + '</a></h3>' +
+          (a.copy ? '<p class="dek">' + esc(a.copy) + '</p>' : '') +
+          '<div class="meta">' + esc([a.source, a.date].filter(Boolean).join(' · ')) + '</div>' +
+          '</div></article>';
+      }).join('') : '<p class="th-empty">No recent Forum stories.</p>';
+
+      // ── Notices (section hides entirely when the town has none) ──
+      var notices = (data['legal-notices'] || []).filter(function (n) {
+        return n && TOWN.noticeEntity.test(n.entity || '');
+      });
+      if (notices.length) {
+        document.getElementById('th-notices-wrap').hidden = false;
+        document.getElementById('th-notices').innerHTML = notices.map(function (n) {
+          return '<div class="th-org"><a href="' + esc(safe(n.url, '/legal-notices.html')) + '" target="_blank" rel="noopener">' + esc(n.title) + '</a>' +
+            '<div class="sub">' + esc([n.type, n.entity].filter(Boolean).join(' · ')) + (n.summary ? ' — ' + esc(String(n.summary).slice(0, 140)) : '') + '</div></div>';
+        }).join('');
+      }
+
+      // ── Orgs ──
+      var orgs = (data['local-orgs'] || []).filter(function (o) {
+        return o && TOWN.orgTowns.indexOf(o.town) !== -1;
+      });
+      document.getElementById('th-orgs').innerHTML = orgs.length ? orgs.map(function (o) {
+        var name = o.website ? '<a href="' + esc(safe(o.website)) + '" target="_blank" rel="noopener">' + esc(o.name) + ' &#8599;</a>' : '<span style="font:600 16.5px/1.3 var(--serif);color:var(--forest)">' + esc(o.name) + '</span>';
+        return '<div class="th-org">' + name + (o.summary ? '<div class="sub">' + esc(String(o.summary).slice(0, 150)) + '</div>' : '') + '</div>';
+      }).join('') : '<p class="th-empty">No West End groups in the directory yet.</p>';
+
+    }).catch(function (err) {
+      LTData.showError(document.getElementById('th-meetings'), err);
+    });
+})();
+</script>
+</body>
+</html>

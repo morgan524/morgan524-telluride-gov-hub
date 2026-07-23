@@ -40,6 +40,7 @@ const STATIC_PAGES = [
   { t: 'About Livable Telluride', s: 'Who we are and why we do this.', u: '/about.html', k: 'page' },
   { t: 'Donate', s: 'Independent, ad-free, always free. Keep it that way.', u: '/donate.html', k: 'page' },
   { t: 'Subscribe to the Week Ahead newsletter', s: 'Meetings, events, and what to watch — free by email every Monday.', u: '/hub-bub.html#signup', k: 'page' },
+  { t: 'Norwood & the West End', s: 'Town meetings, events, Forum news, notices, and groups — one page for Norwood, Nucla, Naturita, and Wright\'s Mesa.', u: '/norwood.html', k: 'page' },
 ];
 
 // Deep dives that live outside LAND_USE_ISSUES (mirror of deep-dives.html EXTRAS).
