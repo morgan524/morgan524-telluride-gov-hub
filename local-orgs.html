@@ -205,20 +205,14 @@
   }
 
   /* ── Featured organization ──────────────────────────────────────────
-     Hand-curated spotlight copy (sourced from each org's own website);
-     logo/links/social come live from the directory entry so they never
-     drift. Rotates weekly through the list. */
-  var FEATURED_ORGS = [
-    { name: 'True North Youth Program',
-      why: 'A space and a support system for every teen in the region — free, year-round, and built around helping kids find their footing on the way to adulthood. Parents say it\u2019s where their teens build confidence and get woven into the community.',
-      what: 'Free year-round programs for all teens in San Miguel and West Montrose counties: Rising Stars, Base Camp, college prep and scholarship help, plus river trips, food drives, and community clean-ups.',
-      how: 'Volunteer at a trail-work day or event (their activities calendar lists openings), donate, or — if you\u2019re a teen — fill out a waiver (English or Spanish) and show up.' },
-    { name: 'Beacon Outreach',
-      why: 'Seasonal workers keep this valley running while facing its hardest edges — housing, cost of living, long seasons far from home. Beacon meets them there with mentorship and genuine community.',
-      what: 'One-on-one life coaching and mentorship, free community meals, game nights and sober social gatherings, retreats and outdoor trips, and mental-health and practical-resource support for lift ops, servers, guides, and the rest of the resort workforce.',
-      how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' }
-  ];
+     Spotlight copy now lives in gov-data.js FEATURED_ORGS (mirrored to
+     data/featured-orgs.json) so the DIGEST's callout box renders the SAME
+     org from the SAME copy — see scripts/weekly-email.js. Logo/links/social
+     still come live from the directory entry so they never drift.
+     Rotates weekly (index rolls over Thursday 00:00 UTC). */
+  var FEATURED_ORGS = [];
   function renderFeaturedOrg() {
+    if (!FEATURED_ORGS.length) return;
     var pick = FEATURED_ORGS[Math.floor(Date.now() / 604800000) % FEATURED_ORGS.length];
     var org = orgs.filter(function (o) { return o.name === pick.name; })[0];
     if (!org) return;
@@ -251,7 +245,12 @@
       c.classList.add('active'); catFilter = c.dataset.cat || ''; render();
     });
     render();
-    renderFeaturedOrg();
+    // Spotlight copy loads separately so a hiccup on featured-orgs.json can
+    // never take down the whole directory (LTData.load rejects if ANY file
+    // fails). Worst case the Featured organization band just stays hidden.
+    LTData.loadOne('featured-orgs')
+      .then(function (list) { FEATURED_ORGS = list || []; renderFeaturedOrg(); })
+      .catch(function (err) { console.warn('[local-orgs] featured-orgs unavailable:', err); });
     mergeApprovedOrgs();
   }).catch(function (err) { LTData.showError(grid, err); });
 })();

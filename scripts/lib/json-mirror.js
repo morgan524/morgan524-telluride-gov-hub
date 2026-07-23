@@ -70,6 +70,9 @@ const MIRROR_GOVDATA_ARRAYS = [
   'DEEP_DIVE_PAGES',
   // local orgs directory (hand-edited config; redesign local-orgs reads the JSON)
   'LOCAL_ORGS',
+  // weekly featured-org spotlight copy — read by local-orgs.html AND the
+  // digest's callout box (scripts/weekly-email.js), so it must be mirrored.
+  'FEATURED_ORGS',
 ];
 
 // HAND-EDITED config objects in gov-data.js, mirrored for the redesign's

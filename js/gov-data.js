@@ -1363,6 +1363,26 @@ const TOPIC_DEFINITIONS = {
 };
 
 
+/* ── Featured organization spotlight ─────────────────────────────────
+   Hand-curated copy (sourced from each org's own website). `name` must
+   match a LOCAL_ORGS entry exactly — the logo, website, and donate link
+   are read live from the directory so they never drift.
+
+   Rotates weekly: index = floor(Date.now() / 604800000) % length, which
+   rolls over Thursday 00:00 UTC. Read by BOTH local-orgs.html (the
+   Featured organization band) and scripts/weekly-email.js (the digest's
+   callout box), so add a new org here and it appears in both.        */
+const FEATURED_ORGS = [
+  { name: 'True North Youth Program',
+    why: 'A space and a support system for every teen in the region — free, year-round, and built around helping kids find their footing on the way to adulthood. Parents say it’s where their teens build confidence and get woven into the community.',
+    what: 'Free year-round programs for all teens in San Miguel and West Montrose counties: Rising Stars, Base Camp, college prep and scholarship help, plus river trips, food drives, and community clean-ups.',
+    how: 'Volunteer at a trail-work day or event (their activities calendar lists openings), donate, or — if you’re a teen — fill out a waiver (English or Spanish) and show up.' },
+  { name: 'Beacon Outreach',
+    why: 'Seasonal workers keep this valley running while facing its hardest edges — housing, cost of living, long seasons far from home. Beacon meets them there with mentorship and genuine community.',
+    what: 'One-on-one life coaching and mentorship, free community meals, game nights and sober social gatherings, retreats and outdoor trips, and mental-health and practical-resource support for lift ops, servers, guides, and the rest of the resort workforce.',
+    how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' }
+];
+
 /* ── Local Orgs directory — extracted from index.html ── */
 /* Schema matches v2/local-orgs.html. Add `donate: 'URL'` and
    social keys (facebook, instagram, twitter, youtube) per org
@@ -1376,7 +1396,7 @@ const LOCAL_ORGS = [
       website: "https://www.beacontelluride.com/",
       donate: "https://www.beacontelluride.com/donate",
       social: { instagram: "https://www.instagram.com/tellurideya/" },
-      logo: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+      logo: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.png"
     },
     {
       name: "Telluride Nordic Association",
