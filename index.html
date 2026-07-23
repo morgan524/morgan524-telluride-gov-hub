@@ -34,23 +34,18 @@
   .hero2 .kicker { font: 700 31px/1.15 var(--sans); color: var(--gold); letter-spacing: .005em; }
   .hero2 h1 { font: 600 64px/1.04 var(--serif); letter-spacing: -.02em; color: var(--forest); max-width: 660px; margin: 16px auto 0; }
   .hero2 .sub { font: 400 17px/1.7 var(--sans); color: var(--body2); max-width: 490px; margin: 22px auto 0; }
-  .overlap { position: relative; z-index: 3; max-width: var(--maxw); margin: -175px auto 0; padding: 0 var(--pad-x); }
-  .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-  .way { padding: 26px 24px; display: flex; flex-direction: column; border: 1.5px solid var(--forest); }
-  .way .g-label { font: 800 11px/1 var(--sans); text-transform: uppercase; letter-spacing: .09em; color: var(--rust); }
-  .way h3 { font: 600 26px/1.15 var(--serif); margin: 10px 0 8px; }
-  .way p { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 14px; flex: 1; }
-  .way .links a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 6px 0; border-top: 1px solid var(--hairline); }
-  .way .links a:hover { color: var(--rust); }
+  /* Newcomer cards sit in the hero-overlap slot (replaced the old
+     Learn/Connect/Act pillars 2026-07-23); shallower cards → smaller pull. */
+  .overlap { position: relative; z-index: 3; max-width: var(--maxw); margin: -140px auto 0; padding: 0 var(--pad-x); }
   .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
   .mini-grid.four { grid-template-columns: repeat(4, 1fr); gap: 18px; }
   @media (max-width: 900px) { .mini-grid.four { grid-template-columns: 1fr 1fr; } }
   @media (max-width: 560px) { .mini-grid.four { grid-template-columns: 1fr; } }
   .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
-  /* Thin forest stroke (Morgan 2026-07-23); hover = a ring, not a width
-     change, so the layout never shifts. */
-  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; border: 1px solid var(--forest); transition: box-shadow .15s; }
-  a.mini-link:hover { box-shadow: 0 0 0 1px var(--forest); }
+  /* White cards + thin forest stroke (Morgan 2026-07-23); hover = a ring,
+     not a width change, so the layout never shifts. */
+  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; background: #fff; border: 1px solid var(--forest); box-shadow: var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); transition: box-shadow .15s; }
+  a.mini-link:hover { box-shadow: 0 0 0 1px var(--forest), var(--shadow-media, 0 8px 24px rgba(26,46,41,.08)); }
   a.mini-link p { flex: 1; margin-bottom: 10px; }
   .mini .ico { font-size: 20px; color: var(--forest); }
   .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }
@@ -103,7 +98,7 @@
   .livable-panel .tail { font: 400 15px/1.65 var(--sans); color: var(--body2); max-width: 700px; margin: 0 auto; }
   @media (max-width: 900px) {
     .hero h1 { font-size: 38px; }
-    .ways-grid, .mini-grid { grid-template-columns: 1fr; }
+    .mini-grid { grid-template-columns: 1fr; }
     .prior-list .row { grid-template-columns: 48px 48px 1fr; }
     .prior-list .p-logo { width: 48px; height: 48px; }
     .prior-list .chev { display: none; }
@@ -139,40 +134,15 @@
   </div>
 </section>
 
+<!-- The four task-based newcomer cards took over the hero-overlap slot from
+     the old Learn/Connect/Act pillar boxes (Morgan, 2026-07-23) — every link
+     the pillars carried lives in the nav dropdowns. White + forest stroke. -->
 <section class="overlap" id="explore">
-  <div class="ways-grid">
-    <div class="way card hub-card">
-      <span class="g-label">Learn</span>
-      <h3>Understand it</h3>
-      <p>Understand what's happening and why &mdash; from daily headlines to the full story behind a project.</p>
-      <div class="links">
-        <a href="local-news.html">Local News &rarr;</a>
-        <a href="deep-dives.html">Deep Dives &rarr;</a>
-        <a href="zoning-map/index.html">Zoning Map &rarr;</a>
-        <a href="projects-map/index.html">Projects Map &rarr;</a>
-      </div>
-    </div>
-    <div class="way card hub-card">
-      <span class="g-label">Connect</span>
-      <h3>Find your people</h3>
-      <p>Find the organizations, groups, and conversations that make up the community.</p>
-      <div class="links">
-        <a href="events.html">Events &rarr;</a>
-        <a href="local-orgs.html">Local Orgs &rarr;</a>
-        <a href="hub-bub.html">Hub-Bub &rarr;</a>
-        <a href="housing.html">Housing &rarr;</a>
-      </div>
-    </div>
-    <div class="way card hub-card">
-      <span class="g-label">Act</span>
-      <h3>Make it count</h3>
-      <p>Show up where it counts. Meetings, agendas, and how to make your voice heard before a vote.</p>
-      <div class="links">
-        <a href="gov-hub.html">Gov-Hub &rarr;</a>
-        <a href="/v2/vote-tracker.html">Vote Tracker &rarr;</a>
-        <a href="legal-notices.html">Legal Notices &rarr;</a>
-      </div>
-    </div>
+  <div class="mini-grid four">
+    <a class="mini mini-link" href="start-here.html"><span class="ico">&#129517;</span><h4>New here?</h4><p>Who decides what, the big issues, and how to plug in &mdash; the ten-minute orientation.</p><span class="meta" style="color:var(--rust)">Start here &rarr;</span></a>
+    <a class="mini mini-link" href="events.html"><span class="ico">&#127914;</span><h4>What's happening?</h4><p>Concerts, films, markets, and talks &mdash; the whole region's calendar in one place.</p><span class="meta" style="color:var(--rust)">See events &rarr;</span></a>
+    <a class="mini mini-link" href="gov-hub.html"><span class="ico">&#128227;</span><h4>Want to speak up?</h4><p>Find the meeting, read the plain-English agenda, comment or join by Zoom.</p><span class="meta" style="color:var(--rust)">Make your voice heard &rarr;</span></a>
+    <a class="mini mini-link" href="housing.html"><span class="ico">&#127968;</span><h4>Need housing?</h4><p>Deed-restricted listings, lotteries, and the data behind the housing crunch.</p><span class="meta" style="color:var(--rust)">Browse housing &rarr;</span></a>
   </div>
 </section>
 
@@ -192,17 +162,8 @@
     .fa-acts .fa-dive { background: var(--forest); color: #fff; }
     .fa-acts .fa-plain { border: 1.5px solid var(--forest); color: var(--forest); background: #fff; }
   </style>
-  <!-- Task-based entry points (2026-07-23, moved above Featured Action per
-       Morgan): people arrive with questions, not content-type preferences —
-       meet the four most common ones. Reuses the .mini card styles;
-       .mini-grid.four widens the row to 4 columns. -->
-  <div class="mini-grid four">
-    <a class="mini mini-link" href="start-here.html"><span class="ico">&#129517;</span><h4>New here?</h4><p>Who decides what, the big issues, and how to plug in &mdash; the ten-minute orientation.</p><span class="meta" style="color:var(--rust)">Start here &rarr;</span></a>
-    <a class="mini mini-link" href="events.html"><span class="ico">&#127914;</span><h4>What's happening?</h4><p>Concerts, films, markets, and talks &mdash; the whole region's calendar in one place.</p><span class="meta" style="color:var(--rust)">See events &rarr;</span></a>
-    <a class="mini mini-link" href="gov-hub.html"><span class="ico">&#128227;</span><h4>Want to speak up?</h4><p>Find the meeting, read the plain-English agenda, comment or join by Zoom.</p><span class="meta" style="color:var(--rust)">Make your voice heard &rarr;</span></a>
-    <a class="mini mini-link" href="housing.html"><span class="ico">&#127968;</span><h4>Need housing?</h4><p>Deed-restricted listings, lotteries, and the data behind the housing crunch.</p><span class="meta" style="color:var(--rust)">Browse housing &rarr;</span></a>
-  </div>
-
+  <!-- (The four newcomer cards moved up into the hero-overlap slot,
+       replacing the Learn/Connect/Act pillars — Morgan, 2026-07-23.) -->
   <div class="fa-card" id="featured-action">
     <div class="fa-eyebrow">&#9733; Featured Action</div>
     <h3 id="fa-headline"></h3>
