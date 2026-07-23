@@ -500,6 +500,16 @@ const NORWOOD_CACHE_DATE = '2026-07-23';
 
 const NORWOOD_CACHED_DATA = [
   {
+    date: "August 11, 2026",
+    time: null,
+    title: "Norwood Water Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "nwc",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
     date: "August 12, 2026",
     time: null,
     title: "Board of Trustees Meeting",
@@ -517,6 +527,16 @@ const NORWOOD_CACHED_DATA = [
     packetUrl: null,
     special: false,
     board: "pz",
+    note: "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    date: "September 8, 2026",
+    time: null,
+    title: "Norwood Water Commission Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    board: "nwc",
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {

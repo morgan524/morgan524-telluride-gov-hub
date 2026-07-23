@@ -220,6 +220,26 @@
     "hook": ""
   },
   {
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "title": "Norwood Water Commission Meeting",
+    "date": "2026-08-11",
+    "time": "",
+    "location": "1670 Naturita St, Norwood CO 81423",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.norwoodtown.com/nwc-meetings",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "cross@norwoodtown.com",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Town Council",

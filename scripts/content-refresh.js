@@ -4768,7 +4768,13 @@ async function syncNorwoodMeetings() {
 
   const pageDefs = [
     { url: 'https://www.norwoodtown.com/board-of-trustees-meetings?year=2026', board: 'bot' },
-    { url: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings?year=2026', board: 'pz' }
+    { url: 'https://www.norwoodtown.com/planning-and-zoning-commission-meetings?year=2026', board: 'pz' },
+    // Norwood Water Commission (added 2026-07-23 per Morgan): NWC runs the
+    // town's water system — a 300 AF/yr Gurley Reservoir allocation that the
+    // 2022 SGM adequacy memo projects development could fully consume by
+    // 2036-2042, which makes these meetings consequential for every P&Z
+    // growth decision. Same page markup as the other boards.
+    { url: 'https://www.norwoodtown.com/nwc-meetings?year=2026', board: 'nwc' }
   ];
 
   const entries = [];
@@ -4799,7 +4805,9 @@ async function syncNorwoodMeetings() {
 
       let vm;
       while ((vm = viewRe.exec(html)) !== null) {
-        const title = vm[1];
+        // The town titles these "NWC Meeting" — spell it out so cards don't
+        // ask readers to know the acronym.
+        const title = vm[1].replace(/^NWC Meeting$/i, 'Norwood Water Commission Meeting');
         const dateStr = vm[2];
         const mDate = new Date(dateStr + 'T12:00:00'); // noon local to avoid tz
         if (mDate < pruneDate || mDate.getTime() > horizon) continue;
@@ -7167,7 +7175,11 @@ async function main() {
   // verified from the town's own 2026 history (never guessed): Board of
   // Trustees = 2nd Wednesday (1/14, 2/11, 3/11, 4/8, 5/13, 6/10, 7/8); P&Z =
   // 3rd Monday (3/16, 4/20, 5/18, 6/15 — shifts when that Monday is a
-  // holiday, and the real agenda wins on reconcile when it posts).
+  // holiday, and the real agenda wins on reconcile when it posts); Water
+  // Commission = 2nd Tuesday (verified from every 2026 meeting the town has
+  // posted: 1/13, 2/10, 3/10, 4/14, 5/12, 6/9, 7/14 — added 2026-07-23 per
+  // Morgan; NWC's Gurley Reservoir allocation vs. growth makes this board
+  // matter as much as P&Z out there).
   const newNorwoodData = await syncNorwoodMeetings();
   if (newNorwoodData === null) {
     console.warn('  Norwood: fetch failed — preserving existing NORWOOD_CACHED_DATA');
@@ -7179,7 +7191,10 @@ async function main() {
     const pzStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'pz'),
       { nth: 3, weekday: 1 },
       { title: 'Planning and Zoning Commission Meeting', board: 'pz', placeholders: 2, note: norwoodNote });
-    const norwoodStubs = [...(botStubs || []), ...(pzStubs || [])]
+    const nwcStubs = assembleBoardStubs(newNorwoodData.filter(e => e.board === 'nwc'),
+      { nth: 2, weekday: 2 },
+      { title: 'Norwood Water Commission Meeting', board: 'nwc', placeholders: 2, note: norwoodNote });
+    const norwoodStubs = [...(botStubs || []), ...(pzStubs || []), ...(nwcStubs || [])]
       .sort((a, b) => new Date(a.date) - new Date(b.date));
     if (norwoodStubs.length) {
       const existingNorwood = extractJsArray(govDataSrc, 'NORWOOD_CACHED_DATA') || [];
