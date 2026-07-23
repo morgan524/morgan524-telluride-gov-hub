@@ -4,6 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Telluride Town Council — Vote Tracker</title>
+<meta name="description" content="How your elected officials actually voted — Telluride Town Council, San Miguel County BOCC, Mountain Village, and more, from official adopted minutes.">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<!-- lt.css is loaded BEFORE this page's own <style> on purpose: the shared
+     header needs it, but this page redefines :root tokens (--green-dark, --bg,
+     --text-dark …) that lt.css also owns and the whole heatmap depends on.
+     Later rules win, so the page's :root below keeps control of its visuals.
+     Converted from the hardcoded topnav 2026-07-23. -->
+<link rel="stylesheet" href="/lt.css?v=8">
 <style>
 /* ─── Base ─────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -33,7 +41,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 /* ─── Header ────────────────────────────────────────────────── */
 .page-header{background:var(--green-dark);color:#fff;padding:18px 24px;display:flex;align-items:center;gap:16px}
-.page-header h1{font-size:20px;font-weight:700;letter-spacing:-.3px}
+/* color:#fff is explicit because lt.css sets a bare `h1,h2,h3,h4 {color:var(--forest)}`
+   which otherwise wins over the inherited white and puts dark green on this
+   dark green band (contrast 0.05). */
+.page-header h1{font-size:20px;font-weight:700;letter-spacing:-.3px;color:#fff}
 .page-header .sub{font-size:12px;opacity:.7;margin-top:2px}
 .back-link{color:#fff;text-decoration:none;opacity:.7;font-size:13px;margin-right:8px;white-space:nowrap}
 .back-link:hover{opacity:1}
@@ -205,29 +216,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 </head>
 <body>
 
-<!-- ─── Site Nav ──────────────────────────────────────────── -->
-<header class="topnav">
-  <div class="topnav-inner">
-    <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-      <img src="https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png" alt="Livable Telluride" onerror="this.style.display='none'">
-    </a>
-    <nav class="topnav-links" id="topnavLinks">
-      <a href="/local-news.html">Local News</a>
-      <a href="/gov-hub.html" class="active">Gov-Hub</a>
-      <a href="/deep-dives.html">Deep Dives</a>
-      <a href="/events.html">Events</a>
-      <a href="/hub-bub.html">Hub-Bub</a>
-      <a href="/local-orgs.html">Local Orgs</a>
-      <a href="/projects-map/">Projects Map</a>
-      <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-    </nav>
-    <div class="topnav-translate" id="google_translate_element"></div>
-    <button class="topnav-translate-reset" id="topnavTranslateReset" onclick="lvResetTranslation()" title="Show original (English)" type="button">↺ EN</button>
-    <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-    <button class="topnav-hamburger" id="topnavHamburger" aria-label="Open navigation menu" aria-expanded="false" type="button">☰</button>
-  </div>
-</header>
+<!-- Shared header via site.js (replaced the hardcoded topnav, its
+     Google-Translate widget and hamburger — site.js owns all three). -->
+<div id="lt-header"></div>
 
 
 <!-- ─── Page Header ─────────────────────────────────────────── -->
@@ -7826,51 +7817,7 @@ function renderHeatmap() {
 renderHeatmap();
 </script>
 
-<script>
-(function(){
-  function lvResetTranslation(){
-    var f=document.querySelector('.goog-te-banner-frame');
-    if(f) f.style.display='none';
-    document.body.style.top='0';
-    if(window.google&&window.google.translate&&window.google.translate.TranslateElement)
-      window.google.translate.TranslateElement({pageLanguage:'en'},'google_translate_element');
-  }
-  window.lvResetTranslation = lvResetTranslation;
-
-  function googleTranslateElementInit(){
-    new window.google.translate.TranslateElement({pageLanguage:'en',layout:window.google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
-  }
-  window.googleTranslateElementInit = googleTranslateElementInit;
-  var s=document.createElement('script');
-  s.src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async=true;
-  document.head.appendChild(s);
-})();
-
-(function(){
-  function init(){
-    var btn=document.getElementById('topnavHamburger');
-    if(!btn) return;
-    var links=document.getElementById('topnavLinks');
-    if(!links) return;
-    btn.addEventListener('click',function(){
-      var open=links.classList.toggle('open');
-      btn.setAttribute('aria-expanded',open?'true':'false');
-      btn.textContent=open?'✕':'☰';
-    });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click',function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded','false');
-        btn.textContent='☰';
-      });
-    });
-  }
-  if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',init);
-  } else { init(); }
-})();
-</script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
+<div id="lt-footer"></div>
+<script src="/site.js?v=10"></script>
 </body>
 </html>
