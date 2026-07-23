@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Where Telluride's Money Goes — A Spending Tracker</title>
+<!-- Shared nav/footer styles (loaded BEFORE the page's own <style> so the
+     page's rules still win for its body/typography). Converted from the old
+     hardcoded topnav 2026-07-23. -->
+<link rel="stylesheet" href="/lt.css?v=8">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -1119,29 +1123,9 @@
 </head>
 <body>
 
-<!-- SITE TOP NAV -->
-<header class="topnav">
-  <div class="topnav-inner">
-    <a class="topnav-logo" href="/" aria-label="Livable Telluride home">
-      <img src="/logo/Livable Telluride Logo.png" alt="Livable Telluride">
-    </a>
-    <nav class="topnav-links">
-      <a href="/local-news.html">Local News</a>
-      <a href="/gov-hub.html">Gov-Hub</a>
-      <a href="/deep-dives.html" class="active">Deep Dives</a>
-      <a href="/events.html">Events</a>
-      <a href="/hub-bub.html">Hub-Bub</a>
-      <a href="/local-orgs.html">Local Orgs</a>
-      <a href="/projects-map/">Projects Map</a>
-      <a href="/about.html">About</a>
-        <a href="/donate.html">Donate</a>
-    </nav>
-    <button id="lvLangToggle" class="topnav-lang-toggle" type="button" onclick="lvToggleLang()" title="Cambiar idioma / Switch language">Español</button>
-    <div id="lvLangWidget" aria-hidden="true"></div>
-    <a class="topnav-cta" href="/hub-bub.html#login">Log In</a>
-    <button class="topnav-hamburger" aria-label="Open navigation menu" aria-expanded="false" id="topnavHamburger" type="button">☰</button>
-  </div>
-</header>
+<!-- SITE TOP NAV (shared header via site.js — replaced the old hardcoded
+     topnav + its EN/ES toggle + hamburger, all now provided by site.js) -->
+<div id="lt-header"></div>
 
 <div class="tooltip" id="tooltip"></div>
 
@@ -2126,86 +2110,10 @@ window.addEventListener('load', renderAll);
 window.addEventListener('resize', () => { renderTreemap(); });
 </script>
 
-<!-- SITE TOP NAV: EN/ES toggle + mobile hamburger (same as deep-dive pages) -->
-<script>
-// EN/ES language toggle — Google Translate is the engine; we hide its UI
-// chrome and expose a single binary pill. Cookie: googtrans=/en/<lang>.
-function lvCurrentLang() {
-  var m = document.cookie.match(/googtrans=\/en\/([a-z]+)/);
-  return m ? m[1] : 'en';
-}
-function lvSetTransCookie(value) {
-  var expires = '=; expires=Thu, 01 Jan 1970 00:00:00 GMT';
-  var domains = ['', '.' + location.hostname, location.hostname];
-  domains.forEach(function(d){
-    var c = 'googtrans' + (value ? '=/en/' + value : expires) + '; path=/';
-    if (d) c += '; domain=' + d;
-    document.cookie = c;
-  });
-}
-function lvToggleLang() {
-  var cur = lvCurrentLang();
-  lvSetTransCookie(cur === 'es' ? '' : 'es');
-  location.reload();
-}
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'es',
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-    autoDisplay: false
-  }, 'lvLangWidget');
-}
-(function(){
-  var hideCss = document.createElement('style');
-  hideCss.textContent = [
-    '.topnav-lang-toggle { display: inline-flex; align-items: center; padding: 6px 14px; border: 1px solid rgba(33,68,60,0.25); border-radius: 999px; background: #fff; color: #2d4a3e; font-size: 0.82rem; font-weight: 600; font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; cursor: pointer; margin-right: 8px; transition: background 0.12s; }',
-    '.topnav-lang-toggle:hover { background: #f5f1ea; }',
-    '.goog-te-banner-frame { display: none !important; }',
-    '.goog-te-gadget { display: none !important; }',
-    'body { top: 0 !important; }',
-    '#lvLangWidget { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; overflow: hidden; }',
-    'font[style*="background-color"] { background: transparent !important; box-shadow: none !important; }',
-    '.goog-tooltip, .goog-tooltip:hover { display: none !important; }',
-    '.goog-text-highlight { background: none !important; box-shadow: none !important; }'
-  ].join('\n');
-  document.head.appendChild(hideCss);
-  function setLabel() {
-    var btn = document.getElementById('lvLangToggle');
-    if (btn) btn.textContent = lvCurrentLang() === 'es' ? 'English' : 'Español';
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', setLabel);
-  } else { setLabel(); }
-  var s = document.createElement('script');
-  s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-  s.async = true;
-  document.head.appendChild(s);
-})();
-(function(){
-  function init(){
-    var btn = document.getElementById('topnavHamburger');
-    if (!btn) return;
-    var links = document.querySelector('.topnav-links');
-    if (!links) return;
-    btn.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.textContent = open ? '✕' : '☰';
-    });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){
-        links.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.textContent = '☰';
-      });
-    });
-  }
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else { init(); }
-})();
-</script>
-<!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "6500d02421bc4da1bebfad6099e6027c"}'></script><!-- End Cloudflare Web Analytics -->
+<!-- Shared footer + nav (single source of truth); site.js also injects
+     the Cloudflare Web Analytics beacon and the EN/ES toggle + mobile
+     drawer that used to live in this page. -->
+<div id="lt-footer"></div>
+<script src="/site.js?v=10"></script>
 </body>
 </html>

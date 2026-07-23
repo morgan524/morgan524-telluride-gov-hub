@@ -217,7 +217,7 @@
      lazy-fetched ONCE on first open). No server, no dependencies. */
   var SEARCH_KINDS = { page: 'Pages', dive: 'Deep Dives', news: 'News', meeting: 'Upcoming Meetings', recap: 'Meeting Recaps', event: 'Events', org: 'Local Orgs', housing: 'Housing', legal: 'Legal Notices', blog: 'Blog' };
   var KIND_ORDER = ['page', 'dive', 'news', 'meeting', 'event', 'recap', 'org', 'housing', 'legal', 'blog'];
-  var searchIdx = null, searchLoading = false, searchSel = -1;
+  var searchIdx = null, searchLoading = false, searchSel = -1, searchReadyCbs = [];
 
   var searchCss = document.createElement('style');
   searchCss.textContent =
@@ -259,11 +259,18 @@
     var bucket = Math.floor(Date.now() / 600000);   // same 10-min cadence as every data file
     fetch(searchOrigin() + '/data/search-index.json?v=' + bucket)
       .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (d) { searchIdx = (d && d.items) || []; searchRender(sInput.value); })
+      .then(function (d) {
+        searchIdx = (d && d.items) || [];
+        searchRender(sInput.value);
+        var cbs = searchReadyCbs; searchReadyCbs = [];
+        cbs.forEach(function (fn) { try { fn(); } catch (e) {} });
+      })
       .catch(function (e) {
         searchLoading = false;   // allow a retry on the next open
         console.error('[site.js] search index failed:', e);
         sResults.innerHTML = '<div class="lt-search-empty">Search couldn’t load — please refresh and try again.</div>';
+        var cbs = searchReadyCbs; searchReadyCbs = [];
+        cbs.forEach(function (fn) { try { fn(e); } catch (er) {} });
       });
   }
   function openSearch() {
@@ -357,6 +364,22 @@
     }
     if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
   });
+
+  /* Public API so pages can build their own inline search box (e.g. the
+     homepage "Search here for any topic" field) over the same index/ranking.
+     ready(cb) lazy-loads the index once, then fires cb; rank(q) returns the
+     top hits; kinds/order mirror the overlay's grouping. */
+  window.LTSearch = {
+    kinds: SEARCH_KINDS,
+    order: KIND_ORDER,
+    open: openSearch,
+    rank: function (q) { return searchIdx ? searchRank(q) : []; },
+    ready: function (cb) {
+      if (searchIdx) { cb(); return; }
+      searchReadyCbs.push(cb);
+      loadIndex();
+    }
+  };
 
   /* ---- "Save to your phone" hint (mobile A2HS discoverability) -----------
      The site has a valid manifest + icons but no service worker (retired),
