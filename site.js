@@ -82,6 +82,7 @@
         g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
     }).join('') +
       '<div class="drawer-cta">' +
+      '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">&#128269; Search</button>' +
       '<a class="lt-pill-donate" href="' + (activeItem === 'donate.html' ? '#' : esc(ROOT + 'donate.html')) + '">Donate</a>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle>Espa&ntilde;ol</button>' +
       '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a></div>';
@@ -92,6 +93,7 @@
       '<img src="' + esc(ROOT + 'uploads/lt-logo.png') + '" alt="Livable Telluride"></a>' +
       '<div class="lt-nav-links">' + links + '</div>' +
       '<div class="lt-nav-cta">' +
+      '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">&#128269;</button>' +
       '<a class="lt-pill-donate" href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
       '<button class="lt-pill-lang" type="button" data-lang-toggle title="Cambiar idioma / Switch language">Espa&ntilde;ol</button>' +
       '<a class="lt-pill-login" href="' + esc(LOGIN_HREF) + '">Log In</a>' +
@@ -107,6 +109,7 @@
       '<div><div class="brand">Livable Telluride</div>' +
       '<div class="tagline">Inform. Connect. Engage. Together.</div></div>' +
       '<div class="lt-footer-links">' +
+      '<a href="' + esc(ROOT + 'start-here.html') + '">Start Here</a>' +
       '<a href="' + esc(ROOT + 'local-news.html') + '">Learn</a>' +
       '<a href="' + esc(ROOT + 'events.html') + '">Connect</a>' +
       '<a href="' + esc(ROOT + 'gov-hub.html') + '">Act</a>' +
@@ -203,4 +206,149 @@
     s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(s);
   }
+
+  /* ---- Site search (header 🔍 + "/" key) --------------------------------
+     Overlay with typeahead over data/search-index.json (built by
+     scripts/build-search-index.js each content-refresh run; ~115 KB,
+     lazy-fetched ONCE on first open). No server, no dependencies. */
+  var SEARCH_KINDS = { page: 'Pages', dive: 'Deep Dives', news: 'News', meeting: 'Upcoming Meetings', recap: 'Meeting Recaps', event: 'Events', org: 'Local Orgs', housing: 'Housing', legal: 'Legal Notices', blog: 'Blog' };
+  var KIND_ORDER = ['page', 'dive', 'news', 'meeting', 'event', 'recap', 'org', 'housing', 'legal', 'blog'];
+  var searchIdx = null, searchLoading = false, searchSel = -1;
+
+  var searchCss = document.createElement('style');
+  searchCss.textContent =
+    '.lt-pill-search{border:0;background:transparent;font-size:17px;cursor:pointer;padding:6px 8px;border-radius:8px;line-height:1;}' +
+    '.lt-pill-search:hover{background:rgba(0,0,0,.06);}' +
+    '.lt-drawer .lt-pill-search{font:600 14px/1 inherit;padding:10px 14px;border:1px solid #ccc;border-radius:999px;background:#fff;}' +
+    '.lt-search-overlay{position:fixed;inset:0;background:rgba(26,46,41,.55);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;}' +
+    '.lt-search-overlay.open{display:flex;}' +
+    '.lt-search-box{background:#fdfbf6;border-radius:14px;width:640px;max-width:100%;box-shadow:0 18px 60px rgba(0,0,0,.35);overflow:hidden;display:flex;flex-direction:column;max-height:78vh;}' +
+    '.lt-search-box input{border:0;outline:none;background:transparent;font:400 19px/1.4 inherit;padding:18px 20px;width:100%;box-sizing:border-box;border-bottom:1px solid #e4ddcd;}' +
+    '.lt-search-results{overflow-y:auto;padding:6px 0 10px;}' +
+    '.lt-search-h{font:700 11px/1 inherit;letter-spacing:.1em;text-transform:uppercase;color:#a0531f;padding:12px 20px 5px;}' +
+    '.lt-search-r{display:block;padding:8px 20px;text-decoration:none;color:#1a2e29;}' +
+    '.lt-search-r .t{font:600 15.5px/1.3 inherit;}' +
+    '.lt-search-r .s{font:400 13px/1.45 inherit;color:#7a8a85;margin-top:1px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}' +
+    '.lt-search-r:hover,.lt-search-r.sel{background:#eef1ee;}' +
+    '.lt-search-empty{padding:22px 20px;font:400 14.5px/1.5 inherit;color:#7a8a85;}' +
+    '.lt-search-foot{font:400 11.5px/1 inherit;color:#9aa8a2;padding:9px 20px;border-top:1px solid #eee7d8;display:flex;gap:14px;}';
+  document.head.appendChild(searchCss);
+
+  var overlay = document.createElement('div');
+  overlay.className = 'lt-search-overlay';
+  overlay.innerHTML = '<div class="lt-search-box" role="dialog" aria-label="Site search">' +
+    '<input type="search" placeholder="Search meetings, news, events, orgs, deep dives…" aria-label="Search the site" autocomplete="off">' +
+    '<div class="lt-search-results" aria-live="polite"></div>' +
+    '<div class="lt-search-foot"><span>&#8629; open</span><span>&#8593;&#8595; navigate</span><span>esc close</span></div></div>';
+  document.body.appendChild(overlay);
+  var sInput = overlay.querySelector('input');
+  var sResults = overlay.querySelector('.lt-search-results');
+
+  function searchOrigin() {
+    return /^https?:$/.test(location.protocol) ? '' : 'https://livabletelluride.org';
+  }
+  function loadIndex() {
+    if (searchIdx || searchLoading) return;
+    searchLoading = true;
+    var bucket = Math.floor(Date.now() / 600000);   // same 10-min cadence as every data file
+    fetch(searchOrigin() + '/data/search-index.json?v=' + bucket)
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (d) { searchIdx = (d && d.items) || []; searchRender(sInput.value); })
+      .catch(function (e) {
+        searchLoading = false;   // allow a retry on the next open
+        console.error('[site.js] search index failed:', e);
+        sResults.innerHTML = '<div class="lt-search-empty">Search couldn’t load — please refresh and try again.</div>';
+      });
+  }
+  function openSearch() {
+    overlay.classList.add('open');
+    sInput.value = ''; searchSel = -1; searchRender('');
+    loadIndex();
+    setTimeout(function () { sInput.focus(); }, 30);
+  }
+  function closeSearch() { overlay.classList.remove('open'); }
+
+  // Scoring: every query token must hit (title or snippet); title hits and
+  // prefix hits rank higher; upcoming/dated items get a small recency nudge.
+  function searchRank(q) {
+    var toks = q.toLowerCase().split(/\s+/).filter(Boolean);
+    if (!toks.length) return [];
+    var scored = [];
+    for (var i = 0; i < searchIdx.length; i++) {
+      var it = searchIdx[i];
+      var t = (it.t || '').toLowerCase(), sn = (it.s || '').toLowerCase();
+      var score = 0, ok = true;
+      for (var j = 0; j < toks.length; j++) {
+        var tk = toks[j];
+        if (t.indexOf(tk) !== -1) score += (t.indexOf(tk) === 0 ? 30 : (new RegExp('\\b' + tk.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).test(t) ? 20 : 12));
+        else if (sn.indexOf(tk) !== -1) score += 6;
+        else { ok = false; break; }
+      }
+      if (!ok) continue;
+      if (it.k === 'page' || it.k === 'dive') score += 8;         // destinations beat individual items
+      scored.push({ it: it, score: score });
+    }
+    scored.sort(function (a, b) { return b.score - a.score || String(b.it.d || '').localeCompare(String(a.it.d || '')); });
+    return scored.slice(0, 30).map(function (x) { return x.it; });
+  }
+
+  function searchRender(q) {
+    q = (q || '').trim();
+    searchSel = -1;
+    if (!searchIdx) { sResults.innerHTML = '<div class="lt-search-empty">Loading the index…</div>'; return; }
+    if (q.length < 2) { sResults.innerHTML = '<div class="lt-search-empty">Type to search everything on the site — meetings, news, events, orgs, deep dives, housing, legal notices.</div>'; return; }
+    var hits = searchRank(q);
+    if (!hits.length) { sResults.innerHTML = '<div class="lt-search-empty">Nothing matched “' + esc(q) + '”. Try fewer or different words.</div>'; return; }
+    // Group by kind, in a fixed order, preserving rank inside each group.
+    var groups = {};
+    hits.forEach(function (it) { (groups[it.k] = groups[it.k] || []).push(it); });
+    var html = '';
+    KIND_ORDER.forEach(function (k) {
+      if (!groups[k]) return;
+      html += '<div class="lt-search-h">' + esc(SEARCH_KINDS[k] || k) + '</div>';
+      groups[k].forEach(function (it) {
+        var ext = /^https?:\/\//.test(it.u) && it.u.indexOf('livabletelluride.org') === -1;
+        html += '<a class="lt-search-r" href="' + esc(it.u) + '"' + (ext ? ' target="_blank" rel="noopener"' : '') + '>' +
+          '<div class="t">' + esc(it.t) + (ext ? ' &#8599;' : '') + '</div>' +
+          (it.s ? '<div class="s">' + esc(it.s) + '</div>' : '') + '</a>';
+      });
+    });
+    sResults.innerHTML = html;
+  }
+
+  var searchDebounce;
+  sInput.addEventListener('input', function () {
+    clearTimeout(searchDebounce);
+    var v = sInput.value;
+    searchDebounce = setTimeout(function () { searchRender(v); }, 80);
+  });
+  sInput.addEventListener('keydown', function (e) {
+    var rows = sResults.querySelectorAll('.lt-search-r');
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!rows.length) return;
+      searchSel = e.key === 'ArrowDown' ? Math.min(searchSel + 1, rows.length - 1) : Math.max(searchSel - 1, 0);
+      rows.forEach(function (r, i) { r.classList.toggle('sel', i === searchSel); });
+      rows[searchSel].scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Enter') {
+      var target = rows[searchSel === -1 ? 0 : searchSel];
+      if (target) target.click();
+    } else if (e.key === 'Escape') { closeSearch(); }
+  });
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closeSearch(); });
+  document.querySelectorAll('[data-search-open]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      document.querySelector('.lt-nav').classList.remove('drawer-open');
+      openSearch();
+    });
+  });
+  // "/" opens search anywhere (unless typing in a field); Esc closes.
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) {
+      var el = document.activeElement;
+      if (el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.isContentEditable)) return;
+      e.preventDefault(); openSearch();
+    }
+    if (e.key === 'Escape' && overlay.classList.contains('open')) closeSearch();
+  });
 })();

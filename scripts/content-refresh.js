@@ -7394,6 +7394,10 @@ async function main() {
   // deep-dive-linked meeting from the watch + week-meetings just built.
   try { require('./build-featured-action.js').run(REPO_ROOT); }
   catch (e) { console.warn('  featured-action build failed: ' + e.message); }
+  // Site search index — flat index over everything just written above
+  // (news/meetings/events/orgs/…), consumed by the header search overlay.
+  try { require('./build-search-index.js').run(REPO_ROOT); }
+  catch (e) { console.warn('  search-index build failed: ' + e.message); }
 
   // ── Note: the old "regenerate data-only.js from gov-helpers.js" step has been
   // retired (2026-05-18). Everything that used to live in gov-helpers.js + be

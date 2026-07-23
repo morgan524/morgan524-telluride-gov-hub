@@ -43,7 +43,13 @@
   .way .links a { display: block; font: 500 15.5px/1.4 var(--serif); color: var(--forest); padding: 6px 0; border-top: 1px solid var(--hairline); }
   .way .links a:hover { color: var(--rust); }
   .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 22px; }
+  .mini-grid.four { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  @media (max-width: 900px) { .mini-grid.four { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .mini-grid.four { grid-template-columns: 1fr; } }
   .mini { padding: 20px 22px; background: var(--sage2); border: 1px solid var(--hairline); border-radius: 10px; }
+  a.mini-link { display: flex; flex-direction: column; color: inherit; text-decoration: none; transition: border-color .15s; }
+  a.mini-link:hover { border-color: var(--forest); }
+  a.mini-link p { flex: 1; margin-bottom: 10px; }
   .mini .ico { font-size: 20px; color: var(--forest); }
   .mini h4 { font: 600 19px/1.2 var(--serif); margin: 8px 0 4px; }
   .mini p { font: 400 15px/1.55 var(--sans); color: var(--body2); margin: 0; }
@@ -191,6 +197,16 @@
     <p class="fa-blurb" id="fa-blurb"></p>
     <div class="fa-acts" id="fa-acts"></div>
   </div>
+
+  <!-- Task-based entry points (2026-07-23): people arrive with questions, not
+       content-type preferences — meet the four most common ones. Reuses the
+       .mini card styles; .mini-grid.four widens the row to 4 columns. -->
+  <div class="mini-grid four">
+    <a class="mini mini-link" href="start-here.html"><span class="ico">&#129517;</span><h4>New here?</h4><p>Who decides what, the big issues, and how to plug in &mdash; the ten-minute orientation.</p><span class="meta" style="color:var(--rust)">Start here &rarr;</span></a>
+    <a class="mini mini-link" href="events.html"><span class="ico">&#127914;</span><h4>What's happening?</h4><p>Concerts, films, markets, and talks &mdash; the whole region's calendar in one place.</p><span class="meta" style="color:var(--rust)">See events &rarr;</span></a>
+    <a class="mini mini-link" href="gov-hub.html"><span class="ico">&#128227;</span><h4>Want to speak up?</h4><p>Find the meeting, read the plain-English agenda, comment or join by Zoom.</p><span class="meta" style="color:var(--rust)">Make your voice heard &rarr;</span></a>
+    <a class="mini mini-link" href="housing.html"><span class="ico">&#127968;</span><h4>Need housing?</h4><p>Deed-restricted listings, lotteries, and the data behind the housing crunch.</p><span class="meta" style="color:var(--rust)">Browse housing &rarr;</span></a>
+  </div>
 </section>
 
 <div style="max-width:var(--maxw);margin:44px auto 0;padding:0 var(--pad-x)"><div id="lt-weather"></div></div>
@@ -267,7 +283,7 @@
 
 
 <div id="lt-footer"></div>
-<script src="site.js?v=7"></script>
+<script src="site.js?v=8"></script>
 <script src="/js/lt-data.js?v=7"></script>
 <script src="/js/lt-weather.js?v=1" defer></script>
 <script>
