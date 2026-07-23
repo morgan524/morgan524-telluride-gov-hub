@@ -165,6 +165,10 @@ const communityImg = (title, townHint) => {
 };
 const imgFallback = (title, townHint) => {
   const t = title || '';
+  const h = String(townHint || '');
+  // Venue/town defaults (Morgan 2026-07-23) — mirror build-events-index.js.
+  if (/\btown park\b/i.test(h) && !/mountain\s+village/i.test(h)) return FB('townpark');
+  if (/mountain\s+village/i.test(h)) return FB('mountainvillage');
   for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
   for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) {
     const n = ROTATING_SLUGS[c.slug];

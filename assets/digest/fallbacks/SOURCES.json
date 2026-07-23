@@ -236,5 +236,19 @@
   "licensee": "Livable Telluride",
   "title": "Telluride Town Park",
   "note": "Morgan's own photo (images/Stock, added 2026-07-22)"
+ },
+ "townpark": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Telluride Town Park",
+  "note": "Morgan's own photo; venue/town default (2026-07-23)"
+ },
+ "mountainvillage": {
+  "license": "owner",
+  "source": "morgan-local-photos",
+  "licensee": "Livable Telluride",
+  "title": "Mountain Village",
+  "note": "Morgan's own photo; venue/town default (2026-07-23)"
  }
 }

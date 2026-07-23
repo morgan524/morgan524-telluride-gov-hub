@@ -136,7 +136,14 @@ function communityImg(title, town) {
     : COMMUNITY_POOLS.generic;
   return FB('community-' + pool[titleHash(title) % pool.length]);
 }
-function fallbackImg(title, town) {
+// Venue/town-specific defaults (Morgan 2026-07-23) — used when an event has no
+// real source image. These beat the generic category/community fallbacks so a
+// Town Park concert shows Town Park (not a stock guitar) and a Mountain Village
+// event shows Mountain Village. Location text is authoritative for Town Park.
+function fallbackImg(title, town, location) {
+  const loc = String(location || '');
+  if (/\btown park\b/i.test(loc) && (!town || town === 'Telluride')) return FB('townpark');
+  if (town === 'Mountain Village') return FB('mountainvillage');
   for (const [re, slug] of CATEGORY_FALLBACKS) {
     if (!re.test(title || '')) continue;
     const n = ROTATING_SLUGS[slug];
@@ -246,10 +253,13 @@ function buildEventsIndex(repoRoot) {
         time: timeOf(e),
         location: String(e.location || '').trim(),
         town: town,
-        // koto.org/wp-content sends Cross-Origin-Resource-Policy: same-origin —
-        // hotlinks are blocked by the browser (ERR_BLOCKED_BY_RESPONSE), so
-        // treat them like webp: unusable → category fallback (2026-07-22 review).
-        img: (/^https?:\/\//.test(rawImg) && !/\.webp(\?|#|$)/i.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title, town),
+        // Keep the source image when it's a usable hotlink. koto.org/wp-content
+        // sends Cross-Origin-Resource-Policy: same-origin, so the browser blocks
+        // it (ERR_BLOCKED_BY_RESPONSE) → fall back. webp IS kept here: browsers
+        // render it fine (the webp block lives only in the EMAIL path, where
+        // Outlook/old iOS Mail can't show it). Otherwise → venue/category
+        // fallback (Morgan 2026-07-23: recover the real webp concert photos).
+        img: (/^https?:\/\//.test(rawImg) && !/koto\.org\/wp-content/i.test(rawImg)) ? rawImg : fallbackImg(title, town, e.location),
         category: String(e.category || '').trim(),
         source: label,
         desc: desc,

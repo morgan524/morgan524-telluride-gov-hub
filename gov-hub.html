@@ -132,7 +132,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=10"></script>
-<script src="/js/lt-data.js?v=7"></script>
+<script src="/js/lt-data.js?v=8"></script>
 <script>
 /* Featured Action — identical loader to index.html's (keep in sync). Loaded
    separately from the meeting list so a miss just hides the card. */
@@ -162,7 +162,15 @@
   if (!window.LTData) { list.innerHTML = '<div class="lt-data-error">This section failed to load. Please refresh in a minute.</div>'; return; }
   var esc = LTData.esc, safe = LTData.safeUrl;
   var MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
-  var meetings = [], srcFilter = '';
+  var meetings = [], srcFilter = '', govShowAll = false;
+  // ISO date 5 business days (Mon–Fri) ahead of today — the initial cutoff;
+  // "Show more" reveals everything past it (Morgan 2026-07-23).
+  function businessCutoff() {
+    var d = LTData.parseDateKey(LTData.todayMT()), n = 0;
+    while (n < 5) { d.setDate(d.getDate() + 1); var wd = d.getDay(); if (wd !== 0 && wd !== 6) n++; }
+    var pad = function (x) { return String(x).padStart(2, '0'); };
+    return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  }
 
   // Public Entities — always ALL listed (even zero-count), logos from /logo/.
   // Keys match week-meetings.json `source`; labels match its sourceLabel.
@@ -226,8 +234,15 @@
       list.innerHTML = '<p class="meta" style="padding:18px 0">No meetings scheduled for ' + esc(name) + ' in the next two weeks.</p>';
       return;
     }
+    // Limit to the next 5 business days unless "Show more" was clicked.
+    var cutoff = businessCutoff();
+    var hiddenCount = govShowAll ? 0 : rows.filter(function (m) { return m.date > cutoff; }).length;
+    var shown = govShowAll ? rows : rows.filter(function (m) { return m.date <= cutoff; });
+    // Never show an empty list just because nothing falls in the next 5 days —
+    // fall back to the full list so the page is never blank.
+    if (!shown.length) { shown = rows; hiddenCount = 0; }
     var html = '', lastDate = '';
-    rows.forEach(function (m) {
+    shown.forEach(function (m) {
       if (m.date !== lastDate) {
         html += '<div class="day-h">' + LTData.fmtDate(m.date, { weekday: 'long', month: 'long', day: 'numeric' }) + '</div>';
         lastDate = m.date;
@@ -255,6 +270,9 @@
         : '<span class="abtn empty" title="Agenda packet not yet posted" aria-disabled="true">&#128230; Agenda Packet</span>';
       if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
       if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+      // Add-to-calendar (.ics) — Morgan 2026-07-23. Meetings without a time
+      // become an all-day entry.
+      acts += '<a class="abtn" href="' + LTData.icsDataUri({ title: m.title + ' — ' + m.sourceLabel, date: m.date, time: m.time, location: m.location, description: m.summary, url: m.agendaUrl || m.link }) + '" download="' + esc(LTData.icsFilename(m.title, m.date)) + '">&#128197; Add to calendar</a>';
       // Zoom block BELOW the button row (per Morgan 2026-07-23): the Join
       // button + Meeting ID + Passcode (+ Phone) together on their own line,
       // rendered ONLY when we actually have the data (no empty shells).
@@ -278,7 +296,12 @@
         (m.location ? '<div class="meta" style="margin-bottom:6px">&#128205; ' + esc(m.location) + '</div>' : '') +
         '<div class="acts" style="margin-top:10px">' + acts + '</div>' + zoomRow + '</div></article>';
     });
+    if (hiddenCount > 0) {
+      html += '<div style="margin:26px 0;text-align:center"><button class="abtn" id="gov-more" style="padding:11px 22px;font-size:14px">Show ' + hiddenCount + ' more meeting' + (hiddenCount === 1 ? '' : 's') + ' &darr;</button></div>';
+    }
     list.innerHTML = html;
+    var gm = document.getElementById('gov-more');
+    if (gm) gm.addEventListener('click', function () { govShowAll = true; render(); });
   }
 
   function renderEntityFilter() {
@@ -296,6 +319,7 @@
     }).join('');
     function pick(el) {
       srcFilter = el.dataset.key || '';
+      govShowAll = false;   // a new filter resets to the 5-business-day view
       bar.querySelectorAll('.ent').forEach(function (x) { x.classList.toggle('active', x === el); });
       render();
     }

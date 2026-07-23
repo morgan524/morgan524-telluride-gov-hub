@@ -23,24 +23,37 @@
   .th-h { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; border-bottom: 2px solid var(--forest); padding-bottom: 12px; margin: 40px 0 4px; flex-wrap: wrap; }
   .th-h h2 { margin: 0; }
   .th-h .all { font: 600 14.5px/1 var(--sans); color: var(--rust); white-space: nowrap; }
-  /* meetings */
-  .th-meet { display: grid; grid-template-columns: 84px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--hairline); }
-  .th-meet .d-mon { font: 800 10.5px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; text-align: center; }
-  .th-meet .d-day { font: 600 32px/1.05 var(--serif); color: var(--forest); text-align: center; }
-  .th-meet h3 { font: 600 21px/1.25 var(--serif); margin: 2px 0 6px; }
-  .th-meet .summ { font: 400 15px/1.6 var(--sans); color: var(--body2); margin: 0 0 10px; }
-  .th-meet .acts { display: flex; gap: 9px; flex-wrap: wrap; }
-  .th-meet .abtn { display: inline-block; font: 600 12px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 12px; border-radius: 5px; }
+  /* side-by-side: events (wider) left, meetings right */
+  .th-cols { display: grid; grid-template-columns: 1.5fr 1fr; gap: 44px; align-items: start; }
+  /* meetings — same button language as Gov-Hub */
+  .th-meet { display: grid; grid-template-columns: 60px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
+  .th-meet .d-mon { font: 800 10px/1 var(--sans); letter-spacing: .08em; color: var(--rust); text-transform: uppercase; text-align: center; }
+  .th-meet .d-day { font: 600 28px/1.05 var(--serif); color: var(--forest); text-align: center; }
+  .th-meet h3 { font: 600 18.5px/1.25 var(--serif); margin: 2px 0 6px; }
+  .th-meet .summ { font: 400 14.5px/1.55 var(--sans); color: var(--body2); margin: 0 0 8px; }
+  .th-meet .loc { font: 400 13.5px/1.5 var(--sans); color: var(--muted); margin: 0 0 8px; }
+  .th-meet .acts { display: flex; gap: 8px; flex-wrap: wrap; }
+  .th-meet .abtn { display: inline-block; font: 600 11.5px/1 var(--sans); color: var(--forest); border: 1.5px solid var(--forest); padding: 6px 11px; border-radius: 5px; text-decoration: none; }
   .th-meet .abtn.primary { background: var(--forest); border-color: var(--forest); color: #fff; }
   .th-meet .abtn.empty { border-color: var(--hairline); color: var(--muted2); background: var(--sage2); cursor: default; }
-  /* events */
-  .th-ev-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 16px; }
-  .th-ev { border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; background: #fff; }
-  .th-ev .img-frame { aspect-ratio: 16/9; }
-  .th-ev .b { padding: 12px 16px 14px; }
-  .th-ev h3 { font: 600 17.5px/1.25 var(--serif); margin: 4px 0 4px; }
+  .th-meet .abtn.zoom { border-color: #2d64a8; color: #2d64a8; }
+  .th-meet .abtn.live { border-color: #a0463d; color: #a0463d; }
+  .th-meet .zoomline { font: 500 13px/1.5 var(--sans); color: var(--muted); margin-top: 6px; }
+  /* events — stacked cards (the column is narrower now) */
+  #th-events { margin-top: 16px; }
+  .th-ev { display: grid; grid-template-columns: 116px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--hairline); }
+  .th-ev .img-frame { aspect-ratio: 4/3; border-radius: 8px; }
+  .th-ev h3 { font: 600 18px/1.25 var(--serif); margin: 2px 0 4px; }
   .th-ev h3 a { color: var(--forest); }
-  .th-ev .meta { font: 400 13.5px/1.5 var(--sans); }
+  .th-ev h3 a:hover { color: var(--rust); }
+  .th-ev .meta { font: 400 13.5px/1.5 var(--sans); color: var(--muted); margin-bottom: 5px; }
+  .th-ev .dek { font: 400 13.5px/1.55 var(--sans); color: var(--body2); margin: 0 0 6px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .th-ev .ev-acts { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+  .th-ev .more-link { font: 600 13px/1 var(--sans); color: var(--rust); text-decoration: none; }
+  .th-ev .more-link:hover { text-decoration: underline; }
+  .th-ev .cal-link { font: 600 12px/1 var(--sans); color: var(--forest); border: 1px solid var(--hairline); border-radius: 999px; padding: 5px 10px; text-decoration: none; }
+  .th-ev .cal-link:hover { background: var(--sage2); border-color: var(--forest); }
+  .th-more { margin: 20px 0 0; text-align: center; }
   /* news */
   .th-news { display: grid; grid-template-columns: 150px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--hairline); }
   .th-news.no-media { grid-template-columns: 1fr; }
@@ -62,7 +75,7 @@
   .th-res a:hover { color: var(--rust); }
   .th-empty { font: 400 15px/1.6 var(--sans); color: var(--muted); padding: 16px 0; }
   @media (max-width: 900px) {
-    .th-ev-grid { grid-template-columns: 1fr; }
+    .th-cols { grid-template-columns: 1fr; gap: 8px; }
     .th-two { grid-template-columns: 1fr; }
     .th-news { grid-template-columns: 1fr; }
   }
@@ -82,11 +95,18 @@
 </header>
 
 <div class="th-wrap">
-  <div class="th-h"><h2 class="section-h">Town meetings</h2><a class="all" href="/gov-hub.html">All meetings on Gov-Hub &rarr;</a></div>
-  <div id="th-meetings"><p class="meta" style="padding:16px 0">Loading meetings&hellip;</p></div>
-
-  <div class="th-h"><h2 class="section-h">Happening nearby</h2><a class="all" href="/events.html">Full events calendar &rarr;</a></div>
-  <div class="th-ev-grid" id="th-events"><p class="meta">Loading events&hellip;</p></div>
+  <!-- Side-by-side (Morgan 2026-07-23): events on the LEFT (the busy column),
+       fewer town meetings on the RIGHT. Stacks on narrow screens. -->
+  <div class="th-cols">
+    <div>
+      <div class="th-h"><h2 class="section-h">Happening nearby</h2><a class="all" href="/events.html">Full calendar &rarr;</a></div>
+      <div id="th-events"><p class="meta">Loading events&hellip;</p></div>
+    </div>
+    <div>
+      <div class="th-h"><h2 class="section-h">Town meetings</h2><a class="all" href="/gov-hub.html">All on Gov-Hub &rarr;</a></div>
+      <div id="th-meetings"><p class="meta" style="padding:16px 0">Loading meetings&hellip;</p></div>
+    </div>
+  </div>
 
   <div class="th-h"><h2 class="section-h">West End news</h2><a class="all" href="/local-news.html">All Local News &rarr;</a></div>
   <div id="th-news"><p class="meta" style="padding:16px 0">Loading news&hellip;</p></div>
@@ -119,7 +139,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=10"></script>
-<script src="/js/lt-data.js?v=7"></script>
+<script src="/js/lt-data.js?v=8"></script>
 <script>
 (function () {
   'use strict';
@@ -139,42 +159,79 @@
   LTData.load(['week-meetings', 'events-index', TOWN.newsFile, 'legal-notices', 'local-orgs'])
     .then(function (data) {
 
-      // ── Meetings ──
+      // ── Meetings (full Gov-Hub button set + Add to calendar) ──
       var meets = (data['week-meetings'] || []).filter(function (m) {
         return m && m.source === TOWN.meetingSource && m.date >= LTData.todayMT();
       });
       document.getElementById('th-meetings').innerHTML = meets.length ? meets.map(function (m) {
         var d = LTData.parseDateKey(m.date);
-        // Same honesty rules as Gov-Hub: green only when the agenda is
-        // actually posted; grey ghost + "Meeting info" link otherwise.
+        // Same button language + honesty rules as Gov-Hub: View Agenda green
+        // only when posted (else grey ghost), Agenda Packet, Meeting info,
+        // Livestream, Add to calendar, and a Zoom row below.
         var acts = '';
         acts += (m.hasAgenda && m.agendaUrl)
           ? '<a class="abtn primary" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda &rarr;</a>'
           : '<span class="abtn empty" title="Agenda not yet posted">View Agenda</span>';
-        if (m.packetUrl) acts += '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">&#128230; Agenda Packet</a>';
+        acts += m.packetUrl
+          ? '<a class="abtn primary" href="' + esc(safe(m.packetUrl)) + '" download target="_blank" rel="noopener">&#128230; Agenda Packet</a>'
+          : '<span class="abtn empty" title="Agenda packet not yet posted">&#128230; Agenda Packet</span>';
+        if (m.livestream) acts += '<a class="abtn live" href="' + esc(safe(m.livestream)) + '" target="_blank" rel="noopener">&#9654; Livestream</a>';
         if (!m.hasAgenda && (m.agendaUrl || m.link)) acts += '<a class="abtn" href="' + esc(safe(m.agendaUrl || m.link)) + '" target="_blank" rel="noopener">Meeting info</a>';
+        acts += '<a class="abtn" href="' + LTData.icsDataUri({ title: m.title + ' — ' + (m.sourceLabel || 'Norwood'), date: m.date, time: m.time, location: m.location, description: m.summary, url: m.agendaUrl || m.link }) + '" download="' + esc(LTData.icsFilename(m.title, m.date)) + '">&#128197; Add to calendar</a>';
+        var zoomBits = [];
+        if (m.zoomMeetingId) zoomBits.push('<strong>ID:</strong> ' + esc(m.zoomMeetingId));
+        if (m.zoomPasscode) zoomBits.push('<strong>Passcode:</strong> ' + esc(String(m.zoomPasscode).replace(/\.$/, '')));
+        var zoomRow = '';
+        if (m.zoomLink || zoomBits.length) {
+          zoomRow = '<div class="acts" style="margin-top:6px">' +
+            (m.zoomLink ? '<a class="abtn zoom" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">&#128249; Join Zoom</a>' : '') +
+            (zoomBits.length ? '<span class="zoomline">' + zoomBits.join(' &middot; ') + '</span>' : '') + '</div>';
+        }
         return '<div class="th-meet">' +
           '<div><div class="d-mon">' + MON[d.getMonth()] + '</div><div class="d-day">' + d.getDate() + '</div></div>' +
           '<div><h3>' + esc(m.title) + '</h3>' +
           (m.summary ? '<p class="summ">' + esc(m.summary) + '</p>' : '') +
-          (m.location ? '<div class="meta" style="margin-bottom:8px">&#128205; ' + esc(m.location) + '</div>' : '') +
-          '<div class="acts">' + acts + '</div></div></div>';
+          (m.location ? '<div class="loc">&#128205; ' + esc(m.location) + '</div>' : '') +
+          '<div class="acts">' + acts + '</div>' + zoomRow + '</div></div>';
       }).join('') : '<p class="th-empty">No town meetings on the calendar in the next month &mdash; agendas usually post a few days ahead on the <a href="https://www.norwoodtown.com/" target="_blank" rel="noopener" style="color:var(--rust)">town site</a>.</p>';
 
-      // ── Events (next 6 in the area) ──
-      var evs = (data['events-index'] || []).filter(function (e) {
+      // ── Events: next 5 days shown, "See more" reveals the rest. Full-date
+      //    meta ("7:00 PM Friday, July 24 · Venue · Source"), detail + calendar. ──
+      var allEvs = (data['events-index'] || []).filter(function (e) {
         return e && TOWN.eventTowns.indexOf(e.town) !== -1 && e.date >= LTData.todayMT();
-      }).slice(0, 6);
-      document.getElementById('th-events').innerHTML = evs.length ? evs.map(function (e) {
-        var img = e.img ? '<div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div>' : '';
-        var when = [LTData.fmtDate(e.date, { weekday: 'short', month: 'short', day: 'numeric' }), e.time].filter(Boolean).join(' · ');
-        return '<article class="th-ev story">' + img + '<div class="b">' +
+      });
+      function evCard(e) {
+        var img = e.img ? '<div class="img-frame"><img src="' + esc(e.img) + '" alt="" loading="lazy"></div>' : '<div class="img-frame"></div>';
+        var when = [e.time, LTData.fmtDate(e.date, { weekday: 'long', month: 'long', day: 'numeric' })].filter(Boolean).join(' ');
+        var meta = [when, e.location || e.town, e.source].filter(Boolean).join(' · ');
+        return '<article class="th-ev story">' + img + '<div>' +
           '<h3><a href="' + esc(safe(e.href, '/events.html')) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
-          '<div class="meta">' + esc(when) + (e.location ? ' · ' + esc(e.location) : '') + '</div>' +
-          '</div></article>';
-      }).join('') : '<p class="th-empty">Nothing on the West End calendar right now.</p>';
+          '<div class="meta">' + esc(meta) + '</div>' +
+          (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') +
+          '<div class="ev-acts">' +
+          '<a class="more-link" href="' + esc(safe(e.href, '/events.html')) + '" target="_blank" rel="noopener">More details here &rarr;</a>' +
+          '<a class="cal-link" href="' + LTData.icsDataUri({ title: e.title, date: e.date, time: e.time, location: e.location, description: e.desc, url: e.href }) + '" download="' + esc(LTData.icsFilename(e.title, e.date)) + '">&#128197; Add to calendar</a>' +
+          '</div></div></article>';
+      }
+      var evWrap = document.getElementById('th-events');
+      if (!allEvs.length) { evWrap.innerHTML = '<p class="th-empty">Nothing on the West End calendar right now.</p>'; }
+      else {
+        // Days with events, first 5 shown initially.
+        var evDays = allEvs.map(function (e) { return e.date; }).filter(function (v, i, a) { return a.indexOf(v) === i; }).sort();
+        var renderEvents = function (showAll) {
+          var cut = evDays[Math.min(4, evDays.length - 1)];
+          var shown = showAll ? allEvs : allEvs.filter(function (e) { return e.date <= cut; });
+          var hidden = allEvs.length - shown.length;
+          var h = shown.map(evCard).join('');
+          if (!showAll && hidden > 0) h += '<div class="th-more"><button class="btn btn-outline" id="ev-more">See ' + hidden + ' more event' + (hidden === 1 ? '' : 's') + ' &darr;</button></div>';
+          evWrap.innerHTML = h;
+          var b = document.getElementById('ev-more');
+          if (b) b.addEventListener('click', function () { renderEvents(true); });
+        };
+        renderEvents(false);
+      }
 
-      // ── News (SMBF = the West End paper) ──
+      // ── News (SMBF = the West End paper) — every item gets "More details" ──
       var news = (data[TOWN.newsFile] || []).slice(0, 6);
       document.getElementById('th-news').innerHTML = news.length ? news.map(function (a) {
         var img = a.img ? '<div class="img-frame"><img src="' + esc(a.img) + '" alt="" loading="lazy"></div>' : '';
@@ -182,6 +239,7 @@
           '<h3><a href="' + esc(safe(a.href)) + '" target="_blank" rel="noopener">' + esc(a.title) + '</a></h3>' +
           (a.copy ? '<p class="dek">' + esc(a.copy) + '</p>' : '') +
           '<div class="meta">' + esc([a.source, a.date].filter(Boolean).join(' · ')) + '</div>' +
+          '<a class="more-link" href="' + esc(safe(a.href)) + '" target="_blank" rel="noopener" style="font:600 13.5px/1 var(--sans);color:var(--rust);text-decoration:none;display:inline-block;margin-top:6px">More details here &rarr;</a>' +
           '</div></article>';
       }).join('') : '<p class="th-empty">No recent Forum stories.</p>';
 

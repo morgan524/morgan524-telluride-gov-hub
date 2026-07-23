@@ -60,6 +60,10 @@
   .ev .img-frame { width: 128px; height: 128px; border-radius: 8px; }
   .more-link { display: inline-block; margin-top: 6px; font: 600 13.5px/1 var(--sans); color: var(--rust); }
   .more-link:hover { text-decoration: underline; }
+  .ev-acts { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 6px; }
+  .ev-acts .more-link { margin-top: 0; }
+  .cal-link { font: 600 13px/1 var(--sans); color: var(--forest); border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 12px; text-decoration: none; }
+  .cal-link:hover { background: var(--sage2); border-color: var(--forest); }
   /* Submit-an-event form */
   .sf-wrap { max-width: 760px; margin: 0 auto; padding: 46px var(--pad-x) 26px; }
   .sf-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
@@ -300,7 +304,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=10"></script>
-<script src="/js/lt-data.js?v=7"></script>
+<script src="/js/lt-data.js?v=8"></script>
 <script src="/js/lt-weather.js?v=1" defer></script>
 <script>
 (function () {
@@ -309,7 +313,7 @@
   var esc = LTData.esc, safe = LTData.safeUrl;
   var TOWN_ORDER = ['Telluride', 'Mountain Village', 'Norwood', 'Ridgway', 'Ouray', 'West End', 'Rico', 'Ophir'];
   var TYPE_ORDER = ['Music', 'Arts & Film', 'Festivals', 'Outdoors & Sports', 'Food & Drink', 'Family & Kids', 'Talks & Classes', 'Wellness', 'Community'];
-  var DAYS_PAGE = 7;
+  var DAYS_PAGE = 5;   // show the next 5 days with events; "See more" reveals the rest
   var events = [], townFilter = '', typeFilter = '', shownDays = DAYS_PAGE;
 
   // Featured pick: today's most compelling event (real photo > fallback,
@@ -360,16 +364,20 @@
           '<h3><a href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
           '<div class="meta">' + esc(metaLine(e)) + '</div>' +
           (e.desc ? '<p class="dek">' + esc(e.desc) + '</p>' : '') +
-          '<a class="more-link" href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">More details here &rarr;</a></div>' +
+          '<div class="ev-acts">' +
+          '<a class="more-link" href="' + esc(safe(e.href)) + '" target="_blank" rel="noopener">More details here &rarr;</a>' +
+          '<a class="cal-link" href="' + LTData.icsDataUri({ title: e.title, date: e.date, time: e.time, location: e.location, description: e.desc, url: e.href }) + '" download="' + esc(LTData.icsFilename(e.title, e.date)) + '">&#128197; Add to calendar</a>' +
+          '</div></div>' +
           '<div class="chev">&rsaquo;</div></article>';
       });
     });
     if (Object.keys(byDay).length > shownDays) {
-      html += '<div class="load-more"><button class="btn btn-outline" id="more-btn">Show more days</button></div>';
+      html += '<div class="load-more"><button class="btn btn-outline" id="more-btn">See more events &darr;</button></div>';
     }
     list.innerHTML = html;
+    // One click reveals the rest (per Morgan: "show the rest of the events").
     var more = document.getElementById('more-btn');
-    if (more) more.addEventListener('click', function () { shownDays += DAYS_PAGE; render(); });
+    if (more) more.addEventListener('click', function () { shownDays = 9999; render(); });
   }
 
   // ── Festival Tickets sidebar (TELLURIDE_FESTIVALS, months 0-indexed) ──

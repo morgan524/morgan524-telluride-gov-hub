@@ -129,6 +129,57 @@
     return /^https?:\/\//i.test(u || '') ? u : (fallback || '#');
   }
 
+  // ---- calendar (.ics) --------------------------------------------------
+  // Build a downloadable single-event iCalendar file as a data: URI, shared by
+  // Gov-Hub, Events, and the town hubs (Morgan 2026-07-23). Times are FLOATING
+  // local (no TZID/Z) — everyone here is Mountain Time, and a floating time
+  // shows at that wall-clock hour in any calendar without tz math. No time →
+  // an all-day event. `ev`: { title, date:'YYYY-MM-DD', time?, location?,
+  // description?, url? }.
+  function icsFmtDate(iso) { return iso.replace(/-/g, ''); }
+  function icsAddDay(iso) {
+    var p = iso.split('-'); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1));
+    return d.getUTCFullYear() + String(d.getUTCMonth() + 1).padStart(2, '0') + String(d.getUTCDate()).padStart(2, '0');
+  }
+  // "6:00 PM" / "6 PM" → {h,m}; null if unparseable.
+  function parseClock(s) {
+    var m = String(s || '').match(/(\d{1,2})(?::(\d{2}))?\s*([ap]\.?m\.?)/i);
+    if (!m) return null;
+    var h = parseInt(m[1], 10) % 12; if (/p/i.test(m[3])) h += 12;
+    return { h: h, m: m[2] ? parseInt(m[2], 10) : 0 };
+  }
+  function icsEsc(s) { return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/[,;]/g, '\\$&').replace(/\r?\n/g, '\\n'); }
+  function icsDataUri(ev) {
+    if (!ev || !ev.date || !/^\d{4}-\d{2}-\d{2}$/.test(ev.date)) return '';
+    var times = String(ev.time || '').split(/[-–—]|to\b/i);
+    var start = parseClock(times[0]), end = times.length > 1 ? parseClock(times[1]) : null;
+    var dtStart, dtEnd;
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    if (start) {
+      var base = icsFmtDate(ev.date) + 'T';
+      dtStart = 'DTSTART:' + base + pad(start.h) + pad(start.m) + '00';
+      var eh = end ? end.h : (start.h + 1) % 24, em = end ? end.m : start.m;
+      var endDate = (!end && start.h === 23) ? icsAddDay(ev.date) : icsFmtDate(ev.date);
+      dtEnd = 'DTEND:' + endDate + 'T' + pad(eh) + pad(em) + '00';
+    } else {
+      dtStart = 'DTSTART;VALUE=DATE:' + icsFmtDate(ev.date);
+      dtEnd = 'DTEND;VALUE=DATE:' + icsAddDay(ev.date);
+    }
+    var uid = 'lt-' + icsFmtDate(ev.date) + '-' + Math.abs(String(ev.title || '').split('').reduce(function (a, c) { return (a * 31 + c.charCodeAt(0)) | 0; }, 7)) + '@livabletelluride.org';
+    var desc = ev.description || '';
+    if (ev.url) desc = (desc ? desc + '\n\n' : '') + ev.url;
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Livable Telluride//EN', 'BEGIN:VEVENT',
+      'UID:' + uid, dtStart, dtEnd, 'SUMMARY:' + icsEsc(ev.title || 'Event')];
+    if (ev.location) lines.push('LOCATION:' + icsEsc(ev.location));
+    if (desc) lines.push('DESCRIPTION:' + icsEsc(desc));
+    lines.push('END:VEVENT', 'END:VCALENDAR');
+    return 'data:text/calendar;charset=utf-8,' + encodeURIComponent(lines.join('\r\n'));
+  }
+  // A slug for the download filename.
+  function icsFilename(title, date) {
+    return (String(title || 'event').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 40) || 'event') + '-' + (date || '') + '.ics';
+  }
+
   // Bold proper-noun runs + standalone street addresses in meeting summaries —
   // THE shared copy of the emphasizeNames heuristic (same rules as the
   // gov-hub.html cards and weekly-email.js digest; keep the three in sync).
@@ -165,6 +216,7 @@
   const api = { load: load, loadOne: loadOne, showError: showError,
     todayMT: todayMT, mtDateKey: mtDateKey, parseDateKey: parseDateKey,
     fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, emphasizeNames: emphasizeNames,
+    icsDataUri: icsDataUri, icsFilename: icsFilename,
     ENTITY_LOGOS: ENTITY_LOGOS, entityLogo: entityLogo, _bucket: bucket };
 
   root.LTData = api;
