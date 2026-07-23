@@ -202,7 +202,9 @@
     e.preventDefault();
     var name = v('lf-name'), email = v('lf-email');
     if (!name) return fail('Please add your name — we publish letters with a byline.');
-    if (!/^\S+@\S+\.\S+$/.test(email)) return fail('Please enter a valid email address.');
+    // Stricter than \S+@\S+\.\S+ — that accepted typos like "you@gmail.,com",
+    // and a bad address means the writer never gets the approve/deny note.
+    if (!/^[^\s@,;]+@[^\s@,;]+\.[A-Za-z]{2,}$/.test(email)) return fail('That email address looks off — please double-check it. We use it to let you know about your letter.');
 
     var text = '', wc = 0;
     if (mode === 'write') {
