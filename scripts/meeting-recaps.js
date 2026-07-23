@@ -197,8 +197,17 @@ function callClaude(body) {
       res.on('end', () => { try {
         const j = JSON.parse(d);
         if (j.error) return reject(new Error(`${j.error.type}: ${j.error.message}`));
-        let txt = j.content?.[0]?.text || ''; const f = txt.match(/```(?:json)?\s*([\s\S]*?)```/); if (f) txt = f[1];
-        resolve(JSON.parse(txt.trim()));
+        let txt = j.content?.[0]?.text || '';
+        // Strip a markdown fence. The old regex required a CLOSING ``` — when a
+        // response hit max_tokens mid-JSON the fence was never closed, the
+        // regex missed, and JSON.parse choked on the leading backticks
+        // ("Unexpected token '`'"). Strip the opening and any closing fence
+        // independently so an unclosed fence still parses. (2026-07-23)
+        txt = txt.replace(/^\s*```(?:json)?\s*/i, '').replace(/\s*```\s*$/, '').trim();
+        if (j.stop_reason === 'max_tokens') {
+          return reject(new Error('Claude response hit max_tokens (truncated JSON) — raise max_tokens for this call'));
+        }
+        resolve(JSON.parse(txt));
       } catch (e) { reject(e); } });
     });
     req.on('error', reject);
@@ -209,7 +218,10 @@ function callClaude(body) {
 
 async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
   const userPrompt = `ENTITY: ${ch.sourceLabel}\nVIDEO TITLE: ${videoTitle}\nMEETING DATE: ${isoDate}\n\nTRANSCRIPT (auto-captions):\n"""\n${transcript.slice(0, 600000)}\n"""\n\nWrite the recap. Return ONLY the JSON object.`;
-  return callClaude({ model: MODEL, max_tokens: 700, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
+  // 1500, not 700: the payload is a ~100-word recap PLUS a votes[] array, and a
+  // busy meeting (Jun 30 2026 had six) truncated at 700 — which surfaced as an
+  // unparseable half-JSON rather than an obvious budget error.
+  return callClaude({ model: MODEL, max_tokens: 1500, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
 }
 
 /* ── Vote-tracker drafts ─────────────────────────────────────────────
@@ -246,6 +258,16 @@ function rosterForDate(entity, isoDate) {
   const w = windows.find((r) => isoDate >= r.start && (r.end === null || r.end === undefined || isoDate <= r.end));
   return w && Array.isArray(w.members) && w.members.length ? w.members : null;
 }
+// The system prompt already tells Claude to skip procedural motions, but it
+// doesn't reliably comply — the Jun 30 2026 council run returned two executive
+// sessions, the consent calendar and a "THA — Approve minutes" among 14 votes.
+// Since drafts now publish unattended, enforce it deterministically instead of
+// trusting the model. Substantive housing/land-use/appointment votes that merely
+// mention "minutes" in passing are unaffected: these patterns anchor on the
+// motion's own subject. (2026-07-23)
+const PROCEDURAL_RE = /\b(?:go into|enter|convene in|adjourn(?:ment)?|recess)\b|\bexecutive session\b|\bconsent calendar\b|\bapprove (?:the )?(?:minutes|agenda)\b|\bminutes approval\b|\bapproval of (?:the )?(?:minutes|agenda)\b/i;
+function isProcedural(title) { return PROCEDURAL_RE.test(String(title || '')); }
+
 async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
   const entity = VT_CONFIG[entityKey];
   const roster = rosterForDate(entity, isoDate);
@@ -297,7 +319,8 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
     };
   // Drop anything with no usable per-member votes: the heatmap is the whole
   // point, and a tally-only row would publish an empty column of dashes.
-  }).filter((e) => e.title && Object.keys(e.votes).length);
+  }).filter((e) => e.title && Object.keys(e.votes).length)
+    .filter((e) => !isProcedural(e.title));
 
   if (!entries.length) {
     console.warn(`  · vote draft for ${entityKey} ${isoDate}: ${parsed.votes.length} motion(s) found but none had usable per-member votes — skipped`);

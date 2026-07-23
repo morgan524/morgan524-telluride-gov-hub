@@ -108,24 +108,47 @@ toInsert.forEach(p => console.log(`  ${p.data.date}: ${p.data.entries.length} en
 const prefixCounter = {};      // prefix → next-available N
 const renameMap = {};          // oldId → newId, globally
 
+// Highest plain `<prefix><year>-NN` already COMMITTED in the tracker. The
+// collision resolver below only ever de-duplicated within the pending batch —
+// it never looked at the file, so an unattended run that numbered from 01
+// happily wrote ids that already existed (the Jun 30 2026 Telluride draft
+// produced 10 duplicate ids: v2026-01…10). Numbering continues past the file's
+// max instead. (2026-07-23)
+function maxCommittedN(prefix, year) {
+  const re = new RegExp(`["']?id["']?\\s*:\\s*['"]${prefix}${year}-(\\d+)['"]`, 'g');
+  let max = 0;
+  for (const m of tracker.matchAll(re)) max = Math.max(max, Number(m[1]));
+  return max;
+}
+
 for (const p of toInsert) {
   const entries = p.data.entries;
   if (entries.length === 0) continue;
+  const year = p.data.date.slice(0, 4);
   // Extract prefix: strip "<letters>YYYY-" + trailing digits.
-  const firstId = entries[0].id;
+  const firstId = entries[0].id || '';
   const match = firstId.match(/^([a-z]+\d{4}-)([A-Z]+)\d+$/);
-  if (!match) {
-    console.warn(`  ⚠ ${p.data.date}: unexpected id format "${firstId}", entries kept as-is`);
+  if (match) {
+    const [, base, letterPrefix] = match;
+    const startN = prefixCounter[letterPrefix] || 1;
+    entries.forEach((e, idx) => {
+      const newId = `${base}${letterPrefix}${startN + idx}`;
+      if (newId !== e.id) renameMap[`${p.data.date}|${e.id}`] = newId;
+      e._newId = newId;
+    });
+    prefixCounter[letterPrefix] = startN + entries.length;
     continue;
   }
-  const [, base, letterPrefix] = match;
-  const startN = prefixCounter[letterPrefix] || 1;
+  // Plain `v2026-07` style (what the transcript auto-drafts emit): continue
+  // numbering after the highest id already in the file, so ids stay unique.
+  const key = `${idPrefix}${year}`;
+  const startN = prefixCounter[key] || (maxCommittedN(idPrefix, year) + 1);
   entries.forEach((e, idx) => {
-    const newId = `${base}${letterPrefix}${startN + idx}`;
+    const newId = `${idPrefix}${year}-${String(startN + idx).padStart(2, '0')}`;
     if (newId !== e.id) renameMap[`${p.data.date}|${e.id}`] = newId;
     e._newId = newId;
   });
-  prefixCounter[letterPrefix] = startN + entries.length;
+  prefixCounter[key] = startN + entries.length;
 }
 
 // Report renames

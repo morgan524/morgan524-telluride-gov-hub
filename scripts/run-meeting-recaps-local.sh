@@ -53,12 +53,14 @@ for pf in scripts/pending/*.json; do
   node scripts/insert-votes.mjs --entity "$ent" --year "$yr" || log "insert-votes failed for $pf (continuing)"
 done
 
-if [ -z "$(git status --porcelain js/gov-helpers.js v2/vote-tracker.html scripts/pending)" ]; then
+if [ -z "$(git status --porcelain js/gov-helpers.js v2/vote-tracker.html)" ]; then
   log "No new recaps or votes — nothing to commit."
   exit 0
 fi
 
-git add js/gov-helpers.js v2/vote-tracker.html scripts/pending
+# NOTE: scripts/pending/ is gitignored — it is an intermediate artifact.
+# `git add`ing it fails the whole step, so only the published files go in.
+git add js/gov-helpers.js v2/vote-tracker.html
 git -c user.name="Gov Hub Bot" -c user.email="bot@livabletelluride.org" \
   commit -m "📝 Auto meeting recaps + vote tracker $(date +%F)" || { log "commit failed"; exit 1; }
 
