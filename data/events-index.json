@@ -120,29 +120,16 @@
     "type": "Community"
   },
   {
-    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
-    "date": "2026-07-22",
-    "time": "5:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Plant Party -You Buggin Me",
-    "href": "https://koto.org/event/plant-party-you-buggin-me/",
+    "title": "Plant Party-You Buggin Me",
+    "href": "https://telluridelibrary.libcal.com/event/16593979?hs=a",
     "date": "2026-07-22",
     "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lower Terrace - outdoors",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Who's Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_01_14_27_53.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Who s Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
     "type": "Community"
   },
   {
@@ -1647,6 +1634,19 @@
     "type": "Wellness"
   },
   {
+    "title": "Adult Craft Night: Flower Pounding",
+    "href": "https://koto.org/event/adult-craft-night-flower-pounding/",
+    "date": "2026-07-30",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Create beautiful botanical prints using fresh flowers and leaves! Learn the art of flower pounding, a simple technique that transfers natural colors and shapes onto fabric or paper. We'll provide materials such as tea towels, bandanas, and…",
+    "type": "Community"
+  },
+  {
     "title": "San Miguel Basin Fair and Rodeo",
     "href": "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
     "date": "2026-07-30",
@@ -1740,6 +1740,45 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-31/",
+    "date": "2026-07-31",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-07-31/",
+    "date": "2026-07-31",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-07-31/",
+    "date": "2026-07-31",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-07-31",
@@ -1764,6 +1803,19 @@
     "source": "Telluride Chamber Music",
     "desc": "A family-friendly kids' concert presented by Telluride Chamber Music.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Free Youth Tennis & Pickleball Program",
+    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-31/",
+    "date": "2026-07-31",
+    "time": "3:30 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "OLD MAN POLLY",
@@ -1933,6 +1985,32 @@
     "source": "The Alibi",
     "desc": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
     "type": "Community"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
+    "date": "2026-07-31",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Bilingual Balance in Motion",
+    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-01/",
+    "date": "2026-08-01",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
   },
   {
     "title": "Top Chef & Taste of Telluride",

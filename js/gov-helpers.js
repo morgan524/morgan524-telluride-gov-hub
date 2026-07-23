@@ -154,9 +154,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026":
     {"sv":2,"zoomUrl":"https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ","meetingId":"815 3599 7736","passcode":"769982","phone":"301-715-8592"},
 
-  "county|2026-06-22|Open Space Commission Meeting":
-    {"sv":2,"zoomUrl":"https://www.google.com/url?q=https://us06web.zoom.us/j/82416565788&sa=D&source=calendar&ust=1782161034577544&usg=AOvVaw1VhSAXMLvCsaoHEGucwKxm","meetingId":"824 1656 5788","passcode":"269895","phone":"970-369-5469"},
-
   "county|2026-06-24|Board of County Commissioners Work Session":
     {"sv":2},
 
@@ -444,15 +441,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-07-26|Open Space Commission - Jul 26 2026":
     "The Open Space Commission is expected to meet to review priorities and criteria related to open space acquisition, management, and maintenance. Agenda details are limited, but the commission may also consider open space elements of local plans and make recommendations to Town Council on related matters.",
 
-  "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
-    "Board will consider selecting vendors for gondola structural analysis projects, discuss Gondola Advisory Committee composition, and receive a gondola project update. Additional items include a fiscal year 2026 budget amendment introduction and second quarter performance and operations reports.",
-
-  "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026":
-    "The Planning & Zoning Commission is expected to approve June meeting minutes, appoint members to the Ethics Commission and Vending Subcommittee, and hold a public hearing. The hybrid meeting takes place July 23 at 5:30 PM at Rebekah Hall.",
-
-  "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
-    "The Planning & Zoning Commission Chair meeting scheduled for July 23, 2026 has been cancelled. No agenda items will be heard.",
-
   "county|2026-07-27|Housing Code Update SSR":
     "Board will consider updates to the housing code as part of a Staff Summary Report (SSR). The meeting may also touch on related county business, including ongoing procurement activities and financial matters being addressed across San Miguel County during this period.",
 
@@ -573,6 +561,106 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "‘Big box’ tightens on Gold Mountain Fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County eyes recovery funds",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "public-safety",
+    copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
+    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Spring targeted for tree-thinning effort",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "public-safety",
+    copy: "A joint wildfire mitigation effort to remove dead or diseased trees from the city of Ouray’s perimeter is expected to move forward next spring, though with a potentially more limited scope. Officials told the Plaindealer that the Ouray Forest Resilience Project, which was first floated several years",
+    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "City reorganizes planning department",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "land-use",
+    copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
+    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "government",
+    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
+    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Local Briefs",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "public-safety",
+    copy: "The 109th annual Ouray County Fair is scheduled to proceed as planned, even if the fairgrounds remain the headquarters for the Gold Mountain Fire operations. The fair is scheduled from Aug. 13-15 at the Ouray County 4-H Center and the fairgrounds, which has been home to more than 900 fire personnel ",
+    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ride-along reveals value of alpine ranger program",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "government",
+    copy: "I m not a Jeep enthusiast or an off-highway vehicle user, but I am a hiker and photographer who cares deeply about our high-country environment. After recent discussions at county commissioners meetings about closing the upper part of Yankee Boy Basin to motorized travel, I wanted to see the area th",
+    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Toth seeks to grow Wright Opera House’s appeal",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "arts-culture",
+    copy: "When Heather Toth moved to Ouray County in 2013, her first question was, “Where’s the theater; where’s the art space?” The arts are a necessity, not a luxury, according to Toth. She values third spaces, especially those with a connection to the arts. “I think they’re vital,” she said. “I think they’",
+    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Send us your celebrations!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "community",
+    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
+    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -623,16 +711,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22817"
   },
   {
-    title: "Fire crews aim to draw ‘big box’ around blaze",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 17, 2026",
-    newsTopic: "public-safety",
-    copy: "Surveying a sprawling map of the northern San Juans on Wednesday, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – who assumed the role of incident commander over Gold Mountain Fire operations on July 14 – said firefighters are working to draw a “big box” aro",
-    href: "https://www.ouraynews.com/2026/07/17/fire-crews-aim-draw-big-box-around-blaze/",
-    img: ""
-  },
-  {
     title: "Stage 2 Fire Restrictions",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -641,96 +719,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Ouray County Remains in Stage 2 Fire Restrictions",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=953",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22782"
-  },
-  {
-    title: "Pilot dies in reservoir crash",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "An experienced firefighting pilot who was pulling water from Silver Jack Reservoir to battle the Gold Mountain Fire died Sunday when his helicopter plunged into the reservoir northeast of Ridgway. Nicholas Dale, 56, of Sooke, British Columbia, was found deceased inside the helicopter by members of t",
-    href: "https://www.ouraynews.com/2026/07/15/pilot-dies-reservoir-crash/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Heights, heat add to firefighters’ strain",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Hotshot Jesse Eaves calls it “The Great Race.” At the small tent city along U.S. Highway 550, Eaves starts each day with a 5 a.m. wakeup call. Thus begins an eight-minute sprint for him and his California-based crew to pack their gear and load their trucks, in what Eaves said is often the most harri",
-    href: "https://www.ouraynews.com/2026/07/15/heights-heat-add-firefighters-strain/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County approves hiring fire recovery manager — if it can find funding",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County intends to hire an employee who can help lead the county’s efforts to recover from the Gold Mountain Fire — assuming it can find funding. County commissioners on Tuesday unanimously agreed to County Manager Antonio Mendez’s plan to bring aboard a recovery manager. The approval comes wit",
-    href: "https://www.ouraynews.com/2026/07/15/county-approves-hiring-fire-recovery-manager-can-find-funding/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Trust, county close to conserving open space park",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "recreation",
-    copy: "Ouray County is much closer to getting a new open space park on the Silver Mountain Mine property. The Trust for Land Restoration has received a $180,000 Great Outdoors Colorado grant. Couple that with $215,000 from Colorado’s Idarado Natural Resource Damage Fund and donations from private citizens,",
-    href: "https://www.ouraynews.com/2026/07/15/trust-county-close-conserving-open-space-park/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Man gets probation, community service in sex assault case",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "A former Ouray County man was sentenced Monday to one year of unsupervised probation for providing alcohol to a then-17-year-old girl who said she was sexually assaulted by two others at the former Ouray police chief s home. Ashton Whittington, 21, was also ordered to perform 48 hours of useful publ",
-    href: "https://www.ouraynews.com/2026/07/15/man-gets-probation-community-service-sex-assault-case/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Thank you, helpers",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Dear Editor: A word of gratitude: These last days since the Gold Mountain Fire started on June 27 have been hard for us, individually and as a community. During times of strife and difficulty a wise man, Fred Rogers, has taught us to “look for the helpers. A sea of helpers is indeed here, both our l",
-    href: "https://www.ouraynews.com/2026/07/15/thank-you-helpers/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Thank you, firefighters",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Dear Editor: Thank you is a simple phrase most of us use every day. However, now thank you just doesn’t seem adequate for our firefighters and first responders. Thank you for saving our town, our homes and possibly our lives. Our gratitude will never be enough. Kathy Hall Ouray",
-    href: "https://www.ouraynews.com/2026/07/15/thank-you-firefighters/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Dead trees need removal",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Dear Editor: On the evening of June 27 my wife, Lori, and I evacuated our home in unincorporated Ouray County and drove to Montrose due to the Gold Mountain Fire. All afternoon we watched from my front porch as the fire on the canyon wall consumed many acres. The wind was fierce and changing directi",
-    href: "https://www.ouraynews.com/2026/07/15/dead-trees-need-removal/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "City has known issues with gym for years",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 16, 2026",
-    newsTopic: "arts-culture",
-    copy: "Dear Editor: I would like to clarify some points made in the Plaindealer s article, “Following outcry, Ouray seeks gym solutions, from the July 9 edition. First, it was “acknowledged that the city didn’t communicate well enough with gym members about the removal of the equipment but said it needed t",
-    href: "https://www.ouraynews.com/2026/07/15/city-known-issues-gym-years/?ta_paidstory",
-    img: ""
   },
   {
     title: "Invitation to prayer/fellowship-Wednesday morning",
@@ -750,16 +738,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Attached is our parish bulletin for Sunday, July 12. As a reminder, the Parish Calendar has the most up-to-date information. Join us before the 9 am Sunday Holy Mass to pray the Holy Rosary. We begin at 8:30 am. After the 9...",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-july-12/",
-    img: ""
-  },
-  {
-    title: "An Invitation to all women–Join Monday, July 20",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 9, 2026",
-    newsTopic: "community",
-    copy: "Please join us for an evening with fellowship, prayer, and personal reflection on Monday, July 20 at 5:30 pm. See flyer below. Contact Katrina @ 970-417-9096 or Judy @ 970-708-1521 for questions. RSVP by Friday, July 17.Come to Me Wome...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/an-invitation-to-all-women-join-monday-july-20/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -819,13 +797,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements/widgets/106633/key_dates#41038"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-22';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-23';
 const LEGAL_NOTICES_CACHE_DATE = '2026-07-22';
 
 const MANUAL_SUMMARIES = {
-  "county|2026-06-22|Open Space Commission Meeting":
-    "The Open Space Commission meets June 22 to work through several active trail and open space projects. On the table: a NEPA process update for the Perimeter Trail, new signage for the Keystone Gorge Loop Trail, and a conversation about future goals for the San Juan Skyway Scenic Byway Corridor. Conceptual plans for Mill Creek Park and an update on the Down Valley Connector Trail through Sawpit are also on the agenda. The commission will also address two vacancies — one regular seat and one alternate — plus a Northwest Mountain seasonal slot.",
-
   "county|2026-06-24|Board of County Commissioners Work Session":
     "MEETING CANCELED — the Board of County Commissioners' June 24 work session has been canceled. The next BOCC meeting is the regular meeting on July 1.",
 
@@ -974,7 +949,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1013,7 +988,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1218,6 +1193,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/business/article_e2e19d5e-7c29-4c24-9db8-3c57f4302dda.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/af/4af9f358-778c-4840-87fc-5fea5ce2c2ba/6a607449a1b61.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "New council members sworn in",
+    source: "Telluride Times",
+    date: "July 22, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "government",
+    copy: "Marya Stark and Charles Dalton were sworn in July 21 after winning the June 30 special election, bringing the full Telluride Town Council together outside Rebekah Hall on Columbia Avenue.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/article_8814ba5b-60a0-4973-80e7-322c72cf84be.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/f2/7f2c2ba8-ffe3-4f24-96f9-a0ed90af3769/6a6157bd889d9.image.jpg",
     imgHiRes: true
   },
   {
@@ -2070,187 +2057,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Stark, Dalton win town council seats after final tally",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "government",
-    copy: "Stark and Dalton won the two Telluride Town Council special election seats, with Dalton's final margin over Mihlein settling at 24 votes after the July 9 count. Both will be sworn in July 21 and serve through November 2029. The seats came open after Fee resigned in January amid an investigation into the Telluride Ski and Golf purchase offer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_a4d7e059-764a-4ec0-8f25-0d610940f403.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/71/271f4bfe-a1dc-4660-b1b8-51db12d95fa4/6a501d7de1d9b.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Weed of the Month is the oxeye daisy",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "Oxeye daisy — pretty as it looks — is an invasive from Europe and Asia that's taken hold around Telluride, Mountain Village, and Ophir. It crowds out native plants, erodes soil, and one flower can drop 200+ seeds that stay viable for 40 years. San Miguel County is asking residents to remove it where they find it.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_6e06e253-035b-4983-9eb3-5959c2de90a7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/f3/6f32d9cd-bf80-4278-b273-d6fea58237de/6a4e808998162.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of July 9-15",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "government",
-    copy: "Local birthdays, meeting schedules, and recurring community events for the week of July 9–15 in the Norwood and Nucla-Naturita area. Highlights include the Thursday Farmers Market (2–6 p.m. at Pocket Park), weekly Senior Meals, Sunday Food Pantry distribution, and regular pickleball, AA, and civic board meetings.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_fd76a51e-b077-4f84-a744-d79eb7b787c2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b3/ab354c44-1d8b-4ff9-9d46-9dc0b9930db8/6a4e832b19d9b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Just desserts",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "An annual homemade dessert contest returns to Norwood School on July 11, with drop-off from 2–5 p.m., judging 5–6 p.m., and public tasting at 6 p.m. Categories run from youth to professional, resident to non-resident. Call (970) 327-4650 for entry details.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_0502877a-72b0-4b56-a009-6d65705d6b69.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/e7/5e7a684c-ec95-4a7a-bda7-3956b5ca1f09/6a4e8a4dd8b85.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Coffee talk",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "public-safety",
-    copy: "Coffee has been part of human culture for over a thousand years, from Ethiopian energy balls to Yemeni monastery rituals to today's sprawling menu of roasts, add-ins, and preparations. Recent research increasingly links regular consumption to reduced risk of heart disease, liver disease, and type 2 diabetes, largely due to polyphenols. Downsides — sleep disruption, caffeine dependence, sugar-loaded drinks — are real too.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_1c001e43-9a15-4c53-aa99-71a15dfaa0bb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/62/9625db20-cb96-4e42-98a4-2e709c28de62/6a4e8ef37beb7.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Here comes the judge",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "government",
-    copy: "Telluride Town Council approved Ronald Carlson as deputy municipal court judge, backing up Judge Daniel Zemke. Carlson brings 30 years on the Frisco bench plus service in several other mountain towns. The part-time role pays $2,000 annually — a figure at least one councilmember thinks may be worth revisiting.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_d27e3f57-76ae-4581-804d-f706b0c0a0e8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b0/4b0dd2b6-df33-4b21-9baa-8640361a22ab/6a4efb7392a71.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "James M Bedford",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "James \"BF Deal\" Bedford arrived in Telluride in 1972 and spent decades helping shape it — co-founding KOTO, directing the Film Festival for 36 years, serving on Town Council and as county commissioner, and championing the Lawson Hill affordable housing project. He died recently, survived by his wife Luci Reeve. One of the early builders of this town.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_25ca1190-2e44-431e-b3e7-f8f571632acd.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/4a/c4a67251-fb36-492c-b7d3-198169e2ca73/6a50021de2b74.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for July 9-15, 2026",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "infrastructure",
-    copy: "Telluride School District is seeking bids for custodial services at its three school buildings; proposals are due by July 21. Mountain Village is holding a second reading July 16 on proposed lighting regulation changes. The Farmers' Water Development Company is processing a replacement share certificate for a lost certificate #887.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Curtis L. Moe",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "Curtis Moe spent winters in Telluride, singing with the Chamber Singers and volunteering at KOTO community radio. He came to skiing late in life, working his way from bunny hills to black diamonds. He's remembered for his generosity, his music, and his deep connections to the people around him.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/obituaries/article_7ef6f384-ed3b-4440-b345-d7e53f859792.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/85/3850f2fd-6abd-49cf-a9be-4fd64a50da75/6a4e5ebd82160.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Science completes $13.5 million capital campaign",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "land-use",
-    copy: "Telluride Science wrapped up a $13.5M campaign to restore the historic Rio Grande Southern Depot into the Telluride Innovation Center — finished on time and on budget. The landmark now hosts nearly 200 events since opening in July 2024, serving local nonprofits, community groups, and Telluride Science's expanded programming.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_6bd9c7f2-255c-4dc8-ae1a-79e4a6cef66e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/32/33291a11-bf4a-4492-9090-c3ef0d94c364/6a4ef00f52156.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Get down with SoDown",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "arts-culture",
-    copy: "Denver producer and live performer SoDown plays the Sheridan Opera House on Thursday, July 9. His set blends live saxophone with bass-heavy electronic production — dubstep, future bass, reggae, hip-hop. Doors at 7:30 p.m., show at 8:30 p.m. Tickets at sheridanoperahouse.com.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_21aa5137-902c-45c9-9e54-00eaec9e9e4c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/cd/5cdddc1a-22bf-47f0-bb2b-6f840aefc393/6a4eeec43c326.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Mountain Village, TMVOA expand wildfire mitigation partnership",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "public-safety",
-    copy: "Mountain Village and TMVOA have expanded their wildfire mitigation effort with a new Dead Wood Vacant Lot Incentive Program, matching 50% of dead tree removal costs up to $10,000 per lot. Applications are open through July 24. Two existing programs — defensible space rebates up to $20,000 and cedar shake re-roofing permit fee waivers — remain available.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_2b9a3446-bd58-4622-9621-92304aa4942b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/50/650c9d14-0a78-479a-8f5a-3fbe3946581a/6a4eed144b433.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Region 10 awarded AmericCorps Seniors RSVP grant",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "Region 10 landed an AmeriCorps Seniors RSVP grant to support around 50 volunteers, age 55+, serving San Miguel and Ouray counties with transportation, nutrition, Medicare counseling, and caregiver respite. The program has run here since 2020 and the new funding also frees up resources for Delta, Montrose, Gunnison, and Hinsdale counties.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_2aa9810c-a0af-4c55-a3c4-d17aee4014d2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/d9/ed95727d-7012-4b19-ae78-4f103520159f/6a4eedb80331f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Arts awards social justice grants to regional artists",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "arts-culture",
-    copy: "Telluride Arts has named five regional artists as 2026 Social Justice Artist Grant recipients, funding new visual work exploring identity, history, and community. Recipients include artists from Telluride, Durango, and Ouray. Completed works will tour the Western Slope in a traveling exhibition opening in Telluride this fall.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1a899ab7-020b-4e6a-95ca-cb571f6989b2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/5f/55fa4206-d0d2-483b-a3b7-a8ba6c9059c7/6a4eec041114f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Palm presents premiere of 'The Wolff and Other Works'",
-    source: "Telluride Times",
-    date: "July 9, 2026",
-    firstSeen: "2026-07-09",
-    newsTopic: "community",
-    copy: "AVID Dance performs \"The Wolff and Other Works\" at the Michael D. Palm Theatre on Saturday, July 11 at 7 p.m. The program includes three pieces, two performed with live music. Tickets are general admission at telluridepalm.com or at the door.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_b5125305-5a98-448c-803b-7aa0b63949af.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/07/2071b1bb-4c45-4400-a639-f2480f815dc0/6a4eeb0fbb915.image.png",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2386,6 +2192,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 7-22-26",
+    source: "KOTO Community Radio",
+    date: "July 23, 2026",
+    newsTopic: "housing",
+    copy: "Preparing for Mudslides; Telluride Extends Housing Waitlist Suspension; A State of the Town Address",
+    href: "https://koto.org/news/newscast-7-22-26/"
+  },
+  {
     title: "Newscast 7-20-26",
     source: "KOTO Community Radio",
     date: "July 21, 2026",
@@ -2440,14 +2254,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "A Ferris Fire Update; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-7-9-26/"
-  },
-  {
-    title: "Newscast 7-8-26",
-    source: "KOTO Community Radio",
-    date: "July 9, 2026",
-    newsTopic: "public-safety",
-    copy: "Gold Mountain Fire Evacuees Return Home; Mountain Village Looks for New Town Manager; AVID Dance Brings a Universal Language",
-    href: "https://koto.org/news/newscast-7-8-26/"
   }
 ];
 
@@ -2970,17 +2776,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Home Tour & House Show with Emily Scott Robinson",
-    link: "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
-    description: "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …",
-    pubDate: "2026-07-21T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "CPR World Wilderness First Aid course",
     link: "https://koto.org/event/cpr-world-wilderness-first-aid-course/",
     description: "CPR World is offering a 2-day Wilderness First Aid course July 22 & 23 in Telluride. For information and registration, visit cprworld.com or call (970) 729-2779.",
@@ -2989,28 +2784,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-22/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-07-22T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Plant Party -You Buggin Me",
-    link: "https://koto.org/event/plant-party-you-buggin-me/",
-    description: "Who's Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
-    pubDate: "2026-07-22T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3419,6 +3192,83 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Adult Craft Night: Flower Pounding",
+    link: "https://koto.org/event/adult-craft-night-flower-pounding/",
+    description: "Create beautiful botanical prints using fresh flowers and leaves! Learn the art of flower pounding, a simple technique that transfers natural colors and shapes onto fabric or paper. We'll provide materials such as tea towels, bandanas, and greeting cards, or you are welcome to bring your own fabric or paper item to decorate. No experience is necessary—all supplies and instruction will be provided. Space is limited. Registration is required. ¡Cree hermosos estampados botánicos utilizando flores y hojas frescas! Aprenda la técnica de martillar flores, una forma sencilla de transferir los colores y las formas naturales de las plantas a tela o papel. Proporcionaremos materiales como paños de cocina, pañuelos tipo bandana y tarjetas, o puede traer su propia tela o artículo de papel para decorar. No se requiere experiencia previa; todos los materiales e instrucciones estarán incluidos. Es necesario registrarse. El cupo es limitado.",
+    pubDate: "2026-07-30T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-07-31T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-31/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-07-31T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: ""
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-07-31/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-07-31T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-07-31/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-07-31T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-31/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-07-31T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-01/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-08-01T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3520,7 +3370,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Dog • Bulldog, French • Male",
     firstSeen: "2026-07-11",
     revealDate: "2026-07-11",
-    lastSeen: "2026-07-22"
+    lastSeen: "2026-07-23"
   }
 ];
 
@@ -6369,18 +6219,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    title: "History at the Movies",
-    link: "https://www.telluride.com/event/history-at-the-movies/",
-    description: "Join the Telluride Historical Museum for History at the Movies! In celebration of our state and National …",
-    pubDate: "2026-07-07",
-    endDate: "2026-07-21",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62987/screenshot_2026-07-01_at_12_43_41_pm.800x533.webp"
-  },
-  {
     title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
     link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
     description: "2026 Shakespeare in the Park\n\nHenry, the young and newly crowned king, is impatient to assert control over the people …",
@@ -8858,6 +8696,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8164
+  },
+  {
+    date: "October 21, 2026",
+    title: "Parks & Recreation Commission",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8083",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8083
   }
 ];
 

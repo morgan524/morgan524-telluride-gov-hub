@@ -6,19 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-civic.xml" rel="self" type="application/rss+xml" />
     <description>Upcoming council, commission, and board meetings across the region — with comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 22:12:43 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 03:23:40 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Meeting] Board of County Commissioners Special Meeting — 2026-07-22</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-22%7CBoard%20of%20County%20Commissioners%20Special%20Meeting</guid>
-      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[San Miguel County • 2026-07-22
-
-The July 22 San Miguel County Board of County Commissioners Special Meeting has been posted, but no agenda detail has been released beyond the meeting type itself. Special meetings are called for specific business outside the regular cycle — what that business is here isn't yet public.]]></description>
-      <category>Meeting</category>
-      <category>San Miguel County</category>
-    </item>
     <item>
       <title>⚡ [Meeting] Planning &amp; Zoning Commission - Jul 23 2026 — 2026-07-23</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -63,7 +52,7 @@ The July 23, 2026 Planning & Zoning Commission Chair meeting has been cancelled.
 
 SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola structural analysis, and Resolution 2026-13 would award the Gondola Shop the cabin structural analysis work — separate contracts, same bridge-or-bust question. The board will also discuss the composition of the Gondola Advisory Committee, get a broader project update, and hear introduction of a FY26 budget amendment. Rounding out the agenda: second-quarter performance and July operations reports, the executive director's verbal update, and an executive session on personnel matters.
 
-⚡ Why it matters: Two gondola structural-analysis contracts up for binding board votes.]]></description>
+⚡ Why it matters: Board votes to award two gondola structural-analysis contracts — project-defining decision.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -109,7 +98,7 @@ The July 27 San Miguel County Open Space Commission agenda hasn't been posted ye
 
 A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.
 
-⚡ Why it matters: Public hearing on KOTO's special event liquor permit — comment welcome.]]></description>
+⚡ Why it matters: Public hearing on KOTO's Live at the Drive liquor permit; public may comment.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -123,6 +112,28 @@ A single item: the Council, sitting as the Liquor Licensing Authority, will hold
 The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] Planning Commission and Board of County Commissioners Joint Work Session — 2026-07-29</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-07-29%7CPlanning%20Commission%20and%20Board%20of%20County%20Commissioners%20Joint%20Work%20Session</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-07-29
+
+The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
+      <title>[Meeting] (RESCHEDULED) Parks &amp; Recreation Commission - Jul 29 2026 — 2026-07-29</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-29%7C(RESCHEDULED)%20Parks%20%26%20Recreation%20Commission%20-%20Jul%2029%202026</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-07-29
+
+The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>
