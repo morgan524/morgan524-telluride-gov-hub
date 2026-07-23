@@ -1,22 +1,22 @@
 {
-  "hash": "13e4e38a41ab58c73462d2dd937fb019bf6ddce2",
-  "lede": "The big one this week is Thursday's Planning and Zoning Commission meeting, where three Town-owned development projects — including the Carhenge Redevelopment at 700 W Pacific Ave — are up for subdivision and concept review, all in the Accommodations 2 zone. Same day, SMART's board votes on two vendor contracts tied to the gondola structural analysis, which keeps that bridge-or-bust project moving. Later in the week, the Gondola Leadership Committee meets Monday on funding commitments and next steps, and Town Council convenes a special session to hear a liquor permit request for KOTO's Live at the Drive event.",
+  "hash": "c54570567ace0b4c07626465698376390050ee54",
+  "lede": "The gondola's future takes center stage this week, with SMART's board voting Wednesday on two vendor contracts for structural analysis — essentially the engineering step that tells us whether the aging gondola cabins and structure can keep running — and the Gondola Leadership Committee meeting Monday to dig into funding commitments and project direction. Alongside that, Town Planning and Zoning takes up three Town-owned redevelopment projects Thursday, including the Carhenge site on West Pacific, while Town Council sits as a liquor authority Sunday for a KOTO Radio event permit hearing.",
   "notable": [
     {
       "id": 0,
-      "stake": "Town votes on Carhenge subdivision and two other Town-owned development concept reviews."
+      "stake": "P&Z votes on Town-owned Carhenge redevelopment and two other major projects."
     },
     {
       "id": 3,
-      "stake": "Board votes to award gondola structural analysis contracts — key to project's future."
+      "stake": "Board votes on two gondola structural-analysis vendor contracts — key to gondola's future."
     },
     {
       "id": 7,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit; public may attend."
+      "stake": "Public hearing on KOTO's special event liquor permit for July 30 Live at the Drive."
     },
     {
       "id": 9,
-      "stake": "Gondola committee takes action on CIG funding commitments and project direction."
+      "stake": "Gondola Leadership Committee takes action on history, funding commitments, and project scope."
     }
   ]
 }

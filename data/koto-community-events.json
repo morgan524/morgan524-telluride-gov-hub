@@ -11,39 +11,6 @@
     "imageUrl": ""
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-23/",
-    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    "pubDate": "2026-07-23T15:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "DIY Condiments with Kayla",
-    "link": "https://koto.org/event/diy-condiments-with-kayla/",
-    "description": "Skip the store-bought bottles and discover how easy—and delicious—it is to make your own flavorful condiments from scratch. Join fermentation educator and local food advocate Kayla Wexelberg of Taste Your Roots for a hands-on workshop focused on creating homemade condiments and barbecue sauce using fresh, wholesome ingredients. Learn the fundamentals of balancing sweet, salty, tangy, and savory flavors while crafting customizable recipes that fit your taste and dietary preferences. Participants will explore ingredient combinations, discover simple techniques for elevating everyday meals, and leave with recipes and inspiration to continue experimenting at home. Whether you're a backyard grill master, a home cook looking to expand your kitchen skills, or simply curious about making more foods from scratch, this class will help you add a personal touch to every meal.",
-    "pubDate": "2026-07-23T18:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Pilates for All Bodies with Laura",
-    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-23/",
-    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "pubDate": "2026-07-23T18:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Party in the Park",
     "link": "https://koto.org/event/party-in-the-park-2/",
     "description": "We hope you will join the Telluride Mountain Club for our annual party and membership drive in Telluride Town Park! This event supports our annual trail maintenance and new trail planning and implementation projects. Thank you to our sponsors: Alpine Club, Telluride Consulting, Jagged Edge, Latitude Insurance, Alpine Bank, Arc'teryx, Stellar Tours. We can't thank you enough! Ticket Price: Adult (Ages 14+): $40 Child (Under 14): $25 Ticket Includes: Food – BBQ by Black Salt Hospitality Reusable Telluride Mountain Club cup Beer (Stronghouse) & Wine – You must be 21 or over to drink alcohol. We'll be checking IDs. Music – DJ Bash Raffle Would you like to become a donor, sponsor, or provide product to our raffle? Please email hope@telluridemountainclub.org.",
@@ -74,8 +41,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -97,8 +63,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Lone Cone Library Norwood",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     "title": "Ridgway Farmer's Market",
@@ -142,7 +107,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Town Park",
-    "imageUrl": ""
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     "title": "Zumba with Gisela",
@@ -164,8 +129,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Conference Center Plaza Mountain Village",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
   },
   {
     "title": "Shakespeare in the Park: \"Henry V\"",
@@ -176,7 +140,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Town Park",
-    "imageUrl": ""
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     "title": "Pickleball Open Play",
@@ -198,8 +162,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
   },
   {
     "title": "Drop In Tech Time with Oliver",
@@ -221,8 +184,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -310,7 +272,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Sheridan Opera House, Telluride",
-    "imageUrl": ""
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg"
   },
   {
     "title": "Native Plant Walk & Talk",
@@ -354,8 +316,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -443,8 +404,7 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Lone Cone Library Norwood",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     "title": "Ridgway Farmer's Market",
@@ -488,7 +448,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "",
-    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ]

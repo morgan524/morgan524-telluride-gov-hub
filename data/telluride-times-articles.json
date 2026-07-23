@@ -1,5 +1,17 @@
 [
   {
+    "title": "A crowded shelter looks toward expansion",
+    "source": "Telluride Times",
+    "date": "July 23, 2026",
+    "firstSeen": "2026-07-23",
+    "newsTopic": "arts-culture",
+    "copy": "Hoof and Paw in Naturita has grown from helping 60–70 animals a year to over 300, and space is tight. The shelter is fundraising $34,000 for a converted shipping container — dubbed \"Caturita\" — to house cats, with $5,000 raised so far. Details and donations at hoofandpawcolorado.org.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_9c94c8cb-6ff1-4a0a-b3d7-253b3a8680a0.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/17/b171ccfe-3c61-47f6-a874-98d3fca4afb9/6a62419b1c29a.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Errico: ‘The State of the Town is strong and engaging’",
     "source": "Telluride Times",
     "date": "July 23, 2026",
@@ -105,9 +117,10 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
     "img": "",
-    "letterAuthor": "Jeremy",
+    "letterAuthor": "Jeremy and Dawn Katz",
     "imgHiRes": true,
-    "isLetter": true
+    "isLetter": true,
+    "authorChecked": true
   },
   {
     "title": "Palm, school clean-up continues apace after last Friday’s flood",

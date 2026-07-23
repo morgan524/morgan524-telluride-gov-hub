@@ -323,7 +323,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8295","zoomUrl":"https://gbsm.zoom.us/j/82559576086","phone":"719-359-4580","sv":4},
 
   "county|2026-07-27|Housing Code Update SSR":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930","zoomUrl":"https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1","meetingId":"840 4528 7708","passcode":"230003"},
 
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
     {"sv":4},
@@ -924,10 +924,10 @@ const MANUAL_SUMMARIES = {
     "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The July 29 Planning Commission and Board of County Commissioners Joint Work Session agenda hasn't been posted yet.",
+    "The agenda for this July 29 joint work session between the San Miguel County Board of County Commissioners and the Planning Commission hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1005,7 +1005,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1020,7 +1020,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1207,6 +1207,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A crowded shelter looks toward expansion",
+    source: "Telluride Times",
+    date: "July 23, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "arts-culture",
+    copy: "Hoof and Paw in Naturita has grown from helping 60–70 animals a year to over 300, and space is tight. The shelter is fundraising $34,000 for a converted shipping container — dubbed \"Caturita\" — to house cats, with $5,000 raised so far. Details and donations at hoofandpawcolorado.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_9c94c8cb-6ff1-4a0a-b3d7-253b3a8680a0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/17/b171ccfe-3c61-47f6-a874-98d3fca4afb9/6a62419b1c29a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Errico: ‘The State of the Town is strong and engaging’",
     source: "Telluride Times",
     date: "July 23, 2026",
@@ -1312,9 +1324,10 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
     img: "",
-    letterAuthor: "Jeremy",
+    letterAuthor: "Jeremy and Dawn Katz",
     imgHiRes: true,
-    isLetter: true
+    isLetter: true,
+    authorChecked: true
   },
   {
     title: "Palm, school clean-up continues apace after last Friday’s flood",
@@ -2891,39 +2904,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-23/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-23T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "DIY Condiments with Kayla",
-    link: "https://koto.org/event/diy-condiments-with-kayla/",
-    description: "Skip the store-bought bottles and discover how easy—and delicious—it is to make your own flavorful condiments from scratch. Join fermentation educator and local food advocate Kayla Wexelberg of Taste Your Roots for a hands-on workshop focused on creating homemade condiments and barbecue sauce using fresh, wholesome ingredients. Learn the fundamentals of balancing sweet, salty, tangy, and savory flavors while crafting customizable recipes that fit your taste and dietary preferences. Participants will explore ingredient combinations, discover simple techniques for elevating everyday meals, and leave with recipes and inspiration to continue experimenting at home. Whether you're a backyard grill master, a home cook looking to expand your kitchen skills, or simply curious about making more foods from scratch, this class will help you add a personal touch to every meal.",
-    pubDate: "2026-07-23T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-23/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-07-23T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Party in the Park",
     link: "https://koto.org/event/party-in-the-park-2/",
     description: "We hope you will join the Telluride Mountain Club for our annual party and membership drive in Telluride Town Park! This event supports our annual trail maintenance and new trail planning and implementation projects. Thank you to our sponsors: Alpine Club, Telluride Consulting, Jagged Edge, Latitude Insurance, Alpine Bank, Arc'teryx, Stellar Tours. We can't thank you enough! Ticket Price: Adult (Ages 14+): $40 Child (Under 14): $25 Ticket Includes: Food – BBQ by Black Salt Hospitality Reusable Telluride Mountain Club cup Beer (Stronghouse) & Wine – You must be 21 or over to drink alcohol. We'll be checking IDs. Music – DJ Bash Raffle Would you like to become a donor, sponsor, or provide product to our raffle? Please email hope@telluridemountainclub.org.",
@@ -2954,8 +2934,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -2977,8 +2956,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Lone Cone Library Norwood",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3022,7 +3000,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Zumba with Gisela",
@@ -3044,8 +3022,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Conference Center Plaza Mountain Village",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
   },
   {
     title: "Shakespeare in the Park: \"Henry V\"",
@@ -3056,7 +3033,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Town Park",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
   },
   {
     title: "Pickleball Open Play",
@@ -3078,8 +3055,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
   },
   {
     title: "Drop In Tech Time with Oliver",
@@ -3101,8 +3077,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3190,7 +3165,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Sheridan Opera House, Telluride",
-    imageUrl: ""
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg"
   },
   {
     title: "Native Plant Walk & Talk",
@@ -3234,8 +3209,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
     title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
@@ -3323,8 +3297,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Lone Cone Library Norwood",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3368,8 +3341,7 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: "",
-    img: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -3606,7 +3578,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3618,7 +3590,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -5397,7 +5369,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-07-20-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, held under the Town of Norwood. The commission reviews land use applications, development proposals, and zoning matters affecting the Norwood community.",
+    description: "",
     pubDate: "2026-07-20T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5408,19 +5380,18 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
     category: "Community Event",
     location: "Norwood, CO",
-    imageUrl: "",
-    img: "https://streamline.imgix.net/56210050-a5c1-4003-868e-c365673996fa/a9cbee90-30ef-43f6-8dae-b863f32d33b3/MotM-2026-Poster-11x17-2-NB.jpg?ixlib=rb-1.1.0&w=2000&h=2000&fit=max&or=0&s=9b0648217c9acc254a616a2d2415871d"
+    imageUrl: ""
   },
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5431,7 +5402,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5442,7 +5413,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5453,7 +5424,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5562,6 +5533,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Gondola Leadership Committee Meeting",
+    link: "https://townofmountainvillage.com/explore/events/all-events/gondola-leadership-committee-meeting/",
+    description: "The Town of Mountain Village, Town of Telluride, San Miguel County, Telluride Mountain Village Owners Association Board,",
+    pubDate: "2026-07-28T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/41857/mplantz-1016-a7v02976_870x435.jpg"
   },
   {
     title: "Town Talk: The Dual Challenge - Climate and Energy",
@@ -7475,6 +7457,23 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
     address: "Telluride, Colorado (specific parcel address truncated in source text)",
     noticeKey: "vesting-project-72-telluride"
+  },
+  {
+    title: "Request for Proposal -- Request for Proposals Interior Painting of the Placerville Schoolhouse",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Proposal",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: Request for Proposals Interior Painting of the Placerville Schoolhouse.",
+    deadline: "Closes 8/6/2026",
+    expires: "2026-08-06",
+    dates: "7/23",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=206",
+    address: "",
+    smcBidID: "206"
   }
 ];
 

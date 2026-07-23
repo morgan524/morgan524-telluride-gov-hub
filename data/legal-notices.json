@@ -644,5 +644,22 @@
     "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
     "address": "Telluride, Colorado (specific parcel address truncated in source text)",
     "noticeKey": "vesting-project-72-telluride"
+  },
+  {
+    "title": "Request for Proposal -- Request for Proposals Interior Painting of the Placerville Schoolhouse",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Request for Proposals Interior Painting of the Placerville Schoolhouse.",
+    "deadline": "Closes 8/6/2026",
+    "expires": "2026-08-06",
+    "dates": "7/23",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=206",
+    "address": "",
+    "smcBidID": "206"
   }
 ]
