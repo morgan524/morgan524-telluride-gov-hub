@@ -103,6 +103,15 @@ jobs:
           html = open(fpath, encoding="utf-8").read()
           if len(html) < 2000:
               raise SystemExit(f"{fpath} looks too small ({len(html)} bytes) — aborting")
+          # Upper guard (added 2026-07-23): a Review Desk DOM round-trip once
+          # baked two base64 JPEGs into the approved Weekend Ahead (607 KB).
+          # Gmail clips past ~102 KB and most clients strip data: URIs, so a
+          # bloated digest would send clipped with broken images. Fail loudly
+          # instead — re-approve at the Review Desk to regenerate a clean file.
+          if "data:image" in html:
+              raise SystemExit(f"{fpath} contains inline data:image payloads — aborting (re-approve at the Review Desk)")
+          if len(html) > 120_000:
+              raise SystemExit(f"{fpath} is {len(html):,} bytes — over the 120 KB clip limit, aborting")
 
           if not override:
               # 1) Approval gate: the human must have approved (locked) THIS week's digest.

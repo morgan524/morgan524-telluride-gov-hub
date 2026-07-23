@@ -85,8 +85,19 @@ jobs:
           fi
           LABEL="$(date -u -d "$WS" '+%B %-d') - $(date -u -d "$WS +2 days" '+%B %-d, %Y')"
           echo "Weekend start: $WS  ·  Label: $LABEL"
-          WEEKEND=1 WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-preview.html 2>&1 | tee /tmp/wp.log
-          WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-mailchimp.html
+          # If this weekend is already APPROVED at the Review Desk, preview the
+          # EXACT file that will send. Re-rendering here would regenerate the
+          # Rick lede and re-pick events, so the review email would contradict
+          # the approved version — which is exactly what happened 2026-07-23.
+          if node scripts/lib/approved-preview.js weekend "$WS" weekend-preview.html > /tmp/wp.log 2>/tmp/wp.err; then
+            cat /tmp/wp.err
+            cp weekend-preview.html weekend-mailchimp.html
+          else
+            cat /tmp/wp.err
+            echo "No approval for $WS — rendering a fresh draft."
+            WEEKEND=1 WEEKLY_PREVIEW=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-preview.html 2>&1 | tee /tmp/wp.log
+            WEEKEND=1 node scripts/weekly-email.js /tmp/gd.js /tmp/gh.js "$WS" "$LABEL" weekend-mailchimp.html
+          fi
           echo "subject=$(grep '^SUBJECT=' /tmp/wp.log | sed 's/^SUBJECT=//')" >> "$GITHUB_OUTPUT"
 
       - name: Email preview to info@livabletelluride.org
