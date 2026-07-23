@@ -163,17 +163,20 @@ const communityImg = (title, townHint) => {
     : COMMUNITY_POOLS.generic;
   return FB('community-' + pool[titleHash(title) % pool.length]);
 };
+// Same fallback priority as build-events-index.js fallbackImg — keep in sync:
+// Town Park venue → hand-pinned IMG_FALLBACKS → category (youth tennis = kids
+// photo) → Mountain Village town default → generic community pool.
 const imgFallback = (title, townHint) => {
   const t = title || '';
   const h = String(townHint || '');
-  // Venue/town defaults (Morgan 2026-07-23) — mirror build-events-index.js.
   if (/\btown park\b/i.test(h) && !/mountain\s+village/i.test(h)) return FB('townpark');
-  if (/mountain\s+village/i.test(h)) return FB('mountainvillage');
   for (const f of IMG_FALLBACKS) if (f.match.test(t)) return f.img;
   for (const c of CATEGORY_FALLBACKS) if (c.match.test(t)) {
+    if (c.slug === 'tennis' && /\byouth\b|\bkids?\b|\bjunior\b|\bchild/i.test(t)) return FB('tennis-3');
     const n = ROTATING_SLUGS[c.slug];
     return n ? FB(c.slug + '-' + ((titleHash(t) % n) + 1)) : FB(c.slug);
   }
+  if (/mountain\s+village/i.test(h)) return FB('mountainvillage');
   return communityImg(t, townHint);
 };
 // Resolve an event image for EMAIL via the SHARED resolver in gov-helpers.js, so

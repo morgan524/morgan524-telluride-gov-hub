@@ -136,20 +136,27 @@ function communityImg(title, town) {
     : COMMUNITY_POOLS.generic;
   return FB('community-' + pool[titleHash(title) % pool.length]);
 }
-// Venue/town-specific defaults (Morgan 2026-07-23) — used when an event has no
-// real source image. These beat the generic category/community fallbacks so a
-// Town Park concert shows Town Park (not a stock guitar) and a Mountain Village
-// event shows Mountain Village. Location text is authoritative for Town Park.
+// Fallback image priority when an event has NO real source image (Morgan,
+// 2026-07-23). Order matters:
+//   1. Telluride Town Park venue → the Town Park photo (a Town Park event
+//      should show Town Park, whatever it is).
+//   2. Category match → the category photo. A tennis event shows tennis
+//      wherever it is — category beats a town default. Youth/kids tennis gets
+//      the kids-tennis photo specifically.
+//   3. Town default → Mountain Village (only when NO category matched, e.g. a
+//      generic MV community event).
+//   4. Generic regional community pool.
 function fallbackImg(title, town, location) {
-  const loc = String(location || '');
+  const loc = String(location || ''), t = String(title || '');
   if (/\btown park\b/i.test(loc) && (!town || town === 'Telluride')) return FB('townpark');
-  if (town === 'Mountain Village') return FB('mountainvillage');
   for (const [re, slug] of CATEGORY_FALLBACKS) {
-    if (!re.test(title || '')) continue;
+    if (!re.test(t)) continue;
+    if (slug === 'tennis' && /\byouth\b|\bkids?\b|\bjunior\b|\bchild/i.test(t)) return FB('tennis-3');
     const n = ROTATING_SLUGS[slug];
-    return n ? FB(slug + '-' + ((titleHash(title) % n) + 1)) : FB(slug);
+    return n ? FB(slug + '-' + ((titleHash(t) % n) + 1)) : FB(slug);
   }
-  return communityImg(title, town);
+  if (town === 'Mountain Village') return FB('mountainvillage');
+  return communityImg(t, town);
 }
 
 // User-facing event-type filter groups (events page "type" chips). Derived
