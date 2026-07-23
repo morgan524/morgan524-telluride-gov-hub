@@ -523,5 +523,126 @@
     "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
     "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
     "noticeKey": "smc-luc-amendment-5-406-wildfire"
+  },
+  {
+    "title": "RFP -- Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting Project",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The Town of Telluride is soliciting proposals for improvements to the Oval (Part 1) and for fencing and safety netting at Warner Field, both located in Town Park. The full RFP is available on the Town's website at www.telluride.gov. Proposals must be submitted prior to 3:00 PM MT on Friday, July 31, 2026.",
+    "deadline": "2026-07-31",
+    "expires": "2026-07-31",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "Town Park, Telluride, Colorado",
+    "noticeKey": "rfp-telluride-town-park-oval-warner-field"
+  },
+  {
+    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
+    "entity": "Montrose Memorial Hospital, Inc.",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email at BODapplications@montrosehealth.com, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM; elections will be held at the Board's annual meeting in October.",
+    "deadline": "2026-08-14",
+    "expires": "2026-08-14",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "800 South 3rd Street, Montrose, Colorado",
+    "noticeKey": "montrose-memorial-hospital-bod-2026"
+  },
+  {
+    "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
+    "entity": "Farmers' Water Development Company",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "💧",
+    "iconClass": "type-hearing",
+    "type": "Utilities",
+    "filterTag": "utilities",
+    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original will be permanently cancelled. Last publication date in this series is July 30, 2026.",
+    "deadline": "2026-08-29",
+    "expires": "2026-08-29",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "PO Box 10, Norwood, Colorado 81423",
+    "noticeKey": "fwdc-share-cert-887-replacement"
+  },
+  {
+    "title": "RFP -- San Miguel County Historic Placerville Schoolhouse Interior Repainting",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is requesting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front Street, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W. Colorado Ave., 2nd Floor, Telluride. Proposals are due by 5:00 PM on Wednesday, August 6, 2026, submitted either by email or dropped off at the Fleet & Facilities office.",
+    "deadline": "2026-08-06",
+    "expires": "2026-08-06",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "400 Front Street, Placerville, Colorado",
+    "noticeKey": "rfp-placerville-schoolhouse-repainting"
+  },
+  {
+    "title": "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County is proceeding with a foreclosure sale of Condominium Unit 7, Double Diamond Condominium, located at 350 S. Mahoney Drive, Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The public auction is scheduled for 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, Colorado.",
+    "deadline": "2026-09-03",
+    "expires": "2026-09-03",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
+    "noticeKey": "foreclosure-202605-350-mahoney-unit7",
+    "caseNumber": "202605"
+  },
+  {
+    "title": "Notice of Vesting -- Site-Specific Development Plan (Project Title: 72 [truncated])",
+    "entity": "Town of Telluride",
+    "entityClass": "ent-county",
+    "entityLogo": "telluride",
+    "icon": "📋",
+    "iconClass": "type-hearing",
+    "type": "Ordinance",
+    "filterTag": "ordinance",
+    "summary": "The Town of Telluride is giving public notice pursuant to Colorado Revised Statutes Section 24-68-103(1) and Telluride Municipal Code Title 18, Article 5, Division 2, Section 5-208.H that a site-specific development plan and vested property right has been approved for a project identified in the notice (project title beginning with '72'; full details were truncated in the source text). Vesting notices typically establish property rights for a defined period following approval. Community members with questions should contact the Town of Telluride directly for full project details.",
+    "deadline": "",
+    "expires": "2026-08-22",
+    "dates": "7/23",
+    "papers": [
+      "ttimes_0723"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    "address": "Telluride, Colorado (specific parcel address truncated in source text)",
+    "noticeKey": "vesting-project-72-telluride"
   }
 ]

@@ -383,12 +383,20 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
-    "date": "2026-07-22",
-    "title": "Healing centers, meet the Land Use Code",
-    "body": "Town Council takes up a Land Use Code amendment August 11 that would add new regulations for natural medicine businesses — a fresh Section 5-31 — with an intergovernmental worksession alongside the county the day before.\n\nSome will read this as sensible groundwork: write the rules before anyone opens a door. Others will ask why a town this size needs a new chapter of code before there's a business to regulate. Nothing's decided yet — the amendment still has to get through Council.\n\nGood groundwork, or code creep?",
-    "choices": ["Write the rules first", "Wait for a real applicant", "It's complicated"],
-    "sourceUrl": "/gov-hub.html",
-    "topics": ["meeting"]
+    date: "2026-07-23",
+    title: "Who counts as a resident when a kid has two homes?",
+    body: "The Telluride Housing Authority is taking up a genuinely knotty question: what happens to deed-restricted housing rules when a household doesn't fit the standard definition — specifically, dependents of multiple custodial parents. The board has set aside 40 minutes for a proposed policy statement on primary residency in those cases, which signals it's not a clean fix.\n\nSome will say the rules need to flex for real family situations. Others will say any loosening of residency definitions creates openings that undermine deed restrictions for everyone. The waitlist pressure isn't getting lighter.\n\nHow strictly should primary residency be defined in deed-restricted housing?",
+    choices: ["Strict definitions protect the system", "Real families don't fit neat rules", "Depends on the case", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
+    date: "2026-07-22",
+    title: "Healing centers, meet the Land Use Code",
+    body: "Town Council takes up a Land Use Code amendment August 11 that would add new regulations for natural medicine businesses — a fresh Section 5-31 — with an intergovernmental worksession alongside the county the day before.\n\nSome will read this as sensible groundwork: write the rules before anyone opens a door. Others will ask why a town this size needs a new chapter of code before there's a business to regulate. Nothing's decided yet — the amendment still has to get through Council.\n\nGood groundwork, or code creep?",
+    choices: ["Write the rules first", "Wait for a real applicant", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
   }
 ];
 
@@ -798,7 +806,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-23';
-const LEGAL_NOTICES_CACHE_DATE = '2026-07-22';
+const LEGAL_NOTICES_CACHE_DATE = '2026-07-23';
 
 const MANUAL_SUMMARIES = {
   "county|2026-06-24|Board of County Commissioners Work Session":
@@ -910,7 +918,7 @@ const MANUAL_SUMMARIES = {
     "The agenda for this July 29 joint work session between the San Miguel County Planning Commission and the Board of County Commissioners hasn't been posted yet.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The July 29, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -988,7 +996,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1015,7 +1023,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1183,6 +1191,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Legals and Public Notices for July 23-29, 2026",
+    source: "Telluride Times",
+    date: "July 23, 2026",
+    firstSeen: "2026-07-23",
+    newsTopic: "education",
+    copy: "This week's legals include a creditor notice for the estate of Lawrence de Bivort (claims due Nov. 16), the Town of Telluride seeking proposals for Town Park and Warner Field improvements (due July 31), and San Miguel County seeking bids to repaint the Placerville Schoolhouse (due Aug. 6). A foreclosure proceeding has been filed in San Miguel County on a 2022 deed of trust.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
   {
     title: "Telluride Preschool to change hands",
     source: "Telluride Times",
@@ -2787,17 +2807,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Shakespeare in the Park: \"Henry V\"",
-    link: "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-22/",
-    description: "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
-    pubDate: "2026-07-23T02:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Town Park",
-    imageUrl: ""
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-23/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3274,81 +3283,81 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Bear Creek Walk & Talk with Dr. Jason Sibold",
-    link: "https://telluridelibrary.libcal.com/event/17105410?hs=a",
-    description: "8:30 AM – 10:30 AM · Dr. Sibold will talk about his multi-year study of Bear Creek trees and you may get to do a little citizen science along the way!  Meet in front of the library and wear sturdy shoes. https://www.libarts.colostate.edu/people/sibold/",
-    pubDate: "2026-07-22T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_43_57.jpg"
-  },
-  {
-    title: "Baby Bop",
-    link: "https://telluridelibrary.libcal.com/event/16610077?hs=a",
-    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
-    pubDate: "2026-07-22T15:00:00.000Z",
+    title: "Yin Yang Yoga with Miriah",
+    link: "https://telluridelibrary.libcal.com/event/16801141?hs=a",
+    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
+    pubDate: "2026-07-23T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
   },
   {
-    title: "Mountain Village Farmers Marketshow: magic mountain Puppet Show",
-    link: "https://telluridelibrary.libcal.com/event/15564458?hs=a",
-    description: "11:00 AM – 12:00 PM",
-    pubDate: "2026-07-22T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Mountain Village Market",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_09_39_46.png"
-  },
-  {
-    title: "Radio Biblioteca",
-    link: "https://telluridelibrary.libcal.com/event/17021873?hs=a",
-    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
-    pubDate: "2026-07-22T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "KOTO Radio Station",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_43_06.png"
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://telluridelibrary.libcal.com/event/16767658?hs=a",
-    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-07-22T19:00:00.000Z",
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772769?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-07-23T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Teen Movie and Ice Cream Club",
-    link: "https://telluridelibrary.libcal.com/event/16935736?hs=a",
-    description: "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
-    pubDate: "2026-07-22T21:00:00.000Z",
+    title: "Play Pickleball!",
+    link: "https://telluridelibrary.libcal.com/event/16897847?hs=a",
+    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
+    pubDate: "2026-07-23T17:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_55_40.png"
+    location: "Telluride Town Park",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
   },
   {
-    title: "Plant Party-You Buggin Me",
-    link: "https://telluridelibrary.libcal.com/event/16593979?hs=a",
-    description: "5:30 PM – 7:00 PM · Who&#39;s Buggin you and what can you do about it? We will discuss common plant ailments and make our own pest spray to keep the bugs away.",
-    pubDate: "2026-07-22T23:30:00.000Z",
+    title: "DIY Condiments and BBQ Sauces",
+    link: "https://telluridelibrary.libcal.com/event/16410802?hs=a",
+    description: "12:00 PM – 2:00 PM · Craft Your Own Condiments & BBQ Sauce Skip the store-bought bottles and discover how easy—and delicious—it is to make your own flavorful condiments from scratch. Join fermentation educator and local food advocate Kayla Wexelberg of Taste Your Roots for a hands-on workshop focused on creating homemade condiments and barbecue sauce using fresh, wholesome ingredients. Learn the fundamentals of balancing sweet, salty, tangy, and savory flavors while crafting customizable recipes that fit your taste and dietary preferences. Participants will explore ingredient combinations, discover simple techniques for elevating everyday meals, and leave with recipes and inspiration to continue experimenting at home. Whether you&#39;re a backyard grill master, a home cook looking to expand your kitchen skills, or simply curious about making more foods from scratch, this class will help you add a personal touch to every meal.",
+    pubDate: "2026-07-23T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_35_22.png"
+  },
+  {
+    title: "CANCELLED-Pilates for All Bodies",
+    link: "https://telluridelibrary.libcal.com/event/16536281?hs=a",
+    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-07-23T18:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
+  },
+  {
+    title: "Littles On the Move",
+    link: "https://telluridelibrary.libcal.com/event/13960353?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
+    pubDate: "2026-07-23T21:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+  },
+  {
+    title: "How to Stop White-Knuckling: Emotional Regulation During Troubling Times",
+    link: "https://telluridelibrary.libcal.com/event/17099290?hs=a",
+    description: "5:30 PM – 7:00 PM · In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps them to navigate stress and identify what measures could be restorative to their nervous systems.  There will be a mix of presentation, writing prompts, and group discussion. Betsy Lamberson is a parenting educator and nervous system coach who helps caregivers and professionals better understand behavior through the lens of stress and connection. Through her work at New Roots Parenting, she offers practical, neuroscience-informed tools rooted in co-regulation, self-awareness, and relationship repair. www.newrootsparenting.com",
+    pubDate: "2026-07-23T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_01_14_27_53.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_24_15_45_40.jpg"
   }
 ];
 
@@ -3757,152 +3766,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-07-22T06:00:00.000Z",
+    pubDate: "2026-07-23T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Red Mountain Pass\"",
-    link: "https://events.ourayridgwayevents.com/event/wildflower-walks-talks-with-mary-menz-jaime-pisarowicz-red-mountain-pass",
-    description: "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"Red Mountain Pass\" July 22nd Wednesday 7:30am - 11:30am $49-$69 Registration: www.weehawkenarts.org Different elevations and habitats provide opportunities to view a wide variety of Colorado’s native plants and wildflowers. Ridgway writer and Colorado Native Plant Master Mary Menz and Jaime Pisarowicz will share their extensive plant knowledge and excitement for the area with you. Special guest and fellow NPM Sandra Dick will also join the group as a guide! Registration includes a copy of their book Common Wildflowers of the San Juan Mountains ($49) or Wildflowers of Colorado’s Western Slope ($69). All groups are limited to 12 participants. Participants will meet and carpooling is recommended (we help facilitate this effort at the meet up location)—specific directions and more information will be provided via email prior to the event. A waiver needs to be signed before the event. …",
-    pubDate: "2026-07-22T13:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Annex on Cora",
-    imageUrl: "https://localist-images.azureedge.net/photos/52806799570561/huge/ec3cb91778c8921ae65c74f916960dc0cfbd0584.jpg"
-  },
-  {
-    title: "On Display: Roots & Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m. View on site | Email this event",
-    pubDate: "2026-07-22T15:00:00.000Z",
-    endDate: "2026-08-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg"
-  },
-  {
-    title: "On Display: Silverton, Interpreted",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
-    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
-    pubDate: "2026-07-22T16:00:00.000Z",
-    endDate: "2026-08-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-07-22T16:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Canceled: Jul 22, 2026: Seussical The Musical - Summer Youth Theatre Program",
-    link: "https://events.ourayridgwayevents.com/event/soussical-the-musical-summer-youth-theatre-program",
-    description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org . View on site | Email this event",
-    pubDate: "2026-07-22T19:00:00.000Z",
-    endDate: "2026-07-24",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Secondary School",
-    imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
-  },
-  {
-    title: "Camp Wildflower - A Women's Wellness Retreat",
-    link: "https://events.ourayridgwayevents.com/event/camp-wildflower-a-womens-wellness-retreat",
-    description: "Camp Wildflower is four-day women's wellness retreat in the heart of the San Juan Mountains July 22-26, 2026. This retreat is designed as a space to slow down, breathe deeper, and be fully supported - physically, mentally, and emotionally. Rooted in the spirit of summer camp, your days will be spent outside, moving your body, exploring, creating, and settling into a rhythm that feels both playful and restorative. Through intentional movement, time in nature, and supportive wellness and nutrition practices, you’ll reconnect with what your body has been asking for in a way that feels simple, steady, and aligned. Along the way, sisterhood is built through shared experiences, open conversations, and time spent together, the kind that stays with you long after you leave. Come reset, refill your cup, and return to your nature! …",
-    pubDate: "2026-07-22T21:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray, CO",
-    imageUrl: "https://localist-images.azureedge.net/photos/52799317043664/huge/1714c75173a9eaf2aedc61c49a369db10de46721.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-07-22T21:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "White Buffalo, Voyager & Tyler Simmons - Live Music Fundraiser!",
-    link: "https://events.ourayridgwayevents.com/event/white-buffalo-voyager-tyler-simmons-live-music-fundraiser",
-    description: "Help us GIVE BACK! Join us for LIVE MUSIC with Tyler Simmons on Wednesday, 7/22, on the Rooftop at White Buffalo Restaurant + Bar at Chipeta Lodge. 10% of all non-alcoholic proceeds go to the Voyager Youth Program. Stay for SUNSET on the best rooftop deck in Ridgway! Reserve a Relaxation Access Pass to enjoy our pool and hot tubs before and after the music. Voyager works with Ouray County schools and the community to provide after-school and summer programs for Pre-K, K-5, and Teens 12+. Support these local programs and help build healthy and productive young adults. Learn more about Voyager Youth Program at https://www.voyageryouth.org/ @voyageryouth @chipetalodge @ridgwaycolorado #ridgwaycolorado #ouraycolorado View on site | Email this event",
-    pubDate: "2026-07-22T23:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "White Buffalo Rooftop",
-    imageUrl: "https://localist-images.azureedge.net/photos/53427639472690/huge/531b33824d528fc929d7ff8e1895f9d8f5cdac5d.jpg"
-  },
-  {
-    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd! View on site | Email this event",
-    pubDate: "2026-07-23T00:00:00.000Z",
-    endDate: "2026-09-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
-  },
-  {
-    title: "Yoga in the Park- Wednesday evenings",
-    link: "https://events.ourayridgwayevents.com/event/yoga-in-the-park-wednesday-evenings",
-    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person. View on site | Email this event",
-    pubDate: "2026-07-23T00:00:00.000Z",
-    endDate: "2026-09-17",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
-    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
-  },
-  {
-    title: "Live Music- The Mammoths",
-    link: "https://events.ourayridgwayevents.com/event/live-music-the-mammoths",
-    description: "Join us for a summer of live music, craft cocktails, mountain views, and unforgettable nights on the St. Elmo Tavern patio. Every Wednesday, we host live music for you to enjoy all season long. Join us on Wednesday, July 22nd as we welcome The Mammoths. This Austin, Texas-based band delivers fuzz-soaked rock n’ roll, blending ’70s psychedelia with heavy guitar work and howling blues energy. Expect distorted riffs, overdriven vocals, and a raw live intensity that hits you in the chest. Loud, dialed in, and unapologetically bold, The Mammoths earn every fan one sweaty show at a time. View on site | Email this event",
-    pubDate: "2026-07-23T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "St. Elmo Tavern",
-    imageUrl: "https://localist-images.azureedge.net/photos/53126480827602/huge/ad9c458a18ae1762a30aad207d0196671b64e012.jpg"
-  },
-  {
-    title: "The Shining: CO-150 Film Festival Screening — Movie Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/the-shining-co-150-film-festival-screening-movie-night-the-wright",
-    description: "The Shining: CO-150 Film Festival Screening — Movie Night @ the Wright ABOUT THE FILM The Shining (1980) follows Jack Torrance and his family as they become winter caretakers of the isolated Overlook Hotel, a place where unsettling forces slowly begin to blur the line between reality and madness. Directed by Stanley Kubrick and based on Stephen King's novel, the film transformed psychological horror forever through haunting imagery, unforgettable performances, and a sense of dread that lingers long after the credits roll. This Colorado-themed screening carries its own mountain connection. While the fictional Overlook Hotel sits high in the Rockies, the film's atmosphere of isolation and snowbound unease feels right at home among Colorado's peaks and mountain towns. A chilling psychological thriller that proves some places remember more than they should. …",
-    pubDate: "2026-07-23T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932610792631/huge/bdcda0258ebbcde0120b61212637e686361ed88a.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -3915,6 +3785,42 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "On Display: Silverton, Interpreted",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
+    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
+    pubDate: "2026-07-23T16:00:00.000Z",
+    endDate: "2026-08-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-07-23T16:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
+  },
+  {
+    title: "Canceled: Jul 23, 2026: Seussical The Musical - Summer Youth Theatre Program",
+    link: "https://events.ourayridgwayevents.com/event/soussical-the-musical-summer-youth-theatre-program",
+    description: "Seussical is a fantastical musical based on the works of Dr. Seuss, primarily blending Horton Hears a Who!, Horton Hatches the Egg, and Gertrude McFuzz. Written by Lynn Ahrens and Stephen Flaherty, it follows Horton the Elephant and the Cat in the Hat as they explore themes of imagination, loyalty, and community through toe-tapping, whimsical musical numbers. Performances on July 25th & 26th at Ridgway Secondary School. For financial assistance contact Kathy O'Mara at 413-441-6120 or Email komara@minervawest.org . View on site | Email this event",
+    pubDate: "2026-07-23T19:00:00.000Z",
+    endDate: "2026-07-24",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Secondary School",
+    imageUrl: "https://localist-images.azureedge.net/photos/52711641780960/huge/4a195394e3f1702e5fcf72925dae09f386f6a1cc.jpg"
   },
   {
     title: "Ridgway Concert Series",
@@ -3952,6 +3858,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52278124487184/huge/345c89f1bce55647f7f354d7df2841d9b503e493.jpg"
   },
   {
+    title: "On Display: Roots & Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
+    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m. View on site | Email this event",
+    pubDate: "2026-07-24T15:00:00.000Z",
+    endDate: "2026-08-03",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create",
+    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg"
+  },
+  {
     title: "Ridgway Farmers Market",
     link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
@@ -3974,6 +3892,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/53198530879947/huge/403c155aa2c93ade83d633e106dcb10f0e69f9d8.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-07-24T21:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
   },
   {
     title: "FLANNEL FEEDBACK",
@@ -4323,6 +4253,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Annex on Cora",
     imageUrl: "https://localist-images.azureedge.net/photos/52806828827371/huge/ae218c9c6c9de549ec730577c3289f68e83e9fd1.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
+    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd! View on site | Email this event",
+    pubDate: "2026-07-30T00:00:00.000Z",
+    endDate: "2026-09-17",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
+  },
+  {
+    title: "Yoga in the Park- Wednesday evenings",
+    link: "https://events.ourayridgwayevents.com/event/yoga-in-the-park-wednesday-evenings",
+    description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person. View on site | Email this event",
+    pubDate: "2026-07-30T00:00:00.000Z",
+    endDate: "2026-09-17",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Gazebo south of Chipeta Lodge, Ridgway, CO (Or studio if raining)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52880886803755/huge/ba2d24fbf09ba1f9a707a06213d60685581d7322.jpg"
   },
   {
     title: "Live Music- The Bramblers",
@@ -7231,6 +7185,115 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
     address: "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
     noticeKey: "smc-luc-amendment-5-406-wildfire"
+  },
+  {
+    title: "RFP -- Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting Project",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "The Town of Telluride is soliciting proposals for improvements to the Oval (Part 1) and for fencing and safety netting at Warner Field, both located in Town Park. The full RFP is available on the Town's website at www.telluride.gov. Proposals must be submitted prior to 3:00 PM MT on Friday, July 31, 2026.",
+    deadline: "2026-07-31",
+    expires: "2026-07-31",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "Town Park, Telluride, Colorado",
+    noticeKey: "rfp-telluride-town-park-oval-warner-field"
+  },
+  {
+    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
+    entity: "Montrose Memorial Hospital, Inc.",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email at BODapplications@montrosehealth.com, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM; elections will be held at the Board's annual meeting in October.",
+    deadline: "2026-08-14",
+    expires: "2026-08-14",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "800 South 3rd Street, Montrose, Colorado",
+    noticeKey: "montrose-memorial-hospital-bod-2026"
+  },
+  {
+    title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
+    entity: "Farmers' Water Development Company",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "💧",
+    iconClass: "type-hearing",
+    type: "Utilities",
+    filterTag: "utilities",
+    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original will be permanently cancelled. Last publication date in this series is July 30, 2026.",
+    deadline: "2026-08-29",
+    expires: "2026-08-29",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "PO Box 10, Norwood, Colorado 81423",
+    noticeKey: "fwdc-share-cert-887-replacement"
+  },
+  {
+    title: "RFP -- San Miguel County Historic Placerville Schoolhouse Interior Repainting",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Public Notice",
+    filterTag: "public-entity",
+    summary: "San Miguel County is requesting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front Street, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W. Colorado Ave., 2nd Floor, Telluride. Proposals are due by 5:00 PM on Wednesday, August 6, 2026, submitted either by email or dropped off at the Fleet & Facilities office.",
+    deadline: "2026-08-06",
+    expires: "2026-08-06",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "400 Front Street, Placerville, Colorado",
+    noticeKey: "rfp-placerville-schoolhouse-repainting"
+  },
+  {
+    title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
+    entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
+    entityClass: "ent-county",
+    entityLogo: "assessor",
+    icon: "💰",
+    iconClass: "type-tax",
+    type: "Tax & Finance",
+    filterTag: "tax-finance",
+    summary: "Public Trustee Brandi R. Hatfield of San Miguel County is proceeding with a foreclosure sale of Condominium Unit 7, Double Diamond Condominium, located at 350 S. Mahoney Drive, Unit 7, Telluride, CO 81435. The original grantor is Ryan Pfaff; the current debt holder is Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust, with an outstanding principal balance of approximately $1,199,032.37. The public auction is scheduled for 10:00 AM on Thursday, September 3, 2026, at 305 W. Colorado Avenue, East entry, Telluride, Colorado.",
+    deadline: "2026-09-03",
+    expires: "2026-09-03",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "350 S Mahoney Drive, Unit 7, Telluride, Colorado 81435",
+    noticeKey: "foreclosure-202605-350-mahoney-unit7",
+    caseNumber: "202605"
+  },
+  {
+    title: "Notice of Vesting -- Site-Specific Development Plan (Project Title: 72 [truncated])",
+    entity: "Town of Telluride",
+    entityClass: "ent-county",
+    entityLogo: "telluride",
+    icon: "📋",
+    iconClass: "type-hearing",
+    type: "Ordinance",
+    filterTag: "ordinance",
+    summary: "The Town of Telluride is giving public notice pursuant to Colorado Revised Statutes Section 24-68-103(1) and Telluride Municipal Code Title 18, Article 5, Division 2, Section 5-208.H that a site-specific development plan and vested property right has been approved for a project identified in the notice (project title beginning with '72'; full details were truncated in the source text). Vesting notices typically establish property rights for a defined period following approval. Community members with questions should contact the Town of Telluride directly for full project details.",
+    deadline: "",
+    expires: "2026-08-22",
+    dates: "7/23",
+    papers: ["ttimes_0723"],
+    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
+    address: "Telluride, Colorado (specific parcel address truncated in source text)",
+    noticeKey: "vesting-project-72-telluride"
   }
 ];
 
