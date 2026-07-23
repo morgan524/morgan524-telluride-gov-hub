@@ -229,12 +229,31 @@ function trackerEntityFor(sourceKey, title) {
   if (sourceKey === 'mv' && /design review/i.test(title)) return 'drb';
   if (sourceKey === 'mv' && /town council/i.test(title)) return 'tomv';
   if (sourceKey === 'rico' && /trustees/i.test(title)) return 'rico';
-  return '';  // telluride council: no roster in vote-tracker-config yet
+  // Telluride Town Council — enabled 2026-07-23 once the `telluride` roster
+  // landed in vote-tracker-config.json (commit ecbc243). It was hardcoded out
+  // before that, which is why the tracker never picked up council votes.
+  if (sourceKey === 'telluride' && /town council/i.test(title)) return 'telluride';
+  return '';
 }
-async function draftVotes(entityKey, isoDate, title, transcript) {
+// Resolve the roster in force on a given date. The config stores `rosters` —
+// an array of {start,end,members} windows — NOT a flat `roster`. draftVotes
+// used to test `entity.roster`, which is undefined for every entity, so it
+// returned null on every call and NO vote draft was ever produced. Fixed
+// 2026-07-23.
+function rosterForDate(entity, isoDate) {
+  const windows = entity && entity.rosters;
+  if (!Array.isArray(windows)) return null;
+  const w = windows.find((r) => isoDate >= r.start && (r.end === null || r.end === undefined || isoDate <= r.end));
+  return w && Array.isArray(w.members) && w.members.length ? w.members : null;
+}
+async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
   const entity = VT_CONFIG[entityKey];
-  if (!entity || !entity.roster) return null;
-  const rosterIds = (entity.roster || []).map((r) => r.id || r).join(', ');
+  const roster = rosterForDate(entity, isoDate);
+  if (!entity || !roster) {
+    console.warn(`  · vote draft skipped for ${entityKey} ${isoDate}: no roster window covers that date`);
+    return null;
+  }
+  const rosterIds = roster.join(', ');
   const sys = `You are extracting substantive recorded votes from a government meeting TRANSCRIPT (auto-captions — noisy) for ${entity.label || entityKey}. ` +
     `Substantive = ordinances, resolutions, IGAs, variances/CUPs/PUDs, code amendments, contracts, appointments. NOT procedural (agenda/minutes approval, adjournment). ` +
     `Roster member ids: ${rosterIds}. Return ONLY JSON: {"votes":[{"title":"<short motion title>","category":"<one of: Land Use, Housing, Budget & Finance, Public Safety, Appointments, Intergovernmental, Other>","outcome":"Passed|Failed|Tabled|Continued","tally":"<e.g. 6-0>","detail":"<one sentence>","memberVotes":{"<id>":"Yes|No|Abstain|Absent"}}]} ` +
@@ -245,11 +264,56 @@ async function draftVotes(entityKey, isoDate, title, transcript) {
   };
   const parsed = await callClaude(body);   // callClaude returns parsed JSON
   if (!parsed || !parsed.votes || !parsed.votes.length) return null;
+
+  // Emit the SHAPE insert-votes.mjs consumes: a top-level `entries` array of
+  // tracker records ({id,date,year,meeting,minutesUrl,title,description,tags,
+  // outcome,tally,votes}). This used to write `votes:` with a different record
+  // shape, which the inserter silently ignored — so even a successful draft
+  // could never reach the tracker.
+  const year = Number(isoDate.slice(0, 4));
+  const prefix = entity.idPrefix || entityKey;
+  const rosterSet = new Set(roster);
+  const entries = parsed.votes.map((v, i) => {
+    // Keep only ids that are actually on the roster for this date — a
+    // hallucinated member would corrupt the heatmap.
+    const votes = {};
+    for (const [id, val] of Object.entries(v.memberVotes || {})) {
+      if (rosterSet.has(id) && /^(Yes|No|Abstain|Absent|Recused|Vacant)$/.test(val)) votes[id] = val;
+    }
+    return {
+      id: `${prefix}${year}-${String(i + 1).padStart(2, '0')}`,
+      date: isoDate, year,
+      meeting: title,
+      // Transcript-sourced, so cite the recording. The tracker labels its
+      // source "official adopted minutes" — swap in the CivicWeb minutes URL
+      // when they are adopted.
+      minutesUrl: videoUrl || '',
+      title: v.title || '',
+      description: v.detail || '',
+      tags: v.category ? [v.category] : [],
+      outcome: v.outcome || '',
+      tally: v.tally || '',
+      votes
+    };
+  // Drop anything with no usable per-member votes: the heatmap is the whole
+  // point, and a tally-only row would publish an empty column of dashes.
+  }).filter((e) => e.title && Object.keys(e.votes).length);
+
+  if (!entries.length) {
+    console.warn(`  · vote draft for ${entityKey} ${isoDate}: ${parsed.votes.length} motion(s) found but none had usable per-member votes — skipped`);
+    return null;
+  }
   const dir = path.join(__dirname, 'pending');
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `${entityKey}-${isoDate}.json`);
-  fs.writeFileSync(file, JSON.stringify({ entity: entityKey, date: isoDate, meeting: title,
-    source: 'transcript-auto-draft (meeting-recaps.js) — REVIEW BEFORE INSERTING', votes: parsed.votes }, null, 2) + '\n');
+  fs.writeFileSync(file, JSON.stringify({
+    entity: entityKey, entityLabel: entity.label || entityKey, date: isoDate, meeting: title,
+    rosterUsed: roster,
+    source: 'transcript-auto-draft (meeting-recaps.js)',
+    generatedAt: new Date().toISOString(),
+    entries
+  }, null, 2) + '\n');
+  console.log(`  ✓ vote draft: ${entries.length} vote(s) → ${path.relative(process.cwd(), file)}`);
   return file;
 }
 
@@ -297,7 +361,7 @@ async function main() {
       const vtEntity = trackerEntityFor(ch.sourceKey, v.title);
       if (vtEntity) {
         try {
-          const vf = await draftVotes(vtEntity, date, v.title, transcript);
+          const vf = await draftVotes(vtEntity, date, v.title, transcript, videoUrl);
           if (vf) console.log(`      🗳 vote draft → ${vf.replace(/^.*scripts\//, 'scripts/')}`);
         } catch (e) { console.log(`      ⚠ vote draft failed (recap unaffected): ${e.message}`); }
       }

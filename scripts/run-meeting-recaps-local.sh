@@ -39,14 +39,28 @@ if ! git pull --ff-only origin main; then log "FATAL: git pull --ff-only failed"
 
 if ! node scripts/meeting-recaps.js; then log "recap script exited non-zero"; exit 1; fi
 
-if [ -z "$(git status --porcelain js/gov-helpers.js)" ]; then
-  log "No new recaps — nothing to commit."
+# Vote tracker: meeting-recaps.js drops per-meeting drafts in scripts/pending/.
+# Insert them straight into v2/vote-tracker.html — Morgan asked for this to run
+# unattended (2026-07-23). insert-votes.mjs is the safety net: it skips any
+# date already committed and skips meetings with 0 entries, and draftVotes only
+# writes votes for ids on that date's roster, so a bad parse drops out rather
+# than publishing garbage.
+for pf in scripts/pending/*.json; do
+  [ -e "$pf" ] || continue
+  ent=$(basename "$pf" | sed 's/-[0-9][0-9-]*\.json$//')
+  yr=$(basename "$pf" | sed 's/^.*-\([0-9]\{4\}\)-[0-9]\{2\}-[0-9]\{2\}\.json$/\1/')
+  log "inserting votes: entity=$ent year=$yr ($(basename "$pf"))"
+  node scripts/insert-votes.mjs --entity "$ent" --year "$yr" || log "insert-votes failed for $pf (continuing)"
+done
+
+if [ -z "$(git status --porcelain js/gov-helpers.js v2/vote-tracker.html scripts/pending)" ]; then
+  log "No new recaps or votes — nothing to commit."
   exit 0
 fi
 
-git add js/gov-helpers.js
+git add js/gov-helpers.js v2/vote-tracker.html scripts/pending
 git -c user.name="Gov Hub Bot" -c user.email="bot@livabletelluride.org" \
-  commit -m "📝 Auto meeting recaps $(date +%F)" || { log "commit failed"; exit 1; }
+  commit -m "📝 Auto meeting recaps + vote tracker $(date +%F)" || { log "commit failed"; exit 1; }
 
 # The content bot pushes to main on its own schedule; rebase our single
 # MEETING_RECAPS change on top (conflict-free since nothing else writes it).
@@ -55,4 +69,4 @@ if ! git pull --rebase origin main; then
 fi
 if ! git push origin main; then log "push failed"; exit 1; fi
 
-log "Pushed new recaps."
+log "Pushed new recaps + vote-tracker updates."

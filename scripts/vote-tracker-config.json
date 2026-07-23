@@ -109,7 +109,7 @@
   "bocc": {
     "label": "San Miguel County Board of County Commissioners",
     "meetingPrefix": "SMC BOCC",
-    "idPrefix": "bocc",
+    "idPrefix": "bv",
     "rosters": [
       {
         "start": "2025-01-01",
@@ -122,14 +122,16 @@
         "_note": "Standard 3-commissioner board. Adjust if a seat changed mid-term."
       }
     ],
-    "_warning": "Roster is a placeholder — verify against the actual *_ALL_MEMBERS array in vote-tracker.html before relying on it for backfill."
+    "_warning": "Roster is a placeholder — verify against the actual *_ALL_MEMBERS array in vote-tracker.html before relying on it for backfill.",
+    "_idPrefixNote": "Was 'bocc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (bv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX."
   },
   "pc": {
     "label": "San Miguel County Planning Commission",
     "meetingPrefix": "SMC Planning Commission",
-    "idPrefix": "pc",
+    "idPrefix": "pv",
     "rosters": [],
-    "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using."
+    "_warning": "Roster intentionally empty — fill from v2/vote-tracker.html PC_*_ALL_MEMBERS before using.",
+    "_idPrefixNote": "Was 'pc' — corrected 2026-07-23 to match the ids actually used in v2/vote-tracker.html (pv2024-01 …) and insert-votes.mjs ENTITY_ID_PREFIX."
   },
   "telluride": {
     "label": "Telluride Town Council",

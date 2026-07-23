@@ -1,0 +1,55 @@
+name: Vote Tracker weekly check
+
+# Morgan's rule (2026-07-23): the Board Vote Tracker must be current at least
+# once a week for EVERY entity it covers.
+#
+# The updating itself is automatic — meeting-recaps.js drafts votes from each
+# meeting transcript, insert-votes.mjs splices them into v2/vote-tracker.html,
+# and run-meeting-recaps-local.sh commits them (that job runs daily on the Mac,
+# because YouTube blocks transcript downloads from GitHub runner IPs).
+#
+# This workflow is the ASSURANCE that the automation is actually running. It
+# compares what we've RECAPPED against what the tracker has VOTES for and opens
+# an issue if any body has a recapped meeting with no votes. That signal is the
+# thing that was missing before: the auto-draft had a `roster`/`rosters` typo
+# and silently produced nothing for months.
+
+on:
+  schedule:
+    - cron: '0 15 * * 1'      # Mondays 15:00 UTC = 9am MT (8am MST)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Check tracker freshness
+        id: check
+        run: |
+          set +e
+          node scripts/check-vote-tracker-freshness.js | tee /tmp/vt.txt
+          echo "stale=$?" >> "$GITHUB_OUTPUT"
+          set -e
+
+      - name: Open / update the review issue
+        if: steps.check.outputs.stale == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BODY=$(printf 'The weekly check found tracked bodies whose meetings were recapped but have **no votes in the Vote Tracker**.\n\n```\n%s\n```\n\nThe daily recap job should be filling these in automatically. If a body stays listed here week over week, the automation has stopped — check that the Mac launchd job (`scripts/run-meeting-recaps-local.sh`) is still running and that `scripts/pending/` is being committed.\n\nTo fill a gap by hand:\n```bash\nnode scripts/extract-votes.mjs --pdf <minutes.pdf> --entity <key> --date <YYYY-MM-DD>\nnode scripts/insert-votes.mjs --entity <key> --year <YYYY>\n```\n' "$(cat /tmp/vt.txt)")
+          EXISTING=$(gh issue list --label vote-tracker --state open --search "Vote tracker behind" --json number --jq '.[0].number')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh label create vote-tracker --color 5319e7 --description "Board Vote Tracker" 2>/dev/null || true
+            gh issue create --title "🗳 Vote tracker behind for one or more bodies" --label vote-tracker --body "$BODY"
+          fi

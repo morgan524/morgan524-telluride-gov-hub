@@ -65,8 +65,14 @@ const ENTITY_ID_PREFIX = {
 };
 const tracker = readFileSync(TRACKER_PATH, 'utf8');
 const idPrefix = ENTITY_ID_PREFIX[ENTITY] || ENTITY;
+// The tracker contains TWO entry styles: the original multi-line
+// `id:'v2024-01', date:'2024-01-09'` and the newer single-line JSON
+// `{"id": "v2026-30", "date": "2026-05-19"}` (added by commit 0bf8c99).
+// The key quotes must therefore be optional — without this the dedup scan was
+// blind to every 2026-04-28-or-later row and a re-run would have re-inserted
+// them as duplicates. That matters far more now the insert runs unattended.
 const entityEntryRe = new RegExp(
-  `id:\\s*['"]${idPrefix}\\d+-[^'"]+['"][^}]*?date:\\s*['"](\\d{4}-\\d{2}-\\d{2})['"]`,
+  `["']?id["']?\\s*:\\s*['"]${idPrefix}\\d+-[^'"]+['"][^}]*?["']?date["']?\\s*:\\s*['"](\\d{4}-\\d{2}-\\d{2})['"]`,
   'gs'
 );
 const committedDates = new Set(
