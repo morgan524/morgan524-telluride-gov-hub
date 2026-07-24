@@ -59,6 +59,51 @@
     "votes": []
   },
   {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-07-16",
+    "title": "Mountain Village Town Council — Jul 16, 2026",
+    "recap": "Council approved the second reading of an ordinance rezoning and transferring density at Lot 640A, 306 Adams Ranch Road, allowing Telluride Ski & Golf to add 15 employee apartment units to the existing Mountain View workforce housing complex. The vote was 4-2. Conditions require completion of the Class 3 design review by the DRB and approval of a minor subdivision plat. Several councilmembers had pushed for an additional condition tying approval to a formal use-and-maintenance agreement for the adjacent open-space field; that condition was not included in the motion that passed.\n\nCouncil also approved on second reading an ordinance amending the Community Development Code's lighting regulations. A last-minute amendment exempts existing wall-mounted sconces and soffit/covered-roof/under-deck fixtures from mandatory replacement, provided bulbs are 2,700 Kelvin or below; staff was directed to explore an incentive program for the 2027 budget. The vote appeared unanimous.\n\nCouncil approved a resolution correcting application types in a previously adopted Proposition 123 affordable-housing expedited-review resolution, and approved a resolution extending the Stage 2 fire restrictions. Three members were appointed to the VCA Resident Advisory Committee for two-year terms. Q2 2026 financials were approved; the town is roughly $500,000 behind in sales tax year-to-date.",
+    "votes": [
+      {
+        "item": "Rezone & density transfer — 306 Adams Ranch Rd",
+        "outcome": "Passed",
+        "tally": "4-2"
+      },
+      {
+        "item": "Lighting regulations CDC amendment — 2nd reading",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "ADU floor-area variance — 500 Benchmark Dr",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Prop 123 expedited-review resolution correction",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Stage 2 fire restrictions extension",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Q2 2026 financials approval",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "VCA Resident Advisory Committee appointments (3)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/912ff751-d475-434d-ac8f-dd55087c180e"
+  },
+  {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-07-15",
@@ -72,6 +117,41 @@
         "tally": ""
       }
     ]
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-07-02",
+    "title": "Design Review Board — Jul 2, 2026",
+    "recap": "The board approved initial architecture and site reviews for three single-family homes: a revised proposal on San Joaquin Road (Lot 164-B1R) that had withdrawn its height variance request and reduced maximum height to 39.8 ft; a new single-family detached condominium on Adams Way (Lot AR 54) on a steep, constrained lot with direct street access; and a detached condo unit (Lot 155-7) on San Joaquin Road, the last undeveloped unit in an existing condo community, with conditions including updating the condo map prior to certificate of occupancy and removal of condition requiring re-approval from the HOA.\n\nThe board voted to recommend Town Council approval of a variance allowing an existing accessory dwelling unit at 500 Benchmark Drive to remain at its current size — roughly 200 sq ft over the 1,500 sq ft ADU limit — after determining the overage appeared to be a measurement error from original construction, not a subsequent addition. The board found it unreasonable to require demolition or alteration.\n\nThe board also approved an initial architecture and site review for a new 15-unit employee apartment building at 306 Adams Ranch Road, a Telski project. Changes since the prior hearing included a revised roofline, repositioned parking to preserve open space, and added stormwater infrastructure. Conditions include updated height calculations, wetland delineation review, drainage details, and a sidewalk connection to Country Club Drive.",
+    "votes": [
+      {
+        "item": "ISR — single-family, Lot 164-B1R, San Joaquin Rd",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "ISR — single-family condo, Lot AR 54, Adams Way",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "ISR — detached condo, Lot 155-7, San Joaquin Rd",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Recommend approval — ADU area variance, 500 Benchmark Dr",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "ISR — 15-unit employee apartments, 306 Adams Ranch Rd",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/c4ac98cd-6cbf-4ec7-bac6-831703c2e54c"
   },
   {
     "sourceKey": "telluride",
@@ -144,6 +224,51 @@
     ]
   },
   {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-06-17",
+    "title": "Mountain Village Town Council — Jun 17, 2026",
+    "recap": "The council approved two special-event liquor permits: one for the San Miguel Resource Center's Play It Forward event at the Telluride Racquet Club (June 28) and one for the Jaman Family Foundation/Telluride Reserve event (July 31). Mayor Pearson recused himself from those votes.\n\nThe council approved a license agreement with the Telluride Racquet Club for seasonal pickleball use of the town's platform paddle courts, and approved a 2026 sponsorship agreement with the Telluride Film Festival authorizing staff to negotiate a lease of the council chambers as a screening venue during Bluegrass and Film Festival season.\n\nThe council approved a resolution establishing an expedited review policy for affordable housing projects to maintain eligibility for Proposition 123 state funds — potentially unlocking up to $45,000 for the Ilium workforce housing project if adopted before July. The council also authorized the interim town manager to execute a Trout Lake water augmentation lease (~$3,000/year) to secure legal water rights for the Ilium development. Two agenda items — a lighting code amendment and a separate item — were continued to the July 16 meeting.\n\nA work session covered findings of an independent investigation into actions by the former mayor and town manager, with the investigator stating unequivocally that no ethics-code violations, corruption, embezzlement, or personal gain were found, and that the full council had no knowledge of or involvement in the events. A second work session segment reviewed draft recommendations for strengthening the ethics code and procurement procedures; no votes were taken, with council directing staff to return revised language emphasizing clear, fact-based conflict standards over subjective \"appearance\" tests.",
+    "votes": [
+      {
+        "item": "Special event permit — San Miguel Resource Center",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Special event permit — Jaman Family Foundation/Telluride Reserve",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "License agreement — Telluride Racquet Club pickleball",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Sponsorship/lease agreement — Telluride Film Festival",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Resolution — Prop 123 expedited affordable housing review",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Trout Lake water augmentation lease — Ilium project",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Lighting code amendment — continued to Jul 16",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/978b9375-97e0-4500-82ac-b73e839a14a6"
+  },
+  {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-06-09",
@@ -177,6 +302,36 @@
         "tally": "4-2"
       }
     ]
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-06-04",
+    "title": "Design Review Board — Jun 4, 2026",
+    "recap": "The board reviewed an initial architecture and site review and an associated height variance request for a proposed single-family home on a steep lot on San Joaquin Road. After extensive discussion — centering on whether topographic hardship justified the variance, the extent of general easement encroachments, lighting levels, and uncertainty about the precise height ask — the board voted unanimously to continue both the height variance recommendation to Town Council and the initial site review to the July 2 DRB meeting.\n\nThe board also took up the initial architecture and site review for a second single-family home on an adjacent steep San Joaquin Road lot. Staff noted height-calculation discrepancies that the applicant addressed during the meeting. The board voted unanimously to approve the initial site review with the conditions, design variations, and specific approvals listed in the staff report.\n\nThe board considered an initial architecture and site review for Little Rose (Lot 27A, Moss Creek Lane), a proposed 19-unit plus 2 employee-unit multi-family condominium building in the village center. Key issues included general easement encroachments, a stone-percentage design variation, alternative drop-off/loading at Blue Mesa, large glazing spans, and concerns raised by the Belvedere Phase 1 owners association about access and construction impacts. A motion to continue to August 6 failed 3–3. A subsequent motion to approve the initial site review passed 4–2.",
+    "votes": [
+      {
+        "item": "Height variance & site review — San Joaquin Rd lot 164-BR1",
+        "outcome": "Continued",
+        "tally": "6-0"
+      },
+      {
+        "item": "Initial site review — San Joaquin Rd Lot 1171-R",
+        "outcome": "Passed",
+        "tally": "6-0"
+      },
+      {
+        "item": "Continue Little Rose (Lot 27A) to August 6",
+        "outcome": "Failed",
+        "tally": "3-3"
+      },
+      {
+        "item": "Initial site review — Little Rose multi-family, Lot 27A",
+        "outcome": "Passed",
+        "tally": "4-2"
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/e65c2506-fb20-4941-8c8b-1dc6c371a5e0"
   },
   {
     "sourceKey": "county",
@@ -252,6 +407,56 @@
         "tally": "Unanimous"
       }
     ]
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-05-21",
+    "title": "Mountain Village Town Council — May 21, 2026",
+    "recap": "Council approved a license agreement allowing the Town of Norwood to use Mountain Village property for a relocated disc golf course (Norwood's current course sits on the future school site). After discussion about termination flexibility and neighbor concerns, the agreement passed unanimously.\n\nCouncil approved applying for a Clean Transit Enterprise (SB 230) formula grant to fund operations and purchase two battery-electric buses for the Meadows Express route, with the budget request scaled up 5% annually. Staff noted the buses would run summers only, mitigating cold-weather battery concerns.\n\nA supplemental appropriation resolution passed, adjusting the 2026 budget by roughly $1.5 million above the original deficit. Major items: $350,000 for the ongoing investigation, $330,000 in additional Heritage boiler costs, $132,000 for a regional marketing recovery program, and water-system work at Ski Ranches. Council discussed but did not direct any offsetting cuts, choosing to monitor summer revenue before acting.\n\nOn the Mountain View Apartments rezone and density transfer (Lot 640A, 306 Adams Ranch Road), council gave first-reading approval 4-1 to add 15 employee-housing units, but conditioned the approval on DRB design approval, subdivision approval, and — critically — a landscaping plan that council itself must approve, preserving adequate green space and screening the building from Adams Ranch Road. Second reading is set for July 16. The sole dissenting vote cited concerns about building siting and impact on the open-space field.\n\nCouncil also adopted Vision Zero as town policy and adopted the Telluride–Mountain Village Transportation Safety Action Plan — both required to apply for an SS4A federal safety implementation grant due the following week. A special event liquor permit for two Telluride Food and Vine events (June 12–13, Conference Center Plaza) passed unanimously. An ordinance amending building-regulations code language passed on second reading. Mountain Munchkins moved to a full-time (5-day) model starting September 2026, with revised late-pickup and sign-in/sign-out fees approved. A conditional use permit for a padel court at 112 Autumn Lane and a road right-of-way encroachment agreement and earthwork easement vacation for separate properties also passed.",
+    "votes": [
+      {
+        "item": "Mental Health Awareness Month proclamation",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Consent agenda items A and D (minutes; housing mitigation amendment)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "License agreement with Norwood for disc golf course",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Clean Transit SB 230 grant application — 2 electric buses",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Special event liquor permit — Telluride Food and Vine",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Supplemental 2026 budget appropriations resolution",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Q1 2026 financial statements approval",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Mountain Munchkins 2026 fee schedule resolution",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/ea492304-65f7-4939-95b1-9e9a73fddfbf"
   },
   {
     "sourceKey": "county",
@@ -369,6 +574,31 @@
     ]
   },
   {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-05-07",
+    "title": "Design Review Board — May 7, 2026",
+    "recap": "The board seated five members and one alternate, administered oaths of office, and elected Banks Brown as chair and Scott Bennett as vice chair for the coming term.\n\nThe board voted to recommend approval to Town Council of a rezone and density transfer for Lot 640A, 306 Adams Ranch Road — the Mountain View Apartments site — to allow 15 additional employee-housing units, bringing the total to 45. One member voted against, citing concern over reducing the open park space. Two regular members were absent; both alternates voted.\n\nOn the concurrent initial architectural and site review for the proposed 50-unit, roughly 11,000-square-foot multi-family building at the same site, the board continued the application to the July meeting. Key concerns raised: massing along the Adams Ranch Road façade, unresolved drainage in the interior courtyard, access to the adjacent open-space parcel, and landscaping/fire-mitigation details.",
+    "votes": [
+      {
+        "item": "Oath of office / election of chair & vice chair",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Rezone & density transfer — 306 Adams Ranch Rd",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Initial design review — 306 Adams Ranch Rd (50-unit)",
+        "outcome": "Continued",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/8bd3a237-8440-4e98-88f1-8c796ab7860f"
+  },
+  {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
     "date": "2026-04-28",
@@ -392,5 +622,250 @@
         "tally": ""
       }
     ]
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-04-23",
+    "title": "Mountain Village Town Council — Apr 23, 2026",
+    "recap": "Council made several board appointments: Luke Trujillo to the Building Board of Appeals, Alison Wright as the at-large member of the Plaza Vending Committee, and Banks Brown, Adam Miller, Scott Bennett, and David Eckman to regular seats on the Design Review Board. Jim Austin was reappointed to a DRB alternate seat, and Tobin Brown was appointed to fill the remaining alternate term vacated by Eckman's upgrade.\n\nOn second reading, council adopted an ordinance incorporating the state-mandated Colorado Wildfire Resiliency Code into the Community Development Code. The adopted version includes locally added thresholds requiring cedar shake roof replacement for single-family remodels valued between $1M–$2M, and full home-hardening compliance for alterations above $2M, effective July 1, 2026. Council also passed second readings of an ordinance creating a background-check process for massage facility operators and an ordinance adjusting municipal penalties to conform with a Colorado Supreme Court ruling. A first reading was approved for a technical cleanup ordinance correcting internal code references.\n\nCouncil passed an emergency ordinance on water conservation, delegating authority to the public works director to impose irrigation restrictions during drought conditions and providing penalties for violations, effective immediately. Forestry director Rodney presented a detailed report on 2025 wildfire mitigation work, including 38 hazard-tree projects, roughly 139,000 cubic feet of woody fuel removed, and 485 burn piles completed this winter.\n\nThe lighting regulations ordinance (CDC amendments to Section 17.5.12) passed first reading with direction to staff to return at the May 21 second reading with modifications addressing motion-sensor lighting near home approaches, soffit lighting on existing structures, and a compliance process and potential incentive program for existing homeowners. A padel court conditional use permit was continued to May 21. Separately, the mayor reported the independent investigation into the former mayor's resignation has now included 21 interviews and a public report is expected within two to four weeks.",
+    "votes": [
+      {
+        "item": "Appoint Luke Trujillo — Building Board of Appeals",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Appoint Alison Wright — Plaza Vending Committee at-large",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Appoint Banks Brown, Adam Miller, Scott Bennett, David Eckman — DRB regular seats; Jim Austin — DRB alternate",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Appoint Tobin Brown — DRB alternate (Eckman vacancy)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Colorado Wildfire Resiliency Code — CDC amendment (2nd reading)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Background check process — massage facilities (2nd reading)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Penalty adjustments ordinance (2nd reading)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Building regulations technical cleanup ordinance (1st reading)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/e1110b6e-5f94-4546-b46b-6d22d03f2f3e"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-04-02",
+    "title": "Design Review Board — Apr 2, 2026",
+    "recap": "The board recommended that Town Council adopt an ordinance amending Chapter 17.7 of the Mountain Village Community Development Code to correct clerical errors — mismatched code-version citations and vague amendment language — left over from last spring's international building code adoption. No substantive policy changes were involved.\n\nThe board approved a final architecture review for a new ADU and accessory Padel court complex at Lot 382R, along with a conditional use permit recommendation to Town Council for the Padel court itself. An acoustic study submitted since the January hearing found the court quieter than a pickleball court. Approval came with conditions including a required fire-mitigation plan update, replacement of one non-compliant light fixture, and a reservation of the town's right to impose additional mitigation — with any future revocation requiring a new public hearing process. Both votes were unanimous.\n\nThe board also approved a specific approval for a general-easement encroachment at Lot 360, 101 Snowfield Drive, allowing underground soil nails and micro-piles needed to shore a foundation on a constrained lot. The approval is contingent on Town Council also approving the associated right-of-way encroachment and on the applicant providing section drawings showing soil-nail depths relative to the road and utilities.\n\nOn board membership, the DRB voted to recommend that Town Council reappoint Banks Brown, Adam Miller, David Eckman, and Scott Bennett to regular seats and Jim Austin and Tobin Brown to alternate seats.",
+    "votes": [
+      {
+        "item": "CDC 17.7 clerical cleanup — recommend adoption",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Conditional use permit — Padel court, Lot 382R",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final architecture review — Lot 382R addition/ADU/Padel",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "GE encroachment — Lot 360, 101 Snowfield Dr",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "DRB membership recommendation to Town Council",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/3a0cfc44-92da-4f39-9281-58a16e13f84c"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-03-05",
+    "title": "Design Review Board — Mar 5, 2026",
+    "recap": "The board approved four individual-property applications and advanced a town-wide code amendment.\n\nOn the CDC amendment front, the board voted unanimously to recommend town council adopt proposed ordinance language updating Community Development Code Section 17.5.6 (building design/exterior materials) and adding Section 17.7.22 to bring Mountain Village into compliance with the Colorado Wildfire Resiliency Code, effective July 1, 2026. The amendment adds descriptive criteria for synthetic and non-combustible materials reviewed under specific approval, while maintaining that specific-approval requirement rather than making such materials by right.\n\nA final architecture application for a single-family detached condominium at Lot 165, Unit 3 on Cortina Drive passed 4–3, with three members dissenting on grounds that the construction mitigation plan — particularly slope remediation and soil nailing questions tied to adjacent Lot 4 — was unresolved. The approval was conditioned on a development agreement and a complete, approvable construction mitigation plan being finalized before any building permit is issued.",
+    "votes": [
+      {
+        "item": "Initial arch/site review — Lot 224B Snowdrift Ln (SFH)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Initial arch/site review — Lot 355, 129 Rocky Rd (ADU)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final arch review — Lot 533 Russell Drive (SFH)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final arch review — Lot 628H Double Eagle Way (SFH)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final arch review — Lot 165 Unit 3 Cortina Dr (condo)",
+        "outcome": "Passed",
+        "tally": "4-3"
+      },
+      {
+        "item": "Specific approval — re-roof 581 Mountain Village Blvd",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Recommend CDC amendment for CWRC compliance",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/7a3320c7-90aa-4bdc-89e0-fddf0120d4a5"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-02-19",
+    "title": "Mountain Village Town Council — Feb 19, 2026",
+    "recap": "Council approved a license agreement with Telluride Ski and Golf to place lift-ticket kiosks on town property, with amendments requiring a periodic review mechanism, restoration to original condition at lease end, and a typo correction.\n\nTwo ordinances passed on second reading: one repealing remaining COVID-19 emergency ordinances and resolutions, and one prohibiting greywater use and installation of greywater treatment works within town boundaries, maintaining the status quo while staff works through water-rights and plumbing code questions.\n\nA conditional-use permit for a paddle court was continued to April 23. A first reading on lighting-regulation amendments (CDC 17.5.12) was also continued to April 23 after extensive discussion about seasonal lighting windows, compliance timelines, enforcement, and dark-sky goals. The Colorado Wildfire Resiliency Code amendment was presented as a work session; a full ordinance will return next meeting.\n\nCouncil voted 5-1 to adopt the Mountain Village Community Resilience Advisory Plan as an advisory document. Council approved the purchase of five acres from Alexander Ranch LLP and approved a related declaration of restrictive covenant; closing is set for February 27. A density-transfer/rezone work session for Lot 152R was continued to March 19. Council ratified the contract with Wheeler Trigg O'Donnell to conduct an internal investigation, capped at $350,000. Dan Jansen was appointed by paper-ballot straw poll and voice vote to fill the vacant council seat and was sworn in at the meeting.",
+    "votes": [
+      {
+        "item": "Consent agenda items A–F",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "License agreement with TSG for lift kiosks (item G)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Ordinance repealing COVID-19 ordinances, 2nd reading",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Ordinance prohibiting greywater use, 2nd reading",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Continue CUP for paddle court to Apr 23",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Continue lighting code amendment (1st reading) to Apr 23",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Table MV Housing Authority guidelines",
+        "outcome": "Tabled",
+        "tally": ""
+      },
+      {
+        "item": "Purchase 5 acres from Alexander Ranch LLP",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/c43cb56c-8567-4d3d-8585-990fa5b27e4a"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-02-05",
+    "title": "Design Review Board — Feb 5, 2026",
+    "recap": "The board approved final architectural review for a new single-family home at Lot 629 Double Eagle Drive, continued from January. The applicant had significantly reduced the lighting plan — from 77 fixtures down to 34 — and addressed prior board concerns about chimney size, driveway backout space, and landscaping.\n\nFinal review for Lot 533 Russell Drive was continued to the March 5 meeting. The board cited an incomplete lighting plan (including a non-compliant fixture), unresolved landscaping and fire-mitigation concerns, and a missing materials board.\n\nInitial review for Lot 523R Russell Drive was approved with conditions. The board directed the applicant to relocate a proposed sauna out of the general easement. Members raised questions about standing-seam metal as a siding material and asked for more specification detail before final review.\n\nInitial review for an accessory dwelling unit at Lot 17, 102 Yellow Brick Road — a compact, non-combustible cabin connected to the main house by a 63-foot metal footbridge — was approved with conditions, including an updated construction-mitigation plan.\n\nA specific approval for a general-easement encroachment at Lot 154, 111 San Joaquin Drive — retaining walls and irrigation lines for a landscaped garden area — was approved.\n\nThe board held a work session on the Colorado Wildfire Resiliency Code, which must be adopted by July 1. Staff recommended adopting Chapters 1–4 largely as written and skipping Chapter 5, since the town's existing defensible-space code already meets or exceeds state requirements. No vote was taken; staff will return next month with a draft amendment.\n\nThe board also held a work session on a potential density transfer and rezone at Lot 152R, Country Club Drive — a request to increase an approved 8-condominium project to 14 units, with underground parking reducing curb cuts from 11 to 3. No vote was taken. Members expressed general openness to the density increase but called for greater building articulation, separation between structures, and reduced massing before a formal application.\n\nFinally, the board voted to recommend Town Council approval of amendments to CDC Section 17.5.12 governing lighting regulations, with one amendment: replacing a generic flag reference with a citation to the U.S. Flag Code.",
+    "votes": [
+      {
+        "item": "Final arch. review — Lot 629 Double Eagle Dr.",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final arch. review — Lot 533 Russell Dr.",
+        "outcome": "Continued",
+        "tally": ""
+      },
+      {
+        "item": "Initial arch. review — Lot 523R Russell Dr.",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Initial arch. review — ADU, Lot 17, 102 Yellow Brick Rd.",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "GE encroachment — Lot 154, 111 San Joaquin Dr.",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "CDC amendment — lighting regs §17.5.12",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/601aedd6-f28c-41e1-a8e5-af4c2723c0e0"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-01-28",
+    "title": "Mountain Village Town Council — Jan 28, 2026",
+    "recap": "The council's main business was filling two vacancies left by Mayor Prohaska's resignation. Town attorney Hayley Carmer walked through the Home Rule Charter provisions requiring the seats be filled by council majority vote within 30 days. Scott Pearson was unanimously appointed mayor and Tucker Maggot was unanimously appointed mayor pro tem; both took their oaths of office. Applications for the vacant council seat are open through February 11.\n\nStaff presented an economic recovery update. December sales tax came in roughly 35.6% below the prior year, with in-town retailers down about 46%. Gondola ridership for January is down 27% year-over-year, though the gap has narrowed week by week since the resort reopened. A $100,000 business assistance grant program is being drafted in coordination with TMVOA, which has not yet committed matching funds.\n\nOn the ongoing investigation into recent town management events, the new mayor reported that the town's attorneys are compiling a list of outside law firms to hire. A firm could be selected by end of the following week, with a hoped-for four-week investigation timeline. The council noted the investigation cannot compel outside parties to cooperate. The meeting closed with a move into executive session on Colorado Open Records Act matters.",
+    "votes": [
+      {
+        "item": "Appoint Scott Pearson as mayor",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Appoint Tucker Maggot as mayor pro tem",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Move into executive session (CORA matters)",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/66650890-1548-4443-97e0-9ec4f350fd9d"
   }
 ]
