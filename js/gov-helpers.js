@@ -227,7 +227,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1931","zoomUrl":"https://us02web.zoom.us/j/89046113764","meetingId":"890 4611 3764","passcode":"475547","phone":"719-359-4580"},
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288"},
@@ -610,23 +610,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
-    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Spring targeted for tree-thinning effort",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "A joint wildfire mitigation effort to remove dead or diseased trees from the city of Ouray’s perimeter is expected to move forward next spring, though with a potentially more limited scope. Officials told the Plaindealer that the Ouray Forest Resilience Project, which was first floated several years",
-    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/",
+    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/?ta_paidstory",
     img: ""
   },
   {
@@ -640,23 +630,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "60 Years Ago",
+    title: "Ridgway to market itself as destination, not crossroads",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "government",
-    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
-    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/",
+    newsTopic: "infrastructure",
+    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
+    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
     img: ""
   },
   {
-    title: "Local Briefs",
+    title: "Ouray County Fair still scheduled for Aug. 13-15",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "The 109th annual Ouray County Fair is scheduled to proceed as planned, even if the fairgrounds remain the headquarters for the Gold Mountain Fire operations. The fair is scheduled from Aug. 13-15 at the Ouray County 4-H Center and the fairgrounds, which has been home to more than 900 fire personnel ",
-    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/",
+    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/?ta_paidstory",
     img: ""
   },
   {
@@ -666,7 +656,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "government",
     copy: "I m not a Jeep enthusiast or an off-highway vehicle user, but I am a hiker and photographer who cares deeply about our high-country environment. After recent discussions at county commissioners meetings about closing the upper part of Yankee Boy Basin to motorized travel, I wanted to see the area th",
-    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/",
+    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/?ta_paidstory",
     img: ""
   },
   {
@@ -676,17 +666,27 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "arts-culture",
     copy: "When Heather Toth moved to Ouray County in 2013, her first question was, “Where’s the theater; where’s the art space?” The arts are a necessity, not a luxury, according to Toth. She values third spaces, especially those with a connection to the arts. “I think they’re vital,” she said. “I think they’",
-    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/",
+    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/?ta_paidstory",
     img: ""
   },
   {
-    title: "Send us your celebrations!",
+    title: "Good For You!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "housing",
+    copy: "Proud parents Katie and Willem Geyer of Ouray welcomed their son Willem “Liam” Pieter Geyer to the world at 5:52 p.m. on July 14, weighing 6 lbs. 8 oz. Liam, also known by his nickname Pork Chop, was welcomed home by his furry siblings Opie, Max and Indie. Liam is the grandson of Willem and Isabella",
+    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Charles ‘CJ’ John Turner",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
     newsTopic: "community",
-    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/",
+    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
+    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
     img: ""
   },
   {
@@ -972,7 +972,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1011,7 +1011,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -2349,25 +2349,14 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway Planning Commission Meeting Agenda",
+    title: "Ridgway Sustainability Advisory Board Meeting Agenda",
     source: "Town of Ridgway",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-10",
-    newsTopic: "land-use",
+    date: "August 4, 2026",
+    firstSeen: "2026-07-24",
+    newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Public Hearing - Application for Resubdivision - Hyde Subdivision Lots 1, 2, 3, 4 of Block 14 (847 and 845 Hyde Street)",
-    source: "Town of Ridgway",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-07",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.07.15_public-hearing-notice-PC.pdf",
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/SAB-Meeting-Packet---August-4%2C-2026.pdf",
     img: ""
   }
 ];
@@ -2977,17 +2966,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-24/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-07-24T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   },
   {
     title: "Ridgway Farmer's Market",
