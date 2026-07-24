@@ -1,11 +1,17 @@
 {
- "generated": "2026-07-24T03:17:53.763Z",
+ "generated": "2026-07-24T08:37:39.612Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-07-19",
    "upcoming": [],
    "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-07-23",
+     "title": "Planning & Zoning Commission - Jul 23 2026",
+     "snippet": "Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project…"
+    },
     {
      "source": "telluride",
      "date": "2026-07-21",
@@ -21,7 +27,9 @@
    ],
    "developments": [],
    "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19."
+    "Carhenge / Shandoka: telluride discussed it on 2026-07-23 (\"Planning & Zoning Commission - Jul 23 2026\") but the deep dive was last edited 2026-07-19.",
+    "Carhenge / Shandoka: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19.",
+    "Carhenge / Shandoka: timeline entry \"P&Z takes up the subdivision and Conceptual PUD\" (Jul 23, 2026) is still marked upcoming but the date has passed."
    ]
   },
   "skigate": {
@@ -75,12 +83,6 @@
      "date": "2026-07-15",
      "title": "Board of County Commissioners Meeting",
      "snippet": "Two Land Use Code amendments headline the July 15 BOCC meeting. The first updates Section 5-31 governing Natural Medicine Businesses — a category that's been working its way through county code since…"
-    },
-    {
-     "source": "county",
-     "date": "2026-07-09",
-     "title": "Planning Commission and Board of County Commissioners Joint Work Session",
-     "snippet": "The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments…"
     }
    ],
    "developments": [],
@@ -117,9 +119,18 @@
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-07-23",
+     "title": "San Miguel Authority for Regional Transportation - Jul 23 2026",
+     "snippet": "SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Gondola 3A: telluride discussed it on 2026-07-23 (\"San Miguel Authority for Regional Transportation - Jul 23…\") but the deep dive was last edited 2026-07-20."
+   ]
   },
   "norwoodwater": {
    "label": "Norwood Water",
