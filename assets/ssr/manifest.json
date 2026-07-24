@@ -1,6 +1,26 @@
 {
   "documents": [
     {
+      "id": "14410",
+      "title": "July SSR No. 7 Meeting Packet",
+      "slug": "SSR-No-7-July-Meeting-Packet",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14410/SSR-No-7-July-Meeting-Packet",
+      "localPath": "assets/ssr/14410-SSR-No-7-July-Meeting-Packet.pdf",
+      "contentType": "application/pdf",
+      "bytes": 399007,
+      "firstSeen": "2026-07-24T03:45:44.661Z"
+    },
+    {
+      "id": "14409",
+      "title": "July SSR No. 6 Meeting High-Level Summary",
+      "slug": "SSR-No-6-July-Meeting-High-Level-Summary",
+      "sourceUrl": "https://www.sanmiguelcountyco.gov/DocumentCenter/View/14409/SSR-No-6-July-Meeting-High-Level-Summary",
+      "localPath": "assets/ssr/14409-SSR-No-6-July-Meeting-High-Level-Summary.pdf",
+      "contentType": "application/pdf",
+      "bytes": 156034,
+      "firstSeen": "2026-07-24T03:45:44.462Z"
+    },
+    {
       "id": "14347",
       "title": "July SSR No. 6 Meeting Packet",
       "slug": "July-SSR-No-6-Meeting-Packet",
@@ -161,5 +181,5 @@
       "firstSeen": "2026-04-27T17:16:56.032Z"
     }
   ],
-  "lastChecked": "2026-07-23T19:47:14.725Z"
+  "lastChecked": "2026-07-24T03:45:44.661Z"
 }
