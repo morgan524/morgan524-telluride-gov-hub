@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Jul 2026 19:40:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 22:13:31 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Jul 24] FREE SHOW! Summer Spectacular: The Music Man</title>
@@ -47,18 +47,6 @@ SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these 
       <media:content url="https://www.telluride.com/site/assets/files/62637/ypt-summer-music-man.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 24] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-07-24/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-07-24</guid>
-      <pubDate>Fri, 24 Jul 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Jul 25] The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum</title>
@@ -153,7 +141,7 @@ The July 27 San Miguel County Open Space Commission agenda hasn't been posted ye
 
 A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.
 
-⚡ Why it matters: Public hearing on KOTO's Live at the Drive liquor permit — comment is open.]]></description>
+⚡ Why it matters: Public hearing on KOTO's Live at the Drive special event liquor permit.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -169,6 +157,18 @@ The agenda for this Housing Code Update SSR meeting lists only the title — no 
       <category>San Miguel County</category>
     </item>
     <item>
+      <title>[Mon, Jul 27] Desserts and Documentary-Bathtubs Over Broadway</title>
+      <link>https://koto.org/event/desserts-and-documentary-bathtubs-over-broadway/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/desserts%20and%20documentary%20bathtubs%7C2026-07-27</guid>
+      <pubDate>Mon, 27 Jul 2026 19:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Enjoy a dessert while watching Bathtubs Over Broadway. When he started as a comedy writer for the LATE SHOW WITH DAVID LETTERMAN, Steve Young had few interests outside of his day job. But while gathering material for a segment on the show, Steve stumbled onto a few vintage record albums that would change his life forever. Bizarre cast recordings – marked “internal use only” – revealed full-throated Broadway-style musical shows about some of the most recognizable corporations in America: General Electric, McDonald’s, Ford, DuPont, Xerox. Steve didn’t know much about musical theater, but these recordings delighted him in a way that nothing ever had. Directed by Dava Whisenant, BATHTUBS OVER BROADWAY follows Steve on his quest to find all he can about this hidden world. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>⚡ [Meeting] Gondola Leadership Committee - Jul 28 2026 — 2026-07-28</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-28%7CGondola%20Leadership%20Committee%20-%20Jul%2028%202026</guid>
@@ -177,7 +177,7 @@ The agenda for this Housing Code Update SSR meeting lists only the title — no 
 
 The Gondola Leadership Committee meets July 28 for what looks like a substantive session. Miles Graham opens with background and history — marked as an action item, which suggests something more than a recap. Ed Parks and Amber Blake then walk through the CIG (Capital Investment Grant) program and its funding commitments, followed by a project update. The heaviest time slot goes to a fiscal and economic impact analysis presented by Parks and Chris Brewer. Miles Graham rounds out the agenda with local jurisdiction updates before public comment. The gondola project — and the $5.2 million annual tax behind it — has been one of the most contested questions in the valley in recent years, so the funding and economic impact presentations will draw scrutiny.
 
-⚡ Why it matters: Gondola funding commitments and CIG program up for action — real money, real decisions.]]></description>
+⚡ Why it matters: Action items on gondola history and Capital Investment Grant funding commitments.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -193,13 +193,15 @@ The July 29 joint work session between the San Miguel County Planning Commission
       <category>San Miguel County</category>
     </item>
     <item>
-      <title>[Meeting] (RESCHEDULED) Parks &amp; Recreation Commission - Jul 29 2026 — 2026-07-29</title>
+      <title>⚡ [Meeting] (RESCHEDULED) Parks &amp; Recreation Commission - Jul 29 2026 — 2026-07-29</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-07-29%7C(RESCHEDULED)%20Parks%20%26%20Recreation%20Commission%20-%20Jul%2029%202026</guid>
       <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-07-29
 
-The July 29, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.]]></description>
+A rescheduled midday meeting with a short agenda. The one action item is a request from the Telluride Humane Society to use Elks Park and the River Trail — Maple St. to Gold Run — for a dog-friendly 5K fun run on October 10, 2026. The event, called Tails on the Trail, expects around 100 attendees, runs 8:30 a.m. to noon, and would generate a maximum of $72.25 in admissions fees to the Town. Street use on Colorado Ave. is still pending staff review. The commission will also hold a work session on the Town Park Oval Improvements Project — no vote expected there, just review and discussion.
+
+⚡ Why it matters: Commission votes on Humane Society's October dog-fun-run use of Elks Park and River Trail.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>

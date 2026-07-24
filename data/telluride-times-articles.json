@@ -1,5 +1,17 @@
 [
   {
+    "title": "Work underway at Society Turn brings new medical facility closer",
+    "source": "Telluride Times",
+    "date": "July 24, 2026",
+    "firstSeen": "2026-07-24",
+    "newsTopic": "land-use",
+    "copy": "Site prep is underway at Society Turn for Telluride's long-planned new medical center — roads, retaining walls, and utilities are being laid by Genesee Properties, which donated the land. The med center expects to take possession late 2027 or early 2028, then begin construction on an expanded facility with a helipad, urgent care, and telehealth infrastructure. This project has been attempted several times over the years; this is the first time it's actually moving dirt.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_8de6f81a-6034-47af-83d9-289f209deb44.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/38/c383af44-054b-4ab1-8933-248a914a3deb/6a61599609c33.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Brass from some of the best",
     "source": "Telluride Times",
     "date": "July 24, 2026",
@@ -916,15 +928,6 @@
     "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
   },
   {
-    "title": "Town of Telluride to Implement Stage 2 Fire Restrictions",
-    "source": "Town of Telluride",
-    "date": "June 24, 2026",
-    "newsTopic": "public-safety",
-    "copy": "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    "href": "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
-    "img": "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
-  },
-  {
     "title": "Home Rebate Programs",
     "source": "San Miguel County",
     "date": "July 8, 2026",
@@ -994,6 +997,17 @@
     "newsTopic": "public-safety",
     "copy": "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=67",
+    "img": ""
+  },
+  {
+    "title": "Aug 13 Open House for Housing Action Plan &amp; Master Plan Water Supply Element",
+    "source": "Town of Ridgway",
+    "date": "July 24, 2026",
+    "firstSeen": "2026-07-24",
+    "newsTopic": "housing",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Aug-Ridgway-HAP-Open-House.pdf",
     "img": ""
   },
   {

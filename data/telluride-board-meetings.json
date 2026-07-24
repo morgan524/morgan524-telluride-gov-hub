@@ -13,10 +13,11 @@
     "date": "July 29, 2026",
     "title": "Parks & Recreation Commission",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8288
+    "civicwebId": 8288,
+    "packetUrl": "https://telluride-co.civicweb.net/document/442582/"
   },
   {
     "date": "August 5, 2026",

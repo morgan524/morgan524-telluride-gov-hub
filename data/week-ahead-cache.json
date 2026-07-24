@@ -1,14 +1,18 @@
 {
-  "hash": "b923e099f919cf0ed6524a3f3e8aa73058874eb9",
-  "lede": "The Gondola Leadership Committee meets Tuesday, July 28 for what looks like a real working session — background and history flagged as an action item, a walkthrough of the Capital Investment Grant program and its funding commitments, and a project update, which makes it worth watching if you care about how the gondola gets funded going forward. On Monday, Town Council sits as the Liquor Licensing Authority for a public hearing on KOTO Radio's Live at the Drive permit for July 30 at 207 N Pine — a chance to weigh in if you have thoughts. Plenty else is happening around the valley this week, from Shakespeare in the Park to the Box Canyon Races to The Music Man at the Sheridan.",
+  "hash": "361ac30e953d445761f626d6e4fea96cfb9d29de",
+  "lede": "The week's meeting to watch is the Gondola Leadership Committee on July 28, where the agenda flags an action item on background and history alongside a deep dive into the Capital Investment Grant program and funding commitments — real money and long-term decisions are on the table. Town Council also convenes Monday as the Liquor Licensing Authority for a public hearing on KOTO Radio's Live at the Drive permit for July 30. On the community side, Shakespeare in the Park wraps its Henry V run this weekend and Town Talk takes on climate and energy Tuesday.",
   "notable": [
     {
       "id": 2,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — comment is open."
+      "stake": "Public hearing on KOTO's Live at the Drive special event liquor permit."
     },
     {
       "id": 4,
-      "stake": "Gondola funding commitments and CIG program up for action — real money, real decisions."
+      "stake": "Action items on gondola history and Capital Investment Grant funding commitments."
+    },
+    {
+      "id": 6,
+      "stake": "Commission votes on Humane Society's October dog-fun-run use of Elks Park and River Trail."
     }
   ]
 }

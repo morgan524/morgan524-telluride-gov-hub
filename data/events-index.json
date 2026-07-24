@@ -27,19 +27,6 @@
     "endDate": "2026-08-07"
   },
   {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-07-24/",
-    "date": "2026-07-24",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
-  },
-  {
     "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     "href": "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     "date": "2026-07-24",
@@ -66,19 +53,6 @@
     "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
     "type": "Food & Drink",
     "endDate": "2026-09-18"
-  },
-  {
-    "title": "Telluride Farmer's Market",
-    "href": "https://koto.org/event/telluride-farmers-market/2026-07-24/",
-    "date": "2026-07-24",
-    "time": "10:30 AM",
-    "location": "Oak Street Plaza, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
-    "type": "Food & Drink"
   },
   {
     "title": "Telluride Farmers Market",
@@ -357,19 +331,6 @@
     "type": "Music"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-24/",
-    "date": "2026-07-24",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-07-24",
@@ -577,7 +538,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment,…",
     "type": "Wellness",
-    "endDate": "2026-09-12"
+    "endDate": "2026-09-05"
   },
   {
     "title": "The Courtyard at 610 Presents: Hiroya Tsukamoto",
@@ -2329,6 +2290,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides! View on site | Email this event",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Flash Tattoo Pop-Up Fundraiser",
+    "href": "https://events.ourayridgwayevents.com/event/flash-tattoo-pop-up-fundraiser",
+    "date": "2026-08-08",
+    "time": "12:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53506206584416/huge/5c0910190bcc815b3556542e2cfda2027272d8bf.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Hello, Library Lovers! We are so excited to announce our second annual Tattoo Pop-up Fundraiser on Saturday, August 8 starting at 12:00 p.m. and on Sunday, August 9 starting at 10:00 a.m. Come early to get added to the list! Mark your…",
+    "type": "Community",
+    "endDate": "2026-08-09"
   },
   {
     "title": "Music On The Mesa The Burroughs",
@@ -4141,5 +4116,18 @@
     "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
     "type": "Festivals",
     "endDate": "2026-09-21"
+  },
+  {
+    "title": "ALPINE JAM",
+    "href": "https://events.ourayridgwayevents.com/event/alpine-jam-8336",
+    "date": "2026-09-22",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   }
 ]
