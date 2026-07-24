@@ -1,27 +1,5 @@
 [
   {
-    "title": "Market on the Plaza",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "pubDate": "2026-07-22T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    "title": "Wine and Wickets",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    "description": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    "pubDate": "2026-07-22T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
-  },
-  {
     "title": "Party in the Park",
     "link": "https://townofmountainvillage.com/explore/events/all-events/party-in-the-park/",
     "description": "The Telluride Mountain Club invites the community to join its Annual Party in the Park at Telluride Town Park. The event supports the club's annual trail",
@@ -174,17 +152,6 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48857/south_austin_moonlighters_1800x900_px_1740x870.jpeg"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "pubDate": "2026-08-01T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     "title": "Mind Blown Telluride",

@@ -217,7 +217,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-07-23';
+const SMART_CACHE_DATE = '2026-07-24';
 
 const SMART_CACHED_DATA = [
   {
@@ -242,7 +242,7 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-07-23';
+const MV_CACHE_DATE = '2026-07-24';
 
 const MV_CACHED_DATA = [
   {
@@ -463,11 +463,11 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-07-23';
+const MED_CACHE_DATE = '2026-07-24';
 
 const MED_CACHED_DATA = [
   {
-    date: "July 23, 2026",
+    date: "August 27, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
     agendaUrl: null,
@@ -477,7 +477,7 @@ const MED_CACHED_DATA = [
     note: "Next scheduled meeting -- agenda posted before the meeting."
   },
   {
-    date: "August 27, 2026",
+    date: "September 24, 2026",
     time: "8:30 AM - 11:30 AM",
     title: "Regular Board Meeting",
     agendaUrl: null,
@@ -496,7 +496,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-07-23';
+const NORWOOD_CACHE_DATE = '2026-07-24';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -565,7 +565,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-07-23';
+const OPHIR_CACHE_DATE = '2026-07-24';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -599,7 +599,7 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
-const RIDGWAY_CACHE_DATE = '2026-07-23';
+const RIDGWAY_CACHE_DATE = '2026-07-24';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is

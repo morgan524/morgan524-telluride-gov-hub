@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-23-26",
+    "source": "KOTO Community Radio",
+    "date": "July 24, 2026",
+    "newsTopic": "recreation",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Recreation on the Uncompahgre River; Cat Movie Fisher with Risho Unda",
+    "href": "https://koto.org/news/newscast-7-23-26/"
+  },
+  {
     "title": "Newscast 7-22-26",
     "source": "KOTO Community Radio",
     "date": "July 23, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "land-use",
     "copy": "On this week's Regional Roundup, we'll hear about the extreme fire danger facing communities across the Rocky Mountain West. Then, we go to Aspen, where an all-American form of dance called Bandaloop turned the side of a building into a stage during the Fourth of July weekend. After that, we'll visit Boulder where a gun safety initiative is giving ",
     "href": "https://koto.org/news/newscast-7-10-26/"
-  },
-  {
-    "title": "Newscast 7-9-26",
-    "source": "KOTO Community Radio",
-    "date": "July 10, 2026",
-    "newsTopic": "public-safety",
-    "copy": "A Ferris Fire Update; West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
-    "href": "https://koto.org/news/newscast-7-9-26/"
   }
 ]

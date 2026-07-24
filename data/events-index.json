@@ -93,32 +93,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Party in the Park",
-    "href": "https://koto.org/event/party-in-the-park-2/",
-    "date": "2026-07-23",
-    "time": "5:15 PM",
-    "location": "Telluride Town Park",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/townpark.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We hope you will join the Telluride Mountain Club for our annual party and membership drive in Telluride Town Park! This event supports our annual trail maintenance and new trail planning and implementation projects. Thank you to our…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Emotional Regualtion Workshop w/Betsy Lamberson",
-    "href": "https://koto.org/event/emotional-regualtion-workshop-w-betsy-lamberson/",
-    "date": "2026-07-23",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care compass that helps…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "How to Stop White-Knuckling: Emotional Regulation During Troubling Times",
     "href": "https://telluridelibrary.libcal.com/event/17099290?hs=a",
     "date": "2026-07-23",
@@ -130,6 +104,19 @@
     "source": "Wilkinson Public Library",
     "desc": "5:30 PM – 7:30 PM · In this two-hour workshop, participants will learn to work with their nervous system to navigate challenging times and build self-regulation skills unique to their situation. Participants will create their own self-care…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Party in the Park",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/party-in-the-park/",
+    "date": "2026-07-23",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49382/tmtc_park_party_insta_6_22.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Telluride Mountain Club invites the community to join its Annual Party in the Park at Telluride Town Park. The event supports the club's annual trail",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -1039,7 +1026,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of…",
     "type": "Community",
-    "endDate": "2026-09-15"
+    "endDate": "2026-09-22"
   },
   {
     "title": "Pilates Mat All Levels",
@@ -1804,6 +1791,45 @@
     "type": "Wellness"
   },
   {
+    "title": "Zumba with Gisela",
+    "href": "https://koto.org/event/zumba-with-gisela/2026-08-01/",
+    "date": "2026-08-01",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Celebration of Life for Mark Silversher",
+    "href": "https://koto.org/event/celebration-of-life-for-mark-silversher/",
+    "date": "2026-08-01",
+    "time": "3:00 PM",
+    "location": "Telluride Town Park",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/townpark.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Celebration of Life for Mark Silversher. Finger foods and beverages will be provided. Bring a chair or blanket and some memories of Mark.",
+    "type": "Festivals"
+  },
+  {
+    "title": "Top Chef and Taste of Telluride",
+    "href": "https://koto.org/event/top-chef-and-taste-of-telluride/",
+    "date": "2026-08-01",
+    "time": "5:30 PM",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/food.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, visitors, and second homeowners for an unforgettable evening of food, fun, and philanthropy. The event features a live Top Chef…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Top Chef & Taste of Telluride",
     "href": "https://telluridescience.org/event/top-chef-taste-of-telluride-2026/",
     "date": "2026-08-01",
@@ -1815,19 +1841,6 @@
     "source": "Telluride Science",
     "desc": "Top Chef & Taste of Telluride serves up delicious food, creative cocktails, a chef competition, and more—all to support One to One Mentoring and its mission to empower local youth through trusted, caring relationships. Indulge in…",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-08-01",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
   },
   {
     "title": "Mind Blown Telluride",
@@ -1853,6 +1866,32 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "TBP Joe brings a one-man musical experience that's anything but ordinary. Armed with nothing more than a bass guitar, drum machine, and his unmistakable vocals, Joe creates a surprisingly full, groove-driven sound that blurs the line…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://koto.org/event/movies-under-the-stars/2026-08-01/",
+    "date": "2026-08-01",
+    "time": "6:30 PM",
+    "location": "Conference Center Plaza Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "The Casual Enormity of Adam Palmer Documentary Film Screening",
+    "href": "https://koto.org/event/the-casual-enormity-of-adam-palmer-documentary-film-screening/",
+    "date": "2026-08-01",
+    "time": "6:30 PM",
+    "location": "Sheridan Opera House, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer will arrive in Telluride on Saturday, August 1, with a screening at the Sheridan Opera House at 7:00pm. This special…",
     "type": "Arts & Film"
   },
   {
@@ -1906,6 +1945,32 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Community"
+  },
+  {
+    "title": "Drop In Tech Time with Oliver",
+    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-02/",
+    "date": "2026-08-02",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "type": "Community"
+  },
+  {
+    "title": "Pickleball Open Play",
+    "href": "https://koto.org/event/pickleball-open-play/2026-08-02/",
+    "date": "2026-08-02",
+    "time": "10:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Home Trust of Ouray County - Home Tour & House Show",
@@ -2072,7 +2137,7 @@
     "time": "6:30 PM – 7:30 PM",
     "location": "Telluride Conference Center, Telluride",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/05/Screenshot-2026-07-23-at-8.00.10-PM.png",
     "category": "",
     "source": "Telluride Science",
     "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
@@ -2845,19 +2910,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Telluride Chamber Music and Telluride Science Community Concert",
-    "href": "https://telluridescience.org/event/community-concert-august/",
-    "date": "2026-08-13",
-    "time": "5:30 PM – 6:30 PM",
-    "location": "Telluride Innovation Center, Telluride",
-    "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Telluride Community Concert — August",
     "href": "https://telluridechambermusic.org/concert/community-aug",
     "date": "2026-08-13",
@@ -2882,6 +2934,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Spencer Marlyn Band is what happens when a looping wizard and a one-man drum circle collide. Formed in Bend, Oregon by two Midwest transplants, this high-energy duo delivers the kind of sound you’d expect from a full band—genre-hopping…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Telluride Chamber Music and Telluride Science Community Concert",
+    "href": "https://telluridescience.org/event/community-concert-august/",
+    "date": "2026-08-13",
+    "time": "6:00 PM – 7:00 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "town": "Telluride",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/05/August-26_concert_1080x1080.jpg",
+    "category": "",
+    "source": "Telluride Science",
+    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert with San Juan Symphony String Quartet on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -3895,19 +3960,6 @@
     "type": "Music"
   },
   {
-    "title": "Telluride Chamber Music and Telluride Science Community Concert",
-    "href": "https://telluridescience.org/event/community-concert-september/",
-    "date": "2026-09-10",
-    "time": "5:30 PM – 6:30 PM",
-    "location": "Telluride Innovation Center, Telluride",
-    "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Telluride Community Concert — September",
     "href": "https://telluridechambermusic.org/concert/community-sep",
     "date": "2026-09-10",
@@ -3932,6 +3984,19 @@
     "source": "Telluride.com",
     "desc": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
     "type": "Wellness"
+  },
+  {
+    "title": "Telluride Chamber Music and Telluride Science Community Concert",
+    "href": "https://telluridescience.org/event/community-concert-september/",
+    "date": "2026-09-10",
+    "time": "6:00 PM – 7:00 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "town": "Telluride",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    "category": "",
+    "source": "Telluride Science",
+    "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. Featured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) All…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Jolie Holland - Live at The Sherbino",

@@ -1,15 +1,5 @@
 [
   {
-    "date": "July 23, 2026",
-    "title": "Planning & Zoning Commission",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100",
-    "hasAgenda": true,
-    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    "time": "",
-    "civicwebId": 8100,
-    "packetUrl": "https://telluride-co.civicweb.net/document/442289/"
-  },
-  {
     "date": "July 27, 2026",
     "title": "Special Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
@@ -162,5 +152,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8083
+  },
+  {
+    "date": "October 22, 2026",
+    "title": "Planning & Zoning Commission",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8106",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8106
   }
 ]

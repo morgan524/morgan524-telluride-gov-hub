@@ -1,25 +1,25 @@
 {
- "generated": "2026-07-23T22:13:21.197Z",
+ "generated": "2026-07-24T03:17:53.765Z",
  "pinned": false,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "Carhenge / Shandoka goes before Planning & Zoning Commission on Thursday, July 23",
- "blurb": "Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project gets two bites of the apple: a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B at 700 W Pacific Ave into a single parcel over 15,000 sq ft, and a Conceptual PUD for new construction on that consolidated lot (carried over from May).",
+ "topic": "code",
+ "topicLabel": "Code Changes & Accelerated Review",
+ "headline": "Code Changes & Accelerated Review goes before Housing Code Update SSR on Monday, July 27",
+ "blurb": "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet.",
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Code Changes & Accelerated Review",
+  "href": "/deep-dive-code.html"
  },
  "meeting": {
-  "title": "Planning & Zoning Commission",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-07-23",
-  "humanDate": "Thursday, July 23",
+  "title": "Housing Code Update SSR",
+  "sourceLabel": "San Miguel County",
+  "date": "2026-07-27",
+  "humanDate": "Monday, July 27",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100",
+  "location": "",
+  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/442289/",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "",
+  "zoomLink": "https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1",
+  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
  }
 }

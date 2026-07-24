@@ -1,22 +1,14 @@
 {
-  "hash": "c54570567ace0b4c07626465698376390050ee54",
-  "lede": "The gondola's future takes center stage this week, with SMART's board voting Wednesday on two vendor contracts for structural analysis — essentially the engineering step that tells us whether the aging gondola cabins and structure can keep running — and the Gondola Leadership Committee meeting Monday to dig into funding commitments and project direction. Alongside that, Town Planning and Zoning takes up three Town-owned redevelopment projects Thursday, including the Carhenge site on West Pacific, while Town Council sits as a liquor authority Sunday for a KOTO Radio event permit hearing.",
+  "hash": "2ca607b354b3db0d4f48432804c88ccb81a63b63",
+  "lede": "The most consequential thing on the calendar this week is the Gondola Leadership Committee meeting on July 28, where the agenda flags an action item on background and history alongside a walkthrough of the Capital Investment Grant program and funding commitments — language that suggests real decisions, not just updates, are on the table. Town Council also convenes Monday as the Liquor Licensing Authority to hold a public hearing on KOTO's Live at the Drive permit for July 30. Sprinkled through the week: Shakespeare in the Park, Box Canyon Races, and The Music Man wrapping its run at the Sheridan.",
   "notable": [
     {
-      "id": 0,
-      "stake": "P&Z votes on Town-owned Carhenge redevelopment and two other major projects."
+      "id": 2,
+      "stake": "Public hearing on KOTO's outdoor Live at the Drive liquor permit."
     },
     {
-      "id": 3,
-      "stake": "Board votes on two gondola structural-analysis vendor contracts — key to gondola's future."
-    },
-    {
-      "id": 7,
-      "stake": "Public hearing on KOTO's special event liquor permit for July 30 Live at the Drive."
-    },
-    {
-      "id": 9,
-      "stake": "Gondola Leadership Committee takes action on history, funding commitments, and project scope."
+      "id": 4,
+      "stake": "Action items on gondola funding commitments and Capital Investment Grant program."
     }
   ]
 }
