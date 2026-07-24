@@ -79,6 +79,20 @@ const committedDates = new Set(
   [...tracker.matchAll(entityEntryRe)].map(m => m[1])
 );
 
+// Entries flagged needsReview (split votes with per-member attributions) are
+// never auto-published: caption-derived attribution of a NAMED person's vote is
+// the highest-consequence error this tool can make. They stay in
+// scripts/pending/ for a human to confirm and insert deliberately.
+for (const p of pending) {
+  const all = p.data.entries || [];
+  const held = all.filter((e) => e.needsReview);
+  if (held.length) {
+    p.data.entries = all.filter((e) => !e.needsReview);
+    console.log(`  HOLD ${p.data.date}: ${held.length} split vote(s) need human confirmation:`);
+    for (const h of held) console.log(`         - ${h.tally} ${h.title.slice(0, 64)}`);
+  }
+}
+
 // ─────── Filter pending: skip committed dates, skip empty meetings ─
 const toInsert = pending.filter(p => {
   if (p.data.entries.length === 0) {

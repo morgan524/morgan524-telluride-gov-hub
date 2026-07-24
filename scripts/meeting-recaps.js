@@ -358,7 +358,12 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
   const sys = `You are extracting substantive recorded votes from a government meeting TRANSCRIPT (auto-captions — noisy) for ${entity.label || entityKey}. ` +
     `Substantive = ordinances, resolutions, IGAs, variances/CUPs/PUDs, code amendments, contracts, appointments. NOT procedural (agenda/minutes approval, adjournment). ` +
     `Roster member ids: ${rosterIds}. Return ONLY JSON: {"votes":[{"title":"<short motion title>","category":"<one of: Land Use, Housing, Budget & Finance, Public Safety, Appointments, Intergovernmental, Other>","outcome":"Passed|Failed|Tabled|Continued","tally":"<e.g. 6-0>","detail":"<one sentence>","memberVotes":{"<id>":"Yes|No|Abstain|Absent"}}]} ` +
-    `Use ONLY what the transcript supports; if member-by-member votes are unclear, omit memberVotes rather than guessing. If no substantive votes, return {"votes":[]}.`;
+    `Use ONLY what the transcript supports. NEVER pad the roster: if the transcript names 4 in favor and two unnamed "nay"s, `
+    + `report exactly what it supports - do NOT assign a vote to every roster member to make the numbers add up, and do NOT `
+    + `assume a member who is not mentioned voted or was even present (attendance is usually absent from these captions). `
+    + `If individual positions were never called (a voice vote - "all those in favor, aye"), omit memberVotes entirely and `
+    + `just give the outcome and tally. The tally must match what the transcript actually says. `
+    + `If no substantive votes, return {"votes":[]}.`;
   const body = {
     model: MODEL, max_tokens: 2000, system: sys,
     messages: [{ role: 'user', content: `MEETING: ${title} (${isoDate})\n\nTRANSCRIPT:\n"""\n${transcript.slice(0, 600000)}\n"""\n\nReturn ONLY the JSON object.` }]
@@ -381,7 +386,36 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
     for (const [id, val] of Object.entries(v.memberVotes || {})) {
       if (rosterSet.has(id) && /^(Yes|No|Abstain|Absent|Recused|Vacant)$/.test(val)) votes[id] = val;
     }
+    // Most municipal motions carry on an unrecorded voice vote — "all those in
+    // favor, aye … motion carries" — where nobody is named. Previously these
+    // were dropped for having no per-member votes, losing ~85% of the record
+    // (the Jul 21 2026 MV meeting yielded 1 vote out of 7).
+    //
+    // We do NOT infer individual positions here. The Jul 21 pilot showed why:
+    // asked to fill a 7-seat roster from "4 in favor … nay, nay", the model
+    // invented a third No for a member who was simply absent. Attendance is not
+    // recoverable from these transcripts (no roll call in the captions), so any
+    // per-member assignment would be a guess about a named person's public
+    // record — the worst error this tool can make.
+    //
+    // Instead every roster member is marked 'Voice': a statement about the
+    // RECORD ("individual positions were not called"), not about how anyone
+    // voted. Only applied when the model reported NO per-member votes at all;
+    // if it named even one, that evidence is kept as-is.
+    if (!Object.keys(votes).length && /passed|failed|carried/i.test(v.outcome || '')) {
+      for (const id of roster) votes[id] = 'Voice';
+    }
+    // A vote carrying named dissent is the one case we will NOT auto-publish.
+    // Voice votes make no claim about individuals, so they are safe. Split
+    // votes require mapping garbled caption first names ("Heat, Tucker, Scott,
+    // Rick") onto roster ids, and the Jul 21 2026 MV pilot got that wrong twice
+    // in a row — first inventing a No for an absent member, then, after the
+    // prompt was hardened, crediting Duprey (never named) while dropping Magid
+    // (explicitly named as "Tucker"). The tally is trustworthy; the attribution
+    // is not. These are held in scripts/pending/ for a human to confirm.
+    const isVoice = Object.values(votes).every((x) => x === 'Voice');
     return {
+      needsReview: !isVoice && Object.keys(votes).length > 0,
       id: `${prefix}${year}-${String(i + 1).padStart(2, '0')}`,
       date: isoDate, year,
       meeting: title,

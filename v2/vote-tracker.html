@@ -154,6 +154,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hm-rec{background:#c48a2e;color:#fff;font-size:9.5px}
 .hm-abs{background:#9ca3af;color:#fff}
 .hm-vac{background:#e5e7eb;color:#9ca3af;border:1px dashed #d1d5db;font-size:9px}
+/* Voice = the motion carried on a voice vote ("all in favor, aye") and no
+   individual positions were called, so no per-member record exists. It is a
+   statement about the RECORD, not about how anyone voted. */
+.hm-voice{background:#dbe4ee;color:#4a6076;font-size:9px}
 .hm-nc{background:transparent;color:#e5e7eb}
 .hm-outcome.passed{color:var(--green-dark);font-weight:700;font-size:11px;white-space:nowrap}
 .hm-outcome.failed{color:#b5574a;font-weight:700;font-size:11px;white-space:nowrap}
@@ -287,6 +291,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div class="leg-item"><div class="leg-swatch hm-rec"></div> Recused</div>
         <div class="leg-item"><div class="leg-swatch hm-abs"></div> Absent</div>
         <div class="leg-item"><div class="leg-swatch hm-vac" style="border:1px dashed #d1d5db;font-size:9px"></div> Vacant</div>
+        <div class="leg-item" title="Carried on a voice vote — individual positions were not called"><div class="leg-swatch hm-voice"></div> Voice vote (no individual record)</div>
       </div>
       <div id="heatmap-content"></div>
     </div>
@@ -6971,11 +6976,12 @@ function voteClass(v) {
     case 'Recused': return 'recused';
     case 'Absent':  return 'absent';
     case 'Vacant':  return 'vacant';
+    case 'Voice':   return 'voice';
     default:        return 'notoncil';
   }
 }
 function voteLabel(v) {
-  return { Yes:'✓', No:'✗', Recused:'⊘', Absent:'–', Vacant:'○' }[v] || '·';
+  return { Yes:'✓', No:'✗', Recused:'⊘', Absent:'–', Vacant:'○', Voice:'🗣' }[v] || '·';
 }
 
 // ── render tracker tab ──────────────────────────────────────
@@ -7319,6 +7325,7 @@ function renderBoccHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on BOCC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
@@ -7437,6 +7444,7 @@ function renderRicoHeatmap() {
         else if (mv === 'Abstain') { cls = 'hm-rec';     lbl = 'Abstain'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on the Board'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
@@ -7548,6 +7556,7 @@ function renderPlanningHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on PC'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
@@ -7659,6 +7668,7 @@ function renderTomvHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
@@ -7770,6 +7780,7 @@ function renderDrbHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Board'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
@@ -7896,6 +7907,7 @@ function renderHeatmap() {
         else if (mv === 'Recused') { cls = 'hm-rec';     lbl = 'Recused'; }
         else if (mv === 'Absent')  { cls = 'hm-abs';     lbl = 'Absent'; }
         else if (mv === 'Vacant')  { cls = 'hm-vac';     lbl = 'Vacant'; }
+        else if (mv === 'Voice')   { cls = 'hm-voice';   lbl = 'Voice'; }
         const cellLink = v.minutesUrl ? `<a href="${v.minutesUrl}" target="_blank" rel="noopener" style="text-decoration:none;display:block">` : '';
         const cellLinkEnd = v.minutesUrl ? '</a>' : '';
         html += `<td>${cellLink}<div class="hm-cell ${cls}" title="${m.name}: ${mv||'Not on Council'}. Click to view minutes.">${lbl}</div>${cellLinkEnd}</td>`;
