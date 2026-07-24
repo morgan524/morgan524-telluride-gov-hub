@@ -480,6 +480,116 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
+    title: "Long-term road closure for the Corbett Creek Bridge Project",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 24, 2026",
+    newsTopic: "infrastructure",
+    copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
+  },
+  {
     title: "‘Big box’ tightens on Gold Mountain Fire",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -500,13 +610,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Spring targeted for tree-thinning effort",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "A joint wildfire mitigation effort to remove dead or diseased trees from the city of Ouray’s perimeter is expected to move forward next spring, though with a potentially more limited scope. Officials told the Plaindealer that the Ouray Forest Resilience Project, which was first floated several years",
-    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/",
     img: ""
   },
   {
@@ -520,13 +640,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Ridgway to market itself as destination, not crossroads",
+    title: "60 Years Ago",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "infrastructure",
-    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
-    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
+    newsTopic: "government",
+    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
+    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/",
     img: ""
   },
   {
@@ -536,7 +656,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "The 109th annual Ouray County Fair is scheduled to proceed as planned, even if the fairgrounds remain the headquarters for the Gold Mountain Fire operations. The fair is scheduled from Aug. 13-15 at the Ouray County 4-H Center and the fairgrounds, which has been home to more than 900 fire personnel ",
-    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/",
     img: ""
   },
   {
@@ -546,7 +666,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "government",
     copy: "I m not a Jeep enthusiast or an off-highway vehicle user, but I am a hiker and photographer who cares deeply about our high-country environment. After recent discussions at county commissioners meetings about closing the upper part of Yankee Boy Basin to motorized travel, I wanted to see the area th",
-    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/",
     img: ""
   },
   {
@@ -556,7 +676,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "arts-culture",
     copy: "When Heather Toth moved to Ouray County in 2013, her first question was, “Where’s the theater; where’s the art space?” The arts are a necessity, not a luxury, according to Toth. She values third spaces, especially those with a connection to the arts. “I think they’re vital,” she said. “I think they’",
-    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/",
     img: ""
   },
   {
@@ -566,17 +686,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "community",
     copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Charles ‘CJ’ John Turner",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "community",
-    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
-    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
+    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/",
     img: ""
   },
   {
@@ -862,7 +972,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -901,7 +1011,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -928,7 +1038,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -2118,6 +2228,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Town of Telluride Announces Schedule & Lineup for Fourth Annual Fourth of July Bash",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=398",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15590"
+  },
+  {
+    title: "Town of Telluride to Implement Stage 2 Fire Restrictions",
+    source: "Town of Telluride",
+    date: "June 24, 2026",
+    newsTopic: "public-safety",
+    copy: "(June 24, 2026) – In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=397",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15584"
+  },
+  {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -2160,6 +2306,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass and Tomboy Road are closed to all vehicle and pedestrian traffic following mudslides and flooding on Friday, July 17. The duration of the closure is unknown.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=70",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
@@ -2803,17 +2967,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Yoga For All with Jay and Jane",
-    link: "https://koto.org/event/yoga-for-all-with-jay-and-jane/2026-07-24/",
-    description: "Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-07-24T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/wellness-lineup-18.png"
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-24/",
@@ -4140,7 +4293,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-07-28T14:15:00.000Z",
-    endDate: "2026-09-17",
+    endDate: "2026-09-22",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5144,7 +5297,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-21",
+    endDate: "2026-09-22",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
