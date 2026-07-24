@@ -88,8 +88,11 @@ for (const p of pending) {
   const held = all.filter((e) => e.needsReview);
   if (held.length) {
     p.data.entries = all.filter((e) => !e.needsReview);
-    console.log(`  HOLD ${p.data.date}: ${held.length} split vote(s) need human confirmation:`);
-    for (const h of held) console.log(`         - ${h.tally} ${h.title.slice(0, 64)}`);
+    console.log(`  HOLD ${p.data.date}: ${held.length} vote(s) need human confirmation:`);
+    for (const h of held) {
+      console.log(`         - ${h.tally} ${h.title.slice(0, 64)}`);
+      for (const r of (h.reviewReasons || ['flagged'])) console.log(`             · ${r}`);
+    }
   }
 }
 

@@ -347,7 +347,40 @@ function rosterForDate(entity, isoDate) {
 const PROCEDURAL_RE = /\b(?:go into|enter|convene in|adjourn(?:ment)?|recess)\b|\bexecutive session\b|\bconsent calendar\b|\bapprove (?:the )?(?:minutes|agenda)\b|\bminutes approval\b|\bapproval of (?:the )?(?:minutes|agenda)\b/i;
 function isProcedural(title) { return PROCEDURAL_RE.test(String(title || '')); }
 
-async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
+// Guard #1 — cross-check the two independent LLM passes over the same
+// transcript. The recap pass and the vote pass each report a tally; where both
+// give a NUMERIC tally for the same motion and they DISAGREE, we don't trust
+// either, so the vote is held for review. This is what would have caught the
+// Jul 21 2026 MV rezone automatically: the recap said 4-2, the vote pass said
+// 4-3 (it had invented a third No). Voice votes carry no numeric tally, so they
+// are never flagged by this guard.
+function parseTally(s) {
+  const m = String(s || '').match(/(\d+)\s*[-–to]+\s*(\d+)/);
+  return m ? [Number(m[1]), Number(m[2])] : null;
+}
+// Significant tokens of a motion title (drop noise words, keep numbers/street
+// names) so "Rezone … 306 Adams Ranch Rd" matches "Rezone and Density Transfer
+// at Lot 640A, 306 Adams Ranch Road".
+function titleTokens(s) {
+  return new Set(String(s || '').toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .split(' ')
+    .filter((w) => w.length > 2 && !/^(the|and|for|second|reading|ordinance|resolution|motion|approve|approval|meeting)$/.test(w)));
+}
+function bestRecapTally(entryTitle, recapVotes) {
+  const et = titleTokens(entryTitle);
+  let best = null, bestScore = 0;
+  for (const rv of recapVotes || []) {
+    const rt = titleTokens(rv.item);
+    let overlap = 0;
+    for (const w of et) if (rt.has(w)) overlap++;
+    const score = overlap / Math.max(1, Math.min(et.size, rt.size));
+    if (score > bestScore) { bestScore = score; best = rv; }
+  }
+  return bestScore >= 0.4 ? (best && best.tally) : null;   // require a real match
+}
+
+async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recapVotes) {
   const entity = VT_CONFIG[entityKey];
   const roster = rosterForDate(entity, isoDate);
   if (!entity || !roster) {
@@ -414,8 +447,18 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl) {
     // (explicitly named as "Tucker"). The tally is trustworthy; the attribution
     // is not. These are held in scripts/pending/ for a human to confirm.
     const isVoice = Object.values(votes).every((x) => x === 'Voice');
+    // Guard #1: does the recap pass agree on the tally?
+    const voteTally = parseTally(v.tally);
+    const recapTallyStr = bestRecapTally(v.title, recapVotes);
+    const recapTally = parseTally(recapTallyStr);
+    const tallyDisagrees = !!(voteTally && recapTally &&
+      (voteTally[0] !== recapTally[0] || voteTally[1] !== recapTally[1]));
+    const reviewReasons = [];
+    if (!isVoice && Object.keys(votes).length > 0) reviewReasons.push('split-vote attribution (caption names are unreliable)');
+    if (tallyDisagrees) reviewReasons.push(`tally disagreement: vote pass ${voteTally.join('-')} vs recap pass ${recapTally.join('-')}`);
     return {
-      needsReview: !isVoice && Object.keys(votes).length > 0,
+      needsReview: reviewReasons.length > 0,
+      reviewReasons,
       id: `${prefix}${year}-${String(i + 1).padStart(2, '0')}`,
       date: isoDate, year,
       meeting: title,
@@ -517,7 +560,7 @@ async function main() {
       const vtEntity = trackerEntityFor(ch.sourceKey, v.title);
       if (vtEntity) {
         try {
-          const vf = await draftVotes(vtEntity, date, v.title, transcript, videoUrl);
+          const vf = await draftVotes(vtEntity, date, v.title, transcript, videoUrl, out.votes || []);
           if (vf) console.log(`      🗳 vote draft → ${vf.replace(/^.*scripts\//, 'scripts/')}`);
         } catch (e) { console.log(`      ⚠ vote draft failed (recap unaffected): ${e.message}`); }
       }
