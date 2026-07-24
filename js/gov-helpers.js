@@ -1078,6 +1078,15 @@ const MANUAL_SUMMARIES = {
              videoUrl }                                                    */
 const MEETING_RECAPS = [
   {
+    sourceKey: "mv",
+    sourceLabel: "Mountain Village",
+    date: "2026-07-21",
+    title: "Mountain Village Town Council — Jul 21, 2026",
+    recap: "Council approved the second reading of an ordinance rezoning and transferring density at Lot 640A, 306 Adams Ranch Road, allowing Telluride Ski & Golf to add 15 employee apartment units in a new building. The vote was 4-2. Conditions require the design to complete Class 3 review by the Design Review Board, a subdivision plat to be approved showing revised lot lines, and a revised parking plan consistent with discussion at the meeting — including preservation of a stand of trees along the lot edge.\n\nCouncil also approved the second reading of an ordinance amending the Community Development Code's lighting regulations, with a modification exempting existing wall-mounted fixtures attached to a structure from mandatory replacement, while still requiring compliance with color-temperature and lumen standards for those fixtures. Staff was directed to develop a proposal for a homeowner incentive program for consideration in the 2027 budget.\n\nA resolution correcting application types in a previously approved Proposition 123 affordable housing expedited-review resolution passed unanimously, as did a resolution extending the Stage 2 emergency fire ban. Council approved Q2 2026 financials. Three applicants were appointed to the VCA Residents Committee for two-year terms. An ADU floor-area variance for 500 Benchmark Drive also passed.",
+    votes: [{"item":"Rezone & density transfer — 306 Adams Ranch Rd","outcome":"Passed","tally":"4-2"}, {"item":"Lighting code amendments — 2nd reading","outcome":"Passed","tally":""}, {"item":"Prop 123 resolution correction","outcome":"Passed","tally":""}, {"item":"Stage 2 fire ban extension","outcome":"Passed","tally":""}, {"item":"Q2 2026 financials approval","outcome":"Passed","tally":""}, {"item":"VCA Residents Committee — 3 appointments","outcome":"Passed","tally":""}, {"item":"ADU floor-area variance — 500 Benchmark Dr","outcome":"Passed","tally":""}],
+    videoUrl: "https://media.avcaptureall.cloud/meeting/cd3f90c7-4db2-46f9-a23e-94cd069ced43"
+  },
+  {
     sourceKey: "county",
     sourceLabel: "San Miguel County",
     date: "2026-07-16",
