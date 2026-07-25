@@ -599,9 +599,9 @@ const REGIONAL_NEWS_ARTICLES = [
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/?ta_paidstory",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/",
     img: ""
   },
   {
@@ -611,17 +611,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
-    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
-    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/",
     img: ""
   },
   {
@@ -641,17 +631,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "land-use",
     copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
-    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/",
     img: ""
   },
   {
-    title: "Looking Back",
+    title: "Ridgway to market itself as destination, not crossroads",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "government",
-    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
-    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/?ta_paidstory",
+    newsTopic: "infrastructure",
+    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
+    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
     img: ""
   },
   {
@@ -692,6 +682,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Proud parents Katie and Willem Geyer of Ouray welcomed their son Willem “Liam” Pieter Geyer to the world at 5:52 p.m. on July 14, weighing 6 lbs. 8 oz. Liam, also known by his nickname Pork Chop, was welcomed home by his furry siblings Opie, Max and Indie. Liam is the grandson of Willem and Isabella",
     href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Charles ‘CJ’ John Turner",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "community",
+    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
+    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
     img: ""
   },
   {
@@ -1013,7 +1013,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1040,7 +1040,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1331,6 +1331,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "4th firefighter dies from injuries in western Colorado blaze",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "public-safety",
+    copy: "A fourth firefighter has died from burns after he and several colleagues were overcome by a fast-moving wildfire near the Colorado-Utah border last month. The federal Interior Department said Saturday that 43-year-old Nathan Matthews died Friday. He was from Lincoln,…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Water hauling is the new chore no rancher asked for",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "land-use",
+    copy: "Ranchers near Montrose are hauling water daily after the Upper Colorado River Basin recorded its worst snowpack in history. Some operations made eight or nine truck runs in a single day just to keep 800 head watered. USDA cost reimbursements help, but nobody's getting the hours back.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_096e200b-6d66-5f24-b4ef-4ec4050ae9a4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/15/115b0f07-30fe-541a-954e-994b8f3eabf8/6a64b7692135f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Lost stories, brought to light",
     source: "Telluride Times",
@@ -5349,17 +5373,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Music on the Green Presents Jon Stickley Trio",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-jon-stickley-trio-1/",
-    description: "Beyond the Groove Productions and the Telluride Mountain Village Owners Association (TMVOA) present Music on the Green with Jon Stickley Trio on Friday,",
-    pubDate: "2026-07-24T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48855/jon_stickley_trio_1800x900px.png"
-  },
-  {
     title: "Mind Blown Telluride",
     link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
@@ -5886,6 +5899,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-08-24T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
