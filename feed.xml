@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 25 Jul 2026 03:02:13 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 25 Jul 2026 05:53:17 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 25–31</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-29</guid>
-      <pubDate>Sat, 25 Jul 2026 03:02:13 GMT</pubDate>
-      <description><![CDATA[The week's most consequential government business is the Gondola Leadership Committee meeting on Tuesday, July 28, where a capital investment grant program and funding commitments are on the table as action items — not just a briefing. Town Council also sits Monday as the Liquor Licensing Authority for a public hearing on KOTO Radio's Live at the Drive permit for July 30. On the community side, the valley stays busy with Shakespeare in the Park, Box Canyon Races, and a climate and energy Town Talk on Tuesday.]]></description>
+      <pubDate>Sat, 25 Jul 2026 05:53:17 GMT</pubDate>
+      <description><![CDATA[The most consequential meeting this week is the Gondola Leadership Committee on July 28, where the agenda flags capital investment funding commitments and what looks like a real action item on the gondola's future — worth paying attention to. Town Council also convenes July 27 as the Liquor Licensing Authority for a public hearing on KOTO Radio's Live at the Drive permit at 207 N Pine. Around all that, the week fills out with Shakespeare in the Park, Box Canyon Races, and a climate and energy Town Talk on Tuesday.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -55,19 +55,6 @@ Come run in the high alpine! Sign up for the Bridal Veil 30k or the Bear Creek 1
       <media:content url="https://www.telluride.com/site/assets/files/48231/boxcanyon-246_1.800x533.webp" medium="image" />
       <category>Community Event</category>
       <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Sat, Jul 25] Shakespeare in the Park: &quot;Henry V&quot;</title>
-      <link>https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-24/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/shakespeare%20in%20the%20park%7C2026-07-25</guid>
-      <pubDate>Sat, 25 Jul 2026 02:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Town Park
-
-Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; "The game's afoot!" Youth & "Pay-What-You-Can" discounts available!]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Jul 25] Zumba with Gisela</title>
@@ -212,7 +199,7 @@ The July 27 San Miguel County Open Space Commission agenda hasn't been posted ye
 
 A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.
 
-⚡ Why it matters: Public hearing on KOTO's outdoor live-music event liquor permit — you can weigh in.]]></description>
+⚡ Why it matters: Public hearing on KOTO's Live at the Drive liquor permit — you can weigh in.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -271,7 +258,7 @@ Enjoy a dessert while watching Bathtubs Over Broadway. When he started as a come
 
 The Gondola Leadership Committee meets July 28 for what looks like a substantive session. Miles Graham opens with background and history — marked as an action item, which suggests something more than a recap. Ed Parks and Amber Blake then walk through the CIG (Capital Investment Grant) program and its funding commitments, followed by a project update. The heaviest time slot goes to a fiscal and economic impact analysis presented by Parks and Chris Brewer. Miles Graham rounds out the agenda with local jurisdiction updates before public comment. The gondola project — and the $5.2 million annual tax behind it — has been one of the most contested questions in the valley in recent years, so the funding and economic impact presentations will draw scrutiny.
 
-⚡ Why it matters: Gondola capital grant funding and commitments are action items, not just updates.]]></description>
+⚡ Why it matters: Gondola capital funding commitments and a flagged action item up for decision.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -381,7 +368,7 @@ The July 29 joint work session between the San Miguel County Planning Commission
 
 A rescheduled midday meeting with a short agenda. The one action item is a request from the Telluride Humane Society to use Elks Park and the River Trail — Maple St. to Gold Run — for a dog-friendly 5K fun run on October 10, 2026. The event, called Tails on the Trail, expects around 100 attendees, runs 8:30 a.m. to noon, and would generate a maximum of $72.25 in admissions fees to the Town. Street use on Colorado Ave. is still pending staff review. The commission will also hold a work session on the Town Park Oval Improvements Project — no vote expected there, just review and discussion.
 
-⚡ Why it matters: Parks Commission votes on a public trail-use permit for an October dog 5K.]]></description>
+⚡ Why it matters: Commission votes on Humane Society's Tails on the Trail use of Elks Park and River Trail.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -409,6 +396,18 @@ Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychede
 
 The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. This event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. This special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Jul 29] Native Plant Walk &amp; Talk</title>
+      <link>https://koto.org/event/native-plant-walk-talk/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/native%20plant%20walk%20and%7C2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet at the the country park and ride lot in Lawson Hill near the bus stop; we will walk on the valley floor. Adults and teens only please!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
