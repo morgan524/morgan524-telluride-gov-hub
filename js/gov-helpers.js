@@ -485,6 +485,106 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
     title: "St Pats Telluride Parish Bulletin for July 26th",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -509,9 +609,9 @@ const REGIONAL_NEWS_ARTICLES = [
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/?ta_paidstory",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/",
     img: ""
   },
   {
@@ -521,17 +621,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
-    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
-    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/",
     img: ""
   },
   {
@@ -551,17 +641,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "land-use",
     copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
-    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/",
     img: ""
   },
   {
-    title: "Looking Back",
+    title: "Ridgway to market itself as destination, not crossroads",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "government",
-    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
-    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/?ta_paidstory",
+    newsTopic: "infrastructure",
+    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
+    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
     img: ""
   },
   {
@@ -602,6 +692,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Proud parents Katie and Willem Geyer of Ouray welcomed their son Willem “Liam” Pieter Geyer to the world at 5:52 p.m. on July 14, weighing 6 lbs. 8 oz. Liam, also known by his nickname Pork Chop, was welcomed home by his furry siblings Opie, Max and Indie. Liam is the grandson of Willem and Isabella",
     href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Charles ‘CJ’ John Turner",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "community",
+    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
+    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
     img: ""
   },
   {
@@ -672,16 +772,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 15...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. (If you are only available for fellowship and i...",
     href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning/",
-    img: ""
-  },
-  {
-    title: "Parish bulletin for July 12",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 11, 2026",
-    newsTopic: "community",
-    copy: "Attached is our parish bulletin for Sunday, July 12. As a reminder, the Parish Calendar has the most up-to-date information. Join us before the 9 am Sunday Holy Mass to pray the Holy Rosary. We begin at 8:30 am. After the 9...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-july-12/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -884,7 +974,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -938,7 +1028,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -950,7 +1040,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1242,18 +1332,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "4th firefighter dies from burn injuries in western Colorado blaze",
-    source: "Telluride Times",
-    date: "July 25, 2026",
-    firstSeen: "2026-07-25",
-    newsTopic: "public-safety",
-    copy: "A fourth firefighter has died from the June 27 burnover in Mesa County — Nathan Matthews, 43, of Lincoln, Nebraska, passed away Friday. Three others — Emily Barker, Nick Hutcherson, and Sydney Watson — died at the scene. Dry conditions and erratic winds continue driving large fires across the western U.S. this summer.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Heat dome expands across the central United States, creating dangerous conditions for millions",
     source: "Telluride Times",
     date: "July 25, 2026",
@@ -1263,6 +1341,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "4th firefighter dies from burn injuries in western Colorado blaze",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "public-safety",
+    copy: "A fourth firefighter has died from the June 27 burnover in Mesa County — Nathan Matthews, 43, of Lincoln, Nebraska, passed away Friday. Three others — Emily Barker, Nick Hutcherson, and Sydney Watson — died at the scene. Dry conditions and erratic winds continue driving large fires across the western U.S. this summer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
     imgHiRes: true
   },
   {
@@ -2884,17 +2974,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Zumba with Gisela",
-    link: "https://koto.org/event/zumba-with-gisela/2026-07-25/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-07-25T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Movies Under the Stars",
     link: "https://koto.org/event/movies-under-the-stars/2026-07-25/",

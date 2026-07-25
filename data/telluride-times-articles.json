@@ -1,17 +1,5 @@
 [
   {
-    "title": "4th firefighter dies from burn injuries in western Colorado blaze",
-    "source": "Telluride Times",
-    "date": "July 25, 2026",
-    "firstSeen": "2026-07-25",
-    "newsTopic": "public-safety",
-    "copy": "A fourth firefighter has died from the June 27 burnover in Mesa County — Nathan Matthews, 43, of Lincoln, Nebraska, passed away Friday. Three others — Emily Barker, Nick Hutcherson, and Sydney Watson — died at the scene. Dry conditions and erratic winds continue driving large fires across the western U.S. this summer.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Heat dome expands across the central United States, creating dangerous conditions for millions",
     "source": "Telluride Times",
     "date": "July 25, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "4th firefighter dies from burn injuries in western Colorado blaze",
+    "source": "Telluride Times",
+    "date": "July 25, 2026",
+    "firstSeen": "2026-07-25",
+    "newsTopic": "public-safety",
+    "copy": "A fourth firefighter has died from the June 27 burnover in Mesa County — Nathan Matthews, 43, of Lincoln, Nebraska, passed away Friday. Three others — Emily Barker, Nick Hutcherson, and Sydney Watson — died at the scene. Dry conditions and erratic winds continue driving large fires across the western U.S. this summer.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
     "imgHiRes": true
   },
   {
