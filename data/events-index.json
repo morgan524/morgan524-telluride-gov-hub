@@ -95,19 +95,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Free Youth Tennis & Pickleball Program",
-    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-24/",
-    "date": "2026-07-24",
-    "time": "3:30 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "FLANNEL FEEDBACK",
     "href": "https://events.ourayridgwayevents.com/event/flannel-feedback-2835",
     "date": "2026-07-24",
@@ -908,7 +895,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray Tourism Advisory Committee (TAC) represents a cross-section of the small businesses, nonprofits, and residents of Ouray. We educate ourselves about best practices in the tourism industry, tourism marketing, and the visitor…",
     "type": "Community",
-    "endDate": "2026-08-25"
+    "endDate": "2026-09-22"
   },
   {
     "title": "Gondola Leadership Committee Meeting",
@@ -1803,6 +1790,19 @@
     "type": "Community"
   },
   {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-08-02/",
+    "date": "2026-08-02",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
     "title": "Home Tour & House Show with Emily Scott Robinson",
     "href": "https://events.ourayridgwayevents.com/event/home-tour-house-show-with-emily-scott-robinson",
     "date": "2026-08-02",
@@ -1882,6 +1882,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-03/",
+    "date": "2026-08-03",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "DAVE MENSCH",
     "href": "https://events.ourayridgwayevents.com/event/dave-mensch-7766",
     "date": "2026-08-04",
@@ -1906,19 +1919,6 @@
     "source": "Mountain Village",
     "desc": "The Mountain Village Police Department and Village Court Apartments (VCA) are teaming up once again to host the 14th annual National Night Out Tuesday,",
     "type": "Community"
-  },
-  {
-    "title": "Town Talk: single molecule views of Nature’s nanomachines",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/single-molecule-views-of-natures-nanomachines/",
-    "date": "2026-08-04",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
-    "type": "Talks & Classes"
   },
   {
     "title": "Parks and Recreation Committee (PARC)",
@@ -1948,6 +1948,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Town Talk: Single molecule views of Nature's nanomachines",
+    "href": "https://koto.org/event/town-talk-single-molecule-views-of-natures-nanomachines/",
+    "date": "2026-08-04",
+    "time": "6:30 PM",
+    "location": "Telluride Innovation Center",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-4.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     "href": "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/",
     "date": "2026-08-04",
@@ -1959,6 +1972,32 @@
     "source": "Telluride Science",
     "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Bardic Trails Online Poetry Night",
+    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-08-04/",
+    "date": "2026-08-04",
+    "time": "7:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-04/",
+    "date": "2026-08-04",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ice Park Advisory Team",
