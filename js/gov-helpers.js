@@ -485,103 +485,13 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
+    title: "St Pats Telluride Parish Bulletin for July 26th",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 25, 2026",
     newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
-    img: ""
-  },
-  {
-    title: "Music on the Mesa",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 8, 2026",
-    newsTopic: "arts-culture",
-    copy: "Live music event on the mesa.",
-    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    copy: "Attached as PDF is the St Pats Telluride Parish Bulletin for July 26th. Please see the Parish Calendar for updates.Coffee and donuts every Sunday during summer after 9:00 AM Holy Mass. We need more volunteers to help.Next Sunday - Second Collectio...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/st-pats-telluride-parish-bulletin-for-july-26th/",
     img: ""
   },
   {
@@ -599,9 +509,9 @@ const REGIONAL_NEWS_ARTICLES = [
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
-    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/",
+    newsTopic: "public-safety",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/?ta_paidstory",
     img: ""
   },
   {
@@ -611,7 +521,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "public-safety",
     copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
-    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/",
+    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Aided by cooler temps, rain, firefighters increase containment to 24%",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 23, 2026",
+    newsTopic: "housing",
+    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
+    href: "https://www.ouraynews.com/2026/07/22/aided-cooler-temps-rain-firefighters-increase-containment-24/?ta_paidstory",
     img: ""
   },
   {
@@ -631,17 +551,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 23, 2026",
     newsTopic: "land-use",
     copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
-    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/",
+    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/?ta_paidstory",
     img: ""
   },
   {
-    title: "Ridgway to market itself as destination, not crossroads",
+    title: "Looking Back",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "July 23, 2026",
-    newsTopic: "infrastructure",
-    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
-    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
+    newsTopic: "government",
+    copy: "July 21, 1966 Discussions under way for a period of two months took shape this week in the filing of articles of incorporation for the Ouray College Association. Named as the board of trustees in the incorporation papers are Robert Jindra, Ray Schey, E.F. Tomiska and Warren H. Gibbs of Ouray and Ted",
+    href: "https://www.ouraynews.com/2026/07/22/looking-back-20260723-0132-541789/?ta_paidstory",
     img: ""
   },
   {
@@ -682,16 +602,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Proud parents Katie and Willem Geyer of Ouray welcomed their son Willem “Liam” Pieter Geyer to the world at 5:52 p.m. on July 14, weighing 6 lbs. 8 oz. Liam, also known by his nickname Pork Chop, was welcomed home by his furry siblings Opie, Max and Indie. Liam is the grandson of Willem and Isabella",
     href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Charles ‘CJ’ John Turner",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "community",
-    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
-    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
     img: ""
   },
   {
@@ -974,7 +884,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1013,7 +923,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1332,15 +1242,27 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "4th firefighter dies from injuries in western Colorado blaze",
+    title: "4th firefighter dies from burn injuries in western Colorado blaze",
     source: "Telluride Times",
     date: "July 25, 2026",
     firstSeen: "2026-07-25",
     newsTopic: "public-safety",
-    copy: "A fourth firefighter has died from burns after he and several colleagues were overcome by a fast-moving wildfire near the Colorado-Utah border last month. The federal Interior Department said Saturday that 43-year-old Nathan Matthews died Friday. He was from Lincoln,…",
-    claudeSummary: false,
+    copy: "A fourth firefighter has died from the June 27 burnover in Mesa County — Nathan Matthews, 43, of Lincoln, Nebraska, passed away Friday. Three others — Emily Barker, Nick Hutcherson, and Sydney Watson — died at the scene. Dry conditions and erratic winds continue driving large fires across the western U.S. this summer.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Heat dome expands across the central United States, creating dangerous conditions for millions",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "community",
+    copy: "A heat dome is pushing temperatures 10–15°F above normal across the central U.S. this weekend into next week, with roughly 70 million people under heat advisories from Dallas to North Dakota. Overnight lows won't drop enough to offer real relief, letting heat stress build. Some Denver-area records may fall; the Southwest and Gulf Coast face the worst of it by midweek.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
     imgHiRes: true
   },
   {
@@ -2241,6 +2163,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -2283,6 +2223,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Imogene Pass and Tomboy Road are closed to all vehicle and pedestrian traffic following mudslides and flooding on Friday, July 17. The duration of the closure is unknown.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=70",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
+    img: ""
+  },
+  {
+    title: "Stage 2 Fire Restrictions In Effect",
+    source: "Town of Telluride",
+    date: "June 26, 2026",
+    newsTopic: "public-safety",
+    copy: "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     img: ""
   },
   {
