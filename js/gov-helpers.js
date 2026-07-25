@@ -1013,7 +1013,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1040,7 +1040,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1331,6 +1331,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Lost stories, brought to light",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "arts-culture",
+    copy: "A Wilkinson Public Library staffer found a box of more than 200 lost oral history interviews — missing for nearly 15 years — recorded in the early 2000s with Telluride residents who lived here during the 1970s transition from mining to skiing. The DVDs are now available for checkout, with digital archiving underway. Housing pressures and the fight to keep small-town character intact come up repeatedly — same as today.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_1ff33a89-d9d4-4512-94cf-6a2720e686a6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/df/adf2b93c-7728-47ce-b4f9-58da26e944c3/6a624fa8b0fc3.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Work underway at Society Turn brings new medical facility closer",
     source: "Telluride Times",
