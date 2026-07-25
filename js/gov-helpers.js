@@ -1013,7 +1013,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1028,7 +1028,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1040,7 +1040,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1332,18 +1332,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Heat dome expands across the central United States, creating dangerous conditions for millions",
-    source: "Telluride Times",
-    date: "July 25, 2026",
-    firstSeen: "2026-07-25",
-    newsTopic: "community",
-    copy: "A heat dome is pushing temperatures 10–15°F above normal across the central U.S. this weekend into next week, with roughly 70 million people under heat advisories from Dallas to North Dakota. Overnight lows won't drop enough to offer real relief, letting heat stress build. Some Denver-area records may fall; the Southwest and Gulf Coast face the worst of it by midweek.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "4th firefighter dies from burn injuries in western Colorado blaze",
     source: "Telluride Times",
     date: "July 25, 2026",
@@ -1353,6 +1341,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Bike park closure leaves riders scrambling",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "recreation",
+    copy: "Telluride's bike park is closed all of 2026 while Telski finishes work tied to a Lift 4 upgrade — downhill and freeride trails stay shut even after the lift modernization wrapped up. Cross-country trails remain open via the gondola. Local riders, shops, and at least one World Cup racer say the closure stings, with some wanting more transparency on the timeline.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_3dbe9271-c799-4b20-8c6d-bedbfcb12d89.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e2/6e225fcd-2a29-4d1d-9045-aeb962f570e8/6a6078f71f346.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Heat dome expands across the central United States, creating dangerous conditions for millions",
+    source: "Telluride Times",
+    date: "July 25, 2026",
+    firstSeen: "2026-07-25",
+    newsTopic: "community",
+    copy: "A heat dome is pushing temperatures 10–15°F above normal across the central U.S. this weekend into next week, with roughly 70 million people under heat advisories from Dallas to North Dakota. Overnight lows won't drop enough to offer real relief, letting heat stress build. Some Denver-area records may fall; the Southwest and Gulf Coast face the worst of it by midweek.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
     imgHiRes: true
   },
   {
