@@ -1,18 +1,18 @@
 {
-  "hash": "f55f10a1f0d644ea5cd84430eff0626929c5edf5",
-  "lede": "The biggest item this week is the Gondola Leadership Committee meeting on July 28, where the agenda flags a capital investment grant program and funding commitments as action items — not just a briefing, something is moving. Town Council also sits as the Liquor Licensing Authority on July 27 for a public hearing on KOTO Radio's Live at the Drive permit for July 30th at 207 N Pine. Rounding out the week, the Parks and Recreation Commission takes up a Humane Society request to use Elks Park and the River Trail for a fall dog-friendly 5K.",
+  "hash": "af98d1209e94da755572f30b635b9ae41b496530",
+  "lede": "The week's meeting to watch is the Gondola Leadership Committee on Tuesday, July 28, where capital investment funding commitments and what looks like a substantive action item on the gondola's future are on the table — not the usual housekeeping. Town Council also convenes Monday as the Liquor Licensing Authority to hear KOTO Radio's permit request for its Live at the Drive event at 207 N Pine Street. Rounding out the week, the Telluride Foundation's Dual Challenge climate and energy forum runs Tuesday through Wednesday, and the Humane Society's Tails on the Trail dog 5K gets a Parks Commission review on Tuesday.",
   "notable": [
     {
       "id": 2,
-      "stake": "Public hearing on KOTO's special event liquor permit for July 30 concert."
+      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — locals can weigh in."
     },
     {
       "id": 4,
-      "stake": "Action items on gondola capital investment grant funding commitments."
+      "stake": "Council votes or acts on gondola capital funding commitments affecting the box's future."
     },
     {
       "id": 6,
-      "stake": "Commission votes on Humane Society use of Elks Park and River Trail."
+      "stake": "Commission decides whether to approve Humane Society's October dog 5K on town parks and trail."
     }
   ]
 }
