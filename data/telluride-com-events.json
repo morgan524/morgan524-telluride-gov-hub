@@ -372,17 +372,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
   },
   {
-    "title": "Summer Spectacular: The Music Man",
-    "link": "https://www.telluride.com/event/summer-spectacular-the-music-man/",
-    "description": "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
-    "pubDate": "2026-07-24",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62637/ypt-summer-music-man.800x533.webp"
-  },
-  {
     "title": "Box Canyon Races",
     "link": "https://www.telluride.com/event/box-canyon-races/",
     "description": "Come run in the high alpine! Sign up for the Bridal Veil 30k or the Bear Creek 10mi races for an exhilarating and …",
@@ -776,5 +765,29 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
+  },
+  {
+    "title": "Telluride Autumn Classic",
+    "link": "https://www.telluride.com/event/telluride-autumn-classic/",
+    "description": "A Colorful Car Show in the Mountains\n\nWhile still very much a celebration of cars and colors, the Autumn Classic is the …",
+    "pubDate": "2026-09-24",
+    "endDate": "2026-09-28",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/37495/0_dvs_4564_small_2mp.800x533.webp"
+  },
+  {
+    "title": "Corvettes & Colors",
+    "link": "https://www.telluride.com/event/corvettes-colors/",
+    "description": "Corvettes, and their owners, are invited to celebrate the Rocky Mountain Fall colors, the crisp San Juan Mountain air …",
+    "pubDate": "2026-09-24",
+    "endDate": "2026-09-28",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
   }
 ]
