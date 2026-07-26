@@ -353,7 +353,13 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297","zoomUrl":"https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297","zoomUrl":"https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1","sv":4},
+
+  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102","sv":4},
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -474,7 +480,13 @@ const MEETING_PREVIEWS = {
     "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices include property tax exemption information for seniors, disabled veterans, and gold star spouses, along with foreclosure and probate matters in the county.",
 
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026":
-    "The Gondola Leadership Committee is expected to review background history, hear updates on the CIG Program funding commitments and current project progress, and examine a fiscal and economic impact analysis. Local jurisdiction updates and an opportunity for public comment are also on the agenda."
+    "The Gondola Leadership Committee is expected to review background history, hear updates on the CIG Program funding commitments and current project progress, and examine a fiscal and economic impact analysis. Local jurisdiction updates and an opportunity for public comment are also on the agenda.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
+    "The Telluride Planning & Zoning Commission is expected to consider a site-specific development plan vesting notice for a local project. Commissioners may also review related land use matters. The meeting will be live streamed on YouTube.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
+    "The Planning & Zoning Commission Chair meeting on August 20, 2026 may address a proposed Land Use Code amendment establishing regulations for Natural Medicine Businesses, as well as a site-specific development plan vesting notice. Detailed agenda items were not fully available in the provided materials."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -994,7 +1006,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 Planning Commission Meeting agenda hasn't been posted yet.",
+    "The August 13, 2026 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1009,7 +1021,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1054,7 +1066,13 @@ const MANUAL_SUMMARIES = {
     "The August 11, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026":
-    "The Gondola Leadership Committee meets July 28 for what looks like a substantive session. Miles Graham opens with background and history — marked as an action item, which suggests something more than a recap. Ed Parks and Amber Blake then walk through the CIG (Capital Investment Grant) program and its funding commitments, followed by a project update. The heaviest time slot goes to a fiscal and economic impact analysis presented by Parks and Chris Brewer. Miles Graham rounds out the agenda with local jurisdiction updates before public comment. The gondola project — and the $5.2 million annual tax behind it — has been one of the most contested questions in the valley in recent years, so the funding and economic impact presentations will draw scrutiny."
+    "The Gondola Leadership Committee meets July 28 for what looks like a substantive session. Miles Graham opens with background and history — marked as an action item, which suggests something more than a recap. Ed Parks and Amber Blake then walk through the CIG (Capital Investment Grant) program and its funding commitments, followed by a project update. The heaviest time slot goes to a fiscal and economic impact analysis presented by Parks and Chris Brewer. Miles Graham rounds out the agenda with local jurisdiction updates before public comment. The gondola project — and the $5.2 million annual tax behind it — has been one of the most contested questions in the valley in recent years, so the funding and economic impact presentations will draw scrutiny.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
+    "The August 20, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
+    "The August 20, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1312,6 +1330,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A priceless chance to sip and learn",
+    source: "Telluride Times",
+    date: "July 26, 2026",
+    firstSeen: "2026-07-26",
+    newsTopic: "arts-culture",
+    copy: "Free wine and spirits tastings happen regularly at several Telluride and Mountain Village shops — Mountain Village Wine Merchant on Wednesdays, Telluride Wine Merchant on Thursdays, and periodically at Telluride Bottleworks and the Wine Mine. The Wilkinson Public Library has also been running a free Around the World tasting series that's drawn full crowds every session, covering sakes, tequilas, Italian wines, and rosé. More library sessions and possibly an Oktoberfest event are being discussed.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_7d94dcba-a1c7-4668-bed6-b516e0e9d320.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/cc/acc894e9-e3c8-4391-add2-52d23fd84064/6a64638fe2396.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "BOCC offers regional environmental updates",
     source: "Telluride Times",
@@ -2934,17 +2964,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-26/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-07-26T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-07-26/",
@@ -8683,7 +8702,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     civicwebId: 8081
   },
   {
-    date: "August 27, 2026",
+    date: "August 20, 2026",
     title: "Planning & Zoning Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
     hasAgenda: false,
