@@ -14,12 +14,36 @@ name: Digest Scheduled Send
 #
 # A manual run (workflow_dispatch, confirm=SEND) bypasses those gates — an
 # explicit human override for an off-cycle send.
+#
+# REDUNDANT TRIGGERS (2026-07-27 incident): the Monday 15:00 UTC run never
+# started at all — 0 runs recorded for the whole day while every other
+# scheduled workflow in this repo fired normally. GitHub Actions cron jobs
+# scheduled at the exact top of the hour (":00") sit on the single most
+# congested slot on GitHub's scheduler and are the ones most likely to be
+# dropped outright rather than merely delayed (documented GitHub behavior).
+# The guard step below only requires the Denver hour to equal 09 — any
+# minute within that hour is valid — so these extra offset triggers are safe,
+# free backups: the approval-lock + duplicate-sent-broadcast checks make a
+# second firing within the same hour a guaranteed no-op once the digest has
+# actually gone out.
 on:
   schedule:
-    - cron: '0 15 * * 1'   # Mon 15:00 UTC = 09:00 MDT (summer)
-    - cron: '0 16 * * 1'   # Mon 16:00 UTC = 09:00 MST (winter)
-    - cron: '0 15 * * 5'   # Fri 15:00 UTC = 09:00 MDT (summer)
-    - cron: '0 16 * * 5'   # Fri 16:00 UTC = 09:00 MST (winter)
+    - cron: '0 15 * * 1'    # Mon 15:00 UTC = 09:00 MDT (summer) — primary
+    - cron: '12 15 * * 1'   # Mon 15:12 UTC — backup #1
+    - cron: '27 15 * * 1'   # Mon 15:27 UTC — backup #2
+    - cron: '45 15 * * 1'   # Mon 15:45 UTC — backup #3
+    - cron: '0 16 * * 1'    # Mon 16:00 UTC = 09:00 MST (winter) — primary
+    - cron: '12 16 * * 1'   # Mon 16:12 UTC — backup #1
+    - cron: '27 16 * * 1'   # Mon 16:27 UTC — backup #2
+    - cron: '45 16 * * 1'   # Mon 16:45 UTC — backup #3
+    - cron: '0 15 * * 5'    # Fri 15:00 UTC = 09:00 MDT (summer) — primary
+    - cron: '12 15 * * 5'   # Fri 15:12 UTC — backup #1
+    - cron: '27 15 * * 5'   # Fri 15:27 UTC — backup #2
+    - cron: '45 15 * * 5'   # Fri 15:45 UTC — backup #3
+    - cron: '0 16 * * 5'    # Fri 16:00 UTC = 09:00 MST (winter) — primary
+    - cron: '12 16 * * 5'   # Fri 16:12 UTC — backup #1
+    - cron: '27 16 * * 5'   # Fri 16:27 UTC — backup #2
+    - cron: '45 16 * * 5'   # Fri 16:45 UTC — backup #3
   workflow_dispatch:
     inputs:
       digest:
