@@ -357,5 +357,19 @@
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
     "sv": 4
+  },
+  "tmvoa|2026-07-28|Gondola Leadership Committee Meeting": {
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
+    "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
+    "sv": 4
+  },
+  "tmvoa|2026-08-11|Mountain Village Merchant Meeting": {
+    "sv": 4
+  },
+  "tmvoa|2026-08-20|TMVOA Investment Committee Meeting": {
+    "sv": 4
+  },
+  "county|2026-08-26|Board of County Commissioners Work Session": {
+    "sv": 4
   }
 }

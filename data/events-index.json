@@ -1,190 +1,5 @@
 [
   {
-    "title": "Drop In Ping Pong",
-    "href": "https://telluridelibrary.libcal.com/event/17203884?hs=a",
-    "date": "2026-07-26",
-    "time": "1:00 PM",
-    "location": "Lower Terrace - outdoors",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_30_12_13_38.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "1:00 PM – 3:00 PM · Drop by the library for casual table tennis matches. Our ping pong table will be set up and ready for players of all ages and skill levels. Whether you re a first-timer or a seasoned player, come enjoy this classic game…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Drop-In Tech Time with Oliver",
-    "href": "https://telluridelibrary.libcal.com/event/15970384?hs=a",
-    "date": "2026-07-26",
-    "time": "1:00 PM",
-    "location": "2nd Floor Desk",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as…",
-    "type": "Community"
-  },
-  {
-    "title": "Ouray Open Air Market",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
-    "date": "2026-07-26",
-    "time": "10:00 AM",
-    "location": "Billy Goats Gruff Patio",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-06"
-  },
-  {
-    "title": "Gentle Yoga with Kristen Milord",
-    "href": "https://telluridelibrary.libcal.com/event/16536441?hs=a",
-    "date": "2026-07-26",
-    "time": "11:00 AM",
-    "location": "Wilkinson Public Library",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "11:00 AM – 12:30 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat,…",
-    "type": "Wellness"
-  },
-  {
-    "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    "href": "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    "date": "2026-07-26",
-    "time": "12:00 PM",
-    "location": "The 610 Arts Collective",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational,…",
-    "type": "Arts & Film",
-    "endDate": "2026-08-28"
-  },
-  {
-    "title": "Chloe's Secret Garden Grand Opening",
-    "href": "https://events.ourayridgwayevents.com/event/chloes-secret-garden-grand-opening",
-    "date": "2026-07-26",
-    "time": "2:00 PM",
-    "location": "Chloe's Charcuterie & Wine",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53491865115071/huge/bff2f232eb493287091d70d7c435baac2f6d6e45.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Welcome to Chloe’s Secret Garden 🌿🍷 We’ve been working behind the scenes to create a beautiful new outdoor space, and we can’t wait to share it with you. This is just a glimpse of what’s to come! 🌸 Grand Opening: Sunday, July 26, 2 PM -…",
-    "type": "Community"
-  },
-  {
-    "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-07-26/",
-    "date": "2026-07-26",
-    "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "type": "Community"
-  },
-  {
-    "title": "Funky Ouray: Reggae music in Fellin Park",
-    "href": "https://events.ourayridgwayevents.com/event/funky-ouray-reggae-music-in-fellin-park",
-    "date": "2026-07-26",
-    "time": "4:00 PM",
-    "location": "Fellin Park",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53251675055630/huge/fc4164d9a73f0015ccaf172c2b42758b02fab547.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us in Fellin Park every Sunday in July for Funky Ouray, a free, all-ages reggae DJ set hosted by Night Nurse Sound System. Bring a blanket, gather your friends, and kick back to reggae rhythms. View on site | Email this event",
-    "type": "Music"
-  },
-  {
-    "title": "Around The World With Your Library-The Regions of Rosé",
-    "href": "https://telluridelibrary.libcal.com/event/17033784?hs=a",
-    "date": "2026-07-26",
-    "time": "5:30 PM",
-    "location": "Wine Mine",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_27_46.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:30 PM – 7:00 PM · Think all ros tastes the same? Think again! Join us and our friends from the Wine Mine for a journey through the world s ros -producing regions. Discover how different grapes, growing conditions, and winemaking…",
-    "type": "Food & Drink"
-  },
-  {
-    "title": "Girl Scout Cookie Booth",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "date": "2026-07-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "date": "2026-07-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "date": "2026-07-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    "type": "Community"
-  },
-  {
-    "title": "Fall Registration is NOW OPEN",
-    "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
-    "date": "2026-07-26",
-    "time": "",
-    "location": "Weehawken Dance & Aerial!",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken…",
-    "type": "Talks & Classes",
-    "endDate": "2026-08-23"
-  },
-  {
-    "title": "Free Show | Adah Hannelore & Corey Hooker | Floating Lotus Mainstage",
-    "href": "https://events.ourayridgwayevents.com/event/free-show-adah-hannelore-corey-hooker-floating-lotus-mainstage",
-    "date": "2026-07-26",
-    "time": "",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53479911973011/huge/3579e167dfcf97cf098fbe7ee5a676f0ced3deaa.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "🎶 Introducing: Floating Lotus Mainstage 🎶 We're excited to launch a new chapter in Ridgway's local music scene. Floating Lotus Mainstage is our new live music series dedicated to showcasing the incredible musicians who have grown through…",
-    "type": "Music"
-  },
-  {
     "title": "Desserts and Documentary-Bathtubs Over Broadway",
     "href": "https://koto.org/event/desserts-and-documentary-bathtubs-over-broadway/",
     "date": "2026-07-27",
@@ -226,6 +41,19 @@
     "endDate": "2026-08-28"
   },
   {
+    "title": "Musik 4 Kinders",
+    "href": "https://telluridelibrary.libcal.com/event/16568422?hs=a",
+    "date": "2026-07-27",
+    "time": "10:30 AM",
+    "location": "Lower Terrace - outdoors",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. M sica, Movimiento, y Aprendizaje Alegre para ni os! Este programa ser en la sala de programas.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Mountain Village Electronics Recycling event",
     "href": "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-27/",
     "date": "2026-07-27",
@@ -253,6 +81,32 @@
     "endDate": "2026-09-21"
   },
   {
+    "title": "Hobby Hopping",
+    "href": "https://telluridelibrary.libcal.com/event/17065536?hs=a",
+    "date": "2026-07-27",
+    "time": "2:00 PM",
+    "location": "Teen Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_15_13_27_58.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! July 6: Henna Tattoos July 13: Cyanotype Printing July 20: Architecture Studio July 27: T-Shirt Pom Poms",
+    "type": "Community"
+  },
+  {
+    "title": "Cookbook Bookclub: Cook This Book",
+    "href": "https://telluridelibrary.libcal.com/event/17049580?hs=a",
+    "date": "2026-07-27",
+    "time": "5:30 PM",
+    "location": "Lower Terrace - outdoors",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_14_46.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Join us for our tastiest book club, Cookbook Bookclub! This month we will be trying out recipes from Cook This Book by Molly Baz. NEW THIS MONTH! Come by the library front desk to pick your recipe, make a copy and sign…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-07-27",
@@ -264,6 +118,19 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Cardio Dance (Baile Cardio) with Kelsey",
+    "href": "https://telluridelibrary.libcal.com/event/16548372?hs=a",
+    "date": "2026-07-27",
+    "time": "6:00 PM",
+    "location": "Program Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won t even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday…",
+    "type": "Music"
   },
   {
     "title": "Town Talk: The Dual Challenge - Climate and Energy",
@@ -358,6 +225,34 @@
     "source": "KOTO Community Calendar",
     "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Fall Registration is NOW OPEN",
+    "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
+    "date": "2026-07-27",
+    "time": "",
+    "location": "Weehawken Dance & Aerial!",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken…",
+    "type": "Talks & Classes",
+    "endDate": "2026-08-23"
+  },
+  {
+    "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    "href": "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    "date": "2026-07-28",
+    "time": "10:00 AM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational,…",
+    "type": "Arts & Film",
+    "endDate": "2026-08-28"
   },
   {
     "title": "Mountain Village Electronics Recycling event",
@@ -820,7 +715,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who…",
     "type": "Food & Drink",
-    "endDate": "2026-09-18"
+    "endDate": "2026-09-25"
   },
   {
     "title": "Love’s Labors Lost: Theatre @ the Wright",
@@ -1387,6 +1282,20 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Ouray Open Air Market",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
+    "date": "2026-08-02",
+    "time": "10:00 AM",
+    "location": "Billy Goats Gruff Patio",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-06"
+  },
+  {
     "title": "Home Trust of Ouray County - Home Tour & House Show",
     "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3769",
     "date": "2026-08-02",
@@ -1859,6 +1768,19 @@
     "type": "Community"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
     "title": "Endea Owens & The Cookout",
     "href": "https://www.alibitelluride.com/calendar#eca-event=endea-owens-and-the-cookout",
     "date": "2026-08-07",
@@ -1870,6 +1792,19 @@
     "source": "The Alibi",
     "desc": "Endea Owens is all about jazz. This phenomenal bassist, composer and performer h...",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
   },
   {
     "title": "Telluride Farmers Market",
@@ -1963,6 +1898,19 @@
     "source": "Mountain Village",
     "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Logan Metz at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
     "type": "Music"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -2126,6 +2074,19 @@
     "type": "Community"
   },
   {
+    "title": "Ridgway Rendezvous 2026 ~ Saturday Live Music Schedule",
+    "href": "https://sherbino.org/event/saturday-music-lineup-ridgway-rendezvous-arts-festival-august-8-2026/",
+    "date": "2026-08-08",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/sat-rr-26.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Music"
+  },
+  {
     "title": "Girl Scout Cookie Booth",
     "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
     "date": "2026-08-09",
@@ -2176,6 +2137,19 @@
     "source": "Mountain Village",
     "desc": "New for 2026, Telluride Jazz Festival and the Madeline Hotel present the Jazz Brunch—a relaxed mountain gathering featuring great food, beautiful views,",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Ridgway Rendezvous 2026 ~ Sunday Live Music Schedule",
+    "href": "https://sherbino.org/event/ridgway-rendezvous-sunday-live-music/",
+    "date": "2026-08-09",
+    "time": "",
+    "location": "Ridgway, CO",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/sunday-rr-26.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Music"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2371,7 +2345,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3031,19 +3005,6 @@
     "type": "Community"
   },
   {
-    "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble at The Courtyard",
-    "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-flagship-romance-the-rough-tumble",
-    "date": "2026-08-21",
-    "time": "7:00 PM",
-    "location": "610",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52994270870445/huge/daf9e9efd8da0f386a5f5b85b8847791c2588a2f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Gates: 6:30 || Show: 7:00 || $25 advance / $30 – day of show General Admission Seating || Limited Bar || The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Wax Monkey",
     "href": "https://www.alibitelluride.com/calendar#eca-event=wax-monkey",
     "date": "2026-08-21",
@@ -3055,6 +3016,19 @@
     "source": "The Alibi",
     "desc": "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
     "type": "Music"
+  },
+  {
+    "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
+    "href": "https://sherbino.org/event/flagship-romance-rough-and-tumble-courtyard-610-august-21/",
+    "date": "2026-08-21",
+    "time": "",
+    "location": "The Courtyard at 610, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-9.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Highgraders Holiday & Mining History",
@@ -3110,19 +3084,6 @@
     "type": "Community"
   },
   {
-    "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
-    "href": "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct",
-    "date": "2026-08-23",
-    "time": "1:00 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53426340345256/huge/41f8f3856c62b8da4427d53a7b71309c0268ddc5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "August 23 @ 1:00 pm – 3:00 pm Rocky Horror Picture Show — Live Shadowcast Edition Directed by Erin Cawley Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast…",
-    "type": "Community"
-  },
-  {
     "title": "Girl Scout Cookie Booth",
     "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
     "date": "2026-08-23",
@@ -3172,6 +3133,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Fortuna Tierra Club is hosting the 11th Annual Log Hill Hustle, Fun Run and fundraiser on Sunday, August 23 at 8 AM starting and finishing at the Divide Ranch and Club Clubhouse at 151 Divide Ranch Circle, Ridgway, CO 81432. The 5k…",
+    "type": "Community"
+  },
+  {
+    "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    "href": "https://sherbino.org/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct/",
+    "date": "2026-08-23",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/06/RHPS-Shadow-Cast-Auditions.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3898,5 +3872,31 @@
     "desc": "Corvettes, and their owners, are invited to celebrate the Rocky Mountain Fall colors, the crisp San Juan Mountain air …",
     "type": "Community",
     "endDate": "2026-09-28"
+  },
+  {
+    "title": "Photon",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=photon",
+    "date": "2026-09-23",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "What started as a passion project dedicated to the late and great Stephen Hawkin...",
+    "type": "Community"
+  },
+  {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-09-25",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
   }
 ]

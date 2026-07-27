@@ -217,7 +217,7 @@ const COUNTY_CACHED_DATA = [
 
 const SMART_BOARD_URL = 'https://smarttelluride.colorado.gov/board-meetings';
 
-const SMART_CACHE_DATE = '2026-07-26';
+const SMART_CACHE_DATE = '2026-07-27';
 
 const SMART_CACHED_DATA = [
   {
@@ -240,7 +240,7 @@ const SMART_CACHED_DATA = [
 
 const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
 
-const TMVOA_CACHE_DATE = '2026-07-26';
+const TMVOA_CACHE_DATE = '2026-07-27';
 
 // TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
 // a government body, but its Gondola Leadership/Subcommittee meetings and
@@ -250,84 +250,84 @@ const TMVOA_CACHE_DATE = '2026-07-26';
 // see that function for the robots.txt-aware scraping note.
 const TMVOA_CACHED_DATA = [
   {
-    "date": "July 9, 2026",
-    "title": "TMVOA Board of Directors Meeting",
-    "board": "board",
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_agenda_7_9_26_revised.pdf",
-    "packetUrl": "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_packet_7_9_26_final.pdf",
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 9, 2026",
+    title: "TMVOA Board of Directors Meeting",
+    board: "board",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_agenda_7_9_26_revised.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_packet_7_9_26_final.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "July 14, 2026",
-    "title": "Mountain Village Merchant Meeting",
-    "board": "merchant",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 14, 2026",
+    title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "July 20, 2026",
-    "title": "Gondola Subcommittee Meeting",
-    "board": "gondola",
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4817/07_20_26_gsub_gondola_agenda_english_spanish.pdf",
-    "packetUrl": "https://tmvoa.org/site/assets/files/4817/july_20-_2026_meeting_packet_english.pdf",
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 20, 2026",
+    title: "Gondola Subcommittee Meeting",
+    board: "gondola",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4817/07_20_26_gsub_gondola_agenda_english_spanish.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4817/july_20-_2026_meeting_packet_english.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "July 23, 2026",
-    "title": "TMVOA Annual Members Meeting",
-    "board": "annual",
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
-    "packetUrl": "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 23, 2026",
+    title: "TMVOA Annual Members Meeting",
+    board: "annual",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "July 23, 2026",
-    "title": "TMVOA Board of Directors Meeting",
-    "board": "board",
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
-    "packetUrl": "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 23, 2026",
+    title: "TMVOA Board of Directors Meeting",
+    board: "board",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "July 28, 2026",
-    "title": "Gondola Leadership Committee Meeting",
-    "board": "gondola",
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "July 28, 2026",
+    title: "Gondola Leadership Committee Meeting",
+    board: "gondola",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "August 11, 2026",
-    "title": "Mountain Village Merchant Meeting",
-    "board": "merchant",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "August 11, 2026",
+    title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "August 20, 2026",
-    "title": "TMVOA Investment Committee Meeting",
-    "board": "investment",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "August 20, 2026",
+    title: "TMVOA Investment Committee Meeting",
+    board: "investment",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "September 8, 2026",
-    "title": "Mountain Village Merchant Meeting",
-    "board": "merchant",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "September 8, 2026",
+    title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
-    "date": "October 13, 2026",
-    "title": "Mountain Village Merchant Meeting",
-    "board": "merchant",
-    "agendaUrl": null,
-    "packetUrl": null,
-    "location": "Mountain Village, CO (see agenda for Zoom link)"
+    date: "October 13, 2026",
+    title: "Mountain Village Merchant Meeting",
+    board: "merchant",
+    agendaUrl: null,
+    packetUrl: null,
+    location: "Mountain Village, CO (see agenda for Zoom link)"
   }
 ];
 
@@ -335,7 +335,7 @@ const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/tow
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
 
-const MV_CACHE_DATE = '2026-07-26';
+const MV_CACHE_DATE = '2026-07-27';
 
 const MV_CACHED_DATA = [
   {
@@ -556,7 +556,7 @@ const FIRE_CACHED_DATA = [
 
 const MED_BOARD_URL = 'https://www.tellmed.org/board-meetings';
 
-const MED_CACHE_DATE = '2026-07-26';
+const MED_CACHE_DATE = '2026-07-27';
 
 const MED_CACHED_DATA = [
   {
@@ -589,7 +589,7 @@ const NORWOOD_NWC_URL = 'https://www.norwoodtown.com/nwc-meetings';
 
 const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district-meeting';
 
-const NORWOOD_CACHE_DATE = '2026-07-26';
+const NORWOOD_CACHE_DATE = '2026-07-27';
 
 const NORWOOD_CACHED_DATA = [
   {
@@ -658,7 +658,7 @@ const OPHIR_GA_URL = 'https://townofophir.colorado.gov/general-assembly-2';
 
 const OPHIR_PZ_URL = 'https://townofophir.colorado.gov/planning-and-zoning';
 
-const OPHIR_CACHE_DATE = '2026-07-26';
+const OPHIR_CACHE_DATE = '2026-07-27';
 
 const OPHIR_CACHED_DATA = [
   {
@@ -692,7 +692,7 @@ const RICO_BOARD_URL = 'https://townofrico.colorado.gov/government/board-of-trus
 
 const RIDGWAY_COUNCIL_URL = 'https://townofridgway.colorado.gov/i-want-to/ridgway-town-council';
 
-const RIDGWAY_CACHE_DATE = '2026-07-26';
+const RIDGWAY_CACHE_DATE = '2026-07-27';
 
 // Ridgway meeting stubs. Town Council = 2nd Wednesday @ 6:00 PM; Planning
 // Commission = 3rd Wednesday @ 5:30 PM. The agenda/packet PDF for each date is
