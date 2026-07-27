@@ -129,14 +129,131 @@
   }
   a{color:var(--accent2);}
   ::selection{background:var(--accent); color:#fff;}
+
+  /* ── Companion-article embed (collapsible, sits above the timeline) ── */
+  .article-embed{
+    background:var(--paper2); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; margin:0 0 50px; box-shadow:0 8px 24px rgba(0,0,0,.08);
+  }
+  .article-hero{ width:100%; height:auto; display:block; }
+  .article-embed-inner{ padding:26px 30px 30px; }
+  .article-kicker{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:15.5px; text-transform:uppercase; letter-spacing:.1em;
+    color:var(--accent); font-weight:700; margin:0 0 8px;
+  }
+  .article-embed-title{ font-size:2rem; margin:0 0 18px; line-height:1.15; }
+  .article-toggle{
+    display:inline-flex; align-items:center; gap:7px;
+    background:var(--accent2); color:#fff; border:none;
+    padding:11px 20px; border-radius:999px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:15.5px; font-weight:700; cursor:pointer;
+  }
+  .article-toggle:hover{ opacity:.88; }
+  .article-embed-body{ margin-top:26px; padding-top:24px; border-top:1px solid var(--line); }
+  .article-embed-body[hidden]{ display:none; }
+  .article-embed-body h3{ font-size:1.32rem; margin:28px 0 10px; line-height:1.25; }
+  .article-embed-body h3:first-child{ margin-top:0; }
+  .article-embed-body p{ margin:0 0 14px; }
+  .article-embed-body ul{ margin:8px 0 16px; padding-left:24px; }
+  .article-embed-body li{ margin-bottom:8px; }
+  .article-chart-figure{ margin:22px 0; }
+  .article-chart-figure img{
+    width:100%; height:auto; border-radius:10px; border:1px solid var(--line);
+  }
+  .article-chart-figure figcaption{ font-size:15.5px; color:var(--muted); margin-top:8px; }
+
   @media (max-width:600px){
     header.masthead h1{font-size:2rem;}
     .wrap{padding:0 14px 100px;}
+    .article-embed-inner{padding:20px 20px 24px;}
+    .article-embed-title{font-size:1.6rem;}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
+
+  <section class="article-embed">
+    <img class="article-hero" src="deja-voodoo-hero.jpg" alt="It's like Deja VooDoo all over again">
+    <div class="article-embed-inner">
+      <p class="article-kicker">Livable Telluride &middot; Companion Piece</p>
+      <h2 class="article-embed-title">It's like Deja VooDoo all over again</h2>
+      <button type="button" class="article-toggle" id="articleToggleBtn" aria-expanded="false" aria-controls="articleBody">Read the full article &#9662;</button>
+
+      <div class="article-embed-body" id="articleBody" hidden>
+        <p>The Town of Telluride has a serious problem when it seeks to approve its own projects. When a third-party developer has a large-scale proposal, the very first thing they determine is whether it is financially feasible, and only then will they begin designing the project.</p>
+        <p>A private developer is free to overspend on design, underestimate construction costs, misjudge the market, and go gloriously bankrupt: that is their money and their problem.</p>
+        <p>However, with the Town as the applicant, any issues of cost/benefit are delayed until the train is way down the track and potentially about to run off a cliff.</p>
+
+        <h3>The Town as Applicant problem</h3>
+        <p>Telluride is considering two extraordinarily ambitious housing projects at <strong>Carhenge</strong> and <strong>Shandoka Lot L</strong>. Together, they could represent hundreds of millions of dollars in construction, nearly 300 new residential units with underground parking, infrastructure, and long-term public debt. Yet the central questions remain largely unanswered in public, such as how much the projects will cost and how much debt will be covered by their income.</p>
+        <p>These are not minor details. They are the questions that determine whether a project is financially sustainable, legally buildable, and worth pursuing. The problem is that Telluride's development-review process is not designed to answer such questions until the very end, if at all.</p>
+
+        <h3>Commissioners recognize the problem</h3>
+        <p>During the recent review of Carhenge and Shandoka Lot L, Planning and Zoning Commissioner Todd Brown openly described the gap in the process. He said the commission was being asked to evaluate project benefits without receiving the corresponding costs. Those questions, he explained, are left to Town Council or the housing authority. &ldquo;We can't, as P&amp;Z, tell you how it's going to work, because we don't get to [the costs], ever.&rdquo;</p>
+        <p>With the understanding that the Town is set up to prohibit either P&amp;Z or HARC from reviewing the financial feasibility of any project, the question becomes: when is this ever addressed?</p>
+
+        <h3>VooDoo shows where this can lead</h3>
+        <p>You can review the entire VooDoo history timeline online <a href="#phase-origins">here</a>, if you'd like more information and all source material relied upon.</p>
+        <p>The VooDoo housing project provides an important example of how a project that underwent 18 to 20 months of review of the building's design received just under half an hour of Housing Authority time&mdash;primarily consisting of presentations by staff, bond counsel, and the bond placement firm&mdash;regarding the financing of the project.</p>
+        <p>In 2022 and 2023, the Town drew <strong>$20 million</strong> from bonds and added roughly <strong>$5.9 million</strong> in upfront subsidy for VooDoo construction, totaling about <strong>$26 million</strong> upfront, or close to $1 million per unit for 27 units.</p>
+        <p>On the income side, VooDoo brings in just under $1 million a year when fully rented, but only brought in a total of $872,000 in 2025.</p>
+        <p>On the debt side, of the $20 million borrowed a few years ago, the town issued three bonds with an artificially low annual debt service of $<strong>1,190,240</strong>.</p>
+        <p>Adding operating expenses in the range of <strong>$140,000</strong> per year brings the total annual shortfall of income vs. expenses to <strong>$320,000-$500,000</strong>, representing about a 30% to 50% annual shortfall, even with the artificially low debt service.</p>
+
+        <figure class="article-chart-figure">
+          <img src="voodoo-income-vs-cost-chart.png" alt="Bar chart: VooDoo's FY2025 income of $872,000 versus total annual cost of $1,324,338 (debt service plus operating expenses), a shortfall of $452,338. Does not include the $23,045,864 balloon payment due December 2032.">
+          <figcaption>See the full breakdown and sourcing on the <a href="https://livabletelluride.org/deep-dive-voodoo.html">VooDoo Deep Dive</a>.</figcaption>
+        </figure>
+
+        <p>In 2032, the Town will owe <strong>$23 million</strong> on the original $20 million debt. Yes, the Town <strong>owes</strong> <strong>$3 million</strong> more than it borrowed after ten years. Tack on the $12 million or so paid over the bond's first ten years and the <strong>$6 million</strong> spent upfront, and by 2032, VooDoo will have cost somewhere on the order of <strong>$41 million</strong> &mdash; about <strong>$1.5 million</strong> per unit, and basically <em>none</em> of the principal borrowed will be paid as of 2032.</p>
+        <p>VooDoo is being financed like a person who makes only minimum payments on a credit card, claiming they are paying off their debt. Spoiler alert: it will never happen.</p>
+        <p>So how did we get here?</p>
+
+        <h3>The VooDoo development and approval process</h3>
+        <p><a href="#phase-origins">VooDoo's story</a> began in April 2021, when the Town Council directed the Telluride Housing Authority Subcommittee to proceed with site planning, design, and cost estimation.</p>
+        <p>That started a train moving from the station that likely could never be stopped after that initial green light.</p>
+        <p>First, the <a href="#phase-design">Town committed funds</a> for the design and initial construction work before any plan was in place. Second, the Town hired CCY Architectural to prepare the plans and drawings for the project. By early 2022, the draft plans were presented to P&amp;Z and HARC, with no cost estimates in the design packages. HARC repeatedly took issue with mass and scale, so the Town Council overruled HARC and approved the project on HARC's behalf.</p>
+        <p>The matter was finally set for the all-important discussion before the Town Council on the project's financial viability in December of 2022, after about a year of entirely design review absent financing discussions.</p>
+
+        <h3>Telluride Housing Authority provides final approval for the VooDoo in half an hour</h3>
+        <p>You might be shocked but not surprised by the sparse detail included in the single meeting of the Telluride Housing Authority (THA) regarding financial discussions for this project.</p>
+        <p>The presentation by Town staff was conducted by <strong>Lance McDonald</strong>, the Town Program Director. He placed the project's construction cost at about $24 million, including a fixed-price contract with Shaw Construction; when added to the other costs, it was approximately <strong>$26 million</strong>, all in.</p>
+        <p>However, when it came to financing this debt, <a href="#phase-financing">the details were scant</a>. There was <em>no mention</em> of the estimated annual debt cost for the project. Mr. McDonald provided no dollar figure for the massive balloon payments when presenting the project or in the agenda package. (Meeting video is located <a href="https://www.youtube.com/watch?v=P_b20zp60vw" target="_blank" rel="noopener">here</a>, and the entire financial discussion by the THA is between 3:57 and 4:26.)</p>
+        <p>Nowhere does the 329-page agenda packet state the Town was approving what became a $23 million balloon payment on the original $20 million debt.</p>
+        <p class="small">To be fair, the Town can refinance that debt and the balloon payments in a couple of years and keep rolling this ball further up the hill as the &ldquo;credit card&rdquo; bill gets bigger and bigger. However, regardless of whether it is refinanced or not, VooDoo financing does not represent a viable housing investment for the simple reason that the costs to build were extremely high, and the amount of income it can produce is limited by the ability of local workers to pay no more than 30% of their income for rent.</p>
+        <p class="small">Whereas a private developer would be counting pennies before ever starting a project, the crucial discussion of VooDoo's financial viability happened in half an hour, with essentially no necessary financial details provided to the approving THA board members.</p>
+
+        <h3>Why Carhenge and Shandoka Rhyme with VooDoo</h3>
+        <p><strong>Carhenge</strong> and <strong>Shandoka Lot L</strong> are now moving through the same process as VooDoo at a dramatically larger scale. Using our credit card analogy, the person making only minimum required credit card payments on VooDoo is now seeking to put a debt ten times the size on that same credit card.</p>
+        <p>Livable Telluride's preliminary estimates place the combined construction cost near $400 million, in large part due to building into the groundwater table for parking at both locations.</p>
+        <p>At the recent Carhenge story-pole event (set up to show off the mass of the proposed development), Lance McDonald was present in his capacity as Town Program Director &mdash; once again the person most likely to have actual cost information no elected Town official has seen. A local resident asked Mr. McDonald how the Town could afford the Carhenge project.</p>
+        <p>His answer: the &ldquo;Housing set-aside fund would cover it all.&rdquo; That fund brings in roughly $4 million a year, which would take somewhere around 100 years to raise enough for the Carhenge and Shandoka projects' upfront costs alone.</p>
+        <p>Even though there is no clear financial ability to fund these projects, real money is already moving on them in major ways. Livable Telluride estimates these projects have already incurred in the neighborhood of $2 million in consultant, legal, design, and geotechnical spending since mid-2022.</p>
+
+        <h3>The TABOR Issue</h3>
+        <p>The above financing issues are not simply isolated, good-government-type issues that should be addressed for their own good. Rather, the failure to keep the THA financial house in order may have serious legal consequences.</p>
+        <p>Under TABOR, the Town may approve bonds for THA projects without voter approval, but only under a narrow exception: the THA must be an &ldquo;Enterprise&rdquo; under the law. The only requirement is that <strong>no more than 10% of the THA's overall revenue may come from grants by the Town and other Colorado governments combined</strong>.</p>
+        <p>TABOR allows &ldquo;Enterprises&rdquo; to avoid a public vote because they are largely self-supporting through rent, fees, or other sources. It makes sense that voter approval is not required when only a small portion of the debt is associated with public funds.</p>
+        <p>However, what if the Town of Telluride is paying more than 10% in public funds on a sustained annual basis? No one really knows because this issue has not been addressed before in Colorado.</p>
+        <p>However, if successfully challenged by the Backman Village folks or others, the Town could lose the Enterprise exemption under TABOR and be forced to place all future projects on the ballot for voter approval, and there could be consequences for already approved projects.</p>
+        <p>This potential sword of Damocles hanging over the THA is reason enough for the Town to stop delaying its review of the financial feasibility of Carhenge and Shandoka Lot L until it is too late to say no to the project, no matter how bad the financing numbers end up being, and to review the effect on Enterprise status now, before it's too late.</p>
+
+        <h3>Conclusion</h3>
+        <p>As a humble suggestion, Town Council should jump on and start driving this project train in a public and transparent manner. Otherwise, the Town appears on a course to repeat the mistakes of VooDoo, but at ten times the cost. The Town Council should set a work session on both Carhenge and Shandoka in the very near future, and it should be open and public.</p>
+        <p>At the meeting, the Town staff should provide the following documents, the first two of which would be released publicly before the meeting.</p>
+        <ul>
+          <li>An <em>independent pro forma</em> identifying anticipated construction and debt costs and expected income based on the targeted AMI (Area Median Income) levels, prepared by someone unrelated to the project;</li>
+          <li>An engineering company report on the feasibility and cost per square foot of building underground in these two locations.</li>
+          <li>An <em>independent legal analysis</em> &mdash; not by the Town Attorney or the attorneys hired by the applicants' consultants for the Town &mdash; that fairly addresses the legal issues of whether an amendment to the Backman Village Subdivision requires the consent of all current owners, and the risks to the Town of litigation. (Legal report for executive session discussion only.)</li>
+        </ul>
+        <p>Both of these projects may be exactly what the Town and the majority of residents want and will love, or they may not. However, regardless of whether a person supports, opposes, or is somewhere in between, it makes no sense to wait until all the plans are done and approved to discuss costs and benefits publicly. It is the alternative where the train can easily drive right off a cliff with no one driving or watching.</p>
+      </div>
+    </div>
+  </section>
+
 
   <header class="masthead">
     <div class="eyebrow">Livable Telluride · Source Record</div>
@@ -669,5 +786,18 @@
   </footer>
 
 </div>
+<script>
+(function(){
+  var btn = document.getElementById('articleToggleBtn');
+  var body = document.getElementById('articleBody');
+  if (!btn || !body) return;
+  btn.addEventListener('click', function(){
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    body.hidden = expanded;
+    btn.setAttribute('aria-expanded', String(!expanded));
+    btn.innerHTML = expanded ? 'Read the full article &#9662;' : 'Hide the full article &#9652;';
+  });
+})();
+</script>
 </body>
 </html>
