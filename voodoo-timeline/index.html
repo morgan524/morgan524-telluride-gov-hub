@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The VooDoo Timeline — A Fully-Sourced Record</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ink:#1c2420; --paper:#faf8f3; --paper2:#ffffff; --line:#ddd4c2;
+    --accent:#7a3b2e; --accent2:#1f4d3f; --muted:#6b6255; --pill:#f0e9d8;
+    --pill-ink:#4a3f2c; --warn:#8b0000; --serif:'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --ink:#e9e4d8; --paper:#1b1a17; --paper2:#242320; --line:#3c382e;
+      --accent:#e0a08c; --accent2:#8fd0b8; --muted:#a89e8c; --pill:#2c2a24; --pill-ink:#d8cdb0; }
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper); color:var(--ink); font-family:var(--serif);
+    line-height:1.6; font-size:17px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:0 20px 120px;}
+  header.masthead{
+    padding:56px 0 32px; border-bottom:2px solid var(--ink);
+    margin-bottom:36px;
+  }
+  header.masthead .eyebrow{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    text-transform:uppercase; letter-spacing:.12em; font-size:.78rem;
+    color:var(--accent); font-weight:700; margin-bottom:10px;
+  }
+  header.masthead h1{font-size:2.6rem; line-height:1.1; margin:0 0 14px;}
+  header.masthead .dek{font-size:1.15rem; color:var(--muted); max-width:62ch; margin:0 0 20px;}
+  .meta-row{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.85rem; color:var(--muted); display:flex; gap:18px; flex-wrap:wrap;
+  }
+  .methodology{
+    background:var(--paper2); border:1px solid var(--line); border-radius:10px;
+    padding:22px 26px; margin:0 0 44px; font-size:.97rem;
+  }
+  .methodology h2{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.85rem; text-transform:uppercase; letter-spacing:.08em;
+    color:var(--accent2); margin:0 0 12px;
+  }
+  .methodology p{margin:0 0 10px;}
+  .methodology ul{margin:8px 0 10px; padding-left:22px;}
+  .methodology li{margin-bottom:6px;}
+  .methodology .flag{color:var(--warn); font-weight:700;}
+
+  nav.jump{
+    display:flex; flex-wrap:wrap; gap:8px; margin:0 0 50px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:.82rem;
+  }
+  nav.jump a{
+    background:var(--pill); color:var(--pill-ink); text-decoration:none;
+    padding:7px 14px; border-radius:20px; border:1px solid var(--line);
+  }
+  nav.jump a:hover{border-color:var(--accent);}
+
+  .phase-header{
+    margin:70px 0 28px; padding-top:10px; border-top:3px solid var(--ink);
+  }
+  .phase-header .phase-eyebrow{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.8rem; text-transform:uppercase; letter-spacing:.1em;
+    color:var(--accent); font-weight:700;
+  }
+  .phase-header h2{font-size:1.9rem; margin:6px 0 8px;}
+  .phase-header .phase-dates{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.85rem; color:var(--muted);
+  }
+  .phase-header .phase-summary{font-size:1.02rem; color:var(--muted); max-width:66ch; margin-top:8px;}
+
+  .timeline{position:relative; padding-left:28px; border-left:2px solid var(--line);}
+  article.event{position:relative; margin:0 0 44px;}
+  article.event::before{
+    content:''; position:absolute; left:-34px; top:6px; width:12px; height:12px;
+    border-radius:50%; background:var(--paper); border:3px solid var(--accent2);
+  }
+  article.event.critical::before{ border-color:var(--warn); background:var(--warn); }
+  .event-date{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-weight:700; font-size:.82rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--accent2);
+  }
+  article.event.critical .event-date{color:var(--warn);}
+  .event-title{font-size:1.35rem; margin:4px 0 10px; line-height:1.25;}
+  .event-body p{margin:0 0 12px;}
+  .event-body blockquote{
+    margin:14px 0; padding:10px 18px; border-left:3px solid var(--accent);
+    background:var(--paper2); font-style:italic; color:var(--ink);
+  }
+  .event-body blockquote cite{
+    display:block; font-style:normal; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.78rem; color:var(--muted); margin-top:6px;
+  }
+  .note{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.85rem; color:var(--muted); background:var(--pill); border-radius:8px;
+    padding:10px 14px; margin:12px 0;
+  }
+  .note.caution{border-left:3px solid var(--warn);}
+  .sources{
+    margin-top:14px; padding-top:12px; border-top:1px dashed var(--line);
+    display:flex; flex-wrap:wrap; gap:8px; align-items:center;
+  }
+  .sources .label{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.72rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted);
+    margin-right:4px;
+  }
+  .src-link{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:.8rem;
+    text-decoration:none; color:var(--accent2); background:var(--pill);
+    border:1px solid var(--line); padding:5px 12px; border-radius:16px;
+  }
+  .src-link:hover{border-color:var(--accent2);}
+  .src-link.external{color:var(--accent);}
+  .src-link .tag{opacity:.65; font-size:.72em; margin-left:4px;}
+
+  footer.colophon{
+    margin-top:80px; padding-top:24px; border-top:2px solid var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    font-size:.85rem; color:var(--muted);
+  }
+  a{color:var(--accent2);}
+  ::selection{background:var(--accent); color:#fff;}
+  @media (max-width:600px){
+    header.masthead h1{font-size:2rem;}
+    .wrap{padding:0 14px 100px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">Livable Telluride · Source Record</div>
+    <h1>The VooDoo Timeline</h1>
+    <p class="dek">A fully-sourced, document-by-document record of how the VooDoo affordable-housing project was designed, reviewed, and financed — from its first mention in 2020 through the balloon payment now due in 2032, and the two much larger projects (Carhenge, Shandoka Lot L) now following the same path.</p>
+    <div class="meta-row">
+      <span>Compiled July 2026</span>
+      <span>32 primary-source excerpts, trimmed to the relevant pages</span>
+      <span>Every claim below links to its source</span>
+    </div>
+  </header>
+
+  <nav class="jump">
+    <a href="#phase-origins">2020–2021: Origins</a>
+    <a href="#phase-design">2022: Design Review</a>
+    <a href="#phase-financing">Dec 2022: The Financing Vote</a>
+    <a href="#phase-aftermath">2023–2026: The VooDoo Bill Becomes Due</a>
+    <a href="#phase-echo">2026: The Train Barreling Down the Track</a>
+  </nav>
+
+  <!-- ============================================================ -->
+  <section id="phase-origins">
+  <div class="phase-header">
+    <div class="phase-eyebrow">Phase One</div>
+    <h2>Origins</h2>
+    <div class="phase-dates">2020 – December 2021</div>
+    <p class="phase-summary">Before any public hearing on the building's design, the Town had already picked a site, hired a design-build team, and started paying it — twenty months before the financing itself would ever come to a vote.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="event">
+      <div class="event-date">2020</div>
+      <h3 class="event-title">The site surfaces in the Town's Parks Master Plan</h3>
+      <div class="event-body">
+        <p>The Telluride Town Parks Master Plan Update identifies the "VooDoo" skate park site near Town Park's main entrance, and notes that the planned Youth Link skate park would mean "the elimination of the 'Voodoo Lounge'" as a youth gathering place — the first documentary mention of the site's redevelopment in this record.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2020_parks-master-plan-excerpt.pdf">Parks Master Plan Update 2020 <span class="tag">pp. 17–18 of excerpt</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">April 21, 2021</div>
+      <h3 class="event-title">THA Subcommittee recommends proceeding — and flags the groundwater risk</h3>
+      <div class="event-body">
+        <p>The Telluride Housing Authority Subcommittee recommends the Town initiate site planning, design, and cost-estimation for three sites: VooDoo Lounge, Virginia Placer Phase 2A, and the Tower House. The memo prepared for Council's April 27 meeting is candid about one limitation of the VooDoo site from the very start:</p>
+        <blockquote>"One limitation of the site is that basements will likely be cost prohibitive due to high groundwater levels. A sewerline also traverses the property and would likely need to be relocated if development were to be undertaken."</blockquote>
+        <p class="note">This is the same groundwater/underground-construction risk raised about Carhenge and Shandoka Lot L in 2026 — flagged for this exact neighborhood five years earlier.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2021-04-27_council-memo_vooDoo-directive.pdf">Council Agenda Memorandum, Item 7b <span class="tag">p. 1–2</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">April 27, 2021</div>
+      <h3 class="event-title">Town Council directs staff to proceed</h3>
+      <div class="event-body">
+        <p>Council directs the THA Subcommittee to proceed with planning, design, and cost-estimation for VooDoo Lounge and Virginia Placer Phase 2A, and to issue Requests for Qualifications (RFQ) for Design/Build services. No cost figures are part of this directive — it authorizes finding out what the project would cost, not what it will cost.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2021-04-27_council-memo_vooDoo-directive.pdf">Council Agenda Memorandum, Item 7b</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">June 11, 2021</div>
+      <h3 class="event-title">RFQ issued for Design/Build services</h3>
+      <div class="event-body">
+        <p>Requests for Qualifications for Design/Build services are issued for the VooDoo Lounge and Virginia Placer Phase 2A projects, per the August 3, 2021 memo's own account of the intervening timeline.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Referenced in</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2021-08-03_council-agenda_design-build-selection.pdf">Aug. 3, 2021 Council Memo <span class="tag">background section</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">August 3, 2021</div>
+      <h3 class="event-title">Shaw Construction and CCY Architects selected — Part 1 of a two-part contract</h3>
+      <div class="event-body">
+        <p>Council selects Shaw Construction, Inc., teamed with CCY Architects, for VooDoo's Design/Build services, and authorizes the Town Manager to execute a two-step contract. <strong>Part 1</strong> covers unit design, preliminary engineering, and cost estimation, at a combined architect/builder fee of 8% of total project cost. <strong>Part 2</strong> — construction — would not begin "unless and until the Town accepts the... Design/Builder's construction proposal and guaranteed maximum price ('GMP')."</p>
+        <p>That two-part structure is the origin of the sequencing this whole record turns on: the entitlement and design process (Part 1) would run for eighteen months before the financial commitment (Part 2 and the bonds) was ever put to a vote.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2021-08-03_council-agenda_design-build-selection.pdf">Council Agenda Memorandum, Items 7c &amp; 7d</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">October 5, 2021</div>
+      <h3 class="event-title">VooDoo placed on the Town's 2022 Goals and Objectives</h3>
+      <div class="event-body">
+        <p>The 2022 Town Council Goals and Objectives are adopted, including: "Complete the design and commence construction on the Voodoo Lounge (deed restricted commercial space...)." VooDoo is now a named institutional priority for the coming year — before a single public hearing on its design has occurred.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2021-10-05_council-agenda_goals-objectives.pdf">Council Agenda, Goals &amp; Objectives <span class="tag">p. 2 of excerpt</span></a>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <section id="phase-design">
+  <div class="phase-header">
+    <div class="phase-eyebrow">Phase Two</div>
+    <h2>Design Review — Eighteen Months, No Cost Figures</h2>
+    <div class="phase-dates">January – August 2022</div>
+    <p class="phase-summary">P&amp;Z and HARC spend the next eight months reviewing height, mass, and historic compatibility across seven hearings and one Council-sitting-as-HARC appeal. Not one of these documents contains a dollar figure. Meanwhile, real construction money is already moving.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="event">
+      <div class="event-date">January 27, 2022</div>
+      <h3 class="event-title">Conceptual PUD approved by P&amp;Z</h3>
+      <div class="event-body">
+        <p>The Planning &amp; Zoning Commission reviews and approves a Conceptual PUD application, including a proposed maximum height of 40' for a portion of the building — the first of what will become a long entitlement chain, per the development-review history later recited in the March 16 HARC staff memo.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Referenced in</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-16_harc-staff-memo.pdf">HARC Staff Memo, March 16, 2022 <span class="tag">Development Review History</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">February 1, 2022</div>
+      <h3 class="event-title">Construction money is already flowing</h3>
+      <div class="event-body">
+        <p>The Town's check register shows a payment of <strong>$177,260.47 to Shaw Builders</strong> under "VOODOO AFFORDABLE HOUSI[NG]" — recorded before a single land-use body has held a public hearing on the project's design. This is the sunk-cost clock starting.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-02-01_council-agenda_shaw-payment.pdf">Council Agenda, Feb. 1, 2022 <span class="tag">Accounts Payable</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">February 2, 2022</div>
+      <h3 class="event-title">First HARC hearing — continued unanimously with 11 conditions</h3>
+      <div class="event-body">
+        <p>At a special meeting, HARC holds a work session and the first public hearing on VooDoo's design. The Commission continues the matter to March 16, attaching 11 conditions that already target height and mass — including a request to reduce the height and/or increase the setback "to the historic blue crib house." No cost information is presented or discussed.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-02-02_harc-minutes_first-hearing.pdf">HARC Minutes, Feb. 2, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">March 16, 2022</div>
+      <h3 class="event-title">HARC continues again, 4–1 — and separately recommends the PUD to P&amp;Z</h3>
+      <div class="event-body">
+        <p>HARC continues the design review a second time on a 4–1 vote (Commissioner Lee dissenting) with 14 conditions, again pressing to reduce height and break up the building's mass. In a separate action the same night, HARC votes 4–1 (Vice Chair Harvey dissenting) to recommend the PUD variations to P&amp;Z. The staff memo accompanying both votes — CCY Architects' detailed presentation included — contains no cost estimate of any kind.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-16_harc-minutes.pdf">HARC Minutes, March 16, 2022</a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-16_harc-staff-memo.pdf">HARC Staff Memo</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">March 24, 2022</div>
+      <h3 class="event-title">P&amp;Z approves the Preliminary PUD and Subdivision, unanimously</h3>
+      <div class="event-body">
+        <p>The Planning &amp; Zoning Commission approves two PUD variations — a lot nearly 50% over the zoning cap, and a height increase to 40' over roughly a quarter of the building — plus a large-scale subdivision, both unanimously. The staff report notes: "Concerns expressed through public comment are related to traffic, parking and the mass and scale of the proposed structure," among other things — but concludes most concerns are mitigated. Nineteen named residents spoke.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-24_pz-minutes.pdf">P&amp;Z Minutes, March 24, 2022</a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-24_pz-staff-report.pdf">P&amp;Z Staff Report <span class="tag">Referral Comments, p.3</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">March 28, 2022</div>
+      <h3 class="event-title">A resident names the structural problem, eight months early</h3>
+      <div class="event-body">
+        <p>In a letter to "HARC, P&amp;Z and Town Council members," longtime resident Zelda Tenenbaum writes:</p>
+        <blockquote>"...the town, as developer, applicant and final decision maker is rapidly moving forward, without addressing the issues being brought forth by both the public and governing bodies."
+        <cite>Letter to HARC/P&amp;Z/Town Council, March 28, 2022</cite></blockquote>
+        <p>This is, in substance, the thesis of this entire record — stated by a Telluride resident in real time, eight months before the financing itself would reach a vote.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-03-28_tenenbaum-letter_call-up-record.pdf">Letter, in VooDoo Call-Up Record <span class="tag">p. 3 of excerpt</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">April 18, 2022</div>
+      <h3 class="event-title">"The APPLICANT... cannot also be the JUDGE"</h3>
+      <div class="event-body">
+        <p>Ahead of the April 19 call-up hearing, neighbor Mary Ann Cercone writes to Council:</p>
+        <blockquote>"By definition this is a conflict of interest for Town Council to have called this application up from HARC. The Town of Telluride is the APPLICANT, the Town of Telluride cannot also be the JUDGE! That would be like a judge making a decision on her own traffic ticket."
+        <cite>Public comment, April 18, 2022</cite></blockquote>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-04-18_public-comment_cercone-letter.pdf">Public Comment Exhibit, April 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">April 2022</div>
+      <h3 class="event-title">CCY presents detailed design plans — still no cost figures</h3>
+      <div class="event-body">
+        <p>CCY Architects' presentation to HARC includes precise dimensional detail — building heights to the inch, façade setbacks, storefront heights compared against neighboring historic buildings — across 53 pages. Not one page contains a dollar figure.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-04_ccy-presentation-excerpt.pdf">CCY Architects Presentation <span class="tag">cover + perspective views, pp. 50–51</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">April 19, 2022</div>
+      <h3 class="event-title">Town Council calls-up the project from HARC</h3>
+      <div class="event-body">
+        <p>Councilmembers verbally confirm their qualifications to sit as the Historic and Architectural Review Commission and hear a call-up of HARC's March 16 decision. More than fifteen residents speak. Out of time, and with the applicant's architects unable to stay, the hearing is continued to April 25 on a 5–2 vote (Carlson and Fee dissenting).</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-04-19_council-minutes_call-up.pdf">Town Council Minutes (sitting as HARC), April 19, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">April 25, 2022</div>
+      <h3 class="event-title">The call-up resolves — approve most, remand the shed</h3>
+      <div class="event-body">
+        <p>Council, still sitting as HARC, approves the demolitions and the Preliminary Large-Scale new construction on a 4–2 vote (Carlson and Fee dissenting), while continuing review of the historic shed's alterations to Final review. One of the thirteen attached conditions softens a mandatory-sounding fix into a suggestion — "<em>Consider</em> a setback on portions of the third story" — the same softening pattern that recurs at HARC's final vote in August.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-04-25_council-minutes_call-up-continued.pdf">Town Council Minutes (Continued from 4/19/22), April 25, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">May 24, 2022</div>
+      <h3 class="event-title">More construction spending, mid-review</h3>
+      <div class="event-body">
+        <p>The Town pays Shaw Builders <strong>$107,535.00</strong> for "TEST PIPE PILES" at VooDoo — geotechnical work proceeding while the project's design is still unresolved at HARC.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-08-02_council-agenda_manager-report-and-payment.pdf">Council Agenda, Aug. 2, 2022 <span class="tag">Accounts Payable, p. 2 of excerpt</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">July 20, 2022</div>
+      <h3 class="event-title">HARC continues a third time, 4–1</h3>
+      <div class="event-body">
+        <p>HARC takes up the Final Large-Scale review and again is not satisfied, continuing to August 17 on a 4–1 vote (Vice Chair Harvey dissenting) with nine additional conditions — still pressing on setbacks near the historic Blue Crib, height at the Pacific/Willow corner, and perceived mass.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-07-20_harc-minutes.pdf">HARC Minutes, July 20, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">August 2, 2022</div>
+      <h3 class="event-title">"The review of the Voodoo project is still underway"</h3>
+      <div class="event-body">
+        <p>The Town Manager's report to Council notes simply that historic-preservation review of VooDoo remains in progress — five months after the process began at HARC.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-08-02_council-agenda_manager-report-and-payment.pdf">Council Agenda, Aug. 2, 2022 <span class="tag">Manager's Report, p. 1 of excerpt</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">August 17, 2022</div>
+      <h3 class="event-title">A mandatory motion fails 0–3; a softened one passes unanimously</h3>
+      <div class="event-body">
+        <p>HARC takes up Final approval. The first motion — which would have required the board to "lower the building one to two additional feet" at the Willow/Pacific corner — <strong>fails 0–3</strong>, with the Chair not voting. A second motion, identical except that the mandatory height reduction becomes "<em>Consider</em> lowering the southwest corner," <strong>passes unanimously</strong>. VooDoo receives Final HARC approval essentially at its proposed height, with the months-long push to shrink it reduced to non-binding language.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-08-17_harc-minutes.pdf">HARC Minutes, August 17, 2022</a>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <section id="phase-financing">
+  <div class="phase-header">
+    <div class="phase-eyebrow">Phase Three</div>
+    <h2>The Financing Vote</h2>
+    <div class="phase-dates">September – December 2022</div>
+    <p class="phase-summary">The design took eight months and seven hearings. The money took one afternoon — approved before the numbers that priced it even existed on paper.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="event">
+      <div class="event-date">September 13, 2022</div>
+      <h3 class="event-title">HARC's own annual report notes the call-up</h3>
+      <div class="event-body">
+        <p>HARC's Annual Report to Council lists VooDoo as "Final HARC approved," with a note: "Called up to Town Council." The Manager's Report the same evening lists VooDoo among several ongoing Town housing projects, without financial detail.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-09-13_council-agenda_harc-annual-report-and-manager-report.pdf">Council Agenda, Sept. 13, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">October 4, 2022</div>
+      <h3 class="event-title">A sewer line, not a bond, reaches Council</h3>
+      <div class="event-body">
+        <p>The Town Manager discusses the timeline for relocating a sewer line that runs through the VooDoo site; Council agrees to take the matter up on November 15. Still no discussion of financing.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-10-04_council-minutes.pdf">Council Minutes (Draft), Oct. 4, 2022</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">November 22, 2022</div>
+      <h3 class="event-title">An emergency ordinance, three weeks before the bond vote</h3>
+      <div class="event-body">
+        <p>Council passes an <strong>emergency ordinance</strong> authorizing a 100-year ground lease from the Town to the Housing Authority — the security interest the bank would require before closing. It is rushed through outside the normal two-meeting process specifically to let the bank-qualified tax-exempt bond close by year-end.</p>
+        <p>The packet for this meeting is also the first place the Town's own financing structure — sources of funds, and the exact cash-subsidy amount required — appears in writing, laid out for Council sitting as THA:</p>
+        <blockquote>
+          "As can be noted in Exhibit 3, the recommended sources of funds for the Project are revenue bonds issued to THA, and the Town of Telluride's Affordable Housing Fund (for the rental housing units) and Capital Fund (for the commercial space, public restroom, and new Free Box). Specifically, the amount of cash subsidy required for the Project from the Affordable Housing Fund Set Aside and Capital Fund are $4,591,094 and $1,337,834, respectively. Note the Affordable Housing Fund subsidy amount includes expenses incurred to date for design and other pre-construction costs, and future contributions from the Capital Fund could occur over a two-year period (2023, 2024). The 2023 Affordable Housing Fund Set Aside Budget is $4,500,000 which includes a rollover of $1,380,000 of projected 2022 fund balance. The 2023 Capital Fund Budget beginning balance is $2,500,000. The recommended Project Budget assumes the building permit and water/sewer taps fees are waived for the Project, and it is likely small subsidies from the Affordable Housing Fund will be necessary during the first three years of occupancy to off-set operational expenses (est. $37,000/yr.)."
+          <cite>Nov. 22, 2022 special meeting packet, financing memorandum to Town Council sitting as THA</cite>
+        </blockquote>
+        <p class="note">Combined, the two cash subsidies disclosed here total <strong>$5,928,928</strong> — separate from the bond proceeds themselves, and separate from the $37,000/year operating subsidy flagged for the first three years of occupancy. For 27 total units, this is already about $220,000 per unit subsidy, without any consideration of the donated land cost.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Referenced in</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_tha-packet_financing-memo.pdf">Dec. 13, 2022 THA Packet <span class="tag">background section, p. 2</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">December 13, 2022 — Morning</div>
+      <h3 class="event-title">Same officials, two hats: the Housing Authority convenes</h3>
+      <div class="event-body">
+        <p>At 1:25 p.m., the Town Council — Mayor DeLanie Young and Councilmembers Carlson, Christy, Enright (recused from housing matters), Fee, and Shaunette — convenes as the Telluride Housing Authority Board of Commissioners. The financing team is introduced: <strong>Dalton Kelly</strong> of Butler Snow (bond counsel) and <strong>Amy Canfield</strong>, Vice President at Stifel, Nicolaus &amp; Co. (placement agent/underwriter). No independent municipal or financial advisor is present.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_council-agenda_cover-and-item-list.pdf">Council Agenda, Dec. 13, 2022 <span class="tag">cover + item list</span></a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_raw-transcript-excerpt_financing-discussion.txt">Raw timestamped transcript <span class="tag">excerpt, timecode 03:25:30+</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">December 13, 2022 — THA Action</div>
+      <h3 class="event-title">The $24 million construction contract and the bonds, approved together</h3>
+      <div class="event-body">
+        <p>The THA accepts a <strong>Guaranteed Maximum Price of $24,076,782</strong> from Shaw Builders and authorizes construction (Item 2A), and authorizes issuance of roughly <strong>$21.5 million</strong> in three revenue-bond series through NBH Bank (Item 2B). The staff memo discloses, in writing, that the ~$170,000-per-unit subsidy is a new record for the Town, above the prior high of ~$131,000 (Entrada, 2009–2011).</p>
+        <p>The bond's defining structure — an interest-only period followed by a balloon — is described as "flexibility," per the raw meeting transcript (auto-caption; <span class="flag">attribution to be confirmed against video</span>):</p>
+        <blockquote>"...the amount of principal we're paying down initially is zero. It kicks in... at year three... that does allow the bond payments to be lower on an annual basis and therefore keep rents where we were targeting."
+        <cite>Dec. 13, 2022 meeting, raw transcript, ~timecode 03:33</cite></blockquote>
+        <p>Minutes later, McDonald lays out the full bond structure and series breakdown — the most detailed real-time account of the financing terms given to either body that day:</p>
+        <blockquote>
+          <p>"We need to close [the VooDoo] bond by the end of this year [two weeks]. The interest rate savings on that is considerable. That would be a little over 6 million. The next bond series of bonds would be, 14.4, which would be the tax exempt fees. And then there's a smaller, taxable bond of 1 million that's, associated with the, commercial space or in part, the commercial space.</p>
+          <p>. . . I want to highlight the, the overall structure of the, the bond. And that's a fixed rate. It's a fixed interest rate. It's a 30-year amortization. There's two options. One where there's a balloon payment in 20 years or a balloon, balloon payment in 20 years.</p>
+          <p>And in ten years, you can call the bond at par, which would basically mean that you could refinance at no penalty. And the other option would be to have a ten-year, balloon payment. But you could call the bond at par with no penalty at five years. And that's the, talking internally. That's the, the bond, the scenario that we would recommend that you go with it provides you a lot of flexibility early on in the process."</p>
+          <cite>Lance McDonald, Dec. 13, 2022 meeting, raw transcript, timecode 03:59:00–03:59:42:14</cite>
+        </blockquote>
+        <p><strong>No dollar figure for the annual debt service or the eventual balloon appears anywhere in the 329-page agenda packet.</strong> The schedule that would show both was deferred to a "Sale Certificate" to be executed at closing — after this vote, before the rates were even locked.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_tha-packet_financing-memo.pdf">THA Packet Financing Memo <span class="tag">GMP p.5, subsidy p.8, bond terms p.9–10</span></a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_bond-resolution-key-sections.pdf">Bond Resolution <span class="tag">Special Obligations, Sinking Fund, Covenant</span></a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_executed-bonds.pdf">Executed Bonds (all 3 series)</a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_raw-transcript-excerpt_financing-discussion.txt">Raw transcript excerpt</a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">December 13, 2022 — Council Action</div>
+      <h3 class="event-title">The moral obligation: "not making a representation... about the balloon"</h3>
+      <div class="event-body">
+        <p>At 2:26 p.m., the same officials adjourn as the Housing Authority and reconvene as the Town Council for Item 9a: a resolution declaring the Town's <strong>non-binding "moral obligation"</strong> to help cover bond payments if the Authority cannot. Town Attorney Kevin Geiger explains the structure is "similar" to prior financings; per the raw transcript (auto-caption; <span class="flag">attribution to be confirmed</span>), the distinction between routine payments and the balloon is made explicit in the room:</p>
+        <blockquote>"...the town council is acknowledging that there may be a balloon payment. And right now, the town council is not making a representation that it would cover the balloon payment... your representation is about the normal debt service payments, not necessarily that balloon in year ten."
+        <cite>Dec. 13, 2022 meeting, raw transcript, ~timecode 04:16</cite></blockquote>
+        <p>The resolution passes. The Town has now borrowed on the project, pledged to help pay it, and never been shown what "it" costs in dollars.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_moral-obligation-resolution.pdf">Moral Obligation Resolution No. 23</a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_raw-transcript-excerpt_financing-discussion.txt">Raw transcript excerpt</a>
+        <a class="src-link external" href="https://livabletelluride.org/assets/transcripts/telluride-town-council-2022-12-13-transcript.docx">Full hosted meeting transcript ↗</a>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <section id="phase-aftermath">
+  <div class="phase-header">
+    <div class="phase-eyebrow">Phase Four</div>
+    <h2>The VooDoo Bill Becomes Due</h2>
+    <div class="phase-dates">2023 – 2026</div>
+    <p class="phase-summary">The same financing pattern repeats on the Town's next two self-issued bonds — and only breaks, in the one case examined here, when a private developer sits across the table instead of the Town alone.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="event">
+      <div class="event-date">2024</div>
+      <h3 class="event-title">VooDoo completed; a $2M state grant reallocated</h3>
+      <div class="event-body">
+        <p>Construction completes. The Town's midyear budget adjustments reallocate a <strong>$2,000,000 DOLA (Colorado Department of Local Affairs) grant</strong> — "Transformational Affordable Housing" program funds — into the VooDoo Fund.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2024-midyear-budget-adjustments.pdf">Staff Memo, 2024 Midyear Budget Adjustments</a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">2025 Budget Book</div>
+      <h3 class="event-title">The VooDoo debt numbers no one saw in 2022, finally in print</h3>
+      <div class="event-body">
+        <p>The Town's own 2025 Budget Book debt schedule shows, for the first time in this record, the year-by-year payments on all three VooDoo bond series through their December 2032 maturity. Summed across the three series, the schedule shows:</p>
+        <ul>
+          <li><strong>~$1,190,240</strong> in combined annual debt service ($289,683 + $764,000 + $136,557 in FY2025)</li>
+          <li><strong>$23,045,864</strong> combined balloon due December 2032 ($6,234,290 + $14,472,068 + $2,339,506) — <em>more than the ~$20.065 million actually drawn</em></li>
+        </ul>
+        <p class="note caution">Both totals are this record's own arithmetic, added from the Budget Book's three separate bond-series rows — the Budget Book does not print a combined total itself. The underlying per-series figures are the Town's.</p>
+        <p>The same Budget Book's Affordable Housing Fund summary shows recurring dedicated tax revenue of roughly <strong>$3.3–3.4 million a year</strong> — less than the annual amount VooDoo's balloon alone would require the Town to set aside.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Sources</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2025-budget-book_voodoo-debt-schedule.pdf">2025 Budget Book <span class="tag">debt schedule, pp. 252, 259–261</span></a>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2025-budget-book_ahf-revenue-summary.pdf">2025 Budget Book <span class="tag">AHF revenue summary, pp. 119–120</span></a>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <section id="phase-echo">
+  <div class="phase-header">
+    <div class="phase-eyebrow">Phase Five</div>
+    <h2>Carhenge and Shandoka Lot L: The Train Barreling Down the Track With No Driver</h2>
+    <div class="phase-dates">2026 — In Progress</div>
+    <p class="phase-summary">The same process is now advancing two projects several times VooDoo's size. The pattern the record above documents is being run again, live.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="event">
+      <div class="event-date">December 13, 2022 — Morning</div>
+      <h3 class="event-title">Shandoka Lot L's own feasibility study lands get its first work session preview.</h3>
+      <div class="event-body">
+        <p>Hours before Council convenes as THA to approve <strong>VooDoo's financing</strong> that afternoon, the same body holds a morning work session on a <strong>feasibility study and conceptual plan for Lot L</strong> — the parcel now known as Shandoka Lot L — prepared by Cushing Terrell (hired August 2022, four public work sessions held since). Program Director Lance McDonald describes the site: currently ~330 surface spaces serving the Shandoka housing facility, private-market housing, some commercial, and general/ski day-use parking, "over-allocated in its current condition." The 2021 Southwest Area Conceptual Plan had already identified a target program for the site: a <strong>960-space parking structure</strong> (absorbing the existing ~300 spaces, plus 288 spaces moved from Carhenge, plus ~300 new commuter/skier spaces), <strong>35–45 deed-restricted resident units</strong>, and <strong>5,000–10,000 sq. ft. of transit-oriented commercial</strong>.</p>
+        <p>During public comment, a resident living across the river from the site reacts to a dollar figure on a presentation slide and raises the same voter-approval question already hanging over VooDoo that same afternoon:</p>
+        <blockquote>"If this — if you're going into town is going to use bonds, is this giant project going to go to the voters? Because it's a big — I mean, I just saw the number at the bottom: 88 million."
+        <cite>Public comment, Dec. 13, 2022 work session</cite></blockquote>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2022-12-13_raw-transcript-excerpt_lot-l-feasibility.txt">Raw timestamped transcript <span class="tag">excerpt, Lot L work session, timecode 01:11:16+</span></a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">July 15, 2026</div>
+      <h3 class="event-title">HARC punts too: "It's not something we need to discuss tonight"</h3>
+      <div class="event-body">
+        <p>At a HARC Regular Meeting, a commissioner directly raises the Chair 7 Community Coalition's letter — and gets the same answer P&amp;Z and Council would each give in turn: someone else already handled it.</p>
+        <blockquote>"Can I ask a question of you, probably for Ally? The letter that we got from the attorney representing the big group of people apparently... seems to imply that we can't do anything."
+        <cite>HARC commissioner, HARC Regular Meeting, July 15, 2026 (auto-caption transcript; <span class="flag">speaker attribution inferred from context, verify against video</span>)</cite></blockquote>
+        <blockquote>"I don't know if Kevin is online. He has addressed this issue in front of P&amp;Z. He did so at the last meeting very eloquently... It's not something we need to discuss tonight."
+        <cite>Staff response, same meeting</cite></blockquote>
+        <p>Later, during public comment, a resident (auto-captioned "Cammy Nichols") puts an objection on the record and reads the room:</p>
+        <blockquote>"I know you all have on the record a letter and some submissions from Diane Wolfson, an attorney for the Chair 7 Community Coalition. I just wanted to... put on the record at the hearing an objection to any approval at today's hearing with the unresolved issues that have been raised — and it sounds to me like the board is leaning towards a continuation."
+        <cite>Public comment, same meeting</cite></blockquote>
+        <p class="note">HARC points to P&amp;Z; P&amp;Z (via Assistant Town Attorney Slaten, at the July 23 hearing below) points to the covenant question being "outside the purview of this commission"; the Town Attorney's own position is what's actually in dispute. Every body treats the legal question as some other body's job.</p>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2026-07-15_raw-transcript-excerpt_harc-deflection.txt">Raw timestamped transcript <span class="tag">excerpt, timecodes 00:17:10 and 03:20:04</span></a>
+      </div>
+    </article>
+
+    <article class="event critical">
+      <div class="event-date">July 23, 2026</div>
+      <h3 class="event-title">A commissioner names the same broken process</h3>
+      <div class="event-body">
+        <p>At a Planning &amp; Zoning Commission hearing on the Carhenge and Shandoka Lot L projects, Commissioner Todd Brown describes the exact structural gap this timeline documents (auto-caption transcript; <span class="flag">attribution to be confirmed against video</span>):</p>
+        <blockquote>"What I don't feel I have is the balance between the benefits and the costs. And we never get that — that's at council level, or the housing committee. And that's a broken piece of the process."
+        <cite>Todd Brown, P&amp;Z hearing, July 23, 2026</cite></blockquote>
+        <p>Planning Director Kristen Clothier confirms cost review is outside P&amp;Z's purview; Assistant Town Attorney Allie Slaten reminds Commissioner Kathy Green — who had asked for an earlier work session — that P&amp;Z must "stay within its purview." A resident invokes VooDoo directly as the cautionary example: <em>"We can look at Voodoo right now as a guideline... costs of this kind of project... How can we believe that you can build a project of this size that's affordable for locals to live in?"</em></p>
+        <p>Later in the same hearing, Chair 7 Community Coalition attorney Diane Wolfson names the structural conflict directly, after walking through the coalition's Backman Village covenant argument:</p>
+        <blockquote>"Your review of this application is quasi-judicial. And so you sit as judges and you apply the land use code, and you are supposed to be an impartial tribunal. But the town is wearing two hats in this room: it's both the applicant and the decision maker, which is fine. But the same lawyer who advocates the town's application and also advises the commission has a conflict. And it's unclear who Mr. Gieger was arguing for at the June 25th hearing... So the coalition is asking the commission to request independent conflict counsel to advise the commission on these applications. That way the town attorney can be on one side and the commission would have independent counsel advising it on the other."
+        <cite>Diane Wolfson, counsel for the Chair 7 Community Coalition, P&amp;Z hearing, July 23, 2026</cite></blockquote>
+      </div>
+      <div class="sources">
+        <span class="label">Source</span>
+        <a class="src-link" target="_blank" rel="noopener" href="sources/2026-07-23_pz-transcript_carhenge-shandoka.docx">P&amp;Z Meeting Transcript, July 23, 2026</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="event-date">2026 — Ongoing</div>
+      <h3 class="event-title">Where things stand</h3>
+      <div class="event-body">
+        <p>Carhenge and Shandoka Lot L remain in the design/entitlement phase — the same phase VooDoo occupied through most of 2022. No independent financial advisor has been named for either project in the record reviewed here; no year-by-year debt schedule or total-cost figure has been presented to P&amp;Z, HARC, or the public. The pattern this timeline documents — design scrutinized for months, financing reserved for a single later vote, no dollar figures until after the fact — has not yet repeated on these two projects, because the financing vote for either one hasn't happened yet.</p>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <footer class="colophon">
+    <p><strong>Compiled by Livable Telluride</strong> from Town of Telluride public records: meeting agendas, adopted minutes, staff memoranda, executed bond documents, and Town budget books, obtained via the Town's public meeting packets and records requests. Where a quotation is drawn from an auto-generated caption transcript rather than adopted minutes, that is noted in the entry, and the underlying claim is corroborated by the official written record wherever possible.</p>
+  </footer>
+
+</div>
+</body>
+</html>
