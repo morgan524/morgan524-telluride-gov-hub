@@ -1,14 +1,26 @@
 [
   {
-    "title": "Heat dome expands across the central United States, creating dangerous conditions for millions",
+    "title": "A priceless chance to sip and learn",
     "source": "Telluride Times",
-    "date": "July 25, 2026",
-    "firstSeen": "2026-07-25",
-    "newsTopic": "community",
-    "copy": "A heat dome is pushing temperatures 10–15°F above normal across the central U.S. this weekend into next week, with roughly 70 million people under heat advisories from Dallas to North Dakota. Overnight lows won't drop enough to offer real relief, letting heat stress build. Some Denver-area records may fall; the Southwest and Gulf Coast face the worst of it by midweek.",
+    "date": "July 26, 2026",
+    "firstSeen": "2026-07-26",
+    "newsTopic": "arts-culture",
+    "copy": "Free wine and spirits tastings happen regularly at several Telluride and Mountain Village shops — Mountain Village Wine Merchant on Wednesdays, Telluride Wine Merchant on Thursdays, and periodically at Telluride Bottleworks and the Wine Mine. The Wilkinson Public Library has also been running a free Around the World tasting series that's drawn full crowds every session, covering sakes, tequilas, Italian wines, and rosé. More library sessions and possibly an Oktoberfest event are being discussed.",
     "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_7d94dcba-a1c7-4668-bed6-b516e0e9d320.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/cc/acc894e9-e3c8-4391-add2-52d23fd84064/6a64638fe2396.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "BOCC offers regional environmental updates",
+    "source": "Telluride Times",
+    "date": "July 26, 2026",
+    "firstSeen": "2026-07-26",
+    "newsTopic": "government",
+    "copy": "San Miguel County's Natural Resources Director briefed the BOCC on two main topics July 22. The county signed a letter opposing new BLM rules that cut public comment periods from 90 days to 10 and reduce oil and gas lease bonds by 90%. The board also discussed composting options and green waste from local arborists.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_20b981b9-8461-40af-9108-28f777ced05f.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/6b/56b90bb0-5340-44f6-a32c-9e2fdc1446df/6a64613178225.image.jpg",
     "imgHiRes": true
   },
   {
@@ -21,6 +33,30 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_e3234d99-d9c8-5d8c-85d4-3dd0012f14bb.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/b1/ab1e27ca-24b8-5614-98ef-a898ff168dd8/6a64bc87501ff.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Bike park closure leaves riders scrambling",
+    "source": "Telluride Times",
+    "date": "July 25, 2026",
+    "firstSeen": "2026-07-25",
+    "newsTopic": "recreation",
+    "copy": "Telluride's bike park is closed all of 2026 while Telski finishes work tied to a Lift 4 upgrade — downhill and freeride trails stay shut even after the lift modernization wrapped up. Cross-country trails remain open via the gondola. Local riders, shops, and at least one World Cup racer say the closure stings, with some wanting more transparency on the timeline.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_3dbe9271-c799-4b20-8c6d-bedbfcb12d89.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/e2/6e225fcd-2a29-4d1d-9045-aeb962f570e8/6a6078f71f346.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Heat dome expands across the central United States, creating dangerous conditions for millions",
+    "source": "Telluride Times",
+    "date": "July 25, 2026",
+    "firstSeen": "2026-07-25",
+    "newsTopic": "community",
+    "copy": "A heat dome is pushing temperatures 10–15°F above normal across the central U.S. this weekend into next week, with roughly 70 million people under heat advisories from Dallas to North Dakota. Overnight lows won't drop enough to offer real relief, letting heat stress build. Some Denver-area records may fall; the Southwest and Gulf Coast face the worst of it by midweek.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_4a56758f-271f-517a-80af-57f4f42aaa78.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/02/9022f7ad-cc64-542e-96ad-30f48201b996/6a64d37bd2276.image.jpg",
     "imgHiRes": true
   },
   {
@@ -885,42 +921,6 @@
     "imgHiRes": true
   },
   {
-    "title": "Telluride Torpedoes gear up for state championships",
-    "source": "Telluride Times",
-    "date": "July 12, 2026",
-    "firstSeen": "2026-07-12",
-    "newsTopic": "community",
-    "copy": "The Telluride Torpedoes swim team, ages 7–17, is heading into the final stretch of its season with eight swimmers already qualified for the Colorado State Championships in Alamosa July 31–Aug. 2. Head coach Kelsea Wright, now in her fourth season, emphasizes personal improvement and team support over standings. The program has previously placed as high as third in state.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_4df1dca4-26a7-46ea-8553-18dbf7eda4a7.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f2/2f28a551-87e9-4af4-8ccb-d39bd38b0f5b/6a52eb100ffd6.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Disaster planning for pets",
-    "source": "Telluride Times",
-    "date": "July 12, 2026",
-    "firstSeen": "2026-07-12",
-    "newsTopic": "land-use",
-    "copy": "With wildfire season active in the region, it's worth having a plan for pets before evacuation becomes urgent. That means identifying pet-friendly hotels or boarding options ahead of time, assembling a go-kit, and making sure animals are microchipped and collared with current ID.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news_release/article_93a9a5dd-e1b8-489f-8f7a-1bf67a617fd5.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/07/d07ad9cd-73ee-403b-981d-2f854d307c3c/6a4e90f1a93ef.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "'Toggery University'",
-    "source": "Telluride Times",
-    "date": "July 12, 2026",
-    "firstSeen": "2026-07-12",
-    "newsTopic": "community",
-    "copy": "Wendy Basham and Todd Tice have co-owned the Telluride Toggery since 2004, carrying on a store that's been part of town since 1972. In January 2025, they bought the building and committed its six upper-floor units to full-time locals — two tenants are Toggery employees whose rent the store helps subsidize. The next generation is already working the floor.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_d7ed4299-05dc-4093-8c48-e86956858f18.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/75/47518859-6ad8-4624-9a18-74b31fb5809b/6a52e927353dd.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     "source": "Town of Telluride",
     "date": "June 30, 2026",
@@ -990,15 +990,6 @@
     "newsTopic": "government",
     "copy": "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=69",
-    "img": ""
-  },
-  {
-    "title": "Stage 2 Fire Restrictions In Effect",
-    "source": "Town of Telluride",
-    "date": "June 26, 2026",
-    "newsTopic": "public-safety",
-    "copy": "In response to increasing fire danger across the region, the Town of Telluride will implement Stage 2 Fire Restrictions effective at 12:01 a.m. MT on Friday, June 26, 2026.",
-    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=67",
     "img": ""
   },
   {

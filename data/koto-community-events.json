@@ -1,60 +1,5 @@
 [
   {
-    "title": "Movies Under the Stars",
-    "link": "https://koto.org/event/movies-under-the-stars/2026-07-25/",
-    "description": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    "pubDate": "2026-07-26T00:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Conference Center Plaza Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
-    "title": "Shakespeare in the Park: \"Henry V\"",
-    "link": "https://koto.org/event/shakespeare-in-the-park-henry-v/2026-07-25/",
-    "description": "Join us ON the Town Park Stage for one of our town’s most beloved traditions: Telluride Theatre's 36th Annual SHAKESPEARE IN THE PARK! Action, humor & romance abound in Shakespeare's iconic war drama. HENRY V, the young and newly crowned king, is impatient to assert control over the people of England. Having received a humiliating gift from overseas, his bruised ego leads him to double down on a military invasion abroad in a bid to expand his green and pleasant land. But at what devastating cost? Witness Henry’s bombastic pursuit of power&#8230; \"The game's afoot!\" Youth & \"Pay-What-You-Can\" discounts available!",
-    "pubDate": "2026-07-26T02:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Town Park",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/07/shakes-henry-v.webp"
-  },
-  {
-    "title": "Pickleball Open Play",
-    "link": "https://koto.org/event/pickleball-open-play/2026-07-26/",
-    "description": "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
-    "pubDate": "2026-07-26T16:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Gentle Yoga with Kristen Milord",
-    "link": "https://koto.org/event/gentle-yoga-with-kristen-milord-2/2026-07-26/",
-    "description": "Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    "pubDate": "2026-07-26T17:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/gentle-yoga-kristen.png"
-  },
-  {
-    "title": "Drop In Tech Time with Oliver",
-    "link": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-07-26/",
-    "description": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    "pubDate": "2026-07-26T19:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Tea and Tarot",
     "link": "https://koto.org/event/tea-and-tarot/2026-07-26/",
     "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -460,5 +405,82 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-05/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-08-05T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://koto.org/event/market-on-the-plaza/2026-08-05/",
+    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    "pubDate": "2026-08-05T17:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-05/",
+    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-08-05T19:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    "link": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-05/",
+    "description": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    "pubDate": "2026-08-05T23:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-08-06T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-06/",
+    "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "pubDate": "2026-08-06T18:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Art Walk Telluride",
+    "link": "https://koto.org/event/art-walk-telluride/2026-08-06/",
+    "description": "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
+    "pubDate": "2026-08-06T23:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
   }
 ]

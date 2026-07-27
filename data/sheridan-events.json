@@ -1,27 +1,5 @@
 [
   {
-    "title": "FREE Oak Street Park SummerSHOW Series: Selasee (Reggae)",
-    "link": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-2/",
-    "description": "A free outdoor reggae concert featuring Selasee, part of the Oak Street Park SummerSHOW Series. The event takes place at the Sheridan Opera House in Telluride, offering a no-cost live music experience in a beloved community venue.",
-    "pubDate": "2026-07-23",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp"
-  },
-  {
-    "title": "FREE SHOW! Summer Spectacular: The Music Man",
-    "link": "https://sheridanoperahouse.com/events/free-show-summer-spectacular-the-music-man/",
-    "description": "A free performance of *The Music Man* at the Sheridan Opera House, part of the venue's Summer Spectacular series. This classic American musical story comes to Telluride's historic stage for an evening of live theatrical entertainment at no cost to attendees.",
-    "pubDate": "2026-07-24",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Summer-Music-man.png"
-  },
-  {
     "title": "The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum",
     "link": "https://sheridanoperahouse.com/events/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum/",
     "description": "A documentary screening and benefit event at the Sheridan Opera House, telling the restoration story of the Nugget as a fundraiser for the Telluride Historical Museum. The program brings together local history and community support in one of Telluride's most storied performing arts venues.",
@@ -31,5 +9,27 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.png"
+  },
+  {
+    "title": "FREE SHOW! Summer Spectacular: The Jungle Book",
+    "link": "https://sheridanoperahouse.com/events/free-show-summer-spectacular-the-jungle-book/",
+    "description": "A free performance of The Jungle Book at the Sheridan Opera House, part of the venue's Summer Spectacular series. The show brings the beloved story to the historic Telluride stage for an evening of live theatrical entertainment.",
+    "pubDate": "2026-07-31",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Sumemr-Jungle-Book.png"
+  },
+  {
+    "title": "Film: The Casual Enormity of Adam Palmer",
+    "link": "https://sheridanoperahouse.com/events/film-the-casual-enormity-of-adam-palmer/",
+    "description": "A film screening of *The Casual Enormity of Adam Palmer* at the historic Sheridan Opera House in Telluride. The event is presented by the Sheridan Opera House as part of its ongoing programming at this landmark downtown venue.",
+    "pubDate": "2026-08-01",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-10.15.22-AM.png"
   }
 ]

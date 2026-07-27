@@ -34,20 +34,6 @@
     "passcode": "793419.",
     "phone": "719) 359-4580"
   },
-  "telluride|2026-06-25|Planning & Zoning Commission - Jun 25 2026": {
-    "sv": 2,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/pvzPtHtIRZmah22XUU2xLg",
-    "meetingId": "846 6324 0731",
-    "passcode": "769982",
-    "phone": "301-715-8592"
-  },
-  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026": {
-    "sv": 2,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/m65fl_EfRuC-m1IoGX6uiQ",
-    "meetingId": "815 3599 7736",
-    "passcode": "769982",
-    "phone": "301-715-8592"
-  },
   "county|2026-07-01|Board of County Commissioners Meeting": {
     "sv": 4,
     "zoomUrl": "https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg",
@@ -87,11 +73,6 @@
   },
   "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026": {
     "sv": 4
-  },
-  "med|2026-06-25|Regular Board Meeting": {
-    "zoomUrl": "https://us02web.zoom.us/j/89509331558",
-    "meetingId": "895 0933 1558",
-    "sv": 2
   },
   "airport|2026-07-16|TRAA Board of Commissioners Meeting": {
     "sv": 2
@@ -133,9 +114,6 @@
   },
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026": {
     "sv": 4
-  },
-  "telluride|2026-06-25|Planning & Zoning Commission Chair - Jun 25 2026 - Cancelled": {
-    "sv": 2
   },
   "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session": {
     "zoomUrl": "https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1",
@@ -370,6 +348,14 @@
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297",
     "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
+    "sv": 4
+  },
+  "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
+    "sv": 4
+  },
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
     "sv": 4
   }
 }
