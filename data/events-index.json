@@ -1990,7 +1990,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -2240,7 +2240,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -2345,7 +2345,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
     "type": "Community"
   },
   {
@@ -2442,6 +2442,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Norwood Sanitation District Meeting",
+    "href": "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
+    "date": "2026-08-13",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Community Concert — August",
     "href": "https://telluridechambermusic.org/concert/community-aug",
     "date": "2026-08-13",
@@ -2504,7 +2517,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2595,8 +2608,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",
@@ -2752,6 +2765,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
+  },
+  {
+    "title": "Lunch and Learn: Enterprise Zone Business Education Event",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-enterprise-zone-business-education-event/",
+    "date": "2026-08-17",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49517/screenshot_2026-07-27_131826.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Town of Mountain Village is pleased to host Region 10 for a Lunch and Learn session about the new Enterprise Zone boundary amendment.",
     "type": "Community"
   },
   {
@@ -3292,6 +3318,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets: $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in…",
+    "type": "Community"
+  },
+  {
+    "title": "THE ONLIES",
+    "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
+    "date": "2026-08-26",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-10.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Community"
   },
   {

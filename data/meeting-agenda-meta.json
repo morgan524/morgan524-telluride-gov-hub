@@ -331,7 +331,10 @@
     "sv": 4
   },
   "mv|2026-08-06|Design Review Board": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49514/august_6-_2026_design_review_board_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/j/84661174346?pwd=pGG47aNtAK3sjfccaVrai3o6jbV3bZ.1",
+    "meetingId": "846 6117 4346"
   },
   "med|2026-07-23|Regular Board Meeting": {
     "sv": 4
@@ -359,7 +362,7 @@
     "sv": 4
   },
   "tmvoa|2026-07-28|Gondola Leadership Committee Meeting": {
-    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
     "zoomUrl": "https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1",
     "sv": 4
   },

@@ -33,7 +33,8 @@
     "endDate": "2026-08-11 12:00:00",
     "location": "Ridgway, CO",
     "copy": "",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    "description": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
   },
   {
     "title": "Celebration of Life for David Leigh Houtz",
@@ -61,5 +62,14 @@
     "location": "The Sherbino, Ridgway",
     "copy": "@ Rocky Horror Picture Show — Live Shadowcast Edition Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/06/RHPS-Shadow-Cast-Auditions.png"
+  },
+  {
+    "title": "THE ONLIES",
+    "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
+    "date": "2026-08-26 19:00:00",
+    "endDate": "2026-08-26 21:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "@ August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets:  $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in partnership by The Sherbino with Pickin' Productions The Onlies are a longstanding collective of young friends defining a powerful new generation of stringband music. Described as “the best old-time stringband out there” (Songlines), their music moves with a pulsating drive, sharp arrangements, and rich vibration — it resounds with the present. Multi-instrumentalists and vocalists Sami Braman, Riley Calcagno, and Leo Shannon formed The Onlies in Seattle as young kids, bringing in celebrated guitarist/singer Vivian Leva 10 years later. “ Their fourth album, You Climb The Mountain, marks 20 years as a band. …",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-10.jpg"
   }
 ]
