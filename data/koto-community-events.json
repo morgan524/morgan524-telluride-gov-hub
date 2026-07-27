@@ -1,16 +1,5 @@
 [
   {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-07-26/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-07-26T20:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-27/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -482,5 +471,38 @@
     "category": "Community Event",
     "location": "",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-11-10-at-2.54.42-PM.png"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-08-07T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "link": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-07/",
+    "description": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    "pubDate": "2026-08-07T16:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Lone Cone Library Norwood",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "link": "https://koto.org/event/telluride-farmers-market/2026-08-07/",
+    "description": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    "pubDate": "2026-08-07T16:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Oak Street Plaza, Telluride",
+    "imageUrl": ""
   }
 ]

@@ -81,15 +81,15 @@
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-07-26/",
+    "href": "https://telluridelibrary.libcal.com/event/17029765?hs=a",
     "date": "2026-07-26",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -820,7 +820,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who…",
     "type": "Food & Drink",
-    "endDate": "2026-09-18"
+    "endDate": "2026-09-25"
   },
   {
     "title": "Love’s Labors Lost: Theatre @ the Wright",
@@ -1859,6 +1859,19 @@
     "type": "Community"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
     "title": "Endea Owens & The Cookout",
     "href": "https://www.alibitelluride.com/calendar#eca-event=endea-owens-and-the-cookout",
     "date": "2026-08-07",
@@ -1870,6 +1883,19 @@
     "source": "The Alibi",
     "desc": "Endea Owens is all about jazz. This phenomenal bassist, composer and performer h...",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
   },
   {
     "title": "Telluride Farmers Market",
@@ -1963,6 +1989,19 @@
     "source": "Mountain Village",
     "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Logan Metz at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
     "type": "Music"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -2371,7 +2410,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3031,19 +3070,6 @@
     "type": "Community"
   },
   {
-    "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble at The Courtyard",
-    "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-flagship-romance-the-rough-tumble",
-    "date": "2026-08-21",
-    "time": "7:00 PM",
-    "location": "610",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52994270870445/huge/daf9e9efd8da0f386a5f5b85b8847791c2588a2f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Gates: 6:30 || Show: 7:00 || $25 advance / $30 – day of show General Admission Seating || Limited Bar || The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Wax Monkey",
     "href": "https://www.alibitelluride.com/calendar#eca-event=wax-monkey",
     "date": "2026-08-21",
@@ -3055,6 +3081,19 @@
     "source": "The Alibi",
     "desc": "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
     "type": "Music"
+  },
+  {
+    "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
+    "href": "https://sherbino.org/event/flagship-romance-rough-and-tumble-courtyard-610-august-21/",
+    "date": "2026-08-21",
+    "time": "",
+    "location": "The Courtyard at 610, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-9.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
   },
   {
     "title": "Highgraders Holiday & Mining History",
@@ -3110,19 +3149,6 @@
     "type": "Community"
   },
   {
-    "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
-    "href": "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct",
-    "date": "2026-08-23",
-    "time": "1:00 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53426340345256/huge/41f8f3856c62b8da4427d53a7b71309c0268ddc5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "August 23 @ 1:00 pm – 3:00 pm Rocky Horror Picture Show — Live Shadowcast Edition Directed by Erin Cawley Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast…",
-    "type": "Community"
-  },
-  {
     "title": "Girl Scout Cookie Booth",
     "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
     "date": "2026-08-23",
@@ -3172,6 +3198,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Fortuna Tierra Club is hosting the 11th Annual Log Hill Hustle, Fun Run and fundraiser on Sunday, August 23 at 8 AM starting and finishing at the Divide Ranch and Club Clubhouse at 151 Divide Ranch Circle, Ridgway, CO 81432. The 5k…",
+    "type": "Community"
+  },
+  {
+    "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    "href": "https://sherbino.org/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct/",
+    "date": "2026-08-23",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/06/RHPS-Shadow-Cast-Auditions.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3898,5 +3937,31 @@
     "desc": "Corvettes, and their owners, are invited to celebrate the Rocky Mountain Fall colors, the crisp San Juan Mountain air …",
     "type": "Community",
     "endDate": "2026-09-28"
+  },
+  {
+    "title": "Photon",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=photon",
+    "date": "2026-09-23",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "What started as a passion project dedicated to the late and great Stephen Hawkin...",
+    "type": "Community"
+  },
+  {
+    "title": "Telluride Farmers Market",
+    "href": "https://www.thetelluridefarmersmarket.com/",
+    "date": "2026-09-25",
+    "time": "10:30 AM – 3:30 PM",
+    "location": "South Oak Street, downtown Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
+    "category": "",
+    "source": "Telluride Farmers Market",
+    "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
   }
 ]

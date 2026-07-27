@@ -11,6 +11,48 @@
     "summary": "Young Dog • Bulldog, French • Male",
     "firstSeen": "2026-07-11",
     "revealDate": "2026-07-11",
-    "lastSeen": "2026-07-26"
+    "lastSeen": "2026-07-27"
+  },
+  {
+    "id": "TEL-A-192",
+    "name": "Goldie",
+    "species": "Dog",
+    "breed": "Retriever, Golden / Poodle",
+    "ageGroup": "Young Puppy",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/9783882bd0b992d3c2e9bc4a03436b40/90a0bc5b6fcfcaf0d8dca8e896117977.jpg",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214172679",
+    "summary": "Young Puppy • Retriever, Golden / Poodle • Female",
+    "firstSeen": "2026-07-27",
+    "revealDate": "2026-07-27",
+    "lastSeen": "2026-07-27"
+  },
+  {
+    "id": "TEL-A-193",
+    "name": "Fig",
+    "species": "Dog",
+    "breed": "Collie, Border / Shepherd, Australian",
+    "ageGroup": "Young Puppy",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/ace144b817dac5d1be12098890b393bc/bd9ea402626cad1b5bd7d0f7de39d544.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214172689",
+    "summary": "Young Puppy • Collie, Border / Shepherd, Australian • Female",
+    "firstSeen": "2026-07-27",
+    "revealDate": "2026-07-29",
+    "lastSeen": "2026-07-27"
+  },
+  {
+    "id": "TEL-A-196",
+    "name": "Apricot",
+    "species": "Dog",
+    "breed": "Shepherd, Australian / Mixed Breed (Medium)",
+    "ageGroup": "Young Puppy",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/81c24864baaf62ae9e749a040434bdd6/c2a309a474ba71b5ce9b34e1c5d3c234.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214172701",
+    "summary": "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
+    "firstSeen": "2026-07-27",
+    "revealDate": "2026-07-31",
+    "lastSeen": "2026-07-27"
   }
 ]

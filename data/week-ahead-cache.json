@@ -1,18 +1,22 @@
 {
-  "hash": "af98d1209e94da755572f30b635b9ae41b496530",
-  "lede": "The week's meeting to watch is the Gondola Leadership Committee on Tuesday, July 28, where capital investment funding commitments and what looks like a substantive action item on the gondola's future are on the table — not the usual housekeeping. Town Council also convenes Monday as the Liquor Licensing Authority to hear KOTO Radio's permit request for its Live at the Drive event at 207 N Pine Street. Rounding out the week, the Telluride Foundation's Dual Challenge climate and energy forum runs Tuesday through Wednesday, and the Humane Society's Tails on the Trail dog 5K gets a Parks Commission review on Tuesday.",
+  "hash": "d7129fbb5aded7427e5f731a06dc6e8e2b4ac736",
+  "lede": "The gondola is front and center this week — the Gondola Leadership Committee meets Monday, July 28, for what looks like a genuinely substantive session covering project history, Capital Investment Grant funding commitments, and a project update, with background and history listed as an action item. The Town Council also holds a special public hearing Sunday on KOTO's liquor permit for its Live at the Drive event at 207 N Pine on July 30. Elsewhere, the week fills out with the Dual Challenge climate talks, Market on the Plaza, and a free Jungle Book performance at the Sheridan to close things out.",
   "notable": [
     {
-      "id": 2,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — locals can weigh in."
+      "id": 1,
+      "stake": "Public hearing on KOTO's special event liquor permit for July 30 show."
+    },
+    {
+      "id": 3,
+      "stake": "Gondola committee takes action on history, funding commitments, and project update."
     },
     {
       "id": 4,
-      "stake": "Council votes or acts on gondola capital funding commitments affecting the box's future."
+      "stake": "Same gondola session from TMVOA side — CIG funding and project direction on the table."
     },
     {
       "id": 6,
-      "stake": "Commission decides whether to approve Humane Society's October dog 5K on town parks and trail."
+      "stake": "Commission votes on Humane Society request to use Elks Park and River Trail."
     }
   ]
 }

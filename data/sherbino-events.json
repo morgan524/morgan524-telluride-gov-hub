@@ -1,14 +1,5 @@
 [
   {
-    "title": "The Courtyard at 610 Presents: Hiroya Tsukamoto",
-    "href": "https://sherbino.org/event/hiroya-tsukamoto-courtyard-610-july-25-2026/",
-    "date": "2026-07-25 19:30:00",
-    "endDate": "2026-07-25 21:00:00",
-    "location": "The Courtyard at 610, Ridgway",
-    "copy": "@ Gates: 7 (behind the 610 Gallery and Sherbino) || Show: 7:30 || $20 – Online / $25 – At Door General Admission Seating || Limited BarThe Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Hiroya Tsukamoto is a one-of-a-kind composer, guitarist, and storyteller from Kyoto, Japan. He began playing the five-string banjo when he was thirteen, and took up the guitar shortly after. …",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/ChatGPT-Image-Apr-30-2026-02_34_08-PM.png"
-  },
-  {
     "title": "Paul McDonald and the Mourning Doves",
     "href": "https://sherbino.org/event/paul-mcdonald-sherbino-ridgway-august-2026/",
     "date": "2026-08-01 19:30:00",
@@ -24,8 +15,7 @@
     "endDate": "2026-08-11 12:00:00",
     "location": "Ridgway, CO",
     "copy": "",
-    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    "description": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     "title": "Celebration of Life for David Leigh Houtz",
@@ -35,5 +25,23 @@
     "location": "The Sherbino, Ridgway",
     "copy": "Celebration of Life for David Leigh Houtz. Friends, family, and the Ridgway community are invited to gather on Monday, August 17, from 3–6 p.m. at The Sherbino to share memories and celebrate David's life. @ 3-6 pm || Sherbino Celebration of Life for David Leigh Houtz David Leigh Houtz was a familiar presence in Ridgway for decades. Many knew him through his jewelry shop and workshop at 147 N. Cora, where he crafted, repaired, and sold jewelry since the 1990s. Others knew him through his years of service as a firefighter, his artistic talents, his independent spirit, and his unmistakable personality. David's daughter and family invite friends, neighbors, former customers, and all who knew him to join them in celebrating his life. …",
     "imageUrl": "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-52.png"
+  },
+  {
+    "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
+    "href": "https://sherbino.org/event/flagship-romance-rough-and-tumble-courtyard-610-august-21/",
+    "date": "2026-08-21 19:00:00",
+    "endDate": "2026-08-21 21:15:00",
+    "location": "The Courtyard at 610, Ridgway",
+    "copy": "@ Gates: 6:30 || Show: 7:00 || $25 advance / $30 – day of show General Admission Seating || Limited Bar || The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** TWO DUOS ON TOUR TOGETHER Rough Romance U.S. Tour 2026 unites Flagship Romance and The Rough & Tumble for a six-month cross-country run of high-energy, harmony-soaked, heart-forward shows. Expect laughter, lump-in-your-throat moments, and a dynamic co-headlining format that turns every venue into a listening room you’ll never forget. …",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-9.jpg"
+  },
+  {
+    "title": "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
+    "href": "https://sherbino.org/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct/",
+    "date": "2026-08-23 13:00:00",
+    "endDate": "2026-08-23 15:00:00",
+    "location": "The Sherbino, Ridgway",
+    "copy": "@ Rocky Horror Picture Show — Live Shadowcast Edition Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
+    "imageUrl": "https://sherbino.org/wp-content/uploads/2026/06/RHPS-Shadow-Cast-Auditions.png"
   }
 ]
