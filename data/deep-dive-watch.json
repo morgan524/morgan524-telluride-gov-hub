@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-26T22:06:29.737Z",
+ "generated": "2026-07-27T13:47:58.430Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -147,6 +147,27 @@
      "link": "https://www.norwoodtown.com/nwc-meetings",
      "zoomLink": "",
      "livestream": ""
+    }
+   ],
+   "recent": [],
+   "developments": [],
+   "stale": []
+  },
+  "fieldpaving": {
+   "label": "Field Paving at Town Park",
+   "lastUpdated": "",
+   "upcoming": [
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Parks & Recreation Commission",
+     "date": "2026-07-29",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
+     "zoomLink": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [],

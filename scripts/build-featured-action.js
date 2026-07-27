@@ -27,7 +27,9 @@ const TOPIC_PRIORITY = ['carhenge', 'society', 'diamond', 'gondola', 'code', 'wi
 
 // Topic key → deep-dive page. Default is deep-dive-<key>.html; anything
 // off-pattern is listed here.
-const TOPIC_HREF = {};
+const TOPIC_HREF = {
+  fieldpaving: '/deep-dive-field-paving-town-park.html'
+};
 const topicHref = (key) => TOPIC_HREF[key] || ('/deep-dive-' + key + '.html');
 
 // Cut at a sentence boundary, never mid-sentence (digest convention).

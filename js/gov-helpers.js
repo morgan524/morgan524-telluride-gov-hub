@@ -928,7 +928,7 @@ const MANUAL_SUMMARIES = {
     "The July 29 joint work session between the San Miguel County Planning Commission and Board of County Commissioners hasn't posted a substantive agenda yet — just the meeting header. No items are listed to summarize.",
 
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "A rescheduled midday meeting with a short agenda. The one action item is a request from the Telluride Humane Society to use Elks Park and the River Trail — Maple St. to Gold Run — for a dog-friendly 5K fun run on October 10, 2026. The event, called Tails on the Trail, expects around 100 attendees, runs 8:30 a.m. to noon, and would generate a maximum of $72.25 in admissions fees to the Town. Street use on Colorado Ave. is still pending staff review. The commission will also hold a work session on the Town Park Oval Improvements Project — no vote expected there, just review and discussion.",
+    "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project.",
 
   "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
     "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -8701,7 +8701,7 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8288,
-    packetUrl: "https://telluride-co.civicweb.net/document/442582/"
+    packetUrl: "https://telluride.civicweb.net/document/442577/Review%20and%20Discussion%20of%20Town%20Park%20Oval%20Improve.pdf?handle=08706D0BC99E40539EFA375F188AC47B"
   },
   {
     date: "August 5, 2026",

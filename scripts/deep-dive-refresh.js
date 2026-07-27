@@ -83,6 +83,12 @@ const TOPICS = {
                'norwood.*water supply', 'water supply.*norwood',
                'wright\'?s mesa.*water', 'pinon park'],
   },
+  fieldpaving: {
+    label: 'Field Paving at Town Park',
+    keywords: ['town park oval', 'oval improvements', 'field paving',
+               'grass oval', 'pickleball.*town park', 'basketball.*town park',
+               'warner field'],
+  },
 };
 
 // ── Sources — Town + County only, as Morgan specified ────────────────────────

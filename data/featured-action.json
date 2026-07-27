@@ -1,25 +1,25 @@
 {
- "generated": "2026-07-26T22:06:29.739Z",
- "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Housing Code Update SSR on Monday, July 27",
- "blurb": "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the county to know these sessions can carry real weight, but there's nothing specific to report yet.",
+ "generated": "2026-07-27T13:47:58.541Z",
+ "pinned": true,
+ "topic": "fieldpaving",
+ "topicLabel": "Field Paving at Town Park",
+ "headline": "Town Park Oval paving goes before Parks & Rec on Wednesday, July 29",
+ "blurb": "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project.",
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Field Paving at Town Park",
+  "href": "/deep-dive-field-paving-town-park.html"
  },
  "meeting": {
-  "title": "Housing Code Update SSR",
-  "sourceLabel": "San Miguel County",
-  "date": "2026-07-27",
-  "humanDate": "Monday, July 27",
+  "title": "Parks & Recreation Commission",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-07-29",
+  "humanDate": "Wednesday, July 29",
   "time": "",
-  "location": "",
-  "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930",
+  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
   "hasAgenda": true,
-  "packetUrl": "",
-  "zoomLink": "https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1",
-  "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+  "packetUrl": "https://telluride.civicweb.net/document/442577/Review%20and%20Discussion%20of%20Town%20Park%20Oval%20Improve.pdf?handle=08706D0BC99E40539EFA375F188AC47B",
+  "zoomLink": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

@@ -1160,7 +1160,12 @@ const DEEP_DIVE_PAGES = [
 //   { "topic": "carhenge", "date": "2026-07-23",
 //     "headline": "…optional…", "blurb": "…optional…" }
 // The pin is ignored once its date has passed (falls back to automatic).
-const FEATURED_ACTION_PIN = {};
+const FEATURED_ACTION_PIN = {
+  "topic": "fieldpaving",
+  "date": "2026-07-29",
+  "headline": "Town Park Oval paving goes before Parks & Rec on Wednesday, July 29",
+  "blurb": "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project."
+};
 
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
