@@ -114,7 +114,8 @@
     ouray:     LOGO_BASE + 'Ouray%20Town.png',
     airport:   LOGO_BASE + 'Airport.png',
     ttimes:    LOGO_BASE + 'TT%20Logo.png',
-    smb:       LOGO_BASE + 'San%20Miguel%20Basin.png'
+    smb:       LOGO_BASE + 'San%20Miguel%20Basin.png',
+    tmvoa:     LOGO_BASE + 'TMVOA%20Logo.png'
   };
   function entityLogo(source) { return ENTITY_LOGOS[source] || ''; }
 

@@ -238,6 +238,99 @@ const SMART_CACHED_DATA = [
   }
 ];
 
+const TMVOA_URL = 'https://tmvoa.org/meetings-events/meeting-materials/';
+
+const TMVOA_CACHE_DATE = '2026-07-26';
+
+// TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
+// a government body, but its Gondola Leadership/Subcommittee meetings and
+// Board of Directors meetings are of high public interest given TMVOA's
+// 12.5% share of gondola cost-sharing (see GONDOLA_STAKEHOLDERS). Rebuilt
+// every run by syncTMVOAAgendas() from the live meeting-materials page —
+// see that function for the robots.txt-aware scraping note.
+const TMVOA_CACHED_DATA = [
+  {
+    "date": "July 9, 2026",
+    "title": "TMVOA Board of Directors Meeting",
+    "board": "board",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_agenda_7_9_26_revised.pdf",
+    "packetUrl": "https://tmvoa.org/site/assets/files/4760/tmvoa_board_meeting_packet_7_9_26_final.pdf",
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "July 14, 2026",
+    "title": "Mountain Village Merchant Meeting",
+    "board": "merchant",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "July 20, 2026",
+    "title": "Gondola Subcommittee Meeting",
+    "board": "gondola",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4817/07_20_26_gsub_gondola_agenda_english_spanish.pdf",
+    "packetUrl": "https://tmvoa.org/site/assets/files/4817/july_20-_2026_meeting_packet_english.pdf",
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "July 23, 2026",
+    "title": "TMVOA Annual Members Meeting",
+    "board": "annual",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
+    "packetUrl": "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "July 23, 2026",
+    "title": "TMVOA Board of Directors Meeting",
+    "board": "board",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
+    "packetUrl": "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "July 28, 2026",
+    "title": "Gondola Leadership Committee Meeting",
+    "board": "gondola",
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "August 11, 2026",
+    "title": "Mountain Village Merchant Meeting",
+    "board": "merchant",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "August 20, 2026",
+    "title": "TMVOA Investment Committee Meeting",
+    "board": "investment",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "September 8, 2026",
+    "title": "Mountain Village Merchant Meeting",
+    "board": "merchant",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    "date": "October 13, 2026",
+    "title": "Mountain Village Merchant Meeting",
+    "board": "merchant",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "location": "Mountain Village, CO (see agenda for Zoom link)"
+  }
+];
+
 const MV_TC_URL = 'https://townofmountainvillage.com/government/town-council/town-council/';
 
 const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-review-board/';
@@ -1098,7 +1191,8 @@ const ENTITY_LOGOS = {
   // San Miguel Basin Forum — transparent PNG at /logo/San Miguel Basin.png
   // (upgraded 2026-07-22 from the white-boxed .jpg, which itself replaced the
   // old "San Miguel Basis Logo.jpg" on 2026-07-02).
-  smb: '<img src="/logo/San%20Miguel%20Basin.png" alt="San Miguel Basin Forum" style="width:100%;height:100%;object-fit:contain;">'
+  smb: '<img src="/logo/San%20Miguel%20Basin.png" alt="San Miguel Basin Forum" style="width:100%;height:100%;object-fit:contain;">',
+  tmvoa: '<img src="/logo/TMVOA%20Logo.png" alt="TMVOA" style="width:100%;height:100%;object-fit:contain;">'
 };
 
 const TOWN_IMAGES = {
@@ -1127,7 +1221,8 @@ const SOURCE_SHORT_NAME = {
   ophir: 'Ophir',
   rico: 'Rico',
   airport: 'TEX',
-  wilkinson: 'Wilkinson'
+  wilkinson: 'Wilkinson',
+  tmvoa: 'TMVOA'
 };
 
 const ENTITY_REMOTE = {
@@ -1154,7 +1249,8 @@ const ENTITY_REMOTE = {
   fire: {},
   med: { hasZoom: true },     // Med Center board meets in-person + Zoom
   airport: {},
-  ttimes: {}
+  ttimes: {},
+  tmvoa: {}   // TMVOA meetings offer Zoom on a per-meeting basis — see agenda
 };
 
 const ENTITY_ADDRESS = {
@@ -1169,7 +1265,8 @@ const ENTITY_ADDRESS = {
   ophir:     'Town of Ophir, CO 81426',
   rico:      'Rico Town Hall, 2 Commercial St, Rico, CO 81332',
   airport:   'Terminal Observation Lounge, Telluride Regional Airport, Telluride, CO 81435',
-  ttimes:    'Telluride, CO'
+  ttimes:    'Telluride, CO',
+  tmvoa:     'Mountain Village, CO 81435'
 };
 
 const HIDDEN_MEETING_BODIES = [

@@ -8513,6 +8513,44 @@ function getSmartMeetings() {
   });
 }
 
+// TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
+// a government body, so it's clearly labeled as such in sourceLabel. Covers
+// the Gondola Leadership Committee, Gondola Subcommittee, Board of Directors,
+// Investment Committee, Annual Members Meeting, and the joint Town-of-
+// Mountain-Village Merchant Meetings — everything on TMVOA's own
+// meeting-materials listing page. Rebuilt every run by syncTMVOAAgendas().
+function getTMVOAMeetings() {
+  if (typeof TMVOA_CACHED_DATA === 'undefined') return [];
+  return TMVOA_CACHED_DATA.map(m => {
+    const eventDate = localDate(m.date);
+    const hasAgenda = !!m.agendaUrl;
+    const link = m.agendaUrl || TMVOA_URL;
+
+    let description = '';
+    if (hasAgenda) {
+      description = m.packetUrl
+        ? 'Agenda and meeting materials available (PDF).'
+        : 'Agenda available (PDF).';
+    }
+
+    return {
+      title: m.title,
+      link,
+      description,
+      eventDate,
+      eventDates: '',
+      eventTimes: '',
+      location: m.location || '',
+      source: 'tmvoa',
+      sourceLabel: 'TMVOA',
+      category: 'Board Meeting',
+      canceled: false,
+      hasAgenda,
+      packetUrl: m.packetUrl || null
+    };
+  });
+}
+
 // Ridgway Town Council + Planning Commission. Surfaces RIDGWAY_CACHED_DATA
 // stubs (each tagged board:'council'|'pc') and pulls the agenda/packet PDF
 // from RIDGWAY_AGENDA_MAP by date (the bot refreshes that map from the two

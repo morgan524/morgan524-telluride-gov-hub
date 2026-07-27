@@ -41,6 +41,7 @@ const GETTERS = [
   ['ouray',     'Ouray County',                     'getOurayMeetings'],
   ['smart',     'SMART Transit',                    'getSmartMeetings'],
   ['airport',   'Telluride Regional Airport',       'getAirportMeetings'],
+  ['tmvoa',     'TMVOA',                            'getTMVOAMeetings'],
 ];
 const WINDOW_DAYS = 30;  // one month out — small towns meet monthly, 14d hid them between cycles
 

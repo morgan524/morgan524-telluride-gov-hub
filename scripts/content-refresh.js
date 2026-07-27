@@ -111,6 +111,11 @@ const AGENDA_SOURCES = {
     pageUrl: 'https://smarttelluride.colorado.gov/board-meetings',
     type: 'generic'
   },
+  tmvoa: {
+    label: 'TMVOA',
+    pageUrl: 'https://tmvoa.org/meetings-events/meeting-materials/',
+    type: 'generic'
+  },
   school: {
     label: 'Telluride School District R-1',
     pageUrl: 'https://www.tellurideschool.org/agendasandminutes',
@@ -799,7 +804,7 @@ async function callClaudeRaw(prompt, opts = {}) {
 // Pull hand-curated meetings from the CACHED_DATA arrays in gov-data.js.
 // Anything inside the next-30-day window with an agendaUrl gets a chance at
 // summary generation. Sources covered: MV, Fire, Med, School, Ophir, SMART,
-// Norwood, Airport — the bot-driven entities that don't have a CivicWeb /
+// Norwood, Airport, TMVOA — the bot-driven entities that don't have a CivicWeb /
 // RSS feed of their own.
 function loadCachedMeetings(now, horizon) {
   const arrays = [
@@ -810,7 +815,8 @@ function loadCachedMeetings(now, horizon) {
     { name: 'OPHIR_CACHED_DATA',   source: 'ophir' },
     { name: 'SMART_CACHED_DATA',   source: 'smart' },
     { name: 'NORWOOD_CACHED_DATA', source: 'norwood' },
-    { name: 'AIRPORT_CACHED_DATA', source: 'airport' }
+    { name: 'AIRPORT_CACHED_DATA', source: 'airport' },
+    { name: 'TMVOA_CACHED_DATA',   source: 'tmvoa' }
   ];
   const src = readJsFile(GOV_DATA_JS);
   const out = [];
@@ -5238,6 +5244,76 @@ async function syncSmartAgendas() {
   return stubs;
 }
 
+// TMVOA (Telluride Mountain Village Owners Association) — a private HOA, not
+// a government body, but its Gondola committees and Board meetings are of
+// high public interest (gondola funding, cost-sharing IGA, merchant issues).
+// Its meeting-materials page is a single unpaginated HTML table, newest-first,
+// covering every TMVOA body plus the joint Town-of-Mountain-Village Merchant
+// Meetings: <th class="no-wrap">YYYY-MM-DD</th> for the date, a plain
+// <td class="title"> with "<Body> Meeting <Month D, YYYY>", then separate
+// <td class="agenda">/<td class="materials"> cells each holding an <a href>
+// when a document exists. NOTE: the site's robots.txt disallows
+// /site/assets/ (crawl-delay 10) — this only fetches the meeting-materials
+// LISTING page (which robots.txt does not disallow) and links out to each
+// PDF rather than downloading/mirroring them. True rebuild every run (not a
+// URL patch), like syncSmartAgendas/syncMVAgendas: returns null on fetch
+// failure so an outage never blanks the section, and only null/empty results
+// leave the existing TMVOA_CACHED_DATA untouched.
+async function syncTMVOAAgendas() {
+  console.log('\n🚡 Rebuilding TMVOA meeting stubs...');
+  const PAGE = AGENDA_SOURCES.tmvoa.pageUrl;
+  const ORIGIN = 'https://tmvoa.org';
+  const html = await fetchPage(PAGE, 'TMVOA meeting-materials page');
+  if (!html) return null;
+
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+                  'July', 'August', 'September', 'October', 'November', 'December'];
+  const now = new Date();
+  const lookback = new Date(now.getTime() - 30 * 86400000);
+  const horizon = new Date(now.getFullYear(), now.getMonth() + 6, now.getDate());
+
+  function firstHref(cell) {
+    const m = /href="([^"]+)"/.exec(cell || '');
+    return m ? m[1] : null;
+  }
+  function boardOf(title) {
+    if (/merchant/i.test(title)) return 'merchant';
+    if (/investment/i.test(title)) return 'investment';
+    if (/gondola/i.test(title)) return 'gondola';
+    if (/board of directors/i.test(title)) return 'board';
+    if (/annual members/i.test(title)) return 'annual';
+    return 'other';
+  }
+
+  const rowRe = /<tr>\s*<th class="no-wrap">\s*([\d-]+)\s*<\/th>\s*<td class="title">\s*([^<]+?)\s*<\/td>[\s\S]*?<td class="agenda u-hide--to-767">([\s\S]*?)<\/td>\s*<td class="materials u-hide--to-767">([\s\S]*?)<\/td>/g;
+  const stubs = [];
+  let rm;
+  while ((rm = rowRe.exec(html)) !== null) {
+    const [, isoDate, titleRaw, agendaCell, materialsCell] = rm;
+    const d = new Date(isoDate + 'T00:00:00');
+    if (isNaN(d) || d < lookback || d > horizon) continue;
+    const [y, mo, day] = isoDate.split('-').map(Number);
+    // Strip the trailing "<Month> <D>, <YYYY>" from the title — redundant
+    // with the `date` field the rest of the pipeline keys off.
+    const title = titleRaw.replace(/\s+[A-Za-z]+\s+\d{1,2},\s+\d{4}\s*$/, '').trim();
+    const agendaHref = firstHref(agendaCell);
+    const materialsHref = firstHref(materialsCell);
+    stubs.push({
+      date: MONTHS[mo - 1] + ' ' + day + ', ' + y,
+      title,
+      board: boardOf(title),
+      agendaUrl: agendaHref ? ORIGIN + agendaHref : null,
+      packetUrl: materialsHref ? ORIGIN + materialsHref : null,
+      location: 'Mountain Village, CO (see agenda for Zoom link)'
+    });
+  }
+  if (!stubs.length) { console.warn('  TMVOA: 0 stubs parsed — preserving existing TMVOA_CACHED_DATA'); return null; }
+
+  stubs.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`  TMVOA: rebuilt ${stubs.length} stub(s) (${stubs.filter(s => s.agendaUrl).length} with agenda)`);
+  return stubs;
+}
+
 // San Miguel County — queries CivicClerk OData for upcoming events whose
 // names match BOCC / Planning Commission / Open Space / etc., and returns
 // a {dateKey: agendaUrl} map keyed by the gov-data.js date format
@@ -6823,6 +6899,23 @@ async function main() {
       govDataChanged = true;
     }
   } catch (e) { console.warn(`  Ridgway rebuild error: ${e.message}`); }
+
+  // ── 0a6. TMVOA: rebuild TMVOA_CACHED_DATA from the live meeting-materials page ──
+  try {
+    const tmvoaStubs = await syncTMVOAAgendas();
+    if (tmvoaStubs && tmvoaStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'TMVOA_CACHED_DATA') || [];
+      if (JSON.stringify(tmvoaStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'TMVOA_CACHED_DATA', tmvoaStubs, false);
+        govDataChanged = true;
+        console.log(`  TMVOA_CACHED_DATA: rebuilt (${tmvoaStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'TMVOA_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) {
+    console.warn(`  TMVOA agenda sync error: ${e.message}`);
+  }
 
   // ── 0b. SMART: rebuild SMART_CACHED_DATA from the live board-meetings page ──
   // syncSmartAgendas() now returns a freshly-generated stub array (2nd-Thursday

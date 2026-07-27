@@ -37,7 +37,7 @@ function loadDataArrays(repoRoot) {
     // The full meeting-getter set (build-week-meetings.js aggregates them all):
     'getMVMeetings', 'getSchoolMeetings', 'getFireMeetings', 'getMedMeetings',
     'getNorwoodMeetings', 'getOphirMeetings', 'getAirportMeetings', 'getSmartMeetings',
-    'getRidgwayMeetings', 'getRicoMeetings', 'getOurayMeetings',
+    'getRidgwayMeetings', 'getRicoMeetings', 'getOurayMeetings', 'getTMVOAMeetings',
     'getMeetingZoomLink', 'getMeetingPasscode'];
   const captureNames = [...constNames, ...helperNames];
 
