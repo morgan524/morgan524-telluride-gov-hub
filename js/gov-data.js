@@ -293,8 +293,8 @@ const TMVOA_CACHED_DATA = [
     date: "July 28, 2026",
     title: "Gondola Leadership Committee Meeting",
     board: "gondola",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
-    packetUrl: null,
+    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_committee_packet.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -343,11 +343,10 @@ const MV_CACHED_DATA = [
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
     board: "drb",
-    agendaUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "August 20, 2026",
@@ -592,6 +591,15 @@ const NORWOOD_SAN_URL = 'https://www.norwoodtown.com/norwood-sanitation-district
 const NORWOOD_CACHE_DATE = '2026-07-27';
 
 const NORWOOD_CACHED_DATA = [
+  {
+    date: "July 29, 2026",
+    time: null,
+    title: "Board of Trustees Work Session",
+    agendaUrl: "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
+    packetUrl: null,
+    special: false,
+    board: "bot"
+  },
   {
     date: "August 11, 2026",
     time: null,
