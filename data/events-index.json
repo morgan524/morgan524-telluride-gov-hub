@@ -1,15 +1,15 @@
 [
   {
-    "title": "Desserts and Documentary-Bathtubs Over Broadway",
-    "href": "https://koto.org/event/desserts-and-documentary-bathtubs-over-broadway/",
+    "title": "Desserts and Documentary: Bathtubs Over Broadway",
+    "href": "https://telluridelibrary.libcal.com/event/17029820?hs=a",
     "date": "2026-07-27",
     "time": "1:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Enjoy a dessert while watching Bathtubs Over Broadway. When he started as a comedy writer for the LATE SHOW WITH DAVID LETTERMAN, Steve Young had few interests outside of his day job. But while gathering material for a segment on the show,…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_22_11_39_21.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:30 PM – 3:00 PM · Enjoy a dessert while watching Bathtubs Over Broadway . When he started as a comedy writer for the LATE SHOW WITH DAVID LETTERMAN, Steve Young had few interests outside of his day job. But while gathering material for a…",
     "type": "Arts & Film"
   },
   {
@@ -212,19 +212,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray Hot Springs summer swim lesson program is a fun and supportive way for kids to build confidence in the water. Two-week sessions run through the summer from June 1 through Aug. 6. Details: ✔️ Classes meet Monday–Thursday for 30…",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-27/",
-    "date": "2026-07-27",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -1990,7 +1977,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -2240,7 +2227,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2345,7 +2332,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2451,7 +2438,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2517,7 +2504,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -2608,8 +2595,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Ouray County Pride",
@@ -3963,5 +3950,18 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "JEAN SANDOVAL AND THE TOWNKIDS",
+    "href": "https://events.ourayridgwayevents.com/event/jean-sandoval-and-the-townkids",
+    "date": "2026-09-25",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   }
 ]

@@ -225,8 +225,8 @@ const SMART_CACHED_DATA = [
     time: "4:00 PM",
     title: "SMART Board of Directors",
     location: "SMART Office, Lawson Hill (also virtual — see agenda)",
-    agendaUrl: "https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-Agenda_July-23rd-2026_distributed.pdf",
-    packetUrl: "https://smarttelluride.colorado.gov/sites/smarttelluride/files/documents/SMART-Board-meeting-packet_July-23rd-2026.pdf"
+    agendaUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-Agenda_July-23rd-2026_distributed.pdf",
+    packetUrl: "https://smarttelluride.colorado.gov/sites/g/files/lrnvjt2346/files/documents/SMART-Board-meeting-packet_July-23rd-2026.pdf"
   },
   {
     date: "August 13, 2026",
@@ -275,18 +275,18 @@ const TMVOA_CACHED_DATA = [
   },
   {
     date: "July 23, 2026",
-    title: "TMVOA Annual Members Meeting",
-    board: "annual",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "July 23, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
     agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
     packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "July 23, 2026",
+    title: "TMVOA Annual Members Meeting",
+    board: "annual",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
