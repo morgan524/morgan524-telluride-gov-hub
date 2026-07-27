@@ -1,22 +1,18 @@
 {
-  "hash": "19278db91cc0408c4f8c9acbceef2d53ab5f9c79",
-  "lede": "The most charged item this week is Wednesday's Parks & Recreation Commission meeting, where the already-approved paving of Town Park's grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters opposing the project are on the table. The gondola project also gets a substantive look Tuesday when the Gondola Leadership Committee takes up funding commitments, capital investment grants, and what's described as an action item on background and history. The Town Council meets Sunday in a special session to hear a liquor-licensing request for KOTO's Live at the Drive event.",
+  "hash": "9629ef937a90c0cee9fcad2ec0b4faa7acdce22c",
+  "lede": "The sharpest item this week is Wednesday's Parks & Recreation Commission meeting, where the already-approved plan to pave Town Park's grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters of opposition are on the table, so this one has real stakes for the heart of town. The Gondola Leadership Committee also convenes Monday on what's described as a substantive session covering funding commitments and project updates on the longest-running civic question in the valley. And Sunday, the Town Council sits as the Liquor Licensing Authority for a public hearing on KOTO's Live at the Drive permit.",
   "notable": [
     {
       "id": 1,
-      "stake": "Public hearing on KOTO's Live at the Drive liquor permit — residents may comment."
+      "stake": "Public hearing on KOTO's Live at the Drive special event liquor permit."
     },
     {
       "id": 3,
-      "stake": "Gondola funding commitments and CIG program up for action, not just discussion."
-    },
-    {
-      "id": 4,
-      "stake": "Same gondola session — capital investment grants and project direction on the agenda."
+      "stake": "Action items on gondola history, CIG funding commitments, and project direction."
     },
     {
       "id": 6,
-      "stake": "Controversial Town Park paving for courts faces commission review; 400+ signatures opposed."
+      "stake": "Controversial Town Park paving plan faces 400+ signatures of public opposition."
     }
   ]
 }

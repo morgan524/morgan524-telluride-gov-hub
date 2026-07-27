@@ -332,7 +332,7 @@
   },
   "mv|2026-08-06|Design Review Board": {
     "sv": 4,
-    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49514/august_6-_2026_design_review_board_meeting_agenda.pdf",
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf",
     "zoomUrl": "https://us06web.zoom.us/j/84661174346?pwd=pGG47aNtAK3sjfccaVrai3o6jbV3bZ.1",
     "meetingId": "846 6117 4346"
   },
@@ -373,6 +373,14 @@
     "sv": 4
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
+    "sv": 4
+  },
+  "norwood|2026-07-29|Board of Trustees Work Session": {
+    "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/84191917434",
+    "meetingId": "841 9191 7434",
+    "passcode": "905972",
+    "phone": "970-327-4288",
     "sv": 4
   }
 }
