@@ -293,7 +293,7 @@ const TMVOA_CACHED_DATA = [
     date: "July 28, 2026",
     title: "Gondola Leadership Committee Meeting",
     board: "gondola",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_docx.pdf",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf",
     packetUrl: null,
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
@@ -343,11 +343,10 @@ const MV_CACHED_DATA = [
     time: "10:00 AM - 3:00 PM",
     title: "Design Review Board",
     board: "drb",
-    agendaUrl: null,
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49514/august_6-_2026_design_review_board_meeting_agenda.pdf",
     packetUrl: null,
     special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A",
-    note: "Agenda typically posted the Friday before."
+    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
   {
     date: "August 20, 2026",
