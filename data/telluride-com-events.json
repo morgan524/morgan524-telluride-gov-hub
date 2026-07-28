@@ -336,18 +336,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    "title": "Telluride Theatre&#039;s Annual Shakespeare in the Park",
-    "link": "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    "description": "2026 Shakespeare in the Park\n\nHenry, the young and newly crowned king, is impatient to assert control over the people …",
-    "pubDate": "2026-07-17",
-    "endDate": "2026-07-26",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/51687/thunder_tix_600x375px.800x533.webp"
-  },
-  {
     "title": "Telluride Baseball Festival",
     "link": "https://www.telluride.com/event/telluride-baseball-festival/",
     "description": "The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …",
@@ -370,17 +358,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
-  },
-  {
-    "title": "The National Summer School: Taste Like a Master",
-    "link": "https://www.telluride.com/event/the-national-summer-school-taste-like-a-master/",
-    "description": "Step into the shoes of a Master Sommelier in this highly interactive, educational series session. Featuring a blind …",
-    "pubDate": "2026-07-26",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63073/the-national_wineeducation-flyer_8_5x11.800x533.webp"
   },
   {
     "title": "Town Talk: The Dual Challenge - Climate and Energy",
@@ -756,5 +733,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
+  },
+  {
+    "title": "Mountains to the Desert Classic",
+    "link": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
+    "description": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    "pubDate": "2026-09-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
   }
 ]

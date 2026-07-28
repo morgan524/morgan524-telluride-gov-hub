@@ -1,19 +1,5 @@
 [
   {
-    "id": "TEL-A-186",
-    "name": "Roman",
-    "species": "Dog",
-    "breed": "Bulldog, French",
-    "ageGroup": "Young Dog",
-    "sex": "Male",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/d41da3a87655b31d6984c022c69835b0/22b7f37d16d281de87282d9cfb67b365.jpeg",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/213885538",
-    "summary": "Young Dog • Bulldog, French • Male",
-    "firstSeen": "2026-07-11",
-    "revealDate": "2026-07-11",
-    "lastSeen": "2026-07-27"
-  },
-  {
     "id": "TEL-A-192",
     "name": "Goldie",
     "species": "Dog",
@@ -25,7 +11,7 @@
     "summary": "Young Puppy • Retriever, Golden / Poodle • Female",
     "firstSeen": "2026-07-27",
     "revealDate": "2026-07-27",
-    "lastSeen": "2026-07-27"
+    "lastSeen": "2026-07-28"
   },
   {
     "id": "TEL-A-193",
@@ -39,7 +25,7 @@
     "summary": "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     "firstSeen": "2026-07-27",
     "revealDate": "2026-07-29",
-    "lastSeen": "2026-07-27"
+    "lastSeen": "2026-07-28"
   },
   {
     "id": "TEL-A-196",
@@ -53,6 +39,6 @@
     "summary": "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     "firstSeen": "2026-07-27",
     "revealDate": "2026-07-31",
-    "lastSeen": "2026-07-27"
+    "lastSeen": "2026-07-28"
   }
 ]
