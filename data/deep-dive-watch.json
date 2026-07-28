@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-28T14:24:19.183Z",
+ "generated": "2026-07-28T16:49:12.326Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -130,6 +130,18 @@
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
    "upcoming": [
+    {
+     "source": "norwood",
+     "sourceLabel": "Town of Norwood",
+     "title": "NWC Possible Quorum",
+     "date": "2026-07-29",
+     "time": "",
+     "location": "1670 Naturita St, Norwood CO 81423",
+     "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
+     "link": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
+     "zoomLink": "",
+     "livestream": ""
+    },
     {
      "source": "norwood",
      "sourceLabel": "Town of Norwood",

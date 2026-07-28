@@ -148,7 +148,7 @@
   },
   "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session": {
     "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1931",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1043/files/agenda/1934",
     "zoomUrl": "https://us02web.zoom.us/j/89046113764",
     "meetingId": "890 4611 3764",
     "passcode": "475547",
@@ -384,6 +384,10 @@
     "sv": 4
   },
   "med|2026-08-27|Regular Board Meeting": {
+    "sv": 4
+  },
+  "norwood|2026-07-29|NWC Possible Quorum": {
+    "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
     "sv": 4
   }
 }
