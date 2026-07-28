@@ -389,5 +389,13 @@
   "norwood|2026-07-29|NWC Possible Quorum": {
     "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
     "sv": 4
+  },
+  "norwood|2026-08-05|Board of Trustees Work Session": {
+    "agendaUrl": "https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/87433907008",
+    "meetingId": "874 3390 7008",
+    "passcode": "126738",
+    "phone": "970-327-4288",
+    "sv": 4
   }
 }
