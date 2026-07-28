@@ -115,7 +115,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "5:15 PM – 6:00 PM",
+    "desc": "A Wilkinson Public Library program featuring Pinhead's Punk Science show, held outdoors on the Lower Terrace. The event runs from 5:15 to 6:00 PM.",
     "type": "Talks & Classes"
   },
   {
@@ -356,6 +356,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "NWC Possible Quorum",
+    "href": "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
+    "date": "2026-07-29",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Government Meeting",
+    "source": "Town of Norwood",
+    "desc": "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    "type": "Community"
   },
   {
     "title": "Wine and Wickets",
@@ -1964,7 +1977,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -2214,7 +2227,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -2425,7 +2438,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -2491,7 +2504,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2582,8 +2595,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",
@@ -3974,7 +3987,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
