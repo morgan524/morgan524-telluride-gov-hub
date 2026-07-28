@@ -1,18 +1,14 @@
 {
-  "hash": "e882e260ef4f31b5abde0f08c43eeaf7b52b3685",
-  "lede": "The gondola's future takes center stage Monday when the Gondola Leadership Committee meets to work through project history, CIG funding commitments, and what sounds like real action items — this is the longest-running civic question in the valley and worth paying attention to. Wednesday, Parks and Rec revisits the controversial Town Park paving plan to install basketball and pickleball courts on the grass oval, with more than 400 signatures of opposition already on the table. The San Miguel Basin Fair and Rodeo kicks off Friday, and the New York Philharmonic Brass Quintet is also in town to close out the week.",
+  "hash": "90b599e056d2ce29394fc5dd59037da65bbe5942",
+  "lede": "The gondola's future takes center stage Monday when the Gondola Leadership Committee meets to work through funding commitments, a project update, and — notably — a governance action item that signals this is more than a routine briefing. Wednesday, Parks & Rec revisits the already-approved paving of the Town Park grass oval for basketball and pickleball courts, a project that's drawn more than 400 signatures in opposition and still has real heat behind it.",
   "notable": [
     {
       "id": 0,
-      "stake": "Action items on gondola funding and project direction; a real decision meeting."
-    },
-    {
-      "id": 1,
-      "stake": "Same gondola session from TMVOA side; CIG funding and project future on the line."
+      "stake": "Gondola funding and governance action items up for committee decision."
     },
     {
       "id": 3,
-      "stake": "Controversial Town Park paving project back on the table with 400+ signatures opposed."
+      "stake": "Controversial Town Park paving project back before commission; 400+ signatures opposed."
     }
   ]
 }
