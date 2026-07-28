@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-27-26",
+    "source": "KOTO Community Radio",
+    "date": "July 28, 2026",
+    "newsTopic": "community",
+    "copy": "Remembering Anna Brown; Telluride Looks to Calm Speed on East End",
+    "href": "https://koto.org/news/newscast-7-27-26/"
+  },
+  {
     "title": "Newscast 7-24-26",
     "source": "KOTO Community Radio",
     "date": "July 25, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "Firefighters Begin Repair Work on Ferris Fire Land; Finding the Glorians with Terry Tempest Williams; Goats Return to the Valley Floor",
     "href": "https://koto.org/news/newscast-7-15-26/"
-  },
-  {
-    "title": "Newscast 7-13-26",
-    "source": "KOTO Community Radio",
-    "date": "July 14, 2026",
-    "newsTopic": "public-safety",
-    "copy": "ICE Arrests Man Outside San Miguel County Jail; Firefighter Dies Battling Gold Mountain; Charles Dalton Elected to Telluride Town Council",
-    "href": "https://koto.org/news/newscast-7-13-26/"
   }
 ]

@@ -374,7 +374,10 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "norwood|2026-07-29|Board of Trustees Work Session":
-    {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4},
+
+  "med|2026-08-27|Regular Board Meeting":
+    {"sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -496,17 +499,11 @@ const MEETING_PREVIEWS = {
   "county|2026-08-19|Board of County Commissioners Meeting":
     "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices include property tax exemption information for seniors, disabled veterans, and gold star spouses, along with foreclosure and probate matters in the county.",
 
-  "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026":
-    "The Gondola Leadership Committee is expected to review background history, hear updates on the CIG Program funding commitments and current project progress, and examine a fiscal and economic impact analysis. Local jurisdiction updates and an opportunity for public comment are also on the agenda.",
-
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
     "The Telluride Planning & Zoning Commission is expected to consider a site-specific development plan vesting notice for a local project. Commissioners may also review related land use matters. The meeting will be live streamed on YouTube.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
     "The Planning & Zoning Commission Chair meeting on August 20, 2026 may address a proposed Land Use Code amendment establishing regulations for Natural Medicine Businesses, as well as a site-specific development plan vesting notice. Detailed agenda items were not fully available in the provided materials.",
-
-  "tmvoa|2026-07-28|Gondola Leadership Committee Meeting":
-    "The Gondola Leadership Committee is expected to review background on the gondola project, hear updates on CIG program funding commitments and project progress, and discuss fiscal and economic impact analysis. Local jurisdiction updates and public comment are also on the agenda.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
     "Commissioners are expected to address county administrative matters. Related legal notices include probate and creditor claims for multiple estates and two foreclosure sales involving properties in Telluride and Telluride Mountain Village, managed by the San Miguel County Public Trustee.",
@@ -518,6 +515,106 @@ const MEETING_PREVIEWS = {
     "Board members will discuss potential placement and location opportunities for a Happenings Kiosk. No formal action will be taken, as this is a work session. The meeting will be held at Norwood Town Hall with a Zoom option available."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
   {
     title: "St Pats Telluride Parish Bulletin for July 26th",
     source: "St. Patrick's Catholic Church",
@@ -697,16 +794,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Ouray County Remains in Stage 2 Fire Restrictions",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=953",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22782"
-  },
-  {
-    title: "Invitation to prayer/fellowship-Wednesday morning",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 14, 2026",
-    newsTopic: "community",
-    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 15...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. (If you are only available for fellowship and i...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning/",
-    img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -730,17 +817,6 @@ const SMC_ALERTS = [
     pubDate: "2026-07-21T23:12:00.000Z",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Tomboy Road reopens Weds 7/22 8AM",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-07-21",
-    pubDate: "2026-07-21T23:10:29.000Z",
-    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
     img: ""
   },
   {
@@ -773,7 +849,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-27';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-28';
 const LEGAL_NOTICES_CACHE_DATE = '2026-07-23';
 
 const MANUAL_SUMMARIES = {
@@ -1021,10 +1097,13 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
-    "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision."
+    "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
+
+  "med|2026-08-27|Regular Board Meeting":
+    "The August 27, 2026 Montrose County Metropolitan Recreation District Regular Board Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1979,218 +2058,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Free Oak Street Park SummerSHOW Series continues",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "recreation",
-    copy: "The Sheridan Arts Foundation's free Oak Street Park SummerSHOW Series has three concerts left this summer — Selasee (July 23), Deltaphonic (Aug. 20), and Mariachi San José (Sept. 24). Shows are on the Opera House patio at 110 S. Oak St., with bar service and food on site. Bring a chair or blanket.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_15291567-c87c-41b3-a999-d18e401ed6b1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/eb/3ebe7471-92ca-4564-9ce7-be3766f5bcc6/6a56b1680e010.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "National Forest Foundation leaders convene in Telluride",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "The National Forest Foundation's board and executive leadership are meeting in Telluride July 21–24 to focus on wildfire preparedness and forest stewardship across the West. Field tours will visit Blue Lakes, Alta Lakes, and Lizard Head Pass to review active and potential projects on the GMU National Forests. The foundation cited the region's collaborative stewardship work as a reason for choosing Telluride.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_1c1dd375-ddcc-4895-b7fd-e0bf46364854.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/93/59354ae2-1072-4770-839a-08dfb371291f/6a56ad4f5520a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Talking Gourds features Esther Belin, Diné poet and artist",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "arts-culture",
-    copy: "Diné poet and artist Esther Belin, Durango's Poet Laureate, will read at Talking Gourds in the Wilkinson Public Library on July 21 at 5:15 p.m. The free event welcomes all ages; attendees are encouraged to bring a poem or story to share. This month's prompt is \"Water.\"",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_21a5512e-d334-4631-9607-3b5039fa2c18.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/82/682efc5f-d5fc-4198-9f35-33f18e5edfa7/6a56ac73c917f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Western Colorado University publishing students launch new anthology",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "education",
-    copy: "Western Colorado University's MFA publishing students are launching their seventh anthology, \"Into the Deep, Dark Woods\" — 28 stories and poems spanning fantasy, horror, and fairy tale — on July 22 at 6 p.m. in Gunnison. Students handled every stage of production. Free and open to the public.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_e683da6f-ed51-4cba-a061-e0de05143b01.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/32/43277e79-0c17-4ce8-b8a5-06f2cb50ebc9/6a56aa6340648.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "When the cure is a virus",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Salk Institute researcher Dr. Clodagh O'Shea presents a free Town Talk July 21 at 6:30 p.m. at the Telluride Conference Center in Mountain Village. She'll explain how her lab engineers viruses to target and destroy cancer cells while leaving healthy tissue alone — work now in clinical trials. The series runs Tuesdays through Aug. 11.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/article_6628b1e5-34db-4c20-bfc5-751e692a85eb.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a0/8a02af43-dff7-4bc9-b5f2-30872ac66c2f/6a56ab4170bd2.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Friends don't leave friends in hot cars",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Parked cars heat up fast ' a 78°F day can push interior temps past 160°F in the sun within 30 minutes, which can kill a dog quickly. Colorado law outlines specific steps before breaking a window: call 911 first, document the vehicle, and use only necessary force. If you see a dog in distress, don't improvise — follow the statute.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_353d28c9-dfea-4ade-ad90-8db000b2e533.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b8/fb871491-6ed0-4c10-99fa-03eb13bb7e16/6a56a9b0bbeaa.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The Town of Mountain Village launches national search for manager",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "recreation",
-    copy: "Mountain Village is conducting a national search for a new town manager, partnering with recruitment firm KRW Associates. The position oversees 160 staff and a $50M+ budget, with big regional projects on the table — workforce housing, a wastewater plant, and gondola replacement. Applications close August 7th.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_cc5e0637-37bb-4d32-9b24-997459f1eb3c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/e3/de3c2535-1551-4e46-9ea3-2dd51e8bfd5a/6a56a8a5c1c4f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Keep the Oval green",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "recreation",
-    copy: "Two of the original builders of Telluride Town Park — who laid the sod and shaped those six acres starting in 1980 — are weighing in against paving the Oval for courts. They watched kids fill that grass during Bluegrass and say hardscape isn't the right trade-off. They're suggesting the indoor hockey arena and high school gym get a second look first.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_5de44ae8-c964-4dd9-af23-ec624d5e7782.html",
-    img: "",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "A community, not just a destination",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "A Democratic candidate for San Miguel County Commissioner is making workforce housing, economic diversification, and transparent government the center of his campaign. He argues that when workers can't afford to live where they work, schools thin out, businesses struggle to keep staff, and longtime residents quietly leave. The election is November 3.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_eff6f5ee-f9a1-4021-bbbd-927e0c953039.html",
-    img: "",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Death, rebirth and morels",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Last summer's Stoner Mesa Fire burned 10,000 acres above Rico in the San Juans. A recent visit to the burn scar turned up unexpected morels — mushrooms that respond to fire's heat and ash-rich soil as a cue to fruit, helping stabilize soils and kick off forest recovery. Heavy loss, but the cycles still turn up here.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_558a094b-2688-4cb2-92bf-a322bdfd5b43.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/06/a066739c-ff2a-462b-a5b9-67b0793e6e62/6a56a442a7441.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Looking for a ‘unicorn buyer’",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "land-use",
-    copy: "Five of 24 homes at Pinion Park, an affordable housing development in Norwood, are listed for sale but finding no takers. The AMI income caps create a narrow buyer pool, and without the low-interest, no-down-payment loans original buyers received, the ~$370K asking prices are out of reach for income-qualified buyers. Rural Homes and the county are exploring options, but grant covenants leave limited room to maneuver.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0f4d036f-b01e-4091-ae66-3a1849e04921.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/cc/0cced57b-f9dc-4119-ba73-3c2b0d53b758/6a55d8e525046.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Pickleball players need their own space",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "A resident letter to the editor raises concerns about pickleball sharing space with tennis at Town Park, citing noise carrying into the East End neighborhoods, nets left on courts, and players gathering early during reserved tennis time. The writer suggests the Hanley Rink could serve as a dedicated pickleball venue. Strong turnout at the June 30 Town Council meeting apparently opposed cementing the park oval for pickleball and basketball.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_09674367-044f-4f2f-90a0-72d04793246d.html",
-    img: "",
-    letterAuthor: "Mary Sama-Brown",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Democracy depends on participation",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "arts-culture",
-    copy: "San Miguel County Democrats held a community picnic July 5th, introducing local candidates including Lane Masters for sheriff, Paul Reich for commissioner, and incumbents Emil Sante, Michael Wyszynski, Brandi Hatfield, and Dave Foley. State House District 58 candidate Alec Lindeman also attended.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b2b08b03-551a-4eb2-b42f-bf9522e89821.html",
-    img: "",
-    letterAuthor: "San Miguel County Democrats",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "What to know about Trump's order shrinking the size of 2 national monuments in Utah",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Trump has signed an order shrinking Bears Ears and Grand Staircase-Escalante national monuments in Utah from over 3.2 million acres to under 303,000 acres combined — a bigger cut than his first term. Utah officials support the move; tribal nations and conservationists say it opens sacred lands to mining.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_124dcf61-0626-5f12-ba0b-7e25ab746916.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/91/69129540-2171-588c-8ea6-b38558c446b6/6a558bcc1da3c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Trump reduces size of 2 national monuments in Utah as Republicans reshape land management",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Trump has reduced Bears Ears and Grand Staircase-Escalante national monuments in Utah by roughly 90% each — from over 3.2 million acres combined down to under 303,000 — opening much of the land to potential mining and drilling. He took similar action in his first term; Biden reversed it. Tribal nations consider Bears Ears a living cultural site and say they weren't properly consulted.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_e6bb1b22-8f36-5cdf-b863-3b7ab23f7677.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/2b/42b866df-fd6b-549a-a651-fc401894ebc5/6a558bd227dd3.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Busy wildfire season tests US fire bosses as they juggle resources to stay ahead",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "public-safety",
-    copy: "Wildfire season is running hot across the West — over 5,600 square miles burned so far, outpacing the decade average. Three firefighters have died in Colorado, resources are stretched to preparedness level 4, and conditions from the Four Corners north aren't expected to ease until September.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_80b44c87-dd50-5e16-843e-a6bb73bd2f53.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/50/350f0ba2-b8fe-5bab-866d-6e3ace65c12f/6a55b864849b6.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "San Miguel County Search and Rescue mission goes viral",
-    source: "Telluride Times",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "public-safety",
-    copy: "A BASE jumper activated a Garmin SOS in Columbine Basin on July 6, triggering a nine-hour, 20-person SAR response — then declined helicopter transport and hiked out. The sheriff's office publicly criticized the man, citing a prior Alps rescue, and the post drew 1,800+ comments. The subject later posted their own account disputing the sheriff's characterization.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_510cc405-a85a-4df5-8f1a-0787ddeed37e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/83/283f5bf8-c554-438a-97c6-49a9401037f6/6a55d58c6a824.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2224,15 +2091,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Tomboy Road reopens Weds 7/22 8AM",
-    source: "San Miguel County",
-    date: "July 21, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to hazardous conditions, Tomboy Road is closed to all pedestrian and vehicle traffic.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=535",
     img: ""
   },
   {
@@ -2276,17 +2134,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Mayor John Clark Receives Prestigious Award",
-    source: "Town of Ridgway",
-    date: "July 14, 2026",
-    firstSeen: "2026-07-14",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2-Mayor-John-Clark-Receives-Prestigious-Award-2026-07-14.pdf",
-    img: ""
-  },
-  {
     title: "Ridgway Sustainability Advisory Board Meeting Agenda",
     source: "Town of Ridgway",
     date: "August 4, 2026",
@@ -2300,6 +2147,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 7-27-26",
+    source: "KOTO Community Radio",
+    date: "July 28, 2026",
+    newsTopic: "community",
+    copy: "Remembering Anna Brown; Telluride Looks to Calm Speed on East End",
+    href: "https://koto.org/news/newscast-7-27-26/"
+  },
   {
     title: "Newscast 7-24-26",
     source: "KOTO Community Radio",
@@ -2355,14 +2210,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "Firefighters Begin Repair Work on Ferris Fire Land; Finding the Glorians with Terry Tempest Williams; Goats Return to the Valley Floor",
     href: "https://koto.org/news/newscast-7-15-26/"
-  },
-  {
-    title: "Newscast 7-13-26",
-    source: "KOTO Community Radio",
-    date: "July 14, 2026",
-    newsTopic: "public-safety",
-    copy: "ICE Arrests Man Outside San Miguel County Jail; Firefighter Dies Battling Gold Mountain; Charles Dalton Elected to Telluride Town Council",
-    href: "https://koto.org/news/newscast-7-13-26/"
   }
 ];
 
@@ -2895,17 +2742,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Mountain Village Electronics Recycling event",
-    link: "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-27/",
-    description: "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep electronic waste out of landfills while ensuring devices and batteries are handled properly. Residents are encouraged to clear out old or unused electronics and drop them off during the two-day collection window. A wide range of electronic items will be accepted, including old computers, televisions and household appliances. Residents are also invited to bring in batteries for recycling, though only certain types and sizes will be accepted. …",
-    pubDate: "2026-07-27T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Womens Empowerment Group",
     link: "https://koto.org/event/womens-empowerment-group-3/",
     description: "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/RLxaexLJar4Vpnhp7 Kaity Swick, LPCC – Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
@@ -3377,6 +3213,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-08-07T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-08/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-08-08T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Zumba with Gisela",
+    link: "https://koto.org/event/zumba-with-gisela/2026-08-08/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-08-08T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-08-08/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-08-09T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
   }
 ];
 
@@ -3445,20 +3325,6 @@ const WILKINSON_EVENTS = [
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
   {
-    id: "TEL-A-186",
-    name: "Roman",
-    species: "Dog",
-    breed: "Bulldog, French",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/d41da3a87655b31d6984c022c69835b0/22b7f37d16d281de87282d9cfb67b365.jpeg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/213885538",
-    summary: "Young Dog • Bulldog, French • Male",
-    firstSeen: "2026-07-11",
-    revealDate: "2026-07-11",
-    lastSeen: "2026-07-27"
-  },
-  {
     id: "TEL-A-192",
     name: "Goldie",
     species: "Dog",
@@ -3470,7 +3336,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Retriever, Golden / Poodle • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-27",
-    lastSeen: "2026-07-27"
+    lastSeen: "2026-07-28"
   },
   {
     id: "TEL-A-193",
@@ -3484,7 +3350,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-29",
-    lastSeen: "2026-07-27"
+    lastSeen: "2026-07-28"
   },
   {
     id: "TEL-A-196",
@@ -3498,7 +3364,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-31",
-    lastSeen: "2026-07-27"
+    lastSeen: "2026-07-28"
   }
 ];
 
@@ -4234,7 +4100,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
     description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
     pubDate: "2026-08-01T02:00:00.000Z",
-    endDate: "2026-09-19",
+    endDate: "2026-09-26",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5361,39 +5227,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Girl Scout Cookie Booth",
-    link: "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    description: "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    pubDate: "2026-07-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    title: "Sunday Rehab: Apres Edition",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    description: "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    pubDate: "2026-07-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    pubDate: "2026-07-26T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
@@ -5590,17 +5423,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48859/logan_metz_1800x900px.png"
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     title: "Mind Blown Telluride",
@@ -6261,18 +6083,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    title: "Telluride Theatre&#039;s Annual Shakespeare in the Park",
-    link: "https://www.telluride.com/event/telluride-theatres-annual-shakespeare-in-the-park/",
-    description: "2026 Shakespeare in the Park\n\nHenry, the young and newly crowned king, is impatient to assert control over the people …",
-    pubDate: "2026-07-17",
-    endDate: "2026-07-26",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/51687/thunder_tix_600x375px.800x533.webp"
-  },
-  {
     title: "Telluride Baseball Festival",
     link: "https://www.telluride.com/event/telluride-baseball-festival/",
     description: "The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …",
@@ -6295,17 +6105,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
-  },
-  {
-    title: "The National Summer School: Taste Like a Master",
-    link: "https://www.telluride.com/event/the-national-summer-school-taste-like-a-master/",
-    description: "Step into the shoes of a Master Sommelier in this highly interactive, educational series session. Featuring a blind …",
-    pubDate: "2026-07-26",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63073/the-national_wineeducation-flyer_8_5x11.800x533.webp"
   },
   {
     title: "Town Talk: The Dual Challenge - Climate and Energy",
@@ -6681,6 +6480,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/48115/2023_corvettes_and_colors.800x533.webp"
+  },
+  {
+    title: "Mountains to the Desert Classic",
+    link: "https://www.telluride.com/event/mountains-to-the-desert-classic/",
+    description: "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    pubDate: "2026-09-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
   }
 ];
 
@@ -8702,16 +8512,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "July 27, 2026",
-    title: "Special Town Council",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8294,
-    packetUrl: "https://telluride-co.civicweb.net/document/442029/"
-  },
   {
     date: "July 29, 2026",
     title: "Parks & Recreation Commission",

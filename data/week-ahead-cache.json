@@ -1,18 +1,18 @@
 {
-  "hash": "9629ef937a90c0cee9fcad2ec0b4faa7acdce22c",
-  "lede": "The sharpest item this week is Wednesday's Parks & Recreation Commission meeting, where the already-approved plan to pave Town Park's grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters of opposition are on the table, so this one has real stakes for the heart of town. The Gondola Leadership Committee also convenes Monday on what's described as a substantive session covering funding commitments and project updates on the longest-running civic question in the valley. And Sunday, the Town Council sits as the Liquor Licensing Authority for a public hearing on KOTO's Live at the Drive permit.",
+  "hash": "e882e260ef4f31b5abde0f08c43eeaf7b52b3685",
+  "lede": "The gondola's future takes center stage Monday when the Gondola Leadership Committee meets to work through project history, CIG funding commitments, and what sounds like real action items — this is the longest-running civic question in the valley and worth paying attention to. Wednesday, Parks and Rec revisits the controversial Town Park paving plan to install basketball and pickleball courts on the grass oval, with more than 400 signatures of opposition already on the table. The San Miguel Basin Fair and Rodeo kicks off Friday, and the New York Philharmonic Brass Quintet is also in town to close out the week.",
   "notable": [
     {
+      "id": 0,
+      "stake": "Action items on gondola funding and project direction; a real decision meeting."
+    },
+    {
       "id": 1,
-      "stake": "Public hearing on KOTO's Live at the Drive special event liquor permit."
+      "stake": "Same gondola session from TMVOA side; CIG funding and project future on the line."
     },
     {
       "id": 3,
-      "stake": "Action items on gondola history, CIG funding commitments, and project direction."
-    },
-    {
-      "id": 6,
-      "stake": "Controversial Town Park paving plan faces 400+ signatures of public opposition."
+      "stake": "Controversial Town Park paving project back on the table with 400+ signatures opposed."
     }
   ]
 }

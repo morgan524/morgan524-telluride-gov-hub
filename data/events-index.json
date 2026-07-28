@@ -54,19 +54,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Mountain Village Electronics Recycling event",
-    "href": "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-27/",
-    "date": "2026-07-27",
-    "time": "12:00 PM",
-    "location": "",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/cycling.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-07-27",
@@ -1031,7 +1018,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-09-19"
+    "endDate": "2026-09-26"
   },
   {
     "title": "Natalie Brooke",
@@ -1807,6 +1794,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Free Youth Tennis & Pickleball Program",
+    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/",
+    "date": "2026-08-07",
+    "time": "3:30 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "RED MOUNTAIN REVIVAL",
     "href": "https://events.ourayridgwayevents.com/event/jack-haight-5810",
     "date": "2026-08-07",
@@ -1900,6 +1900,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Bilingual Balance in Motion",
+    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-08/",
+    "date": "2026-08-08",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
+  },
+  {
+    "title": "Zumba with Gisela",
+    "href": "https://koto.org/event/zumba-with-gisela/2026-08-08/",
+    "date": "2026-08-08",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Dallas Park Cemetery Tour",
     "href": "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
     "date": "2026-08-08",
@@ -1981,19 +2007,6 @@
     "type": "Music"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-08-08",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
-  },
-  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-08-08",
@@ -2005,6 +2018,19 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://koto.org/event/movies-under-the-stars/2026-08-08/",
+    "date": "2026-08-08",
+    "time": "6:30 PM",
+    "location": "Conference Center Plaza Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray: Echoes in the Canyon — Screening @ the Wright",
@@ -3963,5 +3989,31 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Mountains to the Desert Classic",
+    "href": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
+    "date": "2026-09-25",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    "type": "Community"
+  },
+  {
+    "title": "Norwood Pioneer Days And Car Show",
+    "href": "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
+    "date": "2026-09-26",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "",
+    "type": "Community"
   }
 ]

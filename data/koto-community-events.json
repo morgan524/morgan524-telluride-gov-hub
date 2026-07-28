@@ -1,16 +1,5 @@
 [
   {
-    "title": "Mountain Village Electronics Recycling event",
-    "link": "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-27/",
-    "description": "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep electronic waste out of landfills while ensuring devices and batteries are handled properly. Residents are encouraged to clear out old or unused electronics and drop them off during the two-day collection window. A wide range of electronic items will be accepted, including old computers, televisions and household appliances. Residents are also invited to bring in batteries for recycling, though only certain types and sizes will be accepted. …",
-    "pubDate": "2026-07-27T18:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
     "title": "Womens Empowerment Group",
     "link": "https://koto.org/event/womens-empowerment-group-3/",
     "description": "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/RLxaexLJar4Vpnhp7 Kaity Swick, LPCC – Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
@@ -482,5 +471,49 @@
     "category": "Community Event",
     "location": "Oak Street Plaza, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Free Youth Tennis & Pickleball Program",
+    "link": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/",
+    "description": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    "pubDate": "2026-08-07T21:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Bilingual Balance in Motion",
+    "link": "https://koto.org/event/bilingual-balance-in-motion/2026-08-08/",
+    "description": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    "pubDate": "2026-08-08T16:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    "title": "Zumba with Gisela",
+    "link": "https://koto.org/event/zumba-with-gisela/2026-08-08/",
+    "description": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    "pubDate": "2026-08-08T16:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Movies Under the Stars",
+    "link": "https://koto.org/event/movies-under-the-stars/2026-08-08/",
+    "description": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    "pubDate": "2026-08-09T00:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Conference Center Plaza Mountain Village",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
   }
 ]

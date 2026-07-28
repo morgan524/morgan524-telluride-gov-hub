@@ -1,38 +1,5 @@
 [
   {
-    "title": "Girl Scout Cookie Booth",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "description": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "pubDate": "2026-07-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "description": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    "pubDate": "2026-07-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg"
-  },
-  {
-    "title": "Sunday Rehab at Alloy Kitchen",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    "description": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    "pubDate": "2026-07-26T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
-  {
     "title": "Bike & Brewery Tour",
     "link": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
@@ -229,17 +196,6 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48859/logan_metz_1800x900px.png"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "pubDate": "2026-08-08T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     "title": "Mind Blown Telluride",
