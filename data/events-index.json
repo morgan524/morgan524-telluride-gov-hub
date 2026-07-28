@@ -505,6 +505,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "CASTLE",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=castle-7",
+    "date": "2026-07-30",
+    "time": "10:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/1f11bc86-36ab-4472-941b-f896f8d4d43f/-/crop/1000x500/0,92/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
+    "type": "Community"
+  },
+  {
     "title": "Pilates for All Bodies with Laura",
     "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
     "date": "2026-07-30",
@@ -1238,32 +1251,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway's Dallas Meadows neighborhood while…",
-    "type": "Community"
-  },
-  {
-    "title": "Girl Scout Cookie Booth",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "date": "2026-08-02",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "date": "2026-08-02",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
     "type": "Community"
   },
   {
@@ -2074,32 +2061,6 @@
     "type": "Music"
   },
   {
-    "title": "Girl Scout Cookie Booth",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "date": "2026-08-09",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "date": "2026-08-09",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    "type": "Community"
-  },
-  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-09",
@@ -2175,19 +2136,6 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
-    "type": "Music"
-  },
-  {
-    "title": "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
-    "href": "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
-    "date": "2026-08-10",
-    "time": "",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP…",
     "type": "Music"
   },
   {
@@ -2716,32 +2664,6 @@
     "type": "Community"
   },
   {
-    "title": "Girl Scout Cookie Booth",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "date": "2026-08-16",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "date": "2026-08-16",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    "type": "Community"
-  },
-  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-16",
@@ -3097,32 +3019,6 @@
     "type": "Community"
   },
   {
-    "title": "Girl Scout Cookie Booth",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/girl-scout-cookie-booths/",
-    "date": "2026-08-23",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/47998/20250202_153054.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Support our local Girl Scout Troop with their cookie sales. Proceeds fund their activities & camps all year. The Girl Scouts will also donate 20 percent",
-    "type": "Community"
-  },
-  {
-    "title": "Sunday Rehab: Apres Edition",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-apres-edition/",
-    "date": "2026-08-23",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/48025/untitled_11_x_17_in_2200_x_1237_px_1800_x_900_px.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Sunday Rehab: Après Edition is Mountain Lodge Telluride’s weekly Sunday après-ski gathering, happening every Sunday from February 1 through March 29.",
-    "type": "Community"
-  },
-  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-23",
@@ -3308,6 +3204,19 @@
     "type": "Community"
   },
   {
+    "title": "RSUN \\\\ MINDSET",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
+    "date": "2026-08-26",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
+    "type": "Community"
+  },
+  {
     "title": "THE ONLIES",
     "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
     "date": "2026-08-26",
@@ -3346,6 +3255,32 @@
     "desc": "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
     "type": "Arts & Film",
     "endDate": "2026-08-30"
+  },
+  {
+    "title": "MIKEY THUNDER \\\\ BAD SNACKS",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-1",
+    "date": "2026-08-27",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
+    "type": "Community"
+  },
+  {
+    "title": "ESSEKS \\\\ TIEDYE KY",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-2",
+    "date": "2026-08-27",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
+    "type": "Community"
   },
   {
     "title": "Telluride Farmers Market",
