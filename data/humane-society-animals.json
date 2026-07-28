@@ -1,19 +1,5 @@
 [
   {
-    "id": "TEL-A-192",
-    "name": "Goldie",
-    "species": "Dog",
-    "breed": "Retriever, Golden / Poodle",
-    "ageGroup": "Young Puppy",
-    "sex": "Female",
-    "photo": "https://new-s3.shelterluv.com/profile-pictures/9783882bd0b992d3c2e9bc4a03436b40/90a0bc5b6fcfcaf0d8dca8e896117977.jpg",
-    "profileUrl": "https://www.shelterluv.com/embed/animal/214172679",
-    "summary": "Young Puppy • Retriever, Golden / Poodle • Female",
-    "firstSeen": "2026-07-27",
-    "revealDate": "2026-07-27",
-    "lastSeen": "2026-07-28"
-  },
-  {
     "id": "TEL-A-193",
     "name": "Fig",
     "species": "Dog",

@@ -1010,7 +1010,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1049,7 +1049,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13, 2026 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1397,6 +1397,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Trump officials launch probe of 2 school districts over alleged testosterone vials, kissing exercise",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-28",
+    newsTopic: "education",
+    copy: "The U.S. Department of Education says it is investigating whether Denver Public Schools and a school district in Washington state violated federal law. The department said in an announcement Tuesday it was looking into allegations a high school teacher in…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/state/article_b491e416-48f7-5139-ac24-127f03ec2497.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d4/5d4064a2-5635-5796-ae8c-5131d403aad5/6a69089279fef.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "San Miguel County commissioners set legislative priorities",
     source: "Telluride Times",
@@ -2827,17 +2839,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-28/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-28T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Mountain Village Electronics Recycling event",
     link: "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-28/",
     description: "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep electronic waste out of landfills while ensuring devices and batteries are handled properly. Residents are encouraged to clear out old or unused electronics and drop them off during the two-day collection window. A wide range of electronic items will be accepted, including old computers, televisions and household appliances. Residents are also invited to bring in batteries for recycling, though only certain types and sizes will be accepted. …",
@@ -3409,20 +3410,6 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-192",
-    name: "Goldie",
-    species: "Dog",
-    breed: "Retriever, Golden / Poodle",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/9783882bd0b992d3c2e9bc4a03436b40/90a0bc5b6fcfcaf0d8dca8e896117977.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214172679",
-    summary: "Young Puppy • Retriever, Golden / Poodle • Female",
-    firstSeen: "2026-07-27",
-    revealDate: "2026-07-27",
-    lastSeen: "2026-07-28"
-  },
   {
     id: "TEL-A-193",
     name: "Fig",
@@ -4006,7 +3993,7 @@ const OURAY_RIDGWAY_EVENTS = [
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
-    location: "The Annex on Cora",
+    location: "At location - shared by instructor after registration",
     imageUrl: "https://localist-images.azureedge.net/photos/52806828827371/huge/ae218c9c6c9de549ec730577c3289f68e83e9fd1.jpg"
   },
   {
@@ -4067,6 +4054,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "St. Elmo Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/53126545358753/huge/d388db0353cbf06b2a73e8eded661e2e68cf7809.jpg"
+  },
+  {
+    title: "Storytime with a Firefighter",
+    link: "https://events.ourayridgwayevents.com/event/storytime-with-a-firefighter-7905",
+    description: "Join us at the Ouray Library from 11:00 a.m. to 11:45 a.m. to listen to some fantastic stories read by a firefighter! View on site | Email this event",
+    pubDate: "2026-07-30T17:00:00.000Z",
+    endDate: "2026-08-05",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551557860695/huge/3cb96236ee29b9eba88d0709d204187fab55fa7c.jpg"
   },
   {
     title: "Ridgway Concert Series",
@@ -4391,6 +4390,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53119160417727/huge/ec41c6d94b323d25f94fef4ac166f82aefc428a4.jpg"
   },
   {
+    title: "Ridgway Bird Walks & Talks with Mike Campbell: “Summer Birding”",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-bird-walks-talks-with-mike-campbell-summer-birding-6032",
+    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org . View on site | Email this event",
+    pubDate: "2026-08-06T13:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Registerd participants will receive an email with location details",
+    imageUrl: "https://localist-images.azureedge.net/photos/53550883024689/huge/8ef634b3e4fdec99a315d0d58c79b5602863ae76.jpg"
+  },
+  {
     title: "Ouray Youth Summer Programs: Water Sports at Ridgway State Park",
     link: "https://events.ourayridgwayevents.com/event/ouray-youth-summer-programs-water-sports-at-ridgway-state-park",
     description: "Participants will learn the basics of paddle boarding and water safety with instruction and equipment provided by Ridgway State Park staff. Please meet at the Dutch Charlie Marina office at Ridgway State Park and ring snacks, water, sunscreen, a towel and appropriate clothes for the day. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
@@ -4504,6 +4514,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53454953293581/huge/2ed5e2f2553f1fe9c9d5f804b87b8743269c7c9d.jpg"
   },
   {
+    title: "SATURDAY Live Music at the Ridgway Rendezvous Arts Fest",
+    link: "https://events.ourayridgwayevents.com/event/saturday-live-music-at-the-ridgway-rendezvous-arts-fest",
+    description: "Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 2026 9:30 a.m.–5:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Four incredible bands. One beautiful Saturday. Join us Saturday, August 8, at Hartwell Park for a full day of FREE live music during the Ridgway Rendezvous Arts Festival. Heather & Douglas • 9:30–11:00 a.m. Hard Pressed • 11:30 a.m.–1:00 p.m. Tom Ward’s Downfall • 1:15–2:45 p.m. Donny Morales • 3:15–5:00 p.m. Pack a chair if you’d like, bring your friends, and spend the day enjoying great music, local artists, food vendors, and everything that makes Ridgway Rendezvous such a special weekend. ridgwayrendezvous.com The music is just one part of this beloved annual celebration. …",
+    pubDate: "2026-08-08T15:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551169184729/huge/15f9171666e9175bc49f62940fbbcd07abc7fb15.jpg"
+  },
+  {
     title: "Dallas Park Cemetery Tour",
     link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
     description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
@@ -4572,6 +4593,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53375404981466/huge/b6ac805d7cab9956501ae2d370b3c2d63385e823.jpg"
+  },
+  {
+    title: "Ridgway Rendezvous SUNDAY Live Music",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-rendezvous-sunday-live-music",
+    description: "Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 2026 10:00 a.m.–4:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Join us in Hartwell Park on Sunday, August 9, for four performances spanning jazz, blues, roots music, Americana, and more. Sunday Music Schedule 10:00–11:30 a.m. — The Ordinary Two Start the morning with the warm harmonies and acoustic sound of The Ordinary Two. 11:45 a.m.–1:15 p.m. — Mixed Bag Jazz Enjoy an energetic midday set from Mixed Bag Jazz, featuring a lively blend of jazz performed by some of the region’s outstanding musicians. 1:30–2:45 p.m. …",
+    pubDate: "2026-08-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551206723208/huge/d03bf3915661d1d70df6d4a36003d6398c0cb49b.jpg"
+  },
+  {
+    title: "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
+    link: "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
+    description: "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP APPLICATIONS IS 5 PM ON MONDAY, AUGUST 10TH, 2026 Weehawken Dance Scholarships Overview Our scholarship fund, generously supported by donations, fluctuates each season, enabling us to offer varying levels of financial assistance. To ensure you don't miss out on these opportunities, please note the strict deadlines for each semester and adhere to them diligently. Weehawken Dance scholarships applicants may apply for scholarships covering 5-100% of tuition fees. For the Fall semester, we have limited Aerial Scholarships available exclusively for Montrose students attending classes at the FlexRec. It's essential for applicants to disclose any enrollment in classes with other programs during the same semester they plan to attend Weehawken classes on scholarship or financial assistance. …",
+    pubDate: "2026-08-10T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -4798,6 +4841,28 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53471216560394/huge/574183965a0056eaee8b515c5347a414162855ad.jpg"
   },
   {
+    title: "TOP Volunteer Work Day – Monday, August 17",
+    link: "https://events.ourayridgwayevents.com/event/top-volunteer-work-day-monday-august-17",
+    description: "We could use a few helping hands to take care of some basic maintenance around TOP. If you have a few hours to spare, we'd love to have you join us on Monday, August 17, from 9:00 AM until noon. We'll be trimming brush, raking trails, cutting back low-hanging branches, and sprucing up the Disc Golf Course. If you're a disc golfer, this is a great opportunity to help keep the course in great shape for everyone to enjoy. If you have work gloves or yard tools like rakes, loppers, or trimmers, please bring them along. Water is always a good idea, too. Thanks in advance to everyone who comes out to help. We appreciate all of our volunteers and look forward to seeing you on the 17th! View on site | Email this event",
+    pubDate: "2026-08-17T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Top of the Pines",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579851840244/huge/fa872abaa9c1160932255910671aa503548cbb47.jpg"
+  },
+  {
+    title: "Celebration of Life for David Leigh Houtz",
+    link: "https://events.ourayridgwayevents.com/event/celebration-of-life-for-david-leigh-houtz",
+    description: "August 17 @ 3:00 pm – 6:00 pm 3-6 pm || Sherbino Celebration of Life for David Leigh Houtz David Leigh Houtz was a familiar presence in Ridgway for decades. Many knew him through his jewelry shop and workshop at 147 N. Cora, where he crafted, repaired, and sold jewelry since the 1990s. Others knew him through his years of service as a firefighter, his artistic talents, his independent spirit, and his unmistakable personality. David’s daughter and family invite friends, neighbors, former customers, and all who knew him to join them in celebrating his life. Monday, August 17, 2026 Drop by anytime between 3:00–6:00 PM The Sherbino 604 Clinton Street, Ridgway The Sherbino is honored to provide the space for this gathering as family and friends come together to share stories, memories, and light refreshments while celebrating a life well lived. Join us in Ridgway’s Living Room. …",
+    pubDate: "2026-08-17T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551486850468/huge/45887e0ddea874f645f524be6869c3115982f7d8.jpg"
+  },
+  {
     title: "Movie Mondays in Hartwell Park",
     link: "https://events.ourayridgwayevents.com/event/movie-mondays-ferris-buellers-day-off",
     description: "Enjoy free movies under the stars in Ridgway's Hartwell Park. They'll start at 8:30pm. Bring your own chairs, blankets and snacks. Brought to you by the Ridgway Youth Advisory Council. Here's the line-up: June 15th - Ferris Bueller's Day Off (rated PG-13)July 20th - The Peanut Butter Falcon (rated PG-13)August 17th - Top Gun (rated 13+ by Common Sense Media) View on site | Email this event",
@@ -4922,6 +4987,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52250073410263/huge/0c5c647e572d5a4c1c7a05677aec7057f5312338.jpg"
   },
   {
+    title: "AUDITIONS ~ Rocky Horror Picture Show Shadow Cast at the Sherbino",
+    link: "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-shadow-cast-at-the-sherbino",
+    description: "Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
+    pubDate: "2026-08-23T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551411507364/huge/9351508c53a849b9e4a9476395a004248a6e58d9.jpg"
+  },
+  {
     title: "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
     link: "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-live-shadow-cast-edition-show-in-oct",
     description: "August 23 @ 1:00 pm – 3:00 pm Rocky Horror Picture Show — Live Shadowcast Edition Directed by Erin Cawley Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
@@ -5035,6 +5111,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg"
   },
   {
+    title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    link: "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-01T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg"
+  },
+  {
     title: "CORAL SKYE",
     link: "https://events.ourayridgwayevents.com/event/coral-skye-7556",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5057,6 +5145,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53426262588908/huge/71a55615f11bffa976395d1cf0776b9aea0970bd.jpg"
   },
   {
+    title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
+    link: "https://events.ourayridgwayevents.com/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion-8635",
+    description: "September 1 @ 6:30 pm – 8:00 pm Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women’s health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women’s health all over the world. …",
+    pubDate: "2026-09-02T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551521567232/huge/386838c9a250aca9388bec73873cf507473ae100.jpg"
+  },
+  {
     title: "RIDGWAY WRECKING CREW",
     link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-2643",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5066,6 +5165,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "First Friday Opening Reception ~ Bonnie Bucknam's \"UNSCRIPTED ~ Fiber Improvisations\" at 610 Arts",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-opening-reception-bonnie-bucknams-unscripted-fiber-improvisations-at-610-arts",
+    description: "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work Crater won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the International Quilt Museum in Lincoln, Nebraska. Bonnie’s work has been shown in numerous exhibits in the United States. In 2015, Bonnie’s work was in a year-long solo exhibition at the Portland Oregon International Airport. She was a solo artist at the Visions Museum of Textile Art, San Diego, in 2019. Internationally, Bonnie’s work has appeared in the Haus der Wirtschaft museum in Stuttgart, Germany, the Museum of Modern Art in Verona, Italy, and other venues in Germany, England, Ireland, France, Japan, Brazil, and the Netherlands. Bonnie’s work Tangle is part of the permanent collection of the Tuch + Technik Textilmuseum, Neumunster, Germany. …",
+    pubDate: "2026-09-04T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551327108460/huge/e4d20fe9a7a9c8a310fdf85111342924891b0c1b.jpg"
   },
   {
     title: "Ongoing: Social Justice Travel Exhibition",
@@ -5102,6 +5212,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg"
   },
   {
+    title: "The Sherbino Presents: Donny Morales – First Friday Show",
+    link: "https://events.ourayridgwayevents.com/event/the-sherbino-presents-donny-morales-first-friday-show-4267",
+    description: "September 4 @ 6:00 pm – 8:00 pm Friday, September 4th | 6:00–8:00 pm Sherbino “Living Room” Free Show | Cash Bar | Tips Encouraged Celebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of “soul-acousti-funk”, delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado’s Western Slope, Donny’s performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he’s reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that’s impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. …",
+    pubDate: "2026-09-05T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551379943045/huge/6f94dfeb51eb3c4990d31ec7f853a2a3b779ce74.jpg"
+  },
+  {
     title: "Music and Makers Fest",
     link: "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
     description: "Join the highly anticipated Ouray Made's Annual Music and Makers Fest, a celebration of creativity, community, and culture set against the breathtaking San Juan Mountains! This year, immerse yourself in a vibrant atmosphere filled with local music, artisan crafts, and delectable food. Event Highlights - More details to come! Live Music: Enjoy performances from talented local musicians across various genres, providing an energetic festival soundtrack. Artisan Market: Discover and purchase from a diverse selection of local makers offering handmade items, including jewelry, pottery, textiles, and artwork. Food Truck Alley: Indulge in a variety of culinary delights from an array of food trucks serving diverse cuisines. View on site | Email this event",
@@ -5111,6 +5232,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Heather & Douglas at The Courtyard",
+    link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-heather-douglas-4082",
+    description: "September 6 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few “agility” tickets at the gate — which are tickets for seats that you have to climb over a railing for. We don’t sell those online — but we do sell them onsite IF there is space. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. …",
+    pubDate: "2026-09-07T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "610",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg"
   },
   {
     title: "DAVE MENSCH",
@@ -5190,6 +5322,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53426396696874/huge/27241d9ecc4f078cbc6939a2d11aa90a4705a5f0.jpg"
   },
   {
+    title: "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
+    link: "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday-6700",
+    description: "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S. National Park Service, a young filmmaker and his childhood friend set off on a 10,000-mile journey through America’s national parks, leaving home with little more than a camera and a desire to understand what connects people to these wild places. What begins as a summer road trip becomes a seven-year odyssey, capturing untold stories of those who protect, visit, and find healing in the parks. Through intimate interviews, breathtaking cinematography, and a profound original music score, Out There uncovers a deeply human portrait of the parks – revealing them as places of reflection, resilience, and connection across generations and cultures. …",
+    pubDate: "2026-09-17T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Sherbino",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg"
+  },
+  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-6979",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5199,6 +5342,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
+    link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
+    description: "Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Likely to be our last Courtyard Show of the season! Join us for an intimate evening with Alex Dunn and Mimi Genheimer! …",
+    pubDate: "2026-09-21T00:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "610",
+    imageUrl: "https://localist-images.azureedge.net/photos/53551756644415/huge/29fa27ed4c25e649a1da5d91ff6dd2fe89cb9a74.jpg"
   },
   {
     title: "ALPINE JAM",
@@ -5232,6 +5386,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Railroad Museum",
     imageUrl: "https://localist-images.azureedge.net/photos/52594260880730/huge/9b3f82c821e5f84eb57dee6af0b87a07ecd09517.jpg"
+  },
+  {
+    title: "Exceptional Women of Ouray County",
+    link: "https://events.ourayridgwayevents.com/event/exceptional-women-of-ouray-county",
+    description: "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of these extraordinary women enrich our lives and help make our community a better place to live. The Exceptional Women program celebrates their accomplishments and dedication and the hard work they do on our behalf. The awards now include Exceptional Educators from Ouray and Ridgway school districts and an Exceptional Healthcare Professional. View on site | Email this event",
+    pubDate: "2026-09-26T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Brad and Donna Funk's Home",
+    imageUrl: "https://localist-images.azureedge.net/photos/52870214849883/huge/5e53b01264b1462c471681c9d99491d9c8c589d6.jpg"
   }
 ];
 
@@ -6296,6 +6461,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62901/biglovecarwash-2lb24-1536x1024.800x533.webp"
+  },
+  {
+    title: "Susan Dory: Nine New Paintings",
+    link: "https://www.telluride.com/event/susan-dory-nine-new-paintings/",
+    description: "This new series of paintings continues Susan Dory's ongoing exploration of color and the perception of color. Drawing …",
+    pubDate: "2026-08-06",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63134/image_-_2026-07-28t133100_036.800x533.webp"
   },
   {
     title: "Telluride Jazz Festival",

@@ -1,14 +1,18 @@
 {
-  "hash": "9d950e1c1069e19b5abdaf1d7f0de049f9134733",
-  "lede": "The gondola project — the longest-running civic question in this valley — comes to a head Monday when the Gondola Leadership Committee meets with background and history flagged as an action item, not just a briefing, alongside a full review of the CIG funding commitments. Wednesday, Parks and Recreation takes up the already-approved paving of the Town Park grass oval for basketball and pickleball courts, a project that's drawn more than 400 signatures in opposition — that's a meeting worth showing up to.",
+  "hash": "75561e918aabcc62891eb6a4ee734d79a1afc0a1",
+  "lede": "The gondola project takes center stage Monday when the Gondola Leadership Committee meets for what looks like a substantive session — covering the CIG funding commitments, a project update, and background history listed as an action item, not just a recap. Close behind that, Parks and Recreation meets Wednesday at noon to revisit the already-approved paving of Town Park's grass oval for basketball and pickleball courts, a project that's drawn more than 400 signatures in opposition — that's worth showing up for.",
   "notable": [
     {
       "id": 0,
-      "stake": "Gondola history listed as action item; CIG funding and project direction on table."
+      "stake": "CIG funding and gondola project direction up for action, not just discussion."
+    },
+    {
+      "id": 1,
+      "stake": "Same substantive gondola session — funding commitments and project update on the table."
     },
     {
       "id": 3,
-      "stake": "Contested Town Park paving for courts reviewed; 400+ residents signed in opposition."
+      "stake": "Contested Town Park paving project faces Parks & Rec with 400+ signatures in opposition."
     }
   ]
 }

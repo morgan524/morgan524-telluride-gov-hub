@@ -298,6 +298,14 @@ const TMVOA_CACHED_DATA = [
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
+    date: "July 31, 2026",
+    title: "TMVOA Board of Directors Meeting",
+    board: "board",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_packet_7_31_26-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
     date: "August 11, 2026",
     title: "Mountain Village Merchant Meeting",
     board: "merchant",

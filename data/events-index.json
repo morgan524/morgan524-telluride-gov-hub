@@ -265,19 +265,6 @@
     "type": "Community"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-28/",
-    "date": "2026-07-28",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-07-28",
@@ -430,7 +417,7 @@
     "href": "https://events.ourayridgwayevents.com/event/wildflower-walks-talks-with-mary-menz-jaime-pisarowicz-us-basin-back-by-popular-demand",
     "date": "2026-07-29",
     "time": "7:00 AM",
-    "location": "The Annex on Cora",
+    "location": "At location - shared by instructor after registration",
     "town": "Ridgway",
     "img": "https://localist-images.azureedge.net/photos/52806828827371/huge/ae218c9c6c9de549ec730577c3289f68e83e9fd1.jpg",
     "category": "Community Event",
@@ -516,6 +503,20 @@
     "source": "The Alibi",
     "desc": "Having began his journey in Telluride as a ski coach, CASTLE has transitioned to...",
     "type": "Community"
+  },
+  {
+    "title": "Storytime with a Firefighter",
+    "href": "https://events.ourayridgwayevents.com/event/storytime-with-a-firefighter-7905",
+    "date": "2026-07-30",
+    "time": "11:00 AM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53551557860695/huge/3cb96236ee29b9eba88d0709d204187fab55fa7c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at the Ouray Library from 11:00 a.m. to 11:45 a.m. to listen to some fantastic stories read by a firefighter! View on site | Email this event",
+    "type": "Family & Kids",
+    "endDate": "2026-08-05"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -1519,6 +1520,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Susan Dory: Nine New Paintings",
+    "href": "https://www.telluride.com/event/susan-dory-nine-new-paintings/",
+    "date": "2026-08-05",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63134/image_-_2026-07-28t133100_036.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "This new series of paintings continues Susan Dory's ongoing exploration of color and the perception of color. Drawing …",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-08-05",
@@ -1662,6 +1676,19 @@
     "source": "Telluride.com",
     "desc": "The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …",
     "type": "Community"
+  },
+  {
+    "title": "Ridgway Bird Walks & Talks with Mike Campbell: “Summer Birding”",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-bird-walks-talks-with-mike-campbell-summer-birding-6032",
+    "date": "2026-08-06",
+    "time": "7:00 AM",
+    "location": "Registerd participants will receive an email with location details",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53550883024689/huge/8ef634b3e4fdec99a315d0d58c79b5602863ae76.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and…",
+    "type": "Arts & Film"
   },
   {
     "title": "Ouray Youth Summer Programs: Water Sports at Ridgway State Park",
@@ -2048,6 +2075,19 @@
     "type": "Community"
   },
   {
+    "title": "SATURDAY Live Music at the Ridgway Rendezvous Arts Fest",
+    "href": "https://events.ourayridgwayevents.com/event/saturday-live-music-at-the-ridgway-rendezvous-arts-fest",
+    "date": "2026-08-08",
+    "time": "9:30 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551169184729/huge/15f9171666e9175bc49f62940fbbcd07abc7fb15.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 2026 9:30 a.m.–5:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented…",
+    "type": "Music"
+  },
+  {
     "title": "Ridgway Rendezvous 2026 ~ Saturday Live Music Schedule",
     "href": "https://sherbino.org/event/saturday-music-lineup-ridgway-rendezvous-arts-festival-august-8-2026/",
     "date": "2026-08-08",
@@ -2058,6 +2098,19 @@
     "category": "",
     "source": "Sherbino Theater",
     "desc": "",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Rendezvous SUNDAY Live Music",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-rendezvous-sunday-live-music",
+    "date": "2026-08-09",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551206723208/huge/d03bf3915661d1d70df6d4a36003d6398c0cb49b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 2026 10:00 a.m.–4:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by…",
     "type": "Music"
   },
   {
@@ -2136,6 +2189,19 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
+    "type": "Music"
+  },
+  {
+    "title": "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
+    "href": "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
+    "date": "2026-08-10",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP…",
     "type": "Music"
   },
   {
@@ -2716,6 +2782,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "TOP Volunteer Work Day – Monday, August 17",
+    "href": "https://events.ourayridgwayevents.com/event/top-volunteer-work-day-monday-august-17",
+    "date": "2026-08-17",
+    "time": "9:00 AM",
+    "location": "Top of the Pines",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579851840244/huge/fa872abaa9c1160932255910671aa503548cbb47.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "We could use a few helping hands to take care of some basic maintenance around TOP. If you have a few hours to spare, we'd love to have you join us on Monday, August 17, from 9:00 AM until noon. We'll be trimming brush, raking trails,…",
+    "type": "Community"
+  },
+  {
     "title": "Celebration of Life for David Leigh Houtz",
     "href": "https://sherbino.org/event/celebration-of-life-for-david-leigh-houtz/",
     "date": "2026-08-17",
@@ -3016,6 +3095,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "AUDITIONS ~ Rocky Horror Picture Show Shadow Cast at the Sherbino",
+    "href": "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-shadow-cast-at-the-sherbino",
+    "date": "2026-08-23",
+    "time": "1:00 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551411507364/huge/9351508c53a849b9e4a9476395a004248a6e58d9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild…",
     "type": "Community"
   },
   {
@@ -3361,6 +3453,20 @@
     "type": "Music"
   },
   {
+    "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
+    "href": "https://events.ourayridgwayevents.com/event/unscripted-fiber-improvisations-by-bonnie-bucknam",
+    "date": "2026-09-01",
+    "time": "10:00 AM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551302433703/huge/07561f7b06b24999f21e6be2347e5102b9b92cc3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at the…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
+  },
+  {
     "title": "CORAL SKYE",
     "href": "https://events.ourayridgwayevents.com/event/coral-skye-7556",
     "date": "2026-09-01",
@@ -3466,6 +3572,19 @@
     "type": "Music"
   },
   {
+    "title": "First Friday Opening Reception ~ Bonnie Bucknam's \"UNSCRIPTED ~ Fiber Improvisations\" at 610 Arts",
+    "href": "https://events.ourayridgwayevents.com/event/first-friday-opening-reception-bonnie-bucknams-unscripted-fiber-improvisations-at-610-arts",
+    "date": "2026-09-04",
+    "time": "5:00 PM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551327108460/huge/e4d20fe9a7a9c8a310fdf85111342924891b0c1b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our September Exhibition brings us quilted works from internationally known artist, Bonnie Bucknam of Montrose, CO. Bonnie’s work Crater won Best of Show at Quilt National 2011 and is now part of the Quilt National Permanent Collection at…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Ongoing: Social Justice Travel Exhibition",
     "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     "date": "2026-09-04",
@@ -3516,6 +3635,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the highly anticipated Ouray Made's Annual Music and Makers Fest, a celebration of creativity, community, and culture set against the breathtaking San Juan Mountains! This year, immerse yourself in a vibrant atmosphere filled with…",
+    "type": "Community"
+  },
+  {
+    "title": "The Courtyard at 610 Presents: Heather & Douglas at The Courtyard",
+    "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-heather-douglas-4082",
+    "date": "2026-09-06",
+    "time": "7:00 PM",
+    "location": "610",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "September 6 @ 7:00 pm – 8:30 pm Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a…",
     "type": "Community"
   },
   {
@@ -3820,6 +3952,19 @@
     "endDate": "2026-09-21"
   },
   {
+    "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
+    "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
+    "date": "2026-09-20",
+    "time": "6:30 PM",
+    "location": "610",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53551756644415/huge/29fa27ed4c25e649a1da5d91ff6dd2fe89cb9a74.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air…",
+    "type": "Community"
+  },
+  {
     "title": "ALPINE JAM",
     "href": "https://events.ourayridgwayevents.com/event/alpine-jam-8336",
     "date": "2026-09-22",
@@ -3911,6 +4056,19 @@
     "source": "Telluride.com",
     "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
     "type": "Community"
+  },
+  {
+    "title": "Exceptional Women of Ouray County",
+    "href": "https://events.ourayridgwayevents.com/event/exceptional-women-of-ouray-county",
+    "date": "2026-09-26",
+    "time": "3:00 PM",
+    "location": "Brad and Donna Funk's Home",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52870214849883/huge/5e53b01264b1462c471681c9d99491d9c8c589d6.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of…",
+    "type": "Arts & Film"
   },
   {
     "title": "Norwood Pioneer Days And Car Show",
