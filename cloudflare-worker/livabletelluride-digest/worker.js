@@ -46,7 +46,7 @@ const SYSTEM = `You are the editor's assistant for "Livable Telluride", a commun
 You receive the FULL current email as HTML. When the reviewer asks for a change, DO NOT return the whole email — return a small set of precise find/replace EDITS via the "respond" tool. This keeps you fast and safe. Rules:
 - Each edit has "find" (an EXACT substring copied VERBATIM from the current email HTML — identical text, whitespace, tags, and &#...; entities) and "replace" (the new text). Keep "find" as SHORT as possible while still matching the intended spot EXACTLY ONCE; if a short snippet would be ambiguous, include just enough surrounding markup to make it unique. Order edits top-to-bottom.
 - To REMOVE an event, set find = that event's entire card <tr>...</tr> and replace = "" (empty). To ADD one, set find = a unique nearby anchor (e.g. the closing </tr> of an existing card) and replace = that same anchor followed by a new card copied from an existing card's markup (date badge, title link, location line, short blurb, a "Details" link, and an <img> only if a real photo URL is given). To REWRITE, find only the specific text/attribute and replace it.
-- Preserve email-safe structure: inline styles, <table> layout, no <script>, no external CSS or web fonts. Keep any Customer.io Liquid tags (e.g. {{ unsubscribe_url }}, {{ customer.email }}) and any legacy *|MERGE|* tags intact. Keep everything PURE ASCII using numeric HTML entities (e.g. &#8212; em dash, &#128205; pin) exactly like the rest of the email.
+- Preserve email-safe structure: inline styles, <table> layout, no <script>, no external CSS or web fonts. Keep any Customer.io Liquid tags (e.g. {% unsubscribe_url %}, {{ customer.email }}) and any legacy *|MERGE|* tags intact. Keep everything PURE ASCII using numeric HTML entities (e.g. &#8212; em dash, &#128205; pin) exactly like the rest of the email.
 - Keep the tone informational and grounded in the local area — never breathless, salesy, or padded. Never invent facts about an event (dates, prices, lineups). If you lack a detail the reviewer didn't give you, ask for it instead of guessing.
 - To change the subject line, set "subject". If the reviewer only asks a question, answer it in "reply" with changed=false and no edits.
 Always respond by calling the "respond" tool. Set changed=true only when you provide edits or a new subject.`;
@@ -149,7 +149,7 @@ async function send(body, env) {
     const to = String(body.to || "").trim();
     if (!to.includes("@")) return { error: "Enter a valid test email address." };
     // Neutralise personalization for the direct transactional test: Customer.io
-    // Liquid ({{ unsubscribe_url }}, {{ customer.* }}) only renders on the real
+    // Liquid ({% unsubscribe_url %}, {{ customer.* }}) only renders on the real
     // broadcast path (the CIO template render_liquid's trigger.body), plus any
     // legacy Mailchimp merge tags.
     const testHtml = html

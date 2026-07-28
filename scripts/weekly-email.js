@@ -940,7 +940,7 @@ const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewp
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
-    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="{{ unsubscribe_url }}" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email={{ customer.email | url_encode }}&amp;fname={{ customer.first_name | url_encode }}&amp;town={{ customer.region | url_encode }}" style="color:#7a8a85;">Update preferences</a></div></td></tr>
+    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;·&nbsp; <a href="{% unsubscribe_url %}" style="color:#7a8a85;">Unsubscribe</a> &nbsp;·&nbsp; <a href="https://livabletelluride.org/profile.html?email={{ customer.email | url_encode }}&amp;fname={{ customer.first_name | url_encode }}&amp;town={{ customer.region | url_encode }}" style="color:#7a8a85;">Update preferences</a></div></td></tr>
 </table></td></tr></table></body></html>`;
 
 // In preview mode, render an info@ review copy: a banner at the top, every topic
