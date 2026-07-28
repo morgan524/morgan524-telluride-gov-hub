@@ -2427,6 +2427,20 @@ const SMB_FORUM_ARTICLES = [
 // treatment (byline + logo) while still using a custom `img` as the hero.
 const LOCAL_NEWS_FEATURED = [
   {
+    // Featured through Friday 2026-07-31 (Morgan). Remove this entry after that
+    // and restore `featured: true` on the next item down.
+    title: "It's Like Déjà VooDoo All Over Again",
+    source: "Livable Telluride",
+    sourceKey: "blog",
+    date: "July 27, 2026",
+    summary: "VooDoo's design got 18 to 20 months of public review; its financing got less than half an hour. The Town borrowed $20 million and will owe $23 million when the bonds come due in 2032 — more than it borrowed, with essentially no principal retired. Carhenge and Shandoka Lot L are now moving through the same process at roughly ten times the scale, and the central cost questions remain unanswered in public.",
+    href: "/digest/one-off/deja-voodoo-2026-07-27.html",
+    img: "/voodoo-timeline/deja-voodoo-hero.jpg",
+    category: "Housing",
+    newsTopic: "housing",
+    featured: true
+  },
+  {
     title: "Stakeholders discuss housing density",
     source: "Telluride Times",
     sourceKey: "ttimes",
@@ -2436,7 +2450,7 @@ const LOCAL_NEWS_FEATURED = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/94/1948eea0-c2e0-49bc-afdc-e5c61414fd91/6a5ac8e016a5b.image.jpg",
     category: "Housing",
     newsTopic: "housing",
-    featured: true
+    featured: false
   },
   {
     title: "Dry thunderstorms could complicate firefighting efforts",
