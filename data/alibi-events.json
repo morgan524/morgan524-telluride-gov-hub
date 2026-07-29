@@ -36,7 +36,7 @@
     "imageUrl": "https://ucarecdn.com/1f11bc86-36ab-4472-941b-f896f8d4d43f/-/crop/1000x500/0,92/-/preview/"
   },
   {
-    "title": "Natalie Brooke",
+    "title": "Natalie Brooke w/ Winnin' Ugly",
     "link": "https://www.alibitelluride.com/calendar#eca-event=natalie-brooke",
     "description": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
     "pubDate": "2026-08-01",
@@ -214,5 +214,17 @@
     "category": "Live Music",
     "location": "The Alibi • Telluride, CO",
     "imageUrl": "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/"
+  },
+  {
+    "title": "YOPE",
+    "link": "https://www.alibitelluride.com/calendar#eca-event=yope-1",
+    "description": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
+    "pubDate": "2026-09-26",
+    "time": "9:00 PM",
+    "source": "alibi",
+    "sourceLabel": "The Alibi",
+    "category": "Live Music",
+    "location": "The Alibi • Telluride, CO",
+    "imageUrl": "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/"
   }
 ]

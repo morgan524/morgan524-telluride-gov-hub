@@ -122,26 +122,6 @@
     "caseNumber": "202602"
   },
   {
-    "title": "Financial Report -- Treasurer's Semi-Annual Report (July-December 2025)",
-    "entity": "San Miguel County Treasurer",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County Treasurer has prepared the Semi-Annual Report for July-December 2025, which is now available for public viewing on the county website under agendas and minutes from May 6, 2026. This report provides financial information about county operations.",
-    "deadline": "Not specified",
-    "expires": "2026-07-28",
-    "dates": "5/28",
-    "papers": [
-      "ttimes_0528"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
-    "address": "San Miguel County",
-    "noticeKey": "treasurer-report-2025-h2"
-  },
-  {
     "title": "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
     "entity": "San Miguel County Assessor",
     "entityClass": "ent-county",

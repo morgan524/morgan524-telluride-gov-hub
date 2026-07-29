@@ -41,19 +41,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Mountain Village Electronics Recycling event",
-    "href": "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-28/",
-    "date": "2026-07-28",
-    "time": "12:00 PM",
-    "location": "",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/cycling.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "The Power of Connection: Creating Lasting Friendships in an Increasingly Lonely World with Dr. Marisa Franco",
     "href": "https://telluridelibrary.libcal.com/event/17102871?hs=a",
     "date": "2026-07-28",
@@ -119,19 +106,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Summer SketchBook Club w/Annie",
-    "href": "https://koto.org/event/summer-sketchbook-club-w-annie/",
-    "date": "2026-07-28",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "Summer Sketch Book Club with Annie",
     "href": "https://telluridelibrary.libcal.com/event/16759151?hs=a",
     "date": "2026-07-28",
@@ -185,16 +159,16 @@
     "type": "Community"
   },
   {
-    "title": "Town Talk: The Dual Challenge – Climate and Energy",
-    "href": "https://koto.org/event/town-talk-the-dual-challenge-climate-and-energy/",
+    "title": "Town Talk: The Dual Challenge - Climate and Energy",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/town-talk-the-dual-challenge-climate-and-energy/",
     "date": "2026-07-28",
-    "time": "6:30 PM",
-    "location": "Sheridan Opera House, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/48907/0728-tt_320_x_212-tf.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths…",
+    "source": "Mountain Village",
+    "desc": "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine",
     "type": "Talks & Classes"
   },
   {
@@ -210,19 +184,6 @@
     "desc": "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray,…",
     "type": "Arts & Film",
     "endDate": "2026-08-05"
-  },
-  {
-    "title": "Womens Empowerment Group",
-    "href": "https://koto.org/event/womens-empowerment-group-3/",
-    "date": "2026-07-28",
-    "time": "8:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will…",
-    "type": "Community"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -530,6 +491,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     "type": "Wellness"
+  },
+  {
+    "title": "Community Visit with Attorney General Phil Weiser",
+    "href": "https://koto.org/event/community-visit-with-attorney-general-phil-weiser/",
+    "date": "2026-07-30",
+    "time": "4:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Please join Colorado Attorney General Phil Weiser for a conversation about the issues facing San Miguel County, and how we can work together to strengthen our communities. This meetup is Thursday, July 30th, at 4 p.m. in the Telluride Room…",
+    "type": "Community"
   },
   {
     "title": "Adult Craft Night: Flower Pounding",
@@ -927,6 +901,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Natalie Brooke",
+    "href": "https://www.telluride.com/event/natalie-brooke/",
+    "date": "2026-07-31",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her powerhouse 4-piece band from the …",
+    "type": "Music"
+  },
+  {
     "title": "The Casual Enormity of Adam Palmer Film Screening and Panel Discusson",
     "href": "https://www.telluride.com/event/the-casual-enormity-of-adam-palmer-film-screening-and-panel-discusson/",
     "date": "2026-07-31",
@@ -967,7 +954,7 @@
     "endDate": "2026-09-26"
   },
   {
-    "title": "Natalie Brooke",
+    "title": "Natalie Brooke w/ Winnin' Ugly",
     "href": "https://www.alibitelluride.com/calendar#eca-event=natalie-brooke",
     "date": "2026-07-31",
     "time": "9:00 PM",
@@ -1243,15 +1230,15 @@
   },
   {
     "title": "Home Tour & House Show with Emily Scott Robinson",
-    "href": "https://events.ourayridgwayevents.com/event/home-tour-house-show-with-emily-scott-robinson",
+    "href": "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
     "date": "2026-08-02",
     "time": "5:00 PM",
-    "location": "Registration & Map Pickup",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53314328176075/huge/f297998422c8d9c4e8e57b3f8553c07441bc20bd.jpg",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway's Dallas Meadows neighborhood while…",
+    "source": "KOTO Community Calendar",
+    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while…",
     "type": "Community"
   },
   {
@@ -1307,6 +1294,19 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Mountain Village National Night Out Celebration",
+    "href": "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
+    "date": "2026-08-03",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Mountain Village",
+    "img": "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
+    "type": "Festivals"
   },
   {
     "title": "Breathe Together",
@@ -1401,6 +1401,20 @@
     "source": "Telluride.com",
     "desc": "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Sandra Frias Trunk Show",
+    "href": "https://www.telluride.com/event/sandra-frias-trunk-show/",
+    "date": "2026-08-04",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63137/untitled_-_july_26-_2026_at_17_08_07_3.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
+    "type": "Arts & Film",
+    "endDate": "2026-08-10"
   },
   {
     "title": "Town Talk: Single molecule views of Nature's nanomachines",
@@ -2099,6 +2113,19 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Music"
+  },
+  {
+    "title": "Pickleball Open Play",
+    "href": "https://koto.org/event/pickleball-open-play/2026-08-09/",
+    "date": "2026-08-09",
+    "time": "10:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ridgway Rendezvous SUNDAY Live Music",
@@ -3519,6 +3546,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "City Slickers: CO-150 Film Festival Screening @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-screening-the-wright",
+    "date": "2026-09-02",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53552494063177/huge/15fe4ae46423d80d30fb855343007994421cbe10.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "City Slickers: CO-150 Film Festival @ the Wright WHEN? Wednesday, September 2 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 53min RATING: PG-13 ROTTEN TOMATOES SCORE: 90% ABOUT THE…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Telluride Film Festival",
     "href": "https://www.telluride.com/event/telluride-film-festival/",
     "date": "2026-09-03",
@@ -4058,6 +4098,19 @@
     "type": "Community"
   },
   {
+    "title": "YOPE",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=yope-1",
+    "date": "2026-09-25",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
+    "type": "Music"
+  },
+  {
     "title": "Exceptional Women of Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/exceptional-women-of-ouray-county",
     "date": "2026-09-26",
@@ -4069,6 +4122,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Jeep Jamboree Historical Parade",
+    "href": "https://events.ourayridgwayevents.com/event/jeep-jamboree-historical-parade",
+    "date": "2026-09-26",
+    "time": "5:00 PM",
+    "location": "Downtown Ouray",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53171933807100/huge/679f562aa1680a2f20f8ffd0a78d921293437057.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Watch historical Jeep Parade come through town as part of Jeep Jamboree. View on site | Email this event",
+    "type": "Festivals"
   },
   {
     "title": "Norwood Pioneer Days And Car Show",

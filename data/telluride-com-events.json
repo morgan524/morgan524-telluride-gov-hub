@@ -336,18 +336,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    "title": "Telluride Baseball Festival",
-    "link": "https://www.telluride.com/event/telluride-baseball-festival/",
-    "description": "The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …",
-    "pubDate": "2026-07-20",
-    "endDate": "2026-07-27",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/44876/1caea1bf-5cda-4196-93fe-07036f415462.800x533.webp"
-  },
-  {
     "title": "Chill With Chamber Music",
     "link": "https://www.telluride.com/event/chill-with-chamber-music/",
     "description": "Telluride Chamber Music is bringing music to the West End of the county with Community Concerts at the beautiful Livery …",
@@ -494,6 +482,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
   },
   {
+    "title": "Mountain Village National Night Out Celebration",
+    "link": "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
+    "description": "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
+    "pubDate": "2026-08-04",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp"
+  },
+  {
     "title": "Big Love Car Wash",
     "link": "https://www.telluride.com/event/big-love-car-wash/",
     "description": "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
@@ -503,6 +502,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62901/biglovecarwash-2lb24-1536x1024.800x533.webp"
+  },
+  {
+    "title": "Sandra Frias Trunk Show",
+    "link": "https://www.telluride.com/event/sandra-frias-trunk-show/",
+    "description": "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
+    "pubDate": "2026-08-05",
+    "endDate": "2026-08-10",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63137/untitled_-_july_26-_2026_at_17_08_07_3.800x533.webp"
   },
   {
     "title": "Susan Dory: Nine New Paintings",

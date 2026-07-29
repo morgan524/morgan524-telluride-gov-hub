@@ -383,7 +383,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf","sv":4},
 
   "norwood|2026-08-05|Board of Trustees Work Session":
-    {"agendaUrl":"https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/87433907008","meetingId":"874 3390 7008","passcode":"126738","phone":"970-327-4288","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/6bce913bf/08.05.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/87433907008","meetingId":"874 3390 7008","passcode":"126738","phone":"970-327-4288","sv":4},
+
+  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting":
+    {"agendaUrl":"https://tmvoa.org/site/assets/files/4830/tmvoa_board_meeting_agenda_7_31_26-1.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/0AWXShBnSs6SxMTp_gdNUg","meetingId":"8 7 3 8703 5414","passcode":"213545","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -495,12 +498,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
     "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance within the Town of Telluride. The meeting may also include review of open space elements from relevant planning documents and potential recommendations to Town Council regarding open-space-related matters.",
 
-  "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
-    "The Town of Telluride Parks & Recreation Commission is expected to meet in a rescheduled session to address community parks and recreation needs. A related proposal for Telluride Town Park Oval improvements and Warner Field fencing and safety netting improvements may also be discussed.",
-
-  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The Planning Commission and Board of County Commissioners will hold a joint work session covering land use and planning matters. Related county business includes infrastructure projects, foreclosure proceedings, property tax exemptions, and the Board of Equalization's ongoing review of taxpayer appeals of property valuations.",
-
   "county|2026-08-05|Board of County Commissioners Meeting":
     "Board will consider procurement matters including material hauling, soil preparation at Mill Creek Park, foundation repairs at the Placerville Schoolhouse, and roofing at the Trout Lake Water Tank. Commissioners will also sit as the Board of Equalization to hear taxpayer appeals of Assessor property valuations through August 5.",
 
@@ -525,14 +522,11 @@ const MEETING_PREVIEWS = {
   "mv|2026-08-06|Design Review Board":
     "Board will consider design reviews for two multifamily residential projects: four new units at 100 Pennington Place and a multifamily building on Lost Creek Lane, the latter continued from June. Members will also approve minutes from the July 2 meeting and hear an additional quasi-judicial recommendation to Town Council.",
 
-  "norwood|2026-07-29|Board of Trustees Work Session":
-    "Board members will discuss potential placement and location opportunities for a Happenings Kiosk. No formal action will be taken, as this is a work session. The meeting will be held at Norwood Town Hall with a Zoom option available.",
-
-  "norwood|2026-07-29|NWC Possible Quorum":
-    "The Norwood Water Commission may convene a possible quorum to meet with SGM and discuss the design of a redundant waterline. The meeting is scheduled for July 29, 2026, at 11:00 a.m. at the Norwood Community Center.",
-
   "norwood|2026-08-05|Board of Trustees Work Session":
-    "Board will consider two lease renewals — one for Motion Sense Therapy and Performance, LLC at 1110 Lucerne St and another for Austin Overholt at 1475 Pine St. Note that formal action cannot be taken at this work session."
+    "Board will consider two lease renewals — one for Motion Sense Therapy and Performance, LLC at 1110 Lucerne St and another for Austin Overholt at 1475 Pine St. Note that formal action cannot be taken at this work session.",
+
+  "county|2026-07-29|Planning Commission and Board of County Commissioners Joint Work Session":
+    "The San Miguel County Planning Commission and Board of County Commissioners will hold a joint work session on July 29, 2026, in Telluride. The session is expected to address planning and land use matters, with public comment permitted at the chair's discretion."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -634,6 +628,16 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Live music event on the mesa.",
     href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
     img: ""
+  },
+  {
+    title: "July 27 - Changes in evacuation zone status",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 28, 2026",
+    newsTopic: "public-safety",
+    copy: "Effective ?5PM on ?Monday, July 2?7, evacuation zones ?2?5, 30 and 300 will have the following changes and updates.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=956",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22843"
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -879,8 +883,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-28';
-const LEGAL_NOTICES_CACHE_DATE = '2026-07-23';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-29';
+const LEGAL_NOTICES_CACHE_DATE = '2026-07-29';
 
 const MANUAL_SUMMARIES = {
   "telluride|2026-06-30|Town Council - Jun 30 2026":
@@ -1010,7 +1014,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1049,7 +1053,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1139,7 +1143,10 @@ const MANUAL_SUMMARIES = {
     "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood Community Center. The quorum notice suggests this could function as an official commission meeting rather than a simple staff-level consultation.",
 
   "norwood|2026-08-05|Board of Trustees Work Session":
-    "A short work session for the Norwood Board of Trustees, with two lease renewals on the table — Motion Sense Therapy and Performance at 1110 Lucerne St and Austin Overholt at 1475 Pine St. No executive session, no code changes, no land-use items. Formal action can't be taken at a work session, so any decisions will follow at a regular meeting."
+    "A short work session for the Norwood Board of Trustees, with two lease renewals on the table — Motion Sense Therapy and Performance at 1110 Lucerne St and Austin Overholt at 1475 Pine St. No executive session, no code changes, no land-use items. Formal action can't be taken at a work session, so any decisions will follow at a regular meeting.",
+
+  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting":
+    "The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1398,15 +1405,151 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "High notes",
+    source: "Telluride Times",
+    date: "July 29, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "arts-culture",
+    copy: "Telluride Reserve runs July 31–Aug. 1, bringing chefs and boutique winery producers together for tastings, dinners, and seminars across venues including Telluride Town Park. The festival also runs a mentorship program pairing hospitality students with featured chefs, supported by its nonprofit arm, Taste for Impact.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_1a6b7dca-7e57-43ff-9b4f-5fe2a80fc77b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/be/4bec4213-0708-4d0e-bf56-8c80e70dc72c/6a664051bab9a.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Trump officials launch probe of 2 school districts over alleged testosterone vials, kissing exercise",
     source: "Telluride Times",
-    date: "July 28, 2026",
+    date: "July 29, 2026",
     firstSeen: "2026-07-28",
     newsTopic: "education",
-    copy: "The U.S. Department of Education says it is investigating whether Denver Public Schools and a school district in Washington state violated federal law. The department said in an announcement Tuesday it was looking into allegations a high school teacher in…",
-    claudeSummary: false,
+    copy: "The U.S. Department of Education has opened investigations into Denver Public Schools and Washington's Bethel School District over alleged violations of federal parental rights laws. Denver already fired the teacher involved; Bethel says the unauthorized display was immediately removed and handed to law enforcement. Both probes are part of a broader federal push on parental rights in schools.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_b491e416-48f7-5139-ac24-127f03ec2497.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d4/5d4064a2-5635-5796-ae8c-5131d403aad5/6a69089279fef.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Conched out",
+    source: "Telluride Times",
+    date: "July 29, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "community",
+    copy: "A Telluride local reflects on their handmade conch shell horn — collected in the Bahamas, fashioned with a hacksaw — and its role as a celebratory trumpet for U.S. soccer goals and big powder days. The horn saw heavy use this World Cup, echoing through the valley on big moments. It's back on the shelf now until next time.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_cb2f1381-afc4-4dff-aaba-c044e0bdd62f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/c0/4c07ed9a-9810-4f4b-b780-bacdcd12116f/6a694489ec1cc.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Local, everyday care in both towns — one emergency hub for the region",
+    source: "Telluride Times",
+    date: "July 29, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "community",
+    copy: "A local orthopedic surgeon is proposing a three-site care model: upgraded urgent care clinics in both Telluride and Mountain Village for routine needs, with a compact emergency stabilization center at Society Turn for serious cases only. The argument is that consolidating everything at one distant hub adds travel risk, cost, and access barriers that a distributed system avoids.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_c88ab366-4666-4a4f-971a-2c3c8008954d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/87/387084ec-87d5-4cb9-aa8b-1a08170259cf/6a6943ada847c.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Kirbie Bennett of Durango featured at next Bardic Trails",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "recreation",
+    copy: "Kirbie Bennett — Indigenous poet, essayist, and audio producer from Durango and a member of the Navajo Nation — is the featured guest at Bardic Trails on Aug. 4 at 7 p.m. via Zoom. The monthly series is hosted by the Telluride Institute's Talking Gourds program; attendees can find the link at tellurideinstitute.org or email art@tellurideinstitute.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_3b691f21-c7a6-418c-b6d5-f7254b723795.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/e6/ae6e1a11-5d37-4365-86ec-373175debef0/6a694287a0143.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "'This is Colorado' winds down",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "land-use",
+    copy: "Telluride Arts and the Telluride Historical Museum's community art show \"This Is Colorado (In One Square Foot)\" closes July 31. Residents created works on 12x12 canvases marking Colorado's 150th statehood and the US 250th anniversary. Stop by 135 W. Pacific Ave. before end of day Friday to donate and take home a piece.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/gallery/article_adb794bd-3120-46c9-bba9-e583d22d5ac5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/2c/62c29ee5-cc6d-4071-bd14-ca429bf6787c/6a693cea9121c.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride cowboy gives visitors a taste of the American West",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "community",
+    copy: "Thomas \"Roudebush has been a fixture on Colorado Avenue since 1970 — flag in hand at Fourth of July, leading skijoring events in winter, and running Telluride Horseback Adventures out of Norwood. He appeared in a 2004 Disney documentary and has worked with an estimated 400–500 horses over his lifetime.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/local/article_d2e1a797-2a47-4afa-b303-7ee00ecf9add.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/0b/d0bc0d23-4ca7-42d3-bff4-c9469085e732/6a693e5312709.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "An improved print edition",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "community",
+    copy: "The Telluride Times has switched to a new printing facility in Gypsum — the same one used by several other mountain town papers. Print quality is expected to improve significantly, and the paper's physical size will change slightly.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_6fed4e8a-590a-4115-a302-0903f5c80a81.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/1c/61cfa0c0-70c2-402f-b75f-475a5d791e20/6a693b5924735.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "When it rains...it floods",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "government",
+    copy: "Monsoon rains brought relief from wildfire smoke, but quickly swapped one emergency for another — the Palm Theatre took on 4 feet of mud, homes flooded, and Highway 145 closed twice from slides. The County is working on culvert clearing, earth barriers, CDOT partnerships, and employee housing at Deep Creek to keep maintenance crews closer. Bigger road improvements on Norwood Hill and Keystone Hill are in the pipeline for 2029.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_3ac15ce1-f1b3-4a5d-a4fd-2b91df4f1064.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Robinson Waters and Odorisio announces transition in Telluride",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "infrastructure",
+    copy: "After 38 years practicing real estate law in Telluride, Michael Lynch has retired. Denver firm Robinson Waters & Odorisio, which Lynch helped anchor here since 2009, is continuing its local presence through Herb McHarg, who has practiced real estate law in the area since 2005.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_62a30293-b665-4a7b-9618-eeb101fb6d25.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5d/95de4731-af07-47b3-9990-b730581d3001/6a6939828ddba.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Bringing home barn cats",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "community",
+    copy: "Second Chance Humane Society in Ridgway has barn cats available for adoption — unsocialized cats suited for outbuildings rather than indoor homes. They ask adopters to follow a 4–6 week acclimation process using a crate to help the cat establish territory before roaming free. Daily food and water are required; rodents alone won't cut it.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_7021bc89-1c97-436b-bd28-30172cce8db8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/c4/bc422a31-caee-4763-a0b2-f39672e1e848/6a6938ab85294.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village celebrates safe communities with National Night Out",
+    source: "Telluride Times",
+    date: "July 28, 2026",
+    firstSeen: "2026-07-29",
+    newsTopic: "recreation",
+    copy: "Mountain Village is hosting its 14th annual National Night Out on Tuesday, Aug. 4, 5–8 p.m. at the fire station on Mountain Village Boulevard. Free BBQ, ice cream, a bouncy castle, and equipment tours are on tap. A good chance to meet your local first responders in a low-key setting.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_cbfb064f-510d-43fa-9665-7c62eb69b4ec.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/56/556c2474-c6e3-48a3-8099-0008b8a50903/6a693696e7f19.image.jpg",
     imgHiRes: true
   },
   {
@@ -2090,43 +2233,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "‘We are going to find a way’",
-    source: "Telluride Times",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-15",
-    newsTopic: "community",
-    copy: "SMRC's July 21 fundraiser comes as the nonprofit faces steep funding cuts — over $150K lost annually from federal VOCA and state domestic violence grants, plus $290K gone from its youth prevention program. Demand for services is up even as resources shrink. The event is a chance for the community to hear directly from staff and survivors.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_e632b0f9-196e-48ad-8420-45fa7b15ad33.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/71/071eae54-0016-4adb-9037-06a7c09719de/6a5749528470f.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Horror and romance",
-    source: "Telluride Times",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-15",
-    newsTopic: "community",
-    copy: "A personal piece reflecting on a trip from Denver to Michigan — visiting family, taking in a minor league baseball game in Lansing, and attending a high school reunion in Ann Arbor. Along the way, there are observations about friendship, history, and human nature, with a stop at the Tattered Cover in DIA.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_8e22fbcf-5504-466d-a27a-d86bdcd81bb8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/de/ede435f0-ee44-47a3-a78f-93606816902f/6a56ae47c7c91.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "BF Deal",
-    source: "Telluride Times",
-    date: "July 15, 2026",
-    firstSeen: "2026-07-15",
-    newsTopic: "arts-culture",
-    copy: "Jim Bedford, known as \"BF Deal,\" passed away at 81 after more than 50 years shaping Telluride. He co-founded KOTO radio, helped build the Telluride Film Festival over 36 years, and led Mountainfilm in its early days. He moved here in 1972 and never really stopped working.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_9657a583-1b26-466a-96a5-12dce3a67f9c.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a2/9a21030a-af6f-4777-bec4-6254e892d0b6/6a569d831f3fd.image.jpg",
     imgHiRes: true
   },
   {
@@ -2828,50 +2934,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Womens Empowerment Group",
-    link: "https://koto.org/event/womens-empowerment-group-3/",
-    description: "Join Kaity Swick and Sally Harris Porter with Collaborative Trauma Solutions in a women’s empowerment group focused on fostering connections with like-minded women and developing deeper connections with yourselves and each other. We will incorporate somatic practices, mindfulness exercises and practical tools rooted in mind-body awareness. This will be held in a group setting and will be a trauma-informed and non-judgmental space created to strengthen community and provide a safe space to express yourself. Kaity and Sally will guide the group with relevant topics and supportive tools, so all you have to do is show up with an open mind. Please sign up here if you are interested: https://forms.gle/RLxaexLJar4Vpnhp7 Kaity Swick, LPCC – Kaity works with children and adults as a Mental Health Counselor and supports the community as an Early Childhood Mental Health Consultant. …",
-    pubDate: "2026-07-28T14:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Mountain Village Electronics Recycling event",
-    link: "https://koto.org/event/mountain-village-electronics-recycling-event/2026-07-28/",
-    description: "The Town of Mountain Village is offering a free electronics recycling event on Monday, July 27, and Tuesday, July 28, from 12 p.m. to 6 p.m. in the Meadows Parking Lot. The event is designed to give the community a convenient way to keep electronic waste out of landfills while ensuring devices and batteries are handled properly. Residents are encouraged to clear out old or unused electronics and drop them off during the two-day collection window. A wide range of electronic items will be accepted, including old computers, televisions and household appliances. Residents are also invited to bring in batteries for recycling, though only certain types and sizes will be accepted. …",
-    pubDate: "2026-07-28T18:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Summer SketchBook Club w/Annie",
-    link: "https://koto.org/event/summer-sketchbook-club-w-annie/",
-    description: "Join us for our summer sketchbook club! Unwind, connect with other artists, and find inspiration in nature as you fill up your sketchbook. We will meet in the library lobby and together we will walk to find a drawing spot by the river or in the park. All experience levels and drawing styles are welcome. Bring your own sketchbook and drawing materials; some materials may be available to borrow. You may also wish to bring sun protection, a towel or folding chair to sit on, and an extra layer as we will be sketching outside.",
-    pubDate: "2026-07-28T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Town Talk: The Dual Challenge – Climate and Energy",
-    link: "https://koto.org/event/town-talk-the-dual-challenge-climate-and-energy/",
-    description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. Three leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. This event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. This special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.",
-    pubDate: "2026-07-29T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/0728-TT_320-x-212-TF.jpg"
-  },
-  {
     title: "Native Plant Walk & Talk",
     link: "https://koto.org/event/native-plant-walk-talk/",
     description: "Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet at the the country park and ride lot in Lawson Hill near the bus stop; we will walk on the valley floor. Adults and teens only please!",
@@ -2964,6 +3026,17 @@ const KOTO_COMMUNITY_EVENTS = [
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
     pubDate: "2026-07-30T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Community Visit with Attorney General Phil Weiser",
+    link: "https://koto.org/event/community-visit-with-attorney-general-phil-weiser/",
+    description: "Please join Colorado Attorney General Phil Weiser for a conversation about the issues facing San Miguel County, and how we can work together to strengthen our communities. This meetup is Thursday, July 30th, at 4 p.m. in the Telluride Room at Wilkinson Public Library.",
+    pubDate: "2026-07-30T22:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -3134,6 +3207,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Home Tour & House Show with Emily Scott Robinson",
+    link: "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
+    description: "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …",
+    pubDate: "2026-08-02T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3332,6 +3416,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Conference Center Plaza Mountain Village",
     imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "Pickleball Open Play",
+    link: "https://koto.org/event/pickleball-open-play/2026-08-09/",
+    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
+    pubDate: "2026-08-09T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3422,7 +3517,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-29",
-    lastSeen: "2026-07-28"
+    lastSeen: "2026-07-29"
   },
   {
     id: "TEL-A-196",
@@ -3436,7 +3531,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-31",
-    lastSeen: "2026-07-28"
+    lastSeen: "2026-07-29"
   }
 ];
 
@@ -3485,7 +3580,7 @@ const ALIBI_EVENTS = [
     imageUrl: "https://ucarecdn.com/1f11bc86-36ab-4472-941b-f896f8d4d43f/-/crop/1000x500/0,92/-/preview/"
   },
   {
-    title: "Natalie Brooke",
+    title: "Natalie Brooke w/ Winnin' Ugly",
     link: "https://www.alibitelluride.com/calendar#eca-event=natalie-brooke",
     description: "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
     pubDate: "2026-08-01",
@@ -3663,6 +3758,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/05381074-07b4-41a7-a955-cd6eb787e77e/-/crop/7952x3975/0,0/-/preview/"
+  },
+  {
+    title: "YOPE",
+    link: "https://www.alibitelluride.com/calendar#eca-event=yope-1",
+    description: "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
+    pubDate: "2026-09-26",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/"
   }
 ];
 
@@ -5156,6 +5263,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551521567232/huge/386838c9a250aca9388bec73873cf507473ae100.jpg"
   },
   {
+    title: "City Slickers: CO-150 Film Festival Screening @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-screening-the-wright",
+    description: "City Slickers: CO-150 Film Festival @ the Wright WHEN? Wednesday, September 2 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 53min RATING: PG-13 ROTTEN TOMATOES SCORE: 90% ABOUT THE FILM City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. …",
+    pubDate: "2026-09-03T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53552494063177/huge/15fe4ae46423d80d30fb855343007994421cbe10.jpg"
+  },
+  {
     title: "RIDGWAY WRECKING CREW",
     link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-2643",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5397,6 +5515,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Brad and Donna Funk's Home",
     imageUrl: "https://localist-images.azureedge.net/photos/52870214849883/huge/5e53b01264b1462c471681c9d99491d9c8c589d6.jpg"
+  },
+  {
+    title: "Jeep Jamboree Historical Parade",
+    link: "https://events.ourayridgwayevents.com/event/jeep-jamboree-historical-parade",
+    description: "Watch historical Jeep Parade come through town as part of Jeep Jamboree. View on site | Email this event",
+    pubDate: "2026-09-26T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Downtown Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/53171933807100/huge/679f562aa1680a2f20f8ffd0a78d921293437057.jpg"
   }
 ];
 
@@ -5525,17 +5654,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    pubDate: "2026-07-27T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
   {
     title: "Gondola Leadership Committee Meeting",
     link: "https://townofmountainvillage.com/explore/events/all-events/gondola-leadership-committee-meeting/",
@@ -6294,18 +6412,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62860/img_4897.800x533.webp"
   },
   {
-    title: "Telluride Baseball Festival",
-    link: "https://www.telluride.com/event/telluride-baseball-festival/",
-    description: "The Telluride Baseball Festival offers the combination of an instructional girls softball camp, boys baseball camp, …",
-    pubDate: "2026-07-20",
-    endDate: "2026-07-27",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44876/1caea1bf-5cda-4196-93fe-07036f415462.800x533.webp"
-  },
-  {
     title: "Chill With Chamber Music",
     link: "https://www.telluride.com/event/chill-with-chamber-music/",
     description: "Telluride Chamber Music is bringing music to the West End of the county with Community Concerts at the beautiful Livery …",
@@ -6452,6 +6558,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
   },
   {
+    title: "Mountain Village National Night Out Celebration",
+    link: "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
+    description: "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
+    pubDate: "2026-08-04",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp"
+  },
+  {
     title: "Big Love Car Wash",
     link: "https://www.telluride.com/event/big-love-car-wash/",
     description: "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
@@ -6461,6 +6578,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62901/biglovecarwash-2lb24-1536x1024.800x533.webp"
+  },
+  {
+    title: "Sandra Frias Trunk Show",
+    link: "https://www.telluride.com/event/sandra-frias-trunk-show/",
+    description: "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
+    pubDate: "2026-08-05",
+    endDate: "2026-08-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63137/untitled_-_july_26-_2026_at_17_08_07_3.800x533.webp"
   },
   {
     title: "Susan Dory: Nine New Paintings",
@@ -6887,24 +7016,6 @@ const LEGAL_NOTICES = [
     address: "Section 27, Township 45 North, Range 13 West, San Miguel County",
     noticeKey: "foreclosure-202602",
     caseNumber: "202602"
-  },
-  {
-    title: "Financial Report -- Treasurer's Semi-Annual Report (July-December 2025)",
-    entity: "San Miguel County Treasurer",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Treasurer has prepared the Semi-Annual Report for July-December 2025, which is now available for public viewing on the county website under agendas and minutes from May 6, 2026. This report provides financial information about county operations.",
-    deadline: "Not specified",
-    expires: "2026-07-28",
-    dates: "5/28",
-    papers: ["ttimes_0528"],
-    url: "https://www.telluridenews.com/news/legals/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
-    address: "San Miguel County",
-    noticeKey: "treasurer-report-2025-h2"
   },
   {
     title: "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
@@ -8887,6 +8998,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8106
+  },
+  {
+    date: "October 27, 2026",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8045",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8045
   }
 ];
 
