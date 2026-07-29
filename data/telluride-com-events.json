@@ -381,6 +381,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62660/screenshot_2026-06-01_at_3_26_04_pm.800x533.webp"
   },
   {
+    "title": "Wine and Wickets",
+    "link": "https://www.telluride.com/event/wine-and-wickets/",
+    "description": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our …",
+    "pubDate": "2026-07-29",
+    "endDate": "2026-10-14",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp"
+  },
+  {
     "title": "Telluride Reserve",
     "link": "https://www.telluride.com/event/telluride-reserve/",
     "description": "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
@@ -482,6 +494,18 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
   },
   {
+    "title": "Bike and Brewery Tour",
+    "link": "https://www.telluride.com/event/bike-and-brewery-tour/",
+    "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
+    "pubDate": "2026-08-03",
+    "endDate": "2026-10-12",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp"
+  },
+  {
     "title": "Mountain Village National Night Out Celebration",
     "link": "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
     "description": "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
@@ -525,6 +549,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63134/image_-_2026-07-28t133100_036.800x533.webp"
+  },
+  {
+    "title": "Meet and Greet Wine Tasting with Members of Lettuce",
+    "link": "https://www.telluride.com/event/meet-and-greet-wine-tasting-with-members-of-lettuce/",
+    "description": "Meet and greet wine tasting with Benny Bloom and Ryan Zoidis of Lettuce. Enjoy selections from Benny and Zoid Wines, …",
+    "pubDate": "2026-08-06",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63146/1000010517.800x533.webp"
   },
   {
     "title": "Telluride Jazz Festival",
@@ -572,6 +607,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
+  },
+  {
+    "title": "Blizzard Sale",
+    "link": "https://www.telluride.com/event/blizzard-sale/",
+    "description": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
+    "pubDate": "2026-08-20",
+    "endDate": "2026-08-24",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp"
   },
   {
     "title": "Burlesque Buffet",

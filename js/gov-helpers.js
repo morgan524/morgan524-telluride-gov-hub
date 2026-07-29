@@ -1139,7 +1139,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -2843,16 +2843,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "The Dual Challenge: Climate and Energy",
-    date: "2026-07-28",
-    time: "6:30 PM – 7:30 PM",
-    location: "Sheridan Opera House, Telluride",
-    description: " \r\n\r\nThe world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time.\r\nThree leading voices sit down to examine what this challenge actually looks like — the data, the tradeoffs, and the paths forward. Panelists include Dr. Guy Brasseur, Climate Scientist, NCAR and Max Planck Institute for Meteorology, Georgina Campbell Flatter, CEO of Greentown Labs, and Jeff Guldner, Retired CEO of Arizona Public Service Company and Pinnacle West. \r\nThis event, cosponsored by Telluride Science, Telluride Foundation, and Open Minds, is free and open to the public. \r\nThis special Town Talk will be held at the Sheridan Opera House. Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public, but RSVP is required.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
-    link: "https://telluridescience.org/event/the-dual-challenge-climate-and-energy/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/image.webp",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "Top Chef & Taste of Telluride",
     date: "2026-08-01",
     time: "5:30 PM – 10:00 PM",
@@ -2965,17 +2955,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Native Plant Walk & Talk",
-    link: "https://koto.org/event/native-plant-walk-talk/",
-    description: "Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet at the the country park and ride lot in Lawson Hill near the bus stop; we will walk on the valley floor. Adults and teens only please!",
-    pubDate: "2026-07-29T15:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-29/",
@@ -3493,7 +3472,7 @@ const WILKINSON_EVENTS = [
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
+    location: "Mountain Village Market",
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png"
   },
   {
@@ -4026,6 +4005,28 @@ const OURAY_COUNTY_EVENTS = [
     category: "Community Event",
     location: "Dallas Meadows Neighborhood - Ridgway CO 81427",
     imageUrl: ""
+  },
+  {
+    title: "Friends of Phil Weiser for Governor",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3772",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3772",
+    pubDate: "2026-07-31T09:30:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "The Old Firehouse - 185 North Lena St. Ridgway CO 81432",
+    imageUrl: ""
+  },
+  {
+    title: "Phil Weiser Conversation with Community Leaders",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3771",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3771",
+    pubDate: "2026-07-31T08:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Citizens State Bank - 600 Main Street Ouray CO 81427",
+    imageUrl: ""
   }
 ];
 
@@ -4287,18 +4288,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
-    title: "Canceled: Aug 1, 2026: 2-Day Trail Stewardship Trip: West Cimarron & Wetterhorn",
-    link: "https://events.ourayridgwayevents.com/event/2-day-trail-stewardship-trip-west-cimarron-wetterhorn",
-    description: "Join Ouray Trail Group Crew Leader Jenny for a two-day stewardship trip from West Cimarron to Wetterhorn. Volunteers will perform trail maintenance while enjoying the spectacular scenery of Colorado’s backcountry. This is a rewarding opportunity to help maintain local trails alongside fellow volunteers. There's no cost, but please register. View on site | Email this event",
-    pubDate: "2026-08-01T14:00:00.000Z",
-    endDate: "2026-08-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "West Cimarron Trailhead",
-    imageUrl: "https://localist-images.azureedge.net/photos/52932522981610/huge/9bf35e2dc10a9ca173f67ff7eb877828fe036ce2.jpg"
-  },
-  {
     title: "Nature in Four Seasons: Summer Blooms",
     link: "https://events.ourayridgwayevents.com/event/nature-in-four-seasons-summer-blooms",
     description: "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for our third exploration hike of the Nature in Four-Season series. During our summer exploration, we will venture into the realm of the subalpine forest where mammals, birds, and insects are busy making the most of the long sunny days of summer. Join us in an exploratory hike to hear life histories and stories of resilience kept by these alpine residents. View on site | Email this event",
@@ -4551,7 +4540,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
-    description: "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 Starting this June, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Here’s how it works: ✨ Shop during First Friday ✨ Text your receipts from participating businesses ✨ Submit up to 3 receipts each month ✨ Two winners drawn monthly! Every receipt = another chance to win while supporting the galleries, shops, restaurants, artists, makers, and small businesses that make Ridgway feel like Ridgway. 📸 Text receipts to: (970) 316-3197 —or drop them off at Town Hall within 48 hours. …",
+    description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
     pubDate: "2026-08-07T23:00:00.000Z",
     endDate: "2026-09-04",
     source: "oray",
@@ -4822,6 +4811,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
+    link: "https://events.ourayridgwayevents.com/event/community-open-house-for-the-town-of-ridgways-housing-action-plan-master-plan-water-supply-element",
+    description: "The Town of Ridgway and our consulting partners are nearing completion of the Ridgway Housing Action Plan (HAP). Join us for a Community Open House to learn more, ask questions, and discuss your perspectives on housing in your community! Points Consulting is also assisting the Town in amending our 2019 Master Plan by adding a Water Supply Element. Come learn more! All are welcome at this in-person event! The Open House is hosted by the Town of Ridgway Staff, accompanied by Points Consulting. Questions or comments can be directed to Angela Kemp, Town of Ridgway Senior Planner: Email: akemp@town.ridgway.co.us Phone: 970-626-5308 Ext. 214 Both the Housing Action Plan and Water Supply Element follow Colorado Department of Local Affairs (DOLA) planning guidelines. The Housing Action Plan also builds on findings from Ridgway’s 2025 Housing Needs Assessment. …",
+    pubDate: "2026-08-13T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
   },
   {
     title: "Spencer Marlyn Band - Live @ Floating Lotus Brewery",
@@ -5111,6 +5111,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53426340345256/huge/41f8f3856c62b8da4427d53a7b71309c0268ddc5.jpg"
+  },
+  {
+    title: "First Day of School K-12 - Ridgway",
+    link: "https://events.ourayridgwayevents.com/event/first-day-of-school-k-12-ridgway",
+    description: "Pre-K starts August 26 View on site | Email this event",
+    pubDate: "2026-08-24T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg"
+  },
+  {
+    title: "First day of School - Ouray",
+    link: "https://events.ourayridgwayevents.com/event/first-day-of-school-ouray",
+    description: "View on site | Email this event",
+    pubDate: "2026-08-24T06:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/52322176935102/huge/ddc5d3f4273e28e34256e8e641136b3515c2f377.jpg"
   },
   {
     title: "San Juan Chamber MusicFest",
@@ -5427,6 +5449,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "You Can't Hide: Comedy @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright",
+    description: "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner WHEN? Friday, September 11 Doors at 6:00 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel. What begins as an unfortunate booking quickly spirals into an unforgettable adventure filled with bizarre encounters, unsettling discoveries, and laugh-out-loud storytelling. Just when you think the story is over, Casey finds himself returning for one final night, proving that sometimes the funniest stories are also the strangest. Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. …",
+    pubDate: "2026-09-12T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53559826947100/huge/f64b82b52f7d7f9db1aa8ea99d8390b7bee58b8e.jpg"
+  },
+  {
     title: "Young & Dead - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
     description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of psychedelic exploration when Young & Dead takes over the Sherbino stage on Saturday, September 12. Hailing from Boulder, Colorado, this group of talented musicians in their early 20s bringsa fresh and electrifying approach to the music of the Grateful Dead — not simply recreating the catalog, but diving deep into the spirit of improvisation, experimentation, and musical adventure that made the Dead legendary. …",
@@ -5491,6 +5524,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Music Bingo @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/music-bingo-the-wright-6438",
+    description: "Music Bingo @ the Wright WHEN? Friday, September 18 Doors at 6:30 pm • Music Bingo at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It's bingo with a soundtrack. Instead of numbers, your bingo card is filled with song titles and artists. Listen for the music, mark your card, sing along if the mood strikes, and compete for prizes as familiar favorites span decades and genres. No trivia knowledge required, just a love of music and a willingness to have fun. Whether you know every lyric or simply enjoy discovering new songs, Music Bingo is an easygoing evening of laughter, friendly competition, and community. Free to attend. In-person event at the historic Wright Opera House. Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
+    pubDate: "2026-09-19T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Wright Opera House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53560045436493/huge/a14a8a4e7c57d0a1bef341efac6f2260bc078cfc.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
@@ -6477,6 +6521,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62660/screenshot_2026-06-01_at_3_26_04_pm.800x533.webp"
   },
   {
+    title: "Wine and Wickets",
+    link: "https://www.telluride.com/event/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our …",
+    pubDate: "2026-07-29",
+    endDate: "2026-10-14",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp"
+  },
+  {
     title: "Telluride Reserve",
     link: "https://www.telluride.com/event/telluride-reserve/",
     description: "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
@@ -6578,6 +6634,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
   },
   {
+    title: "Bike and Brewery Tour",
+    link: "https://www.telluride.com/event/bike-and-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
+    pubDate: "2026-08-03",
+    endDate: "2026-10-12",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp"
+  },
+  {
     title: "Mountain Village National Night Out Celebration",
     link: "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
     description: "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
@@ -6621,6 +6689,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63134/image_-_2026-07-28t133100_036.800x533.webp"
+  },
+  {
+    title: "Meet and Greet Wine Tasting with Members of Lettuce",
+    link: "https://www.telluride.com/event/meet-and-greet-wine-tasting-with-members-of-lettuce/",
+    description: "Meet and greet wine tasting with Benny Bloom and Ryan Zoidis of Lettuce. Enjoy selections from Benny and Zoid Wines, …",
+    pubDate: "2026-08-06",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63146/1000010517.800x533.webp"
   },
   {
     title: "Telluride Jazz Festival",
@@ -6668,6 +6747,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
+  },
+  {
+    title: "Blizzard Sale",
+    link: "https://www.telluride.com/event/blizzard-sale/",
+    description: "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
+    pubDate: "2026-08-20",
+    endDate: "2026-08-24",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp"
   },
   {
     title: "Burlesque Buffet",

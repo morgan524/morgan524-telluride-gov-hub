@@ -58,8 +58,8 @@
     "href": "https://telluridelibrary.libcal.com/event/16461643?hs=a",
     "date": "2026-07-29",
     "time": "11:00 AM",
-    "location": "Program Room",
-    "town": "Telluride",
+    "location": "Mountain Village Market",
+    "town": "Mountain Village",
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
@@ -212,19 +212,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us on Wednesday, July 29th as we savor the sounds of the Bramblers! The Bramblers are a five-piece Americana and jam-grass band based out of Fort Collins, Colorado. Known for a genre-blurring sound blending folk, psych-rock, funk, and…",
     "type": "Music"
-  },
-  {
-    "title": "Native Plant Walk & Talk",
-    "href": "https://koto.org/event/native-plant-walk-talk/",
-    "date": "2026-07-29",
-    "time": "9:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Baby Bop",
@@ -611,6 +598,32 @@
     "source": "Telluride Chamber Music",
     "desc": "A family-friendly kids' concert presented by Telluride Chamber Music.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Phil Weiser Conversation with Community Leaders",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3771",
+    "date": "2026-07-31",
+    "time": "2:00 AM",
+    "location": "Citizens State Bank - 600 Main Street Ouray CO 81427",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3771",
+    "type": "Community"
+  },
+  {
+    "title": "Friends of Phil Weiser for Governor",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3772",
+    "date": "2026-07-31",
+    "time": "3:30 AM",
+    "location": "The Old Firehouse - 185 North Lena St. Ridgway CO 81432",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3772",
+    "type": "Community"
   },
   {
     "title": "Free Youth Tennis & Pickleball Program",
@@ -1136,6 +1149,20 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Bike and Brewery Tour",
+    "href": "https://www.telluride.com/event/bike-and-brewery-tour/",
+    "date": "2026-08-02",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-10-12"
+  },
+  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-08-03",
@@ -1441,6 +1468,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Meet and Greet Wine Tasting with Members of Lettuce",
+    "href": "https://www.telluride.com/event/meet-and-greet-wine-tasting-with-members-of-lettuce/",
+    "date": "2026-08-05",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63146/1000010517.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Meet and greet wine tasting with Benny Bloom and Ryan Zoidis of Lettuce. Enjoy selections from Benny and Zoid Wines, …",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-08-05",
@@ -1738,7 +1778,7 @@
     "img": "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Discover new work, celebrate openings and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits and special programming…",
+    "desc": "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and…",
     "type": "Arts & Film",
     "endDate": "2026-09-04"
   },
@@ -2364,6 +2404,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
+    "href": "https://events.ourayridgwayevents.com/event/community-open-house-for-the-town-of-ridgways-housing-action-plan-master-plan-water-supply-element",
+    "date": "2026-08-13",
+    "time": "4:30 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Town of Ridgway and our consulting partners are nearing completion of the Ridgway Housing Action Plan (HAP). Join us for a Community Open House to learn more, ask questions, and discuss your perspectives on housing in your community!…",
+    "type": "Community"
+  },
+  {
     "title": "Norwood Sanitation District Meeting",
     "href": "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
     "date": "2026-08-13",
@@ -2809,6 +2862,20 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Blizzard Sale",
+    "href": "https://www.telluride.com/event/blizzard-sale/",
+    "date": "2026-08-19",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
+    "type": "Community",
+    "endDate": "2026-08-24"
+  },
+  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-08-19",
@@ -3095,6 +3162,32 @@
     "source": "The Alibi",
     "desc": "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
     "type": "Music"
+  },
+  {
+    "title": "First Day of School K-12 - Ridgway",
+    "href": "https://events.ourayridgwayevents.com/event/first-day-of-school-k-12-ridgway",
+    "date": "2026-08-24",
+    "time": "",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52196842516113/huge/34c03f502c2e6b24c2bdceae7a155d7b6d463e8f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Pre-K starts August 26 View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "First day of School - Ouray",
+    "href": "https://events.ourayridgwayevents.com/event/first-day-of-school-ouray",
+    "date": "2026-08-24",
+    "time": "",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52322176935102/huge/ddc5d3f4273e28e34256e8e641136b3515c2f377.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "DAVE JORDAN",
@@ -3768,6 +3861,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "You Can't Hide: Comedy @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright",
+    "date": "2026-09-11",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53559826947100/huge/f64b82b52f7d7f9db1aa8ea99d8390b7bee58b8e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner WHEN? Friday, September 11 Doors at 6:00 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Part stand-up comedy. Part true crime…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Balourdet Quartet",
     "href": "https://www.telluride.com/event/balourdet-quartet/",
     "date": "2026-09-12",
@@ -3937,6 +4043,19 @@
     "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
     "type": "Festivals",
     "endDate": "2026-09-21"
+  },
+  {
+    "title": "Music Bingo @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/music-bingo-the-wright-6438",
+    "date": "2026-09-18",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53560045436493/huge/a14a8a4e7c57d0a1bef341efac6f2260bc078cfc.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Music Bingo @ the Wright WHEN? Friday, September 18 Doors at 6:30 pm • Music Bingo at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It's bingo with a soundtrack. Instead of numbers, your bingo card is…",
+    "type": "Arts & Film"
   },
   {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",

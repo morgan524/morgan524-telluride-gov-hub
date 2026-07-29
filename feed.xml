@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 16:30:24 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 19:27:25 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 29–4</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-29</guid>
-      <pubDate>Wed, 29 Jul 2026 16:30:24 GMT</pubDate>
-      <description><![CDATA[The biggest thing on the civic calendar this week is Wednesday's rescheduled Parks & Recreation Commission meeting, where the already-approved plan to pave the Town Park grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters in opposition make this one worth watching. The TMVOA Board also meets Thursday to vote on board officers and proposed amendments to its fiscal policies. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday, and the New York Philharmonic Brass Quintet comes to town.]]></description>
+      <pubDate>Wed, 29 Jul 2026 19:27:25 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the civic calendar this week is Wednesday's Parks and Recreation Commission meeting, where commissioners will take up the already-approved but deeply contested plan to pave Town Park's grass oval for basketball and pickleball courts — a project that's drawn more than 400 signatures in opposition. The TMVOA Board also meets Thursday with proposed amendments to its fiscal policies on the table, and the San Miguel Basin Fair and Rodeo kicks off Friday alongside the New York Philharmonic Brass Quintet as part of the summer music stretch.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -36,7 +36,7 @@ The July 29 joint work session between the San Miguel County Planning Commission
 
 On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project.
 
-⚡ Why it matters: Parks & Rec revisits contested Town Park paving plan opposed by 400+ residents.]]></description>
+⚡ Why it matters: Commissioners revisit paving Town Park oval despite 400+ signatures opposing it.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -77,6 +77,19 @@ Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychede
       <category>The Alibi</category>
     </item>
     <item>
+      <title>[Wed, Jul 29] Wine and Wickets</title>
+      <link>https://www.telluride.com/event/wine-and-wickets/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/wine%20and%20wickets%7C2026-07-29</guid>
+      <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Wed, Jul 29] Baby Bop</title>
       <link>https://telluridelibrary.libcal.com/event/16610078?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/baby%20bop%7C2026-07-29</guid>
@@ -103,18 +116,6 @@ Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychede
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Wed, Jul 29] Native Plant Walk &amp; Talk</title>
-      <link>https://koto.org/event/native-plant-walk-talk/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/native%20plant%20walk%20and%7C2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 15:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Join the recently retired Horticulturist for Colorado State University extension office for San Miguel County, Yvette Henson, for a plant and flower ID walk and talk. Yvette will share years of expertise as we identify native plants. Space will fill up fast. Sign up today for this informative experience! Meet at the the country park and ride lot in Lawson Hill near the bus stop; we will walk on the valley floor. Adults and teens only please!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Wed, Jul 29] Youth Tennis &amp; Pickleball Camp</title>
       <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-29/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-29</guid>
@@ -132,7 +133,7 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <guid isPermaLink="false">https://livabletelluride.org/event/summer%20market%20show%20peter%7C2026-07-29</guid>
       <pubDate>Wed, 29 Jul 2026 17:00:00 GMT</pubDate>
       <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
+📍 Mountain Village Market
 
 11:00 AM – 12:00 PM]]></description>
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png" medium="image" />
@@ -310,7 +311,7 @@ Create beautiful botanical prints using fresh flowers and leaves! Learn the art 
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: TMVOA votes on board officers and amendments to fiscal policies and procedures.]]></description>
+⚡ Why it matters: Board votes on officer elections and proposed fiscal policy amendments.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
