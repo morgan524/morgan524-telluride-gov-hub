@@ -63,7 +63,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A library program featuring Peter Davison, held in the Program Room at Wilkinson Public Library as part of the Summer Market Show series. The event runs for approximately one hour and is presented by the library.",
+    "desc": "11:00 AM – 12:00 PM",
     "type": "Community"
   },
   {
@@ -129,7 +129,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1899,7 +1899,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -2162,7 +2162,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2373,7 +2373,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2439,7 +2439,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -2530,8 +2530,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Ouray County Pride",
@@ -3586,6 +3586,19 @@
     "type": "Music"
   },
   {
+    "title": "Trivia Night @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-5257",
+    "date": "2026-09-04",
+    "time": "7:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53558793928797/huge/69d5d4e49c83194d4758001abf857ab86f277a9e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Trivia Night @ the Wright WHEN? Friday, September 4 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Gather your team and put your knowledge to the test at Trivia Night @ the…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Music and Makers Fest",
     "href": "https://events.ourayridgwayevents.com/event/music-and-makers-fest",
     "date": "2026-09-06",
@@ -3623,6 +3636,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/historic-treasures-of-the-san-juan-mountains-art-opening-reception-the-wright",
+    "date": "2026-09-10",
+    "time": "4:00 PM",
+    "location": "The Wright Opera House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53559063730711/huge/d94f240e8b9d7f60aaed38e8a76a97c827bb4f07.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Community Concert — September",
@@ -4067,7 +4093,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
