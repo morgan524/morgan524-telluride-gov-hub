@@ -63,7 +63,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "11:00 AM – 12:00 PM",
+    "desc": "A library program featuring Peter Davison, held in the Program Room at Wilkinson Public Library as part of the Summer Market Show series. The event runs for approximately one hour and is presented by the library.",
     "type": "Community"
   },
   {
@@ -129,7 +129,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
     "type": "Community"
   },
   {
@@ -1123,6 +1123,19 @@
     "type": "Community"
   },
   {
+    "title": "SAF Young People's Theater Registration",
+    "href": "https://sheridanoperahouse.com/events/saf-young-peoples-theater-registration/",
+    "date": "2026-08-02",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2024/11/Oliver_110.jpg",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Registration for the Sheridan Arts Foundation's Young People's Theater program takes place at the Sheridan Opera House. The program offers youth in the Telluride area an opportunity to participate in theater arts under the SAF's…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-08-03",
@@ -1886,7 +1899,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -2149,7 +2162,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -2360,7 +2373,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -2426,7 +2439,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2517,8 +2530,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",
@@ -3349,6 +3362,19 @@
     "type": "Community"
   },
   {
+    "title": "Music on the Green Presents Cristina Vane",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
+    "date": "2026-08-28",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/48865/cristina_vane_1800x900px_1.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    "type": "Music"
+  },
+  {
     "title": "DARRELL SCOTT - Live at The Sherbino",
     "href": "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
     "date": "2026-08-29",
@@ -4041,7 +4067,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

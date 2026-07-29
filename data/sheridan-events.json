@@ -1,16 +1,5 @@
 [
   {
-    "title": "The Nugget: A Telluride Restoration Story, and a Benefit for the Telluride Historical Museum",
-    "link": "https://sheridanoperahouse.com/events/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum/",
-    "description": "A documentary screening and benefit event at the Sheridan Opera House, telling the restoration story of the Nugget as a fundraiser for the Telluride Historical Museum. The program brings together local history and community support in one of Telluride's most storied performing arts venues.",
-    "pubDate": "2026-07-25",
-    "source": "sheridan",
-    "sourceLabel": "Sheridan Opera House",
-    "category": "Concert / Performance",
-    "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/film-the-nugget-a-telluride-restoration-story-and-a-benefit-for-the-telluride-historical-museum.png"
-  },
-  {
     "title": "FREE SHOW! Summer Spectacular: The Jungle Book",
     "link": "https://sheridanoperahouse.com/events/free-show-summer-spectacular-the-jungle-book/",
     "description": "A free performance of The Jungle Book at the Sheridan Opera House, part of the venue's Summer Spectacular series. The show brings the beloved story to the historic Telluride stage for an evening of live theatrical entertainment.",
@@ -31,5 +20,16 @@
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
     "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-10.15.22-AM.png"
+  },
+  {
+    "title": "SAF Young People's Theater Registration",
+    "link": "https://sheridanoperahouse.com/events/saf-young-peoples-theater-registration/",
+    "description": "Registration for the Sheridan Arts Foundation's Young People's Theater program takes place at the Sheridan Opera House. The program offers youth in the Telluride area an opportunity to participate in theater arts under the SAF's programming.",
+    "pubDate": "2026-08-03",
+    "source": "sheridan",
+    "sourceLabel": "Sheridan Opera House",
+    "category": "Concert / Performance",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2024/11/Oliver_110.jpg"
   }
 ]
