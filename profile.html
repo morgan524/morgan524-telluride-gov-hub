@@ -52,10 +52,20 @@
   .sub:last-of-type{border-bottom:0}
   .sub-t{font-weight:700;color:#21302b;font-size:.96rem}
   .sub-d{font-size:.8rem;color:var(--muted)}
-  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:#f3f6f3}
-  .seg-btn{border:0;background:transparent;padding:7px 13px;font-size:.8rem;font-weight:600;color:var(--muted);cursor:pointer;font-family:inherit;white-space:nowrap}
-  .seg-btn.active{background:var(--green);color:#fff}
-  .seg-btn.active[data-v="off"]{background:#b44b3c}
+  /* On/off switch — dark green = subscribed, grey = not subscribed.
+     Replaces the old three-way "Keep as-is / Subscribe / Unsubscribe" control:
+     the page now reads the person's real state, so a plain switch can be
+     honest about what it's showing. `data-init` holds the state we rendered,
+     and only switches the person actually flips get sent. */
+  .tog{display:inline-flex;align-items:center;gap:11px}
+  .tog-sw{position:relative;flex:0 0 auto;width:54px;height:31px;padding:0;border:1px solid var(--line);border-radius:999px;background:#cfd4d0;cursor:pointer;transition:background .15s,border-color .15s;font-family:inherit}
+  .tog-sw::after{content:"";position:absolute;top:3px;left:3px;width:23px;height:23px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.28);transition:transform .15s}
+  .tog-sw[aria-checked="true"]{background:var(--green);border-color:var(--green)}
+  .tog-sw[aria-checked="true"]::after{transform:translateX(23px)}
+  .tog-sw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .tog-sw:disabled{opacity:.45;cursor:not-allowed}
+  .tog-lbl{font-size:15.5px;font-weight:700;color:var(--muted);min-width:118px}
+  .tog-sw[aria-checked="true"]+.tog-lbl{color:var(--green)}
   .actions{display:flex;gap:14px;align-items:center;margin-top:22px;flex-wrap:wrap}
   button.save{background:var(--green);color:#fff;border:0;border-radius:999px;padding:12px 26px;font-weight:700;font-size:.96rem;cursor:pointer;font-family:inherit}
   button.save:hover{background:var(--green-2)}
@@ -67,9 +77,6 @@
   .loadmsg.ok{background:#e7f1ea;color:#1f5840}
   .loadmsg.info{background:#eef3ef;color:#3a443e}
   .loadmsg a{color:var(--green);font-weight:600}
-  .sub-status{font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:6px;vertical-align:middle;white-space:nowrap}
-  .sub-status.on{background:#e7f1ea;color:#1f5840}
-  .sub-status.off{background:#f1efe9;color:#8a7a55}
   .sub.topic-row{display:none}          /* shown only once its Mailchimp group exists */
   .sub.topic-row.show{display:grid}
   .msg{font-size:.9rem;margin:14px 0 0;min-height:1em}
@@ -154,22 +161,28 @@
           <div class="row"><label for="pRadius">Miles you’ll travel</label><input id="pRadius" type="number" min="1" max="200" placeholder="e.g. 25"></div>
         </div>
 
-        <div class="section">Your subscriptions <span class="sub">Choose a subscription only to change it — “Keep as-is” leaves it untouched.</span></div>
+        <div class="section">Your subscriptions <span class="sub">Green means you’re subscribed. Flip a switch to change it — we only save what you change.</span></div>
+
+        <div id="profGlobalUnsub" style="display:none;font-size:.86rem;line-height:1.5;color:#7a4a3a;background:#fdeeea;border:1px solid #e8bfb4;border-radius:9px;padding:11px 13px;margin:2px 0 12px;">
+          <strong>You’ve unsubscribed from all Livable Telluride email.</strong> That came from clicking “unsubscribe” in one of our emails, and it overrides everything below — we won’t send you anything while it’s in place. Turn any switch below back on and save, and we’ll start sending that one again.
+        </div>
+
+        <div id="profSubUnknown" style="display:none;font-size:.82rem;line-height:1.45;color:#3a443e;background:#eef3ef;border-radius:9px;padding:9px 12px;margin:2px 0 12px;">
+          These switches start in the off position because we can’t tell which lists you’re on until you’re signed in. <strong>Anything you don’t touch stays exactly as it is</strong> — only the switches you actually move get saved, in whatever position you leave them.
+        </div>
 
         <div class="sub">
-          <div><div class="sub-t">Weekly Update <span class="sub-status" data-status="weekly"></span></div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
-          <div class="seg" data-sub="weekly">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-weekly">Weekly Update</div><div class="sub-d">The Friday look-ahead — upcoming meetings &amp; events.</div></div>
+          <div class="tog" data-sub="weekly" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-weekly"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
         <div class="sub">
-          <div><div class="sub-t">Newsletter <span class="sub-status" data-status="newsletter"></span></div><div class="sub-d">Long-form posts when we publish them.</div></div>
-          <div class="seg" data-sub="newsletter">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-newsletter">Newsletter</div><div class="sub-d">Long-form posts when we publish them.</div></div>
+          <div class="tog" data-sub="newsletter" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-newsletter"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
 
@@ -178,37 +191,33 @@
           ⚠ Event topics are delivered inside the <strong>Weekly Update</strong> email. Subscribe to the Weekly Update above to choose topics — without it, we have no email in which to send your event notices.
         </div>
 
-        <!-- Event Topics (revealed only once the matching Mailchimp group exists) -->
+        <!-- Event Topics (revealed only once the matching Customer.io topic exists) -->
         <div class="sub topic-row">
-          <div><div class="sub-t">Music, Arts &amp; Festivals <span class="sub-status" data-status="arts"></span></div><div class="sub-d">Concerts, film, theater, gallery openings, and festivals.</div></div>
-          <div class="seg" data-sub="arts">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-arts">Music, Arts &amp; Festivals</div><div class="sub-d">Concerts, film, theater, gallery openings, and festivals.</div></div>
+          <div class="tog" data-sub="arts" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-arts"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
         <div class="sub topic-row">
-          <div><div class="sub-t">Government Meetings <span class="sub-status" data-status="civic"></span></div><div class="sub-d">Council, commission, and board meetings — with comment deadlines.</div></div>
-          <div class="seg" data-sub="civic">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-civic">Government Meetings</div><div class="sub-d">Council, commission, and board meetings — with comment deadlines.</div></div>
+          <div class="tog" data-sub="civic" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-civic"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
         <div class="sub topic-row">
-          <div><div class="sub-t">Family &amp; Kids <span class="sub-status" data-status="family"></span></div><div class="sub-d">Storytime, youth programs, and all-ages activities.</div></div>
-          <div class="seg" data-sub="family">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-family">Family &amp; Kids</div><div class="sub-d">Storytime, youth programs, and all-ages activities.</div></div>
+          <div class="tog" data-sub="family" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-family"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
         <div class="sub topic-row">
-          <div><div class="sub-t">Outdoors &amp; Recreation <span class="sub-status" data-status="outdoors"></span></div><div class="sub-d">Hikes, races, ski events, and stewardship days.</div></div>
-          <div class="seg" data-sub="outdoors">
-            <button type="button" class="seg-btn active" data-v="">Keep as-is</button>
-            <button type="button" class="seg-btn" data-v="on">Subscribe</button>
-            <button type="button" class="seg-btn" data-v="off">Unsubscribe</button>
+          <div><div class="sub-t" id="subt-outdoors">Outdoors &amp; Recreation</div><div class="sub-d">Hikes, races, ski events, and stewardship days.</div></div>
+          <div class="tog" data-sub="outdoors" data-init="">
+            <button type="button" class="tog-sw" role="switch" aria-checked="false" aria-labelledby="subt-outdoors"></button>
+            <span class="tog-lbl">Not subscribed</span>
           </div>
         </div>
 
@@ -279,13 +288,38 @@
   }
   function flagMissing(){ ['pFirst','pLast'].forEach(id=>{ const el=document.getElementById(id); if(el) el.classList.toggle('missing', !el.value.trim()); }); }
   function loadMsg(text, cls){ const el=document.getElementById('profLoadMsg'); if(!el) return; el.innerHTML=text; el.className='loadmsg show '+(cls||'info'); }
+  // Explain the switches whenever we could NOT read the person's real state,
+  // so an all-off row is never mistaken for "you're unsubscribed from everything".
+  function subsUnknown(show){ const el=document.getElementById('profSubUnknown'); if(el) el.style.display = show ? '' : 'none'; }
+  // Global opt-out: Customer.io's footer unsubscribe stops ALL mail no matter
+  // what the individual switches say. Show the banner and hide the "unknown
+  // state" one, which would otherwise contradict it.
+  function globalUnsub(show){
+    const el=document.getElementById('profGlobalUnsub'); if(el) el.style.display = show ? '' : 'none';
+    if(show) subsUnknown(false);
+  }
+  // ── Subscription switches ────────────────────────────────────────────
+  // Each `.tog` carries data-init = the state we RENDERED ("true"/"false", or
+  // "" when we never learned it). Only switches whose current position differs
+  // from data-init are sent, so leaving one alone never touches that list —
+  // that's what makes an honest two-position switch safe on a page that can't
+  // always read the person's real state.
+  function togOf(key){ return document.querySelector('.tog[data-sub="'+key+'"]'); }
+  function togGet(tog){ return tog.querySelector('.tog-sw').getAttribute('aria-checked')==='true'; }
+  function togSet(tog, on){
+    tog.querySelector('.tog-sw').setAttribute('aria-checked', on ? 'true' : 'false');
+    tog.querySelector('.tog-lbl').textContent = on ? 'Subscribed' : 'Not subscribed';
+  }
+  // Record a state read back from Customer.io: move the switch AND make that
+  // position the new baseline, so a loaded value is never re-sent as a change.
   function setSubStatus(key, val){
-    if(key==='weekly'){ _weeklyCurrent = (val===true); syncTopicGate(); }
-    const el=document.querySelector('.sub-status[data-status="'+key+'"]');
-    if(!el) return;
-    if(val===true){ el.textContent='Currently subscribed'; el.className='sub-status on'; }
-    else if(val===false){ el.textContent='Currently not subscribed'; el.className='sub-status off'; }
-    else { el.textContent=''; el.className='sub-status'; }
+    if(key==='weekly'){ _weeklyCurrent = (val===true); }
+    const tog=togOf(key);
+    if(tog){
+      togSet(tog, val===true);
+      tog.setAttribute('data-init', val===true ? 'true' : (val===false ? 'false' : ''));
+    }
+    if(key==='weekly') syncTopicGate();
   }
 
   // ── Gate Event Topics on the Weekly Update subscription ──
@@ -295,26 +329,20 @@
   var _weeklyCurrent = null;                 // set by profile-read (true/false/null)
   var _db = null, _storage = null, _avatarUser = null;   // Firebase handles for the profile photo
   function effectiveWeeklyOn(){
-    const seg=document.querySelector('.seg[data-sub="weekly"]');
-    const act=seg && seg.querySelector('.seg-btn.active');
-    const v=act ? act.getAttribute('data-v') : '';
-    if(v==='on')  return true;
-    if(v==='off') return false;
-    return _weeklyCurrent===true;            // "Keep as-is" → current state
+    const tog=togOf('weekly');
+    return tog ? togGet(tog) : (_weeklyCurrent===true);
   }
   function syncTopicGate(){
     const on=effectiveWeeklyOn();
     document.querySelectorAll('.sub.topic-row').forEach(function(row){
       row.style.opacity = on ? '' : '0.55';
-      row.querySelectorAll('.seg-btn').forEach(function(b){ b.disabled=!on; });
+      row.querySelectorAll('.tog-sw').forEach(function(b){ b.disabled=!on; });
       if(!on){
-        // Revert a pending topic "Subscribe" to Keep-as-is so a disabled control
-        // can't opt someone into a topic with no weekly email to carry it.
-        const seg=row.querySelector('.seg[data-sub]');
-        const act=seg && seg.querySelector('.seg-btn.active');
-        if(act && act.getAttribute('data-v')==='on'){
-          seg.querySelectorAll('.seg-btn').forEach(function(b){ b.classList.toggle('active', b.getAttribute('data-v')===''); });
-        }
+        // Snap a disabled topic switch back to its baseline so it can't send a
+        // change either way — no opting into a topic with no weekly email to
+        // carry it, and no silent unsubscribe just for turning the weekly off.
+        const tog=row.querySelector('.tog[data-sub]');
+        if(tog){ togSet(tog, tog.getAttribute('data-init')==='true'); tog.removeAttribute('data-touched'); }
       }
     });
     const note=document.getElementById('profTopicGate');
@@ -331,23 +359,21 @@
   setVal('pRadius', qp('radius'));
   flagMissing();
 
-  // Segmented control behaviour
-  document.querySelectorAll('.seg').forEach(seg=>{
-    seg.querySelectorAll('.seg-btn').forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        seg.querySelectorAll('.seg-btn').forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-        syncTopicGate();   // weekly change may enable/disable topics
-      });
+  // Switch behaviour
+  document.querySelectorAll('.tog').forEach(tog=>{
+    tog.querySelector('.tog-sw').addEventListener('click',()=>{
+      togSet(tog, !togGet(tog));
+      tog.setAttribute('data-touched','1');   // they set this one deliberately
+      syncTopicGate();   // weekly change may enable/disable topics
     });
   });
 
-  // Reveal each Event Topic row only if its Mailchimp group actually exists.
+  // Reveal each Event Topic row only if its Customer.io topic actually exists.
   fetch(AVAIL_ENDPOINT, { method:'POST', headers:{'Content-Type':'application/json'}, body:'{}' })
     .then(r=>r.json()).then(function(resp){
       const avail = (resp && resp.available) || {};
-      document.querySelectorAll('.sub.topic-row .seg[data-sub]').forEach(function(seg){
-        if (avail[seg.getAttribute('data-sub')]) seg.closest('.sub').classList.add('show');
+      document.querySelectorAll('.sub.topic-row .tog[data-sub]').forEach(function(tog){
+        if (avail[tog.getAttribute('data-sub')]) tog.closest('.sub').classList.add('show');
       });
       syncTopicGate();   // apply the weekly gate once topic rows are revealed
     }).catch(function(){});
@@ -358,6 +384,7 @@
   // anyone else's data.
   (function initProfileLoad(){
     const loginHint = 'Have an account? <a href="/hub-bub.html#login">Log in</a> and your saved info loads here automatically.';
+    subsUnknown(true);   // assume unknown until a profile-read proves otherwise
     if (!window.firebase || !firebase.initializeApp) { loadMsg(loginHint, 'info'); return; }
     try {
       firebase.initializeApp(SITE_CONFIG.FIREBASE);
@@ -375,8 +402,12 @@
           setVal('pFirst', fl.FNAME); setVal('pLast', fl.LNAME); setRegion(fl.MMERGE6);
           setVal('pAddr', fl.MMERGE10); setVal('pRadius', fl.MMERGE11);
           flagMissing();
-          if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); }
-          loadMsg('✓ Loaded your saved info for <strong>'+resp.email+'</strong>. Update anything below — empty boxes are details we don’t have yet.', 'ok');
+          if (resp.subs) { Object.keys(resp.subs).forEach(function(k){ setSubStatus(k, resp.subs[k]); }); subsUnknown(false); }
+          // A global opt-out (Customer.io's own footer unsubscribe) suppresses
+          // every send regardless of the per-list attributes, so say so plainly
+          // rather than showing switches that imply mail is on its way.
+          globalUnsub(resp.unsubscribed === true);
+          loadMsg('✓ Loaded your saved info for <strong>'+resp.email+'</strong>. The switches below show what you’re on right now. Empty boxes are details we don’t have yet.', 'ok');
         } else if (resp && resp.ok && !resp.found) {
           loadMsg('You’re signed in as <strong>'+resp.email+'</strong>, but we don’t have a subscription for that address yet. Fill in your info below to get started.', 'info');
         } else {
@@ -462,16 +493,21 @@
     const a=val('pAddr');   if(a) fields.MMERGE10=a;
     const r=val('pRadius'); if(r) fields.MMERGE11=r;
 
-    // Only subscription changes the person explicitly picked (name-based;
-    // the Worker resolves these to the real Mailchimp interest IDs).
+    // Only switches the person actually MOVED off the state we rendered
+    // (data-init). A switch left alone sends nothing, so an unknown baseline
+    // can never silently unsubscribe anyone. The Worker maps these names onto
+    // the Customer.io sub_*/topic_* attributes.
     const subs={};
-    document.querySelectorAll('.seg[data-sub]').forEach(seg=>{
-      const row=seg.closest('.sub');
+    document.querySelectorAll('.tog[data-sub]').forEach(tog=>{
+      const row=tog.closest('.sub');
       if(row && row.classList.contains('topic-row') && !row.classList.contains('show')) return; // hidden/unavailable topic
-      const active=seg.querySelector('.seg-btn.active');
-      const v=active?active.getAttribute('data-v'):'';
-      if(v==='on')  subs[seg.getAttribute('data-sub')]=true;
-      if(v==='off') subs[seg.getAttribute('data-sub')]=false;
+      const now=togGet(tog);
+      const init=tog.getAttribute('data-init');          // 'true' | 'false' | '' (unknown)
+      const touched=tog.getAttribute('data-touched')==='1';
+      // Touched → send wherever they left it (this is the only way someone on an
+      // email link, whose baseline we never learned, can turn a list OFF).
+      // Untouched → send only if it disagrees with a baseline we actually read.
+      if(touched || (init!=='' && now !== (init==='true'))) subs[tog.getAttribute('data-sub')]=now;
     });
 
     const payload={ email:email, fields:fields, subs:subs };

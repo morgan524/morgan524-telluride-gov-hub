@@ -312,16 +312,24 @@ async function handleProfileRead(request, env) {
   let a = {};
   try { const j = await resp.json(); a = (j.customer && j.customer.attributes) || j.attributes || {}; } catch (_) {}
   const truthy = (v) => v === true || v === 1 || v === "true" || v === "1";
+  // Customer.io's own footer unsubscribe sets a GLOBAL `unsubscribed` flag and
+  // does NOT touch our sub_* attributes, so someone who opted out that way still
+  // reads sub_weekly_update=true. Report the flag so the profile page can show
+  // them as unsubscribed instead of a green switch that contradicts their choice.
+  const globallyUnsubscribed = truthy(a.unsubscribed);
   return json({
     ok: true, found: true, email,
+    unsubscribed: globallyUnsubscribed,
     fields: { FNAME: a.first_name || "", LNAME: a.last_name || "", MMERGE6: a.region || "" },
     subs: {
-      weekly:     truthy(a.sub_weekly_update),
-      newsletter: truthy(a.sub_newsletter),
-      arts:       truthy(a.topic_music_arts),
-      civic:      truthy(a.topic_gov_meetings),
-      family:     truthy(a.topic_family_kids),
-      outdoors:   truthy(a.topic_outdoors_rec),
+      // A global opt-out overrides every per-list attribute — Customer.io
+      // suppresses delivery regardless of what these say.
+      weekly:     !globallyUnsubscribed && truthy(a.sub_weekly_update),
+      newsletter: !globallyUnsubscribed && truthy(a.sub_newsletter),
+      arts:       !globallyUnsubscribed && truthy(a.topic_music_arts),
+      civic:      !globallyUnsubscribed && truthy(a.topic_gov_meetings),
+      family:     !globallyUnsubscribed && truthy(a.topic_family_kids),
+      outdoors:   !globallyUnsubscribed && truthy(a.topic_outdoors_rec),
     },
   });
 }
@@ -355,11 +363,22 @@ async function handleUpdateProfile(request, env) {
   for (const [k, attr] of Object.entries(CIO_FIELDS_TO_ATTR)) {
     if (merge_fields[k]) cioAttrs[attr] = merge_fields[k];
   }
+  let optingIn = false;
   if (data.subs && typeof data.subs === "object") {
     for (const [k, v] of Object.entries(data.subs)) {
-      if (CIO_SUBS_TO_ATTR[k] && typeof v === "boolean") cioAttrs[CIO_SUBS_TO_ATTR[k]] = v;
+      if (CIO_SUBS_TO_ATTR[k] && typeof v === "boolean") {
+        cioAttrs[CIO_SUBS_TO_ATTR[k]] = v;
+        if (v === true) optingIn = true;
+      }
     }
   }
+  // Someone who used Customer.io's footer unsubscribe carries a GLOBAL
+  // `unsubscribed` flag that suppresses delivery no matter what the sub_*
+  // attributes say. If they now deliberately switch a list back ON, clear it —
+  // otherwise they'd re-subscribe on paper and still receive nothing. Only ever
+  // cleared by an explicit opt-in action; turning everything off does NOT set it
+  // (attribute-level off is enough).
+  if (optingIn) cioAttrs.unsubscribed = false;
   if (!Object.keys(cioAttrs).length) return json({ ok: false, msg: "Nothing to update." }, 400);
 
   const cioStatus = await cioIdentify(env, email, cioAttrs);
