@@ -1,10 +1,14 @@
 {
-  "hash": "31b071819fdfa00ef114d19db69b842de7340c4a",
-  "lede": "The biggest thing on the civic calendar this week is the Parks & Recreation Commission meeting Wednesday, July 29 at noon, where commissioners take up the already-approved plan to pave the Town Park grass oval for basketball and pickleball courts — a project that has drawn more than 400 signatures and letters in opposition. The rest of the week is quieter on the decision-making front, with the San Miguel Basin Fair and Rodeo, New York Philharmonic Brass Quintet, and a free Jungle Book production at the Sheridan rounding out a full valley weekend.",
+  "hash": "993403a62f958348032b2a964659d4b6b70f858a",
+  "lede": "The biggest thing on the civic calendar this week is Wednesday's rescheduled Parks & Recreation Commission meeting, where the already-approved plan to pave the Town Park grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters in opposition make this one worth watching. The TMVOA Board also meets Thursday to vote on board officers and proposed amendments to its fiscal policies. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday, and the New York Philharmonic Brass Quintet comes to town.",
   "notable": [
     {
       "id": 1,
-      "stake": "Commission revisits controversial Town Park paving opposed by 400+ residents."
+      "stake": "Parks & Rec revisits contested Town Park paving plan opposed by 400+ residents."
+    },
+    {
+      "id": 4,
+      "stake": "TMVOA votes on board officers and amendments to fiscal policies and procedures."
     }
   ]
 }
