@@ -1,35 +1,42 @@
 /* lt-profile.js — "Update your profile" pop-up.
  *
  * A branded modal that lets an existing subscriber fill in missing info
- * (first/last name, town, "events near you" location) and manage their
- * subscriptions, writing back to Mailchimp via the Cloudflare Worker
- * endpoint POST /update-profile (worker.js holds the API key server-side).
+ * (first/last name, region, "events near you" location) and manage their
+ * subscriptions, writing back to Customer.io via the Cloudflare Worker
+ * endpoint POST /update-profile (worker.js holds the API keys server-side).
  *
  * Built for the many legacy subscribers imported without names/location.
  *
  * Entry points:
  *   - window.lvShowProfile(prefill?)  — open it programmatically.
  *   - URL ?profile=1 (or #update-profile) auto-opens it. The weekly email's
- *     "Update your info" button links here with Mailchimp merge tags, e.g.
- *       /?profile=1&email=*|EMAIL|*&fname=*|FNAME|*&lname=*|LNAME|*
- *        &town=*|MMERGE6|*&addr=*|MMERGE10|*&radius=*|MMERGE11|*
- *     so the person lands with their record pre-filled and the blanks obvious.
+ *     "Update your info" button links here with the person's own details, e.g.
+ *       /?profile=1&email=…&fname=…&lname=…&region=…&addr=…&radius=…
+ *     so they land with their record pre-filled and the blanks obvious.
  *
  * SAFETY: merge fields are only sent when non-empty (never blanks existing
- * data), and each subscription is "No change" by default — we only ever
- * change a group the person explicitly chooses to change. The Worker PATCHes
- * an EXISTING member only (a non-member is told to subscribe first).
+ * data), and a subscription switch is only sent when the person actually
+ * moves it — see the data-touched rule below. The Worker upserts the contact
+ * by email in Customer.io.
+ *
+ * SCOPE: this popup covers the two headline subscriptions only. The four
+ * Event Topics live on the full page (/profile.html), which can sign you in
+ * and read your real state — a topic only makes sense alongside the Weekly
+ * Update that carries it, and this popup can't know whether you have one.
  */
 (function () {
   var WORKER_ENDPOINT =
     SITE_CONFIG.RSS_PROXY_BASE + '/update-profile';
 
-  // Mailchimp interest groups under category 7915 ("Email Subscriptions").
-  // Add future "Event Topics" groups here as { id, label, desc } and they
-  // render automatically — no other change needed.
+  // Keyed by NAME, matching CIO_SUBS_TO_ATTR in worker.js, which maps them onto
+  // the Customer.io sub_*/topic_* attributes. These used to be Mailchimp
+  // interest IDs ('24642'/'24641') sent as an `interests` object — but the
+  // Worker only reads `subs`, so every subscription change made here was
+  // silently thrown away while the name/region still saved (making the request
+  // look successful). Never reintroduce numeric ids here.
   var SUBSCRIPTIONS = [
-    { id: '24642', label: 'Weekly Update', desc: 'The Friday look-ahead — upcoming meetings & events.' },
-    { id: '24641', label: 'Newsletter',    desc: 'Long-form posts when we publish them.' },
+    { key: 'weekly',     label: 'Weekly Update', desc: 'The Friday look-ahead — upcoming meetings & events.' },
+    { key: 'newsletter', label: 'Newsletter',    desc: 'Long-form posts when we publish them.' },
   ];
 
   function qp(name) {
@@ -56,9 +63,20 @@
       '#ltProfModal input.lt-prof-missing{border-color:#d99a3c;background:#fff9ef;}',
       '#ltProfModal .lt-prof-hint{font-size:0.72rem;color:#b07a1e;font-weight:600;}',
       '#ltProfModal .lt-prof-section{margin:18px 0 6px;font-size:0.72rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#7a8a85;border-top:1px solid #eef1ee;padding-top:16px;}',
-      '#ltProfModal .lt-prof-sub{display:grid;grid-template-columns:1fr 150px;gap:10px;align-items:center;margin-bottom:10px;}',
+      '#ltProfModal .lt-prof-sub{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;margin-bottom:10px;}',
       '#ltProfModal .lt-prof-sub .t{font-size:0.92rem;font-weight:700;color:#21302b;}',
       '#ltProfModal .lt-prof-sub .d{font-size:0.78rem;color:#6b7a74;}',
+      // On/off switch — dark green = subscribed. Mirrors profile.html's .tog.
+      '#ltProfModal .lt-tog{display:inline-flex;align-items:center;gap:10px;}',
+      '#ltProfModal .lt-tog-sw{position:relative;flex:0 0 auto;width:54px;height:31px;padding:0;border:1px solid #e2e6e3;border-radius:999px;background:#cfd4d0;cursor:pointer;transition:background .15s,border-color .15s;font-family:inherit;-webkit-appearance:none;appearance:none;}',
+      '#ltProfModal .lt-tog-sw::after{content:"";position:absolute;top:3px;left:3px;width:23px;height:23px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,0.28);transition:transform .15s;}',
+      '#ltProfModal .lt-tog-sw[aria-checked="true"]{background:#21443c;border-color:#21443c;}',
+      '#ltProfModal .lt-tog-sw[aria-checked="true"]::after{transform:translateX(23px);}',
+      '#ltProfModal .lt-tog-sw:focus-visible{outline:2px solid #2f7a5f;outline-offset:2px;}',
+      '#ltProfModal .lt-tog-lbl{font-size:15.5px;font-weight:700;color:#6b7a74;min-width:118px;}',
+      '#ltProfModal .lt-tog-sw[aria-checked="true"]+.lt-tog-lbl{color:#21443c;}',
+      '#ltProfModal .lt-prof-note{font-size:0.8rem;line-height:1.45;color:#3a443e;background:#eef3ef;border-radius:8px;padding:9px 11px;margin:2px 0 12px;}',
+      '#ltProfModal .lt-prof-note a{color:#21443c;font-weight:600;}',
       '#ltProfModal .lt-prof-actions{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap;}',
       '#ltProfModal button[type="submit"]{background:#21443c;color:#fff;border:none;border-radius:999px;padding:11px 24px;font-weight:700;font-size:0.95rem;cursor:pointer;font-family:inherit;}',
       '#ltProfModal button[type="submit"]:hover{background:#2a5347;}',
@@ -73,17 +91,48 @@
     document.head.appendChild(s);
   }
 
+  // Each switch carries data-init = the state we RENDERED (always "" here — this
+  // popup is unauthenticated and cannot read anyone's real state) and gets
+  // data-touched when moved. Only touched switches are sent, so leaving one
+  // alone never changes that list, and moving one is the only way to change it
+  // in either direction.
   function subRowsHtml() {
     return SUBSCRIPTIONS.map(function (g) {
+      var id = 'ltProfSubT-' + g.key;
       return '<div class="lt-prof-sub">' +
-        '<div><div class="t">' + g.label + '</div><div class="d">' + g.desc + '</div></div>' +
-        '<select data-interest="' + g.id + '">' +
-          '<option value="">No change</option>' +
-          '<option value="on">Subscribe</option>' +
-          '<option value="off">Unsubscribe</option>' +
-        '</select>' +
+        '<div><div class="t" id="' + id + '">' + g.label + '</div><div class="d">' + g.desc + '</div></div>' +
+        '<div class="lt-tog" data-sub="' + g.key + '" data-init="">' +
+          '<button type="button" class="lt-tog-sw" role="switch" aria-checked="false" aria-labelledby="' + id + '"></button>' +
+          '<span class="lt-tog-lbl">Not subscribed</span>' +
+        '</div>' +
       '</div>';
     }).join('');
+  }
+
+  function togGet(tog) { return tog.querySelector('.lt-tog-sw').getAttribute('aria-checked') === 'true'; }
+  function togSet(tog, on) {
+    tog.querySelector('.lt-tog-sw').setAttribute('aria-checked', on ? 'true' : 'false');
+    tog.querySelector('.lt-tog-lbl').textContent = on ? 'Subscribed' : 'Not subscribed';
+  }
+  function wireToggles() {
+    document.querySelectorAll('#ltProfModal .lt-tog').forEach(function (tog) {
+      tog.querySelector('.lt-tog-sw').addEventListener('click', function () {
+        togSet(tog, !togGet(tog));
+        tog.setAttribute('data-touched', '1');
+      });
+    });
+  }
+
+  // Infer a region from a legacy free-text town, matching profile.html's
+  // setRegion(). MMERGE6 holds one of three regions now, not a town name.
+  function setRegion(v) {
+    var sel = document.getElementById('ltProfRegion');
+    if (!sel || !v) return;
+    var low = String(v).trim().toLowerCase(), r = '';
+    if (/east end|telluride|mountain village|\bophir\b|sawpit/.test(low)) r = 'East End';
+    else if (/west end|norwood|nucla|naturita|paradox|redvale|egnar/.test(low)) r = 'West End';
+    else if (/ridgway|ouray/.test(low)) r = 'Ridgway/Ouray';
+    if (r) sel.value = r;
   }
 
   function ensureModal() {
@@ -104,11 +153,18 @@
             '<div class="row"><label for="ltProfLast">Last name</label><input id="ltProfLast" type="text" autocomplete="family-name"></div>' +
           '</div>' +
           '<div class="row"><label for="ltProfEmail">Email <span class="lt-prof-hint">(the address you subscribed with)</span></label><input id="ltProfEmail" type="email" autocomplete="email" required></div>' +
-          '<div class="row"><label for="ltProfTown">Town</label><input id="ltProfTown" type="text" placeholder="e.g. Telluride, Norwood, Ridgway"></div>' +
+          '<div class="row"><label for="ltProfRegion">Region</label>' +
+            '<select id="ltProfRegion">' +
+              '<option value="">— Select your region —</option>' +
+              '<option value="East End">East End</option>' +
+              '<option value="West End">West End</option>' +
+              '<option value="Ridgway/Ouray">Ridgway/Ouray</option>' +
+            '</select></div>' +
           '<div class="lt-prof-section">Events near you (optional)</div>' +
           '<div class="row"><label for="ltProfAddr">Your address or town</label><input id="ltProfAddr" type="text" placeholder="So we can flag events close to you"></div>' +
           '<div class="row"><label for="ltProfRadius">How far you’ll travel (miles)</label><input id="ltProfRadius" type="number" min="1" max="200" placeholder="e.g. 25"></div>' +
           '<div class="lt-prof-section">Your subscriptions</div>' +
+          '<div class="lt-prof-note">These switches start off because we can’t tell which lists you’re on from here. <strong>Anything you don’t touch stays exactly as it is</strong> — only switches you actually move get saved. For event topics and your current settings, use the <a href="/profile.html">full profile page</a>.</div>' +
           subRowsHtml() +
           '<p class="lt-prof-msg" id="ltProfMsg" role="status" aria-live="polite"></p>' +
           '<div class="lt-prof-actions">' +
@@ -118,6 +174,7 @@
         '</form>' +
       '</div>';
     document.body.appendChild(overlay);
+    wireToggles();
     overlay.addEventListener('click', function (e) { if (e.target === overlay) window.lvHideProfile(); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') {
@@ -137,9 +194,14 @@
     setVal('ltProfFirst',  prefill.fname  || qp('fname'));
     setVal('ltProfLast',   prefill.lname  || qp('lname'));
     setVal('ltProfEmail',  prefill.email  || qp('email'));
-    setVal('ltProfTown',   prefill.town   || qp('town'));
+    setRegion(prefill.region || prefill.town || qp('region') || qp('town'));
     setVal('ltProfAddr',   prefill.addr   || qp('addr'));
     setVal('ltProfRadius', prefill.radius || qp('radius'));
+    // Reopening starts clean — no switch is "touched" until moved this time.
+    document.querySelectorAll('#ltProfModal .lt-tog').forEach(function (tog) {
+      tog.removeAttribute('data-touched');
+      togSet(tog, tog.getAttribute('data-init') === 'true');
+    });
     // Gently flag the blanks we most want filled (name).
     ['ltProfFirst', 'ltProfLast'].forEach(function (id) {
       var el = document.getElementById(id);
@@ -176,15 +238,21 @@
     var fields = {};
     var fv = val('ltProfFirst');  if (fv) fields.FNAME = fv;
     var lv = val('ltProfLast');   if (lv) fields.LNAME = lv;
-    var tv = val('ltProfTown');   if (tv) fields.MMERGE6 = tv;
+    var tv = val('ltProfRegion'); if (tv) fields.MMERGE6 = tv;
     var av = val('ltProfAddr');   if (av) fields.MMERGE10 = av;
     var rv = val('ltProfRadius'); if (rv) fields.MMERGE11 = rv;
-    // Only send subscription changes the person explicitly picked.
-    var interests = {};
-    document.querySelectorAll('#ltProfModal select[data-interest]').forEach(function (sel) {
-      if (sel.value === 'on') interests[sel.getAttribute('data-interest')] = true;
-      else if (sel.value === 'off') interests[sel.getAttribute('data-interest')] = false;
+    // Only switches the person actually moved. Sent as `subs` keyed by NAME —
+    // the Worker reads `subs`, never `interests`.
+    var subs = {};
+    document.querySelectorAll('#ltProfModal .lt-tog[data-sub]').forEach(function (tog) {
+      if (tog.getAttribute('data-touched') === '1') subs[tog.getAttribute('data-sub')] = togGet(tog);
     });
+
+    if (!Object.keys(fields).length && !Object.keys(subs).length) {
+      msg.className = 'lt-prof-msg error';
+      msg.textContent = 'Nothing to update yet — fill in a field or change a subscription.';
+      return false;
+    }
 
     msg.className = 'lt-prof-msg';
     msg.textContent = 'Saving…';
@@ -193,7 +261,7 @@
     fetch(WORKER_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: email, fields: fields, interests: interests }),
+      body: JSON.stringify({ email: email, fields: fields, subs: subs }),
     })
       .then(function (r) { return r.json().catch(function () { return { ok: false, msg: 'Unexpected response.' }; }); })
       .then(function (resp) {
