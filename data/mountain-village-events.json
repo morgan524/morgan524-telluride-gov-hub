@@ -396,6 +396,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   },
   {
+    "title": "Gaiascope Opening Night",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
+    "description": "Celebrate the opening of Gaiascope with artist Brooke during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
+    "pubDate": "2026-08-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg"
+  },
+  {
     "title": "Music on the Green Presents Cristina Vane",
     "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
     "description": "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
@@ -405,5 +416,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/48865/cristina_vane_1800x900px_1.png"
+  },
+  {
+    "title": "Camp Alderwild",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/camp-alderwild-1/",
+    "description": "Camp Alderwild returns to Telluride, Colorado August 28th + 29th with Of The Trees & Daily Bread.",
+    "pubDate": "2026-08-28T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": ""
   }
 ]

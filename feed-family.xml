@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jul 2026 19:27:25 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2026 22:09:54 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Planning Commission and Board of County Commissioners Joint Work Session — 2026-07-29</title>
@@ -28,7 +28,7 @@ The July 29 joint work session between the San Miguel County Planning Commission
 
 On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project.
 
-⚡ Why it matters: Commissioners revisit paving Town Park oval despite 400+ signatures opposing it.]]></description>
+⚡ Why it matters: Controversial Town Park paving project faces 400+ signatures in opposition.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -81,30 +81,6 @@ The Norwood Water Commission may have a quorum present at a July 29 meeting with
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Wed, Jul 29] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-29/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Wed, Jul 29] Market on the Plaza</title>
-      <link>https://koto.org/event/market-on-the-plaza/2026-07-29/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-07-29</guid>
-      <pubDate>Wed, 29 Jul 2026 17:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Heritage Plaza, Mountain Village
-
-Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Wed, Jul 29] Teen Movie and Ice Cream Club</title>
       <link>https://telluridelibrary.libcal.com/event/16935737?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/teen%20movie%20and%20ice%7C2026-07-29</guid>
@@ -151,9 +127,21 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: Board votes on officer elections and proposed fiscal policy amendments.]]></description>
+⚡ Why it matters: TMVOA votes on board officers and amendments to fiscal policies and procedures.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
+    </item>
+    <item>
+      <title>[Fri, Jul 31] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-31</guid>
+      <pubDate>Fri, 31 Jul 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Open Space Commission - Aug 03 2026 — 2026-08-03</title>

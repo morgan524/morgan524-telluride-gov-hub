@@ -1,15 +1,15 @@
 [
   {
     "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-07-29/",
+    "href": "https://telluridelibrary.libcal.com/event/16767659?hs=a",
     "date": "2026-07-29",
     "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lower Terrace - outdoors",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you…",
     "type": "Community"
   },
   {
@@ -41,19 +41,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://koto.org/event/market-on-the-plaza/2026-07-29/",
-    "date": "2026-07-29",
-    "time": "11:00 AM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
-    "type": "Community"
-  },
-  {
     "title": "Summer Market Show: Peter Davison",
     "href": "https://telluridelibrary.libcal.com/event/16461643?hs=a",
     "date": "2026-07-29",
@@ -63,7 +50,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "11:00 AM – 12:00 PM",
+    "desc": "A library program featuring Peter Davison, held in the Program Room at Wilkinson Public Library as part of the Summer Market Show series. The event runs for approximately one hour and is presented by the library.",
     "type": "Community"
   },
   {
@@ -129,7 +116,20 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    "type": "Community"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-07-29",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
   },
   {
@@ -186,6 +186,20 @@
     "desc": "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
     "type": "Community",
     "endDate": "2026-08-02"
+  },
+  {
+    "title": "Live at the Drive",
+    "href": "https://www.telluride.com/event/live-at-the-drive/",
+    "date": "2026-07-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/54474/dsc08059lr.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join KOTO for a party at the purple house! They will be closing down North Pine Street and using the driveway as a …",
+    "type": "Community",
+    "endDate": "2026-08-27"
   },
   {
     "title": "Wildflower Walks & Talks with Mary Menz & Jaime Pisarowicz \"U.S. Basin\" - Back by Popular Demand!",
@@ -265,19 +279,6 @@
     "source": "The Alibi",
     "desc": "Nik Parr & The Selfless Lovers are a high-energy, piano-driven roots rock band h...",
     "type": "Music"
-  },
-  {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-29/",
-    "date": "2026-07-29",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -1377,6 +1378,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Jazz w/ Kenny G & Yaz",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
+    "date": "2026-08-04",
+    "time": "8:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/9025541b-fd93-4ca9-959d-9655afb2250d/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    "type": "Music"
+  },
+  {
     "title": "Youth Tennis & Pickleball Camp",
     "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-04/",
     "date": "2026-08-04",
@@ -1939,7 +1953,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -2202,7 +2216,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -2426,7 +2440,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -2492,7 +2506,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2583,8 +2597,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Ouray County Pride",
@@ -2913,6 +2927,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Velvet Daydream",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=velvet-daydream",
+    "date": "2026-08-19",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/4b241e38-d848-429c-b682-edd9e0f0eb6c/-/crop/996x498/0,299/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Velvet Daydream, hailing from Denver, is striving to weave the rock n' roll they...",
+    "type": "Community"
   },
   {
     "title": "Burlesque Buffet",
@@ -3284,6 +3311,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Gaiascope Opening Night",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
+    "date": "2026-08-26",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Celebrate the opening of Gaiascope with artist Brooke during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Creative Space: Artist Salon Series",
     "href": "https://events.ourayridgwayevents.com/event/creative-space-artist-salon-series",
     "date": "2026-08-26",
@@ -3466,6 +3506,19 @@
     "source": "Mountain Village",
     "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
     "type": "Music"
+  },
+  {
+    "title": "Camp Alderwild",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/camp-alderwild-1/",
+    "date": "2026-08-28",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Camp Alderwild returns to Telluride, Colorado August 28th + 29th with Of The Trees & Daily Bread.",
+    "type": "Community"
   },
   {
     "title": "DARRELL SCOTT - Live at The Sherbino",
@@ -3728,6 +3781,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Vana Liya w/ Lola Rising",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=vana-liya-w-lola-rising",
+    "date": "2026-09-09",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
     "type": "Music"
   },
   {
@@ -4212,7 +4278,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
