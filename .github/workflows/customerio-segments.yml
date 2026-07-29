@@ -1,0 +1,20 @@
+name: Customer.io — Segment Audit (read-only)
+
+# Manual-only. Lists the workspace's segments, counts how many people carry each
+# of the six sub_*/topic_* attributes the website offers, and names the segments
+# that still need creating. Writes nothing to Customer.io and sends no email.
+on:
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Audit segments
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+        run: node scripts/customerio-segments.js
