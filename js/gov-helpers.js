@@ -1075,7 +1075,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1153,7 +1153,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1435,8 +1435,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 30, 2026",
     firstSeen: "2026-07-30",
     newsTopic: "arts-culture",
-    copy: "For two decades, UpstART Theater has been bringing Shakespeare to a wide range of audiences with their No Holds Bard productions, and on Aug. 4, the troupe brings “Love’s Labor’s Lost” to The Livery in Norwood for an evening of…",
-    claudeSummary: false,
+    copy: "UpstART Theater's No Holds Bard troupe brings \"Love's Labor's Lost\" to The Livery in Norwood on Aug. 4, part of a six-night Western Slope run. The Ouray-based company performs Shakespeare unrehearsed, with actors playing rotating roles each night — closer to how the plays were originally staged.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_29fe4ca6-fcf8-4070-ad80-6977ed183b2c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/3d/63d45e2c-8a1d-4a16-989f-a660df96f24b/6a6a2425548fe.image.png",
     imgHiRes: true
@@ -1447,8 +1447,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "July 30, 2026",
     firstSeen: "2026-07-30",
     newsTopic: "government",
-    copy: "To ensure that your birthday is listed, email utetrailstudyclub@yahoo.com. For other events, email mia.rupani@telluridetimes.com.",
-    claudeSummary: false,
+    copy: "High school football practice kicks off August 3, with middle and high school volleyball, cross country, and middle school football all starting August 10. The Norwood Farmers Market runs Thursdays through mid-October, 2–6 p.m. at Pocket Park, and a free Chamber Music concert is set for August 27 at The Livery.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/norwood_post/article_4f4b8a88-e098-41fe-a40b-2b9c043c65c1.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c06145-5961-4638-99e9-1a088f047c47/6a6a26bbcf067.image.jpg",
     imgHiRes: true
@@ -6142,6 +6142,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-08-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-08-29T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
