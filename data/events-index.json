@@ -81,19 +81,6 @@
     "endDate": "2026-08-05"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
-    "date": "2026-07-30",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Pilates for All Bodies",
     "href": "https://telluridelibrary.libcal.com/event/16536282?hs=a",
     "date": "2026-07-30",
@@ -1001,7 +988,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-09-21"
+    "endDate": "2026-09-28"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -1293,6 +1280,20 @@
     "source": "Mountain Village",
     "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
     "type": "Food & Drink"
+  },
+  {
+    "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    "href": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
+    "date": "2026-08-05",
+    "time": "6:00 PM",
+    "location": "Floating Lotus Brewery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
+    "type": "Music",
+    "endDate": "2026-09-24"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",

@@ -656,6 +656,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22847"
   },
   {
+    title: "Several homes damaged, 17 people rescued from flooding",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "At least 17 people were rescued from flooding and debris flows in the Cutler Creek area between Ridgway and Ouray on Wednesday night, authorities said this morning. At least three homes in Ponderosa Village, two homes along County Road 23 and one home on Dexter Creek were damaged by flooding and deb",
+    href: "https://www.ouraynews.com/2026/07/30/several-homes-damaged-17-people-rescued-flooding/",
+    img: ""
+  },
+  {
     title: "Evacuations ordered near Cutler Creek as rain pummels burn scar",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -672,7 +682,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 30, 2026",
     newsTopic: "housing",
     copy: "Heavy rainfall over scorched soil sent flash floods raging down Cutler Creek on Sunday night, spilling mud down through Ponderosa Village and briefly shuttering U.S. Highway 550. The torrent of water and debris — loosed by nearly an inch of rain in the area — closed the highway around 5 p.m. as char",
-    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/",
     img: ""
   },
   {
@@ -696,16 +706,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "River managers ‘wait with bated breath’ for management plan",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Max Wilson, like water managers around the Colorado River Basin, spent Monday waiting for a new federal report outlining the river’s future — and future water cuts. He watched the federal website where the report would be published, which appeared to be temporarily down. He sat in the city’s ninth-f",
-    href: "https://www.ouraynews.com/2026/07/29/river-managers-wait-bated-breath-management-plan/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Ridgway-area homes featured on Home Trust tour",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -713,16 +713,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "An eclectic mix of Ridgway-area houses are on the Home Trust of Ouray County s tour this weekend, with homeowners opening their homes to participants to help raise funds for affordable housing. This year s selection includes one of the Home Trust s projects — a duplex in Parkside subdivision. It s t",
     href: "https://www.ouraynews.com/2026/07/29/ridgway-area-homes-featured-home-trust-tour/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Study: Aspen trees can slow, stop wildfires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters, emergency planners and foresters in Colorado know that a healthy stand of aspen can be a day-saving firebreak, by slowing flames and giving crews and nearby homeowners a chance to regroup. Whether that happens because the aspen themselves are moist and fire-retardant, or because aspen ",
-    href: "https://www.ouraynews.com/2026/07/29/study-aspen-trees-can-slow-stop-wildfires/?ta_paidstory",
     img: ""
   },
   {
@@ -753,6 +743,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "recreation",
     copy: "Two weeks ago, the southwest monsoon arrived, bringing relief to these parched landscapes and their residents. Most afternoons since then, Ouray has had measurable rain. But the condition of these mountains still reflects seven months of severe drought and seven years of below normal precipitation. ",
     href: "https://www.ouraynews.com/2026/07/29/rain-helps-region-still-mired-drought/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "arts-culture",
+    copy: "60 Years Ago July 28, 1966 High cables across the Uncompahgre valley and river, leading from a mountainside to the Silver Shield Mill, are to come down this weekend, according to Warren H. Gibbs. Gibbs said that electric power to the TV tower will be off part of Friday and part of Saturday when the ",
+    href: "https://www.ouraynews.com/2026/07/29/looking-back-20260730-0155-418941/?ta_paidstory",
     img: ""
   },
   {
@@ -858,12 +858,12 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
-    title: "Black Bear and Imogene Passes Currently Closed!",
+    title: "Black Bear and Imogene Passes Currently Partially Closed",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
     date: "2026-07-30",
-    pubDate: "2026-07-30T17:36:06.000Z",
+    pubDate: "2026-07-30T19:39:30.000Z",
     copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
     img: ""
@@ -1103,7 +1103,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1142,7 +1142,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
-    "The Aug 20 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The August 20, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "tmvoa|2026-07-28|Gondola Leadership Committee Meeting":
     "The Gondola Leadership Committee convenes July 28 for a substantive session covering the full arc of the gondola project. Miles Graham opens with background and history — the longest-running and most contested civic question in the region right now. Ed Parks and Amber Blake then brief the committee on the CIG (Capital Investment Grant) program and current funding commitments, followed by a project status update. The weightiest item is a 30-minute fiscal and economic impact analysis presented by Parks and Chris Brewer. Graham closes the formal agenda with local jurisdiction updates before the floor opens for public comment.",
@@ -1430,6 +1430,31 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Mushrooms are the focus at West End Stories & Poems",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "arts-culture",
+    copy: "Art Goodtimes and Leslie Ament will lead a mushroom-focused evening at the Naturita Community Library on Aug. 6 at 6 p.m. as part of the West End Stories and Poems series. Goodtimes, long connected to the Telluride Mushroom Festival, is hoping locals bring their own fungi stories to share. Free, all ages, refreshments provided.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_d1ae679f-bdcb-4adc-8f64-5e8d232a71cc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/a8/8a8e6da0-a73b-4d0a-9e3d-08fda1712669/6a6a274b69a5a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Eavesdropping on molecular conversations",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "community",
+    copy: "Harvard physicist-turned-biologist Dr. Taekjip Ha presents a free Telluride Science Town Talk Aug. 4 at 6:30 p.m. in Mountain Village, covering how single-molecule imaging tools are revealing how proteins move — and how mutations drive cancer. His lab's work includes studying BRCA2 and improving the accuracy of CRISPR gene editing. The series runs through Aug. 11, supported by Alpine Bank and TMVOA.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/editorials/article_b39b35b9-763d-4f00-a540-31ff4614f92e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/e8/1e842ded-bf40-4551-9274-f872d9f9ba63/6a6b7decac89d.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
   {
     title: "Shakespeare comes to Norwood",
     source: "Telluride Times",
@@ -2280,7 +2305,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
-    title: "Black Bear and Imogene Passes Currently Closed!",
+    title: "Black Bear and Imogene Passes Currently Partially Closed",
     source: "San Miguel County",
     date: "July 30, 2026",
     newsTopic: "housing",
@@ -2313,15 +2338,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
-    title: "Town of Telluride Election Today",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "government",
-    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
     img: ""
   },
   {
@@ -2959,17 +2975,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-07-30/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-07-30T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -4344,7 +4349,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-08-03T18:00:00.000Z",
-    endDate: "2026-09-21",
+    endDate: "2026-09-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4431,6 +4436,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
+  },
+  {
+    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
+    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
+    description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
+    pubDate: "2026-08-06T00:00:00.000Z",
+    endDate: "2026-09-24",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/8fc500326eed5dc630e7e4235909efe3b2751086.jpg"
   },
   {
     title: "Yoga in the Park- Wednesday evenings",
