@@ -672,7 +672,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 30, 2026",
     newsTopic: "housing",
     copy: "Heavy rainfall over scorched soil sent flash floods raging down Cutler Creek on Sunday night, spilling mud down through Ponderosa Village and briefly shuttering U.S. Highway 550. The torrent of water and debris — loosed by nearly an inch of rain in the area — closed the highway around 5 p.m. as char",
-    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/",
     img: ""
   },
   {
@@ -696,16 +696,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "River managers ‘wait with bated breath’ for management plan",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Max Wilson, like water managers around the Colorado River Basin, spent Monday waiting for a new federal report outlining the river’s future — and future water cuts. He watched the federal website where the report would be published, which appeared to be temporarily down. He sat in the city’s ninth-f",
-    href: "https://www.ouraynews.com/2026/07/29/river-managers-wait-bated-breath-management-plan/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Ridgway-area homes featured on Home Trust tour",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -713,16 +703,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "An eclectic mix of Ridgway-area houses are on the Home Trust of Ouray County s tour this weekend, with homeowners opening their homes to participants to help raise funds for affordable housing. This year s selection includes one of the Home Trust s projects — a duplex in Parkside subdivision. It s t",
     href: "https://www.ouraynews.com/2026/07/29/ridgway-area-homes-featured-home-trust-tour/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Study: Aspen trees can slow, stop wildfires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters, emergency planners and foresters in Colorado know that a healthy stand of aspen can be a day-saving firebreak, by slowing flames and giving crews and nearby homeowners a chance to regroup. Whether that happens because the aspen themselves are moist and fire-retardant, or because aspen ",
-    href: "https://www.ouraynews.com/2026/07/29/study-aspen-trees-can-slow-stop-wildfires/?ta_paidstory",
     img: ""
   },
   {
@@ -753,6 +733,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "recreation",
     copy: "Two weeks ago, the southwest monsoon arrived, bringing relief to these parched landscapes and their residents. Most afternoons since then, Ouray has had measurable rain. But the condition of these mountains still reflects seven months of severe drought and seven years of below normal precipitation. ",
     href: "https://www.ouraynews.com/2026/07/29/rain-helps-region-still-mired-drought/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "arts-culture",
+    copy: "60 Years Ago July 28, 1966 High cables across the Uncompahgre valley and river, leading from a mountainside to the Silver Shield Mill, are to come down this weekend, according to Warren H. Gibbs. Gibbs said that electric power to the TV tower will be off part of Friday and part of Saturday when the ",
+    href: "https://www.ouraynews.com/2026/07/29/looking-back-20260730-0155-418941/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Good for you!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "recreation",
+    copy: "The Wizards of the West celebrate winning the Ouray Parks & Rec Softball League Championship on Tuesday, finishing their season with a 10-2 record. Pictured here in the back row from left to right are: Spencer Purvis, Anna Eytchison, TJ Burr, Ben Schlappi, Nikki Sawyer, Justin Hofmann and Tate Roger",
+    href: "https://www.ouraynews.com/2026/07/29/good-for-you-20260730-0156-290688/",
     img: ""
   },
   {
@@ -1429,6 +1429,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Shakespeare comes to Norwood",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "arts-culture",
+    copy: "For two decades, UpstART Theater has been bringing Shakespeare to a wide range of audiences with their No Holds Bard productions, and on Aug. 4, the troupe brings “Love’s Labor’s Lost” to The Livery in Norwood for an evening of…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_29fe4ca6-fcf8-4070-ad80-6977ed183b2c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/3d/63d45e2c-8a1d-4a16-989f-a660df96f24b/6a6a2425548fe.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of July 30-Aug. 5",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "government",
+    copy: "To ensure that your birthday is listed, email utetrailstudyclub@yahoo.com. For other events, email mia.rupani@telluridetimes.com.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/norwood_post/article_4f4b8a88-e098-41fe-a40b-2b9c043c65c1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1c/c1c06145-5961-4638-99e9-1a088f047c47/6a6a26bbcf067.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Let there be light limitations",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "government",
+    copy: "Mountain Village unanimously passed updated architectural lighting regulations July 16 after 10 public meetings and unusually heavy outreach. The final rules grandfather existing recessed soffit and underdeck lighting attached to buildings, sparing owners costly retrofits, while new construction must meet the full standard. The stated goal is balancing homeowner preferences with the community's interest in darker skies.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6392bdbe-6d24-4572-9bb1-76ad22d33d1b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/8c/b8c6039d-ce96-4aa3-acaa-3c2891c7ac48/6a68434710330.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Legals and Public Notices for July 30-August 5, 2026",
     source: "Telluride Times",
