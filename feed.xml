@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 19:44:11 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 22:15:14 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 30–5</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-30</guid>
-      <pubDate>Thu, 30 Jul 2026 19:44:11 GMT</pubDate>
-      <description><![CDATA[The most substantive meeting this week is the TMVOA Board of Directors gathering Thursday, July 31, where proposed amendments to the organization's fiscal policies and procedures headline the agenda alongside board officer elections and fall and winter programming decisions. Over on the county side, Ouray County's Planning Commission meets virtually Wednesday, August 5, to work through possible changes to the Land Use Code's definitions section — dry as that sounds, definitions are where land-use rules get their real teeth. The rest of the week's public agendas haven't been posted yet, so keep an eye out as those drop.]]></description>
+      <pubDate>Thu, 30 Jul 2026 22:15:14 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the calendar this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to who qualifies as a 'Qualified Owner,' a wildfire-area code update, and a continued hearing on nonconforming lots. Those are the kinds of decisions that quietly reshape what gets built and where in this county for years to come. The TMVOA board also meets July 31st to vote on officer elections and proposed changes to its fiscal policies, and Ouray County's Planning Commission is holding a virtual work session the same day as the BOCC to dig into possible rewrites of their Land Use Code definitions.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -81,18 +81,6 @@ Join KOTO for a party at the purple house! They will be closing down North Pine 
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 30] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-30/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Thu, Jul 30] Storytime / Hora de Cuentos</title>
@@ -180,7 +168,7 @@ Please join Colorado Attorney General Phil Weiser for a conversation about the i
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: Board votes on fiscal policy amendments and elects new officers.]]></description>
+⚡ Why it matters: Board officer elections and a vote on amendments to fiscal policies and procedures.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -352,6 +340,19 @@ Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po
       <category>The Alibi</category>
     </item>
     <item>
+      <title>[Sat, Aug 1] Natalie Brooke</title>
+      <link>https://www.telluride.com/event/natalie-brooke/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/natalie%20brooke%7C2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her powerhouse 4-piece band from the …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Meeting] Open Space Commission - Aug 03 2026 — 2026-08-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-03%7COpen%20Space%20Commission%20-%20Aug%2003%202026</guid>
@@ -396,13 +397,15 @@ The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been p
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>[Meeting] Board of County Commissioners Meeting — 2026-08-05</title>
+      <title>⚡ [Meeting] Board of County Commissioners Meeting — 2026-08-05</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-08-05%7CBoard%20of%20County%20Commissioners%20Meeting</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[San Miguel County • 2026-08-05
 
-The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.]]></description>
+Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.
+
+⚡ Why it matters: Three public hearings on Land Use Code changes affecting ownership rules, wildfire areas, and nonconforming lots.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -426,7 +429,7 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: Land Use Code definition changes could quietly reshape what development rules allow.]]></description>
+⚡ Why it matters: County rewriting Land Use Code definitions — changes here shift what rules mean in practice.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>

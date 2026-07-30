@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-30T19:44:10.925Z",
+ "generated": "2026-07-30T22:15:06.013Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -45,7 +45,20 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-08-05",
+     "time": "",
+     "location": "",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "county",
@@ -75,7 +88,20 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "county",
+     "sourceLabel": "San Miguel County",
+     "title": "Board of County Commissioners Meeting",
+     "date": "2026-08-05",
+     "time": "",
+     "location": "",
+     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
+     "link": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
+     "zoomLink": "https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA",
+     "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    }
+   ],
    "recent": [
     {
      "source": "telluride",

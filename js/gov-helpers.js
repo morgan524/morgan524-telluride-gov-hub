@@ -248,7 +248,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162"},
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942","zoomUrl":"https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA","meetingId":"838 9184 9311","passcode":"530688","phone":"719-359-4580"},
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"},
@@ -863,7 +863,7 @@ const SMC_ALERTS = [
     sourceLabel: "San Miguel County",
     category: "Alert",
     date: "2026-07-30",
-    pubDate: "2026-07-30T19:39:30.000Z",
+    pubDate: "2026-07-30T22:21:13.000Z",
     copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
     img: ""
@@ -1037,7 +1037,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "The August 5, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.",
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
@@ -1430,6 +1430,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Art of being rad, and a good human",
+    source: "Telluride Times",
+    date: "July 30, 2026",
+    firstSeen: "2026-07-30",
+    newsTopic: "arts-culture",
+    copy: "Craig Wasserman has been running the Telluride Summer Skateboard Camp since 2017 out of his Drop Boardshop, growing from a handful of kids to 20–30 campers a day. The program runs June through August, focusing on fundamentals alongside life skills like patience and perseverance. Many former campers, including coach Walter Kvale, now come back to teach.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_cf6f960f-6659-499d-9b93-88f977e7bd6d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/70/f70d58b5-0a39-4f7e-98d2-fdc26fbb4c05/6a693ff67d713.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Mushrooms are the focus at West End Stories & Poems",
     source: "Telluride Times",
@@ -2908,9 +2920,9 @@ const TELLURIDE_SCIENCE_EVENTS = [
     date: "2026-08-25",
     time: "6:30 PM – 7:30 PM",
     location: "Telluride Innovation Center, Telluride",
-    description: " \r\n\r\n\r\nThis special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center.  \r\nFrom hydrothermal vents and volcanic seeps to alpine soils and mine drainage right here in Telluride, Earth’s most unusual ecosystems are home to microscopic life with extraordinary abilities. In this talk, Tierney will  share stories from the field and the lab through their team at the Two Frontiers Project. They explore the planet’s microbial diversity in search of “microbial superpowers” that could help tackle pollution, support agriculture, protect ecosystems, and improve human health. With an emphasis on projects ongoing in Colorado, we’ll explore how these invisible ecosystems work, why they matter for everyday life, and how citizen scientists and students can help map this hidden world.\r\nThanks to our title sponsor Alpine Bank.",
+    description: "  This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps to alpine soils and mine drainage right here in Telluride, Earth’s most unusual ecosystems are home to microscopic life with extraordinary abilities. In this talk, Tierney will share stories from the field and the lab through their team at the Two Frontiers Project. They explore the planet’s microbial diversity in search of “microbial superpowers” that could help tackle pollution, support agriculture, protect ecosystems, and improve human health. With an emphasis on projects ongoing in Colorado, we’ll explore how these invisible ecosystems work, why they matter for everyday life, and how citizen scientists and students can help map this hidden world. …",
     link: "https://telluridescience.org/event/talk-unusual-microbes/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/06/TT0825_320-x-212.jpg",
     sourceLabel: "Telluride Science"
   },
   {
@@ -2966,17 +2978,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-30/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-30T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Community Visit with Attorney General Phil Weiser",
     link: "https://koto.org/event/community-visit-with-attorney-general-phil-weiser/",
