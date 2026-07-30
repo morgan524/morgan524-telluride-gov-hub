@@ -2261,24 +2261,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "recreation",
-    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
-  },
-  {
-    title: "Home Rebate Programs",
-    source: "San Miguel County",
-    date: "July 8, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
-  },
-  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -2294,24 +2276,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    source: "San Miguel County",
-    date: "July 14, 2026",
-    newsTopic: "housing",
-    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
-    title: "Town of Telluride Election Today",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "government",
-    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
     img: ""
   },
   {
