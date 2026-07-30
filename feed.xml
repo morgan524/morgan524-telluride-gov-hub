@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 14:16:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 16:43:37 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 30–5</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-30</guid>
-      <pubDate>Thu, 30 Jul 2026 14:16:07 GMT</pubDate>
-      <description><![CDATA[The meeting that deserves your attention this week is TMVOA's July 31st board session, where proposed amendments to the organization's fiscal policies and procedures get 30 minutes of dedicated agenda time — the most of any item — alongside board officer elections and fall/winter programming decisions. Over in Ouray County, a virtual-only planning commission work session on August 5th is quietly doing the kind of foundational work that matters: reviewing possible changes to Land Use Code definitions, where a single word shift can reshape what the rules actually allow. The rest of the week's government calendars are largely blank — most agendas haven't posted yet.]]></description>
+      <pubDate>Thu, 30 Jul 2026 16:43:37 GMT</pubDate>
+      <description><![CDATA[The most substantive meeting this week is the TMVOA Board of Directors gathering Thursday, July 31, where proposed amendments to the organization's fiscal policies and procedures headline the agenda alongside board officer elections and fall and winter programming decisions. Over on the county side, Ouray County's Planning Commission meets virtually Wednesday, August 5, to work through possible changes to the Land Use Code's definitions section — dry as that sounds, definitions are where land-use rules get their real teeth. The rest of the week's public agendas haven't been posted yet, so keep an eye out as those drop.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -68,18 +68,6 @@ Join KOTO for a party at the purple house! They will be closing down North Pine 
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_30_12_56_31.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 30] Coffee and Climate Conversations</title>
-      <link>https://koto.org/event/coffee-and-climate-conversations-2/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/coffee%20and%20climate%20conversations%7C2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Wilkinson Public Library, Telluride
-
-Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson Public Library for a community conversation exploring what it means to diversify our local energy sources from renewable options to grid resilience, and what that path forward could look like for our community. We're excited to have representatives from San Miguel Power Association on hand, alongside local energy experts, to share insights, answer questions, and hear your ideas for our local energy future. We hope you’ll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. As always, coffee, tea and pastries kindly provided.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Thu, Jul 30] Yin Yang Yoga with Miriah</title>
@@ -192,7 +180,7 @@ Please join Colorado Attorney General Phil Weiser for a conversation about the i
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: Fiscal policy amendments and new board officer elections could reshape TMVOA governance.]]></description>
+⚡ Why it matters: Board votes on fiscal policy amendments and elects new officers.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -350,6 +338,20 @@ A film screening of *The Casual Enormity of Adam Palmer* at the historic Sherida
       <category>Sheridan Opera House</category>
     </item>
     <item>
+      <title>[Sat, Aug 1] Natalie Brooke w/ Winnin&apos; Ugly</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=natalie-brooke</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/natalie%20brooke%20w%20winnin%7C2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/b150a182-60cb-4116-bccf-81a27439a381/-/crop/1080x432/0,36/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 9:00 PM
+
+Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...]]></description>
+      <media:content url="https://ucarecdn.com/b150a182-60cb-4116-bccf-81a27439a381/-/crop/1080x432/0,36/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
       <title>[Meeting] Open Space Commission - Aug 03 2026 — 2026-08-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-03%7COpen%20Space%20Commission%20-%20Aug%2003%202026</guid>
@@ -424,7 +426,7 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: Land use code definition changes can quietly rewrite what development rules actually permit.]]></description>
+⚡ Why it matters: Land Use Code definition changes could quietly reshape what development rules allow.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>

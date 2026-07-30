@@ -672,7 +672,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 30, 2026",
     newsTopic: "housing",
     copy: "Heavy rainfall over scorched soil sent flash floods raging down Cutler Creek on Sunday night, spilling mud down through Ponderosa Village and briefly shuttering U.S. Highway 550. The torrent of water and debris — loosed by nearly an inch of rain in the area — closed the highway around 5 p.m. as char",
-    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/",
+    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/?ta_paidstory",
     img: ""
   },
   {
@@ -696,6 +696,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "River managers ‘wait with bated breath’ for management plan",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "Max Wilson, like water managers around the Colorado River Basin, spent Monday waiting for a new federal report outlining the river’s future — and future water cuts. He watched the federal website where the report would be published, which appeared to be temporarily down. He sat in the city’s ninth-f",
+    href: "https://www.ouraynews.com/2026/07/29/river-managers-wait-bated-breath-management-plan/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "Ridgway-area homes featured on Home Trust tour",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -703,6 +713,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "An eclectic mix of Ridgway-area houses are on the Home Trust of Ouray County s tour this weekend, with homeowners opening their homes to participants to help raise funds for affordable housing. This year s selection includes one of the Home Trust s projects — a duplex in Parkside subdivision. It s t",
     href: "https://www.ouraynews.com/2026/07/29/ridgway-area-homes-featured-home-trust-tour/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Study: Aspen trees can slow, stop wildfires",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters, emergency planners and foresters in Colorado know that a healthy stand of aspen can be a day-saving firebreak, by slowing flames and giving crews and nearby homeowners a chance to regroup. Whether that happens because the aspen themselves are moist and fire-retardant, or because aspen ",
+    href: "https://www.ouraynews.com/2026/07/29/study-aspen-trees-can-slow-stop-wildfires/?ta_paidstory",
     img: ""
   },
   {
@@ -733,26 +753,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "recreation",
     copy: "Two weeks ago, the southwest monsoon arrived, bringing relief to these parched landscapes and their residents. Most afternoons since then, Ouray has had measurable rain. But the condition of these mountains still reflects seven months of severe drought and seven years of below normal precipitation. ",
     href: "https://www.ouraynews.com/2026/07/29/rain-helps-region-still-mired-drought/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "arts-culture",
-    copy: "60 Years Ago July 28, 1966 High cables across the Uncompahgre valley and river, leading from a mountainside to the Silver Shield Mill, are to come down this weekend, according to Warren H. Gibbs. Gibbs said that electric power to the TV tower will be off part of Friday and part of Saturday when the ",
-    href: "https://www.ouraynews.com/2026/07/29/looking-back-20260730-0155-418941/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Good for you!",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "recreation",
-    copy: "The Wizards of the West celebrate winning the Ouray Parks & Rec Softball League Championship on Tuesday, finishing their season with a 10-2 record. Pictured here in the back row from left to right are: Spencer Purvis, Anna Eytchison, TJ Burr, Ben Schlappi, Nikki Sawyer, Justin Hofmann and Tate Roger",
-    href: "https://www.ouraynews.com/2026/07/29/good-for-you-20260730-0156-290688/",
     img: ""
   },
   {
@@ -854,19 +854,20 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Changes in evacuation zones 25 and 300 on July 17, 2026",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=954",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22817"
-  },
-  {
-    title: "Stage 2 Fire Restrictions",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County Remains in Stage 2 Fire Restrictions",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=953",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22782"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
+  {
+    title: "Black Bear and Imogene Passes Currently Closed!",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-07-30",
+    pubDate: "2026-07-30T17:36:06.000Z",
+    copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
+    img: ""
+  },
   {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
@@ -1102,7 +1103,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1141,7 +1142,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 Planning & Zoning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026":
-    "The August 20, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
+    "The Aug 20 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
 
   "tmvoa|2026-07-28|Gondola Leadership Committee Meeting":
     "The Gondola Leadership Committee convenes July 28 for a substantive session covering the full arc of the gondola project. Miles Graham opens with background and history — the longest-running and most contested civic question in the region right now. Ed Parks and Amber Blake then brief the committee on the CIG (Capital Investment Grant) program and current funding commitments, followed by a project status update. The weightiest item is a 30-minute fiscal and economic impact analysis presented by Parks and Chris Brewer. Graham closes the formal agenda with local jurisdiction updates before the floor opens for public comment.",
@@ -2261,6 +2262,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "recreation",
+    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
+  },
+  {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
+    title: "Black Bear and Imogene Passes Currently Closed!",
+    source: "San Miguel County",
+    date: "July 30, 2026",
+    newsTopic: "housing",
+    copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
+    img: ""
+  },
+  {
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
@@ -2276,6 +2304,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "Town of Telluride Election Today",
+    source: "Town of Telluride",
+    date: "June 30, 2026",
+    newsTopic: "government",
+    copy: "Results for today's Town of Telluride special election are being reported live by San Miguel County. Updated totals will be posted as ballots are counted. View the live election results: https://bit.ly/totelection26",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=69",
     img: ""
   },
   {
@@ -2904,17 +2950,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Coffee and Climate Conversations",
-    link: "https://koto.org/event/coffee-and-climate-conversations-2/",
-    description: "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson Public Library for a community conversation exploring what it means to diversify our local energy sources from renewable options to grid resilience, and what that path forward could look like for our community. We're excited to have representatives from San Miguel Power Association on hand, alongside local energy experts, to share insights, answer questions, and hear your ideas for our local energy future. We hope you’ll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. As always, coffee, tea and pastries kindly provided.",
-    pubDate: "2026-07-30T14:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-30/",
@@ -5269,7 +5304,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-24",
+    endDate: "2026-09-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5962,7 +5997,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     sourceLabel: "Mountain Village",
     category: "Community Event",
     location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49517/lunch_learn_logo_-_white.png"
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49517/lunch_learn_-_simple_9.png"
   },
   {
     title: "Bike & Brewery Tour",
