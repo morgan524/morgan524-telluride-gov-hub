@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-29T22:09:48.918Z",
+ "generated": "2026-07-30T02:47:09.517Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -133,18 +133,6 @@
     {
      "source": "norwood",
      "sourceLabel": "Town of Norwood",
-     "title": "NWC Possible Quorum",
-     "date": "2026-07-29",
-     "time": "",
-     "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
-     "link": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
-     "zoomLink": "",
-     "livestream": ""
-    },
-    {
-     "source": "norwood",
-     "sourceLabel": "Town of Norwood",
      "title": "Norwood Water Commission Meeting",
      "date": "2026-08-11",
      "time": "",
@@ -162,20 +150,7 @@
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Parks & Recreation Commission",
-     "date": "2026-07-29",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-     "zoomLink": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": []

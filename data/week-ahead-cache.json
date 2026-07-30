@@ -1,14 +1,14 @@
 {
-  "hash": "a74ef1f28a3201e243a11a1bb0805e478c86468e",
-  "lede": "The biggest thing on the civic calendar this week is Wednesday's Parks & Rec Commission meeting, where the already-approved plan to pave Town Park's grass oval for basketball and pickleball courts comes back up — more than 400 signatures and letters in opposition make this one worth watching. Elsewhere, TMVOA's board meets Thursday to vote on officer elections and proposed amendments to its fiscal policies, and the San Miguel Basin Fair and Rodeo kicks off Friday alongside the New York Philharmonic Brass Quintet as part of the summer music run.",
+  "hash": "d2ad978d9f82122855864e79ed520a953d09335c",
+  "lede": "The item most worth tracking this week is the Ouray County Planning Commission's virtual work session Wednesday on proposed changes to the Land Use Code's definitions section — the kind of quiet, technical meeting where the meaning of the rules gets shaped before anyone's paying attention. Closer to home, TMVOA meets Thursday to vote on board officers and proposed amendments to its fiscal policies, with that last item drawing a full 30 minutes on the agenda. The week also brings the San Miguel Basin Fair and Rodeo, the New York Philharmonic Brass Quintet, and a free Jungle Book production at the Sheridan Opera House.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Controversial Town Park paving project faces 400+ signatures in opposition."
+      "id": 7,
+      "stake": "Land use code definition changes can quietly reshape what development rules allow."
     },
     {
-      "id": 4,
-      "stake": "TMVOA votes on board officers and amendments to fiscal policies and procedures."
+      "id": 0,
+      "stake": "TMVOA votes on board officers and fiscal policy amendments affecting the organization."
     }
   ]
 }

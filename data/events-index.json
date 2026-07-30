@@ -50,7 +50,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_13_11_31_06.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A library program featuring Peter Davison, held in the Program Room at Wilkinson Public Library as part of the Summer Market Show series. The event runs for approximately one hour and is presented by the library.",
+    "desc": "11:00 AM – 12:00 PM",
     "type": "Community"
   },
   {
@@ -81,32 +81,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-29/",
-    "date": "2026-07-29",
-    "time": "5:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "America 250/Colorado 150 Book Club",
-    "href": "https://koto.org/event/america-250-colorado-150-book-club/",
-    "date": "2026-07-29",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "NWC Possible Quorum",
     "href": "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
     "date": "2026-07-29",
@@ -116,7 +90,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -144,20 +118,6 @@
     "source": "Mountain Village",
     "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
     "type": "Food & Drink"
-  },
-  {
-    "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    "href": "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    "date": "2026-07-29",
-    "time": "6:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic…",
-    "type": "Music",
-    "endDate": "2026-09-24"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -438,20 +398,6 @@
     "source": "Telluride.com",
     "desc": "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
     "type": "Community"
-  },
-  {
-    "title": "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    "href": "https://events.ourayridgwayevents.com/event/thirsty-thursday-game-night-at-floating-lotus",
-    "date": "2026-07-30",
-    "time": "7:00 PM",
-    "location": "Floating Lotus Brewery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who…",
-    "type": "Food & Drink",
-    "endDate": "2026-09-25"
   },
   {
     "title": "Love’s Labors Lost: Theatre @ the Wright",
@@ -1387,7 +1333,7 @@
     "img": "https://ucarecdn.com/9025541b-fd93-4ca9-959d-9655afb2250d/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    "desc": "Free live jazz",
     "type": "Music"
   },
   {
@@ -1953,7 +1899,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -2063,6 +2009,19 @@
     "type": "Music"
   },
   {
+    "title": "Drop In Tech Time with Oliver",
+    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-09/",
+    "date": "2026-08-09",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "type": "Community"
+  },
+  {
     "title": "Pickleball Open Play",
     "href": "https://koto.org/event/pickleball-open-play/2026-08-09/",
     "date": "2026-08-09",
@@ -2087,6 +2046,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 2026 10:00 a.m.–4:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by…",
     "type": "Music"
+  },
+  {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-08-09/",
+    "date": "2026-08-09",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
   },
   {
     "title": "Sunday Rehab at Alloy Kitchen",
@@ -2167,6 +2139,19 @@
     "type": "Music"
   },
   {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-10/",
+    "date": "2026-08-10",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
     "href": "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
     "date": "2026-08-10",
@@ -2216,7 +2201,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2309,6 +2294,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "As a celebration of Dark Skies in Ouray County, a Perseid Meteor Watch, Stargazing with binoculars, and a Laser Guided Constellation Tour will be held at Top of the Pines a DarkSky International designated Dark Sky Park, on Tuesday August…",
+    "type": "Community"
+  },
+  {
+    "title": "Telluride Mountain School Open House",
+    "href": "https://koto.org/event/telluride-mountain-school-open-house/",
+    "date": "2026-08-11",
+    "time": "9:15 AM",
+    "location": "Telluride Mountain School",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for an upcoming Open House! Discover the new chapter unfolding at Telluride Mountain School, with inspiring new leadership, a renewed mission and values, and an exciting vision for the future. There's never been a better time to…",
     "type": "Community"
   },
   {
@@ -2440,7 +2438,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2506,7 +2504,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -2597,8 +2595,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Ouray County Pride",
@@ -2731,13 +2729,13 @@
     "type": "Community"
   },
   {
-    "title": "Lunch and Learn: Enterprise Zone Business Education Event",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-enterprise-zone-business-education-event/",
+    "title": "Lunch and Learn: Region 10 Enterprise Zone- what does this mean for businesses?",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-region-10-enterprise-zone-what-does-this-mean-for-businesses/",
     "date": "2026-08-17",
     "time": "6:00 AM",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49517/screenshot_2026-07-27_131826.png",
+    "img": "https://townofmountainvillage.com/site/assets/files/49517/lunch_learn_logo_-_white.png",
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "The Town of Mountain Village is pleased to host Region 10 for a Lunch and Learn session about the new Enterprise Zone boundary amendment.",
@@ -3320,7 +3318,7 @@
     "img": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg",
     "category": "Community Event",
     "source": "Mountain Village",
-    "desc": "Celebrate the opening of Gaiascope with artist Brooke during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
+    "desc": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
     "type": "Arts & Film"
   },
   {
@@ -3514,7 +3512,7 @@
     "time": "6:00 AM",
     "location": "Mountain Village, CO",
     "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "img": "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png",
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Camp Alderwild returns to Telluride, Colorado August 28th + 29th with Of The Trees & Daily Bread.",
@@ -4278,7 +4276,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -4293,5 +4291,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "This weekend event includes a Museum open house, opportunity to ride Motor No. 1 as well as Goose No. 4 on Saturday and Sunday. There will be a talk on \"TBA\" on Saturday at 7:00 pm View on site | Email this event",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Ouray Ridgway Young Life Banquet",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-ridgway-young-life-banquet",
+    "date": "2026-09-27",
+    "time": "5:30 PM",
+    "location": "Ridgway Christian Center",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52622115299633/huge/61aba8b7fef027ac0730e8b6024be4d074d1d8ad.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the…",
+    "type": "Community"
   }
 ]

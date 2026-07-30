@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-29-26",
+    "source": "KOTO Community Radio",
+    "date": "July 30, 2026",
+    "newsTopic": "arts-culture",
+    "copy": "Parks &amp; Rec Keeps the Oval Green; Telluride Invests in Tourism; Chamber Music Celebrates American Brass",
+    "href": "https://koto.org/news/newscast-7-29-26/"
+  },
+  {
     "title": "Newscast 7-27-26",
     "source": "KOTO Community Radio",
     "date": "July 28, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "community",
     "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
     "href": "https://koto.org/news/newscast-7-16-26/"
-  },
-  {
-    "title": "Newscast 7-15-26",
-    "source": "KOTO Community Radio",
-    "date": "July 16, 2026",
-    "newsTopic": "public-safety",
-    "copy": "Firefighters Begin Repair Work on Ferris Fire Land; Finding the Glorians with Terry Tempest Williams; Goats Return to the Valley Floor",
-    "href": "https://koto.org/news/newscast-7-15-26/"
   }
 ]

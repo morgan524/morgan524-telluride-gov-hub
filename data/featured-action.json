@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-29T22:09:48.920Z",
+ "generated": "2026-07-30T02:47:09.519Z",
  "pinned": true,
  "topic": "fieldpaving",
  "topicLabel": "Field Paving at Town Park",
@@ -10,16 +10,16 @@
   "href": "/deep-dive-field-paving-town-park.html"
  },
  "meeting": {
-  "title": "Parks & Recreation Commission",
-  "sourceLabel": "Town of Telluride",
+  "title": "",
+  "sourceLabel": "",
   "date": "2026-07-29",
   "humanDate": "Wednesday, July 29",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-  "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/442582/",
-  "zoomLink": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "location": "",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

@@ -193,9 +193,6 @@ const MEETING_AGENDA_META = {
   "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
     {"zoomUrl":"https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1","meetingId":"861 6939 9856","passcode":"690306","phone":"970-728-3844","sv":4},
 
-  "county|2026-06-29|San Miguel Basin Fair Board":
-    {"sv":4},
-
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
     {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/tThmDYw9REKbs5_LM8bpog","meetingId":"832 9649 4938","passcode":"425135","phone":"719-359-4580"},
 
@@ -204,9 +201,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
-
-  "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
-    {"sv":4},
 
   "county|2026-07-27|Open Space Commission Meeting":
     {"sv":4},
@@ -644,6 +638,106 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Rain on burn scar triggers flooding, evacuation",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "housing",
+    copy: "Heavy rainfall over scorched soil sent flash floods raging down Cutler Creek on Sunday night, spilling mud down through Ponderosa Village and briefly shuttering U.S. Highway 550. The torrent of water and debris — loosed by nearly an inch of rain in the area — closed the highway around 5 p.m. as char",
+    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fire scorches bottom lines",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "It didn’t take but a spark and a stiff breeze to turn Justin Mitchell’s summer upside down. During the first few hours of the Gold Mountain Fire, Mitchell — who runs a horseback guiding outfit in the Cutler Creek area off County Road 14A — spent the afternoon of June 27 evacuating their 21 horses as",
+    href: "https://www.ouraynews.com/2026/07/29/fire-scorches-bottom-lines/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Governments team up on flood mitigation",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Government agencies and nonprofit organizations have begun stepping up to help Ouray County pay to protect homes and roads from flooding and mudslides in the aftermath of the Gold Mountain Fire. The Ouray City Council unanimously agreed Monday to contribute $125,000 toward the county’s participation",
+    href: "https://www.ouraynews.com/2026/07/29/governments-team-flood-mitigation/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "River managers ‘wait with bated breath’ for management plan",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "infrastructure",
+    copy: "Max Wilson, like water managers around the Colorado River Basin, spent Monday waiting for a new federal report outlining the river’s future — and future water cuts. He watched the federal website where the report would be published, which appeared to be temporarily down. He sat in the city’s ninth-f",
+    href: "https://www.ouraynews.com/2026/07/29/river-managers-wait-bated-breath-management-plan/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Ridgway-area homes featured on Home Trust tour",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "housing",
+    copy: "An eclectic mix of Ridgway-area houses are on the Home Trust of Ouray County s tour this weekend, with homeowners opening their homes to participants to help raise funds for affordable housing. This year s selection includes one of the Home Trust s projects — a duplex in Parkside subdivision. It s t",
+    href: "https://www.ouraynews.com/2026/07/29/ridgway-area-homes-featured-home-trust-tour/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Study: Aspen trees can slow, stop wildfires",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters, emergency planners and foresters in Colorado know that a healthy stand of aspen can be a day-saving firebreak, by slowing flames and giving crews and nearby homeowners a chance to regroup. Whether that happens because the aspen themselves are moist and fire-retardant, or because aspen ",
+    href: "https://www.ouraynews.com/2026/07/29/study-aspen-trees-can-slow-stop-wildfires/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Equal parts romantic comedy, moral conflict, ‘Love’s Labors Lost’ takes stage in Ouray",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "education",
+    copy: "Forty years after he wrote his senior thesis about “Love’s Labors Lost,” one of William Shakespeare’s seldom-seen, early comedies still resonates with John Kissingford. As a student at Princeton University, he developed a passion for Renaissance literature — and especially for the allegory he saw in",
+    href: "https://www.ouraynews.com/2026/07/29/equal-parts-romantic-comedy-moral-conflict-loves-labors-lost-takes-stage-ouray/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Thank you, community",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "Dear Editor: We were getting ready for bed the evening of June 27 when our power went out. Shortly after we received the evacuation alert on our phone. At this point we were unaware of the fire. We looked out the front window of our house on County Road 14A and saw the hillside above Jackass Flats a",
+    href: "https://www.ouraynews.com/2026/07/29/thank-you-community/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Rain helps, but region still mired in drought",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "recreation",
+    copy: "Two weeks ago, the southwest monsoon arrived, bringing relief to these parched landscapes and their residents. Most afternoons since then, Ouray has had measurable rain. But the condition of these mountains still reflects seven months of severe drought and seven years of below normal precipitation. ",
+    href: "https://www.ouraynews.com/2026/07/29/rain-helps-region-still-mired-drought/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "arts-culture",
+    copy: "60 Years Ago July 28, 1966 High cables across the Uncompahgre valley and river, leading from a mountainside to the Silver Shield Mill, are to come down this weekend, according to Warren H. Gibbs. Gibbs said that electric power to the TV tower will be off part of Friday and part of Saturday when the ",
+    href: "https://www.ouraynews.com/2026/07/29/looking-back-20260730-0155-418941/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "July 27 - Changes in evacuation zone status",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -682,106 +776,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
-  },
-  {
-    title: "‘Big box’ tightens on Gold Mountain Fire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Surveying a sprawling map of the northern San Juans last week, Mike Smith was deep in a geometry of fire. Fingers tracing fire lines and ridges, Smith – the current incident commander over Gold Mountain Fire operations – said firefighters were working to draw a “big box” around the blaze in its thir",
-    href: "https://www.ouraynews.com/2026/07/22/big-box-tightens-gold-mountain-fire/",
-    img: ""
-  },
-  {
-    title: "County eyes recovery funds",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "Federal program could offer nearly $3 million — if cash-poor leaders can find matching dollars Ouray County could receive nearly $3 million in federal funding to protect homes, roads and other infrastructure from flooding and debris flows in the wake of the Gold Mountain Fire. In order to unlock tho",
-    href: "https://www.ouraynews.com/2026/07/22/county-eyes-recovery-funds/",
-    img: ""
-  },
-  {
-    title: "Spring targeted for tree-thinning effort",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "A joint wildfire mitigation effort to remove dead or diseased trees from the city of Ouray’s perimeter is expected to move forward next spring, though with a potentially more limited scope. Officials told the Plaindealer that the Ouray Forest Resilience Project, which was first floated several years",
-    href: "https://www.ouraynews.com/2026/07/22/spring-targeted-tree-thinning-effort/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "City reorganizes planning department",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "land-use",
-    copy: "Ouray City Administrator Michelle Metteer is overhauling the city’s community development department, dividing responsibilities among a third-party consultant and two city employees rather than consolidating them under a single department director. At Metteer’s recommendation, the Ouray City Council",
-    href: "https://www.ouraynews.com/2026/07/22/city-reorganizes-planning-department/",
-    img: ""
-  },
-  {
-    title: "Ridgway to market itself as destination, not crossroads",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "infrastructure",
-    copy: "A consultant has recommended that Ridgway reimagine its marketing campaign to bring outdoor enthusiasts, history buffs and regional explorers to town. The idea is to shift tourists’ perception away from Ridgway’s reputation as a pass-through town and move it toward a multi-day base camp with a town ",
-    href: "https://www.ouraynews.com/2026/07/22/ridgway-market-destination-not-crossroads/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ouray County Fair still scheduled for Aug. 13-15",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "public-safety",
-    copy: "The 109th annual Ouray County Fair is scheduled to proceed as planned, even if the fairgrounds remain the headquarters for the Gold Mountain Fire operations. The fair is scheduled from Aug. 13-15 at the Ouray County 4-H Center and the fairgrounds, which has been home to more than 900 fire personnel ",
-    href: "https://www.ouraynews.com/2026/07/22/local-briefs-20260723-0133-386468/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Ride-along reveals value of alpine ranger program",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "government",
-    copy: "I m not a Jeep enthusiast or an off-highway vehicle user, but I am a hiker and photographer who cares deeply about our high-country environment. After recent discussions at county commissioners meetings about closing the upper part of Yankee Boy Basin to motorized travel, I wanted to see the area th",
-    href: "https://www.ouraynews.com/2026/07/22/ride-along-reveals-value-alpine-ranger-program/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Toth seeks to grow Wright Opera House’s appeal",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "arts-culture",
-    copy: "When Heather Toth moved to Ouray County in 2013, her first question was, “Where’s the theater; where’s the art space?” The arts are a necessity, not a luxury, according to Toth. She values third spaces, especially those with a connection to the arts. “I think they’re vital,” she said. “I think they’",
-    href: "https://www.ouraynews.com/2026/07/22/toth-seeks-grow-wright-opera-houses-appeal/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Good For You!",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Proud parents Katie and Willem Geyer of Ouray welcomed their son Willem “Liam” Pieter Geyer to the world at 5:52 p.m. on July 14, weighing 6 lbs. 8 oz. Liam, also known by his nickname Pork Chop, was welcomed home by his furry siblings Opie, Max and Indie. Liam is the grandson of Willem and Isabella",
-    href: "https://www.ouraynews.com/2026/07/22/send-us-celebrations-20260723-0134-493241/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Charles ‘CJ’ John Turner",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 23, 2026",
-    newsTopic: "community",
-    copy: "August 27, 1960 – July 7, 2026 Born Charles John Turner on August 27, 1960, in Nashua, NH, CJ “Turbo” Turner comes full circle to rest beside his beloved Mother, Joanne Turner. CJ was one of a kind, reflected in his visionary designs and award-winning home and landscape projects. A passionate abando",
-    href: "https://www.ouraynews.com/2026/07/22/charles-cj-john-turner/",
-    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -881,14 +875,6 @@ const SMC_ALERTS = [
 ];              // SMC AlertCenter items
 const ENGAGE_MEETINGS = [
   {
-    projectName: "Town Park Oval Warner Field Improvements",
-    projectUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements",
-    title: "P&R Commission Phase II Design Review",
-    date: "2026-07-29",
-    board: "other",
-    dateUrl: "https://engagetelluride.org/town-park-oval-warner-field-improvements/widgets/106633/key_dates#41038"
-  },
-  {
     projectName: "Shandoka Lot Redevelopment Project",
     projectUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project",
     title: "HARC Site Walk & Meeting",
@@ -897,7 +883,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-29';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-30';
 const LEGAL_NOTICES_CACHE_DATE = '2026-07-29';
 
 const MANUAL_SUMMARIES = {
@@ -967,9 +953,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
     "The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.",
 
-  "county|2026-06-29|San Miguel Basin Fair Board":
-    "The San Miguel Basin Fair Board meets in Norwood on June 29th. The posted agenda is a shell — minutes approval and generic \"new/old business\" placeholders, with no specific items listed. There's no detail on what the board actually plans to discuss.",
-
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
     "A rare West End meeting — the commissioners convene Wednesday evening at the Norwood Sheriff Annex. Two items of substance: the board considers appointing an alternate member to the Planning Commission (a seat that matters whenever land-use decisions get close), and Deputy County Manager Jarrod Biggs presents the results of the Placerville Fire Survey. At 6:00 the board holds an open listening session with San Miguel County residents. Consent covers routine approval of minutes. Earlier in the afternoon, commissioners tour the Wright's Mesa Historical Society and Log Cabin Museum.",
 
@@ -978,9 +961,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
     "The Ecology Commission meets Wednesday to work through two substantive items. The main session is a work session reviewing the 2022 Climate Action Plan, with discussion focused on two specific focus areas: Transportation & Land Use and Materials & Consumption — both of which connect directly to how people move around the box canyon and what gets consumed and discarded here. The commission will also take action on appointing members to the Green Grants Selection Subcommittee, which directs local environmental funding. Rounding out the agenda is a report on the outcome of the Trash Bash event. The June meeting was canceled, so there are no prior minutes to approve.",
-
-  "telluride|2026-06-29|Open Space Commission Site Walk - Jun 29 2026":
-    "The Open Space Commission heads out on foot Monday at 4:00 PM — meeting at the northwest corner of the Shandoka parking lot on Mahoney Drive. The site walk covers potential river trail alignments in Reach 1 of the Valley Floor Open Space. No agenda room, no projector: just commissioners walking the ground to see what the land actually has to say about where a trail might go.",
 
   "county|2026-07-27|Open Space Commission Meeting":
     "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
@@ -1067,7 +1047,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1094,7 +1074,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -2193,102 +2173,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Nugget documentary premieres July 25",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "A 30-minute documentary about the Nugget Building's 23-year restoration premieres July 25 at the Sheridan Opera House — 6:30–9 p.m., tickets $25, proceeds to the Telluride Historical Museum. The film draws on footage Katrine Formby shot throughout the process and will also air on Rocky Mountain PBS August 27.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_2f7e38c8-ff08-4b9f-ae12-2f5aa1569469.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/e7/fe77c416-28f8-42ce-b739-59554210f863/6a588d9c070a0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Conversing with horses is for everyone",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "Three authors behind *Horse Brain Science* — neuroscientist Steven Peters, Crissi McDonald, and Mark Rashid — visit Norwood's Lone Cone Library on July 23 for a community dinner and public conversation, brought in by San Miguel Basin CSU Extension and the local 4-H horse program. Tickets are $10, seating is limited to 144.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_4da54dde-2df0-445c-8a30-287d81ebefa0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/d1/3d1c362c-4c1a-4c2f-bed6-9770fcca18e0/6a578902e8264.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "David and Goliath in the wild",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "Small birds mobbing a hawk, ants taking down large prey, a kangaroo rat dodging a rattlesnake — the region's wildlife offers daily reminders that size and force aren't the only things that matter out here. The piece draws a line from those moments straight through to Gandhi and beyond.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_c7f478a3-7de2-4d22-8220-d133d8e78bc8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/db/1db08448-f03b-4dc0-8418-e238ebce6dcc/6a578a49ce53b.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of July 16-22",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "government",
-    copy: "The Telluride Times Chalkboard for July 16–22 lists birthdays for a dozen local residents and runs through the regular community calendar — town board, school board, farmers market, senior meals, food pantry, pickleball, and more. Most recurring meetings and services in Norwood and the Nucla-Naturita area follow their usual schedules.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_4c261cdf-35eb-46b1-93cf-da23a9eba1d4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/f2/bf21fdc4-695b-40e7-9eeb-5cfe0e537f13/6a578b2e20d14.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Paradox Valley ranch permanently protected",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "A 266-acre ranch in Paradox Valley near Bedrock has been permanently protected through a conservation easement with Colorado West Land Trust, conserving over a mile of Dolores River frontage alongside a neighboring 114-acre easement completed last year. Landowner Jim Johnston bought the parcels between 2008 and 2016 specifically to keep them from being developed. More than 1,400 acres within 10 miles are now permanently protected.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_8dc56b93-f9b3-43d4-bba2-eb46a7a8d82f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/8a/c8afbd54-900c-4622-ba84-7e00b6f1b01e/6a5785713dd15.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Meet the winners of Norwood’s annual dessert contest",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "The San Miguel Basin Fair dessert contest wrapped up its 42nd year in Norwood on July 11 with a record 87 entries across categories from pie to ice cream, drawing over 300 attendees. Winners took home hand-crafted wooden spoons and aprons across youth, amateur, and professional divisions.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_0df299c3-ee21-4cb6-8cd8-ec4e12c773b1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/31/231edc8b-2dc1-4603-8af0-c0d5aa52b66a/6a57873cd5a89.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "‘Once more unto the breach, dear friends’",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "community",
-    copy: "Telluride Theatre opens \"Henry V\" in Town Park on July 17, directed by Jim Cairl — a New York actor who first came out in 2024 on short notice and has been back every summer since. Julia Caulfield plays the king, with a cast that includes several longtime local performers.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_cca895f7-7e7c-451a-b8ee-fd5a3e0891b7.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/dc/6dc4fa40-eaac-4e2f-9aa0-56e45146e4fc/6a574d9ec8af2.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for July 16-22, 2026",
-    source: "Telluride Times",
-    date: "July 16, 2026",
-    firstSeen: "2026-07-16",
-    newsTopic: "education",
-    copy: "San Miguel County commissioners hold a public hearing August 5 on two Land Use Code changes — one redefining \"Qualified Owner\" in affordable housing rules, another updating wildfire area regulations. The Town of Telluride is also taking proposals through July 31 for Town Park oval and Warner Field improvements.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
     source: "Town of Telluride",
     date: "June 30, 2026",
@@ -2379,6 +2263,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 7-29-26",
+    source: "KOTO Community Radio",
+    date: "July 30, 2026",
+    newsTopic: "arts-culture",
+    copy: "Parks &amp; Rec Keeps the Oval Green; Telluride Invests in Tourism; Chamber Music Celebrates American Brass",
+    href: "https://koto.org/news/newscast-7-29-26/"
+  },
+  {
     title: "Newscast 7-27-26",
     source: "KOTO Community Radio",
     date: "July 28, 2026",
@@ -2433,14 +2325,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "community",
     copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
     href: "https://koto.org/news/newscast-7-16-26/"
-  },
-  {
-    title: "Newscast 7-15-26",
-    source: "KOTO Community Radio",
-    date: "July 16, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters Begin Repair Work on Ferris Fire Land; Finding the Glorians with Terry Tempest Williams; Goats Return to the Valley Floor",
-    href: "https://koto.org/news/newscast-7-15-26/"
   }
 ];
 
@@ -2452,14 +2336,6 @@ const KOTO_FEATURED_STORIES = [
     newsTopic: "land-use",
     copy: "The Palm Theatre and portions of the Telluride Intermediate and Middle Schools flooded after a mudslide pushed through a loading door. With feet of water and mud in the building, cleanup begins.",
     href: "https://koto.org/news/palm-theatre-floods-in-major-rainstorm/"
-  },
-  {
-    title: "Finding the Glorians with Terry Tempest Williams",
-    source: "KOTO Community Radio",
-    date: "July 16, 2026",
-    newsTopic: "community",
-    copy: "In her new book, The Glorians: Visitations from the Holy Ordinary, author Terry Tempest Williams asks us to find moments of grace in a complicated world. Tempest Williams spoke with KOTO's Julia Caulfield.",
-    href: "https://koto.org/news/finding-the-glorians-with-terry-tempest-williams/"
   }
 ];
 
@@ -2977,28 +2853,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-07-29/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-07-29T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "America 250/Colorado 150 Book Club",
-    link: "https://koto.org/event/america-250-colorado-150-book-club/",
-    description: "Join the Telluride Historical Museum and Wilkinson Public Library for a deep dive into some of the threads that make up the tapestry of Colorado's and the United States of America's history as we celebrate Colorado's 150th year as state and USA's 250th year as an independent country. We will will start will a discussion of Jill Lepore's 2026 Pulitzer Prize winning history of the constitution, We The People: A History of the U.S. Constitution. Check out this interview to learn more about Jill Lepore and her book: https://www.pbs.org/newshour/show/historian-jill-lepore-explores-the-constitution-and-its-interpretations-in-we-the-people The discussion will be lead by by attorney and current San Miguel County Court Judge, Melanie Morgan. You can check out of copy of the book (physical or ebook) from the library or purchase your own copy for 10% off at Between the Covers Bookstore! …",
-    pubDate: "2026-07-29T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Coffee and Climate Conversations",
     link: "https://koto.org/event/coffee-and-climate-conversations-2/",
     description: "Coffee & Climate Conversations: Diversifying Local Energy Sources Where does our local energy come from? What opportunities does our region have for local energy sources? Join EcoAction Partners, Sheep Mountain Alliance, and the Wilkinson Public Library for a community conversation exploring what it means to diversify our local energy sources from renewable options to grid resilience, and what that path forward could look like for our community. We're excited to have representatives from San Miguel Power Association on hand, alongside local energy experts, to share insights, answer questions, and hear your ideas for our local energy future. We hope you’ll leave with fresh perspectives on local resilience, deeper community connection, and new ways of imagining climate action in our region. As always, coffee, tea and pastries kindly provided.",
@@ -3426,6 +3280,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-09/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-08-09T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-08-09/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-08-09T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-10/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-08-10T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Mountain School Open House",
+    link: "https://koto.org/event/telluride-mountain-school-open-house/",
+    description: "Join us for an upcoming Open House! Discover the new chapter unfolding at Telluride Mountain School, with inspiring new leadership, a renewed mission and values, and an exciting vision for the future. There's never been a better time to learn what makes us so unique. Meet our new Head of School, Jonathan Fouser, hear about the innovative changes shaping the year ahead, and see how our mission comes to life through meaningful relationships, experiential learning, and academic excellence. **Bonus – Enjoy coffee and donuts on a beautiful mountain morning.",
+    pubDate: "2026-08-11T15:15:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Mountain School",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Mountain School Open House",
+    link: "https://koto.org/event/telluride-mountain-school-open-house-3/",
+    description: "Come Curious. Leave Inspired. Meet our new Head of School, connect with our passionate teachers and leadership team, explore our campus, and see firsthand how Telluride’s only independent school is redefining education through meaningful relationships, hands-on learning, and a love of the outdoors.",
+    pubDate: "2026-08-11T15:15:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Mountain School",
+    imageUrl: ""
   }
 ];
 
@@ -3455,7 +3364,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Summer Market Show: Peter Davison",
     link: "https://telluridelibrary.libcal.com/event/16461643?hs=a",
-    description: "A library program featuring Peter Davison, held in the Program Room at Wilkinson Public Library as part of the Summer Market Show series. The event runs for approximately one hour and is presented by the library.",
+    description: "11:00 AM – 12:00 PM",
     pubDate: "2026-07-29T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3516,7 +3425,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-29",
-    lastSeen: "2026-07-29"
+    lastSeen: "2026-07-30"
   },
   {
     id: "TEL-A-196",
@@ -3530,7 +3439,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-31",
-    lastSeen: "2026-07-29"
+    lastSeen: "2026-07-30"
   }
 ];
 
@@ -3593,7 +3502,7 @@ const ALIBI_EVENTS = [
   {
     title: "Jazz w/ Kenny G & Yaz",
     link: "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
-    description: "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    description: "Free live jazz",
     pubDate: "2026-08-05",
     time: "8:00 PM",
     source: "alibi",
@@ -3665,7 +3574,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3677,7 +3586,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4127,18 +4036,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
   },
   {
-    title: "OPEN MIC / JAM NIGHT w/ host DJ Strong",
-    link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
-    description: "Join us at the Lotus for a midweek tradition that brings together musicians, music lovers, and the incredible local talent that makes our community shine. From intimate solo sets to full-band jam sessions with rotating players, Open Mic Night is always full of surprises. Want to play? We’d love to have you — signups begin at 5:30pm. Just bring your instrument and your creativity, and we’ll take care of the rest. Our stage is fully equipped with PA, mics, drums, bass, and everything you need to plug in and play. 🎟️ Free admission 🍻 Grab a beer, settle in, and enjoy the show Come be part of the music — on stage or in the crowd! View on site | Email this event",
-    pubDate: "2026-07-30T00:00:00.000Z",
-    endDate: "2026-09-24",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523630382868/huge/ed08b494666358349bc84e969db6e8b262ef71aa.jpg"
-  },
-  {
     title: "Yoga in the Park- Wednesday evenings",
     link: "https://events.ourayridgwayevents.com/event/yoga-in-the-park-wednesday-evenings",
     description: "For noncyclists and cyclists alike. After an optional social bike ride at 5 pm, wind down for a yoga class in the park 6 - 7 pm. A moderate to advanced vinyasa style class targetting the areas of the body affected by time in the bike saddle and other areas of request. Bring your own mat. If you don't have one, please let me know earlier in the day so I can bring one for you. Meet at the Gazebo south of Chipeta Lodge. If the weather is too inclement, we can meet at the studio at 380 Sherman Street, Ridgway. While this is donation based, please pay before online or in person. View on site | Email this event",
@@ -4195,18 +4092,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52696447609647/huge/b28c8601f5e3e0db939bf8de5f0e8929fe11dc2b.jpg"
-  },
-  {
-    title: "THIRSTY THURSDAY - Game Night at Floating Lotus",
-    link: "https://events.ourayridgwayevents.com/event/thirsty-thursday-game-night-at-floating-lotus",
-    description: "Thirsty Thursday is where the week turns into the weekend. Every Thursday at Floating Lotus Brewery, we’re bringing the energy with Trivia Night (1st & 3rd) and Music Bingo (2nd & 4th). Cold beer, loud music, and a room full of people who came to have a good time. Happening 7-9pm every week View on site | Email this event",
-    pubDate: "2026-07-31T01:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52523770567385/huge/aa7bcfeb333ca9d6b01c43aa6294ed32c0d384e4.jpg"
   },
   {
     title: "Love’s Labors Lost: Theatre @ the Wright",
@@ -5625,6 +5510,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Downtown Ouray",
     imageUrl: "https://localist-images.azureedge.net/photos/53171933807100/huge/679f562aa1680a2f20f8ffd0a78d921293437057.jpg"
+  },
+  {
+    title: "Ouray Ridgway Young Life Banquet",
+    link: "https://events.ourayridgwayevents.com/event/ouray-ridgway-young-life-banquet",
+    description: "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the gospel, changed lives, and laughter in our county's youth. Guest speaker is Dr. Tanita Maddox, an expert in Gen Z, that will speak about how to connect with the next generation with compassion, urgency and action. RSVP with ddowdy@vsiok.com View on site | Email this event",
+    pubDate: "2026-09-27T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Christian Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52622115299633/huge/61aba8b7fef027ac0730e8b6024be4d074d1d8ad.jpg"
   }
 ];
 
@@ -5632,7 +5528,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Possible Quorum",
     link: "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
-    description: "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5643,7 +5539,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-07-29-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, held as part of the board's regular governance activities. These sessions typically allow trustees to discuss town business and policy matters in a collaborative setting outside of formal action meetings.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5654,7 +5550,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
+    description: "",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5665,7 +5561,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5676,7 +5572,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5687,7 +5583,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5698,7 +5594,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5709,7 +5605,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5720,7 +5616,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5731,7 +5627,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5742,7 +5638,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6029,15 +5925,15 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
-    title: "Lunch and Learn: Enterprise Zone Business Education Event",
-    link: "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-enterprise-zone-business-education-event/",
+    title: "Lunch and Learn: Region 10 Enterprise Zone- what does this mean for businesses?",
+    link: "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-region-10-enterprise-zone-what-does-this-mean-for-businesses/",
     description: "The Town of Mountain Village is pleased to host Region 10 for a Lunch and Learn session about the new Enterprise Zone boundary amendment.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
     category: "Community Event",
     location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49517/screenshot_2026-07-27_131826.png"
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49517/lunch_learn_logo_-_white.png"
   },
   {
     title: "Bike & Brewery Tour",
@@ -6152,7 +6048,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
   {
     title: "Gaiascope Opening Night",
     link: "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
-    description: "Celebrate the opening of Gaiascope with artist Brooke during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
+    description: "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
     pubDate: "2026-08-26T12:00:00.000Z",
     source: "mv",
     sourceLabel: "Mountain Village",
@@ -6180,7 +6076,7 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     sourceLabel: "Mountain Village",
     category: "Community Event",
     location: "Mountain Village, CO",
-    imageUrl: ""
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
   }
 ];
 
@@ -6532,28 +6428,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
-  },
-  {
-    title: "Town Talk: The Dual Challenge - Climate and Energy",
-    link: "https://www.telluride.com/event/town-talk-the-dual-challenge-climate-and-energy/",
-    description: "The world needs both more energy AND a stable climate. Delivering both is one of the defining challenges of our time. …",
-    pubDate: "2026-07-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62558/0728-tt_320_x_212-tf.800x533.webp"
-  },
-  {
-    title: "Book Signing With Micheline Klagsbrun",
-    link: "https://www.telluride.com/event/book-signing-with-micheline-klagsbrun/",
-    description: "Join Fringe for a book signing with Telluride artist Micheline Klagsbrun on Tuesday, July 28th, from 4:30 p.m. - 6 p.m. …",
-    pubDate: "2026-07-28",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63062/journey.800x533.webp"
   },
   {
     title: "The Mammoths",
@@ -9014,16 +8888,6 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
-  {
-    date: "July 29, 2026",
-    title: "Parks & Recreation Commission",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8288,
-    packetUrl: "https://telluride-co.civicweb.net/document/442582/"
-  },
   {
     date: "August 5, 2026",
     title: "Telluride Housing Authority Subcommittee",

@@ -275,15 +275,15 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
-    "title": "Lunch and Learn: Enterprise Zone Business Education Event",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-enterprise-zone-business-education-event/",
+    "title": "Lunch and Learn: Region 10 Enterprise Zone- what does this mean for businesses?",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/lunch-and-learn-region-10-enterprise-zone-what-does-this-mean-for-businesses/",
     "description": "The Town of Mountain Village is pleased to host Region 10 for a Lunch and Learn session about the new Enterprise Zone boundary amendment.",
     "pubDate": "2026-08-17T12:00:00.000Z",
     "source": "mv",
     "sourceLabel": "Mountain Village",
     "category": "Community Event",
     "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49517/screenshot_2026-07-27_131826.png"
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49517/lunch_learn_logo_-_white.png"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -398,7 +398,7 @@
   {
     "title": "Gaiascope Opening Night",
     "link": "https://townofmountainvillage.com/explore/events/all-events/gaiascope-opening-night/",
-    "description": "Celebrate the opening of Gaiascope with artist Brooke during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
+    "description": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage Plaza, Mountain Village.",
     "pubDate": "2026-08-26T12:00:00.000Z",
     "source": "mv",
     "sourceLabel": "Mountain Village",
@@ -426,6 +426,6 @@
     "sourceLabel": "Mountain Village",
     "category": "Community Event",
     "location": "Mountain Village, CO",
-    "imageUrl": ""
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
   }
 ]
