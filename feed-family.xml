@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 05:50:18 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 08:39:58 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Thu, Jul 30] Youth Tennis &amp; Pickleball Camp</title>
@@ -19,6 +19,32 @@
 Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 30] Storytime / Hora de Cuentos</title>
+      <link>https://telluridelibrary.libcal.com/event/16772771?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Thu, Jul 30] Littles On the Move</title>
+      <link>https://telluridelibrary.libcal.com/event/13960354?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/littles%20on%20the%20move%7C2026-07-30</guid>
+      <pubDate>Thu, 30 Jul 2026 21:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Fri, Jul 31] The Brass Family</title>
@@ -42,7 +68,7 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: TMVOA votes on board officers and fiscal policy amendments affecting the organization.]]></description>
+⚡ Why it matters: Fiscal policy amendments and new board officer elections could reshape TMVOA governance.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -158,7 +184,7 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: Land use code definition changes can quietly reshape what development rules allow.]]></description>
+⚡ Why it matters: Land use code definition changes can quietly rewrite what development rules actually permit.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>

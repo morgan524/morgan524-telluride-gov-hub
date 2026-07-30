@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-30T05:50:17.991Z",
+ "generated": "2026-07-30T08:39:49.963Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -17,12 +17,6 @@
      "date": "2026-07-21",
      "title": "Town Council - Jul 21 2026",
      "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-07-15",
-     "title": "Historic & Architectural Review Commission - Jul 15 2026",
-     "snippet": "The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2,…"
     }
    ],
    "developments": [],
@@ -70,12 +64,6 @@
      "date": "2026-07-16",
      "title": "Housing Code Update SSR",
      "snippet": "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and…"
-    },
-    {
-     "source": "county",
-     "date": "2026-07-15",
-     "title": "Board of County Commissioners Meeting",
-     "snippet": "Two Land Use Code amendments headline the July 15 BOCC meeting. The first updates Section 5-31 governing Natural Medicine Businesses — a category that's been working its way through county code since…"
     }
    ],
    "developments": [],
@@ -143,15 +131,31 @@
      "livestream": ""
     }
    ],
-   "recent": [],
+   "recent": [
+    {
+     "source": "norwood",
+     "date": "2026-07-29",
+     "title": "NWC Possible Quorum",
+     "snippet": "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood…"
+    }
+   ],
    "developments": [],
-   "stale": []
+   "stale": [
+    "Norwood Water: norwood discussed it on 2026-07-29 (\"NWC Possible Quorum\") but the deep dive was last edited 2026-07-23."
+   ]
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-07-29",
+     "title": "(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026",
+     "snippet": "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens…"
+    }
+   ],
    "developments": [],
    "stale": []
   }
