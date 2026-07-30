@@ -538,103 +538,23 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
+    title: "News Release: Flash Flooding Prompts Road Closures and Evacuations",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "FOR IMMEDIATE RELEASE: Flash Flooding Prompts Road Closures and Evacuations in Ouray County",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=957",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22847"
   },
   {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
-    img: ""
-  },
-  {
-    title: "Music on the Mesa",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 8, 2026",
-    newsTopic: "arts-culture",
-    copy: "Live music event on the mesa.",
-    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    title: "Evacuations ordered near Cutler Creek as rain pummels burn scar",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "public-safety",
+    copy: "UPDATE, 9:45 p.m. U.S. Highway 550 reopened between Ridgway and Ouray Wednesday night, authorities announced at 9:15 p.m. Emergency officials encouraged motorists to be cautions when driving through areas that recently flooded. Ouray County commissioners will hold an emergency meeting at 10:30 a.m. ",
+    href: "https://www.ouraynews.com/2026/07/29/evacuations-ordered-near-cutler-creek-rain-pummels-burn-scar/",
     img: ""
   },
   {
@@ -644,7 +564,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "July 30, 2026",
     newsTopic: "housing",
     copy: "Heavy rainfall over scorched soil sent flash floods raging down Cutler Creek on Sunday night, spilling mud down through Ponderosa Village and briefly shuttering U.S. Highway 550. The torrent of water and debris — loosed by nearly an inch of rain in the area — closed the highway around 5 p.m. as char",
-    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/07/29/rain-burn-scar-triggers-flooding-evacuation/",
     img: ""
   },
   {
@@ -668,16 +588,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "River managers ‘wait with bated breath’ for management plan",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "infrastructure",
-    copy: "Max Wilson, like water managers around the Colorado River Basin, spent Monday waiting for a new federal report outlining the river’s future — and future water cuts. He watched the federal website where the report would be published, which appeared to be temporarily down. He sat in the city’s ninth-f",
-    href: "https://www.ouraynews.com/2026/07/29/river-managers-wait-bated-breath-management-plan/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Ridgway-area homes featured on Home Trust tour",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -685,16 +595,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "An eclectic mix of Ridgway-area houses are on the Home Trust of Ouray County s tour this weekend, with homeowners opening their homes to participants to help raise funds for affordable housing. This year s selection includes one of the Home Trust s projects — a duplex in Parkside subdivision. It s t",
     href: "https://www.ouraynews.com/2026/07/29/ridgway-area-homes-featured-home-trust-tour/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Study: Aspen trees can slow, stop wildfires",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "July 30, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters, emergency planners and foresters in Colorado know that a healthy stand of aspen can be a day-saving firebreak, by slowing flames and giving crews and nearby homeowners a chance to regroup. Whether that happens because the aspen themselves are moist and fire-retardant, or because aspen ",
-    href: "https://www.ouraynews.com/2026/07/29/study-aspen-trees-can-slow-stop-wildfires/?ta_paidstory",
     img: ""
   },
   {
@@ -735,6 +635,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "arts-culture",
     copy: "60 Years Ago July 28, 1966 High cables across the Uncompahgre valley and river, leading from a mountainside to the Silver Shield Mill, are to come down this weekend, according to Warren H. Gibbs. Gibbs said that electric power to the TV tower will be off part of Friday and part of Saturday when the ",
     href: "https://www.ouraynews.com/2026/07/29/looking-back-20260730-0155-418941/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Good for you!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "July 30, 2026",
+    newsTopic: "recreation",
+    copy: "The Wizards of the West celebrate winning the Ouray Parks & Rec Softball League Championship on Tuesday, finishing their season with a 10-2 record. Pictured here in the back row from left to right are: Spencer Purvis, Anna Eytchison, TJ Burr, Ben Schlappi, Nikki Sawyer, Justin Hofmann and Tate Roger",
+    href: "https://www.ouraynews.com/2026/07/29/good-for-you-20260730-0156-290688/",
+    img: ""
+  },
+  {
+    title: "Parish Picnic-Town Park July 30 at 5:30 pm",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 30, 2026",
+    newsTopic: "recreation",
+    copy: "Please join our Annual Parish Picnic on Thursday, July 30 at 5:30 PM at Town Park. We ask families with last names from A - M to bring a side dish or salad and from N - Z to bring dessert. We'll see you at Town Park tomorrow.",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-picnic-town-park-july-30-at-530-pm/",
     img: ""
   },
   {
@@ -1074,7 +994,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1125,7 +1045,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -3451,18 +3371,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Mammoths",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-mammoths",
-    description: "Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychedeli...",
-    pubDate: "2026-07-29",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/e85f9702-e225-45cd-9c77-3b9d939c883b/-/crop/4096x2049/0,547/-/preview/"
-  },
   {
     title: "Nik Parr & the Selfless Lovers",
     link: "https://www.alibitelluride.com/calendar#eca-event=nik-parr-and-the-selfless-lovers",
