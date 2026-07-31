@@ -182,14 +182,19 @@
   // senior meals, food pantry, birthdays) we already carry as events — so it
   // never runs as a news card.
   function isAggregatorRoundup(s) { return /\bchalkboard\b/i.test(s.title || ''); }
-  function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
+  // sortDate (optional, on the data record): editorial placement override —
+  // ordering uses it while the card still SHOWS the real `date`. Lets a story
+  // be moved up/down the page without falsifying its publication date
+  // (Morgan, 2026-07-31: swap a top-block story out for a letter). Same
+  // "Month D, YYYY" format as `date` so same-day ties keep stable file order.
+  function parseWhen(s) { var d = new Date(s.sortDate || s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
   function normalize(a, srcLabel) {
     // dek: copy (scraped articles) or summary (LOCAL_NEWS_FEATURED pins store
     // their text there — unmapped until 2026-07-22, so featured leads rendered
     // with NO summary). NOTE claudeSummary is a boolean flag, never dek text.
     return { title: a.title || '', href: a.href || '', img: a.img || a.imageUrl || '',
       dek: a.copy || a.summary || '', topic: a.newsTopic || '', src: a.source || srcLabel,
-      date: a.date || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
+      date: a.date || '', sortDate: a.sortDate || '', when: 0, isLetter: !!a.isLetter, featured: !!a.featured,
       letterAuthor: a.letterAuthor || '', imgPos: a.imgPos || '' };
   }
   function metaLine(s) {
