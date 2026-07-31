@@ -991,7 +991,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
-    "endDate": "2026-09-24"
+    "endDate": "2026-09-29"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -3332,6 +3332,19 @@
     "source": "The Alibi",
     "desc": "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
     "type": "Music"
+  },
+  {
+    "title": "Sunday Rehab at Alloy Kitchen",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    "date": "2026-08-30",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    "type": "Community"
   },
   {
     "title": "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",
