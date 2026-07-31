@@ -27,13 +27,6 @@
     "passcode": "281002.",
     "phone": "346-248-7799"
   },
-  "telluride|2026-06-30|Town Council - Jun 30 2026": {
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/oQIoNRzgRC-zUdrPFaFzpQ",
-    "meetingId": "843 9146 6771",
-    "passcode": "793419.",
-    "phone": "719) 359-4580"
-  },
   "county|2026-07-01|Board of County Commissioners Meeting": {
     "sv": 4,
     "zoomUrl": "https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg",
@@ -70,9 +63,6 @@
     "passcode": "036814",
     "phone": "719-359-4580",
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1917"
-  },
-  "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026": {
-    "sv": 4
   },
   "airport|2026-07-16|TRAA Board of Commissioners Meeting": {
     "sv": 2

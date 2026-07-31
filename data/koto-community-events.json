@@ -1,27 +1,5 @@
 [
   {
-    "title": "Community Visit with Attorney General Phil Weiser",
-    "link": "https://koto.org/event/community-visit-with-attorney-general-phil-weiser/",
-    "description": "Please join Colorado Attorney General Phil Weiser for a conversation about the issues facing San Miguel County, and how we can work together to strengthen our communities. This meetup is Thursday, July 30th, at 4 p.m. in the Telluride Room at Wilkinson Public Library.",
-    "pubDate": "2026-07-30T22:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Adult Craft Night: Flower Pounding",
-    "link": "https://koto.org/event/adult-craft-night-flower-pounding/",
-    "description": "Create beautiful botanical prints using fresh flowers and leaves! Learn the art of flower pounding, a simple technique that transfers natural colors and shapes onto fabric or paper. We'll provide materials such as tea towels, bandanas, and greeting cards, or you are welcome to bring your own fabric or paper item to decorate. No experience is necessary—all supplies and instruction will be provided. Space is limited. Registration is required. ¡Cree hermosos estampados botánicos utilizando flores y hojas frescas! Aprenda la técnica de martillar flores, una forma sencilla de transferir los colores y las formas naturales de las plantas a tela o papel. Proporcionaremos materiales como paños de cocina, pañuelos tipo bandana y tarjetas, o puede traer su propia tela o artículo de papel para decorar. No se requiere experiencia previa; todos los materiales e instrucciones estarán incluidos. Es necesario registrarse. El cupo es limitado.",
-    "pubDate": "2026-07-30T23:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
     "title": "Youth Tennis & Pickleball Camp",
     "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
     "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -449,5 +427,71 @@
     "category": "Community Event",
     "location": "Telluride Mountain School",
     "imageUrl": ""
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-11/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-08-11T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
+    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-08-11/",
+    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    "pubDate": "2026-08-11T22:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride Mushroom Festival",
+    "link": "https://koto.org/event/telluride-mushroom-festival/",
+    "description": "Telluride Mushroom Festival brings together leading mycologists, artists, foragers and enthusiasts to explore all things fungi. We focus on science, culture, and community, covering topics like psychedelic research, cultivation, decriminalization, and identification. More than just a festival, it is an annual reunion for fungi folks to gather and celebrate fungi and their impact on our world. This year’s theme is “Rewild” and will feature a raft of myco-luminaries including Mark Plotkin, world-renowned ethnobotanist best known for his work with Indigenous peoples of the Amazon and for popularizing the idea that rainforest conservation must center Indigenous knowledge. His book Tales of a Shaman’s Apprentice is still one of the most influential works in the field. …",
+    "pubDate": "2026-08-12T06:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/02/Untitled-design-scaled.jpg"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-12/",
+    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    "pubDate": "2026-08-12T15:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://koto.org/event/market-on-the-plaza/2026-08-12/",
+    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    "pubDate": "2026-08-12T17:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
+    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-08-12T19:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   }
 ]

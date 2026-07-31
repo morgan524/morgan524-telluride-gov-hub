@@ -6,34 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 Jul 2026 22:15:14 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 03:28:42 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Thu, Jul 30] Storytime / Hora de Cuentos</title>
-      <link>https://telluridelibrary.libcal.com/event/16772771?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Jul 30] Littles On the Move</title>
-      <link>https://telluridelibrary.libcal.com/event/13960354?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/littles%20on%20the%20move%7C2026-07-30</guid>
-      <pubDate>Thu, 30 Jul 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Fri, Jul 31] The Brass Family</title>
       <link>https://www.telluride.com/event/the-brass-family/</link>
@@ -56,7 +30,7 @@
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: Board officer elections and a vote on amendments to fiscal policies and procedures.]]></description>
+⚡ Why it matters: TMVOA votes on fiscal policy amendments and elects new board officers.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -94,6 +68,42 @@ We are a MOBILE family business offering non-competitive Gymnastics, Preschool S
 📍 Telluride Racquet Club, Mountain Village
 
 Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Aug 1] Top Chef and Taste of Telluride</title>
+      <link>https://koto.org/event/top-chef-and-taste-of-telluride/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/top%20chef%20and%20taste%7C2026-08-01</guid>
+      <pubDate>Sat, 01 Aug 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, visitors, and second homeowners for an unforgettable evening of food, fun, and philanthropy. The event features a live Top Chef competition, where talented local chefs compete for culinary bragging rights, a Taste of Telluride showcasing signature bites from some of the area's favorite restaurants, and an exciting Silent Auction filled with unique experiences and items. Proceeds from the event support One to One Mentoring's mission of empowering local youth through positive mentoring relationships and life-enriching opportunities.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 2] Movies Under the Stars</title>
+      <link>https://koto.org/event/movies-under-the-stars/2026-08-01/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/movies%20under%20the%20stars%7C2026-08-02</guid>
+      <pubDate>Sun, 02 Aug 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Conference Center Plaza Mountain Village
+
+Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 2] The Casual Enormity of Adam Palmer Documentary Film Screening</title>
+      <link>https://koto.org/event/the-casual-enormity-of-adam-palmer-documentary-film-screening/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/the%20casual%20enormity%20of%7C2026-08-02</guid>
+      <pubDate>Sun, 02 Aug 2026 00:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Sheridan Opera House, Telluride
+
+A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer will arrive in Telluride on Saturday, August 1, with a screening at the Sheridan Opera House at 7:00pm. This special screening includes a post-film conversation with local leaders focused on building resilient and sustainable mountain communities. The Casual Enormity of Adam Palmer explores the remarkable legacy of Palmer — an outdoor enthusiast, musician, family man, Eagle Town Council member, Holy Cross Energy board member, and former Eagle County Director of Sustainability. Through stories from friends, colleagues, and fellow community leaders, the film examines how one person’s everyday actions can inspire lasting change. Produced by the Adam Palmer Sustainability Fund with Risan Media, the documentary highlights Palmer’s belief that community, innovation, and deliberate action can create meaningful solutions to challenges ranging from clean energy and housing to transportation and environmental stewardship. …]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -150,7 +160,7 @@ The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been p
 
 Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.
 
-⚡ Why it matters: Three public hearings on Land Use Code changes affecting ownership rules, wildfire areas, and nonconforming lots.]]></description>
+⚡ Why it matters: Three Land Use Code public hearings, including wildfire rules and ownership definitions.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -174,9 +184,33 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: County rewriting Land Use Code definitions — changes here shift what rules mean in practice.]]></description>
+⚡ Why it matters: Land use definitions rewrite — how terms read shapes what rules actually allow.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
+    </item>
+    <item>
+      <title>[Meeting] Town Council Retreat - Aug 06 2026 — 2026-08-06</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-06%7CTown%20Council%20Retreat%20-%20Aug%2006%202026</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-08-06
+
+The August 6, 2026 Town Council Retreat agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Design Review Board — 2026-08-06</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-08-06%7CDesign%20Review%20Board</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Mountain Village • 2026-08-06
+
+Three multifamily projects are on the board's plate Thursday morning. First up is an initial architecture and site review for four new multifamily units at 100 Pennington Place (Lot 726-R1). Then the board returns to a multifamily building at TBD Lost Creek Lane (Lot 27A) — continued from June — for another initial architecture review. A conditional-use permit for office space at 620 Mountain Village Blvd, Unit 1A goes to the DRB for a recommendation to Town Council. Finally, the final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road (Lot 640A) is expected to be continued to the September 3 meeting.
+
+⚡ Why it matters: Three multifamily projects under review, including a conditional-use permit decision.]]></description>
+      <category>Meeting</category>
+      <category>Mountain Village</category>
     </item>
   </channel>
 </rss>

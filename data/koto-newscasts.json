@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-30-26",
+    "source": "KOTO Community Radio",
+    "date": "July 31, 2026",
+    "newsTopic": "community",
+    "copy": "West End Roundup with the San Miguel Basin Forum; No Holds Bard with Love’s Labor’s Lost; Cat Movie Fisher with Risho Unda",
+    "href": "https://koto.org/news/newscast-7-30-26/"
+  },
+  {
     "title": "Newscast 7-29-26",
     "source": "KOTO Community Radio",
     "date": "July 30, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "public-safety",
     "copy": "On this week's Regional Roundup, we'll hear about some of the fires burning in the region, we'll hear from evacuees from the Aspen Acres fire, we pay a visit to the incident command post for the Gold Mountain Fire in Western Colorado to hear what it takes to support the hundreds of firefighters battling the blaze, and we'll hear about the ecologica",
     "href": "https://koto.org/news/newscast-7-17-26/"
-  },
-  {
-    "title": "Newscast 7-16-26",
-    "source": "KOTO Community Radio",
-    "date": "July 17, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
-    "href": "https://koto.org/news/newscast-7-16-26/"
   }
 ]

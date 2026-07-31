@@ -142,26 +142,6 @@
     "noticeKey": "tax-exemption-2026"
   },
   {
-    "title": "Foreclosure Sale -- Hartman Property (Sale No. COL-000156)",
-    "entity": "San Miguel County Public Trustee",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Alexander S. Hartman due to death of all named mortgagors. The property at 1730 Grand Avenue, Norwood will be auctioned on July 30, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $309,162.10.",
-    "deadline": "July 30, 2026 at 10:00 AM",
-    "expires": "2026-07-30",
-    "dates": "6/11",
-    "papers": [
-      "ttimes_0611"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    "address": "Section 27, Township 45 North, Range 13 West (1730 Grand Avenue, Norwood, CO 81423)",
-    "noticeKey": "foreclosure-col-000156"
-  },
-  {
     "title": "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
     "entity": "Colorado District Court, Water Division No. 4",
     "entityClass": "ent-county",
@@ -324,26 +304,6 @@
     "address": "District Court of San Miguel County, Colorado",
     "noticeKey": "COL-000183-estate-wilson-26PR30005",
     "caseNumber": "26PR30005"
-  },
-  {
-    "title": "Public Notice -- Replacement of Lost Share Certificate #887, Farmers' Water Development Company",
-    "entity": "Farmers' Water Development Company",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original permanently cancelled.",
-    "deadline": "2026-07-30",
-    "expires": "2026-07-30",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
-    "noticeKey": "COL-000181-fwdc-share-cert-887"
   },
   {
     "title": "Foreclosure Sale Notice -- Lot 166AR2, Telluride Mountain Village (Sale No. 202604)",

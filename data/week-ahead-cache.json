@@ -1,18 +1,22 @@
 {
-  "hash": "ac34a2d8439a0a1174444e22470289d20a02a5d1",
-  "lede": "The biggest thing on the calendar this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to who qualifies as a 'Qualified Owner,' a wildfire-area code update, and a continued hearing on nonconforming lots. Those are the kinds of decisions that quietly reshape what gets built and where in this county for years to come. The TMVOA board also meets July 31st to vote on officer elections and proposed changes to its fiscal policies, and Ouray County's Planning Commission is holding a virtual work session the same day as the BOCC to dig into possible rewrites of their Land Use Code definitions.",
+  "hash": "b3129504edea4c5e000b3231656e6c94eba918a2",
+  "lede": "The biggest item this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined, a wildfire areas update, and a continued hearing on nonconforming lots. Also on the 5th, the Ouray County Planning Commission meets virtually to work through possible changes to their Land Use Code definitions section, which is exactly the kind of quiet rewrite that shapes everything downstream. The week opens with the San Miguel Basin Fair and Rodeo, the New York Philharmonic Brass Quintet, and a free Jungle Book show at the Sheridan.",
   "notable": [
     {
       "id": 5,
-      "stake": "Three public hearings on Land Use Code changes affecting ownership rules, wildfire areas, and nonconforming lots."
-    },
-    {
-      "id": 0,
-      "stake": "Board officer elections and a vote on amendments to fiscal policies and procedures."
+      "stake": "Three Land Use Code public hearings, including wildfire rules and ownership definitions."
     },
     {
       "id": 7,
-      "stake": "County rewriting Land Use Code definitions — changes here shift what rules mean in practice."
+      "stake": "Land use definitions rewrite — how terms read shapes what rules actually allow."
+    },
+    {
+      "id": 0,
+      "stake": "TMVOA votes on fiscal policy amendments and elects new board officers."
+    },
+    {
+      "id": 9,
+      "stake": "Three multifamily projects under review, including a conditional-use permit decision."
     }
   ]
 }

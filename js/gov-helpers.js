@@ -145,9 +145,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
-  "telluride|2026-06-30|Town Council - Jun 30 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/oQIoNRzgRC-zUdrPFaFzpQ","meetingId":"843 9146 6771","passcode":"793419.","phone":"719) 359-4580"},
-
   "county|2026-07-01|Board of County Commissioners Meeting":
     {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg","meetingId":"828 4833 4181","passcode":"562164","phone":"719-359-4580"},
 
@@ -165,9 +162,6 @@ const MEETING_AGENDA_META = {
 
   "county|2026-07-15|Board of County Commissioners Meeting":
     {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580","agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1917"},
-
-  "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    {"sv":4},
 
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     {"sv":2},
@@ -537,9 +531,6 @@ const MEETING_PREVIEWS = {
 
   "norwood|2026-08-05|Board of Trustees Work Session":
     "Board will consider two lease renewals — one for Motion Sense Therapy and Performance, LLC at 1110 Lucerne St and another for Austin Overholt at 1475 Pine St. Note that formal action cannot be taken at this work session.",
-
-  "tmvoa|2026-07-31|TMVOA Board of Directors Meeting":
-    "Board will consider approving minutes from July 23, discuss fall and winter programming, elect board officers, and review proposed amendments to fiscal policies and procedures. Public comment and new business will also be addressed. The meeting is scheduled via Zoom on July 31, 2026.",
 
   "ouray|2026-08-05|, 2-4:00 PM - Virtual Meeting Only - No in-person attendance.  Work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to the agenda)":
     "The Planning Commission will hold a virtual work session to review and discuss potential changes to Section 2 (Definitions) of the Ouray County Land Use Code. No in-person attendance is available for this meeting."
@@ -912,13 +903,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-30';
-const LEGAL_NOTICES_CACHE_DATE = '2026-07-30';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-31';
+const LEGAL_NOTICES_CACHE_DATE = '2026-07-31';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-06-30|Town Council - Jun 30 2026":
-    "A full agenda for the last day of June. The most consequential item: first reading of Land Use Code amendments tied to Colorado's wildfire resilience requirements — changes to the rules that govern how buildings are built here, with fire country context that anyone in the box canyon understands. Council will also hold a second work session on the Telluride Energy Mitigation Program (TEMP), debating which outdoor energy uses — snowmelt, heat tape, outdoor fireplaces, spas, pools — trigger mitigation requirements and at what offset levels. On second reading: a new Black Hills Energy gas franchise, a school district tap-fee IGA, and the authorized sale of two deed-restricted properties (907 E. Colorado and Longwill 16 Unit B3). An emergency fire ban ordinance — covering open fires, fireworks, and smoking restrictions — is also up for consideration. Council will also vote on acquiring Spruce House Unit H as deed-restricted housing.",
-
   "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
     "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
 
@@ -954,9 +942,6 @@ const MANUAL_SUMMARIES = {
 
   "county|2026-07-15|Board of County Commissioners Meeting":
     "Two Land Use Code amendments headline the July 15 BOCC meeting. The first updates Section 5-31 governing Natural Medicine Businesses — a category that's been working its way through county code since Colorado's 2022 legalization of psychedelic-assisted therapy. The second addresses Nonconforming Lots, the kind of code language that quietly shapes what can and can't be built on the valley's more complicated parcels. There's also a lot-line vacation at Lawson Hill PUD — specifically the county jail property, Lots 425-1 and 425-2. On the administrative side: the County Assessor presents the Board of Equalization value report, the board takes up a new Records Retention Schedule, and Natural Resources Director Starr Jamison brings three federal public lands items — letters on the Mountain Pact, the Public Lands Workforce Stability Act, and the Public Lands Integrity Act. The consent agenda includes a retaining wall agreement for County Road 58P and a liquor license public hearing covers a Rotary Foundation event at the Telluride Airport in September.",
-
-  "telluride|2026-06-30|Telluride Housing Authority - Jun 30 2026":
-    "The Telluride Housing Authority is standing up its newly created Resident Advisory Committee — a structure approved unanimously in May — by appointing members from across the Town's rental properties. Fifteen eligible applications came in from tenants at the Boarding House, Shandoka, Sunnyside, Virginia Placer, and Voodoo. The THA will also hold a random drawing to assign staggered terms. It's a small procedural meeting, but the RAC itself is new ground: a formal channel for renters in Town-owned housing to have a structured voice in how those policies are shaped.",
 
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
@@ -1076,7 +1061,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1094,7 +1079,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "The August 19, 2026 HARC agenda hasn't been posted yet.",
+    "The August 19 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
     "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1154,7 +1139,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1430,6 +1415,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Burglary charge could send man linked to Navajo elder's disappearance back to federal prison",
+    source: "Telluride Times",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "community",
+    copy: "Preston Tolth — the only person convicted in connection with the 2021 disappearance of Navajo elder Ella Mae Begay — was arrested in Phoenix this week on a burglary charge. Released from federal prison in June, two years early, he was already under a U.S. Marshals warrant when Phoenix police picked him up. His family says there's still no justice or closure.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_76882ffe-8459-557e-9a42-b53975d1779f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/47/1479d6df-aa7f-5de2-a827-daded8bd670a/6a6be991898c1.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Art of being rad, and a good human",
     source: "Telluride Times",
@@ -2275,39 +2272,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A multifaceted organization now has a simple name",
-    source: "Telluride Times",
-    date: "July 17, 2026",
-    firstSeen: "2026-07-17",
-    newsTopic: "health",
-    copy: "Tri-County Health Network is rebranding to Thrive Community Health Network on August 1, with a new logo and website refresh expected this fall. The organization has grown from serving three counties to six and wanted a name that reflects that expanded reach and its broad range of health and social services. They're also hosting their first-ever fundraiser, Noche de Luz, on August 21 in Telluride.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_1e26f36a-c914-4b60-952c-6266967becf3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/54/e5438fcb-fc3c-41aa-9ed1-e209adbf96da/6a59c674d3b6c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "BOCC discusses public lands",
-    source: "Telluride Times",
-    date: "July 17, 2026",
-    firstSeen: "2026-07-17",
-    newsTopic: "housing",
-    copy: "San Miguel County commissioners signed letters of support for two federal public lands bills — one barring land sales through budget reconciliation, another halting layoffs at Interior and the Forest Service through 2030. Colorado has seen a 26% cut in public land agency staff since January. They also backed a $200,000 grant application for a floating solar project near Norwood.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_65e1b685-2138-4a3b-bcfc-cd30b2c7fe99.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/47/c47437c9-5b07-4b76-b927-9099f02f7100/6a59c3a8929bd.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Town of Telluride Welcomes Patrick Rondinelli as Deputy Town Manager",
-    source: "Town of Telluride",
-    date: "June 30, 2026",
-    newsTopic: "recreation",
-    copy: "(June 30, 2026) – The Town has hired Patrick Rondinelli as its new Deputy Town Manager. He joins the Town with more than two decades of local government leadership experience & a deep understanding of the opportunities & challenges facing mountain towns.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=399",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15606"
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -2389,6 +2353,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 7-30-26",
+    source: "KOTO Community Radio",
+    date: "July 31, 2026",
+    newsTopic: "community",
+    copy: "West End Roundup with the San Miguel Basin Forum; No Holds Bard with Love’s Labor’s Lost; Cat Movie Fisher with Risho Unda",
+    href: "https://koto.org/news/newscast-7-30-26/"
+  },
+  {
     title: "Newscast 7-29-26",
     source: "KOTO Community Radio",
     date: "July 30, 2026",
@@ -2443,14 +2415,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "public-safety",
     copy: "On this week's Regional Roundup, we'll hear about some of the fires burning in the region, we'll hear from evacuees from the Aspen Acres fire, we pay a visit to the incident command post for the Gold Mountain Fire in Western Colorado to hear what it takes to support the hundreds of firefighters battling the blaze, and we'll hear about the ecologica",
     href: "https://koto.org/news/newscast-7-17-26/"
-  },
-  {
-    title: "Newscast 7-16-26",
-    source: "KOTO Community Radio",
-    date: "July 17, 2026",
-    newsTopic: "community",
-    copy: "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda; Women in Fierce Country",
-    href: "https://koto.org/news/newscast-7-16-26/"
   }
 ];
 
@@ -2563,32 +2527,6 @@ const SMB_FORUM_ARTICLES = [
     copy: "The Gold Mountain Fire started June 27 near Ouray and has burned over 31,400 acres in steep, hard-to-reach terrain on the Cimarron Range — tough enough that it's now a top national priority with 800+ firefighters deployed. Evacuations along U.S. 550 hit during what's normally Ouray's busiest week, and local businesses are reporting cancellations up 30–50%, with one KOA owner estimating $75,000–$100,000 in losses.",
     claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/ouray-locals-reflect-on-impacts-of-fire,121620",
-    img: ""
-  },
-  {
-    title: "It’s time to bake; annual dessert contest is July 11",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    dateSource: "article",
-    newsTopic: "education",
-    copy: "The San Miguel Basin Fair's annual dessert contest returns July 11 at Norwood School, with drop-off starting at 2 p.m. and judging at 5 p.m. Open to pros, non-pros, youth, and non-residents, the contest spans 18+ categories. The public is welcome to taste afterward.",
-    claudeSummary: true,
-    href: "https://www.sanmiguelbasinforum.com/stories/its-time-to-bake-annual-dessert-contest-is-july-11,120634",
-    img: ""
-  },
-  {
-    title: "West End producers sell at Ridgway markets",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 1, 2026",
-    firstSeen: "2026-07-01",
-    dateSource: "article",
-    newsTopic: "arts-culture",
-    copy: "Three West End producers ��� Cypress Roots (Nucla), L Bar Bell Ranch (Norwood), and Hank's Hens (Norwood) — are among the vendors at Ridgway's Hartwell Park Farmers Market, now in its 26th year. The market runs Fridays through October 16. This summer's heat and drought are putting pressure on livestock and pasture across the area.",
-    claudeSummary: true,
-    href: "https://www.sanmiguelbasinforum.com/stories/west-end-producers-sell-at-ridgway-markets,120637",
     img: ""
   }
 ];
@@ -2978,28 +2916,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Community Visit with Attorney General Phil Weiser",
-    link: "https://koto.org/event/community-visit-with-attorney-general-phil-weiser/",
-    description: "Please join Colorado Attorney General Phil Weiser for a conversation about the issues facing San Miguel County, and how we can work together to strengthen our communities. This meetup is Thursday, July 30th, at 4 p.m. in the Telluride Room at Wilkinson Public Library.",
-    pubDate: "2026-07-30T22:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Adult Craft Night: Flower Pounding",
-    link: "https://koto.org/event/adult-craft-night-flower-pounding/",
-    description: "Create beautiful botanical prints using fresh flowers and leaves! Learn the art of flower pounding, a simple technique that transfers natural colors and shapes onto fabric or paper. We'll provide materials such as tea towels, bandanas, and greeting cards, or you are welcome to bring your own fabric or paper item to decorate. No experience is necessary—all supplies and instruction will be provided. Space is limited. Registration is required. ¡Cree hermosos estampados botánicos utilizando flores y hojas frescas! Aprenda la técnica de martillar flores, una forma sencilla de transferir los colores y las formas naturales de las plantas a tela o papel. Proporcionaremos materiales como paños de cocina, pañuelos tipo bandana y tarjetas, o puede traer su propia tela o artículo de papel para decorar. No se requiere experiencia previa; todos los materiales e instrucciones estarán incluidos. Es necesario registrarse. El cupo es limitado.",
-    pubDate: "2026-07-30T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
@@ -3428,6 +3344,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Mountain School",
     imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-11/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-08-11T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Free Legal Clinic – Clínica Jurídica Gratuita",
+    link: "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-08-11/",
+    description: "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
+    pubDate: "2026-08-11T22:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Mushroom Festival",
+    link: "https://koto.org/event/telluride-mushroom-festival/",
+    description: "Telluride Mushroom Festival brings together leading mycologists, artists, foragers and enthusiasts to explore all things fungi. We focus on science, culture, and community, covering topics like psychedelic research, cultivation, decriminalization, and identification. More than just a festival, it is an annual reunion for fungi folks to gather and celebrate fungi and their impact on our world. This year’s theme is “Rewild” and will feature a raft of myco-luminaries including Mark Plotkin, world-renowned ethnobotanist best known for his work with Indigenous peoples of the Amazon and for popularizing the idea that rainforest conservation must center Indigenous knowledge. His book Tales of a Shaman’s Apprentice is still one of the most influential works in the field. …",
+    pubDate: "2026-08-12T06:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/Untitled-design-scaled.jpg"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-12/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-08-12T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-08-12/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-08-12T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-12T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   }
 ];
 
@@ -3529,7 +3511,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-29",
-    lastSeen: "2026-07-30"
+    lastSeen: "2026-07-31"
   },
   {
     id: "TEL-A-196",
@@ -3543,7 +3525,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-31",
-    lastSeen: "2026-07-30"
+    lastSeen: "2026-07-31"
   }
 ];
 
@@ -4374,7 +4356,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
     description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
     pubDate: "2026-08-04T00:15:00.000Z",
-    endDate: "2026-09-22",
+    endDate: "2026-09-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5732,28 +5714,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-07-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Wine and Wickets",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    pubDate: "2026-07-29T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
-  },
-  {
     title: "New York Philharmonic Brass Quintet",
     link: "https://townofmountainvillage.com/explore/events/all-events/new-york-philharmonic-brass-quintet-1/",
     description: "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players in the country in what promises to be a",
@@ -6534,17 +6494,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/58269/norwood.800x533.webp"
   },
   {
-    title: "The Mammoths",
-    link: "https://www.telluride.com/event/the-mammoths/",
-    description: "Hailing from Austin, TX, fuzz rockers The Mammoths fuse ‘70s inspired psychedelia with biting, petrified rock n’ …",
-    pubDate: "2026-07-29",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62660/screenshot_2026-06-01_at_3_26_04_pm.800x533.webp"
-  },
-  {
     title: "Wine and Wickets",
     link: "https://www.telluride.com/event/wine-and-wickets/",
     description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our …",
@@ -7183,24 +7132,6 @@ const LEGAL_NOTICES = [
     noticeKey: "tax-exemption-2026"
   },
   {
-    title: "Foreclosure Sale -- Hartman Property (Sale No. COL-000156)",
-    entity: "San Miguel County Public Trustee",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Public Trustee is conducting a foreclosure sale for property owned by Alexander S. Hartman due to death of all named mortgagors. The property at 1730 Grand Avenue, Norwood will be auctioned on July 30, 2026 at 10:00 AM at the Telluride courthouse to satisfy a debt of $309,162.10.",
-    deadline: "July 30, 2026 at 10:00 AM",
-    expires: "2026-07-30",
-    dates: "6/11",
-    papers: ["ttimes_0611"],
-    url: "https://www.telluridenews.com/news/legals/article_6de56aef-d7ac-4c1e-bb5f-1bc3f669e424.html",
-    address: "Section 27, Township 45 North, Range 13 West (1730 Grand Avenue, Norwood, CO 81423)",
-    noticeKey: "foreclosure-col-000156"
-  },
-  {
     title: "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
     entity: "Colorado District Court, Water Division No. 4",
     entityClass: "ent-county",
@@ -7347,24 +7278,6 @@ const LEGAL_NOTICES = [
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "COL-000183-estate-wilson-26PR30005",
     caseNumber: "26PR30005"
-  },
-  {
-    title: "Public Notice -- Replacement of Lost Share Certificate #887, Farmers' Water Development Company",
-    entity: "Farmers' Water Development Company",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "💧",
-    iconClass: "type-hearing",
-    type: "Utilities",
-    filterTag: "utilities",
-    summary: "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Unless a written objection is filed with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post, a replacement certificate will be issued and the original permanently cancelled.",
-    deadline: "2026-07-30",
-    expires: "2026-07-30",
-    dates: "7/2",
-    papers: ["ttimes_0702"],
-    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    address: "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
-    noticeKey: "COL-000181-fwdc-share-cert-887"
   },
   {
     title: "Foreclosure Sale Notice -- Lot 166AR2, Telluride Mountain Village (Sale No. 202604)",
