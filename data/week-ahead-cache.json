@@ -1,22 +1,18 @@
 {
-  "hash": "280570e18386747de155ef5b0863dc4d4644c0ee",
-  "lede": "The San Miguel County BOCC holds public hearings Tuesday on three Land Use Code amendments — including changes to who qualifies as an 'owner' under affordable housing rules, a wildfire areas update, and a nonconforming lots decision — and those are the kinds of votes that quietly shape who gets to live and build here for years to come. Ouray County's Planning Commission is also meeting virtually Tuesday to work through possible changes to their Land Use Code definitions section. Meanwhile, the week kicks off with the San Miguel Basin Fair and Rodeo and the New York Philharmonic Brass Quintet both running Friday.",
+  "hash": "7c86d3254d2313cf25a2e7e6afb1114bfc011d28",
+  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in affordable housing rules, a wildfire areas update, and a continued hearing on nonconforming lots. That same day, the Ouray County Planning Commission meets virtually to work through possible changes to their Land Use Code definitions section, and TMVOA takes up amendments to its fiscal policies at its July 31st board meeting. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday alongside a free Jungle Book show at the Sheridan.",
   "notable": [
     {
       "id": 5,
-      "stake": "Public hearings on three LUC amendments including affordable housing ownership rules and wildfire zoning."
-    },
-    {
-      "id": 0,
-      "stake": "TMVOA board votes on officer elections and proposed fiscal policy amendments."
+      "stake": "Public hearings on three Land Use Code amendments, including affordable housing ownership rules."
     },
     {
       "id": 7,
-      "stake": "Land Use Code definition changes being shaped — definitions determine what the rules actually mean."
+      "stake": "Land Use Code definitions are being rewritten — definitions determine what rules actually mean."
     },
     {
-      "id": 3,
-      "stake": "CCAASE reviews 2026 grant-cycle applicants; action items on community calendar requests."
+      "id": 0,
+      "stake": "Proposed amendments to TMVOA fiscal policies up for formal action."
     }
   ]
 }

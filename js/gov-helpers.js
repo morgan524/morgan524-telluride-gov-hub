@@ -251,7 +251,7 @@ const MEETING_AGENDA_META = {
     {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1051/files/agenda/1898"},
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050"},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050","zoomUrl":"https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA","meetingId":"845 3020 1574","passcode":"082987.","phone":"719) 359-4580"},
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8099"},
@@ -642,6 +642,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "arts-culture",
     copy: "Live music event on the mesa.",
     href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
+    title: "CANCELLED: Hike and Holy Mass on August 1",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "July 31, 2026",
+    newsTopic: "community",
+    copy: "Regrettably the Hike and Holy Mass for Saturday, August 1 to Hope Lake has been cancelled.",
+    href: "https://stpatrickstelluride.com/2026/parish-news/cancelled-hike-and-holy-mass-on-august-1/",
     img: ""
   },
   {
@@ -1039,7 +1049,7 @@ const MANUAL_SUMMARIES = {
     "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.",
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    "The August 6, 2026 Town Council Retreat agenda hasn't been posted yet.",
+    "The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.",
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED":
     "The July 23, 2026 Planning & Zoning Commission Chair meeting has been cancelled.",
@@ -1069,7 +1079,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1433,6 +1443,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_37334c6a-ad41-5fcd-9900-2de63d49cd5d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ea/4ea576e4-b46b-5fb0-b738-13a76c043e90/6a6cba4c81216.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "SMART Executive Director David Averill resigns effective Nov. 30",
+    source: "Telluride Times",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "government",
+    copy: "SMART Executive Director David Averill has resigned after nearly nine years, with his last day set for November 30. He built the authority from scratch — no buses, no routes, no assets — into a regional transit operation serving San Miguel, Montrose, and Dolores counties. The board is now looking for his replacement.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8e94f1f3-3c67-48ed-a227-19d028e05a59.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/52/7528c53a-bb46-42c0-b9c1-4e07bd148b75/6a6ba5a920f1f.image.jpg",
     imgHiRes: true
   },
   {
@@ -2982,39 +3004,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-07-31T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-07-31/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-07-31T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-07-31/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-07-31T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Free Youth Tennis & Pickleball Program",
     link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-31/",
@@ -5550,6 +5539,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway Christian Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52622115299633/huge/61aba8b7fef027ac0730e8b6024be4d074d1d8ad.jpg"
+  },
+  {
+    title: "ETHAN PERRY",
+    link: "https://events.ourayridgwayevents.com/event/ethan-perry",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-09-29T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
@@ -9033,10 +9033,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "August 6, 2026",
     title: "Town Council Retreat",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
     time: "",
-    civicwebId: 8050
+    civicwebId: 8050,
+    packetUrl: "https://telluride-co.civicweb.net/document/442759/"
   },
   {
     date: "August 11, 2026",

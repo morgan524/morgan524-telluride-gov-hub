@@ -27,19 +27,6 @@
     "endDate": "2026-08-07"
   },
   {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-07-31/",
-    "date": "2026-07-31",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
-  },
-  {
     "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     "href": "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     "date": "2026-07-31",
@@ -66,19 +53,6 @@
     "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
     "type": "Food & Drink",
     "endDate": "2026-09-25"
-  },
-  {
-    "title": "Telluride Farmer's Market",
-    "href": "https://koto.org/event/telluride-farmers-market/2026-07-31/",
-    "date": "2026-07-31",
-    "time": "10:30 AM",
-    "location": "Oak Street Plaza, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
-    "type": "Food & Drink"
   },
   {
     "title": "Telluride Farmers Market",
@@ -395,19 +369,6 @@
     "source": "The Alibi",
     "desc": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her po...",
     "type": "Community"
-  },
-  {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/",
-    "date": "2026-07-31",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -4106,5 +4067,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "A fun evening to celebrate with local Young Life staff, leaders, committee and guests that God is on the move in our community, and one vehicle is Young Life. An opportunity to learn about and financially support the clear sharing of the…",
     "type": "Community"
+  },
+  {
+    "title": "ETHAN PERRY",
+    "href": "https://events.ourayridgwayevents.com/event/ethan-perry",
+    "date": "2026-09-29",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   }
 ]

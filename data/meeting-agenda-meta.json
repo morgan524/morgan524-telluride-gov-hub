@@ -212,7 +212,11 @@
   },
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026": {
     "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050"
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA",
+    "meetingId": "845 3020 1574",
+    "passcode": "082987.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026 - CANCELLED": {
     "sv": 4,

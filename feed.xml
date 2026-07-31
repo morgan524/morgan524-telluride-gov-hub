@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Jul 2026 19:45:07 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 31 Jul 2026 22:13:33 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Jul 31–6</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-30</guid>
-      <pubDate>Fri, 31 Jul 2026 19:45:07 GMT</pubDate>
-      <description><![CDATA[The San Miguel County BOCC holds public hearings Tuesday on three Land Use Code amendments — including changes to who qualifies as an 'owner' under affordable housing rules, a wildfire areas update, and a nonconforming lots decision — and those are the kinds of votes that quietly shape who gets to live and build here for years to come. Ouray County's Planning Commission is also meeting virtually Tuesday to work through possible changes to their Land Use Code definitions section. Meanwhile, the week kicks off with the San Miguel Basin Fair and Rodeo and the New York Philharmonic Brass Quintet both running Friday.]]></description>
+      <pubDate>Fri, 31 Jul 2026 22:13:33 GMT</pubDate>
+      <description><![CDATA[The biggest thing on the civic calendar this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in affordable housing rules, a wildfire areas update, and a continued hearing on nonconforming lots. That same day, the Ouray County Planning Commission meets virtually to work through possible changes to their Land Use Code definitions section, and TMVOA takes up amendments to its fiscal policies at its July 31st board meeting. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday alongside a free Jungle Book show at the Sheridan.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -25,7 +25,7 @@
 
 The TMVOA Board meets July 31 with three substantive items on the docket: fall and winter programming decisions, election of board officers, and — the weightiest item — proposed amendments to the organization's fiscal policies and procedures. That last one gets 30 minutes, more than anything else on the agenda, which tells you where the real work is. Board officer elections mark the kind of organizational housekeeping that shapes who steers the association going into the next season.
 
-⚡ Why it matters: TMVOA board votes on officer elections and proposed fiscal policy amendments.]]></description>
+⚡ Why it matters: Proposed amendments to TMVOA fiscal policies up for formal action.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
@@ -120,42 +120,6 @@ SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these 
       <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 31] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-07-31/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 31] Ridgway Farmer&apos;s Market</title>
-      <link>https://koto.org/event/ridgway-farmers-market/2026-07-31/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/ridgway%20farmer%20s%20market%7C2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 16:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Hartwell Park Ridgway
-
-The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Fri, Jul 31] Telluride Farmer&apos;s Market</title>
-      <link>https://koto.org/event/telluride-farmers-market/2026-07-31/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmer%20s%20market%7C2026-07-31</guid>
-      <pubDate>Fri, 31 Jul 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Oak Street Plaza, Telluride
-
-We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Fri, Jul 31] Telluride Farmers Marketshow: New York Philharmonic Brass Quintet</title>
@@ -345,6 +309,42 @@ Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players shoul
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Sun, Aug 2] Drop In Tech Time with Oliver</title>
+      <link>https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/drop%20in%20tech%20time%7C2026-08-02</guid>
+      <pubDate>Sun, 02 Aug 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 2] Tea and Tarot</title>
+      <link>https://koto.org/event/tea-and-tarot/2026-08-02/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/tea%20and%20tarot%7C2026-08-02</guid>
+      <pubDate>Sun, 02 Aug 2026 20:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2025/04/tea-1.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sun, Aug 2] Home Tour &amp; House Show with Emily Scott Robinson</title>
+      <link>https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/home%20tour%20and%20house%7C2026-08-02</guid>
+      <pubDate>Sun, 02 Aug 2026 23:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Open Space Commission - Aug 03 2026 — 2026-08-03</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-03%7COpen%20Space%20Commission%20-%20Aug%2003%202026</guid>
@@ -367,15 +367,13 @@ The August 5, 2026 Ecology Commission agenda hasn't been posted yet.]]></descrip
       <category>Town of Telluride</category>
     </item>
     <item>
-      <title>⚡ [Meeting] Commission for Community Assistance, Arts &amp; Special Events - Aug 05 2026 — 2026-08-05</title>
+      <title>[Meeting] Commission for Community Assistance, Arts &amp; Special Events - Aug 05 2026 — 2026-08-05</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-05%7CCommission%20for%20Community%20Assistance%2C%20Arts%20%26%20Special%20Events%20-%20Aug%2005%202026</guid>
       <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-08-05
 
-CCAASE's August meeting is grant-season housekeeping more than anything else. The board will interview four organizations — Second Chance Humane Society, Telluride Soccer Club, Telluride Mountain Club, and Sheep Mountain Alliance — as part of the 2026 grant cycle review. On the action side: a calendar date request from Telluride Humane Society for a Tails on the Trail 5K fun run on October 10, 2026 (using Elks Park, the River Trail, and Colorado Ave.); final approval of 2027 CCAASE grant materials including guidelines and application; and a recommendation to Town Council on the 2027 CCAASE budget allocation. The grant materials were workshopped at the July meeting — this is the approval step.
-
-⚡ Why it matters: CCAASE reviews 2026 grant-cycle applicants; action items on community calendar requests.]]></description>
+CCAASE's August meeting is grant-season housekeeping more than anything else. The board will interview four organizations — Second Chance Humane Society, Telluride Soccer Club, Telluride Mountain Club, and Sheep Mountain Alliance — as part of the 2026 grant cycle review. On the action side: a calendar date request from Telluride Humane Society for a Tails on the Trail 5K fun run on October 10, 2026 (using Elks Park, the River Trail, and Colorado Ave.); final approval of 2027 CCAASE grant materials including guidelines and application; and a recommendation to Town Council on the 2027 CCAASE budget allocation. The grant materials were workshopped at the July meeting — this is the approval step.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -399,7 +397,7 @@ The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been p
 
 Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.
 
-⚡ Why it matters: Public hearings on three LUC amendments including affordable housing ownership rules and wildfire zoning.]]></description>
+⚡ Why it matters: Public hearings on three Land Use Code amendments, including affordable housing ownership rules.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -423,7 +421,7 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: Land Use Code definition changes being shaped — definitions determine what the rules actually mean.]]></description>
+⚡ Why it matters: Land Use Code definitions are being rewritten — definitions determine what rules actually mean.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -434,7 +432,7 @@ Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a wor
       <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-08-06
 
-The August 6, 2026 Town Council Retreat agenda hasn't been posted yet.]]></description>
+The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
