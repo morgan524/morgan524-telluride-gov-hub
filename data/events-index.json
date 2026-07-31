@@ -27,19 +27,6 @@
     "endDate": "2026-08-07"
   },
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-07-31/",
-    "date": "2026-07-31",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "Ridgway Farmer's Market",
     "href": "https://koto.org/event/ridgway-farmers-market/2026-07-31/",
     "date": "2026-07-31",
@@ -1046,6 +1033,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Telluride Film Festival Nugget Project Talk",
+    "href": "https://koto.org/event/telluride-film-festival-nugget-project-talk/",
+    "date": "2026-08-05",
+    "time": "3:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Film Festival hosts a Nugget Project Talk on Wednesday, August 5 th , at 3:30 p.m. in the Program Room at Wilkinson Public Library.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
     "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-05/",
     "date": "2026-08-05",
@@ -2047,19 +2047,6 @@
     "type": "Community"
   },
   {
-    "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
-    "date": "2026-08-12",
-    "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
-    "type": "Community"
-  },
-  {
     "title": "Market on the Plaza",
     "href": "https://koto.org/event/market-on-the-plaza/2026-08-12/",
     "date": "2026-08-12",
@@ -2596,6 +2583,19 @@
     "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
     "type": "Community",
     "endDate": "2026-09-15"
+  },
+  {
+    "title": "\"Best Day Ever\" Free Movie Screening",
+    "href": "https://www.telluride.com/event/best-day-ever-free-movie-screening/",
+    "date": "2026-08-18",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice …",
+    "type": "Arts & Film"
   },
   {
     "title": "Sunset Concert Series",
