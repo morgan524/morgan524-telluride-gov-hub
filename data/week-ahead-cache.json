@@ -1,22 +1,26 @@
 {
-  "hash": "bde48d77422db55cef71efa6d46f78b47b583249",
-  "lede": "The biggest item this week is the San Miguel County BOCC meeting on August 5th, where three Land Use Code amendments go to public hearing — including changes to how 'Qualified Owner' gets defined, a wildfire areas update, and a continued hearing on nonconforming lots. Ouray County's Planning Commission is also meeting virtually that same day to work through possible changes to their Land Use Code definitions section, which is exactly the kind of quiet process where the shape of future decisions gets set. Amid all that, the valley's got a full plate: the San Miguel Basin Fair and Rodeo kicks off Friday, the New York Philharmonic Brass Quintet plays the Farmers Market, and the Sheridan's running a free Jungle Book show for kids.",
+  "hash": "31d009735c802484cb29eff45a264877e25932da",
+  "lede": "The San Miguel County BOCC holds public hearings Tuesday on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in the affordable housing code and a wildfire areas update — and those are the kinds of rewrites that quietly reshape what's possible here for years. Also Tuesday, Ouray County's Planning Commission meets virtually to work through possible changes to their own land use definitions, while Mountain Village's Design Review Board takes up three multifamily projects Thursday. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday alongside the New York Philharmonic Brass Quintet at the farmers market.",
   "notable": [
     {
+      "id": 0,
+      "stake": "Board votes on officer elections and fiscal policy amendments with significant time allocated."
+    },
+    {
+      "id": 3,
+      "stake": "Grant interviews and action items for four local organizations in the 2026 funding cycle."
+    },
+    {
       "id": 5,
-      "stake": "Public hearings on three Land Use Code amendments, including wildfire rules and ownership definitions."
+      "stake": "Public hearings on three Land Use Code changes, including affordable housing ownership rules and wildfire areas."
     },
     {
       "id": 7,
-      "stake": "Virtual work session shaping Land Use Code definitions that determine what rules mean in practice."
-    },
-    {
-      "id": 0,
-      "stake": "Vote on fiscal policy amendments and board officer elections for TMVOA."
+      "stake": "Land use definitions being rewritten — how terms read here determines what rules mean in practice."
     },
     {
       "id": 9,
-      "stake": "Initial reviews and a conditional-use permit for multifamily projects in Mountain Village."
+      "stake": "Three multifamily projects under design review, including a conditional-use permit decision."
     }
   ]
 }

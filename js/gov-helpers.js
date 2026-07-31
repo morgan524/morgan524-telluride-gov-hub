@@ -236,7 +236,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117"},
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065"},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065","zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
 
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162"},
@@ -1024,7 +1024,7 @@ const MANUAL_SUMMARIES = {
     "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
-    "The August 5, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+    "CCAASE's August meeting is grant-season housekeeping more than anything else. The board will interview four organizations — Second Chance Humane Society, Telluride Soccer Club, Telluride Mountain Club, and Sheep Mountain Alliance — as part of the 2026 grant cycle review. On the action side: a calendar date request from Telluride Humane Society for a Tails on the Trail 5K fun run on October 10, 2026 (using Elks Park, the River Trail, and Colorado Ave.); final approval of 2027 CCAASE grant materials including guidelines and application; and a recommendation to Town Council on the 2027 CCAASE budget allocation. The grant materials were workshopped at the July meeting — this is the approval step.",
 
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
     "The August 5, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
@@ -1147,7 +1147,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1423,6 +1423,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Arizona, California and Nevada would share cuts under federal proposal to manage the Colorado River",
+    source: "Telluride Times",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "infrastructure",
+    copy: "The federal government is proposing mandatory water cuts for Arizona, California, and Nevada — up to 3 million acre-feet through 2036 — while Upper Basin states like Colorado get a reprieve for now. It's a 10-year framework with decisions revisited every two years. The long-term fight over the Colorado River is far from settled.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_37334c6a-ad41-5fcd-9900-2de63d49cd5d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/ea/4ea576e4-b46b-5fb0-b738-13a76c043e90/6a6cba4c81216.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Lone Cone Legacy Trust 2026 community grants cycle now open",
     source: "Telluride Times",
@@ -2304,6 +2316,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Black Bear and Imogene Passes Currently Partially Closed",
     source: "San Miguel County",
     date: "July 30, 2026",
@@ -2331,6 +2352,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
     title: "Aug 13 Open House for Housing Action Plan &amp; Master Plan Water Supply Element",
     source: "Town of Ridgway",
     date: "July 24, 2026",
@@ -2350,6 +2380,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/07-2926-Vacancy-on-SAB-Notice.pdf",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearings Aug 12, 2026 at 5:30pm 1) Proposal: organization of Alpenglow Vista Metro Districts 1-4, 2) Application: Hyde Subdivision, resubdivision of lots",
+    source: "Town of Ridgway",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "education",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC-Public-Hearing-Notice-Combined-Aug-2026.pdf",
     img: ""
   },
   {
@@ -5228,7 +5269,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-social-justice-travel-exhibition",
     description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
     pubDate: "2026-09-04T23:00:00.000Z",
-    endDate: "2026-09-28",
+    endDate: "2026-09-29",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
