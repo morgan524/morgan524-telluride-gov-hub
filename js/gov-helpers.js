@@ -1069,7 +1069,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1147,7 +1147,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1423,6 +1423,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Lone Cone Legacy Trust 2026 community grants cycle now open",
+    source: "Telluride Times",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "community",
+    copy: "Lone Cone Legacy Trust is accepting applications for its 2026 Community Grants through Sept. 14, with a record $26,000 set to be distributed across the Wright's Mesa area, including Norwood and Redvale. Local nonprofits, taxing districts, and sponsored community organizations are eligible, with extra weight given to groups serving local youth. Grant recipients will be announced at the Harvest Celebration Dinner on Oct. 10 in Norwood.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_d640934b-95b6-4acf-bdd9-37128787cf7e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/1d/81d6b368-c810-415c-b978-696826974b31/6a6a251b73644.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Town Council extends waitlist suspension",
+    source: "Telluride Times",
+    date: "July 31, 2026",
+    firstSeen: "2026-07-31",
+    newsTopic: "housing",
+    copy: "Town Council extended the suspension of Telluride's housing waitlist through end of September, giving staff more time to place applicants in town-owned rentals. Vacancy sits at 14% — above the 8% target. About 195 people remain on the waitlist, and 26 more units are expected through the Canyonlands project within six to eight months.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_3478f558-f4bf-4dcf-8293-5a5b89679c10.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/c5/7c5624f2-d1ff-4cb7-b33a-0ae63571e576/6a6b9f9dd7986.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Burglary charge could send man linked to Navajo elder's disappearance back to federal prison",
     source: "Telluride Times",
@@ -3436,7 +3460,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Telluride Farmers Marketshow: New York Philharmonic Brass Quintet",
     link: "https://telluridelibrary.libcal.com/event/15564474?hs=a",
-    description: "A farmers market performance at Gondola Plaza featuring the New York Philharmonic Brass Quintet, presented by Wilkinson Public Library. The free outdoor concert brings live classical brass music to the weekly Telluride Farmers Market.",
+    description: "11:00 AM – 12:00 PM",
     pubDate: "2026-07-31T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3528,7 +3552,7 @@ const ALIBI_EVENTS = [
   {
     title: "Jazz w/ Kenny G & Yaz",
     link: "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
-    description: "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    description: "Free live jazz",
     pubDate: "2026-08-05",
     time: "8:00 PM",
     source: "alibi",
@@ -3600,7 +3624,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3612,7 +3636,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3963,17 +3987,6 @@ const OURAY_COUNTY_EVENTS = [
     sourceLabel: "Ouray County",
     category: "Community Event",
     location: "Dallas Meadows Neighborhood - Ridgway CO 81427",
-    imageUrl: ""
-  },
-  {
-    title: "Friends of Phil Weiser for Governor",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3772",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3772",
-    pubDate: "2026-07-31T09:30:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "The Old Firehouse - 185 North Lena St. Ridgway CO 81432",
     imageUrl: ""
   }
 ];
@@ -5521,7 +5534,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Possible Quorum",
     link: "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
-    description: "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5532,7 +5545,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-07-29-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, held as part of the board's regular governance activities. These sessions typically allow trustees to discuss town business and policy matters in a collaborative setting outside of formal action meetings.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5543,7 +5556,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
+    description: "",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5554,7 +5567,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5565,7 +5578,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5576,7 +5589,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5587,7 +5600,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5598,7 +5611,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5609,7 +5622,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5620,7 +5633,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5631,7 +5644,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
