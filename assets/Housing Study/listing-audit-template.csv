@@ -1,0 +1,2 @@
+date_observed,platform,listing_url_or_screenshot,location,unit_type,bedrooms,bathrooms,sqft,ask_rent_monthly,utilities_included,which_utilities,furnished,pets_allowed,parking,washer_dryer,lease_length,deed_restricted,employer_tied,days_listed_if_known,notes
+2026-08-01,facebook,example-screenshot-001.png,telluride,apartment,1,1,,2400,partial,heat only,yes,no,street,shared,12mo,no,no,,EXAMPLE ROW - delete

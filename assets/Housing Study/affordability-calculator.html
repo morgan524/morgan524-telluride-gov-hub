@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telluride Region Housing Affordability Calculator — Livable Telluride</title>
+<style>
+  /* Livable Telluride standing rule: no readable text below 15.5px */
+  :root {
+    --ink: #22303c;
+    --ink-soft: #51606d;
+    --paper: #f7f5f0;
+    --card: #ffffff;
+    --line: #dcd6ca;
+    --accent: #1d5c63;       /* spruce */
+    --accent-soft: #e3eeef;
+    --gold: #b98a2f;
+    --good: #2e7d4f;
+    --warn: #b26a00;
+    --bad: #b3362c;
+    --chip-yes: #e0efe6;
+    --chip-maybe: #f6ecd9;
+    --chip-no: #f3e0de;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--paper);
+    padding: 24px 16px 64px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 28px; line-height: 1.2; margin-bottom: 6px; }
+  .tagline { color: var(--ink-soft); margin-bottom: 22px; font-size: 16px; }
+  h2 { font-size: 20px; margin: 26px 0 10px; }
+
+  /* ---------- input panel ---------- */
+  .panel {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  }
+  .field label { display: block; font-size: 15.5px; font-weight: 600; margin-bottom: 4px; }
+  .field .hint { font-size: 15.5px; color: var(--ink-soft); margin-top: 3px; }
+  .field input, .field select {
+    width: 100%; font-size: 17px; padding: 9px 10px; border: 1px solid var(--line);
+    border-radius: 8px; background: #fff; color: var(--ink);
+  }
+  .field input:focus, .field select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  @media (max-width: 760px) { .panel { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .panel { grid-template-columns: 1fr; } }
+
+  /* ---------- your-numbers strip ---------- */
+  .youbar {
+    margin-top: 16px; background: var(--accent); color: #fff; border-radius: 12px;
+    padding: 16px 20px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline;
+  }
+  .youbar b { font-size: 21px; }
+  .youbar .lbl { font-size: 15.5px; opacity: .85; display: block; }
+  .burden { border-radius: 6px; padding: 1px 8px; font-size: 15.5px; font-weight: 600; }
+  .burden.ok    { background: #d9efe2; color: #14532d; }
+  .burden.warn  { background: #fdeeda; color: #7c4a03; }
+  .burden.bad   { background: #fbdcd8; color: #7f1d1d; }
+
+  /* ---------- quick six-box summary ---------- */
+  .quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+  .qcard {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 12px 14px; text-align: center;
+  }
+  .qstatus { font-size: 15.5px; font-weight: 600; margin-top: 7px; }
+  .qstatus.g { color: var(--good); } .qstatus.o { color: var(--warn); } .qstatus.r { color: var(--bad); }
+  .qcard .qtown { font-weight: 700; font-size: 17px; }
+  .qcard .qtype { font-size: 15.5px; color: var(--ink-soft); margin-bottom: 6px; }
+  .qcard .qget { font-size: 16px; font-weight: 700; color: var(--accent); }
+  .qcard .qget.none { color: var(--bad); }
+  .qcard .qsf { font-size: 15.5px; color: var(--ink-soft); }
+  @media (max-width: 760px) { .quick { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .quick { grid-template-columns: 1fr; } }
+
+  /* ---------- results rows ---------- */
+  .rows { margin-top: 10px; }
+  .row {
+    display: grid; grid-template-columns: 215px 1fr 175px; gap: 0;
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    margin-top: 14px; overflow: hidden;
+  }
+  .pubcol {
+    border-left: 1px dashed var(--line); padding: 14px 12px; text-align: center;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .pctitle { font-size: 15.5px; font-weight: 600; color: var(--ink-soft); line-height: 1.25; }
+  .pcnum { font-size: 18px; font-weight: 700; color: #7c5a10; margin-top: 6px; }
+  .pcsub { font-size: 15.5px; color: var(--ink-soft); margin-top: 4px; }
+  .pubcol.none .pcnum { color: var(--ink-soft); font-weight: 600; }
+  .row .loc {
+    background: var(--accent-soft); padding: 16px; border-right: 1px solid var(--line);
+  }
+  .loc h3 { font-size: 17px; line-height: 1.25; }
+  .loc .sub { font-size: 15.5px; color: var(--ink-soft); margin-top: 4px; }
+  .row .box { padding: 14px 18px 16px; }
+  .verdict { font-size: 18px; font-weight: 700; }
+  .verdict .beds { color: var(--accent); }
+  .meta { font-size: 15.5px; color: var(--ink-soft); margin: 3px 0 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+  .chip { font-size: 15.5px; white-space: nowrap; color: var(--ink-soft); }
+  .chip b.yes   { color: var(--good); }
+  .chip b.maybe { color: var(--warn); }
+  .chip b.no    { color: var(--bad); }
+  .stamp { float: right; font-size: 15.5px; font-weight: 700; border-radius: 6px; padding: 2px 9px; margin-left: 8px; }
+  .stamp.in      { background: #d9efe2; color: #14532d; }
+  .stamp.stretch { background: #fdeeda; color: #7c4a03; }
+  .stamp.out     { background: #fbdcd8; color: #7f1d1d; }
+  .stamp.gate    { background: #e3e8f4; color: #26355c; }
+  .datanote { font-size: 15.5px; color: var(--ink-soft); margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 7px; }
+  .pubcost { font-size: 15.5px; color: #7c5a10; background: #faf3e3; border-radius: 8px; padding: 6px 10px; margin-top: 8px; }
+  .ledger {
+    margin-top: 16px; font-size: 15.5px; color: var(--ink-soft); background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px;
+  }
+  .ledger b { color: var(--ink); }
+  .datanote b.verylow  { color: var(--bad); }
+  .datanote b.low      { color: var(--warn); }
+  .datanote b.waitlist { color: var(--warn); }
+  .datanote b.varies   { color: var(--warn); }
+  .datanote b.moderate { color: var(--good); }
+  @media (max-width: 640px) {
+    .row { grid-template-columns: 1fr; }
+    .row .loc { border-right: none; border-bottom: 1px solid var(--line); }
+    .pubcol { border-left: none; border-top: 1px dashed var(--line); }
+  }
+
+  /* ---------- footer ---------- */
+  .fineprint {
+    margin-top: 30px; font-size: 15.5px; color: var(--ink-soft); background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+  }
+  .fineprint li { margin: 6px 0 0 20px; }
+  .src { color: var(--gold); font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>What does your rent actually get you here?</h1>
+  <p class="tagline">Enter your household numbers. We'll show what unit size and amenities your budget most likely buys in each part of the region — using only public, sourced data (baseline v0.5.1), not guesswork.</p>
+
+  <div class="panel">
+    <div class="field">
+      <label for="income">Household income (annual, gross)</label>
+      <input type="number" id="income" value="85000" min="0" step="1000" inputmode="numeric">
+      <div class="hint">Everyone's income, before taxes</div>
+    </div>
+    <div class="field">
+      <label for="hhsize">Household size</label>
+      <select id="hhsize">
+        <option value="1">1 person</option><option value="2" selected>2 people</option>
+        <option value="3">3 people</option><option value="4">4 people</option>
+        <option value="5">5 people</option><option value="6">6 people</option>
+        <option value="7">7 people</option><option value="8">8 people</option>
+      </select>
+      <div class="hint">Living together, related or not</div>
+    </div>
+    <div class="field">
+      <label for="rent30">Typical maximum rent</label>
+      <input type="number" id="rent30" readonly tabindex="-1" style="background:#f1efe9">
+      <div class="hint">30% of your income (auto-calculated)</div>
+    </div>
+    <div class="field">
+      <label for="rentmax">Stretch monthly rent</label>
+      <input type="number" id="rentmax" min="0" step="50" inputmode="numeric" placeholder="optional">
+      <div class="hint">Only if you'd pay more than 30%</div>
+    </div>
+  </div>
+
+  <div class="youbar" id="youbar"></div>
+
+  <h2>Where your budget lands</h2>
+  <div class="quick" id="quick"></div>
+  <div class="rows" id="rows"></div>
+
+
+
+</div>
+
+<script>
+/* =====================================================================
+   ALL numbers below trace to assets/Housing Study/housing-baseline.json
+   (v0.3.0, 2026-07-31). Source tags:
+   [CHFA26]  CHFA 2026 rent & income limits, San Miguel County (grade A)
+   [THA25]   Telluride Affordable Housing Guidelines Appendix A/B, Oct 2025 (A)
+   [ACS24]   ACS 2020-2024 5-yr, tables B25031/B25064/B25070 (A, MOEs real)
+   [FMR26]   HUD FY2026 Fair Market Rents (A)
+   [RRC24]   2024 RRC Household Survey via HNA 2025 (B)
+   [OBS]     Point-in-time listings/observations (C — thin, labeled)
+   [EST]     Interpolated estimate between graded anchors (labeled)
+   ===================================================================== */
+
+// [CHFA26] 100% AMI annual income by household size 1-8
+const AMI_100 = [91800, 104900, 118000, 131100, 141600, 152100, 162600, 173100];
+
+// [CHFA26] max monthly program rent by %AMI band and bedrooms [0br,1br,2br,3br,4br]
+const CHFA_RENTS = {
+  20:[459,491,590,681,760], 30:[688,737,885,1022,1140], 40:[918,983,1180,1363,1521],
+  45:[1032,1106,1327,1533,1711], 50:[1147,1229,1475,1704,1901], 55:[1262,1352,1622,1874,2091],
+  60:[1377,1475,1770,2045,2281], 70:[1606,1721,2065,2386,2661], 80:[1836,1967,2360,2727,3042],
+  90:[2065,2212,2655,3067,3422], 100:[2295,2458,2950,3408,3802], 110:[2524,2704,3245,3749,4182],
+  120:[2754,2950,3540,4090,4563], 130:[2983,3196,3835,4431,4943], 140:[3213,3442,4130,4772,5323],
+  150:[3442,3688,4425,5113,5703], 160:[3672,3934,4720,5454,6084]
+};
+
+// [THA25] Telluride deed-restricted max rents by tier [studio/1br, 2br, 3br, 4br]
+// and eligibility caps as % of household-size AMI (THA Appendix A grid)
+const THA = {
+  tier1: { rents:[1465,2151,2421,2689], cap:120, label:"Tier 1" },
+  tier2: { rents:[1883,2629,2959,3286], cap:180, label:"Tier 2" },
+  tier4: { rents:[2720,3585,4035,4481], cap:220, label:"Tier 4" }
+};
+
+// [A] Town of Telluride Employee Rental Housing Policies (amended 2026-05-19):
+// lettered tiers A-J for the 251 town-owned rentals. [name, rent-target %AMI, income-limit %AMI]
+const TOWN_AMI25 = [83700, 95600, 107600, 119500, 129100, 138700];   // April 2025 AMI, hh size 1-6
+const TOWN_TIERS = [["A",45,60],["B",60,80],["C",80,100],["D",100,120],["E",120,140],
+                    ["F",140,160],["G",160,180],["H",180,200],["I",200,220],["J",220,240]];
+
+// [FMR26] HUD FY2026 Fair Market Rents [0br,1br,2br,3br,4br]
+const FMR = [1245,1254,1645,2288,2579];
+
+// Approx square footage by bedrooms. [OBS] anchored: 2BR 935-988 sqft and
+// 3BR ~1330 sqft from July 2026 deed-restricted listings; studio/1BR/4BR [EST].
+const SQFT = ["~400–500", "~600–750", "~900–1,000", "~1,250–1,400", "~1,600–1,900"];
+const BR_NAMES = ["Studio", "1 bedroom", "2 bedrooms", "3 bedrooms", "4 bedrooms"];
+
+// Market rent estimates per location per bedrooms: {lo, hi, grade}
+// lo/hi are the documented anchor range; the AFFORDABILITY TEST uses lo
+// ("best realistic case") and the box says what hi means.
+const MARKETS = {
+  telluride: {
+    name: "Town of Telluride",
+    sub: "market-rate rentals",
+    // [ACS24] town median gross rent $3,056 ±359 (all sizes); 3BR $3,171 ±395.
+    // [OBS 3/2025] room $1,600, 1BR $2,400, 2BR $4,700, 3BR house $7,000.
+    rents: [ {lo:1600,hi:2200,g:"C"}, {lo:2200,hi:2800,g:"C"}, {lo:3000,hi:4700,g:"C"},
+             {lo:3171,hi:7000,g:"B"}, {lo:4500,hi:9000,g:"EST"} ],
+    avail: { score:2, text:"only a couple of public listings at any time; most rentals move by word of mouth" },
+    amen: { yard:"no", view:"maybe", wd:"maybe", parking:"maybe", pets:"no", walk:"yes" }
+  },
+  mv: {
+    name: "Mountain Village",
+    sub: "income-restricted units",
+    // [A] OFFICIAL 2026 Village Court Apartments fee schedule (MVHA Resolution
+    // 2026-0319-05): lo = under-100%-AMI rate, hi = 100%-AMI-and-up rate.
+    // Building 16 (up to 140% AMI) runs 1BR $1,962-$2,787, 2BR $2,347-$3,337.
+    // No 4BR units exist at VCA. 88 units carry 50-60% AMI income caps.
+    rents: [ {lo:824,hi:942,g:"A"}, {lo:1084,hi:1212,g:"A"}, {lo:1211,hi:1383,g:"A"},
+             {lo:1574,hi:1657,g:"A"}, {none:true} ],
+    hiLabel: "the 100%-AMI-and-up rate",
+    pubcost: true,
+    restricted: true,   // VCA: income-restricted, min occupancy 1 person/bedroom
+    avail: { score:1, text:"There are 95 income-capped units at Village Court (40 at ≤50% AMI, 48 at ≤60%, 7 HOME units) plus Building 16 (up to 140% AMI) — but the waitlist is currently capped, not accepting new applications" },
+    amen: { yard:"no", view:"maybe", wd:"maybe", parking:"yes", pets:"maybe", gondola:"yes" }
+  },
+  norwood: {
+    name: "Norwood / West End",
+    sub: "≈65–75 min to Telluride",
+    // [ACS24] Norwood median gross rent $1,618 ±416 (unstable MOE, labeled).
+    rents: [ {lo:900,hi:1100,g:"EST"}, {lo:1100,hi:1400,g:"EST"}, {lo:1400,hi:1800,g:"A"},
+             {lo:1700,hi:2200,g:"EST"}, {lo:2000,hi:2600,g:"EST"} ],
+    avail: { score:4, text:"small stock with occasional listings; more house-for-the-money than anywhere in SMC" },
+    amen: { yard:"yes", view:"maybe", wd:"yes", parking:"yes", pets:"maybe", walk:"no" }
+  },
+  ridgway: {
+    name: "Ridgway",
+    sub: "≈45 min to Telluride",
+    // [ACS24] Ridgway town median $1,577 ±326; 1BR $1,322 ±175; 2BR $1,714 ±529;
+    // 3BR $1,893 ±735. Ouray County: 2BR $1,718 ±394, 3BR $2,125 ±324.
+    rents: [ {lo:1100,hi:1300,g:"EST"}, {lo:1322,hi:1447,g:"A"}, {lo:1714,hi:1718,g:"A"},
+             {lo:1893,hi:2125,g:"A"}, {lo:2200,hi:2800,g:"EST"} ],
+    avail: { score:4, text:"small town, occasional listings" },
+    amen: { yard:"maybe", view:"yes", wd:"yes", parking:"yes", pets:"maybe", walk:"no" }
+  },
+  montrose: {
+    name: "Montrose",
+    sub: "≈70 min to Telluride",
+    // [ACS24] Montrose city median $1,197 ±138; county 2BR $1,078 ±93 and
+    // 3BR $1,424 ±81 (the most statistically reliable rents in this tool).
+    // City 1BR median ($427) is skewed by subsidized/senior stock — not used.
+    rents: [ {lo:806,hi:1000,g:"A"}, {lo:900,hi:1200,g:"EST"}, {lo:1078,hi:1155,g:"A"},
+             {lo:1424,hi:1696,g:"A"}, {lo:1800,hi:2600,g:"EST"} ],
+    avail: { score:7, text:"the region's largest rental market, with regular listings" },
+    amen: { yard:"yes", view:"maybe", wd:"yes", parking:"yes", pets:"maybe", walk:"no" }
+  },
+  ouray: {
+    name: "Ouray",
+    sub: "≈75 min to Telluride",
+    // [ACS24] Ouray TOWN median is unusable ($1,346 ±$1,244 — MOE equals the
+    // estimate), so this row uses OURAY COUNTY: median $1,786 ±298;
+    // 1BR $1,447 ±565 (unstable); 2BR $1,718 ±394; 3BR $2,125 ±324.
+    rents: [ {lo:1100,hi:1300,g:"EST"}, {lo:1447,hi:1600,g:"A"}, {lo:1718,hi:1786,g:"A"},
+             {lo:2125,hi:2400,g:"A"}, {lo:2400,hi:3000,g:"EST"} ],
+    avail: { score:3, text:"very small town with rare listings" },
+    amen: { yard:"maybe", view:"yes", wd:"yes", parking:"yes", pets:"maybe", walk:"no" }
+  }
+};
+
+// Public-cost line for subsidized rents. A below-market rent is financed, not
+// free: compute how much construction debt the rent itself can carry (5%/30yr,
+// 95% occupancy, $9,500/yr opex) against real local costs per unit —
+// Sunnyside $516k (free county land) to VooDoo $1.26M [cost tracker models].
+function publicCost(rentMonthly) {
+  const noi = Math.max(0, rentMonthly * 12 * 0.95 - 9500);
+  const debt = noi * 15.37;                       // PV of $1/yr, 30 yrs @ 5%
+  const k = n => n >= 995000 ? "$" + (n / 1e6).toFixed(2).replace(/0$/, "") + "M" : "$" + Math.round(n / 1000) + "k";
+  const lo = Math.max(0, 516103 - debt), hi = Math.max(0, 1255635 - debt);
+  return { num: `${k(lo)}–${k(hi)}` };
+}
+
+// Availability line: 1-10 scale, 10 = easiest to actually find a unit
+function availLine(score, text) {
+  const cls = score <= 3 ? "verylow" : score <= 6 ? "low" : "moderate";
+  return `Estimated availability: <b class="${cls}">${score}/10</b> — ${text}.`;
+}
+
+// Amenity chip labels
+const AMEN_LABELS = {
+  yard:"Private yard", view:"Mountain views", wd:"In-unit washer/dryer",
+  parking:"Dedicated parking", pets:"Dog-friendly", walk:"Walk to work/school",
+  gondola:"Gondola access", util:"Utilities in rent", newer:"Newer building (2022+)"
+};
+
+const usd = n => "$" + Math.round(n).toLocaleString("en-US");
+const withArticle = s => (s === "Studio" ? "a studio" : "a " + s.toLowerCase().replace("bedrooms","bedroom").replace("bedroom","bedroom unit"));
+
+function bedroomsNeeded(size) { // HUD-style occupancy convention (~2 persons/BR)
+  return size <= 1 ? 0 : size <= 2 ? 1 : size <= 4 ? 2 : size <= 6 ? 3 : 4;
+}
+
+function burdenBadge(pctIncome) {
+  if (!isFinite(pctIncome)) return "";
+  if (pctIncome <= 30) return '<span class="burden ok">affordable (≤30%)</span>';
+  if (pctIncome <= 50) return '<span class="burden warn">cost-burdened (' + Math.round(pctIncome) + '%)</span>';
+  return '<span class="burden bad">severely burdened (' + Math.round(pctIncome) + '%)</span>';
+}
+
+function chfaBand(amiPct) { // largest CHFA band <= household AMI% (floor at 20)
+  const bands = Object.keys(CHFA_RENTS).map(Number).sort((a,b)=>a-b);
+  let pick = null;
+  for (const b of bands) if (amiPct >= b) pick = b;
+  return pick;
+}
+
+function biggestAffordable(rents, budget) { // returns largest BR index whose lo <= budget, else -1
+  let best = -1;
+  rents.forEach((r,i) => { if (r.lo <= budget) best = i; });
+  return best;
+}
+
+function chips(amenObj, extra) {
+  const all = Object.assign({}, amenObj, extra || {});
+  return '<div class="chips">' + Object.entries(all).map(([k,v]) => {
+    const cls = v === "yes" ? "yes" : v === "maybe" ? "maybe" : "no";
+    const word = v === "yes" ? "Likely" : v === "maybe" ? "Possible" : "Unlikely";
+    return `<span class="chip">${AMEN_LABELS[k] || k}: <b class="${cls}">${word}</b></span>`;
+  }).join("") + "</div>";
+}
+
+function stamp(kind, text) { return `<span class="stamp ${kind}">${text}</span>`; }
+
+function marketRow(m, budget, brNeed) {
+  // Always show the unit the household NEEDS with its estimated rent;
+  // the stamp + meta say whether the budget covers it.
+  const need = m.rents[brNeed];
+  const got = biggestAffordable(m.rents, budget);
+  if (need.none) {
+    // e.g. no 4BR units exist at Village Court
+    const largest = m.rents.map((r,i)=>r.none?-1:i).filter(i=>i>=0).pop();
+    return {
+      s: stamp("gate","no units this size"),
+      verdict: brNeed === 0 ? "No studios here" : `No ${brNeed}-bedroom units here`,
+      meta: `Largest available is ${withArticle(BR_NAMES[largest])} at ${usd(m.rents[largest].lo)}–${usd(m.rents[largest].hi)}/mo.`,
+      chipsHtml: "", note: ""
+    };
+  }
+  const verdict = `<span class="beds">${BR_NAMES[brNeed]}</span> · ${SQFT[brNeed]} sq ft · est. ${usd(need.lo)}–${usd(need.hi)}/mo`;
+  let s, meta, qualified = true;
+  if (need.lo <= budget) {
+    s = stamp("in", m.restricted ? "qualifies" : "fits your budget");
+    const hiGot = biggestAffordable(m.rents.map(r=>({lo:r.hi})), budget);
+    meta = `Your budget covers the low end of that range. At ${m.hiLabel || "recently-listed prices"} you'd get ${hiGot < 0 ? "nothing" : withArticle(BR_NAMES[hiGot])}.`;
+  } else if (got >= 0 && m.restricted) {
+    // Income-restricted programs enforce household-size/occupancy rules
+    qualified = false;
+    s = stamp("stretch","not qualified");
+    meta = `Your budget only covers ${withArticle(BR_NAMES[got])} (est. ${usd(m.rents[got].lo)}–${usd(m.rents[got].hi)}/mo), and this program's occupancy rules won't allow a household of ${curSize} in one.`;
+  } else if (got >= 0) {
+    // Market rentals have no occupancy tier rules — downsizing is allowed, just tight
+    s = stamp("stretch","smaller units only");
+    meta = `Your budget covers ${withArticle(BR_NAMES[got])} here (est. ${usd(m.rents[got].lo)}–${usd(m.rents[got].hi)}/mo) — market rentals have no household-size rules, so doubling up is your call.`;
+  } else {
+    qualified = false;
+    s = stamp("out","out of reach");
+    meta = `Even a studio runs est. ${usd(m.rents[0].lo)}–${usd(m.rents[0].hi)}/mo here.`;
+  }
+  const pub = m.pubcost ? publicCost(need.lo) : { num: "$0", none: true };
+  // Non-qualifying rows drop the amenity chips and availability line (noise for them)
+  return { s, verdict, meta,
+           chipsHtml: qualified ? chips(m.amen) : "",
+           pub,
+           note: qualified ? availLine(m.avail.score, m.avail.text) : "" };
+}
+
+let curSize = 2;
+
+function render() {
+  const income = Math.max(0, +document.getElementById("income").value || 0);
+  const size   = Math.min(8, Math.max(1, +document.getElementById("hhsize").value || 1));
+  const rentMax = Math.max(0, +document.getElementById("rentmax").value || 0);
+  curSize = size;
+
+  const amiPct = income > 0 ? (income / AMI_100[size-1]) * 100 : 0;
+  const afford30 = income * 0.30 / 12;
+  document.getElementById("rent30").value = Math.round(afford30);
+  const brNeed = bedroomsNeeded(size);
+  // Shop at the stretch rent if given, otherwise at the 30%-of-income maximum
+  const budget = Math.max(rentMax > 0 ? rentMax : afford30, 1);
+
+  // ---- your-numbers strip ----
+  const maxPct = income > 0 ? (rentMax * 12 / income) * 100 : Infinity;
+  document.getElementById("youbar").innerHTML = `
+    <span><span class="lbl">Your area median income level</span><b>${Math.round(amiPct)}% AMI</b></span>
+    <span><span class="lbl">Typical maximum rent (30% of income)</span><b>${usd(afford30)}/mo</b></span>
+    <span><span class="lbl">Space your household needs</span><b>${BR_NAMES[brNeed]}</b></span>
+    <span><span class="lbl">Stretch rent</span><b>${rentMax ? usd(rentMax) : "—"}</b> ${rentMax ? burdenBadge(maxPct) : ""}</span>`;
+
+  // ---- quick six-box summary (at stretch budget) ----
+  const qstatus = (cls, word) => `<div class="qstatus ${cls}">● ${word}</div>`;
+  const marketBox = (key, town, type) => {
+    const m = MARKETS[key];
+    const got = biggestAffordable(m.rents, budget);
+    const need = m.rents[brNeed];
+    if (need.none) {
+      const largest = m.rents.map((r,i)=>r.none?-1:i).filter(i=>i>=0).pop();
+      return `<div class="qcard"><div class="qtown">${town}</div><div class="qtype">${type}</div>` +
+             `<div class="qget none">${brNeed === 0 ? "No studios" : "No " + brNeed + "-bedroom units"}</div><div class="qsf">largest: ${BR_NAMES[largest]} ${usd(m.rents[largest].lo)}+/mo</div>${qstatus("r","no units your size")}</div>`;
+    }
+    const fits = need.lo <= budget;   // the unit you NEED is affordable here
+    const fitWord = m.restricted ? "qualifies" : "fits your budget";
+    const status = !fits ? qstatus("r", got < 0 ? "out of reach" : (m.restricted ? "does not qualify" : "smaller units only"))
+                 : m.avail.score <= 3 ? qstatus("o", fitWord + " — very limited or waitlist")
+                 : qstatus("g", fitWord);
+    const body = got < 0
+      ? `<div class="qget none">Out of reach</div><div class="qsf">${BR_NAMES[brNeed]} est. ${usd(need.lo)}+/mo</div>`
+      : `<div class="qget">${BR_NAMES[got]}</div><div class="qsf">${SQFT[got]} sq ft · est. ${usd(m.rents[got].lo)}+/mo</div>`;
+    return `<div class="qcard"><div class="qtown">${town}</div><div class="qtype">${type}</div>${body}${status}</div>`;
+  };
+  const thaBox = () => {
+    // Same lettered-tier logic as the Telluride income-restricted row (Town Policies A-J)
+    const a25 = TOWN_AMI25[Math.min(size, 6) - 1];
+    const pct = income > 0 ? (income / a25) * 100 : 0;
+    const tier = TOWN_TIERS.find(t => pct <= t[2]);
+    const unitPersons = Math.max(1, brNeed);
+    let body;
+    if (!tier || tier[1] >= 180) {
+      body = `<div class="qget none">Not eligible</div><div class="qsf">${tier ? "no new leases at Tier " + tier[0] : "income above Tier J cap"}</div>${qstatus("r","does not qualify")}`;
+    } else {
+      const rent = Math.round(tier[1] / 100 * TOWN_AMI25[unitPersons - 1] * 0.25 / 12);
+      body = `<div class="qget">${BR_NAMES[brNeed]}</div><div class="qsf">${SQFT[brNeed]} sq ft · from ${usd(rent)}/mo (Tier ${tier[0]})</div>` +
+             (rent > budget ? qstatus("r","above your budget") : qstatus("o","qualifies — very limited or waitlist"));
+    }
+    return `<div class="qcard"><div class="qtown">Telluride</div><div class="qtype">Income-restricted</div>${body}</div>`;
+  };
+  document.getElementById("quick").innerHTML =
+    marketBox("telluride","Telluride","Free market") +
+    thaBox() +
+    marketBox("mv","Mountain Village","Income-restricted") +
+    marketBox("ridgway","Ridgway","Free market") +
+    marketBox("norwood","Norwood","Free market") +
+    marketBox("montrose","Montrose","Free market");
+
+  // ---- rows ----
+  const rows = [];
+
+  // 1) Telluride market
+  { const r = marketRow(MARKETS.telluride, budget, brNeed);
+    rows.push(rowHtml(MARKETS.telluride.name, MARKETS.telluride.sub, r)); }
+
+  // 2) Telluride income-restricted (town-managed rentals, Shandoka etc.)
+  // [A] Telluride Employee Rental Housing Policies (amended 2026-05-19) +
+  // 2026 Rent Calculator, live-verified 2026-07-31. Rent = tier's target-%AMI
+  // income for the unit's assumed occupancy / 12 x multiplier (25% Shandoka
+  // A-E, 27% other properties, leases from 2026-01-01). Uses the April 2025
+  // AMI grid per the Policies. Verified: Tier C 2BR = $76,480 x .25/12 = $1,593.
+  {
+    const AMI25 = TOWN_AMI25, TIERS = TOWN_TIERS;
+    // Official unit inventory by bedroom count (Policies Appendix E). Any unit
+    // rents at the tenant's tier rate, so the relevant supply = units your size.
+    // Voodoo split per the 2025 TOT Voodoo AMI/rent table: 6 studios + 2 1-beds
+    // (Policies Appendix E lumps them as 8 studios).
+    const TOWN_INV = [
+      [["Boarding House",33],["Voodoo",6],["Virginia Placer",6],["Shandoka F",5],["tiny homes",6]],   // studios
+      [["Shandoka",43],["Sunnyside",6],["Voodoo",2]],                                                 // 1BR
+      [["Shandoka",47],["Virginia Placer",12],["Sunnyside",12],["Shandoka F",11],["Voodoo",10]],      // 2BR
+      [["Shandoka",17],["Shandoka F",8],["Voodoo",8],["Sunnyside",3]],                                // 3BR
+      [["Sunnyside",6],["Shandoka F",5],["Shandoka",4],["Voodoo",1]]                                  // 4BR
+    ];
+    const a25 = AMI25[Math.min(size, 6) - 1];
+    const pct = income > 0 ? (income / a25) * 100 : 0;
+    const tier = TIERS.find(t => pct <= t[2]);
+    const unitPersons = Math.max(1, brNeed);   // Policies: unit rent keys to bedrooms-as-occupancy
+    let r;
+    if (!tier) {
+      r = { s: stamp("gate","over income cap"), verdict: "Not eligible (above Tier J cap, 240% AMI)",
+            meta: `The town-managed system tops out at 240% of AMI for your household size (${usd(AMI25[Math.min(size,6)-1] * 2.4)}/yr).`,
+            chipsHtml: "", note: "" };
+    } else if (tier[1] >= 180) {
+      r = { s: stamp("gate","renewal tiers only"), verdict: `Tier ${tier[0]} — no new leases at this tier`,
+            meta: "New leases are capped at Tier G (income up to 180% AMI); Tiers H–J are reached only by income growth after move-in.",
+            chipsHtml: "", note: "" };
+    } else {
+      // Per-property initial-lease caps (2025 TOT rent tables): Shandoka A-E (the
+      // 25% multiplier) takes NEW tenants only through Tier D; Tier A exists only
+      // there; Tiers E-G enter via Bldg F / Sunnyside / Voodoo / V.Placer at 27%.
+      const ti = TIERS.indexOf(tier);
+      const multLo = ti <= 3 ? 0.25 : 0.27;
+      const multHi = ti === 0 ? 0.25 : 0.27;
+      const rentLo = Math.round(tier[1] / 100 * AMI25[unitPersons - 1] * multLo / 12);
+      const rentHi = Math.round(tier[1] / 100 * AMI25[unitPersons - 1] * multHi / 12);
+      const minIncomeOk = income / 12 >= 2 * rentLo;
+      const can = rentLo <= budget && minIncomeOk;
+      r = {
+        s: !minIncomeOk ? stamp("gate", "below 2x-rent minimum income")
+           : can ? stamp("in", "Tier " + tier[0] + " · qualifies") : stamp("stretch", "Tier " + tier[0] + " · above stretch"),
+        verdict: `<span class="beds">${BR_NAMES[brNeed]}</span> · ${SQFT[brNeed]} sq ft · rent ${usd(rentLo)}${rentHi > rentLo ? "–" + usd(rentHi) : ""}/mo`,
+        meta: `You'd be Tier ${tier[0]} (${Math.round(pct)}% of the Town's 2025 AMI grid), which is roughly 20–25% of gross income within your tier.`,
+        chipsHtml: minIncomeOk ? chips({ util:"no", parking:"yes", newer:"maybe", yard:"no", view:"maybe", pets:"maybe", walk:"yes" }) : "",
+        pub: publicCost(rentLo),
+        note: (() => {
+          if (!minIncomeOk) return "";
+          const inv = TOWN_INV[brNeed];
+          const totalOfSize = inv.reduce((a, x) => a + x[1], 0);
+          const breakdown = inv.map(x => x[0] + " " + x[1]).join(", ");
+          const sizeLabel = brNeed === 0 ? "are studios" : "have " + brNeed + "-bedroom" + (brNeed > 1 ? "s" : "");
+          return availLine(3, `There are ${totalOfSize} units that ${sizeLabel} town-wide (${breakdown})`);
+        })()
+      };
+    }
+    rows.push(rowHtml("Telluride income-restricted", "town-managed rentals", r));
+  }
+
+  // 3) Mountain Village
+  { const r = marketRow(MARKETS.mv, budget, brNeed);
+    rows.push(rowHtml(MARKETS.mv.name, MARKETS.mv.sub, r)); }
+
+  // 5) Norwood / West End
+  { const r = marketRow(MARKETS.norwood, budget, brNeed);
+    rows.push(rowHtml(MARKETS.norwood.name, MARKETS.norwood.sub, r)); }
+
+  // 6) Ridgway
+  { const r = marketRow(MARKETS.ridgway, budget, brNeed);
+    rows.push(rowHtml(MARKETS.ridgway.name, MARKETS.ridgway.sub, r)); }
+
+  // 7) Ouray
+  { const r = marketRow(MARKETS.ouray, budget, brNeed);
+    rows.push(rowHtml(MARKETS.ouray.name, MARKETS.ouray.sub, r)); }
+
+  // 8) Montrose
+  { const r = marketRow(MARKETS.montrose, budget, brNeed);
+    rows.push(rowHtml(MARKETS.montrose.name, MARKETS.montrose.sub, r)); }
+
+  document.getElementById("rows").innerHTML = rows.join("");
+
+}
+
+function rowHtml(name, sub, r) {
+  const pub = r.pub
+    ? `<div class="pubcol ${r.pub.none ? "none" : "has"}">
+         <div class="pctitle">Estimated Public Subsidy Required Per New Unit</div>
+         <div class="pcnum">${r.pub.num}</div>
+         ${r.pub.sub ? `<div class="pcsub">${r.pub.sub}</div>` : ""}
+       </div>`
+    : `<div class="pubcol none">
+         <div class="pctitle">Estimated Public Subsidy Required Per New Unit</div>
+         <div class="pcnum">—</div>
+       </div>`;
+  return `<div class="row ${r.rowCls || ""}">
+    <div class="loc"><h3>${name}</h3><div class="sub">${sub}</div></div>
+    <div class="box">
+      ${r.s}
+      <div class="verdict">${r.verdict}</div>
+      <div class="meta">${r.meta}</div>
+      ${r.chipsHtml}
+      ${r.note ? `<div class="datanote">${r.note}</div>` : ""}
+    </div>
+    ${pub}
+  </div>`;
+}
+
+["income","hhsize","rentmax"].forEach(id =>
+  document.getElementById(id).addEventListener("input", render));
+render();
+</script>
+</body>
+</html>

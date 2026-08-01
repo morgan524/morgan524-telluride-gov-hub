@@ -1,0 +1,2021 @@
+{
+ "meta": {
+  "title": "Livable Telluride Housing Survey \u2014 Rental Cost & Amenity Baseline",
+  "purpose": "Single source of truth for all survey design, answer bands, and post-survey analysis. Every rent figure, income cutoff, and amenity expectation used in the Livable Telluride housing survey MUST trace to an entry in this file. No number appears in the survey that is not sourced here.",
+  "version": "0.6.3",
+  "created": "2026-07-31",
+  "last_updated": "2026-07-31",
+  "maintainer": "Livable Telluride (livabletelluride.org)",
+  "changelog": {
+   "0.6.3": "MV lodging pipeline added (maintainer-supplied, 2026-08-01): Four Seasons Telluride (26 private + 43 hotel residences, from $4M, Olson Kundig; under construction) and Six Senses 109R (50 hot-bed efficiency lodge + 31 lodge + 20 condos + 20 on-site EH units + ~26k sf commercial; DRB Dec 2022). Job/traffic load estimates flagged [E].",
+   "0.6.2": "WWTP siting story resolved via TMV Regional WWTP Project page: existing Society Turn-area plant is on 3.24 ac (~2.5 usable) with restricted expansion space; 2024 analysis priced a retrofit to 2.3 MGD at ~$133M lasting only through 2047 while operating; region chose a new Ilium Valley site instead. Festival peaks add up to 24,000 visitors to the system.",
+   "0.6.1": "Society Turn PUD program added from the preliminary application + Employee Housing Mitigation Plan (maintainer-supplied, 2026-08-01). Approved; road work beginning; vertical construction timing unknown.",
+   "0.6.0": "Ownership/delivery case studies added (maintainer-supplied links, 2026-08-01): Meadowlark (29 units, net subsidy ~$137k/unit, sold out, no income caps), Pinion Park (24 homes, unicorn-buyer failure: 5 unsold at 80-120% AMI caps vs ~$370k prices; original 2.5% mortgage product), VCA Phase 4 ($22.6M/35 units), Alexander/Ilium (56.3 ac CH rezone; phase 1 = 70-100 rentals, Triumph, entitlements sought by end-2026). SMC CH zone district documented.",
+   "0.5.1": "Official 2025 TOT AMI-limits/rent tables added for Voodoo, Shandoka, Sunnyside (maintainer-supplied PDFs). Corrects Voodoo mix (6 studios + 2 one-beds, not 8 studios); adds per-property tier availability and INITIAL-occupancy caps (Shandoka A-E: initial A-D only; Bldg F: B-G; Sunnyside: tiers C-J, initial C-G; Voodoo: per-unit targets 90-140%, lottery limits 110-160%, post-occupancy 220%). Flags Bldg F unit-count discrepancy (12 in rent table vs 29 in Policies App. E).",
+   "0.5.0": "Town-managed rental system upgraded to grade A: Telluride Employee Rental Housing Policies (amended 2026-05-19) downloaded + 2026 online Rent Calculator verified live (test case matches formula to the dollar). Full tier system A-J, project multipliers (25%/27% from 2026-01-01, down from 27%/30%), official 251-unit inventory, Shandoka A-E 2026 rate table.",
+   "0.4.0": "Mountain Village official documents added by maintainer: 2026 VCA fee schedule (Resolution 2026-0319-05 \u2014 actual rents, income caps, fees; grade A) and MV Employee Housing Restriction ordinances 1997-05 / 2009-07 (R-1 employment requirement). New vca_rents_2026 section; calculator MV row switched from ACS estimates to official rents.",
+   "0.3.2": "Added Ouray town ACS check (median unusable: $1,346 +/-$1,244 \u2014 MOE equals estimate; use Ouray County instead). Calculator availability scores (1-10) documented.",
+   "0.3.1": "Added regional out-commute ACS 2020-2024 rents (Ridgway town, Ouray County, Montrose city, Montrose County) for the affordability calculator.",
+   "0.3.0": "SMRHA/town listings folded in from livabletelluride.org housing page (HOUSING_LISTINGS); official town-owned unit counts from telluride.gov/745 (grade A); corrected town domain (telluride.gov, not telluride-co.gov); utility-rate detail (SMPA/Black Hills tariffs) removed per maintainer \u2014 survey only needs the utilities-included question; download list trimmed.",
+   "0.2.0": "Gap-filling pass 2026-07-31: official HUD FY2025+FY2026 FMRs (huduser.gov docsys, grade A); full CHFA 2025 and 2026 San Miguel rent/income grids (grade A); ACS 2020-2024 5-year rents, rent burden, tenure, bedrooms with MOEs (grade A); BLS QCEW 2024 county wages by sector (grade A); town-managed rental regime change (grade C, verify); SMPA rates (grade C); data_gaps converted to precise download list.",
+   "0.1.0": "Initial build from HNA 2025, RRC 2024 surveys, THA Guidelines Oct 2025."
+  },
+  "usage_rules": [
+   "Every datum carries a source key into the `sources` registry, an as-of date, and a reliability grade.",
+   "Reliability grades: A = official published statistic or adopted regulation; B = professional study estimate (survey or model) with known n; C = point-in-time observation, news report, or secondary-source figure pending verification against the primary source; X = placeholder, DO NOT USE until filled.",
+   "Grade C and X values may not be quoted in public-facing survey materials. They exist only to mark what needs verification.",
+   "When two sources disagree (e.g., ACS median rent vs. 2024 household-survey median rent), the survey must present neither as 'the' rent; it uses the range and names both sources.",
+   "ACS estimates whose margin of error exceeds 30% of the estimate are marked moe_unstable:true and may only be used with the MOE shown.",
+   "Update cadence: income limits and FMR annually (CHFA ~May, HUD FMR ~Oct 1); ACS each December release; Telluride Guidelines whenever THA amends Appendix A/B."
+  ],
+  "geography": {
+   "study_area": "San Miguel County, Colorado, with jurisdiction-level detail for Town of Telluride, Town of Mountain Village, Norwood, Ophir, Sawpit/Placerville, and unincorporated county. Regional context (Ridgway, Montrose, Rico) noted where sources include it.",
+   "note": "Demographic/income statistics are place-of-residence; jobs and wage statistics are place-of-employment. Do not mix the two when computing affordability (per HNA methodology notes)."
+  }
+ },
+ "sources": {
+  "hna_2025": {
+   "citation": "San Miguel County Housing Needs Analysis, Final Report, Economic & Planning Systems Inc. (EPS #243008) with RRC Associates, June 2025. Prepared for San Miguel Regional Housing Authority, San Miguel County, Town of Telluride, Town of Mountain Village.",
+   "local_file": "assets/Housing Study/HNA-Final.pdf",
+   "type": "professional housing study",
+   "reliability": "A/B (A for reproduced official statistics, B for its survey and model estimates)"
+  },
+  "rrc_household_survey_2024": {
+   "citation": "RRC Associates, 2024 San Miguel County Regional Household (Resident) Survey, fielded September 2024; findings memo April 10, 2025.",
+   "local_file": "assets/Housing Study/Household-Survey-Findings_04-10-25.pdf",
+   "type": "regional household survey",
+   "n_total": 1129,
+   "n_smc_residents": 821,
+   "n_renters": 338,
+   "reliability": "B"
+  },
+  "rrc_employer_survey_2024": {
+   "citation": "RRC Associates, 2024 San Miguel County Employer Survey; findings memo April 10, 2025.",
+   "local_file": "assets/Housing Study/Employer-Survey-Findings_04-10-25.pdf",
+   "type": "employer survey",
+   "reliability": "B"
+  },
+  "tha_guidelines_2025": {
+   "citation": "Telluride Affordable Housing Guidelines, as amended October 21, 2025 (Telluride Housing Authority / Town of Telluride). Appendix A: Income Eligibility Tiers; Appendix B: Initial Sale Prices and Maximum Rental Rates.",
+   "local_file": "assets/Housing Study/Telluride-Affordable-Housing-Guidelines-October-21-2025.pdf",
+   "type": "adopted regulation",
+   "reliability": "A"
+  },
+  "acs_2018_2022": {
+   "citation": "U.S. Census Bureau, ACS 5-Year Estimates 2018-2022 (as reproduced in HNA 2025).",
+   "type": "federal survey estimate",
+   "reliability": "A"
+  },
+  "acs_2020_2024": {
+   "citation": "U.S. Census Bureau, ACS 5-Year Estimates 2020-2024 (released Dec 2025), retrieved 2026-07-31 via Census Reporter API (tables B25064, B25031, B25070, B25003, B25042). Margins of error are 90% confidence.",
+   "url": "https://censusreporter.org/profiles/05000US08113-san-miguel-county-co/",
+   "type": "federal survey estimate",
+   "reliability": "A"
+  },
+  "chfa_2024_limits": {
+   "citation": "Colorado Housing and Finance Authority, 2024 Income Limits for San Miguel County (as reproduced in HNA 2025, Table 17).",
+   "type": "official program limits",
+   "reliability": "A"
+  },
+  "chfa_2025_limits": {
+   "citation": "CHFA 2025 Income Limit and Maximum Rent Tables, San Miguel County. HUD effective date 2025-04-01; implementation cutoff 2025-05-16. Retrieved 2026-07-31.",
+   "url": "https://www.chfainfo.com/getattachment/51bd724a-b820-4d3d-9579-1d4766d9db82/2025-Rent-and-income-limits.pdf",
+   "type": "official program limits",
+   "reliability": "A"
+  },
+  "chfa_2026_limits": {
+   "citation": "CHFA 2026 Income Limit and Maximum Rent Tables, San Miguel County. HUD effective date 2026-05-01 (current). Retrieved 2026-07-31.",
+   "url": "https://www.chfainfo.com/getattachment/620a2abf-e2d3-44a6-868b-4318906acc3e/2026-Rent-and-income-limits.pdf",
+   "type": "official program limits",
+   "reliability": "A"
+  },
+  "hud_fmr_docsys": {
+   "citation": "HUD FY2026 Fair Market Rent Documentation System, San Miguel County CO (non-metropolitan county; 40th-percentile gross rents). Retrieved 2026-07-31 directly from huduser.gov. FY2026 base: ACS 2019-2023 2BR standard-quality gross rent, recent-mover and inflation adjusted.",
+   "url": "https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2026_code/select_Geography.odn",
+   "type": "federal administrative rent standard",
+   "reliability": "A"
+  },
+  "bls_qcew": {
+   "citation": "U.S. Bureau of Labor Statistics, Quarterly Census of Employment and Wages, San Miguel County CO (area 08113), 2024 annual averages and 2025 Q1. Retrieved 2026-07-31 via BLS open data API.",
+   "url": "https://data.bls.gov/cew/data/api/2024/a/area/08113.csv",
+   "type": "employer-reported administrative data (near-census of covered employment)",
+   "reliability": "A"
+  },
+  "town_managed_rentals_news": {
+   "citation": "The Colorado Sun, 'In Telluride, new regulations designed to help renters are instead driving many out of town' (2026-04-19); Telluride Daily Planet reporting on rent-to-income multiplier reduction. Retrieved 2026-07-31.",
+   "url": "https://coloradosun.com/2026/04/19/telluride-rent-regulations-renters-affordability-shandoka-sunnyside-voodoo-apartments/",
+   "type": "news reporting",
+   "reliability": "C \u2014 verify every figure with Town of Telluride Housing Dept before public use"
+  },
+  "lt_housing_listings": {
+   "citation": "Livable Telluride housing page (livabletelluride.org/housing.html), HOUSING_LISTINGS data refreshed by the site's housing bot from SMRHA, Town of Telluride, and Town of Mountain Village listings. Snapshot 2026-07-31.",
+   "url": "https://livabletelluride.org/housing.html",
+   "type": "aggregated listing snapshot",
+   "reliability": "B (point-in-time but sourced from the agencies' own listings)"
+  },
+  "mvha_2026_fee_schedule": {
+   "citation": "Mountain Village Housing Authority, Resolution 2026-0319-05 (adopted 2026-03-19), amending the 2026 Village Court Apartments Fee Schedule (original schedule approved 2025-10-16).",
+   "local_file": "assets/Housing Study/Units and rents 2026/2026_mountain_village_housing_authority_fee_schedule (1).pdf",
+   "type": "adopted fee schedule",
+   "reliability": "A"
+  },
+  "mv_employee_housing_restriction": {
+   "citation": "Town of Mountain Village Employee Housing Restriction, Ordinance 1997-05 (50-year covenant on Employee Apartment/Dormitory lots) and Ordinance 2009-07 (occupancy-verification penalties, $10/day lien).",
+   "local_file": "assets/Housing Study/employee-housing-restriction-ordinane-no_-1997-05.pdf",
+   "type": "adopted ordinance",
+   "reliability": "A"
+  },
+  "telluride_gov_rentals": {
+   "citation": "Town of Telluride, Town-Owned Rental Properties page. Retrieved 2026-07-31.",
+   "url": "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
+   "type": "official town information",
+   "reliability": "A"
+  },
+  "telluride_rental_policies_2026": {
+   "citation": "Telluride Employee Rental Housing Policies, amended May 19, 2026 (Town of Telluride Housing Dept). Incl. Appendix B income tiers/AMI tables, Appendix D fees, Appendix E unit inventory.",
+   "local_file": "assets/Housing Study/Telluride-Employee-Rental-Housing-Policies-2025-10-28.pdf",
+   "url": "https://www.telluride.gov/DocumentCenter/View/15341",
+   "type": "adopted policy",
+   "reliability": "A"
+  },
+  "telluride_rent_calculator_2026": {
+   "citation": "Town of Telluride 2026 Rental Calculator (Formstack), verified live 2026-07-31: 2-person household, $85,000 gross -> 88.91% AMI -> Tier C -> Shandoka A-E 2BR/1BA $1,593/mo, matching the Policies formula exactly ($76,480 x 0.25 / 12).",
+   "url": "https://telluride.formstack.com/forms/2026_telluride_rental_v1",
+   "type": "official tool (live-verified)",
+   "reliability": "A"
+  },
+  "telluride_assoc_realtors": {
+   "citation": "Telluride Association of Realtors sales data (as reproduced in HNA 2025).",
+   "type": "MLS sales records",
+   "reliability": "A"
+  },
+  "smc_assessor": {
+   "citation": "San Miguel County Assessor records (as reproduced in HNA 2025).",
+   "type": "public records",
+   "reliability": "A"
+  },
+  "meadowlark_records": {
+   "citation": "Town of Mountain Village: Meadowlark project page and Aug 8, 2023 pricing release; Telluride Daily Planet, Dec 17, 2024 (council lessons-learned with Finance Dir. Lemley and Town Mgr. Wisor figures).",
+   "urls": [
+    "https://townofmountainvillage.com/community/housing/meadowlark-at-mountain-village/",
+    "https://townofmountainvillage.com/blog/town-council-approves-unit-pricing-for-meadowlark-at-mountain-village/",
+    "https://www.telluridenews.com/news/article_4164c7b8-bccc-11ef-81fc-8f4f843fe7e0.html"
+   ],
+   "reliability": "A (official) / B (council statements via news)"
+  },
+  "pinion_park_records": {
+   "citation": "Telluride Daily Planet, July 14, 2026, 'Looking for a unicorn buyer'; SMRHA property listings retrieved 2026-08-01; Rural Homes program records.",
+   "urls": [
+    "https://www.telluridenews.com/news/article_0f4d036f-b01e-4091-ae66-3a1849e04921.html",
+    "https://smrha.org/property-listings/"
+   ],
+   "reliability": "B/C (news + listings snapshot)"
+  },
+  "alexander_ilium_records": {
+   "citation": "Town of Mountain Village Alexander Property page; SMC Planning Commission Community Housing rezone application, July 13, 2023 (local copy: assets/Housing Study/july_13-_2023_..._zoning_application.pdf).",
+   "urls": [
+    "https://townofmountainvillage.com/community/housing/alexander-property-in-ilium-valley/"
+   ],
+   "reliability": "A"
+  },
+  "society_turn_application": {
+   "citation": "Society Turn Preliminary PUD/Subdivision Application and Narrative (Genesee Properties; final) with Exhibit X Employee Housing Mitigation Plan (10.21.22) and Exhibit A berm plan. Local copies: assets/Society Turn/.",
+   "reliability": "A (application of record; approved per maintainer, 2026-08-01)"
+  },
+  "tmv_wwtp_project_page": {
+   "citation": "Town of Mountain Village, Regional Wastewater Treatment Plant Project page (with StoryMap). Retrieved 2026-08-01.",
+   "url": "https://townofmountainvillage.com/government/town-projects/regional-wastewater-treatment-plant-project/",
+   "reliability": "A"
+  },
+  "four_seasons_marketing": {
+   "citation": "Four Seasons Resort & Residences Telluride marketing (tellurideprivateresidences.com) + floor plans (local: assets/Four Seasons/). Developer Merrimac/MFP; 680 Mountain Village Blvd.",
+   "reliability": "B (developer marketing; program subject to change)"
+  },
+  "six_senses_drb_packet": {
+   "citation": "Town of Mountain Village Design Review Board packet, December 1, 2022: 109R PUD major amendment (Six Senses), staff memo of Nov 20, 2022. Local: assets/Sixth Sense/.",
+   "reliability": "A (staff memo of record; verify final approved numbers)"
+  }
+ },
+ "definitions": {
+  "affordable": "Housing costing no more than 30% of gross household income. Renters: rent + utilities. Owners: principal, interest, taxes, insurance. (HUD standard; HNA glossary.)",
+  "cost_burdened": "Paying more than 30% of gross income for housing. Severely cost burdened: more than 50%.",
+  "ami": "Area Median Income for San Miguel County, published annually by HUD and CHFA, varies by household size. The Town of Telluride adopts its own AMI table in Guidelines Appendix A.",
+  "gross_rent_vs_contract_rent": "ACS 'gross rent' = contract rent + estimated utilities. Survey questions must specify whether a reported rent includes utilities; Telluride Maximum Rental Rates are quoted INCLUDING utilities, less a utility allowance.",
+  "market_rate": "Housing with no deed restriction on price, rent, use, or occupancy.",
+  "deed_restricted": "Housing with recorded restrictions on rent/sale price, occupancy, and/or income eligibility.",
+  "telluride_tiers": "Town of Telluride income-eligibility tiers. Tier 1 targets ~70-90% AMI; Tier 2 ~90-110%; Tier 3 (legacy, no longer created) ~80-100% targets with 130% cap; Tier 4 ~130-150% targets. Eligibility caps: Tier 1 = 120% of household-size AMI, Tier 2 = 180%, Tier 3 = 130%.",
+  "fmr": "HUD Fair Market Rent: 40th-percentile gross rent for a standard-quality unit, set annually per county. Governs Housing Choice Voucher payment standards. It is a RENT STANDARD, not a market median."
+ },
+ "income_limits": {
+  "chfa_2024_san_miguel_county": {
+   "source": "chfa_2024_limits",
+   "as_of": "2024",
+   "reliability": "A",
+   "annual_income_by_pct_ami": {
+    "1_person": {
+     "30": 23010,
+     "60": 46020,
+     "80": 61360,
+     "100": 76700,
+     "120": 92040,
+     "150": 115050,
+     "200": 153400,
+     "250": 191750
+    },
+    "2_person": {
+     "30": 26310,
+     "50": 43850,
+     "60": 52620,
+     "80": 70160,
+     "100": 87700,
+     "120": 105240,
+     "150": 131550,
+     "200": 175400,
+     "250": 219250
+    },
+    "3_person": {
+     "30": 29610,
+     "50": 49350,
+     "60": 59220,
+     "80": 78960,
+     "100": 98700,
+     "120": 118440,
+     "150": 148050,
+     "200": 197400,
+     "250": 246750
+    },
+    "4_person": {
+     "30": 32880,
+     "60": 65760,
+     "80": 87680,
+     "100": 109600,
+     "120": 131520,
+     "150": 164400,
+     "200": 219200,
+     "250": 274000
+    }
+   }
+  },
+  "chfa_2025_san_miguel_county": {
+   "source": "chfa_2025_limits",
+   "as_of": "2025-04-01",
+   "reliability": "A",
+   "note": "Rural resort county: Prop 123 tiers extend to 160% AMI. 100% AMI 4-person = $119,500. Max rents assume 1.5 persons/bedroom and include utility allowance per LIHTC convention.",
+   "max_monthly_rent_by_pct_ami": {
+    "20": {
+     "0br": 418,
+     "1br": 448,
+     "2br": 538,
+     "3br": 621,
+     "4br": 693
+    },
+    "30": {
+     "0br": 627,
+     "1br": 672,
+     "2br": 807,
+     "3br": 932,
+     "4br": 1040
+    },
+    "40": {
+     "0br": 837,
+     "1br": 896,
+     "2br": 1076,
+     "3br": 1243,
+     "4br": 1387
+    },
+    "45": {
+     "0br": 941,
+     "1br": 1008,
+     "2br": 1210,
+     "3br": 1398,
+     "4br": 1560
+    },
+    "50": {
+     "0br": 1046,
+     "1br": 1120,
+     "2br": 1345,
+     "3br": 1553,
+     "4br": 1733
+    },
+    "55": {
+     "0br": 1150,
+     "1br": 1232,
+     "2br": 1479,
+     "3br": 1709,
+     "4br": 1907
+    },
+    "60": {
+     "0br": 1255,
+     "1br": 1344,
+     "2br": 1614,
+     "3br": 1864,
+     "4br": 2080
+    },
+    "70": {
+     "0br": 1464,
+     "1br": 1568,
+     "2br": 1883,
+     "3br": 2175,
+     "4br": 2427
+    },
+    "80": {
+     "0br": 1674,
+     "1br": 1793,
+     "2br": 2152,
+     "3br": 2486,
+     "4br": 2774
+    },
+    "90": {
+     "0br": 1883,
+     "1br": 2017,
+     "2br": 2421,
+     "3br": 2796,
+     "4br": 3120
+    },
+    "100": {
+     "0br": 2092,
+     "1br": 2241,
+     "2br": 2690,
+     "3br": 3107,
+     "4br": 3467
+    },
+    "110": {
+     "0br": 2301,
+     "1br": 2465,
+     "2br": 2959,
+     "3br": 3418,
+     "4br": 3814
+    },
+    "120": {
+     "0br": 2511,
+     "1br": 2689,
+     "2br": 3228,
+     "3br": 3729,
+     "4br": 4161
+    },
+    "130": {
+     "0br": 2720,
+     "1br": 2913,
+     "2br": 3497,
+     "3br": 4039,
+     "4br": 4507
+    },
+    "140": {
+     "0br": 2929,
+     "1br": 3137,
+     "2br": 3766,
+     "3br": 4350,
+     "4br": 4854
+    },
+    "150": {
+     "0br": 3138,
+     "1br": 3361,
+     "2br": 4035,
+     "3br": 4661,
+     "4br": 5201
+    },
+    "160": {
+     "0br": 3348,
+     "1br": 3586,
+     "2br": 4304,
+     "3br": 4972,
+     "4br": 5548
+    }
+   },
+   "annual_income_100_ami": {
+    "1_person": 83700,
+    "2_person": 95600,
+    "3_person": 107600,
+    "4_person": 119500,
+    "5_person": 129100,
+    "6_person": 138700,
+    "7_person": 148200,
+    "8_person": 157800
+   }
+  },
+  "chfa_2026_san_miguel_county": {
+   "source": "chfa_2026_limits",
+   "as_of": "2026-05-01",
+   "reliability": "A",
+   "note": "CURRENT limits. 100% AMI jumped ~9.7% over 2025 (1-person $83,700 -> $91,800; 4-person $119,500 -> $131,100).",
+   "max_monthly_rent_by_pct_ami": {
+    "20": {
+     "0br": 459,
+     "1br": 491,
+     "2br": 590,
+     "3br": 681,
+     "4br": 760
+    },
+    "30": {
+     "0br": 688,
+     "1br": 737,
+     "2br": 885,
+     "3br": 1022,
+     "4br": 1140
+    },
+    "40": {
+     "0br": 918,
+     "1br": 983,
+     "2br": 1180,
+     "3br": 1363,
+     "4br": 1521
+    },
+    "45": {
+     "0br": 1032,
+     "1br": 1106,
+     "2br": 1327,
+     "3br": 1533,
+     "4br": 1711
+    },
+    "50": {
+     "0br": 1147,
+     "1br": 1229,
+     "2br": 1475,
+     "3br": 1704,
+     "4br": 1901
+    },
+    "55": {
+     "0br": 1262,
+     "1br": 1352,
+     "2br": 1622,
+     "3br": 1874,
+     "4br": 2091
+    },
+    "60": {
+     "0br": 1377,
+     "1br": 1475,
+     "2br": 1770,
+     "3br": 2045,
+     "4br": 2281
+    },
+    "70": {
+     "0br": 1606,
+     "1br": 1721,
+     "2br": 2065,
+     "3br": 2386,
+     "4br": 2661
+    },
+    "80": {
+     "0br": 1836,
+     "1br": 1967,
+     "2br": 2360,
+     "3br": 2727,
+     "4br": 3042
+    },
+    "90": {
+     "0br": 2065,
+     "1br": 2212,
+     "2br": 2655,
+     "3br": 3067,
+     "4br": 3422
+    },
+    "100": {
+     "0br": 2295,
+     "1br": 2458,
+     "2br": 2950,
+     "3br": 3408,
+     "4br": 3802
+    },
+    "110": {
+     "0br": 2524,
+     "1br": 2704,
+     "2br": 3245,
+     "3br": 3749,
+     "4br": 4182
+    },
+    "120": {
+     "0br": 2754,
+     "1br": 2950,
+     "2br": 3540,
+     "3br": 4090,
+     "4br": 4563
+    },
+    "130": {
+     "0br": 2983,
+     "1br": 3196,
+     "2br": 3835,
+     "3br": 4431,
+     "4br": 4943
+    },
+    "140": {
+     "0br": 3213,
+     "1br": 3442,
+     "2br": 4130,
+     "3br": 4772,
+     "4br": 5323
+    },
+    "150": {
+     "0br": 3442,
+     "1br": 3688,
+     "2br": 4425,
+     "3br": 5113,
+     "4br": 5703
+    },
+    "160": {
+     "0br": 3672,
+     "1br": 3934,
+     "2br": 4720,
+     "3br": 5454,
+     "4br": 6084
+    }
+   },
+   "annual_income_100_ami": {
+    "1_person": 91800,
+    "2_person": 104900,
+    "3_person": 118000,
+    "4_person": 131100,
+    "5_person": 141600,
+    "6_person": 152100,
+    "7_person": 162600,
+    "8_person": 173100
+   }
+  },
+  "tha_2025_appendix_a": {
+   "source": "tha_guidelines_2025",
+   "as_of": "2025-10-21",
+   "reliability": "A",
+   "note": "The Town of Telluride's adopted AMI grid (Appendix A) \u2014 matches the CHFA 2025 vintage (100% 1p $83,700). The 130% / 4-person figure is printed as $155.350 in the PDF \u2014 an obvious typo for $155,350, recorded as corrected. Printed 120% row does not exactly equal 1.2 x 100% row ($100,400 vs computed $100,440); the printed value governs. NOTE: with CHFA 2026 limits now ~9.7% higher, expect THA to update this grid; watch for an amendment.",
+   "annual_income_by_pct_ami": {
+    "50": {
+     "1_person": 41850,
+     "2_person": 47800,
+     "3_person": 53800,
+     "4_person": 59750,
+     "5_person": 64550,
+     "6_person": 69350
+    },
+    "70": {
+     "1_person": 58590,
+     "2_person": 66920,
+     "3_person": 75320,
+     "4_person": 83650,
+     "5_person": 90370,
+     "6_person": 97090
+    },
+    "80": {
+     "1_person": 66960,
+     "2_person": 76480,
+     "3_person": 86080,
+     "4_person": 95600,
+     "5_person": 103280,
+     "6_person": 110960
+    },
+    "90": {
+     "1_person": 75330,
+     "2_person": 86040,
+     "3_person": 96840,
+     "4_person": 107550,
+     "5_person": 116190,
+     "6_person": 124830
+    },
+    "100": {
+     "1_person": 83700,
+     "2_person": 95600,
+     "3_person": 107600,
+     "4_person": 119500,
+     "5_person": 129100,
+     "6_person": 138700
+    },
+    "110": {
+     "1_person": 92070,
+     "2_person": 105160,
+     "3_person": 118360,
+     "4_person": 131450,
+     "5_person": 142010,
+     "6_person": 152570
+    },
+    "120": {
+     "1_person": 100400,
+     "2_person": 114720,
+     "3_person": 129120,
+     "4_person": 143400,
+     "5_person": 154920,
+     "6_person": 166440
+    },
+    "130": {
+     "1_person": 108810,
+     "2_person": 124280,
+     "3_person": 139880,
+     "4_person": 155350,
+     "5_person": 167830,
+     "6_person": 180310
+    },
+    "150": {
+     "1_person": 125550,
+     "2_person": 143400,
+     "3_person": 161400,
+     "4_person": 179250,
+     "5_person": 193650,
+     "6_person": 208050
+    },
+    "180": {
+     "1_person": 150660,
+     "2_person": 172080,
+     "3_person": 193680,
+     "4_person": 215100,
+     "5_person": 232380,
+     "6_person": 249660
+    },
+    "200": {
+     "1_person": 167400,
+     "2_person": 191200,
+     "3_person": 215200,
+     "4_person": 239000,
+     "5_person": 258200,
+     "6_person": 277400
+    },
+    "220": {
+     "1_person": 184140,
+     "2_person": 210320,
+     "3_person": 236720,
+     "4_person": 262900,
+     "5_person": 284020,
+     "6_person": 305140
+    }
+   }
+  }
+ },
+ "market_rents": {
+  "acs_median_gross_rent_2018_2022": {
+   "source": "acs_2018_2022",
+   "via": "hna_2025 Table 14",
+   "reliability": "A",
+   "caveats": [
+    "Superseded by acs_median_gross_rent_2020_2024 below; retained for trend.",
+    "5-year pooled estimates lag the market; small-geography MOEs are large; the informal market is undercounted."
+   ],
+   "median_monthly_gross_rent": {
+    "telluride": {
+     "2010": 1408,
+     "2022": 1844
+    },
+    "mountain_village": {
+     "2010": 640,
+     "2022": 874
+    },
+    "norwood": {
+     "2010": 923,
+     "2022": 1211
+    },
+    "ophir": {
+     "2010": 2000,
+     "2022": 1156
+    },
+    "san_miguel_county": {
+     "2010": 973,
+     "2022": 1267
+    }
+   }
+  },
+  "acs_median_gross_rent_2020_2024": {
+   "source": "acs_2020_2024",
+   "as_of": "2020-2024 pooled (released 2025-12)",
+   "reliability": "A",
+   "median_monthly_gross_rent": {
+    "san_miguel_county": {
+     "estimate": 1149,
+     "moe": 57
+    },
+    "telluride": {
+     "estimate": 3056,
+     "moe": 359
+    },
+    "mountain_village": {
+     "estimate": 1072,
+     "moe": 84
+    },
+    "norwood": {
+     "estimate": 1618,
+     "moe": 416,
+     "moe_unstable": true
+    },
+    "ophir": {
+     "estimate": null,
+     "moe": null,
+     "note": "suppressed \u2014 too few renters"
+    }
+   },
+   "interpretation": [
+    "Telluride's median gross rent JUMPED to $3,056 (\u00b1359) from $1,844 in the 2018-2022 vintage \u2014 the post-2021 market repricing is now visible in federal data.",
+    "The COUNTY median ($1,149) is now BELOW the 2018-2022 county median ($1,267) because Mountain Village's 1,134 renter households (mostly deed-restricted, median $1,072) dominate the countywide renter universe of 1,705.",
+    "Lesson for the survey: countywide medians hide everything; always split by jurisdiction and restriction status."
+   ]
+  },
+  "acs_median_gross_rent_by_bedrooms_2020_2024": {
+   "source": "acs_2020_2024",
+   "table": "B25031",
+   "reliability": "A",
+   "san_miguel_county": {
+    "all": {
+     "estimate": 1149,
+     "moe": 57
+    },
+    "0br": {
+     "estimate": 789,
+     "moe": 23
+    },
+    "1br": {
+     "estimate": 1118,
+     "moe": 62
+    },
+    "2br": {
+     "estimate": 1162,
+     "moe": 88
+    },
+    "3br": {
+     "estimate": 2742,
+     "moe": 221
+    },
+    "4br": {
+     "estimate": 2306,
+     "moe": 782,
+     "moe_unstable": true
+    },
+    "5br_plus": {
+     "estimate": null,
+     "moe": null
+    }
+   },
+   "telluride": {
+    "all": {
+     "estimate": 3056,
+     "moe": 359
+    },
+    "3br": {
+     "estimate": 3171,
+     "moe": 395
+    },
+    "note": "other bedroom sizes suppressed"
+   },
+   "mountain_village": {
+    "all": {
+     "estimate": 1072,
+     "moe": 84
+    },
+    "0br": {
+     "estimate": 786,
+     "moe": 18
+    },
+    "1br": {
+     "estimate": 1116,
+     "moe": 81
+    },
+    "2br": {
+     "estimate": 1154,
+     "moe": 112
+    },
+    "3br": {
+     "estimate": 3205,
+     "moe": 501,
+     "moe_unstable": false
+    }
+   },
+   "interpretation": "County 0-2BR medians ($789-$1,162) sit at deed-restricted price points; 3BR ($2,742) is where the market-rate segment shows. The bedroom split is the cleanest public evidence that the rental market is two different markets."
+  },
+  "rent_burden_2020_2024": {
+   "source": "acs_2020_2024",
+   "table": "B25070 (gross rent as % of household income)",
+   "reliability": "A",
+   "san_miguel_county": {
+    "renter_households": {
+     "estimate": 1705,
+     "moe": 293
+    },
+    "computed_universe": 1630,
+    "paying_30_pct_plus": {
+     "estimate": 872,
+     "share_pct": 53.5
+    },
+    "paying_50_pct_plus": {
+     "estimate": 594,
+     "moe": 342,
+     "share_pct": 36.4,
+     "moe_unstable": true
+    },
+    "note": "Over half of county renters are cost-burdened by the HUD 30% standard; over a third severely. The 50%+ MOE is very wide (\u00b1342 on 594) \u2014 quote as 'roughly a third' with the MOE, never as a precise figure."
+   },
+   "mountain_village": {
+    "renter_households": {
+     "estimate": 1134,
+     "moe": 267
+    },
+    "paying_50_pct_plus": {
+     "estimate": 415,
+     "moe": 336,
+     "moe_unstable": true
+    }
+   },
+   "telluride": {
+    "renter_households": {
+     "estimate": 178,
+     "moe": 92,
+     "moe_unstable": true
+    },
+    "note": "48 of 178 'not computed' \u2014 tiny universe, unusable for burden shares; use county figures."
+   }
+  },
+  "household_survey_2024_reported_rent": {
+   "source": "rrc_household_survey_2024",
+   "via": "hna_2025 ch.5 and ch.8",
+   "reliability": "B",
+   "n_renters_regional": 338,
+   "median_monthly_rent_smc_respondents": {
+    "all_rentals": 1400,
+    "market_rate": 1848,
+    "affordable_deed_restricted": 1200
+   },
+   "avg_monthly_housing_cost_all_tenures": {
+    "market_rate": 2100,
+    "deed_restricted": 1700
+   },
+   "trend_since_2011_survey": {
+    "smc_avg_housing_cost_increase_pct": 35,
+    "outside_smc_increase_pct": 77,
+    "outside_smc_increase_dollars_per_month": 900,
+    "deed_restricted_increase_pct": 10,
+    "deed_restricted_increase_dollars_per_month": 140
+   },
+   "regime_change_warning": "Fielded September 2024 \u2014 BEFORE the Town of Telluride's January 2025 income-based rent rules took effect at town-managed properties (see town_managed_rentals). Deed-restricted rents reported here do not reflect post-2025 income-linked rents. Any new survey must date-stamp rent questions and ask about rent changes since January 2025."
+  },
+  "hud_fair_market_rents": {
+   "source": "hud_fmr_docsys",
+   "reliability": "A",
+   "area": "San Miguel County, CO (non-metropolitan county)",
+   "percentile": "40th percentile gross rent",
+   "fy2025": {
+    "studio": 1318,
+    "1br": 1326,
+    "2br": 1743,
+    "3br": 2438,
+    "4br": 2806
+   },
+   "fy2026": {
+    "studio": 1245,
+    "1br": 1254,
+    "2br": 1645,
+    "3br": 2288,
+    "4br": 2579,
+    "effective": "2025-10-01"
+   },
+   "interpretation": "FY2026 FMRs DROPPED ~6-8% across all sizes (2BR $1,743 -> $1,645) because HUD's FY2026 base moved to ACS 2019-2023, in which the county's deed-restricted-heavy renter mix pulls the 40th percentile down. An FMR decrease in one of Colorado's least affordable rental markets is itself a finding about how badly standard statistics capture this market \u2014 a fair survey should note it, not hide it."
+  },
+  "point_in_time_listings_2025": {
+   "source": "hna_2025",
+   "as_of": "2025-03",
+   "reliability": "C",
+   "caveat": "Anecdotal, n=5. Illustrates the listed-market vs. paid-rent gap; NEVER quote as a market statistic. Useful only to justify the structured listing audit.",
+   "observations": [
+    {
+     "platform": "Zillow",
+     "unit": "3BR detached, Telluride",
+     "monthly_rent": 7000
+    },
+    {
+     "platform": "Zillow",
+     "unit": "4BR luxury detached",
+     "monthly_rent": 125000
+    },
+    {
+     "platform": "Facebook",
+     "unit": "2BR, Telluride",
+     "monthly_rent": 4700
+    },
+    {
+     "platform": "Facebook",
+     "unit": "1BR apartment",
+     "monthly_rent": 2400
+    },
+    {
+     "platform": "Facebook",
+     "unit": "private room",
+     "monthly_rent": 1600
+    }
+   ]
+  },
+  "agency_listings_snapshot_2026_07": {
+   "source": "lt_housing_listings",
+   "as_of": "2026-07-31",
+   "reliability": "B",
+   "note": "Everything the region's housing agencies had publicly listed on this date, via the Livable Telluride housing page. Key validation: the one active deed-restricted rental listing ($1,883/mo room) exactly equals the THA Tier 2 studio/1BR Maximum Rental Rate \u2014 the Guidelines formula is binding in practice.",
+   "rentals": [
+    {
+     "listing": "Room in in-town 2BR condo, Telluride",
+     "monthly_rent": 1883,
+     "restriction": "deed-restricted (SMRHA)",
+     "matches": "tier_2 studio_1br max rent"
+    },
+    {
+     "listing": "Village Court Apartments, Mountain Village (studio-3BR)",
+     "monthly_rent": "income-based",
+     "status": "waitlist CAPPED \u2014 not accepting applications"
+    },
+    {
+     "listing": "Shandoka Townhomes, Telluride (1-3BR)",
+     "monthly_rent": "income-based",
+     "status": "waitlist; town-employee priority"
+    },
+    {
+     "listing": "Virginia Placer Apartments, Telluride (studio-2BR)",
+     "monthly_rent": "income-based",
+     "status": "waitlist"
+    }
+   ],
+   "deed_restricted_sales": [
+    {
+     "listing": "Element 52 SW-102, 2BR/1BA ~988 sqft",
+     "price": 352529,
+     "tier": "Tier 2 Mitigation Unit",
+     "hoa_monthly": 420.28
+    },
+    {
+     "listing": "Silver Jack 202, 3BR/2BA ~1330 sqft",
+     "price": 405507,
+     "tier": "Tier 1 Town Constructed Unit",
+     "hoa_monthly": 307.64
+    },
+    {
+     "listing": "Silver Jack 205, 2BR/1BA ~935 sqft",
+     "price": 368620,
+     "tier": "Tier 1 Town Constructed Unit",
+     "hoa_monthly": 218.42
+    }
+   ],
+   "interpretation": "On any given day the entire publicly listed deed-restricted rental market is essentially one room plus three waitlists (one capped). 'What's available' and 'what people pay' are different questions \u2014 the survey must ask both."
+  },
+  "regional_out_commute_acs_2020_2024": {
+   "source": "acs_2020_2024",
+   "as_of": "2020-2024 pooled (retrieved 2026-07-31)",
+   "reliability": "A",
+   "note": "Where Telluride's workforce actually out-commutes from. Ridgway ~45 min / Montrose ~70 min to Telluride. Montrose 1BR medians are skewed low by subsidized/senior stock (huge MOEs) \u2014 anchor on 2BR/3BR, which are the county's most reliable rent statistics in this entire file (MOE under 7%).",
+   "median_monthly_gross_rent": {
+    "ridgway_town": {
+     "all": {
+      "estimate": 1577,
+      "moe": 326,
+      "moe_unstable": true
+     },
+     "1br": {
+      "estimate": 1322,
+      "moe": 175
+     },
+     "2br": {
+      "estimate": 1714,
+      "moe": 529,
+      "moe_unstable": true
+     },
+     "3br": {
+      "estimate": 1893,
+      "moe": 735,
+      "moe_unstable": true
+     }
+    },
+    "ouray_county": {
+     "all": {
+      "estimate": 1786,
+      "moe": 298
+     },
+     "1br": {
+      "estimate": 1447,
+      "moe": 565,
+      "moe_unstable": true
+     },
+     "2br": {
+      "estimate": 1718,
+      "moe": 394
+     },
+     "3br": {
+      "estimate": 2125,
+      "moe": 324
+     }
+    },
+    "ouray_town": {
+     "all": {
+      "estimate": 1346,
+      "moe": 1244,
+      "moe_unstable": true,
+      "note": "MOE equals the estimate \u2014 DO NOT USE; use ouray_county"
+     }
+    },
+    "montrose_city": {
+     "all": {
+      "estimate": 1197,
+      "moe": 138
+     },
+     "0br": {
+      "estimate": 806,
+      "moe": 306,
+      "moe_unstable": true
+     },
+     "1br": {
+      "estimate": 427,
+      "moe": 181,
+      "moe_unstable": true,
+      "note": "skewed by subsidized stock \u2014 do not use"
+     },
+     "2br": {
+      "estimate": 1155,
+      "moe": 136
+     },
+     "3br": {
+      "estimate": 1696,
+      "moe": 108
+     }
+    },
+    "montrose_county": {
+     "all": {
+      "estimate": 1188,
+      "moe": 88
+     },
+     "2br": {
+      "estimate": 1078,
+      "moe": 93
+     },
+     "3br": {
+      "estimate": 1424,
+      "moe": 81
+     }
+    }
+   },
+   "commute_context": "HNA: in-commuters are a major share of the Telluride workforce; households outside SMC saw housing costs rise 77% (~$900/mo) since 2011 vs 35% inside SMC [RRC24]."
+  }
+ },
+ "deed_restricted_max_rents_telluride": {
+  "source": "tha_guidelines_2025",
+  "as_of": "2025-10-21",
+  "reliability": "A",
+  "formula": "Maximum Rental Rate = 30% of the tier's target income / 12, quoted INCLUDING utilities, charged as rent less a utility allowance (HUD Utility Allowance). Verified: Tier 1 studio $1,465 = 30% x $58,590 (70% of 1-person AMI) / 12.",
+  "fees_rule": "Max rents may not be increased by additional fees. Landlord may separately charge actual utilities up to 20% of the Maximum Rental Rate, or per HUD Utility Allowance (Guidelines s.207).",
+  "monthly_max_rent_by_tier": {
+   "tier_1": {
+    "studio_1br": {
+     "income_target": "70% of 1-person AMI",
+     "max_rent": 1465
+    },
+    "2br": {
+     "income_target": "90% of 2-person AMI",
+     "max_rent": 2151
+    },
+    "3br": {
+     "income_target": "90% of 3-person AMI",
+     "max_rent": 2421
+    },
+    "4br": {
+     "income_target": "90% of 4-person AMI",
+     "max_rent": 2689
+    }
+   },
+   "tier_2": {
+    "studio_1br": {
+     "income_target": "90% of 1-person AMI",
+     "max_rent": 1883
+    },
+    "2br": {
+     "income_target": "110% of 2-person AMI",
+     "max_rent": 2629
+    },
+    "3br": {
+     "income_target": "110% of 3-person AMI",
+     "max_rent": 2959
+    },
+    "4br": {
+     "income_target": "110% of 4-person AMI",
+     "max_rent": 3286
+    }
+   },
+   "tier_3": {
+    "note": "Legacy tier; units with permission to rent follow the Tier 1 rental standard."
+   },
+   "tier_4": {
+    "studio_1br": {
+     "income_target": "130% of 1-person AMI",
+     "max_rent": 2720
+    },
+    "2br": {
+     "income_target": "150% of 2-person AMI",
+     "max_rent": 3585
+    },
+    "3br": {
+     "income_target": "150% of 3-person AMI",
+     "max_rent": 4035
+    },
+    "4br": {
+     "income_target": "150% of 4-person AMI",
+     "max_rent": 4481
+    }
+   }
+  },
+  "room_rentals": "A room in a Tier 1 or Tier 3 unit rents at the Tier 1 studio/1BR max; a room in a Tier 2 or Tier 4 unit rents at the Tier 2 studio/1BR max.",
+  "scope_caveat": "These are TOWN OF TELLURIDE deed-restriction rules (mitigation units, EDUs, etc.). Town-MANAGED apartment complexes (Shandoka, Sunnyside, Voodoo, Boarding House) run on a separate income-based system \u2014 see town_managed_rentals. SMRHA (county), Mountain Village, and Norwood programs also have separate schedules \u2014 see download_list."
+ },
+ "vca_rents_2026": {
+  "source": "mvha_2026_fee_schedule",
+  "as_of": "2026-03-19",
+  "reliability": "A",
+  "note": "Actual adopted rents at Village Court Apartments \u2014 the county's largest rental complex. These supersede the ACS-based MV estimates for program purposes. Explains the ACS MV medians almost exactly (ACS 0BR $786 / 1BR $1,116 / 2BR $1,154 vs. these schedules).",
+  "eligibility": "Tenants must be employed (or show intent to be employed) within the Telluride R-1 School District per the MV Employee Housing Restriction (Ord. 1997-05). Retiree exception: 60+ with R-1 employment history.",
+  "income_caps_dola_covenant": {
+   "units_at_50pct_ami_max": 40,
+   "units_at_60pct_ami_max": 48,
+   "home_units_bldgs_10_11_12": "7 units (6 at \u226460% AMI, 1 at \u226450%)",
+   "building_16_max": "140% AMI"
+  },
+  "monthly_rents_phases_1_3": {
+   "studio": {
+    "under_100_ami": 824,
+    "at_or_over_100_ami": 942
+   },
+   "1br": {
+    "under_100_ami": 1084,
+    "at_or_over_100_ami": 1212
+   },
+   "2br": {
+    "under_100_ami": 1211,
+    "at_or_over_100_ami": 1383
+   },
+   "3br": {
+    "under_100_ami": 1574,
+    "at_or_over_100_ami": 1657
+   }
+  },
+  "monthly_rents_building_16": {
+   "1br": {
+    "under_120_ami": 1962,
+    "120_to_140_ami": 2375,
+    "at_140_ami": 2787
+   },
+   "2br": {
+    "under_120_ami": 2347,
+    "120_to_140_ami": 2842,
+    "at_140_ami": 3337
+   }
+  },
+  "terms": {
+   "lease": "one year required",
+   "security_deposit": "1.5x monthly rent",
+   "min_occupancy": "one person per bedroom (a single person cannot rent a 2BR)",
+   "utilities": "Rent includes water, sewer, trash, recycling. Electricity separately metered and tenant-paid (SMPA or Fair Energy depending on unit type).",
+   "pets": "Dogs allowed: $300 refundable deposit + $30/month; cats $300 deposit.",
+   "fees": "Application $50/adult; admin $50 + $10 per additional earner; parking pass $50/vehicle one-time."
+  },
+  "no_4br_units": true
+ },
+ "town_managed_rentals": {
+  "source": "telluride_gov_rentals (inventory) + town_managed_rentals_news (rent rules/effects)",
+  "as_of": "2026-07-31",
+  "reliability": "A for inventory and eligibility; C for rent-rule effects (news-sourced) pending Town confirmation",
+  "inventory": {
+   "source": "telluride_gov_rentals",
+   "reliability": "A",
+   "shandoka": {
+    "units": 134,
+    "plus": "daycare facility, four laundry facilities",
+    "built": "1990-2004"
+   },
+   "virginia_placer": {
+    "units": "18 apartments + 3 tiny homes"
+   },
+   "sunnyside": {
+    "units": "8 townhomes + 3 tiny homes + 18 apartments + in-home daycare",
+    "opened": 2022
+   },
+   "boarding_house": {
+    "units": "single/double rooms, 46 occupants total",
+    "built": 2018
+   },
+   "voodoo": {
+    "units": "27 apartments (studio-3BR, one 4BR)",
+    "opened": 2024
+   },
+   "eligibility": "Year-round housing for employees working within the Telluride R-1 School District boundaries. Waitlist-based; town-employee priority on some properties. Contact rentalhousing@telluride.gov / (970) 728-4025.",
+   "rent_calculator": "Town publishes a '2026 Rent Calculator' and 'Employee Rental Housing Policies' document on the page above \u2014 the authoritative rent formula lives there."
+  },
+  "rent_system_verified_2026": {
+   "source": "telluride_rental_policies_2026 + telluride_rent_calculator_2026",
+   "reliability": "A",
+   "formula": "Rent = (AMI Rent Target income for the household's TIER and SIZE) / 12 x project multiplier x unit-amenities multiplier. Rent is pegged to the tier's target income, not the household's exact income \u2014 effective burden runs ~20-25% of gross within a tier and steps up at tier boundaries (renewal income documentation drives tier reassignment; this is the mechanism behind the reported big rent jumps).",
+   "income_tiers": {
+    "note": "Tier = rent target %AMI / income limit %AMI. A household qualifies for the lowest tier whose limit covers its income.",
+    "A": {
+     "target": 45,
+     "limit": 60
+    },
+    "B": {
+     "target": 60,
+     "limit": 80
+    },
+    "C": {
+     "target": 80,
+     "limit": 100
+    },
+    "D": {
+     "target": 100,
+     "limit": 120
+    },
+    "E": {
+     "target": 120,
+     "limit": 140
+    },
+    "F": {
+     "target": 140,
+     "limit": 160
+    },
+    "G": {
+     "target": 160,
+     "limit": 180
+    },
+    "H": {
+     "target": 180,
+     "limit": 200
+    },
+    "I": {
+     "target": 200,
+     "limit": 220
+    },
+    "J": {
+     "target": 220,
+     "limit": 240
+    },
+    "initial_lease_cap": "No initial leases in Tiers H-J; households may only ADVANCE into them at renewal."
+   },
+   "project_multipliers": {
+    "leases_before_2026_01_01": {
+     "shandoka_except_f": 0.27,
+     "shandoka_f": 0.3,
+     "virginia_placer": 0.3,
+     "sunnyside": 0.3,
+     "voodoo": 0.3
+    },
+    "leases_on_after_2026_01_01": {
+     "shandoka_except_f": 0.25,
+     "shandoka_f": 0.27,
+     "virginia_placer": 0.27,
+     "sunnyside": 0.27,
+     "voodoo": 0.27
+    },
+    "boarding_house": "set separately (dorm-style)"
+   },
+   "ami_tables": "Leases before 2026-01-01 use April 2024 AMI; on/after use April 2025 AMI (2-person 100% = $95,600 \u2014 matches THA Appendix A).",
+   "shandoka_a_e_2026_rates_verified": {
+    "note": "From the live calculator; unit counts in parentheses. Tier A -> J.",
+    "1br_1ba_(43)": [
+     785,
+     1046,
+     1395,
+     1744,
+     2093,
+     2441,
+     2790,
+     3139,
+     3488,
+     3836
+    ],
+    "2br_1ba_(42)": [
+     896,
+     1195,
+     1593,
+     1992,
+     2390,
+     2788,
+     3187,
+     3585,
+     3983,
+     4382
+    ],
+    "3br_1ba_(6)": [
+     1009,
+     1345,
+     1793,
+     2242,
+     2690,
+     3138,
+     3587,
+     4035,
+     4483,
+     4932
+    ],
+    "4br_2ba_(4)": [
+     1120,
+     1494,
+     1992,
+     2490,
+     2988,
+     3485,
+     3983,
+     4481,
+     4979,
+     5477
+    ]
+   },
+   "eligibility_standards": "Employed in R-1 district; primary residence; NO ownership of developed residential property in San Miguel/Montrose/Ouray/Dolores counties; net-asset limits by tier (Tier A: 10x the 45%-AMI income ... Tier J: 5x the 220%-AMI income); minimum household size = bedrooms (2BR needs 2 people); minimum income 2x monthly rent; verified deductions (childcare/medical/retirement/education/FHSA) capped at $15,000 per adult.",
+   "monthly_admin_fees": "Electricity administration $30/mo + water/sewer administration $30/mo (Appendix D) \u2014 add to rent when normalizing gross housing cost.",
+   "official_inventory_appendix_e": {
+    "shandoka_except_f": {
+     "1br": 43,
+     "2br": 47,
+     "3br": 17,
+     "4br": 4,
+     "total": 111
+    },
+    "shandoka_f": {
+     "studio": 5,
+     "2br": 11,
+     "3br": 8,
+     "4br": 5,
+     "total": 29
+    },
+    "virginia_placer": {
+     "tiny_home": 3,
+     "studio": 6,
+     "2br": 12,
+     "total": 21
+    },
+    "boarding_house": {
+     "studio": 33,
+     "total": 33
+    },
+    "sunnyside": {
+     "tiny_home": 3,
+     "1br": 6,
+     "2br": 12,
+     "3br": 3,
+     "4br": 6,
+     "total": 30
+    },
+    "voodoo": {
+     "studio": 6,
+     "1br": 2,
+     "2br": 10,
+     "3br": 8,
+     "4br": 1,
+     "total": 27,
+     "note": "Appendix E lists 8 studios/0 1BR; the 2025 Voodoo AMI-limits rent table (lottery document) splits them 6 studios + 2 one-bedrooms \u2014 the lottery table governs"
+    },
+    "portfolio_total": 251
+   }
+  },
+  "property_rent_tables_2025": {
+   "source": "Official TOT AMI-Limits/Rent tables 2025, all four properties, archived in assets/Housing Study/Units and rents 2026/ (Voodoo, Shandoka, Sunnyside, Virginia Placer PDFs). Basis: Rental Housing Policies adopted 2024-11-19; 2024 AMI grid; pre-2026 multipliers (27%/30%).",
+   "reliability": "A",
+   "initial_qualification_caps_by_property": {
+    "shandoka_a_e_g_h": {
+     "tiers_available": "A-J",
+     "initial_leases": "A-D only"
+    },
+    "shandoka_f": {
+     "tiers_available": "B-J",
+     "initial_leases": "B-G"
+    },
+    "sunnyside": {
+     "tiers_available": "C-J only",
+     "initial_leases": "C-G"
+    },
+    "virginia_placer": {
+     "tiers_available": "B-J only",
+     "initial_leases": "B-G"
+    },
+    "voodoo": {
+     "per_unit_affordability_targets": "90-140% AMI",
+     "lottery_income_limits": "110-160% AMI",
+     "post_occupancy_income_cap": "220% AMI (THA); grant-assisted units 110-150% per grant covenant"
+    },
+    "note": "The cheapest option (Shandoka A-E at the lowest multiplier) is closed to NEW tenants above Tier D (120% AMI limit); mid-tier households enter through Sunnyside/Bldg F/Voodoo at higher rents. Sunnyside has no Tier A/B rents at all \u2014 its floor is the 80%-AMI-target rent."
+   },
+   "voodoo_unit_mix_and_initial_rents_2024_lottery": {
+    "grant_assisted_12_units": [
+     {
+      "type": "studio",
+      "n": 1,
+      "target_ami": 90,
+      "initial_rent": 1726,
+      "income_limit": 110
+     },
+     {
+      "type": "studio",
+      "n": 2,
+      "target_ami": 100,
+      "initial_rent": 1918,
+      "income_limit": 120
+     },
+     {
+      "type": "studio",
+      "n": 3,
+      "target_ami": 120,
+      "initial_rent": 2301,
+      "income_limit": 140
+     },
+     {
+      "type": "1br",
+      "n": 2,
+      "target_ami": 120,
+      "initial_rent": 2301,
+      "income_limit": 140
+     },
+     {
+      "type": "2br",
+      "n": 2,
+      "target_ami": 100,
+      "initial_rent": 2193,
+      "income_limit": 120
+     },
+     {
+      "type": "2br",
+      "n": 2,
+      "target_ami": 130,
+      "initial_rent": 2850,
+      "income_limit": 150
+     }
+    ],
+    "other_affordable_15_units": [
+     {
+      "type": "2br",
+      "n": 3,
+      "target_ami": 120,
+      "initial_rent": 2631,
+      "lottery_limit": 140
+     },
+     {
+      "type": "2br",
+      "n": 3,
+      "target_ami": 140,
+      "initial_rent": 3070,
+      "lottery_limit": 160
+     },
+     {
+      "type": "3br",
+      "n": 2,
+      "target_ami": 100,
+      "initial_rent": 2468,
+      "lottery_limit": 120
+     },
+     {
+      "type": "3br",
+      "n": 2,
+      "target_ami": 120,
+      "initial_rent": 2961,
+      "lottery_limit": 140
+     },
+     {
+      "type": "3br",
+      "n": 4,
+      "target_ami": 140,
+      "initial_rent": 3455,
+      "lottery_limit": 160
+     },
+     {
+      "type": "4br",
+      "n": 1,
+      "target_ami": 120,
+      "initial_rent": 3562,
+      "lottery_limit": 150
+     }
+    ],
+    "notes": "Rents set below state (DOLA covenant) maximums; utilities charged to tenant on top, with landlord absorbing any excess over state caps (Lease 18.5). This table is the grade-A documentation of the 110-170% AMI product positioning."
+   },
+   "shandoka_2025_rate_anchors": {
+    "bldg_f_12_units_listed": {
+     "studio": 3,
+     "2br": 5,
+     "3br": 3,
+     "4br": 1,
+     "tier_c_2br": 1754,
+     "discrepancy": "Policies App. E lists Bldg F at 29 units \u2014 unresolved; rent table may list unit TYPES only. Verify with THD."
+    },
+    "a_e_g_h_111_units": {
+     "tier_a_1br": 777,
+     "tier_d_1br": 1726,
+     "tier_j_1br": 3797,
+     "note": "2025 rates (2024 AMI x 27%); superseded by 2026 rates (2025 AMI x 25%) \u2014 e.g. 1BR Tier A $777 -> $785"
+    }
+   },
+   "virginia_placer_2025_rates": {
+    "units_listed": {
+     "studio": 4,
+     "2br_1ba": 3,
+     "2br_2ba": 9,
+     "tiny_home": 3
+    },
+    "tier_c": {
+     "studio": 1581,
+     "2br_1ba": 1754,
+     "2br_2ba": 1808,
+     "tiny_home": 1534
+    },
+    "note": "Rent table lists 4 studios vs App. E's 6 \u2014 minor discrepancy, verify with THD"
+   },
+   "sunnyside_2025_rates": {
+    "1br_tier_c": 1581,
+    "2br_tier_c": 1808,
+    "3br_tier_c": 2035,
+    "4br_tier_c": 2260,
+    "tiny_home_tier_c": 1534,
+    "note": "2BR C $1,808 = 80%-target x 2-person 2024 AMI x 30%/12 + rounding conventions; Sunnyside multiplier 30% in 2025, 27% from 2026-01-01"
+   }
+  },
+  "reported_effects_context": {
+   "reliability": "C (news)",
+   "notes": [
+    "Example rent trajectories reported by tenants under the income-based system: Shandoka 3BR $1,800 -> $2,400 -> $3,600; Sunnyside 4BR $2,450 -> $2,850 -> $4,400.",
+    "~49 town units vacant April 2026 (~25% of the complexes then counted).",
+    "Minimum work requirement reported reduced 1,400 -> 1,200 hrs/yr in town (verify against Policies section 103)."
+   ]
+  },
+  "survey_relevance": "This is the single most consequential recent change in local rental economics, and it post-dates every dataset above except ACS tail-end. The survey MUST distinguish town-managed income-based rent from deed-restricted flat-max rent from market rent, and ask when the respondent's rent last changed."
+ },
+ "rental_affordability": {
+  "source": "hna_2025",
+  "as_of": "2024",
+  "reliability": "A (arithmetic on CHFA 2024 limits)",
+  "note": "For 2026-dollar equivalents, recompute from chfa_2026_san_miguel_county (30% of income / 12) rather than inflating these.",
+  "affordable_monthly_rent_at_30pct_income": {
+   "1_person": {
+    "30_ami": 575,
+    "50_ami": 959,
+    "80_ami": 1534,
+    "100_ami": 1918,
+    "120_ami": 2301,
+    "150_ami": 2876
+   },
+   "2_person": {
+    "30_ami": 658,
+    "50_ami": 1096,
+    "80_ami": 1754,
+    "100_ami": 2193,
+    "120_ami": 2631,
+    "150_ami": 3289
+   },
+   "3_person": {
+    "30_ami": 740,
+    "50_ami": 1234,
+    "80_ami": 1974,
+    "100_ami": 2468,
+    "120_ami": 2961,
+    "150_ami": 3701
+   }
+  },
+  "monthly_gap_to_median_market_rent_1848": {
+   "note": "Positive = subsidy needed to reach the $1,848 market-rate median (2024 household survey).",
+   "1_person": {
+    "30_ami": 1273,
+    "50_ami": 889,
+    "80_ami": 314
+   },
+   "2_person": {
+    "30_ami": 1190,
+    "50_ami": 752,
+    "80_ami": 94
+   },
+   "3_person": {
+    "30_ami": 1108,
+    "50_ami": 614
+   }
+  }
+ },
+ "wages": {
+  "qcew_2024_annual": {
+   "source": "bls_qcew",
+   "as_of": "2024 annual average",
+   "reliability": "A",
+   "geography": "San Miguel County (place of employment)",
+   "all_industries": {
+    "establishments": 805,
+    "avg_employment": 6077,
+    "avg_weekly_wage": 1129,
+    "avg_annual_pay": 58699
+   },
+   "by_sector_private": {
+    "construction_23": {
+     "avg_employment": 520,
+     "avg_annual_pay": 71456
+    },
+    "retail_trade_44_45": {
+     "avg_employment": 569,
+     "avg_annual_pay": 45086
+    },
+    "finance_insurance_52": {
+     "avg_employment": 82,
+     "avg_annual_pay": 189502
+    },
+    "real_estate_53": {
+     "avg_employment": 270,
+     "avg_annual_pay": 72002
+    },
+    "professional_services_54": {
+     "avg_employment": 247,
+     "avg_annual_pay": 131126
+    },
+    "private_education_61": {
+     "avg_employment": 97,
+     "avg_annual_pay": 50828
+    },
+    "health_care_social_62": {
+     "avg_employment": 210,
+     "avg_annual_pay": 62520
+    },
+    "arts_entertainment_rec_71": {
+     "avg_employment": 856,
+     "avg_annual_pay": 38476,
+     "note": "includes ski operations \u2014 the county's 2nd-largest sector"
+    },
+    "accommodation_food_72": {
+     "avg_employment": 1532,
+     "avg_annual_pay": 49332,
+     "note": "largest sector"
+    },
+    "other_services_81": {
+     "avg_employment": 196,
+     "avg_annual_pay": 52970
+    }
+   },
+   "local_government": {
+    "avg_employment": 809,
+    "avg_annual_pay": 64178,
+    "public_education_61": {
+     "avg_employment": 247,
+     "avg_annual_pay": 53953
+    }
+   },
+   "q1_2025": {
+    "avg_weekly_wage": 1148,
+    "avg_monthly_employment": 6838
+   },
+   "affordability_bridge": {
+    "note": "Affordable monthly rent = annual pay x 0.30 / 12, single-earner household.",
+    "avg_all_industries": {
+     "annual_pay": 58699,
+     "affordable_rent": 1467
+    },
+    "accommodation_food_worker": {
+     "annual_pay": 49332,
+     "affordable_rent": 1233
+    },
+    "arts_rec_ski_worker": {
+     "annual_pay": 38476,
+     "affordable_rent": 962
+    },
+    "retail_worker": {
+     "annual_pay": 45086,
+     "affordable_rent": 1127
+    },
+    "vs": "2024 survey market-rate median rent $1,848; FY2026 FMR 1BR $1,254; Telluride ACS median $3,056. A single average tourism-sector earner cannot afford the market-rate median anywhere in the county without roommates."
+   }
+  }
+ },
+ "amenities_baseline": {
+  "note": "What public data actually supports about the amenities a renter can expect. Anchors survey questions about unit size, condition, and what rent includes.",
+  "unit_size_by_tenure": {
+   "source": "rrc_household_survey_2024",
+   "reliability": "B",
+   "avg_bedrooms": {
+    "smc_all": 2.5,
+    "owners": 2.9,
+    "renters": 1.8,
+    "market": 2.8,
+    "employee_housing": 1.9,
+    "affordable_deed_restricted": 2.0
+   },
+   "avg_bathrooms": {
+    "smc_all": 2.1,
+    "owners": 2.5,
+    "renters": 1.4,
+    "market": 2.4,
+    "employee_housing": 1.4,
+    "affordable_deed_restricted": 1.7
+   },
+   "renter_bedroom_distribution_pct": {
+    "studio": 9,
+    "1br": 36,
+    "2br": 34,
+    "3br": 16,
+    "4br_plus": 5,
+    "n": 324
+   }
+  },
+  "renter_bedrooms_acs_2020_2024": {
+   "source": "acs_2020_2024",
+   "table": "B25042",
+   "reliability": "A",
+   "san_miguel_county_renter_occupied": {
+    "total": 1705,
+    "0br": 348,
+    "1br": 309,
+    "2br": 691,
+    "3br": 244,
+    "4br": 81,
+    "5br_plus": 32
+   },
+   "note": "ACS shows more studios (20%) than the 2024 survey (9%) \u2014 the survey under-reached dorm/studio dwellers; weight accordingly."
+  },
+  "employer_provided_housing_share": {
+   "source": "rrc_household_survey_2024",
+   "reliability": "B",
+   "pct_of_renters_in_employer_housing": 13,
+   "pct_of_smc_respondents": 5
+  },
+  "utilities_convention": {
+   "reliability": "A (definitional)",
+   "rule": "Deed-restricted max rents include utilities (less allowance); market listings typically EXCLUDE utilities. Survey must ask 'does your rent include heat / electricity / internet?' and normalize to gross rent before comparison.",
+   "scope_note": "Per maintainer (2026-07-31): the survey does NOT model utility rates. It only asks whether rent includes utilities and, if not, roughly what the respondent pays per month. No tariff data belongs in this file."
+  },
+  "structure_and_condition": {
+   "reliability": "X",
+   "needed": "Furnished/unfurnished, pets, parking, lease length, W/D, condition \u2014 no government source records these. Filled only by the listing audit (template: listing-audit-template.csv in this folder)."
+  }
+ },
+ "housing_stock_context": {
+  "housing_units_total_acs_2020_2024": {
+   "value": 6656,
+   "source": "acs_2020_2024",
+   "reliability": "A",
+   "note": "31% vacant \u2014 mostly seasonal/second homes"
+  },
+  "occupied_units_acs_2020_2024": {
+   "estimate": 4604,
+   "moe": 219,
+   "source": "acs_2020_2024",
+   "table": "B25003",
+   "reliability": "A"
+  },
+  "renter_households_acs_2020_2024": {
+   "san_miguel_county": {
+    "estimate": 1705,
+    "moe": 293
+   },
+   "telluride": {
+    "estimate": 178,
+    "moe": 92,
+    "moe_unstable": true,
+    "note": "Startlingly low \u2014 town renters largely live in MV, Lawson Hill, or town-managed units counted oddly; reconcile before quoting."
+   },
+   "mountain_village": {
+    "estimate": 1134,
+    "moe": 267,
+    "note": "73% of MV's occupied units are renter-occupied \u2014 MV is the county's rental hub."
+   },
+   "norwood": {
+    "estimate": 82,
+    "moe": 50
+   },
+   "ophir": {
+    "estimate": 17,
+    "moe": 20
+   },
+   "source": "acs_2020_2024",
+   "reliability": "A"
+  },
+  "occupied_housing_units_survey_2024": {
+   "value": 3998,
+   "source": "rrc_household_survey_2024",
+   "via": "hna_2025 Table 16",
+   "reliability": "B"
+  },
+  "overcrowded_units_2023": {
+   "value": 110,
+   "pct_of_occupied": 2.8,
+   "source": "acs_2018_2022",
+   "via": "hna_2025 Table 15",
+   "reliability": "A",
+   "caveat": "likely undercount"
+  },
+  "households_in_temporary_housing": {
+   "value": 72,
+   "pct": 1.81,
+   "source": "rrc_household_survey_2024",
+   "via": "hna_2025 Table 16",
+   "reliability": "B",
+   "caveat": "likely undercount (survey-distribution and disclosure-fear bias, per HNA)"
+  }
+ },
+ "renter_stability": {
+  "source": "rrc_household_survey_2024",
+  "reliability": "B",
+  "pct_renters_forced_to_move_past_5yr": 38,
+  "avg_monthly_cost_increase_after_move": 900,
+  "pct_owners_feel_secure": 92,
+  "pct_renters_feel_secure": 60,
+  "top_reasons_for_moving_smc_pct": {
+   "n": 191,
+   "note": "'Owner sold the rental unit' was the most common reason (over a third of SMC movers, per HNA ch.6 narrative; exact row not re-extracted).",
+   "owner_moved_in": 21,
+   "owner_would_not_commit_to_long_lease": 15,
+   "unit_converted_to_vacation_rental": 16,
+   "big_rent_increase": 13,
+   "changed_jobs_lost_employer_housing": 14,
+   "could_not_afford_rent_or_mortgage": 9,
+   "household_size_change": 8,
+   "evicted": 6,
+   "pets_not_allowed": 5,
+   "big_increase_in_other_housing_costs": 4
+  }
+ },
+ "ownership_market_context": {
+  "source": "telluride_assoc_realtors",
+  "via": "hna_2025",
+  "as_of": "2024",
+  "reliability": "A",
+  "note": "Context only \u2014 the survey is rental-focused, but these anchor the 'could you ever buy here?' framing.",
+  "median_sale_price_2024": {
+   "telluride_all_types": 3450000,
+   "county_single_family": 4563650,
+   "county_attached_condo": 1350000,
+   "deed_restricted_county": 456459
+  },
+  "deed_restricted_sales_2024_n": 30,
+  "income_needed_for_median_unit": "Telluride median sale price requires ~850-960% AMI household income (HNA Table 18).",
+  "sales_below_200pct_ami_affordability_2024": {
+   "value": 32,
+   "of_total": 165,
+   "note": "Only ~20% of 2024 sales (through August) were affordable below 200% AMI."
+  },
+  "median_owner_occupied_value_acs_2020_2024": {
+   "value": 720700,
+   "source": "acs_2020_2024",
+   "reliability": "A",
+   "note": "ACS self-reported value, dragged down by deed-restricted stock \u2014 6.3x below the MLS single-family median. Another two-markets illustration."
+  }
+ },
+ "survey_statistical_targets": {
+  "note": "Statistical-validity yardsticks for the Livable Telluride survey, derived from this baseline.",
+  "population_frames": {
+   "occupied_households_smc_acs": 4604,
+   "renter_households_smc_acs": 1705,
+   "note": "ACS 2020-2024 frames (grade A) supersede the 0.1.0 survey-derived estimates (3,998 / ~1,360)."
+  },
+  "sample_size_for_95conf_5moe": {
+   "all_households": 355,
+   "renter_households": 314,
+   "method": "finite-population correction, p=0.5, recomputed on ACS frames"
+  },
+  "benchmark": "The 2024 RRC regional survey achieved n=1,129 total / 821 SMC / 338 renters \u2014 treat those as the bar for credibility.",
+  "design_rules_from_baseline": [
+   "Rent-amount answer bands must be built from this file's breakpoints (FMR, tier max rents, CHFA 2026 rent limits, affordable-rent-by-AMI), not round guesses.",
+   "Always ask utilities-included yes/no and normalize to gross rent.",
+   "Ask market vs. deed-restricted vs. town-managed income-based vs. employer-provided \u2014 FOUR populations with different baselines.",
+   "Date-stamp rent answers and ask about changes since January 2025 (town-managed regime change).",
+   "Report results against the baseline range (ACS county $1,149 ... survey market-rate $1,848 ... Telluride ACS $3,056), never a single 'true rent'.",
+   "Weight or at least report by jurisdiction; Mountain Village holds 2/3 of the county's renters and skews every countywide number."
+  ]
+ },
+ "download_list": {
+  "note": "Items still needing a human (2026-07-31). Exact URL + what to grab. Drop files into assets/Housing Study/ and Claude will fold them in. SMRHA listings: RESOLVED via the Livable Telluride housing page. Utility tariffs: REMOVED from scope per maintainer.",
+  "items": [
+   {
+    "id": "town_rent_calculator",
+    "what": "From the Town-Owned Rental Properties page, download the '2026 Rent Calculator' and the 'Employee Rental Housing Policies' document (both linked on the page). These give the authoritative rent-to-income formula and confirm/refute the reported 25%/27% multipliers.",
+    "url": "https://www.telluride.gov/745/Town-Owned-Rental-Properties",
+    "why": "The rent-rule portion of town_managed_rentals is still grade C (news-sourced); these two documents upgrade it to A."
+   },
+   {
+    "id": "hud_chas",
+    "what": "CHAS data for San Miguel County: on the linked page choose 'Data' -> 2018-2022 (or newest) ACS-based CHAS, query for San Miguel County CO, download the county workbook (Table 7/8: cost burden by income by tenure).",
+    "url": "https://www.huduser.gov/portal/datasets/cp.html",
+    "why": "Only dataset crossing cost burden with AMI bands by tenure. huduser blocks automated download; the query tool needs a human click-through.",
+    "optional": true
+   },
+   {
+    "id": "oews_wages",
+    "what": "BLS OEWS occupational wage table for the Western Colorado nonmetropolitan area: on the linked page, under 'Nonmetropolitan areas', pick Western Colorado, and save the page (or its XLS link) with median wages for: teachers, RNs, cooks, housekeepers, carpenters, police/EMS.",
+    "url": "https://www.bls.gov/oes/current/oessrcma.htm",
+    "why": "Lets the survey relate named jobs to rent affordability ('a starting teacher can afford $X').",
+    "optional": true
+   },
+   {
+    "id": "rrc_2011_topline",
+    "what": "The 2011 RRC San Miguel County survey topline/report (rent + housing-cost questions). Request from SMRHA or RRC Associates; not online.",
+    "url": "mailto:admin@smrha.org",
+    "why": "Only longitudinal comparison point; HNA cites it repeatedly.",
+    "optional": true
+   },
+   {
+    "id": "str_license_counts",
+    "what": "Current count of active short-term rental licenses in Town of Telluride (clerk's office) and Mountain Village; a one-line email answer suffices.",
+    "url": "https://www.telluride-co.gov/",
+    "why": "STR conversion is a top displacement driver in the stability data.",
+    "optional": true
+   }
+  ]
+ },
+ "ownership_case_studies": {
+  "as_of": "2026-08-01",
+  "meadowlark_mv_for_sale": {
+   "source": "meadowlark_records",
+   "reliability": "A/B",
+   "units": 29,
+   "bedrooms": 65,
+   "partner": "Triumph Development West (public-private)",
+   "timeline": "approved 2022-11; COs 2024-10; 28 of 29 sold by 2024-12",
+   "initial_prices": {
+    "low_1br": 395287,
+    "high_3br_garage": 1025763,
+    "per_sqft": "524-544 vs 617 prevailing DR resale"
+   },
+   "town_buydown": 4300000,
+   "total_budget": 20900000,
+   "town_contribution": 6000000,
+   "recovered_via_unsubsidized_essential_org_sales": 1600000,
+   "net_subsidy_per_unit": 137000,
+   "deed_restriction": "NO income limits; 4% annual appreciation cap; R-1 employment 1,560 hrs/yr; owner-occupancy or 13-month leases; MVHA first offer on resale; 10 units reserved for essential orgs; tiered priority points (not lottery)",
+   "lessons_learned_council": "density lowers per-unit subsidy; Wisor: should have built 41 not 29",
+   "resale_example_2026": {
+    "unit": "D104 3BR/2.5BA 1461sqft",
+    "price": 833586,
+    "hoa_monthly": 609.86
+   },
+   "construction_method_note": "Maintainer attributes cost control partly to modular construction \u2014 NOT confirmed in official pages; verify before public use [X]"
+  },
+  "pinion_park_norwood_for_sale": {
+   "source": "pinion_park_records",
+   "reliability": "B/C",
+   "units": 24,
+   "developer": "Rural Homes pilot (state grants + county land donation); SMRHA administers covenants it did not write",
+   "income_caps": "120% AMI (80% on some units)",
+   "typical_price": 370000,
+   "failure_mode": "'Unicorn buyer' (Comm. Waring): must afford mortgage/down payment yet stay under AMI cap. Original affordability came from one-time 2.5% no-down mortgage product unavailable to resale buyers.",
+   "status_2026_07": "5 of 24 homes listed unsold 5-20 months ($262,895-$383,244 per SMRHA listings); SMRHA received ONE qualification application; documented seller expecting ~$100k loss on county-mandated declining price schedule; single teacher told she needed a roommate to qualify",
+   "mitigations": "Rural Homes exploring covenant relief on 80% units; Telluride Foundation down-payment assistance (up to 20%, shared equity)",
+   "key_insight": "Affordability lived in the FINANCING, not the price; eligibility windows narrower than the price point create null buyer sets"
+  },
+  "vca_phase4_rental": {
+   "source": "meadowlark_records",
+   "reliability": "B",
+   "units": 35,
+   "bedrooms": 88,
+   "total_cost": 22600000,
+   "financing": "$15M lease-purchase + >$3M grants + ~$4M town/AHDF cash",
+   "note": "With Meadowlark, ~200 new beds 2024; VCA waitlist turnover visibly quickened (Wisor)"
+  },
+  "alexander_ilium_pipeline": {
+   "source": "alexander_ilium_records",
+   "reliability": "A",
+   "parcel": "56.343 acres, Ilium Valley, purchased by MV 2023; rezoned Forestry/Ag -> Community Housing (SMC LUC 5-324: high-density, R-1 deed restriction)",
+   "phase_1": "70-100 rental units adjacent CR 63-L; Triumph pre-development contract through 2026; entitlements sought from SMC by end-2026",
+   "rezone_application_notes": "Application traffic study: 100-400 additional units do not trigger road improvements beyond current obligations (Bechtolt letter) \u2014 note tension with Society Turn/Last Dollar LOS findings in the investigation",
+   "neighbors": "IPOA meeting 2025-09-16: density, traffic, forest/wetland concerns",
+   "reconcile": "June 2025 WWTP MOU sites the 2.67 MGD regional plant on a 5-acre Ilium Alexander piece ($1.1M, June 2024) \u2014 reconcile with MV 2023 56.3-ac purchase before quoting either as THE Alexander transaction [flag]"
+  },
+  "delivery_cost_ladder_net_public_per_unit": {
+   "vail_indeed_restriction": "62000-68000",
+   "meadowlark_ownership": "~137000",
+   "vca4_rental_town_cash": "~114000 (+$15M debt)",
+   "sunnyside_rental": "~500000 class",
+   "voodoo_rental_all_in": "~955000",
+   "shandoka_lot_l_proposal": "~3300000",
+   "design_insight": "Eligibility-window width (Meadowlark none vs Pinion Park narrow) determines sell-through independent of price"
+  },
+  "society_turn_pipeline": {
+   "source": "society_turn_application",
+   "reliability": "A",
+   "status_2026_08": "Approved; road work starting; vertical build timing unknown (maintainer). Located at the Society Turn roundabout \u2014 one of the two gateway intersections the traffic studies project failing on background growth.",
+   "max_total_density_sf": 342843,
+   "with_4th_story_option_sf": 364319,
+   "density_basis_stated_by_applicant": "Town of Telluride water/sewer allocation, the traffic study, pending CDOT access permits, and mass/scale \u2014 i.e., the applicant itself sized the project to infrastructure capacity",
+   "program_baseline_vs_max": {
+    "employee_housing": "64,821 sf baseline; no sf max but <=121 units",
+    "medical_center": "44,995 sf baseline; 40,000 net sf + 3 EH units (future acute-care hospital, helipad; 2.6-ac parcel conveyed FREE to Telluride Hospital District)",
+    "retail_dining": "19,595 sf baseline; 28,600 sf max",
+    "offices": "65,745 sf baseline; 85,000 sf max",
+    "flex_space": "55,355 sf baseline; 74,000 sf max",
+    "hotel": "92,332 sf baseline; 116,000 sf max, <=125 rooms (needs analysis claims region supports 250)"
+   },
+   "employee_housing_mitigation": {
+    "required_units": 91,
+    "fourth_story_bonus_units": 27,
+    "medical_center_units": 3,
+    "max_total_eh_units": 121,
+    "eh_mix": "25% studios (375 sf min), 50% 1BR (525 sf), 25% 2BR (850 sf)",
+    "note": "Per SMC LUC 5-1303A/B; no waivers sought. The commercial/hotel program mitigates only the code-required share of generated jobs \u2014 the growth-accommodation dynamic (Section 7 of the public report) instantiated at the failing roundabout."
+   },
+   "public_benefits": "Free 2.6-ac medical center parcel; the 2022 application also offered no-cost WWTP-expansion land at Society Turn, but the region determined the existing plant site (3.24 ac, ~2.5 usable; restricted expansion space; ~$133M retrofit to 2.3 MGD lasting only through 2047) could not be expanded viably and selected a new Ilium Valley site instead (5 ac under contract June 2024, $1.1M; June 2025 MOU; 2.67 MGD; Sewer Authority due 2028-07-01) [tmv_wwtp_project_page] \u2014 RECONCILED",
+   "zoning": "PUDR -> MXD (Mixed-Use Development zone, BOCC Res. 2021-23)"
+  }
+ },
+ "wwtp_current_status": {
+  "source": "tmv_wwtp_project_page + wwtp-status-and-program-cost-benchmarks evidence",
+  "reliability": "A",
+  "existing_plant": "Society Turn area, 3.24-acre site (~2.5 usable acres), 2.1 MGD; challenges per TMV: capacity/treatment limits, irreplaceable components, limited redundancy, aging infrastructure, technological deficiencies, RESTRICTED EXPANSION SPACE",
+  "festival_peak_load": "up to 24,000 visitors during festivals/peak holidays significantly increase volumes",
+  "retrofit_option_rejected": "2024 engineering analysis: ~$133M to reach 2.3 MGD, sufficient only through 2047, full retrofit while operating \u2014 rejected as costly/risky",
+  "chosen_path": "New purpose-built regional plant in Ilium Valley (2.67 MGD per June 2025 MOU); new Sewer Authority required by 2028-07-01"
+ },
+ "mv_lodging_pipeline": {
+  "as_of": "2026-08-01 (both under construction per maintainer)",
+  "four_seasons_telluride": {
+   "source": "four_seasons_marketing",
+   "reliability": "B",
+   "program": "26 private residences (1-5BR, 821-6,445 sf, from $4M) + 43 hotel residences; five-star service package (butler/private chef/concierge, ski valet, wellness incl. hyperbaric); steps from gondola",
+   "employee_housing_on_site": "none identified in supplied materials [verify MV mitigation applied]"
+  },
+  "six_senses_109r": {
+   "source": "six_senses_drb_packet",
+   "reliability": "A",
+   "program_proposed_2022": "50 efficiency lodge units (guaranteed hot beds) + 31 lodge units + 20 condominiums + ~26,000 sf commercial (market, 2 retail, fine dining, bar, 6th-floor conference/wedding) + public plaza/bathrooms",
+   "employee_housing_on_site": "18 dormitory units + 2 employee apartments (packet tables: 20 employee units, 306-408 sf, ~13,728 sf mezzanine level)",
+   "history": "Lot 109R, Village Center; Mountain Village Hotel PUD 2010, amendments through Sept 2023; owner Tiara Telluride LLC; Six Senses brand LOI",
+   "vs_prior_approval": "prior: 66 efficiency + 38 lodge + 20 condo + 1 employee apt + 20,164 sf commercial"
+  },
+  "growth_load_estimate": {
+   "reliability": "E \u2014 Livable Telluride estimate, method stated",
+   "method": "Luxury-tier staffing ratios (1.5-2.5 staff per key, industry convention for five-star) on ~43 FS keys and ~81 Six Senses lodge/hot-bed units, plus 2.5 jobs/1,000 sf on ~26k sf Six Senses commercial (Telluride LUC rate), less on-site EH capacity (20 Six Senses units; FS none identified).",
+   "estimate": "Order of 200-400 new service jobs between the two projects at Village Center, with on-site employee housing for perhaps 25-40 workers \u2014 the remainder arrives as demand on the regional housing stock, the gondola, Hwy 145, and the WWTP (peak-visitor sizing). Refine when mitigation filings are available."
+  }
+ }
+}

@@ -1,0 +1,69 @@
+{
+ "meta": {
+  "generated": "2026-07-31",
+  "method": "turf.js area + intersect; steep-slopes and conservation-easement overlap per FLU polygon; overlaps may double-count where a slope IS in an easement (net figure is conservative-low on constraints)"
+ },
+ "east_end_flu": {
+  "P/I | Public/Institutional": {
+   "polygons": 11,
+   "gross_acres": 624.9,
+   "steep_slope_acres": 7.2,
+   "easement_acres": 8.1,
+   "net_unconstrained_acres": 609.5
+  },
+  "RM | Residential Medium": {
+   "polygons": 14,
+   "gross_acres": 1301.8,
+   "steep_slope_acres": 52.9,
+   "easement_acres": 0,
+   "net_unconstrained_acres": 1248.9
+  },
+  "RL | Residential Low": {
+   "polygons": 33,
+   "gross_acres": 8975.7,
+   "steep_slope_acres": 48.5,
+   "easement_acres": 250.5,
+   "net_unconstrained_acres": 8676.7
+  },
+  "Con | Conservation and Large Lots": {
+   "polygons": 129,
+   "gross_acres": 8510.4,
+   "steep_slope_acres": 903.5,
+   "easement_acres": 695.8,
+   "net_unconstrained_acres": 6911.2
+  },
+  "I | Commercial/Industrial": {
+   "polygons": 5,
+   "gross_acres": 145.1,
+   "steep_slope_acres": 5.6,
+   "easement_acres": 0.4,
+   "net_unconstrained_acres": 139.1
+  },
+  "RH/MU | Residential High/Mixed Use": {
+   "polygons": 16,
+   "gross_acres": 476.4,
+   "steep_slope_acres": 34.5,
+   "easement_acres": 2.3,
+   "net_unconstrained_acres": 439.6
+  },
+  "P/OS | Parks and Open Space": {
+   "polygons": 2,
+   "gross_acres": 163.3,
+   "steep_slope_acres": 0,
+   "easement_acres": 126.1,
+   "net_unconstrained_acres": 37.2
+  },
+  "Con | Residential Medium": {
+   "polygons": 1,
+   "gross_acres": 52.8,
+   "steep_slope_acres": 31.2,
+   "easement_acres": 0,
+   "net_unconstrained_acres": 21.6
+  }
+ },
+ "totals": {
+  "gross_acres": 20250.4,
+  "steep_acres": 1083.5,
+  "easement_acres": 1083.1
+ }
+}
