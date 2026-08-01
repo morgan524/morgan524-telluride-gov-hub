@@ -635,6 +635,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Parish Bulletin for August 2",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 1, 2026",
+    newsTopic: "community",
+    copy: "Attached is this week's bulletin. Please check the Parish Calendar for the most updated information. With this being the first weekend of the month, there will be Holy Adoration for 30 minutes before the Vigil and Sunday morning Holy M...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-2/",
+    img: ""
+  },
+  {
     title: "CANCELLED: Hike and Holy Mass on August 1",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1041,7 +1051,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1395,6 +1405,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "From the Western Slope to Washington",
+    source: "Telluride Times",
+    date: "August 1, 2026",
+    firstSeen: "2026-08-01",
+    newsTopic: "education",
+    copy: "Three Western Slope high school seniors — from Olathe, Ridgway, and Nucla — traveled to Washington, D.C., in July as Pinhead Institute interns to participate in the Smithsonian National Youth Summit on American history. It marked the first time Pinhead expanded its internships beyond STEM subjects, through its Smithsonian Rural Initiative affiliation. The students worked with museum staff, curators, and educators to develop classroom materials on civic engagement and U.S. history.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_87498e26-e4ee-40bb-ba79-604becc0d886.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/0f/a0f80091-d57c-44b7-9b24-02d9b3eac975/6a6d2c6cbafbc.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Fishing closures are becoming routine as record heat warms rivers in the US West",
     source: "Telluride Times",
