@@ -1,22 +1,22 @@
 {
-  "hash": "ee3ebc994a04bba4722d036e177db25a4dd7319b",
-  "lede": "The biggest thing on the calendar this week is Wednesday's San Miguel County BOCC meeting, where three Land Use Code amendments go to public hearing — including changes to who qualifies as an 'owner' under housing rules and a wildfire-area code update, both the kind of thing that shapes this valley for years. The Open Space Commission meets Monday to settle on a preferred trail alignment for the Valley Floor River Trail, with three wetland-sensitive options in play. Mountain Village's Design Review Board takes up several multifamily projects Thursday, and the Ouray County Planning Commission holds a virtual work session Wednesday on definition changes to their land use code.",
+  "hash": "95edc9175f5e41fb1e85501906f2f1deb8938111",
+  "lede": "The biggest item this week is the San Miguel County BOCC meeting on August 5, where three Land Use Code amendments go to public hearing — including changes to who qualifies as an 'Qualified Owner,' a wildfire areas update, and a continued hearing on nonconforming lots, all heading toward formal votes. The Open Space Commission meets Monday to pick a preferred trail alignment for the Valley Floor River Trail, with three routes on the table near mapped wetlands. Mountain Village's Design Review Board takes up three multifamily projects Thursday, including a conditional-use permit.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commissioners pick which River Trail alignment crosses Valley Floor wetlands."
+      "stake": "Commission selects Valley Floor River Trail route from three alignment options."
     },
     {
       "id": 4,
-      "stake": "Public hearings on three code changes, including housing 'Qualified Owner' definition and wildfire rules."
+      "stake": "Three Land Use Code amendments — including ownership rules and wildfire areas — go to public hearing."
     },
     {
       "id": 6,
-      "stake": "Land use code definition changes that quietly shift what rules mean in practice."
+      "stake": "Land Use Code definition changes being shaped; definitions determine what rules mean in practice."
     },
     {
       "id": 8,
-      "stake": "Conditional-use permit and design reviews for multiple new multifamily projects."
+      "stake": "Conditional-use permit and multifamily architecture reviews up for decision in Mountain Village."
     }
   ]
 }
