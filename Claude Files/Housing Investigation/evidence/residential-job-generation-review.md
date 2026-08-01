@@ -185,7 +185,83 @@ generation rates, and flow-based construction accounting, the honest fee for
 large homes is several times today's — and the honest charge on modest local
 units is close to zero.
 
-## 5. Open items
+## 5. Comparison with the CURRENT San Miguel County plan (added 2026-08-01)
+
+Sources: Affordable Housing Fee Methodology Report (John Huebner, SMC Senior
+Planner, June 15, 2022 — the "Market-Affordability Gap" method, replacing
+Res. 2007-11); LUC Appendix E "Employee Housing Impact Fee Method &
+Calculation Tables" (June 2025); county FAQ (retrieved 2026-08-01). Local
+copies: `assets/Housing Study/Housing Mitigation Studies/`.
+
+**The current system (LUC §5-1303, single-family/duplex, R-1 district):**
+Fee = Employees Generated × 400 sf/employee × graduated mitigation rate ×
+market-affordability gap $/sf, where:
+- Employees Generated = **0.070174·e^(0.000322·sf) + 0.11·(sf/1,000)** —
+  the 2005 exponential and the 2005 construction amortization, verbatim.
+- Mitigation rate: **≤2,000 sf exempt; 18% starting at 2,001; 90% above
+  5,000 sf** (deed-restricted exempt).
+- Gap fee: market price/sf (3-yr MLS avg, Telluride Region duplex/MF) minus
+  affordable price at 100% AMI → **$527/sf (2021) → $928/sf (eff. 1/1/2026)**;
+  per-employee equivalent $623,251 (2024, 4-person).
+
+**What the County fixed (defusing our staleness critique):** the 2022
+switch to the market-affordability gap replaced the 2005 $42,200/employee
+with an annually-updated market-based dollar input. The dollar side of the
+fee is now modern, self-updating, and litigation-tested (Gunnison 2008).
+Grade A machinery.
+
+**What the County kept (our critique lands fully):** both generation-rate
+defects. The 2022 report cites the 2000 RRC study as its nexus and never
+revisits the curve. Consequences, code E vs our measured band:
+
+| Size | Code "employees" | Measured FTE | Overstatement | Current fee (2026) |
+|---|---|---|---|---|
+| 2,000 sf | 0.354 | 0.03–0.12 | ~3–12× (moot: exempt) | $0 |
+| 4,000 sf | 0.694 | 0.10–0.35 | ~2–7× | ~$170k |
+| 6,000 sf | 1.144 | 0.19–0.68 | ~1.7–6× | ~$382k |
+| 10,000 sf | 2.856 | 0.43–1.51 | ~1.9–6.6× | ~$954k |
+| 15,000 sf | **10.44** | 0.82–2.86 (0.5–2.0 @ 1 mo/yr) | **~4–13× (5–21× occupancy-adj)** | **~$3.49M** |
+
+(Fee ramp 18→90% between 2,001–5,000 sf interpolated; exact adopted steps
+should be read from §5-1303 G before quoting mid-range dollars.)
+
+**The decomposition:** fee = employees × dollars-per-employee. Their
+dollars-per-employee (400 sf × 90% × $928 ≈ $334k top-tier) sits at the top
+of our honest range ($70k–$350k per generated employee) — defensible. The
+employee *count* is the broken half: ~2–6× high through the normal range,
+exploding past 8,000 sf where the 2005 exponential leaves the data behind
+(8.8 maintenance FTE at 15,000 sf vs a largest-ever measurement of 1.10).
+
+**The paradox that matters legally:** the old system under-charged; the
+current one **over-charges large homes relative to any measurable nexus** —
+~$3.5M at 15,000 sf against a defensible liability of $0.3M–$1.3M even
+using the County's own gap-per-unit dollar metric (0.3–1.35 induced worker
+households × $997k/unit). The County's own legal section states fees must
+be "no greater than necessary to defray impacts related to the proposed
+development." The top brackets are therefore a proportionality-challenge
+target (CRS 29-20-104.5; Nollan/Dolan line): one lawsuit from a mega-home
+builder armed with the 2013 Teton study's 7,000-sf cutoff could put the
+entire fee at risk. Rebuilding the generation curve on measured data
+(elasticity ~1.6, banded calibration, flow-based construction) would lower
+the top-end fee to the $200k–$700k class — and make it defensible.
+
+**Flag — possible error in the live code appendix:** LUC Appendix E (June
+2025) Table 3 lists the constant "Average Construction FTE's **0.0044**"
+where the 2022 method report uses **0.11 per 1,000 sf** (= 4.4 FTE-yr ÷
+40-yr career). 0.0044/sf is the *un-amortized* 2005 number (4.4/1,000 sf).
+If the working spreadsheet multiplies 0.0044 × floor area without dividing
+by the career term, construction employees are overstated 40×. Verify the
+actual worksheet with Planning; either the code prints a mislabeled
+constant or permits are being miscalculated.
+
+**What survives contact in both directions:** their graduation instinct
+(exempt small, load large) matches our measured curve's shape; their
+size-only basis is defensible because occupancy barely moderates employment
+(our 0.6–0.8 factor); and our per-employee liability range brackets their
+$334k. The single reform that matters is replacing the 2005 employee-count
+formula with the measured power law and honest construction accounting.
+
+## 6. Open items
 
 - Whether/what the County currently levies from the 2005 schedule (check the
   LUC's employee housing mitigation section; the 15% subdivision-era rule vs
