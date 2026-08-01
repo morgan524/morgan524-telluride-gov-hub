@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Housing &amp; Infrastructure Bill Calculator — Livable Telluride</title>
+<style>
+  /* Livable Telluride standing rule: no readable text below 15.5px */
+  :root {
+    --ink: #22303c;
+    --ink-soft: #51606d;
+    --paper: #f7f5f0;
+    --card: #ffffff;
+    --line: #dcd6ca;
+    --accent: #1d5c63;       /* spruce */
+    --accent-soft: #e3eeef;
+    --gold: #b98a2f;
+    --good: #2e7d4f;
+    --warn: #b26a00;
+    --bad: #b3362c;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px; line-height: 1.5; color: var(--ink); background: var(--paper);
+    padding: 24px 16px 64px;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  h1 { font-size: 28px; line-height: 1.2; margin-bottom: 6px; }
+  .tagline { color: var(--ink-soft); margin-bottom: 22px; font-size: 16px; }
+  h2 { font-size: 20px; margin: 26px 0 10px; }
+  .panel {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  }
+  .field label { display: block; font-size: 15.5px; font-weight: 600; margin-bottom: 4px; }
+  .field .hint { font-size: 15.5px; color: var(--ink-soft); margin-top: 3px; }
+  .field input, .field select {
+    width: 100%; font-size: 17px; padding: 9px 10px; border: 1px solid var(--line);
+    border-radius: 8px; background: #fff; color: var(--ink);
+  }
+  .field input:focus, .field select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+  @media (max-width: 760px) { .panel { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .panel { grid-template-columns: 1fr; } }
+
+  .youbar {
+    margin-top: 16px; background: var(--accent); color: #fff; border-radius: 12px;
+    padding: 16px 20px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: baseline;
+  }
+  .youbar b { font-size: 21px; }
+  .youbar .lbl { font-size: 15.5px; opacity: .85; display: block; }
+
+  .cards { margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  @media (max-width: 760px) { .cards { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px;
+  }
+  .card h3 { font-size: 16px; margin-bottom: 8px; color: var(--accent); }
+  .card .big { font-size: 24px; font-weight: 700; }
+  .card .sub { font-size: 15.5px; color: var(--ink-soft); margin-top: 4px; }
+  .chain { margin-top: 6px; }
+  .chain li { margin: 6px 0 6px 18px; font-size: 15.5px; }
+  .bar-wrap { margin-top: 10px; background: var(--accent-soft); border-radius: 6px; height: 22px; position: relative; overflow: hidden; }
+  .bar-fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--gold); border-radius: 6px 0 0 6px; }
+  .bar-note { font-size: 15.5px; color: var(--ink-soft); margin-top: 5px; }
+  .foot { margin-top: 26px; font-size: 15.5px; color: var(--ink-soft); }
+  .foot li { margin: 4px 0 4px 18px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Project Housing &amp; Infrastructure Bill</h1>
+  <p class="tagline">What one lodging/commercial approval costs the public, region-wide.
+  Defaults model the two Mountain Village hotels (Four Seasons + Six Senses) combined.
+  Every factor is editable; all are ranges from the Livable Telluride housing baseline.</p>
+
+  <div class="panel">
+    <div class="field">
+      <label for="keys">Hotel keys / lodge units</label>
+      <input type="number" id="keys" value="124" min="0">
+      <div class="hint">FS ~43 + Six Senses ~81</div>
+    </div>
+    <div class="field">
+      <label for="resid">Serviced residences / condos</label>
+      <input type="number" id="resid" value="0" min="0">
+      <div class="hint">FS 26 + SS 20 if serviced; adds staff at half rate (0 = report base case)</div>
+    </div>
+    <div class="field">
+      <label for="comm">Commercial sq ft</label>
+      <input type="number" id="comm" value="26000" min="0">
+      <div class="hint">Jobs at 2.5 / 1,000 sq ft (LUC rate)</div>
+    </div>
+    <div class="field">
+      <label for="staffLo">Staffing, employees per key (low)</label>
+      <input type="number" id="staffLo" value="1.5" step="0.1" min="0">
+      <div class="hint">Luxury convention 1.5–2.5</div>
+    </div>
+    <div class="field">
+      <label for="staffHi">Staffing, employees per key (high)</label>
+      <input type="number" id="staffHi" value="2.5" step="0.1" min="0">
+      <div class="hint">Residences counted at half this rate</div>
+    </div>
+    <div class="field">
+      <label for="onsite">Workers housed on-site</label>
+      <input type="number" id="onsite" value="30" min="0">
+      <div class="hint">Six Senses dorms+apts ≈ 25–40; FS 0</div>
+    </div>
+    <div class="field">
+      <label for="jpw">Jobs per worker</label>
+      <input type="number" id="jpw" value="1.2" step="0.05" min="1">
+      <div class="hint">Resort multiple-job-holding</div>
+    </div>
+    <div class="field">
+      <label for="wph">Workers per household</label>
+      <input type="number" id="wph" value="1.6" step="0.1" min="1">
+      <div class="hint">HNA convention 1.4–1.8</div>
+    </div>
+    <div class="field">
+      <label for="delivery">Housing delivery model</label>
+      <select id="delivery">
+        <option value="145000,352000">Sunnyside-class (free public land): $145k–$352k/unit</option>
+        <option value="678000,1090000">VooDoo-class (bespoke in-town): $678k–$1.09M/unit</option>
+        <option value="137000,137000">Meadowlark-class ownership: ~$137k/unit</option>
+        <option value="400000,700000" selected>Blended central estimate: $400k–$700k/unit</option>
+      </select>
+      <div class="hint">Public capital gap per unit, 60–100% AMI tier</div>
+    </div>
+  </div>
+
+  <div class="youbar" id="youbar"></div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>The chain</h3>
+      <ol class="chain" id="chain"></ol>
+    </div>
+    <div class="card">
+      <h3>Public housing bill</h3>
+      <div class="big" id="bill"></div>
+      <div class="sub" id="perkey"></div>
+      <div class="sub" id="perpillow"></div>
+    </div>
+    <div class="card">
+      <h3>Shared-system draw</h3>
+      <div class="big" id="mgd"></div>
+      <div class="bar-wrap"><div class="bar-fill" id="wwbar"></div></div>
+      <div class="bar-note" id="wwnote"></div>
+      <div class="sub" id="trips" style="margin-top:10px"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <b>Method &amp; sources.</b>
+    <ul>
+      <li>Staffing 1.5–2.5/key and the jobs→workers→households factors are stated-range extrapolations [E]; commercial rate is the adopted Telluride LUC rate. Replace with each project's mitigation filings when public.</li>
+      <li>Delivery costs are the region's demonstrated results: Sunnyside ($516k TDC, free county land), VooDoo ($1.26M TDC), Meadowlark (~$137k net town subsidy). See the housing baseline and the public report, Sections 4–5.</li>
+      <li>Wastewater: 70–100 gal/person/day; guest pillows ≈ 2.2/key; food &amp; beverage, spa, and laundry add high-strength load (shown as the mid-range person-equivalent bump). Headroom denominator: ~1.05 MGD, the new 2.67 MGD Ilium plant minus ~1.6 MGD current peak (report endnote 62).</li>
+      <li>Traffic: ~5 trips/key/day resort generation plus one round-trip per commuting worker; comparator from the Diamond Ridge study — a 240-unit project advances Society Turn roundabout failure to ~2027.</li>
+      <li>Estimates only, for public discussion. Livable Telluride welcomes corrections.</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+function $(id){ return document.getElementById(id); }
+function nv(id){ return Math.max(0, parseFloat($(id).value) || 0); }
+function money(x){
+  if (x >= 1e6) return '$' + (x/1e6).toFixed(x >= 10e6 ? 0 : 1) + 'M';
+  return '$' + Math.round(x/1000) + 'k';
+}
+function calc(){
+  var keys = nv('keys'), resid = nv('resid'), comm = nv('comm');
+  var sLo = nv('staffLo'), sHi = Math.max(nv('staffHi'), nv('staffLo'));
+  var onsite = nv('onsite'), jpw = Math.max(1, nv('jpw')), wph = Math.max(1, nv('wph'));
+  var dl = $('delivery').value.split(','), subLo = +dl[0], subHi = +dl[1];
+
+  var commJobs = comm / 1000 * 2.5;
+  var jobsLo = keys * sLo + resid * sLo * 0.5 + commJobs;
+  var jobsHi = keys * sHi + resid * sHi * 0.5 + commJobs;
+
+  var wLo = jobsLo / jpw, wHi = jobsHi / jpw;
+  var netLo = Math.max(0, wLo - onsite), netHi = Math.max(0, wHi - onsite);
+  var hhLo = Math.round(netLo / (wph + 0.2));       // low case: bigger households
+  var hhHi = Math.round(netHi / Math.max(1, wph - 0.2)); // high case: smaller households
+  var hhMid = Math.round((hhLo + hhHi) / 2);
+
+  var billLo = hhLo * subLo, billHi = hhHi * subHi;
+  var billMidLo = hhMid * subLo, billMidHi = hhMid * subHi;
+
+  var pillows = keys * 2.2;
+  var perKeyLo = keys ? billMidLo / keys : 0, perKeyHi = keys ? billMidHi / keys : 0;
+  var perPilLo = pillows ? billMidLo / pillows : 0, perPilHi = pillows ? billMidHi / pillows : 0;
+
+  // wastewater: guests (pillows as PE, +50% mid-range strength bump) + workers in service area
+  var peLo = pillows * 1.0 + (wLo + wHi) / 2 * 0.9;
+  var peHi = pillows * 1.9 + (wLo + wHi) / 2 * 1.0;
+  var mgdLo = peLo * 70 / 1e6, mgdHi = peHi * 100 / 1e6;
+  var headroom = 1.05;
+  var pctLo = mgdLo / headroom * 100, pctHi = mgdHi / headroom * 100;
+
+  var commuting = Math.round((netLo + netHi) / 2);
+  var trips = Math.round(keys * 5 + commuting * 2);
+
+  $('youbar').innerHTML =
+    '<span><span class="lbl">New jobs</span><b>' + Math.round(jobsLo) + '–' + Math.round(jobsHi) + '</b></span>' +
+    '<span><span class="lbl">Unhoused worker households</span><b>' + hhLo + '–' + hhHi + '</b></span>' +
+    '<span><span class="lbl">Public housing bill (central)</span><b>' + money(billMidLo) + '–' + money(billMidHi) + '</b></span>' +
+    '<span><span class="lbl">Per hotel key</span><b>' + money(perKeyLo) + '–' + money(perKeyHi) + '</b></span>';
+
+  $('chain').innerHTML =
+    '<li>' + Math.round(jobsLo) + '–' + Math.round(jobsHi) + ' jobs (keys, residences at half rate, commercial)</li>' +
+    '<li>÷ ' + jpw + ' jobs/worker → ' + Math.round(wLo) + '–' + Math.round(wHi) + ' workers</li>' +
+    '<li>− ' + onsite + ' housed on-site → ' + Math.round(netLo) + '–' + Math.round(netHi) + ' unhoused workers</li>' +
+    '<li>÷ ~' + wph + ' workers/household → <b>' + hhLo + '–' + hhHi + ' households</b> (central ~' + hhMid + ')</li>';
+
+  $('bill').textContent = money(billMidLo) + ' – ' + money(billMidHi);
+  $('perkey').textContent = 'Per hotel key: ' + money(perKeyLo) + '–' + money(perKeyHi) + ' of public housing capital';
+  $('perpillow').textContent = 'Per guest pillow (~2.2/key): ' + money(perPilLo) + '–' + money(perPilHi) +
+    ' · Full range across cases: ' + money(billLo) + '–' + money(billHi);
+
+  $('mgd').textContent = mgdLo.toFixed(2) + '–' + mgdHi.toFixed(2) + ' MGD';
+  var pctMid = Math.min(100, (pctLo + pctHi) / 2);
+  $('wwbar').style.width = pctMid.toFixed(1) + '%';
+  $('wwnote').textContent = pctLo.toFixed(0) + '–' + pctHi.toFixed(0) +
+    '% of the new regional plant’s ~1.05 MGD generational headroom';
+  $('trips').textContent = '~' + trips + ' added daily vehicle trips (resort generation + ~' +
+    commuting + ' commuting workers). Yardstick: a 240-unit project advances Society Turn failure to ~2027.';
+}
+document.querySelectorAll('input, select').forEach(function(el){ el.addEventListener('input', calc); });
+calc();
+</script>
+</body>
+</html>
