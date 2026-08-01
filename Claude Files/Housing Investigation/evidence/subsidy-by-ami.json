@@ -1,0 +1,112 @@
+{
+ "assumptions": {
+  "opex_per_unit_yr": 9500,
+  "vacancy": 0.05,
+  "rate": 0.05,
+  "term_yrs": 30,
+  "unit": "2BR at CHFA 2026 max rent"
+ },
+ "tdc_scenarios": {
+  "sunnyside_516k": 516103,
+  "voodoo_1256k": 1255635,
+  "shandoka_L_3296k": 3296182
+ },
+ "rows": [
+  {
+   "ami": "30% AMI",
+   "monthly_rent": 885,
+   "noi_per_yr": 589,
+   "supportable_debt": 9054,
+   "subsidy_sunnyside_516k": 507049,
+   "subsidy_pct_sunnyside_516k": 98,
+   "subsidy_voodoo_1256k": 1246581,
+   "subsidy_pct_voodoo_1256k": 99,
+   "subsidy_shandoka_L_3296k": 3287128,
+   "subsidy_pct_shandoka_L_3296k": 100
+  },
+  {
+   "ami": "50% AMI",
+   "monthly_rent": 1475,
+   "noi_per_yr": 7315,
+   "supportable_debt": 112449,
+   "subsidy_sunnyside_516k": 403654,
+   "subsidy_pct_sunnyside_516k": 78,
+   "subsidy_voodoo_1256k": 1143186,
+   "subsidy_pct_voodoo_1256k": 91,
+   "subsidy_shandoka_L_3296k": 3183733,
+   "subsidy_pct_shandoka_L_3296k": 97
+  },
+  {
+   "ami": "60% AMI",
+   "monthly_rent": 1770,
+   "noi_per_yr": 10678,
+   "supportable_debt": 164147,
+   "subsidy_sunnyside_516k": 351956,
+   "subsidy_pct_sunnyside_516k": 68,
+   "subsidy_voodoo_1256k": 1091488,
+   "subsidy_pct_voodoo_1256k": 87,
+   "subsidy_shandoka_L_3296k": 3132035,
+   "subsidy_pct_shandoka_L_3296k": 95
+  },
+  {
+   "ami": "80% AMI",
+   "monthly_rent": 2360,
+   "noi_per_yr": 17404,
+   "supportable_debt": 267542,
+   "subsidy_sunnyside_516k": 248561,
+   "subsidy_pct_sunnyside_516k": 48,
+   "subsidy_voodoo_1256k": 988093,
+   "subsidy_pct_voodoo_1256k": 79,
+   "subsidy_shandoka_L_3296k": 3028640,
+   "subsidy_pct_shandoka_L_3296k": 92
+  },
+  {
+   "ami": "100% AMI",
+   "monthly_rent": 2950,
+   "noi_per_yr": 24130,
+   "supportable_debt": 370937,
+   "subsidy_sunnyside_516k": 145166,
+   "subsidy_pct_sunnyside_516k": 28,
+   "subsidy_voodoo_1256k": 884698,
+   "subsidy_pct_voodoo_1256k": 70,
+   "subsidy_shandoka_L_3296k": 2925245,
+   "subsidy_pct_shandoka_L_3296k": 89
+  },
+  {
+   "ami": "120% AMI",
+   "monthly_rent": 3540,
+   "noi_per_yr": 30856,
+   "supportable_debt": 474332,
+   "subsidy_sunnyside_516k": 41771,
+   "subsidy_pct_sunnyside_516k": 8,
+   "subsidy_voodoo_1256k": 781303,
+   "subsidy_pct_voodoo_1256k": 62,
+   "subsidy_shandoka_L_3296k": 2821850,
+   "subsidy_pct_shandoka_L_3296k": 86
+  },
+  {
+   "ami": "140% AMI",
+   "monthly_rent": 4130,
+   "noi_per_yr": 37582,
+   "supportable_debt": 577727,
+   "subsidy_sunnyside_516k": 0,
+   "subsidy_pct_sunnyside_516k": 0,
+   "subsidy_voodoo_1256k": 677908,
+   "subsidy_pct_voodoo_1256k": 54,
+   "subsidy_shandoka_L_3296k": 2718455,
+   "subsidy_pct_shandoka_L_3296k": 82
+  },
+  {
+   "ami": "160% AMI",
+   "monthly_rent": 4720,
+   "noi_per_yr": 44308,
+   "supportable_debt": 681123,
+   "subsidy_sunnyside_516k": 0,
+   "subsidy_pct_sunnyside_516k": 0,
+   "subsidy_voodoo_1256k": 574512,
+   "subsidy_pct_voodoo_1256k": 46,
+   "subsidy_shandoka_L_3296k": 2615059,
+   "subsidy_pct_shandoka_L_3296k": 79
+  }
+ ]
+}
