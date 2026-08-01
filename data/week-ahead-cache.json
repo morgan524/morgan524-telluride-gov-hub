@@ -1,22 +1,22 @@
 {
-  "hash": "95edc9175f5e41fb1e85501906f2f1deb8938111",
-  "lede": "The biggest item this week is the San Miguel County BOCC meeting on August 5, where three Land Use Code amendments go to public hearing — including changes to who qualifies as an 'Qualified Owner,' a wildfire areas update, and a continued hearing on nonconforming lots, all heading toward formal votes. The Open Space Commission meets Monday to pick a preferred trail alignment for the Valley Floor River Trail, with three routes on the table near mapped wetlands. Mountain Village's Design Review Board takes up three multifamily projects Thursday, including a conditional-use permit.",
+  "hash": "1b7b47a076fb7e4e98a599618794599236c28b7f",
+  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC meeting on August 5, where three Land Use Code amendments go to formal public hearing — including changes to who qualifies as an 'owner' under affordable housing rules, a wildfire areas update, and a continued hearing on nonconforming lots. The same day, the Open Space Commission takes up trail alignment for Reach 1 of the Valley Floor River Trail, with three routes around wetlands still in play. Ouray County's planning commission is also meeting virtually to work through definition changes in their land use code — the kind of quiet rewrite that shapes everything downstream.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commission selects Valley Floor River Trail route from three alignment options."
+      "stake": "Commissioners choose one of three Valley Floor River Trail alignments near wetlands."
     },
     {
       "id": 4,
-      "stake": "Three Land Use Code amendments — including ownership rules and wildfire areas — go to public hearing."
+      "stake": "Public hearings on three Land Use Code changes, including affordable housing ownership rules."
     },
     {
       "id": 6,
-      "stake": "Land Use Code definition changes being shaped; definitions determine what rules mean in practice."
+      "stake": "Definition rewrites in Ouray County's land use code can quietly shift what rules allow."
     },
     {
       "id": 8,
-      "stake": "Conditional-use permit and multifamily architecture reviews up for decision in Mountain Village."
+      "stake": "Design review and conditional-use permit decisions on three Mountain Village multifamily projects."
     }
   ]
 }

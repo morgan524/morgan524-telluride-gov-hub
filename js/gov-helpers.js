@@ -835,16 +835,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "St Pats Telluride Parish Bulletin for July 19th",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 18, 2026",
-    newsTopic: "arts-culture",
-    copy: "Attached as PDF is the St Pats Telluride Parish Bulletin for July 19th. Please see the Parish Calendar on the website for any updates to the schedule.Please join us for praying the Holy Rosary on Sundays before 9:00 AM Holy Mass. It starts at 8:30...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/st-pats-telluride-parish-bulletin-for-july-19th/",
-    img: ""
-  },
-  {
     title: "Changes in evacuation zones 25 and 300",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -1051,7 +1041,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1069,7 +1059,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "The August 19 2026 HARC agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
     "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -2926,28 +2916,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-01/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-08-01T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "Zumba with Gisela",
-    link: "https://koto.org/event/zumba-with-gisela/2026-08-01/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-08-01T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Celebration of Life for Mark Silversher",
     link: "https://koto.org/event/celebration-of-life-for-mark-silversher/",
