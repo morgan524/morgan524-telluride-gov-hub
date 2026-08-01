@@ -6,34 +6,6 @@
     "passcode": "314276.",
     "phone": "719) 359-4580"
   },
-  "telluride|2026-07-01|Ecology Commission - Jul 01 2026": {
-    "sv": 4
-  },
-  "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026": {
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"
-  },
-  "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026": {
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1",
-    "meetingId": "830 2245 1705",
-    "passcode": "229528.",
-    "phone": "719) 359-4580"
-  },
-  "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026": {
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
-    "meetingId": "861 6987 1704",
-    "passcode": "281002.",
-    "phone": "346-248-7799"
-  },
-  "county|2026-07-01|Board of County Commissioners Meeting": {
-    "sv": 4,
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg",
-    "meetingId": "828 4833 4181",
-    "passcode": "562164",
-    "phone": "719-359-4580"
-  },
   "county|2026-07-14|Historical Commission": {
     "sv": 4
   },
@@ -119,9 +91,6 @@
     "passcode": "425135",
     "phone": "719-359-4580"
   },
-  "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)": {
-    "sv": 4
-  },
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026": {
     "sv": 4,
     "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
@@ -176,7 +145,11 @@
   },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
     "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130"
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw",
+    "meetingId": "894 7506 0147",
+    "passcode": "314276.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026": {
     "sv": 4,

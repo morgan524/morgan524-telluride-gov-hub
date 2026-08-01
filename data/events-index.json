@@ -108,19 +108,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Free Youth Tennis & Pickleball Program",
-    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-31/",
-    "date": "2026-07-31",
-    "time": "3:30 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "OLD MAN POLLY",
     "href": "https://events.ourayridgwayevents.com/event/old-man-polly-5391",
     "date": "2026-07-31",
@@ -2008,6 +1995,19 @@
     "type": "Community"
   },
   {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
+    "date": "2026-08-12",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://koto.org/event/market-on-the-plaza/2026-08-12/",
     "date": "2026-08-12",
@@ -2019,6 +2019,32 @@
     "source": "KOTO Community Calendar",
     "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
+  },
+  {
+    "title": "Sewing 101 with Melissa",
+    "href": "https://koto.org/event/sewing-101-with-melissa/2026-08-12/",
+    "date": "2026-08-12",
+    "time": "5:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/02/sewing.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll…",
+    "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-12/",
+    "date": "2026-08-12",
+    "time": "5:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "August Book Club- \"Welcome to the Monkey House\"",
@@ -2127,6 +2153,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
+    "date": "2026-08-13",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
     "title": "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
     "href": "https://events.ourayridgwayevents.com/event/community-open-house-for-the-town-of-ridgways-housing-action-plan-master-plan-water-supply-element",
     "date": "2026-08-13",
@@ -2217,6 +2256,19 @@
     "source": "The Alibi",
     "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-13/",
+    "date": "2026-08-13",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers Market",

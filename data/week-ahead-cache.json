@@ -1,18 +1,22 @@
 {
-  "hash": "7c86d3254d2313cf25a2e7e6afb1114bfc011d28",
-  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC meeting on August 5th, where commissioners will hold public hearings on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in affordable housing rules, a wildfire areas update, and a continued hearing on nonconforming lots. That same day, the Ouray County Planning Commission meets virtually to work through possible changes to their Land Use Code definitions section, and TMVOA takes up amendments to its fiscal policies at its July 31st board meeting. On the lighter side, the San Miguel Basin Fair and Rodeo kicks off Friday alongside a free Jungle Book show at the Sheridan.",
+  "hash": "ee3ebc994a04bba4722d036e177db25a4dd7319b",
+  "lede": "The biggest thing on the calendar this week is Wednesday's San Miguel County BOCC meeting, where three Land Use Code amendments go to public hearing — including changes to who qualifies as an 'owner' under housing rules and a wildfire-area code update, both the kind of thing that shapes this valley for years. The Open Space Commission meets Monday to settle on a preferred trail alignment for the Valley Floor River Trail, with three wetland-sensitive options in play. Mountain Village's Design Review Board takes up several multifamily projects Thursday, and the Ouray County Planning Commission holds a virtual work session Wednesday on definition changes to their land use code.",
   "notable": [
     {
-      "id": 5,
-      "stake": "Public hearings on three Land Use Code amendments, including affordable housing ownership rules."
-    },
-    {
-      "id": 7,
-      "stake": "Land Use Code definitions are being rewritten — definitions determine what rules actually mean."
-    },
-    {
       "id": 0,
-      "stake": "Proposed amendments to TMVOA fiscal policies up for formal action."
+      "stake": "Commissioners pick which River Trail alignment crosses Valley Floor wetlands."
+    },
+    {
+      "id": 4,
+      "stake": "Public hearings on three code changes, including housing 'Qualified Owner' definition and wildfire rules."
+    },
+    {
+      "id": 6,
+      "stake": "Land use code definition changes that quietly shift what rules mean in practice."
+    },
+    {
+      "id": 8,
+      "stake": "Conditional-use permit and design reviews for multiple new multifamily projects."
     }
   ]
 }

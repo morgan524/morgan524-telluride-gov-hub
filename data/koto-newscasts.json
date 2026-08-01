@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 7-31-26",
+    "source": "KOTO Community Radio",
+    "date": "August 1, 2026",
+    "newsTopic": "arts-culture",
+    "copy": "On this week's Regional Roundup, hear about literary endeavors around the region. We hear about a new book inspired by the author's own journey from being a former east coast attorney to moving to Colorado to work on a horse ranch. Then we visit a bookstore in Nederland to hear how it is working to create a community space. After that, best selling",
+    "href": "https://koto.org/news/newscast-7-31-26/"
+  },
+  {
     "title": "Newscast 7-30-26",
     "source": "KOTO Community Radio",
     "date": "July 31, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "health",
     "copy": "Palm Theatre Floods in Major Rainstorm; Coming Up Next, Telluride; Forest Health with Jason Sibold",
     "href": "https://koto.org/news/newscast-7-20-26/"
-  },
-  {
-    "title": "Newscast 7-17-26",
-    "source": "KOTO Community Radio",
-    "date": "July 18, 2026",
-    "newsTopic": "public-safety",
-    "copy": "On this week's Regional Roundup, we'll hear about some of the fires burning in the region, we'll hear from evacuees from the Aspen Acres fire, we pay a visit to the incident command post for the Gold Mountain Fire in Western Colorado to hear what it takes to support the hundreds of firefighters battling the blaze, and we'll hear about the ecologica",
-    "href": "https://koto.org/news/newscast-7-17-26/"
   }
 ]

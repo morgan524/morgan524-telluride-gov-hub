@@ -133,21 +133,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
-  "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    {"sv":4},
-
-  "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
-
-  "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
-
-  "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
-
-  "county|2026-07-01|Board of County Commissioners Meeting":
-    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/Mie5Wdx5RWmbBb3Nr07LBg","meetingId":"828 4833 4181","passcode":"562164","phone":"719-359-4580"},
-
   "county|2026-07-14|Historical Commission":
     {"sv":4},
 
@@ -190,9 +175,6 @@ const MEETING_AGENDA_META = {
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
     {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/tThmDYw9REKbs5_LM8bpog","meetingId":"832 9649 4938","passcode":"425135","phone":"719-359-4580"},
 
-  "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
-    {"sv":4},
-
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
     {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-2496"},
 
@@ -230,7 +212,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1045/files/agenda/1896"},
 
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130"},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130","zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117"},
@@ -921,25 +903,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-07-31';
-const LEGAL_NOTICES_CACHE_DATE = '2026-07-31';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-01';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-01';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-07-01|Ecology Commission - Jul 01 2026":
-    "The July 1, 2026 Ecology Commission agenda hasn't been posted yet.",
-
-  "telluride|2026-07-01|Commission for Community Assistance, Arts & Special Events - Jul 01 2026":
-    "A routine CCAASE meeting with two items worth noting. RASR Productions LLC is asking to extend the Telluride Autumn Classic street closure on September 25, 2026 — adding the westbound lane of Colorado Ave. between Willow and Alder to an already-approved closure from Aspen to Willow. No objections came back from emergency services or affected residents. The commission will also take up a 2027 calendar date request from TMVOA for Red, White & Blues on July 3–4, which overlaps with MusicFest, Plein Air, and the 4th of July Celebration already on the books. A work session reviews draft 2027 grant materials.",
-
-  "telluride|2026-07-01|Telluride Housing Authority Subcommittee - Jul 01 2026":
-    "Two worksession items — no formal votes today. First, the subcommittee takes up nonconventional lending under Guideline §110.2, which currently restricts borrowers to conventional or government-guaranteed fixed-rate mortgages. The discussion centers on whether that framework fits mixed-use structures, where Fannie Mae and Freddie Mac's \"warrantable condominium\" standards can block financing entirely. Second, a thornier policy question: how to count children of split-custody households toward minimum bedroom requirements. Current language defines primary residence as a \"sole and exclusive place of residence,\" which leaves staff using tax-dependent status and custody percentages to determine eligibility — a framework that, applied consistently, means a child may qualify for a bedroom in only one parent's unit. Staff has laid out the scenarios and is asking the subcommittee whether existing appeal and exception pathways are sufficient, or whether the Guidelines and Policies need revision.",
-
-  "telluride|2026-07-01|Liquor Licensing Authority - Jul 01 2026":
-    "The Liquor Licensing Authority takes up 14 special event permit requests at its July 1 meeting — a busy slate that tracks the canyon's summer season in full swing. Applicants include Palm Arts Inc. (AVID Dance Performance, Camp Alderwild), Telluride Mountain Club (Mountain Run, Telluride Reserve), Telluride Medical Center Foundation (Telluride Table across multiple venues), San Miguel Mentoring (Top Chef & Taste of Telluride), Tri-County Health Network (Noche de Luz), Telluride Chamber Music Association (New York Philharmonic Brass Quintet), Telluride Society for Jazz (Jazz Festival), Telluride Film Festival, and Telluride Bluegrass Beer Booth Inc. (Camp Alderwild). Events span July through early September 2026. The board will also approve minutes from the May 21 meeting.",
-
-  "county|2026-07-01|Board of County Commissioners Meeting":
-    "A relatively routine July BOCC meeting, though a few items are worth tracking. The board will interview an applicant for an alternate seat on the Planning Commission — a slot that matters whenever land-use decisions get close. There's a 40-minute presentation on the Road and Bridge High Country Road opening policy, with the Forest Service at the table, which touches on access to the county's backcountry roads every season. The board will also take up an ADA policy update, a tax abatement denial, and board appointments to the Behavioral Health Solutions Panel. The attorney's agenda includes an executive session on a code enforcement matter — no details given, as is typical.",
-
   "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
     "Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.",
 
@@ -988,9 +955,6 @@ const MANUAL_SUMMARIES = {
   "county|2026-07-08|Board of County Commissioners Special - In Norwood at Sheriff Annex":
     "A rare West End meeting — the commissioners convene Wednesday evening at the Norwood Sheriff Annex. Two items of substance: the board considers appointing an alternate member to the Planning Commission (a seat that matters whenever land-use decisions get close), and Deputy County Manager Jarrod Biggs presents the results of the Placerville Fire Survey. At 6:00 the board holds an open listening session with San Miguel County residents. Consent covers routine approval of minutes. Earlier in the afternoon, commissioners tour the Wright's Mesa Historical Society and Log Cabin Museum.",
 
-  "ouray|2026-07-01|PM - The Planning Commission will conduct a work session to review and discuss possible changes to the Ouray County Land Use Code, Section 2 – Definitions. (Packet materials are attached to this agenda)":
-    "Ouray County's Planning Commission meets July 1 at 2:00 PM for a work session on possible changes to Section 2 – Definitions in the Land Use Code. Definitions work might sound like housekeeping, but how a county defines its terms shapes everything that follows — what counts as a dwelling unit, what qualifies as a use, what triggers review. The packet materials are attached to the posted agenda.",
-
   "telluride|2026-07-08|Ecology Commission - Jul 08 2026":
     "The Ecology Commission meets Wednesday to work through two substantive items. The main session is a work session reviewing the 2022 Climate Action Plan, with discussion focused on two specific focus areas: Transportation & Land Use and Materials & Consumption — both of which connect directly to how people move around the box canyon and what gets consumed and discarded here. The commission will also take action on appointing members to the Green Grants Selection Subcommittee, which directs local environmental funding. Rounding out the agenda is a report on the outcome of the Trash Bash event. The June meeting was canceled, so there are no prior minutes to approve.",
 
@@ -1028,7 +992,7 @@ const MANUAL_SUMMARIES = {
     "A late-night special meeting — 10 p.m. — to debrief the day's fair activities and work through whatever issues surfaced during the event. The agenda is intentionally open-ended, which is typical for fair boards wrapping up a long day.",
 
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    "The August 3, 2026 Open Space Commission agenda hasn't been posted yet.",
+    "The Open Space Commission meets August 3 to work through two consequential items for the Valley Floor. First, commissioners will review and confirm a preferred trail alignment for Reach 1 of the River Trail — three alternative alignments are on the table, each threading around mapped wetlands near the Public Works facility. Second, the commission will consider a formal recommendation to Town Council to amend the Valley Floor Open Space Management Plan to allow dogs on a limited portion of that same River Trail segment. A review of upcoming site walks rounds out the agenda.",
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
     "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
@@ -1157,7 +1121,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -2278,66 +2242,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Hickenlooper’s office updates county commissioners on relevant initiatives",
-    source: "Telluride Times",
-    date: "July 18, 2026",
-    firstSeen: "2026-07-18",
-    newsTopic: "government",
-    copy: "Sen. Hickenlooper's Southwest Regional Director briefed San Miguel County commissioners on several active issues, including voting rights legislation, immigration enforcement oversight, and public lands bills covering hundreds of thousands of Colorado acres. Wildfire resources, IRA water projects, and a major 2024 gas spill on Southern Ute land were also on the agenda.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_ad1056b1-54f0-4ac3-ad15-7f43c2fd6f07.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/da/9daf1ab2-558d-4e28-9814-44db631d9128/6a5abd5662386.image.webp",
-    imgHiRes: true
-  },
-  {
-    title: "Region expected to see record low streamflows",
-    source: "Telluride Times",
-    date: "July 18, 2026",
-    firstSeen: "2026-07-18",
-    newsTopic: "land-use",
-    copy: "Warm, dry winter conditions have pushed streamflows across the region to historic lows — the Uncompahgre at Ridgway hit an all-time record, while the San Miguel, Animas, and Dolores all logged fourth-lowest levels. Up to 20 miles of the San Miguel may drop below 10 cfs, stressing native fish and raising metal concentrations. Monsoon rains are unlikely to meaningfully shift the numbers this late in the season.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_dbdd8f79-5b19-431b-a325-7f028ec16a45.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/76/c76a2cd6-fb63-457e-b6c6-29005be04252/6a5aba1513e44.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Updated: Palm, parts of TIS and TM/HS flooded",
-    source: "Telluride Times",
-    date: "July 18, 2026",
-    firstSeen: "2026-07-18",
-    newsTopic: "education",
-    copy: "Friday afternoon's heavy rain triggered mudslides from the Jud Wiebe Trail area, flooding the Palm Theatre with 3–4 feet of water and mud after a loading dock door gave way. Parts of TIS and TM/HS were also affected. No injuries reported; remediation crews were already on scene.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_32546b30-de8d-4012-8929-88d83de86934.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/d6/0d6a74ff-58d1-4a51-b5ae-38b9f261deac/6a5af1330fabf.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Off-duty employee arrested in shooting near ICE detention center in Colorado that injured a woman",
-    source: "Telluride Times",
-    date: "July 18, 2026",
-    firstSeen: "2026-07-18",
-    newsTopic: "public-safety",
-    copy: "An off-duty GEO Group employee at Aurora's ICE detention center was arrested after allegedly firing his personal handgun at two women who had photographed employees' vehicles during a protest, striking one in the foot. He faces attempted second-degree murder and first-degree assault charges. GEO Group placed him on unpaid leave.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_1d300f4d-c6e5-5354-9a1b-5fa283c52025.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Men sue hospital after DNA tests showed they were switched at birth 38 years ago",
-    source: "Telluride Times",
-    date: "July 18, 2026",
-    firstSeen: "2026-07-18",
-    newsTopic: "health",
-    copy: "Two men born on the same day in 1988 at a North Dakota hospital discovered through at-home DNA tests that they were switched at birth. The hospital acknowledges the switch happened but says records are gone and no staff from that era remain. Both men have sued.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_ede3518b-803d-50b3-adac-038ef418a20e.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/6c/16c1336b-33d2-5a9b-92e5-ea1ac759c262/6a5ab1a7616dc.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -2441,6 +2345,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 7-31-26",
+    source: "KOTO Community Radio",
+    date: "August 1, 2026",
+    newsTopic: "arts-culture",
+    copy: "On this week's Regional Roundup, hear about literary endeavors around the region. We hear about a new book inspired by the author's own journey from being a former east coast attorney to moving to Colorado to work on a horse ranch. Then we visit a bookstore in Nederland to hear how it is working to create a community space. After that, best selling",
+    href: "https://koto.org/news/newscast-7-31-26/"
+  },
+  {
     title: "Newscast 7-30-26",
     source: "KOTO Community Radio",
     date: "July 31, 2026",
@@ -2495,14 +2407,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "health",
     copy: "Palm Theatre Floods in Major Rainstorm; Coming Up Next, Telluride; Forest Health with Jason Sibold",
     href: "https://koto.org/news/newscast-7-20-26/"
-  },
-  {
-    title: "Newscast 7-17-26",
-    source: "KOTO Community Radio",
-    date: "July 18, 2026",
-    newsTopic: "public-safety",
-    copy: "On this week's Regional Roundup, we'll hear about some of the fires burning in the region, we'll hear from evacuees from the Aspen Acres fire, we pay a visit to the incident command post for the Gold Mountain Fire in Western Colorado to hear what it takes to support the hundreds of firefighters battling the blaze, and we'll hear about the ecologica",
-    href: "https://koto.org/news/newscast-7-17-26/"
   }
 ];
 
@@ -3005,17 +2909,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-07-31/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-07-31T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-01/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
@@ -3454,6 +3347,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-12T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Sewing 101 with Melissa",
+    link: "https://koto.org/event/sewing-101-with-melissa/2026-08-12/",
+    description: "Don't throw away your old clothes just because they have a tiny (or even a large) hole in them! Learn the basics of sewing and mending your clothing with our very own talented seamstress, Melissa Sumpter! Bring your own garment, we'll provide the sewing materials.",
+    pubDate: "2026-08-12T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/02/sewing.jpg"
+  },
+  {
+    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
+    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-12/",
+    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
+    pubDate: "2026-08-12T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-13/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-08-13T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Pilates for All Bodies with Laura",
+    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
+    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    pubDate: "2026-08-13T18:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3511,21 +3459,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
     firstSeen: "2026-07-27",
     revealDate: "2026-07-29",
-    lastSeen: "2026-07-31"
-  },
-  {
-    id: "TEL-A-196",
-    name: "Apricot",
-    species: "Dog",
-    breed: "Shepherd, Australian / Mixed Breed (Medium)",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/81c24864baaf62ae9e749a040434bdd6/c2a309a474ba71b5ce9b34e1c5d3c234.JPG",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214172701",
-    summary: "Young Puppy • Shepherd, Australian / Mixed Breed (Medium) • Female",
-    firstSeen: "2026-07-27",
-    revealDate: "2026-07-31",
-    lastSeen: "2026-07-31"
+    lastSeen: "2026-08-01"
   }
 ];
 
@@ -6506,17 +6440,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/54474/dsc08059lr.800x533.webp"
   },
   {
-    title: "Nik Parr & the Selfless Lovers",
-    link: "https://www.telluride.com/event/nik-parr-the-selfless-lovers/",
-    description: "Nik Parr & The Selfless Lovers are a high-energy, piano-driven roots rock band hailing from Austin, Texas. Imagine …",
-    pubDate: "2026-07-30",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62663/screenshot_2026-06-01_at_3_27_44_pm.800x533.webp"
-  },
-  {
     title: "San Miguel Basin Fair and Rodeo",
     link: "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
     description: "The San Miguel Basin Fair takes place every summer at the San Miguel County Fairgrounds in Norwood. Livestock shows …",
@@ -7082,25 +7005,6 @@ const LEGAL_NOTICES = [
     smcBidID: "187"
   },
   {
-    title: "Foreclosure Sale -- Section 27 Property (Sale No. 202602)",
-    entity: "San Miguel County Public Trustee",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "Public Trustee will conduct a foreclosure sale for property originally owned by Alexander S. Hartman due to death of all named mortgagors under the deed of trust. The property is located in Section 27, Township 45 North, Range 13 West. Current debt holder is Mortgage Assets Management, LLC with an outstanding balance of $309,162.10.",
-    deadline: "TBD",
-    expires: "2026-07-31",
-    dates: "6/4",
-    papers: ["ttimes_0604"],
-    url: "https://www.telluridenews.com/news/legals/article_f189086a-bd15-49d6-92a1-f8e7553ebb74.html",
-    address: "Section 27, Township 45 North, Range 13 West, San Miguel County",
-    noticeKey: "foreclosure-202602",
-    caseNumber: "202602"
-  },
-  {
     title: "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
     entity: "San Miguel County Assessor",
     entityClass: "ent-county",
@@ -7322,23 +7226,6 @@ const LEGAL_NOTICES = [
     noticeKey: "tax-exemption-senior-veteran-2026"
   },
   {
-    title: "Request for Proposal -- Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "Town of Telluride is seeking qualified respondents for: Telluride Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting.",
-    deadline: "Closes 7/31/2026",
-    expires: "2026-07-31",
-    dates: "7/10",
-    url: "https://www.telluride.gov/bids.aspx?bidID=131",
-    address: "",
-    totBidID: "131"
-  },
-  {
     title: "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
     entity: "Estate of Lawrence de Bivort",
     entityClass: "ent-county",
@@ -7356,24 +7243,6 @@ const LEGAL_NOTICES = [
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "probate-2026PR30008",
     caseNumber: "2026PR30008"
-  },
-  {
-    title: "RFP -- Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting Project",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride is soliciting proposals for two related projects: Oval Improvements (Part 1) and fencing/safety netting at Warner Field, both located in Telluride's Town Park. The full RFP is available on the Town's website at www.telluride.gov. Proposals must be submitted before 3:00 PM MT on Friday, July 31, 2026.",
-    deadline: "2026-07-31",
-    expires: "2026-07-31",
-    dates: "7/16",
-    papers: ["ttimes_0716"],
-    url: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    address: "Town Park, Telluride, CO",
-    noticeKey: "rfp-telluride-townpark-oval-warner"
   },
   {
     title: "Public Hearing -- San Miguel County LUC Amendment, Section 5-1305B \"Qualified Owner\" Definition",
@@ -7410,24 +7279,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
     address: "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
     noticeKey: "smc-luc-amendment-5-406-wildfire"
-  },
-  {
-    title: "RFP -- Town Park Oval Improvements (Part 1) and Warner Field Fencing and Safety Netting Project",
-    entity: "Town of Telluride",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "The Town of Telluride is soliciting proposals for improvements to the Oval (Part 1) and for fencing and safety netting at Warner Field, both located in Town Park. The full RFP is available on the Town's website at www.telluride.gov. Proposals must be submitted prior to 3:00 PM MT on Friday, July 31, 2026.",
-    deadline: "2026-07-31",
-    expires: "2026-07-31",
-    dates: "7/23",
-    papers: ["ttimes_0723"],
-    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    address: "Town Park, Telluride, Colorado",
-    noticeKey: "rfp-telluride-town-park-oval-warner-field"
   },
   {
     title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
