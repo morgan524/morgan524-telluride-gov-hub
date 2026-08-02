@@ -1070,7 +1070,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1082,7 +1082,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1133,7 +1133,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1412,6 +1412,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "For divorced parents, Telluride lowers threshold for town-owned or deed-restricted units",
+    source: "Telluride Times",
+    date: "August 2, 2026",
+    firstSeen: "2026-08-02",
+    newsTopic: "housing",
+    copy: "Telluride's Housing Authority voted July 21 to lower the shared-custody threshold for town-owned and deed-restricted units from 50% to 20%, allowing a parent with at least 20% custody to qualify for a bedroom for their child. The change applies to both rentals and for-purchase units.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_0c847016-c186-40f7-ac1a-fa807ebdef23.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/aa/8aa472db-aa78-4f24-a4c1-327b35f88eec/6a6d2ba52e3c8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "A perfect time for the Perseids",
     source: "Telluride Times",
@@ -2911,17 +2923,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-02/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-02T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-08-02/",
