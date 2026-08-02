@@ -549,6 +549,106 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
     title: "Parish Bulletin for August 2",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -970,7 +1070,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1033,7 +1133,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -2709,16 +2809,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "Top Chef & Taste of Telluride",
-    date: "2026-08-01",
-    time: "5:30 PM – 10:00 PM",
-    location: "Telluride Innovation Center, Telluride",
-    description: "Top Chef & Taste of Telluride serves up delicious food, creative cocktails, a chef competition, and more—all to support One to One Mentoring and its mission to empower local youth through trusted, caring relationships.\nIndulge in delectable dishes prepared by local chefs while enjoying the stunning views of Telluride. This event is designed to celebrate the rich local food culture of Telluride and to showcase three amazing chefs in a \"Top Chef\" style competition. Don't miss out on this unique opportunity to savor the flavors of Telluride!\nBuy tickets HERE.\n ",
-    link: "https://telluridescience.org/event/top-chef-taste-of-telluride-2026/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/August-1-top-chef.png",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     date: "2026-08-04",
     time: "6:30 PM – 7:30 PM",
@@ -2821,17 +2911,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Pickleball Open Play",
-    link: "https://koto.org/event/pickleball-open-play/2026-08-02/",
-    description: "Weekly Round Robins Eligibility: Must be rated 2.5+. Requirements: Players should know the rules, scoring, and basic strategy of tennis. Format: Fun, competitive matches with rotating partners each session. Minimum Players: A minimum of 4 players is required for the class to run.",
-    pubDate: "2026-08-02T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Drop In Tech Time with Oliver",
     link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-02/",
@@ -3360,20 +3439,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-193",
-    name: "Fig",
-    species: "Dog",
-    breed: "Collie, Border / Shepherd, Australian",
-    ageGroup: "Young Puppy",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/ace144b817dac5d1be12098890b393bc/bd9ea402626cad1b5bd7d0f7de39d544.JPG",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214172689",
-    summary: "Young Puppy • Collie, Border / Shepherd, Australian • Female",
-    firstSeen: "2026-07-27",
-    revealDate: "2026-07-29",
-    lastSeen: "2026-08-02"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3813,17 +3879,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-  {
-    title: "Home Trust of Ouray County - Home Tour & House Show",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3769",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3769",
-    pubDate: "2026-08-02T17:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Dallas Meadows Neighborhood - Ridgway CO 81427",
-    imageUrl: ""
-  }
+
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -4103,6 +4159,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52487582547065/huge/563a405a9c9cafe377d9fb833f1a4084535fcf25.jpg"
+  },
+  {
+    title: "State of Journalism in Trump's Washington",
+    link: "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
+    description: "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism in Trump's Washington. Hessler has written widely on topics ranging from Western Slope politics to his experiences living in and writing about China and Egypt. O'Connell is part of the reporting team that received the 2026 Pulitzer Prize for Public Service and has written extensively about the intersection of business and politics in Washington, D.C. View on site | Email this event",
+    pubDate: "2026-08-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53589242097771/huge/34513880aab250a7f25104b4f0d5d65920c25ed6.jpg"
   },
   {
     title: "Paw Prints Book Club",
