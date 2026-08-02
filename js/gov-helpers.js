@@ -1070,7 +1070,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1412,6 +1412,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A perfect time for the Perseids",
+    source: "Telluride Times",
+    date: "August 2, 2026",
+    firstSeen: "2026-08-02",
+    newsTopic: "community",
+    copy: "The Perseids meteor shower peaks the nights of Aug. 11–12 and 12–13, with no moonlight interference this year making for ideal dark skies. No equipment needed — just find a dark spot; locally, Top of the Pines near Ridgway, Lizard Head Pass, or Hastings Mesa all work. After midnight you may see up to 100 meteors per hour.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_cdaa6533-92f7-42ca-bc46-8a6258c06670.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/77/b77102fd-a6c1-49ed-8002-357712082116/6a6ba339ca365.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "From the Western Slope to Washington",
     source: "Telluride Times",
