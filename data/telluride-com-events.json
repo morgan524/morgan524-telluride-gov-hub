@@ -396,39 +396,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
   },
   {
-    "title": "New York Philharmonic Brass Quintet",
-    "link": "https://www.telluride.com/event/new-york-philharmonic-brass-quintet/",
-    "description": "The incredible New York Philharmonic Principal Brass Quintet perform in Telluride! Don’t miss the best brass players …",
-    "pubDate": "2026-07-31",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62212/nyp_brass.800x533.webp"
-  },
-  {
-    "title": "The Brass Family",
-    "link": "https://www.telluride.com/event/the-brass-family/",
-    "description": "“The Brass Family” – with the New York Philharmonic Principal Brass Quintet Learn all about brass instruments in …",
-    "pubDate": "2026-07-31",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62214/nyp_education.800x533.webp"
-  },
-  {
-    "title": "Summer Spectacular: The Jungle Book",
-    "link": "https://www.telluride.com/event/summer-spectacular-the-jungle-book/",
-    "description": "SAF’s YPT Summer Spectacular program starts on a Monday, and by Friday, these summer campers have learned an entire …",
-    "pubDate": "2026-07-31",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62640/ypt-sumemr-jungle-book.800x533.webp"
-  },
-  {
     "title": "Top Chef and Taste of Telluride",
     "link": "https://www.telluride.com/event/top-chef-and-taste-of-telluride/",
     "description": "Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, …",
@@ -792,5 +759,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp"
+  },
+  {
+    "title": "Original Thinkers",
+    "link": "https://www.telluride.com/event/original-thinkers/",
+    "description": "Original Thinkers returns to breathtaking Telluride, Colorado, for the highly anticipated ninth annual festival, taking …",
+    "pubDate": "2026-10-01",
+    "endDate": "2026-10-05",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp"
   }
 ]

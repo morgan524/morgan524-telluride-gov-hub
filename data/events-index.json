@@ -40,19 +40,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Celebration of Life for Mark Silversher",
-    "href": "https://koto.org/event/celebration-of-life-for-mark-silversher/",
-    "date": "2026-08-01",
-    "time": "3:00 PM",
-    "location": "Telluride Town Park",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/townpark.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Celebration of Life for Mark Silversher. Finger foods and beverages will be provided. Bring a chair or blanket and some memories of Mark.",
-    "type": "Festivals"
-  },
-  {
     "title": "Top Chef and Taste of Telluride",
     "href": "https://koto.org/event/top-chef-and-taste-of-telluride/",
     "date": "2026-08-01",
@@ -115,19 +102,6 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "The Casual Enormity of Adam Palmer Documentary Film Screening",
-    "href": "https://koto.org/event/the-casual-enormity-of-adam-palmer-documentary-film-screening/",
-    "date": "2026-08-01",
-    "time": "6:30 PM",
-    "location": "Sheridan Opera House, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer will arrive in Telluride on Saturday, August 1, with a screening at the Sheridan Opera House at 7:00pm. This special…",
     "type": "Arts & Film"
   },
   {
@@ -739,7 +713,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-09-24"
+    "endDate": "2026-10-01"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -1322,7 +1296,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "",
     "type": "Arts & Film",
-    "endDate": "2026-09-24"
+    "endDate": "2026-10-01"
   },
   {
     "title": "Electric Showcase",
@@ -1371,7 +1345,7 @@
     "time": "9:30 AM",
     "location": "Hartwell Park",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53551169184729/huge/15f9171666e9175bc49f62940fbbcd07abc7fb15.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53551169184729/huge/d363a60ec963787455148228afd09f3fa3ffcb7f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 2026 9:30 a.m.–5:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented…",
@@ -1807,7 +1781,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
-    "endDate": "2026-09-23"
+    "endDate": "2026-09-30"
   },
   {
     "title": "Wine and Wickets",
@@ -1915,6 +1889,19 @@
     "type": "Community"
   },
   {
+    "title": "The Creative Exchange at Telluride Arts HQ",
+    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-08-13/",
+    "date": "2026-08-13",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
+    "type": "Community"
+  },
+  {
     "title": "Norwood Sanitation District Meeting",
     "href": "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
     "date": "2026-08-13",
@@ -2007,6 +1994,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
     "title": "Ridgway Farmers Market",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     "date": "2026-08-14",
@@ -2019,6 +2032,19 @@
     "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
     "type": "Food & Drink",
     "endDate": "2026-09-25"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
   },
   {
     "title": "Telluride Farmers Market",
@@ -2110,6 +2136,19 @@
     "source": "The Alibi",
     "desc": "Telluride Mushroom Fest Puff Ball After Party",
     "type": "Community"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ouray County Pride",
@@ -3895,5 +3934,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Original Thinkers",
+    "href": "https://www.telluride.com/event/original-thinkers/",
+    "date": "2026-09-30",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Original Thinkers returns to breathtaking Telluride, Colorado, for the highly anticipated ninth annual festival, taking …",
+    "type": "Festivals",
+    "endDate": "2026-10-05"
   }
 ]

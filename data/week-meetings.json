@@ -498,5 +498,25 @@
     "livestream": "",
     "commentEmail": "bodadmin@tellmed.org",
     "hook": ""
+  },
+  {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Town Council",
+    "date": "2026-09-01",
+    "time": "",
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
+    "hasAgenda": false,
+    "summary": "The September 1, 2026 Town Council agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
   }
 ]
