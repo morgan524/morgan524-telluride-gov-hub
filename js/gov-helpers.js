@@ -549,106 +549,6 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
-    img: ""
-  },
-  {
-    title: "Music on the Mesa",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 8, 2026",
-    newsTopic: "arts-culture",
-    copy: "Live music event on the mesa.",
-    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
-    img: ""
-  },
-  {
     title: "Parish Bulletin for August 2",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1070,7 +970,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1133,7 +1033,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -2269,6 +2169,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "Home Rebate Programs",
+    source: "San Miguel County",
+    date: "July 8, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
+  },
+  {
     title: "Black Bear and Imogene Passes Currently Partially Closed",
     source: "San Miguel County",
     date: "July 30, 2026",
@@ -2293,6 +2202,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "housing",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
     img: ""
   },
   {
@@ -4043,7 +3961,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-08-04T14:15:00.000Z",
-    endDate: "2026-09-29",
+    endDate: "2026-10-01",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
