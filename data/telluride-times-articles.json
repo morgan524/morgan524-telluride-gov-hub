@@ -1,17 +1,5 @@
 [
   {
-    "title": "Nurturing the jazz artists of tomorrow",
-    "source": "Telluride Times",
-    "date": "August 3, 2026",
-    "firstSeen": "2026-08-03",
-    "newsTopic": "arts-culture",
-    "copy": "The Telluride Jazz Festival's All-Stars program has been developing elite young jazz musicians — ages 15–21 — since 1995, putting them on the Town Park main stage each August. The 2026 group performs at the New Sheridan Bar on Aug. 4–5 and hits the main stage Aug. 8 at 1:30 p.m. Details at telluridejazz.org/allstars.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_8dfd63e3-3d7c-4d4f-86bf-9984f565884c.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/c3/fc367985-3342-4be9-bc05-7208b7611580/6a6f93dded403.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Judge clarifies NCAA eligibility order, which could blunt its impact on new '5 for 5' rule",
     "source": "Telluride Times",
     "date": "August 3, 2026",
@@ -21,6 +9,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/state/article_b448d062-4328-5edd-ac68-930017d214ac.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/71/f71da2da-9017-5ceb-a135-cf15a58f6f9f/6a6ff383cb28f.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Nurturing the jazz artists of tomorrow",
+    "source": "Telluride Times",
+    "date": "August 3, 2026",
+    "firstSeen": "2026-08-03",
+    "newsTopic": "arts-culture",
+    "copy": "The Telluride Jazz Festival's All-Stars program has been developing elite young jazz musicians — ages 15–21 — since 1995, putting them on the Town Park main stage each August. The 2026 group performs at the New Sheridan Bar on Aug. 4–5 and hits the main stage Aug. 8 at 1:30 p.m. Details at telluridejazz.org/allstars.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_8dfd63e3-3d7c-4d4f-86bf-9984f565884c.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/c3/fc367985-3342-4be9-bc05-7208b7611580/6a6f93dded403.image.jpg",
     "imgHiRes": true
   },
   {
