@@ -1490,7 +1490,8 @@ const TOPIC_DEFINITIONS = {
    Rotates weekly: index = floor(Date.now() / 604800000) % length, which
    rolls over Thursday 00:00 UTC. Read by BOTH local-orgs.html (the
    Featured organization band) and scripts/weekly-email.js (the digest's
-   callout box), so add a new org here and it appears in both.        */
+   callout box), so add a new org here and it appears in both.
+   12 orgs = a different org each week, ~3 months before a repeat.    */
 const FEATURED_ORGS = [
   { name: 'True North Youth Program',
     why: 'A space and a support system for every teen in the region — free, year-round, and built around helping kids find their footing on the way to adulthood. Parents say it’s where their teens build confidence and get woven into the community.',
@@ -1499,7 +1500,47 @@ const FEATURED_ORGS = [
   { name: 'Beacon Outreach',
     why: 'Seasonal workers keep this valley running while facing its hardest edges — housing, cost of living, long seasons far from home. Beacon meets them there with mentorship and genuine community.',
     what: 'One-on-one life coaching and mentorship, free community meals, game nights and sober social gatherings, retreats and outdoor trips, and mental-health and practical-resource support for lift ops, servers, guides, and the rest of the resort workforce.',
-    how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' }
+    how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' },
+  { name: 'Telluride Adaptive Sports Program',
+    why: 'Getting down a ski run or up a climbing wall looks different for everyone — TASP has spent nearly three decades making sure a disability doesn’t decide who gets to be out on this mountain.',
+    what: 'Year-round adaptive recreation for people with disabilities, age four and up: skiing and snowboarding all winter, plus biking, rock climbing, and flatwater paddling in summer, along with camps and dedicated programs for veterans.',
+    how: 'Volunteer (their site walks you through training and the interest form), donate, or pass their name along to a family who could use them.' },
+  { name: 'The Pinhead Institute',
+    why: 'A Smithsonian affiliate in a box canyon — Pinhead has been getting local kids elbow-deep in real science for years, and its free Punk Science demos are a fixture in both Telluride and Ridgway.',
+    what: 'Hands-on STEM classes for K–12 kids, summer “Pinternships” placing local students with working scientists around the country, Scholars in the Schools visits, and free family-friendly Punk Science talks and demonstrations.',
+    how: 'Bring the kids to a free Punk Science event, enroll them in an after-school class, donate, or mentor or host a Pintern.' },
+  { name: 'Telluride Mountain Club',
+    why: 'Every cleared deadfall, via ferrata cable, and trail reroute around here has hands behind it — most of them volunteer. TMC is how the valley’s human-powered recreation actually gets built and maintained.',
+    what: 'Trail building and maintenance across the region, stewardship of the Via Ferrata, avalanche-education scholarships through the Peter Inglis Fund, a used-gear drive for locals, and a free bike maintenance station in Town Park.',
+    how: 'Join a trail workday, become a member, donate, or report trail conditions on their online map.' },
+  { name: 'Tri-County Health Network',
+    why: 'Health coverage, dental care, food on the table — the practical stuff that keeps a household steady is exactly where this crew works, quietly, across three counties.',
+    what: 'Health-insurance enrollment help, care coordination, food-security programs, mental-health scholarships and grief support, the Skippy dental program, emergency assistance funds, and multicultural advocacy across San Miguel, Ouray, and neighboring counties.',
+    how: 'Volunteer (call 970-708-7096 or email volunteer@tchnetwork.org), donate, or join the Communities That Care coalition.' },
+  { name: 'KOTO Community Radio',
+    why: 'Commercial-free since 1975, KOTO is one of the last truly community-run stations anywhere — snow reports, council coverage, and whatever your neighbor decided to spin at 10pm.',
+    what: 'Nonprofit, non-underwritten community radio at 91.7, 89.3, 100.3, and 105.3 FM — local news and public-affairs coverage, music from volunteer DJs, and community announcements across the region.',
+    how: 'Become a member, donate, volunteer, or pitch a show — the airwaves are open to locals.' },
+  { name: 'Second Chance Humane Society',
+    why: 'Since 1994 the region’s stray and surrendered pets have had somewhere to land — and the thrift shops in Ridgway and Telluride quietly help fund the whole operation.',
+    what: 'Pet adoption and fostering, veterinary services and vouchers, lost-and-found help, behavior and training resources, and thrift shops in Ridgway and Telluride, serving Ouray, San Miguel, and Montrose counties.',
+    how: 'Adopt or foster (applications on their site), volunteer at the shelter, donate, or drop off goods at either thrift shop.' },
+  { name: 'EcoAction Partners',
+    why: 'Regional climate work here is mostly practical: insulation, energy bills, spring cleanups. EcoAction is the outfit doing that unglamorous groundwork across two counties.',
+    what: 'Home energy audits and free efficiency upgrades through the CARE program, Green Grants, the San Miguel County Spring Clean Up, a Youth Climate Summit, and climate-action planning for San Miguel and Ouray counties.',
+    how: 'Book an energy audit, volunteer at a cleanup event, come to a Coffee & Climate conversation, or donate.' },
+  { name: 'Voyager Youth Program',
+    why: 'Founded by Ouray County parents in 1997 to fill the after-school gap, Voyager is still the answer to “what do the kids do until dinner” in Ridgway and Ouray.',
+    what: 'After-school programs in Ridgway and Ouray, summer enrichment for kids and tweens, the H.U.B.B. teen program with events, jobs, and internships, and evidence-based prevention education around substance use and mental health.',
+    how: 'Volunteer, donate (grants and gifts keep program costs low for families), or enroll a kid through their site.' },
+  { name: 'Sheep Mountain Alliance',
+    why: 'Born in 1988 out of a fight to keep logging off Sheep Mountain, SMA has been the valley’s longest-standing voice on public lands, water, and wildlife ever since.',
+    what: 'Grassroots environmental work across the Telluride region — public-lands monitoring, water and wildlife programs, energy and resource-extraction oversight, and outdoor-equity initiatives.',
+    how: 'Become a member, volunteer, donate, or show up to one of their community events.' },
+  { name: 'Habitat for Humanity of the San Juans',
+    why: 'Homeownership math in this region is brutal — Habitat’s partner-family model is one of the few paths that still pencils out for working households.',
+    what: 'Home builds and renovations in partnership with local families, a homeownership application program, and the Montrose ReStore, which resells donated building materials and household goods at up to 80% off retail.',
+    how: 'Volunteer on a build site or at the ReStore, donate money or materials, or apply for the homeownership program.' }
 ];
 
 /* ── Local Orgs directory — extracted from index.html ── */
@@ -1574,7 +1615,7 @@ const LOCAL_ORGS = [
       website: "https://www.telluridemountainclub.org/",
       donate: "https://www.telluridemountainclub.org/membership/",
       social: { facebook: "https://www.facebook.com/telluridemountainclub", instagram: "https://www.instagram.com/telluridemountainclub/" },
-      logo: "https://livabletelluride.org/logo/TtMC-logo.webp"
+      logo: "https://livabletelluride.org/logo/TtMC-logo.png"
     },
     {
       name: "Telluride Venture Network",
@@ -1604,7 +1645,7 @@ const LOCAL_ORGS = [
       website: "https://ecoactionpartners.org/",
       donate: "https://www.ecoactionpartners.org/donate",
       social: { instagram: "https://www.instagram.com/EcoAction_Partners/" },
-      logo: "https://livabletelluride.org/logo/Eco%20Action.webp"
+      logo: "https://livabletelluride.org/logo/Eco%20Action.png"
     },
     {
       name: "Lone Cone Legacy Trust",
@@ -1842,7 +1883,7 @@ const LOCAL_ORGS = [
       website: "https://koto.org/",
       donate: "https://koto.org/donate/",
       social: { facebook: "https://www.facebook.com/KOTOCommunityRadio/", instagram: "https://www.instagram.com/kotoradio/" },
-      logo: "https://livabletelluride.org/logo/koto-fm-logo.webp"
+      logo: "https://livabletelluride.org/logo/koto-fm-logo.png"
     },
     {
       name: "Telluride Humane Society",
@@ -1862,7 +1903,7 @@ const LOCAL_ORGS = [
       website: "https://secondchancehumane.org/",
       donate: "https://secondchancehumane.org/support-us/donate",
       social: { facebook: "https://www.facebook.com/SecondChanceHumaneSociety", instagram: "https://www.instagram.com/secondchancehumanesociety/", twitter: "https://x.com/chancehumane", youtube: "https://www.youtube.com/channel/UC-gw9lq86637HbTJ0su2iiA" },
-      logo: "https://livabletelluride.org/logo/Second%20Chance.webp"
+      logo: "https://livabletelluride.org/logo/Second%20Chance.png"
     },
     {
       name: "Wilkinson Public Library",
@@ -1954,8 +1995,8 @@ const LOCAL_ORGS = [
       category: "nonprofits",
       town: "Ridgway",
       summary: "Affordable housing nonprofit serving San Miguel, Ouray, Hinsdale, and surrounding counties. Builds and rehabs homes with partner families and runs a ReStore (Ridgway) selling donated home goods to fund builds.",
-      website: "https://www.habitatsanjuans.org/",
-      donate: "https://www.habitatsanjuans.org/donate",
+      website: "https://www.buildinglives.org/",
+      donate: "https://www.buildinglives.org/donate/",
       social: { facebook: "https://www.facebook.com/HabitatforHumanityoftheSanJuans/" },
       logo: "https://livabletelluride.org/logo/Habitat-for-Humanit-Logo.jpg"
     },
@@ -1966,8 +2007,9 @@ const LOCAL_ORGS = [
       summary: "Nonprofit providing adaptive winter and summer recreation experiences for people with physical, cognitive, sensory, and emotional disabilities. Winter ski/snowboard programs with the Telluride Ski Resort; summer hiking, cycling, and water programs.",
       website: "https://tellurideadaptivesports.org/",
       donate: "https://tellurideadaptivesports.org/donate/",
-      social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" },
-      logo: "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+      social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" }
+      /* logo TBD — entry previously pointed at the Ski & Snowboard Club's
+         logo by mistake; add a real TASP logo to /logo/ and link it here */
     },
     {
       name: "Ouray Trail Group",

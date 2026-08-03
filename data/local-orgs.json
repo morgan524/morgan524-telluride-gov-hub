@@ -84,7 +84,7 @@
       "facebook": "https://www.facebook.com/telluridemountainclub",
       "instagram": "https://www.instagram.com/telluridemountainclub/"
     },
-    "logo": "https://livabletelluride.org/logo/TtMC-logo.webp"
+    "logo": "https://livabletelluride.org/logo/TtMC-logo.png"
   },
   {
     "name": "Telluride Venture Network",
@@ -119,7 +119,7 @@
     "social": {
       "instagram": "https://www.instagram.com/EcoAction_Partners/"
     },
-    "logo": "https://livabletelluride.org/logo/Eco%20Action.webp"
+    "logo": "https://livabletelluride.org/logo/Eco%20Action.png"
   },
   {
     "name": "Lone Cone Legacy Trust",
@@ -414,7 +414,7 @@
       "facebook": "https://www.facebook.com/KOTOCommunityRadio/",
       "instagram": "https://www.instagram.com/kotoradio/"
     },
-    "logo": "https://livabletelluride.org/logo/koto-fm-logo.webp"
+    "logo": "https://livabletelluride.org/logo/koto-fm-logo.png"
   },
   {
     "name": "Telluride Humane Society",
@@ -442,7 +442,7 @@
       "twitter": "https://x.com/chancehumane",
       "youtube": "https://www.youtube.com/channel/UC-gw9lq86637HbTJ0su2iiA"
     },
-    "logo": "https://livabletelluride.org/logo/Second%20Chance.webp"
+    "logo": "https://livabletelluride.org/logo/Second%20Chance.png"
   },
   {
     "name": "Wilkinson Public Library",
@@ -558,8 +558,8 @@
     "category": "nonprofits",
     "town": "Ridgway",
     "summary": "Affordable housing nonprofit serving San Miguel, Ouray, Hinsdale, and surrounding counties. Builds and rehabs homes with partner families and runs a ReStore (Ridgway) selling donated home goods to fund builds.",
-    "website": "https://www.habitatsanjuans.org/",
-    "donate": "https://www.habitatsanjuans.org/donate",
+    "website": "https://www.buildinglives.org/",
+    "donate": "https://www.buildinglives.org/donate/",
     "social": {
       "facebook": "https://www.facebook.com/HabitatforHumanityoftheSanJuans/"
     },
@@ -575,8 +575,7 @@
     "social": {
       "facebook": "https://www.facebook.com/TellurideAdaptiveSportsProgram/",
       "instagram": "https://www.instagram.com/tellurideadaptivesports/"
-    },
-    "logo": "https://livabletelluride.org/logo/Telluride%20Ski%20Club.webp"
+    }
   },
   {
     "name": "Ouray Trail Group",
