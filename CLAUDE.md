@@ -150,3 +150,65 @@ over the new index.html. This destroyed:
 **`telluride-gov-hub.html` was permanently deleted 2026-05-12.**
 `index.html` is the only landing page. Do NOT recreate `telluride-gov-hub.html`.
 All changes go to `index.html` only.
+
+## CRITICAL: never link to an agenda that doesn't exist
+
+**Rule (Morgan, 2026-08-03), applies to every digest and every surface:** if no
+agenda has been posted for a meeting, render **no link at all** — not a
+fallback, not the jurisdiction's agenda index.
+
+The old `scripts/weekly-email.js` fallback rendered `Meeting info →` pointing at
+the body's agenda INDEX (e.g. `ouraycountyco.gov/AgendaCenter`) whenever no
+agenda was found. The reader clicks expecting an agenda, lands on a listing, and
+has to hunt. The card text already says the agenda is pending — that's the
+honest thing to show.
+
+An agenda URL is rejected in three cases (meeting-collect loop + the `mh` row
+renderer in `scripts/weekly-email.js`):
+
+1. **`agendaPending`** — the scraped summary already says the agenda "hasn't
+   been posted yet" / "not available" / "not yet". **This wording beats any
+   URL.** Telluride civicweb mints a `MeetingInformation.aspx?Id=NNNN` page for
+   every scheduled meeting whether or not a packet is attached, so the URL looks
+   meeting-specific while the page is an empty shell.
+2. **`isGenericAgendaUrl()`** — the URL is an agenda *index*: a CivicPlus
+   AgendaCenter, a bare `/agendas` or `/meetings` path, or a bare portal root
+   with no path/query (San Miguel County emits
+   `https://sanmiguelcoco.portal.civicclerk.com` for meetings whose packet
+   isn't out yet).
+3. **`agendaUnverified`** — no summary content at all (so no "pending" wording
+   to catch) AND the URL isn't the document itself (`AGENDA_DOC_URL`: `.pdf`/
+   `.doc`, or a `/files/`, `/documents/`, `/assets/` route). With no
+   agenda-derived content there's no evidence a packet exists.
+
+This is self-healing: links reappear automatically as agendas post, because the
+digest re-renders daily from live data. **Do NOT hand-add agenda links to
+compensate for an empty week.**
+
+Audit with `node scripts/audit-meeting-summaries.js /tmp/gd.js /tmp/gh.js 21 45`
+(fetch the live `js/gov-data.js` + `js/gov-helpers.js` first). It reuses these
+same predicates so the audit and the email can never disagree — **if you change
+the agenda logic here, mirror it in the audit script.**
+
+Note `MANUAL_SUMMARIES` and `MEETING_PREVIEWS` live in **`js/gov-helpers.js`**
+(~lines 940 and 503), not `gov-data.js`. `AI_SUMMARIES` is Firestore-backed and
+inlined ONLY on `gov-hub.html`, so it's empty in any node-side render.
+
+## Featured organization rotation is week-anchored
+
+`featuredOrgIndex()` (duplicated in `scripts/weekly-email.js` and
+`local-orgs.html` — change one, change the other) snaps to the **Monday of the
+week being rendered** and counts weeks from `Date.UTC(2026, 7, 3)`. It is NOT a
+render-time index: `digest-refresh.yml` drafts the email days before it sends
+and an approved digest freezes behind `digest/<key>.lock.json`, so a render-time
+pick could advertise a different org than the site showed that week.
+
+**The index is positional — reordering `FEATURED_ORGS` reshuffles the
+schedule.** Append new orgs at the end unless you mean to change who runs when.
+Re-run `node scripts/mirror-json.js` after any edit and commit both
+`js/gov-data.js` and `data/featured-orgs.json`.
+
+Every featured org needs a **.png or .jpg** logo — the digest silently drops
+`.webp` (`emailUsableImg()`). Convert `.webp` sources and **preserve alpha**, so
+the logo sits correctly on both the site band's white card and the email's cream
+callout.
