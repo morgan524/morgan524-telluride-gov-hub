@@ -2022,9 +2022,12 @@ const LOCAL_ORGS = [
       summary: "Nonprofit providing adaptive winter and summer recreation experiences for people with physical, cognitive, sensory, and emotional disabilities. Winter ski/snowboard programs with the Telluride Ski Resort; summer hiking, cycling, and water programs.",
       website: "https://tellurideadaptivesports.org/",
       donate: "https://tellurideadaptivesports.org/donate/",
-      social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" }
-      /* logo TBD — entry previously pointed at the Ski & Snowboard Club's
-         logo by mistake; add a real TASP logo to /logo/ and link it here */
+      social: { facebook: "https://www.facebook.com/TellurideAdaptiveSportsProgram/", instagram: "https://www.instagram.com/tellurideadaptivesports/" },
+      /* Supplied by Morgan 2026-08-03. PNG (not the source .webp) because the
+         digest drops .webp — see emailUsableImg() in scripts/weekly-email.js.
+         Alpha is preserved, so it sits correctly on both the site band's white
+         card and the email callout's cream background. */
+      logo: "https://livabletelluride.org/logo/Telluride%20Adaptive%20Sports.png"
     },
     {
       name: "Ouray Trail Group",

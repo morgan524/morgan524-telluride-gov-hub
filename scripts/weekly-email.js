@@ -472,6 +472,24 @@ function bodyDesc(name, src) {
   return 'Regular public meeting — the agenda posts closer to the date on the Gov-Hub.';
 }
 const isWeak = (s) => !s || s.length < 32 || /agenda (tbd|not available|not yet|not posted)|hasn.t been posted|isn.t available|not available yet|no agenda|list of past meetings|meeting scheduled for|^regular meeting agenda/i.test(s);
+// URLs that are an agenda *index*, not an agenda: CivicPlus AgendaCenter, a
+// bare /agendas or /meetings path, a portal meeting list. See the agenda
+// resolution in the meeting-collect loop below.
+const GENERIC_AGENDA_PAGE = /agenda-?center|agendaminutes|meeting-?list|\/(agendas?|meetings?|agendas-and-minutes)\/?(?:[?#].*)?$/i;
+// True when a URL can't be a specific agenda. Also catches a bare portal root
+// (e.g. "https://sanmiguelcoco.portal.civicclerk.com" with no event path),
+// which the county source emits for meetings whose packet isn't out yet.
+function isGenericAgendaUrl(u) {
+  if (!u) return true;
+  try {
+    const p = new URL(u);
+    if (!p.search && (p.pathname === '' || p.pathname === '/')) return true;
+  } catch (e) { /* not absolute — fall through to the pattern test */ }
+  return GENERIC_AGENDA_PAGE.test(u);
+}
+// A URL that is the agenda DOCUMENT itself (a PDF, a portal file route), as
+// opposed to a meeting page that may or may not have a packet attached.
+const AGENDA_DOC_URL = /\.(?:pdf|docx?)(?:[?#]|$)|\/(?:files?|documents?|assets)\//i;
 // Truncate without ever ending mid-sentence. Prefer cutting at a sentence
 // boundary; otherwise drop the dangling (often source-truncated) last word and
 // mark continuation with an ellipsis. This also cleans up source descriptions
@@ -546,11 +564,38 @@ for (const fn of MEETING_FNS) {
     // note, so the card reads as "details coming" rather than looking empty — it
     // fills in on its own once the agenda posts (the digest re-renders daily).
     const agendaPending = /not posted|hasn['’]?t been posted|not available|not yet/i.test(sm);
+    // Captured BEFORE sm is overwritten by the bodyDesc fallback: true means we
+    // hold no agenda-derived content for this meeting at all.
+    const noAgendaContent = isWeak(sm);
     if (isWeak(sm)) {
       sm = bodyDesc(name, src);
       if (agendaPending && !/agenda/i.test(sm)) sm += ' The agenda hasn’t been posted yet — details will follow closer to the meeting.';
     }
-    const agenda = m.agendaLink || (m.hasAgenda ? m.link : '') || '';
+    // An agenda link must point at an ACTUAL agenda (Morgan, 2026-08-03: never
+    // link to an agenda when there isn't one). Two ways a link lies:
+    //
+    //  1. agendaPending — the scraper already told us in plain words that the
+    //     agenda "hasn't been posted yet". Sources still hand us a URL in that
+    //     state: Telluride civicweb mints a MeetingInformation.aspx?Id= page
+    //     for every scheduled meeting whether or not a packet is attached, so
+    //     the link looks specific but leads to an empty shell. The summary
+    //     text is the more reliable signal — trust it over the URL.
+    //  2. The URL is an agenda *index* (a CivicPlus AgendaCenter, a bare
+    //     "/agendas" path, or a portal root like sanmiguelcoco.portal
+    //     .civicclerk.com with no event path) — where an agenda would live if
+    //     one existed.
+    //
+    // And the quiet third case: no summary text at all (so no pending wording
+    // to catch) plus a meeting-page URL. With no agenda-derived content we have
+    // no evidence a packet exists, so a link is only safe when the URL is the
+    // document itself. Far-out meetings sit here — e.g. Sep 10 Town Council
+    // Budget carried a civicweb Id= link with a zero-length summary.
+    //
+    // Either way: no agenda link. The card's own text says the agenda is
+    // pending, which is the honest thing to show.
+    const rawAgenda = m.agendaLink || (m.hasAgenda ? m.link : '') || '';
+    const agendaUnverified = noAgendaContent && !AGENDA_DOC_URL.test(rawAgenda);
+    const agenda = (agendaPending || isGenericAgendaUrl(rawAgenda) || agendaUnverified) ? '' : rawAgenda;
     // Match the meeting against WHY_THIS_MATTERS (title + summary + description),
     // exactly like gov-hub.html's getWTMEntry(), so the same land-use / code
     // meetings get the "Why This Matters" highlight in the email.
@@ -679,13 +724,16 @@ const prettyDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', 
 const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.srcKey))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
 const safeUrl = (u) => /^https?:\/\//i.test(u || '') ? u : (SITE + '/events.html');
 const mh = meetings.map((m) => {
-  const link = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">View agenda →</a>` : `<a href="${esc(m.link)}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Meeting info →</a>`;
+  // No agenda → no link. The old fallback ("Meeting info →") pointed at the
+  // body's agenda index, which is exactly the decoy the rule above exists to
+  // prevent; the card's own text already says the agenda hasn't posted yet.
+  const link = m.hasAgenda ? `<a href="${esc(m.agenda)}" style="color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">View agenda →</a>` : '';
   // Small "Comment" button → opens the reader's mail client to the board's
   // public-comment inbox (only shown when we have a recipient for that body).
   const commentBtn = commentEmailFor(m.name, m.srcKey)
     ? `<a href="${esc(commentMailto(m))}" style="display:inline-block;background:#2f7a5f;color:#fff;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;vertical-align:middle;">Comment</a>`
     : '';
-  const sep = commentBtn ? ' &nbsp;&nbsp; ' : '';
+  const sep = (commentBtn && link) ? ' &nbsp;&nbsp; ' : '';
   // "Why This Matters" — mirror the Gov-Hub highlight: a green-bordered card
   // plus an info callout with the stakes and a Deep Dive link, for meetings
   // that touch a tracked code amendment or high-level land-use issue.
