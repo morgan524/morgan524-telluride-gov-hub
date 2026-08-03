@@ -224,7 +224,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162","zoomUrl":"https://us06web.zoom.us/j/83022451705?pwd=Lj8jkLF9GQny7CWBqvP8IYkQhviQBb.1","meetingId":"830 2245 1705","passcode":"229528.","phone":"719) 359-4580"},
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942","zoomUrl":"https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA","meetingId":"838 9184 9311","passcode":"530688","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1944","zoomUrl":"https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA","meetingId":"838 9184 9311","passcode":"530688","phone":"719-359-4580"},
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"},
@@ -880,13 +880,13 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
-    title: "Black Bear and Imogene Passes Currently Partially Closed",
+    title: "Black Bear Temporarily Closed",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-07-30",
-    pubDate: "2026-07-30T22:21:13.000Z",
-    copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
+    date: "2026-08-03",
+    pubDate: "2026-08-03T18:35:54.000Z",
+    copy: "Black Bear Pass and the portion of Bridal Veil Rd. from the Idarado Mining building up to the top of Bridal Veil Falls are closed until at least 3:00 p.m. today, Monday, August 3rd, for road repairs.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
     img: ""
   },
@@ -1101,7 +1101,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1152,7 +1152,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -2333,11 +2333,11 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
-    title: "Black Bear and Imogene Passes Currently Partially Closed",
+    title: "Black Bear Temporarily Closed",
     source: "San Miguel County",
-    date: "July 30, 2026",
-    newsTopic: "housing",
-    copy: "Due to mud and debris flow following Wednesday evening's rains, Black Bear is closed and will remain closed until further notice. Additionally, the Ouray side of Imogene Pass is closed due to rockslides, flooding and debris flow.",
+    date: "August 3, 2026",
+    newsTopic: "land-use",
+    copy: "Black Bear Pass and the portion of Bridal Veil Rd. from the Idarado Mining building up to the top of Bridal Veil Falls are closed until at least 3:00 p.m. today, Monday, August 3rd, for road repairs.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
     img: ""
   },
@@ -2989,6 +2989,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Shakespeare in Norwood!",
+    link: "https://koto.org/event/shakespeare-in-norwood/",
+    description: "Wide Sky Arts Collective and Norwood Park & Rec present a No Holds Bard production of William Shakespeare's romantic comedy \"Love's Labors Lost\" in the shaded Yard at The Livery in Norwood on Tuesday, August 4th. Gates at 5:30pm, show at 6:30pm. General admission seating plus a refreshing Bard’s Bar. Tickets available at the door for $8 each or $20 for a family of 3 or more. Show goes on rain or shine.",
+    pubDate: "2026-08-04T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Livery Norwood",
+    imageUrl: ""
+  },
+  {
     title: "Town Talk: Single molecule views of Nature's nanomachines",
     link: "https://koto.org/event/town-talk-single-molecule-views-of-natures-nanomachines/",
     description: "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of cancer at bay? Did you know that biology is a new research frontier for physical scientists? In this talk, Professor Ha of Harvard University will discuss how biophysicists are using light-based tools to poke and examine Nature’s nano-machines, one molecule at a time, uncovering the amazing acrobatic abilities that are essential for all forms of life.",
@@ -3063,6 +3074,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-9/",
+    description: "Telluride Rotary Club meets Wednesday, August 5, at 6 p.m. at the Mountain Lodge in Mountain Village. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-08-06T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Mountain Lodge Telluride, Mountain Village",
     imageUrl: ""
   },
   {
@@ -3341,6 +3363,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Drought on the West End",
+    link: "https://koto.org/event/drought-on-the-west-end/",
+    description: "Join San Miguel County and Montrose County, in partnership with the Shavano Conservation District, at The Livery in Norwood on Wednesday, 8/13, for a free workshop for agricultural producers dealing with the effects of ongoing drought across the West End. The event will bring together experts from the Natural Resources Conservation Service, Farm Service Agency, the Bureau of Land Management, and Colorado State University Extension to share resources and strategies for maintaining productive, resilient land through dry conditions. This event is free and open to the public, but please register online in advance at bit.ly/droughtonthewestend and consider bringing a dessert to share.",
+    pubDate: "2026-08-13T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Livery Norwood",
+    imageUrl: ""
+  },
+  {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
     description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -3433,39 +3466,6 @@ const KOTO_COMMUNITY_EVENTS = [
     link: "https://koto.org/event/zumba-with-gisela/2026-08-15/",
     description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
     pubDate: "2026-08-15T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Studio TAB: Summer Fever",
-    link: "https://koto.org/event/studio-tab-summer-fever/",
-    description: "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening at a private estate in Aldasoro Ranch overlooking Wilson Peak. Enjoy a curated mini fashion show, delicious heavy hors d'oeuvres, signature cocktails, and an evening of music, celebration, and community—all in support of the Telluride AIDS Benefit. One Night Only Fundraiser Benefitting TAB Mini Fashion Show | Heavy Apps | Cocktails | DJ Only 100 Tickets Available!",
-    pubDate: "2026-08-16T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://koto.org/event/movies-under-the-stars/2026-08-15/",
-    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    pubDate: "2026-08-16T00:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Conference Center Plaza Mountain Village",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-16T19:00:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
@@ -3571,6 +3571,18 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
+  {
+    title: "BINGO",
+    link: "https://www.alibitelluride.com/calendar#eca-event=bingo",
+    description: "Join us at the Alibi for a lively night of BINGO Tuesday, August 4th with WPL me...",
+    pubDate: "2026-08-04",
+    time: "5:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/4c2e3334-4868-4786-82c6-efc6fe30171f/-/crop/1294x1295/0,0/-/preview/"
+  },
   {
     title: "Jazz w/ Kenny G & Yaz",
     link: "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
@@ -4555,6 +4567,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
   },
   {
+    title: "End of Summer Reading Party",
+    link: "https://events.ourayridgwayevents.com/event/end-of-summer-reading-party",
+    description: "Come celebrate the end of summer and the reading challenge with the Ouray Library! Enjoy ice cream, games, and the prize pulled winners of the Summer Reading Challenge. All ages! View on site | Email this event",
+    pubDate: "2026-08-11T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53569820640600/huge/527f0fec08a3c54f7459f93b5276ae3c6fc35ba8.jpg"
+  },
+  {
     title: "BOXCAR",
     link: "https://events.ourayridgwayevents.com/event/boxcar-4205",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4667,6 +4690,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "Drag Queen Storytime",
+    link: "https://events.ourayridgwayevents.com/event/drag-queen-storytime",
+    description: "Join us for a Drag Queen Storytime! This will be a fun, safe event. Ages; Elementary View on site | Email this event",
+    pubDate: "2026-08-14T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The San Juan Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg"
   },
   {
     title: "TYLER SIMMONS",
@@ -5360,6 +5394,28 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53559826947100/huge/f64b82b52f7d7f9db1aa8ea99d8390b7bee58b8e.jpg"
   },
   {
+    title: "Ellar Day at Ouray Books",
+    link: "https://events.ourayridgwayevents.com/event/ellar-day-at-ouray-books",
+    description: "Join us at Ouray Books for an exclusive author meet & greet and book signing with author Marcy S. Wood, celebrating the launch. All Welcome! FREE EVENT! September 12th marks a somber milestone—the 139th anniversary of the tragic events that defined the lives and deaths of Ellar Day and Joe Dixon. Immerse yourself in the world of a bustling Colorado mining town as we explore the haunting story behind this piece of local history. About the Novel In a time of suffocating societal judgment, nineteen-year-old Ellar Day finds herself caught between the ghosts of her past and a forbidden, passionate love for Joe Dixon, a former Buffalo Soldier. Against a backdrop of deep-seated racial prejudice and small-town volatility, Ellar’s attempts to protect her family and the man she loves lead to a chain of events that would end in a brutal, unforgettable tragedy. Marcy S. …",
+    pubDate: "2026-09-12T20:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Books",
+    imageUrl: "https://localist-images.azureedge.net/photos/53585920590422/huge/0c3d546070c874ec15fc8d0e89b1c48824f1a12e.jpg"
+  },
+  {
+    title: "Historic Sites Tour and Reception",
+    link: "https://events.ourayridgwayevents.com/event/historic-sites-tour-and-reception",
+    description: "Join us for an author-led historic tour followed by an intimate gathering, marking the anniversary of the Ellar Day and Joe Dixon tragedy. Commemorating History: The Ellar Day Legacy Join us on September 12th, 2026 as we mark the 139th anniversary of the tragic events that defined the lives and deaths of Ellar Day and Joseph W. Dixon. This special event invites you to step back in time and explore the haunting history behind Marcy S. Wood’s novel, The Notorious Murder of Ellar Day. The Walking Tour: Immerse yourself in the setting of the novel with a guided walking tour of landmark buildings central to the story. We will trace the path of history—from the Beaumont Hotel to the site of Joe Dixon’s final hours—visiting many of the key locations featured in the book. The Reception: The evening concludes at Cassidy’s Cafe & Antiques. …",
+    pubDate: "2026-09-12T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Cassidy's Cafe and Antiques",
+    imageUrl: "https://localist-images.azureedge.net/photos/53585949770506/huge/c98cb43fee3b91d08bc4ebb6a015b0d4a5e3f886.jpg"
+  },
+  {
     title: "Young & Dead - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
     description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of psychedelic exploration when Young & Dead takes over the Sherbino stage on Saturday, September 12. Hailing from Boulder, Colorado, this group of talented musicians in their early 20s bringsa fresh and electrifying approach to the music of the Grateful Dead — not simply recreating the catalog, but diving deep into the spirit of improvisation, experimentation, and musical adventure that made the Dead legendary. …",
@@ -5837,6 +5893,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48861/ben_musser_walker_young_1800x900px.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-08-15T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     title: "Mind Blown Telluride",

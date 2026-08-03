@@ -1,26 +1,26 @@
 {
-  "hash": "0167e2f4995073ce5b3f975e1572885f25eb63bf",
-  "lede": "The biggest thing on the calendar this week is Wednesday's San Miguel County BOCC meeting, where commissioners will hold public hearings on three Land Use Code amendments — including changes to who qualifies as a deed-restricted owner, a wildfire-area code update, and nonconforming lots, all moving toward formal votes. Monday the Open Space Commission takes up the Valley Floor River Trail alignment, with three routes through sensitive wetlands on the table, and the Housing Authority subcommittee weighs in on a deed-restriction variance for a homeowner facing a $47,000 roof replacement.",
+  "hash": "9392257c54a0d653ef38ad45af4799a7e665ece8",
+  "lede": "The biggest item this week is Wednesday's San Miguel County BOCC meeting, where three Land Use Code amendments go to public hearing — including changes to who qualifies as an owner under workforce-housing rules, a wildfire-area code update, and a continued hearing on nonconforming lots, all heading toward formal votes. The Open Space Commission kicks things off Monday with a real decision on the Valley Floor River Trail alignment. The Housing Authority Subcommittee also takes up a deed-restriction variance request, and Mountain Village's Design Review Board weighs in on three multifamily projects Thursday.",
   "notable": [
     {
       "id": 0,
-      "stake": "Commissioners choose one of three Valley Floor River Trail alignments near wetlands."
+      "stake": "Commissioners pick one of three Valley Floor River Trail alignments near wetlands."
     },
     {
       "id": 3,
-      "stake": "Board decides whether to let a deed-restricted homeowner exceed capital-improvement cost limits."
+      "stake": "Vote on whether a deed-restricted owner can exceed the 5% capital-improvement cap."
     },
     {
       "id": 4,
-      "stake": "Public hearings on three Land Use Code changes, including who qualifies as a deed-restricted owner."
+      "stake": "Public hearings and likely votes on three Land Use Code amendments, including workforce-housing ownership rules."
     },
     {
       "id": 6,
-      "stake": "Work session reshaping Ouray County Land Use Code definitions — changes that quietly rewrite the rules."
+      "stake": "Land Use Code definitions are being rewritten — early shaping with public access to comment."
     },
     {
       "id": 8,
-      "stake": "Design review and conditional-use permit decisions on three multifamily projects in Mountain Village."
+      "stake": "Design review and conditional-use decisions on three new multifamily projects in Mountain Village."
     }
   ]
 }

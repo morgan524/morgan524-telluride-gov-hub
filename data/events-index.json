@@ -93,6 +93,19 @@
     "type": "Community"
   },
   {
+    "title": "BINGO",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=bingo",
+    "date": "2026-08-03",
+    "time": "5:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/4c2e3334-4868-4786-82c6-efc6fe30171f/-/crop/1294x1295/0,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Join us at the Alibi for a lively night of BINGO Tuesday, August 4th with WPL me...",
+    "type": "Community"
+  },
+  {
     "title": "Monthly Karate in Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-08-03",
@@ -239,6 +252,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Shakespeare in Norwood!",
+    "href": "https://koto.org/event/shakespeare-in-norwood/",
+    "date": "2026-08-04",
+    "time": "5:30 PM",
+    "location": "The Livery Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Wide Sky Arts Collective and Norwood Park & Rec present a No Holds Bard production of William Shakespeare's romantic comedy \"Love's Labors Lost\" in the shaded Yard at The Livery in Norwood on Tuesday, August 4th. Gates at 5:30pm, show at…",
+    "type": "Community"
   },
   {
     "title": "National Night Out",
@@ -1351,6 +1377,19 @@
     "type": "Music"
   },
   {
+    "title": "End of Summer Reading Party",
+    "href": "https://events.ourayridgwayevents.com/event/end-of-summer-reading-party",
+    "date": "2026-08-11",
+    "time": "1:00 PM",
+    "location": "The San Juan Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53569820640600/huge/527f0fec08a3c54f7459f93b5276ae3c6fc35ba8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come celebrate the end of summer and the reading challenge with the Ouray Library! Enjoy ice cream, games, and the prize pulled winners of the Summer Reading Challenge. All ages! View on site | Email this event",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     "href": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
     "date": "2026-08-11",
@@ -1693,6 +1732,19 @@
     "type": "Festivals"
   },
   {
+    "title": "Drought on the West End",
+    "href": "https://koto.org/event/drought-on-the-west-end/",
+    "date": "2026-08-13",
+    "time": "11:00 AM",
+    "location": "The Livery Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join San Miguel County and Montrose County, in partnership with the Shavano Conservation District, at The Livery in Norwood on Wednesday, 8/13, for a free workshop for agricultural producers dealing with the effects of ongoing drought…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Pilates for All Bodies with Laura",
     "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
     "date": "2026-08-13",
@@ -1822,6 +1874,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Drag Queen Storytime",
+    "href": "https://events.ourayridgwayevents.com/event/drag-queen-storytime",
+    "date": "2026-08-14",
+    "time": "1:00 PM",
+    "location": "The San Juan Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for a Drag Queen Storytime! This will be a fun, safe event. Ages; Elementary View on site | Email this event",
+    "type": "Family & Kids"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -2046,6 +2111,19 @@
     "type": "Music"
   },
   {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-08-15",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
+  },
+  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-08-15",
@@ -2059,19 +2137,6 @@
     "type": "Community"
   },
   {
-    "title": "Studio TAB: Summer Fever",
-    "href": "https://koto.org/event/studio-tab-summer-fever/",
-    "date": "2026-08-15",
-    "time": "6:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening…",
-    "type": "Music"
-  },
-  {
     "title": "Teen Pride Karaoke Night",
     "href": "https://events.ourayridgwayevents.com/event/teen-pride-karaoke-night",
     "date": "2026-08-15",
@@ -2083,19 +2148,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This…",
     "type": "Community"
-  },
-  {
-    "title": "Movies Under the Stars",
-    "href": "https://koto.org/event/movies-under-the-stars/2026-08-15/",
-    "date": "2026-08-15",
-    "time": "6:30 PM",
-    "location": "Conference Center Plaza Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
-    "type": "Arts & Film"
   },
   {
     "title": "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
@@ -2147,19 +2199,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "This program offers a unique opportunity to explore the wonders of the night sky through the expert lens of the Black Canyon Astronomical Society. This free program removes the guesswork of stargazing by providing high-powered telescopes…",
-    "type": "Community"
-  },
-  {
-    "title": "Drop In Tech Time with Oliver",
-    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
-    "date": "2026-08-16",
-    "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
     "type": "Community"
   },
   {
@@ -3565,6 +3604,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner WHEN? Friday, September 11 Doors at 6:00 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Part stand-up comedy. Part true crime…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Ellar Day at Ouray Books",
+    "href": "https://events.ourayridgwayevents.com/event/ellar-day-at-ouray-books",
+    "date": "2026-09-12",
+    "time": "2:30 PM",
+    "location": "Ouray Books",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53585920590422/huge/0c3d546070c874ec15fc8d0e89b1c48824f1a12e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at Ouray Books for an exclusive author meet & greet and book signing with author Marcy S. Wood, celebrating the launch. All Welcome! FREE EVENT! September 12th marks a somber milestone—the 139th anniversary of the tragic events…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Historic Sites Tour and Reception",
+    "href": "https://events.ourayridgwayevents.com/event/historic-sites-tour-and-reception",
+    "date": "2026-09-12",
+    "time": "3:00 PM",
+    "location": "Cassidy's Cafe and Antiques",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53585949770506/huge/c98cb43fee3b91d08bc4ebb6a015b0d4a5e3f886.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for an author-led historic tour followed by an intimate gathering, marking the anniversary of the Ellar Day and Joe Dixon tragedy. Commemorating History: The Ellar Day Legacy Join us on September 12th, 2026 as we mark the 139th…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Balourdet Quartet",

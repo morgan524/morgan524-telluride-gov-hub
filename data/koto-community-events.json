@@ -22,6 +22,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Shakespeare in Norwood!",
+    "link": "https://koto.org/event/shakespeare-in-norwood/",
+    "description": "Wide Sky Arts Collective and Norwood Park & Rec present a No Holds Bard production of William Shakespeare's romantic comedy \"Love's Labors Lost\" in the shaded Yard at The Livery in Norwood on Tuesday, August 4th. Gates at 5:30pm, show at 6:30pm. General admission seating plus a refreshing Bard’s Bar. Tickets available at the door for $8 each or $20 for a family of 3 or more. Show goes on rain or shine.",
+    "pubDate": "2026-08-04T23:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Livery Norwood",
+    "imageUrl": ""
+  },
+  {
     "title": "Town Talk: Single molecule views of Nature's nanomachines",
     "link": "https://koto.org/event/town-talk-single-molecule-views-of-natures-nanomachines/",
     "description": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of cancer at bay? Did you know that biology is a new research frontier for physical scientists? In this talk, Professor Ha of Harvard University will discuss how biophysicists are using light-based tools to poke and examine Nature’s nano-machines, one molecule at a time, uncovering the amazing acrobatic abilities that are essential for all forms of life.",
@@ -96,6 +107,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "link": "https://koto.org/event/telluride-rotary-club-meeting-9/",
+    "description": "Telluride Rotary Club meets Wednesday, August 5, at 6 p.m. at the Mountain Lodge in Mountain Village. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    "pubDate": "2026-08-06T00:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Mountain Lodge Telluride, Mountain Village",
     "imageUrl": ""
   },
   {
@@ -374,6 +396,17 @@
     "imageUrl": ""
   },
   {
+    "title": "Drought on the West End",
+    "link": "https://koto.org/event/drought-on-the-west-end/",
+    "description": "Join San Miguel County and Montrose County, in partnership with the Shavano Conservation District, at The Livery in Norwood on Wednesday, 8/13, for a free workshop for agricultural producers dealing with the effects of ongoing drought across the West End. The event will bring together experts from the Natural Resources Conservation Service, Farm Service Agency, the Bureau of Land Management, and Colorado State University Extension to share resources and strategies for maintaining productive, resilient land through dry conditions. This event is free and open to the public, but please register online in advance at bit.ly/droughtonthewestend and consider bringing a dessert to share.",
+    "pubDate": "2026-08-13T17:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "The Livery Norwood",
+    "imageUrl": ""
+  },
+  {
     "title": "Pilates for All Bodies with Laura",
     "link": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
     "description": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
@@ -466,39 +499,6 @@
     "link": "https://koto.org/event/zumba-with-gisela/2026-08-15/",
     "description": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
     "pubDate": "2026-08-15T16:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Studio TAB: Summer Fever",
-    "link": "https://koto.org/event/studio-tab-summer-fever/",
-    "description": "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening at a private estate in Aldasoro Ranch overlooking Wilson Peak. Enjoy a curated mini fashion show, delicious heavy hors d'oeuvres, signature cocktails, and an evening of music, celebration, and community—all in support of the Telluride AIDS Benefit. One Night Only Fundraiser Benefitting TAB Mini Fashion Show | Heavy Apps | Cocktails | DJ Only 100 Tickets Available!",
-    "pubDate": "2026-08-16T00:00:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
-    "title": "Movies Under the Stars",
-    "link": "https://koto.org/event/movies-under-the-stars/2026-08-15/",
-    "description": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
-    "pubDate": "2026-08-16T00:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Conference Center Plaza Mountain Village",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
-  },
-  {
-    "title": "Drop In Tech Time with Oliver",
-    "link": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
-    "description": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    "pubDate": "2026-08-16T19:00:00.000Z",
     "source": "koto",
     "sourceLabel": "KOTO",
     "category": "Community Event",
