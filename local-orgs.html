@@ -207,13 +207,36 @@
   /* ── Featured organization ──────────────────────────────────────────
      Spotlight copy now lives in gov-data.js FEATURED_ORGS (mirrored to
      data/featured-orgs.json) so the DIGEST's callout box renders the SAME
-     org from the SAME copy — see scripts/weekly-email.js. Logo/links/social
+     org from the SAME copy — see scripts/weekly-email.js.  Logo/links/social
      still come live from the directory entry so they never drift.
-     Rotates weekly (index rolls over Thursday 00:00 UTC). */
+
+     Rotates every Monday, indexed off the Monday of the current week in
+     MOUNTAIN time (index 0 = week of Mon Aug 3, 2026).  Mountain rather than
+     UTC so the band flips Monday morning alongside the 9am digest send, not
+     at 6pm the Sunday before.  featuredOrgIndex() below is a byte-for-byte
+     twin of the one in scripts/weekly-email.js — change one, change the
+     other, or the email and the site will disagree.                      */
   var FEATURED_ORGS = [];
+  var FEATURED_EPOCH_MONDAY = Date.UTC(2026, 7, 3);   // Mon Aug 3, 2026, 00:00 UTC
+  function featuredOrgIndex(isoDate, len) {
+    var d = new Date(String(isoDate).slice(0, 10) + 'T00:00:00Z');
+    if (isNaN(d)) return 0;
+    var dow = (d.getUTCDay() + 6) % 7;                // Mon=0 … Sun=6
+    var monday = d.getTime() - dow * 86400000;
+    var weeks = Math.round((monday - FEATURED_EPOCH_MONDAY) / 604800000);
+    return ((weeks % len) + len) % len;               // negatives wrap forward
+  }
+  // Today's date as it reads in Telluride, as YYYY-MM-DD. en-CA formats ISO.
+  function todayMountain() {
+    try {
+      return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(new Date());
+    } catch (e) {
+      return new Date().toISOString().slice(0, 10);   // ancient-browser fallback
+    }
+  }
   function renderFeaturedOrg() {
     if (!FEATURED_ORGS.length) return;
-    var pick = FEATURED_ORGS[Math.floor(Date.now() / 604800000) % FEATURED_ORGS.length];
+    var pick = FEATURED_ORGS[featuredOrgIndex(todayMountain(), FEATURED_ORGS.length)];
     var org = orgs.filter(function (o) { return o.name === pick.name; })[0];
     if (!org) return;
     var slot = document.getElementById('feat-org');

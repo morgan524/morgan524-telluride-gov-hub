@@ -795,19 +795,41 @@ function autoWhatsReading() {
 }
 const WHATS_READING = WHATS_READING_MANUAL[WEEK_START] || autoWhatsReading();
 const whatsReadingBox = WHATS_READING ? `<tr><td class="callout-wrap" style="padding:26px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="callout-card" style="background:#f1ece1;border-left:4px solid #a0531f;border-radius:6px;padding:19px 22px;"><div style="font-family:Georgia,serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;margin-bottom:9px;">→ What We're Reading</div><div style="font-family:Georgia,serif;font-size:16px;font-weight:700;color:#1a2e29;line-height:1.3;"><a href="${WHATS_READING.url}" style="color:#1a2e29;text-decoration:none;">${esc(WHATS_READING.title)}</a></div><div style="font-size:12px;color:#7a8a85;margin:3px 0 9px;">${esc(WHATS_READING.source)}</div><p style="margin:0;font-size:14px;line-height:1.65;color:#2c3b35;">${esc(WHATS_READING.blurb)}</p><a href="${WHATS_READING.url}" style="display:inline-block;margin-top:10px;color:#a0531f;text-decoration:underline;font-size:12.5px;font-weight:600;">Read it →</a></td></tr></table></td></tr>` : '';
-// ── "Featured Organization" box (replaced the freelance-writer recruitment ad
-// per Morgan, 2026-07-23). Spotlight copy comes from gov-data.js FEATURED_ORGS;
-// the logo, website, and donate link are read live from the LOCAL_ORGS
-// directory entry so they never drift. Same weekly rotation as the Featured
-// organization band on local-orgs.html — floor(Date.now()/604800000), which
-// rolls over Thursday 00:00 UTC — so the email and the site always show the
-// SAME org. Add another org to FEATURED_ORGS and it joins the rotation.
-// Falls back to What We're Reading if the pick can't be resolved.
+// ── Featured-organization weekly rotation ───────────────────────────────
+// Index 0 = the week of Mon Aug 3, 2026; advances one org each Monday.
+//
+// Anchored to the MONDAY OF THE WEEK BEING RENDERED, never to the moment of
+// rendering. That distinction is the whole point: digest-refresh.yml drafts
+// this email days ahead of the send, and an approved digest is frozen behind
+// a lock file, so a render-time pick (the old floor(Date.now()/604800000),
+// which rolled over Thursday 00:00 UTC only because the Unix epoch happens to
+// be a Thursday) could advertise one org while the site showed another.
+// Keying off WEEK_START makes the pick a property of the week the email
+// covers, so it is identical whenever the render happens to run.
+//
+// The Friday "Weekend Ahead" digest snaps back to the Monday of its own week,
+// so the Monday and Friday emails in a given week feature the same org.
+// local-orgs.html carries a byte-for-byte equivalent of this function — change
+// one, change the other.
+const FEATURED_EPOCH_MONDAY = Date.UTC(2026, 7, 3);   // Mon Aug 3, 2026, 00:00 UTC
+function featuredOrgIndex(isoDate, len) {
+  const d = new Date(`${String(isoDate).slice(0, 10)}T00:00:00Z`);
+  if (isNaN(d)) return 0;
+  const dow = (d.getUTCDay() + 6) % 7;                 // Mon=0 … Sun=6
+  const monday = d.getTime() - dow * 86400000;
+  const weeks = Math.round((monday - FEATURED_EPOCH_MONDAY) / 604800000);
+  return ((weeks % len) + len) % len;                  // negatives wrap forward
+}
+
+// The box itself. Spotlight copy comes from gov-data.js FEATURED_ORGS; the
+// logo, website, and donate link are read live from the LOCAL_ORGS directory
+// entry so they never drift. Add another org to FEATURED_ORGS and it joins the
+// rotation. Falls back to What We're Reading if the pick can't be resolved.
 function buildFeaturedOrgBox() {
   const picks = G('FEATURED_ORGS') || [];
   const dir = G('LOCAL_ORGS') || [];
   if (!picks.length) return '';
-  const pick = picks[Math.floor(Date.now() / 604800000) % picks.length];
+  const pick = picks[featuredOrgIndex(WEEK_START, picks.length)];
   const org = dir.find(o => o.name === pick.name);
   if (!org) { console.error(`FEATURED_ORGS: "${pick.name}" is not in LOCAL_ORGS — featured-org box skipped.`); return ''; }
   const abs = (u) => /^https?:\/\//i.test(u || '') ? u : '';

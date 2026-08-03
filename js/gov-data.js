@@ -1487,20 +1487,25 @@ const TOPIC_DEFINITIONS = {
    match a LOCAL_ORGS entry exactly — the logo, website, and donate link
    are read live from the directory so they never drift.
 
-   Rotates weekly: index = floor(Date.now() / 604800000) % length, which
-   rolls over Thursday 00:00 UTC. Read by BOTH local-orgs.html (the
-   Featured organization band) and scripts/weekly-email.js (the digest's
-   callout box), so add a new org here and it appears in both.
-   12 orgs = a different org each week, ~3 months before a repeat.    */
+   ROTATION (changed 2026-08-03 — read this before reordering the array):
+   The pick is anchored to the MONDAY of the week being rendered, not to
+   the moment of rendering — index 0 is the week of Mon Aug 3, 2026, and
+   it advances by one each Monday. See featuredOrgIndex() in
+   scripts/weekly-email.js and the matching copy in local-orgs.html.
+
+   Anchoring to the week (rather than the old floor(Date.now()/604800000),
+   which rolled over Thursday 00:00 UTC for no reason beyond the Unix
+   epoch falling on a Thursday) matters because the digest draft is
+   rendered days before it sends and can be frozen by an approval lock.
+   Under the old math a digest drafted Tuesday and sent the following
+   Monday advertised a different org than the one on the site that week.
+
+   Because the index is positional, REORDERING THIS ARRAY RESHUFFLES THE
+   SCHEDULE. Append new orgs at the end unless you mean to change who is
+   featured when. 12 orgs = a different org weekly, no repeat for ~3
+   months. True North and Beacon sit last because both already ran during
+   the two-org era; the ten ahead of them have not been featured yet.   */
 const FEATURED_ORGS = [
-  { name: 'True North Youth Program',
-    why: 'A space and a support system for every teen in the region — free, year-round, and built around helping kids find their footing on the way to adulthood. Parents say it’s where their teens build confidence and get woven into the community.',
-    what: 'Free year-round programs for all teens in San Miguel and West Montrose counties: Rising Stars, Base Camp, college prep and scholarship help, plus river trips, food drives, and community clean-ups.',
-    how: 'Volunteer at a trail-work day or event (their activities calendar lists openings), donate, or — if you’re a teen — fill out a waiver (English or Spanish) and show up.' },
-  { name: 'Beacon Outreach',
-    why: 'Seasonal workers keep this valley running while facing its hardest edges — housing, cost of living, long seasons far from home. Beacon meets them there with mentorship and genuine community.',
-    what: 'One-on-one life coaching and mentorship, free community meals, game nights and sober social gatherings, retreats and outdoor trips, and mental-health and practical-resource support for lift ops, servers, guides, and the rest of the resort workforce.',
-    how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' },
   { name: 'Telluride Adaptive Sports Program',
     why: 'Getting down a ski run or up a climbing wall looks different for everyone — TASP has spent nearly three decades making sure a disability doesn’t decide who gets to be out on this mountain.',
     what: 'Year-round adaptive recreation for people with disabilities, age four and up: skiing and snowboarding all winter, plus biking, rock climbing, and flatwater paddling in summer, along with camps and dedicated programs for veterans.',
@@ -1540,7 +1545,17 @@ const FEATURED_ORGS = [
   { name: 'Habitat for Humanity of the San Juans',
     why: 'Homeownership math in this region is brutal — Habitat’s partner-family model is one of the few paths that still pencils out for working households.',
     what: 'Home builds and renovations in partnership with local families, a homeownership application program, and the Montrose ReStore, which resells donated building materials and household goods at up to 80% off retail.',
-    how: 'Volunteer on a build site or at the ReStore, donate money or materials, or apply for the homeownership program.' }
+    how: 'Volunteer on a build site or at the ReStore, donate money or materials, or apply for the homeownership program.' },
+  /* ── Already featured during the two-org era (Jul 22 – Aug 2, 2026) —
+        parked at the end so they come back around last. ── */
+  { name: 'True North Youth Program',
+    why: 'A space and a support system for every teen in the region — free, year-round, and built around helping kids find their footing on the way to adulthood. Parents say it’s where their teens build confidence and get woven into the community.',
+    what: 'Free year-round programs for all teens in San Miguel and West Montrose counties: Rising Stars, Base Camp, college prep and scholarship help, plus river trips, food drives, and community clean-ups.',
+    how: 'Volunteer at a trail-work day or event (their activities calendar lists openings), donate, or — if you’re a teen — fill out a waiver (English or Spanish) and show up.' },
+  { name: 'Beacon Outreach',
+    why: 'Seasonal workers keep this valley running while facing its hardest edges — housing, cost of living, long seasons far from home. Beacon meets them there with mentorship and genuine community.',
+    what: 'One-on-one life coaching and mentorship, free community meals, game nights and sober social gatherings, retreats and outdoor trips, and mental-health and practical-resource support for lift ops, servers, guides, and the rest of the resort workforce.',
+    how: 'Volunteer through the Get Involved page on their site, donate, or reach out directly at beacontelluride@gmail.com.' }
 ];
 
 /* ── Local Orgs directory — extracted from index.html ── */
