@@ -1,5 +1,13 @@
 [
   {
+    "date": "Aug 3, 2026",
+    "subject": "The Week Ahead Outlook - August 3 - August 9, 2026",
+    "key": "weekly",
+    "href": "https://livabletelluride.org/digest/archive/2026-08-03-weekly.html",
+    "excerpt": "@media only screen and (max-width:480px){ /* Event cards: stack image on top, text below, for easier mobile reading. */ .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;} .ev-img-cell img{width:160px !important;height:160px !important;} .ev-text-cell{display:block !important;width:100% !important;} /* Festival hero: stack the logo above the text on phones. ",
+    "sentAt": "2026-08-03T18:48:43.806Z"
+  },
+  {
     "date": "Jul 27, 2026",
     "subject": "The Week Ahead Outlook - July 27 - August 2, 2026",
     "key": "weekly",
