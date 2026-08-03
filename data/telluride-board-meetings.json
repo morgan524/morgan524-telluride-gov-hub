@@ -3,10 +3,11 @@
     "date": "August 5, 2026",
     "title": "Telluride Housing Authority Subcommittee",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162",
-    "hasAgenda": false,
+    "hasAgenda": true,
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
-    "civicwebId": 8162
+    "civicwebId": 8162,
+    "packetUrl": "https://telluride-co.civicweb.net/document/442849/"
   },
   {
     "date": "August 6, 2026",
