@@ -362,7 +362,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4},
+
+  "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4},
+
+  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4},
+
+  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -511,9 +520,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-05|Telluride Housing Authority Subcommittee - Aug 05 2026":
     "The Telluride Housing Authority Subcommittee is expected to convene its regular monthly meeting on August 5, 2026. No specific agenda items have been publicly detailed, but the subcommittee typically addresses local affordable housing matters, consistent with its ongoing oversight responsibilities for the Telluride Housing Authority.",
 
-  "telluride|2026-08-03|Open Space Commission - Aug 03 2026":
-    "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance within the Town of Telluride. The meeting may also include review of open space elements from relevant planning documents and potential recommendations to Town Council regarding open-space-related matters.",
-
   "county|2026-08-05|Board of County Commissioners Meeting":
     "Board will consider procurement matters including material hauling, soil preparation at Mill Creek Park, foundation repairs at the Placerville Schoolhouse, and roofing at the Trout Lake Water Tank. Commissioners will also sit as the Board of Equalization to hear taxpayer appeals of Assessor property valuations through August 5.",
 
@@ -545,7 +551,16 @@ const MEETING_PREVIEWS = {
     "The Planning Commission will hold a virtual work session to review and discuss potential changes to Section 2 (Definitions) of the Ouray County Land Use Code. No in-person attendance is available for this meeting.",
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    "Council is expected to address a utilities matter involving a request to replace a lost or destroyed share certificate (#887) for the Farmers' Water Development Company, originally issued to A.F. Newans M.D. Additional agenda items have not been specified in available materials."
+    "Council is expected to address a utilities matter involving a request to replace a lost or destroyed share certificate (#887) for the Farmers' Water Development Company, originally issued to A.F. Newans M.D. Additional agenda items have not been specified in available materials.",
+
+  "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
+    "The Ecology Commission is expected to meet to address human-wildlife interactions in Telluride, consistent with its ongoing mandate to reduce threats to wildlife and public safety. Specific agenda items for the September 2, 2026 meeting have not been publicly detailed in available materials.",
+
+  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
+    "The Commission for Community Assistance, Arts & Special Events is expected to consider matters related to annual funding allocations for community support and arts organizations, special events scheduling, and applications for street closures and banners in Telluride.",
+
+  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
+    "The Telluride Housing Authority Subcommittee is expected to meet on September 2, 2026, as part of its regular monthly schedule. No specific agenda items are publicly detailed, but the subcommittee typically addresses local affordable housing matters, program updates, and related administrative business."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -839,16 +854,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "July 20th Women’s Retreat Reminder",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 19, 2026",
-    newsTopic: "community",
-    copy: "It is not too late to join us for a Spirit-filled evening with fellowship, scripture and personal reflection tomorrow (MONDAY, JULY 20th) The theme of the evening is \"Come to Me...\"Potluck begins at 5:30pm at Carroll Mueller's home (address provided up...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/july-20th-womens-retreat-reminder/",
-    img: ""
-  },
-  {
     title: "Changes in evacuation zones 25 and 300",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -915,7 +920,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-02';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-03';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-01';
 
 const MANUAL_SUMMARIES = {
@@ -1082,7 +1087,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1133,7 +1138,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1154,7 +1159,16 @@ const MANUAL_SUMMARIES = {
     "Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.",
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    "The September 1, 2026 Town Council agenda hasn't been posted yet."
+    "The September 1, 2026 Town Council agenda hasn't been posted yet.",
+
+  "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
+    "The September 2, 2026 Ecology Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
+    "The September 2, 2026 Commission for Community Assistance, Arts & Special Events agenda hasn't been posted yet.",
+
+  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
+    "The September 2, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1412,6 +1426,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Judge clarifies NCAA eligibility order, which could blunt its impact on new '5 for 5' rule",
+    source: "Telluride Times",
+    date: "August 3, 2026",
+    firstSeen: "2026-08-03",
+    newsTopic: "education",
+    copy: "A federal judge clarified her ruling granting a fifth eligibility year to certain 2022 high school graduates, confirming it doesn't override NCAA rules on pro contracts or transfer portals. Football players who signed NFL or CFL deals this summer cannot use the ruling to return to college. The NCAA is appealing, leaving teams to weigh roster decisions carefully.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_b448d062-4328-5edd-ac68-930017d214ac.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/71/f71da2da-9017-5ceb-a135-cf15a58f6f9f/6a6ff383cb28f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "For divorced parents, Telluride lowers threshold for town-owned or deed-restricted units",
     source: "Telluride Times",
@@ -2257,30 +2283,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "‘A beautiful, full circle’",
-    source: "Telluride Times",
-    date: "July 20, 2026",
-    firstSeen: "2026-07-20",
-    newsTopic: "education",
-    copy: "Rockies After School Program and Summer Camp has been part of this community for nearly 40 years, growing out of Rainbow Preschool into a nonprofit serving kids from toddlers through grade school. What stands out now is that former Rockies kids are coming back as staff — recent THS grad Caitlyn McKillop among them. Full circle, literally.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0ef6ae31-f786-44d3-8cfc-15634273b28f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/93/793df834-8f72-4eaa-ad3f-cbfce8568b20/6a5ad34faa925.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Bridging the gap",
-    source: "Telluride Times",
-    date: "July 20, 2026",
-    firstSeen: "2026-07-20",
-    newsTopic: "community",
-    copy: "Scientists, industry leaders, and policy experts gather at Telluride Science July 27–31 to work on aligning energy access with climate goals. A public Town Talk happens July 28 at the Sheridan Opera House at 6:30 p.m. with three featured speakers. Small-group format is intentional — it's how Telluride Science says it gets things done.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cee728ec-1810-4365-a8d6-afb8517da935.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/7b/b7b5f9c5-ef54-4814-b50c-8bdab43b67bc/6a5dab2ba8a9c.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -2924,28 +2926,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-08-02/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-08-02T20:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
-    title: "Home Tour & House Show with Emily Scott Robinson",
-    link: "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
-    description: "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while enjoying delicious food, refreshing beverages, and an intimate live music finale. The evening culminates with a special house show featuring acclaimed singer-songwriter Emily Scott Robinson and local favorite You Knew Me When. Emily Scott Robinson is an internationally touring singer-songwriter signed to John Prine’s Oh Boy Records. Praised by NPR, Rolling Stone, Billboard, Colorado Public Radio, and The Washington Post, Robinson recently released her fifth album, Appalachia, which spent six consecutive weeks at #1 on the Folk Radio charts. …",
-    pubDate: "2026-08-02T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-03/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3384,6 +3364,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-08-14T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-08-15T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "Zumba with Gisela",
+    link: "https://koto.org/event/zumba-with-gisela/2026-08-15/",
+    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
+    pubDate: "2026-08-15T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Studio TAB: Summer Fever",
+    link: "https://koto.org/event/studio-tab-summer-fever/",
+    description: "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening at a private estate in Aldasoro Ranch overlooking Wilson Peak. Enjoy a curated mini fashion show, delicious heavy hors d'oeuvres, signature cocktails, and an evening of music, celebration, and community—all in support of the Telluride AIDS Benefit. One Night Only Fundraiser Benefitting TAB Mini Fashion Show | Heavy Apps | Cocktails | DJ Only 100 Tickets Available!",
+    pubDate: "2026-08-16T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-08-15/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-08-16T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-08-16T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3666,6 +3712,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/"
+  },
+  {
+    title: "Ken Gentry & the Companions",
+    link: "https://www.alibitelluride.com/calendar#eca-event=ken-gentry-and-the-companions",
+    description: "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity ...",
+    pubDate: "2026-10-01",
+    time: "9:00 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/5503e0b2-6da7-415a-b118-18a9e65ed3e4/-/crop/816x408/0,37/-/preview/"
   }
 ];
 
@@ -3732,22 +3790,13 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Paul McDonald and the Mourning Doves",
-    href: "https://sherbino.org/event/paul-mcdonald-sherbino-ridgway-august-2026/",
-    date: "2026-08-01 19:30:00",
-    endDate: "2026-08-01 21:30:00",
-    location: "The Sherbino, Ridgway",
-    copy: "@ Doors: 7:00 pm | Show: 7:30 pm*$25 advance | $30 day of show – to buy GA tickets, select from the ticket option BELOW the seating chart*Limited reserved tables available – to purchase a reserved table, hover over the tables on the seating chart. ABOUT PAUL MCDONALD:Born in Alabama and baptized in the dive bars of the southeast, Paul McDonald first made noise with the Grand Magnolias, a roots-rock outfit, before catching fire in the public eye during American Idol’s 2011 run. When the bright lights blurred and the cameras turned, the man behind the voice slipped into the shadows where he did what real artists do: he lived, he lost, and he wrote. Retreating to Nashville, that holy city of reinvention, Paul stitched himself back together with worn boots, hard songs, and a new band called the Mourning Doves. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-22.png"
-  },
-  {
     title: "Ridgway Rendezvous 2026 ~ Saturday Live Music Schedule",
     href: "https://sherbino.org/event/saturday-music-lineup-ridgway-rendezvous-arts-festival-august-8-2026/",
     date: "2026-08-08 09:30:00",
     endDate: "2026-08-08 17:00:00",
     location: "Ridgway, CO",
-    copy: "@ Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 20269:30 a.m.–5:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Four incredible bands. One beautiful Saturday. Join us Saturday, August 8, at Hartwell Park for a full day of FREE live music during the Ridgway Rendezvous Arts Festival. 🎶 Heather & Douglas • 9:30–11:00 a.m.🎶 Hard Pressed • 11:30 a.m.–1:00 p.m.🎶 Tom Ward's Downfall • 1:15–2:45 p.m.🎶 D&G Railroad • 3:15–5:00 p.m. Pack a chair if you'd like, bring your friends, and spend the day enjoying great music, local artists, food vendors, and everything that makes Ridgway Rendezvous such a special weekend. 🌐 ridgwayrendezvous.com The music is just one part of this beloved annual celebration. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/sat-rr-26.png"
+    copy: "@ Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 20269:30 a.m.–5:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Four incredible bands. One beautiful Saturday. Join us Saturday, August 8, at Hartwell Park for a full day of FREE live music during the Ridgway Rendezvous Arts Festival. 🎶 Heather & Douglas • 9:30–11:00 a.m.🎶 Hard Pressed • 11:30 a.m.–1:00 p.m.🎶 Tom Ward's Downfall • 1:15–2:45 p.m.🎶 Donny Morales • 3:15–5:00 p.m. Pack a chair if you'd like, bring your friends, and spend the day enjoying great music, local artists, food vendors, and everything that makes Ridgway Rendezvous such a special weekend. 🌐 ridgwayrendezvous.com The music is just one part of this beloved annual celebration. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Saturday-RR-Banner-live-music.png"
   },
   {
     title: "Ridgway Rendezvous 2026 ~ Sunday Live Music Schedule",
@@ -3755,8 +3804,8 @@ const SHERBINO_EVENTS = [
     date: "2026-08-09 10:00:00",
     endDate: "2026-08-09 16:00:00",
     location: "Ridgway, CO",
-    copy: "@ Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 202610:00 a.m.–4:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Join us in Hartwell Park on Sunday, August 9, for four performances spanning jazz, blues, roots music, Americana, and more. Sunday Music Schedule 10:00–11:30 a.m. — The Ordinary TwoStart the morning with the warm harmonies and acoustic sound of The Ordinary Two. 11:45 a.m.–1:15 p.m. — Mixed Bag JazzEnjoy an energetic midday set from Mixed Bag Jazz, featuring a lively blend of jazz performed by some of the region’s outstanding musicians. 1:30–2:45 p.m. — D&G RailroadD&G Railroad takes the stage for an afternoon performance filled with blues, roots music, rock, and plenty of personality. 3:00–4:00 p.m. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/sunday-rr-26.png"
+    copy: "@ Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 202610:00 a.m.–4:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Join us in Hartwell Park on Sunday, August 9, for four performances spanning jazz, blues, roots music, Americana, and more. Sunday Music Schedule 10:00–11:30 a.m. — The Ordinary TwoStart the morning with the warm harmonies and acoustic sound of The Ordinary Two. 11:45 a.m.–1:15 p.m. — Mixed Bag JazzEnjoy an energetic midday set from Mixed Bag Jazz, featuring a lively blend of jazz performed by some of the region’s outstanding musicians. 1:30–2:45 p.m. — Donny MoralesDonny takes the stage for an afternoon performance filled with blues, roots music, rock, and plenty of personality. 3:00–4:00 p.m. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Sunday-RR-Banner-live-music.png"
   },
   {
     title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
@@ -3765,8 +3814,7 @@ const SHERBINO_EVENTS = [
     endDate: "2026-08-11 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "Celebration of Life for David Leigh Houtz",
@@ -3803,6 +3851,24 @@ const SHERBINO_EVENTS = [
     location: "The Sherbino, Ridgway",
     copy: "@ August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets:  $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in partnership by The Sherbino with Pickin' Productions The Onlies are a longstanding collective of young friends defining a powerful new generation of stringband music. Described as “the best old-time stringband out there” (Songlines), their music moves with a pulsating drive, sharp arrangements, and rich vibration — it resounds with the present. Multi-instrumentalists and vocalists Sami Braman, Riley Calcagno, and Leo Shannon formed The Onlies in Seattle as young kids, bringing in celebrated guitarist/singer Vivian Leva 10 years later. “ Their fourth album, You Climb The Mountain, marks 20 years as a band. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-10.jpg"
+  },
+  {
+    title: "DARRELL SCOTT",
+    href: "https://sherbino.org/event/darrell-scott-sherbino-ridgway-august-29/",
+    date: "2026-08-29 19:30:00",
+    endDate: "2026-08-29 21:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin' Productions About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. Scott’s debut album, Aloha from Nashville, introduced enduring songs that became modern standards, including “You’ll Never Leave Harlan Alive” and “It’s A Great Day To Be Alive.” Across albums including Family Tree, The Invisible Man, Modern Hymns, A Crooked Road, and Long Ride Home, Scott’s songwriting and instrumental artistry have continued to resonate with audiences and fellow musicians alike. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-7-e1777594191779.jpg"
+  },
+  {
+    title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
+    href: "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
+    date: "2026-09-01 18:30:00",
+    endDate: "2026-09-01 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion. @ Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women's health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women's health all over the world. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/ChatGPT-Image-Jun-23-2026-07_58_16-PM.png"
   }
 ];
 
@@ -5468,28 +5534,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-08-01T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
-  {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
@@ -5664,17 +5708,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48861/ben_musser_walker_young_1800x900px.png"
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     title: "Mind Blown Telluride",
@@ -6296,39 +6329,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
   },
   {
-    title: "Top Chef and Taste of Telluride",
-    link: "https://www.telluride.com/event/top-chef-and-taste-of-telluride/",
-    description: "Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, …",
-    pubDate: "2026-08-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44989/screenshot_2024-07-09_at_1_28_41_pm.800x533.webp"
-  },
-  {
-    title: "Natalie Brooke",
-    link: "https://www.telluride.com/event/natalie-brooke/",
-    description: "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her powerhouse 4-piece band from the …",
-    pubDate: "2026-08-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp"
-  },
-  {
-    title: "The Casual Enormity of Adam Palmer Film Screening and Panel Discusson",
-    link: "https://www.telluride.com/event/the-casual-enormity-of-adam-palmer-film-screening-and-panel-discusson/",
-    description: "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer …",
-    pubDate: "2026-08-01",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
-  },
-  {
     title: "Bike and Brewery Tour",
     link: "https://www.telluride.com/event/bike-and-brewery-tour/",
     description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
@@ -6671,6 +6671,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp"
+  },
+  {
+    title: "Pink Talking Fish",
+    link: "https://www.telluride.com/event/pink-talking-fish/",
+    description: "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
+    pubDate: "2026-10-02",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
   }
 ];
 

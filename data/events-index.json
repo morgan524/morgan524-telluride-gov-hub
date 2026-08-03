@@ -55,15 +55,15 @@
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-08-02/",
+    "href": "https://telluridelibrary.libcal.com/event/17029766?hs=a",
     "date": "2026-08-02",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -81,15 +81,15 @@
   },
   {
     "title": "Home Tour & House Show with Emily Scott Robinson",
-    "href": "https://koto.org/event/home-tour-house-show-with-emily-scott-robinson-2/",
+    "href": "https://events.ourayridgwayevents.com/event/home-tour-house-show-with-emily-scott-robinson",
     "date": "2026-08-02",
     "time": "5:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "location": "Registration & Map Pickup",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53314328176075/huge/f297998422c8d9c4e8e57b3f8553c07441bc20bd.jpg",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway’s Dallas Meadows neighborhood while…",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Home Trust of Ouray County for an unforgettable summer evening at the Home Tour & House Show on Sunday, August 2, from 5:00–8:30 PM. Explore a curated collection of beautiful homes in Ridgway's Dallas Meadows neighborhood while…",
     "type": "Community"
   },
   {
@@ -1215,7 +1215,7 @@
     "time": "",
     "location": "Ridgway, CO",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/07/sat-rr-26.png",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/Saturday-RR-Banner-live-music.png",
     "category": "",
     "source": "Sherbino Theater",
     "desc": "",
@@ -1306,7 +1306,7 @@
     "time": "",
     "location": "Ridgway, CO",
     "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/07/sunday-rr-26.png",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/Sunday-RR-Banner-live-music.png",
     "category": "",
     "source": "Sherbino Theater",
     "desc": "",
@@ -1558,7 +1558,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1917,6 +1917,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Free Youth Tennis & Pickleball Program",
+    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "3:30 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "TYLER SIMMONS",
     "href": "https://events.ourayridgwayevents.com/event/tyler-simmons-9384",
     "date": "2026-08-14",
@@ -2008,6 +2021,32 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Bilingual Balance in Motion",
+    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
+    "date": "2026-08-15",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
+  },
+  {
+    "title": "Zumba with Gisela",
+    "href": "https://koto.org/event/zumba-with-gisela/2026-08-15/",
+    "date": "2026-08-15",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Ouray County Pride",
     "href": "https://events.ourayridgwayevents.com/event/ouray-county-pride",
     "date": "2026-08-15",
@@ -2034,19 +2073,6 @@
     "type": "Music"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-08-15",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
-  },
-  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-08-15",
@@ -2060,6 +2086,19 @@
     "type": "Community"
   },
   {
+    "title": "Studio TAB: Summer Fever",
+    "href": "https://koto.org/event/studio-tab-summer-fever/",
+    "date": "2026-08-15",
+    "time": "6:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening…",
+    "type": "Music"
+  },
+  {
     "title": "Teen Pride Karaoke Night",
     "href": "https://events.ourayridgwayevents.com/event/teen-pride-karaoke-night",
     "date": "2026-08-15",
@@ -2071,6 +2110,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This…",
     "type": "Community"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://koto.org/event/movies-under-the-stars/2026-08-15/",
+    "date": "2026-08-15",
+    "time": "6:30 PM",
+    "location": "Conference Center Plaza Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
@@ -2122,6 +2174,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "This program offers a unique opportunity to explore the wonders of the night sky through the expert lens of the Black Canyon Astronomical Society. This free program removes the guesswork of stargazing by providing high-powered telescopes…",
+    "type": "Community"
+  },
+  {
+    "title": "Drop In Tech Time with Oliver",
+    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
+    "date": "2026-08-16",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
     "type": "Community"
   },
   {
@@ -2993,6 +3058,19 @@
     "type": "Music"
   },
   {
+    "title": "DARRELL SCOTT",
+    "href": "https://sherbino.org/event/darrell-scott-sherbino-ridgway-august-29/",
+    "date": "2026-08-29",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-7-e1777594191779.jpg",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-30",
@@ -3047,15 +3125,15 @@
   },
   {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
-    "href": "https://events.ourayridgwayevents.com/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion",
+    "href": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     "date": "2026-09-01",
-    "time": "6:30 PM",
-    "location": "The Sherbino",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53426262588908/huge/71a55615f11bffa976395d1cf0776b9aea0970bd.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "September 1 @ 6:30 pm – 8:00 pm Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women’s health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim…",
+    "img": "https://sherbino.org/wp-content/uploads/2026/06/ChatGPT-Image-Jun-23-2026-07_58_16-PM.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Arts & Film"
   },
   {
@@ -3805,5 +3883,31 @@
     "desc": "Original Thinkers returns to breathtaking Telluride, Colorado, for the highly anticipated ninth annual festival, taking …",
     "type": "Festivals",
     "endDate": "2026-10-05"
+  },
+  {
+    "title": "Ken Gentry & the Companions",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=ken-gentry-and-the-companions",
+    "date": "2026-09-30",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/5503e0b2-6da7-415a-b118-18a9e65ed3e4/-/crop/816x408/0,37/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity ...",
+    "type": "Community"
+  },
+  {
+    "title": "Pink Talking Fish",
+    "href": "https://www.telluride.com/event/pink-talking-fish/",
+    "date": "2026-10-01",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
+    "type": "Community"
   }
 ]

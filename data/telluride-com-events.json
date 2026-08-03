@@ -396,39 +396,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
   },
   {
-    "title": "Top Chef and Taste of Telluride",
-    "link": "https://www.telluride.com/event/top-chef-and-taste-of-telluride/",
-    "description": "Top Chef & Taste of Telluride is One to One Mentoring's premier annual fundraiser, bringing together locals, …",
-    "pubDate": "2026-08-01",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/44989/screenshot_2024-07-09_at_1_28_41_pm.800x533.webp"
-  },
-  {
-    "title": "Natalie Brooke",
-    "link": "https://www.telluride.com/event/natalie-brooke/",
-    "description": "Natalie Brooke is a rock star. A virtuoso funk / rock keys player leading her powerhouse 4-piece band from the …",
-    "pubDate": "2026-08-01",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62666/screenshot_2026-06-01_at_3_29_24_pm.800x533.webp"
-  },
-  {
-    "title": "The Casual Enormity of Adam Palmer Film Screening and Panel Discusson",
-    "link": "https://www.telluride.com/event/the-casual-enormity-of-adam-palmer-film-screening-and-panel-discusson/",
-    "description": "A new Colorado-made documentary celebrating the life, values, and enduring influence of community leader Adam Palmer …",
-    "pubDate": "2026-08-01",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63037/apsf-film-cover.800x533.webp"
-  },
-  {
     "title": "Bike and Brewery Tour",
     "link": "https://www.telluride.com/event/bike-and-brewery-tour/",
     "description": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …",
@@ -771,5 +738,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28484/ot_poster_2025_final.800x533.webp"
+  },
+  {
+    "title": "Pink Talking Fish",
+    "link": "https://www.telluride.com/event/pink-talking-fish/",
+    "description": "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
+    "pubDate": "2026-10-02",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
   }
 ]

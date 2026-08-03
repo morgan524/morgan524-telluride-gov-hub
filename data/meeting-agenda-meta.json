@@ -379,5 +379,17 @@
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "sv": 4
+  },
+  "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
+    "sv": 4
+  },
+  "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
+    "sv": 4
+  },
+  "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
+    "sv": 4
   }
 }
