@@ -1273,6 +1273,19 @@
     "type": "Music"
   },
   {
+    "title": "August Intergovernmental Worksession",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/august-intergovernmental-worksession/",
+    "date": "2026-08-10",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/32340/ig-worksessions-new_event.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "The Town of Telluride hosts an Intergovernmental Worksession on August 10, 2026.",
+    "type": "Community"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-08-10",
@@ -1848,7 +1861,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
     "type": "Food & Drink",
-    "endDate": "2026-09-25"
+    "endDate": "2026-10-02"
   },
   {
     "title": "Telluride Farmer's Market",
@@ -2453,6 +2466,19 @@
     "type": "Music"
   },
   {
+    "title": "The Flight of the Pollinators - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/the-flight-of-the-pollinators-ridgway-state-park-summer-program-series",
+    "date": "2026-08-21",
+    "time": "6:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53594904289337/huge/5dcda519655d9c8463440969864239b2fdd45d31.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Bees are the quiet champions of the Uncompahgre Valley, keeping our wild high-desert valleys blooming and our local backyard gardens thriving. In this fun, eye-opening evening presentation, you will discover the incredible diversity of…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Telluride Mountain Run",
     "href": "https://www.telluride.com/event/telluride-mountain-run/",
     "date": "2026-08-21",
@@ -2555,6 +2581,32 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
+    "title": "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/lunar-tics-unite-discovering-the-moon-ridgway-state-park-summer-program-series",
+    "date": "2026-08-22",
+    "time": "7:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53594962246638/huge/78cf2476b700b1075a450a7ed2dac1b00709c7a3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ready to unlock the secrets of our favorite cosmic neighbor? Pack your curiosity and join professor Gerald J. Spangrude for a fun, stellar evening as we talk all about the moon—from its wild crater-faced history and lunar myths to how it…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Bats, Our Friends in the Dark - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/bats-our-friends-in-the-dark-ridgway-state-park-summer-program-series",
+    "date": "2026-08-22",
+    "time": "9:00 AM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53602909844206/huge/86588d56807d9717bb526b283fe016d75d0899eb.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Prepare to flip your perspective on the most misunderstood residents of the night sky! Join us at the Pa-Co-Chu-Puk Ponds for an eye-opening morning dedicated to the world’s only flying mammals. Far from being spooky, these \"caped…",
     "type": "Community"
   },
   {
@@ -2966,6 +3018,32 @@
     "type": "Community"
   },
   {
+    "title": "Roots & Wings: The Pollinator Connection - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/roots-wings-the-pollinator-connection-ridgway-state-park-summer-program-series",
+    "date": "2026-08-28",
+    "time": "6:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53595153401195/huge/21d02df3239c35fcac02e56bef6792ae2e868513.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Discover the secret, bustling world of our local ecosystem! Join passionate plant enthusiast Zoe Debenedette for an eye-opening evening exploring the incredible native flora of the San Juan region and the vital pollinators they support.…",
+    "type": "Community"
+  },
+  {
+    "title": "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
+    "date": "2026-08-29",
+    "time": "5:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53595172751829/huge/9578a24cf2da72cd8b280b6b30487657c8b924e2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Get ready to add a splash of sapphire to your weekend! Pack your binoculars and join professor Bruce Ackerman at the Visitor Center for a fun, feather-filled evening discovering Colorado’s most brilliant bluebirds—from their cheerful songs…",
+    "type": "Community"
+  },
+  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-08-29",
@@ -3279,6 +3357,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Trivia Night @ the Wright WHEN? Friday, September 4 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Gather your team and put your knowledge to the test at Trivia Night @ the…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Public Bird Banding Day - Ridgway State Park",
+    "href": "https://events.ourayridgwayevents.com/event/public-bird-banding-day-ridgway-state-park",
+    "date": "2026-09-05",
+    "time": "8:00 AM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53595198326789/huge/b52afc36fd4c4e87537e211690d7093afa8c36a3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for a morning of science and discovery at Ridgway State Park. This unique, hands-on event offers a rare \"behind-the-scenes\" look at how researchers track and protect our feathered friends. This program offers a front-row seat to…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Music and Makers Fest",

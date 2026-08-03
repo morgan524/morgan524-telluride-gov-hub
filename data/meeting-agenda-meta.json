@@ -212,7 +212,11 @@
   },
   "telluride|2026-08-11|Town Council - Aug 11 2026": {
     "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041"
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
+    "meetingId": "830 1182 2138",
+    "passcode": "888369.",
+    "phone": "719) 359-4580"
   },
   "ridgway|2026-07-15|Ridgway Planning Commission Meeting": {
     "zoomUrl": "https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1",

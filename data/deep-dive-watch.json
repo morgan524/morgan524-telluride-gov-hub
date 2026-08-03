@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-03T14:53:00.757Z",
+ "generated": "2026-08-03T17:16:14.924Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -57,6 +57,18 @@
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
      "zoomLink": "https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-08-11",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [
@@ -94,6 +106,18 @@
      "link": "https://sanmiguelcoco.portal.civicclerk.com/event/886/files/agenda/1942",
      "zoomLink": "https://us02web.zoom.us/meeting/register/Usig5v0QSkGHbjSBf4K6oA",
      "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Town Council",
+     "date": "2026-08-11",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
    "recent": [
