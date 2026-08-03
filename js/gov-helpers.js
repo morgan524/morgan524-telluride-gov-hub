@@ -1152,7 +1152,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1443,6 +1443,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Where the mountains meet the dance floor",
+    source: "Telluride Times",
+    date: "August 3, 2026",
+    firstSeen: "2026-08-03",
+    newsTopic: "arts-culture",
+    copy: "The Telluride AIDS Benefit hosts Studio TAB: Summer Fever on Aug. 15, a disco-themed outdoor fashion show and fundraiser at an Aldasoro estate, 6–9 p.m. Just 100 tickets available. Proceeds support local HIV prevention, education, and wellness programs running since 1993.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_53c75a0c-f465-43dc-848a-f693cd6dafc4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/69/d69fd711-2840-4159-b86c-7409ab41d8ea/6a701e7402f53.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Judge clarifies NCAA eligibility order, which could blunt its impact on new '5 for 5' rule",
     source: "Telluride Times",
@@ -2967,15 +2979,15 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-03/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-03T15:30:00.000Z",
+    title: "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    link: "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-04/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
+    pubDate: "2026-08-04T14:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -2997,6 +3009,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "The Livery Norwood",
+    imageUrl: ""
+  },
+  {
+    title: "BINGO night at the Alibi",
+    link: "https://koto.org/event/bingo-night-at-the-alibi/",
+    description: "Join us at the Alibi for a lively night of BINGO with WPL merch and mystery prizes! This program is FREE and open to the public. Make sure to be on time to ensure that you have a seat and a BINGO card! Hope to see you there!",
+    pubDate: "2026-08-04T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "The Alibi, Telluride",
     imageUrl: ""
   },
   {
@@ -3074,6 +3097,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Being and Becoming Ute: The Story of an American Indian People",
+    link: "https://koto.org/event/being-and-becoming-ute-the-story-of-an-american-indian-people/",
+    description: "Join author Sondra Jones for a presentation about her book, Being and Becoming Ute: The Story of an American Indian People on Wednesday, August 5th at 5:30 pm! Sondra Jones traces the metamorphosis of the Ute people from a society of small, interrelated bands of mobile hunter-gatherers to sovereign, dependent nations—modern tribes who run extensive business enterprises and government services. Weaving together the history of all Ute groups—in Colorado, Utah, and New Mexico—the narrative describes their traditional culture, including the many facets that have continued to define them as a people. Jones emphasizes how the Utes adapted over four centuries and details events, conflicts, trade, and social interactions with non-Utes and non-Indians. …",
+    pubDate: "2026-08-05T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3242,14 +3276,25 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Telluride Mountain School Open House",
-    link: "https://koto.org/event/telluride-mountain-school-open-house/",
-    description: "Join us for an upcoming Open House! Discover the new chapter unfolding at Telluride Mountain School, with inspiring new leadership, a renewed mission and values, and an exciting vision for the future. There's never been a better time to learn what makes us so unique. Meet our new Head of School, Jonathan Fouser, hear about the innovative changes shaping the year ahead, and see how our mission comes to life through meaningful relationships, experiential learning, and academic excellence. **Bonus – Enjoy coffee and donuts on a beautiful mountain morning.",
-    pubDate: "2026-08-11T15:15:00.000Z",
+    title: "Tribal Allyship in Colorado with Ernest House",
+    link: "https://koto.org/event/tribal-allyship-in-colorado-with-ernest-house/",
+    description: "Join Ernest House, Jr.Senior Policy Director at the Center of Tribal & Indigenous Engagement at the Keystone Policy Center for a conversation on August 10th at 5:30 pm. He will talk about projects like the Colorado Outdoor Strategy Tribal Framework, buffalo restoration in the San Luis Valley, and the building the nation's first tribal embassy in Denver. Ernest House Jr. is an enrolled member of the Ute Mountain Ute Tribe in Towaoc, Colorado, and a leader in Native American affairs. He served as Executive Director of the Colorado Commission of Indian Affairs (CCIA) for 12 years, fostering communication between Colorado’s tribal nations and state agencies, while maintaining government-to-government relations under Governors Owens, Ritter, and Hickenlooper. Currently, as Senior Policy Director and Director for the Center for Tribal and Indigenous Engagement at the Keystone Policy Center, he focuses on tribal consultation, energy, conservation, healthcare, natural resources, and cultural resource management. …",
+    pubDate: "2026-08-10T23:30:00.000Z",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Telluride Mountain School",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "DMV2GO",
+    link: "https://koto.org/event/dmv2go/2026-08-11/",
+    description: "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver License, ID or Permit REPLACE – A lost or stolen Colorado Driver License, ID or Permit FIRST TIME – Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER – Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aquí. Tenga en cuenta, DMV2GO no ofrece NINGÚN servicio de prueba. …",
+    pubDate: "2026-08-11T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3286,6 +3331,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    link: "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-11/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
+    pubDate: "2026-08-11T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
+  },
+  {
     title: "Telluride Mushroom Festival",
     link: "https://koto.org/event/telluride-mushroom-festival/",
     description: "Telluride Mushroom Festival brings together leading mycologists, artists, foragers and enthusiasts to explore all things fungi. We focus on science, culture, and community, covering topics like psychedelic research, cultivation, decriminalization, and identification. More than just a festival, it is an annual reunion for fungi folks to gather and celebrate fungi and their impact on our world. This year’s theme is “Rewild” and will feature a raft of myco-luminaries including Mark Plotkin, world-renowned ethnobotanist best known for his work with Indigenous peoples of the Amazon and for popularizing the idea that rainforest conservation must center Indigenous knowledge. His book Tales of a Shaman’s Apprentice is still one of the most influential works in the field. …",
@@ -3295,6 +3351,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://koto.org/wp-content/uploads/2026/02/Untitled-design-scaled.jpg"
+  },
+  {
+    title: "DMV2GO",
+    link: "https://koto.org/event/dmv2go/2026-08-12/",
+    description: "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver License, ID or Permit REPLACE – A lost or stolen Colorado Driver License, ID or Permit FIRST TIME – Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER – Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aquí. Tenga en cuenta, DMV2GO no ofrece NINGÚN servicio de prueba. …",
+    pubDate: "2026-08-12T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   },
   {
     title: "Youth Tennis & Pickleball Camp",
@@ -3352,6 +3419,28 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Sound Bath with Danielle and Ian",
+    link: "https://koto.org/event/sound-bath-with-danielle-and-ian/",
+    description: "Join us for an hour of traveling through sound and the inner self! In this once a month community event, we are healing the body and auric field with a multitude of sound frequencies. Chimes, 432hz quartz singing bowls, crystal tuning pyramids, rain drums, GALORE! We will also be holding space for group conversation, weaving through topics of spirituality. Bring a blanket, yoga mat, water bottle, journal, and your psycho-spiritual discussion hat! After each sound bath, we will be sticking around for group discussion for a duration of 30 – 40 minutes. Each month will have a different psycho-spiritual topic, and will offer tools to integrate these themes into our daily lives. Join us for this beautiful summer offering! Please sign up in advance! …",
+    pubDate: "2026-08-12T23:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "DMV2GO",
+    link: "https://koto.org/event/dmv2go/2026-08-13/",
+    description: "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver License, ID or Permit REPLACE – A lost or stolen Colorado Driver License, ID or Permit FIRST TIME – Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER – Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aquí. Tenga en cuenta, DMV2GO no ofrece NINGÚN servicio de prueba. …",
+    pubDate: "2026-08-13T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-13/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3360,17 +3449,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Drought on the West End",
-    link: "https://koto.org/event/drought-on-the-west-end/",
-    description: "Join San Miguel County and Montrose County, in partnership with the Shavano Conservation District, at The Livery in Norwood on Wednesday, 8/13, for a free workshop for agricultural producers dealing with the effects of ongoing drought across the West End. The event will bring together experts from the Natural Resources Conservation Service, Farm Service Agency, the Bureau of Land Management, and Colorado State University Extension to share resources and strategies for maintaining productive, resilient land through dry conditions. This event is free and open to the public, but please register online in advance at bit.ly/droughtonthewestend and consider bringing a dessert to share.",
-    pubDate: "2026-08-13T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "The Livery Norwood",
     imageUrl: ""
   },
   {
@@ -3394,83 +3472,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-14/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-14T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-08-14T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-08-14/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-08-14T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-08-14/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-08-14T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-08-14T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-08-15T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "Zumba with Gisela",
-    link: "https://koto.org/event/zumba-with-gisela/2026-08-15/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-08-15T16:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   }
 ];
 
@@ -4415,7 +4416,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52597541791172/huge/0dc02f916413850382610dca39e894ab3e0c73f8.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53604939799289/huge/9d342ef941735ff72dd4a24d0df58e12a8e49027.jpg"
   },
   {
     title: "The Hummingbird’s Secret Mission - Ridgway State Park Summer Program Series",
@@ -4496,6 +4497,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/53506206584416/huge/5c0910190bcc815b3556542e2cfda2027272d8bf.jpg"
+  },
+  {
+    title: "Floating Lotus Brewery 2 Year Anniversary Celebration",
+    link: "https://events.ourayridgwayevents.com/event/floating-lotus-brewery-2-year-anniversary-celebration",
+    description: "Free celebration · All ages · Live music 6–10 p.m. Floating Lotus Brewery · Outdoor and indoor stages Here’s to two years in business! Join us on Saturday, August 8, 2026, for an all-day celebration featuring food and drink specials, live music, cornhole, giveaways, and plenty more. One-Day Food Special We’ve partnered with Taqueria Alonzo to offer a pint and an entrée for just $16. Choose any pint and pair it with an order of the taqueria’s new fish tacos. This anniversary special will be available all day, for one day only, while supplies last. Live Music Our good friend TBP Joe returns from Fruita to perform on the outdoor stage from 6–8 p.m. Afterward, Sean Universe and DJ Photon will take over the indoor stage with an EDM set that continues late into the night. …",
+    pubDate: "2026-08-08T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53603888943583/huge/4dd2b97b517c8a564d3e0267ae9c3926e7e803ac.jpg"
   },
   {
     title: "Ouray: Echoes in the Canyon — Screening @ the Wright",
@@ -4678,6 +4690,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53500612747225/huge/d592d9f9005f6dd7c1d76cbb109c68986d38d503.jpg"
+  },
+  {
+    title: "Spencer Marlyn Band - Live @ Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/spencer-marlyn-band-live-floating-lotus-brewery-335",
+    description: "Spencer Marlyn Band is what happens when a looping wizard and a one-man drum circle collide. Formed in Bend, Oregon, by two Midwest transplants, this high-energy duo delivers the kind of sound you would expect from a full band—genre-hopping through funk, reggae, bluegrass, jam, folk, and psychedelia. Frontman Spencer Marlyn combines captivating songwriting with a looping setup and effects-pedal mastery, while percussionist Scottie brings a globally influenced punch shaped by West African rhythms and a wildly diverse drum kit. The result is a danceable, feel-good explosion of sound packed with originals and crowd-favorite covers. View on site | Email this event",
+    pubDate: "2026-08-14T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604104925928/huge/1d26a65a7f2186c5172d845f74bbeb53f5ccb043.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -4903,6 +4926,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53259464395794/huge/7fdca250f8fbc225136fb161d79ef1df818a7b74.jpg"
   },
   {
+    title: "Motel Prophets - Live @ Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/motel-prophets-live-floating-lotus-brewery",
+    description: "Motel Prophets are Ridgway’s new folk-rock band, featuring Corey Hooker on vocals. With country-tinged vocals, rootsy storytelling, and a loose mountain-town energy, the band blends folk grit with rock-and-roll warmth for a sound that feels both familiar and fresh. Expect an easygoing, heartfelt set built for cold beers, good company, and a true local music night. View on site | Email this event",
+    pubDate: "2026-08-21T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604148125477/huge/f14b8951b91261a2b0d6d1962bc705fb32252ed7.jpg"
+  },
+  {
     title: "Highgraders Holiday & Mining History",
     link: "https://events.ourayridgwayevents.com/event/highgraders-holiday-mining-history",
     description: "Watch the Hardrock mining competition and learn about the history of mining in Ouray. There will be a full bar, and food vendors. Miner’s Heritage Park is on the southwest corner of Fellin Park. Friday, Aug. 21 | Fellin Park Horseshoe Tournament (open to the public) Registration from 2-3 PM $20/team Saturday, Aug. 22 | Miner’s Heritage Park 9-10 AM - Registration 10 AM - Hand Mucking 11 AM - Spike Driving 12 PM - Single Man Drilling 3 PM - Single Jack Sunday, Aug. 23 | Miner’s Heritage Park 9-10 AM - Registration 10 AM - Team Drilling 12 PM - Machine Mucking 2 PM - Double Jack Awards Ceremony *All times are approximate and subject to change. View on site | Email this event",
@@ -4935,6 +4969,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53594904289337/huge/5dcda519655d9c8463440969864239b2fdd45d31.jpg"
+  },
+  {
+    title: "the Fabulous Blues Tones - Live @ Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-floating-lotus-brewery",
+    description: "If you like blues music with a kick, you will love the Fabulous Blues Tones. With Greg Jacobs and Tony Kovacic out front on vocals and guitars, the band comes to the stage with a whole slew of house-rocking material—some timeless standards and some pulled from deep within the blues vault. On drums and bass, Tim Brennan and Dave Underwood keep the pocket tight and the groove going strong all night long. This is authentic, hard-driving blues played by four musicians who dearly love it. Come out and get your mojo working. View on site | Email this event",
+    pubDate: "2026-08-22T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604223147724/huge/c985d5189882648846e08f8f047b93c0a26dab4a.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble at The Courtyard",
@@ -5117,6 +5162,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52994337466169/huge/c00e4314e46ffb42f048810ccb67e832be842847.jpg"
   },
   {
+    title: "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-floating-lotus-brewery-7737",
+    description: "If you like blues music with a kick, you will love the Fabulous Blues Tones. With Greg Jacobs and Tony Kovacic out front on vocals and guitars, the band comes to the stage with a whole slew of house-rocking material—some timeless standards and some pulled from deep within the blues vault. On drums and bass, Tim Brennan and Dave Underwood keep the pocket tight and the groove going strong all night long. This is authentic, hard-driving blues played by four musicians who dearly love it. Come out and get your mojo working. View on site | Email this event",
+    pubDate: "2026-08-28T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604234896494/huge/7d3a3f2cb3d8a141dbf964c56c072834ed01eb67.jpg"
+  },
+  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5137,6 +5193,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Voyager Basecamp",
     imageUrl: "https://localist-images.azureedge.net/photos/53428561014390/huge/ddcc842e71104da739a6e5d9ae3d47e5e9c98a98.jpg"
+  },
+  {
+    title: "Alpine Jam - Live @ Floating Lotus Brewerty",
+    link: "https://events.ourayridgwayevents.com/event/alpine-jam-live-floating-lotus-brewerty",
+    description: "Ridgway-based Alpine Jam plays an eclectic, high-energy mix of real rock and roll, down-home blues, and upbeat country. Their dynamic vocals, wailing saxophone and guitar leads, and instrumental jams are sure to get you up and moving. View on site | Email this event",
+    pubDate: "2026-08-29T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604246650500/huge/18e210b78b98c467d364bab798eb9b5e4c95c24d.jpg"
   },
   {
     title: "Roots & Wings: The Pollinator Connection - Ridgway State Park Summer Program Series",
@@ -5761,6 +5828,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
+  },
+  {
+    title: "Design Review Board Meeting August 2026",
+    link: "https://townofmountainvillage.com/explore/events/all-events/august-design-review-board-meeting/",
+    description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    pubDate: "2026-08-06T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/31723/drb-event-new.png"
   },
   {
     title: "Opening Show for Telluride Jazz Festival",
@@ -6570,6 +6648,18 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp"
   },
   {
+    title: "Eco-Grief Workshops: Between Grief & Gratitude",
+    link: "https://www.telluride.com/event/eco-grief-workshops-between-grief-gratitude-where-love-and-loss-meet-in-a-changing-world/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for …",
+    pubDate: "2026-08-04",
+    endDate: "2026-08-25",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp"
+  },
+  {
     title: "Big Love Car Wash",
     link: "https://www.telluride.com/event/big-love-car-wash/",
     description: "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
@@ -6730,6 +6820,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/62312/screenshot_2026-04-29_at_2_59_37_pm.800x533.webp"
   },
   {
+    title: "Coffee & Climate Conversations",
+    link: "https://www.telluride.com/event/coffee-climate-conversations/",
+    description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
+    pubDate: "2026-08-27",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/57231/download_16.800x533.webp"
+  },
+  {
     title: "Camp Alderwild",
     link: "https://www.telluride.com/event/camp-alderwild/",
     description: "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
@@ -6740,6 +6841,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/57622/of_the_trees_by_frankie_zarantonello.800x533.webp"
+  },
+  {
+    title: "Full Circle Fashion Fundraiser",
+    link: "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
+    description: "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
+    pubDate: "2026-08-29",
+    endDate: "2026-08-31",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
   },
   {
     title: "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
