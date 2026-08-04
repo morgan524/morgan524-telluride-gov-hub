@@ -1,26 +1,22 @@
 {
-  "hash": "4e36da68c7f0a053ab809e9b7e32efad68d89fcc",
-  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC's triple-header of public hearings on August 5 — three Land Use Code amendments up for formal action, including changes to 'Qualified Owner' definitions and a wildfire-areas update, all open for public comment. The Open Space Commission kicks things off Monday with a real decision on the Valley Floor River Trail alignment. The Housing Authority Subcommittee weighs in on whether a deed-restricted owner can replace a roof that blows past her improvement cap, and Mountain Village's Design Review Board takes up three multifamily projects Thursday.",
+  "hash": "ece4b2a281e61d8dd3e1897fd67c4c0a5c2bf115",
+  "lede": "The San Miguel County BOCC holds public hearings Wednesday on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in the deed-restriction code, a wildfire areas update, and a nonconforming lots hearing — all moving toward formal votes, so this is a real window to weigh in. The Telluride Housing Authority Subcommittee also meets Wednesday on a deed-restricted homeowner's request to exceed improvement limits for a necessary roof replacement. Wrapping up the week, the Jazz Festival kicks off Friday alongside the KOTO Duck Race.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Commissioners pick one of three River Trail alignments near Valley Floor wetlands."
-    },
-    {
       "id": 3,
-      "stake": "Vote on whether deed-restricted owner can exceed improvement cap for a new roof."
+      "stake": "Public hearings on three Land Use Code changes, including deed-restriction and wildfire rules."
     },
     {
-      "id": 4,
-      "stake": "Three public hearings on Land Use Code changes, including wildfire rules and owner definitions."
+      "id": 2,
+      "stake": "Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof."
     },
     {
-      "id": 6,
-      "stake": "Definition changes to Ouray County Land Use Code could quietly shift what gets permitted."
+      "id": 5,
+      "stake": "Land Use Code definition changes being shaped — definitions determine what rules mean in practice."
     },
     {
-      "id": 8,
-      "stake": "Three multifamily projects, including a conditional-use permit, go before Mountain Village DRB."
+      "id": 7,
+      "stake": "Design review votes on three new multifamily projects in Mountain Village, including a conditional-use permit."
     }
   ]
 }

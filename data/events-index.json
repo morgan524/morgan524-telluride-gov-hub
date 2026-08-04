@@ -677,19 +677,6 @@
     "type": "Music"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-06/",
-    "date": "2026-08-06",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Art Walk Telluride",
     "href": "https://koto.org/event/art-walk-telluride/2026-08-06/",
     "date": "2026-08-06",
@@ -727,19 +714,6 @@
     "source": "Mountain Village",
     "desc": "Join us on Thursday, August 6, from 5:00–7:00 PM for the Telluride Jazz Festival Opening Show at Reflection Plaza in Mountain Village (Music on the Green",
     "type": "Festivals"
-  },
-  {
-    "title": "State of Journalism in Trump's Washington",
-    "href": "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
-    "date": "2026-08-06",
-    "time": "6:00 PM",
-    "location": "Decker Community Room",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53589242097771/huge/34513880aab250a7f25104b4f0d5d65920c25ed6.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism in Trump's Washington. Hessler has written widely on…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Jazz Festival",
@@ -950,7 +924,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and…",
     "type": "Arts & Film",
-    "endDate": "2026-09-04"
+    "endDate": "2026-10-02"
   },
   {
     "title": "First Friday at Rootwings Art at Rootwings Art",
@@ -964,7 +938,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes…",
     "type": "Arts & Film",
-    "endDate": "2026-09-04"
+    "endDate": "2026-10-02"
   },
   {
     "title": "Old Man Polly & Natalie Heller at Fabula for First Friday!",
@@ -1863,19 +1837,6 @@
     "type": "Festivals"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
-    "date": "2026-08-13",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
     "href": "https://events.ourayridgwayevents.com/event/community-open-house-for-the-town-of-ridgways-housing-action-plan-master-plan-water-supply-element",
     "date": "2026-08-13",
@@ -2020,6 +1981,32 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
     "title": "Ridgway Farmers Market",
     "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     "date": "2026-08-14",
@@ -2034,6 +2021,19 @@
     "endDate": "2026-10-02"
   },
   {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-08-14",
@@ -2045,6 +2045,19 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Free Youth Tennis & Pickleball Program",
+    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "3:30 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "TYLER SIMMONS",
@@ -2123,6 +2136,32 @@
     "source": "The Alibi",
     "desc": "Telluride Mushroom Fest Puff Ball After Party",
     "type": "Community"
+  },
+  {
+    "title": "Youth Tennis & Pickleball Camp",
+    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Bilingual Balance in Motion",
+    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
+    "date": "2026-08-15",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
   },
   {
     "title": "Ouray County Pride",
@@ -4170,5 +4209,58 @@
     "source": "Telluride.com",
     "desc": "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
     "type": "Community"
+  },
+  {
+    "title": "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
+    "href": "https://events.ourayridgwayevents.com/event/art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53048200847384/huge/574f2906fa13a967da1b53fe33b1ea163558dc3f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the opening of Space Cowboy for its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Ongiong: Space Cowboy by Dundee & Lee",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53048203945878/huge/24f84f08b2f8624cb59d2163b0403c16995d63c2.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "Artabout",
+    "href": "https://www.telluride.com/event/artabout/",
+    "date": "2026-10-02",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
+    "type": "Community",
+    "endDate": "2026-10-05"
+  },
+  {
+    "title": "Ouray 150th Gala",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-150th-gala",
+    "date": "2026-10-02",
+    "time": "7:00 PM",
+    "location": "Beaumont Hotel & Spa",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53056912759532/huge/aa016e5f576b545feeba24a39e7ee32221da7c4a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for an unforgettable evening as we celebrate 150 years of Ouray's rich history, vibrant community, and enduring spirit. Held in the elegant ballroom of the historic Beaumont Hotel, the Ouray 150th Gala will bring together…",
+    "type": "Festivals"
   }
 ]

@@ -6,34 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-outdoors.xml" rel="self" type="application/rss+xml" />
     <description>Hikes, races, ski events, and stewardship days — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2026 22:16:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2026 02:57:49 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Mon, Aug 3] Bike and Brewery Tour</title>
-      <link>https://www.telluride.com/event/bike-and-brewery-tour/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/bike%20and%20brewery%20tour%7C2026-08-03</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>⚡ [Meeting] Open Space Commission - Aug 03 2026 — 2026-08-03</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-03%7COpen%20Space%20Commission%20-%20Aug%2003%202026</guid>
-      <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-08-03
-
-The Open Space Commission meets August 3 to work through two consequential items for the Valley Floor. First, commissioners will review and confirm a preferred trail alignment for Reach 1 of the River Trail — three alternative alignments are on the table, each threading around mapped wetlands near the Public Works facility. Second, the commission will consider a formal recommendation to Town Council to amend the Valley Floor Open Space Management Plan to allow dogs on a limited portion of that same River Trail segment. A review of upcoming site walks rounds out the agenda.
-
-⚡ Why it matters: Commissioners pick one of three River Trail alignments near Valley Floor wetlands.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
     <item>
       <title>[Meeting] Ecology Commission - Aug 05 2026 — 2026-08-05</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
@@ -65,7 +39,7 @@ CCAASE's August meeting is grant-season housekeeping more than anything else. Th
 
 The Telluride Housing Authority Subcommittee meets August 5 with two items on the deed-restricted housing front. The action item is a request from Lela and Jon Martin to exceed the 5% Permitted Capital Improvement (PCI) limit on their Gold Run unit — they need a new roof, bid at $47,743.86 (roughly 17% of their original purchase price), but their 2010-era deed restriction only allows staff to approve up to 5% without a finding that the work increases the unit's capacity to house additional occupants. Staff recommends approval on the merits of the failing roof, but flags that the legal standard may not be met — leaving the Subcommittee in a bind that could resolve by encouraging the Martins to update to the current deed restriction language, which allows up to 10% without that constraint. The worksession takes up a request from Alpine Planning to deed-restrict Unit H at Pacifica House Condominiums as an employee dwelling unit under Guidelines §211, as mitigation for new free-market construction.
 
-⚡ Why it matters: Vote on whether deed-restricted owner can exceed improvement cap for a new roof.]]></description>
+⚡ Why it matters: Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -78,7 +52,7 @@ The Telluride Housing Authority Subcommittee meets August 5 with two items on th
 
 Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related amendments to 5-1305C and 5-1350F), a wildfire areas update to Section 5-406 and Article 7 definitions, and a continued hearing on nonconforming lots — all heading toward formal resolutions. On the administrative side, the board takes up a tax abatement petition from Robert N. and Claudina E. Posey (recommended for denial) and approval of the 2026 Board of Equalization officer recommendations. The consent agenda covers meeting minutes and two Chevrolet Silverado pickups for Road and Bridge at up to $89,400. The BLM Tres Rios Field Office also gets time for an update.
 
-⚡ Why it matters: Three public hearings on Land Use Code changes, including wildfire rules and owner definitions.]]></description>
+⚡ Why it matters: Public hearings on three Land Use Code changes, including deed-restriction and wildfire rules.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -102,9 +76,21 @@ A short work session for the Norwood Board of Trustees, with two lease renewals 
 
 Ouray County Planning Commission meets virtually August 5th, 2–4 PM, for a work session on possible changes to the Land Use Code's Section 2 — the definitions section. No in-person attendance. Work sessions like this are where the real shaping happens: definitions determine what the rules actually mean in practice, and a tweak to how a term is defined can quietly shift what gets permitted, what gets denied, and how future applications get read. The packet is attached to the posted agenda, but the agenda itself doesn't spell out which definitions are under review.
 
-⚡ Why it matters: Definition changes to Ouray County Land Use Code could quietly shift what gets permitted.]]></description>
+⚡ Why it matters: Land Use Code definition changes being shaped — definitions determine what rules mean in practice.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 5] Being and Becoming Ute: The Story of an American Indian People</title>
+      <link>https://koto.org/event/being-and-becoming-ute-the-story-of-an-american-indian-people/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/being%20and%20becoming%20ute%7C2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join author Sondra Jones for a presentation about her book, Being and Becoming Ute: The Story of an American Indian People on Wednesday, August 5th at 5:30 pm! Sondra Jones traces the metamorphosis of the Ute people from a society of small, interrelated bands of mobile hunter-gatherers to sovereign, dependent nations—modern tribes who run extensive business enterprises and government services. Weaving together the history of all Ute groups—in Colorado, Utah, and New Mexico—the narrative describes their traditional culture, including the many facets that have continued to define them as a people. Jones emphasizes how the Utes adapted over four centuries and details events, conflicts, trade, and social interactions with non-Utes and non-Indians. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Town Council Retreat - Aug 06 2026 — 2026-08-06</title>
@@ -126,9 +112,33 @@ The August 6 retreat is a single three-hour work session in which Council will s
 
 Three multifamily projects are on the board's plate Thursday morning. First up is an initial architecture and site review for four new multifamily units at 100 Pennington Place (Lot 726-R1). Then the board returns to a multifamily building at TBD Lost Creek Lane (Lot 27A) — continued from June — for another initial architecture review. A conditional-use permit for office space at 620 Mountain Village Blvd, Unit 1A goes to the DRB for a recommendation to Town Council. Finally, the final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road (Lot 640A) is expected to be continued to the September 3 meeting.
 
-⚡ Why it matters: Three multifamily projects, including a conditional-use permit, go before Mountain Village DRB.]]></description>
+⚡ Why it matters: Design review votes on three new multifamily projects in Mountain Village, including a conditional-use permit.]]></description>
       <category>Meeting</category>
       <category>Mountain Village</category>
+    </item>
+    <item>
+      <title>[Fri, Aug 7] KOTO Duck Race</title>
+      <link>https://www.telluride.com/event/koto-duck-race/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20duck%20race%7C2026-08-07</guid>
+      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
+      <title>[Meeting] Intergovernmental Worksession - Aug 10 2026 — 2026-08-10</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-10%7CIntergovernmental%20Worksession%20-%20Aug%2010%202026</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[Town of Telluride • 2026-08-10
+
+The August 10, 2026 Intergovernmental Worksession agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>Town of Telluride</category>
     </item>
   </channel>
 </rss>

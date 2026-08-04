@@ -288,18 +288,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
   },
   {
-    "title": "\"This Is Colorado (In One Square Foot)\" Community Art Project Exhibition",
-    "link": "https://www.telluride.com/event/this-is-colorado-in-one-square-foot-community-art-project-exhibition/",
-    "description": "\"This Is Colorado (In One Square Foot)\" is a Community Art Project on display in Telluride and Mountain Village between …",
-    "pubDate": "2026-06-24",
-    "endDate": "2026-08-02",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62946/this_is_co_art_exhibit_2200x1237.800x533.webp"
-  },
-  {
     "title": "Oak Street Park SummerSHOW Series",
     "link": "https://www.telluride.com/event/oak-street-park-summershow-series/",
     "description": "The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows to keep the arts accessible to all. …",
@@ -360,18 +348,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp"
   },
   {
-    "title": "Telluride Reserve",
-    "link": "https://www.telluride.com/event/telluride-reserve/",
-    "description": "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
-    "pubDate": "2026-07-30",
-    "endDate": "2026-08-02",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/36164/dsc8590_1.800x533.webp"
-  },
-  {
     "title": "Live at the Drive",
     "link": "https://www.telluride.com/event/live-at-the-drive/",
     "description": "Join KOTO for a party at the purple house! They will be closing down North Pine Street and using the driveway as a …",
@@ -382,18 +358,6 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/54474/dsc08059lr.800x533.webp"
-  },
-  {
-    "title": "San Miguel Basin Fair and Rodeo",
-    "link": "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
-    "description": "The San Miguel Basin Fair takes place every summer at the San Miguel County Fairgrounds in Norwood. Livestock shows …",
-    "pubDate": "2026-07-31",
-    "endDate": "2026-08-02",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
   },
   {
     "title": "Bike and Brewery Tour",
@@ -784,5 +748,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
+  },
+  {
+    "title": "Artabout",
+    "link": "https://www.telluride.com/event/artabout/",
+    "description": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
+    "pubDate": "2026-10-03",
+    "endDate": "2026-10-05",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp"
   }
 ]

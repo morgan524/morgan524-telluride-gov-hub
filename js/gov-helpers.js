@@ -374,6 +374,9 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
+    {"sv":4},
+
+  "mv|2026-09-03|Design Review Board":
     {"sv":4}
 };
 
@@ -880,14 +883,14 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
-    title: "Black Bear Temporarily Closed",
+    title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
     date: "2026-08-03",
-    pubDate: "2026-08-03T18:35:54.000Z",
-    copy: "Black Bear Pass and the portion of Bridal Veil Rd. from the Idarado Mining building up to the top of Bridal Veil Falls are closed until at least 3:00 p.m. today, Monday, August 3rd, for road repairs.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
+    pubDate: "2026-08-03T23:34:03.000Z",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
@@ -934,7 +937,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-03';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-04';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-01';
 
 const MANUAL_SUMMARIES = {
@@ -1101,7 +1104,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1152,7 +1155,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1185,7 +1188,10 @@ const MANUAL_SUMMARIES = {
     "The September 2, 2026 Telluride Housing Authority Subcommittee agenda hasn't been posted yet.",
 
   "county|2026-09-02|Board of County Commissioners Meeting":
-    "The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
+    "The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+
+  "mv|2026-09-03|Design Review Board":
+    "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2157,185 +2163,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Grateful for Green Grant program",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "EcoAction Partners and San Miguel County's Green Grant program helped a Lawson Hill household replace two aging west-facing windows, with the homeowners reporting noticeable gains in comfort and energy efficiency. The 40-year-old windows had long needed updating.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_1bb9d39e-4569-435c-8b80-c03b8c3f74e3.html",
-    img: "",
-    letterAuthor: "Jeremy and Dawn Katz",
-    imgHiRes: true,
-    isLetter: true,
-    authorChecked: true
-  },
-  {
-    title: "Palm, school clean-up continues apace after last Friday’s flood",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "education",
-    copy: "Mudslides from the Jud Wiebe area on July 17 sent water, mud, and debris through the Palm Theatre and adjacent schools, buckling the stage, flooding the orchestra pit, and depositing an estimated 10,000–15,000 lbs of mud. The goal is to have school spaces and Palm support areas ready by the Aug. 18 school opening. The main theater will take longer, though seating replacement is the top priority to allow Film Festival to proceed Sept. 4–7.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_24fa27f5-c902-452e-9879-6dd2717e1a17.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/17/917acda0-cd83-4d5f-be02-3fe89b58cfc7/6a5fb73da93a1.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The art of being",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "arts-culture",
-    copy: "A local finds a quiet moment of stillness on a mesa walk — elk grazing, a hidden pond, a tended forest clearing with a picnic table and campfire ring. Simple surroundings, no agenda. The kind of morning this place still offers if you take a different turn.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_4024128f-535d-4c2b-a336-c0bd6c3daabc.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/fb/0fbd29c7-33f3-4edd-bc35-ba1fa07333a7/6a5fdca1bdc9f.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "How to fix our broken housing programs",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "housing",
-    copy: "San Miguel County recently fixed a legal issue requiring deed-restricted buyers to sign new covenants at closing — a process involving outside counsel and public meetings. A local homeowner argues Telluride's program has similar and deeper problems: asset limits tied to original purchase price push out long-term residents, while ever-changing guidelines spanning 70 pages leave even town attorneys confused.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_8bcac1cf-be30-4f0f-9cd5-9bf05882a7d4.html",
-    img: "",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Beautiful windows, beautiful efficiency",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "A Norwood homeowner used a Regional Green Grant from EcoAction Partners to replace half the aging single-pane windows in a late-1950s house. The upgrade should cut heating and electricity costs, with plans to finish the remaining windows next year.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_f9cb36d9-a8f6-47a5-aae2-fb6bb5bc6f2a.html",
-    img: "",
-    letterAuthor: "Kerry Welch",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Desensitizing bathtime",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "Anxious about bath time with your dog? Second Chance Humane Society recommends gradual desensitization — start with treats in the bathroom, work up to the tub, then water slowly over multiple short sessions. Most dogs do fine bathing every four to six weeks; when in doubt, check with your vet.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_07aceefb-041d-4513-97a4-46c6010427f4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ea/7ea33f08-ecb7-4bfd-ac51-07a31f2e5b11/6a5fdbd1ebbc1.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "When the land that heals us turns toxic",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "Wildfire smoke has made outdoor activity — long the primary stress relief for many Telluride residents — a health calculation rather than a given this summer. A local therapist notes that losing access to trails, lakes, and clean air hits harder here than most places, since nature is central to how people cope. Research backs up what many are already feeling: smoke exposure is linked to increased anxiety, depression, and reactivated trauma.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_e29f4037-700b-485a-be15-716cdee2f545.html",
-    img: "",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Happy accidents",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "public-safety",
-    copy: "A Telluride local shares a few of those hard-to-explain moments — running into a wedding couple 2,000 miles from town, a message bottle found in Bermuda by a family with the same dog's name, a daughter born on her great-great-grandmother's 100th birthday. The kind of stories that make you pause.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_300e6f97-c37e-4e31-9066-8930608f4e28.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/47/047217d6-3892-4274-811c-5d511543d118/6a5fdb420a985.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Where is the next Valley Floor?",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "Federal cuts to the Forest Service and BLM are opening public San Juan lands to private development pressures — something the Valley Floor fight only partially addressed. The column argues that defending individual parcels isn't enough; the whole mountain ecosystem needs coordinated stewardship. A regional rethink, from Gunnison to Cortez, may be overdue.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/columnists/article_6a7660a4-a11c-4f33-900d-ff6aa110751b.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/b3/1b30faef-00f2-4390-8531-111c5feec239/6a5fda0653aab.image.jpg",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Documentary honoring sustainability leader Adam Palmer comes to Telluride",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "A documentary on the life and legacy of Eagle County sustainability leader Adam Palmer screens at the Sheridan Opera House on Saturday, Aug. 1, doors at 6:30 p.m., film at 7. A community discussion follows. Tickets at apsfund.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_dd45309e-10d6-4390-abf4-0e3c97dea8e8.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/88/588dbfcb-cf65-4908-b5ef-7c45b42d2175/6a5fd919cee74.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Telluride Tourism Board announces new board",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "government",
-    copy: "The Telluride Tourism Board has added three new members — Buck Smith, Andrés Vargas-Johnson, and Ashley Von Spreecken — bringing the full board to seven. Huascar Gomez was elected chair, with Danny Craft as vice chair. The board draws from lodging, brewing, retail, local government, and hospitality.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news_release/article_7453a8a7-7fb1-440e-9b5c-51625d398514.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/d8/3d80f09d-f809-4fd5-b036-4708c4b6cd52/6a5fd7a73e6a0.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Where's Waldo?",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "The annual Where's Waldo town hunt returns to Telluride this July, with Waldo hidden in 25+ locations across town. Grab a playing card at Between the Covers or Bruno Coffee to get started. Prizes, free posters, and a grand prize drawing wrap up at month's end.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/gallery/featured/article_42ab2b1c-c142-402a-85b8-22eab7fd3b72.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5d/95d78762-93a8-419e-bb4d-02ac62eeb04c/6a5fd6c0c8078.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "The dual challenge: climate and energy",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "community",
-    copy: "Climate scientists, oil executives, utility leaders, and investors gather in Telluride July 27–31 for a Telluride Science workshop aimed at finding common ground between energy demand and climate stability. A free public Town Talk follows July 28 at 6:30 p.m. at the Sheridan Opera House.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/opinion/editorials/article_ebdd9221-7fc0-4ace-b501-3a9c4b0c1279.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/6a/c6a9f0c4-5d2e-410e-8e8f-c9933badf732/6a5fd51da4a9e.image.png",
-    imgHiRes: true,
-    isLetter: true
-  },
-  {
-    title: "Telski amends lawsuit against Prohaska, Wisor and Fee",
-    source: "Telluride Times",
-    date: "July 21, 2026",
-    firstSeen: "2026-07-21",
-    newsTopic: "arts-culture",
-    copy: "Telski's lawsuit against former Mountain Village Mayor Prohaska, Town Manager Wisor, and former Mayor Pro Tem Fee is still active, now with an amended complaint adding transcripts from a disputed recording. The recording dispute centers on whether a meeting with owner Chuck Horning was illegally captured without consent. Defendants continue pushing for dismissal.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_fdd6316f-fb0f-4629-87d0-6ae9800e4251.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/4c/14c7ea5c-8180-433b-94c2-dbcc9f266fab/6a5e8c59ed331.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Home Rebate Programs",
     source: "San Miguel County",
     date: "July 8, 2026",
@@ -2345,12 +2172,12 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
-    title: "Black Bear Temporarily Closed",
+    title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
-    newsTopic: "land-use",
-    copy: "Black Bear Pass and the portion of Bridal Veil Rd. from the Idarado Mining building up to the top of Bridal Veil Falls are closed until at least 3:00 p.m. today, Monday, August 3rd, for road repairs.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=538",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
@@ -2439,6 +2266,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 8-3-26",
+    source: "KOTO Community Radio",
+    date: "August 4, 2026",
+    newsTopic: "arts-culture",
+    copy: "Telluride Film Festival Full Steam Ahead with Nugget Rebuild; Eco-Grief Finds the Space Between Grief and Gratitude",
+    href: "https://koto.org/news/newscast-8-3-26/"
+  },
+  {
     title: "Newscast 7-31-26",
     source: "KOTO Community Radio",
     date: "August 1, 2026",
@@ -2493,14 +2328,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "housing",
     copy: "Preparing for Mudslides; Telluride Extends Housing Waitlist Suspension; A State of the Town Address",
     href: "https://koto.org/news/newscast-7-22-26/"
-  },
-  {
-    title: "Newscast 7-20-26",
-    source: "KOTO Community Radio",
-    date: "July 21, 2026",
-    newsTopic: "health",
-    copy: "Palm Theatre Floods in Major Rainstorm; Coming Up Next, Telluride; Forest Health with Jason Sibold",
-    href: "https://koto.org/news/newscast-7-20-26/"
   }
 ];
 
@@ -3133,17 +2960,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-06/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-06T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Art Walk Telluride",
     link: "https://koto.org/event/art-walk-telluride/2026-08-06/",
     description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
@@ -3452,17 +3268,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-13/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-13T18:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "The Creative Exchange at Telluride Arts HQ",
     link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-08-13/",
     description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
@@ -3472,6 +3277,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png"
+  },
+  {
+    title: "Youth Tennis & Pickleball Camp",
+    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-14/",
+    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
+    pubDate: "2026-08-14T15:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-08-14T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-08-14/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-08-14T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-08-14/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-08-14T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Free Youth Tennis & Pickleball Program",
+    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
+    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
+    pubDate: "2026-08-14T21:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-08-15T16:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
   }
 ];
 
@@ -4281,17 +4152,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487582547065/huge/563a405a9c9cafe377d9fb833f1a4084535fcf25.jpg"
   },
   {
-    title: "State of Journalism in Trump's Washington",
-    link: "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
-    description: "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism in Trump's Washington. Hessler has written widely on topics ranging from Western Slope politics to his experiences living in and writing about China and Egypt. O'Connell is part of the reporting team that received the 2026 Pulitzer Prize for Public Service and has written extensively about the intersection of business and politics in Washington, D.C. View on site | Email this event",
-    pubDate: "2026-08-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53589242097771/huge/34513880aab250a7f25104b4f0d5d65920c25ed6.jpg"
-  },
-  {
     title: "Paw Prints Book Club",
     link: "https://events.ourayridgwayevents.com/event/paw-prints-book-club",
     description: "Join us in Ouray Library from 1:00 pm to 2:00 pm for the new Paw Prints Book Club! This is an animal themed graphic novel book club ran by a kid, for kids. There will be four book club meetings over 4 weeks, where there will be discussion on a different graphic novel each week. This book club is open to all ages, but the reading level is from 8 to 12 years old. To sign up and reserve a book, please email programsouraypl@gmail.com View on site | Email this event",
@@ -4341,7 +4201,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
     pubDate: "2026-08-07T23:00:00.000Z",
-    endDate: "2026-09-04",
+    endDate: "2026-10-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4353,7 +4213,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/first-friday-at-rootwings-art-1540",
     description: "Rootwings Art will be open for Ridgway's First Friday Art Walk, featuring local ceramic sculptures and large vessels by artist Andy Nasisse, original oils by Emma Kalff, Bruce Backer's Ravens & Crows, Taos artist Fred Burns fantasy nudes and one of a kind jewelry and ceramics by Vanessa Backer. View on site | Email this event",
     pubDate: "2026-08-07T23:00:00.000Z",
-    endDate: "2026-09-04",
+    endDate: "2026-10-02",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5646,6 +5506,39 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
+    link: "https://events.ourayridgwayevents.com/event/art-opening-space-cowboy-by-dundee-lee",
+    description: "Join us for the opening of Space Cowboy for its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. The Space Cowboy opening is honored to welcome Colorado's 11th Poet Laureate, Crisosto Apache who will give a reading in honor of the event. …",
+    pubDate: "2026-10-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048200847384/huge/574f2906fa13a967da1b53fe33b1ea163558dc3f.jpg"
+  },
+  {
+    title: "Ongiong: Space Cowboy by Dundee & Lee",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
+    description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
+    pubDate: "2026-10-02T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53048203945878/huge/24f84f08b2f8624cb59d2163b0403c16995d63c2.jpg"
+  },
+  {
+    title: "Ouray 150th Gala",
+    link: "https://events.ourayridgwayevents.com/event/ouray-150th-gala",
+    description: "Join us for an unforgettable evening as we celebrate 150 years of Ouray's rich history, vibrant community, and enduring spirit. Held in the elegant ballroom of the historic Beaumont Hotel, the Ouray 150th Gala will bring together residents, visitors, and history enthusiasts for a night of music, food, dancing, and celebration. Guests are invited to honor the era that shaped Ouray by dressing in black-tie attire or historical period clothing reminiscent of the late 1800s. Step back in time and experience the charm, elegance, and excitement of a bygone era while commemorating this once-in-a-generation milestone. Raise a glass to 150 years of adventure, resilience, and community as we celebrate Ouray's past, present, and future. …",
+    pubDate: "2026-10-03T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Beaumont Hotel & Spa",
+    imageUrl: "https://localist-images.azureedge.net/photos/53056912759532/huge/aa016e5f576b545feeba24a39e7ee32221da7c4a.jpg"
   }
 ];
 
@@ -5774,17 +5667,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Sunday Rehab at Alloy Kitchen",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
-    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
-    pubDate: "2026-08-02T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
@@ -6517,18 +6399,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
   },
   {
-    title: "\"This Is Colorado (In One Square Foot)\" Community Art Project Exhibition",
-    link: "https://www.telluride.com/event/this-is-colorado-in-one-square-foot-community-art-project-exhibition/",
-    description: "\"This Is Colorado (In One Square Foot)\" is a Community Art Project on display in Telluride and Mountain Village between …",
-    pubDate: "2026-06-24",
-    endDate: "2026-08-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62946/this_is_co_art_exhibit_2200x1237.800x533.webp"
-  },
-  {
     title: "Oak Street Park SummerSHOW Series",
     link: "https://www.telluride.com/event/oak-street-park-summershow-series/",
     description: "The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows to keep the arts accessible to all. …",
@@ -6589,18 +6459,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63144/wine-and-wickets-1800x900_870x435.800x533.webp"
   },
   {
-    title: "Telluride Reserve",
-    link: "https://www.telluride.com/event/telluride-reserve/",
-    description: "Telluride Reserve is more than an event—it is an intimate gathering where stories are shared, flavors are discovered, …",
-    pubDate: "2026-07-30",
-    endDate: "2026-08-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/36164/dsc8590_1.800x533.webp"
-  },
-  {
     title: "Live at the Drive",
     link: "https://www.telluride.com/event/live-at-the-drive/",
     description: "Join KOTO for a party at the purple house! They will be closing down North Pine Street and using the driveway as a …",
@@ -6611,18 +6469,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/54474/dsc08059lr.800x533.webp"
-  },
-  {
-    title: "San Miguel Basin Fair and Rodeo",
-    link: "https://www.telluride.com/event/san-miguel-basin-fair-and-rodeo/",
-    description: "The San Miguel Basin Fair takes place every summer at the San Miguel County Fairgrounds in Norwood. Livestock shows …",
-    pubDate: "2026-07-31",
-    endDate: "2026-08-02",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44941/60e630d2b3fd1_image.800x533.webp"
   },
   {
     title: "Bike and Brewery Tour",
@@ -7013,6 +6859,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp"
+  },
+  {
+    title: "Artabout",
+    link: "https://www.telluride.com/event/artabout/",
+    description: "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
+    pubDate: "2026-10-03",
+    endDate: "2026-10-05",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp"
   }
 ];
 

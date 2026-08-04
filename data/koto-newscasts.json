@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-3-26",
+    "source": "KOTO Community Radio",
+    "date": "August 4, 2026",
+    "newsTopic": "arts-culture",
+    "copy": "Telluride Film Festival Full Steam Ahead with Nugget Rebuild; Eco-Grief Finds the Space Between Grief and Gratitude",
+    "href": "https://koto.org/news/newscast-8-3-26/"
+  },
+  {
     "title": "Newscast 7-31-26",
     "source": "KOTO Community Radio",
     "date": "August 1, 2026",
@@ -54,13 +62,5 @@
     "newsTopic": "housing",
     "copy": "Preparing for Mudslides; Telluride Extends Housing Waitlist Suspension; A State of the Town Address",
     "href": "https://koto.org/news/newscast-7-22-26/"
-  },
-  {
-    "title": "Newscast 7-20-26",
-    "source": "KOTO Community Radio",
-    "date": "July 21, 2026",
-    "newsTopic": "health",
-    "copy": "Palm Theatre Floods in Major Rainstorm; Coming Up Next, Telluride; Forest Health with Jason Sibold",
-    "href": "https://koto.org/news/newscast-7-20-26/"
   }
 ]
