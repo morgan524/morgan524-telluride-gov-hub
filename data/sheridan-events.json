@@ -1,35 +1,36 @@
 [
   {
-    "title": "FREE SHOW! Summer Spectacular: The Jungle Book",
-    "link": "https://sheridanoperahouse.com/events/free-show-summer-spectacular-the-jungle-book/",
-    "description": "A free performance of The Jungle Book at the Sheridan Opera House, part of the venue's Summer Spectacular series. The show brings the beloved story to the historic Telluride stage for an evening of live theatrical entertainment.",
-    "pubDate": "2026-07-31",
+    "title": "Big Love Car Wash: Free Music, SHOW Bar Patio",
+    "link": "https://sheridanoperahouse.com/events/free-music-at-show-bar-big-love-car-wash/",
+    "description": "A free outdoor music event hosted on the SHOW Bar patio at the Sheridan Opera House, Big Love Car Wash brings live performances to one of Telluride's beloved historic venues. The patio setting offers a relaxed atmosphere for catching live music on a summer evening in August.",
+    "pubDate": "2026-08-05",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/05/YPT-Sumemr-Jungle-Book.png"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/BigLoveCarWash-2LB24.jpg"
   },
   {
-    "title": "Film: The Casual Enormity of Adam Palmer",
-    "link": "https://sheridanoperahouse.com/events/film-the-casual-enormity-of-adam-palmer/",
-    "description": "A film screening of *The Casual Enormity of Adam Palmer* at the historic Sheridan Opera House in Telluride. The event is presented by the Sheridan Opera House as part of its ongoing programming at this landmark downtown venue.",
-    "pubDate": "2026-08-01",
+    "title": "Telluride Jazz Festival",
+    "link": "https://sheridanoperahouse.com/events/telluride-jazz-festival/",
+    "description": "A jazz performance held at the historic Sheridan Opera House in Telluride, part of the Telluride Jazz Festival. The intimate venue offers an exceptional setting for live jazz in the heart of the San Juan Mountains.",
+    "pubDate": "2026-08-07",
+    "endDate": "2026-08-08",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/07/Screenshot-2026-07-08-at-10.15.22-AM.png"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/TJF_Vertical__Black.webp"
   },
   {
-    "title": "SAF Young People's Theater Registration",
-    "link": "https://sheridanoperahouse.com/events/saf-young-peoples-theater-registration/",
-    "description": "Registration for the Sheridan Arts Foundation's Young People's Theater program takes place at the Sheridan Opera House. The program offers youth in the Telluride area an opportunity to participate in theater arts under the SAF's programming.",
-    "pubDate": "2026-08-03",
+    "title": "Telluride Mushroom Festival",
+    "link": "https://sheridanoperahouse.com/events/telluride-mushroom-festival/",
+    "description": "The Telluride Mushroom Festival brings its annual celebration of fungi, foraging, and mycology to the Sheridan Opera House for an evening of performances and programming. The festival, a beloved Telluride tradition, gathers enthusiasts, experts, and curious community members around a shared passion for the fungal world.",
+    "pubDate": "2026-08-13",
     "source": "sheridan",
     "sourceLabel": "Sheridan Opera House",
     "category": "Concert / Performance",
     "location": "Sheridan Opera House • Telluride, CO",
-    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2024/11/Oliver_110.jpg"
+    "imageUrl": "https://sheridanoperahouse.com/wp-content/uploads/2021/07/Mushroom-Fest-Logo.png"
   }
 ]

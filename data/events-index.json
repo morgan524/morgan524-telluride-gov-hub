@@ -63,7 +63,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_40.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "2:30 PM – 3:30 PM",
+    "desc": "A library-hosted arts event taking place outdoors on the Lower Terrace. Organized by Wilkinson Public Library, this afternoon program offers a creative gathering for the Telluride community.",
     "type": "Arts & Film"
   },
   {
@@ -89,7 +89,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "5:15 PM – 6:00 PM",
+    "desc": "A library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. Hosted by Wilkinson Public Library, the event runs from 5:15 to 6:00 PM.",
     "type": "Talks & Classes"
   },
   {
@@ -130,6 +130,32 @@
     "source": "Mountain Village",
     "desc": "The Mountain Village Police Department and Village Court Apartments (VCA) are teaming up once again to host the 14th annual National Night Out Tuesday,",
     "type": "Community"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-08-04",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Big Love Car Wash: Free Music, SHOW Bar Patio",
+    "href": "https://sheridanoperahouse.com/events/free-music-at-show-bar-big-love-car-wash/",
+    "date": "2026-08-04",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/BigLoveCarWash-2LB24.jpg",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A free outdoor music event hosted on the SHOW Bar patio at the Sheridan Opera House, Big Love Car Wash brings live performances to one of Telluride's beloved historic venues. The patio setting offers a relaxed atmosphere for catching live…",
+    "type": "Arts & Film"
   },
   {
     "title": "Parks and Recreation Committee (PARC)",
@@ -247,7 +273,7 @@
     "img": "https://ucarecdn.com/9025541b-fd93-4ca9-959d-9655afb2250d/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Free live jazz",
+    "desc": "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
     "type": "Music"
   },
   {
@@ -263,19 +289,6 @@
     "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
     "endDate": "2026-10-01"
-  },
-  {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
-    "href": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-04/",
-    "date": "2026-08-04",
-    "time": "8:30 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Eco-Series- Between Grief and Gratitude",
@@ -595,17 +608,17 @@
   },
   {
     "title": "Telluride Jazz Festival",
-    "href": "https://www.telluride.com/event/telluride-jazz-festival/",
+    "href": "https://sheridanoperahouse.com/events/telluride-jazz-festival/",
     "date": "2026-08-06",
     "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28880/14407123460f9210.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Since 1977, Telluride’s majestic perch high in the San Juan Mountains of southwestern Colorado has been the site of …",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/TJF_Vertical__Black.webp",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "A jazz performance held at the historic Sheridan Opera House in Telluride, part of the Telluride Jazz Festival. The intimate venue offers an exceptional setting for live jazz in the heart of the San Juan Mountains.",
     "type": "Festivals",
-    "endDate": "2026-08-09"
+    "endDate": "2026-08-08"
   },
   {
     "title": "KOTO Duck Race",
@@ -936,7 +949,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff…",
     "type": "Arts & Film",
-    "endDate": "2026-09-12"
+    "endDate": "2026-10-03"
   },
   {
     "title": "Electric Vehicle (EV) Ride and Drive",
@@ -988,7 +1001,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -1425,7 +1438,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -1440,6 +1453,19 @@
     "source": "Mountain Village",
     "desc": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
     "type": "Community"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-08-11",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Mushroom Festival",
@@ -1792,7 +1818,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -1871,7 +1897,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2054,8 +2080,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -2318,6 +2344,19 @@
     "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
     "type": "Community",
     "endDate": "2026-09-15"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-08-18",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "type": "Talks & Classes"
   },
   {
     "title": "\"Best Day Ever\" Free Movie Screening",
@@ -2805,6 +2844,19 @@
     "endDate": "2026-09-22"
   },
   {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-08-25",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
     "href": "https://telluridescience.org/event/talk-unusual-microbes/",
     "date": "2026-08-25",
@@ -3108,6 +3160,19 @@
     "type": "Community"
   },
   {
+    "title": "Music on the Green with Cristina Vane",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-with-cristina-vane/",
+    "date": "2026-08-28",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49603/cristina_vane_1800px_x_900px.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Beyond The Groove and TMVOA present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    "type": "Music"
+  },
+  {
     "title": "Alpine Jam - Live @ Floating Lotus Brewerty",
     "href": "https://events.ourayridgwayevents.com/event/alpine-jam-live-floating-lotus-brewerty",
     "date": "2026-08-28",
@@ -3277,6 +3342,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "date": "2026-09-01",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "type": "Talks & Classes"
   },
   {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
@@ -4061,7 +4139,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -4195,5 +4273,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for an unforgettable evening as we celebrate 150 years of Ouray's rich history, vibrant community, and enduring spirit. Held in the elegant ballroom of the historic Beaumont Hotel, the Ouray 150th Gala will bring together…",
     "type": "Festivals"
+  },
+  {
+    "title": "Mineral Identification Workshop For Kids",
+    "href": "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-kids",
+    "date": "2026-10-03",
+    "time": "10:00 AM",
+    "location": "Ouray County Historical Society Research Center & Archive",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52278219322548/huge/0e7cc3a05f960a6d1c77d69eb8423134dfed7fa4.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Basic identification of hand samples of minerals from the San Juan Mountian Region with Robert Stoufer View on site | Email this event",
+    "type": "Family & Kids"
   }
 ]
