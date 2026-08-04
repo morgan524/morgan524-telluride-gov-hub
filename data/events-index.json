@@ -63,7 +63,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_40.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A library-hosted arts event taking place outdoors on the Lower Terrace. Organized by Wilkinson Public Library, this afternoon program offers a creative gathering for the Telluride community.",
+    "desc": "2:30 PM – 3:30 PM",
     "type": "Arts & Film"
   },
   {
@@ -89,7 +89,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. Hosted by Wilkinson Public Library, the event runs from 5:15 to 6:00 PM.",
+    "desc": "5:15 PM – 6:00 PM",
     "type": "Talks & Classes"
   },
   {
@@ -273,7 +273,7 @@
     "img": "https://ucarecdn.com/9025541b-fd93-4ca9-959d-9655afb2250d/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    "desc": "Free live jazz",
     "type": "Music"
   },
   {
@@ -619,6 +619,19 @@
     "desc": "A jazz performance held at the historic Sheridan Opera House in Telluride, part of the Telluride Jazz Festival. The intimate venue offers an exceptional setting for live jazz in the heart of the San Juan Mountains.",
     "type": "Festivals",
     "endDate": "2026-08-08"
+  },
+  {
+    "title": "The State of Journalism",
+    "href": "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
+    "date": "2026-08-06",
+    "time": "6:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53606837967993/huge/b67d8e8777c92b16f627b5cf841dff8226fab243.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism. Hessler has written widely on topics ranging from…",
+    "type": "Talks & Classes"
   },
   {
     "title": "KOTO Duck Race",
@@ -1001,7 +1014,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -1438,7 +1451,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1818,7 +1831,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1897,7 +1910,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -2080,8 +2093,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -2698,6 +2711,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ready to unlock the secrets of our favorite cosmic neighbor? Pack your curiosity and join professor Gerald J. Spangrude for a fun, stellar evening as we talk all about the moon—from its wild crater-faced history and lunar myths to how it…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Ethan Perry",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=ethan-perry",
+    "date": "2026-08-22",
+    "time": "8:30 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/524956fc-c05b-47c9-8c0d-321e86406287/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Ethan began his music career in Seattle in 2007, shortly thereafter forming his ...",
+    "type": "Community"
   },
   {
     "title": "Bats, Our Friends in the Dark - Ridgway State Park Summer Program Series",
@@ -4139,7 +4165,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {

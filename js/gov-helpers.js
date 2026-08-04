@@ -215,7 +215,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130","zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117"},
+    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071"},
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8065","zoomUrl":"https://us06web.zoom.us/meeting/register/tZ0pc-ChqDwsGNFpPigfqqLQptmoMmpJdiOx"},
@@ -293,7 +293,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8144","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4},
 
   "mv|2026-08-20|Town Council Meeting":
     {"sv":4},
@@ -589,6 +589,106 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -779,16 +879,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
   },
   {
-    title: "Invitation to Prayer/Fellowship Wednesday Morning",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 21, 2026",
-    newsTopic: "community",
-    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 22nd...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....",
-    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-2/",
-    img: ""
-  },
-  {
     title: "Changes in evacuation zones 25 and 300",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -947,7 +1037,7 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission meets August 3 to work through two consequential items for the Valley Floor. First, commissioners will review and confirm a preferred trail alignment for Reach 1 of the River Trail — three alternative alignments are on the table, each threading around mapped wetlands near the Public Works facility. Second, the commission will consider a formal recommendation to Town Council to amend the Valley Floor Open Space Management Plan to allow dogs on a limited portion of that same River Trail segment. A review of upcoming site walks rounds out the agenda.",
 
   "telluride|2026-08-05|Ecology Commission - Aug 05 2026":
-    "The August 5, 2026 Ecology Commission agenda hasn't been posted yet.",
+    "The Ecology Commission meets August 5 for a work session heavy on planning. Two items will advance the 2027 Climate Action Plan update — one broad discussion of the working document, and a focused session on the Materials & Consumption focus area. The commission will also plan Black Bear Safety Week. Minutes from the July 8 meeting are up for approval; that session covered Transportation & Land Use and Materials & Consumption focus areas, and the commission appointed Ruthie Boyd as primary and Kristen Rosenbaum as alternate to the Green Grants selection subcommittee.",
 
   "telluride|2026-08-05|Commission for Community Assistance, Arts & Special Events - Aug 05 2026":
     "CCAASE's August meeting is grant-season housekeeping more than anything else. The board will interview four organizations — Second Chance Humane Society, Telluride Soccer Club, Telluride Mountain Club, and Sheep Mountain Alliance — as part of the 2026 grant cycle review. On the action side: a calendar date request from Telluride Humane Society for a Tails on the Trail 5K fun run on October 10, 2026 (using Elks Park, the River Trail, and Colorado Ave.); final approval of 2027 CCAASE grant materials including guidelines and application; and a recommendation to Town Council on the 2027 CCAASE budget allocation. The grant materials were workshopped at the July meeting — this is the approval step.",
@@ -1010,7 +1100,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -1022,7 +1112,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
+    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -3286,7 +3376,7 @@ const WILKINSON_EVENTS = [
   {
     title: "I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16574863?hs=a",
-    description: "A library-hosted arts event taking place outdoors on the Lower Terrace. Organized by Wilkinson Public Library, this afternoon program offers a creative gathering for the Telluride community.",
+    description: "2:30 PM – 3:30 PM",
     pubDate: "2026-08-04T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3297,7 +3387,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Punk Science with Pinhead",
     link: "https://telluridelibrary.libcal.com/event/16297537?hs=a",
-    description: "A library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. Hosted by Wilkinson Public Library, the event runs from 5:15 to 6:00 PM.",
+    description: "5:15 PM – 6:00 PM",
     pubDate: "2026-08-04T23:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3361,7 +3451,7 @@ const ALIBI_EVENTS = [
   {
     title: "Jazz w/ Kenny G & Yaz",
     link: "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
-    description: "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
+    description: "Free live jazz",
     pubDate: "2026-08-05",
     time: "8:00 PM",
     source: "alibi",
@@ -3433,7 +3523,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3445,7 +3535,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3477,6 +3567,18 @@ const ALIBI_EVENTS = [
     category: "Live Music",
     location: "The Alibi • Telluride, CO",
     imageUrl: "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/"
+  },
+  {
+    title: "Ethan Perry",
+    link: "https://www.alibitelluride.com/calendar#eca-event=ethan-perry",
+    description: "Ethan began his music career in Seattle in 2007, shortly thereafter forming his ...",
+    pubDate: "2026-08-23",
+    time: "8:30 PM",
+    source: "alibi",
+    sourceLabel: "The Alibi",
+    category: "Live Music",
+    location: "The Alibi • Telluride, CO",
+    imageUrl: "https://ucarecdn.com/524956fc-c05b-47c9-8c0d-321e86406287/"
   },
   {
     title: "The Last Wild Buffalo w/ Hunter Archer",
@@ -3996,6 +4098,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52487582547065/huge/563a405a9c9cafe377d9fb833f1a4084535fcf25.jpg"
+  },
+  {
+    title: "The State of Journalism",
+    link: "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
+    description: "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism. Hessler has written widely on topics ranging from Western Slope politics to his experiences living in and writing about China and Egypt. O'Connell is part of the reporting team that received the 2026 Pulitzer Prize for Public Service and has written extensively about the intersection of business and politics in Washington, D.C. Moderated by retired journalist, radio news anchor, and reporter Susan Witkin. View on site | Email this event",
+    pubDate: "2026-08-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53606837967993/huge/b67d8e8777c92b16f627b5cf841dff8226fab243.jpg"
   },
   {
     title: "Paw Prints Book Club",
@@ -5450,7 +5563,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Possible Quorum",
     link: "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
-    description: "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5461,7 +5574,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-07-29-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, held as part of the board's regular governance activities. These sessions typically allow trustees to discuss town business and policy matters in a collaborative setting outside of formal action meetings.",
+    description: "",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5472,7 +5585,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
+    description: "",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5483,7 +5596,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5494,7 +5607,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5505,7 +5618,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5516,7 +5629,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5527,7 +5640,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5538,7 +5651,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5549,7 +5662,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5560,7 +5673,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
