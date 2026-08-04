@@ -1,34 +1,8 @@
 [
   {
-    "title": "Ping Pong",
-    "href": "https://telluridelibrary.libcal.com/event/16775342?hs=a",
-    "date": "2026-08-03",
-    "time": "1:00 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_10_59_03.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "1:00 PM – 3:00 PM · Come play Ping Pong! Juega Ping Pong con nosotros!",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Savvy Seniors-Puzzle and Pie",
-    "href": "https://telluridelibrary.libcal.com/event/17029821?hs=a",
-    "date": "2026-08-03",
-    "time": "1:30 PM",
-    "location": "Wilkinson Public Library",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_37_44.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "On Display: Silverton, Interpreted",
     "href": "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
-    "date": "2026-08-03",
+    "date": "2026-08-04",
     "time": "10:00 AM",
     "location": "Decker Community Room",
     "town": "Ridgway",
@@ -40,192 +14,17 @@
     "endDate": "2026-08-06"
   },
   {
-    "title": "Musik 4 Kinders",
-    "href": "https://telluridelibrary.libcal.com/event/16568423?hs=a",
-    "date": "2026-08-03",
-    "time": "10:30 AM",
-    "location": "Lower Terrace - outdoors",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. M sica, Movimiento, y Aprendizaje Alegre para ni os! Este programa ser en la sala de programas.",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "Senior Lunch by Neighbor to Neighbor",
-    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    "date": "2026-08-03",
+    "title": "The Legacy of Julia Child&#039;s Kitchen with Smithsonian Curator Paula J. Johnson",
+    "href": "https://telluridelibrary.libcal.com/event/17222875?hs=a",
+    "date": "2026-08-04",
     "time": "12:00 PM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
-    "type": "Community",
-    "endDate": "2026-09-28"
-  },
-  {
-    "title": "Hobby Hopping: Pickleball",
-    "href": "https://telluridelibrary.libcal.com/event/17286073?hs=a",
-    "date": "2026-08-03",
-    "time": "2:00 PM",
-    "location": "Teen Area",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Puzzle Competition",
-    "href": "https://telluridelibrary.libcal.com/event/16294560?hs=a",
-    "date": "2026-08-03",
-    "time": "5:00 PM",
-    "location": "Program Room",
-    "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_10_31_51.jpg",
-    "category": "Library Event",
-    "source": "Wilkinson Public Library",
-    "desc": "5:00 PM – 7:00 PM · Space is limited to 10 teams of two, so make sure to sign up today! NEW, PLEASE NOTE: Only one team member needs to sign up for their team of two. Dive into the ultimate puzzle challenge at Wilkinson Public Library s…",
-    "type": "Community"
-  },
-  {
-    "title": "BINGO",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=bingo",
-    "date": "2026-08-03",
-    "time": "5:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/4c2e3334-4868-4786-82c6-efc6fe30171f/-/crop/1294x1295/0,0/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Join us at the Alibi for a lively night of BINGO Tuesday, August 4th with WPL me...",
-    "type": "Community"
-  },
-  {
-    "title": "Monthly Karate in Ouray County",
-    "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
-    "date": "2026-08-03",
-    "time": "5:00 PM",
-    "location": "Weehawken Ridgway (Old Schoolhouse)",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
-    "type": "Talks & Classes",
-    "endDate": "2026-09-07"
-  },
-  {
-    "title": "Bike & Brewery Tour",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    "date": "2026-08-03",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Mountain Village National Night Out Celebration",
-    "href": "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
-    "date": "2026-08-03",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Mountain Village",
-    "img": "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
-    "type": "Festivals"
-  },
-  {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude",
-    "href": "https://www.telluride.com/event/eco-grief-workshops-between-grief-gratitude-where-love-and-loss-meet-in-a-changing-world/",
-    "date": "2026-08-03",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for …",
-    "type": "Talks & Classes",
-    "endDate": "2026-08-25"
-  },
-  {
-    "title": "Breathe Together",
-    "href": "https://events.ourayridgwayevents.com/event/breathe-together-9572",
-    "date": "2026-08-03",
-    "time": "6:15 PM",
-    "location": "Bee True You Wellness and Creative Studio",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of…",
-    "type": "Community",
-    "endDate": "2026-09-29"
-  },
-  {
-    "title": "Pilates Mat All Levels",
-    "href": "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
-    "date": "2026-08-03",
-    "time": "8:30 AM",
-    "location": "Ridgway Pilates",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building…",
-    "type": "Wellness",
-    "endDate": "2026-08-31"
-  },
-  {
-    "title": "Analog Days: No Internet Access",
-    "href": "https://telluridelibrary.libcal.com/event/17277934?hs=a",
-    "date": "2026-08-03",
-    "time": "9:00 AM",
     "location": "Wilkinson Public Library",
     "town": "Telluride",
-    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_13_54_09.png",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_17_13_55_17.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "9:00 AM – 7:00 PM · On Monday and Tuesday, August 3rd and 4th , the Marmot library system will undergo a planned server upgrade. During this time, some of our library services will be temporarily unavailable while important system…",
-    "type": "Community"
-  },
-  {
-    "title": "On Display: Roots & Rhythms",
-    "href": "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    "date": "2026-08-03",
-    "time": "9:00 AM",
-    "location": "Space to Create",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection…",
-    "type": "Arts & Film"
-  },
-  {
-    "title": "Fall Registration is NOW OPEN",
-    "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
-    "date": "2026-08-03",
-    "time": "",
-    "location": "Weehawken Dance & Aerial!",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken…",
-    "type": "Talks & Classes",
-    "endDate": "2026-08-23"
+    "desc": "12:00 PM – 1:00 PM · Join us for a conversation that's sure to warm your heart (and make your stomach rumble), as we delve into the legacy of cooking icon Julia Child with Smithsonian curator and public historian Paula J. Johnson, author…",
+    "type": "Talks & Classes"
   },
   {
     "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
@@ -242,6 +41,32 @@
     "endDate": "2026-08-28"
   },
   {
+    "title": "Teen Cook",
+    "href": "https://telluridelibrary.libcal.com/event/16935718?hs=a",
+    "date": "2026-08-04",
+    "time": "2:00 PM",
+    "location": "Teen Area",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    "type": "Community"
+  },
+  {
+    "title": "I Heart Art",
+    "href": "https://telluridelibrary.libcal.com/event/16574863?hs=a",
+    "date": "2026-08-04",
+    "time": "2:30 PM",
+    "location": "Lower Terrace - outdoors",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_40.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A library-hosted arts event taking place outdoors on the Lower Terrace. Organized by Wilkinson Public Library, this afternoon program offers a creative gathering for the Telluride community.",
+    "type": "Arts & Film"
+  },
+  {
     "title": "DAVE MENSCH",
     "href": "https://events.ourayridgwayevents.com/event/dave-mensch-7766",
     "date": "2026-08-04",
@@ -253,6 +78,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Punk Science with Pinhead",
+    "href": "https://telluridelibrary.libcal.com/event/16297537?hs=a",
+    "date": "2026-08-04",
+    "time": "5:15 PM",
+    "location": "Lower Terrace - outdoors",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/talk.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "A library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. Hosted by Wilkinson Public Library, the event runs from 5:15 to 6:00 PM.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Shakespeare in Norwood!",
@@ -374,6 +212,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Bardic Trails Online Poetry Night: Kirbie Bennett",
+    "href": "https://telluridelibrary.libcal.com/event/15970602?hs=a",
+    "date": "2026-08-04",
+    "time": "7:00 PM",
+    "location": "Wilkinson Public Library",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_15_57_22.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "7:00 PM – 8:30 PM · The Telluride Institute s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Evenings of History 2026 @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/evenings-of-history-2026-the-wright",
     "date": "2026-08-04",
@@ -396,7 +247,7 @@
     "img": "https://ucarecdn.com/9025541b-fd93-4ca9-959d-9655afb2250d/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Free live jazz",
+    "desc": "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
     "type": "Music"
   },
   {
@@ -427,6 +278,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Eco-Series- Between Grief and Gratitude",
+    "href": "https://telluridelibrary.libcal.com/event/17177321?hs=a",
+    "date": "2026-08-04",
+    "time": "8:30 AM",
+    "location": "Telluride Room",
+    "town": "Telluride",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_11_59_54.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "8:30 AM – 10:00 AM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on…",
+    "type": "Community"
+  },
+  {
     "title": "Youth Tennis & Pickleball Camp",
     "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-04/",
     "date": "2026-08-04",
@@ -438,6 +302,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Fall Registration is NOW OPEN",
+    "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
+    "date": "2026-08-04",
+    "time": "",
+    "location": "Weehawken Dance & Aerial!",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken…",
+    "type": "Talks & Classes",
+    "endDate": "2026-08-23"
   },
   {
     "title": "Mahjongg for Independent Players",
@@ -1110,7 +988,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/livemusic.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     "type": "Music"
   },
   {
@@ -1339,6 +1217,20 @@
     "type": "Music"
   },
   {
+    "title": "Senior Lunch by Neighbor to Neighbor",
+    "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    "date": "2026-08-10",
+    "time": "12:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    "type": "Community",
+    "endDate": "2026-09-28"
+  },
+  {
     "title": "Tribal Allyship in Colorado with Ernest House",
     "href": "https://koto.org/event/tribal-allyship-in-colorado-with-ernest-house/",
     "date": "2026-08-10",
@@ -1389,6 +1281,34 @@
     "source": "Mountain Village",
     "desc": "Join Pristine Bins for a live demonstration of our eco-friendly trash bin cleaning system on Monday, August 10 5:30-6:30 p.m.",
     "type": "Community"
+  },
+  {
+    "title": "Breathe Together",
+    "href": "https://events.ourayridgwayevents.com/event/breathe-together-9572",
+    "date": "2026-08-10",
+    "time": "6:15 PM",
+    "location": "Bee True You Wellness and Creative Studio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of…",
+    "type": "Community",
+    "endDate": "2026-09-29"
+  },
+  {
+    "title": "Pilates Mat All Levels",
+    "href": "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
+    "date": "2026-08-10",
+    "time": "8:30 AM",
+    "location": "Ridgway Pilates",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building…",
+    "type": "Wellness",
+    "endDate": "2026-08-31"
   },
   {
     "title": "Max & Heather Stalling",
@@ -1505,7 +1425,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
     "type": "Community"
   },
   {
@@ -1649,7 +1569,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "",
+    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
     "type": "Community"
   },
   {
@@ -1872,7 +1792,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -1951,7 +1871,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -2134,8 +2054,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -3595,6 +3515,19 @@
     "type": "Community"
   },
   {
+    "title": "Monthly Karate in Ouray County",
+    "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
+    "date": "2026-09-07",
+    "time": "5:00 PM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "DAVE MENSCH",
     "href": "https://events.ourayridgwayevents.com/event/dave-mensch-1938",
     "date": "2026-09-08",
@@ -4128,7 +4061,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

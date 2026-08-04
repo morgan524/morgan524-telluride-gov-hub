@@ -392,6 +392,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-04",
+    title: "Bears, people, and who adjusts for whom",
+    body: "The Ecology Commission meets August 5 to take up human-wildlife interactions and public safety. Up here that's not an abstract topic — it's your trash can, your dog, your trail. The tension is real: some residents want stronger rules on human behavior to protect wildlife, others think safety measures should focus first on keeping people safe and that wildlife has plenty of advocates already. Both views come from people who care about this place.\n\nWhere do you think the balance should land?",
+    choices: ["Protect wildlife first", "Prioritize human safety", "Both, if rules are fair", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-03",
     title: "Foreclosure in Mountain Village — who's watching?",
     body: "Two properties in Mountain Village are headed to foreclosure sale. That's not nothing up here. Some residents will see it as routine legal process — debts come due, the system works as designed. Others will wonder what it signals about the broader market, or whether there are downstream effects on the community. Neither read is wrong. The sales are upcoming; nothing has been decided beyond the legal notices.\n\nWhat do foreclosure sales in Mountain Village mean to you?",
@@ -1077,7 +1085,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -2161,15 +2169,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/arts_and_entertainment/article_67f14313-ffd6-40ac-9e0a-0bf21a107cff.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5e/95e82843-a06e-4203-a2be-1bd051e32c48/6a601b9a2aed5.image.jpg",
     imgHiRes: true
-  },
-  {
-    title: "Home Rebate Programs",
-    source: "San Miguel County",
-    date: "July 8, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1403",
-    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14355"
   },
   {
     title: "Black Bear Pass Now Open",
@@ -3359,70 +3358,81 @@ const WILKINSON_EVENTS = [
     imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_13_54_09.png"
   },
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568423?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-08-03T16:30:00.000Z",
+    title: "Eco-Series- Between Grief and Gratitude",
+    link: "https://telluridelibrary.libcal.com/event/17177321?hs=a",
+    description: "8:30 AM – 10:00 AM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
+    pubDate: "2026-08-04T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_11_59_54.jpg"
   },
   {
-    title: "CANCELLED: Strings in the Stacks: Live Violin with Annie Foxen",
-    link: "https://telluridelibrary.libcal.com/event/16759874?hs=a",
-    description: "12:00 PM – 1:00 PM · Unwind at the library with live violin music from violinist and WPL staff member, Annie Foxen. On the first Monday of every month, Annie fills the library with a calming mix of classical, Celtic, and folk tunes—perfect for reading, relaxing, or simply listening. Free and open to the public. All ages are welcome.",
-    pubDate: "2026-08-03T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1769020935.jpg"
-  },
-  {
-    title: "Ping Pong",
-    link: "https://telluridelibrary.libcal.com/event/16775342?hs=a",
-    description: "1:00 PM – 3:00 PM · Come play Ping Pong! Juega Ping Pong con nosotros!",
-    pubDate: "2026-08-03T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_10_59_03.png"
-  },
-  {
-    title: "Savvy Seniors-Puzzle and Pie",
-    link: "https://telluridelibrary.libcal.com/event/17029821?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. This Monday we will be putting together a puzzle together and having some pie.",
-    pubDate: "2026-08-03T19:30:00.000Z",
+    title: "The Legacy of Julia Child&#039;s Kitchen with Smithsonian Curator Paula J. Johnson",
+    link: "https://telluridelibrary.libcal.com/event/17222875?hs=a",
+    description: "12:00 PM – 1:00 PM · Join us for a conversation that's sure to warm your heart (and make your stomach rumble), as we delve into the legacy of cooking icon Julia Child with Smithsonian curator and public historian Paula J. Johnson, author of Julia Child's Kitchen : The Design, Tools, Stories, and Legacy of an Iconic Space . The book includes interviews with chefs who knew Julia well, commentary on her favorite culinary tools and kitchen gadgets, and a stunning array of photos. Julia Child&#39;s 20' x 14' kitchen was a serious workspace and recipe‑testing lab that exuded a sense of mid‑century homey comfort. It has been on display at the National Museum of American History in Washington, D.C., for most of the past twenty-three years, and museum goers have made it a top destination. …",
+    pubDate: "2026-08-04T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_37_44.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_17_13_55_17.jpg"
   },
   {
-    title: "Hobby Hopping: Pickleball",
-    link: "https://telluridelibrary.libcal.com/event/17286073?hs=a",
-    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
-    pubDate: "2026-08-03T20:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935718?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-08-04T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
   },
   {
-    title: "Puzzle Competition",
-    link: "https://telluridelibrary.libcal.com/event/16294560?hs=a",
-    description: "5:00 PM – 7:00 PM · Space is limited to 10 teams of two, so make sure to sign up today! NEW, PLEASE NOTE: Only one team member needs to sign up for their team of two. Dive into the ultimate puzzle challenge at Wilkinson Public Library&#39;s Puzzle Competition! Join us on Monday, August 3rd, from 5 to 7pm for an evening of brain-teasing fun. Gather your partner and prepare to piece together a 500-piece puzzle against the clock. It&#39;s a race to the finish as teams compete head-to-head to claim the title of puzzle champions! All participants will work on the same puzzle, ensuring a level playing field for everyone. This event isn&#39;t just about speed—it&#39;s about camaraderie and community. Puzzle enthusiasts of all ages are invited to showcase their skills and enjoy an evening of friendly competition. …",
-    pubDate: "2026-08-03T23:00:00.000Z",
+    title: "I Heart Art",
+    link: "https://telluridelibrary.libcal.com/event/16574863?hs=a",
+    description: "A library-hosted arts event taking place outdoors on the Lower Terrace. Organized by Wilkinson Public Library, this afternoon program offers a creative gathering for the Telluride community.",
+    pubDate: "2026-08-04T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_10_31_51.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_40.png"
+  },
+  {
+    title: "Punk Science with Pinhead",
+    link: "https://telluridelibrary.libcal.com/event/16297537?hs=a",
+    description: "A library program called Punk Science with Pinhead, taking place outdoors on the Lower Terrace. Hosted by Wilkinson Public Library, the event runs from 5:15 to 6:00 PM.",
+    pubDate: "2026-08-04T23:15:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: ""
+  },
+  {
+    title: "BINGO Night at the Alibi",
+    link: "https://telluridelibrary.libcal.com/event/17080973?hs=a",
+    description: "5:30 PM – 7:00 PM · Join us at the Alibi for a lively night of BINGO with WPL merch and mystery prizes! This program is FREE and open to the public. Make sure to be on time to ensure that you have a seat and a BINGO card! Hope to see you there!",
+    pubDate: "2026-08-04T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "The Alibi",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_19_01_50.jpg"
+  },
+  {
+    title: "Bardic Trails Online Poetry Night: Kirbie Bennett",
+    link: "https://telluridelibrary.libcal.com/event/15970602?hs=a",
+    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. …",
+    pubDate: "2026-08-05T01:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Wilkinson Public Library",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_15_57_22.jpg"
   }
 ];
 
@@ -3458,7 +3468,7 @@ const ALIBI_EVENTS = [
   {
     title: "Jazz w/ Kenny G & Yaz",
     link: "https://www.alibitelluride.com/calendar#eca-event=jazz-w-kenny-g-and-yaz",
-    description: "Free live jazz",
+    description: "Free live jazz comes to The Alibi with an evening featuring Kenny G and Yaz performing together. The show begins at 8:00 PM at the beloved Telluride bar and music venue.",
     pubDate: "2026-08-05",
     time: "8:00 PM",
     source: "alibi",
@@ -3530,7 +3540,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3542,7 +3552,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3772,7 +3782,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-08-11 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
   },
   {
     title: "Celebration of Life for David Leigh Houtz",
@@ -3912,84 +3923,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-03T06:00:00.000Z",
+    pubDate: "2026-08-04T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Pilates Mat All Levels",
-    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
-    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
-    pubDate: "2026-08-03T14:30:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Pilates",
-    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
-  },
-  {
-    title: "On Display: Roots & Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/roots-and-rhythms-opening-night-with-live-music-and-demo",
-    description: "Roots & Rhythms is a collaborative exhibition featuring mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. Where memory surfaces, movement unfolds, and forms emerge. The exhibition will remain on view July 3–August 4, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m. View on site | Email this event",
-    pubDate: "2026-08-03T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create",
-    imageUrl: "https://localist-images.azureedge.net/photos/53268350844000/huge/445ca1a6868c4a44ce4c2ec9f324477640148d3b.jpg"
-  },
-  {
-    title: "On Display: Silverton, Interpreted",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
-    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
-    pubDate: "2026-08-03T16:00:00.000Z",
-    endDate: "2026-08-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
-    pubDate: "2026-08-03T18:00:00.000Z",
-    endDate: "2026-09-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Monthly Karate in Ouray County",
-    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
-    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
-    pubDate: "2026-08-03T23:00:00.000Z",
-    endDate: "2026-09-07",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
-  },
-  {
-    title: "Breathe Together",
-    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
-    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
-    pubDate: "2026-08-04T00:15:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness and Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -4002,6 +3942,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "On Display: Silverton, Interpreted",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
+    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
+    pubDate: "2026-08-04T16:00:00.000Z",
+    endDate: "2026-08-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
   },
   {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
@@ -4414,6 +4366,42 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg"
+  },
+  {
+    title: "Pilates Mat All Levels",
+    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
+    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
+    pubDate: "2026-08-10T14:30:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Pilates",
+    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
+  },
+  {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    pubDate: "2026-08-10T18:00:00.000Z",
+    endDate: "2026-09-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
+    title: "Breathe Together",
+    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
+    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
+    pubDate: "2026-08-11T00:15:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness and Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -5266,6 +5254,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg"
   },
   {
+    title: "Monthly Karate in Ouray County",
+    link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
+    description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
+    pubDate: "2026-09-07T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/52253033564264/huge/ef12b5792bac47932752278d68230c7704389412.jpg"
+  },
+  {
     title: "DAVE MENSCH",
     link: "https://events.ourayridgwayevents.com/event/dave-mensch-1938",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5546,7 +5545,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Possible Quorum",
     link: "https://www.norwoodtown.com/2026-07-29-nwc-possible-quorum",
-    description: "",
+    description: "A possible quorum of the Norwood Water Commission is scheduled to take place in Norwood, Colorado. This government meeting may bring together enough members to conduct official business on behalf of the commission.",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5557,7 +5556,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-07-29-board-of-trustees-work-session",
-    description: "",
+    description: "A work session of the Town of Norwood Board of Trustees, held as part of the board's regular governance activities. These sessions typically allow trustees to discuss town business and policy matters in a collaborative setting outside of formal action meetings.",
     pubDate: "2026-07-29T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5568,7 +5567,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "",
+    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5579,7 +5578,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5590,7 +5589,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5601,7 +5600,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "",
+    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5612,7 +5611,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5623,7 +5622,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5634,7 +5633,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5645,7 +5644,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5656,7 +5655,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

@@ -1,22 +1,22 @@
 {
-  "hash": "ece4b2a281e61d8dd3e1897fd67c4c0a5c2bf115",
-  "lede": "The San Miguel County BOCC holds public hearings Wednesday on three Land Use Code amendments — including changes to how 'Qualified Owner' is defined in the deed-restriction code, a wildfire areas update, and a nonconforming lots hearing — all moving toward formal votes, so this is a real window to weigh in. The Telluride Housing Authority Subcommittee also meets Wednesday on a deed-restricted homeowner's request to exceed improvement limits for a necessary roof replacement. Wrapping up the week, the Jazz Festival kicks off Friday alongside the KOTO Duck Race.",
+  "hash": "3f5347e472c37833d1adda4748bf969dc45c5cde",
+  "lede": "The biggest thing on the calendar this week is the San Miguel County BOCC, which holds public hearings on three separate Land Use Code amendments Wednesday — including changes to the 'Qualified Owner' definition, a wildfire-areas update, and nonconforming lots, all moving toward formal votes. Also Wednesday, the Telluride Housing Authority Subcommittee takes up a deed-restricted homeowner's request to exceed the 5% capital improvement limit for a $47,000 roof replacement, and Mountain Village's Design Review Board weighs in on three multifamily projects Thursday.",
   "notable": [
     {
       "id": 3,
-      "stake": "Public hearings on three Land Use Code changes, including deed-restriction and wildfire rules."
+      "stake": "Three Land Use Code amendments up for public hearing and formal vote."
     },
     {
       "id": 2,
-      "stake": "Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof."
-    },
-    {
-      "id": 5,
-      "stake": "Land Use Code definition changes being shaped — definitions determine what rules mean in practice."
+      "stake": "Board decides whether deed-restricted owner can exceed improvement cap for needed roof."
     },
     {
       "id": 7,
-      "stake": "Design review votes on three new multifamily projects in Mountain Village, including a conditional-use permit."
+      "stake": "Three multifamily projects face design and conditional-use permit review."
+    },
+    {
+      "id": 5,
+      "stake": "Definition changes to Ouray County Land Use Code could quietly shift what rules allow."
     }
   ]
 }
