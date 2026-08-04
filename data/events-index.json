@@ -304,19 +304,6 @@
     "type": "Community"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-04/",
-    "date": "2026-08-04",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-08-04",
@@ -1755,6 +1742,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver…",
     "type": "Community"
+  },
+  {
+    "title": "Teen Garden to Kitchen Adventure Wednesday",
+    "href": "https://events.ourayridgwayevents.com/event/teen-garden-to-kitchen-adventure-wednesday",
+    "date": "2026-08-12",
+    "time": "9:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53596853239611/huge/53fb740555b64be11cf4485b74947de504eb1b66.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come with Voyager Youth Program to pick produce at the Ridgway Community Garden and cook with Chef Joe from Taco Del Gnar at the Decker Room! Sign up at voyageryouth.org and click \"register.\" Have questions? Email Jazzmin at…",
+    "type": "Food & Drink"
   },
   {
     "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
@@ -3383,6 +3383,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
+    "href": "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
+    "date": "2026-09-01",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63253/telluride_com.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders …",
+    "type": "Community"
+  },
+  {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
     "href": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     "date": "2026-09-01",
@@ -4011,6 +4024,20 @@
     "type": "Arts & Film"
   },
   {
+    "title": "4th Annual San Juan Slam Pickleball Tournament",
+    "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
+    "date": "2026-09-18",
+    "time": "9:00 AM",
+    "location": "Ridgway Athletic Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53613028091683/huge/e56cdb46a4d61fdd2c60557def953fd8939a1e2e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-09-20"
+  },
+  {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
     "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
     "date": "2026-09-20",
@@ -4312,5 +4339,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Basic identification of hand samples of minerals from the San Juan Mountian Region with Robert Stoufer View on site | Email this event",
     "type": "Family & Kids"
+  },
+  {
+    "title": "150th Concert: Big Head Todd & the Monsters w/ Hazel Miller & The Collective",
+    "href": "https://events.ourayridgwayevents.com/event/150th-concert-big-head-todd",
+    "date": "2026-10-03",
+    "time": "4:00 PM",
+    "location": "Fellin Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52364674023264/huge/f98fd45e49189eebaa22894d39eb7c241c2e49a9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Headlining the celebration…",
+    "type": "Music"
   }
 ]
