@@ -201,7 +201,11 @@
   },
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026": {
     "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057"
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057",
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/ZOZQ7J9UTmKHp7XXMuliiw",
+    "meetingId": "886 1441 5107",
+    "passcode": "070631.",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-07-26|Open Space Commission - Jul 26 2026": {
     "sv": 4,
