@@ -2111,24 +2111,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Tomboy Road",
-    source: "San Miguel County",
-    date: "July 21, 2026",
-    newsTopic: "housing",
-    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    source: "San Miguel County",
-    date: "July 14, 2026",
-    newsTopic: "housing",
-    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
     title: "Aug 13 Open House for Housing Action Plan &amp; Master Plan Water Supply Element",
     source: "Town of Ridgway",
     date: "July 24, 2026",
@@ -2253,14 +2235,7 @@ const KOTO_NEWSCASTS = [
 ];
 
 const KOTO_FEATURED_STORIES = [
-  {
-    title: "Palm Theatre Floods in Major Rainstorm",
-    source: "KOTO Community Radio",
-    date: "July 21, 2026",
-    newsTopic: "land-use",
-    copy: "The Palm Theatre and portions of the Telluride Intermediate and Middle Schools flooded after a mudslide pushed through a loading door. With feet of water and mud in the building, cleanup begins.",
-    href: "https://koto.org/news/palm-theatre-floods-in-major-rainstorm/"
-  }
+
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
