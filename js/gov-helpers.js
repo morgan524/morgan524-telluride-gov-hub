@@ -1065,7 +1065,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -2145,6 +2145,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "recreation",
     copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "community",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "housing",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
     img: ""
   },
   {
@@ -4157,7 +4184,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Electric Vehicle (EV) Ride and Drive",
     link: "https://events.ourayridgwayevents.com/event/electric-vehicle-ev-ride-and-drive",
-    description: "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides! View on site | Email this event",
+    description: "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides!And make sure to head over to the Electric Showcase booth in the southeast corner of Hartwell Park from 9am to 5pm. You can check out and try electric yard equipment and learn about financial incentives. Also learn how you can win an E-bike from San Miguel Power Association. View on site | Email this event",
     pubDate: "2026-08-08T17:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4394,6 +4421,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
+  },
+  {
+    title: "Ouray County Fair 2026",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-fair-2026",
+    description: "Come see local youth's best rabbits, sheep, chickens and other farm animals. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is allowed on the Fairgrounds. There is no smoking within 10 feet of the fair barn. Schedule of Events: find more details HERE. Thanks to all of the sponsors! View on site | Email this event",
+    pubDate: "2026-08-13T16:00:00.000Z",
+    endDate: "2026-08-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg"
   },
   {
     title: "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
@@ -5690,17 +5729,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   },
   {
-    title: "Pristine Bins Demonstration",
-    link: "https://townofmountainvillage.com/explore/events/all-events/meadow-parking-lot-pristine-bins-demonstration/",
-    description: "Join Pristine Bins for a live demonstration of our eco-friendly trash bin cleaning system on Monday, August 10 5:30-6:30 p.m.",
-    pubDate: "2026-08-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49434/pristine_bins_event_1800x900_1.png"
-  },
-  {
     title: "Mountain Village Merchant Meeting",
     link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
     description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
@@ -5963,17 +5991,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49541/campalderwild_2026_telluride_support_1800x900.png"
-  },
-  {
-    title: "Music on the Green with Cristina Vane",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-with-cristina-vane/",
-    description: "Beyond The Groove and TMVOA present Cristina Vane at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    pubDate: "2026-08-28T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49603/cristina_vane_1800px_x_900px.png"
   },
   {
     title: "Movies Under the Stars",
@@ -6597,7 +6614,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62743/1_burlesque_buffet_visit_telluride_placeholder.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/62743/buffet_visit_telluride_image.800x533.webp"
   },
   {
     title: "Noche de Luz (Night of Light)",
