@@ -575,10 +575,7 @@ const MEETING_PREVIEWS = {
     "The Telluride Housing Authority Subcommittee is expected to meet on September 2, 2026, as part of its regular monthly schedule. No specific agenda items are publicly detailed, but the subcommittee typically addresses local affordable housing matters, program updates, and related administrative business.",
 
   "county|2026-09-02|Board of County Commissioners Meeting":
-    "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County.",
-
-  "county|2026-08-05|Board of County Commissioners Meeting":
-    "The Board of County Commissioners will convene to address routine county business, including procurement matters such as material hauling, park site regrading, schoolhouse repairs and repainting, and water tank roofing. The board will also sit as the Board of Equalization to hear property valuation appeals through August 5."
+    "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -3619,7 +3616,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Big Love Car Wash: Free Music, SHOW Bar Patio",
     link: "https://sheridanoperahouse.com/events/free-music-at-show-bar-big-love-car-wash/",
-    description: "A free outdoor music event hosted on the SHOW Bar patio at the Sheridan Opera House, Big Love Car Wash brings live performances to one of Telluride's beloved historic venues. The patio setting offers a relaxed atmosphere for catching live music on a summer evening in August.",
+    description: "",
     pubDate: "2026-08-05",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3630,7 +3627,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Jazz Festival",
     link: "https://sheridanoperahouse.com/events/telluride-jazz-festival/",
-    description: "A jazz performance held at the historic Sheridan Opera House in Telluride, part of the Telluride Jazz Festival. The intimate venue offers an exceptional setting for live jazz in the heart of the San Juan Mountains.",
+    description: "",
     pubDate: "2026-08-07",
     endDate: "2026-08-08",
     source: "sheridan",
@@ -3642,7 +3639,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Mushroom Festival",
     link: "https://sheridanoperahouse.com/events/telluride-mushroom-festival/",
-    description: "The Telluride Mushroom Festival brings its annual celebration of fungi, foraging, and mycology to the Sheridan Opera House for an evening of performances and programming. The festival, a beloved Telluride tradition, gathers enthusiasts, experts, and curious community members around a shared passion for the fungal world.",
+    description: "",
     pubDate: "2026-08-13",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
