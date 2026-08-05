@@ -592,24 +592,6 @@ const NORWOOD_CACHE_DATE = '2026-08-05';
 
 const NORWOOD_CACHED_DATA = [
   {
-    date: "July 29, 2026",
-    time: null,
-    title: "Board of Trustees Work Session",
-    agendaUrl: "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
-    packetUrl: null,
-    special: false,
-    board: "bot"
-  },
-  {
-    date: "July 29, 2026",
-    time: null,
-    title: "NWC Possible Quorum",
-    agendaUrl: "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
-    packetUrl: null,
-    special: false,
-    board: "nwc"
-  },
-  {
     date: "August 5, 2026",
     time: null,
     title: "Board of Trustees Work Session",
