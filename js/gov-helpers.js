@@ -392,6 +392,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-05",
+    title: "Dogs on the Valley Floor — a little, or not at all?",
+    body: "The Open Space Commission is weighing a recommendation to Town Council to allow dogs on a limited portion of the River Trail on the Valley Floor. Three trail alignments for that same Reach 1 segment are also on the table, each routed around mapped wetlands near the Public Works facility. Nothing is decided yet — this is a commission recommendation, not a final vote. Some residents see a reasonable middle ground; others think any access sets a precedent for a space that was set aside for a reason. Where do you stand?",
+    choices: ["Dogs belong on the trail", "Keep the floor dog-free", "Depends on the alignment", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-04",
     title: "Bears, people, and who adjusts for whom",
     body: "The Ecology Commission meets August 5 to take up human-wildlife interactions and public safety. Up here that's not an abstract topic — it's your trash can, your dog, your trail. The tension is real: some residents want stronger rules on human behavior to protect wildlife, others think safety measures should focus first on keeping people safe and that wildlife has plenty of advocates already. Both views come from people who care about this place.\n\nWhere do you think the balance should land?",
@@ -570,7 +578,7 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County.",
 
   "county|2026-08-05|Board of County Commissioners Meeting":
-    "Board will consider several procurement matters, including proposals for soil preparation at Mill Creek Park, foundation repairs and interior repainting at the Historic Placerville Schoolhouse, Trout Lake water tank roofing, and material hauling services. The board will also conclude its 2026 Board of Equalization session hearing property valuation appeals."
+    "The Board of County Commissioners will convene to address routine county business, including procurement matters such as material hauling, park site regrading, schoolhouse repairs and repainting, and water tank roofing. The board will also sit as the Board of Equalization to hear property valuation appeals through August 5."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -824,16 +832,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "July 27 - Changes in evacuation zone status",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "July 28, 2026",
-    newsTopic: "public-safety",
-    copy: "Effective ?5PM on ?Monday, July 2?7, evacuation zones ?2?5, 30 and 300 will have the following changes and updates.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=956",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22843"
-  },
-  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -930,7 +928,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-04';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-05';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-01';
 
 const MANUAL_SUMMARIES = {
@@ -1085,7 +1083,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19, 2026 HARC Chair agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
     "The August 19, 2026 HARC agenda hasn't been posted yet.",
@@ -3258,81 +3256,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Eco-Series- Between Grief and Gratitude",
-    link: "https://telluridelibrary.libcal.com/event/17177321?hs=a",
-    description: "8:30 AM – 10:00 AM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
-    pubDate: "2026-08-04T14:30:00.000Z",
+    title: "CANCELLED: Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610079?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-08-05T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_11_59_54.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
   },
   {
-    title: "The Legacy of Julia Child&#039;s Kitchen with Smithsonian Curator Paula J. Johnson",
-    link: "https://telluridelibrary.libcal.com/event/17222875?hs=a",
-    description: "12:00 PM – 1:00 PM · Join us for a conversation that's sure to warm your heart (and make your stomach rumble), as we delve into the legacy of cooking icon Julia Child with Smithsonian curator and public historian Paula J. Johnson, author of Julia Child's Kitchen : The Design, Tools, Stories, and Legacy of an Iconic Space . The book includes interviews with chefs who knew Julia well, commentary on her favorite culinary tools and kitchen gadgets, and a stunning array of photos. Julia Child&#39;s 20' x 14' kitchen was a serious workspace and recipe‑testing lab that exuded a sense of mid‑century homey comfort. It has been on display at the National Museum of American History in Washington, D.C., for most of the past twenty-three years, and museum goers have made it a top destination. …",
-    pubDate: "2026-08-04T18:00:00.000Z",
+    title: "Plants, Pastries & Coffee Tour",
+    link: "https://telluridelibrary.libcal.com/event/16594066?hs=a",
+    description: "9:00 AM – 10:00 AM · Join Melissa and Tiffany for a fun, exciting tour of the library plants. We will enjoy stories from Melissa as well as some delicious pastries and coffee.",
+    pubDate: "2026-08-05T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_17_13_55_17.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_15_13_46_41.png"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935718?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-08-04T20:00:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17021876?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-08-05T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_47_42.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767660?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-05T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
+  },
+  {
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935738?hs=a",
+    description: "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-08-05T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_04_18_39_02.png"
   },
   {
-    title: "I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16574863?hs=a",
-    description: "2:30 PM – 3:30 PM",
-    pubDate: "2026-08-04T20:30:00.000Z",
+    title: "Sweet Sounds - Live Music and Sweet Treats! Speakeasy Jazz Trio",
+    link: "https://telluridelibrary.libcal.com/event/16604747?hs=a",
+    description: "3:30 PM – 4:30 PM · Join us on the library patio for Sweet Sounds , an afternoon of live local music and sweet treats! This free, all-ages program invites you to relax, connect, and enjoy the sounds of our community. Tasty treats will be available while supplies last. Stay for the full performance or drop in for a bit and soak up the atmosphere. This program was made possible by the Augment Music Project.  Summer Schedule: June 3rd: Grassblasters Bluegrass (Tom Nading on Guitar, Sam Burgess on Bass, and Danny D&#39;Alessandro on Banjo) July 1st: Aubrey Mable of LVDY August 5th: Speakeasy Jazz Trio (Donavan Dailey on Guitar, Danny D&#39;Alessandro on Sax, John Brown on Bass)",
+    pubDate: "2026-08-05T21:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_40.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_18_13_09_23.jpg"
   },
   {
-    title: "Punk Science with Pinhead",
-    link: "https://telluridelibrary.libcal.com/event/16297537?hs=a",
-    description: "5:15 PM – 6:00 PM",
-    pubDate: "2026-08-04T23:15:00.000Z",
+    title: "Back to School Fair • Feria de regreso a la Escuela",
+    link: "https://telluridelibrary.libcal.com/event/17189298?hs=a",
+    description: "4:00 PM – 6:00 PM · We will have: school health and immunization registration, community and financial resources, free school supplies, prizes, and more! &bull; Tendremos: registro de salud escolar y vacunaci&oacute;n, recursos comunitarios y financieros, &uacute;tiles escolares gratuitos, premios y &iexcl;mucho m&aacute;s!",
+    pubDate: "2026-08-05T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_12_10_55_36.png"
+  },
+  {
+    title: "America 250/Colorado 150 Book Club: Being and Becoming Ute",
+    link: "https://telluridelibrary.libcal.com/event/16922735?hs=a",
+    description: "5:30 PM – 7:00 PM · Join author Sondra Jones for a presentation about her book, Being and Becoming Ute: The Story of an American Indian People on Wednesday, August 5th at 5:30 pm! Sondra Jones traces the metamorphosis of the Ute people from a society of small, interrelated bands of mobile hunter-gatherers to sovereign, dependent nations—modern tribes who run extensive business enterprises and government services. Weaving together the history of all Ute groups—in Colorado, Utah, and New Mexico—the narrative describes their traditional culture, including the many facets that have continued to define them as a people. Jones emphasizes how the Utes adapted over four centuries and details events, conflicts, trade, and social interactions with non-Utes and non-Indians. …",
+    pubDate: "2026-08-05T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: ""
-  },
-  {
-    title: "BINGO Night at the Alibi",
-    link: "https://telluridelibrary.libcal.com/event/17080973?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us at the Alibi for a lively night of BINGO with WPL merch and mystery prizes! This program is FREE and open to the public. Make sure to be on time to ensure that you have a seat and a BINGO card! Hope to see you there!",
-    pubDate: "2026-08-04T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_19_01_50.jpg"
-  },
-  {
-    title: "Bardic Trails Online Poetry Night: Kirbie Bennett",
-    link: "https://telluridelibrary.libcal.com/event/15970602?hs=a",
-    description: "7:00 PM – 8:30 PM · The Telluride Institute&#39;s Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet's work and inspirations, with time afterwards for poetry sharing from attendees – a Gourd Circle of sharing whatever poetry attendees wish, or just listening in. The list of 2026 poets is below. The free Bardic Trails virtual Zoom series is on the first Tuesday of each month. Visit < https://www. tellurideinstitute.org/ western-slope-calendar > to get the zoom link each month , Thanks to the Wilkinson Public Library, Cantor Family, the Guttman Family Foundation, CCAASE and our Fischer and Cantor contest participants for supporting our program and projects. …",
-    pubDate: "2026-08-05T01:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_15_57_22.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_11_50_32.jpg"
   }
 ];
 
@@ -3824,83 +3833,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-04T06:00:00.000Z",
+    pubDate: "2026-08-05T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-08-04T14:15:00.000Z",
-    endDate: "2026-10-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
-    title: "On Display: Silverton, Interpreted",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
-    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
-    pubDate: "2026-08-04T16:00:00.000Z",
-    endDate: "2026-08-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-04T18:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "DAVE MENSCH",
-    link: "https://events.ourayridgwayevents.com/event/dave-mensch-7766",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-04T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Parks and Recreation Committee (PARC)",
-    link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
-    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
-    pubDate: "2026-08-05T00:00:00.000Z",
-    endDate: "2026-09-02",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
-  },
-  {
-    title: "Evenings of History 2026 @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/evenings-of-history-2026-the-wright",
-    description: "Evenings of History 2026 @ the Wright WHEN? Weekly Tuesdays • 7:00 pm – 9:00 pm Doors at 6:30 pm • Presentations at 7:00 pm June 16 June 23 June 30 July 7 July 14 July 21 July 28 August 4 WHERE? Wright Opera House 472 Main St. Ouray, Colorado SERIES: Presented by the Ouray County Historical Society ABOUT THE SERIES Join the Ouray County Historical Society for another season of Evenings of History, a community lecture series exploring the people, places, and stories that shaped Ouray County and the greater San Juan region. From mining legends and frontier photography to fashion, recreation, and Ute history, this year’s lineup offers a fascinating look into the characters and events that helped define the American West. Through local historians, researchers, storytellers, and community experts, Evenings of History continues a longstanding tradition of preserving and sharing the rich heritage of Ouray County. …",
-    pubDate: "2026-08-05T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/52887120617394/huge/59851e9ca29d75054645a0e488e33edbbcf73d69.jpg"
   },
   {
     title: "Beautification Committee (OBC)",
@@ -3913,6 +3852,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center, San Juan Room",
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-05T16:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Storytime with a Firefighter",
@@ -3983,6 +3934,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53550883024689/huge/8ef634b3e4fdec99a315d0d58c79b5602863ae76.jpg"
   },
   {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-08-06T14:15:00.000Z",
+    endDate: "2026-10-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
     title: "Ouray Youth Summer Programs: Water Sports at Ridgway State Park",
     link: "https://events.ourayridgwayevents.com/event/ouray-youth-summer-programs-water-sports-at-ridgway-state-park",
     description: "Participants will learn the basics of paddle boarding and water safety with instruction and equipment provided by Ridgway State Park staff. Please meet at the Dutch Charlie Marina office at Ridgway State Park and ring snacks, water, sunscreen, a towel and appropriate clothes for the day. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
@@ -3992,6 +3955,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52994829548404/huge/1b35bf736db2ace8de36b37a504f763702f48af8.jpg"
+  },
+  {
+    title: "On Display: Silverton, Interpreted",
+    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
+    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
+    pubDate: "2026-08-06T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -5043,6 +5017,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Parks and Recreation Committee (PARC)",
+    link: "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
+    description: "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
+    pubDate: "2026-09-02T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
   },
   {
     title: "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",

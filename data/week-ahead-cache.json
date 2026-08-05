@@ -1,26 +1,22 @@
 {
-  "hash": "5b9345300fc59b2650a2127f22717ffff416fcf5",
-  "lede": "The biggest thing on the calendar this week is the San Miguel County BOCC, which holds public hearings Tuesday on three Land Use Code amendments — including changes to 'Qualified Owner' definitions, a wildfire areas update, and nonconforming lots, all moving toward formal votes. Telluride Town Council follows Monday with third reading of the Colorado Wildfire Resiliency Code, which would rewrite historic review and landscaping standards for property owners across town. Sandwiched in between, the Housing Authority Subcommittee takes up a deed-restricted homeowner's roof replacement request, and the Telluride Jazz Festival opens Friday.",
+  "hash": "b529355064ce35b6c15f3433fb91d69762f752bc",
+  "lede": "The biggest item this week is Tuesday's Telluride Town Council meeting, where the Colorado Wildfire Resiliency Code comes up for its third and final reading — pass it and the Land Use Code changes for good, reshaping what property owners can do with landscaping and historic structures. Before that, Wednesday's San Miguel County BOCC holds public hearings on three Land Use Code amendments, including a redefinition of 'Qualified Owner' in affordable housing rules and a wildfire areas update, and the Telluride Housing Authority Subcommittee weighs in on a deed-restriction variance for a Telluride homeowner facing a $47,000 roof bill. Jazz Fest kicks off Friday to round out the week.",
   "notable": [
     {
       "id": 3,
-      "stake": "Public hearings on three Land Use Code amendments, including owner definitions and wildfire rules."
-    },
-    {
-      "id": 9,
-      "stake": "Third reading vote on Wildfire Resiliency Code changes affecting historic review and landscaping rules."
+      "stake": "Public hearings on three county Land Use Code changes, including affordable housing ownership rules."
     },
     {
       "id": 2,
-      "stake": "Vote on whether a deed-restricted homeowner can exceed the capital improvement cap for a new roof."
-    },
-    {
-      "id": 5,
-      "stake": "Work session shaping Ouray County Land Use Code definitions — changes here ripple through all future decisions."
+      "stake": "Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof."
     },
     {
       "id": 7,
       "stake": "Architecture and conditional-use permit reviews for three new multifamily projects in Mountain Village."
+    },
+    {
+      "id": 9,
+      "stake": "Third and final reading of Wildfire Resiliency Code — permanent Land Use Code change if approved."
     }
   ]
 }

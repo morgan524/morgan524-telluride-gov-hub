@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-05T05:53:57.685Z",
+ "generated": "2026-08-05T08:46:48.926Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -11,18 +11,11 @@
      "date": "2026-07-23",
      "title": "Planning & Zoning Commission - Jul 23 2026",
      "snippet": "Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-07-21",
-     "title": "Town Council - Jul 21 2026",
-     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
     }
    ],
    "developments": [],
    "stale": [
     "Carhenge / Shandoka: telluride discussed it on 2026-07-23 (\"Planning & Zoning Commission - Jul 23 2026\") but the deep dive was last edited 2026-07-19.",
-    "Carhenge / Shandoka: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19.",
     "Carhenge / Shandoka: timeline entry \"P&Z takes up the subdivision and Conceptual PUD\" (Jul 23, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -77,18 +70,11 @@
      "date": "2026-07-27",
      "title": "Housing Code Update SSR",
      "snippet": "The agenda for this Housing Code Update SSR meeting lists only the title — no line items, staff reports, or supporting materials have been posted. There's enough history with housing code work in the…"
-    },
-    {
-     "source": "telluride",
-     "date": "2026-07-21",
-     "title": "Town Council - Jul 21 2026",
-     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: county discussed it on 2026-07-27 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: county discussed it on 2026-07-27 (\"Housing Code Update SSR\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
@@ -120,18 +106,9 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-07-21",
-     "title": "Town Council - Jul 21 2026",
-     "snippet": "A newly seated Council opens with a swearing-in and executive session on San Miguel Valley Corp. negotiations before moving into a full day. The headline item is second reading of the Colorado…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Wildfire Resiliency: telluride discussed it on 2026-07-21 (\"Town Council - Jul 21 2026\") but the deep dive was last edited 2026-06-01."
-   ]
+   "stale": []
   },
   "diamond": {
    "label": "Diamond Ridge",
