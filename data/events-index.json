@@ -93,29 +93,16 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Shakespeare in Norwood!",
-    "href": "https://koto.org/event/shakespeare-in-norwood/",
+    "title": "BINGO Night at the Alibi",
+    "href": "https://telluridelibrary.libcal.com/event/17080973?hs=a",
     "date": "2026-08-04",
     "time": "5:30 PM",
-    "location": "The Livery Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Wide Sky Arts Collective and Norwood Park & Rec present a No Holds Bard production of William Shakespeare's romantic comedy \"Love's Labors Lost\" in the shaded Yard at The Livery in Norwood on Tuesday, August 4th. Gates at 5:30pm, show at…",
-    "type": "Community"
-  },
-  {
-    "title": "BINGO night at the Alibi",
-    "href": "https://koto.org/event/bingo-night-at-the-alibi/",
-    "date": "2026-08-04",
-    "time": "5:30 PM",
-    "location": "The Alibi, Telluride",
+    "location": "The Alibi",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us at the Alibi for a lively night of BINGO with WPL merch and mystery prizes! This program is FREE and open to the public. Make sure to be on time to ensure that you have a seat and a BINGO card! Hope to see you there!",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_19_01_50.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "5:30 PM – 7:00 PM · Join us at the Alibi for a lively night of BINGO with WPL merch and mystery prizes! This program is FREE and open to the public. Make sure to be on time to ensure that you have a seat and a BINGO card! Hope to see you…",
     "type": "Community"
   },
   {
@@ -130,6 +117,19 @@
     "source": "Mountain Village",
     "desc": "The Mountain Village Police Department and Village Court Apartments (VCA) are teaming up once again to host the 14th annual National Night Out Tuesday,",
     "type": "Community"
+  },
+  {
+    "title": "Town Talk: single molecule views of Nature’s nanomachines",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/single-molecule-views-of-natures-nanomachines/",
+    "date": "2026-08-04",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49100/tt_logo_1048x802_a.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "This Town Talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
@@ -199,19 +199,6 @@
     "endDate": "2026-08-10"
   },
   {
-    "title": "Town Talk: Single molecule views of Nature's nanomachines",
-    "href": "https://koto.org/event/town-talk-single-molecule-views-of-natures-nanomachines/",
-    "date": "2026-08-04",
-    "time": "6:30 PM",
-    "location": "Telluride Innovation Center",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/TT_logo_1048x802_A-4.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children’s Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
-    "type": "Talks & Classes"
-  },
-  {
     "title": "The Tiny Machines That Keep Us Alive: Watching Life at Work, One Molecule at a Time",
     "href": "https://telluridescience.org/event/single-molecule-views-of-natures-nanomachines/",
     "date": "2026-08-04",
@@ -223,19 +210,6 @@
     "source": "Telluride Science",
     "desc": "This town talk will be presented by Taekjip (TJ) Ha, Harvard Medical School, Boston Children's Hospital, Howard Hughes Medical School. Did you know that proteins are nano-scale machines that help us think, dance and keep the threat of…",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Bardic Trails Online Poetry Night",
-    "href": "https://koto.org/event/bardic-trails-online-poetry-night-3/2026-08-04/",
-    "date": "2026-08-04",
-    "time": "7:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://koto.org/wp-content/uploads/2026/03/Bardic-Trails-2026.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Telluride Institute's Bardic Trails poetry night features an award-winning guest poet sharing their new and exciting work. The reading will be followed with a Q & A about the poet’s work and inspirations, with time afterwards for…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Bardic Trails Online Poetry Night: Kirbie Bennett",
@@ -832,6 +806,19 @@
     "endDate": "2026-10-02"
   },
   {
+    "title": "First Friday: Silverton, Interpreted",
+    "href": "https://events.ourayridgwayevents.com/event/copy-of-silverton-interpreted",
+    "date": "2026-08-07",
+    "time": "5:00 PM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53047134482853/huge/29f47320cc40fddf16a0212cb4f823f1953adc4e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us for the closing reception of Silverton Interpreted during Ridgway First Friday! This traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San…",
+    "type": "Community"
+  },
+  {
     "title": "Old Man Polly & Natalie Heller at Fabula for First Friday!",
     "href": "https://events.ourayridgwayevents.com/event/old-man-polly-natalie-heller-at-fabula-for-first-friday",
     "date": "2026-08-07",
@@ -1069,7 +1056,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment,…",
     "type": "Wellness",
-    "endDate": "2026-09-05"
+    "endDate": "2026-08-29"
   },
   {
     "title": "The 41st Annual Ridgway Rendezvous Arts Festival",
@@ -2110,6 +2097,20 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Ouray County Pride",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-county-pride",
+    "date": "2026-08-14",
+    "time": "",
+    "location": "Clinton Street",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Small towns. Big mountains. Bigger pride. 🏳️‍🌈 OURAY COUNTY PRIDE WEEKEND August 14–16, 2026 🏳️‍🌈🏔️ FRIDAY, AUGUST 14 7P One-woman show The Wright Opera House — Ouray Kick off Pride weekend with EDIE: a one-woman theatrical…",
+    "type": "Arts & Film",
+    "endDate": "2026-08-16"
+  },
+  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
     "date": "2026-08-15",
@@ -2123,17 +2124,17 @@
     "type": "Wellness"
   },
   {
-    "title": "Ouray County Pride",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-county-pride",
+    "title": "Zumba with Gisela",
+    "href": "https://koto.org/event/zumba-with-gisela/2026-08-15/",
     "date": "2026-08-15",
-    "time": "12:00 PM",
-    "location": "Clinton Street",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
     "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Small towns. Big mountains. Bigger pride. Ouray County PRIDE returns Saturday, August 15th, 2026. View on site | Email this event",
-    "type": "Community"
+    "source": "KOTO Community Calendar",
+    "desc": "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa,…",
+    "type": "Talks & Classes"
   },
   {
     "title": "AJ FULLERTON",
@@ -2905,7 +2906,7 @@
     "img": "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned concert pianist Max Levinson. Together, they produce a number of…",
+    "desc": "August 25 - August 30 at multiple venues in Ridwway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of…",
     "type": "Music",
     "endDate": "2026-08-30"
   },
@@ -2972,7 +2973,7 @@
     "img": "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for the second CREATIVE SPACE artist salon on WEDNESDAY JUNE 24! We will enjoy an artist talk by local painter, Karen Keene Day, during the run of her exhibition in the Decker Room. Stay and socialize with creatives afterward!…",
+    "desc": "Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and…",
     "type": "Arts & Film",
     "endDate": "2026-09-24"
   },
@@ -4352,5 +4353,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Headlining the celebration…",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Leadership Summit",
+    "href": "https://www.telluride.com/event/telluride-leadership-summit/",
+    "date": "2026-10-03",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-10-07"
   }
 ]

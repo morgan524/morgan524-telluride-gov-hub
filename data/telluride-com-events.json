@@ -771,5 +771,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp"
+  },
+  {
+    "title": "Telluride Leadership Summit",
+    "link": "https://www.telluride.com/event/telluride-leadership-summit/",
+    "description": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
+    "pubDate": "2026-10-04",
+    "endDate": "2026-10-07",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
   }
 ]
