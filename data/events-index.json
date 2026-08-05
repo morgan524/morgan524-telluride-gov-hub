@@ -1620,7 +1620,7 @@
     "img": "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Come see local youth's best rabbits, sheep, chickens and other farm animals. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is…",
+    "desc": "Come see local youth's best rabbits, sheep, chickens and other farm animals. Drool over delicious baked goods, wines, needlework, art and photos in the Open General Projects category. If you're looking for some locally-raised beef, pork or…",
     "type": "Festivals",
     "endDate": "2026-08-15"
   },
@@ -2579,19 +2579,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Prepare to flip your perspective on the most misunderstood residents of the night sky! Join us at the Pa-Co-Chu-Puk Ponds for an eye-opening morning dedicated to the world’s only flying mammals. Far from being spooky, these \"caped…",
-    "type": "Community"
-  },
-  {
-    "title": "AUDITIONS ~ Rocky Horror Picture Show Shadow Cast at the Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/auditions-rocky-horror-picture-show-shadow-cast-at-the-sherbino",
-    "date": "2026-08-23",
-    "time": "1:00 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53551411507364/huge/9351508c53a849b9e4a9476395a004248a6e58d9.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild…",
     "type": "Community"
   },
   {
@@ -3801,12 +3788,12 @@
   },
   {
     "title": "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
-    "href": "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday",
+    "href": "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday-6700",
     "date": "2026-09-16",
     "time": "6:30 PM",
     "location": "The Sherbino",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53426396696874/huge/27241d9ecc4f078cbc6939a2d11aa90a4705a5f0.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S.…",
@@ -4235,5 +4222,18 @@
     "desc": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
     "type": "Outdoors & Sports",
     "endDate": "2026-10-07"
+  },
+  {
+    "title": "The Ridgway 1k Rally thru the Alley 2026 ~ presented by Citizens State Bank",
+    "href": "https://events.ourayridgwayevents.com/event/the-ridgway-1k-rally-thru-the-alley-2026-presented-by-citizens-state-bank",
+    "date": "2026-10-04",
+    "time": "12:15 PM",
+    "location": "Weehawken Ridgway (Old Schoolhouse)",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52594955200102/huge/3db67c1200c0d9d2af4a79fb63697fe875912a78.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Event Date: October 4, 2026 In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm).…",
+    "type": "Talks & Classes"
   }
 ]
