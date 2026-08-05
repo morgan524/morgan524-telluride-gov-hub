@@ -377,6 +377,9 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "mv|2026-09-03|Design Review Board":
+    {"sv":4},
+
+  "county|2026-08-27|CWAB":
     {"sv":4}
 };
 
@@ -575,9 +578,112 @@ const MEETING_PREVIEWS = {
     "The Telluride Housing Authority Subcommittee is expected to meet on September 2, 2026, as part of its regular monthly schedule. No specific agenda items are publicly detailed, but the subcommittee typically addresses local affordable housing matters, program updates, and related administrative business.",
 
   "county|2026-09-02|Board of County Commissioners Meeting":
-    "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County."
+    "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County.",
+
+  "county|2026-08-27|CWAB":
+    "The San Miguel County CWAB meeting is expected to involve legal and financial matters, including probate proceedings for multiple estates and foreclosure sales on properties in Telluride and Mountain Village, such as a vacant lot on Stonegate Drive and a Double Diamond condominium unit."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Music on the Mesa",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 8, 2026",
+    newsTopic: "arts-culture",
+    copy: "Live music event on the mesa.",
+    href: "https://norwoodcolorado.com/event/music-on-the-mesa-4/",
+    img: ""
+  },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
@@ -1033,7 +1139,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The August 26, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
+    "The August 26 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1069,7 +1175,10 @@ const MANUAL_SUMMARIES = {
     "The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "mv|2026-09-03|Design Review Board":
-    "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet."
+    "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
+
+  "county|2026-08-27|CWAB":
+    "The August 27 CWAB agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1327,6 +1436,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Fore for a cause",
+    source: "Telluride Times",
+    date: "August 5, 2026",
+    firstSeen: "2026-08-05",
+    newsTopic: "community",
+    copy: "The Bob Miller Memorial Golf Tournament — now in its 28th year — raises money for the Telluride Adaptive Sports Program, with this year's event set for Sept. 17 at Telluride Golf Club. Bob Miller helped found TASP in 1996 and passed away two years later; his wife and family will attend this year for the first time in many years. Register at tellurideadaptivesports.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_4b36b0e7-0dd6-48a9-bc75-c774c184e0a1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/1d/91dcdd42-9d1f-4294-bb28-a08ce66b8073/6a727d8fcd3dc.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Patrick Rondinelli: Telluride’s seasoned new deputy town manager",
+    source: "Telluride Times",
+    date: "August 5, 2026",
+    firstSeen: "2026-08-05",
+    newsTopic: "community",
+    copy: "Telluride hired Patrick Rondinelli as deputy town manager this summer. He brings 13 years as Ouray's city administrator and nine years with the Colorado Dept. of Local Affairs, supporting southwest Colorado communities. He's based in Ouray and knows the region well.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8d6c8f96-d0b4-4aa9-a0d0-ab18b912ba98.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca310ef2-5edb-4142-8419-2326101a6801/6a739ceb85cb5.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "New Alloy Kitchen",
     source: "Telluride Times",
@@ -2646,39 +2779,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-05/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-05T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-08-05/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-08-05T17:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-05/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-08-05T19:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
     title: "Telluride Film Festival Nugget Project Talk",
     link: "https://koto.org/event/telluride-film-festival-nugget-project-talk/",
     description: "Telluride Film Festival hosts a Nugget Project Talk on Wednesday, August 5 th , at 3:30 p.m. in the Program Room at Wilkinson Public Library.",
@@ -3731,6 +3831,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/50382168464273/huge/9567987a01fc4f1da8e171fabd1eb5b7bdbdccfa.jpg"
   },
   {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-05T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
@@ -3922,6 +4034,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Downtown Ridgway, CO",
     imageUrl: "https://localist-images.azureedge.net/photos/52941247100302/huge/24aa8ce412f9817ce04becd51e5d1cc5b8db2cad.jpg"
+  },
+  {
+    title: "First Friday Reception - Roots and Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/first-friday-reception-roots-and-rhythms",
+    description: "Roots & Rhythms returns for a second reception celebrating this collaborative exhibition. Join us for an exciting evening featuring live music with T-Bone, the artists present, and an interactive art experience. Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
+    pubDate: "2026-08-07T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621931741575/huge/c986c6fd0e2d747d8f8d9617a4b544d0dad533ee.jpg"
   },
   {
     title: "First Friday at Rootwings Art at Rootwings Art",
@@ -4154,6 +4277,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
   },
   {
+    title: "On Display - Roots and Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
+    description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
+    pubDate: "2026-08-10T15:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
+  },
+  {
     title: "Senior Lunch by Neighbor to Neighbor",
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
@@ -4335,17 +4470,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53500612747225/huge/d592d9f9005f6dd7c1d76cbb109c68986d38d503.jpg"
-  },
-  {
-    title: "Spencer Marlyn Band - Live @ Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/spencer-marlyn-band-live-floating-lotus-brewery-335",
-    description: "Spencer Marlyn Band is what happens when a looping wizard and a one-man drum circle collide. Formed in Bend, Oregon, by two Midwest transplants, this high-energy duo delivers the kind of sound you would expect from a full band—genre-hopping through funk, reggae, bluegrass, jam, folk, and psychedelia. Frontman Spencer Marlyn combines captivating songwriting with a looping setup and effects-pedal mastery, while percussionist Scottie brings a globally influenced punch shaped by West African rhythms and a wildly diverse drum kit. The result is a danceable, feel-good explosion of sound packed with originals and crowd-favorite covers. View on site | Email this event",
-    pubDate: "2026-08-14T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53604104925928/huge/1d26a65a7f2186c5172d845f74bbeb53f5ccb043.jpg"
   },
   {
     title: "Ouray County Pride",
@@ -4592,7 +4716,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Miner's Heritage Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092594380571/huge/dd4fc50c3832545339cb376e1b3c66326236ee56.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/52092594380571/huge/0242f87adfd989494856026cfcdfbb5c60ca7962.jpg"
   },
   {
     title: "RIDGWAY WRECKING CREW",
@@ -4652,13 +4776,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray Day",
     link: "https://events.ourayridgwayevents.com/event/ouray-day",
-    description: "Celebrate Ouray's heritage with a day of art, food, games, and family-friendly fun! Bring your friends, family, and neighbors to cheer on the hard rock mining competitions during Highgraders Holiday, sample delicious entries in the Ouray Women's Club Annual Chili Cookoff, and enjoy activities and entertainment for all ages. Saturday, August 22, 2026 Noon to 4:00 PM Fellin Park, Ouray ACTIVITIES 🏐 Volleyball & Bocce Ball tournaments 🌶️ Chili Cookoff ⛏️ HighGraders Holiday mining competition (9 AM-3 PM) 🏰 Bouncy houses 💦 Dunk tank 🎨 Local artist booths 🎲 Games for all ages 🎁 Door prizes (including a chance to win an Ouray Hot Springs Pool Annual Pass!) Plus, a free afternoon entry at Ouray Hot Springs for Ouray-area residents with completion of a community survey (available at the event) SCHEDULE Noon – Ouray Day begins 1–2 PM – Volleyball Tournament 1–3 PM – Chess Tournament 2-3 PM – Bocce …",
+    description: "Celebrate Ouray's heritage with a day of art, food, games, and family-friendly fun! Bring your friends, family, and neighbors to cheer on the hard rock mining competitions during Highgraders Holiday, sample delicious entries in the Women's Club of Ouray County Annual Chili Cookoff, and enjoy activities and entertainment for all ages. Saturday, August 22, 2026 Noon to 4:00 PM Fellin Park, Ouray ACTIVITIES 🏐 Volleyball & Bocce Ball tournaments 🌶️ Chili Cookoff ⛏️ HighGraders Holiday mining competition (9 AM-3 PM) 🏰 Bouncy houses 💦 Dunk tank 🎨 Local artist booths 🎲 Games for all ages 🎁 Door prizes (including a chance to win an Ouray Hot Springs Pool Annual Pass!) Plus, a free afternoon entry at Ouray Hot Springs for Ouray-area residents with completion of a community survey (available at the event) SCHEDULE Noon – Ouray Day begins 1–2 PM – Volleyball Tournament 1–3 PM – Chess Tournament 2-3 PM …",
     pubDate: "2026-08-22T18:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53481231331209/huge/e33196ce52a57dc504a5ff3bdea39e754192273e.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53481231331209/huge/c0cdcb0d2847ee1b3356d6a5770d61693b5eea88.jpg"
   },
   {
     title: "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
@@ -4786,17 +4910,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53259548444843/huge/23e7eee7a5733b674e4f9932b58f78da3e273dc9.jpg"
   },
   {
-    title: "THE ONLIES - Live at The Sherbino",
-    link: "https://events.ourayridgwayevents.com/event/the-onlies-live-at-the-sherbino",
-    description: "August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets: $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in partnership by The Sherbino with Pickin’ Productions The Onlies are a longstanding collective of young friends defining a powerful new generation of stringband music. Described as “the best old-time stringband out there” (Songlines), their music moves with a pulsating drive, sharp arrangements, and rich vibration — it resounds with the present. Multi-instrumentalists and vocalists Sami Braman, Riley Calcagno, and Leo Shannon formed The Onlies in Seattle as young kids, bringing in celebrated guitarist/singer Vivian Leva 10 years later. “ Their fourth album, You Climb The Mountain, marks 20 years as a band. …",
-    pubDate: "2026-08-27T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Sherbino",
-    imageUrl: "https://localist-images.azureedge.net/photos/52994337466169/huge/c00e4314e46ffb42f048810ccb67e832be842847.jpg"
-  },
-  {
     title: "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
     link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-floating-lotus-brewery-7737",
     description: "If you like blues music with a kick, you will love the Fabulous Blues Tones. With Greg Jacobs and Tony Kovacic out front on vocals and guitars, the band comes to the stage with a whole slew of house-rocking material—some timeless standards and some pulled from deep within the blues vault. On drums and bass, Tim Brennan and Dave Underwood keep the pocket tight and the groove going strong all night long. This is authentic, hard-driving blues played by four musicians who dearly love it. Come out and get your mojo working. View on site | Email this event",
@@ -4917,6 +5030,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551521567232/huge/386838c9a250aca9388bec73873cf507473ae100.jpg"
+  },
+  {
+    title: "Dinosaur Tracks Hike",
+    link: "https://events.ourayridgwayevents.com/event/dinosaur-tracks-hike",
+    description: "Hike up the Silvershield Trail to see fossilized dinosaur tracks. This is a strenuous and steep hike of 1600 vertical feet. You should be in good hiking shape to do this tour. We will discuss the geology and natural history of this formation. Be prepared to be outside in variable weather and at altitude. Expect to hike uphill for 1.5-2 hours. REGISTER HERE This activity is sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
+    pubDate: "2026-09-02T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Silvershield Trailhead",
+    imageUrl: "https://localist-images.azureedge.net/photos/53622925400388/huge/78ed1b5451403be8feaebe77cd45b69c1a39e826.jpg"
   },
   {
     title: "City Slickers: CO-150 Film Festival Screening @ the Wright",
@@ -5240,6 +5364,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52594260880730/huge/9b3f82c821e5f84eb57dee6af0b87a07ecd09517.jpg"
   },
   {
+    title: "Geology Tour",
+    link: "https://events.ourayridgwayevents.com/event/geology-tour-1061",
+    description: "Join a local geologist for a guided tour exploring the fascinating geology that shapes our landscape. You’ll gain a deeper understanding of the forces that built this incredible region, while exploring the range of rock formations, from sandstone to quartzite. REGISTER HERE This activity is sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
+    pubDate: "2026-09-26T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Visitor Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53623018208189/huge/fa73fbfb09ce8f09a2e637984cbe313d209e0bfb.jpg"
+  },
+  {
     title: "Exceptional Women of Ouray County",
     link: "https://events.ourayridgwayevents.com/event/exceptional-women-of-ouray-county",
     description: "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of these extraordinary women enrich our lives and help make our community a better place to live. The Exceptional Women program celebrates their accomplishments and dedication and the hard work they do on our behalf. The awards now include Exceptional Educators from Ouray and Ridgway school districts and an Exceptional Healthcare Professional. View on site | Email this event",
@@ -5348,6 +5483,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/52594955200102/huge/3db67c1200c0d9d2af4a79fb63697fe875912a78.jpg"
+  },
+  {
+    title: "San Juan Oktoberfest 2026",
+    link: "https://events.ourayridgwayevents.com/event/san-juan-oktoberfest-2026",
+    description: "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and cottonwoods glowing on the hillsides, and the irresistible scent of bratwursts sizzling in Hartwell Park. That can only mean one thing: Oktoberfest has arrived! This year marks the inaugural San Juan Oktoberfest, happening Sunday, October 4, immediately following the wildly fun Ridgway 1K Rally Through the Alley. After the costumes, laughter, and downhill dash through town, the celebration continues in the park with a festival that blends Austrian tradition with Rocky Mountain charm. Picture lederhosen and dirndls, frothy steins clinking together, live music filling the autumn air, and kids laughing just as much as the adults. …",
+    pubDate: "2026-10-04T20:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52595045386518/huge/f5138926bb27495f4ce42292fa805810d8db023d.jpg"
   }
 ];
 

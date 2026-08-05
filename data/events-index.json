@@ -1,16 +1,30 @@
 [
   {
     "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-05/",
+    "href": "https://telluridelibrary.libcal.com/event/16767660?hs=a",
     "date": "2026-08-05",
     "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Program Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you…",
     "type": "Community"
+  },
+  {
+    "title": "On Display: PAWS for Art Gallery Asian-themed show",
+    "href": "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    "date": "2026-08-05",
+    "time": "10:00 AM",
+    "location": "Second Chance PAWS for Art Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    "type": "Arts & Film",
+    "endDate": "2026-08-31"
   },
   {
     "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
@@ -25,19 +39,6 @@
     "desc": "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational,…",
     "type": "Arts & Film",
     "endDate": "2026-08-28"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://koto.org/event/market-on-the-plaza/2026-08-05/",
-    "date": "2026-08-05",
-    "time": "11:00 AM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
-    "type": "Community"
   },
   {
     "title": "Storytime with a Firefighter",
@@ -170,6 +171,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-08-05",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
+  },
+  {
     "title": "Wine and Wickets",
     "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
     "date": "2026-08-05",
@@ -288,19 +302,6 @@
     "source": "Wilkinson Public Library",
     "desc": "9:00 AM – 10:00 AM · Join Melissa and Tiffany for a fun, exciting tour of the library plants. We will enjoy stories from Melissa as well as some delicious pastries and coffee.",
     "type": "Community"
-  },
-  {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-05/",
-    "date": "2026-08-05",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -631,6 +632,19 @@
     "desc": "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and…",
     "type": "Arts & Film",
     "endDate": "2026-10-02"
+  },
+  {
+    "title": "First Friday Reception - Roots and Rhythms",
+    "href": "https://events.ourayridgwayevents.com/event/first-friday-reception-roots-and-rhythms",
+    "date": "2026-08-07",
+    "time": "5:00 PM",
+    "location": "Space to Create Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53621931741575/huge/c986c6fd0e2d747d8f8d9617a4b544d0dad533ee.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Roots & Rhythms returns for a second reception celebrating this collaborative exhibition. Join us for an exciting evening featuring live music with T-Bone, the artists present, and an interactive art experience. Roots & Rhythms features…",
+    "type": "Arts & Film"
   },
   {
     "title": "First Friday at Rootwings Art at Rootwings Art",
@@ -1136,6 +1150,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building…",
     "type": "Wellness",
+    "endDate": "2026-08-31"
+  },
+  {
+    "title": "On Display - Roots and Rhythms",
+    "href": "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
+    "date": "2026-08-10",
+    "time": "9:00 AM",
+    "location": "Space to Create Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
+    "type": "Arts & Film",
     "endDate": "2026-08-31"
   },
   {
@@ -2496,7 +2524,7 @@
     "time": "",
     "location": "Miner's Heritage Park",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52092594380571/huge/dd4fc50c3832545339cb376e1b3c66326236ee56.jpg",
+    "img": "https://localist-images.azureedge.net/photos/52092594380571/huge/0242f87adfd989494856026cfcdfbb5c60ca7962.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Watch the Hardrock mining competition and learn about the history of mining in Ouray. There will be a full bar, and food vendors. Miner’s Heritage Park is on the southwest corner of Fellin Park. Friday, Aug. 21 | Fellin Park Horseshoe…",
@@ -2510,10 +2538,10 @@
     "time": "12:00 PM",
     "location": "Fellin Park",
     "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53481231331209/huge/e33196ce52a57dc504a5ff3bdea39e754192273e.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53481231331209/huge/c0cdcb0d2847ee1b3356d6a5770d61693b5eea88.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Celebrate Ouray's heritage with a day of art, food, games, and family-friendly fun! Bring your friends, family, and neighbors to cheer on the hard rock mining competitions during Highgraders Holiday, sample delicious entries in the Ouray…",
+    "desc": "Celebrate Ouray's heritage with a day of art, food, games, and family-friendly fun! Bring your friends, family, and neighbors to cheer on the hard rock mining competitions during Highgraders Holiday, sample delicious entries in the Women's…",
     "type": "Food & Drink"
   },
   {
@@ -2831,19 +2859,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "",
     "type": "Arts & Film"
-  },
-  {
-    "title": "THE ONLIES - Live at The Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/the-onlies-live-at-the-sherbino",
-    "date": "2026-08-26",
-    "time": "7:00 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52994337466169/huge/c00e4314e46ffb42f048810ccb67e832be842847.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "August 26 || 6:30 pm doors & Bar || 7:00 pm showtime || seated show || General Admission Tickets: $28 advance / $32 day of show (some reserved section seats are also available via map above GA tickets as-available). Presented in…",
-    "type": "Community"
   },
   {
     "title": "RSUN \\\\ MINDSET",
@@ -3302,6 +3317,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "City Slickers: CO-150 Film Festival @ the Wright WHEN? Wednesday, September 2 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 53min RATING: PG-13 ROTTEN TOMATOES SCORE: 90% ABOUT THE…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Dinosaur Tracks Hike",
+    "href": "https://events.ourayridgwayevents.com/event/dinosaur-tracks-hike",
+    "date": "2026-09-02",
+    "time": "9:00 AM",
+    "location": "Silvershield Trailhead",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53622925400388/huge/78ed1b5451403be8feaebe77cd45b69c1a39e826.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Hike up the Silvershield Trail to see fossilized dinosaur tracks. This is a strenuous and steep hike of 1600 vertical feet. You should be in good hiking shape to do this tour. We will discuss the geology and natural history of this…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Film Festival",
@@ -4052,6 +4080,19 @@
     "type": "Community"
   },
   {
+    "title": "Geology Tour",
+    "href": "https://events.ourayridgwayevents.com/event/geology-tour-1061",
+    "date": "2026-09-26",
+    "time": "9:00 AM",
+    "location": "Ouray Visitor Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53623018208189/huge/fa73fbfb09ce8f09a2e637984cbe313d209e0bfb.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join a local geologist for a guided tour exploring the fascinating geology that shapes our landscape. You’ll gain a deeper understanding of the forces that built this incredible region, while exploring the range of rock formations, from…",
+    "type": "Community"
+  },
+  {
     "title": "Ouray County Railroad Days: 9/26-9/27, 2026",
     "href": "https://events.ourayridgwayevents.com/event/ouray-county-railroad-days-926-927-2026",
     "date": "2026-09-26",
@@ -4235,5 +4276,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Event Date: October 4, 2026 In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm).…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "San Juan Oktoberfest 2026",
+    "href": "https://events.ourayridgwayevents.com/event/san-juan-oktoberfest-2026",
+    "date": "2026-10-04",
+    "time": "2:00 PM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52595045386518/huge/f5138926bb27495f4ce42292fa805810d8db023d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and…",
+    "type": "Music"
   }
 ]

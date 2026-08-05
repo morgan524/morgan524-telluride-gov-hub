@@ -1,22 +1,26 @@
 {
-  "hash": "b529355064ce35b6c15f3433fb91d69762f752bc",
-  "lede": "The biggest item this week is Tuesday's Telluride Town Council meeting, where the Colorado Wildfire Resiliency Code comes up for its third and final reading — pass it and the Land Use Code changes for good, reshaping what property owners can do with landscaping and historic structures. Before that, Wednesday's San Miguel County BOCC holds public hearings on three Land Use Code amendments, including a redefinition of 'Qualified Owner' in affordable housing rules and a wildfire areas update, and the Telluride Housing Authority Subcommittee weighs in on a deed-restriction variance for a Telluride homeowner facing a $47,000 roof bill. Jazz Fest kicks off Friday to round out the week.",
+  "hash": "3c53b277e96d075c179ef372f810966024c26043",
+  "lede": "The biggest thing on the calendar this week is the San Miguel County BOCC meeting on August 5, where commissioners will hold public hearings and move toward formal votes on three Land Use Code amendments — including a wildfire areas update and a change to the 'Qualified Owner' definition that touches deed-restricted housing rules. Telluride Town Council follows on August 11 with third reading of the Colorado Wildfire Resiliency Code, which would rewrite land use and landscaping standards for property owners valleywide. In between, the Telluride Jazz Festival opens Friday and the KOTO Duck Race runs alongside it.",
   "notable": [
     {
       "id": 3,
-      "stake": "Public hearings on three county Land Use Code changes, including affordable housing ownership rules."
+      "stake": "Three Land Use Code amendments go to public hearing and formal vote."
     },
     {
       "id": 2,
       "stake": "Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof."
     },
     {
-      "id": 7,
-      "stake": "Architecture and conditional-use permit reviews for three new multifamily projects in Mountain Village."
+      "id": 9,
+      "stake": "Third reading of Wildfire Resiliency Code would amend land use and landscaping rules for all property owners."
     },
     {
-      "id": 9,
-      "stake": "Third and final reading of Wildfire Resiliency Code — permanent Land Use Code change if approved."
+      "id": 7,
+      "stake": "Conditional-use permit and architecture reviews for three multifamily projects in Mountain Village."
+    },
+    {
+      "id": 5,
+      "stake": "Ouray County LUC definitions rewrite — changes here quietly shift what the rules allow in practice."
     }
   ]
 }
