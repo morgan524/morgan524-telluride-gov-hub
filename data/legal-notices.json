@@ -588,5 +588,65 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
     "address": "",
     "smcBidID": "159"
+  },
+  {
+    "title": "Notice of Opportunity to Object -- South Uncompahgre Hazardous Fuels and Ecological Resiliency Project (SUHFER)",
+    "entity": "USDA Forest Service, Grand Mesa, Uncompahgre and Gunnison National Forests",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The USDA Forest Service Grand Mesa, Uncompahgre and Gunnison National Forests (Norwood and Ouray Ranger Districts) has prepared a Final Environmental Assessment and Draft Decision Notice for the 267,300-acre SUHFER Project on the Uncompahgre Plateau. The project establishes a 20-year Condition-Based Management framework for silvicultural treatments, hazardous fuels reduction, and wildlife habitat improvements to increase forest resilience against wildfire, insects, and disease. Eligible parties who previously submitted written comments may file a pre-decisional objection within 45 calendar days of the August 6, 2026 publication date.",
+    "deadline": "2026-09-20",
+    "expires": "2026-09-20",
+    "dates": "8/6",
+    "papers": [
+      "ttimes_0806"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
+    "address": "Uncompahgre Plateau, Norwood and Ouray Ranger Districts, Grand Mesa, Uncompahgre and Gunnison National Forests, Colorado",
+    "noticeKey": "SUHFER-objection-2026"
+  },
+  {
+    "title": "Public Hearing -- San Miguel County Planning Commission Regular Meeting (August 13, 2026)",
+    "entity": "San Miguel County Planning Commission",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "The San Miguel County Planning Commission will hold its regular meeting on Thursday, August 13, 2026 at 9:00 AM at 333 West Colorado Ave., Second Floor, Telluride. The agenda includes approval of July minutes, a work session on minor and major subdivisions, and a referral and recommendation on an Energy Code Update. The meeting is also accessible via Zoom for remote public participation.",
+    "deadline": "2026-08-13",
+    "expires": "2026-08-13",
+    "dates": "8/6",
+    "papers": [
+      "ttimes_0806"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
+    "address": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    "noticeKey": "smc-planning-commission-2026-08-13"
+  },
+  {
+    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Application",
+    "entity": "Montrose Memorial Hospital, Inc.",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Public Notice",
+    "filterTag": "public-entity",
+    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications to fill open positions on its Board of Directors. Application packets are available online, by email, or in person at the Montrose Regional Health Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the Board's annual meeting in October.",
+    "deadline": "2026-08-14",
+    "expires": "2026-08-14",
+    "dates": "8/6",
+    "papers": [
+      "ttimes_0806"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
+    "address": "800 South 3rd Street, Montrose, CO",
+    "noticeKey": "montrose-memorial-hospital-bod-applications-2026"
   }
 ]
