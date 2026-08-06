@@ -392,6 +392,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-06",
+    title: "When a roof costs more than the rules allow",
+    body: "Lela and Jon Martin need a new roof on their deed-restricted Gold Run unit. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their 2010-era deed restriction only lets staff approve capital improvements up to 5% without a finding that the work adds occupancy capacity. A failing roof clearly doesn't do that. Staff recommends approval anyway, but admits the legal standard may not be met.\n\nOne view: the rules exist to keep deed-restricted units affordable, not to trap owners with deteriorating roofs. The other: if exceptions get made case by case, the caps lose their meaning.\n\nWhen the rules and the reality collide like this, what should the subcommittee do?",
+    choices: ["Approve it — a roof is a roof", "Hold the line on the cap", "Update the deed restriction first", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-05",
     title: "Dogs on the Valley Floor — a little, or not at all?",
     body: "The Open Space Commission is weighing a recommendation to Town Council to allow dogs on a limited portion of the River Trail on the Valley Floor. Three trail alignments for that same Reach 1 segment are also on the table, each routed around mapped wetlands near the Public Works facility. Nothing is decided yet — this is a commission recommendation, not a final vote. Some residents see a reasonable middle ground; others think any access sets a precedent for a space that was set aside for a reason. Where do you stand?",
@@ -1414,6 +1422,42 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Parent PLUS loan limits leave families scrambling before fall semester",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-06",
+    newsTopic: "housing",
+    copy: "Federal changes to Parent PLUS loans — now capped at $20,000/year and $65,000 lifetime — blindsided families just weeks before fall semester. Students who took dual enrollment credits in high school may exhaust eligibility before graduating. Norwood's True North Youth Program stepped in with a $5,000 scholarship for one local student caught in the gap.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_35b523aa-436d-4f69-ae7e-7977f1a10e28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/46/b46708e7-5a80-481e-819b-026cd66cf162/6a73d588074e7.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Iran war renews concerns about the lasting toll of traumatic brain injuries to US troops",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-06",
+    newsTopic: "community",
+    copy: "Nearly 700 U.S. troops have been wounded in the Iran conflict, most with traumatic brain injuries. Doctors still can't predict who'll have lasting effects, and drone blasts close to the head create different brain damage than ground-level explosions. Some lawmakers are pressing the military on whether injured troops received timely screening and care.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_bd3a30b3-a750-5d21-95ae-29f598169ae9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0a/b0aaf848-7645-5ed7-9614-27295e508ec3/6a74671a699d4.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘Detroiticizing’ the Dead: Don Was reinterprets ‘Blues for Allah’",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-06",
+    newsTopic: "community",
+    copy: "Don Was — six-time Grammy winner and longtime producer — brings his nine-piece Pan-Detroit Ensemble to Telluride to perform the Grateful Dead's *Blues for Allah* in full, reimagined through a Detroit lens. Was played upright bass with Bobby Weir and the Wolf Bros for eight years until Weir's death earlier this year. The project debuted last fall and marks the album's 50th anniversary.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_2ce30e73-1b9f-47a2-a7d5-123d6f5d2bdd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/95/f95f5439-ba3f-407d-a390-967cac98e66e/6a71594e36e1e.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Legals and Public Notices for August 6-12, 2026",
     source: "Telluride Times",
