@@ -130,9 +130,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/ePrh_CzmTLKqp0syEbUesw","meetingId":"894 7506 0147","passcode":"314276.","phone":"719) 359-4580"},
-
   "county|2026-07-14|Historical Commission":
     {"sv":4},
 
@@ -541,9 +538,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
     "Council is expected to meet in an intergovernmental worksession with San Miguel County representatives to discuss proposed Land Use Code amendments, including new regulations for Natural Medicine Businesses, changes to the \"Qualified Owner\" definition, and updates to Wildfire Area standards. A lost water share certificate replacement may also be addressed.",
 
-  "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
-    "Council is expected to gather for a retreat session on August 6, 2026. Related legal notices indicate ongoing San Miguel County discussions around natural medicine businesses, wildfire area regulations, qualified owner definitions, and a water share certificate replacement, though the retreat's specific agenda items were not fully disclosed.",
-
   "county|2026-08-12|Board of County Commissioners Work Session":
     "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices also cover property tax exemption programs for seniors, disabled veterans, and gold star spouses, as well as upcoming foreclosure sales on two Mountain Village properties.",
 
@@ -561,9 +555,6 @@ const MEETING_PREVIEWS = {
 
   "county|2026-08-26|Board of County Commissioners Work Session":
     "Commissioners are expected to address county administrative matters. Related legal notices include probate and creditor claims for multiple estates and two foreclosure sales involving properties in Telluride and Telluride Mountain Village, managed by the San Miguel County Public Trustee.",
-
-  "mv|2026-08-06|Design Review Board":
-    "Board will consider design reviews for two multifamily residential projects: four new units at 100 Pennington Place and a multifamily building on Lost Creek Lane, the latter continued from June. Members will also approve minutes from the July 2 meeting and hear an additional quasi-judicial recommendation to Town Council.",
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
     "Council is expected to address a utilities matter involving a request to replace a lost or destroyed share certificate (#887) for the Farmers' Water Development Company, originally issued to A.F. Newans M.D. Additional agenda items have not been specified in available materials.",
@@ -921,13 +912,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-05';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-01';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-06';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-06';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-07-06|Open Space Commission - Jul 06 2026":
-    "Three substantive items on the Valley Floor dominate this meeting. First, the Commission reviews alternative trail alignments for Reach 1 of the Valley Floor Open Space — three route options are mapped, each threading around wetland delineations. Second, the Telluride Mountain Club requests permission to route approximately 0.25 miles of the long-planned Mountain Village to Valley Floor Connector Trail across Town-owned open space; after nine years of public engagement and a completed NEPA process, the Forest Service has issued a FONSI and Draft Decision Notice — the missing piece is this short segment on Town land. The Club also asks the Commission to recommend allowing dogs on that segment, for consistency with the surrounding Forest Service trail. Third, a forwarded letter from resident Ramona Gaylord challenges the goat grazing program, citing drought conditions, documented thistle re-emergence in the 2025 grazing footprint, elk calving conflicts, and an absence of measurable pilot data — and asking the Commission to reconsider before committing roughly $10,000 to another season.",
-
   "smart|2026-07-09|SMART Board of Directors":
     "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
 
@@ -1061,7 +1049,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 San Miguel County Planning Commission agenda hasn't been posted yet.",
+    "The August 13 Planning Commission agenda hasn't been posted yet.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -2090,78 +2078,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A crowded shelter looks toward expansion",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "arts-culture",
-    copy: "Hoof and Paw in Naturita has grown from helping 60–70 animals a year to over 300, and space is tight. The shelter is fundraising $34,000 for a converted shipping container — dubbed \"Caturita\" — to house cats, with $5,000 raised so far. Details and donations at hoofandpawcolorado.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_9c94c8cb-6ff1-4a0a-b3d7-253b3a8680a0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/17/b171ccfe-3c61-47f6-a874-98d3fca4afb9/6a62419b1c29a.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Errico: ‘The State of the Town is strong and engaging’",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "community",
-    copy: "Mayor Errico's mid-year State of the Town address shifted from January's \"ongoing disruption\" framing to \"strong and engaging,\" crediting residents, staff, and visitors rather than government. He highlighted completed infrastructure work — repaved bike paths, park improvements, housing programs — while calling for earlier civic involvement instead of last-minute pushback on decisions. The mudslides and wildfires still weigh on the region.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_ea5e5200-39e4-49fb-af23-33fe1f7dbfb3.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/b2/fb2dc9e0-020a-4ec4-9e31-330b8c8d14c1/6a6248857dc0c.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Summer sounds at The Yard",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "education",
-    copy: "Telluride Chamber Music returns to The Yard at NPRD's Norwood campus for two free outdoor concerts — July 23 featuring a San Juan Symphony string quartet playing Mozart and Dvořák, and Aug. 27 with a jazzier set from keyboardist Kenny Goldman and saxophonist Yaz Ishikawa. Gates open 5:30 p.m., music runs 6–7 p.m. Bring a picnic and a blanket; rain moves things inside The Livery.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_fe7a2edf-4f4c-4e85-865f-8ab4d184b496.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/65/c655494b-791c-4ec8-a023-5fecb122c984/6a6240f29e76a.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "CHALKBOARD Week of July 23-29",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "government",
-    copy: "Community birthdays run July 23–29, and regular weekly events continue — Norwood Farmers Market Thursdays 2–6 p.m., Senior Meals Mondays and Thursdays at noon, Food Pantry Sundays 3–6 p.m. Free chamber music at The Livery on July 23, 6–7 p.m.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_90dc97b8-f5f6-4ef1-bbe1-f053707152d2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/d8/8d85fcc6-d6d8-4992-8da7-93889651880e/6a622ba032bbf.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Chef showdown",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "community",
-    copy: "Top Chef & Taste of Telluride returns August 1st at the Telluride Innovation Center, 5:30–9:30 p.m., benefiting One to One Mentoring. Two-time defending champ Graeme Charles faces challenger Jen Williams of Van Atta, a 22-year culinary veteran with James Beard–connected credits. Around 20 local chefs also participate in the tasting portion, with a silent auction alongside.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_4c8665b3-858d-4ef0-a484-adf343c93e92.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/47/147805a2-1f96-4d3e-a5ae-996fa67f66dd/6a607cb5acd38.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Legals and Public Notices for July 23-29, 2026",
-    source: "Telluride Times",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "education",
-    copy: "This week's legals include a creditor notice for the estate of Lawrence de Bivort (claims due Nov. 16), the Town of Telluride seeking proposals for Town Park and Warner Field improvements (due July 31), and San Miguel County seeking bids to repaint the Placerville Schoolhouse (due Aug. 6). A foreclosure proceeding has been filed in San Miguel County on a 2022 deed of trust.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -2209,17 +2125,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Notice of Vacancy on Sustainability Advisory Board",
-    source: "Town of Ridgway",
-    date: "July 23, 2026",
-    firstSeen: "2026-07-23",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/07-2926-Vacancy-on-SAB-Notice.pdf",
-    img: ""
-  },
-  {
     title: "Notice of Public Hearings Aug 12, 2026 at 5:30pm 1) Proposal: organization of Alpenglow Vista Metro Districts 1-4, 2) Application: Hyde Subdivision, resubdivision of lots",
     source: "Town of Ridgway",
     date: "July 31, 2026",
@@ -2255,6 +2160,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 8-5-26",
+    source: "KOTO Community Radio",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "Dylan Brooks Vies for Seat on San Miguel Board of County Commissioners; Tri-County Shifts to Thrive Community Health Network; Feathered Athletes Flock to Telluride",
+    href: "https://koto.org/news/newscast-8-5-26/"
+  },
   {
     title: "Newscast 8-3-26",
     source: "KOTO Community Radio",
@@ -2310,19 +2223,18 @@ const KOTO_NEWSCASTS = [
     newsTopic: "recreation",
     copy: "West End Roundup with the San Miguel Basin Forum; Recreation on the Uncompahgre River; Cat Movie Fisher with Risho Unda",
     href: "https://koto.org/news/newscast-7-23-26/"
-  },
-  {
-    title: "Newscast 7-22-26",
-    source: "KOTO Community Radio",
-    date: "July 23, 2026",
-    newsTopic: "housing",
-    copy: "Preparing for Mudslides; Telluride Extends Housing Waitlist Suspension; A State of the Town Address",
-    href: "https://koto.org/news/newscast-7-22-26/"
   }
 ];
 
 const KOTO_FEATURED_STORIES = [
-
+  {
+    title: "Dylan Brooks Vies for Seat on San Miguel Board of County Commissioners",
+    source: "KOTO Community Radio",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "Dylan Brooks is running for San Miguel County Commissioner in District 2. He spoke with KOTO News about why he's running and his vision for the county.",
+    href: "https://koto.org/news/dylan-brooks-san-miguel-county-commissioner-candidate-election/"
+  }
 ];
 
 // San Miguel Basin Forum (West End — Norwood, Nucla, Naturita, Paradox).
@@ -2779,50 +2691,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Film Festival Nugget Project Talk",
-    link: "https://koto.org/event/telluride-film-festival-nugget-project-talk/",
-    description: "Telluride Film Festival hosts a Nugget Project Talk on Wednesday, August 5 th , at 3:30 p.m. in the Program Room at Wilkinson Public Library.",
-    pubDate: "2026-08-05T21:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    link: "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-05/",
-    description: "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.",
-    pubDate: "2026-08-05T23:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Being and Becoming Ute: The Story of an American Indian People",
-    link: "https://koto.org/event/being-and-becoming-ute-the-story-of-an-american-indian-people/",
-    description: "Join author Sondra Jones for a presentation about her book, Being and Becoming Ute: The Story of an American Indian People on Wednesday, August 5th at 5:30 pm! Sondra Jones traces the metamorphosis of the Ute people from a society of small, interrelated bands of mobile hunter-gatherers to sovereign, dependent nations—modern tribes who run extensive business enterprises and government services. Weaving together the history of all Ute groups—in Colorado, Utah, and New Mexico—the narrative describes their traditional culture, including the many facets that have continued to define them as a people. Jones emphasizes how the Utes adapted over four centuries and details events, conflicts, trade, and social interactions with non-Utes and non-Indians. …",
-    pubDate: "2026-08-05T23:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Rotary Club Meeting",
-    link: "https://koto.org/event/telluride-rotary-club-meeting-9/",
-    description: "Telluride Rotary Club meets Wednesday, August 5, at 6 p.m. at the Mountain Lodge in Mountain Village. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    pubDate: "2026-08-06T00:00:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Mountain Lodge Telluride, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3227,6 +3095,72 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Studio TAB: Summer Fever",
+    link: "https://koto.org/event/studio-tab-summer-fever/",
+    description: "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening at a private estate in Aldasoro Ranch overlooking Wilson Peak. Enjoy a curated mini fashion show, delicious heavy hors d'oeuvres, signature cocktails, and an evening of music, celebration, and community—all in support of the Telluride AIDS Benefit. One Night Only Fundraiser Benefitting TAB Mini Fashion Show | Heavy Apps | Cocktails | DJ Only 100 Tickets Available!",
+    pubDate: "2026-08-16T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://koto.org/event/movies-under-the-stars/2026-08-15/",
+    description: "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from 6:30-8:30 p.m.! Enjoy lawn games, sidewalk chalk, a bounce house, face painting and more. Film schedule below: June 13 – Alice in Wonderland (1951) June 20 – Zootopia 2 July 4 – The Sandlot July 11 – Elio July 18 – How to Train Your Dragon (2025) July 25 – GOAT August 1 – Wicked for Good August 8 – Hoppers August 15 – Superman (2025)",
+    pubDate: "2026-08-16T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Conference Center Plaza Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg"
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-08-16T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-08-16/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-08-16T20:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Book Buzz – Free Coffee!",
+    link: "https://koto.org/event/book-buzz-free-coffee/",
+    description: "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-08-17T15:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
+    link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-17/",
+    description: "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on identification for her bird walk the following morning. The bird walk will take place at 8:30 am on August 18th. Meet outside the Telluride Patagonia store. Bring binoculars if you have them. If you don't, they will be provided. The walk is limited to 12 participants. Sign up at Telluride Patagonia or with a QR code provided on local flyers.",
+    pubDate: "2026-08-17T23:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
     imageUrl: ""
   }
 ];
@@ -5286,18 +5220,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg"
   },
   {
-    title: "4th Annual San Juan Slam Pickleball Tournament",
-    link: "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
-    description: "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for spectators, takes place at the Ridgway Athletic Field from September 18-20. Sept. 18 Women's Doubles, Sept. 19 Mixed Doubles, and Sept. 20 Men's Doubles. This year's tournament will follow a Team Round-Robin pool play format with medal rounds at every skill and age level, providing participants and spectators plenty of gameplay. Our 4-legged friends (on leashes of course) are welcome to get their photo taken for inclusion in the World Famous 'Dogs of the San Juan Slam'. View on site | Email this event",
-    pubDate: "2026-09-18T15:00:00.000Z",
-    endDate: "2026-09-20",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Athletic Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53613028091683/huge/e56cdb46a4d61fdd2c60557def953fd8939a1e2e.jpg"
-  },
-  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-6979",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5601,17 +5523,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
-    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
-    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
-    pubDate: "2026-08-04T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
-  },
-  {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -5775,17 +5686,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48861/ben_musser_walker_young_1800x900px.png"
-  },
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-15T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
   },
   {
     title: "Mind Blown Telluride",
@@ -6472,17 +6372,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63161/bike-and-brewery-tour-1800x900_870x435.800x533.webp"
   },
   {
-    title: "Mountain Village National Night Out Celebration",
-    link: "https://www.telluride.com/event/mountain-village-national-night-out-celebration/",
-    description: "The Mountain Village Police Department and Village Court Apartments are teaming up to host the 14th annual National …",
-    pubDate: "2026-08-04",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48735/2024nationalnightoutsocial1-90e201c71225e012.800x533.webp"
-  },
-  {
     title: "Eco-Grief Workshops: Between Grief & Gratitude",
     link: "https://www.telluride.com/event/eco-grief-workshops-between-grief-gratitude-where-love-and-loss-meet-in-a-changing-world/",
     description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for …",
@@ -6954,40 +6843,6 @@ const LEGAL_NOTICES = [
     url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    title: "Request for Quote -- Request for Quote: Material Hauling",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Quote",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
-    address: "",
-    smcBidID: "159"
-  },
-  {
-    title: "Request for Proposal -- Soil Preparation and Regrading of Mill Creek Park Site",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Soil Preparation and Regrading of Mill Creek Park Site.",
-    deadline: "Open until contracted",
-    expires: "2026-08-05",
-    dates: "5/7",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189",
-    address: "",
-    smcBidID: "189"
-  },
-  {
     title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
     entity: "San Miguel County Assessor",
     entityClass: "ent-county",
@@ -7169,24 +7024,6 @@ const LEGAL_NOTICES = [
     noticeKey: "property-tax-exemption-senior-veteran-2026"
   },
   {
-    title: "Public Notice -- San Miguel County Board of Equalization (CBOE) Session 2026",
-    entity: "San Miguel County Board of Equalization",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The San Miguel County Board of Commissioners will sit as the Board of Equalization (CBOE) from July 1 through August 5, 2026, to hear taxpayer appeals of Assessor property valuation and classification decisions. Independent hearing officers will conduct hearings and submit recommendations; only taxpayers who previously filed objections with the Assessor may petition. Filing deadlines are July 15, 2026 for real property and July 20, 2026 for personal property.",
-    deadline: "2026-07-20",
-    expires: "2026-08-05",
-    dates: "7/2",
-    papers: ["ttimes_0702"],
-    url: "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    address: "Miramonte Building, 2nd Floor, Room 201, 333 West Colorado Avenue, Telluride, Colorado",
-    noticeKey: "COL-000178-cboe-2026"
-  },
-  {
     title: "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     entity: "Estate of Gerald D. Wilson",
     entityClass: "ent-county",
@@ -7278,42 +7115,6 @@ const LEGAL_NOTICES = [
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "probate-2026PR30008",
     caseNumber: "2026PR30008"
-  },
-  {
-    title: "Public Hearing -- San Miguel County LUC Amendment, Section 5-1305B \"Qualified Owner\" Definition",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-1305B, which would change the definition of 'Qualified Owner,' along with related amendments to Sections 5-1305C and 5-1350F. This is the second step of a two-step LUC amendment process requiring Community Planning Commission review and Board action. The hearing is scheduled for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
-    deadline: "2026-08-05",
-    expires: "2026-08-05",
-    dates: "7/16",
-    papers: ["ttimes_0716"],
-    url: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    address: "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    noticeKey: "smc-luc-amendment-5-1305B-qualified-owner"
-  },
-  {
-    title: "Public Hearing -- San Miguel County LUC Amendment, Section 5-406 Wildfire Areas",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-406 (Wildfire Areas), with related amendments to Article 7 (Definitions). This is the second step of a two-step LUC amendment process. The hearing is set for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
-    deadline: "2026-08-05",
-    expires: "2026-08-05",
-    dates: "7/16",
-    papers: ["ttimes_0716"],
-    url: "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    address: "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    noticeKey: "smc-luc-amendment-5-406-wildfire"
   },
   {
     title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
@@ -7550,6 +7351,23 @@ const LEGAL_NOTICES = [
     address: "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     noticeKey: "COL-000202-foreclosure-2026-04-stonegate",
     caseNumber: "Foreclosure Sale No. 2026-04"
+  },
+  {
+    title: "Request for Quote -- Request for Quote: Material Hauling",
+    entity: "San Miguel County",
+    entityClass: "ent-county",
+    entityLogo: "county",
+    icon: "🏛️",
+    iconClass: "type-rfp",
+    type: "Request for Quote",
+    filterTag: "public-entity",
+    summary: "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
+    deadline: "Open until contracted",
+    expires: "2026-11-04",
+    dates: "8/6",
+    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
+    address: "",
+    smcBidID: "159"
   }
 ];
 
@@ -8907,16 +8725,6 @@ function getTownAgendaLink(title, eventDate) {
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
   {
-    date: "August 5, 2026",
-    title: "Telluride Housing Authority Subcommittee",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8162",
-    hasAgenda: true,
-    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-    time: "",
-    civicwebId: 8162,
-    packetUrl: "https://telluride-co.civicweb.net/document/442849/"
-  },
-  {
     date: "August 6, 2026",
     title: "Town Council Retreat",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
@@ -9061,6 +8869,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8045
+  },
+  {
+    date: "November 4, 2026",
+    title: "Telluride Housing Authority Subcommittee",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8165",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8165
   }
 ];
 

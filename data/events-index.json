@@ -80,19 +80,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Telluride Film Festival Nugget Project Talk",
-    "href": "https://koto.org/event/telluride-film-festival-nugget-project-talk/",
-    "date": "2026-08-05",
-    "time": "3:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/film.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Film Festival hosts a Nugget Project Talk on Wednesday, August 5 th , at 3:30 p.m. in the Program Room at Wilkinson Public Library.",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Sweet Sounds - Live Music and Sweet Treats! Speakeasy Jazz Trio",
     "href": "https://telluridelibrary.libcal.com/event/16604747?hs=a",
     "date": "2026-08-05",
@@ -117,32 +104,6 @@
     "source": "Wilkinson Public Library",
     "desc": "4:00 PM – 6:00 PM · We will have: school health and immunization registration, community and financial resources, free school supplies, prizes, and more! Tendremos: registro de salud escolar y vacunaci n, recursos comunitarios y…",
     "type": "Festivals"
-  },
-  {
-    "title": "Tennis Clinic | 105 | 3.0+ | Golden Hour",
-    "href": "https://koto.org/event/tennis-clinic-105-3-0-golden-hour/2026-08-05/",
-    "date": "2026-08-05",
-    "time": "5:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning…",
-    "type": "Outdoors & Sports"
-  },
-  {
-    "title": "Being and Becoming Ute: The Story of an American Indian People",
-    "href": "https://koto.org/event/being-and-becoming-ute-the-story-of-an-american-indian-people/",
-    "date": "2026-08-05",
-    "time": "5:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join author Sondra Jones for a presentation about her book, Being and Becoming Ute: The Story of an American Indian People on Wednesday, August 5th at 5:30 pm! Sondra Jones traces the metamorphosis of the Ute people from a society of…",
-    "type": "Talks & Classes"
   },
   {
     "title": "America 250/Colorado 150 Book Club: Being and Becoming Ute",
@@ -2020,19 +1981,6 @@
     "type": "Music"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    "date": "2026-08-15",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    "type": "Community"
-  },
-  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-08-15",
@@ -2046,6 +1994,19 @@
     "type": "Community"
   },
   {
+    "title": "Studio TAB: Summer Fever",
+    "href": "https://koto.org/event/studio-tab-summer-fever/",
+    "date": "2026-08-15",
+    "time": "6:00 PM",
+    "location": "",
+    "town": "",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening…",
+    "type": "Music"
+  },
+  {
     "title": "Teen Pride Karaoke Night",
     "href": "https://events.ourayridgwayevents.com/event/teen-pride-karaoke-night",
     "date": "2026-08-15",
@@ -2057,6 +2018,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This…",
     "type": "Community"
+  },
+  {
+    "title": "Movies Under the Stars",
+    "href": "https://koto.org/event/movies-under-the-stars/2026-08-15/",
+    "date": "2026-08-15",
+    "time": "6:30 PM",
+    "location": "Conference Center Plaza Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
+    "type": "Arts & Film"
   },
   {
     "title": "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
@@ -2111,6 +2085,32 @@
     "type": "Community"
   },
   {
+    "title": "Drop In Tech Time with Oliver",
+    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
+    "date": "2026-08-16",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "type": "Community"
+  },
+  {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-08-16/",
+    "date": "2026-08-16",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-16",
@@ -2122,6 +2122,19 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
+  },
+  {
+    "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
+    "href": "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-17/",
+    "date": "2026-08-17",
+    "time": "5:00 PM",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Lunch and Learn: Region 10 Enterprise Zone- what does this mean for businesses?",
@@ -2161,6 +2174,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Enjoy free movies under the stars in Ridgway's Hartwell Park. They'll start at 8:30pm. Bring your own chairs, blankets and snacks. Brought to you by the Ridgway Youth Advisory Council. Here's the line-up: June 15th - Ferris Bueller's Day…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Book Buzz – Free Coffee!",
+    "href": "https://koto.org/event/book-buzz-free-coffee/",
+    "date": "2026-08-17",
+    "time": "9:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip,…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "TOP Volunteer Work Day – Monday, August 17",
@@ -3906,20 +3932,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Music Bingo @ the Wright WHEN? Friday, September 18 Doors at 6:30 pm • Music Bingo at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT It's bingo with a soundtrack. Instead of numbers, your bingo card is…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "4th Annual San Juan Slam Pickleball Tournament",
-    "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
-    "date": "2026-09-18",
-    "time": "9:00 AM",
-    "location": "Ridgway Athletic Park",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53613028091683/huge/e56cdb46a4d61fdd2c60557def953fd8939a1e2e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
-    "type": "Outdoors & Sports",
-    "endDate": "2026-09-20"
   },
   {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",

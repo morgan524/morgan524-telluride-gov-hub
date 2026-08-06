@@ -13,40 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Request for Quote -- Request for Quote: Material Hauling",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Quote",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
-    "deadline": "Open until contracted",
-    "expires": "2026-08-05",
-    "dates": "5/7",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
-    "address": "",
-    "smcBidID": "159"
-  },
-  {
-    "title": "Request for Proposal -- Soil Preparation and Regrading of Mill Creek Park Site",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Proposal",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Soil Preparation and Regrading of Mill Creek Park Site.",
-    "deadline": "Open until contracted",
-    "expires": "2026-08-05",
-    "dates": "5/7",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=189",
-    "address": "",
-    "smcBidID": "189"
-  },
-  {
     "title": "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
     "entity": "San Miguel County Assessor",
     "entityClass": "ent-county",
@@ -244,26 +210,6 @@
     "noticeKey": "property-tax-exemption-senior-veteran-2026"
   },
   {
-    "title": "Public Notice -- San Miguel County Board of Equalization (CBOE) Session 2026",
-    "entity": "San Miguel County Board of Equalization",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Board of Commissioners will sit as the Board of Equalization (CBOE) from July 1 through August 5, 2026, to hear taxpayer appeals of Assessor property valuation and classification decisions. Independent hearing officers will conduct hearings and submit recommendations; only taxpayers who previously filed objections with the Assessor may petition. Filing deadlines are July 15, 2026 for real property and July 20, 2026 for personal property.",
-    "deadline": "2026-07-20",
-    "expires": "2026-08-05",
-    "dates": "7/2",
-    "papers": [
-      "ttimes_0702"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_d2ca136e-7993-4d52-abfc-0e8f243974dd.html",
-    "address": "Miramonte Building, 2nd Floor, Room 201, 333 West Colorado Avenue, Telluride, Colorado",
-    "noticeKey": "COL-000178-cboe-2026"
-  },
-  {
     "title": "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     "entity": "Estate of Gerald D. Wilson",
     "entityClass": "ent-county",
@@ -365,46 +311,6 @@
     "address": "District Court of San Miguel County, Colorado",
     "noticeKey": "probate-2026PR30008",
     "caseNumber": "2026PR30008"
-  },
-  {
-    "title": "Public Hearing -- San Miguel County LUC Amendment, Section 5-1305B \"Qualified Owner\" Definition",
-    "entity": "San Miguel County Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-1305B, which would change the definition of 'Qualified Owner,' along with related amendments to Sections 5-1305C and 5-1350F. This is the second step of a two-step LUC amendment process requiring Community Planning Commission review and Board action. The hearing is scheduled for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
-    "deadline": "2026-08-05",
-    "expires": "2026-08-05",
-    "dates": "7/16",
-    "papers": [
-      "ttimes_0716"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    "noticeKey": "smc-luc-amendment-5-1305B-qualified-owner"
-  },
-  {
-    "title": "Public Hearing -- San Miguel County LUC Amendment, Section 5-406 Wildfire Areas",
-    "entity": "San Miguel County Board of County Commissioners",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "The San Miguel County Board of County Commissioners will hold a public hearing to consider a Land Use Code amendment to Section 5-406 (Wildfire Areas), with related amendments to Article 7 (Definitions). This is the second step of a two-step LUC amendment process. The hearing is set for 10:00 AM or later on Wednesday, August 5, 2026, held both online and in person at 333 W Colorado Ave, 2nd Floor, Telluride; written comments should be received by noon on July 28, 2026.",
-    "deadline": "2026-08-05",
-    "expires": "2026-08-05",
-    "dates": "7/16",
-    "papers": [
-      "ttimes_0716"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_6d5eb2e7-d860-4528-8e72-754a66dad591.html",
-    "address": "333 W Colorado Ave, 2nd Floor, Telluride, CO 81435",
-    "noticeKey": "smc-luc-amendment-5-406-wildfire"
   },
   {
     "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
@@ -665,5 +571,22 @@
     "address": "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village)",
     "noticeKey": "COL-000202-foreclosure-2026-04-stonegate",
     "caseNumber": "Foreclosure Sale No. 2026-04"
+  },
+  {
+    "title": "Request for Quote -- Request for Quote: Material Hauling",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Quote",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Request for Quote: Material Hauling.",
+    "deadline": "Open until contracted",
+    "expires": "2026-11-04",
+    "dates": "8/6",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=159",
+    "address": "",
+    "smcBidID": "159"
   }
 ]

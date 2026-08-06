@@ -1,26 +1,18 @@
 {
-  "hash": "3c53b277e96d075c179ef372f810966024c26043",
-  "lede": "The biggest thing on the calendar this week is the San Miguel County BOCC meeting on August 5, where commissioners will hold public hearings and move toward formal votes on three Land Use Code amendments — including a wildfire areas update and a change to the 'Qualified Owner' definition that touches deed-restricted housing rules. Telluride Town Council follows on August 11 with third reading of the Colorado Wildfire Resiliency Code, which would rewrite land use and landscaping standards for property owners valleywide. In between, the Telluride Jazz Festival opens Friday and the KOTO Duck Race runs alongside it.",
+  "hash": "a7c869bb9a39aa164f2bf54e527e981af540f766",
+  "lede": "The week's most consequential moment comes Tuesday, August 11, when Telluride Town Council takes up third reading of the Colorado Wildfire Resiliency Code — a vote that would amend the Land Use Code's historic review standards and landscaping rules to meet state wildfire requirements, the kind of change that ripples out to nearly every property owner in town. Before that, Thursday's Council retreat sets the Town's 2027 priorities, which quietly drives budget and staff decisions all year, and Mountain Village's Design Review Board takes on three multifamily projects. The Telluride Jazz Festival kicks off Friday and runs through the weekend, with the KOTO Duck Race also on tap.",
   "notable": [
     {
       "id": 3,
-      "stake": "Three Land Use Code amendments go to public hearing and formal vote."
+      "stake": "Third-reading vote on Wildfire Resiliency Code changes land-use and landscaping rules."
     },
     {
-      "id": 2,
-      "stake": "Vote on whether a deed-restricted homeowner can exceed capital improvement limits for a new roof."
+      "id": 0,
+      "stake": "Council sets 2027 priorities that will shape the full budget and policy cycle."
     },
     {
-      "id": 9,
-      "stake": "Third reading of Wildfire Resiliency Code would amend land use and landscaping rules for all property owners."
-    },
-    {
-      "id": 7,
-      "stake": "Conditional-use permit and architecture reviews for three multifamily projects in Mountain Village."
-    },
-    {
-      "id": 5,
-      "stake": "Ouray County LUC definitions rewrite — changes here quietly shift what the rules allow in practice."
+      "id": 1,
+      "stake": "Three multifamily projects reviewed, including a conditional-use permit decision."
     }
   ]
 }
