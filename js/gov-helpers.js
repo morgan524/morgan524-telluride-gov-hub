@@ -2390,7 +2390,34 @@ const SMB_FORUM_ARTICLES = [
 // pinned letter or feature here is stable. local-news.html prepends these and
 // honors `featured: true`. Set `isLetter: true` to get the Letter-to-the-Editor
 // treatment (byline + logo) while still using a custom `img` as the hero.
+//
+// Standing rule (Morgan, 2026-08-06): a FEATURE lasts only until the morning
+// review, where the next one is picked. `expires: "YYYY-MM-DD"` = "retire at
+// 6:30 AM MT on this date" (NOT midnight), so a story featured today gets
+// expires = tomorrow and hands off cleanly at the next morning review. Longer
+// runs only when Morgan directs one. Non-featured pins (e.g. the standing
+// letter below) may omit `expires` and run until hand-removed.
+//
+// 6:30 rather than 6:00 because content-refresh commits land 1.5–3h after their
+// cron fires — the morning batch shows up ~5:30am MT, so 6:30 guarantees the
+// review is picking from today's news, not yesterday's.
+//
+// Do NOT re-feature a story that has already had its day — once `featured` is
+// dropped it stays dropped; the review finds something new.
 const LOCAL_NEWS_FEATURED = [
+  {
+    title: "Fire management moonshot",
+    source: "Telluride Times",
+    sourceKey: "ttimes",
+    date: "August 6, 2026",
+    summary: "In a guest column, Norwood's John Metzger argues that a half-century of suppress-everything forest policy has left Western timberlands overgrown and primed to burn, and that the fix is industrial-scale thinning paired with utility-grade biomass plants that turn the excess fuel into energy. He points to the 1990s WHIMS defensible-space program -- which stalled on political resistance and thin rural fire budgets -- as the model to revive, and calls for a CCC-style national service corps to do the work.",
+    href: "https://www.telluridenews.com/article_c6fb9425-1ec8-5321-969c-ad7808f56cf5.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/84/e849a731-98e2-5067-a168-3729aa39f798/6a745ca4b69ef.image.jpg?crop=766%2C403%2C0%2C11",
+    category: "Opinion",
+    newsTopic: "public-safety",
+    featured: true,
+    expires: "2026-08-08"   // Morgan directed a longer run: through Aug 7, off at the Aug 8 review
+  },
   {
     title: "Stakeholders discuss housing density",
     source: "Telluride Times",
@@ -2401,7 +2428,7 @@ const LOCAL_NEWS_FEATURED = [
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/94/1948eea0-c2e0-49bc-afdc-e5c61414fd91/6a5ac8e016a5b.image.jpg",
     category: "Housing",
     newsTopic: "housing",
-    featured: true
+    featured: false   // had its run as the feature (Jul 19–Aug 6); never re-feature
   },
   {
     title: "Dry thunderstorms could complicate firefighting efforts",

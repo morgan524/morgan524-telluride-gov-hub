@@ -182,6 +182,36 @@
   // senior meals, food pantry, birthdays) we already carry as events — so it
   // never runs as a news card.
   function isAggregatorRoundup(s) { return /\bchalkboard\b/i.test(s.title || ''); }
+  // Scheduled removal for LOCAL_NEWS_FEATURED pins.
+  //
+  // Standing rule (Morgan, 2026-08-06): a feature runs only until the morning
+  // review, which is where the next one gets picked. So `expires: 'YYYY-MM-DD'`
+  // means "retire at the review cutoff on this date" — NOT midnight. A story
+  // pinned today normally gets `expires` = tomorrow, so it hands off at the next
+  // morning review with no dark window overnight. Morgan can direct a longer
+  // run; omitting `expires` entirely leaves it up until hand-removed.
+  //
+  // The cutoff is 6:30am, NOT 6:00 — content-refresh commits land 1.5–3h after
+  // their cron fires, so the morning batch (the 12:00 UTC run) actually arrives
+  // ~5:30am MT. 6:30 leaves ~1h of margin so the review is always choosing from
+  // the day's fresh news rather than yesterday's. Times are America/Denver
+  // wall-clock, so the cutoff is 6:30 local for every reader, in either DST
+  // phase, regardless of which UTC-scheduled job does the picking.
+  var PIN_CUTOFF_MIN = 6 * 60 + 30;   // 6:30am MT
+  function mtMinutes() {
+    var p = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Denver', hour: 'numeric', minute: '2-digit', hour12: false
+    }).formatToParts(new Date());
+    function part(t) { for (var i = 0; i < p.length; i++) if (p[i].type === t) return parseInt(p[i].value, 10); return 0; }
+    var h = part('hour');
+    return (h === 24 ? 0 : h) * 60 + part('minute');   // some engines render midnight as '24'
+  }
+  function isPinLive(a) {
+    if (!a.expires) return true;
+    var today = LTData.todayMT();
+    if (today !== a.expires) return today < a.expires;
+    return mtMinutes() < PIN_CUTOFF_MIN;   // on the expiry date: gone at the review
+  }
   function parseWhen(s) { var d = new Date(s.date || s.firstSeen || ''); return isNaN(d) ? 0 : d.getTime(); }
   function normalize(a, srcLabel) {
     // dek: copy (scraped articles) or summary (LOCAL_NEWS_FEATURED pins store
@@ -335,7 +365,7 @@
   LTData.load(['telluride-times-articles', 'koto-newscasts', 'smb-forum-articles', 'local-news-featured', 'humane-society-animals'])
     .then(function (data) {
       renderPets(data['humane-society-animals']);
-      var pins = (data['local-news-featured'] || []).map(function (a) { var s = normalize(a, a.sourceKey || 'Featured'); s.featured = a.featured === true; return s; });
+      var pins = (data['local-news-featured'] || []).filter(isPinLive).map(function (a) { var s = normalize(a, a.sourceKey || 'Featured'); s.featured = a.featured === true; return s; });
       var pinHrefs = {};
       pins.forEach(function (p) { if (p.href) pinHrefs[p.href] = 1; });
       stories = pins.concat(
