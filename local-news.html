@@ -182,6 +182,23 @@
   // senior meals, food pantry, birthdays) we already carry as events — so it
   // never runs as a news card.
   function isAggregatorRoundup(s) { return /\bchalkboard\b/i.test(s.title || ''); }
+  // Standing rule (Morgan, 2026-08-07): government MEETING material — agendas,
+  // hearing notices, calls for work sessions — lives on the Gov Hub and never in
+  // Local News. This matches the notice/agenda shape rather than the source, so
+  // ordinary government press releases that really are news (a pass reopening, a
+  // highway closure, a road advisory) still run here.
+  function isGovMeetingNotice(s) {
+    var t = (s.title || '').replace(/&amp;/g, '&');
+    return /\bmeeting\s+agenda\b/i.test(t)
+        || /\b(regular|special|joint|emergency)\s+meeting\b/i.test(t)
+        || /\bwork\s+session\b/i.test(t)
+        || /\bnotice\s+(of|&|and)\s+call\b/i.test(t)
+        || /\bnotice\s+of\s+public\s+hearings?\b/i.test(t)
+        || /\bpublic\s+hearings?\s+(on|for|notice)\b/i.test(t)
+        || /\b(council|commission|board|committee)\s+agenda\b/i.test(t)
+        || /\bagenda\b.*\b(council|commission|board|committee)\b/i.test(t)
+        || /\b(council|commission|board|committee)\b.*\bagenda\b/i.test(t);
+  }
   // Scheduled removal for LOCAL_NEWS_FEATURED pins.
   //
   // Standing rule (Morgan, 2026-08-06): a feature runs only until the morning
@@ -375,6 +392,7 @@
         if (!s.title || !s.href) return false;
         if (isLegalNotice(s)) return false;   // legal notices live on /legal-notices.html only
         if (isAggregatorRoundup(s)) return false;   // CHALKBOARD = aggregator, never posted
+        if (isGovMeetingNotice(s)) return false;   // meeting agendas/hearing notices -> Gov Hub only
         if (!s.featured && pinHrefs[s.href] && pins.indexOf(s) === -1) return false;   // pin wins over duplicate
         return true;
       });
