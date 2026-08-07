@@ -714,7 +714,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
     img: ""
   },
   {
@@ -1188,7 +1188,7 @@ const MANUAL_SUMMARIES = {
     "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
 
   "county|2026-08-27|CWAB":
-    "The August 27 CWAB agenda hasn't been posted yet.",
+    "The August 27 CWAB meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled."
@@ -1449,6 +1449,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "The Burroughs sweat it out in Norwood",
+    source: "Telluride Times",
+    date: "August 7, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "arts-culture",
+    copy: "Nine-piece Colorado funk-soul band The Burroughs plays Norwood's Music on the Mesa at the San Miguel County Fairgrounds Pig Palace on Saturday, Aug. 8. The free outdoor show includes food vendors, a bar, and a kid zone with a squirt gun battle area. It's the sixth Music on the Mesa concert and the band's first appearance at the event.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_df45f2cf-adfc-4be6-9efe-936ace3239f1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/4c/e4c0c5c2-9b87-4d6d-b90e-bf4bb2107a10/6a74a24e2c68f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "County housing code discussions continue",
     source: "Telluride Times",
@@ -5976,28 +5988,6 @@ const NORWOOD_EVENTS = [
 
 const MOUNTAIN_VILLAGE_EVENTS = [
   {
-    title: "Design Review Board Meeting August 2026",
-    link: "https://townofmountainvillage.com/explore/events/all-events/august-design-review-board-meeting/",
-    description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
-    pubDate: "2026-08-06T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/31723/drb-event-new.png"
-  },
-  {
-    title: "Opening Show for Telluride Jazz Festival",
-    link: "https://townofmountainvillage.com/explore/events/all-events/opening-show-for-telluride-jazz-festival/",
-    description: "Join us on Thursday, August 6, from 5:00–7:00 PM for the Telluride Jazz Festival Opening Show at Reflection Plaza in Mountain Village (Music on the Green",
-    pubDate: "2026-08-06T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49400/mtn-village-event-image-opening-show.jpg"
-  },
-  {
     title: "Music on the Green Presents Logan Metz",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-logan-metz/",
     description: "Beyond The Groove and TMVOA (tmvoa.org) present Logan Metz at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
@@ -6436,6 +6426,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-09-06T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   }
 ];
 
