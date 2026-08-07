@@ -84,6 +84,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
     <div class="row"><input type="text" id="testto" value="info@livabletelluride.org"><button class="btn ghost tiny" id="test">Send test</button></div>
     <button class="btn sec" id="fulltest" style="margin-top:8px">▶ Send full test (real broadcast → your test list)</button>
     <div style="margin-top:14px">
+      <div id="ghwarn" class="status err" style="display:none;margin-bottom:8px"></div>
       <button class="btn primary" id="lockbtn" style="width:100%">✓ Approve &amp; Schedule</button>
       <div id="lockstate" style="font-size:12px;color:var(--muted);margin-top:6px"></div>
     </div>
@@ -93,6 +94,7 @@ input[type=text],input[type=password],textarea{width:100%;border:1px solid var(-
 
   <div class="panel">
     <div class="preview-head"><span class="dot ok"></span><span class="subj" id="psubj"></span><button class="btn ghost tiny" id="boldbtn" style="margin-left:auto" title="Select text in the preview below, then click to bold it (click again to unbold)"><b>B</b> Bold selection</button><button class="btn ghost tiny" id="linkbtn" style="margin-left:6px" title="Select text in the preview below, then click to turn it into a link">&#128279; Link selection</button><button class="btn ghost tiny" id="photobtn" style="margin-left:6px" title="Click a photo in the preview below, then click to upload a replacement">&#128247; Replace photo</button></div>
+    <div id="upd" style="font-size:11px;color:var(--muted);margin:-4px 0 8px;min-height:14px"></div>
     <input type="file" id="photofile" accept="image/*" style="display:none">
     <iframe class="frame" id="frame"></iframe>
   </div>
@@ -161,6 +163,25 @@ function setPill(h){
   if(h && h.ok && h.broadcast){ p.innerHTML='<span class="dot ok"></span>Customer.io — live'; }
   else if(h && h.ok){ p.innerHTML='<span class="dot"></span>Customer.io — test only (broadcast pending)'; }
   else { p.innerHTML='<span class="dot"></span>Worker offline'; }
+  showGhWarning(h && h.github);
+}
+// An expired GitHub token used to announce itself only when Approve failed —
+// after all the editing was done, minutes before a send window. Now the Desk
+// asks /health on load and says so up front.
+const GH_FIX =
+  'Fix: create a fine-grained GitHub token with <b>Contents: Read and write</b> on the site repo, then run '
+  + '<code>npx wrangler secret put GITHUB_TOKEN</code> in <code>cloudflare-worker/livabletelluride-digest</code> '
+  + '(or update the secret in the Cloudflare dashboard). Editing here still works — only Approve and photo upload need it.';
+function showGhWarning(status){
+  const el=$("ghwarn"); if(!el) return;
+  if(!status || status==="ok" || status==="unknown"){ el.style.display="none"; el.innerHTML=""; return; }
+  const head = status==="missing"
+    ? "⚠ <b>Approve is not configured</b> — the Worker has no GitHub token."
+    : status==="forbidden"
+      ? "⚠ <b>Approve will fail</b> — the GitHub token lacks write access to the site repo."
+      : "⚠ <b>Approve will fail</b> — the Worker's GitHub token has expired.";
+  el.innerHTML=head+"<br>"+GH_FIX;
+  el.style.display="block";
 }
 function buildSeg(){
   const seg=$("seg"); seg.innerHTML="";
@@ -181,6 +202,7 @@ function load(k){
   $("meta").innerHTML="<b>Audience:</b> "+d.audience+" segment<br><b>Covers:</b> "+d.covers;
   $("subject").value=d.subject; $("psubj").textContent=d.subject; $("frame").srcdoc=d.html;
   $("lede").value=currentLede(d.html);
+  if($("upd")) $("upd").textContent="";
   renderLog(); hideStatus(); updateLockState();
 }
 function updateLockState(){
@@ -196,13 +218,91 @@ async function lockDigest(){
   if(!confirm('Approve "'+d.subject+'" and SCHEDULE it? It becomes the final version and sends automatically '+sendWhen()+'. Nothing is sent right now.')) return;
   showStatus('<span class="spin"></span> Approving & scheduling…'); $("lockbtn").disabled=true;
   try{ const r=await api("/save",{ key:cur, html:d.html, subject:d.subject, weekStart:d.weekStart });
-    if(r.ok){ d.locked=true; updateLockState(); showStatus("✓ Approved & scheduled — this exact version sends automatically "+sendWhen()+". Nothing was sent now."); }
+    if(r.ok){ d.locked=true; updateLockState(); showGhWarning("ok");
+      showStatus("✓ Approved & scheduled — this exact version sends automatically "+sendWhen()+". Nothing was sent now."); }
+    else if(r.tokenExpired || /bad credentials|401/i.test(String(r.error||"")+String(r.detail||""))){
+      // Nothing was written — the Worker preflights the token before it starts.
+      showGhWarning("bad");
+      showStatus("⚠ <b>Couldn't approve — the Worker's GitHub token has expired.</b> Your edits are safe in this "
+        + "window; don't reload. "+GH_FIX+" Then click Approve again.",true); }
     else showStatus("⚠ "+(r.error||"approve failed")+(r.detail?" — "+r.detail:""),true);
   }catch(e){ if(e.message!=="unauthorized") showStatus("⚠ "+e.message,true); }
   finally{ $("lockbtn").disabled=false; }
 }
 $("lockbtn").onclick=lockDigest;
-function renderPreview(){ $("frame").srcdoc=state[cur].html; $("psubj").textContent=state[cur].subject; }
+// ---- preview refresh ----------------------------------------------------
+// Reassigning srcdoc reloads the iframe, which silently throws away the
+// reviewer's scroll position. An edit near the bottom of a long digest would
+// land correctly in the HTML but bounce the pane back to the masthead, so the
+// change was invisible until it arrived in a test email — the reviewer's whole
+// reason for distrusting the preview. Now: remember the scroll, and when the
+// Worker tells us what text it changed, scroll straight to it and flash it.
+// Applies to both the Week Ahead and the Weekend Ahead (shared code path).
+let _lastScroll = 0;
+function stampUpdated(note){
+  const el=$("upd"); if(!el) return;
+  const t=new Date().toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",second:"2-digit"});
+  el.textContent="Preview updated "+t+(note?" — "+note:"");
+}
+// A flash outline must NEVER survive into the saved email; serializeDoc strips
+// outline from every element, and we also clear it on a timer and before saves.
+let _flashTimer=null,_flashEl=null,_flashPrev=null;
+function clearFlash(){
+  if(_flashEl){ try{ if(_flashPrev!==null&&_flashPrev!==undefined) _flashEl.setAttribute("style",_flashPrev); else _flashEl.removeAttribute("style"); }catch(e){} }
+  _flashEl=null; _flashPrev=null;
+  if(_flashTimer){ clearTimeout(_flashTimer); _flashTimer=null; }
+}
+function flashEl(el){
+  clearFlash();
+  _flashEl=el; _flashPrev=el.getAttribute("style");
+  try{ el.style.outline="3px solid #b58a2c"; el.style.outlineOffset="2px"; }catch(e){}
+  _flashTimer=setTimeout(clearFlash,4500);
+}
+const _norm = (s) => String(s||"").replace(/\s+/g," ").trim();
+function findTextEl(doc, needle){
+  const n=_norm(needle); if(n.length<6) return null;
+  const root=doc.body||doc.documentElement; if(!root) return null;
+  for(const probe of [n, n.slice(0,60), n.slice(0,28)]){
+    if(probe.length<6) continue;
+    const w=doc.createTreeWalker(root, 4 /* SHOW_TEXT */, null);
+    let node;
+    while((node=w.nextNode())){ if(_norm(node.nodeValue).indexOf(probe)!==-1) return node.parentElement; }
+  }
+  return null;
+}
+// opts.locate: array of plain-text snippets the Worker actually changed.
+let _pendingLoad=null,_pendingTimer=null;
+function renderPreview(opts){
+  const o=opts||{}, fr=$("frame");
+  clearFlash();
+  // Drop any refresh still in flight so rapid-fire edits can't stack listeners.
+  if(_pendingLoad){ fr.removeEventListener("load",_pendingLoad); _pendingLoad=null; }
+  if(_pendingTimer){ clearTimeout(_pendingTimer); _pendingTimer=null; }
+  try{ const w=fr.contentWindow; if(w) _lastScroll = w.scrollY || (w.document&&w.document.documentElement&&w.document.documentElement.scrollTop) || 0; }catch(e){}
+  const settle=()=>{
+    if(_pendingTimer){ clearTimeout(_pendingTimer); _pendingTimer=null; }
+    if(_pendingLoad){ fr.removeEventListener("load",_pendingLoad); _pendingLoad=null; }
+    const doc=fr.contentDocument, win=fr.contentWindow;
+    if(!doc||!win){ stampUpdated(o.note||""); return; }
+    let hit=null;
+    for(const s of (o.locate||[])){ hit=findTextEl(doc,s); if(hit) break; }
+    if(hit){
+      try{ hit.scrollIntoView({block:"center"}); }catch(e){ try{ win.scrollTo(0,Math.max(0,(hit.offsetTop||0)-120)); }catch(e2){} }
+      flashEl(hit);
+      stampUpdated("jumped to the change");
+    } else {
+      try{ win.scrollTo(0,_lastScroll); }catch(e){}
+      stampUpdated(o.note||"");
+    }
+  };
+  _pendingLoad=settle;
+  fr.addEventListener("load",settle);
+  // Belt and braces: if the browser decides not to fire load (identical srcdoc,
+  // for instance) still stamp the pane so the reviewer is never left guessing.
+  _pendingTimer=setTimeout(settle,1800);
+  fr.srcdoc=state[cur].html;
+  $("psubj").textContent=state[cur].subject;
+}
 function showStatus(msg,isErr){ const s=$("status"); s.innerHTML=msg; s.className="status show"+(isErr?" err":""); }
 function hideStatus(){ $("status").className="status"; }
 
@@ -308,7 +408,13 @@ function stripSelOutline(doc){ doc.querySelectorAll("img").forEach(i=>{ if(i.sty
 // ballooned to 607 KB with two inline JPEGs (Gmail clips at ~102 KB and most
 // clients strip data: URIs). Fixed 2026-07-23.
 function serializeDoc(doc){
+  clearFlash();                       // never bake the "here's the change" outline into the email
   const clone=doc.documentElement.cloneNode(true);
+  // Belt and braces: no element in a digest legitimately carries an outline.
+  clone.querySelectorAll("[style*='outline']").forEach(e=>{
+    e.style.removeProperty("outline"); e.style.removeProperty("outline-offset");
+    if(!e.getAttribute("style")) e.removeAttribute("style");
+  });
   clone.querySelectorAll("img").forEach(i=>{
     const hosted=i.getAttribute("data-hosted-src");
     if(hosted && (i.getAttribute("src")||"").startsWith("data:")) i.setAttribute("src",hosted);
@@ -403,9 +509,13 @@ async function aiSend(text){
       history:d.history.filter(m=>m.role!=="sys").slice(0,-1) });
     thinking.remove();
     if(res.error){ addMsgEl("ai","⚠ "+res.error); pushHist("assistant","⚠ "+res.error); return; }
-    if(res.changed && res.html){ d.html=res.html; if(res.subject) d.subject=res.subject; renderPreview();
+    if(res.changed && res.html){ d.html=res.html; if(res.subject) d.subject=res.subject;
+      renderPreview({ locate: Array.isArray(res.appliedEdits) ? res.appliedEdits : [] });
       $("subject").value=d.subject; $("lede").value=currentLede(d.html);
       addMsgEl("sys","✎ preview updated"); state[cur].history.push({role:"sys",text:"✎ preview updated"}); }
+    else if(res.changed===false && !res.html){
+      // Nothing landed — say so in the pane too, so "did that work?" is never ambiguous.
+      stampUpdated("no change applied"); }
     addMsgEl("ai",res.reply||"(done)"); pushHist("assistant",res.reply||"(done)");
   }catch(e){ thinking.remove(); if(e.message!=="unauthorized") addMsgEl("ai","⚠ "+e.message); }
   finally{ $("aisend").disabled=false; }
@@ -450,7 +560,9 @@ function encodeLede(s){
   return parts.map(t=>LEDE_OPEN+encodeLedeInner(t)+"</p>").join("");
 }
 function applyLede(){ const d=state[cur]; if(!LEDE_RE.test(d.html)){ showStatus("Couldn't find the intro to update.",true); return; }
-  const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,()=>encodeLede(txt)); renderPreview(); showStatus("Intro updated in the preview."); }
+  const txt=$("lede").value.trim(); d.html=d.html.replace(LEDE_RE,()=>encodeLede(txt));
+  renderPreview({ locate:[ txt.replace(/\*\*/g,"").replace(/\[([^\]]*)\]\([^)]*\)/g,"$1").slice(0,60) ] });
+  showStatus("Intro updated in the preview."); }
 $("applyLede").onclick=applyLede;
 $("lede").addEventListener("blur",applyLede);
 

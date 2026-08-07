@@ -116,12 +116,21 @@ async function chat(body, env) {
   const edits = Array.isArray(inp.edits) ? inp.edits : [];
   let newHtml = emailHtml, applied = 0;
   const misses = [];
+  const appliedSnippets = [];
   for (const e of edits) {
     if (!e || typeof e.find !== "string" || typeof e.replace !== "string" || e.find === "") continue;
     const idx = newHtml.indexOf(e.find);
     if (idx === -1) { misses.push(e.find.replace(/\s+/g, " ").slice(0, 50)); continue; }
     newHtml = newHtml.slice(0, idx) + e.replace + newHtml.slice(idx + e.find.length);
     applied++;
+    // Visible text of what changed — used only to locate the edit in the
+    // rendered preview. A deletion has no new text, so fall back to the text
+    // just before the cut so the Desk can still scroll to the right place.
+    const plain = (s) => String(s).replace(/<[^>]*>/g, " ").replace(/&[a-z#0-9]+;/gi, " ")
+      .replace(/\s+/g, " ").trim();
+    const after = plain(e.replace);
+    const anchor = after || plain(newHtml.slice(Math.max(0, idx - 300), idx)).slice(-60);
+    if (anchor) appliedSnippets.push(anchor.slice(0, 80));
   }
   const subj = typeof inp.subject === "string" ? inp.subject : "";
   const subjectChanged = !!subj && subj !== String(body.subject || "");
@@ -136,6 +145,9 @@ async function chat(body, env) {
     changed,
     html: changed ? newHtml : "",
     subject: subj,
+    // What actually landed, so the Review Desk can scroll the reviewer to the
+    // change and flash it. Plain text only, short — this is a UI hint, not data.
+    appliedEdits: appliedSnippets.slice(0, 6),
   };
 }
 
@@ -252,7 +264,11 @@ async function ghAppendJson(env, path, entry) {
     headers,
     body: JSON.stringify({ message: "Blog: record sent broadcast " + (entry.date || ""), content: b64(JSON.stringify(arr, null, 2) + "\n"), branch: "main", ...(sha ? { sha } : {}) }),
   });
-  if (!put.ok) { const tt = await put.text(); throw new Error("GitHub " + put.status + ": " + tt.slice(0, 150)); }
+  if (!put.ok) {
+    const tt = await put.text();
+    if (put.status === 401) { _ghCache = { at: Date.now(), status: "bad" }; throw new Error(GH_TOKEN_HELP); }
+    throw new Error("GitHub " + put.status + ": " + tt.slice(0, 150));
+  }
 }
 
 // ── /save — freeze the human-approved digest as final for the week ──
@@ -276,6 +292,45 @@ async function ghPutFile(env, path, contentStr, message) {
   return ghPutB64(env, path, b64(contentStr), message);
 }
 
+// ── GitHub token health ──────────────────────────────────────────────────────
+// Fine-grained PATs expire. Before this existed the first sign of an expired
+// token was a raw "GitHub 401: Bad credentials" thrown in the reviewer's face at
+// Approve time — on a Friday morning, minutes before the send window, with no
+// way to tell it apart from a real outage. Now the Desk asks on load and warns
+// early, and /save refuses to start a half-write it can't finish.
+// Cached in module scope so the unauthenticated /health can't be used to hammer
+// GitHub; a Worker isolate lives minutes, so a fixed token is picked up quickly.
+let _ghCache = { at: 0, status: "unknown" };
+async function ghTokenStatus(env) {
+  if (!env.GITHUB_TOKEN) return "missing";
+  const now = Date.now();
+  if (_ghCache.status !== "unknown" && now - _ghCache.at < 60000) return _ghCache.status;
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  let status = "unknown";
+  try {
+    const r = await fetch("https://api.github.com/repos/" + repo, {
+      headers: {
+        "Authorization": "Bearer " + env.GITHUB_TOKEN,
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "livabletelluride-digest-worker",
+      },
+    });
+    if (r.status === 401) status = "bad";            // expired / revoked / malformed
+    else if (r.status === 403 || r.status === 404) status = "forbidden";  // wrong scope or repo
+    else if (r.ok) status = "ok";
+    else status = "unknown";
+  } catch (e) { status = "unknown"; }
+  _ghCache = { at: now, status };
+  return status;
+}
+
+const GH_TOKEN_HELP =
+  "The Worker's GitHub token has expired, so nothing can be committed. " +
+  "Create a new fine-grained token (Contents: Read and write on the site repo), " +
+  "then run `npx wrangler secret put GITHUB_TOKEN` in cloudflare-worker/livabletelluride-digest " +
+  "(or update the secret in the Cloudflare dashboard). Then click Approve again — " +
+  "nothing you have done here is lost.";
+
 // Same commit flow but the content is ALREADY base64 (binary uploads — the
 // /upload-image photos — must not round-trip through TextEncoder).
 async function ghPutB64(env, path, contentB64, message) {
@@ -297,6 +352,11 @@ async function ghPutB64(env, path, contentB64, message) {
   });
   if (!put.ok) {
     const t = await put.text();
+    if (put.status === 401) { _ghCache = { at: Date.now(), status: "bad" }; throw new Error(GH_TOKEN_HELP); }
+    if (put.status === 403 || put.status === 404) {
+      throw new Error("GitHub refused the write on " + path + " (" + put.status + "). The token is valid but " +
+        "doesn't have Contents: Read and write on this repo — re-issue it with that permission.");
+    }
     throw new Error("GitHub " + put.status + " on " + path + ": " + t.slice(0, 200));
   }
 }
@@ -324,6 +384,12 @@ async function uploadImage(body, env) {
 
 async function saveDigest(body, env) {
   if (!env.GITHUB_TOKEN) return { error: "Locking isn't configured yet — add a fine-scoped GitHub token (contents:write) as the Worker's GITHUB_TOKEN secret." };
+  // Preflight. /save writes TWO files (the digest, then the lock marker); a
+  // token that dies between them would leave the digest committed but
+  // unapproved — looks locked, never sends. Check first, write nothing on fail.
+  const tok = await ghTokenStatus(env);
+  if (tok === "bad") return { error: GH_TOKEN_HELP, tokenExpired: true };
+  if (tok === "forbidden") return { error: "The Worker's GitHub token is valid but lacks Contents: Read and write on the site repo — re-issue it with that permission.", tokenExpired: true };
   const key = String(body.key || "").trim();
   const file = DIGEST_FILES[key];
   if (!file) return { error: "Unknown digest key: " + key };
@@ -344,7 +410,15 @@ export default {
     const url = new URL(request.url);
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors(origin) });
     if (url.pathname === "/health") {
-      return json({ ok: true, broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim(), testBroadcast: !!(env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim() }, 200, origin);
+      return json({
+        ok: true,
+        broadcast: !!(env.CUSTOMERIO_BROADCAST_ID || "").trim(),
+        testBroadcast: !!(env.CUSTOMERIO_TEST_BROADCAST_ID || "").trim(),
+        // "ok" | "bad" | "missing" | "forbidden" | "unknown" — the Desk warns on
+        // load so an expired token surfaces before the reviewer does the work,
+        // not at Approve time. No secret is exposed, only whether it still works.
+        github: await ghTokenStatus(env),
+      }, 200, origin);
     }
     if (request.method !== "POST") return json({ error: "POST only" }, 405, origin);
 
