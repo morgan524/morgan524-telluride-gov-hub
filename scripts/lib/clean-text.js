@@ -35,4 +35,33 @@ function isPlaceholderSummary(s) {
   return /agenda[^.]{0,140}?\b(?:hasn'?t|has not)\s+been posted yet|agenda not yet available|no agenda(?:\s+text)?\s+available|agenda\s+(?:details\s+)?(?:tbd|pending|forthcoming|to be (?:determined|announced|posted))|meeting information unavailable|meeting scheduled for|list of past meetings|agenda content for this/i.test(s);
 }
 
-module.exports = { stripDescPreamble, isPlaceholderSummary };
+// Fingerprint of the ONLY two inputs a meeting summary is derived from. Stored
+// on a placeholder's agenda-meta as `ph` so content-refresh can tell "nothing
+// has changed since I last wrote this stub" from "a real agenda just landed".
+//
+// Why this exists: the previous guard skipped the Claude call only when BOTH
+// the agenda text and the seed text were empty. `agendaSeedText` is 50-140
+// chars of never-changing metadata (title/category from the source API), so on
+// every seed-text meeting the guard never fired and Claude re-derived a
+// byte-equivalent "agenda hasn't been posted yet" stub on all 8 daily runs,
+// forever. Measured 2026-08-07: 10 wasted calls/run, 80/day.
+function summaryInputFingerprint(agendaText, seedText) {
+  return require('crypto').createHash('sha1')
+    .update(`${agendaText || ''} ${seedText || ''}`)
+    .digest('hex').slice(0, 16);
+}
+
+// True when a placeholder stub can be left alone — same inputs as last time, so
+// re-asking would just re-roll the same sentence at full price. Any change to
+// the agenda/seed text (notably: a real agenda posting) flips this to false and
+// the summary regenerates, which is what keeps the cards self-healing.
+function placeholderIsCurrent(isPlaceholder, priorFingerprint, currentFingerprint) {
+  return !!isPlaceholder && !!priorFingerprint && priorFingerprint === currentFingerprint;
+}
+
+module.exports = {
+  stripDescPreamble,
+  isPlaceholderSummary,
+  summaryInputFingerprint,
+  placeholderIsCurrent,
+};

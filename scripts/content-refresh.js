@@ -714,10 +714,14 @@ ${agendaText || '[No agenda text available. The agenda has not been posted yet o
 
 Return ONLY valid JSON matching the format specified.`;
 
+  // SUMMARY_SYSTEM_PROMPT is ~2,000 tokens and byte-identical on every call in
+  // a run (up to ~95 of them). Marking it cache_control:ephemeral makes the
+  // first call write the cache and the rest read it at 10% of input price. The
+  // 5-minute cache TTL comfortably covers Task 1, which runs in ~70s.
   const body = JSON.stringify({
     model: CLAUDE_MODEL,
     max_tokens: 2048,
-    system: SUMMARY_SYSTEM_PROMPT,
+    system: [{ type: 'text', text: SUMMARY_SYSTEM_PROMPT, cache_control: { type: 'ephemeral' } }],
     messages: [{ role: 'user', content: userPrompt }]
   });
 
@@ -1299,7 +1303,11 @@ async function fetchSmcCountyMeetings(now, horizon) {
 // merely mentions a "pending application" or "TBD" date isn't mistaken for a stub.
 // (moved to lib/clean-text.js 2026-07-23 so build-week-meetings shares the
 // exact same predicate — hasAgenda now derives from the summary there.)
-const { isPlaceholderSummary } = require('./lib/clean-text.js');
+const {
+  isPlaceholderSummary,
+  summaryInputFingerprint,
+  placeholderIsCurrent,
+} = require('./lib/clean-text.js');
 
 async function refreshSummaries(existingSummaries, existingAgendaMeta) {
   console.log('\n📋 Task 1: Refreshing meeting summaries...');
@@ -1381,12 +1389,25 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
       // the Claude call (which we'd otherwise re-do unnecessarily).
       continue;
     }
-    // A placeholder stub with STILL no agenda text/seed (agenda genuinely
-    // not posted yet): keep the existing stub and don't burn a Claude call
-    // reproducing the same "not posted yet" sentence on every run. Once an
-    // agenda IS posted, agendaText becomes truthy and we fall through to
-    // regenerate a real summary below.
-    if (isPlaceholder && !agendaText && !m.agendaSeedText) {
+    // A placeholder stub ("the agenda hasn't been posted yet"): don't burn a
+    // Claude call reproducing the same sentence on every run. `ph` records a
+    // hash of the exact inputs that produced the stub, so we re-ask ONLY when
+    // those inputs actually change — the moment a real agenda posts,
+    // agendaText changes, the hash changes, and a real summary regenerates.
+    //
+    // The old guard was `isPlaceholder && !agendaText && !m.agendaSeedText`,
+    // which required BOTH to be empty. agendaSeedText is 50-140 chars of
+    // never-changing meeting metadata (title/category from the source API), so
+    // for every seed-text meeting the guard never fired and Claude re-derived
+    // an identical stub 8x/day, forever. Measured 2026-08-07: 10 such calls
+    // per run, 80/day, ~$18/mo — and because the wording jittered between runs
+    // ("the August 27 CWAB meeting agenda" vs "the August 27 CWAB agenda") it
+    // also churned the git diff and busted the Week Ahead lede cache
+    // downstream.
+    const summaryInputHash = summaryInputFingerprint(agendaText, m.agendaSeedText);
+    const priorInputHash = (existingZoom && typeof existingZoom === "object") ? existingZoom.ph : undefined;
+    if (placeholderIsCurrent(isPlaceholder, priorInputHash, summaryInputHash)) {
+      console.log(`    Placeholder unchanged - skipping Claude call`);
       continue;
     }
 
@@ -1426,6 +1447,11 @@ async function refreshSummaries(existingSummaries, existingAgendaMeta) {
         const topicBullets = (result.topics || []).join(' · ');
         updated[key] = result.shortSummary || topicBullets;
         meta[key] = { ...(meta[key] || {}), sv: SUMMARY_VERSION };  // record summary style version
+        // Stamp the input hash whenever the result is (still) a placeholder, so
+        // the guard above can skip the identical re-ask next run. A real
+        // summary needs no stamp — haveRealSummary already short-circuits it.
+        if (isPlaceholderSummary(updated[key])) meta[key].ph = summaryInputHash;
+        else delete meta[key].ph;
         newCount++;
         console.log(`    ✓ Generated summary (${result.topics?.length || 0} topics)`);
       }

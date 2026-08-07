@@ -35,7 +35,31 @@ log "Starting. repo=$REPO"
 
 # Discard any leftover uncommitted recap edits (regenerable) so the pull is clean.
 git checkout -- js/gov-helpers.js 2>/dev/null || true
-if ! git pull --ff-only origin main; then log "FATAL: git pull --ff-only failed"; exit 1; fi
+
+# The content bot pushes to main ~8x/day, so this checkout is routinely behind
+# and occasionally holds a local commit whose push lost a race. --ff-only then
+# fails FOREVER, and the job wedges: on 2026-08-07 it had been re-drafting (and
+# re-paying for) the same three transcripts every morning for ten days without
+# ever landing them. So: try to fast-forward, and if we're carrying local
+# commits, rebase them onto origin/main instead of giving up.
+git fetch origin main || { log "FATAL: git fetch failed"; exit 1; }
+if ! git merge-base --is-ancestor HEAD origin/main 2>/dev/null; then
+  log "local commits present — rebasing onto origin/main"
+  if ! git rebase origin/main; then
+    git rebase --abort 2>/dev/null || true
+    log "FATAL: rebase onto origin/main failed — needs a human"; exit 1
+  fi
+elif ! git merge --ff-only origin/main; then
+  log "FATAL: fast-forward to origin/main failed"; exit 1
+fi
+
+# meeting-recaps.js needs playwright (Mountain Village's portal is a Blazor app
+# that only renders in a browser). A checkout without scripts/node_modules threw
+# MODULE_NOT_FOUND mid-run on 2026-08-06 and took the whole job down with it.
+if [ ! -d scripts/node_modules ]; then
+  log "scripts/node_modules missing — installing"
+  (cd scripts && npm install --no-audit --no-fund) || log "npm install failed (continuing; per-source failures are now isolated)"
+fi
 
 if ! node scripts/meeting-recaps.js; then log "recap script exited non-zero"; exit 1; fi
 

@@ -34,6 +34,7 @@ const { execFileSync } = require('child_process');
 const { extractJsArray } = require('./lib/extract.js');
 const { serializeArray } = require('./lib/serialize.js');
 const { SONNET } = require('./lib/claude-model.js');
+const { createResponseCache } = require('./lib/response-cache.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const GOV_HELPERS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -264,7 +265,23 @@ OUTPUT — return ONLY valid JSON, no prose, no code fence:
   "votes": [ { "item": "<what was voted on, max 50 chars>", "outcome": "Passed|Failed|Tabled|Continued", "tally": "<e.g. 6-0, 4-3; empty string if not stated>" } ] }
 VOTES RULES — substantive votes ONLY: ordinances/readings, resolutions, approvals/denials of applications, contracts/IGAs, money allocated, appointments. EXCLUDE administrative/procedural votes: minutes, agenda, consent-agenda approval, adjournment, entering/leaving executive session, continuances of omitted individual-property items. Same no-invention rule: only votes the transcript clearly supports; leave tally "" when unstated. Empty array when none.`;
 
+// Content-addressed cache for Anthropic responses - see lib/response-cache.js
+// for why this job in particular needs one (a failed git push used to make it
+// re-buy ~266k tokens of transcript every morning).
+const RESPONSE_CACHE = createResponseCache();
+
 function callClaude(body) {
+  if (!FORCE) {
+    const cached = RESPONSE_CACHE.read(body);
+    if (cached !== null) return Promise.resolve(cached);
+  }
+  return callClaudeUncached(body).then((parsed) => {
+    RESPONSE_CACHE.write(body, parsed);
+    return parsed;
+  });
+}
+
+function callClaudeUncached(body) {
   return new Promise((resolve, reject) => {
     const payload = JSON.stringify(body);
     const req = https.request({
@@ -295,12 +312,22 @@ function callClaude(body) {
   });
 }
 
-async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
+// Split out so the cache lookup and the actual call can't drift — a hit is
+// decided by hashing the exact body that would otherwise be sent.
+function recapRequestBody(ch, isoDate, videoTitle, transcript) {
   const userPrompt = `ENTITY: ${ch.sourceLabel}\nVIDEO TITLE: ${videoTitle}\nMEETING DATE: ${isoDate}\n\nTRANSCRIPT (auto-captions):\n"""\n${transcript.slice(0, 600000)}\n"""\n\nWrite the recap. Return ONLY the JSON object.`;
   // 1500, not 700: the payload is a ~100-word recap PLUS a votes[] array, and a
   // busy meeting (Jun 30 2026 had six) truncated at 700 — which surfaced as an
   // unparseable half-JSON rather than an obvious budget error.
-  return callClaude({ model: MODEL, max_tokens: 1500, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] });
+  return { model: MODEL, max_tokens: 1500, system: RECAP_SYSTEM_PROMPT, messages: [{ role: 'user', content: userPrompt }] };
+}
+
+function recapIsCached(ch, isoDate, videoTitle, transcript) {
+  return !FORCE && RESPONSE_CACHE.has(recapRequestBody(ch, isoDate, videoTitle, transcript));
+}
+
+async function recapFromTranscript(ch, isoDate, videoTitle, transcript) {
+  return callClaude(recapRequestBody(ch, isoDate, videoTitle, transcript));
 }
 
 /* ── Vote-tracker drafts ─────────────────────────────────────────────
@@ -499,6 +526,9 @@ async function draftVotes(entityKey, isoDate, title, transcript, videoUrl, recap
 async function main() {
   if (!process.env.ANTHROPIC_API_KEY && !DRY) { console.error('  ✗ ANTHROPIC_API_KEY not set'); process.exit(1); }
 
+  const pruned = RESPONSE_CACHE.prune();
+  if (pruned) console.log(`  cache: pruned ${pruned} entr${pruned === 1 ? 'y' : 'ies'} older than ${RESPONSE_CACHE.maxAgeDays}d`);
+
   let src = fs.readFileSync(GOV_HELPERS, 'utf8');
   const existing = extractJsArray(src, 'MEETING_RECAPS') || [];
   const seenVideo = new Set(existing.map((r) => r.videoUrl).filter(Boolean));
@@ -507,9 +537,22 @@ async function main() {
   const channels = CHANNELS.filter((c) => !ONLY_ENTITY || c.sourceKey === ONLY_ENTITY);
   const added = [];
 
+  let channelFailures = 0;
   for (const ch of channels) {
     const isAv = ch.kind === 'avcapture';
-    let vids = isAv ? await listAvCapture(ch.url) : listChannel(ch.url);
+    // One source must not be able to take down the others. On 2026-08-06 the
+    // Mountain Village listing threw MODULE_NOT_FOUND (playwright absent from
+    // the bot checkout's scripts/node_modules) and the uncaught rejection
+    // killed the whole run — Telluride, County and Rico were never even
+    // listed, so nothing was recapped at all that day.
+    let vids;
+    try {
+      vids = isAv ? await listAvCapture(ch.url) : listChannel(ch.url);
+    } catch (e) {
+      channelFailures++;
+      console.warn(`  ⚠ ${ch.sourceKey}: could not list meetings (${e.message.split('\n')[0]}) — continuing with other sources`);
+      continue;
+    }
     if (isAv) {
       // The portal often holds several recordings of the same body on the same
       // day (a short fragment plus the full session, plus a "Merged" file).
@@ -546,7 +589,10 @@ async function main() {
 
       const transcript = isAv ? await fetchVtt(v.vtt) : fetchTranscript(v.id);
       if (!transcript || transcript.length < 500) { console.log(`      ⚠ no usable transcript (${transcript.length} chars) — skipping`); continue; }
-      console.log(`      transcript ${transcript.length} chars → drafting recap…`);
+      const fromCache = recapIsCached(ch, date, v.title, transcript);
+      console.log(fromCache
+        ? `      transcript ${transcript.length} chars → cached recap (no API call)`
+        : `      transcript ${transcript.length} chars → drafting recap…`);
       let out;
       try { out = await recapFromTranscript(ch, date, v.title, transcript); }
       catch (e) { console.log(`      ✗ recap failed: ${e.message}`); continue; }
@@ -569,6 +615,16 @@ async function main() {
   }
 
   console.log('  ' + '─'.repeat(64));
+  // "No new recaps" must not read the same whether the sources were quiet or
+  // unreachable. If EVERY source failed to list, that's a broken run, not an
+  // empty week — exit non-zero so the wrapper logs it instead of reporting a
+  // clean no-op.
+  if (channelFailures) console.warn(`  ⚠ ${channelFailures}/${channels.length} source(s) could not be listed this run`);
+  if (channels.length && channelFailures === channels.length) {
+    console.error('  ✗ every source failed to list — treating as a failed run');
+    process.exitCode = 1;
+    return;
+  }
   if (!added.length) { console.log('  No new recaps.'); return; }
   if (DRY) { console.log(`  ${added.length} candidate(s) (dry run — nothing written).`); return; }
 
@@ -592,4 +648,10 @@ async function main() {
   console.log(`  ✓ Wrote ${added.length} new recap(s); MEETING_RECAPS now ${final.length} entries.`);
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+// Guarded so the cache wiring can be exercised by test/ without the script
+// listing channels and calling the API on require.
+if (require.main === module) {
+  main().catch((e) => { console.error(e); process.exit(1); });
+}
+
+module.exports = { RESPONSE_CACHE, recapRequestBody, recapIsCached, callClaude };
