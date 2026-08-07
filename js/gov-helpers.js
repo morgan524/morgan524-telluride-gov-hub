@@ -395,6 +395,14 @@ const DEEP_DIVE_UPDATES = [];
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-07",
+    title: "Who counts as a 'Qualified Owner' anyway?",
+    body: "The Board of County Commissioners held a public hearing August 5 on a proposed change to the Land Use Code's definition of 'Qualified Owner' — Section 5-1305B, with ripple amendments to two related sections. That definition shapes who can own and do what with certain properties in the county. Tighten it and you may keep speculation out; loosen it and you may open doors for legitimate buyers who don't currently qualify. Nothing is final — these are hearings, not adopted resolutions. So: does the current definition need fixing, and if so, in which direction?",
+    choices: ["Definition's too restrictive", "Current rules protect us", "Depends who benefits", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-06",
     title: "When a roof costs more than the rules allow",
     body: "Lela and Jon Martin need a new roof on their deed-restricted Gold Run unit. The bid came in at $47,743.86 — roughly 17% of their original purchase price. Their 2010-era deed restriction only lets staff approve capital improvements up to 5% without a finding that the work adds occupancy capacity. A failing roof clearly doesn't do that. Staff recommends approval anyway, but admits the legal standard may not be met.\n\nOne view: the rules exist to keep deed-restricted units affordable, not to trap owners with deteriorating roofs. The other: if exceptions get made case by case, the caps lose their meaning.\n\nWhen the rules and the reality collide like this, what should the subcommittee do?",
@@ -3479,103 +3487,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801143?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-08-06T15:00:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803452?hs=a",
+    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-08-07T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772773?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-08-06T16:30:00.000Z",
+    title: "Stuffed Animal Storytime / Pijamada de Peluches",
+    link: "https://telluridelibrary.libcal.com/event/17285907?hs=a",
+    description: "10:30 AM – 11:30 AM · Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only* Ponte la pijama y trae tu peluche para la Hora del Cuento. * Pijamada solo para peluches*",
+    pubDate: "2026-08-07T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_07_55.png"
   },
   {
-    title: "Learn to Play Pickleball!",
-    link: "https://telluridelibrary.libcal.com/event/16897848?hs=a",
-    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching adults how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction, followed by another session to practice and put what you&#39;ve learned into action. Space is limited. Please sign up in advance.  Join us for some fun and fitness this summer! - June 4th - Learn to Play Pickleball - June 22nd - Play Pickleball (basic knowledge of the game is required) - July 6th - Learn to Play Pickleball - July 23rd - Play Pickleball (basic knowledge of the game is required) - August 6th - Learn to Play Pickleball - August 20th - Play Pickleball (basic knowledge of the game is required)",
-    pubDate: "2026-08-06T17:30:00.000Z",
+    title: "Manga and Ramen Club",
+    link: "https://telluridelibrary.libcal.com/event/17286024?hs=a",
+    description: "1:00 PM – 3:00 PM · Join the WPL for Manga and Ramen club. We will eat ramen and do some fun activities about manga/ramen.",
+    pubDate: "2026-08-07T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_31_10_03_27.png"
-  },
-  {
-    title: "CANCELED Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536283?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-06T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Bugs and Buds Discovery Club",
-    link: "https://telluridelibrary.libcal.com/event/17017422?hs=a",
-    description: "1:00 PM – 3:00 PM · Join Wilkinson Public Library and US Forest Service for a fun afternoon outdoors!  We will be going on a scats and tracks animal adventure.  Please meet us in the Wilkinson Public Library lobby by 1 pm.  This program is for ages 8-12.  Please register online and sign waiver.     LIABILITY WAIVER",
-    pubDate: "2026-08-06T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_17_16_57_20.png"
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960355?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-08-06T21:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
-  },
-  {
-    title: "French Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/15970654?hs=a",
-    description: "5:00 PM – 6:00 PM · Practice speaking in French with other French speakers in an informal setting at the Alibi. Light snacks are provided and beverages are available to purchase at the bar. Space is limited, sign up at www.telluridelibrary.org.",
-    pubDate: "2026-08-06T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "The Alibi",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1747415393.jpg"
-  },
-  {
-    title: "Tarde de Piscina",
-    link: "https://telluridelibrary.libcal.com/event/16773026?hs=a",
-    description: "5:00 PM – 6:30 PM · El tiempo de verano est&aacute; aqu&iacute;, pero &iquest;sab&iacute;as que hay una piscina en el parque del pueblo? Ven a nadar y visita la piscina! Todas las edades son bienvenidas.",
-    pubDate: "2026-08-06T23:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_28_11_22_38.png"
-  },
-  {
-    title: "Adult Craft Night: Free Box Braided Rug",
-    link: "https://telluridelibrary.libcal.com/event/17123420?hs=a",
-    description: "5:30 PM – 7:00 PM · Join us for a fun evening of upcycling with Laura Marchal as she guides us through the process of creating a one-of-a-kind braided rug using material from the Free Box! All materials will be provided. Please sign up in advance as space is limited.",
-    pubDate: "2026-08-06T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_02_13_53_46.jpg"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_17_56.png"
   }
 ];
 
@@ -4065,7 +4007,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-06T06:00:00.000Z",
+    pubDate: "2026-08-07T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4074,83 +4016,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
   },
   {
-    title: "Ridgway Bird Walks & Talks with Mike Campbell: “Summer Birding”",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-bird-walks-talks-with-mike-campbell-summer-birding-6032",
-    description: "Join Mike Campbell, a Colorado native, lifelong birder, retired educator, wildlife artist, bird banding educator, and Friends of Ridgway State Park board member, as he shares his experiences and knowledge of our local feathered friends and the environment we share during a guided Bird Walk & Talk in Ouray County. Small group sizes will allow the experience to be tailored to participants’ knowledge levels and interests. Times, meeting location, and any weather-related updates will be provided via email prior to the event. A waiver needs to be signed before the event. Please do so here. If you're having issues with registration, please email lexi@weehawkenarts.org . View on site | Email this event",
-    pubDate: "2026-08-06T13:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Registerd participants will receive an email with location details",
-    imageUrl: "https://localist-images.azureedge.net/photos/53550883024689/huge/8ef634b3e4fdec99a315d0d58c79b5602863ae76.jpg"
-  },
-  {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-08-06T14:15:00.000Z",
-    endDate: "2026-10-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
-    title: "Ouray Youth Summer Programs: Water Sports at Ridgway State Park",
-    link: "https://events.ourayridgwayevents.com/event/ouray-youth-summer-programs-water-sports-at-ridgway-state-park",
-    description: "Participants will learn the basics of paddle boarding and water safety with instruction and equipment provided by Ridgway State Park staff. Please meet at the Dutch Charlie Marina office at Ridgway State Park and ring snacks, water, sunscreen, a towel and appropriate clothes for the day. REGISTER HERE Scholarships are available if needed. This activity is part of the Youth Adventure Days, sponsored by Ouray's Parks and Recreation Department. For questions, contact Sean Hart at 970-318-1003 or seanhart@cityofouray.com View on site | Email this event",
-    pubDate: "2026-08-06T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52994829548404/huge/1b35bf736db2ace8de36b37a504f763702f48af8.jpg"
-  },
-  {
-    title: "On Display: Silverton, Interpreted",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
-    description: "This show will run through mid-August Silverton, Interpreted is a traveling show features a selection of artists from The 9318 Collective whose work reflects the beauty, energy, and elemental character of the San Juan Mountains and the lands that surround them. Through varied styles and mediums, the exhibition offers multiple perspectives on a shared place, celebrating the artistic dialogue between land and maker. View on site | Email this event",
-    pubDate: "2026-08-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53047351194602/huge/ca565426cdce176dbabc27b75052233f99cf4818.jpg"
-  },
-  {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-06T16:00:00.000Z",
+    pubDate: "2026-08-07T16:00:00.000Z",
     endDate: "2026-08-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/copy-of-ridgway-farmers-market",
-    description: "Ridgway Farmers Market NOTE: This week, the Market is on a Thursday, since folks will be setting up on Friday for the Ridgway Rendezvous. WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-08-06T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487582547065/huge/563a405a9c9cafe377d9fb833f1a4084535fcf25.jpg"
-  },
-  {
-    title: "The State of Journalism",
-    link: "https://events.ourayridgwayevents.com/event/state-of-journalism-in-trumps-washington",
-    description: "Join Ridgway author and New Yorker Staff Writer Peter Hessler in conversation with Washington Post investigative journalist Jonathan O'Connell as they discuss the state of journalism. Hessler has written widely on topics ranging from Western Slope politics to his experiences living in and writing about China and Egypt. O'Connell is part of the reporting team that received the 2026 Pulitzer Prize for Public Service and has written extensively about the intersection of business and politics in Washington, D.C. Moderated by retired journalist, radio news anchor, and reporter Susan Witkin. View on site | Email this event",
-    pubDate: "2026-08-07T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53606837967993/huge/b67d8e8777c92b16f627b5cf841dff8226fab243.jpg"
   },
   {
     title: "Paw Prints Book Club",
@@ -4530,6 +4405,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Bee True You Wellness and Creative Studio",
     imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-08-11T14:15:00.000Z",
+    endDate: "2026-10-01",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",

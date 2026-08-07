@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-07T05:02:25.356Z",
+ "generated": "2026-08-07T07:26:20.685Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -18,17 +18,9 @@
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-07-23",
-     "title": "Planning & Zoning Commission - Jul 23 2026",
-     "snippet": "Three Town-owned development projects dominate this agenda — all in the Accommodations 2 zone, all designed by Design Workshop, all on land the Town itself owns. The Carhenge Redevelopment Project…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": [
-    "Carhenge / Shandoka: telluride discussed it on 2026-07-23 (\"Planning & Zoning Commission - Jul 23 2026\") but the deep dive was last edited 2026-07-19.",
     "Carhenge / Shandoka: timeline entry \"P&Z takes up the subdivision and Conceptual PUD\" (Jul 23, 2026) is still marked upcoming but the date has passed."
    ]
   },
@@ -139,18 +131,9 @@
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-07-23",
-     "title": "San Miguel Authority for Regional Transportation - Jul 23 2026",
-     "snippet": "SMART's board meets virtually on July 23rd with the gondola project front and center. Two vendor selections are up for action: Resolution 2026-12 would award SCJ Alliance the contract for gondola…"
-    }
-   ],
+   "recent": [],
    "developments": [],
-   "stale": [
-    "Gondola 3A: telluride discussed it on 2026-07-23 (\"San Miguel Authority for Regional Transportation - Jul 23…\") but the deep dive was last edited 2026-07-20."
-   ]
+   "stale": []
   },
   "norwoodwater": {
    "label": "Norwood Water",
