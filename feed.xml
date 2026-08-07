@@ -6,14 +6,14 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2026 19:08:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 21:47:37 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>📅 The Week Ahead — Aug 7–13</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-31</guid>
-      <pubDate>Fri, 07 Aug 2026 19:08:05 GMT</pubDate>
-      <description><![CDATA[The biggest thing to watch this week is Telluride Town Council's Tuesday meeting, where the Colorado Wildfire Resiliency Code comes up for its third and final reading — passage would amend the Land Use Code's historic review standards and landscaping rules to meet state wildfire mitigation requirements, which touches nearly every property owner in town. On Thursday, the County Planning Commission has real work on the table too: a subdivision mechanics work session and a referral on an energy code update that would reshape building standards for new construction. Woven around all that, the Jazz Festival rolls through the Sheridan and the Alibi, and the week wraps with the Ridgway Rendezvous carrying live music through the weekend.]]></description>
+      <pubDate>Fri, 07 Aug 2026 21:47:37 GMT</pubDate>
+      <description><![CDATA[The headline this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code goes to its third and final reading — a vote that would rewrite the Land Use Code's rules on historic review, landscaping, and tree maintenance for every property owner in town. Alongside that, the county Planning Commission takes up subdivision mechanics and a building energy code update on Thursday, both of which shape how land gets divided and built on across San Miguel County. In between, the valley is humming with Jazz Fest spillover, the KOTO Duck Race, and Ridgway Rendezvous wrapping up the weekend.]]></description>
       <category>The Week Ahead</category>
     </item>
     <item>
@@ -69,18 +69,6 @@ The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on Au
       <category>Wilkinson Public Library</category>
     </item>
     <item>
-      <title>[Fri, Aug 7] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Fri, Aug 7] Stuffed Animal Storytime / Pijamada de Peluches</title>
       <link>https://telluridelibrary.libcal.com/event/17285907?hs=a</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/stuffed%20animal%20storytime%20pijamada%7C2026-08-07</guid>
@@ -92,18 +80,6 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_07_55.png" medium="image" />
       <category>Community Event</category>
       <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Telluride Farmer&apos;s Market</title>
-      <link>https://koto.org/event/telluride-farmers-market/2026-08-07/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20farmer%20s%20market%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Oak Street Plaza, Telluride
-
-We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Fri, Aug 7] Manga and Ramen Club</title>
@@ -253,6 +229,19 @@ This intergovernmental worksession brings together representatives from Tellurid
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Mon, Aug 10] Colorado Capsule on Tour</title>
+      <link>https://www.telluride.com/event/colorado-capsule-on-tour/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/colorado%20capsule%20on%20tour%7C2026-08-10</guid>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
+    </item>
+    <item>
       <title>[Mon, Aug 10] Youth Tennis &amp; Pickleball Camp</title>
       <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-10/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-10</guid>
@@ -285,7 +274,7 @@ Join Ernest House, Jr.Senior Policy Director at the Center of Tribal & Indigenou
 
 The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.
 
-⚡ Why it matters: Third-reading vote on wildfire code that rewrites land-use and landscaping rules.]]></description>
+⚡ Why it matters: Final vote on wildfire code that rewrites historic review and landscaping rules.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -373,6 +362,17 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Tue, Aug 11] Free Legal Clinic – Clínica Jurídica Gratuita</title>
+      <link>https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-08-11/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/free%20legal%20clinic%20cl%7C2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+
+A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-08-12</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-08-12%7CBoard%20of%20County%20Commissioners%20Work%20Session</guid>
@@ -425,7 +425,7 @@ The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></
 
 Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.
 
-⚡ Why it matters: County weighs subdivision rules and an energy code that sets new construction standards.]]></description>
+⚡ Why it matters: County weighs subdivision rules and a new energy code for all new construction.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

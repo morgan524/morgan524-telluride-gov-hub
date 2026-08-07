@@ -234,7 +234,8 @@
   },
   "smart|2026-08-13|SMART Board of Directors": {
     "agendaUrl": "null",
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "county|2026-08-13|Planning Commission Meeting": {
     "sv": 4,
@@ -262,7 +263,8 @@
     "passcode": "230003"
   },
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021",
@@ -282,7 +284,8 @@
   },
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
-    "sv": 4
+    "sv": 4,
+    "ph": "e232fffd40cd7ad2"
   },
   "county|2026-07-21|SMC Historical Commission Meeting": {
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926",
@@ -293,14 +296,17 @@
     "phone": "970-728-3844"
   },
   "county|2026-08-19|Board of County Commissioners Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "a12dfd2ce826475e"
   },
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291",
-    "sv": 4
+    "sv": 4,
+    "ph": "278bc1c1c8c6db27"
   },
   "mv|2026-08-20|Town Council Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296",
@@ -308,10 +314,12 @@
     "sv": 4
   },
   "norwood|2026-08-12|Board of Trustees Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "norwood|2026-08-17|Planning and Zoning Commission Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "mv|2026-08-06|Design Review Board": {
     "sv": 4,
@@ -323,13 +331,16 @@
     "sv": 4
   },
   "ophir|2026-08-18|General Assembly Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "norwood|2026-08-11|Norwood Water Commission Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297",
@@ -354,13 +365,16 @@
     "sv": 4
   },
   "tmvoa|2026-08-11|Mountain Village Merchant Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "tmvoa|2026-08-20|TMVOA Investment Committee Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
-    "sv": 4
+    "sv": 4,
+    "ph": "5bee59f208152c68"
   },
   "norwood|2026-07-29|Board of Trustees Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
@@ -371,7 +385,8 @@
     "sv": 4
   },
   "med|2026-08-27|Regular Board Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "norwood|2026-07-29|NWC Possible Quorum": {
     "agendaUrl": "https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf",
@@ -398,28 +413,35 @@
   },
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
-    "sv": 4
+    "sv": 4,
+    "ph": "afbb6fcf58f46cfd"
   },
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
-    "sv": 4
+    "sv": 4,
+    "ph": "2b8857be6e12267c"
   },
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
-    "sv": 4
+    "sv": 4,
+    "ph": "3bcbff87c865ec6d"
   },
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163",
-    "sv": 4
+    "sv": 4,
+    "ph": "558b2c991b258cd1"
   },
   "county|2026-09-02|Board of County Commissioners Meeting": {
-    "sv": 4
+    "sv": 4,
+    "ph": "a12dfd2ce826475e"
   },
   "mv|2026-09-03|Design Review Board": {
-    "sv": 4
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   },
   "county|2026-08-27|CWAB": {
-    "sv": 4
+    "sv": 4,
+    "ph": "23152d2f933fa82e"
   },
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",

@@ -257,7 +257,7 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "smart|2026-08-13|SMART Board of Directors":
-    {"agendaUrl":"null","sv":4},
+    {"agendaUrl":"null","sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-08-13|Planning Commission Meeting":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"},
@@ -272,7 +272,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1052/files/agenda/1930","zoomUrl":"https://us06web.zoom.us/j/84045287708?pwd=2u4vMzFjoI7ZFitrp3Zp9yUa0YQh0b.1","meetingId":"840 4528 7708","passcode":"230003"},
 
   "rico|2026-08-19|Rico Board of Trustees Regular Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"854 0207 9752","passcode":"775535","phone":"301-715-8592"},
@@ -281,28 +281,28 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"e232fffd40cd7ad2"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"ph":"278bc1c1c8c6db27"},
 
   "mv|2026-08-20|Town Council Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296","zoomUrl":"https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1","sv":4},
 
   "norwood|2026-08-12|Board of Trustees Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "norwood|2026-08-17|Planning and Zoning Commission Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "mv|2026-08-06|Design Review Board":
     {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/84661174346?pwd=pGG47aNtAK3sjfccaVrai3o6jbV3bZ.1","meetingId":"846 6117 4346"},
@@ -311,13 +311,13 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "ophir|2026-08-18|General Assembly Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "norwood|2026-08-11|Norwood Water Commission Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297","zoomUrl":"https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1","sv":4},
@@ -332,19 +332,19 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://tmvoa.org/site/assets/files/4825/07_28_26_leadership_gondola_agenda_updated.pdf","zoomUrl":"https://us06web.zoom.us/j/85350165336?pwd=P0eS14nFbqd5jLXEO2gckIoA9kPAro.1","sv":4},
 
   "tmvoa|2026-08-11|Mountain Village Merchant Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "tmvoa|2026-08-20|TMVOA Investment Committee Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    {"sv":4},
+    {"sv":4,"ph":"5bee59f208152c68"},
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4},
 
   "med|2026-08-27|Regular Board Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "norwood|2026-07-29|NWC Possible Quorum":
     {"agendaUrl":"https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf","sv":4},
@@ -359,25 +359,25 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
-    {"sv":4},
+    {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "mv|2026-09-03|Design Review Board":
-    {"sv":4},
+    {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-08-27|CWAB":
-    {"sv":4},
+    {"sv":4,"ph":"23152d2f933fa82e"},
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4}
@@ -1088,7 +1088,7 @@ const MANUAL_SUMMARIES = {
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "The August 19 Board of County Commissioners agenda hasn't been posted yet.",
+    "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
@@ -1145,7 +1145,7 @@ const MANUAL_SUMMARIES = {
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
 
   "med|2026-08-27|Regular Board Meeting":
-    "The August 27, 2026 Montrose County Metropolitan Recreation District Regular Board Meeting agenda hasn't been posted yet.",
+    "The August 27, 2026 Mountain Village Metropolitan District Regular Board Meeting agenda hasn't been posted yet.",
 
   "norwood|2026-07-29|NWC Possible Quorum":
     "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood Community Center. The quorum notice suggests this could function as an official commission meeting rather than a simple staff-level consultation.",
@@ -1439,6 +1439,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘Leadership is an inside job’",
+    source: "Telluride Times",
+    date: "August 7, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "A new executive conference called the Telluride Leadership Summit is coming to town October 4–6, organized by local resident and executive coach Hal Adler. It'll bring in CEOs and top leaders from around the country to share strategies on leading through change, with sessions indoors and out on the mountain. Coffee Cowboy's Scott Keating and Hailey Arnold are among the local faces on the program.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_c508642a-14c7-4271-b49b-bbd67f37b48d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/b1/db19a333-bab6-443f-883e-edbca07a8789/6a74d456f3fd4.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
     source: "Telluride Times",
@@ -2356,7 +2368,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Numerous Highway Closures",
     source: "San Miguel County",
     date: "July 22, 2026",
-    newsTopic: "community",
+    newsTopic: "infrastructure",
     copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
     img: ""
@@ -2365,7 +2377,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Tomboy Road",
     source: "San Miguel County",
     date: "July 21, 2026",
-    newsTopic: "housing",
+    newsTopic: "infrastructure",
     copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
     img: ""
@@ -2374,7 +2386,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     source: "San Miguel County",
     date: "July 14, 2026",
-    newsTopic: "housing",
+    newsTopic: "recreation",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
     img: ""
@@ -2395,7 +2407,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Town of Ridgway",
     date: "July 31, 2026",
     firstSeen: "2026-07-31",
-    newsTopic: "education",
+    newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC-Public-Hearing-Notice-Combined-Aug-2026.pdf",
@@ -2406,7 +2418,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Town of Ridgway",
     date: "July 31, 2026",
     firstSeen: "2026-07-31",
-    newsTopic: "land-use",
+    newsTopic: "government",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/TC-PC-Joint-Work-Session-Notice-2026-08-12.pdf",
@@ -2417,7 +2429,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Town of Ridgway",
     date: "August 7, 2026",
     firstSeen: "2026-08-07",
-    newsTopic: "community",
+    newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.08.19_public-hearing-notice.pdf",
@@ -2486,7 +2498,7 @@ const KOTO_NEWSCASTS = [
     title: "Newscast 7-24-26",
     source: "KOTO Community Radio",
     date: "July 25, 2026",
-    newsTopic: "land-use",
+    newsTopic: "public-safety",
     copy: "On this week's Regional Roundup, we'll hear about the recent awards given by Aspen nonprofit Climate Curve for innovative climate solutions. Then we'll hear how President Trump has reduced the size of Bears Ears and Grand Staircase Escalante National Monuments, reducing protections for the iconic landscapes. Then we find out how an animal shelter i",
     href: "https://koto.org/news/newscast-7-24-26/"
   }
@@ -2989,28 +3001,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-07T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-08-07/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-08-07T16:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Free Youth Tennis & Pickleball Program",
     link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/",
@@ -6771,6 +6761,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp"
   },
   {
+    title: "Colorado Capsule on Tour",
+    link: "https://www.telluride.com/event/colorado-capsule-on-tour/",
+    description: "The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …",
+    pubDate: "2026-08-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp"
+  },
+  {
     title: "Telluride Mushroom Festival",
     link: "https://www.telluride.com/event/telluride-mushroom-festival/",
     description: "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
@@ -6793,6 +6794,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp"
+  },
+  {
+    title: "Studio TAB: Summer Fever",
+    link: "https://www.telluride.com/event/studio-tab-summer-fever/",
+    description: "Join the Telluride AIDS Benefit for a new Summer event! Located at a private home in Aldasoro, overlooking Wilson Peak, …",
+    pubDate: "2026-08-15",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63131/tab_studio_tab_sig_2027.800x533.webp"
   },
   {
     title: "\"Best Day Ever\" Free Movie Screening",
