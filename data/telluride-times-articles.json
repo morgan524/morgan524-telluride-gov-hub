@@ -1,5 +1,17 @@
 [
   {
+    "title": "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
+    "source": "Telluride Times",
+    "date": "August 7, 2026",
+    "firstSeen": "2026-08-07",
+    "newsTopic": "infrastructure",
+    "copy": "The Bureau of Reclamation won't release cool water from Lake Powell this year to protect the humpback chub, citing strained hydropower conditions — Lake Powell sits at just 23% capacity after record-low snowpack. Cool releases worked in 2024 and 2025 to curb smallmouth bass spawning, but this year power costs won out.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_673a3eed-0eac-574c-96c0-ae44dc4bd325.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "The Burroughs sweat it out in Norwood",
     "source": "Telluride Times",
     "date": "August 7, 2026",
@@ -21,18 +33,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_5dd10aad-25f1-48ff-a86a-195ca900007d.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1d/b1d2a1a5-1419-4843-bfcb-28b632c7d352/6a74d2f120e85.image.png",
-    "imgHiRes": true
-  },
-  {
-    "title": "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
-    "source": "Telluride Times",
-    "date": "August 7, 2026",
-    "firstSeen": "2026-08-07",
-    "newsTopic": "infrastructure",
-    "copy": "The Bureau of Reclamation won't release cool water from Lake Powell this year to protect the humpback chub, citing strained hydropower conditions — Lake Powell sits at just 23% capacity after record-low snowpack. Cool releases worked in 2024 and 2025 to curb smallmouth bass spawning, but this year power costs won out.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_673a3eed-0eac-574c-96c0-ae44dc4bd325.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     "imgHiRes": true
   },
   {
@@ -937,6 +937,17 @@
     "newsTopic": "housing",
     "copy": "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    "img": ""
+  },
+  {
+    "title": "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
+    "source": "Town of Ridgway",
+    "date": "August 7, 2026",
+    "firstSeen": "2026-08-07",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.08.19_public-hearing-notice.pdf",
     "img": ""
   },
   {

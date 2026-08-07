@@ -764,7 +764,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/?ta_paidstory",
     img: ""
   },
   {
@@ -778,33 +778,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Good For You!",
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "August 4, 1966 Thurman Grady Rohus entered a guilty plea in district court July 27 to a charge of grand larceny. Judge Fred Calhoun presided. Sentencing will be Aug. 29 following the probation officer’s report. Rohus was charged with the theft of about 300 pounds of copper wire from the Revenue Mine",
+    href: "https://www.ouraynews.com/2026/08/05/looking-back-20260806-0344-371224/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Everything you need to know about the new federal report on the Colorado River’s future",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "infrastructure",
+    copy: "Colorado water officials knew that they and the three other Upper Basin states would likely be asked to conserve Colorado River water under a new plan spanning the next decade. Now they know the target amount: up to 200,000 acre-feet, or 65 billion gallons of savings among the four states. Water wat",
+    href: "https://www.ouraynews.com/2026/08/05/everything-need-know-new-federal-report-colorado-rivers-future/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Send us your celebrations!",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
     newsTopic: "community",
-    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
-    img: ""
-  },
-  {
-    title: "Ridgway concert series puts trash in its place",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "arts-culture",
-    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
-    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Calendar & Events",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "arts-culture",
-    copy: "Thursday, August 6 Ridgway Farmers Market, 10 a.m.-2 p.m. in Hartwell Park – on Thursday this week due to Ridgway Rendezvous. Youth Garden Club for ages 8-18, Other Undergrounders root vegetables, from 3:30-4:30 p.m. at the Ridgway Public Library, 320 Charles St. Ouray County Republican Central Comm",
-    href: "https://www.ouraynews.com/2026/08/05/calendar-events-20260806-0346-556192/",
+    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/?ta_paidstory",
     img: ""
   },
   {
@@ -866,16 +866,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Attached as PDF is the St Pats Telluride Parish Bulletin for July 26th. Please see the Parish Calendar for updates.Coffee and donuts every Sunday during summer after 9:00 AM Holy Mass. We need more volunteers to help.Next Sunday - Second Collectio...",
     href: "https://stpatrickstelluride.com/2026/parish-news/st-pats-telluride-parish-bulletin-for-july-26th/",
     img: ""
-  },
-  {
-    title: "Long-term road closure for the Corbett Creek Bridge Project",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "July 24, 2026",
-    newsTopic: "infrastructure",
-    copy: "Long-term road closure for the Corbett Creek Bridge Project, July 24 through October 8, 2026.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=955",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22829"
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
@@ -1188,7 +1178,7 @@ const MANUAL_SUMMARIES = {
     "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
 
   "county|2026-08-27|CWAB":
-    "The August 27 CWAB meeting agenda hasn't been posted yet.",
+    "The August 27 CWAB agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled."
@@ -1450,6 +1440,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
+    source: "Telluride Times",
+    date: "August 7, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "infrastructure",
+    copy: "The Bureau of Reclamation won't release cool water from Lake Powell this year to protect the humpback chub, citing strained hydropower conditions — Lake Powell sits at just 23% capacity after record-low snowpack. Cool releases worked in 2024 and 2025 to curb smallmouth bass spawning, but this year power costs won out.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_673a3eed-0eac-574c-96c0-ae44dc4bd325.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
     title: "The Burroughs sweat it out in Norwood",
     source: "Telluride Times",
     date: "August 7, 2026",
@@ -1471,18 +1473,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_5dd10aad-25f1-48ff-a86a-195ca900007d.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1d/b1d2a1a5-1419-4843-bfcb-28b632c7d352/6a74d2f120e85.image.png",
-    imgHiRes: true
-  },
-  {
-    title: "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
-    source: "Telluride Times",
-    date: "August 7, 2026",
-    firstSeen: "2026-08-07",
-    newsTopic: "infrastructure",
-    copy: "The Bureau of Reclamation won't release cool water from Lake Powell this year to protect the humpback chub, citing strained hydropower conditions — Lake Powell sits at just 23% capacity after record-low snowpack. Cool releases worked in 2024 and 2025 to curb smallmouth bass spawning, but this year power costs won out.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_673a3eed-0eac-574c-96c0-ae44dc4bd325.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
     imgHiRes: true
   },
   {
@@ -2363,6 +2353,44 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "community",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "housing",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
+    source: "Town of Ridgway",
+    date: "August 7, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.08.19_public-hearing-notice.pdf",
+    img: ""
+  },
+  {
     title: "Notice of Public Hearings Aug 12, 2026 at 5:30pm 1) Proposal: organization of Alpenglow Vista Metro Districts 1-4, 2) Application: Hyde Subdivision, resubdivision of lots",
     source: "Town of Ridgway",
     date: "July 31, 2026",
@@ -2635,6 +2663,15 @@ const LOCAL_NEWS_FEATURED = [
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "The Weekend Ahead Outlook - August 7 - August 9, 2026",
+    date: "Aug 7, 2026",
+    href: "https://livabletelluride.org/digest/archive/2026-08-07-weekend.html",
+    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
+    excerpt: "@media only screen and (max-width:480px){ /* Event cards: stack image on top, text below, for easier mobile reading. */ .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;} .ev-img-cell img{width:160px !important;height:160px !important;} .ev-text-cell{display:block !important;width:100% !important;} /* Festival hero: stack the logo above the text on phones. ",
+    category: "Newsletter",
+    source: "customerio"
+  },
   {
     title: "Speak Up by Noon Wednesday: the Carhenge Subdivision and Backman Village P&Z Meeting",
     date: "Jul 21, 2026",
@@ -4242,18 +4279,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53444356689862/huge/ac92e28117fe69a241a729e8065ab23d70be8daf.jpg"
   },
   {
-    title: "Happy Little Trees: Classes @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright",
-    description: "Happy Little Trees: Classes @ the Wright WHEN? Classes at 10:30 am WHERE? Wright Community Room Wright Opera House 472 Main St. Ouray, Colorado TICKETS: $55 Per Class (All supplies are included + coffee!) ABOUT THE CLASS Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. …",
-    pubDate: "2026-08-08T16:30:00.000Z",
-    endDate: "2026-10-03",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/52373044220947/huge/1d3e4ebb5835fbe0ed89bf2b3588d8e41db8f444.jpg"
-  },
-  {
     title: "Electric Vehicle (EV) Ride and Drive",
     link: "https://events.ourayridgwayevents.com/event/electric-vehicle-ev-ride-and-drive",
     description: "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides!And make sure to head over to the Electric Showcase booth in the southeast corner of Hartwell Park from 9am to 5pm. You can check out and try electric yard equipment and learn about financial incentives. Also learn how you can win an E-bike from San Miguel Power Association. View on site | Email this event",
@@ -4308,18 +4333,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park Ouray",
     imageUrl: "https://localist-images.azureedge.net/photos/53630704110490/huge/606da76369d52578672122d9226699422d70664e.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon — Screening @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-screening-the-wright",
-    description: "Ouray: Echoes in the Canyon — Screening @ the Wright WHEN? Saturday, July 18 Doors at 6:30 pm • Film at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RATING: G ABOUT THE FILM Ouray: Echoes in the Canyon returns to the Wright Opera House following its sold-out premiere. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. …",
-    pubDate: "2026-08-09T01:00:00.000Z",
-    endDate: "2026-10-01",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53375404981466/huge/b6ac805d7cab9956501ae2d370b3c2d63385e823.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4408,7 +4421,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-08-11T14:15:00.000Z",
-    endDate: "2026-10-01",
+    endDate: "2026-10-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4678,17 +4691,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/04059243547212bbd8b1fbcbafe16b2195b8c518.jpg"
   },
   {
-    title: "EDIE: Theatre @ the Wright Presented by UpstART Theatre",
-    link: "https://events.ourayridgwayevents.com/event/edie-theatre-the-wright-presented-by-upstart-theatre",
-    description: "EDIE: Theatre @ the Wright Presented by UpstART Theatre WHEN? Friday, August 14 Doors at 7:00 pm • Show at 7:30 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. …",
-    pubDate: "2026-08-15T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53366893046907/huge/7d1ae27186d2776e5040699812057cb6188e9a6a.jpg"
-  },
-  {
     title: "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
     link: "https://events.ourayridgwayevents.com/event/mt-sneffels-half-marathon-10k-kids-fun-run",
     description: "Foot Race-26th Year annual fundraising event for the Mount Sneffels Education Foundation. View on site | Email this event",
@@ -4742,17 +4744,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/53435902153115/huge/f4a7c1ac8c55f57a55ad821679d80f9d354f233f.jpg"
-  },
-  {
-    title: "Ouray County Pride After Party @ the Wright presented by SMAC",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-pride-after-party-the-wright-presented-by-smac",
-    description: "Ouray County Pride After Party @ the Wright WHEN? Saturday, August 15 Doors at 7:00 pm • Party until late WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Keep the celebration going after the Ouray County Pride Block Party with an evening of music, drag, dancing, drinks, and community at the historic Wright Opera House. The Pride After Party brings together locals, visitors, performers, allies, and friends for a joyful night of connection and celebration in one of Colorado's most unique mountain venues. Expect live entertainment, dancing, laughter, and plenty of opportunities to celebrate the people and relationships that make our communities stronger. Whether you spent the afternoon at the Block Party or are just joining the festivities for the evening, all are welcome to come celebrate Pride in the heart of downtown Ouray. …",
-    pubDate: "2026-08-16T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53251445737216/huge/4f015d7791637ae1f1a70b8b9d1b65f12312407b.jpg"
   },
   {
     title: "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -4865,17 +4856,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "St. Elmo Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/53126599615246/huge/97aedc5531194289457c49a360d9af1390f0938d.jpg"
-  },
-  {
-    title: "A League of Their Own: CO-150 Film Festival @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/a-league-of-their-own-co-150-film-festival-the-wright",
-    description: "A League of Their Own: CO-150 Film Festival @ the Wright WHEN? Wednesday, August 19 Special Community Wiffle Ball Game 3:00 pm Fellin Park, Ouray Movie Screening Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 2h 8min RATING: PG ROTTEN TOMATOES SCORE: 82% ABOUT THE FILM A League of Their Own (1992) tells the story of the All-American Girls Professional Baseball League, formed during World War II when many major league players were serving overseas. Led by an unforgettable ensemble cast including Geena Davis, Lori Petty, Rosie O'Donnell, Madonna, and Tom Hanks, the film celebrates the women who stepped onto the field and proved they belonged there. Marla Hooch's tryout scene was filmed at Colorado State University's Glenn Morris Field House in Fort Collins, and the character herself proudly hails from Fort Collins in the film. …",
-    pubDate: "2026-08-20T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53259464395794/huge/7fdca250f8fbc225136fb161d79ef1df818a7b74.jpg"
   },
   {
     title: "Motel Prophets - Live @ Floating Lotus Brewery",
@@ -5103,17 +5083,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg"
   },
   {
-    title: "Dumb and Dumber: CO-150 Film Festival @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/dumb-and-dumber-co-150-film-festival-the-wright",
-    description: "Dumb and Dumber: CO-150 Film Festival @ the Wright WHEN? Wednesday, August 26 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 47min RATING: PG-13 ROTTEN TOMATOES SCORE: 67% ABOUT THE FILM This Colorado-connected screening celebrates one of the state's most memorable movie road trips. Several scenes were filmed in Colorado, including locations in Breckenridge, Fort Collins, and Estes Park, showcasing the mountain landscapes and small-town charm that help make the state such a memorable backdrop for adventure. A wildly funny comedy about friendship, bad decisions, and the occasional accidental success. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. Part of CO 150 Film Fest Screenings @ the Wright, celebrating 150 years of film, community, and conversation in Colorado. View on site | Email this event",
-    pubDate: "2026-08-27T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53259548444843/huge/23e7eee7a5733b674e4f9932b58f78da3e273dc9.jpg"
-  },
-  {
     title: "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
     link: "https://events.ourayridgwayevents.com/event/the-fabulous-blues-tones-live-floating-lotus-brewery-7737",
     description: "If you like blues music with a kick, you will love the Fabulous Blues Tones. With Greg Jacobs and Tony Kovacic out front on vocals and guitars, the band comes to the stage with a whole slew of house-rocking material—some timeless standards and some pulled from deep within the blues vault. On drums and bass, Tim Brennan and Dave Underwood keep the pocket tight and the groove going strong all night long. This is authentic, hard-driving blues played by four musicians who dearly love it. Come out and get your mojo working. View on site | Email this event",
@@ -5280,17 +5249,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
   },
   {
-    title: "City Slickers: CO-150 Film Festival Screening @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-screening-the-wright",
-    description: "City Slickers: CO-150 Film Festival @ the Wright WHEN? Wednesday, September 2 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 53min RATING: PG-13 ROTTEN TOMATOES SCORE: 90% ABOUT THE FILM City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. …",
-    pubDate: "2026-09-03T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53552494063177/huge/15fe4ae46423d80d30fb855343007994421cbe10.jpg"
-  },
-  {
     title: "WOH Art Show: Brittany Stadler",
     link: "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
     description: "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose presence represents an ecosystem, region, or symbol. From that base shape, I build inward and intuitively. I draw in larger forms first, and work my way toward the smaller details. Research is an essential part of the practice. I study each plant and animal that I consider for a piece — how they move, how they relate to their environment. These rhythms inform the poses and compositions in my work, helping each subject feel alive and true. What results is part collage, part optical illusion — a work that I hope will be a process of discovery for everyone that views it. …",
@@ -5367,17 +5325,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53358101603318/huge/d6a95490ff2eae257adf6f909e37473c1092b24e.jpg"
-  },
-  {
-    title: "Trivia Night @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-5257",
-    description: "Trivia Night @ the Wright WHEN? Friday, September 4 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Gather your team and put your knowledge to the test at Trivia Night @ the Wright. From pop culture and movies to history, science, music, sports, and wonderfully random facts, every round offers a chance to learn something new, laugh a little harder, and compete for bragging rights. Whether you're a seasoned trivia champion or simply looking for a fun night out, everyone is welcome. Locals and visitors, history buffs and movie nerds, fringe and mainstream, all are invited, as long as you're kind. Free to attend. In-person event at the historic Wright Opera House. Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
-    pubDate: "2026-09-05T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53558793928797/huge/69d5d4e49c83194d4758001abf857ab86f277a9e.jpg"
   },
   {
     title: "Public Bird Banding Day - Ridgway State Park",
@@ -5458,17 +5405,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
   },
   {
-    title: "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/historic-treasures-of-the-san-juan-mountains-art-opening-reception-the-wright",
-    description: "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright Presented by the Ouray County Arts Association WHEN? Thursday, September 10 4:00 pm – 6:00 pm Exhibition on View: September 10 – October 31, 2026 WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EXHIBITION Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and white photography, Livingstone documents the historic mines, weathered structures, and forgotten places scattered throughout the San Juan Mountains. The exhibition is drawn from a seven-year photographic project that culminated in his acclaimed book, Historic Treasures of the San Juan Mountains, preserving a remarkable visual record of Colorado's mining heritage. …",
-    pubDate: "2026-09-10T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53559063730711/huge/d94f240e8b9d7f60aaed38e8a76a97c827bb4f07.jpg"
-  },
-  {
     title: "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner",
     link: "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright-featuring-comedian-casey-skinner",
     description: "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel. What begins as an unfortunate booking quickly spirals into an unforgettable adventure filled with bizarre encounters, unsettling discoveries, and laugh-out-loud storytelling. Just when you think the story is over, Casey finds himself returning for one final night, proving that sometimes the funniest stories are also the strangest. Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also producing television projects for Netflix, Discovery, and Max. …",
@@ -5500,17 +5436,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "You Can't Hide: Comedy @ the Wright",
-    link: "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright",
-    description: "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner WHEN? Friday, September 11 Doors at 6:00 pm • Show at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE SHOW Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel. What begins as an unfortunate booking quickly spirals into an unforgettable adventure filled with bizarre encounters, unsettling discoveries, and laugh-out-loud storytelling. Just when you think the story is over, Casey finds himself returning for one final night, proving that sometimes the funniest stories are also the strangest. Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. …",
-    pubDate: "2026-09-12T01:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The Wright Opera House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53559826947100/huge/f64b82b52f7d7f9db1aa8ea99d8390b7bee58b8e.jpg"
   },
   {
     title: "Happy Little Trees: Classes @ the Wright",
@@ -5793,7 +5718,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-10-05",
+    endDate: "2026-10-06",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
