@@ -1,5 +1,18 @@
 [
   {
+    "title": "Before we build",
+    "source": "Telluride Times",
+    "sourceKey": "ttimes",
+    "date": "August 6, 2026",
+    "summary": "A letter to the editor urges a closer look at San Miguel County's projected housing need before the county acts on it. The county's most recent housing needs analysis projects a net need for 1,070 additional housing units by 2034, including 218 units in unincorporated San Miguel County -- the figure now driving the density conversation.",
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_3f869615-1ddf-4680-8040-5e60c16fe0e6.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg?resize=600%2C315",
+    "category": "Opinion",
+    "newsTopic": "housing",
+    "featured": true,
+    "expires": "2026-08-14"
+  },
+  {
     "title": "Fire management moonshot",
     "source": "Telluride Times",
     "sourceKey": "ttimes",
@@ -9,7 +22,7 @@
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/84/e849a731-98e2-5067-a168-3729aa39f798/6a745ca4b69ef.image.jpg?crop=766%2C403%2C0%2C11",
     "category": "Opinion",
     "newsTopic": "public-safety",
-    "featured": true,
+    "featured": false,
     "expires": "2026-08-08"
   },
   {
