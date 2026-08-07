@@ -714,7 +714,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
     img: ""
   },
   {
@@ -1188,7 +1188,7 @@ const MANUAL_SUMMARIES = {
     "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
 
   "county|2026-08-27|CWAB":
-    "The August 27 CWAB meeting agenda hasn't been posted yet.",
+    "The August 27 CWAB agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled."
@@ -1449,6 +1449,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "County housing code discussions continue",
+    source: "Telluride Times",
+    date: "August 7, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "land-use",
+    copy: "San Miguel County commissioners and the planning commission held a joint session on the ongoing housing code audit, which aims to remove regulatory barriers to housing development in unincorporated areas. Proposed updates include density bonuses and height allowances for projects with 50–80%+ deed-restricted units. The county estimates it needs roughly 1,100 units by 2030, with nearly half of local workers already commuting 25-plus miles.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5dd10aad-25f1-48ff-a86a-195ca900007d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/1d/b1d2a1a5-1419-4843-bfcb-28b632c7d352/6a74d2f120e85.image.png",
+    imgHiRes: true
+  },
   {
     title: "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
     source: "Telluride Times",

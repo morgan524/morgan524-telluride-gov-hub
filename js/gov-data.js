@@ -267,18 +267,18 @@ const TMVOA_CACHED_DATA = [
   },
   {
     date: "July 23, 2026",
-    title: "TMVOA Board of Directors Meeting",
-    board: "board",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "July 23, 2026",
     title: "TMVOA Annual Members Meeting",
     board: "annual",
     agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
     packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "July 23, 2026",
+    title: "TMVOA Board of Directors Meeting",
+    board: "board",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -338,16 +338,6 @@ const MV_DRB_URL = 'https://townofmountainvillage.com/business/planning/design-r
 const MV_CACHE_DATE = '2026-08-07';
 
 const MV_CACHED_DATA = [
-  {
-    date: "August 6, 2026",
-    time: "10:00 AM - 3:00 PM",
-    title: "Design Review Board",
-    board: "drb",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49516/august_6-_2026_design_review_board_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49591/august_6-_2026_design_review_board_meeting_packet.pdf",
-    special: false,
-    location: "Town Hall, 455 Mountain Village Blvd, Suite A"
-  },
   {
     date: "August 20, 2026",
     time: "2:00 PM - 8:00 PM",
