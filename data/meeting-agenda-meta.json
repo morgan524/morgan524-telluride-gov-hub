@@ -338,7 +338,11 @@
   },
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
-    "sv": 4
+    "sv": 4,
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZ0qd-GsrDwuGtGVXN_cveUy9V0AT2ZawXEW",
+    "meetingId": "897 0842 7405",
+    "passcode": "430134",
+    "phone": "301-715-8592"
   },
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",

@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-07T00:11:50.976Z",
+ "generated": "2026-08-07T05:02:25.356Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -62,6 +62,18 @@
      "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
      "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
      "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
+     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+    },
+    {
+     "source": "telluride",
+     "sourceLabel": "Town of Telluride",
+     "title": "Planning & Zoning Commission",
+     "date": "2026-08-20",
+     "time": "",
+     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
+     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
+     "zoomLink": "https://us06web.zoom.us/meeting/register/tZ0qd-GsrDwuGtGVXN_cveUy9V0AT2ZawXEW",
      "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
     }
    ],

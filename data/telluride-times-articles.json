@@ -1,5 +1,17 @@
 [
   {
+    "title": "Officials will not release cool water from a Colorado River reservoir to protect threatened fish",
+    "source": "Telluride Times",
+    "date": "August 7, 2026",
+    "firstSeen": "2026-08-07",
+    "newsTopic": "infrastructure",
+    "copy": "The Bureau of Reclamation won't release cool water from Lake Powell this year to protect the humpback chub, citing strained hydropower conditions — Lake Powell sits at just 23% capacity after record-low snowpack. Cool releases worked in 2024 and 2025 to curb smallmouth bass spawning, but this year power costs won out.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_673a3eed-0eac-574c-96c0-ae44dc4bd325.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Jalapeños linked to a US salmonella outbreak are tracked to a Mexican farm and a distributor",
     "source": "Telluride Times",
     "date": "August 6, 2026",
@@ -53,8 +65,8 @@
     "date": "August 6, 2026",
     "firstSeen": "2026-08-07",
     "newsTopic": "community",
-    "copy": "Telluride Truffle has a new offering, a gift box called the signature cookie collection. The box contains six cookies, a brownie and a blondie. The blondie is new and so are some of the cookies: a tahini-coconut cookie and an…",
-    "claudeSummary": false,
+    "copy": "Telluride Truffle has a new signature cookie collection gift box — six cookies, a brownie, and a blondie — designed for shipping. New additions include a tahini-coconut and oatmeal-brown butter cookie. The shop is at 135 E. Colorado Ave., with locations also in Denver and Lakewood.",
+    "claudeSummary": true,
     "href": "https://www.telluridenews.com/business/article_6c309497-d124-4d41-8903-d2d3260254b1.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/01/8013316d-fdda-4063-bade-1d56e2df4335/6a74c8c11deef.image.jpg",
     "imgHiRes": true
@@ -68,7 +80,7 @@
     "copy": "San Miguel County's housing needs analysis projects 1,070 additional units needed by 2034, but roughly 520 of those units stem from a single modeling assumption — that in-commuters would relocate here if housing were available. Meanwhile, the Town of Telluride recently reported about a 22% vacancy rate across its employee housing portfolio. Worth watching how the projected need and the on-the-ground numbers line up before major commitments are made.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_3f869615-1ddf-4680-8040-5e60c16fe0e6.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Michael Saftler",
     "isLetter": true,
     "imgHiRes": true
@@ -107,7 +119,7 @@
     "copy": "Parks and Rec required a women's softball team to disband after winning the league championship multiple times in a row. The team's captain argues the decision punishes success rather than encouraging other teams to improve, and suggests alternatives like an A/B league split or a draft system.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_b422bdbf-f5b6-45ee-9e5f-b34e135d2ede.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Robin Jones Mountain Limo Softball Team",
     "isLetter": true,
     "imgHiRes": true
@@ -121,7 +133,7 @@
     "copy": "A Telluride couple used Green Grants funding — through Telluride Foundation, San Miguel County, and EcoAction Partners — to install a mini split heat pump via Stellar Air. The switch is expected to cut propane use and greenhouse gas emissions, with added electricity offset by years of green power through SMPA.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_70617cf9-0845-4fb2-a485-ae31a9dc1229.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "img": "",
     "letterAuthor": "Leigh Sullivan and Phil Hayden",
     "isLetter": true,
     "imgHiRes": true
