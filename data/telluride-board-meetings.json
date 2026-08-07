@@ -1,15 +1,5 @@
 [
   {
-    "date": "August 6, 2026",
-    "title": "Town Council Retreat",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
-    "hasAgenda": true,
-    "location": "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
-    "time": "",
-    "civicwebId": 8050,
-    "packetUrl": "https://telluride-co.civicweb.net/document/442759/"
-  },
-  {
     "date": "August 11, 2026",
     "title": "Town Council",
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
@@ -153,5 +143,14 @@
     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     "time": "",
     "civicwebId": 8165
+  },
+  {
+    "date": "November 5, 2026",
+    "title": "Town Council Budget",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
+    "hasAgenda": false,
+    "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    "time": "",
+    "civicwebId": 8054
   }
 ]

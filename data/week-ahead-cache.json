@@ -1,18 +1,14 @@
 {
-  "hash": "06cb03958f4a73b2564d5dbfaadc9de6c19bd653",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council meeting, where council takes up third reading of the Colorado Wildfire Resiliency Code — a vote that would amend Telluride's Land Use Code to change historic review standards and landscaping rules for fire mitigation, touching property owners across town. Thursday, the Town kicks off its goal-setting retreat for 2027, and the week opens with the Telluride Jazz Festival running through the weekend.",
+  "hash": "ce8c1a2e96c36a1da92aa7736c2fd23706823434",
+  "lede": "The biggest thing to watch this week is Telluride Town Council's Tuesday meeting, where the Colorado Wildfire Resiliency Code goes to third reading — a final vote that would amend land use, historic review standards, and landscaping rules for property owners across town. Also worth your attention: San Miguel County Planning Commission meets Thursday with a subdivision work session and an energy code update affecting new construction on the agenda. On the lighter side, the Jazz Festival is rolling, Ridgway Rendezvous wraps up the weekend, and Movies Under the Stars lands Sunday night.",
   "notable": [
     {
-      "id": 3,
-      "stake": "Final vote on wildfire code that reshapes historic review and landscaping rules."
-    },
-    {
-      "id": 0,
-      "stake": "2027 priorities set here will drive the town budget and staff direction all year."
-    },
-    {
       "id": 1,
-      "stake": "Three multifamily projects reviewed, including a conditional-use permit decision."
+      "stake": "Final vote on wildfire code that reshapes land use and landscaping rules."
+    },
+    {
+      "id": 8,
+      "stake": "County subdivision mechanics and energy code update for new construction reviewed."
     }
   ]
 }

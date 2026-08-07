@@ -96,18 +96,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
   },
   {
-    "title": "Sweet Sounds",
-    "link": "https://www.telluride.com/event/sweet-sounds/",
-    "description": "Head to the Wilkinson Public Library on the first Wednesday of the month this summer for live music and sweet treats! …",
-    "pubDate": "2026-06-03",
-    "endDate": "2026-08-05",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp"
-  },
-  {
     "title": "Telluride Art Walk",
     "link": "https://www.telluride.com/event/telluride-art-walk/",
     "description": "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
@@ -396,17 +384,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp"
   },
   {
-    "title": "Big Love Car Wash",
-    "link": "https://www.telluride.com/event/big-love-car-wash/",
-    "description": "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
-    "pubDate": "2026-08-05",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/62901/biglovecarwash-2lb24-1536x1024.800x533.webp"
-  },
-  {
     "title": "Sandra Frias Trunk Show",
     "link": "https://www.telluride.com/event/sandra-frias-trunk-show/",
     "description": "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
@@ -554,6 +531,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62312/screenshot_2026-04-29_at_2_59_37_pm.800x533.webp"
+  },
+  {
+    "title": "Gaiascope Opening Night",
+    "link": "https://www.telluride.com/event/gaiascope-opening-night/",
+    "description": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …",
+    "pubDate": "2026-08-26",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp"
   },
   {
     "title": "Coffee & Climate Conversations",

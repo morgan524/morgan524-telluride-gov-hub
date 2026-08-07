@@ -260,7 +260,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"null","sv":4},
 
   "county|2026-08-13|Planning Commission Meeting":
-    {"sv":4},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"},
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294","sv":4,"zoomUrl":"https://us06web.zoom.us/j/83026171795?pwd=4cWG6X1zHUnG7rNIbuMYaAeGXgIESW.1","meetingId":"830 2617 1795","passcode":"256663.","phone":"719) 359-4580"},
@@ -275,10 +275,10 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"854 0207 9752","passcode":"775535","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4},
@@ -377,7 +377,10 @@ const MEETING_AGENDA_META = {
     {"sv":4},
 
   "county|2026-08-27|CWAB":
-    {"sv":4}
+    {"sv":4},
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -580,7 +583,10 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to several legal and financial notices, including two foreclosure sales involving properties in Telluride and Mountain Village, and probate proceedings for multiple estates in San Miguel County.",
 
   "county|2026-08-27|CWAB":
-    "The San Miguel County CWAB meeting is expected to involve legal and financial matters, including probate proceedings for multiple estates and foreclosure sales on properties in Telluride and Mountain Village, such as a vacant lot on Stonegate Drive and a Double Diamond condominium unit."
+    "The San Miguel County CWAB meeting is expected to involve legal and financial matters, including probate proceedings for multiple estates and foreclosure sales on properties in Telluride and Mountain Village, such as a vacant lot on Stonegate Drive and a Double Diamond condominium unit.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
+    "The August 20, 2026 Planning & Zoning Commission Chair meeting in Telluride has been cancelled. No agenda items will be heard. Residents with matters before the commission should watch for rescheduling information."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -684,13 +690,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
+  },
+  {
     title: "Flood ravages homes",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
     img: ""
   },
   {
@@ -910,8 +926,8 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-06';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-06';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-07';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-07';
 
 const MANUAL_SUMMARIES = {
   "smart|2026-07-09|SMART Board of Directors":
@@ -1047,7 +1063,7 @@ const MANUAL_SUMMARIES = {
     "The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.",
 
   "county|2026-08-13|Planning Commission Meeting":
-    "The August 13 Planning Commission agenda hasn't been posted yet.",
+    "Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.",
 
   "telluride|2026-07-27|Special Town Council - Jul 27 2026":
     "A single item: the Council, sitting as the Liquor Licensing Authority, will hold a public hearing on a special event permit request from San Miguel Educational Fund (KOTO Radio) for its Live at the Drive event at 207 N Pine Street on July 30, 2026, from 2:00 pm to 9:30 pm.",
@@ -1062,10 +1078,10 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The August 19, 2026 Historic & Architectural Review Commission Chair agenda hasn't been posted yet.",
+    "The August 19 HARC agenda has one item: a pergola at 472 W Pacific Ave, the Elks Lodge property. The structure was built without a permit and is currently in violation — HARC will consider whether to approve it after the fact as a minor-scale alteration within the Telluride Historic Landmark District.",
 
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "The August 19, 2026 HARC agenda hasn't been posted yet.",
+    "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary large-scale review — Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another — with a 3:00 PM site walk preceding the evening session. Both applications involve new construction of more than 5,000 sq ft in the Accommodations 2 zone district, with the Town of Telluride as owner and Design Workshop as applicant. The three Carhenge building clusters (A/B/C, D1/D2, and E1/E2/E3 at 700 W Pacific Ave) are continued to a September date TBD. A work session covers proposed new construction and shed work at 335 W Colorado — the County/Town Facilities project, now in its second HARC work session. Also on the public hearing list: a final large-scale application for 208 S Fir Street (5,000+ sq ft, Commercial zone), and smaller-scale items at 461 Dakota Ave and 734 Primrose Lane involving steep-slope construction.",
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
     "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
@@ -1164,7 +1180,10 @@ const MANUAL_SUMMARIES = {
     "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
 
   "county|2026-08-27|CWAB":
-    "The August 27 CWAB agenda hasn't been posted yet."
+    "The August 27 CWAB agenda hasn't been posted yet.",
+
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
+    "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1423,15 +1442,27 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "Parent PLUS loan limits leave families scrambling before fall semester",
+    title: "Jalapeños linked to a US salmonella outbreak are tracked to a Mexican farm and a distributor",
     source: "Telluride Times",
     date: "August 6, 2026",
-    firstSeen: "2026-08-06",
-    newsTopic: "housing",
-    copy: "Federal changes to Parent PLUS loans — now capped at $20,000/year and $65,000 lifetime — blindsided families just weeks before fall semester. Students who took dual enrollment credits in high school may exhaust eligibility before graduating. Norwood's True North Youth Program stepped in with a $5,000 scholarship for one local student caught in the gap.",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Jalapeño peppers tied to a multistate salmonella outbreak have been traced to a Sinaloa, Mexico grower and distributed into the U.S. by Coast Citrus Distributors, which has issued a recall. At least 345 people across 27 states have gotten sick — Colorado among the hardest hit — with 36 hospitalized. Chipotle and Qdoba have pulled jalapeños from their menus.",
     claudeSummary: true,
-    href: "https://www.telluridenews.com/norwood_post/article_35b523aa-436d-4f69-ae7e-7977f1a10e28.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/46/b46708e7-5a80-481e-819b-026cd66cf162/6a73d588074e7.image.jpg",
+    href: "https://www.telluridenews.com/news/state/article_efee1111-e541-58a3-85ce-16308445d142.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/f8/3f8145d4-7669-582b-a1bb-8944c19d19bf/6a750f722a716.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Logan Metz and the fork in the road",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "infrastructure",
+    copy: "Logan Metz — Wisconsin-born singer-songwriter and multi-instrumentalist — plays Music on the Green at Reflection Plaza in Mountain Village on Friday, Aug. 7, 5–7 p.m. He's toured with Lukas Nelson, Willie Nelson, Neil Young, and others. His first solo album in a decade is due early next year; an EP preview, *The Chimney Rock*, is out now on Bandcamp.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_e7b4505a-8fe0-4327-ba03-cd289b681020.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/4b/24b0fa32-e963-425b-857c-d97a5a10dd42/6a72781e976e6.image.jpg",
     imgHiRes: true
   },
   {
@@ -1444,6 +1475,185 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_bd3a30b3-a750-5d21-95ae-29f598169ae9.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/0a/b0aaf848-7645-5ed7-9614-27295e508ec3/6a74671a699d4.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Upcoming workshop will help producers navigate drought conditions",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "San Miguel and Montrose counties, with the Shavano Conservation District, are hosting a free drought workshop for West End agricultural producers on Aug. 13, 11 a.m.–3 p.m. at The Livery in Norwood. Topics include water scarcity, prairie dog management, invasive weeds, soil health, and available funding. Lunch provided; bring a dessert and RSVP at droughtonthewestend.eventbrite.com.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/the_norwood_post/article_19a431bf-2782-4870-aa77-d3d7c5aec14a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/aa/aaa0710c-8143-4755-8375-c91e90a1affe/6a74a047229d7.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "New cookies are selling like hot cakes",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Telluride Truffle has a new offering, a gift box called the signature cookie collection. The box contains six cookies, a brownie and a blondie. The blondie is new and so are some of the cookies: a tahini-coconut cookie and an…",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/business/article_6c309497-d124-4d41-8903-d2d3260254b1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/01/8013316d-fdda-4063-bade-1d56e2df4335/6a74c8c11deef.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Before we build",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "San Miguel County's housing needs analysis projects 1,070 additional units needed by 2034, but roughly 520 of those units stem from a single modeling assumption — that in-commuters would relocate here if housing were available. Meanwhile, the Town of Telluride recently reported about a 22% vacancy rate across its employee housing portfolio. Worth watching how the projected need and the on-the-ground numbers line up before major commitments are made.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_3f869615-1ddf-4680-8040-5e60c16fe0e6.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Michael Saftler",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Then and now",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "A local writer reflects on growing up in 1950s small-town America — less fearful childhoods, WWII-generation pragmatism, and a politics centered on national interest over party loyalty. He contrasts that era's broad civic unity with today's ideological polarization and concern over executive overreach. Worth a read if you've been watching these shifts for a while.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_ad9bdb14-1309-45b3-bb0a-169d5c3d2cbc.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/8e/08ee1e1e-0ae1-42a6-8a07-cf4986923207/6a74c9b358aa8.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Fire management moonshot",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "public-safety",
+    copy: "Decades of fire-suppression policy left Western forests dangerously overgrown, and Fire Season '26 produced more pollution than fossil fuels combined. A growing number of voices are calling for a national-scale shift — thinning forests and converting waste wood to biomass energy through public-private partnerships. Early programs like WHIMS showed it works; the question is whether the will is there to do it at scale.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_9dfd0bb2-f5ff-4966-b164-e5c1f56659ab.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/26/c2637ce2-fbea-42f3-a851-7260c80cd91e/6a74a11dc40c5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Penalizing success",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Parks and Rec required a women's softball team to disband after winning the league championship multiple times in a row. The team's captain argues the decision punishes success rather than encouraging other teams to improve, and suggests alternatives like an A/B league split or a draft system.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_b422bdbf-f5b6-45ee-9e5f-b34e135d2ede.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Robin Jones Mountain Limo Softball Team",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Thank you to Green Grants and partners",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "arts-culture",
+    copy: "A Telluride couple used Green Grants funding — through Telluride Foundation, San Miguel County, and EcoAction Partners — to install a mini split heat pump via Stellar Air. The switch is expected to cut propane use and greenhouse gas emissions, with added electricity offset by years of green power through SMPA.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_70617cf9-0845-4fb2-a485-ae31a9dc1229.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Leigh Sullivan and Phil Hayden",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Skinny dipping",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "recreation",
+    copy: "A Telluride local writes about returning to her Maine hometown — the mill town she once couldn't wait to leave — and finding herself newly fond of its rough, familiar edges. She and her husband traveled without kids for the first time, mixing family obligations with coastal inn stays and time at a rustic lakeside camp.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_8a45d6f0-7fe4-4f7f-87fc-17b6c0322779.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/76/f769215a-15d5-4610-9ecf-a5742e46bc9d/6a74c3ad6d272.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Chemistry with no beakers in sight",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Harvard chemistry professor Joonho Lee speaks Tuesday, Aug. 11 at 6:30 p.m. at the Telluride Conference Center in Mountain Village on what quantum computers can actually do for chemistry — drug discovery, better materials, energy applications. Free and open to all, no science background needed. Final Mountain Village Town Talk of the 2026 season.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_1c667c9c-af24-4e8c-92f4-2d5d556ab8d1.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/0d/30dfc4ac-b3cb-4d35-9038-4a2ad73a4ff6/6a74c486581de.image.jpg",
+    letterAuthor: "Townsend St",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "The air we breathe",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Smoke from the Gold Mountain Fire pushed Ridgway's AQI to 281 this summer — \"very unhealthy\" territory — while temperatures hit an unofficial 95–96°F. The writer notes wildfire smoke carries PM2.5 particles and VOCs that damage lungs fast. Telluride had its own air quality reckoning in the 1980s, when wood-burning stoves earned it worse ratings than Denver.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_bf00b207-4214-49a0-81b6-8dbf0a6ec13e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/88/d88a20a6-e4bc-4349-bbb4-4710587bd52a/6a74c27ac3155.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Dog jumping",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "community",
+    copy: "Dogs jump mostly to say hello or get attention — punishing it usually backfires since even negative reactions are still attention. Turning away calmly and rewarding a sit works better, but everyone around the dog has to respond the same way. Second Chance Humane Society in Ridgway is open daily 11–5:30.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_d5d6c56e-15ba-414e-9e6c-a064bb518ada.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/7d/47d53cf6-30d9-41ec-90a2-de6e06726a44/6a74c3178ec55.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Town of Mountain Village to host Village Pond Plaza development engagement events",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "land-use",
+    copy: "Mountain Village is gathering public input on three conceptual redesigns for Village Pond Plaza, tied to the Four Seasons development agreement. Drop-in events are scheduled Aug. 12 at Heritage Plaza (11am–4pm) and Aug. 13 at Town Hall (5–7pm), with an online survey launching the week of Aug. 10. Construction is targeted for summer 2027.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_bf815df6-bca3-4d50-88d0-b38540054c06.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/f9/5f9b3527-23af-43fc-a312-1687e4098147/6a74c17165209.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Week of Aug. 6-12",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-07",
+    newsTopic: "government",
+    copy: "Norwood-area birthdays run Aug. 6–12, and the week kicks off fall youth sports — volleyball, cross country, and football all start Aug. 10, with a back-to-school barbecue Aug. 14. The Farmers Market runs Thursdays through mid-October, and a free chamber music concert hits The Livery Aug. 27.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_69428c0a-c9dc-4ef4-b85d-486d1ae30bce.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/ae/eaed7ea4-1f71-44b3-9a79-b17bd188c26c/6a74a60e70eec.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Parent PLUS loan limits leave families scrambling before fall semester",
+    source: "Telluride Times",
+    date: "August 6, 2026",
+    firstSeen: "2026-08-06",
+    newsTopic: "housing",
+    copy: "Federal changes to Parent PLUS loans — now capped at $20,000/year and $65,000 lifetime — blindsided families just weeks before fall semester. Students who took dual enrollment credits in high school may exhaust eligibility before graduating. Norwood's True North Youth Program stepped in with a $5,000 scholarship for one local student caught in the gap.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_35b523aa-436d-4f69-ae7e-7977f1a10e28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/46/b46708e7-5a80-481e-819b-026cd66cf162/6a73d588074e7.image.jpg",
     imgHiRes: true
   },
   {
@@ -2100,30 +2310,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Work underway at Society Turn brings new medical facility closer",
-    source: "Telluride Times",
-    date: "July 24, 2026",
-    firstSeen: "2026-07-24",
-    newsTopic: "land-use",
-    copy: "Site prep is underway at Society Turn for Telluride's long-planned new medical center — roads, retaining walls, and utilities are being laid by Genesee Properties, which donated the land. The med center expects to take possession late 2027 or early 2028, then begin construction on an expanded facility with a helipad, urgent care, and telehealth infrastructure. This project has been attempted several times over the years; this is the first time it's actually moving dirt.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8de6f81a-6034-47af-83d9-289f209deb44.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/38/c383af44-054b-4ab1-8933-248a914a3deb/6a61599609c33.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Brass from some of the best",
-    source: "Telluride Times",
-    date: "July 24, 2026",
-    firstSeen: "2026-07-24",
-    newsTopic: "arts-culture",
-    copy: "The New York Philharmonic Principal Brass Quintet returns to the Sheridan Opera House on July 31 at 8 p.m. after a well-received 2023 appearance during Telluride Chamber Music's 50th anniversary. The evening program spans Renaissance to Gershwin. Earlier that day, the quintet plays a free kids' concert at the Oak Street Gondola Plaza.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_2e5259f9-4c04-468f-848e-439dffc03d8d.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c7/dc7c9079-923d-41ff-ab58-97c50b81b233/6a59c157b008b.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -2133,14 +2319,30 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Aug 13 Open House for Housing Action Plan &amp; Master Plan Water Supply Element",
-    source: "Town of Ridgway",
-    date: "July 24, 2026",
-    firstSeen: "2026-07-24",
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "community",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
     newsTopic: "housing",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Aug-Ridgway-HAP-Open-House.pdf",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "housing",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
     img: ""
   },
   {
@@ -2179,6 +2381,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 ];
 
 const KOTO_NEWSCASTS = [
+  {
+    title: "Newscast 8-6-26",
+    source: "KOTO Community Radio",
+    date: "August 7, 2026",
+    newsTopic: "arts-culture",
+    copy: "Ranching in Drought; West End Roundup with the San Miguel Basin Forum; Music on the Mesa Brings the Burroughs",
+    href: "https://koto.org/news/newscast-8-6-26/"
+  },
   {
     title: "Newscast 8-5-26",
     source: "KOTO Community Radio",
@@ -2234,14 +2444,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "land-use",
     copy: "On this week's Regional Roundup, we'll hear about the recent awards given by Aspen nonprofit Climate Curve for innovative climate solutions. Then we'll hear how President Trump has reduced the size of Bears Ears and Grand Staircase Escalante National Monuments, reducing protections for the iconic landscapes. Then we find out how an animal shelter i",
     href: "https://koto.org/news/newscast-7-24-26/"
-  },
-  {
-    title: "Newscast 7-23-26",
-    source: "KOTO Community Radio",
-    date: "July 24, 2026",
-    newsTopic: "recreation",
-    copy: "West End Roundup with the San Miguel Basin Forum; Recreation on the Uncompahgre River; Cat Movie Fisher with Risho Unda",
-    href: "https://koto.org/news/newscast-7-23-26/"
   }
 ];
 
@@ -2342,19 +2544,6 @@ const SMB_FORUM_ARTICLES = [
     claudeSummary: true,
     href: "https://www.sanmiguelbasinforum.com/stories/dessert-contest-had-87-entries-310-guests,122303",
     img: "https://zeta.creativecirclecdn.com/smb/original/20260713-235341-51b-F3%20-%20front%20page%20pic.jpg"
-  },
-  {
-    title: "Ouray locals reflect on impacts of fire",
-    source: "San Miguel Basin Forum",
-    sourceKey: "smb",
-    date: "July 8, 2026",
-    firstSeen: "2026-07-08",
-    dateSource: "article",
-    newsTopic: "public-safety",
-    copy: "The Gold Mountain Fire started June 27 near Ouray and has burned over 31,400 acres in steep, hard-to-reach terrain on the Cimarron Range — tough enough that it's now a top national priority with 800+ firefighters deployed. Evacuations along U.S. 550 hit during what's normally Ouray's busiest week, and local businesses are reporting cancellations up 30–50%, with one KOA owner estimating $75,000–$100,000 in losses.",
-    claudeSummary: true,
-    href: "https://www.sanmiguelbasinforum.com/stories/ouray-locals-reflect-on-impacts-of-fire,121620",
-    img: ""
   }
 ];
 
@@ -2650,7 +2839,7 @@ const TELLURIDE_SCIENCE_EVENTS = [
     location: "Telluride Conference Center, Telluride",
     description: "This Town Talk will be presented by Joonhoo Lee from Harvard University.\r\nLee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh perspectives on how to think about what quantum computing can—and cannot—deliver for chemistry. He will also make the case for why chemists must learn theoretical computer science to prepare for the coming wave of fault-tolerant quantum computing.\r\nThis is the last Town Talk of the summer that  will be held oat the Telluride Conference Center in Mountain Village. The final Town Talk on August 25 will be held at the Telluride Innovation Center in Telluride.  Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     link: "https://telluridescience.org/event/quantum-computing-chemistry/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/Screenshot-2026-08-06-at-4.46.13-PM.png",
     sourceLabel: "Telluride Science"
   },
   {
@@ -2684,13 +2873,23 @@ const TELLURIDE_SCIENCE_EVENTS = [
     sourceLabel: "Telluride Science"
   },
   {
+    title: "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
+    date: "2026-09-02",
+    time: "6:00 PM – 7:00 PM",
+    location: "Telluride Innovation Center, Telluride",
+    description: "In collaboration with Telluride Science, Telluride Foundation, Mountain Towns 2030, and Eco Action Partners As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 20203, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Panelists include Jessica Burley, Sustainability Manager for the Town of Breckenridge; John Clark, Mayor of Ridgway, and MT2030 Executive Director Chris Steinkamp. About Mountain Towns 2030: 96% of local leaders cite limited staffing and bandwidth as the number one barrier to climate action. …",
+    link: "https://telluridescience.org/event/mountain-towns2030/",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/08/MT2030_320x212.jpg",
+    sourceLabel: "Telluride Science"
+  },
+  {
     title: "Telluride Chamber Music and Telluride Science Community Concert",
     date: "2026-09-10",
     time: "6:00 PM – 7:00 PM",
     location: "Telluride Innovation Center, Telluride",
     description: "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. \r\nFeatured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) \r\nAll are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
     link: "https://telluridescience.org/event/community-concert-september/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/com_concert-0910_1080x1080.png",
     sourceLabel: "Telluride Science"
   }
 ];
@@ -2737,17 +2936,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-06T15:30:00.000Z",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Art Walk Telluride",
     link: "https://koto.org/event/art-walk-telluride/2026-08-06/",
     description: "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
@@ -2789,6 +2977,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Stuffy Sleepover Storytime",
+    link: "https://koto.org/event/stuffy-sleepover-storytime/",
+    description: "Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only.* Storytime will be on the lower terrace.",
+    pubDate: "2026-08-07T16:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
   },
   {
@@ -3207,6 +3406,72 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: ""
+  },
+  {
+    title: "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
+    link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-18/",
+    description: "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on identification for her bird walk the following morning. The bird walk will take place at 8:30 am on August 18th. Meet outside the Telluride Patagonia store. Bring binoculars if you have them. If you don't, they will be provided. The walk is limited to 12 participants. Sign up at Telluride Patagonia or with a QR code provided on local flyers.",
+    pubDate: "2026-08-18T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: ""
+  },
+  {
+    title: "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    link: "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-18/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
+    pubDate: "2026-08-18T14:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
+  },
+  {
+    title: "\"Best Day Ever\" Free Movie Screening",
+    link: "https://koto.org/event/best-day-ever-free-movie-screening/",
+    description: "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice Award winner at the 2026 Mountainfilm Festival. Directed by Telluride local Ben Knight, the film is a powerful story about what can happen when a community comes together to build outdoor spaces that welcome everyone. Set in the Green Mountains of Vermont, Best Day Ever follows Greg Durso and Allie Bianchi as they work alongside friends, trail builders, and advocates to create the world’s first fully adaptive mountain bike trail network. Along the way, the film explores how thoughtful trail design, collaboration, and a shared vision can transform not only access to the outdoors, but the experience for every rider. …",
+    pubDate: "2026-08-19T00:30:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Conference Center, Mountain Village",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/07/BEST-DAY-EVER.webp"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://koto.org/event/market-on-the-plaza/2026-08-19/",
+    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    pubDate: "2026-08-19T17:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Heritage Plaza, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-19/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-19T19:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Telluride Rotary Club Meeting",
+    link: "https://koto.org/event/telluride-rotary-club-meeting-10/",
+    description: "Telluride Rotary Club meets Wednesday, August 19, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    pubDate: "2026-08-20T00:00:00.000Z",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
     imageUrl: ""
   }
 ];
@@ -3781,7 +4046,17 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-
+  {
+    title: "Community Meeting - Flooding, Economic Impacts, and Community Resilience",
+    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3775",
+    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3775",
+    pubDate: "2026-08-11T18:00:00.000Z",
+    source: "ouraycounty",
+    sourceLabel: "Ouray County",
+    category: "Community Event",
+    location: "Ouray Community Center - 320 6th Avenue Ouray CO 81427",
+    imageUrl: ""
+  }
 ];
 
 const OURAY_RIDGWAY_EVENTS = [
@@ -3830,18 +4105,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52994829548404/huge/1b35bf736db2ace8de36b37a504f763702f48af8.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-06T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
   },
   {
     title: "On Display: Silverton, Interpreted",
@@ -4003,6 +4266,29 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
+    title: "Happy Little Trees: Painting Class",
+    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-painting-class",
+    description: "\"QUIET WOODS\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. View on site | Email this event",
+    pubDate: "2026-08-08T10:30:30.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793305718/huge/54c3153d4a8aa3d414529babdd589f3da27b481d.jpg"
+  },
+  {
+    title: "Annual Ridgway Fire Department Pancake Breakfast",
+    link: "https://events.ourayridgwayevents.com/event/annual-ridgway-fire-department-pancake-breakfast",
+    description: "Saturday, August 8 and Sunday, August 9 from 7:30am to 10:30am, come support your local firefighters at their Annual Pancake Breakfast Fundraiser. Includes pancakes, sausage, eggs, coffee & juice. $10 Adults, $5 Children or $25 for the family. Best Breakfast, Best Prices, Best Cooks in Town (at least for the weekend)! View on site | Email this event",
+    pubDate: "2026-08-08T13:30:00.000Z",
+    endDate: "2026-08-09",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Fire House",
+    imageUrl: "https://localist-images.azureedge.net/photos/53631321088580/huge/1e3b4e247e16202b8851a99ceb9ede86f5dee60e.jpg"
+  },
+  {
     title: "Electric Showcase",
     link: "https://events.ourayridgwayevents.com/event/electric-showcase",
     description: "Experience electrification hands on! Visit the Electric Showcase booth at the southeast corner of the Ridgway Rendezvous. Check out electric yard equipmentLearn about financial incentivevsDiscover how you can win an E-Bike with SMPA! Presented by : The Town of Ridgway and the Ridgway Sustainability Advisory BoardEcoAction PartnersClean Energy Economy for the Region (CLEER) San Miguel Power Association (SMPA) View on site | Email this event",
@@ -4118,6 +4404,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53506206584416/huge/5c0910190bcc815b3556542e2cfda2027272d8bf.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8419",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-08-08T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
     title: "Floating Lotus Brewery 2 Year Anniversary Celebration",
     link: "https://events.ourayridgwayevents.com/event/floating-lotus-brewery-2-year-anniversary-celebration",
     description: "Free celebration · All ages · Live music 6–10 p.m. Floating Lotus Brewery · Outdoor and indoor stages Here’s to two years in business! Join us on Saturday, August 8, 2026, for an all-day celebration featuring food and drink specials, live music, cornhole, giveaways, and plenty more. One-Day Food Special We’ve partnered with Taqueria Alonzo to offer a pint and an entrée for just $16. Choose any pint and pair it with an order of the taqueria’s new fish tacos. This anniversary special will be available all day, for one day only, while supplies last. Live Music Our good friend TBP Joe returns from Fruita to perform on the outdoor stage from 6–8 p.m. Afterward, Sean Universe and DJ Photon will take over the indoor stage with an EDM set that continues late into the night. …",
@@ -4127,6 +4424,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53603888943583/huge/4dd2b97b517c8a564d3e0267ae9c3926e7e803ac.jpg"
+  },
+  {
+    title: "Vibrant Music + Dance",
+    link: "https://events.ourayridgwayevents.com/event/vibrant-music-dance",
+    description: "Vibrant returns to Ouray! Live music (rock, blues, and more!), dance beats, flow dance artists, food, beer from the Ouray Mountain Air Music Series nonprofit, live painters, arts and crafts, bounce houses, and more! Kid friendly, and kids 12 and under free. Get tickets at View on site | Email this event",
+    pubDate: "2026-08-08T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park Ouray",
+    imageUrl: "https://localist-images.azureedge.net/photos/53630704110490/huge/606da76369d52578672122d9226699422d70664e.jpg"
   },
   {
     title: "Ouray: Echoes in the Canyon — Screening @ the Wright",
@@ -4203,7 +4511,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-08-10T18:00:00.000Z",
-    endDate: "2026-09-28",
+    endDate: "2026-10-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4266,6 +4574,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Community Meeting - Regarding flooding, economic impacts, and community resilience",
+    link: "https://events.ourayridgwayevents.com/event/community-meeting-regarding-flooding-economic-impacts-and-community-resilience",
+    description: "Hosted by Ouray County: Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows. Please plan to attend this community meeting and information session with discussion and presentations from local, regional, federal and state partners. This event will begin with a presentation by a panel of experts and then move into breakout booths for direct Q&A with experts. View on site | Email this event",
+    pubDate: "2026-08-12T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53631245622363/huge/e81829d7b12df787e2c9e06bbe1bb4188da3a9ea.jpg"
   },
   {
     title: "Live Music- Will Overman Band",
@@ -4441,6 +4760,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg"
   },
   {
+    title: "Edie",
+    link: "https://events.ourayridgwayevents.com/event/edie",
+    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. View on site | Email this event",
+    pubDate: "2026-08-14T19:30:42.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793255536/huge/48ca171fe67cde30db5164cdafeb611f560ad66c.jpg"
+  },
+  {
     title: "TYLER SIMMONS",
     link: "https://events.ourayridgwayevents.com/event/tyler-simmons-9384",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4496,6 +4826,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53471176747260/huge/13058b48d3167871df0880c9045d9735fa1b9c13.jpg"
   },
   {
+    title: "Ouray Country Pride After Party",
+    link: "https://events.ourayridgwayevents.com/event/ouray-country-pride-after-party",
+    description: "Keep the celebration going after the Ouray County Pride Block Party with an evening of music, drag, dancing, drinks, and community at the historic Wright Opera House. The Pride After Party brings together locals, visitors, performers, allies, and friends for a joyful night of connection and celebration in one of Colorado's most unique mountain venues. Expect live entertainment, dancing, laughter, and plenty of opportunities to celebrate the people and relationships that make our communities stronger. Whether you spent the afternoon at the Block Party or are just joining the festivities for the evening, all are welcome to come celebrate Pride in the heart of downtown Ouray. 18+ Ticketed Event View on site | Email this event",
+    pubDate: "2026-08-15T19:00:56.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793196138/huge/7a061eea58c9d308eb4b46baeb37a87414c9b693.jpg"
+  },
+  {
     title: "AJ FULLERTON",
     link: "https://events.ourayridgwayevents.com/event/aj-fullerton",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4538,6 +4879,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53471216560394/huge/574183965a0056eaee8b515c5347a414162855ad.jpg"
+  },
+  {
+    title: "Sold Out: Aug 16, 2026: Ouray County Pride Drag Brunch 2026",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-pride-drag-brunch-2026",
+    description: "Be fabulous! Celebrate Ouray County Pride with us on the Rooftop at White Buffalo Restaurant + Bar! Join hostess, Maxine LaQueene, with Aria Pettyone, Hysteria Brooks, MixTrix, and Simone, for Sunday Brunch, cocktails and drag to close out Pride weekend in Ridgway. August 16, 2026, 12:00 - 2:00 pm. Event is currently sold out, call the property to inquire about current availability/wait list; reservations required. 970-626-3737 Must be 21 or older. The Rooftop at White Buffalo is located at Chipeta Lodge Resort + Spa at 304 S. Lena St., Ridgway. View on site | Email this event",
+    pubDate: "2026-08-16T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "White Buffalo Restaurant + Bar",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629220241939/huge/16644e551a7696d45dae23224664787f1fd221ac.jpg"
   },
   {
     title: "TOP Volunteer Work Day – Monday, August 17",
@@ -4606,6 +4958,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Decker Community Room",
     imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg"
+  },
+  {
+    title: "CO-150: A League of Their Own",
+    link: "https://events.ourayridgwayevents.com/event/co-150-a-league-of-their-own",
+    description: "A League of Their Own (1992) tells the story of the All-American Girls Professional Baseball League, formed during World War II when many major league players were serving overseas. Led by an unforgettable ensemble cast including Geena Davis, Lori Petty, Rosie O'Donnell, Madonna, and Tom Hanks, the film celebrates the women who stepped onto the field and proved they belonged there. Funny, heartfelt, and endlessly quotable, the film has become a beloved classic about teamwork, perseverance, and challenging expectations. This screening is part of the Colorado 150 Film Festival and includes a special Colorado connection. Marla Hooch's tryout scene was filmed at Colorado State University's Glenn Morris Field House in Fort Collins, and the character herself proudly hails from Fort Collins in the film. Before the screening, join the community for a friendly wiffle ball game at Fellin Park at 3:00 pm. …",
+    pubDate: "2026-08-19T19:00:44.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793089630/huge/0c6cd87ef64554102af8e9c1429715eaa74f68f8.jpg"
   },
   {
     title: "Live Music- Emilio Gonzalez",
@@ -4719,6 +5082,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53481231331209/huge/c0cdcb0d2847ee1b3356d6a5770d61693b5eea88.jpg"
   },
   {
+    title: "WCOC 3rd Annual Chili Cook-Off",
+    link: "https://events.ourayridgwayevents.com/event/wcoc-3rd-annual-chili-cook-off",
+    description: "Braggin' rights are on the line for competitors to earn the title of Best Chili in Ouray County for 2026 during the 3rd Annual WCOC Chili Cook-Off! Local businesses will present an assortment of chilis to be tested by professionals and citizens. Participants could take home the prize of Best Chili, People's Choice, Best Decorated and Top Fundraiser (as additional monetary tips help the participants earn this prize). Taste alll of the chilis for $14. If they're extra good, leave them an additional tip! Baked goods made by WCOC members will also be available for purchase. This event is hosted by the Woman's Club of Ouray County, a 501(c)(3) nonprofit organization. All proceeds benefit Ouray County nonprofits with grants. We are grateful for the past, present and future support of our Community! View on site | Email this event",
+    pubDate: "2026-08-22T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53623729143081/huge/45546bcb32f8d150e1f7b0a0d240e5499f23a374.jpg"
+  },
+  {
     title: "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
     link: "https://events.ourayridgwayevents.com/event/lunar-tics-unite-discovering-the-moon-ridgway-state-park-summer-program-series",
     description: "Ready to unlock the secrets of our favorite cosmic neighbor? Pack your curiosity and join professor Gerald J. Spangrude for a fun, stellar evening as we talk all about the moon—from its wild crater-faced history and lunar myths to how it dances through our Colorado night skies! View on site | Email this event",
@@ -4807,6 +5181,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ouray Community Center",
     imageUrl: "https://localist-images.azureedge.net/photos/52092171660517/huge/0e628304026c92db25e8df01849c962ac902a3b4.jpg"
+  },
+  {
+    title: "CO-150: Dumb and Dumber",
+    link: "https://events.ourayridgwayevents.com/event/co-150-dumb-and-dumber",
+    description: "Dumb and Dumber (1994) follows two well-meaning but spectacularly clueless friends, Lloyd Christmas and Harry Dunne, as they embark on a cross-country road trip that quickly spirals into one ridiculous misadventure after another. Starring Jim Carrey and Jeff Daniels at the height of their comedic powers, the film became an instant cult classic thanks to its endlessly quotable lines, outrageous situations, and perfect blend of slapstick and absurdity. This Colorado-connected screening celebrates one of the state's most memorable movie road trips. Several scenes were filmed in Colorado, including locations in Breckenridge, Fort Collins, and Estes Park, showcasing the mountain landscapes and small-town charm that help make the state such a memorable backdrop for adventure. A wildly funny comedy about friendship, bad decisions, and the occasional accidental success. View on site | Email this event",
+    pubDate: "2026-08-26T19:00:31.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793039448/huge/0fe7e8d5f45588023fbbee28323ea2c0d3cb36fa.jpg"
   },
   {
     title: "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
@@ -4899,6 +5284,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53595153401195/huge/21d02df3239c35fcac02e56bef6792ae2e868513.jpg"
   },
   {
+    title: "San Juan Chamber MusicFest Festival Concert",
+    link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest-festival-concert",
+    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. Tickets available through the Ouray County Performing Arts Guild. Meet the SJCMF musicians >> View on site | Email this event",
+    pubDate: "2026-08-29T19:30:16.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/39f020be09948c428ebce6f72c1b5cb7e2a7cb06.jpg"
+  },
+  {
     title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
     link: "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
     description: "Get ready to add a splash of sapphire to your weekend! Pack your binoculars and join professor Bruce Ackerman at the Visitor Center for a fun, feather-filled evening discovering Colorado’s most brilliant bluebirds—from their cheerful songs and quirky nesting habits to the best spots for watching them flap around Ridgway! View on site | Email this event",
@@ -4988,6 +5384,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53622925400388/huge/78ed1b5451403be8feaebe77cd45b69c1a39e826.jpg"
   },
   {
+    title: "City Slickers: CO-150 Film Festival @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
+    description: "City Slickers : CO- 150 Movie Night @ the Wright We’re celebrating Colorado’s Sesquicentennial with 150 screenings throughout the Centennial State. WHEN? Wednesday, September 2nd Doors at 6:30 pm • Movie at 7:00 pm RUN TIME: 1h 52min YEAR: 1991 RATING: PG-13 ABOUT THE FILM Every year, three friends take a vacation away from their wives. This year, henpecked Phil (Daniel Stern), newly married Ed (Bruno Kirby), and Mitch (Billy Crystal) -- terrified of his midlife crisis -- decide to reignite their masculinity by taking a supervised cattle drive across the Southwest. Under the supervision of gruff cowboy Curly (Jack Palance), the men set out on a journey that turns unexpectedly dangerous. The three men bond along the way to conquering their fear of aging. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
+    pubDate: "2026-09-02T19:00:18.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
+  },
+  {
     title: "City Slickers: CO-150 Film Festival Screening @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-screening-the-wright",
     description: "City Slickers: CO-150 Film Festival @ the Wright WHEN? Wednesday, September 2 Doors at 6:30 pm • Movie at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado RUN TIME: 1h 53min RATING: PG-13 ROTTEN TOMATOES SCORE: 90% ABOUT THE FILM City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. …",
@@ -4997,6 +5404,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53552494063177/huge/15fe4ae46423d80d30fb855343007994421cbe10.jpg"
+  },
+  {
+    title: "WOH Art Show: Brittany Stadler",
+    link: "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
+    description: "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose presence represents an ecosystem, region, or symbol. From that base shape, I build inward and intuitively. I draw in larger forms first, and work my way toward the smaller details. Research is an essential part of the practice. I study each plant and animal that I consider for a piece — how they move, how they relate to their environment. These rhythms inform the poses and compositions in my work, helping each subject feel alive and true. What results is part collage, part optical illusion — a work that I hope will be a process of discovery for everyone that views it. …",
+    pubDate: "2026-09-03T16:00:37.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg"
+  },
+  {
+    title: "Trivia Night @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
+    description: "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you absolutely learned once in 8th grade and never expected to need again. Bring a team, bring a friend, or arrive alone like a mysterious wandering scholar of useless information. Competitive spirits, wild guesses, and dramatic confidence are all encouraged. No studying required. In fact, studying may make things worse. View on site | Email this event",
+    pubDate: "2026-09-04T19:00:12.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg"
   },
   {
     title: "RIDGWAY WRECKING CREW",
@@ -5103,6 +5532,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     description: "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month. Karate class is a great way to learn skills to keep you safe, stay in shape and strong core movements. Karate believes in using it only to protect self and is taught accordingly. Whether you are new to Karate or a seasoned student, the Sensei will work with your level. Taught in the kyokushin kai-kan style, similar shotokan style of karate, we welcome new students to try this exceptional experience for your mind and body! Mixed ages --- Ages 7 through Adult (extended time for more experience) Mondays in Ouray: St. …",
     pubDate: "2026-09-07T23:00:00.000Z",
+    endDate: "2026-10-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5121,6 +5551,28 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-09T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
+    title: "WOH Art Show: Thomas Livingstone Photography",
+    link: "https://events.ourayridgwayevents.com/event/woh-art-show-thomas-livingstone-photography",
+    description: "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and white photography, Livingstone documents the historic mines, weathered structures, and forgotten places scattered throughout the San Juan Mountains. The exhibition is drawn from a seven-year photographic project that culminated in his acclaimed book, Historic Treasures of the San Juan Mountains, preserving a remarkable visual record of Colorado's mining heritage. Born in New York and raised in Colorado, Livingstone developed an early appreciation for mountain landscapes before studying at the Brooks Institute of Photography in Santa Barbara. Since opening his Colorado gallery in 2011, his work has been exhibited throughout the state and has earned recognition for its blend of fine art and historic preservation. …",
+    pubDate: "2026-09-10T16:00:37.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
+  },
+  {
     title: "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/historic-treasures-of-the-san-juan-mountains-art-opening-reception-the-wright",
     description: "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright Presented by the Ouray County Arts Association WHEN? Thursday, September 10 4:00 pm – 6:00 pm Exhibition on View: September 10 – October 31, 2026 WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EXHIBITION Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and white photography, Livingstone documents the historic mines, weathered structures, and forgotten places scattered throughout the San Juan Mountains. The exhibition is drawn from a seven-year photographic project that culminated in his acclaimed book, Historic Treasures of the San Juan Mountains, preserving a remarkable visual record of Colorado's mining heritage. …",
@@ -5130,6 +5582,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53559063730711/huge/d94f240e8b9d7f60aaed38e8a76a97c827bb4f07.jpg"
+  },
+  {
+    title: "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner",
+    link: "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright-featuring-comedian-casey-skinner",
+    description: "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel. What begins as an unfortunate booking quickly spirals into an unforgettable adventure filled with bizarre encounters, unsettling discoveries, and laugh-out-loud storytelling. Just when you think the story is over, Casey finds himself returning for one final night, proving that sometimes the funniest stories are also the strangest. Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also producing television projects for Netflix, Discovery, and Max. …",
+    pubDate: "2026-09-11T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792641067/huge/bbdacac6fd41328414a646697eef58da7bd6ce25.jpg"
   },
   {
     title: "Jolie Holland - Live at The Sherbino",
@@ -5163,6 +5626,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Wright Opera House",
     imageUrl: "https://localist-images.azureedge.net/photos/53559826947100/huge/f64b82b52f7d7f9db1aa8ea99d8390b7bee58b8e.jpg"
+  },
+  {
+    title: "Happy Little Trees: Classes @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
+    description: "Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail ABOUT THE INSTRUCTOR Emma Kalff was classically trained in oil painting under American realist painter Auseklis Ozols at the New Orleans Academy of Fine Arts. …",
+    pubDate: "2026-09-12T10:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792520229/huge/beba7240c3a492b2d1d507ede526f4823cfe0996.jpg"
+  },
+  {
+    title: "WCOC Rummage Sale Collection Day",
+    link: "https://events.ourayridgwayevents.com/event/wcoc-rummage-sale-collection-day-7834",
+    description: "Have a pile of unneeded items you would like to remove from your home before winter? The Woman's Club of Ouray County (WCOC) could probably use them for the 2027 Rummage Sale! The WCOC sells the donated items and turns the cash into grants benefiting Ouray County nonprofits! The WCOC is a 501(c)(3) organization. Please visit the WCOC website to see a list of items that cannot be accepted for donation. We thank our community for their past, present and future support! View on site | Email this event",
+    pubDate: "2026-09-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "St. John's Episcopal Church",
+    imageUrl: "https://localist-images.azureedge.net/photos/53623942514307/huge/7e3390c38586c7689074adcead387d39a23bfaee.jpg"
   },
   {
     title: "Ellar Day at Ouray Books",
@@ -5220,6 +5705,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-16T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
     title: "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
     link: "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday-6700",
     description: "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S. National Park Service, a young filmmaker and his childhood friend set off on a 10,000-mile journey through America’s national parks, leaving home with little more than a camera and a desire to understand what connects people to these wild places. What begins as a summer road trip becomes a seven-year odyssey, capturing untold stories of those who protect, visit, and find healing in the parks. Through intimate interviews, breathtaking cinematography, and a profound original music score, Out There uncovers a deeply human portrait of the parks – revealing them as places of reflection, resilience, and connection across generations and cultures. …",
@@ -5229,6 +5725,29 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg"
+  },
+  {
+    title: "Stillhouse Junkies: Live Music @ the Wright",
+    link: "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
+    description: "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique as the trio weave through high-energy, intricately composed original songs, never taking the same path twice. Formed in 2017, the band consists of Fred Kosak (guitar, mandolin), Alissa Wolf (fiddle), and Jeanette Adams (bass). Part of programming at the Wright Opera House, bringing arts, conversation, and community to downtown Ouray since 1889. View on site | Email this event",
+    pubDate: "2026-09-17T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792427039/huge/1430b7a25dd4d66785cd4b7dae7ceff018f8679d.jpg"
+  },
+  {
+    title: "4th Annual San Juan Slam Pickleball Tournament",
+    link: "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
+    description: "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for spectators, takes place at the Ridgway Athletic Field from September 18-20. Sept. 18 Women's Doubles, Sept. 19 Mixed Doubles, and Sept. 20 Men's Doubles. This year's tournament will follow a Team Round-Robin pool play format with medal rounds at every skill and age level, providing participants and spectators plenty of gameplay. Our 4-legged friends (on leashes of course) are welcome to get their photo taken for inclusion in the World Famous 'Dogs of the San Juan Slam'. View on site | Email this event",
+    pubDate: "2026-09-18T15:00:00.000Z",
+    endDate: "2026-09-20",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Athletic Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg"
   },
   {
     title: "OLD MAN POLLY",
@@ -5273,6 +5792,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-23T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
   },
   {
     title: "JEAN SANDOVAL AND THE TOWNKIDS",
@@ -5352,6 +5882,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Ouray: Echoes in the Canyon",
+    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
+    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
+    pubDate: "2026-09-30T19:00:43.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
     title: "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",
     link: "https://events.ourayridgwayevents.com/event/art-opening-space-cowboy-by-dundee-lee",
     description: "Join us for the opening of Space Cowboy for its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. The Space Cowboy opening is honored to welcome Colorado's 11th Poet Laureate, Crisosto Apache who will give a reading in honor of the event. …",
@@ -5367,6 +5908,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
+    endDate: "2026-10-05",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5533,28 +6075,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Market on the Plaza",
-    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    pubDate: "2026-08-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
-    title: "Wine and Wickets",
-    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    pubDate: "2026-08-05T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
-  },
   {
     title: "Design Review Board Meeting August 2026",
     link: "https://townofmountainvillage.com/explore/events/all-events/august-design-review-board-meeting/",
@@ -6117,18 +6637,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/48069/walkingtour_tabloidsize_2021.800x533.webp"
   },
   {
-    title: "Sweet Sounds",
-    link: "https://www.telluride.com/event/sweet-sounds/",
-    description: "Head to the Wilkinson Public Library on the first Wednesday of the month this summer for live music and sweet treats! …",
-    pubDate: "2026-06-03",
-    endDate: "2026-08-05",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62443/sweet_sounds_5.800x533.webp"
-  },
-  {
     title: "Telluride Art Walk",
     link: "https://www.telluride.com/event/telluride-art-walk/",
     description: "The Telluride Art Walk is a lively monthly celebration of art, community, and creativity in downtown Telluride and …",
@@ -6417,17 +6925,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp"
   },
   {
-    title: "Big Love Car Wash",
-    link: "https://www.telluride.com/event/big-love-car-wash/",
-    description: "Like the music they play, Big Love Car Wash is full of dichotomies: whimsical yet serious, fanciful yet pragmatic, …",
-    pubDate: "2026-08-05",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62901/biglovecarwash-2lb24-1536x1024.800x533.webp"
-  },
-  {
     title: "Sandra Frias Trunk Show",
     link: "https://www.telluride.com/event/sandra-frias-trunk-show/",
     description: "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
@@ -6575,6 +7072,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62312/screenshot_2026-04-29_at_2_59_37_pm.800x533.webp"
+  },
+  {
+    title: "Gaiascope Opening Night",
+    link: "https://www.telluride.com/event/gaiascope-opening-night/",
+    description: "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …",
+    pubDate: "2026-08-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp"
   },
   {
     title: "Coffee & Climate Conversations",
@@ -7186,24 +7694,6 @@ const LEGAL_NOTICES = [
     noticeKey: "fwdc-share-cert-887-replacement"
   },
   {
-    title: "RFP -- San Miguel County Historic Placerville Schoolhouse Interior Repainting",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is requesting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front Street, Placerville, Colorado. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities Department at 333 W. Colorado Ave., 2nd Floor, Telluride. Proposals are due by 5:00 PM on Wednesday, August 6, 2026, submitted either by email or dropped off at the Fleet & Facilities office.",
-    deadline: "2026-08-06",
-    expires: "2026-08-06",
-    dates: "7/23",
-    papers: ["ttimes_0723"],
-    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    address: "400 Front Street, Placerville, Colorado",
-    noticeKey: "rfp-placerville-schoolhouse-repainting"
-  },
-  {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 202605)",
     entity: "San Miguel County Public Trustee / Wilmington Savings Fund Society FSB",
     entityClass: "ent-county",
@@ -7239,23 +7729,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
     address: "Telluride, Colorado (specific parcel address truncated in source text)",
     noticeKey: "vesting-project-72-telluride"
-  },
-  {
-    title: "Request for Proposal -- Request for Proposals Interior Painting of the Placerville Schoolhouse",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Request for Proposals Interior Painting of the Placerville Schoolhouse.",
-    deadline: "Closes 8/6/2026",
-    expires: "2026-08-06",
-    dates: "7/23",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=206",
-    address: "",
-    smcBidID: "206"
   },
   {
     title: "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
@@ -7328,24 +7801,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Farmers' Water Development Company, PO Box 10, Norwood, CO 81423",
     noticeKey: "COL-000181-fwdc-share-887"
-  },
-  {
-    title: "RFP -- Interior Repainting of Historic Placerville Schoolhouse (COL-000205)",
-    entity: "San Miguel County Fleet & Facilities",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "San Miguel County is soliciting proposals from contractors to repaint the interior of the Historic Placerville Schoolhouse located at 400 Front St, Placerville. RFP information is available at www.sanmiguelcountyco.gov/bids.aspx or from the Fleet & Facilities department at 333 W Colorado Ave, 2nd Floor, Telluride. Proposals must be submitted by 5:00 PM on Wednesday, August 6, 2026, either by email or in person at the Fleet & Facilities department.",
-    deadline: "2026-08-06",
-    expires: "2026-08-06",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "400 Front St, Placerville, Colorado (Historic Placerville Schoolhouse)",
-    noticeKey: "COL-000205-placerville-schoolhouse-rfp"
   },
   {
     title: "Foreclosure Sale Notice -- 350 S Mahoney Dr Unit 7, Telluride (Sale No. 2026-05)",
@@ -8812,16 +9267,6 @@ function getTownAgendaLink(title, eventDate) {
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
   {
-    date: "August 6, 2026",
-    title: "Town Council Retreat",
-    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050",
-    hasAgenda: true,
-    location: "Hybrid/Public Works Conference Room 1370 W Black Bear Rd. Telluride, CO 81435",
-    time: "",
-    civicwebId: 8050,
-    packetUrl: "https://telluride-co.civicweb.net/document/442759/"
-  },
-  {
     date: "August 11, 2026",
     title: "Town Council",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
@@ -8965,6 +9410,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8165
+  },
+  {
+    date: "November 5, 2026",
+    title: "Town Council Budget",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8054",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8054
   }
 ];
 

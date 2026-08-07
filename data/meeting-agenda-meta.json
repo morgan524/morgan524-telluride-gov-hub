@@ -237,7 +237,8 @@
     "sv": 4
   },
   "county|2026-08-13|Planning Commission Meeting": {
-    "sv": 4
+    "sv": 4,
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/922/files/agenda/1949"
   },
   "telluride|2026-07-27|Special Town Council - Jul 27 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8294",
@@ -265,11 +266,19 @@
   },
   "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8021",
-    "sv": 4
+    "sv": 4,
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
+    "meetingId": "854 0207 9752",
+    "passcode": "775535",
+    "phone": "301-715-8592"
   },
   "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-    "sv": 4
+    "sv": 4,
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+    "meetingId": "812 9136 3866",
+    "passcode": "440860.",
+    "phone": "301-715-8592"
   },
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
@@ -406,6 +415,10 @@
     "sv": 4
   },
   "county|2026-08-27|CWAB": {
+    "sv": 4
+  },
+  "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101",
     "sv": 4
   }
 }

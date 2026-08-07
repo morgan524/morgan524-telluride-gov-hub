@@ -1,16 +1,5 @@
 [
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "link": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/",
-    "description": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    "pubDate": "2026-08-06T15:30:00.000Z",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "Art Walk Telluride",
     "link": "https://koto.org/event/art-walk-telluride/2026-08-06/",
     "description": "Join us the first Thursday of every month for Telluride's Art Walk. It will be an evening filled with inspiring exhibits, engaging receptions, and the chance to meet local and visiting artists. From 5–7 pm, participating venues will open their doors, showcasing new collections and inviting art lovers to explore the vibrant gallery scene. Find what's new on www.telluridearts.org Note: Special Edition Art Walk May 21st.",
@@ -52,6 +41,17 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Oak Street Plaza, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Stuffy Sleepover Storytime",
+    "link": "https://koto.org/event/stuffy-sleepover-storytime/",
+    "description": "Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only.* Storytime will be on the lower terrace.",
+    "pubDate": "2026-08-07T16:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
     "imageUrl": ""
   },
   {
@@ -470,6 +470,72 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Patagonia Telluride, Telluride Retail",
+    "imageUrl": ""
+  },
+  {
+    "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
+    "link": "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-18/",
+    "description": "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on identification for her bird walk the following morning. The bird walk will take place at 8:30 am on August 18th. Meet outside the Telluride Patagonia store. Bring binoculars if you have them. If you don't, they will be provided. The walk is limited to 12 participants. Sign up at Telluride Patagonia or with a QR code provided on local flyers.",
+    "pubDate": "2026-08-18T14:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "imageUrl": ""
+  },
+  {
+    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    "link": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-18/",
+    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
+    "pubDate": "2026-08-18T14:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
+  },
+  {
+    "title": "\"Best Day Ever\" Free Movie Screening",
+    "link": "https://koto.org/event/best-day-ever-free-movie-screening/",
+    "description": "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice Award winner at the 2026 Mountainfilm Festival. Directed by Telluride local Ben Knight, the film is a powerful story about what can happen when a community comes together to build outdoor spaces that welcome everyone. Set in the Green Mountains of Vermont, Best Day Ever follows Greg Durso and Allie Bianchi as they work alongside friends, trail builders, and advocates to create the world’s first fully adaptive mountain bike trail network. Along the way, the film explores how thoughtful trail design, collaboration, and a shared vision can transform not only access to the outdoors, but the experience for every rider. …",
+    "pubDate": "2026-08-19T00:30:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Conference Center, Mountain Village",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/07/BEST-DAY-EVER.webp"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://koto.org/event/market-on-the-plaza/2026-08-19/",
+    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    "pubDate": "2026-08-19T17:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-19/",
+    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-08-19T19:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "link": "https://koto.org/event/telluride-rotary-club-meeting-10/",
+    "description": "Telluride Rotary Club meets Wednesday, August 19, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
+    "pubDate": "2026-08-20T00:00:00.000Z",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
     "imageUrl": ""
   }
 ]

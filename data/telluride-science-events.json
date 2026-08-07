@@ -6,7 +6,7 @@
     "location": "Telluride Conference Center, Telluride",
     "description": "This Town Talk will be presented by Joonhoo Lee from Harvard University.\r\nLee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh perspectives on how to think about what quantum computing can—and cannot—deliver for chemistry. He will also make the case for why chemists must learn theoretical computer science to prepare for the coming wave of fault-tolerant quantum computing.\r\nThis is the last Town Talk of the summer that  will be held oat the Telluride Conference Center in Mountain Village. The final Town Talk on August 25 will be held at the Telluride Innovation Center in Telluride.  Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
     "link": "https://telluridescience.org/event/quantum-computing-chemistry/",
-    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/07/Screenshot-2026-08-06-at-4.46.13-PM.png",
     "sourceLabel": "Telluride Science"
   },
   {
@@ -40,13 +40,23 @@
     "sourceLabel": "Telluride Science"
   },
   {
+    "title": "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
+    "date": "2026-09-02",
+    "time": "6:00 PM – 7:00 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "description": "In collaboration with Telluride Science, Telluride Foundation, Mountain Towns 2030, and Eco Action Partners As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 20203, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size – including Telluride and across the surrounding region. Panelists include Jessica Burley, Sustainability Manager for the Town of Breckenridge; John Clark, Mayor of Ridgway, and MT2030 Executive Director Chris Steinkamp. About Mountain Towns 2030: 96% of local leaders cite limited staffing and bandwidth as the number one barrier to climate action. …",
+    "link": "https://telluridescience.org/event/mountain-towns2030/",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/08/MT2030_320x212.jpg",
+    "sourceLabel": "Telluride Science"
+  },
+  {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
     "date": "2026-09-10",
     "time": "6:00 PM – 7:00 PM",
     "location": "Telluride Innovation Center, Telluride",
     "description": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. \r\nFeatured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) \r\nAll are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
     "link": "https://telluridescience.org/event/community-concert-september/",
-    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    "imageUrl": "https://telluridescience.org/wp-content/uploads/2026/07/com_concert-0910_1080x1080.png",
     "sourceLabel": "Telluride Science"
   }
 ]

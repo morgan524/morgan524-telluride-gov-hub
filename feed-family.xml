@@ -6,72 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-family.xml" rel="self" type="application/rss+xml" />
     <description>Storytime, youth programs, and all-ages activities — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Aug 2026 14:26:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2026 00:11:56 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>⚡ [Meeting] Town Council Retreat - Aug 06 2026 — 2026-08-06</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-06%7CTown%20Council%20Retreat%20-%20Aug%2006%202026</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Town of Telluride • 2026-08-06
-
-The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.
-
-⚡ Why it matters: 2027 priorities set here will drive the town budget and staff direction all year.]]></description>
-      <category>Meeting</category>
-      <category>Town of Telluride</category>
-    </item>
-    <item>
-      <title>⚡ [Meeting] Design Review Board — 2026-08-06</title>
-      <link>https://livabletelluride.org/gov-hub.html</link>
-      <guid isPermaLink="false">https://livabletelluride.org/meeting/mv%7C2026-08-06%7CDesign%20Review%20Board</guid>
-      <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[Mountain Village • 2026-08-06
-
-Three multifamily projects are on the board's plate Thursday morning. First up is an initial architecture and site review for four new multifamily units at 100 Pennington Place (Lot 726-R1). Then the board returns to a multifamily building at TBD Lost Creek Lane (Lot 27A) — continued from June — for another initial architecture review. A conditional-use permit for office space at 620 Mountain Village Blvd, Unit 1A goes to the DRB for a recommendation to Town Council. Finally, the final architecture review for a 15-unit employee apartment building at 306 Adams Ranch Road (Lot 640A) is expected to be continued to the September 3 meeting.
-
-⚡ Why it matters: Three multifamily projects reviewed, including a conditional-use permit decision.]]></description>
-      <category>Meeting</category>
-      <category>Mountain Village</category>
-    </item>
-    <item>
-      <title>[Thu, Aug 6] Youth Tennis &amp; Pickleball Camp</title>
-      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-06</guid>
-      <pubDate>Thu, 06 Aug 2026 15:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Aug 6] Storytime / Hora de Cuentos</title>
-      <link>https://telluridelibrary.libcal.com/event/16772773?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/storytime%20hora%20de%20cuentos%7C2026-08-06</guid>
-      <pubDate>Thu, 06 Aug 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Thu, Aug 6] Littles On the Move</title>
-      <link>https://telluridelibrary.libcal.com/event/13960355?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/littles%20on%20the%20move%7C2026-08-06</guid>
-      <pubDate>Thu, 06 Aug 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
     <item>
       <title>[Fri, Aug 7] Youth Tennis &amp; Pickleball Camp</title>
       <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-07/</link>
@@ -94,6 +30,18 @@ Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly
 
 We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!]]></description>
       <media:content url="https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Aug 7] Stuffy Sleepover Storytime</title>
+      <link>https://koto.org/event/stuffy-sleepover-storytime/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/stuffy%20sleepover%20storytime%7C2026-08-07</guid>
+      <pubDate>Fri, 07 Aug 2026 16:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only.* Storytime will be on the lower terrace.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
     </item>
@@ -134,6 +82,18 @@ This intergovernmental worksession brings together representatives from Tellurid
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Mon, Aug 10] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-10/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-10</guid>
+      <pubDate>Mon, 10 Aug 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>⚡ [Meeting] Town Council - Aug 11 2026 — 2026-08-11</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/telluride%7C2026-08-11%7CTown%20Council%20-%20Aug%2011%202026</guid>
@@ -142,7 +102,7 @@ This intergovernmental worksession brings together representatives from Tellurid
 
 The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.
 
-⚡ Why it matters: Final vote on wildfire code that reshapes historic review and landscaping rules.]]></description>
+⚡ Why it matters: Final vote on wildfire code that reshapes land use and landscaping rules.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -167,6 +127,18 @@ The August 11, 2026 Norwood Water Commission Meeting agenda hasn't been posted y
 The August 11, 2026 Mountain Village Merchant Meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
+    </item>
+    <item>
+      <title>[Tue, Aug 11] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-11/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
     </item>
     <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-08-12</title>
@@ -200,6 +172,30 @@ The August 12, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted 
 The August 12, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
+    </item>
+    <item>
+      <title>[Meeting] SMART Board of Directors — 2026-08-13</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-08-13%7CSMART%20Board%20of%20Directors</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[SMART Transit • 2026-08-13
+
+The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></description>
+      <category>Meeting</category>
+      <category>SMART Transit</category>
+    </item>
+    <item>
+      <title>⚡ [Meeting] Planning Commission Meeting — 2026-08-13</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-08-13%7CPlanning%20Commission%20Meeting</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-08-13
+
+Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.
+
+⚡ Why it matters: County subdivision mechanics and energy code update for new construction reviewed.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
     </item>
   </channel>
 </rss>

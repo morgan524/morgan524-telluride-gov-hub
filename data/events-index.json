@@ -13,20 +13,6 @@
     "type": "Community"
   },
   {
-    "title": "On Display: PAWS for Art Gallery Asian-themed show",
-    "href": "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    "date": "2026-08-06",
-    "time": "10:00 AM",
-    "location": "Second Chance PAWS for Art Gallery",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    "type": "Arts & Film",
-    "endDate": "2026-08-31"
-  },
-  {
     "title": "On Display: Silverton, Interpreted",
     "href": "https://events.ourayridgwayevents.com/event/copy-of-show-opening-silverton-interpreted-ridgway-first-friday",
     "date": "2026-08-06",
@@ -290,19 +276,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-06/",
-    "date": "2026-08-06",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-08-06",
@@ -380,6 +353,19 @@
     "source": "KOTO Community Calendar",
     "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Stuffy Sleepover Storytime",
+    "href": "https://koto.org/event/stuffy-sleepover-storytime/",
+    "date": "2026-08-07",
+    "time": "10:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/family.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only.* Storytime will be on the lower terrace.",
+    "type": "Family & Kids"
   },
   {
     "title": "Telluride Farmers Market",
@@ -555,6 +541,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8419",
+    "date": "2026-08-08",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-08/",
     "date": "2026-08-08",
@@ -662,6 +661,32 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Vibrant Music + Dance",
+    "href": "https://events.ourayridgwayevents.com/event/vibrant-music-dance",
+    "date": "2026-08-08",
+    "time": "4:00 PM",
+    "location": "Fellin Park Ouray",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53630704110490/huge/606da76369d52578672122d9226699422d70664e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Vibrant returns to Ouray! Live music (rock, blues, and more!), dance beats, flow dance artists, food, beer from the Ouray Mountain Air Music Series nonprofit, live painters, arts and crafts, bounce houses, and more! Kid friendly, and kids…",
+    "type": "Music"
+  },
+  {
+    "title": "Happy Little Trees: Painting Class",
+    "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-painting-class",
+    "date": "2026-08-08",
+    "time": "4:30 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793305718/huge/54c3153d4a8aa3d414529babdd589f3da27b481d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "\"QUIET WOODS\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Music On The Mesa The Burroughs",
     "href": "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
     "date": "2026-08-08",
@@ -713,6 +738,20 @@
     "desc": "",
     "type": "Arts & Film",
     "endDate": "2026-10-01"
+  },
+  {
+    "title": "Annual Ridgway Fire Department Pancake Breakfast",
+    "href": "https://events.ourayridgwayevents.com/event/annual-ridgway-fire-department-pancake-breakfast",
+    "date": "2026-08-08",
+    "time": "7:30 AM",
+    "location": "Ridgway Fire House",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53631321088580/huge/1e3b4e247e16202b8851a99ceb9ede86f5dee60e.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Saturday, August 8 and Sunday, August 9 from 7:30am to 10:30am, come support your local firefighters at their Annual Pancake Breakfast Fundraiser. Includes pancakes, sausage, eggs, coffee & juice. $10 Adults, $5 Children or $25 for the…",
+    "type": "Family & Kids",
+    "endDate": "2026-08-09"
   },
   {
     "title": "Electric Showcase",
@@ -911,7 +950,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-09-28"
+    "endDate": "2026-10-05"
   },
   {
     "title": "Tribal Allyship in Colorado with Ernest House",
@@ -1061,6 +1100,19 @@
     "endDate": "2026-09-08"
   },
   {
+    "title": "Community Meeting - Flooding, Economic Impacts, and Community Resilience",
+    "href": "https://ouraycountyco.gov/Calendar.aspx?EID=3775",
+    "date": "2026-08-11",
+    "time": "12:00 PM",
+    "location": "Ouray Community Center - 320 6th Avenue Ouray CO 81427",
+    "town": "Ouray",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "Ouray County",
+    "desc": "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3775",
+    "type": "Community"
+  },
+  {
     "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
     "href": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-08-11/",
     "date": "2026-08-11",
@@ -1139,6 +1191,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Community Meeting - Regarding flooding, economic impacts, and community resilience",
+    "href": "https://events.ourayridgwayevents.com/event/community-meeting-regarding-flooding-economic-impacts-and-community-resilience",
+    "date": "2026-08-11",
+    "time": "6:00 PM",
+    "location": "Ouray Community Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53631245622363/huge/e81829d7b12df787e2c9e06bbe1bb4188da3a9ea.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Hosted by Ouray County: Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows. Please plan to attend this community meeting and…",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Mushroom Festival",
     "href": "https://www.telluride.com/event/telluride-mushroom-festival/",
     "date": "2026-08-11",
@@ -1159,7 +1224,7 @@
     "time": "6:30 PM – 7:30 PM",
     "location": "Telluride Conference Center, Telluride",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/04/TT_logo_1048x802_A.png",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/07/Screenshot-2026-08-06-at-4.46.13-PM.png",
     "category": "",
     "source": "Telluride Science",
     "desc": "This Town Talk will be presented by Joonhoo Lee from Harvard University. Lee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh…",
@@ -1653,6 +1718,19 @@
     "type": "Family & Kids"
   },
   {
+    "title": "Edie",
+    "href": "https://events.ourayridgwayevents.com/event/edie",
+    "date": "2026-08-14",
+    "time": "1:30 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793255536/huge/48ca171fe67cde30db5164cdafeb611f560ad66c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
     "date": "2026-08-14",
@@ -1837,6 +1915,19 @@
     "endDate": "2026-08-16"
   },
   {
+    "title": "Ouray Country Pride After Party",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-country-pride-after-party",
+    "date": "2026-08-15",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629793196138/huge/7a061eea58c9d308eb4b46baeb37a87414c9b693.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Keep the celebration going after the Ouray County Pride Block Party with an evening of music, drag, dancing, drinks, and community at the historic Wright Opera House. The Pride After Party brings together locals, visitors, performers,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
     "date": "2026-08-15",
@@ -1991,6 +2082,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
     "type": "Community"
+  },
+  {
+    "title": "Sold Out: Aug 16, 2026: Ouray County Pride Drag Brunch 2026",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-county-pride-drag-brunch-2026",
+    "date": "2026-08-16",
+    "time": "12:00 PM",
+    "location": "White Buffalo Restaurant + Bar",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629220241939/huge/16644e551a7696d45dae23224664787f1fd221ac.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Be fabulous! Celebrate Ouray County Pride with us on the Rooftop at White Buffalo Restaurant + Bar! Join hostess, Maxine LaQueene, with Aria Pettyone, Hysteria Brooks, MixTrix, and Simone, for Sunday Brunch, cocktails and drag to close out…",
+    "type": "Food & Drink"
   },
   {
     "title": "Tea and Tarot",
@@ -2165,16 +2269,81 @@
   },
   {
     "title": "\"Best Day Ever\" Free Movie Screening",
-    "href": "https://www.telluride.com/event/best-day-ever-free-movie-screening/",
+    "href": "https://koto.org/event/best-day-ever-free-movie-screening/",
     "date": "2026-08-18",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "time": "6:30 PM",
+    "location": "Telluride Conference Center, Mountain Village",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp",
+    "img": "https://koto.org/wp-content/uploads/2026/07/BEST-DAY-EVER.webp",
     "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice …",
+    "source": "KOTO Community Calendar",
+    "desc": "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
+    "href": "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-18/",
+    "date": "2026-08-18",
+    "time": "8:30 AM",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    "href": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-18/",
+    "date": "2026-08-18",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated…",
+    "type": "Talks & Classes"
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-19/",
+    "date": "2026-08-19",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
+    "title": "CO-150: A League of Their Own",
+    "href": "https://events.ourayridgwayevents.com/event/co-150-a-league-of-their-own",
+    "date": "2026-08-19",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793089630/huge/0c6cd87ef64554102af8e9c1429715eaa74f68f8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "A League of Their Own (1992) tells the story of the All-American Girls Professional Baseball League, formed during World War II when many major league players were serving overseas. Led by an unforgettable ensemble cast including Geena…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://koto.org/event/market-on-the-plaza/2026-08-19/",
+    "date": "2026-08-19",
+    "time": "11:00 AM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
+    "type": "Community"
   },
   {
     "title": "Sunset Concert Series",
@@ -2188,19 +2357,6 @@
     "source": "Mountain Village",
     "desc": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
     "type": "Music"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-08-19",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "type": "Community"
   },
   {
     "title": "Wine and Wickets",
@@ -2466,6 +2622,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "WCOC 3rd Annual Chili Cook-Off",
+    "href": "https://events.ourayridgwayevents.com/event/wcoc-3rd-annual-chili-cook-off",
+    "date": "2026-08-22",
+    "time": "3:00 PM",
+    "location": "Fellin Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53623729143081/huge/45546bcb32f8d150e1f7b0a0d240e5499f23a374.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Braggin' rights are on the line for competitors to earn the title of Best Chili in Ouray County for 2026 during the 3rd Annual WCOC Chili Cook-Off! Local businesses will present an assortment of chilis to be tested by professionals and…",
+    "type": "Community"
+  },
+  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-08-22",
@@ -2662,6 +2831,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Gaiascope Opening Night",
+    "href": "https://www.telluride.com/event/gaiascope-opening-night/",
+    "date": "2026-08-25",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
     "href": "https://telluridescience.org/event/talk-unusual-microbes/",
     "date": "2026-08-25",
@@ -2687,6 +2869,19 @@
     "desc": "August 25 - August 30 at multiple venues in Ridwway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of…",
     "type": "Music",
     "endDate": "2026-08-30"
+  },
+  {
+    "title": "CO-150: Dumb and Dumber",
+    "href": "https://events.ourayridgwayevents.com/event/co-150-dumb-and-dumber",
+    "date": "2026-08-26",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793039448/huge/0fe7e8d5f45588023fbbee28323ea2c0d3cb36fa.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Dumb and Dumber (1994) follows two well-meaning but spectacularly clueless friends, Lloyd Christmas and Harry Dunne, as they embark on a cross-country road trip that quickly spirals into one ridiculous misadventure after another. Starring…",
+    "type": "Community"
   },
   {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
@@ -2992,6 +3187,19 @@
     "endDate": "2026-08-31"
   },
   {
+    "title": "San Juan Chamber MusicFest Festival Concert",
+    "href": "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest-festival-concert",
+    "date": "2026-08-29",
+    "time": "1:30 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793138788/huge/39f020be09948c428ebce6f72c1b5cb7e2a7cb06.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for…",
+    "type": "Festivals"
+  },
+  {
     "title": "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
     "href": "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
     "date": "2026-08-29",
@@ -3175,6 +3383,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "City Slickers: CO-150 Film Festival @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
+    "date": "2026-09-02",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "City Slickers : CO- 150 Movie Night @ the Wright We’re celebrating Colorado’s Sesquicentennial with 150 screenings throughout the Centennial State. WHEN? Wednesday, September 2nd Doors at 6:30 pm • Movie at 7:00 pm RUN TIME: 1h 52min YEAR:…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Market on the Plaza",
     "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "date": "2026-09-02",
@@ -3212,6 +3433,19 @@
     "source": "Telluride.com",
     "desc": "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
     "type": "Community"
+  },
+  {
+    "title": "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
+    "href": "https://telluridescience.org/event/mountain-towns2030/",
+    "date": "2026-09-02",
+    "time": "6:00 PM – 7:00 PM",
+    "location": "Telluride Innovation Center, Telluride",
+    "town": "Telluride",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/08/MT2030_320x212.jpg",
+    "category": "",
+    "source": "Telluride Science",
+    "desc": "In collaboration with Telluride Science, Telluride Foundation, Mountain Towns 2030, and Eco Action Partners As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -3266,6 +3500,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "WOH Art Show: Brittany Stadler",
+    "href": "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
+    "date": "2026-09-03",
+    "time": "10:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792913484/huge/0f655603601840911844cbf1cce4ddcdecf2dbb1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Telluride Film Festival",
     "href": "https://www.telluride.com/event/telluride-film-festival/",
     "date": "2026-09-03",
@@ -3278,6 +3525,19 @@
     "desc": "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
     "type": "Arts & Film",
     "endDate": "2026-09-08"
+  },
+  {
+    "title": "Trivia Night @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
+    "date": "2026-09-04",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629793379457/huge/94e90759cff30df21fa21e46e7fcd2e69c247e84.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come test the true limits of the human mind at Trivia Night @ the Wright, where obscure facts become temporary personality traits. Questions may include history, movies, science, music, local lore, accidental expertise, and things you…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Farmers Market",
@@ -3398,19 +3658,6 @@
     "type": "Music"
   },
   {
-    "title": "Trivia Night @ the Wright",
-    "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-5257",
-    "date": "2026-09-04",
-    "time": "7:00 PM",
-    "location": "The Wright Opera House",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53558793928797/huge/69d5d4e49c83194d4758001abf857ab86f277a9e.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Trivia Night @ the Wright WHEN? Friday, September 4 Doors at 6:30 pm • Trivia at 7:00 pm WHERE? Wright Opera House 472 Main St. Ouray, Colorado ABOUT THE EVENT Gather your team and put your knowledge to the test at Trivia Night @ the…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-09-05",
@@ -3486,7 +3733,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join Weehawken Creative Arts for Karate with Sensei Kay Briggs. We offer unlimited monthly classes in Ouray County (meaning you can attend each week in Ouray and/or Ridgway — or both). Tuition/registration is DUE the 1st week of the month.…",
-    "type": "Talks & Classes"
+    "type": "Talks & Classes",
+    "endDate": "2026-10-05"
   },
   {
     "title": "DAVE MENSCH",
@@ -3502,6 +3750,19 @@
     "type": "Music"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
+    "date": "2026-09-09",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Vana Liya w/ Lola Rising",
     "href": "https://www.alibitelluride.com/calendar#eca-event=vana-liya-w-lola-rising",
     "date": "2026-09-09",
@@ -3513,6 +3774,19 @@
     "source": "The Alibi",
     "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
     "type": "Music"
+  },
+  {
+    "title": "WOH Art Show: Thomas Livingstone Photography",
+    "href": "https://events.ourayridgwayevents.com/event/woh-art-show-thomas-livingstone-photography",
+    "date": "2026-09-10",
+    "time": "10:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and…",
+    "type": "Arts & Film"
   },
   {
     "title": "Historic Treasures of the San Juan Mountains: Art Opening Reception @ the Wright",
@@ -3541,6 +3815,19 @@
     "type": "Music"
   },
   {
+    "title": "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner",
+    "href": "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright-featuring-comedian-casey-skinner",
+    "date": "2026-09-10",
+    "time": "6:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792641067/huge/bbdacac6fd41328414a646697eef58da7bd6ce25.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel.…",
+    "type": "Community"
+  },
+  {
     "title": "The Meditations",
     "href": "https://www.telluride.com/event/the-meditations/",
     "date": "2026-09-10",
@@ -3560,7 +3847,7 @@
     "time": "6:00 PM – 7:00 PM",
     "location": "Telluride Innovation Center, Telluride",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/05/ChatGPT-Image-May-27-2026-03_58_05-PM.png",
+    "img": "https://telluridescience.org/wp-content/uploads/2026/07/com_concert-0910_1080x1080.png",
     "category": "",
     "source": "Telluride Science",
     "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert on the scenic patio at the Innovation Center. Featured musicians:Danny DeSantis (viola), Anne Foxen (violin), Steve White (cell) and Travis Fisher (piano) All…",
@@ -3658,6 +3945,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "WCOC Rummage Sale Collection Day",
+    "href": "https://events.ourayridgwayevents.com/event/wcoc-rummage-sale-collection-day-7834",
+    "date": "2026-09-12",
+    "time": "10:00 AM",
+    "location": "St. John's Episcopal Church",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53623942514307/huge/7e3390c38586c7689074adcead387d39a23bfaee.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Have a pile of unneeded items you would like to remove from your home before winter? The Woman's Club of Ouray County (WCOC) could probably use them for the 2027 Rummage Sale! The WCOC sells the donated items and turns the cash into grants…",
+    "type": "Community"
+  },
+  {
     "title": "Ellar Day at Ouray Books",
     "href": "https://events.ourayridgwayevents.com/event/ellar-day-at-ouray-books",
     "date": "2026-09-12",
@@ -3682,6 +3982,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for an author-led historic tour followed by an intimate gathering, marking the anniversary of the Ellar Day and Joe Dixon tragedy. Commemorating History: The Ellar Day Legacy Join us on September 12th, 2026 as we mark the 139th…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Happy Little Trees: Classes @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
+    "date": "2026-09-12",
+    "time": "4:30 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792520229/huge/beba7240c3a492b2d1d507ede526f4823cfe0996.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are…",
+    "type": "Arts & Film"
   },
   {
     "title": "Balourdet Quartet",
@@ -3749,6 +4062,19 @@
     "type": "Music"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
+    "date": "2026-09-16",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "TASP Bob Miller Memorial Golf Classic",
     "href": "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
     "date": "2026-09-16",
@@ -3786,6 +4112,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S.…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Stillhouse Junkies: Live Music @ the Wright",
+    "href": "https://events.ourayridgwayevents.com/event/stillhouse-junkies-live-music-the-wright",
+    "date": "2026-09-17",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792427039/huge/1430b7a25dd4d66785cd4b7dae7ceff018f8679d.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Wright Opera House welcomes Stillhouse Junkies, the acclaimed Durango-based trio explore the worlds between roots, bluegrass, Texas swing, blues, and rock. Their free-flowing musical interplay and improvisation make every show unique…",
+    "type": "Music"
   },
   {
     "title": "Telluride Blues & Brews Festival",
@@ -3868,6 +4207,20 @@
     "type": "Arts & Film"
   },
   {
+    "title": "4th Annual San Juan Slam Pickleball Tournament",
+    "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
+    "date": "2026-09-18",
+    "time": "9:00 AM",
+    "location": "Ridgway Athletic Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53613028091683/huge/89356c844c3d4e996774f5c668ba438226be20a1.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-09-20"
+  },
+  {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
     "href": "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
     "date": "2026-09-20",
@@ -3892,6 +4245,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8790",
+    "date": "2026-09-23",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Autumn Classic",
@@ -4078,6 +4444,19 @@
     "type": "Music"
   },
   {
+    "title": "Ouray: Echoes in the Canyon",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon",
+    "date": "2026-09-30",
+    "time": "1:00 PM",
+    "location": "",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history,…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Original Thinkers",
     "href": "https://www.telluride.com/event/original-thinkers/",
     "date": "2026-09-30",
@@ -4141,7 +4520,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-10-05"
   },
   {
     "title": "Artabout",
