@@ -1,14 +1,14 @@
 {
-  "hash": "35d5c017023bdac0b72be4fb18d3c81e28f2b93c",
-  "lede": "The week's most consequential moment comes Tuesday when Telluride Town Council takes up third reading of the Colorado Wildfire Resiliency Code — a vote that would amend the Land Use Code's historic review standards and landscaping rules to meet state wildfire mitigation requirements, the kind of quiet code change that affects what property owners can do on their own land. The intergovernmental worksession Monday gathers all five regional jurisdictions for a large-projects update, and the county Planning Commission meets Thursday to work through subdivision mechanics and a building energy code update. In between, the Jazz Festival and Ridgway Rendezvous are wrapping up the summer festival stretch.",
+  "hash": "db1249ba90e4748b800d0bd6173b7950d473e61f",
+  "lede": "The biggest thing to watch this week is Telluride Town Council's Tuesday meeting, where the Colorado Wildfire Resiliency Code comes up for its third and final reading — passage would amend the Land Use Code's historic review standards and landscaping rules to meet state wildfire mitigation requirements, which touches nearly every property owner in town. On Thursday, the County Planning Commission has real work on the table too: a subdivision mechanics work session and a referral on an energy code update that would reshape building standards for new construction. Woven around all that, the Jazz Festival rolls through the Sheridan and the Alibi, and the week wraps with the Ridgway Rendezvous carrying live music through the weekend.",
   "notable": [
     {
       "id": 1,
-      "stake": "Final vote on wildfire code that rewrites landscaping and historic review rules."
+      "stake": "Third-reading vote on wildfire code that rewrites land-use and landscaping rules."
     },
     {
       "id": 8,
-      "stake": "Commission weighs energy code and subdivision rules shaping all new county construction."
+      "stake": "County weighs subdivision rules and an energy code that sets new construction standards."
     }
   ]
 }
