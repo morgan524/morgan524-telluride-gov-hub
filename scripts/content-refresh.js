@@ -5743,6 +5743,37 @@ async function refreshSmcAlerts(existingAlerts = []) {
 
 
 // ── Engage Telluride — daily scrape of published project key dates ──
+// ── Engage Telluride vs the Town's own meeting list ──────────────────────────
+// Engage Telluride publishes project key-dates that are often the SAME meeting
+// already carried in TELLURIDE_CACHED_DATA — the Aug 19 2026 HARC meeting showed
+// up in both (content review, 2026-08-08). TELLURIDE_CACHED_DATA is the
+// authoritative record (it carries the agenda link and the CivicWeb id), so an
+// Engage row that collides with it on the same calendar date and the same
+// meeting body is dropped. Matching is deliberately conservative: same date AND
+// the same sorted title tokens, so "HARC Meeting" collapses onto "HARC Meeting"
+// while a genuinely different Engage item on that date survives.
+function _meetingTitleKey(title) {
+  return (String(title || '').toLowerCase().match(/[a-z]+/g) || []).sort().join('');
+}
+function dropEngageDuplicates(engageRows) {
+  const rows = Array.isArray(engageRows) ? engageRows : [];
+  let cached = [];
+  try { cached = extractJsArray(readJsFile(GOV_DATA_JS), 'TELLURIDE_CACHED_DATA') || []; }
+  catch (e) { cached = []; }
+  // Can't read the authoritative list -> change nothing rather than guess.
+  if (!cached.length) return rows;
+  const taken = new Set(
+    cached.filter(m => m && m.date).map(m => String(m.date) + '|' + _meetingTitleKey(m.title))
+  );
+  const kept = rows.filter(r => {
+    if (!r || !r.date) return true;
+    return !taken.has(String(r.date) + '|' + _meetingTitleKey(r.title));
+  });
+  const dropped = rows.length - kept.length;
+  if (dropped) console.log(`  Engage: dropped ${dropped} meeting(s) already in TELLURIDE_CACHED_DATA`);
+  return kept;
+}
+
 async function refreshEngageMeetings(existing = []) {
   const BASE = 'https://engagetelluride.org';
   const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -7132,7 +7163,8 @@ async function main() {
 
   // ── 2d. Engage Telluride project meeting key dates (daily) ──
   const existingEngageMeetings = extractJsArray(govHubSrc, 'ENGAGE_MEETINGS') || [];
-  const freshEngageMeetings = await refreshEngageMeetings(existingEngageMeetings);
+  const freshEngageMeetings = dropEngageDuplicates(
+    await refreshEngageMeetings(existingEngageMeetings));
   if (JSON.stringify(freshEngageMeetings) !== JSON.stringify(existingEngageMeetings)) {
     govHubSrc = replaceJsValue(govHubSrc, 'ENGAGE_MEETINGS', freshEngageMeetings, false);
     changed = true;
