@@ -1,5 +1,17 @@
 [
   {
+    "title": "Drawing together, through art",
+    "source": "Telluride Times",
+    "date": "August 8, 2026",
+    "firstSeen": "2026-08-08",
+    "newsTopic": "arts-culture",
+    "copy": "Telluride Arts has named seven 2026 Artist Grant recipients whose work spans photography, music, poetry, fashion, film, and craft — all with a community focus. Projects include an immersive \"apothecary\" installation pairing poetry and original music, free retro-style ski passes, and a novel-in-verse set in Settlement-Age Iceland.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/arts_and_entertainment/article_93585163-2ed8-429d-817b-bb780dd0ebcf.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/6a/f6a8fbfa-d772-45cc-99f4-0cd2f528bead/6a769364cf3e0.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "August at The Alibi",
     "source": "Telluride Times",
     "date": "August 8, 2026",
@@ -604,7 +616,7 @@
     "source": "Telluride Times",
     "date": "July 29, 2026",
     "firstSeen": "2026-07-29",
-    "newsTopic": "community",
+    "newsTopic": "health",
     "copy": "Dr. Steven Smolen has opened the Dog House, a dog boarding and daycare facility at 780 Vance Drive in Ilium — the third piece of an animal care operation that also includes the Animal Hospital of Telluride and Pet Telluride. HOA and county approvals delayed the opening by at least a year, and staffing and grooming remain works in progress. Cat accommodations are planned as a next phase.",
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_0ea056ae-2268-4a3d-be73-8ca8d2ae5209.html",
@@ -866,6 +878,42 @@
     "href": "https://www.telluridenews.com/news/article_20b981b9-8461-40af-9108-28f777ced05f.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/6b/56b90bb0-5340-44f6-a32c-9e2fdc1446df/6a64613178225.image.jpg",
     "imgHiRes": true
+  },
+  {
+    "title": "Black Bear Pass Now Open",
+    "source": "San Miguel County",
+    "date": "August 3, 2026",
+    "newsTopic": "recreation",
+    "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    "img": ""
+  },
+  {
+    "title": "Numerous Highway Closures",
+    "source": "San Miguel County",
+    "date": "July 22, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road",
+    "source": "San Miguel County",
+    "date": "July 21, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    "img": ""
+  },
+  {
+    "title": "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    "source": "San Miguel County",
+    "date": "July 14, 2026",
+    "newsTopic": "recreation",
+    "copy": "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    "img": ""
   },
   {
     "title": "Ridgway Town Council Regular Meeting Agenda",

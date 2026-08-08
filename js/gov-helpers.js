@@ -275,7 +275,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"e232fffd40cd7ad2"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"ddf45dec51f16002"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
@@ -603,13 +603,123 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
+    img: ""
+  },
+  {
+    title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
+  },
+  {
     title: "Flood ravages homes",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
     img: ""
   },
   {
@@ -659,7 +769,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
     img: ""
   },
   {
@@ -673,33 +783,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "August 4, 1966 Thurman Grady Rohus entered a guilty plea in district court July 27 to a charge of grand larceny. Judge Fred Calhoun presided. Sentencing will be Aug. 29 following the probation officer’s report. Rohus was charged with the theft of about 300 pounds of copper wire from the Revenue Mine",
-    href: "https://www.ouraynews.com/2026/08/05/looking-back-20260806-0344-371224/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Everything you need to know about the new federal report on the Colorado River’s future",
+    title: "Good For You!",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
     newsTopic: "community",
-    copy: "Colorado water officials knew that they and the three other Upper Basin states would likely be asked to conserve Colorado River water under a new plan spanning the next decade. Now they know the target amount: up to 200,000 acre-feet, or 65 billion gallons of savings among the four states. Water wat",
-    href: "https://www.ouraynews.com/2026/08/05/everything-need-know-new-federal-report-colorado-rivers-future/?ta_paidstory",
+    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
     img: ""
   },
   {
-    title: "Send us your celebrations!",
+    title: "Ridgway concert series puts trash in its place",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/?ta_paidstory",
+    newsTopic: "arts-culture",
+    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
+    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Calendar & Events",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "recreation",
+    copy: "Thursday, August 6 Ridgway Farmers Market, 10 a.m.-2 p.m. in Hartwell Park – on Thursday this week due to Ridgway Rendezvous. Youth Garden Club for ages 8-18, Other Undergrounders root vegetables, from 3:30-4:30 p.m. at the Ridgway Public Library, 320 Charles St. Ouray County Republican Central Comm",
+    href: "https://www.ouraynews.com/2026/08/05/calendar-events-20260806-0346-556192/",
     img: ""
   },
   {
@@ -1329,6 +1439,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Drawing together, through art",
+    source: "Telluride Times",
+    date: "August 8, 2026",
+    firstSeen: "2026-08-08",
+    newsTopic: "arts-culture",
+    copy: "Telluride Arts has named seven 2026 Artist Grant recipients whose work spans photography, music, poetry, fashion, film, and craft — all with a community focus. Projects include an immersive \"apothecary\" installation pairing poetry and original music, free retro-style ski passes, and a novel-in-verse set in Settlement-Age Iceland.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_93585163-2ed8-429d-817b-bb780dd0ebcf.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/6a/f6a8fbfa-d772-45cc-99f4-0cd2f528bead/6a769364cf3e0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "August at The Alibi",
     source: "Telluride Times",
     date: "August 8, 2026",
@@ -1933,7 +2055,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "July 29, 2026",
     firstSeen: "2026-07-29",
-    newsTopic: "community",
+    newsTopic: "health",
     copy: "Dr. Steven Smolen has opened the Dog House, a dog boarding and daycare facility at 780 Vance Drive in Ilium — the third piece of an animal care operation that also includes the Animal Hospital of Telluride and Pet Telluride. HOA and county approvals delayed the opening by at least a year, and staffing and grooming remain works in progress. Cat accommodations are planned as a next phase.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_0ea056ae-2268-4a3d-be73-8ca8d2ae5209.html",
@@ -2195,6 +2317,42 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_20b981b9-8461-40af-9108-28f777ced05f.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/6b/56b90bb0-5340-44f6-a32c-9e2fdc1446df/6a64613178225.image.jpg",
     imgHiRes: true
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "recreation",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
   },
   {
     title: "Ridgway Town Council Regular Meeting Agenda",
@@ -5151,13 +5309,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Happy Little Trees: Classes @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/happy-little-trees-classes-the-wright-6743",
-    description: "Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail ABOUT THE INSTRUCTOR Emma Kalff was classically trained in oil painting under American realist painter Auseklis Ozols at the New Orleans Academy of Fine Arts. …",
+    description: "\"ARIZONA SPLENDOR\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. FULL SCHEDULE April 11 — Horizons West May 9 — Barn at Sunset June 13 — LIttle House by the Road July 11 — Mountain Splendor August 8 — Quiet Woods September 12 — Arizona Splendor October 3 — Meadow Stream November 14 — Lonely Retreat December 12 — Snow Trail Part of Classes @ the Wright, bringing creativity, learning, and community together in downtown Ouray since Letitia Wright first dreamed it up. View on site | Email this event",
     pubDate: "2026-09-12T10:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792520229/huge/beba7240c3a492b2d1d507ede526f4823cfe0996.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/6ffbb92193cec13bf4355fd2e040b60aed735e09.jpg"
   },
   {
     title: "WCOC Rummage Sale Collection Day",
