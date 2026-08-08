@@ -3026,7 +3026,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Beautification Committee (OBC) works on projects to help beautify the community. The committee oversees the installation of all the flower gardens in the City as well as all the hanging baskets and plantings on Main Street. They have…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-10-07"
   },
   {
     "title": "Dinosaur Tracks Hike",
