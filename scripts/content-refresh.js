@@ -1885,72 +1885,9 @@ async function pullSmbForum(existingSmbArticles = []) {
   return out;
 }
 
-
-// Topic tagging for news items.
-//
-// This was a first-match-wins cascade of unanchored substrings, which produced
-// two whole classes of wrong tag (Morgan, 2026-08-07):
-//   * ordering — "Logan Metz and the fork in the road", a singer-songwriter
-//     preview, hit /road/ (infrastructure) three rules before /music/
-//     (arts-culture) could ever be tested;
-//   * substrings — /rent/ matched "current", /art/ matched "part", /park/
-//     matched "parking", /district/ matched "fire district", and /mountain/
-//     matched "Mountain Village" in nearly every article we carry.
-// Every pattern is now word-anchored and topics are SCORED rather than raced,
-// with the headline weighted over the body, so one incidental word in a title
-// cannot outvote a body that is plainly about something else.
-const TOPIC_RULES = [
-  ['public-safety', [/\bwild ?fires?\b/, /\bfires?\b/, /\bfire (district|department|ban|restrictions?)\b/,
-                     /\bmarshals?\b/, /\bpolice\b/, /\bsheriff\b/, /\brescue\b/, /\bevacuat\w*\b/,
-                     /\bcrash(es)?\b/, /\baccidents?\b/, /\bavalanche\w*\b/, /\bemergency\b/, /\bsmoke\b/]],
-  ['housing',       [/\bhousing\b/, /\baffordab\w*\b/, /\bdeed[- ]restrict\w*\b/, /\bsmrha\b/,
-                     /\brents?\b/, /\brental\w*\b/, /\bworkforce\b/, /\bapartments?\b/,
-                     /\bdeed restriction\b/, /\bshort[- ]term rental\b/, /\bvacancy\b/]],
-  ['land-use',      [/\bzoning\b/, /\bland[- ]use\b/, /\bpud\b/, /\bsubdivision\b/, /\bvariance\b/,
-                     /\bsetbacks?\b/, /\bharc\b/, /\bhistoric (district|preservation|landmark)\b/,
-                     /\bbuilding permits?\b/, /\bdesign standards?\b/, /\bmaster plan\b/, /\bannexation\b/]],
-  ['government',    [/\bbudget\b/, /\btaxes?\b/, /\btax\b/, /\brevenues?\b/, /\bbonds?\b/, /\bfiscal\b/,
-                     /\bappropriation\w*\b/, /\btown councils?\b/, /\bcounty commission\w*\b/,
-                     /\bcommissioners?\b/, /\belections?\b/, /\bballots?\b/, /\bordinances?\b/,
-                     /\bresolutions?\b/, /\bboards?\b/, /\bcouncils?\b/]],
-  ['infrastructure',[/\broads?\b/, /\bhighways?\b/, /\bbridges?\b/, /\bpaving\b/,
-                     /\bwater (system|line|main|rights?|treatment)\b/, /\bsewer\w*\b/, /\bwastewater\b/,
-                     /\btransit\b/, /\bgondola\b/, /\bsmart\b/, /\binfrastructure\b/, /\bbroadband\b/,
-                     /\butility\b/, /\bconstruction (project|season)\b/, /\bdetour\w*\b/,
-                     // "closure" alone is far too broad — it also means fishing
-                     // closures, trail closures, business closures. Anchor to travel.
-                     /\b(road|highway|lane|pass|bridge)\s+closures?\b/, /\bclosed to traffic\b/]],
-  ['education',     [/\bschools?\b/, /\bstudents?\b/, /\beducation\b/, /\bteachers?\b/,
-                     /\bschool district\b/, /\bclassrooms?\b/, /\bgraduat\w*\b/, /\bscholarships?\b/]],
-  ['arts-culture',  [/\barts?\b/, /\bartists?\b/, /\bmusic\b/, /\bmusicians?\b/, /\bconcerts?\b/,
-                     /\bsongwriters?\b/, /\bbands?\b/, /\balbums?\b/, /\bfestivals?\b/, /\bfilms?\b/,
-                     /\bgalleries\b/, /\bgallery\b/, /\btheat(er|re)\b/, /\bculture\b/, /\bcultural\b/,
-                     /\bexhibit\w*\b/, /\bauthors?\b/, /\bpoetry\b/, /\bdance\b/, /\bperform\w*\b/]],
-  ['recreation',    [/\bski(ing|ers?)?\b/, /\btrails?\b/, /\bhik\w*\b/, /\bbik\w*\b/, /\bclimb\w*\b/,
-                     /\brecreation\w*\b/, /\bopen space\b/, /\bparks?\b/, /\bcampground\w*\b/,
-                     /\bfishing\b/, /\brafting\b/, /\bpass (is )?(now )?open\b/]],
-  ['health',        [/\bhealth\b/, /\bmedical\b/, /\bhospitals?\b/, /\bclinics?\b/, /\bcovid\b/,
-                     /\bmental health\b/, /\bpublic health\b/, /\bvaccin\w*\b/]],
-];
-const TOPIC_TITLE_WEIGHT = 3;
-const TOPIC_BODY_WEIGHT = 2;
-
-function classifyNewsTopic(title, desc) {
-  const t = String(title || '').toLowerCase();
-  const d = String(desc || '').toLowerCase();
-  let best = 'community', bestScore = 0;
-  for (const [topic, patterns] of TOPIC_RULES) {
-    let score = 0;
-    for (const re of patterns) {
-      if (re.test(t)) score += TOPIC_TITLE_WEIGHT;
-      else if (re.test(d)) score += TOPIC_BODY_WEIGHT;
-    }
-    // Strictly greater keeps TOPIC_RULES order as the tiebreak, so a genuine
-    // tie resolves to the more specific topic listed first.
-    if (score > bestScore) { best = topic; bestScore = score; }
-  }
-  return bestScore > 0 ? best : 'community';
-}
+// Topic tagging + the carry-forward re-tag live in lib/news-topics.js so the
+// scoring rules are unit-testable without running the whole refresh.
+const { classifyNewsTopic, retagCarriedForward } = require('./lib/news-topics.js');
 
 // Repair legacy "mojibake": runs of U+FFFD (replacement chars) left by the old
 // chunk-split UTF-8 bug. In these short news excerpts the culprit is almost
@@ -2185,7 +2122,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
       if (existing.source !== 'Telluride Times') continue; // gov news handled separately
       const pub = new Date(existing.date || existing.firstSeen || '');
       if (!isNaN(pub) && pub >= cutoff) {
-        articles.push(existing);   // carry forward — still within window
+        articles.push(retagCarriedForward(existing));  // carry forward, re-tagged
         scrapedHrefs.add(href);    // prevent duplication if loop runs twice
       }
     }
@@ -2409,9 +2346,10 @@ async function refreshRegionalNews(existingRegional = []) {
         if (pubDate < cutoff) continue;
         const href = (item.link || '').trim();
         if (!href) continue;
-        // Carry forward existing entry unchanged if we already have it
+        // Carry forward the existing entry if we already have it — but re-tag
+        // it, so a topic-rules change reaches regional articles too.
         if (existingByHref.has(href)) {
-          articles.push(existingByHref.get(href));
+          articles.push(retagCarriedForward(existingByHref.get(href)));
           count++;
           continue;
         }
