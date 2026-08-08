@@ -109,3 +109,44 @@ test('re-tagging is idempotent', () => {
   const once = retagCarriedForward(stored);
   assert.deepEqual(retagCarriedForward(once), once);
 });
+
+test('a cached-with-Claude-summary record is re-tagged', () => {
+  // The path that actually serves most articles. An article that already has a
+  // Claude summary short-circuits the scrape and is pushed verbatim — this was
+  // the branch that kept Logan Metz on `infrastructure` through five refresh
+  // runs after the first fix, which only patched the carry-forward branches.
+  const cached = {
+    title: 'Logan Metz and the fork in the road',
+    copy: 'Logan Metz — Wisconsin-born singer-songwriter and multi-instrumentalist — plays Music on the Green at Reflection Plaza.',
+    newsTopic: 'infrastructure',
+    claudeSummary: true,
+    href: 'https://www.telluridenews.com/arts_and_entertainment/article_e7b4505a.html',
+    source: 'Telluride Times',
+  };
+  assert.equal(retagCarriedForward(cached).newsTopic, 'arts-culture');
+});
+
+// ── Wiring guard ──
+// The helper being correct is not enough — the first fix had a correct helper
+// wired into two branches that most articles never take. These assert the
+// re-tag sits on the unconditional return path of both news functions, so a
+// future edit can't quietly reintroduce a bypassing branch.
+const fs = require('fs');
+const path = require('path');
+const SRC = fs.readFileSync(path.join(__dirname, '..', 'content-refresh.js'), 'utf8');
+
+test('refreshNews re-tags every array it returns', () => {
+  const body = SRC.slice(SRC.indexOf('async function refreshNews('));
+  const ret = body.slice(body.indexOf('\n  return {'), body.indexOf('\n}'));
+  for (const key of ['ttArticles', 'kotoNewscasts', 'kotoFeatured', 'smbArticles']) {
+    const line = ret.split('\n').find((l) => l.trim().startsWith(key + ':'));
+    assert.ok(line, `no ${key} in refreshNews return`);
+    assert.match(line, /retagAll\(/, `${key} is returned without re-tagging`);
+  }
+});
+
+test('refreshRegionalNews re-tags what it returns', () => {
+  const body = SRC.slice(SRC.indexOf('async function refreshRegionalNews('));
+  const ret = body.slice(body.indexOf('\n  return articles'), body.indexOf('\n}'));
+  assert.match(ret, /\.map\(retagCarriedForward\)/, 'regional return is not re-tagged');
+});

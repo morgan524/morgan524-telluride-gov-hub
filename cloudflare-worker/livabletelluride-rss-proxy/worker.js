@@ -389,10 +389,103 @@ async function handleUpdateProfile(request, env) {
 }
 
 
+/* ── Anthropic usage metering ────────────────────────────────────────
+   The three AI endpoints below are visitor-triggered, so unlike every other
+   Claude call in this project they appear in no GitHub Actions log and no
+   local log file. That made them the one unmeasured line item during the
+   2026-08-07 cost triage — "probably the Worker" was a guess, and guesses are
+   a bad basis for deciding whether to move an endpoint to a cheaper model.
+
+   Each call records tokens + computed cost into a per-day KV counter, read
+   back at GET /ai-usage. Metering must never break a user-facing request:
+   every failure path here is swallowed, and the write runs in waitUntil() so
+   it can't add latency to the response.
+
+   Prices are USD per million tokens, verified 2026-08-07. Cache reads bill at
+   0.1x the input rate and 5-minute cache writes at 1.25x. */
+const AI_PRICES = {
+  "claude-opus-5":          { in: 5,  out: 25 },
+  "claude-opus-4-8":        { in: 5,  out: 25 },
+  "claude-sonnet-5":        { in: 3,  out: 15 },
+  "claude-sonnet-4-6":      { in: 3,  out: 15 },
+  "claude-haiku-4-5":       { in: 1,  out: 5  },
+  "claude-haiku-4-5-20251001": { in: 1, out: 5 },
+};
+
+function aiCostUsd(model, u) {
+  const p = AI_PRICES[model];
+  if (!p || !u) return 0;
+  return (
+    (u.input_tokens || 0) * p.in / 1e6 +
+    (u.output_tokens || 0) * p.out / 1e6 +
+    (u.cache_read_input_tokens || 0) * p.in * 0.1 / 1e6 +
+    (u.cache_creation_input_tokens || 0) * p.in * 1.25 / 1e6
+  );
+}
+
+// Read-modify-write on a daily key. These endpoints are human-triggered (a
+// flyer upload, a letter submission, a forum post), so concurrent writes to
+// the same day+endpoint are rare; a lost increment costs one data point, not
+// correctness of the overall picture. Not worth a Durable Object.
+async function recordAiUsage(env, endpoint, model, out) {
+  if (!env.AI_USAGE) return;               // binding absent — metering is optional
+  const u = out && out.usage;
+  if (!u) return;
+  const day = new Date().toISOString().slice(0, 10);
+  const key = `ai:${day}`;
+  try {
+    const prior = JSON.parse((await env.AI_USAGE.get(key)) || "{}");
+    const e = prior[endpoint] || { calls: 0, model, in: 0, out: 0, cacheRead: 0, cacheWrite: 0, usd: 0 };
+    e.calls      += 1;
+    e.model       = model;
+    e.in         += u.input_tokens || 0;
+    e.out        += u.output_tokens || 0;
+    e.cacheRead  += u.cache_read_input_tokens || 0;
+    e.cacheWrite += u.cache_creation_input_tokens || 0;
+    e.usd         = Math.round((e.usd + aiCostUsd(model, u)) * 1e6) / 1e6;
+    prior[endpoint] = e;
+    // 90-day TTL: long enough to compare against a monthly invoice, short
+    // enough that the namespace prunes itself.
+    await env.AI_USAGE.put(key, JSON.stringify(prior), { expirationTtl: 90 * 86400 });
+  } catch (_) { /* metering must never fail a request */ }
+}
+
+// GET /ai-usage?days=30 → per-day, per-endpoint token + cost rollup.
+async function handleAiUsage(request, env) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj, null, 2), {
+    status: status || 200,
+    headers: { ...cors, "Content-Type": "application/json" },
+  });
+  if (!env.AI_USAGE) return json({ ok: false, msg: "AI_USAGE KV binding not configured" }, 500);
+
+  const days = Math.min(90, Math.max(1, parseInt(new URL(request.url).searchParams.get("days") || "30", 10) || 30));
+  const today = new Date();
+  const out = {};
+  let totalUsd = 0, totalCalls = 0;
+  for (let i = 0; i < days; i++) {
+    const d = new Date(today.getTime() - i * 86400000).toISOString().slice(0, 10);
+    let row;
+    try { row = JSON.parse((await env.AI_USAGE.get(`ai:${d}`)) || "null"); } catch (_) { row = null; }
+    if (!row) continue;
+    out[d] = row;
+    for (const k of Object.keys(row)) { totalUsd += row[k].usd || 0; totalCalls += row[k].calls || 0; }
+  }
+  return json({
+    ok: true,
+    days,
+    totalCalls,
+    totalUsd: Math.round(totalUsd * 1e4) / 1e4,
+    avgUsdPerDay: Math.round((totalUsd / days) * 1e4) / 1e4,
+    byDay: out,
+  });
+}
+
+
 // POST /summarize-flyer { imageUrl } → { ok, summary }. Reads the flyer image
 // with Claude (vision) and returns a short factual event summary for the
 // admin event-review page. Needs the ANTHROPIC_API_KEY Worker secret.
-async function handleSummarizeFlyer(request, env) {
+async function handleSummarizeFlyer(request, env, ctx) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
@@ -439,6 +532,7 @@ async function handleSummarizeFlyer(request, env) {
     return json({ ok: false, msg: "Summary failed (" + resp.status + ").", detail: detail.slice(0, 200) }, 502);
   }
   const out = await resp.json().catch(() => ({}));
+  if (ctx) ctx.waitUntil(recordAiUsage(env, "summarize-flyer", "claude-opus-4-8", out));
   const summary = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("").trim();
   if (!summary) return json({ ok: false, msg: "No summary was returned." }, 502);
   return json({ ok: true, summary });
@@ -477,7 +571,7 @@ function parseFirstJson(s) {
   try { return JSON.parse(t.slice(i, j + 1)); } catch { return null; }
 }
 
-async function handleReviewLetter(request, env) {
+async function handleReviewLetter(request, env, ctx) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
@@ -527,6 +621,7 @@ async function handleReviewLetter(request, env) {
   }
   if (!resp.ok) return json({ ok: true, needsManual: true, cleanedText: "", wordCount: 0, notes: "" });
   const out = await resp.json().catch(() => ({}));
+  if (ctx) ctx.waitUntil(recordAiUsage(env, "review-letter", "claude-opus-4-8", out));
   const raw = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("").trim();
   const parsed = parseFirstJson(raw);
   const cleaned = parsed && typeof parsed.cleanedText === "string" ? parsed.cleanedText.trim() : "";
@@ -583,7 +678,7 @@ function modEmailHtml(o) {
   </div></div>`;
 }
 
-async function handleModerate(request, env) {
+async function handleModerate(request, env, ctx) {
   const cors = profileCorsHeaders(request.headers.get("Origin") || "");
   const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
   if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
@@ -613,6 +708,7 @@ async function handleModerate(request, env) {
         messages: [{ role: "user", content: "POST TITLE: " + title + "\n\nPOST BODY:\n" + body }] }),
     });
     const out = await r.json();
+    if (ctx) ctx.waitUntil(recordAiUsage(env, "moderate", "claude-opus-4-8", out));
     const txt = (out.content || []).filter(b => b && b.type === "text").map(b => b.text).join("");
     const m = txt.match(/\{[\s\S]*\}/);
     if (m) verdict = JSON.parse(m[0]);
@@ -741,13 +837,13 @@ export default {
       return handleInterests(request, env);
     }
     if (url.pathname === "/summarize-flyer") {
-      return handleSummarizeFlyer(request, env);
+      return handleSummarizeFlyer(request, env, ctx);
     }
     if (url.pathname === "/review-letter") {
-      return handleReviewLetter(request, env);
+      return handleReviewLetter(request, env, ctx);
     }
     if (url.pathname === "/moderate") {
-      return handleModerate(request, env);
+      return handleModerate(request, env, ctx);
     }
     if (url.pathname === "/moderation-action") {
       return handleModerationAction(request, env);
@@ -757,6 +853,9 @@ export default {
     }
     if (url.pathname === "/health") {
       return Response.json({ ok: true, version: VERSION, allowed: ALLOWED_HOSTS });
+    }
+    if (url.pathname === "/ai-usage") {
+      return handleAiUsage(request, env);
     }
     if (url.pathname === "/og") {
       // Open-Graph extractor for Hub-Bub link previews. It legitimately needs to

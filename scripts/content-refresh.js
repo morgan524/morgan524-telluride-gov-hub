@@ -2122,7 +2122,7 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
       if (existing.source !== 'Telluride Times') continue; // gov news handled separately
       const pub = new Date(existing.date || existing.firstSeen || '');
       if (!isNaN(pub) && pub >= cutoff) {
-        articles.push(retagCarriedForward(existing));  // carry forward, re-tagged
+        articles.push(existing);   // carry forward — re-tagged at the return
         scrapedHrefs.add(href);    // prevent duplication if loop runs twice
       }
     }
@@ -2311,11 +2311,32 @@ async function refreshNews(existingTtArticles = [], existingSmbArticles = []) {
   }
 
   console.log(`  Found: ${ttArticles.length} Telluride Times, ${govArticles.length} gov news, ${kotoNewscasts.length} KOTO newscasts, ${kotoFeatured.length} KOTO stories, ${csSunArticles.length} Colorado Sun, ${ridgwayArticles.length} Ridgway, ${smbArticles.length} SMBF`);
+
+  // Re-tag EVERY record on the way out, whatever path built it.
+  //
+  // This is deliberately a single choke point rather than a fix at each push
+  // site. There are six ways a record reaches this return — freshly scraped,
+  // cached-with-Claude-summary, two letterAuthor-backfill variants, aged-out
+  // carry-forward, and regional carry-forward — and four of them reuse a
+  // stored record verbatim, so they keep whatever topic was assigned the first
+  // time the article was ingested. Patching the two carry-forward paths alone
+  // (my first attempt at this, 2026-08-07) fixed nothing visible: the dominant
+  // path is the cached-summary short-circuit, and "Logan Metz and the fork in
+  // the road" was still filed under infrastructure after five refresh runs.
+  //
+  // Re-tagging here is safe and strictly better than the per-site call:
+  //   * idempotent — a freshly classified record re-classifies to itself;
+  //   * better input — the fresh sites classify against the raw RSS
+  //     description, while this runs on `copy` (cleaned excerpt, or the Claude
+  //     summary), so tagging no longer depends on which path built the record;
+  //   * future-proof — a new push site cannot reintroduce the bug.
+  const retagAll = arr => arr.map(retagCarriedForward);
+
   return {
-    ttArticles: [...ttArticles, ...govArticles, ...dedup(csSunArticles), ...dedup(ridgwayArticles)],
-    kotoNewscasts: dedup(kotoNewscasts),
-    kotoFeatured: dedup(kotoFeatured),
-    smbArticles
+    ttArticles: retagAll([...ttArticles, ...govArticles, ...dedup(csSunArticles), ...dedup(ridgwayArticles)]),
+    kotoNewscasts: retagAll(dedup(kotoNewscasts)),
+    kotoFeatured: retagAll(dedup(kotoFeatured)),
+    smbArticles: retagAll(smbArticles)
   };
 }
 
@@ -2346,10 +2367,10 @@ async function refreshRegionalNews(existingRegional = []) {
         if (pubDate < cutoff) continue;
         const href = (item.link || '').trim();
         if (!href) continue;
-        // Carry forward the existing entry if we already have it — but re-tag
-        // it, so a topic-rules change reaches regional articles too.
+        // Carry forward existing entry unchanged if we already have it.
+        // (Re-tagging happens in one pass at this function's return.)
         if (existingByHref.has(href)) {
-          articles.push(retagCarriedForward(existingByHref.get(href)));
+          articles.push(existingByHref.get(href));
           count++;
           continue;
         }
@@ -2376,11 +2397,15 @@ async function refreshRegionalNews(existingRegional = []) {
     }
   }
 
-  // Sort by date descending, deduplicate by href
+  // Sort by date descending, deduplicate by href, and re-tag on the way out —
+  // same single-choke-point reasoning as refreshNews (this function has its own
+  // return, so it needs its own pass). Carried-forward regional entries would
+  // otherwise keep whatever topic they were first assigned.
   const seen = new Set();
   return articles
     .filter(a => { if (seen.has(a.href)) return false; seen.add(a.href); return true; })
-    .sort((a, b) => new Date(b.date) - new Date(a.date));
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .map(retagCarriedForward);
 }
 
 // ── Task 3: Community Pulse ──
