@@ -324,7 +324,11 @@
   },
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---August-12%2C-2026.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/84715599948?pwd=SykKnn9yD3R1s6uF08awGxXm8s8y6P.1",
+    "meetingId": "847 1559 9948",
+    "passcode": "194920",
+    "phone": "346 248 7799"
   },
   "norwood|2026-08-11|Norwood Water Commission Meeting": {
     "sv": 4,

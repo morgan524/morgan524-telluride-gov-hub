@@ -1,14 +1,18 @@
 {
-  "hash": "7d278a393bed055b7b25345753fdbd04a293ab49",
-  "lede": "Tuesday's Town Council meeting is the one to watch this week — council takes up third reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code to change historic and architectural review standards and landscaping and tree rules for property owners across town. Thursday's San Miguel County Planning Commission adds another layer, with a work session on subdivision mechanics and a referral on an energy code update that would revise building standards for new construction. Meanwhile, the Telluride Mushroom Festival kicks off midweek and the Ridgway Rendezvous fills the weekend.",
+  "hash": "e025ca8190424dfae14e99488c5d95d760b994c7",
+  "lede": "The biggest thing happening at the government level this week is Tuesday's Telluride Town Council meeting, where the Colorado Wildfire Resiliency Code goes to its third and final reading — pass it and the Land Use Code changes in ways that affect what every property owner here can do with landscaping and historic structures. Ridgway's council also has a full plate Wednesday, with a public hearing on a subdivision and a joint work session on a new Housing Action Plan. Meanwhile, the Mushroom Festival rolls into town mid-week and the Ridgway Rendezvous fills the weekend.",
   "notable": [
     {
       "id": 1,
-      "stake": "Third reading vote on wildfire code that rewrites LUC landscaping and review rules."
+      "stake": "Third reading vote on wildfire code that rewrites landscaping and historic-review rules."
+    },
+    {
+      "id": 6,
+      "stake": "Public hearing on Hyde Subdivision plus council vote on draft Housing Action Plan."
     },
     {
       "id": 8,
-      "stake": "County subdivision standards and energy code update affecting new construction countywide."
+      "stake": "County energy code update would revise building standards for new construction and major renovations."
     }
   ]
 }
