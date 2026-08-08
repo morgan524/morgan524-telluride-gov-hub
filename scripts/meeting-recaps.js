@@ -35,6 +35,7 @@ const { extractJsArray } = require('./lib/extract.js');
 const { serializeArray } = require('./lib/serialize.js');
 const { SONNET } = require('./lib/claude-model.js');
 const { createResponseCache } = require('./lib/response-cache.js');
+const { mirrorAll } = require('./lib/json-mirror.js');
 
 const REPO_ROOT = path.resolve(__dirname, '..');
 const GOV_HELPERS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -646,6 +647,16 @@ async function main() {
   try { new Function(src); } catch (e) { console.error('  ✗ refusing to write — result would not parse: ' + e.message); process.exit(1); }
   fs.writeFileSync(GOV_HELPERS, src);
   console.log(`  ✓ Wrote ${added.length} new recap(s); MEETING_RECAPS now ${final.length} entries.`);
+
+  // Re-mirror MEETING_RECAPS to data/<name>.json — the rebuilt pages read the
+  // mirrors (js/lt-data.js), not the JS const, so a recap that only lands in
+  // gov-helpers.js is invisible until some other job happens to re-mirror.
+  // A missing const is FATAL rather than mirrored as empty (audit P0-2).
+  {
+    const { written, failures } = mirrorAll(REPO_ROOT);
+    console.log(`  JSON mirrors: ${written.length} written/verified.`);
+    if (failures.length) throw new Error('JSON mirror FAILED — refusing to ship:\n  ' + failures.join('\n  '));
+  }
 }
 
 // Guarded so the cache wiring can be exercised by test/ without the script

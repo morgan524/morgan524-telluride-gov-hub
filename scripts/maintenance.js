@@ -21,6 +21,7 @@ const crypto = require('crypto');
 const { execSync } = require('child_process');
 const { extractJsArray } = require('./lib/extract.js');
 const { assertParses } = require('./lib/write-guard.js');
+const { mirrorAll } = require('./lib/json-mirror.js');
 
 const REPO_ROOT = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
@@ -619,6 +620,28 @@ async function main() {
     console.log('\n✅ Maintenance complete — files updated.');
   } else {
     console.log('\n✓ Maintenance complete — no changes needed.');
+  }
+
+  // Re-mirror the JS consts to data/<name>.json, exactly as content-refresh
+  // does after ITS writes. This job prunes LEGAL_NOTICES and rewrites the
+  // per-source cached-data arrays, so skipping it left the mirrors stale until
+  // whenever content-refresh next ran — and the mirrors are what the rebuilt
+  // pages actually read (js/lt-data.js → data/*.json), so that window served
+  // stale content, not just a red json-mirror test. Twice in two days it was
+  // the red test: LOCAL_NEWS_FEATURED on 2026-08-07, TELLURIDE_TIMES_ARTICLES
+  // on 2026-08-08.
+  //
+  // Runs regardless of `changed`: mirrorAll is write-if-different, so it's a
+  // no-op on a quiet run and self-heals drift introduced from anywhere else.
+  // A missing/mistyped const is FATAL for the same reason it is in
+  // content-refresh — shipping a valid-but-empty mirror would wipe live data
+  // (2026-07-22 audit P0-2).
+  {
+    const { written, failures } = mirrorAll(REPO_ROOT);
+    console.log(`  JSON mirrors: ${written.length} written/verified.`);
+    if (failures.length) {
+      throw new Error('JSON mirror FAILED — refusing to ship (a missing const would be mirrored as empty and wipe live data):\n  ' + failures.join('\n  '));
+    }
   }
 
   // Summary

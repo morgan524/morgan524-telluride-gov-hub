@@ -17,6 +17,7 @@ const path  = require('path');
 
 const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_DATA_JS = path.join(REPO_ROOT, 'js', 'gov-data.js');
+const { mirrorAll } = require('./lib/json-mirror.js');
 
 const USER_AGENT    = 'Mozilla/5.0 (compatible; LivableTelluride-Bot/1.0; +https://livabletelluride.org)';
 const FETCH_TIMEOUT = 15000;
@@ -231,6 +232,15 @@ async function main() {
     console.log('\nNo changes — all statuses current');
   }
 
+  // Re-mirror to data/<name>.json after writing the JS const — the rebuilt
+  // pages read the mirrors (js/lt-data.js), not the JS. Unconditional and
+  // write-if-different, so it no-ops on a quiet run and self-heals drift.
+  // A missing const is FATAL rather than mirrored as empty (audit P0-2).
+  {
+    const { written, failures } = mirrorAll(REPO_ROOT);
+    console.log('  JSON mirrors: ' + written.length + ' written/verified.');
+    if (failures.length) throw new Error('JSON mirror FAILED — refusing to ship:\n  ' + failures.join('\n  '));
+  }
   process.exit(0);
 }
 

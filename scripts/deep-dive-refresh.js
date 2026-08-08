@@ -24,6 +24,7 @@ const path   = require('path');
 
 const REPO_ROOT  = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
 const GOV_HELPERS_JS = path.join(REPO_ROOT, 'js', 'gov-helpers.js');
+const { mirrorAll } = require('./lib/json-mirror.js');
 
 const { assertParses } = require('./lib/write-guard.js');
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
@@ -461,6 +462,15 @@ async function main() {
     console.log('\nNo changes — DEEP_DIVE_UPDATES unchanged');
   }
 
+  // Re-mirror to data/<name>.json after writing the JS const — the rebuilt
+  // pages read the mirrors (js/lt-data.js), not the JS. Unconditional and
+  // write-if-different, so it no-ops on a quiet run and self-heals drift.
+  // A missing const is FATAL rather than mirrored as empty (audit P0-2).
+  {
+    const { written, failures } = mirrorAll(REPO_ROOT);
+    console.log('  JSON mirrors: ' + written.length + ' written/verified.');
+    if (failures.length) throw new Error('JSON mirror FAILED — refusing to ship:\n  ' + failures.join('\n  '));
+  }
   process.exit(0);
 }
 
