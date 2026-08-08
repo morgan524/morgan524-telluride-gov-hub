@@ -592,6 +592,29 @@ function mtMoment(year, monthIdx, day, hour, minute) {
   return new Date(Date.UTC(year, monthIdx, day, hour + 6, minute, 0));
 }
 
+// Serialize an instant as ISO-8601 carrying the MOUNTAIN offset (-06:00 / -07:00)
+// rather than Z. Same instant either way, but every downstream reader that takes
+// the first 10 characters as the calendar date now gets the LOCAL date.
+// Why (Morgan, 2026-08-08): the Rotary Club meeting at 6:00 PM MDT on Aug 19 was
+// stored by toISOString() as 2026-08-20T00:00:00.000Z and rendered as Aug 20 —
+// a day late. Every KOTO event starting at or after 6:00 PM MDT had this bug.
+function mtIsoString(d) {
+  const fmt = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Denver', hour12: false,
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+  });
+  const p = {};
+  for (const part of fmt.formatToParts(d)) p[part.type] = part.value;
+  const hh = p.hour === '24' ? '00' : p.hour;          // some engines render midnight as 24
+  const asIfUtc = Date.UTC(+p.year, +p.month - 1, +p.day, +hh, +p.minute, +p.second);
+  const offMin = Math.round((asIfUtc - d.getTime()) / 60000);
+  const sign = offMin < 0 ? '-' : '+';
+  const abs = Math.abs(offMin);
+  const off = sign + String(Math.floor(abs / 60)).padStart(2, '0') + ':' + String(abs % 60).padStart(2, '0');
+  return `${p.year}-${p.month}-${p.day}T${hh}:${p.minute}:${p.second}${off}`;
+}
+
 // ══════════════════════════════════════════════════════════════
 // ── Claude API — Meeting Summary Generation ──
 // ══════════════════════════════════════════════════════════════
@@ -3981,7 +4004,7 @@ async function syncKotoCommunityEvents() {
       title: decodeHtmlEntities(e.title),
       link: e.url || '',
       description,
-      pubDate: start.toISOString(),
+      pubDate: mtIsoString(start),   // local offset, not Z — see mtIsoString
       source: 'koto',
       sourceLabel: 'KOTO',
       category: 'Community Event',
@@ -4362,12 +4385,33 @@ const EVENT_SOURCE_OVERRIDES = [
   { match: /music on the mesa/i,
     sourceLabel: 'Norwood Park & Recreation District',
     link: 'https://www.norwoodparkandrec.org/music-on-the-mesa-2026' },
+
+  // ── Title corrections (content review 2026-08-08) ──
+  // Upstream feeds ship these misspelled; we cannot fix them at the source, and
+  // a re-scrape would undo any hand edit to the JSON, so they are corrected here
+  // on every run. `title` may be a string or a [find, replace] pair.
+  { match: /floating lotus brewerty/i, title: [/brewerty/i, 'Brewery'] },
+  { match: /ouray country pride/i,     title: [/\bCountry\b/, 'County'] },
+  // The Community Meditation session was moved; the feed left the OLD date in
+  // the title while dating the record to the NEW one, so the card contradicted
+  // itself. State both, unambiguously.
+  { match: /^postponed:\s*aug 12, 2026:\s*community meditation/i,
+    title: 'Community Meditation (postponed from Aug 12 to Aug 13, 2026)' },
 ];
+
+// Apply a title override. Accepts a literal replacement string or a
+// [pattern, replacement] pair for a surgical substitution.
+function applyTitleOverride(current, rule) {
+  if (!rule.title) return current;
+  if (Array.isArray(rule.title)) return String(current).replace(rule.title[0], rule.title[1]);
+  return rule.title;
+}
 function applyEventOverrides(events) {
   for (const ev of events || []) {
     const rule = EVENT_SOURCE_OVERRIDES.find(r => r.match.test(ev.title || ''));
     if (!rule) continue;
     if (rule.sourceLabel) ev.sourceLabel = rule.sourceLabel;
+    if (rule.title) ev.title = applyTitleOverride(ev.title, rule);
     if (rule.link) {
       if ('link' in ev) ev.link = rule.link;   // RSS-shaped records
       if ('href' in ev) ev.href = rule.link;   // href-shaped records
