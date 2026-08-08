@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-08T18:47:06.899Z",
+ "generated": "2026-08-08T21:38:02.091Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -19,7 +19,18 @@
     }
    ],
    "recent": [],
-   "developments": [],
+   "developments": [
+    {
+     "topic": "carhenge",
+     "type": "news",
+     "source": "Town of Telluride",
+     "articleDate": "Aug 8, 2026",
+     "title": "Shandoka and Carhenge Lots Closed Aug 11–21",
+     "copy": "Both the Shandoka and Carhenge commuter parking lots will close temporarily from August 11 through 21. The reason for the closure was not specified in the notice.",
+     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
+     "addedDate": "2026-08-08"
+    }
+   ],
    "stale": [
     "Carhenge / Shandoka: timeline entry \"P&Z takes up the subdivision and Conceptual PUD\" (Jul 23, 2026) is still marked upcoming but the date has passed."
    ]
