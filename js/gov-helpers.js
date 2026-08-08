@@ -702,106 +702,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
   },
   {
-    title: "Flood ravages homes",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County floats disaster relief sales tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
-    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Log Hill won’t join fire authority",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
-    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Crews near full containment on fire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
-    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "‘We were in a panic’",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "infrastructure",
-    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
-    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Riders scrutinize Ouray’s new shuttle service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
-    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "August 4, 1966 Thurman Grady Rohus entered a guilty plea in district court July 27 to a charge of grand larceny. Judge Fred Calhoun presided. Sentencing will be Aug. 29 following the probation officer’s report. Rohus was charged with the theft of about 300 pounds of copper wire from the Revenue Mine",
-    href: "https://www.ouraynews.com/2026/08/05/looking-back-20260806-0344-371224/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Everything you need to know about the new federal report on the Colorado River’s future",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "Colorado water officials knew that they and the three other Upper Basin states would likely be asked to conserve Colorado River water under a new plan spanning the next decade. Now they know the target amount: up to 200,000 acre-feet, or 65 billion gallons of savings among the four states. Water wat",
-    href: "https://www.ouraynews.com/2026/08/05/everything-need-know-new-federal-report-colorado-rivers-future/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Send us your celebrations!",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -1428,6 +1328,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "August at The Alibi",
+    source: "Telluride Times",
+    date: "August 8, 2026",
+    firstSeen: "2026-08-08",
+    newsTopic: "arts-culture",
+    copy: "The Alibi has 29 nights of programming lined up for August, starting with four nights of Mushroom Festival after-parties Aug. 12–15, including Banshee Tree, Copper Children, and DJ sets. The month continues with acts ranging from classic rock to Americana to bluegrass-adjacent, with Aug. 27–29 already sold out for Camp Alderwild after-parties.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_26713cbc-a035-4151-be69-3ef3f427977b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a3/9a3af767-c0f5-4abe-8123-431795651f3c/6a769447ea970.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "‘Leadership is an inside job’",
     source: "Telluride Times",
     date: "August 7, 2026",
@@ -2032,7 +1944,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     source: "Telluride Times",
     date: "July 29, 2026",
     firstSeen: "2026-08-03",
-    newsTopic: "land-use",
+    newsTopic: "arts-culture",
     copy: "Telluride Arts and the Telluride Historical Museum wrapped up their \"This Is Colorado (In One Square Foot)\" community art show July 31. Local residents filled 12x12 canvases responding to what it means to be a Coloradan, displayed at Telluride Arts HQ and Mountain Village. In-person donations were accepted in exchange for taking a piece home.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/arts_and_entertainment/article_a7235154-2251-408a-a5a9-8bb658d97e73.html",
@@ -7740,6 +7652,9 @@ const HOUSING_LISTINGS = [
 ];
 
 const RIDGWAY_AGENDA_MAP = {
+  "August 12, 2026":
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---August-12%2C-2026.pdf",
+
   "July 8, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---July-8%2C-2026.pdf",
 
