@@ -1,18 +1,18 @@
 {
-  "hash": "e025ca8190424dfae14e99488c5d95d760b994c7",
-  "lede": "The biggest thing happening at the government level this week is Tuesday's Telluride Town Council meeting, where the Colorado Wildfire Resiliency Code goes to its third and final reading — pass it and the Land Use Code changes in ways that affect what every property owner here can do with landscaping and historic structures. Ridgway's council also has a full plate Wednesday, with a public hearing on a subdivision and a joint work session on a new Housing Action Plan. Meanwhile, the Mushroom Festival rolls into town mid-week and the Ridgway Rendezvous fills the weekend.",
+  "hash": "7b72e69927741205b70d58bca3946a6e5cf7d17c",
+  "lede": "The week's most important meeting is Tuesday's Town Council, where the Colorado Wildfire Resiliency Code goes to third reading — a vote that would rewrite Telluride's Land Use Code to change what property owners can do with landscaping and historic structures in the name of fire mitigation. Ridgway's council also holds a public hearing on the Hyde Subdivision resubdivision and a joint work session on its state-mandated Housing Action Plan. On the county side, the Planning Commission takes up an energy code update that would reshape building standards for new construction.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Third reading vote on wildfire code that rewrites landscaping and historic-review rules."
+      "id": 2,
+      "stake": "Third reading vote on wildfire code that rewrites landscaping and historic review rules."
     },
     {
-      "id": 6,
-      "stake": "Public hearing on Hyde Subdivision plus council vote on draft Housing Action Plan."
+      "id": 7,
+      "stake": "Public hearing on Hyde Subdivision resubdivision plus state-mandated housing plan work session."
     },
     {
-      "id": 8,
-      "stake": "County energy code update would revise building standards for new construction and major renovations."
+      "id": 9,
+      "stake": "Energy code update could change building standards for all new county construction."
     }
   ]
 }

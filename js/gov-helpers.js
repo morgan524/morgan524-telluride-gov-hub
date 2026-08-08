@@ -374,13 +374,27 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"23152d2f933fa82e"},
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
+
+  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8298","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
 // triage of Town/County news + agendas). Seeded 2026-07-20 — the writer
 // existed for months but this const was missing, so writes never landed.
-const DEEP_DIVE_UPDATES = [];
+const DEEP_DIVE_UPDATES = [
+{
+  "topic": "carhenge",
+  "type": "news",
+  "source": "Town of Telluride",
+  "articleDate": "Aug 8, 2026",
+  "title": "Shandoka and Carhenge Lots Closed Aug 11–21",
+  "copy": "Both the Shandoka and Carhenge commuter parking lots will close temporarily from August 11 through 21. The reason for the closure was not specified in the notice.",
+  "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
+  "addedDate": "2026-08-08"
+}
+];
 
 // Hub-Bub Question of the Day, written by content-refresh.js (Task 24) on the
 // first run of each Mountain-Time day. Newest first, capped at 30. Each entry:
@@ -599,109 +613,12 @@ const MEETING_PREVIEWS = {
     "The August 20, 2026 Planning & Zoning Commission Chair meeting in Telluride has been cancelled. No agenda items will be heard. Residents with matters before the commission should watch for rescheduling information.",
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion."
+    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion.",
+
+  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
+    "The Open Space Commission will conduct a site walk at Bear Creek Trailhead to review a potential trail alignment connecting to Firecracker Hill, assess beaver activity in Zone 3 of the Bear Creek Preserve, and discuss restoration planning in Zone 1 of the preserve."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
-  {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
-    img: ""
-  },
   {
     title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
     source: "Ouray County",
@@ -719,7 +636,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
     img: ""
   },
   {
@@ -769,7 +686,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 6, 2026",
     newsTopic: "public-safety",
     copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
     img: ""
   },
   {
@@ -783,33 +700,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "August 4, 1966 Thurman Grady Rohus entered a guilty plea in district court July 27 to a charge of grand larceny. Judge Fred Calhoun presided. Sentencing will be Aug. 29 following the probation officer’s report. Rohus was charged with the theft of about 300 pounds of copper wire from the Revenue Mine",
-    href: "https://www.ouraynews.com/2026/08/05/looking-back-20260806-0344-371224/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Everything you need to know about the new federal report on the Colorado River’s future",
+    title: "Good For You!",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
     newsTopic: "community",
-    copy: "Colorado water officials knew that they and the three other Upper Basin states would likely be asked to conserve Colorado River water under a new plan spanning the next decade. Now they know the target amount: up to 200,000 acre-feet, or 65 billion gallons of savings among the four states. Water wat",
-    href: "https://www.ouraynews.com/2026/08/05/everything-need-know-new-federal-report-colorado-rivers-future/?ta_paidstory",
+    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
     img: ""
   },
   {
-    title: "Send us your celebrations!",
+    title: "Ridgway concert series puts trash in its place",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "The “Good For You!” page is a place for reader-submitted photos illustrating community, celebrations and more. Want to submit a photo for publication? Here are some guidelines for submissions: This page is dedicated to photos of people doing community-related activities here in the region or celebra",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/?ta_paidstory",
+    newsTopic: "arts-culture",
+    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
+    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Calendar & Events",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "recreation",
+    copy: "Thursday, August 6 Ridgway Farmers Market, 10 a.m.-2 p.m. in Hartwell Park – on Thursday this week due to Ridgway Rendezvous. Youth Garden Club for ages 8-18, Other Undergrounders root vegetables, from 3:30-4:30 p.m. at the Ridgway Public Library, 320 Charles St. Ouray County Republican Central Comm",
+    href: "https://www.ouraynews.com/2026/08/05/calendar-events-20260806-0346-556192/",
     img: ""
   },
   {
@@ -860,16 +777,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 29th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questions...",
     href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-3/",
-    img: ""
-  },
-  {
-    title: "St Pats Telluride Parish Bulletin for July 26th",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 25, 2026",
-    newsTopic: "community",
-    copy: "Attached as PDF is the St Pats Telluride Parish Bulletin for July 26th. Please see the Parish Calendar for updates.Coffee and donuts every Sunday during summer after 9:00 AM Holy Mass. We need more volunteers to help.Next Sunday - Second Collectio...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/st-pats-telluride-parish-bulletin-for-july-26th/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -1188,7 +1095,10 @@ const MANUAL_SUMMARIES = {
     "The August 27 CWAB meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Planning & Zoning Commission Chair - Aug 20 2026 - Cancelled":
-    "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled."
+    "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled.",
+
+  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
+    "The Open Space Commission trades the conference room for the trail on August 10, meeting at the Bear Creek Trailhead at 4:00 PM for a site walk. Three things are on the ground-level agenda: a potential new trail alignment connecting Bear Creek Trailhead to Firecracker Hill, a look at beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Site walks like this are where the real decisions get shaped — what gets built, what gets left alone, what nature is already rerouting on its own."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2384,6 +2294,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -2417,6 +2336,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "recreation",
     copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "Shandoka, Carhenge Lots Closed",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "community",
+    copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
     img: ""
   },
   {
@@ -3021,28 +2949,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Bilingual Balance in Motion",
-    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-08/",
-    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
-    pubDate: "2026-08-08T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "Zumba with Gisela",
-    link: "https://koto.org/event/zumba-with-gisela/2026-08-08/",
-    description: "Ditch the workout and join the party! Zumba® is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. ¡Olvida el entrenamiento y únete a la fiesta! Zumba® es una clase de fitness de baile de alta energía que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calorías. …",
-    pubDate: "2026-08-08T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Movies Under the Stars",
     link: "https://koto.org/event/movies-under-the-stars/2026-08-08/",
