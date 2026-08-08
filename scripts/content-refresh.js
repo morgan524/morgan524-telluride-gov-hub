@@ -5755,6 +5755,25 @@ async function refreshSmcAlerts(existingAlerts = []) {
 function _meetingTitleKey(title) {
   return (String(title || '').toLowerCase().match(/[a-z]+/g) || []).sort().join('');
 }
+// Engage sometimes packs two distinct gatherings into one row — "HARC Site Walk
+// & Meeting" is a daytime site walk AND a separate hearing, and a resident may
+// well want one and not the other (Morgan, 2026-08-08). Split those into two
+// entries. The "... Meeting" half then matches the Town's own cached row by
+// title, so dropEngageDuplicates below collapses the duplicate on its own.
+function splitCombinedEngageTitles(engageRows) {
+  const out = [];
+  for (const r of (Array.isArray(engageRows) ? engageRows : [])) {
+    const title = String((r && r.title) || '');
+    const m = title.match(/^(.*?)\s*site\s*walk\s*(?:&|and)\s*meeting\s*$/i);
+    if (!m) { out.push(r); continue; }
+    const body = m[1].trim();                       // e.g. "HARC"
+    const label = (suffix) => (body ? body + ' ' + suffix : suffix);
+    out.push({ ...r, title: label('Site Walk') });
+    out.push({ ...r, title: label('Meeting') });
+  }
+  return out;
+}
+
 function dropEngageDuplicates(engageRows) {
   const rows = Array.isArray(engageRows) ? engageRows : [];
   let cached = [];
@@ -7164,7 +7183,7 @@ async function main() {
   // ── 2d. Engage Telluride project meeting key dates (daily) ──
   const existingEngageMeetings = extractJsArray(govHubSrc, 'ENGAGE_MEETINGS') || [];
   const freshEngageMeetings = dropEngageDuplicates(
-    await refreshEngageMeetings(existingEngageMeetings));
+    splitCombinedEngageTitles(await refreshEngageMeetings(existingEngageMeetings)));
   if (JSON.stringify(freshEngageMeetings) !== JSON.stringify(existingEngageMeetings)) {
     govHubSrc = replaceJsValue(govHubSrc, 'ENGAGE_MEETINGS', freshEngageMeetings, false);
     changed = true;
