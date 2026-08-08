@@ -1172,6 +1172,7 @@
     "link": "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     "description": "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together. Events include Broomball, Cabin Fever Days, Dodgeball, Softball, and Game Night, among others. The committee works closely with local organizations, businesses, and other City committees to carry out its mission. Community partners include the Ouray Hot Springs Pool & Fitness Center, the Beautification Committee, and the Ouray School District. PARC also plays an important role in developing and implementing master plans for the City’s park system, helping ensure that Ouray’s parks and recreational spaces serve residents and visitors for years to come. Members of the public are welcome to attend these meetings. Meetings: PARC meets monthly on the first Tuesday at 6:00 p.m. …",
     "pubDate": "2026-09-02T00:00:00.000Z",
+    "endDate": "2026-10-07",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -1753,5 +1754,16 @@
     "category": "Community Event",
     "location": "Hartwell Park",
     "imageUrl": "https://localist-images.azureedge.net/photos/52595045386518/huge/f5138926bb27495f4ce42292fa805810d8db023d.jpg"
+  },
+  {
+    "title": "CORAL SKYE",
+    "link": "https://events.ourayridgwayevents.com/event/coral-skye-7671",
+    "description": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "pubDate": "2026-10-06T22:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ]

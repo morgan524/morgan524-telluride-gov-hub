@@ -6,105 +6,15 @@
     <atom:link href="https://livabletelluride.org/feed.xml" rel="self" type="application/rss+xml" />
     <description>This week&apos;s upcoming Gov-Hub meetings and community events across the Telluride region (Town of Telluride, Mountain Village, San Miguel County, the Sheridan Opera House, The Alibi, Wilkinson Library, KOTO, telluride.com, and more).</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Aug 2026 21:47:37 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 01:57:34 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
-      <title>📅 The Week Ahead — Aug 7–13</title>
+      <title>📅 The Week Ahead — Aug 8–14</title>
       <link>https://livabletelluride.org/events.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/week-ahead/2026-31</guid>
-      <pubDate>Fri, 07 Aug 2026 21:47:37 GMT</pubDate>
-      <description><![CDATA[The headline this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code goes to its third and final reading — a vote that would rewrite the Land Use Code's rules on historic review, landscaping, and tree maintenance for every property owner in town. Alongside that, the county Planning Commission takes up subdivision mechanics and a building energy code update on Thursday, both of which shape how land gets divided and built on across San Miguel County. In between, the valley is humming with Jazz Fest spillover, the KOTO Duck Race, and Ridgway Rendezvous wrapping up the weekend.]]></description>
+      <pubDate>Sat, 08 Aug 2026 01:57:34 GMT</pubDate>
+      <description><![CDATA[Tuesday's Town Council meeting is the one to watch this week — council takes up third reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code to change historic and architectural review standards and landscaping and tree rules for property owners across town. Thursday's San Miguel County Planning Commission adds another layer, with a work session on subdivision mechanics and a referral on an energy code update that would revise building standards for new construction. Meanwhile, the Telluride Mushroom Festival kicks off midweek and the Ridgway Rendezvous fills the weekend.]]></description>
       <category>The Week Ahead</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Telluride Jazz Festival</title>
-      <link>https://sheridanoperahouse.com/events/telluride-jazz-festival/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20jazz%20festival%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/03/TJF_Vertical__Black.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/03/TJF_Vertical__Black.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Theo Croker - Telluride Jazz Fest After Dark</title>
-      <link>https://www.alibitelluride.com/calendar#eca-event=theo-croker-telluride-jazz-fest-after-dark</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/theo%20croker%20telluride%20jazz%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://ucarecdn.com/0cb46769-06f4-4294-84d6-a2e85873e599/-/crop/1295x1296/152,0/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
-📍 The Alibi • Telluride, CO
-🕒 10:00 PM
-
-With trumpeter, vocalist, composer and record producer, Theo Croker, we will beh...]]></description>
-      <media:content url="https://ucarecdn.com/0cb46769-06f4-4294-84d6-a2e85873e599/-/crop/1295x1296/152,0/-/preview/" medium="image" />
-      <category>Community Event</category>
-      <category>The Alibi</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] KOTO Duck Race</title>
-      <link>https://www.telluride.com/event/koto-duck-race/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20duck%20race%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Yoga for ALL with Jane &amp; Jay</title>
-      <link>https://telluridelibrary.libcal.com/event/15803452?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/yoga%20for%20all%20with%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 14:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Program Room
-
-8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Stuffed Animal Storytime / Pijamada de Peluches</title>
-      <link>https://telluridelibrary.libcal.com/event/17285907?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/stuffed%20animal%20storytime%20pijamada%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 16:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_07_55.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Lower Terrace - outdoors
-
-10:30 AM – 11:30 AM · Wear PJs & bring your stuffy for storytime. *sleepover for stuffed animals only* Ponte la pijama y trae tu peluche para la Hora del Cuento. * Pijamada solo para peluches*]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_07_55.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Manga and Ramen Club</title>
-      <link>https://telluridelibrary.libcal.com/event/17286024?hs=a</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/manga%20and%20ramen%20club%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 19:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_17_56.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
-📍 Teen Area
-
-1:00 PM – 3:00 PM · Join the WPL for Manga and Ramen club. We will eat ramen and do some fun activities about manga/ramen.]]></description>
-      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_17_56.png" medium="image" />
-      <category>Community Event</category>
-      <category>Wilkinson Public Library</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 7] Free Youth Tennis &amp; Pickleball Program</title>
-      <link>https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/free%20youth%20tennis%20and%7C2026-08-07</guid>
-      <pubDate>Fri, 07 Aug 2026 21:30:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Telluride Racquet Club, Mountain Village
-
-Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
     <item>
       <title>[Sat, Aug 8] Endea Owens &amp; The Cookout</title>
@@ -274,7 +184,7 @@ Join Ernest House, Jr.Senior Policy Director at the Center of Tribal & Indigenou
 
 The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.
 
-⚡ Why it matters: Final vote on wildfire code that rewrites historic review and landscaping rules.]]></description>
+⚡ Why it matters: Third reading vote on wildfire code that rewrites LUC landscaping and review rules.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -373,6 +283,19 @@ A FREE legal clinic for parties who have no attorney. Sign up today because spot
       <category>KOTO</category>
     </item>
     <item>
+      <title>[Tue, Aug 11] Eco-Grief Workshops: Between Grief &amp; Gratitude, love and loss in a changing world</title>
+      <link>https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-11/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/eco%20grief%20workshops%20between%7C2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 23:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] Board of County Commissioners Work Session — 2026-08-12</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-08-12%7CBoard%20of%20County%20Commissioners%20Work%20Session</guid>
@@ -406,6 +329,81 @@ The August 12, 2026 Ridgway Town Council Regular Meeting agenda hasn't been post
       <category>ridgway</category>
     </item>
     <item>
+      <title>[Wed, Aug 12] Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival</title>
+      <link>https://www.alibitelluride.com/calendar#eca-event=banshee-tree-w-quattlebaum-telluride-mushroom-festival</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/banshee%20tree%20w%20quattlebaum%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 The Alibi
+📍 The Alibi • Telluride, CO
+🕒 7:00 PM
+
+Set against the electric backdrop of the Telluride Mushroom Festival—a legendary...]]></description>
+      <media:content url="https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/" medium="image" />
+      <category>Community Event</category>
+      <category>The Alibi</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 12] Telluride Mushroom Festival</title>
+      <link>https://koto.org/event/telluride-mushroom-festival/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20mushroom%20festival%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/02/Untitled-design-scaled.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+
+Telluride Mushroom Festival brings together leading mycologists, artists, foragers and enthusiasts to explore all things fungi. We focus on science, culture, and community, covering topics like psychedelic research, cultivation, decriminalization, and identification. More than just a festival, it is an annual reunion for fungi folks to gather and celebrate fungi and their impact on our world. This year’s theme is “Rewild” and will feature a raft of myco-luminaries including Mark Plotkin, world-renowned ethnobotanist best known for his work with Indigenous peoples of the Amazon and for popularizing the idea that rainforest conservation must center Indigenous knowledge. His book Tales of a Shaman’s Apprentice is still one of the most influential works in the field. …]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/02/Untitled-design-scaled.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 12] DMV2GO</title>
+      <link>https://koto.org/event/dmv2go/2026-08-12/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/dmv2go%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 15:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver License, ID or Permit REPLACE – A lost or stolen Colorado Driver License, ID or Permit FIRST TIME – Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER – Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aquí. Tenga en cuenta, DMV2GO no ofrece NINGÚN servicio de prueba. …]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 12] Youth Tennis &amp; Pickleball Camp</title>
+      <link>https://koto.org/event/youth-tennis-pickleball-camp/2026-08-12/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/youth%20tennis%20and%20pickleball%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 15:30:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Telluride Racquet Club, Mountain Village
+
+Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 12] Market on the Plaza</title>
+      <link>https://koto.org/event/market-on-the-plaza/2026-08-12/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/market%20on%20the%20plaza%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 17:00:00 GMT</pubDate>
+      <description><![CDATA[🎫 KOTO
+📍 Heritage Plaza, Mountain Village
+
+Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.]]></description>
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 12] Mahjongg for Independent Players</title>
+      <link>https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/mahjongg%20for%20independent%20players%7C2026-08-12</guid>
+      <pubDate>Wed, 12 Aug 2026 19:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
+📍 Wilkinson Public Library, Telluride
+
+Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!]]></description>
+      <media:content url="https://koto.org/wp-content/uploads/2026/05/mahj.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>KOTO</category>
+    </item>
+    <item>
       <title>[Meeting] SMART Board of Directors — 2026-08-13</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/smart%7C2026-08-13%7CSMART%20Board%20of%20Directors</guid>
@@ -425,7 +423,7 @@ The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></
 
 Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.
 
-⚡ Why it matters: County weighs subdivision rules and a new energy code for all new construction.]]></description>
+⚡ Why it matters: County subdivision standards and energy code update affecting new construction countywide.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>

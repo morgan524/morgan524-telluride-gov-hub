@@ -120,19 +120,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Free Youth Tennis & Pickleball Program",
-    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-07/",
-    "date": "2026-08-07",
-    "time": "3:30 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "RED MOUNTAIN REVIVAL",
     "href": "https://events.ourayridgwayevents.com/event/jack-haight-5810",
     "date": "2026-08-07",
@@ -2150,6 +2137,32 @@
     "type": "Community"
   },
   {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-20/",
+    "date": "2026-08-20",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "Salon Night at Telluride Arts HQ",
+    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-08-20/",
+    "date": "2026-08-20",
+    "time": "5:30 PM",
+    "location": "Telluride Arts HQ, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
+    "type": "Community"
+  },
+  {
     "title": "Motel Prophets - Live @ Floating Lotus Brewery",
     "href": "https://events.ourayridgwayevents.com/event/motel-prophets-live-floating-lotus-brewery",
     "date": "2026-08-20",
@@ -3053,7 +3066,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Parks and Recreation Committee (PARC) is made up of community members who volunteer their time to support and enhance recreational opportunities in Ouray. PARC organizes safe, family-friendly events that bring the community together.…",
-    "type": "Family & Kids"
+    "type": "Family & Kids",
+    "endDate": "2026-10-07"
   },
   {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
@@ -4288,5 +4302,31 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and…",
     "type": "Music"
+  },
+  {
+    "title": "CORAL SKYE",
+    "href": "https://events.ourayridgwayevents.com/event/coral-skye-7671",
+    "date": "2026-10-06",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-10-07",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Mountain Lodge, 457 Mountain Village Blvd, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
   }
 ]
