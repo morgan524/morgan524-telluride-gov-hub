@@ -99,13 +99,23 @@ function run(repoRoot) {
     const m = choice.meeting;
     // Enrich from week-meetings (summary + packet + time live there).
     const wk = week.find(w => w.source === m.source && w.date === m.date && w.title === m.title) || {};
+    // An expired pin must stop supplying COPY, not just stop selecting the
+    // meeting. `pinned` already tested pin.date, but headline/blurb used
+    // `pin.headline || …` unconditionally — so once a pin's date passed, it
+    // stopped choosing the meeting while still overriding the text of whatever
+    // meeting was auto-selected next. On 2026-08-08 the card advertised "Town
+    // Park Oval paving goes before Parks & Rec on Wednesday, July 29" (a pin
+    // that expired ten days earlier) stapled to an unrelated Aug 11 Town
+    // Council meeting — wrong body, wrong date, and a call to action for a
+    // meeting that had already happened.
+    const pinActive = !!(pin.topic && pin.date && pin.date >= todayMT);
     out = {
       generated: out.generated,
-      pinned: !!(pin.topic && pin.date && pin.date >= todayMT),
+      pinned: pinActive,
       topic: choice.topic,
       topicLabel: choice.label,
-      headline: pin.headline || (choice.label + ' goes before ' + (m.title || 'the board') + ' on ' + humanDate(m.date)),
-      blurb: pin.blurb || truncSentence(wk.summary || '', 480),
+      headline: (pinActive && pin.headline) || (choice.label + ' goes before ' + (m.title || 'the board') + ' on ' + humanDate(m.date)),
+      blurb: (pinActive && pin.blurb) || truncSentence(wk.summary || '', 480),
       deepDive: { label: choice.label, href: topicHref(choice.topic) },
       meeting: {
         title: m.title || wk.title || '',
