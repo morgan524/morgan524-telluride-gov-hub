@@ -70,13 +70,6 @@
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026": {
     "sv": 4
   },
-  "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session": {
-    "zoomUrl": "https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1",
-    "meetingId": "861 6939 9856",
-    "passcode": "690306",
-    "phone": "970-728-3844",
-    "sv": 4
-  },
   "county|2026-07-27|Open Space Commission Meeting": {
     "sv": 4
   },
@@ -442,5 +435,13 @@
   "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8298",
     "sv": 4
+  },
+  "norwood|2026-09-08|Norwood Water Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "tmvoa|2026-09-08|Mountain Village Merchant Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

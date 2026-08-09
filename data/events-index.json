@@ -937,7 +937,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
-    "endDate": "2026-09-30"
+    "endDate": "2026-10-07"
   },
   {
     "title": "Wine and Wickets",
@@ -964,7 +964,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-10-01"
+    "endDate": "2026-10-08"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -2019,6 +2019,45 @@
     "type": "Community"
   },
   {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "href": "https://koto.org/event/telluride-farmers-market/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "10:30 AM",
+    "location": "Oak Street Plaza, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-08-21",
@@ -2098,16 +2137,29 @@
   },
   {
     "title": "Noche de Luz (Night of Light)",
-    "href": "https://telluridescience.org/event/noche-de-luz-night-of-light/",
+    "href": "https://koto.org/event/noche-de-luz-night-of-light/",
     "date": "2026-08-21",
-    "time": "6:30 PM – 10:00 PM",
-    "location": "Telluride Innovation Center, Telluride",
+    "time": "6:30 PM",
+    "location": "Telluride Science &#038; Innovation Center, TELLURIDE",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/07/Poster-without-Sponsor-block.jpg",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom, presented by Community Banks of Colorado A fundraiser for the Multicultural Advocacy Programs at Thrive Community Health Network, in…",
+    "img": "https://koto.org/wp-content/uploads/2026/06/NDLBanner.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom Join us Friday, August 21st at 6:30pm at the Telluride Innovation Center to celebrate our \"Community in Bloom!\" The event will feature…",
     "type": "Community"
+  },
+  {
+    "title": "BURLESQUE BUFFET!",
+    "href": "https://koto.org/event/burlesque-buffet/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "8:00 PM",
+    "location": "Sheridan Opera House, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-8.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House.…",
+    "type": "Arts & Film"
   },
   {
     "title": "Wax Monkey",
@@ -4173,6 +4225,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Ice Park Advisory Team",
+    "href": "https://events.ourayridgwayevents.com/event/ice-park-advisory-team",
+    "date": "2026-10-07",
+    "time": "5:30 PM",
+    "location": "Ouray Community Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Rotary Club Meeting",

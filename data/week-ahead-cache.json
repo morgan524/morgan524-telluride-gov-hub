@@ -1,18 +1,18 @@
 {
-  "hash": "7b72e69927741205b70d58bca3946a6e5cf7d17c",
-  "lede": "The week's most important meeting is Tuesday's Town Council, where the Colorado Wildfire Resiliency Code goes to third reading — a vote that would rewrite Telluride's Land Use Code to change what property owners can do with landscaping and historic structures in the name of fire mitigation. Ridgway's council also holds a public hearing on the Hyde Subdivision resubdivision and a joint work session on its state-mandated Housing Action Plan. On the county side, the Planning Commission takes up an energy code update that would reshape building standards for new construction.",
+  "hash": "ddfb397d5d30f7f520c3d1abe1fd2bb7d0f31d53",
+  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code hits third reading — a vote that would rewrite land use, historic review, and landscaping rules for property owners across Telluride. Ridgway's council also has a full plate Wednesday, with a public hearing on the Hyde Subdivision and a joint work session on a new Housing Action Plan required by state law. Meanwhile, the Mushroom Festival rolls into town midweek and the Open Space Commission does a site walk Monday to scope a potential new trail from Bear Creek to Firecracker Hill.",
   "notable": [
     {
       "id": 2,
-      "stake": "Third reading vote on wildfire code that rewrites landscaping and historic review rules."
+      "stake": "Third reading vote on wildfire code that reshapes land use and landscaping rules."
     },
     {
       "id": 7,
-      "stake": "Public hearing on Hyde Subdivision resubdivision plus state-mandated housing plan work session."
+      "stake": "Public hearing on Hyde Subdivision replatting and vote on state-mandated Housing Action Plan."
     },
     {
       "id": 9,
-      "stake": "Energy code update could change building standards for all new county construction."
+      "stake": "County energy code update could revise building standards for new construction and major renovations."
     }
   ]
 }

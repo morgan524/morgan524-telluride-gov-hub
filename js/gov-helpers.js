@@ -166,9 +166,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
     {"sv":4},
 
-  "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
-    {"zoomUrl":"https://us06web.zoom.us/j/86169399856?pwd=UPH9VHFb655TsZwXPmXCQ4BKMCZ9n5.1","meetingId":"861 6939 9856","passcode":"690306","phone":"970-728-3844","sv":4},
-
   "county|2026-07-27|Open Space Commission Meeting":
     {"sv":4},
 
@@ -377,7 +374,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8101","sv":4},
 
   "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8298","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8298","sv":4},
+
+  "norwood|2026-09-08|Norwood Water Commission Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "tmvoa|2026-09-08|Mountain Village Merchant Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -620,106 +623,6 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
-    img: ""
-  },
-  {
     title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -944,13 +847,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-08';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-09';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-07';
 
 const MANUAL_SUMMARIES = {
-  "smart|2026-07-09|SMART Board of Directors":
-    "The July 9 SMART Board of Directors agenda hasn't been posted yet.",
-
   "county|2026-07-14|Historical Commission":
     "The July 14 San Miguel County Historical Commission agenda hasn't been posted yet.",
 
@@ -986,9 +886,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-07-23|Planning & Zoning Commission Chair - Jul 23 2026":
     "The July 23, 2026 Planning & Zoning Commission Chair agenda hasn't been posted yet.",
-
-  "county|2026-07-09|Planning Commission and Board of County Commissioners Joint Work Session":
-    "The Planning Commission and BOCC are sitting down together for a joint work session — no final votes, but the discussion is substantive. They'll be working through proposed Land Use Code amendments across five sections: forestry practices (§6-4), oil and gas operations (§6-5), and deep geothermal operations (§6-6) in the morning, followed by condominium plats (§12-15) and PUD and subdivision rules (§5-14). Work sessions like this are where the actual shape of code changes gets negotiated before anything goes to public hearing — worth paying attention to early.",
 
   "county|2026-07-27|Open Space Commission Meeting":
     "The July 27 San Miguel County Open Space Commission agenda hasn't been posted yet.",
@@ -1198,7 +1095,13 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 Planning & Zoning Commission meeting has been cancelled.",
 
   "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
-    "The Open Space Commission trades the conference room for the trail on August 10, meeting at the Bear Creek Trailhead at 4:00 PM for a site walk. Three things are on the ground-level agenda: a potential new trail alignment connecting Bear Creek Trailhead to Firecracker Hill, a look at beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Site walks like this are where the real decisions get shaped — what gets built, what gets left alone, what nature is already rerouting on its own."
+    "The Open Space Commission trades the conference room for the trail on August 10, meeting at the Bear Creek Trailhead at 4:00 PM for a site walk. Three things are on the ground-level agenda: a potential new trail alignment connecting Bear Creek Trailhead to Firecracker Hill, a look at beaver activity in Zone 3 of the Bear Creek Preserve, and restoration planning in Zone 1. Site walks like this are where the real decisions get shaped — what gets built, what gets left alone, what nature is already rerouting on its own.",
+
+  "norwood|2026-09-08|Norwood Water Commission Meeting":
+    "The September 8, 2026 Norwood Water Commission Meeting agenda hasn't been posted yet.",
+
+  "tmvoa|2026-09-08|Mountain Village Merchant Meeting":
+    "The September 8, 2026 Mountain Village Merchant Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2382,30 +2285,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "A priceless chance to sip and learn",
-    source: "Telluride Times",
-    date: "July 26, 2026",
-    firstSeen: "2026-07-26",
-    newsTopic: "community",
-    copy: "Free wine and spirits tastings happen regularly at several Telluride and Mountain Village shops — Mountain Village Wine Merchant on Wednesdays, Telluride Wine Merchant on Thursdays, and periodically at Telluride Bottleworks and the Wine Mine. The Wilkinson Public Library has also been running a free Around the World tasting series that's drawn full crowds every session, covering sakes, tequilas, Italian wines, and rosé. More library sessions and possibly an Oktoberfest event are being discussed.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/arts_and_entertainment/article_7d94dcba-a1c7-4668-bed6-b516e0e9d320.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/cc/acc894e9-e3c8-4391-add2-52d23fd84064/6a64638fe2396.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "BOCC offers regional environmental updates",
-    source: "Telluride Times",
-    date: "July 26, 2026",
-    firstSeen: "2026-07-26",
-    newsTopic: "government",
-    copy: "San Miguel County's Natural Resources Director briefed the BOCC on two main topics July 22. The county signed a letter opposing new BLM rules that cut public comment periods from 90 days to 10 and reduce oil and gas lease bonds by 90%. The board also discussed composting options and green waste from local arborists.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_20b981b9-8461-40af-9108-28f777ced05f.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/6b/56b90bb0-5340-44f6-a32c-9e2fdc1446df/6a64613178225.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "State of the Town Address: The State of the Town Is Strong and Engaging",
     source: "Town of Telluride",
     date: "August 8, 2026",
@@ -2495,7 +2374,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
     source: "Town of Ridgway",
-    date: "August 8, 2026",
+    date: "August 9, 2026",
     firstSeen: "2026-08-07",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3533,6 +3412,61 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Arts HQ, TELLURIDE",
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
+  },
+  {
+    title: "Up-off Gymnastics, Dance, and Spanish",
+    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
+    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
+    pubDate: "2026-08-21T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Lone Cone Library Norwood",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+  },
+  {
+    title: "Ridgway Farmer's Market",
+    link: "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
+    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
+    pubDate: "2026-08-21T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Hartwell Park Ridgway",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride Farmer's Market",
+    link: "https://koto.org/event/telluride-farmers-market/2026-08-21/",
+    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    pubDate: "2026-08-21T10:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Noche de Luz (Night of Light)",
+    link: "https://koto.org/event/noche-de-luz-night-of-light/",
+    description: "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom Join us Friday, August 21st at 6:30pm at the Telluride Innovation Center to celebrate our \"Community in Bloom!\" The event will feature tastings from local immigrant owned restaurants, cocktails and mocktails, artist demonstrations and live music from Denver-based Chicano funk band Los Mocochetes! Tickets and Sponsorships include; – Enjoy appetizers, dinner and desert with tastings from local, immigrant-owned restaurants and catering businesses – 1 drink ticket for the bar serving signature cocktails and mocktails, beer and wine (additional drinks available for purchase) – Live Artist Demonstrations and Traditional Artisan Displays – Live Music! Performances from local DJs and a live 5-piece latin funk band to close out the night – Silent Auction &#8230;.. and more! …",
+    pubDate: "2026-08-21T18:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Science &#038; Innovation Center, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/06/NDLBanner.png"
+  },
+  {
+    title: "BURLESQUE BUFFET!",
+    link: "https://koto.org/event/burlesque-buffet/2026-08-21/",
+    description: "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.",
+    pubDate: "2026-08-21T20:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -4436,7 +4370,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-08-12T23:30:00.000Z",
-    endDate: "2026-09-30",
+    endDate: "2026-10-07",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4448,7 +4382,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-08-13T00:00:00.000Z",
-    endDate: "2026-10-01",
+    endDate: "2026-10-08",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5743,6 +5677,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Ice Park Advisory Team",
+    link: "https://events.ourayridgwayevents.com/event/ice-park-advisory-team",
+    description: "The Ice Park Advisory Team (IPAT) Opens in new window was created to provide an informal, good-faith forum for discussion about the future and ongoing management of the Ouray Ice Park. IPAT serves as a space for the Parties and any interested community members to come together and talk through topics that impact the Ice Park, including: Management and operationsPark usage and recreational interestsCommercial interests and guiding considerationsCapital planning and long-term strategic planningSuccession planning and sustainabilityMission, vision, and valuesEconomic impact to the communityUnforeseen issues as they arise View on site | Email this event",
+    pubDate: "2026-10-07T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
   }
 ];
 
@@ -6743,17 +6688,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28880/14407123460f9210.800x533.webp"
-  },
-  {
-    title: "KOTO Duck Race",
-    link: "https://www.telluride.com/event/koto-duck-race/",
-    description: "The Ducks are trained and ready to rumble! KOTO’s Duck Race is happening on August 7, and there are a ton of …",
-    pubDate: "2026-08-07",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/44995/rubber-duck-race-white-no-rotary-logo-or-heading_20200710-224712.800x533.webp"
   },
   {
     title: "Colorado Capsule on Tour",
