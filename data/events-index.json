@@ -172,19 +172,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Colorado Capsule on Tour",
-    "href": "https://www.telluride.com/event/colorado-capsule-on-tour/",
-    "date": "2026-08-09",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …",
-    "type": "Community"
-  },
-  {
     "title": "Annual Ridgway Fire Department Pancake Breakfast",
     "href": "https://events.ourayridgwayevents.com/event/annual-ridgway-fire-department-pancake-breakfast",
     "date": "2026-08-09",
@@ -278,6 +265,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Colorado Capsule on Tour",
+    "href": "https://www.telluride.com/event/colorado-capsule-on-tour/",
+    "date": "2026-08-10",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …",
+    "type": "Community"
+  },
+  {
     "title": "Breathe Together",
     "href": "https://events.ourayridgwayevents.com/event/breathe-together-9572",
     "date": "2026-08-10",
@@ -318,19 +318,6 @@
     "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
     "type": "Arts & Film",
     "endDate": "2026-08-31"
-  },
-  {
-    "title": "Max & Heather Stalling",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=max-and-heather-stalling",
-    "date": "2026-08-10",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/2f8a6c97-33f7-43f4-a134-b385a801631a/-/crop/5464x2727/0,1365/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
-    "type": "Music"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -503,20 +490,6 @@
     "type": "Community"
   },
   {
-    "title": "Telluride Mushroom Festival",
-    "href": "https://www.telluride.com/event/telluride-mushroom-festival/",
-    "date": "2026-08-11",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/45066/2-2-26-4to3-full-color-poster.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
-    "type": "Festivals",
-    "endDate": "2026-08-17"
-  },
-  {
     "title": "Seeking Elusive Quantum Advantages in Computational Chemistry",
     "href": "https://telluridescience.org/event/quantum-computing-chemistry/",
     "date": "2026-08-11",
@@ -528,19 +501,6 @@
     "source": "Telluride Science",
     "desc": "This Town Talk will be presented by Joonhoo Lee from Harvard University. Lee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=banshee-tree-w-quattlebaum-telluride-mushroom-festival",
-    "date": "2026-08-11",
-    "time": "7:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Set against the electric backdrop of the Telluride Mushroom Festival—a legendary...",
-    "type": "Festivals"
   },
   {
     "title": "Live Music- Will Overman Band",
@@ -594,6 +554,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Participants will spend the morning in the Fellin Park area learning and practicing mountain biking skills, including balance, riding technique, and basic bike maintenance. Participants should bring their bike, helmet, gloves, and any…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Max & Heather Stalling",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=max-and-heather-stalling",
+    "date": "2026-08-11",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/2f8a6c97-33f7-43f4-a134-b385a801631a/-/crop/5464x2727/0,1365/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te...",
+    "type": "Music"
   },
   {
     "title": "Dark Sky Meteor Watch at Top of the Pines",
@@ -781,31 +754,17 @@
     "endDate": "2026-09-17"
   },
   {
-    "title": "Community Concert",
-    "href": "https://www.telluride.com/event/community-concert/",
+    "title": "Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=banshee-tree-w-quattlebaum-telluride-mushroom-festival",
     "date": "2026-08-12",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "time": "7:00 PM",
+    "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
-    "type": "Music",
-    "endDate": "2026-09-10"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-12",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
+    "img": "https://ucarecdn.com/3a7022df-2a89-4430-9639-65f67a9584ce/-/crop/500x500/0,63/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Set against the electric backdrop of the Telluride Mushroom Festival—a legendary...",
+    "type": "Festivals"
   },
   {
     "title": "DMV2GO",
@@ -832,19 +791,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Come with Voyager Youth Program to pick produce at the Ridgway Community Garden and cook with Chef Joe from Taco Del Gnar at the Decker Room! Sign up at voyageryouth.org and click \"register.\" Have questions? Email Jazzmin at…",
     "type": "Food & Drink"
-  },
-  {
-    "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
-    "date": "2026-08-12",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "The Copper Children are a diverse blend of styles and influences that span from ...",
-    "type": "Family & Kids"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -952,6 +898,33 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Community Concert",
+    "href": "https://www.telluride.com/event/community-concert/",
+    "date": "2026-08-13",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
+    "type": "Music",
+    "endDate": "2026-09-10"
+  },
+  {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-13",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
     "href": "https://telluridescience.org/event/community-concert-august/",
     "date": "2026-08-13",
@@ -1005,17 +978,17 @@
     "type": "Community"
   },
   {
-    "title": "DJ Jonko X Codestar - Telluride Mushroom Fest",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
+    "title": "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
     "date": "2026-08-13",
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
+    "img": "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
-    "type": "Music"
+    "desc": "The Copper Children are a diverse blend of styles and influences that span from ...",
+    "type": "Family & Kids"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -1228,19 +1201,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Studio TAB: Summer Fever",
-    "href": "https://www.telluride.com/event/studio-tab-summer-fever/",
-    "date": "2026-08-14",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63131/tab_studio_tab_sig_2027.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join the Telluride AIDS Benefit for a new Summer event! Located at a private home in Aldasoro, overlooking Wilson Peak, …",
-    "type": "Community"
-  },
-  {
     "title": "Steps Tavern Presents Karaoke Night",
     "href": "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
     "date": "2026-08-14",
@@ -1255,17 +1215,17 @@
     "endDate": "2026-09-26"
   },
   {
-    "title": "Thom LaFond + DROS",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
+    "title": "DJ Jonko X Codestar - Telluride Mushroom Fest",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
     "date": "2026-08-14",
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
+    "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Telluride Mushroom Fest After Party",
+    "type": "Music"
   },
   {
     "title": "Youth Tennis & Pickleball Camp",
@@ -1423,6 +1383,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "This program is an engaging, hands-on introduction to a timeless outdoor sport. Led by CPW staff and certified volunteer instructors, this free clinic provides children with the unique opportunity to learn archery skills. The program…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Thom LaFond + DROS",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
+    "date": "2026-08-15",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -1752,18 +1725,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Blizzard Sale",
-    "href": "https://www.telluride.com/event/blizzard-sale/",
+    "title": "\"Best Day Ever\" Free Movie Screening",
+    "href": "https://www.telluride.com/event/best-day-ever-free-movie-screening/",
     "date": "2026-08-19",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
-    "type": "Community",
-    "endDate": "2026-08-24"
+    "desc": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice …",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -1790,19 +1762,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Hailing from Nashville, TN, Emilio Gonzalez is gracing the St. Elmo patio to close out our 2026 Summer Sound Series. We can’t wait to share and enjoy his raw talent and authentic presence with you. Emilio is a singer / songwriter /…",
     "type": "Music"
-  },
-  {
-    "title": "Velvet Daydream",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=velvet-daydream",
-    "date": "2026-08-19",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/4b241e38-d848-429c-b682-edd9e0f0eb6c/-/crop/996x498/0,299/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Velvet Daydream, hailing from Denver, is striving to weave the rock n' roll they...",
-    "type": "Community"
   },
   {
     "title": "Pilates for All Bodies with Laura",
@@ -1844,31 +1803,18 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Burlesque Buffet",
-    "href": "https://www.telluride.com/event/burlesque-buffet/",
+    "title": "Blizzard Sale",
+    "href": "https://www.telluride.com/event/blizzard-sale/",
     "date": "2026-08-20",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62743/buffet_visit_telluride_image.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Presented by Telluride Theatre's Professional Burlesque Troupe: THE HOUSE OF SHIMMY SHAKE! HOSS returns for a …",
-    "type": "Arts & Film",
-    "endDate": "2026-08-23"
-  },
-  {
-    "title": "Noche de Luz (Night of Light)",
-    "href": "https://www.telluride.com/event/noche-de-luz-night-of-light/",
-    "date": "2026-08-20",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62940/untitled_2200_x_1237_px.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join Tri-County Health Network for a Night of Light, Celebrating our Community in Bloom! A Vibrant Celebration of …",
-    "type": "Community"
+    "desc": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
+    "type": "Community",
+    "endDate": "2026-08-24"
   },
   {
     "title": "Pickleball Nights",
@@ -1882,6 +1828,19 @@
     "source": "Beacon",
     "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Velvet Daydream",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=velvet-daydream",
+    "date": "2026-08-20",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/4b241e38-d848-429c-b682-edd9e0f0eb6c/-/crop/996x498/0,299/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Velvet Daydream, hailing from Denver, is striving to weave the rock n' roll they...",
+    "type": "Community"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -2001,19 +1960,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Telluride Mountain Run",
-    "href": "https://www.telluride.com/event/telluride-mountain-run/",
-    "date": "2026-08-21",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
-    "type": "Community"
-  },
-  {
     "title": "Noche de Luz (Night of Light)",
     "href": "https://koto.org/event/noche-de-luz-night-of-light/",
     "date": "2026-08-21",
@@ -2038,19 +1984,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House.…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Wax Monkey",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=wax-monkey",
-    "date": "2026-08-21",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
-    "type": "Music"
   },
   {
     "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
@@ -2132,6 +2065,19 @@
     "type": "Community"
   },
   {
+    "title": "Telluride Mountain Run",
+    "href": "https://www.telluride.com/event/telluride-mountain-run/",
+    "date": "2026-08-22",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
+    "type": "Community"
+  },
+  {
     "title": "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
     "href": "https://events.ourayridgwayevents.com/event/lunar-tics-unite-discovering-the-moon-ridgway-state-park-summer-program-series",
     "date": "2026-08-22",
@@ -2143,19 +2089,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ready to unlock the secrets of our favorite cosmic neighbor? Pack your curiosity and join professor Gerald J. Spangrude for a fun, stellar evening as we talk all about the moon—from its wild crater-faced history and lunar myths to how it…",
     "type": "Talks & Classes"
-  },
-  {
-    "title": "Ethan Perry",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=ethan-perry",
-    "date": "2026-08-22",
-    "time": "8:30 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/524956fc-c05b-47c9-8c0d-321e86406287/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Ethan began his music career in Seattle in 2007, shortly thereafter forming his ...",
-    "type": "Community"
   },
   {
     "title": "Bats, Our Friends in the Dark - Ridgway State Park Summer Program Series",
@@ -2185,6 +2118,19 @@
     "endDate": "2026-08-29"
   },
   {
+    "title": "Wax Monkey",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=wax-monkey",
+    "date": "2026-08-22",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/16f8ae40-6bce-4ecb-8d32-adaabafa3398/-/crop/2304x1153/0,383/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm...",
+    "type": "Music"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-23",
@@ -2208,6 +2154,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Fortuna Tierra Club is hosting the 11th Annual Log Hill Hustle, Fun Run and fundraiser on Sunday, August 23 at 8 AM starting and finishing at the Divide Ranch and Club Clubhouse at 151 Divide Ranch Circle, Ridgway, CO 81432. The 5k…",
+    "type": "Community"
+  },
+  {
+    "title": "Ethan Perry",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=ethan-perry",
+    "date": "2026-08-23",
+    "time": "8:30 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/524956fc-c05b-47c9-8c0d-321e86406287/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Ethan began his music career in Seattle in 2007, shortly thereafter forming his ...",
     "type": "Community"
   },
   {
@@ -2235,19 +2194,6 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
-  },
-  {
-    "title": "The Last Wild Buffalo w/ Hunter Archer",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer",
-    "date": "2026-08-24",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/80e2e21e-674b-4121-b683-5081a143cca8/-/crop/1308x1310/67,0/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
-    "type": "Music"
   },
   {
     "title": "First Day of School K-12 - Ridgway",
@@ -2329,19 +2275,6 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Gaiascope Opening Night",
-    "href": "https://www.telluride.com/event/gaiascope-opening-night/",
-    "date": "2026-08-25",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
     "href": "https://telluridescience.org/event/talk-unusual-microbes/",
     "date": "2026-08-25",
@@ -2353,6 +2286,19 @@
     "source": "Telluride Science",
     "desc": "This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "The Last Wild Buffalo w/ Hunter Archer",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer",
+    "date": "2026-08-25",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/80e2e21e-674b-4121-b683-5081a143cca8/-/crop/1308x1310/67,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
+    "type": "Music"
   },
   {
     "title": "San Juan Chamber MusicFest",
@@ -2449,32 +2395,6 @@
     "endDate": "2026-09-24"
   },
   {
-    "title": "Coffee & Climate Conversations",
-    "href": "https://www.telluride.com/event/coffee-climate-conversations/",
-    "date": "2026-08-26",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/57231/download_16.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
-    "type": "Family & Kids"
-  },
-  {
-    "title": "RSUN \\\\ MINDSET",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
-    "date": "2026-08-26",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
-    "type": "Community"
-  },
-  {
     "title": "THE ONLIES",
     "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
     "date": "2026-08-26",
@@ -2514,18 +2434,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Camp Alderwild",
-    "href": "https://www.telluride.com/event/camp-alderwild/",
+    "title": "Coffee & Climate Conversations",
+    "href": "https://www.telluride.com/event/coffee-climate-conversations/",
     "date": "2026-08-27",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/57622/of_the_trees_by_frankie_zarantonello.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/57231/download_16.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
-    "type": "Arts & Film",
-    "endDate": "2026-08-30"
+    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
+    "type": "Family & Kids"
   },
   {
     "title": "Pickleball Nights",
@@ -2541,21 +2460,8 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "MIKEY THUNDER \\\\ BAD SNACKS",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-1",
-    "date": "2026-08-27",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
-    "type": "Community"
-  },
-  {
-    "title": "ESSEKS \\\\ TIEDYE KY",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-2",
+    "title": "RSUN \\\\ MINDSET",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
     "date": "2026-08-27",
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
@@ -2684,18 +2590,30 @@
     "type": "Community"
   },
   {
-    "title": "Full Circle Fashion Fundraiser",
-    "href": "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
+    "title": "MIKEY THUNDER \\\\ BAD SNACKS",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-1",
     "date": "2026-08-28",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
-    "type": "Community",
-    "endDate": "2026-08-31"
+    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
+    "type": "Community"
+  },
+  {
+    "title": "ESSEKS \\\\ TIEDYE KY",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset-2",
+    "date": "2026-08-28",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/0793e80b-a99a-4924-a9a8-d6e5b31fed89/-/crop/399x399/0,15/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
+    "type": "Community"
   },
   {
     "title": "San Juan Chamber MusicFest Festival Concert",
@@ -2750,6 +2668,20 @@
     "type": "Community"
   },
   {
+    "title": "Full Circle Fashion Fundraiser",
+    "href": "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
+    "date": "2026-08-29",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
+    "type": "Community",
+    "endDate": "2026-08-31"
+  },
+  {
     "title": "DARRELL SCOTT - Live at The Sherbino",
     "href": "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
     "date": "2026-08-29",
@@ -2761,19 +2693,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Darrell Scott Darrell…",
     "type": "Community"
-  },
-  {
-    "title": "Big Blitz",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
-    "date": "2026-08-29",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/d2998c5f-69ce-4db7-bee5-9c0a3e1ded0c/-/crop/2048x1024/0,158/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
-    "type": "Music"
   },
   {
     "title": "DARRELL SCOTT",
@@ -2800,6 +2719,19 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
+  },
+  {
+    "title": "Big Blitz",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=big-blitz",
+    "date": "2026-08-30",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/d2998c5f-69ce-4db7-bee5-9c0a3e1ded0c/-/crop/2048x1024/0,158/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
+    "type": "Music"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2882,19 +2814,6 @@
     "endDate": "2026-10-07"
   },
   {
-    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    "href": "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
-    "date": "2026-09-01",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63253/telluride_com.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders …",
-    "type": "Community"
-  },
-  {
     "title": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
     "href": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
     "date": "2026-09-01",
@@ -2947,30 +2866,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
-    "href": "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
+    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
+    "href": "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
     "date": "2026-09-02",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/63253/telluride_com.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
+    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders …",
     "type": "Community"
-  },
-  {
-    "title": "Mountain Towns 2030: Leveraging a Network of Community Leaders to Accelerate Climate Action",
-    "href": "https://telluridescience.org/event/mountain-towns2030/",
-    "date": "2026-09-02",
-    "time": "6:00 PM – 7:00 PM",
-    "location": "Telluride Innovation Center, Telluride",
-    "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/08/MT2030_320x212.jpg",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "In collaboration with Telluride Science, Telluride Foundation, Mountain Towns 2030, and Eco Action Partners As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Telluride Rotary Club Meeting",
@@ -3026,18 +2932,17 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Telluride Film Festival",
-    "href": "https://www.telluride.com/event/telluride-film-festival/",
+    "title": "America 250 - Colorado 150 \"Stories in the Sky\" Drone Show",
+    "href": "https://www.telluride.com/event/america-250-colorado-150-stories-in-the-sky-drone-show/",
     "date": "2026-09-03",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/62752/colorado_250-150.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
-    "type": "Arts & Film",
-    "endDate": "2026-09-08"
+    "desc": "The America 250 - Colorado 150 Commission is taking its milestone celebrations to new heights with Stories in the Sky, …",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",
@@ -3225,6 +3130,20 @@
     "type": "Music"
   },
   {
+    "title": "Telluride Film Festival",
+    "href": "https://www.telluride.com/event/telluride-film-festival/",
+    "date": "2026-09-04",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Each Labor Day weekend, the tiny mountain village of Telluride, Colorado triples in size. Swells of passionate film …",
+    "type": "Arts & Film",
+    "endDate": "2026-09-08"
+  },
+  {
     "title": "Movies Under the Stars",
     "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "date": "2026-09-05",
@@ -3395,19 +3314,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Vana Liya w/ Lola Rising",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=vana-liya-w-lola-rising",
-    "date": "2026-09-09",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
-    "type": "Music"
-  },
-  {
     "title": "WOH Art Show: Thomas Livingstone Photography",
     "href": "https://events.ourayridgwayevents.com/event/woh-art-show-thomas-livingstone-photography",
     "date": "2026-09-10",
@@ -3445,19 +3351,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel.…",
     "type": "Community"
-  },
-  {
-    "title": "The Meditations",
-    "href": "https://www.telluride.com/event/the-meditations/",
-    "date": "2026-09-10",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
-    "type": "Wellness"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -3499,6 +3392,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Vana Liya w/ Lola Rising",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=vana-liya-w-lola-rising",
+    "date": "2026-09-10",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/1550b57f-249f-4e1f-9096-b818dd357f2b/-/crop/1080x540/0,487/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Genre-busting vocalist and songwriter Vana Liya made a serendipitous arrival o...",
+    "type": "Music"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-11",
@@ -3538,30 +3444,17 @@
     "type": "Music"
   },
   {
-    "title": "Imogene Pass Run",
-    "href": "https://www.telluride.com/event/imogene-pass-run/",
+    "title": "The Meditations",
+    "href": "https://www.telluride.com/event/the-meditations/",
     "date": "2026-09-11",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/28638/149445047981c35a961.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/62648/meditations_poster_template_2018.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "What began as a way to train for the Pike's Peak marathon in 1974 is now a full-fledged race. The race ventures from …",
-    "type": "Community"
-  },
-  {
-    "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
-    "href": "https://www.telluride.com/event/a-telluride-theatre-fringe-project-la-familia-music-group/",
-    "date": "2026-09-11",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62898/screenshot_2026-06-15_at_11_29_51_am.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
-    "type": "Arts & Film"
+    "desc": "Founded in Jamaica in the 1970s, The Meditations are legendary roots reggae pioneers whose soulful harmonies and …",
+    "type": "Wellness"
   },
   {
     "title": "Dallas Park Cemetery Tour",
@@ -3629,17 +3522,30 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Balourdet Quartet",
-    "href": "https://www.telluride.com/event/balourdet-quartet/",
+    "title": "Imogene Pass Run",
+    "href": "https://www.telluride.com/event/imogene-pass-run/",
     "date": "2026-09-12",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/28638/149445047981c35a961.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "A concert by the multi-award winning Balourdet String Quartet. One of the most inspiring quartets of their generation. …",
-    "type": "Music"
+    "desc": "What began as a way to train for the Pike's Peak marathon in 1974 is now a full-fledged race. The race ventures from …",
+    "type": "Community"
+  },
+  {
+    "title": "A Telluride Theatre FRINGE Project: La Familia Music Group",
+    "href": "https://www.telluride.com/event/a-telluride-theatre-fringe-project-la-familia-music-group/",
+    "date": "2026-09-12",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/62898/screenshot_2026-06-15_at_11_29_51_am.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
+    "type": "Arts & Film"
   },
   {
     "title": "Young & Dead - Live at The Sherbino",
@@ -3733,19 +3639,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "TASP Bob Miller Memorial Golf Classic",
-    "href": "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
-    "date": "2026-09-16",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
-    "type": "Community"
-  },
-  {
     "title": "Telluride Rotary Club Meeting",
     "href": "https://portal.clubrunner.ca/3291",
     "date": "2026-09-16",
@@ -3785,18 +3678,17 @@
     "type": "Music"
   },
   {
-    "title": "Telluride Blues & Brews Festival",
-    "href": "https://www.telluride.com/event/telluride-blues-brews-festival/",
+    "title": "TASP Bob Miller Memorial Golf Classic",
+    "href": "https://www.telluride.com/event/tasp-bob-miller-memorial-golf-classic/",
     "date": "2026-09-17",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/55141/download_13.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
-    "type": "Festivals",
-    "endDate": "2026-09-21"
+    "desc": "Tee off for a cause at 9,500 feet! Join the Telluride Adaptive Sports Program for the 28th Annual Bob Miller Memorial …",
+    "type": "Community"
   },
   {
     "title": "Pickleball Nights",
@@ -3864,16 +3756,16 @@
     "type": "Music"
   },
   {
-    "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
-    "href": "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
+    "title": "Telluride Blues & Brews Festival",
+    "href": "https://www.telluride.com/event/telluride-blues-brews-festival/",
     "date": "2026-09-18",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/32823/bluesandbrewsperformer-medium.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
+    "desc": "Renowned as one of the most scenic and intimate music festivals in the country, Telluride Blues & Brews Festival is …",
     "type": "Festivals",
     "endDate": "2026-09-21"
   },
@@ -3903,6 +3795,20 @@
     "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
     "type": "Outdoors & Sports",
     "endDate": "2026-09-20"
+  },
+  {
+    "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
+    "href": "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
+    "date": "2026-09-19",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Head to Telluride for the Crystal Festival, an educational and vendor event featuring rocks, minerals, fossils, …",
+    "type": "Festivals",
+    "endDate": "2026-09-21"
   },
   {
     "title": "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
@@ -3946,7 +3852,7 @@
   {
     "title": "Telluride Autumn Classic",
     "href": "https://www.telluride.com/event/telluride-autumn-classic/",
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
@@ -3960,7 +3866,7 @@
   {
     "title": "Corvettes & Colors",
     "href": "https://www.telluride.com/event/corvettes-colors/",
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
@@ -3974,7 +3880,7 @@
   {
     "title": "Photon",
     "href": "https://www.alibitelluride.com/calendar#eca-event=photon",
-    "date": "2026-09-23",
+    "date": "2026-09-24",
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
@@ -4008,32 +3914,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    "type": "Music"
-  },
-  {
-    "title": "Mountains to the Desert Classic",
-    "href": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
-    "date": "2026-09-25",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
-    "type": "Community"
-  },
-  {
-    "title": "YOPE",
-    "href": "https://www.alibitelluride.com/calendar#eca-event=yope-1",
-    "date": "2026-09-25",
-    "time": "9:00 PM",
-    "location": "The Alibi • Telluride, CO",
-    "town": "Telluride",
-    "img": "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/",
-    "category": "Live Music",
-    "source": "The Alibi",
-    "desc": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
     "type": "Music"
   },
   {
@@ -4089,6 +3969,19 @@
     "type": "Community"
   },
   {
+    "title": "Mountains to the Desert Classic",
+    "href": "https://www.telluride.com/event/mountains-to-the-desert-classic/",
+    "date": "2026-09-26",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/48458/m2dlogonob_g.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Mountains to the Desert Classic (M2D) is celebrating its 22 Anniversary as the primary fundraising event for the …",
+    "type": "Community"
+  },
+  {
     "title": "Geology Tour",
     "href": "https://events.ourayridgwayevents.com/event/geology-tour-1061",
     "date": "2026-09-26",
@@ -4100,6 +3993,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join a local geologist for a guided tour exploring the fascinating geology that shapes our landscape. You’ll gain a deeper understanding of the forces that built this incredible region, while exploring the range of rock formations, from…",
     "type": "Community"
+  },
+  {
+    "title": "YOPE",
+    "href": "https://www.alibitelluride.com/calendar#eca-event=yope-1",
+    "date": "2026-09-26",
+    "time": "9:00 PM",
+    "location": "The Alibi • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://ucarecdn.com/edc6f077-88d6-4e3a-abc9-b6b9c482cfcf/-/crop/4032x2017/0,0/-/preview/",
+    "category": "Live Music",
+    "source": "The Alibi",
+    "desc": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
+    "type": "Music"
   },
   {
     "title": "Ouray County Railroad Days: 9/26-9/27, 2026",
@@ -4156,7 +4062,7 @@
   {
     "title": "Original Thinkers",
     "href": "https://www.telluride.com/event/original-thinkers/",
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
@@ -4170,7 +4076,7 @@
   {
     "title": "Ken Gentry & the Companions",
     "href": "https://www.alibitelluride.com/calendar#eca-event=ken-gentry-and-the-companions",
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "time": "9:00 PM",
     "location": "The Alibi • Telluride, CO",
     "town": "Telluride",
@@ -4178,19 +4084,6 @@
     "category": "Live Music",
     "source": "The Alibi",
     "desc": "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity ...",
-    "type": "Community"
-  },
-  {
-    "title": "Pink Talking Fish",
-    "href": "https://www.telluride.com/event/pink-talking-fish/",
-    "date": "2026-10-01",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
     "type": "Community"
   },
   {
@@ -4221,18 +4114,17 @@
     "endDate": "2026-10-06"
   },
   {
-    "title": "Artabout",
-    "href": "https://www.telluride.com/event/artabout/",
+    "title": "Pink Talking Fish",
+    "href": "https://www.telluride.com/event/pink-talking-fish/",
     "date": "2026-10-02",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/62634/2025_ptf_fall_r4_gen_600x400.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
-    "type": "Community",
-    "endDate": "2026-10-05"
+    "desc": "Pink Talking Fish is a Hybrid Tribute Fusion Act that takes the music from three of the world's most beloved bands and …",
+    "type": "Community"
   },
   {
     "title": "Ouray 150th Gala",
@@ -4274,18 +4166,18 @@
     "type": "Music"
   },
   {
-    "title": "Telluride Leadership Summit",
-    "href": "https://www.telluride.com/event/telluride-leadership-summit/",
+    "title": "Artabout",
+    "href": "https://www.telluride.com/event/artabout/",
     "date": "2026-10-03",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/62618/art-about-draft-768x369.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
-    "type": "Outdoors & Sports",
-    "endDate": "2026-10-07"
+    "desc": "For visitors and residents alike, you can Telluride the first week of October with Ah Haa as your guide. Artabout …",
+    "type": "Community",
+    "endDate": "2026-10-05"
   },
   {
     "title": "The Ridgway 1k Rally thru the Alley 2026 ~ presented by Citizens State Bank",
@@ -4312,6 +4204,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "San Juan Oktoberfest with Live Music by Ridgway Band (opening) and BLUE CAMOOSE polka! Sunday, October 4, 2026 | Hartwell Park | Ridgway, Colorado There’s nothing quite like Ridgway in early October — bright blue skies, golden aspens and…",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Leadership Summit",
+    "href": "https://www.telluride.com/event/telluride-leadership-summit/",
+    "date": "2026-10-04",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Where limits end, leadership begins. Welcome to the Telluride Leadership Summit - A mountain destination experience …",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-10-07"
   },
   {
     "title": "CORAL SKYE",

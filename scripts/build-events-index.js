@@ -208,9 +208,21 @@ function mtKey(iso) {
   if (isNaN(d)) return '';
   return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit' }).format(d);
 }
+// A bare "YYYY-MM-DD" is a CALENDAR DATE, not an instant. new Date() parses it
+// as UTC midnight, and converting that to Mountain Time lands on the PREVIOUS
+// DAY — so every source that stores a date-only pubDate was listed a day early.
+//
+// Found 2026-08-09 via the Telluride Mushroom Festival: it starts Aug 12, but
+// telluride.com's and the Alibi's copies (pubDate "2026-08-12", no time) came
+// out as Aug 11, while KOTO's ("2026-08-12T00:00:00-06:00", carrying an offset)
+// was correct. Same trap as the MT-anchored rule, one layer down: the fix isn't
+// to convert more carefully, it's to not convert a value that has no time in it.
+const isCalendarDate = (v) => /^\d{4}-\d{2}-\d{2}$/.test(String(v || '').trim());
+
 function dateKeyOf(e) {
   if (/^\d{4}-\d{2}-\d{2}/.test(e.date || '')) return String(e.date).slice(0, 10);
   if (e.date) { const k = mtKey(e.date); if (k) return k; }
+  if (isCalendarDate(e.pubDate)) return String(e.pubDate).trim();
   if (e.pubDate) return mtKey(e.pubDate);
   return '';
 }
@@ -369,4 +381,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dateKeyOf };

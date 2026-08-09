@@ -56,3 +56,35 @@ test('malformed act rows never suppress anything', () => {
   assert.equal(idx.size, 0);
   assert.equal(isSuppressed(idx, 'Movie Mondays in Hartwell Park', '2026-08-17'), false);
 });
+
+// ── Calendar dates must not be timezone-converted ───────────────────────
+// A bare "YYYY-MM-DD" is a calendar date, not an instant. new Date() reads it
+// as UTC midnight, and converting THAT to Mountain Time lands on the previous
+// day — so every source storing a date-only pubDate was listed a day early.
+// Found 2026-08-09: the Mushroom Festival starts Aug 12, but telluride.com's
+// and the Alibi's copies rendered as Aug 11. 40 events were off by one.
+const { dateKeyOf } = require('../build-events-index.js');
+
+test('a date-only pubDate is a calendar date, not an instant', () => {
+  assert.equal(dateKeyOf({ pubDate: '2026-08-12' }), '2026-08-12');
+  assert.equal(dateKeyOf({ pubDate: ' 2026-08-12 ' }), '2026-08-12');
+});
+
+test('a pubDate WITH an offset is a real instant and is converted', () => {
+  // KOTO stores midnight Mountain explicitly; that is already the right day.
+  assert.equal(dateKeyOf({ pubDate: '2026-08-12T00:00:00-06:00' }), '2026-08-12');
+  // An instant late in the UTC day is still the same Mountain calendar day.
+  assert.equal(dateKeyOf({ pubDate: '2026-08-12T23:00:00Z' }), '2026-08-12');
+  // ...and one just past UTC midnight belongs to the PREVIOUS Mountain day.
+  assert.equal(dateKeyOf({ pubDate: '2026-08-13T02:00:00Z' }), '2026-08-12');
+});
+
+test('an explicit date field always wins over pubDate', () => {
+  assert.equal(dateKeyOf({ date: '2026-08-12', pubDate: '2026-01-01' }), '2026-08-12');
+  assert.equal(dateKeyOf({ date: '2026-08-12T00:00:00-06:00' }), '2026-08-12');
+});
+
+test('an undated record yields no key rather than a wrong one', () => {
+  assert.equal(dateKeyOf({}), '');
+  assert.equal(dateKeyOf({ pubDate: 'not a date' }), '');
+});
