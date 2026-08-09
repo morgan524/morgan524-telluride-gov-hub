@@ -406,6 +406,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-09",
+    title: "Bear Creek's beavers and the trail question",
+    body: "The Open Space Commission is heading out to Bear Creek Trailhead to look at a potential new trail alignment connecting to Firecracker Hill — and also to check on beaver activity in the preserve. Those two things pull in different directions. More trail access means more people out there, which is the whole point of public land. But the commission is also doing restoration planning, and active beavers in a protected zone complicate what \"open\" in open space actually means. How much human use belongs alongside active habitat work?\n\nWhere do you land — more trail, or let the beavers have it?",
+    choices: ["Build the connection", "Hold off on the trail", "Depends on the habitat impact", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-08",
     title: "Natural medicine businesses — where do they fit in town?",
     body: "Town Council is expected to consider a Land Use Code amendment that would add new regulations for Natural Medicine Businesses. That's a real category now in Colorado, and Telluride has to decide what the rules look like up here.\n\nSome residents will want clear, workable rules that let legitimate businesses operate — delay just creates gray areas. Others will want strict limits on where and how these businesses can set up, worried about fit with the town's existing character and land use patterns.\n\nNo vote has happened yet. So: should Telluride move quickly to regulate and allow, or take its time and draw tighter lines?",
@@ -721,16 +729,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
     img: ""
-  },
-  {
-    title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
-    source: "Ouray County",
-    sourceKey: "ouray-county",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
-    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
-    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
   },
   {
     title: "Flood ravages homes",
@@ -2385,60 +2383,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
-    source: "Town of Telluride",
-    date: "August 8, 2026",
-    newsTopic: "government",
-    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
-  },
-  {
-    title: "Black Bear Pass Now Open",
-    source: "San Miguel County",
-    date: "August 3, 2026",
-    newsTopic: "recreation",
-    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
-    img: ""
-  },
-  {
-    title: "Numerous Highway Closures",
-    source: "San Miguel County",
-    date: "July 22, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
-    img: ""
-  },
-  {
-    title: "Tomboy Road",
-    source: "San Miguel County",
-    date: "July 21, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    source: "San Miguel County",
-    date: "July 14, 2026",
-    newsTopic: "recreation",
-    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
-    img: ""
-  },
-  {
-    title: "Shandoka, Carhenge Lots Closed",
-    source: "Town of Telluride",
-    date: "August 8, 2026",
-    newsTopic: "community",
-    copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
-    href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
-    img: ""
-  },
-  {
     title: "Ridgway Town Council Regular Meeting Agenda",
     source: "Town of Ridgway",
     date: "August 12, 2026",
@@ -3561,37 +3505,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Balance in Motion - Equilibrio en Movimiento",
-    link: "https://telluridelibrary.libcal.com/event/16536391?hs=a",
-    description: "10:00 AM – 11:00 AM · Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome. Mu&eacute;vase, respire y ll&eacute;nese de energ&iacute;a en esta din&aacute;mica clase biling&uuml;e, dirigido por Lauren Norton, dise&ntilde;ada para fortalecer su cuerpo y mente. Combinando la fuerza y fluidez del pilates, el ritmo y la energ&iacute;a de la danza, y la presencia equilibrante del yoga y la respiraci&oacute;n, esta sesi&oacute;n le dejar&aacute; sinti&eacute;ndose fuerte, en armon&iacute;a y revitalizado/a. …",
-    pubDate: "2026-08-08T16:00:00.000Z",
+    title: "Gentle Yoga with Kristen Milord",
+    link: "https://telluridelibrary.libcal.com/event/16536443?hs=a",
+    description: "11:00 AM – 12:30 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
+    pubDate: "2026-08-09T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1740003527.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
   },
   {
-    title: "Fly Tyin&#039; with Ryan: Cast Your Fly",
-    link: "https://telluridelibrary.libcal.com/event/16571103?hs=a",
-    description: "11:00 AM – 12:00 PM · Practice Casting your fly! Please register online. This program is for children aged 8-12.",
-    pubDate: "2026-08-08T17:00:00.000Z",
+    title: "Drop-In Tech Time with Oliver",
+    link: "https://telluridelibrary.libcal.com/event/15970386?hs=a",
+    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
+    pubDate: "2026-08-09T19:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "2nd Floor Desk",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
+  },
+  {
+    title: "Lotería Familiar • Family Lotería",
+    link: "https://telluridelibrary.libcal.com/event/17052024?hs=a",
+    description: "2:00 PM – 3:30 PM · Ven a jugar Loter&iacute;a con familia y amigos en la biblioteca! sera una tarde entretenida y con sorpresas ;)  &bull; Come and play Loter&iacute;a with family and friends at the library! It will be a fun afternoon full of surprises ;)",
+    pubDate: "2026-08-09T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_38_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_49_07.png"
   },
   {
-    title: "Pieles y Pociones",
-    link: "https://telluridelibrary.libcal.com/event/17021941?hs=a",
-    description: "2:00 PM – 4:00 PM · &iexcl;Ven y aprende a crear tus propias pociones para cuidar tu piel y la de tu familia con Mar&iacute;a Mart&iacute;nez del Campo!",
-    pubDate: "2026-08-08T20:00:00.000Z",
+    title: "Tea and Tarot",
+    link: "https://telluridelibrary.libcal.com/event/17029767?hs=a",
+    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
+    pubDate: "2026-08-09T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_28_16_25_11.png"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
   }
 ];
 
@@ -3612,18 +3567,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Endea Owens & The Cookout",
-    link: "https://www.alibitelluride.com/calendar#eca-event=endea-owens-and-the-cookout",
-    description: "Endea Owens is all about jazz. This phenomenal bassist, composer and performer h...",
-    pubDate: "2026-08-08",
-    time: "10:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/2340e518-38e2-471f-802f-0183b7f67cbb/-/crop/1069x1068/235,0/-/preview/"
-  },
   {
     title: "Max & Heather Stalling",
     link: "https://www.alibitelluride.com/calendar#eca-event=max-and-heather-stalling",
@@ -4069,7 +4012,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-08T06:00:00.000Z",
+    pubDate: "2026-08-09T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4078,22 +4021,10 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
   },
   {
-    title: "Happy Little Trees: Painting Class",
-    link: "https://events.ourayridgwayevents.com/event/happy-little-trees-painting-class",
-    description: "\"QUIET WOODS\" Join Emma Kalff for a morning of coffee and painting at the Wright Opera House Community Room. Participants will follow along with a classic Bob Ross episode and create their own Bob Ross–style landscape painting. All supplies are included, and no prior painting experience is necessary. Just bring your curiosity and enjoy a relaxed, creative morning inspired by the joy of painting. View on site | Email this event",
-    pubDate: "2026-08-08T10:30:30.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793305718/huge/54c3153d4a8aa3d414529babdd589f3da27b481d.jpg"
-  },
-  {
     title: "Annual Ridgway Fire Department Pancake Breakfast",
     link: "https://events.ourayridgwayevents.com/event/annual-ridgway-fire-department-pancake-breakfast",
     description: "Saturday, August 8 and Sunday, August 9 from 7:30am to 10:30am, come support your local firefighters at their Annual Pancake Breakfast Fundraiser. Includes pancakes, sausage, eggs, coffee & juice. $10 Adults, $5 Children or $25 for the family. Best Breakfast, Best Prices, Best Cooks in Town (at least for the weekend)! View on site | Email this event",
-    pubDate: "2026-08-08T13:30:00.000Z",
-    endDate: "2026-08-09",
+    pubDate: "2026-08-09T13:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4101,164 +4032,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53631321088580/huge/1e3b4e247e16202b8851a99ceb9ede86f5dee60e.jpg"
   },
   {
-    title: "Electric Showcase",
-    link: "https://events.ourayridgwayevents.com/event/electric-showcase",
-    description: "Experience electrification hands on! Visit the Electric Showcase booth at the southeast corner of the Ridgway Rendezvous. Check out electric yard equipmentLearn about financial incentivevsDiscover how you can win an E-Bike with SMPA! Presented by : The Town of Ridgway and the Ridgway Sustainability Advisory BoardEcoAction PartnersClean Energy Economy for the Region (CLEER) San Miguel Power Association (SMPA) View on site | Email this event",
-    pubDate: "2026-08-08T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53443481081189/huge/1c29ff615fd2208e8a6eab9017bb24268cd815b5.jpg"
-  },
-  {
-    title: "Saturday Yoga",
-    link: "https://events.ourayridgwayevents.com/event/saturday-yoga",
-    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00. View on site | Email this event",
-    pubDate: "2026-08-08T15:00:00.000Z",
-    endDate: "2026-08-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
-  },
-  {
-    title: "The 41st Annual Ridgway Rendezvous Arts Festival",
-    link: "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
-    description: "Ridgway Rendezvous Arts Festival (41st Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 41st year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest Colorado. Hosted by Weehawken Creative Arts, this highly regarded juried festival is known for exceptional craftsmanship, original design, and high-quality handmade work not easily found elsewhere in the region. Artists consistently call it “one of the best shows of the year,” citing strong sales and a welcoming, well-organized atmosphere. Set in the heart of Ridgway along the scenic Million Dollar Highway, the festival attracts an engaged audience of collectors, second homeowners, and visitors from across the country—and coincides with the nearby Telluride Jazz Festival, expanding its reach and energy. Enjoy live music throughout the day both days, featuring a diverse lineup of talented regional and touring musicians. …",
-    pubDate: "2026-08-08T15:00:00.000Z",
-    endDate: "2026-08-09",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53604939799289/huge/9d342ef941735ff72dd4a24d0df58e12a8e49027.jpg"
-  },
-  {
-    title: "The Hummingbird’s Secret Mission - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/the-hummingbirds-secret-mission-ridgway-state-park-summer-program-series",
-    description: "Come explore the astonishing world of nature's smallest high-performance pilots. Led by experts from the Black Canyon Audubon Society, this program reveals the \"superpowers\" behind the hummingbird’s impossible flight patterns and epic seasonal migrations. You will learn to identify local species during their peak summer activity and discover the native plants that fuel their high-speed survival. Whether you are a dedicated birdwatcher or a family looking for a magical morning in the park, this event offers a front-row seat to the aerial acrobatics of these shimmering \"flying gems\". View on site | Email this event",
-    pubDate: "2026-08-08T15:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53454953293581/huge/2ed5e2f2553f1fe9c9d5f804b87b8743269c7c9d.jpg"
-  },
-  {
-    title: "SATURDAY Live Music at the Ridgway Rendezvous Arts Fest",
-    link: "https://events.ourayridgwayevents.com/event/saturday-live-music-at-the-ridgway-rendezvous-arts-fest",
-    description: "Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 2026 9:30 a.m.–5:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Four incredible bands. One beautiful Saturday. Join us Saturday, August 8, at Hartwell Park for a full day of FREE live music during the Ridgway Rendezvous Arts Festival. Heather & Douglas • 9:30–11:00 a.m. Hard Pressed • 11:30 a.m.–1:00 p.m. Tom Ward’s Downfall • 1:15–2:45 p.m. Donny Morales • 3:15–5:00 p.m. Pack a chair if you’d like, bring your friends, and spend the day enjoying great music, local artists, food vendors, and everything that makes Ridgway Rendezvous such a special weekend. ridgwayrendezvous.com The music is just one part of this beloved annual celebration. …",
-    pubDate: "2026-08-08T15:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551169184729/huge/d363a60ec963787455148228afd09f3fa3ffcb7f.jpg"
-  },
-  {
-    title: "Dallas Park Cemetery Tour",
-    link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
-    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
-    pubDate: "2026-08-08T16:00:00.000Z",
-    endDate: "2026-09-12",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Dallas Park Cemetery",
-    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-08T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "Used Book Sale",
-    link: "https://events.ourayridgwayevents.com/event/used-book-sale",
-    description: "Used Book Sale hosted by Friends of the Ridgway Library on Saturday August 8th, 10am-2pm. Tote bags and t-shirts will be available for purchase. Want to volunteer? Sign up at the Ridgway Library front desk. Have books to donate? Call: 970-626-5252 View on site | Email this event",
-    pubDate: "2026-08-08T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/53444356689862/huge/ac92e28117fe69a241a729e8065ab23d70be8daf.jpg"
-  },
-  {
-    title: "Electric Vehicle (EV) Ride and Drive",
-    link: "https://events.ourayridgwayevents.com/event/electric-vehicle-ev-ride-and-drive",
-    description: "Electric Vehicle (EV) Ride and Drive: Test drive an electric vehicleTest ride the latest e-bike technologyEat a grilled cheese powered by an EVFree train rides!And make sure to head over to the Electric Showcase booth in the southeast corner of Hartwell Park from 9am to 5pm. You can check out and try electric yard equipment and learn about financial incentives. Also learn how you can win an E-bike from San Miguel Power Association. View on site | Email this event",
-    pubDate: "2026-08-08T17:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Railroad Museum",
-    imageUrl: "https://localist-images.azureedge.net/photos/53444478649232/huge/46383f7cbeab4425648f3e6bf6e4e504e8371d0c.jpg"
-  },
-  {
     title: "Flash Tattoo Pop-Up Fundraiser",
     link: "https://events.ourayridgwayevents.com/event/flash-tattoo-pop-up-fundraiser",
     description: "Hello, Library Lovers! We are so excited to announce our second annual Tattoo Pop-up Fundraiser on Saturday, August 8 starting at 12:00 p.m. and on Sunday, August 9 starting at 10:00 a.m. Come early to get added to the list! Mark your calendars for this weekend event! We hope to see you there! View on site | Email this event",
-    pubDate: "2026-08-08T18:00:00.000Z",
-    endDate: "2026-08-09",
+    pubDate: "2026-08-09T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray Public Library",
     imageUrl: "https://localist-images.azureedge.net/photos/53506206584416/huge/5c0910190bcc815b3556542e2cfda2027272d8bf.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-08T18:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ouray: Echoes in the Canyon",
-    link: "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-8419",
-    description: "Ouray: Echoes in the Canyon returns to the Wright Opera House for some additional screenings. Presented by Photonic Media and produced in cooperation with the City of Ouray 150th Committee, the documentary explores the people, history, landscapes, and enduring spirit that helped shape what many still call \"The Gem of the Rockies.\" Through storytelling, archival perspective, aerial cinematography, and local voices, the film traces the layered history of Ouray and the individuals who built a mountain community that continues to evolve while remaining deeply connected to its frontier roots. The film features aerial photography by Ouray By Flight, cinematography by Levi Kramer, and is produced and directed by Hank Braxtan. We are offering a \"pay what you can\" for your ticket - $5, $10 and $15. Pick the amount that fees \"Wright\" to you. Thank you for your support! …",
-    pubDate: "2026-08-08T19:00:43.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
-  },
-  {
-    title: "Floating Lotus Brewery 2 Year Anniversary Celebration",
-    link: "https://events.ourayridgwayevents.com/event/floating-lotus-brewery-2-year-anniversary-celebration",
-    description: "Free celebration · All ages · Live music 6–10 p.m. Floating Lotus Brewery · Outdoor and indoor stages Here’s to two years in business! Join us on Saturday, August 8, 2026, for an all-day celebration featuring food and drink specials, live music, cornhole, giveaways, and plenty more. One-Day Food Special We’ve partnered with Taqueria Alonzo to offer a pint and an entrée for just $16. Choose any pint and pair it with an order of the taqueria’s new fish tacos. This anniversary special will be available all day, for one day only, while supplies last. Live Music Our good friend TBP Joe returns from Fruita to perform on the outdoor stage from 6–8 p.m. Afterward, Sean Universe and DJ Photon will take over the indoor stage with an EDM set that continues late into the night. …",
-    pubDate: "2026-08-08T20:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53603888943583/huge/4dd2b97b517c8a564d3e0267ae9c3926e7e803ac.jpg"
-  },
-  {
-    title: "Vibrant Music + Dance",
-    link: "https://events.ourayridgwayevents.com/event/vibrant-music-dance",
-    description: "Vibrant returns to Ouray! Live music (rock, blues, and more!), dance beats, flow dance artists, food, beer from the Ouray Mountain Air Music Series nonprofit, live painters, arts and crafts, bounce houses, and more! Kid friendly, and kids 12 and under free. Get tickets at View on site | Email this event",
-    pubDate: "2026-08-08T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Fellin Park Ouray",
-    imageUrl: "https://localist-images.azureedge.net/photos/53630704110490/huge/606da76369d52578672122d9226699422d70664e.jpg"
   },
   {
     title: "Ouray Open Air Market",
@@ -4282,6 +4064,41 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53551206723208/huge/d03bf3915661d1d70df6d4a36003d6398c0cb49b.jpg"
+  },
+  {
+    title: "The 41st Annual Ridgway Rendezvous Arts Festival",
+    link: "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
+    description: "Ridgway Rendezvous Arts Festival (41st Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 41st year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest Colorado. Hosted by Weehawken Creative Arts, this highly regarded juried festival is known for exceptional craftsmanship, original design, and high-quality handmade work not easily found elsewhere in the region. Artists consistently call it “one of the best shows of the year,” citing strong sales and a welcoming, well-organized atmosphere. Set in the heart of Ridgway along the scenic Million Dollar Highway, the festival attracts an engaged audience of collectors, second homeowners, and visitors from across the country—and coincides with the nearby Telluride Jazz Festival, expanding its reach and energy. Enjoy live music throughout the day both days, featuring a diverse lineup of talented regional and touring musicians. …",
+    pubDate: "2026-08-09T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53604939799289/huge/9d342ef941735ff72dd4a24d0df58e12a8e49027.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-09T18:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-09T18:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
@@ -4886,6 +4703,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53602909844206/huge/86588d56807d9717bb526b283fe016d75d0899eb.jpg"
   },
   {
+    title: "Saturday Yoga",
+    link: "https://events.ourayridgwayevents.com/event/saturday-yoga",
+    description: "Zen Mountain Yoga is a carefully designed yoga class created to move your mind, body, and spirit through a series of seated and standing yoga poses. Yoga props are used to facilitate deeper movement for a richer stretch environment, designed to increase flexibility, balance, and range of movement. Restorative breathing exercises, neurogenic brain training, and guided relaxation will promote stress reduction and mental clarity. Zen out in as we explore the eight limbs of yoga through your dosha awareness, and bring the mountain home to your heart. Appropriate for beginner to advanced. ***Please visit studioouray.com in case of inclement weather or class cancellation.***Please bring a yoga mat, sun protection, and water.*** $10.00 outside until Labor Day. Drop-indoors after labor day $20.00. View on site | Email this event",
+    pubDate: "2026-08-22T15:00:00.000Z",
+    endDate: "2026-08-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Fellin Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53233830352657/huge/0d1cbbdf672690b660591a1d6fa1c311b49b04ef.jpg"
+  },
+  {
     title: "Ouray Day",
     link: "https://events.ourayridgwayevents.com/event/ouray-day",
     description: "Celebrate Ouray's heritage with a day of art, food, games, and family-friendly fun! Bring your friends, family, and neighbors to cheer on the hard rock mining competitions during Highgraders Holiday, sample delicious entries in the Women's Club of Ouray County Annual Chili Cookoff, and enjoy activities and entertainment for all ages. Saturday, August 22, 2026 Noon to 4:00 PM Fellin Park, Ouray ACTIVITIES 🏐 Volleyball & Bocce Ball tournaments 🌶️ Chili Cookoff ⛏️ HighGraders Holiday mining competition (9 AM-3 PM) 🏰 Bouncy houses 💦 Dunk tank 🎨 Local artist booths 🎲 Games for all ages 🎁 Door prizes (including a chance to win an Ouray Hot Springs Pool Annual Pass!) Plus, a free afternoon entry at Ouray Hot Springs for Ouray-area residents with completion of a community survey (available at the event) SCHEDULE Noon – Ouray Day begins 1–2 PM – Volleyball Tournament 1–3 PM – Chess Tournament 2-3 PM …",
@@ -5423,6 +5252,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53644731506912/huge/6ffbb92193cec13bf4355fd2e040b60aed735e09.jpg"
+  },
+  {
+    title: "Dallas Park Cemetery Tour",
+    link: "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
+    description: "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
+    pubDate: "2026-09-12T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Dallas Park Cemetery",
+    imageUrl: "https://localist-images.azureedge.net/photos/52462667793124/huge/857907efd93056a1ba298d906bd6d5231a5f9d13.jpg"
   },
   {
     title: "WCOC Rummage Sale Collection Day",
