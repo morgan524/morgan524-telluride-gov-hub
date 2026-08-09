@@ -1,48 +1,22 @@
 [
   {
-    "date": "May 19, 2026",
+    "date": "August 18, 2026",
     "time": "5:30 PM",
     "title": "Board of Directors Meeting",
-    "agendaUrl": "https://www.telluridefire.com/files/9e90a32e9/Agenda+-May+19th%2C+2026.pdf",
+    "agendaUrl": null,
     "packetUrl": null,
     "special": false,
     "location": "131 W Columbia Ave, Telluride, CO 81435",
     "note": "Next scheduled meeting -- agenda typically posted a few days before."
   },
   {
-    "date": "June 16, 2026",
-    "time": "5:30 PM",
-    "title": "Board of Directors Meeting",
-    "agendaUrl": "https://www.telluridefire.com/files/978c9813f/Agenda+-June+16th%2C+2026.pdf",
-    "packetUrl": null,
-    "special": false,
-    "location": "131 W Columbia Ave, Telluride, CO 81435"
-  },
-  {
-    "date": "July 21, 2026",
+    "date": "September 15, 2026",
     "time": "5:30 PM",
     "title": "Board of Directors Meeting",
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "location": "131 W Columbia Ave, Telluride, CO 81435"
-  },
-  {
-    "date": "April 21, 2026",
-    "time": "5:30 PM",
-    "title": "Board of Directors Meeting",
-    "agendaUrl": "https://www.telluridefire.com/files/d960bb1a5/Agenda+-April+21st%2C+2026.pdf",
-    "packetUrl": null,
-    "special": false,
-    "location": "131 W Columbia Ave, Telluride, CO 81435"
-  },
-  {
-    "date": "March 17, 2026",
-    "time": "5:30 PM",
-    "title": "Board of Directors Meeting",
-    "agendaUrl": "https://www.telluridefire.com/files/3d3e8ccfb/Agenda+-March+17th%2C+2026.pdf",
-    "packetUrl": null,
-    "special": false,
-    "location": "131 W Columbia Ave, Telluride, CO 81435"
+    "location": "131 W Columbia Ave, Telluride, CO 81435",
+    "note": "Next scheduled meeting -- agenda typically posted a few days before."
   }
 ]

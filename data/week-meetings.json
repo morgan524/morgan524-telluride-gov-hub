@@ -180,6 +180,26 @@
     "hook": ""
   },
   {
+    "source": "fire",
+    "sourceLabel": "Fire Protection",
+    "title": "Board of Directors Meeting",
+    "date": "2026-08-18",
+    "time": "",
+    "location": "131 W Columbia Ave, Telluride, CO 81435",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.telluridefire.com/board-meetings",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "pdasaro@telluridefire.com",
+    "hook": ""
+  },
+  {
     "source": "ophir",
     "sourceLabel": "Town of Ophir",
     "title": "General Assembly Meeting",
