@@ -360,6 +360,26 @@
     "hook": ""
   },
   {
+    "source": "airport",
+    "sourceLabel": "Telluride Regional Airport",
+    "title": "TRAA Board of Commissioners Meeting",
+    "date": "2026-08-20",
+    "time": "",
+    "location": "Terminal Observation Lounge, Telluride Regional Airport",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://tellurideairport.com/traa-board-information/",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "info@tellurideairport.com",
+    "hook": ""
+  },
+  {
     "source": "county",
     "sourceLabel": "San Miguel County",
     "title": "Board of County Commissioners Work Session",

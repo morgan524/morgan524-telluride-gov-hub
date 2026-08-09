@@ -661,104 +661,90 @@ const TOWN_CIVICWEB_IDS = {
 
 const TELLURIDE_HARC_URL = 'https://telluride.gov/100/Historic-and-Architectural-Review-Commis';
 
-const TELLURIDE_CACHE_DATE = '2026-05-11';
+const TELLURIDE_CACHE_DATE = '2026-08-09';
 
 const TELLURIDE_CACHED_DATA = [
-  // ── Historic and Architectural Review Commission (HARC) ──
-  // Meets 3rd Wednesday of each month at Rebekah Hall, Telluride
   {
-    date: 'May 20, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    civicWebId: 8014,
-    note: 'Agenda includes Carhenge and Shandoka worksessions.'
+    date: "August 19, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 201 N. Pine Street, Telluride",
+    civicWebId: 8020,
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
+    packetUrl: "https://telluride-co.civicweb.net/document/443013/"
   },
   {
-    date: 'June 17, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8016'
+    date: "September 16, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 201 N. Pine Street, Telluride",
+    civicWebId: 8022
   },
   {
-    date: 'July 15, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8018'
+    date: "October 21, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 201 N. Pine Street, Telluride",
+    civicWebId: 8024
   },
   {
-    date: 'August 19, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    packetUrl: 'https://telluride-co.civicweb.net/document/443013/',
-    agendaUrl: 'https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020'
+    date: "November 18, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 201 N. Pine Street, Telluride",
+    civicWebId: 8026
   },
   {
-    date: 'September 16, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: null
-  },
-  {
-    date: 'October 21, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: null
-  },
-  {
-    date: 'November 18, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: null
-  },
-  {
-    date: 'December 16, 2026',
-    title: 'HARC Meeting',
-    board: 'harc',
-    location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
-    agendaUrl: null
+    date: "December 16, 2026",
+    title: "HARC Meeting",
+    board: "harc",
+    location: "Rebekah Hall, 201 N. Pine Street, Telluride",
+    civicWebId: 8028
   }
 ];
 
 const AIRPORT_BOARD_URL = 'https://tellurideairport.com/traa-board-information/';
 
-const AIRPORT_CACHE_DATE = '2026-03-25';
+const AIRPORT_CACHE_DATE = '2026-08-09';
 
 const AIRPORT_CACHED_DATA = [
-  // Jan 15 already past
   {
-    date: 'May 21, 2026',
-    title: 'TRAA Board of Commissioners Meeting',
-    time: '12:00 PM',
-    location: 'Terminal Observation Lounge, Telluride Regional Airport',
-    note: 'Regular board meeting of the Telluride Regional Airport Authority.'
+    date: "August 20, 2026",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport",
+    note: "Regular board meeting of the Telluride Regional Airport Authority."
   },
   {
-    date: 'July 16, 2026',
-    title: 'TRAA Board of Commissioners Meeting',
-    time: '12:00 PM',
-    location: 'Terminal Observation Lounge, Telluride Regional Airport',
-    note: 'Regular board meeting of the Telluride Regional Airport Authority.'
+    date: "September 17, 2026",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport"
   },
   {
-    date: 'September 17, 2026',
-    title: 'TRAA Board of Commissioners Meeting',
-    time: '12:00 PM',
-    location: 'Terminal Observation Lounge, Telluride Regional Airport',
-    note: 'Regular board meeting of the Telluride Regional Airport Authority.'
+    date: "October 15, 2026",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport",
+    note: "Regular board meeting of the Telluride Regional Airport Authority."
   },
   {
-    date: 'November 19, 2026',
-    title: 'TRAA Board of Commissioners Meeting',
-    time: '12:00 PM',
-    location: 'Terminal Observation Lounge, Telluride Regional Airport',
-    note: 'Regular board meeting of the Telluride Regional Airport Authority.'
+    date: "November 19, 2026",
+    time: "12:00 PM",
+    title: "TRAA Board of Commissioners Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Terminal Observation Lounge, Telluride Regional Airport"
   }
 ];
 

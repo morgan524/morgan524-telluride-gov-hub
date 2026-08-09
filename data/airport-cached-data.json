@@ -1,30 +1,40 @@
 [
   {
-    "date": "May 21, 2026",
-    "title": "TRAA Board of Commissioners Meeting",
+    "date": "August 20, 2026",
     "time": "12:00 PM",
-    "location": "Terminal Observation Lounge, Telluride Regional Airport",
-    "note": "Regular board meeting of the Telluride Regional Airport Authority."
-  },
-  {
-    "date": "July 16, 2026",
     "title": "TRAA Board of Commissioners Meeting",
-    "time": "12:00 PM",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
     "location": "Terminal Observation Lounge, Telluride Regional Airport",
     "note": "Regular board meeting of the Telluride Regional Airport Authority."
   },
   {
     "date": "September 17, 2026",
-    "title": "TRAA Board of Commissioners Meeting",
     "time": "12:00 PM",
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Terminal Observation Lounge, Telluride Regional Airport"
+  },
+  {
+    "date": "October 15, 2026",
+    "time": "12:00 PM",
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
     "location": "Terminal Observation Lounge, Telluride Regional Airport",
     "note": "Regular board meeting of the Telluride Regional Airport Authority."
   },
   {
     "date": "November 19, 2026",
-    "title": "TRAA Board of Commissioners Meeting",
     "time": "12:00 PM",
-    "location": "Terminal Observation Lounge, Telluride Regional Airport",
-    "note": "Regular board meeting of the Telluride Regional Airport Authority."
+    "title": "TRAA Board of Commissioners Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "location": "Terminal Observation Lounge, Telluride Regional Airport"
   }
 ]
