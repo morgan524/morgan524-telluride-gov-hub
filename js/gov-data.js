@@ -715,8 +715,7 @@ const AIRPORT_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport",
-    note: "Regular board meeting of the Telluride Regional Airport Authority."
+    location: "Terminal Observation Lounge, Telluride Regional Airport"
   },
   {
     date: "September 17, 2026",
@@ -734,8 +733,7 @@ const AIRPORT_CACHED_DATA = [
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: "Terminal Observation Lounge, Telluride Regional Airport",
-    note: "Regular board meeting of the Telluride Regional Airport Authority."
+    location: "Terminal Observation Lounge, Telluride Regional Airport"
   },
   {
     date: "November 19, 2026",

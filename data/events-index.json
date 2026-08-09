@@ -754,6 +754,19 @@
     "endDate": "2026-09-17"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-12",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Banshee Tree w/ Quattlebaum - Telluride Mushroom Festival",
     "href": "https://www.alibitelluride.com/calendar#eca-event=banshee-tree-w-quattlebaum-telluride-mushroom-festival",
     "date": "2026-08-12",
@@ -910,19 +923,6 @@
     "desc": "A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …",
     "type": "Music",
     "endDate": "2026-09-10"
-  },
-  {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-13",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",

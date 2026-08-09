@@ -383,6 +383,9 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "fire|2026-08-18|Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "airport|2026-08-20|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"}
 };
 
@@ -1215,7 +1218,10 @@ const MANUAL_SUMMARIES = {
     "The September 8, 2026 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
 
   "fire|2026-08-18|Board of Directors Meeting":
-    "The August 18, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet."
+    "The August 18, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "airport|2026-08-20|TRAA Board of Commissioners Meeting":
+    "The August 20, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
