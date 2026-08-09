@@ -1,4 +1,19 @@
 {
   "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | drop-event. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
-  "corrections": []
+  "corrections": [
+    {
+      "id": "datefix-the-m-factor-shredding-the-silence-on-me-2026-09-01-ouray_ridgway_events",
+      "kind": "event-date",
+      "array": "OURAY_RIDGWAY_EVENTS",
+      "titleMatch": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
+      "wrongDate": "2026-09-02",
+      "correctDate": "2026-09-01",
+      "reason": "The Sherbino page clearly states the event is on September 1, confirming the SHERBINO_EVENTS date.",
+      "evidence": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
+      "quote": "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion.",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-08-09",
+      "expiresOn": "2026-10-01"
+    }
+  ]
 }
