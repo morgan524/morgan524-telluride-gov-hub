@@ -40,178 +40,140 @@ const COUNTY_CIVICCLERK_AGENDA_FILES = {
 const COUNTY_CACHE_DATE = '2026-08-09';
 
 const COUNTY_CACHED_DATA = [
-  // ── March 2026 ──
   {
-    date: 'March 25, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 864,
+    date: "August 13, 2026",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 922,
     note: null
   },
   {
-    date: 'March 26, 2026',
-    time: '9:30 AM - 12:00 PM',
-    title: 'Planning Commission and Board of County Commissioners Joint Work Session',
-    type: 'planning',
-    location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
-    civicClerkId: 971,
-    note: 'Joint session -- Accelerated Housing Review, Forestry Code, and related topics.'
-  },
-  // ── April 2026 ──
-  {
-    date: 'April 1, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 882,
+    date: "August 19, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 899,
     note: null
   },
   {
-    date: 'April 8, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Work Session',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 986,
+    date: "August 26, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    civicClerkId: 869,
     note: null
   },
-  // April 6-17 Spring Break -- no BOCC meetings
   {
-    date: 'April 22, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    date: "August 27, 2026",
+    time: "4:30 PM",
+    title: "CWAB",
+    type: "other",
+    location: "",
+    civicClerkId: 1055,
+    note: null
   },
   {
-    date: 'April 27, 2026',
-    time: '1:30 PM - 3:30 PM',
-    title: 'Housing Code Update -- SSR Meeting #5',
-    type: 'ssr',
-    location: '333 West Colorado Ave, 2nd Floor, Telluride, CO 81435',
-    civicClerkId: null,
-    agendaUrl: '/assets/ssr/14206-April-SSR-No-5-Meeting-Packet.pdf',
-    note: '2-hour working session of the Stakeholder Strategic Roundtable for the SMC Housing Code Update. Agenda: Recap of Project Objectives (5 min) -- Accelerated Housing Review (25 min) -- Draft Code Recommendations (85 min) -- Closing (5 min). Zoom: 860 9725 9982 / passcode 731354 (https://us06web.zoom.us/j/86097259982).'
+    date: "September 2, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 887,
+    note: null
   },
   {
-    date: 'April 29, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
-  },
-  // ── May 2026 ──
-  {
-    date: 'May 6, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    date: "September 9, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd Floor, Telluride, CO 81435",
+    civicClerkId: 857,
+    note: null
   },
   {
-    date: 'May 13, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 999,
-    note: 'Agenda typically posted the Friday before.'
+    date: "September 10, 2026",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 923,
+    note: null
   },
   {
-    date: 'May 14, 2026',
-    time: '9:30 AM',
-    title: 'Planning Commission Meeting',
-    type: 'planning',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 919,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/919/files/agenda/1705',
-    note: 'Public hearings on land use applications and code amendments (footprint definitions, accelerated housing review). Work session on natural medicine code amendments.'
+    date: "September 16, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 900,
+    note: null
   },
   {
-    date: 'May 20, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: 896,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/896/files/agenda/1716',
-    note: 'Agenda typically posted the Friday before.'
+    date: "September 23, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 870,
+    note: null
   },
   {
-    date: 'May 27, 2026',
-    time: '2:00 PM - 6:30 PM',
-    title: 'Board of County Commissioners Special Meeting in Telluride 2:00 pm - 2:45 pm',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride (2-2:45 pm) then Placerville School House (work session 4-6:30 pm)',
-    civicClerkId: 1035,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1035/files/agenda/1762',
-    note: 'Special meeting + work session. Agenda posted May 22.'
-  },
-  // ── June 2026 ──
-  {
-    date: 'June 3, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.',
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/884/files/agenda/1847'
+    date: "October 7, 2026",
+    time: "10:00 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "5634 Cty Road H1, Egnar Fire Station, Egnar, CO 81325",
+    civicClerkId: 888,
+    note: null
   },
   {
-    date: 'June 10, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.',
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1040/files/agenda/1857'
+    date: "October 8, 2026",
+    time: "9:00 AM",
+    title: "Planning Commission Meeting",
+    type: "planning",
+    location: "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
+    civicClerkId: 924,
+    note: null
   },
   {
-    date: 'June 17, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.',
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/897/files/agenda/1869'
+    date: "October 14, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "333 West Colorado Ave 2nd Fl, Telluride, CO 81435",
+    civicClerkId: 858,
+    note: null
   },
   {
-    date: 'June 24, 2026',
-    time: '9:30 AM - 3:00 PM',
-    title: 'Board of County Commissioners Meeting',
-    type: 'bocc',
-    location: '305 W Colorado Ave, Telluride, CO 81435',
-    civicClerkId: null,
-    note: 'Agenda typically posted the Friday before.'
+    date: "October 21, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 901,
+    note: null
   },
   {
-    date: 'July 8, 2026',
-    time: '5:30 PM',
-    title: 'Board of County Commissioners Special - In Norwood at Sheriff Annex',
-    type: 'bocc',
-    location: '1110 Summit Street, Norwood Sheriff Annex, Norwood, CO 81423',
-    civicClerkId: 1001,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/1001/files/agenda/1899'
+    date: "October 28, 2026",
+    time: "4:00 PM",
+    title: "Board of County Commissioners Work Session",
+    type: "bocc",
+    location: "Placerville School House, Placerville",
+    civicClerkId: 1036,
+    note: null
   },
   {
-    date: 'July 9, 2026',
-    time: '9:30 AM',
-    title: 'Planning Commission and Board of County Commissioners Joint Work Session',
-    type: 'planning',
-    civicClerkId: 921,
-    agendaUrl: 'https://sanmiguelcoco.portal.civicclerk.com/event/921/files/agenda/1903'
+    date: "November 4, 2026",
+    time: "9:30 AM",
+    title: "Board of County Commissioners Meeting",
+    type: "bocc",
+    location: "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    civicClerkId: 889,
+    note: null
   }
 ];
 
