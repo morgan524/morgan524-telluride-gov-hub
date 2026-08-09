@@ -3257,6 +3257,7 @@ function readJsFile(filePath) {
 const { extractJsArray, extractJsObject } = require('./lib/extract.js');
 // JS→JSON migration (Phase 1): dual-write mirrored arrays to data/<name>.json.
 const { mirrorAll } = require('./lib/json-mirror.js');
+const { countyRowsFromEvents, mergeCountyRows } = require('./lib/civicclerk-events.js');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 
 /**
@@ -5193,6 +5194,74 @@ async function rebuildMedMeetings() {
   });
 }
 
+// Rebuild COUNTY_CACHED_DATA from the CivicClerk event calendar.
+//
+// syncCountyAgendas() below has queried this same API for months, but only to
+// patch agendaUrl onto rows a human hand-typed into gov-data.js. The last one
+// was typed 2026-03-25, so by 2026-08-09 the array held ZERO upcoming meetings
+// while the API returned eleven. The page didn't go blank only because
+// getCountyCachedMeetings() falls back to MANUAL_SUMMARIES — the primary path
+// had failed silently and the backup was carrying San Miguel County.
+//
+// The merge preserves hand-curated rows the API doesn't know about (the SSR
+// Housing Code Update roundtables live in DocumentCenter, not CivicClerk), so
+// this ADDS automation without taking away the ability to hand-add a meeting.
+async function rebuildCountyMeetings(existing, now = new Date()) {
+  console.log('\n🏛  Rebuilding San Miguel County meetings from CivicClerk...');
+  const horizon = new Date(now.getTime() + 90 * 86400000);
+  const toIso = (d) => d.toISOString().split('.')[0] + 'Z';
+  const filter = `startDateTime ge ${toIso(now)} and startDateTime le ${toIso(horizon)}`;
+  const url = `${AGENDA_SOURCES.county.apiBase}/Events?` +
+    `$filter=${encodeURIComponent(filter)}&$orderby=startDateTime&$top=100`;
+
+  let resp;
+  try { resp = await fetch(url); }
+  catch (e) { console.warn(`  CivicClerk fetch error: ${e.message} — preserving existing COUNTY_CACHED_DATA`); return null; }
+  if (resp.status !== 200) {
+    console.warn(`  CivicClerk API returned HTTP ${resp.status} — preserving existing COUNTY_CACHED_DATA`);
+    return null;
+  }
+  let events;
+  try { events = JSON.parse(resp.text).value || []; }
+  catch (e) { console.warn(`  CivicClerk JSON parse error: ${e.message} — preserving existing`); return null; }
+
+  // A successful call that returns nothing is NOT a reason to empty the list —
+  // that is the silent-wipe shape this whole area keeps producing.
+  if (!events.length) { console.warn('  CivicClerk returned 0 events — preserving existing COUNTY_CACHED_DATA'); return null; }
+
+  const rows = countyRowsFromEvents(events);
+  const merged = mergeCountyRows(existing, rows, { now });
+  console.log(`  ${events.length} CivicClerk event(s) → ${merged.length} row(s) after merge`);
+  return merged.length ? merged : null;
+}
+
+// Rebuild FIRE_CACHED_DATA: real Traction-Rec agendas + 3rd-Tuesday regulars.
+//
+// VERIFIED CADENCE — every regular 2026 board meeting the district posted lands
+// on the 3rd Tuesday: Jan 20, Feb 17, Mar 17, Apr 21, May 19, Jun 16. (A single
+// Jul 17 Friday agenda is an off-cycle exception; the scraped entry carries it,
+// the projection doesn't invent it.)
+//
+// Why a projection is needed at all: telluridefire.com posts an agenda only a
+// few days before each meeting, so a scraped-only list is EMPTY most of the
+// month. Before this (2026-08-09) FIRE_CACHED_DATA had 0 upcoming meetings and
+// the Fire District simply vanished from the meetings page, even though the
+// board was still meeting on its normal schedule. Med/Ophir/Ridgway already
+// solve this the same way — Fire was the one district left un-wired.
+async function rebuildFireMeetings() {
+  console.log('\n🚒 Rebuilding Fire District meetings...');
+  const map = await syncFireAgendas();              // { 'Month D, YYYY': url } or null
+  if (map === null) { console.warn('  Fire: fetch failed — preserving existing FIRE_CACHED_DATA'); return null; }
+  const scraped = Object.keys(map).map(date => ({ date, agendaUrl: map[date] }));
+  return assembleBoardStubs(scraped, { nth: 3, weekday: 2 }, {
+    title: 'Board of Directors Meeting',
+    time: '5:30 PM',
+    location: '131 W Columbia Ave, Telluride, CO 81435',
+    placeholders: 2,
+    note: 'Next scheduled meeting -- agenda typically posted a few days before.'
+  });
+}
+
 // Rebuild SCHOOL_CACHED_DATA: scraped-only (no weekday placeholder). The Board
 // of Education's meeting dates are set by the academic calendar and land on the
 // 2nd / 3rd / last Tuesday depending on the month — there is NO reliable weekday
@@ -6920,8 +6989,42 @@ async function main() {
   // Patches CACHED_DATA entries in gov-data.js with newly-published agenda
   // PDF URLs. Runs BEFORE summary generation so any agenda detected this
   // run can be summarized in the same run.
+  // ── 0-pre. Rebuild the two lists that had gone dry (2026-08-09) ──
+  // Both run BEFORE the agenda-URL patch loop below so patchAgendaUrls can
+  // attach freshly-published agendas to the rows created here in the same run.
+  //
+  // FIRE is no longer in that patch loop: rebuildFireMeetings() calls
+  // syncFireAgendas() itself and folds the URLs in via assembleBoardStubs,
+  // exactly as Med/MV already do.
+  try {
+    const existingCounty = extractJsArray(govDataSrc, 'COUNTY_CACHED_DATA') || [];
+    const countyRows = await rebuildCountyMeetings(existingCounty);
+    if (countyRows && countyRows.length) {
+      if (JSON.stringify(countyRows) !== JSON.stringify(existingCounty)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'COUNTY_CACHED_DATA', countyRows, false);
+        govDataChanged = true;
+        console.log(`  COUNTY_CACHED_DATA: rebuilt (${countyRows.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'COUNTY_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  County rebuild error: ${e.message}`); }
+
+  try {
+    const fireStubs = await rebuildFireMeetings();
+    if (fireStubs && fireStubs.length) {
+      const existing = extractJsArray(govDataSrc, 'FIRE_CACHED_DATA') || [];
+      if (JSON.stringify(fireStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'FIRE_CACHED_DATA', fireStubs, false);
+        govDataChanged = true;
+        console.log(`  FIRE_CACHED_DATA: rebuilt (${fireStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'FIRE_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Fire rebuild error: ${e.message}`); }
+
   for (const [arrName, syncFn] of [
-    ['FIRE_CACHED_DATA',      syncFireAgendas],
     ['COUNTY_CACHED_DATA',    syncCountyAgendas],
     ['TELLURIDE_CACHED_DATA', syncTellurideAgendas]
   ]) {
