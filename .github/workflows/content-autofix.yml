@@ -152,8 +152,30 @@ jobs:
             printf '\nCorrections live in `data/content-corrections.json` and re-apply after every scrape (a direct data edit would be overwritten within six hours). Every row expires on its own.\n'
           } > /tmp/pr-body.md
 
-          gh pr create --title "🔎 Proposed date corrections $(date -u +'%Y-%m-%d')" \
-                       --body-file /tmp/pr-body.md --base main --head "$BRANCH"
+          # Creating a PR from Actions requires "Allow GitHub Actions to create
+          # and approve pull requests" (Settings → Actions → General). If it's
+          # off, the branch is already pushed and the review still has to reach
+          # a human — so fall back to an issue carrying the same evidence and a
+          # one-click compare link. Losing a proposal because of a repo checkbox
+          # would be the silent-failure shape this whole system exists to avoid.
+          TITLE="🔎 Proposed date corrections $(date -u +'%Y-%m-%d')"
+          if gh pr create --title "$TITLE" --body-file /tmp/pr-body.md --base main --head "$BRANCH"; then
+            exit 0
+          fi
+          echo "::warning::Could not open a PR (Actions may lack PR-creation permission) — opening an issue instead."
+          {
+            printf '**Branch `%s` is pushed and ready.** Open the PR here: %s/%s/compare/main...%s?expand=1\n\n' \
+              "$BRANCH" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$BRANCH"
+            printf -- '---\n\n'
+            cat /tmp/pr-body.md
+            printf '\n\n_If this keeps happening, enable **Settings → Actions → General → Allow GitHub Actions to create and approve pull requests** and the workflow will open PRs directly._\n'
+          } > /tmp/issue-body.md
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file /tmp/issue-body.md
+          else
+            gh issue create --title "$TITLE" --body-file /tmp/issue-body.md
+          fi
 
       - name: Upload run logs
         if: always()
