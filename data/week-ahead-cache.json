@@ -1,18 +1,18 @@
 {
-  "hash": "ddfb397d5d30f7f520c3d1abe1fd2bb7d0f31d53",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Town Council meeting, where the Colorado Wildfire Resiliency Code hits third reading — a vote that would rewrite land use, historic review, and landscaping rules for property owners across Telluride. Ridgway's council also has a full plate Wednesday, with a public hearing on the Hyde Subdivision and a joint work session on a new Housing Action Plan required by state law. Meanwhile, the Mushroom Festival rolls into town midweek and the Open Space Commission does a site walk Monday to scope a potential new trail from Bear Creek to Firecracker Hill.",
+  "hash": "9ea7161cb885621c87322abba991a58f99df877f",
+  "lede": "Town Council votes Tuesday on third reading of the Colorado Wildfire Resiliency Code — a Land Use Code amendment that would change historic review standards and landscaping rules for property owners valley-wide, so it's worth paying attention. Ridgway's council also holds a public hearing Wednesday on the Hyde Subdivision resubdivision and kicks off its state-mandated Housing Action Plan work session. Meanwhile, the Mushroom Festival rolls into town midweek and the Open Space Commission takes a site walk Monday to scout a new Bear Creek trail alignment.",
   "notable": [
     {
       "id": 2,
-      "stake": "Third reading vote on wildfire code that reshapes land use and landscaping rules."
+      "stake": "Third-reading vote on wildfire code changes affecting historic review and landscaping rules."
     },
     {
       "id": 7,
-      "stake": "Public hearing on Hyde Subdivision replatting and vote on state-mandated Housing Action Plan."
+      "stake": "Public hearing on Hyde Subdivision plus state-required Housing Action Plan work session."
     },
     {
       "id": 9,
-      "stake": "County energy code update could revise building standards for new construction and major renovations."
+      "stake": "County energy code update and subdivision mechanics review could reshape new construction standards."
     }
   ]
 }
