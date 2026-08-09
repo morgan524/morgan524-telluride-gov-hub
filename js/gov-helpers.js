@@ -3977,32 +3977,216 @@ const SHERBINO_EVENTS = [
 // seasonal items (Ski Days, Adopt-a-Liftie) are intentionally omitted until
 // they resume. Safe to hand-edit between runs.
 const BEACON_EVENTS = [
-  { title:"Friday Feast", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's twice-a-month free home-cooked dinner for lifties and all other seasonal workers.", date:"2026-06-12", time:"6:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"The Well Coffee Shop, Telluride", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Friday Feast", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's twice-a-month free home-cooked dinner for lifties and all other seasonal workers.", date:"2026-07-10", time:"6:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"The Well Coffee Shop, Telluride", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Young Adult Gathering", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly gathering for seasonal and young-adult workers — food, conversation, and Bible study.", date:"2026-06-16", time:"6:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"The Well, 122 S Aspen St, Telluride", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Young Adult Gathering", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly gathering for seasonal and young-adult workers — food, conversation, and Bible study.", date:"2026-06-23", time:"6:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"The Well, 122 S Aspen St, Telluride", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Young Adult Gathering", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly gathering for seasonal and young-adult workers — food, conversation, and Bible study.", date:"2026-06-30", time:"6:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"The Well, 122 S Aspen St, Telluride", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Pickleball Night", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly pickleball night — no experience necessary, all supplies provided.", date:"2026-06-11", time:"7:00 – 9:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"Telluride Racket Club", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Pickleball Night", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly pickleball night — no experience necessary, all supplies provided.", date:"2026-06-18", time:"7:00 – 9:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"Telluride Racket Club", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
-  { title:"Pickleball Night", link:"https://www.beacontelluride.com/upcoming-events", description:"Beacon's weekly pickleball night — no experience necessary, all supplies provided.", date:"2026-06-25", time:"7:00 – 9:00 PM", source:"beacon", sourceLabel:"Beacon", category:"Community Event", location:"Telluride Racket Club", imageUrl:"https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp" },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-08-11",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-08-13",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Friday Feast",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A twice a month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel.",
+    date: "2026-08-14",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well Coffee Shop",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-08-18",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-08-20",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-08-25",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-08-27",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-09-01",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-09-03",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-09-08",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-09-10",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Weekly Young Adult Gathering",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    date: "2026-09-15",
+    time: "6:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "The Well, 122 S Aspen",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    title: "Pickleball Nights",
+    link: "https://www.beacontelluride.com/upcoming-events",
+    description: "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    date: "2026-09-17",
+    time: "7:00-9:00 PM",
+    source: "beacon",
+    sourceLabel: "Beacon",
+    category: "Community Event",
+    location: "Telluride Racket Club",
+    imageUrl: "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  }
 ];
 
 
 // Telluride Chamber Music concerts (telluridechambermusic.org/events).
 // Bot-refreshed by the chamber-music-events-refresh scheduled task.
 const CHAMBER_MUSIC_EVENTS = [
-  { title:"Resonance & Romance", link:"https://telluridechambermusic.org/concert/romance", description:"A summer chamber music concert presented by Telluride Chamber Music.", date:"2026-06-28", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/romance.webp" },
-  { title:"Frame Drum Workshop", link:"https://telluridechambermusic.org/concert/frame-drum", description:"A frame drum workshop presented by Telluride Chamber Music.", date:"2026-06-29", time:"5:30 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/frame-drum.webp" },
-  { title:"Local Artists Night", link:"https://telluridechambermusic.org/concert/local-artists-night", description:"An evening showcasing local artists, presented by Telluride Chamber Music.", date:"2026-06-30", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/local-artists-night.webp" },
-  { title:"From the Music Room — A Trip Down Memory Lane", link:"https://telluridechambermusic.org/concert/music-room", description:"A chamber music concert presented by Telluride Chamber Music.", date:"2026-07-02", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/music-room.webp" },
-  { title:"Braided Traditions — A Festival of Cultural Roots", link:"https://telluridechambermusic.org/concert/braided", description:"A festival concert celebrating cultural roots, presented by Telluride Chamber Music.", date:"2026-07-05", time:"3:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/braided.webp" },
-  { title:"Chill with Chamber Music! — Norwood", link:"https://telluridechambermusic.org/concert/norwood-jul", description:"A relaxed chamber music concert in Norwood, presented by Telluride Chamber Music.", date:"2026-07-23", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Norwood", imageUrl:"https://telluridechambermusic.org/concerts/norwood-jul.webp" },
-  { title:"The Brass Family — Kids' Concert", link:"https://telluridechambermusic.org/concert/brass-family", description:"A family-friendly kids' concert presented by Telluride Chamber Music.", date:"2026-07-31", time:"11:00 AM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/brass-family.webp" },
-  { title:"New York Philharmonic Principal Brass Quintet", link:"https://telluridechambermusic.org/concert/ny-phil", description:"A concert by the New York Philharmonic Principal Brass Quintet, presented by Telluride Chamber Music.", date:"2026-07-31", time:"7:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/ny-phil.webp" },
-  { title:"Telluride Community Concert — August", link:"https://telluridechambermusic.org/concert/community-aug", description:"A community concert presented by Telluride Chamber Music.", date:"2026-08-13", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/community-aug.webp" },
-  { title:"Chill with Chamber Music! — Norwood", link:"https://telluridechambermusic.org/concert/norwood-aug", description:"A relaxed chamber music concert in Norwood, presented by Telluride Chamber Music.", date:"2026-08-27", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Norwood", imageUrl:"https://telluridechambermusic.org/concerts/norwood-aug.webp" },
-  { title:"Telluride Community Concert — September", link:"https://telluridechambermusic.org/concert/community-sep", description:"A community concert presented by Telluride Chamber Music.", date:"2026-09-10", time:"6:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/community-sep.webp" },
-  { title:"Balourdet Quartet", link:"https://telluridechambermusic.org/concert/balourdet", description:"A concert by the Balourdet Quartet, presented by Telluride Chamber Music.", date:"2026-09-13", time:"7:00 PM", source:"chamber-music", sourceLabel:"Telluride Chamber Music", category:"Concert", location:"Telluride", imageUrl:"https://telluridechambermusic.org/concerts/balourdet.webp" },
+  {
+    title: "Telluride Community Concert — August",
+    link: "https://telluridechambermusic.org/concert/community-aug",
+    description: "An hour of chamber music on the deck — the perfect way to unwind.",
+    date: "2026-08-13",
+    time: "6:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Telluride Science and Innovation Center",
+    imageUrl: "https://telluridechambermusic.org/concerts/community-aug.webp"
+  },
+  {
+    title: "Chill with Chamber Music! — Norwood",
+    link: "https://telluridechambermusic.org/concert/norwood-aug",
+    description: "An hour of gorgeous music. The perfect way to unwind after your day.",
+    date: "2026-08-27",
+    time: "6:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "The Livery, Norwood, CO",
+    imageUrl: "https://telluridechambermusic.org/concerts/norwood-aug.webp"
+  },
+  {
+    title: "Telluride Community Concert — September",
+    link: "https://telluridechambermusic.org/concert/community-sep",
+    description: "An hour of chamber music on the deck — the perfect way to unwind.",
+    date: "2026-09-10",
+    time: "6:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Telluride Science and Innovation Center",
+    imageUrl: "https://telluridechambermusic.org/concerts/community-sep.webp"
+  },
+  {
+    title: "Balourdet Quartet",
+    link: "https://telluridechambermusic.org/concert/balourdet",
+    description: "An evening of Ravel and Brahms in the historic Sheridan Opera House.",
+    date: "2026-09-13",
+    time: "7:00 PM",
+    source: "chamber-music",
+    sourceLabel: "Telluride Chamber Music",
+    category: "Concert",
+    location: "Sheridan Opera House, Telluride, CO",
+    imageUrl: "https://telluridechambermusic.org/concerts/balourdet.webp"
+  }
 ];
 
 

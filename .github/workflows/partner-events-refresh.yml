@@ -1,0 +1,112 @@
+name: Partner Events Refresh
+
+# Weekly refresh of the event data that has no feed behind it, so the 6-hourly
+# content-refresh bot can't touch it — each source publishes its schedule as
+# prose on one page, which a script reads with Claude's help:
+#
+#   scripts/partner-events-refresh.js   BEACON_EVENTS, CHAMBER_MUSIC_EVENTS
+#   scripts/recurring-acts-refresh.js   recurring-acts.json (the specific film
+#                                       or band behind a generic series title)
+#
+# WHY IT LIVES HERE (2026-08-09): all three were Claude *scheduled tasks* on
+# Morgan's Mac, pointed at ~/Documents/Claude/Projects/Livable-Telluride2 — the
+# workspace retired 2026-06-26. They kept firing weekly into a directory that no
+# longer existed, and did nothing, while the scheduler still recorded a
+# lastRunAt that made them look healthy. BEACON_EVENTS sat frozen at
+# 2026-06-11..07-10 — entirely in the past — for a month.
+#
+# Two things follow from that, and both matter more than the schedule:
+#   • no local-machine dependency: this runs in the cloud like everything else
+#     (contrast meeting-recaps.yml, which MUST stay on the Mac because YouTube
+#     blocks caption downloads from runner IPs);
+#   • it fails LOUDLY. Each script throws on an unreachable page, an empty
+#     extraction, or a suspicious collapse in entry count, and the ci-health-issue
+#     step below turns that into a GitHub issue. A quiet weekly no-op is exactly
+#     what went unnoticed for six weeks.
+#
+# Timing: Monday 14:30 UTC (≈8:30am MT) sits clear of every other scheduled job
+# that writes js/gov-helpers.js — content-refresh (0/6/12/18), content-review
+# (1/7/13/19), the 13:00 reviews and the 15:00 digest/vote-tracker runs.
+
+on:
+  schedule:
+    - cron: '30 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: partner-events-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Refresh Beacon + Chamber Music events
+        id: partner
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
+        run: |
+          set -o pipefail
+          node scripts/partner-events-refresh.js 2>&1 | tee /tmp/partner-events.log
+
+      # Runs even if the step above failed: the two jobs read different sources
+      # and write different files, so one broken partner site must not also cost
+      # us the week's recurring-acts refresh. The job still fails at the end.
+      - name: Refresh recurring series acts
+        if: always()
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
+        run: |
+          set -o pipefail
+          node scripts/recurring-acts-refresh.js 2>&1 | tee /tmp/recurring-acts.log
+
+      # Path-limited on purpose — these scripts touch exactly these files, and a
+      # bare `git add -A` would sweep in anything else a run happened to leave
+      # behind (see the workflow-log-routing note in memory).
+      - name: Commit and push
+        if: always()
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -- js/gov-helpers.js data recurring-acts.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit — partner calendars already current."
+            exit 0
+          fi
+          git commit -m "🎪 Partner events refresh $(date -u +'%Y-%m-%d')
+
+          Beacon, Chamber Music, and recurring-series acts."
+          git pull --rebase origin main
+          git push
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: partner-events-logs-${{ github.run_id }}
+          path: /tmp/*.log
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Partner Events Refresh workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

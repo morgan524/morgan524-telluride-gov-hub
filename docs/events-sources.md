@@ -167,3 +167,80 @@ synchronously from the events-render path) reads the const directly.
 
 If LibCal ever changes the api_events.php response format, update
 `parseWilkinsonHtml()` in `scripts/content-refresh.js`.
+
+## Feed-less partner sources — the weekly Partner Events Refresh
+
+Three pieces of event data have **no feed at all**: the venue publishes its
+schedule as prose on one page. `content-refresh.js` therefore never touches
+them, and they're refreshed once a week by
+`.github/workflows/partner-events-refresh.yml` (Mondays 14:30 UTC ≈ 8:30am MT):
+
+| Data | Script | Source page |
+| ---- | ------ | ----------- |
+| `BEACON_EVENTS` | `scripts/partner-events-refresh.js` | beacontelluride.com/upcoming-events |
+| `CHAMBER_MUSIC_EVENTS` | `scripts/partner-events-refresh.js` | telluridechambermusic.org/events/ |
+| `recurring-acts.json` | `scripts/recurring-acts-refresh.js` | per-series detail pages |
+
+Both scripts share `scripts/lib/scrape.js` (fetch, HTML→text, Claude call, and
+**all** Mountain-time date resolution).
+
+### Claude reads; the script does the arithmetic
+
+Claude is asked only for structured facts — a weekday, or the month/day the
+page prints — and **never for a calendar date**. `resolveMonthDay()` and
+`weeklyOccurrences()` in `lib/scrape.js` turn those into real MT dates.
+
+That split exists because these pages print dates with no year, and a page
+usually lists a whole season *including dates already past* ("Friday Feast —
+June 12, July 10, Aug 14"). Rolling every past month/day forward a year turned
+Beacon's spent June and July dates into 2027 entries — caught in the
+2026-08-09 dry run. `resolveMonthDay` now only rolls forward when the
+next-year date is within `ROLLOVER_WINDOW_DAYS` (120), so a January concert
+listed in December still resolves while a spent June date is simply dropped.
+
+### These jobs must fail loudly
+
+All three ran as Claude **scheduled tasks on Morgan's Mac** until 2026-08-09.
+They pointed at `~/Documents/Claude/Projects/Livable-Telluride2` — the
+workspace retired 2026-06-26 — so from that date they fired weekly into a
+directory that didn't exist and did nothing. Nothing complained: the scheduler
+kept recording a `lastRunAt`, so they looked healthy. `BEACON_EVENTS` sat
+frozen at 2026-06-11..07-10, entirely in the past, for a month.
+
+Hence the failure policy. A source that won't fetch, won't parse, yields zero
+events, or **shrinks by more than 60%** throws, and the workflow's
+`ci-health-issue` step opens a GitHub issue. An array is never overwritten with
+an empty one. If you add a fourth partner source, keep that property — a silent
+weekly no-op is the specific failure this design exists to prevent.
+
+The one deliberate exception is per-series: in `recurring-acts-refresh.js`, a
+series whose page is *unreachable* keeps its existing entries (one venue having
+a bad afternoon must not blank a good card), while a series whose page loads
+fine but names no acts is correctly dropped. A run where **every** series fails
+still throws.
+
+### Change detection is semantic
+
+Both scripts compare on date/title/time/location/link — never on
+`description`, which Claude rewords slightly on every extraction. Comparing the
+full record would produce a commit every Monday forever.
+
+### Two gotchas
+
+- **Don't double-list.** `COVERED_ELSEWHERE` in `recurring-acts-refresh.js`
+  excludes series that already reach the page through a dedicated array.
+  Discovery legitimately finds Music on the Green, but `MUSIC_ON_THE_GREEN`
+  already carries the same per-band entries on the same dates.
+- **Movie posters are TMDB's job.** A series whose name matches
+  `/movie|film|cinema/i` always gets `image: ""`; `content-refresh.js` Task 23
+  fills the poster from TMDB. An existing image is preserved on rewrite so a
+  filled poster is never blanked.
+
+### recurring-acts.json currently has no reader
+
+The pre-redesign `events.html` fetched it, rendered each occurrence as a Daily
+card, and suppressed the generic series from the Recurring calendar. The
+redesign cutover (`0e7e0335`) dropped that reader, so as of 2026-08-09 the file
+is written by this job and by content-refresh's TMDB task but **rendered
+nowhere**. The refresher is scheduled anyway so the data is current whenever
+the reader returns — but until then, changes to it are invisible on the site.

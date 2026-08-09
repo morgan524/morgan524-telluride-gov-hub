@@ -49,7 +49,7 @@ provider changes, a script is restructured), update it in the same commit.
 | ----------- | ---- |
 | Cloudflare Worker proxy, content-refresh.js, TT/KOTO news scraping, "news isn't refreshing" | `docs/news-pipeline.md` |
 | Local News tab — San Miguel Basin Forum, Humane Society animals, card overrides/filtering/logo alignment | `docs/local-news.md` |
-| Events tab — KOTO calendar, Wilkinson, cross-source dedup, within-day sort, per-group logos | `docs/events-sources.md` |
+| Events tab — KOTO calendar, Wilkinson, cross-source dedup, within-day sort, per-group logos, the weekly feed-less partner refresh (Beacon / Chamber Music / recurring-acts) | `docs/events-sources.md` |
 | Mailchimp — two-subscription model, Subscribe form, blog-from-campaigns, feed.xml, RSS digest, "I got nothing" | `docs/mailchimp.md` |
 | Email-to-events — events@ Gmail → Apps Script → Sheet → Task 5 pipeline + the 6 install gotchas | `docs/email-to-events.md` |
 | Firestore rules, Hub-Bub auth, admin-email check | `docs/firestore-auth.md` |
