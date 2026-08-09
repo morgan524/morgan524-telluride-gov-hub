@@ -152,12 +152,13 @@ async function proposeDateFixes(findings, todayISO) {
     // they contradict each other. Whichever got checked first won. That is the
     // confidently-wrong outcome this whole tier exists to avoid.
     const confirmations = [];
+    const unreadable = [];
     for (const claim of linked) {
       try {
         const res = await fetchUrl(claim.link);
-        if (res.status !== 200) continue;
+        if (res.status !== 200) { unreadable.push(`${claim.link} (HTTP ${res.status})`); continue; }
         const text = htmlToText(res.text).slice(0, 20000);
-        if (text.length < 200) continue;
+        if (text.length < 200) { unreadable.push(`${claim.link} (no readable text)`); continue; }
         const answer = await callClaudeJson(VERIFY_SYSTEM, verifyPrompt(f, text, claim.link));
         if (answer && answer.verdict === 'confirms' && f.claims.some(c => c.date === answer.date)) {
           confirmations.push({ ...answer, checkedUrl: claim.link });
@@ -165,8 +166,21 @@ async function proposeDateFixes(findings, todayISO) {
           unresolved.push({ finding: f, why: `${claim.link}: ${answer.note}` });
         }
       } catch (e) {
-        unresolved.push({ finding: f, why: `${claim.link}: ${e.message}` });
+        unreadable.push(`${claim.link} (${e.message})`);
       }
+    }
+
+    // If ANY disputed source's page couldn't be read, we have not checked them
+    // all — and a one-sided read looks exactly like agreement. This is not
+    // hypothetical: from GitHub runner IPs KOTO returns 504, so a cloud run saw
+    // only telluride.com and proposed its date as confirmed, contradicting what
+    // KOTO's own page says. Silence from a source is not consent.
+    if (unreadable.length) {
+      unresolved.push({
+        finding: f,
+        why: `could not read ${unreadable.length} of ${linked.length} disputed source page(s), so the check is one-sided: ${unreadable.join('; ')}`,
+      });
+      continue;
     }
 
     const distinct = [...new Set(confirmations.map(c => c.date))];

@@ -95,6 +95,15 @@ function resolveMonthDay(month, day, todayISO) {
 // doesn't allow fails closed, which is the safe direction but still a bug.
 const PROXY_HOSTS = new Set([
   'events.ourayridgwayevents.com',
+  // KOTO blocks/times out from GitHub runner IPs — it returned 504 on ten live
+  // event URLs in one 2026-08-09 review run. That is not just noise: when
+  // content-autofix.js verifies a date conflict, an unreachable KOTO means it
+  // reads only the OTHER source, sees no contradiction, and confidently
+  // proposes the wrong date with a citation. Route it through the Worker.
+  'koto.org',
+  'www.koto.org',
+  'telluridenews.com',
+  'www.telluridenews.com',
 ]);
 
 function maybeProxy(url) {
