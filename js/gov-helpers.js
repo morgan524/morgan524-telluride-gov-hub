@@ -272,7 +272,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"e232fffd40cd7ad2"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"3f4e90cd76c3d7c9"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
@@ -1534,6 +1534,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Learn about the Enterprise Zone expansion",
+    source: "Telluride Times",
+    date: "August 9, 2026",
+    firstSeen: "2026-08-09",
+    newsTopic: "government",
+    copy: "San Miguel County's East End is now part of Colorado's Enterprise Zone, approved in July and running through 2035, unlocking state tax credits for local businesses and nonprofits. Credits include 3% on business investments, $1,100 per new hire, and 25% on donations to qualifying projects. Two info sessions are set for Aug. 17.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_13654f4f-aa9e-4a0e-a981-0570501111a8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b2/4b2bd3ef-c563-45b9-a633-a6c265e7c33a/6a7784421a0bd.image.png",
+    imgHiRes: true
+  },
   {
     title: "Shroom-tastic",
     source: "Telluride Times",
@@ -3082,17 +3094,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-09/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-09T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-08-09/",
