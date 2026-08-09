@@ -482,5 +482,27 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    "title": "Mountain Village Merchant Meeting",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
+    "description": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    "pubDate": "2026-09-08T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
+  },
+  {
+    "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    "pubDate": "2026-09-08T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ]

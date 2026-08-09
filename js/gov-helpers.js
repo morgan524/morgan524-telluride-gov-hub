@@ -1518,8 +1518,8 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "August 9, 2026",
     firstSeen: "2026-08-09",
     newsTopic: "arts-culture",
-    copy: "After its start on Aug. 12, the Telluride Mushroom Festival continues through Sunday, Aug. 16, at a range of venues, indoor and outdoor.",
-    claudeSummary: false,
+    copy: "The 46th Telluride Mushroom Festival runs Aug. 12–16 across town, balancing mycological science with art, foraging, and culinary programming. This year's theme is \"Rewild,\" with speakers including ethnobotanist Mark Plotkin and several bestselling authors. Many events are free and open to all experience levels.",
+    claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_2503ab94-1617-49e9-9947-3ce87c82788a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5b/95b21348-ad7e-4641-b2a1-2f751ee6f26a/6a7781c14d621.image.jpg",
     imgHiRes: true
@@ -6282,6 +6282,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
+  },
+  {
+    title: "Mountain Village Merchant Meeting",
+    link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
+    description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
+    pubDate: "2026-09-08T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
+  },
+  {
+    title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
+    link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
+    pubDate: "2026-09-08T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   }
 ];
 
