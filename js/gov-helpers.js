@@ -731,6 +731,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Community Meeting: Regarding flooding, economic impacts and community resilience",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
+  },
+  {
     title: "Flood ravages homes",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -1502,6 +1512,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Shroom-tastic",
+    source: "Telluride Times",
+    date: "August 9, 2026",
+    firstSeen: "2026-08-09",
+    newsTopic: "arts-culture",
+    copy: "After its start on Aug. 12, the Telluride Mushroom Festival continues through Sunday, Aug. 16, at a range of venues, indoor and outdoor.",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news/article_2503ab94-1617-49e9-9947-3ce87c82788a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/5b/95b21348-ad7e-4641-b2a1-2f751ee6f26a/6a7781c14d621.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘Beacon of light’",
     source: "Telluride Times",
@@ -2381,6 +2403,60 @@ const TELLURIDE_TIMES_ARTICLES = [
     href: "https://www.telluridenews.com/news/article_8e17fdf6-e2b4-40b4-8b6a-026044b8970a.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d2/ad2a4eae-cc62-4ed3-a012-ce4cdef87e67/6a651c98276f9.image.jpg",
     imgHiRes: true
+  },
+  {
+    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "government",
+    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
+    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
+    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "recreation",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
+    title: "Shandoka, Carhenge Lots Closed",
+    source: "Town of Telluride",
+    date: "August 8, 2026",
+    newsTopic: "community",
+    copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
+    href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
+    img: ""
   },
   {
     title: "Ridgway Town Council Regular Meeting Agenda",
