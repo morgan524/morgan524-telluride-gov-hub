@@ -144,7 +144,14 @@ async function proposeDateFixes(findings, todayISO) {
     const linked = f.claims.filter(c => c.link);
     if (!linked.length) { unresolved.push({ finding: f, why: 'no linked page to check' }); continue; }
 
-    let settled = null;
+    // Check EVERY linked page, never stop at the first that confirms something.
+    //
+    // Stopping early made the answer depend on claim ordering: the first live
+    // run concluded Aug 19 for "Best Day Ever" from telluride.com's page, while
+    // a local run concluded Aug 18 from KOTO's — both pages state a date, and
+    // they contradict each other. Whichever got checked first won. That is the
+    // confidently-wrong outcome this whole tier exists to avoid.
+    const confirmations = [];
     for (const claim of linked) {
       try {
         const res = await fetchUrl(claim.link);
@@ -153,19 +160,34 @@ async function proposeDateFixes(findings, todayISO) {
         if (text.length < 200) continue;
         const answer = await callClaudeJson(VERIFY_SYSTEM, verifyPrompt(f, text, claim.link));
         if (answer && answer.verdict === 'confirms' && f.claims.some(c => c.date === answer.date)) {
-          settled = { ...answer, checkedUrl: claim.link };
-          break;
+          confirmations.push({ ...answer, checkedUrl: claim.link });
+        } else if (answer && answer.note) {
+          unresolved.push({ finding: f, why: `${claim.link}: ${answer.note}` });
         }
-        if (answer && answer.note) unresolved.push({ finding: f, why: `${claim.link}: ${answer.note}` });
       } catch (e) {
         unresolved.push({ finding: f, why: `${claim.link}: ${e.message}` });
       }
     }
 
+    const distinct = [...new Set(confirmations.map(c => c.date))];
+    if (distinct.length > 1) {
+      // The sources contradict each other ON THEIR OWN PAGES. No amount of
+      // re-reading settles that — somebody has to ring the organizer.
+      unresolved.push({
+        finding: f,
+        why: `sources contradict each other on their own pages: ` +
+             confirmations.map(c => `${c.date} per ${c.checkedUrl}`).join(' vs '),
+      });
+      continue;
+    }
+
+    const settled = confirmations[0] || null;
     if (!settled) {
       if (!unresolved.some(u => u.finding === f)) unresolved.push({ finding: f, why: 'no page settled it' });
       continue;
     }
+    // Record every page that agreed, so the reviewer sees the corroboration.
+    settled.corroboration = confirmations.map(c => c.checkedUrl);
 
     // Correct every array that disagrees with the confirmed date.
     const wrongClaims = f.claims.filter(c => c.date !== settled.date);
