@@ -236,11 +236,31 @@ full record would produce a commit every Monday forever.
   fills the poster from TMDB. An existing image is preserved on rewrite so a
   filled poster is never blanked.
 
-### recurring-acts.json currently has no reader
+### How recurring-acts.json reaches the page
 
-The pre-redesign `events.html` fetched it, rendered each occurrence as a Daily
-card, and suppressed the generic series from the Recurring calendar. The
-redesign cutover (`0e7e0335`) dropped that reader, so as of 2026-08-09 the file
-is written by this job and by content-refresh's TMDB task but **rendered
-nowhere**. The refresher is scheduled anyway so the data is current whenever
-the reader returns — but until then, changes to it are invisible on the site.
+The pre-redesign `events.html` fetched the file itself, rendered each occurrence
+as a "Daily" card, and suppressed the generic series from the Recurring
+calendar. The redesign cutover (`0e7e0335`) dropped that reader, so for six
+weeks the file was written by two jobs and displayed nowhere.
+
+It was restored 2026-08-09 **at build time instead** — the rebuilt page renders
+`data/events-index.json` and stays dumb, so `scripts/build-events-index.js`
+folds the acts in as a source (`ACTS_FILE`, first in `SOURCES`). They inherit
+dedup, town-pinning, type classification and fallback images for free, and no
+page-side fetch was re-added.
+
+Two things to know if you touch that builder:
+
+- **The acts source must stay first in `SOURCES`.** Collisions resolve
+  first-source-wins, and a specific act should beat a generic entry.
+- **`actSuppressionIndex()` drops the generic card** on any date a specific act
+  covers, matching by normalized-title substring. That's what keeps "Movie
+  Mondays in Hartwell Park" from sitting next to "Movie Mondays: Top Gun".
+  The substring rule is deliberately narrow: suppressing "Telluride Farmers'
+  Market Music Series" must not also suppress "Telluride Farmers Market", which
+  is a genuinely different event that runs the same morning.
+
+`partner-events-refresh.yml` re-runs the index builder after the refresh
+scripts. Without that step a week's changes would sit invisible until the next
+content-refresh rebuilt the index — up to six hours, and exactly the kind of
+quiet gap this whole area keeps producing.

@@ -74,6 +74,16 @@ jobs:
           set -o pipefail
           node scripts/recurring-acts-refresh.js 2>&1 | tee /tmp/recurring-acts.log
 
+      # events.html renders data/events-index.json, not the per-source mirrors,
+      # so without this the week's refresh would sit invisible until the next
+      # content-refresh happened to rebuild the index (up to 6h). Runs even if a
+      # refresh step failed — the other source's changes still deserve to land.
+      - name: Rebuild the events index
+        if: always()
+        run: |
+          set -o pipefail
+          node scripts/build-events-index.js 2>&1 | tee -a /tmp/partner-events.log
+
       # Path-limited on purpose — these scripts touch exactly these files, and a
       # bare `git add -A` would sweep in anything else a run happened to leave
       # behind (see the workflow-log-routing note in memory).

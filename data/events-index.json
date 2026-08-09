@@ -477,6 +477,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-11",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Community Meeting - Regarding flooding, economic impacts, and community resilience",
     "href": "https://events.ourayridgwayevents.com/event/community-meeting-regarding-flooding-economic-impacts-and-community-resilience",
     "date": "2026-08-11",
@@ -782,19 +795,6 @@
     "endDate": "2026-09-10"
   },
   {
-    "title": "Postcard Writing Party",
-    "href": "https://smcdemocrats.org/",
-    "date": "2026-08-12",
-    "time": "6:00 PM - 7:30 PM",
-    "location": "Oliver House, 1555 Summit Street, Norwood",
-    "town": "Norwood",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "",
-    "source": "Community",
-    "desc": "",
-    "type": "Community"
-  },
-  {
     "title": "DMV2GO",
     "href": "https://koto.org/event/dmv2go/2026-08-12/",
     "date": "2026-08-12",
@@ -917,12 +917,12 @@
     "href": "https://telluridechambermusic.org/concert/community-aug",
     "date": "2026-08-13",
     "time": "6:00 PM",
-    "location": "Telluride",
+    "location": "Telluride Science and Innovation Center",
     "town": "Telluride",
     "img": "https://telluridechambermusic.org/concerts/community-aug.webp",
     "category": "Concert",
     "source": "Telluride Chamber Music",
-    "desc": "A community concert presented by Telluride Chamber Music.",
+    "desc": "An hour of chamber music on the deck — the perfect way to unwind.",
     "type": "Music"
   },
   {
@@ -939,6 +939,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Postcard Writing Party",
+    "href": "https://smcdemocrats.org/",
+    "date": "2026-08-13",
+    "time": "6:00 PM - 7:30 PM",
+    "location": "Oliver House, 1555 Summit Street, Norwood",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "",
+    "source": "Community",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
     "href": "https://telluridescience.org/event/community-concert-august/",
     "date": "2026-08-13",
@@ -950,6 +963,19 @@
     "source": "Telluride Science",
     "desc": "Join Telluride Science and Telluride Chamber Music for a free community concert with San Juan Symphony String Quartet on the scenic patio at the Innovation Center. All are welcome—come soak in the beauty of live chamber music in an…",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-13",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Ouray Economic Development Committee",
@@ -1097,6 +1123,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Telluride Farmers' Market Music Series: Travis Fisher",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-08-14",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-2.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "True Grit Historic Walking Tours",
     "href": "https://events.ourayridgwayevents.com/event/true-grit-tours",
     "date": "2026-08-14",
@@ -1174,6 +1213,19 @@
     "source": "Mountain Village",
     "desc": "Beyond The Groove and TMVOA (tmvoa.org) present Ben Musser & Walker Young at Reflection Plaza in Mountain Village. The Friday shows are free,",
     "type": "Music"
+  },
+  {
+    "title": "Friday Feast",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-14",
+    "time": "6:00 PM",
+    "location": "The Well Coffee Shop",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A twice a month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel.",
+    "type": "Food & Drink"
   },
   {
     "title": "Studio TAB: Summer Fever",
@@ -1477,16 +1529,16 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Movie Mondays in Hartwell Park",
+    "title": "Movie Mondays: Top Gun",
     "href": "https://events.ourayridgwayevents.com/event/movie-mondays-ferris-buellers-day-off",
     "date": "2026-08-17",
     "time": "8:30 PM",
-    "location": "Hartwell Park",
+    "location": "Hartwell Park, Ridgway",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52922424426850/huge/1e180755c642fe19893a7caee0beacbf99e967d3.jpg",
-    "category": "Community Event",
+    "img": "https://localist-images.azureedge.net/photos/52922424426850/card/1e180755c642fe19893a7caee0beacbf99e967d3.jpg",
+    "category": "",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Enjoy free movies under the stars in Ridgway's Hartwell Park. They'll start at 8:30pm. Bring your own chairs, blankets and snacks. Brought to you by the Ridgway Youth Advisory Council. Here's the line-up: June 15th - Ferris Bueller's Day…",
+    "desc": "Enjoy free movies under the stars in Ridgway's Hartwell Park, brought to you by the Ridgway Youth Advisory Council.",
     "type": "Arts & Film"
   },
   {
@@ -1581,6 +1633,19 @@
     "source": "Mountain Village",
     "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
     "type": "Talks & Classes"
+  },
+  {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-18",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
   },
   {
     "title": "\"Best Day Ever\" Free Movie Screening",
@@ -1806,6 +1871,19 @@
     "type": "Community"
   },
   {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-20",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Up-off Gymnastics, Dance, and Spanish",
     "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
     "date": "2026-08-21",
@@ -1855,6 +1933,19 @@
     "category": "",
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Telluride Farmers' Market Music Series: Donavan Daily",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-08-21",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-3.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
     "type": "Food & Drink"
   },
   {
@@ -2225,6 +2316,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-25",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Gaiascope Opening Night",
     "href": "https://www.telluride.com/event/gaiascope-opening-night/",
     "date": "2026-08-25",
@@ -2388,12 +2492,12 @@
     "href": "https://telluridechambermusic.org/concert/norwood-aug",
     "date": "2026-08-27",
     "time": "6:00 PM",
-    "location": "Norwood",
+    "location": "The Livery, Norwood, CO",
     "town": "Norwood",
     "img": "https://telluridechambermusic.org/concerts/norwood-aug.webp",
     "category": "Concert",
     "source": "Telluride Chamber Music",
-    "desc": "A relaxed chamber music concert in Norwood, presented by Telluride Chamber Music.",
+    "desc": "An hour of gorgeous music. The perfect way to unwind after your day.",
     "type": "Music"
   },
   {
@@ -2422,6 +2526,19 @@
     "desc": "Denver-based producer Of the Trees will be returning to play two nights at Town Park this summer. Of The Trees will be …",
     "type": "Arts & Film",
     "endDate": "2026-08-30"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-08-27",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "MIKEY THUNDER \\\\ BAD SNACKS",
@@ -2460,6 +2577,19 @@
     "category": "",
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Telluride Farmers' Market Music Series: Claybrook & Tom",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-08-28",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-3.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
     "type": "Food & Drink"
   },
   {
@@ -2725,6 +2855,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-01",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Parks and Recreation Committee (PARC)",
     "href": "https://events.ourayridgwayevents.com/event/parks-and-recreation-committee-parc",
     "date": "2026-09-01",
@@ -2897,6 +3040,19 @@
     "endDate": "2026-09-08"
   },
   {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-03",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Trivia Night @ the Wright",
     "href": "https://events.ourayridgwayevents.com/event/trivia-night-the-wright-1382",
     "date": "2026-09-04",
@@ -2920,6 +3076,19 @@
     "category": "",
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Telluride Farmers' Market Music Series: Kirk Drogsvold",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-09-04",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-2.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
     "type": "Food & Drink"
   },
   {
@@ -3200,6 +3369,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-08",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
+  },
+  {
     "title": "Ouray: Echoes in the Canyon",
     "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-2450",
     "date": "2026-09-09",
@@ -3243,12 +3425,12 @@
     "href": "https://telluridechambermusic.org/concert/community-sep",
     "date": "2026-09-10",
     "time": "6:00 PM",
-    "location": "Telluride",
+    "location": "Telluride Science and Innovation Center",
     "town": "Telluride",
     "img": "https://telluridechambermusic.org/concerts/community-sep.webp",
     "category": "Concert",
     "source": "Telluride Chamber Music",
-    "desc": "A community concert presented by Telluride Chamber Music.",
+    "desc": "An hour of chamber music on the deck — the perfect way to unwind.",
     "type": "Music"
   },
   {
@@ -3302,6 +3484,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie…",
     "type": "Community"
+  },
+  {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-10",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers Market",
@@ -3464,13 +3659,13 @@
     "href": "https://telluridechambermusic.org/concert/balourdet",
     "date": "2026-09-13",
     "time": "7:00 PM",
-    "location": "Telluride",
+    "location": "Sheridan Opera House, Telluride, CO",
     "town": "Telluride",
     "img": "https://telluridechambermusic.org/concerts/balourdet.webp",
     "category": "Concert",
     "source": "Telluride Chamber Music",
-    "desc": "A concert by the Balourdet Quartet, presented by Telluride Chamber Music.",
-    "type": "Music"
+    "desc": "An evening of Ravel and Brahms in the historic Sheridan Opera House.",
+    "type": "Arts & Film"
   },
   {
     "title": "Woman's Club of Ouray County monthly meeting",
@@ -3497,6 +3692,32 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Augment Summer Music Series: Charlie and the Leatherheads",
+    "href": "https://www.telluride.com/event/augment-summer-music-series/",
+    "date": "2026-09-15",
+    "time": "5:00 PM",
+    "location": "Elks Park, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Telluride's local non-profit organization Augment Music Project is hosting monthly concerts in Elks Park this summer, highlighting some of the top local bands.",
+    "type": "Music"
+  },
+  {
+    "title": "Weekly Young Adult Gathering",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-15",
+    "time": "6:00 PM",
+    "location": "The Well, 122 S Aspen",
+    "town": "",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
   },
   {
     "title": "Ouray: Echoes in the Canyon",
@@ -3578,6 +3799,19 @@
     "endDate": "2026-09-21"
   },
   {
+    "title": "Pickleball Nights",
+    "href": "https://www.beacontelluride.com/upcoming-events",
+    "date": "2026-09-17",
+    "time": "7:00-9:00 PM",
+    "location": "Telluride Racket Club",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp",
+    "category": "Community Event",
+    "source": "Beacon",
+    "desc": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-18",
@@ -3588,6 +3822,19 @@
     "category": "",
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Telluride Farmers' Market Music Series: Kevin Hauze",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-09-18",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
     "type": "Food & Drink"
   },
   {
@@ -3788,6 +4035,19 @@
     "source": "The Alibi",
     "desc": "Yope is a Durango, CO based rock/funk/jam/fusion band that has been making waves...",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Farmers' Market Music Series: Danny D'Alessandro",
+    "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
+    "date": "2026-09-26",
+    "time": "11am - 3pm",
+    "location": "Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/farmersmarket-1.jpg",
+    "category": "",
+    "source": "Telluride.com",
+    "desc": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
+    "type": "Food & Drink"
   },
   {
     "title": "Exceptional Women of Ouray County",

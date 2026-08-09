@@ -30,8 +30,25 @@ const RUNTIME_SOURCES = {
   'telluride-rotary-meetings': 'TELLURIDE_ROTARY_MEETINGS',
 };
 
+// Specific per-occurrence acts for rotating series, kept in recurring-acts.json
+// at the REPO ROOT (not data/) and shaped { _comment, series: [...] }.
+//
+// Restored to the index 2026-08-09. The pre-redesign events.html fetched this
+// file itself and rendered a "Daily" card per act; the cutover (0e7e0335)
+// dropped that reader, so from then on the file was written by two jobs and
+// displayed nowhere. Folding it in HERE instead of re-adding a page-side fetch
+// matches how the rebuilt page works — events.html renders events-index.json
+// and stays dumb — and it means the acts inherit dedup, town-pinning, type
+// classification and fallback images for free.
+//
+// MUST be first in SOURCES: a specific act ("Movie Mondays: Top Gun") wins over
+// the generic series entry ("Movie Mondays in Hartwell Park") on the same day,
+// and first-source-wins is how this builder resolves collisions.
+const ACTS_FILE = 'recurring-acts';
+
 // mirror file (sans .json) → display source label
 const SOURCES = {
+  [ACTS_FILE]:                 '',   // label comes from each act's own `source`
   'community-events':          'Community',
   'music-on-the-green':        'Music on the Green',
   'telluride-farmers-market':  'Telluride Farmers Market',
@@ -211,6 +228,51 @@ function timeOf(e) {
 }
 const normTitle = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 
+// Read recurring-acts.json (repo root, { _comment, series: [...] }). Missing or
+// malformed is non-fatal — the rest of the index is worth building.
+function readActs(repoRoot) {
+  try {
+    const doc = JSON.parse(fs.readFileSync(path.join(repoRoot, ACTS_FILE + '.json'), 'utf8'));
+    return Array.isArray(doc.series) ? doc.series : [];
+  } catch (e) {
+    console.warn(`  events-index: ${ACTS_FILE}.json unreadable — specific acts skipped (${e.message})`);
+    return [];
+  }
+}
+
+// date → normalized series names that have a SPECIFIC act that day.
+//
+// Without this the page shows both cards: "Movie Mondays in Hartwell Park" from
+// the Ouray/Ridgway calendar AND "Movie Mondays: Top Gun" from the acts file.
+// The generic one is strictly less useful — knowing the film is the whole point
+// of the acts file — so it loses. Matching is substring-on-normalized-title, so
+// "Movie Mondays" catches "Movie Mondays in Hartwell Park" while leaving
+// "Telluride Farmers Market" (the market itself) alone when the suppressed
+// series is "Telluride Farmers' Market Music Series".
+function actSuppressionIndex(acts) {
+  const byDate = new Map();
+  for (const a of acts) {
+    const date = String(a?.date || '').slice(0, 10);
+    const series = normTitle(a?.series);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !series) continue;
+    if (!byDate.has(date)) byDate.set(date, new Set());
+    byDate.get(date).add(series);
+  }
+  return byDate;
+}
+
+// Does a specific act already cover this title on this date? Kept as its own
+// exported function so test/recurring-acts-suppression.test.js exercises the
+// REAL matching rule rather than a copy of it — the over-match failure here
+// deletes a live event from the calendar, silently.
+function isActSuppressed(index, title, date) {
+  const set = index.get(date);
+  if (!set) return false;
+  const nt = normTitle(title);
+  for (const series of set) if (nt.includes(series)) return true;
+  return false;
+}
+
 function buildEventsIndex(repoRoot) {
   const DATA = path.join(repoRoot, 'data');
   const pad = (n) => String(n).padStart(2, '0');
@@ -222,9 +284,13 @@ function buildEventsIndex(repoRoot) {
   const seen = new Map();   // normTitle|date → record (first source wins)
   const out = [];
   let runtime = null;
+  const suppressed = actSuppressionIndex(readActs(repoRoot));
   for (const [file, label] of Object.entries(SOURCES)) {
     let arr = [];
-    if (RUNTIME_SOURCES[file]) {
+    if (file === ACTS_FILE) {
+      // Each act carries `image`; the shared normalizer below reads `imageUrl`.
+      arr = readActs(repoRoot).map((a) => ({ ...a, imageUrl: a.image || '' }));
+    } else if (RUNTIME_SOURCES[file]) {
       try {
         if (!runtime) runtime = loadDataArrays(repoRoot);
         arr = runtime.arrays[RUNTIME_SOURCES[file]] || runtime.captured[RUNTIME_SOURCES[file]] || [];
@@ -240,6 +306,8 @@ function buildEventsIndex(repoRoot) {
       if (EXCLUDED.test(title) || GOV_MEETING.test(title) || CLOSURE.test(title)) continue;
       const date = dateKeyOf(e);
       if (!date || date < todayKey || date > horizonKey) continue;
+      // A generic series entry loses to the specific act on the same day.
+      if (file !== ACTS_FILE && isActSuppressed(suppressed, title, date)) continue;
       const key = normTitle(title).slice(0, 60) + '|' + date;
       if (seen.has(key)) continue;
       const href = e.link || e.href || '';
@@ -252,7 +320,10 @@ function buildEventsIndex(repoRoot) {
         .replace(/&#?\w+;/g, ' ').replace(/\s+/g, ' ').trim();
       if (normTitle(desc).slice(0, 40) === normTitle(title).slice(0, 40)) desc = '';  // desc that just repeats the title
       if (desc.length > 240) desc = desc.slice(0, 240).replace(/\s+\S*$/, '') + '…';
-      const town = townFor(e, label);
+      // Acts come from several calendars, so each carries its own source label
+      // ("Ouray Ridgway Calendar", "Telluride.com") rather than a per-file one.
+      const srcLabel = label || String(e.source || '').trim();
+      const town = townFor(e, srcLabel);
       const rec = {
         title: title,
         href: href,
@@ -267,7 +338,7 @@ function buildEventsIndex(repoRoot) {
         // category fallback.
         img: (/^https?:\/\//.test(rawImg)) ? rawImg : fallbackImg(title, town, e.location),
         category: String(e.category || '').trim(),
-        source: label,
+        source: srcLabel,
         desc: desc,
         type: typeOf(title, desc),
       };
@@ -298,4 +369,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle };
