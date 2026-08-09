@@ -320,10 +320,34 @@ function checkCrossSourceDateConflict(ctx) {
       // items are usually a legitimately recurring event, not a conflict.
       const sorted = dates.slice().sort();
       if (daysBetweenIso(sorted[0], sorted[sorted.length - 1]) <= 7) {
+        // A RECURRING SERIES is not a disagreement. If any single array lists
+        // the event on more than one of these dates, that array is telling us
+        // it happens repeatedly — "Drop In Tech Time with Oliver" runs weekly,
+        // and KOTO carries both the 9th and the 16th while Wilkinson carries
+        // only the 9th. Two sources genuinely disagreeing each assert exactly
+        // one date. Without this the auto-fixer would "correct" a real weekly
+        // event out of the calendar.
+        const perArrayDates = new Map();
+        for (const g of group) {
+          if (!perArrayDates.has(g.array)) perArrayDates.set(g.array, new Set());
+          perArrayDates.get(g.array).add(g.iso);
+        }
+        if ([...perArrayDates.values()].some(s => s.size > 1)) continue;
+
         const r = group[0];
         add('High', 'Conflicting event dates',
           `"${r.title}" listed on ${dates.join(' vs ')} across ${arrs.join(', ')}`,
-          `The same event has different dates in different sources. One is wrong — verify against the organizer/Sheridan/Telluride.com and correct the bad source (see memory: mv-calendar-wrong-dates).`);
+          `The same event has different dates in different sources. One is wrong — verify against the organizer/Sheridan/Telluride.com and correct the bad source (see memory: mv-calendar-wrong-dates).`,
+          // Machine-readable so content-autofix.js can verify against the
+          // organizer and propose a correction. `claims` pairs each candidate
+          // date with the arrays asserting it, which is what a reviewer needs
+          // to judge the proposal without re-deriving it.
+          { eventTitle: r.title, dates: dates.slice().sort(), arrays: arrs,
+            claims: dates.slice().sort().map(d => ({
+              date: d,
+              arrays: [...new Set(group.filter(g => g.iso === d).map(g => g.array))],
+              link: (group.find(g => g.iso === d && g.link) || {}).link || null,
+            })) });
       }
     }
   }
@@ -446,10 +470,18 @@ function probe(url) {
       if (s >= 200 && s < 400) verdict = 'ok';
       else if (s === 401 || s === 403 || s === 429) verdict = 'blocked';   // CI-IP / auth wall, inconclusive
       else if (s === 404 || s === 410) verdict = 'dead';
+      // 5xx is the SERVER having a bad moment, not a missing page. KOTO returned
+      // 504 on ten live event URLs in one 2026-08-09 run — every one of them
+      // loads fine in a browser. Calling those "dead" is worse than noise now
+      // that content-autofix.js acts on findings: it would propose deleting live
+      // civic listings because a WordPress box was slow. Inconclusive, like 403.
+      else if (s >= 500) verdict = 'blocked';
       else verdict = 'suspect';
       resolve({ url, status: s, verdict });
     });
-    req.on('error', () => resolve({ url, status: 0, verdict: 'dead' }));
+    // A transport error (DNS blip, connection reset) is not proof the page is
+    // gone either — same reasoning as the 5xx case above.
+    req.on('error', () => resolve({ url, status: 0, verdict: 'unreachable' }));
     req.on('timeout', () => { req.destroy(); resolve({ url, status: 0, verdict: 'timeout' }); });
   });
 }
@@ -487,12 +519,21 @@ async function checkLinks(ctx) {
   const dropped = seen.size - urls.length;
   const results = await Promise.all(urls.map(probe));
   for (const res of results) {
-    if (res.verdict === 'dead' || res.verdict === 'timeout' || res.verdict === 'suspect') {
+    if (res.verdict === 'dead' || res.verdict === 'timeout' || res.verdict === 'suspect' || res.verdict === 'unreachable') {
       const r = seen.get(res.url);
-      const sev = (r.kind === 'notice' || r.kind === 'housing') ? 'High' : 'Medium';
+      // Only 404/410 is proof. A timeout or transport error is a maybe, so it
+      // reports one tier lower and content-autofix.js never acts on it.
+      const confirmed = res.verdict === 'dead';
+      const baseSev = (r.kind === 'notice' || r.kind === 'housing') ? 'High' : 'Medium';
+      const sev = confirmed ? baseSev : 'Low';
       add(sev, 'Broken link',
         `${res.status || res.verdict}: ${res.url}`,
-        `Linked from "${r.title}" in ${r.array}. Status ${res.status || '—'} (${res.verdict}). Verify and update or remove the link.`);
+        `Linked from "${r.title}" in ${r.array}. Status ${res.status || '—'} (${res.verdict}). ` +
+        (confirmed
+          ? 'Verify and update or remove the link.'
+          : 'NOT confirmed dead — the server may just have been slow or unreachable. Re-checked every run; only a 404/410 is treated as real.'),
+        // Machine-readable so the auto-fixer can act on confirmed cases only.
+        { url: res.url, httpStatus: res.status, verdict: res.verdict, confirmed, array: r.array, itemTitle: r.title });
     }
   }
   if (dropped > 0) {

@@ -157,3 +157,66 @@ listed in the `claude-model-inventory` memory note. It is NOT covered by the
 content-refresh preflight (different workflow), but a model retirement only
 degrades the optional AI pass to a swallowed `Low` "AI pass error"; the
 deterministic checks are unaffected.
+
+---
+
+## Auto-fix (2026-08-09)
+
+The review stays report-only. `scripts/content-autofix.js` +
+`.github/workflows/content-autofix.yml` (**daily, 14:20 UTC** — ~80 min after
+the 13:00 review, clear of the 15:00 digest jobs) act on its findings.
+
+### Fixes are OVERRIDES, not data edits
+
+Every array the review flags is re-scraped from scratch every six hours. Editing
+a bad date in `js/gov-helpers.js` fixes nothing — the next refresh puts it back
+and the finding returns forever. So fixes are rows in
+**`data/content-corrections.json`**, which `content-refresh.js` re-applies after
+each scrape (Task 21d, next to the source-trust and festival-anchor reconciles).
+
+A row matches on array + normalized title + **the date the source currently
+publishes**. That makes it self-retiring: when the source corrects itself the row
+stops matching and does nothing. **Every row expires** (`expiresOn`, required,
+pruned automatically) — a permanent override silently distorts data long after
+the source fixed its mistake, and nobody remembers it exists.
+
+Kinds: `event-date` (rewrite the date), `clear-link` (drop a dead href, **keep
+the event**), `drop-event` (remove a phantom entry).
+
+### Two tiers
+
+| | What | Where it goes |
+| --- | --- | --- |
+| **AUTO** | a link 404/410-ing for **3 consecutive daily runs**; pruning expired corrections | committed to `main` |
+| **PROPOSE** | which of two sources has an event's date right | a **pull request**, never auto-merged |
+
+The split is by evidence, not by importance. A 404 seen three days running is
+deterministic and the action is reversible — the event survives, only the href
+goes. Which source has a date right cannot be derived; a wrong answer sends
+residents somewhere on the wrong day, so it gets a human.
+
+**It refuses to guess.** A date conflict is proposed only when the organizer's
+own page states one of the candidate dates. Unfetchable, ambiguous, or a *third*
+date → left for a human, and said so in the PR. An unfixed finding is a far
+smaller failure than a confidently wrong one.
+
+Blast-radius caps: `DEAD_LINK_RUNS` 3, `MAX_AUTO_FIXES` 10, `MAX_PROPOSALS` 8,
+so a scraper breaking overnight can't become a mass edit.
+
+### Review accuracy fixed at the same time
+
+The fixer is only as good as the findings, so three false-positive classes were
+corrected first — each of which it would otherwise have acted on:
+
+- **5xx and transport errors are no longer "dead."** KOTO returned `504` on ten
+  live event URLs in one run; every one loads in a browser. Only `404/410` is
+  confirmed. Findings now carry `confirmed`, `verdict`, `url`, `array`.
+- **A recurring series is not a date conflict.** If one array lists the event on
+  more than one of the disputed dates, it's telling us it repeats — "Drop In Tech
+  Time with Oliver" runs weekly and KOTO carries both the 9th and the 16th.
+  Sources genuinely disagreeing each assert exactly one date.
+- **Conflicts carry `claims`** (each date + the arrays asserting it + a link), so
+  the fixer and a PR reviewer both see the evidence without re-deriving it.
+
+Together these took a 57-finding report to 33, with the 8 "High" down to 4 real
+ones.

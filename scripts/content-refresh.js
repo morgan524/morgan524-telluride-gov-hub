@@ -7815,6 +7815,35 @@ async function main() {
       console.log(`  Festival anchor: dropped ${dropped.length} off-date festival header(s) from ${name}:`);
       for (const d of dropped) console.log(`    - "${d.title}" ${d.wrongDate} -> festival starts ${d.canonicalDate}`);
     }
+
+    // ── 21d: apply durable editorial corrections ──
+    // data/content-corrections.json holds reviewed fixes for things no rule can
+    // decide — a source publishing the wrong date, a link that 404s. They must
+    // re-apply HERE, after every scrape, because editing the arrays directly is
+    // undone by the next refresh six hours later. Written by content-autofix.js.
+    try {
+      const { readCorrections, applyCorrections, pruneExpired, writeCorrections } =
+        require('./lib/content-corrections.js');
+      const { doc, corrections } = readCorrections(REPO_ROOT);
+      const todayISO = today();
+      const corrArrays = {};
+      for (const n of reconcileNames) corrArrays[n] = extractJsArray(govHubSrc, n) || [];
+      const { arrays: fixed, applied, skipped } = applyCorrections(corrArrays, corrections, todayISO);
+      for (const a of applied) {
+        govHubSrc = replaceJsValue(govHubSrc, a.array, fixed[a.array], false);
+        changed = true;
+        console.log(`  Correction ${a.id || '(unnamed)'}: ${a.kind} on ${a.array} (${a.hits || a.after + '/' + a.before})`);
+      }
+      for (const s of skipped) console.warn(`  ⚠ correction skipped (${s.why}): ${s.c && s.c.id}`);
+      // Prune here as well as in the auto-fixer: a correction whose window has
+      // passed must stop applying even if that job hasn't run.
+      const { kept, removed } = pruneExpired(corrections, todayISO);
+      if (removed.length) {
+        doc.corrections = kept;
+        writeCorrections(REPO_ROOT, doc);
+        console.log(`  Corrections: pruned ${removed.length} expired row(s)`);
+      }
+    } catch (e) { console.warn(`  Corrections apply failed: ${e.message}`); }
   }
 
   // ── Task 24: Hub-Bub Question of the Day ──

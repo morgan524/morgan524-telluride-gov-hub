@@ -1,0 +1,177 @@
+name: Content Auto-Fix
+
+# Closes the loop on the daily content review, which has always been
+# report-only. Two tiers, and the split is the whole design:
+#
+#   AUTO   — committed to main. Deterministic evidence, reversible action:
+#            a link that has 404'd for 3 consecutive days gets its href
+#            cleared (the EVENT is kept), and corrections past their window
+#            are pruned.
+#   PROPOSE — a pull request, never auto-merged. Anything needing judgment:
+#            which of two sources has an event's date right. That answer is
+#            checked against the organizer's own page, and a wrong one sends
+#            residents somewhere on the wrong day.
+#
+# Fixes are written to data/content-corrections.json rather than to the data
+# files, because every array involved is re-scraped from scratch every six
+# hours — a direct edit is gone by the next refresh. content-refresh.js
+# re-applies the corrections after each scrape (Task 21d).
+#
+# Timing: 14:20 UTC daily, ~80 minutes after the 13:00 content-review run whose
+# findings it consumes, and clear of the 15:00 digest/vote-tracker jobs. Daily
+# rather than per-review (4x/day) on purpose: these are editorial issues, not
+# outages, and one PR a day at most is a review load a person can actually keep
+# up with. The 3-day dead-link threshold assumes this cadence.
+
+on:
+  schedule:
+    - cron: '20 14 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: content-autofix
+  cancel-in-progress: false
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Install script deps
+        run: cd scripts && npm install --no-audit --no-fund
+
+      # The fixer consumes content-review-findings.json, so generate a CURRENT
+      # one rather than trusting an artifact from a run that may be hours stale
+      # — acting on a stale finding is how you "fix" something already fixed.
+      - name: Run the content review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -o pipefail
+          node scripts/content-review.js 2>&1 | tee /tmp/content-review.log || true
+
+      - name: Auto-fix and propose
+        id: fix
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RSS_PROXY_URL: ${{ secrets.RSS_PROXY_URL }}
+        run: |
+          set -o pipefail
+          node scripts/content-autofix.js 2>&1 | tee /tmp/content-autofix.log
+          tail -1 /tmp/content-autofix.log | tr ' ' '\n' | grep -E '^(autoFixed|proposed|unresolved)=' >> "$GITHUB_OUTPUT" || true
+
+      # ── AUTO tier: straight to main, path-limited.
+      - name: Commit automatic fixes
+        if: always()
+        run: |
+          git config user.name "Gov Hub Bot"
+          git config user.email "bot@livabletelluride.org"
+          git add -- data/content-corrections.json data/content-autofix-state.json
+          if git diff --cached --quiet; then
+            echo "No automatic fixes this run."
+            exit 0
+          fi
+          git commit -m "🩹 Content auto-fix $(date -u +'%Y-%m-%d')
+
+          Cleared confirmed-dead links and pruned expired corrections."
+          git pull --rebase origin main
+          git push
+
+      # ── PROPOSE tier: a branch + PR carrying the evidence, so the reviewer
+      # can judge without re-deriving anything.
+      - name: Open a pull request for proposed date fixes
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          COUNT=$(node -e "try{console.log((require('./content-autofix-proposals.json').proposals||[]).length)}catch(e){console.log(0)}")
+          if [ "$COUNT" = "0" ]; then echo "No proposals to review."; exit 0; fi
+
+          BRANCH="autofix/date-corrections-$(date -u +'%Y%m%d')"
+          # An open PR for today already covers these; don't stack duplicates.
+          if gh pr list --head "$BRANCH" --state open --json number --jq '.[0].number' | grep -q .; then
+            echo "PR already open for $BRANCH."; exit 0
+          fi
+
+          node -e "
+            const fs=require('fs');
+            const p=require('./content-autofix-proposals.json');
+            const {readCorrections,writeCorrections}=require('./scripts/lib/content-corrections.js');
+            const {doc,corrections}=readCorrections(process.cwd());
+            const have=new Set(corrections.map(c=>c.id));
+            const add=p.proposals.flatMap(x=>x.rows).filter(r=>!have.has(r.id));
+            doc.corrections=[...corrections,...add];
+            writeCorrections(process.cwd(),doc);
+            console.log('staged '+add.length+' proposed correction(s)');
+          "
+          git add -- data/content-corrections.json
+          if git diff --cached --quiet; then echo "Proposals already present."; exit 0; fi
+
+          git checkout -b "$BRANCH"
+          git commit -m "🔎 Proposed date corrections $(date -u +'%Y-%m-%d')"
+          git push -u origin "$BRANCH"
+
+          {
+            printf 'The daily content review found events whose date two sources disagree on. Each proposal below was checked against the organizer'"'"'s own page; only the ones that page actually settled are here.\n\n'
+            printf '**Merging applies these on the next content refresh. Closing this PR rejects them — nothing reaches the site meanwhile.**\n\n'
+            node -e "
+              const p=require('./content-autofix-proposals.json');
+              for (const x of p.proposals) {
+                console.log('### ' + x.event);
+                console.log('');
+                console.log('**Confirmed date: ' + x.confirmedDate + '** — ' + x.evidence);
+                if (x.quote) console.log('> ' + x.quote);
+                console.log('');
+                console.log('| Date | Claimed by | Verdict |');
+                console.log('|---|---|---|');
+                for (const c of x.claims) {
+                  console.log('| ' + c.date + ' | ' + c.arrays.join(', ') + ' | ' + (c.date === x.confirmedDate ? 'correct' : 'corrected') + ' |');
+                }
+                console.log('');
+              }
+              if (p.unresolved.length) {
+                console.log('### Left for a human');
+                console.log('');
+                for (const u of p.unresolved) console.log('- **' + u.event + '** — ' + u.why);
+                console.log('');
+              }
+            "
+            printf '\nCorrections live in `data/content-corrections.json` and re-apply after every scrape (a direct data edit would be overwritten within six hours). Every row expires on its own.\n'
+          } > /tmp/pr-body.md
+
+          gh pr create --title "🔎 Proposed date corrections $(date -u +'%Y-%m-%d')" \
+                       --body-file /tmp/pr-body.md --base main --head "$BRANCH"
+
+      - name: Upload run logs
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: content-autofix-logs-${{ github.run_id }}
+          path: |
+            /tmp/content-autofix.log
+            /tmp/content-review.log
+            content-autofix-proposals.json
+          retention-days: 14
+          if-no-files-found: ignore
+
+      - name: CI health issue
+        if: always()
+        uses: ./.github/actions/ci-health-issue
+        with:
+          title: '🚨 Content Auto-Fix workflow is failing'
+          status: ${{ job.status }}
+          run-url: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

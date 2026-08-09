@@ -1,0 +1,4 @@
+{
+  "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | drop-event. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
+  "corrections": []
+}

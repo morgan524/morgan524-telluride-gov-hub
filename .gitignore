@@ -60,3 +60,4 @@ parity-snapshot/
 scripts/editorial/triage-report.json
 scripts/editorial/draft-sample.json
 scripts/editorial/.just-published.json
+content-autofix-proposals.json
