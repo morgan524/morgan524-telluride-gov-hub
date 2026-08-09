@@ -25,9 +25,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Deploy digest Worker
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_WORKER || secrets.CLOUDFLAIR_WORKER }}
           accountId: 8f020e73de4e9956f0e3ad7dce070ef4

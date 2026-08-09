@@ -57,10 +57,10 @@ jobs:
       PREVIEW_SMTP_PASS: ${{ secrets.PREVIEW_SMTP_PASS }}
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '24'
 
@@ -94,7 +94,7 @@ jobs:
 
       - name: Email preview to info@livabletelluride.org
         if: env.PREVIEW_SMTP_PASS != ''
-        uses: dawidd6/action-send-mail@v3
+        uses: dawidd6/action-send-mail@v18
         with:
           server_address: smtp.gmail.com
           server_port: 465
@@ -112,7 +112,7 @@ jobs:
 
       - name: Upload preview artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: weekly-preview
           path: |

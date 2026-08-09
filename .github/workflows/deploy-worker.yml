@@ -23,10 +23,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v5
 
       - name: Deploy RSS proxy Worker
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           # Prefer CLOUDFLARE_WORKER (correct spelling); fall back to the
           # historical CLOUDFLAIR_WORKER while the GitHub secret is being
