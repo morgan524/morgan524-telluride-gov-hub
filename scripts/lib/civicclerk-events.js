@@ -57,6 +57,25 @@ function countyTypeOf(eventName, categoryName) {
   return 'other';
 }
 
+// eventLocation is a STRUCTURED ADDRESS OBJECT, not a string:
+//   { id, eventId, address1, address2, city, state, zipCode }
+// String()-ing it yields the literal "[object Object]", which is exactly what
+// shipped on the first run (2026-08-09) — caught by the data-file write guard
+// before it reached the site, which is what that guard exists for. Every field
+// is independently nullable: CWAB comes back with all of them null, and that
+// must produce an empty string, not "null, null null".
+function formatEventLocation(loc) {
+  if (!loc) return '';
+  if (typeof loc === 'string') return loc.trim();          // defensive: shape may change back
+  const clean = (v) => (v == null ? '' : String(v).trim());
+  // The county writes both "CO" and "Colorado"; existing rows use the abbreviation.
+  const state = clean(loc.state).replace(/^colorado$/i, 'CO');
+  const zip = clean(loc.zipCode);
+  const tail = [state, zip].filter(Boolean).join(' ');
+  return [clean(loc.address1), clean(loc.address2), clean(loc.city), tail]
+    .filter(Boolean).join(', ');
+}
+
 // Map the API's events onto cached-list rows.
 //
 // agendaUrl is deliberately NOT set here even though the API reports
@@ -79,7 +98,7 @@ function countyRowsFromEvents(events) {
       time: fmtMeetingTime(p),
       title,
       type: countyTypeOf(title, e.categoryName),
-      location: String(e.eventLocation || '').trim(),
+      location: formatEventLocation(e.eventLocation),
       civicClerkId: Number.isFinite(e.id) ? e.id : null,
       note: null,
     };
@@ -135,6 +154,6 @@ function mergeCountyRows(existing, fresh, opts = {}) {
 }
 
 module.exports = {
-  wallParts, fmtMeetingDate, fmtMeetingTime, countyTypeOf,
+  wallParts, fmtMeetingDate, fmtMeetingTime, countyTypeOf, formatEventLocation,
   countyRowsFromEvents, mergeCountyRows, MONTHS,
 };
