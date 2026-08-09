@@ -5139,7 +5139,7 @@ async function syncMedAgendas() {
 //   opts:    { title, location, time?, board?, note?, placeholders=2, skipMonths=[], lookbackDays=21 }
 // Returns a sorted stub array, or null when there's nothing to publish (so the
 // caller preserves the existing array rather than blanking the section).
-const { nextOccurrences: _nextOccurrences } = require('./lib/schedule.js');
+const { nextOccurrences: _nextOccurrences, fmtDate: _fmtScheduleDate } = require('./lib/schedule.js');
 function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
   const lookbackDays = opts.lookbackDays == null ? 21 : opts.lookbackDays;
   const lookback = new Date(now.getTime() - lookbackDays * 86400000);
@@ -5192,6 +5192,94 @@ async function rebuildMedMeetings() {
     placeholders: 2,
     note: 'Next scheduled meeting -- agenda posted before the meeting.'
   });
+}
+
+// Rebuild AIRPORT_CACHED_DATA: the TRAA board on its 3rd-Thursday cadence.
+//
+// The airport publishes no machine-readable schedule — tellurideairport.com's
+// board page renders its links with JavaScript — so this is a pure projection,
+// and the cadence is the evidence:
+//   • every date the hand-kept list held is a 3rd Thursday (May 21, Jul 16,
+//     Sep 17, Nov 19 2026);
+//   • the board page carries a PACKET FOR EVERY MONTH (Jan through Jul 2026),
+//     so the board meets monthly, not bimonthly.
+// The hand-kept list only ever recorded odd months, so it was missing half the
+// meetings — this projection is more complete than what it replaces, not less.
+function rebuildAirportMeetings(existing, now = new Date()) {
+  return assembleBoardStubs(existing, { nth: 3, weekday: 4 }, {
+    title: 'TRAA Board of Commissioners Meeting',
+    time: '12:00 PM',
+    location: 'Terminal Observation Lounge, Telluride Regional Airport',
+    placeholders: 3,
+    note: 'Regular board meeting of the Telluride Regional Airport Authority.'
+  }, now);
+}
+
+// Rebuild TELLURIDE_CACHED_DATA — the town's HARC list — from CivicWeb.
+//
+// This array is HARC-only (the rest of the Town of Telluride's meetings come
+// from the bot-maintained TELLURIDE_BOARD_MEETINGS). It was hand-typed, and
+// TELLURIDE_CACHE_DATE had not moved since 2026-05-11. CivicWeb publishes the
+// commission's whole schedule months ahead, so there is no reason for a person
+// to be retyping it.
+//
+// Rows carry civicWebId, NOT agendaUrl. Telluride's CivicWeb mints a
+// MeetingInformation page for every scheduled meeting whether or not a packet
+// is attached, so treating that URL as an agenda link is the exact trap
+// CLAUDE.md warns about. syncTellurideAgendas() patches a real agendaUrl in
+// once a packet actually posts.
+async function rebuildTellurideHarcMeetings(existing, now = new Date()) {
+  console.log('\n🏛  Rebuilding Telluride HARC meetings from CivicWeb...');
+  const horizon = new Date(now.getTime() + 240 * 86400000);
+  let meetings;
+  try { meetings = await fetchTownTellurideMeetings(now, horizon); }
+  catch (e) { console.warn(`  Telluride HARC fetch error: ${e.message} — preserving existing`); return null; }
+  if (!meetings || !meetings.length) {
+    console.warn('  CivicWeb returned no meetings — preserving existing TELLURIDE_CACHED_DATA');
+    return null;
+  }
+  // "…Commission Chair" is a separate pre-meeting for the chair, not the
+  // commission's own hearing; listing it would double every HARC date.
+  const harc = meetings.filter(m =>
+    /historic\s*&?(?:amp;)?\s*architectural review commission/i.test(m.title) && !/\bchair\b/i.test(m.title));
+  if (!harc.length) {
+    console.warn('  No HARC meetings in the CivicWeb feed — preserving existing TELLURIDE_CACHED_DATA');
+    return null;
+  }
+  // NOT assembleBoardStubs here: it rebuilds each stub from a fixed field list
+  // and would drop civicWebId, which is what gives the card its portal link.
+  const priorByDate = new Map();
+  for (const r of existing || []) if (r && r.date) priorByDate.set(r.date, r);
+
+  const lookback = new Date(now.getTime() - 21 * 86400000);
+  const rows = [];
+  for (const m of harc) {
+    const [y, mo, d] = String(m.date).split('-').map(Number);
+    if (!y || !mo || !d) continue;
+    const when = new Date(y, mo - 1, d);
+    if (when < lookback) continue;
+    const date = _fmtScheduleDate(when);                 // "August 19, 2026"
+    const id = (String(m.agendaUrl || '').match(/Id=(\d+)/) || [])[1];
+    const row = {
+      date,
+      title: 'HARC Meeting',
+      board: 'harc',
+      location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+    };
+    if (id) row.civicWebId = Number(id);
+    // A packet URL already patched in, and any hand-written note, outlive the
+    // rebuild — syncTellurideAgendas would re-patch the URL, but not the note.
+    const prior = priorByDate.get(date);
+    if (prior) {
+      if (prior.agendaUrl) row.agendaUrl = prior.agendaUrl;
+      if (prior.packetUrl) row.packetUrl = prior.packetUrl;
+      if (prior.note) row.note = prior.note;
+    }
+    rows.push(row);
+  }
+  rows.sort((a, b) => new Date(a.date) - new Date(b.date));
+  console.log(`  ${harc.length} HARC meeting(s) on the CivicWeb calendar → ${rows.length} row(s)`);
+  return rows.length ? rows : null;
 }
 
 // Rebuild COUNTY_CACHED_DATA from the CivicClerk event calendar.
@@ -7011,6 +7099,34 @@ async function main() {
   } catch (e) { console.warn(`  County rebuild error: ${e.message}`); }
 
   try {
+    const existing = extractJsArray(govDataSrc, 'AIRPORT_CACHED_DATA') || [];
+    const airportStubs = rebuildAirportMeetings(existing);
+    if (airportStubs && airportStubs.length) {
+      if (JSON.stringify(airportStubs) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'AIRPORT_CACHED_DATA', airportStubs, false);
+        govDataChanged = true;
+        console.log(`  AIRPORT_CACHED_DATA: rebuilt (${airportStubs.length} meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'AIRPORT_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Airport rebuild error: ${e.message}`); }
+
+  try {
+    const existing = extractJsArray(govDataSrc, 'TELLURIDE_CACHED_DATA') || [];
+    const harcRows = await rebuildTellurideHarcMeetings(existing);
+    if (harcRows && harcRows.length) {
+      if (JSON.stringify(harcRows) !== JSON.stringify(existing)) {
+        govDataSrc = replaceJsValue(govDataSrc, 'TELLURIDE_CACHED_DATA', harcRows, false);
+        govDataChanged = true;
+        console.log(`  TELLURIDE_CACHED_DATA: rebuilt (${harcRows.length} HARC meetings)`);
+      }
+      govDataSrc = replaceConstString(govDataSrc, 'TELLURIDE_CACHE_DATE', today());
+      govDataChanged = true;
+    }
+  } catch (e) { console.warn(`  Telluride HARC rebuild error: ${e.message}`); }
+
+  try {
     const fireStubs = await rebuildFireMeetings();
     if (fireStubs && fireStubs.length) {
       const existing = extractJsArray(govDataSrc, 'FIRE_CACHED_DATA') || [];
@@ -7678,6 +7794,26 @@ async function main() {
       changed = true;
       console.log(`  Trust reconcile: dropped ${dropped.length} wrong-date copy(ies) from ${name}:`);
       for (const d of dropped) console.log(`    - "${d.title}" ${d.mvDate} vs trusted ${d.trustedDate}`);
+    }
+
+    // ── 21c: anchor festival headers to TELLURIDE_FESTIVALS ──
+    // The tiers above can't settle a festival's start date, because the
+    // disagreeing sources are all HIGH — the Sheridan is authoritative for its
+    // own shows, so it can't be demoted, but it republishes town-wide festivals
+    // under the bare festival name on whatever day its own programming starts.
+    // TELLURIDE_FESTIVALS is hand-vetted and drives the ticket sidebar, so it
+    // anchors the date. Matches on an EXACT normalized title, which keeps the
+    // festival's individual shows (Alibi's nightly bands) untouched.
+    const { reconcileFestivalDates } = require('./lib/source-trust.js');
+    const festivals = extractJsArray(govDataSrc, 'TELLURIDE_FESTIVALS') || [];
+    const festArrays = {};
+    for (const n of reconcileNames) festArrays[n] = extractJsArray(govHubSrc, n) || [];
+    const festResult = reconcileFestivalDates(festArrays, festivals);
+    for (const [name, { kept, dropped }] of Object.entries(festResult)) {
+      govHubSrc = replaceJsValue(govHubSrc, name, kept, false);
+      changed = true;
+      console.log(`  Festival anchor: dropped ${dropped.length} off-date festival header(s) from ${name}:`);
+      for (const d of dropped) console.log(`    - "${d.title}" ${d.wrongDate} -> festival starts ${d.canonicalDate}`);
     }
   }
 

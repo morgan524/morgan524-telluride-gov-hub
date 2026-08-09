@@ -1267,7 +1267,11 @@ const TELLURIDE_FESTIVALS = [
   { name: 'Telluride Jazz Festival', month: 7, dayStart: 7, dayEnd: 10, icon: '🎷',
     logo: 'https://images.squarespace-cdn.com/content/v1/583db0c9d1758e46ff3221e9/821ecb11-5000-415a-a970-87b539036111/2026-ebony-color-logo-png-for-website-no-dates.png?format=1500w',
     url: 'https://www.telluridejazz.org/', ticketUrl: 'https://www.telluridejazz.org/tickets', ticketLabel: 'Buy Tickets', ticketStatus: 'on-sale', promo: 'Tickets on sale now — Tier 1 pricing until July 15' },
-  { name: 'Telluride Mushroom Festival', month: 7, dayStart: 14, dayEnd: 17, icon: '🍄',
+  // Starts the 12th, not the 14th (confirmed by Morgan 2026-08-09; KOTO and
+  // telluride.com both list Aug 12-17). The wrong dayStart was showing on the
+  // Festival Tickets sidebar and left the festival listed on three different
+  // start dates across the site.
+  { name: 'Telluride Mushroom Festival', month: 7, dayStart: 12, dayEnd: 17, icon: '🍄',
     logo: 'https://raw.githubusercontent.com/morgan524/morgan524-telluride-gov-hub/main/logo/Mushroom.png',
     url: 'https://www.tellurideinstitute.org/telluride-mushroom-festival/', ticketUrl: 'https://www.tellurideinstitute.org/passes-telluride-mushroom-festival/', ticketLabel: 'Buy Passes', ticketStatus: 'on-sale', promo: '2026 passes launched Feb 5 — get them before they sell out' },
   { name: 'Telluride Yoga Festival', month: 5, dayStart: 25, dayEnd: 28, icon: '🧘',
