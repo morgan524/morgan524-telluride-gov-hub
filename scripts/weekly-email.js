@@ -21,6 +21,7 @@ const path = require('path');
 const { execSync } = require('child_process');
 const { stripDescPreamble } = require('./lib/clean-text.js');
 const { generateRickLede } = require('./lib/rick-lede.js');
+const { meetingDisplayName } = require('./lib/meeting-title.js');
 const GD = process.argv[2], GH = process.argv[3];
 const WEEK_START = process.argv[4] || new Date().toISOString().slice(0, 10);
 const LABEL = process.argv[5] || 'This Week';
@@ -748,7 +749,7 @@ const mh = meetings.map((m) => {
     ? 'padding:14px 15px;border:2px solid #2d6a4f;border-radius:8px;background:#f7fbf8;'
     : 'padding:13px 0;border-top:1px solid #eef1ee;';
   // Comment button first, then the Meeting-info / View-agenda link.
-  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(m.name)}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${commentBtn}${sep}${link}</td></tr>`;
+  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${commentBtn}${sep}${link}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
