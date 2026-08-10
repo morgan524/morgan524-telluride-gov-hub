@@ -5698,7 +5698,17 @@ async function syncTellurideBoardMeetings() {
                   'July','August','September','October','November','December'];
   // Bodies to surface (HARC handled separately). The joint P&Z/HARC subcommittee
   // is caught by the Planning & Zoning pattern.
-  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec/i;
+  // INTERGOVERNMENTAL / JOINT sessions added 2026-08-10 (Morgan). The Town and
+  // the County both announce these on their websites — the Aug 10 2026
+  // "Intergovernmental Worksession - Town of Telluride Hosts" was on both front
+  // pages and on CivicWeb (Id 8057, published) — but this allow-list named only
+  // the standing bodies, so the one meeting where the two governments sit down
+  // together was the one meeting Gov Hub didn't carry.
+  //
+  // County-side joint sessions need no equivalent change: COUNTY_CACHED_DATA is
+  // rebuilt from every CivicClerk event, so "Planning Commission and Board of
+  // County Commissioners Joint Work Session" already flows through.
+  const KEEP = /town council|planning\s*(?:&|and)\s*zoning|\bp&z\b|housing authority|ethics commission|parks?\s*(?:&|and)\s*rec|intergovernmental|\bjoint\b/i;
   const out = [];
   const seen = new Set();
   for (const m of items) {
