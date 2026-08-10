@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Aug 2026 04:45:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 07:52:20 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Meeting] Intergovernmental Worksession - Aug 10 2026 — 2026-08-10</title>
@@ -31,6 +31,45 @@ The Open Space Commission trades the conference room for the trail on August 10,
       <category>Town of Telluride</category>
     </item>
     <item>
+      <title>[Mon, Aug 10] Piano on the Patio with Oliver Henry</title>
+      <link>https://telluridelibrary.libcal.com/event/16644816?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/piano%20on%20the%20patio%7C2026-08-10</guid>
+      <pubDate>Mon, 10 Aug 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+12:00 PM – 1:00 PM · Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL&#39;s very own, Oliver Henry, of Apr&egrave;s Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Mon, Aug 10] Savvy Seniors-Open Tech</title>
+      <link>https://telluridelibrary.libcal.com/event/17029822?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/savvy%20seniors%20open%20tech%7C2026-08-10</guid>
+      <pubDate>Mon, 10 Aug 2026 19:30:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_39_48.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Meeting Room #6 - large
+
+1:30 PM – 2:30 PM · Join us every Monday for "Savvy Seniors," an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_39_48.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Tue, Aug 11] Cardio Dance (Baile Cardio) with Kelsey</title>
+      <link>https://telluridelibrary.libcal.com/event/16548397?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cardio%20dance%20baile%20cardio%7C2026-08-11</guid>
+      <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Lower Terrace - outdoors
+
+6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up! You will be having so much fun, you won&#39;t even know you are exercising! Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
       <title>[Tue, Aug 11] Max &amp; Heather Stalling</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=max-and-heather-stalling</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/max%20and%20heather%20stalling%7C2026-08-11</guid>
@@ -53,7 +92,7 @@ Meet Max & Heather Stalling, a dynamic duo of singer-songwriters from Dallas, Te
 
 The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.
 
-⚡ Why it matters: Third-reading vote could permanently change landscaping and historic review rules.]]></description>
+⚡ Why it matters: Third-reading vote could rewrite landscaping and historic-review rules valley-wide.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -124,7 +163,7 @@ The August 12, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted 
 
 A full agenda for August 12. The headline item is a joint work session with the Planning Commission on the draft 2026 Housing Action Plan — required under SB 24-174 by 2028, with five goal areas covering policy, future housing, lifecycle housing, workforce housing, and momentum building. On the land-use side, council holds a public hearing on the Hyde Subdivision — a resubdivision of four lots in the Historic Residential zone at the corner of Hyde and S. Charlotte Streets. More consequential still: a public hearing on the proposed Alpenglow Vista Metropolitan District Nos. 1–4, a consolidated service plan for a new metro district along N. Laura, McCall, Roundhouse, and N. Cora Streets in the Light Industrial and Mixed Residential zones. Ouray County representatives will present a proposed county sales tax for disaster mitigation and response. Council also takes up the updated Community-Led Marketing Strategy, a Business Recovery Initiative, and a Chamber of Commerce biannual report. Routine consent items include liquor license renewals for Sherbino Theater, Eatery 66, Colorado Boy, the Liquor Library, and Greenwoods, plus a new restaurant liquor license hearing for Fire Root Kitchen.
 
-⚡ Why it matters: Public hearing on Hyde Subdivision resubdivision plus housing plan joint work session.]]></description>
+⚡ Why it matters: Public hearing on Hyde Subdivision replatting plus housing-plan work session open for input.]]></description>
       <category>Meeting</category>
       <category>ridgway</category>
     </item>
@@ -139,19 +178,6 @@ A full agenda for August 12. The headline item is a joint work session with the 
 Join us for a 105 club takeover on all four courts! 105 scoring preview 1 Point for just winning the point. 5 points for winning the point off a groundstroke winner. 10 points for winning a point off a volley winner. 20 points for winning the point off of an overhead winner. Suitable for levels 3.0+, this game is not only a workout and a ton of fun, but it will improve your tennis game by: Teaching you when to play near the net player. Improve your overall net game. Encourage you to practice being aggressive at the net. Finding a backhand volley. Execute deep lobs.]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Thu, Aug 13] Community Concert</title>
-      <link>https://www.telluride.com/event/community-concert/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/community%20concert%7C2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-A fun and free chamber music series featuring talented local musicians. These concerts will appeal to both first time …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/60285/download_8.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
     </item>
     <item>
       <title>[Meeting] SMART Board of Directors — 2026-08-13</title>
@@ -173,22 +199,9 @@ The August 13, 2026 SMART Board of Directors agenda hasn't been posted yet.]]></
 
 Two substantive items on the August 13 agenda. The commission takes up a work session on minor and major subdivisions — the kind of foundational land-use mechanics that quietly shape how parcels get divided across the county. Then, on referral and recommendation, an energy code update, which would revise the building standards that apply to new construction and major renovations. Code updates like this tend to move without much fanfare but set the baseline rules for years.
 
-⚡ Why it matters: Energy code update would revise building standards for new construction and major renovations.]]></description>
+⚡ Why it matters: County energy code update would revise building standards for new construction and major renovations.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
-    </item>
-    <item>
-      <title>[Thu, Aug 13] The Creative Exchange at Telluride Arts HQ</title>
-      <link>https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-08-13/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/the%20creative%20exchange%20at%7C2026-08-13</guid>
-      <pubDate>Thu, 13 Aug 2026 23:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Arts HQ, TELLURIDE
-
-The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
     </item>
   </channel>
 </rss>

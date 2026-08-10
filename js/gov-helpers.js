@@ -418,6 +418,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-10",
+    title: "Lock it in — or leave room to adjust?",
+    body: "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. A vested plan is a big deal: once approved, it locks in a developer's right to build under current rules, even if the Land Use Code changes later. That protects investment and gives developers certainty. But it also ties the community's hands — if neighbors or commissioners later have second thoughts, the window to adjust closes. So the question is whose interests the clock should favor.\n\nWhen a development plan gets vested, who should get the benefit of the doubt — the developer or the community?",
+    choices: ["Developer — certainty matters", "Community — keep options open", "Depends on the project", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-09",
     title: "Bear Creek's beavers and the trail question",
     body: "The Open Space Commission is heading out to Bear Creek Trailhead to look at a potential new trail alignment connecting to Firecracker Hill — and also to check on beaver activity in the preserve. Those two things pull in different directions. More trail access means more people out there, which is the whole point of public land. But the commission is also doing restoration planning, and active beavers in a protected zone complicate what \"open\" in open space actually means. How much human use belongs alongside active habitat work?\n\nWhere do you land — more trail, or let the beavers have it?",
@@ -3597,48 +3605,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Gentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536443?hs=a",
-    description: "11:00 AM – 12:30 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-08-09T17:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
-  },
-  {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970386?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-08-09T19:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Lotería Familiar • Family Lotería",
-    link: "https://telluridelibrary.libcal.com/event/17052024?hs=a",
-    description: "2:00 PM – 3:30 PM · Ven a jugar Loter&iacute;a con familia y amigos en la biblioteca! sera una tarde entretenida y con sorpresas ;)  &bull; Come and play Loter&iacute;a with family and friends at the library! It will be a fun afternoon full of surprises ;)",
-    pubDate: "2026-08-09T20:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568424?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-08-10T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_11_14_49_07.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029767?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-08-09T20:30:00.000Z",
+    title: "Piano on the Patio with Oliver Henry",
+    link: "https://telluridelibrary.libcal.com/event/16644816?hs=a",
+    description: "12:00 PM – 1:00 PM · Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL&#39;s very own, Oliver Henry, of Apr&egrave;s Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.",
+    pubDate: "2026-08-10T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg"
+  },
+  {
+    title: "Cocina con Corazón",
+    link: "https://telluridelibrary.libcal.com/event/17202614?hs=a",
+    description: "12:00 PM – 1:30 PM · Tendremos el programa Cocina con Coraz&oacute;n cada mes asociado con Ah Haa para traer m&aacute;s programas para la comunidad de hispanohablantes. Vamos a cocinar sopes con Israel.  Este program solamente es para adultos y en espa&ntilde;ol.   &iexcl;Tenemos espacio para 12 adultos, inscr&iacute;bete con Claudia hoy!  Todos los niveles de espa&ntilde;ol son bienvenidos.",
+    pubDate: "2026-08-10T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Ahh Haa School of Arts",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_14_14_51_05.png"
+  },
+  {
+    title: "Savvy Seniors-Open Tech",
+    link: "https://telluridelibrary.libcal.com/event/17029822?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
+    pubDate: "2026-08-10T19:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_39_48.png"
+  },
+  {
+    title: "Hobby Hopping: Cyanotype Printing",
+    link: "https://telluridelibrary.libcal.com/event/17286074?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
+    pubDate: "2026-08-10T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png"
+  },
+  {
+    title: "Family Movie Matinee: Goat",
+    link: "https://telluridelibrary.libcal.com/event/15536184?hs=a",
+    description: "A free library program screening the film *Goat* for families, hosted in the Program Room at Wilkinson Public Library. The event runs from 2:00 to 4:00 PM.",
+    pubDate: "2026-08-10T20:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_37.png"
+  },
+  {
+    title: "Tribal Allyship in Colorado with Ernest House",
+    link: "https://telluridelibrary.libcal.com/event/16641834?hs=a",
+    description: "5:30 PM – 7:00 PM · Join Ernest House, Jr., Senior Policy Director at the Center of Tribal & Indigenous Engagement at the Wilkinson Public Library for a conversation on August 10th at 5:30 pm. He will talk about projects like the Colorado Outdoor Strategy Tribal Framework , buffalo restoration in the San Luis Valley, and the building the nation&#39;s first t ribal embassy in Denver. Ernest House Jr. is an enrolled member of the Ute Mountain Ute Tribe in Towaoc, Colorado, and a leader in Native American affairs. He served as Executive Director of the Colorado Commission of Indian Affairs (CCIA) for 12 years, fostering communication between Colorado's tribal nations and state agencies, while maintaining government-to-government relations under Governors Owens, Ritter, and Hickenlooper. …",
+    pubDate: "2026-08-10T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_13_22_59.jpg"
+  },
+  {
+    title: "Cardio Dance (Baile Cardio) with Kelsey",
+    link: "https://telluridelibrary.libcal.com/event/16548397?hs=a",
+    description: "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
+    pubDate: "2026-08-11T00:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
   }
 ];
 
@@ -3711,7 +3763,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3723,7 +3775,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3946,7 +3998,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-08-11 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
   },
   {
     title: "Celebration of Life for David Leigh Houtz",
@@ -4036,7 +4089,8 @@ const SHERBINO_EVENTS = [
     endDate: "2026-09-08 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
   }
 ];
 
@@ -4316,93 +4370,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-09T06:00:00.000Z",
+    pubDate: "2026-08-10T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Annual Ridgway Fire Department Pancake Breakfast",
-    link: "https://events.ourayridgwayevents.com/event/annual-ridgway-fire-department-pancake-breakfast",
-    description: "Saturday, August 8 and Sunday, August 9 from 7:30am to 10:30am, come support your local firefighters at their Annual Pancake Breakfast Fundraiser. Includes pancakes, sausage, eggs, coffee & juice. $10 Adults, $5 Children or $25 for the family. Best Breakfast, Best Prices, Best Cooks in Town (at least for the weekend)! View on site | Email this event",
-    pubDate: "2026-08-09T13:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Fire House",
-    imageUrl: "https://localist-images.azureedge.net/photos/53631321088580/huge/1e3b4e247e16202b8851a99ceb9ede86f5dee60e.jpg"
-  },
-  {
-    title: "Flash Tattoo Pop-Up Fundraiser",
-    link: "https://events.ourayridgwayevents.com/event/flash-tattoo-pop-up-fundraiser",
-    description: "Hello, Library Lovers! We are so excited to announce our second annual Tattoo Pop-up Fundraiser on Saturday, August 8 starting at 12:00 p.m. and on Sunday, August 9 starting at 10:00 a.m. Come early to get added to the list! Mark your calendars for this weekend event! We hope to see you there! View on site | Email this event",
-    pubDate: "2026-08-09T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Public Library",
-    imageUrl: "https://localist-images.azureedge.net/photos/53506206584416/huge/5c0910190bcc815b3556542e2cfda2027272d8bf.jpg"
-  },
-  {
-    title: "Ouray Open Air Market",
-    link: "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
-    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM. View on site | Email this event",
-    pubDate: "2026-08-09T16:00:00.000Z",
-    endDate: "2026-09-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Billy Goats Gruff Patio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
-  },
-  {
-    title: "Ridgway Rendezvous SUNDAY Live Music",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-rendezvous-sunday-live-music",
-    description: "Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 2026 10:00 a.m.–4:00 p.m. Location: Hartwell Park Ridgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Join us in Hartwell Park on Sunday, August 9, for four performances spanning jazz, blues, roots music, Americana, and more. Sunday Music Schedule 10:00–11:30 a.m. — The Ordinary Two Start the morning with the warm harmonies and acoustic sound of The Ordinary Two. 11:45 a.m.–1:15 p.m. — Mixed Bag Jazz Enjoy an energetic midday set from Mixed Bag Jazz, featuring a lively blend of jazz performed by some of the region’s outstanding musicians. 1:30–2:45 p.m. …",
-    pubDate: "2026-08-09T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53551206723208/huge/d03bf3915661d1d70df6d4a36003d6398c0cb49b.jpg"
-  },
-  {
-    title: "The 41st Annual Ridgway Rendezvous Arts Festival",
-    link: "https://events.ourayridgwayevents.com/event/the-42nd-annual-ridgway-rendezvous-arts-festival",
-    description: "Ridgway Rendezvous Arts Festival (41st Annual) Saturday: 9 AM – 5 PM | Sunday: 10 AM – 4 PM | Ridgway Town Park Free Admission Celebrating its 41st year, the Ridgway Rendezvous Arts Festival is a beloved summer tradition in southwest Colorado. Hosted by Weehawken Creative Arts, this highly regarded juried festival is known for exceptional craftsmanship, original design, and high-quality handmade work not easily found elsewhere in the region. Artists consistently call it “one of the best shows of the year,” citing strong sales and a welcoming, well-organized atmosphere. Set in the heart of Ridgway along the scenic Million Dollar Highway, the festival attracts an engaged audience of collectors, second homeowners, and visitors from across the country—and coincides with the nearby Telluride Jazz Festival, expanding its reach and energy. Enjoy live music throughout the day both days, featuring a diverse lineup of talented regional and touring musicians. …",
-    pubDate: "2026-08-09T16:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53604939799289/huge/9d342ef941735ff72dd4a24d0df58e12a8e49027.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-09T18:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-09T18:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
@@ -4438,6 +4412,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Space to Create Gallery",
     imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-10T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
   },
   {
     title: "Senior Lunch by Neighbor to Neighbor",
@@ -4497,6 +4483,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-11T16:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "End of Summer Reading Party",
@@ -4826,6 +4824,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53471216560394/huge/574183965a0056eaee8b515c5347a414162855ad.jpg"
+  },
+  {
+    title: "Ouray Open Air Market",
+    link: "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
+    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM. View on site | Email this event",
+    pubDate: "2026-08-16T16:00:00.000Z",
+    endDate: "2026-09-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goats Gruff Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
   },
   {
     title: "Sold Out: Aug 16, 2026: Ouray County Pride Drag Brunch 2026",
@@ -5928,7 +5938,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "",
+    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5939,7 +5949,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5950,7 +5960,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5961,7 +5971,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "",
+    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5972,7 +5982,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5983,7 +5993,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5994,7 +6004,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6005,7 +6015,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6016,7 +6026,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
