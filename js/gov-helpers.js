@@ -2468,6 +2468,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "recreation",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
     title: "Shandoka, Carhenge Lots Closed",
     source: "Town of Telluride",
     date: "August 8, 2026",
@@ -2482,7 +2509,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     date: "August 10, 2026",
     firstSeen: "2026-08-10",
     newsTopic: "community",
-    copy: "Taking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathonTaking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathon",
+    copy: "Taking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathon",
     claudeSummary: false,
     href: "https://coloradosun.com/2026/08/10/softrock-100-hardrock-route/",
     img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/08/PXL_20260726_200042055-1.jpg?fit=771%2C1024&amp;ssl=1"
@@ -4678,7 +4705,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
     pubDate: "2026-08-14T16:00:00.000Z",
-    endDate: "2026-10-02",
+    endDate: "2026-10-09",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7996,7 +8023,7 @@ const HOUSING_LISTINGS = [
 
 const RIDGWAY_AGENDA_MAP = {
   "August 12, 2026":
-    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---August-12%2C-2026.pdf",
+    "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet-August-12-2026_0.pdf",
 
   "July 8, 2026":
     "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---July-8%2C-2026.pdf",
