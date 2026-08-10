@@ -272,7 +272,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"12856830136e0503"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"3f4e90cd76c3d7c9"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
@@ -350,16 +350,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"1bf41babc7a37427"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"4ec2365b89071bd6"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"b8be81b862717054"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -2504,7 +2504,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "It’s not just a race. It’s a route. Running the “Softrock 100” from Silverton to Telluride and back",
+    title: "It’s not just a race, it’s a route: Running the “Softrock 100” from Silverton to Telluride and back",
     source: "Colorado Sun",
     date: "August 10, 2026",
     firstSeen: "2026-08-10",
@@ -6081,17 +6081,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
-    title: "Jazz Brunch",
-    link: "https://townofmountainvillage.com/explore/events/all-events/jazz-brunch/",
-    description: "New for 2026, Telluride Jazz Festival and the Madeline Hotel present the Jazz Brunch—a relaxed mountain gathering featuring great food, beautiful views,",
-    pubDate: "2026-08-09T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49398/jazz-brunch-9x16.jpeg"
-  },
-  {
     title: "August Intergovernmental Worksession",
     link: "https://townofmountainvillage.com/explore/events/all-events/august-intergovernmental-worksession/",
     description: "The Town of Telluride hosts an Intergovernmental Worksession on August 10, 2026.",
@@ -6552,6 +6541,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    title: "Market on the Plaza",
+    link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    description: "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    pubDate: "2026-09-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    title: "Wine and Wickets",
+    link: "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    description: "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    pubDate: "2026-09-09T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   }
 ];
 

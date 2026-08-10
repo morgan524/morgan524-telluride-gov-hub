@@ -11,17 +11,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   },
   {
-    "title": "Jazz Brunch",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/jazz-brunch/",
-    "description": "New for 2026, Telluride Jazz Festival and the Madeline Hotel present the Jazz Brunch—a relaxed mountain gathering featuring great food, beautiful views,",
-    "pubDate": "2026-08-09T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49398/jazz-brunch-9x16.jpeg"
-  },
-  {
     "title": "August Intergovernmental Worksession",
     "link": "https://townofmountainvillage.com/explore/events/all-events/august-intergovernmental-worksession/",
     "description": "The Town of Telluride hosts an Intergovernmental Worksession on August 10, 2026.",
@@ -482,5 +471,27 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "pubDate": "2026-09-09T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Wine and Wickets",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
+    "description": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
+    "pubDate": "2026-09-09T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
   }
 ]
