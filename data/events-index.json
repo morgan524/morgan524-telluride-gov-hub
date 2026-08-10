@@ -102,7 +102,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_37.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A free library program screening the film *Goat* for families, hosted in the Program Room at Wilkinson Public Library. The event runs from 2:00 to 4:00 PM.",
+    "desc": "2:00 PM – 4:00 PM",
     "type": "Arts & Film"
   },
   {
@@ -355,7 +355,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -538,7 +538,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -802,7 +802,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1145,7 +1145,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -1315,8 +1315,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -3297,7 +3297,7 @@
     "img": "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
     "category": "",
     "source": "Sherbino Theater",
-    "desc": "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3965,7 +3965,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -4163,6 +4163,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "🎶 Ouray 150th Anniversary Concert 🎶 Join us for an unforgettable evening of live music as we celebrate 150 years of Ouray with a FREE community concert in the park! 📅 October 3, 2026 ⏰ 4–8 PM 📍 Fellin Park Headlining the celebration…",
+    "type": "Music"
+  },
+  {
+    "title": "COUSIN CURTIS",
+    "href": "https://events.ourayridgwayevents.com/event/cousin-curtis",
+    "date": "2026-10-03",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
   },
   {

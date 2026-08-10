@@ -272,7 +272,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"3f4e90cd76c3d7c9"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"12856830136e0503"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
@@ -350,16 +350,16 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"1bf41babc7a37427"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"4ec2365b89071bd6"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"b8be81b862717054"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -392,7 +392,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "county|2026-09-09|Board of County Commissioners Work Session":
+    {"sv":4,"ph":"307e0c7b19e4ff5b"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -641,7 +644,10 @@ const MEETING_PREVIEWS = {
     "The August 20, 2026 Planning & Zoning Commission Chair meeting in Telluride has been cancelled. No agenda items will be heard. Residents with matters before the commission should watch for rescheduling information.",
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion."
+    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion.",
+
+  "county|2026-09-09|Board of County Commissioners Work Session":
+    "Board will consider matters related to county operations, including a material hauling contract request for quote. Related legal notices include estate creditor notifications, a foreclosure sale on Telluride Mountain Village property, and a federal hazardous fuels management project affecting over 267,000 acres in nearby national forests."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1245,7 +1251,10 @@ const MANUAL_SUMMARIES = {
     "The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
 
   "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
-    "The September 9, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet."
+    "The September 9, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet.",
+
+  "county|2026-09-09|Board of County Commissioners Work Session":
+    "The September 9, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1548,6 +1557,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "After the flood: Telluride schools’ miraculous recovery and re-opening",
+    source: "Telluride Times",
+    date: "August 10, 2026",
+    firstSeen: "2026-08-10",
+    newsTopic: "arts-culture",
+    copy: "The July 17 mudslide hit Telluride Intermediate School and the Palm Theatre hard, but near-round-the-clock work by staff and a SERVPRO disaster team has the school on track to open August 18 as scheduled. The Palm won't be fully restored by then, but should be usable for Film Festival in September. The spring-loaded stage floor is gone for now — replacement is planned for after fest, before year's end.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_46c0c405-676e-40f1-8431-16636d570ffd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/04/60423621-d553-4e47-bc3f-07b4730d5472/6a7787105ebad.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Learn about the Enterprise Zone expansion",
     source: "Telluride Times",
@@ -2481,6 +2502,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
     img: ""
+  },
+  {
+    title: "It’s not just a race. It’s a route. Running the “Softrock 100” from Silverton to Telluride and back",
+    source: "Colorado Sun",
+    date: "August 10, 2026",
+    firstSeen: "2026-08-10",
+    newsTopic: "community",
+    copy: "Taking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathonTaking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathon",
+    claudeSummary: false,
+    href: "https://coloradosun.com/2026/08/10/softrock-100-hardrock-route/",
+    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/08/PXL_20260726_200042055-1.jpg?fit=771%2C1024&amp;ssl=1"
   },
   {
     title: "Ridgway Town Council Regular Meeting Agenda",
@@ -3662,7 +3694,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Family Movie Matinee: Goat",
     link: "https://telluridelibrary.libcal.com/event/15536184?hs=a",
-    description: "A free library program screening the film *Goat* for families, hosted in the Program Room at Wilkinson Public Library. The event runs from 2:00 to 4:00 PM.",
+    description: "2:00 PM – 4:00 PM",
     pubDate: "2026-08-10T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3763,7 +3795,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3775,7 +3807,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3983,23 +4015,13 @@ const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
   {
-    title: "Ridgway Rendezvous 2026 ~ Sunday Live Music Schedule",
-    href: "https://sherbino.org/event/ridgway-rendezvous-sunday-live-music/",
-    date: "2026-08-09 10:00:00",
-    endDate: "2026-08-09 16:00:00",
-    location: "Ridgway, CO",
-    copy: "@ Ridgway Rendezvous Sunday Live Music Lineup Sunday, August 9, 202610:00 a.m.–4:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Join us in Hartwell Park on Sunday, August 9, for four performances spanning jazz, blues, roots music, Americana, and more. Sunday Music Schedule 10:00–11:30 a.m. — The Ordinary TwoStart the morning with the warm harmonies and acoustic sound of The Ordinary Two. 11:45 a.m.–1:15 p.m. — Mixed Bag JazzEnjoy an energetic midday set from Mixed Bag Jazz, featuring a lively blend of jazz performed by some of the region’s outstanding musicians. 1:30–2:45 p.m. — Donny MoralesDonny takes the stage for an afternoon performance filled with blues, roots music, rock, and plenty of personality. 3:00–4:00 p.m. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Sunday-RR-Banner-live-music.png"
-  },
-  {
     title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
     href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-08-11/",
     date: "2026-08-11 10:00:00",
     endDate: "2026-08-11 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "The Welcome Home Alliance hosts its monthly veterans coffee gathering at the Sherbino in Ridgway, offering a regular space for local veterans to connect and find community support. It is a recurring meetup held on a monthly basis."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   },
   {
     title: "Celebration of Life for David Leigh Houtz",
@@ -4089,8 +4111,7 @@ const SHERBINO_EVENTS = [
     endDate: "2026-09-08 12:00:00",
     location: "Ridgway, CO",
     copy: "",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
-    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png"
   }
 ];
 
@@ -5889,6 +5910,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52364674023264/huge/f98fd45e49189eebaa22894d39eb7c241c2e49a9.jpg"
   },
   {
+    title: "COUSIN CURTIS",
+    link: "https://events.ourayridgwayevents.com/event/cousin-curtis",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-10-03T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
     title: "The Ridgway 1k Rally thru the Alley 2026 ~ presented by Citizens State Bank",
     link: "https://events.ourayridgwayevents.com/event/the-ridgway-1k-rally-thru-the-alley-2026-presented-by-citizens-state-bank",
     description: "Ridgway 1K ~ Rally Through The Alley: Colorado’s Most Entertaining Fun Run Event Date: October 4, 2026 In-person Registration Opens: 12:15 PM Race Starts: 12:45 PM Last Call for Runners: 1:15 PM (all runners must be checked-in by 1:15 pm). Downtown Ridgway, Colorado Join the most hilarious costumed fun run in Colorado! The Ridgway 1K Rally Through The Alley is a family-friendly, costume-themed, 1K race in downtown Ridgway. But don’t be fooled—this 6-block, downhill “race” is all about fun, food, and funky vibes, not speed. Why It’s a Must-Do Event: Open to all ages and fitness levelsCostumes are encouraged (and rewarded!)8 unique aid stations featuring outrageous snacks like bacon, donuts, and hot dogsThe race ends with live music in Hartwell ParkAdd-on available: Access to the San Juan Barrel Fest, a regional craft beer, wine, and cider tasting festival Pro Tip: In the Ridgway 1K, if you’re first… you’re last! …",
@@ -5938,7 +5970,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
+    description: "",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5949,7 +5981,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5960,7 +5992,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5971,7 +6003,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5982,7 +6014,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5993,7 +6025,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6004,7 +6036,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6015,7 +6047,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6026,7 +6058,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
