@@ -1,18 +1,18 @@
 {
-  "hash": "c25f718c054fd8ca821cb97a4f0441aaa260bf77",
-  "lede": "The week's sharpest decision comes Tuesday, August 11, when Telluride Town Council takes up third reading of the Colorado Wildfire Resiliency Code — a vote that would rewrite Land Use Code rules around historic review and landscaping to meet state fire-mitigation standards, with real consequences for what property owners can plant and maintain. Ridgway's council is also busy Wednesday with a public hearing on the Hyde Subdivision replatting and a joint work session on its draft Housing Action Plan. Meanwhile, the Open Space Commission walks the Bear Creek Trailhead Monday to look at a potential new trail alignment and restoration work, and the Mushroom Festival rolls into town midweek.",
+  "hash": "664e6734475b270978ac9614a07477266f3fe864",
+  "lede": "Tuesday night, Town Council takes up third reading of the Colorado Wildfire Resiliency Code — a vote that would rewrite historic review standards and landscaping rules for property owners across Telluride, so this one is worth showing up for. Ridgway's council is equally busy Wednesday with a public hearing on the Hyde Subdivision resubdivision and a joint work session on its state-mandated Housing Action Plan. San Miguel County's Planning Commission meets Thursday on subdivision mechanics and a building energy code update that would set new standards for construction county-wide.",
   "notable": [
     {
       "id": 2,
-      "stake": "Third-reading vote could rewrite landscaping and historic-review rules valley-wide."
+      "stake": "Third-reading vote rewrites historic review and landscaping rules for all property owners."
     },
     {
-      "id": 7,
-      "stake": "Public hearing on Hyde Subdivision replatting plus housing-plan work session open for input."
+      "id": 8,
+      "stake": "Public hearing on Hyde Subdivision resubdivision; council also reviews state-mandated Housing Action Plan."
     },
     {
-      "id": 9,
-      "stake": "County energy code update would revise building standards for new construction and major renovations."
+      "id": 10,
+      "stake": "County weighs subdivision land-use rules and a building energy code update affecting new construction."
     }
   ]
 }

@@ -325,7 +325,11 @@
   },
   "norwood|2026-08-11|Norwood Water Commission Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://www.norwoodtown.com/files/ed8086933/08.11.2026+NWC+Agenda.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/88274908233",
+    "meetingId": "882 7490 8233",
+    "passcode": "997236",
+    "phone": "346-248-7799"
   },
   "telluride|2026-07-28|Gondola Leadership Committee - Jul 28 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8297",
