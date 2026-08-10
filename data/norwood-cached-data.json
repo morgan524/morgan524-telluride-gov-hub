@@ -12,11 +12,10 @@
     "date": "August 11, 2026",
     "time": null,
     "title": "Norwood Water Commission Meeting",
-    "agendaUrl": null,
+    "agendaUrl": "https://www.norwoodtown.com/files/ed8086933/08.11.2026+NWC+Agenda.pdf",
     "packetUrl": null,
     "special": false,
-    "board": "nwc",
-    "note": "Next scheduled meeting -- agenda posted before the meeting."
+    "board": "nwc"
   },
   {
     "date": "August 12, 2026",

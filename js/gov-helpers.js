@@ -353,7 +353,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"54967543ae106ac4"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
@@ -769,6 +769,106 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
+  },
+  {
+    title: "Flood ravages homes",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
+    img: ""
+  },
+  {
+    title: "County floats disaster relief sales tax",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
+    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Log Hill won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
+    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Crews near full containment on fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
+    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "‘We were in a panic’",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "infrastructure",
+    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
+    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
+    img: ""
+  },
+  {
+    title: "Riders scrutinize Ouray’s new shuttle service",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
+    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Good For You!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "community",
+    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
+    img: ""
+  },
+  {
+    title: "Ridgway concert series puts trash in its place",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "arts-culture",
+    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
+    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Calendar & Events",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "recreation",
+    copy: "Thursday, August 6 Ridgway Farmers Market, 10 a.m.-2 p.m. in Hartwell Park – on Thursday this week due to Ridgway Rendezvous. Youth Garden Club for ages 8-18, Other Undergrounders root vegetables, from 3:30-4:30 p.m. at the Ridgway Public Library, 320 Charles St. Ouray County Republican Central Comm",
+    href: "https://www.ouraynews.com/2026/08/05/calendar-events-20260806-0346-556192/",
+    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -5555,6 +5655,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53585949770506/huge/c98cb43fee3b91d08bc4ebb6a015b0d4a5e3f886.jpg"
   },
   {
+    title: "Happy's Birthday w/ Chromatic Cowboy - Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/happys-birthday-w-chromatic-cowboy-live-at-floating-lotus-brewery",
+    description: "Happy’s Birthday has carved out a unique space in the Los Angeles music community by providing theatrical performances with whimsical and vidid story telling. Their unique sound combines elements of folk and indie with the bite of post hardcore and experimental rock to create a colorful and zany array of songs. View on site | Email this event",
+    pubDate: "2026-09-13T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53660243978511/huge/0d850e6e74677d6cc9089c2193c88214448d54ea.jpg"
+  },
+  {
     title: "Young & Dead - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
     description: "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables are found by hovering over the diagram. GA seats are available in the bar area. Get ready for a high-energy night of psychedelic exploration when Young & Dead takes over the Sherbino stage on Saturday, September 12. Hailing from Boulder, Colorado, this group of talented musicians in their early 20s bringsa fresh and electrifying approach to the music of the Grateful Dead — not simply recreating the catalog, but diving deep into the spirit of improvisation, experimentation, and musical adventure that made the Dead legendary. …",
@@ -9195,6 +9306,16 @@ function getTownAgendaLink(title, eventDate) {
 // MeetingsService (HARC stays in TELLURIDE_CACHED_DATA above). Empty until the
 // next content-refresh run. Each entry: {date,title,agendaUrl,hasAgenda,location,time}.
 const TELLURIDE_BOARD_MEETINGS = [
+  {
+    date: "August 10, 2026",
+    title: "Intergovernmental Worksession",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8057",
+    hasAgenda: true,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8057,
+    packetUrl: "https://telluride-co.civicweb.net/document/442862/"
+  },
   {
     date: "August 11, 2026",
     title: "Town Council",
