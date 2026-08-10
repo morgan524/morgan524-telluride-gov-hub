@@ -386,6 +386,12 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "airport|2026-08-20|TRAA Board of Commissioners Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "norwood|2026-09-09|Board of Trustees Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
     {"sv":4,"ph":"b858cb282617fb09"}
 };
 
@@ -587,9 +593,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-11|Town Council - Aug 11 2026":
     "Council is expected to consider a Land Use Code amendment adding new regulations for Natural Medicine Businesses (Section 5-31). The meeting may also address a request to replace a lost share certificate for the Farmers' Water Development Company.",
 
-  "telluride|2026-08-10|Intergovernmental Worksession - Aug 10 2026":
-    "Council is expected to meet in an intergovernmental worksession with San Miguel County representatives to discuss proposed Land Use Code amendments, including new regulations for Natural Medicine Businesses, changes to the \"Qualified Owner\" definition, and updates to Wildfire Area standards. A lost water share certificate replacement may also be addressed.",
-
   "county|2026-08-12|Board of County Commissioners Work Session":
     "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices also cover property tax exemption programs for seniors, disabled veterans, and gold star spouses, as well as upcoming foreclosure sales on two Mountain Village properties.",
 
@@ -630,10 +633,7 @@ const MEETING_PREVIEWS = {
     "The August 20, 2026 Planning & Zoning Commission Chair meeting in Telluride has been cancelled. No agenda items will be heard. Residents with matters before the commission should watch for rescheduling information.",
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion.",
-
-  "telluride|2026-08-10|Open Space Commission Site Walk - Aug 10 2026":
-    "The Open Space Commission will conduct a site walk at Bear Creek Trailhead to review a potential trail alignment connecting to Firecracker Hill, assess beaver activity in Zone 3 of the Bear Creek Preserve, and discuss restoration planning in Zone 1 of the preserve."
+    "Council is expected to approve minutes from the July 8 regular meeting and Workforce and Affordable Housing Committee meeting, along with the August 2026 register of demands. These routine items are grouped on the consent calendar for approval in a single motion."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -971,7 +971,7 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-09';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-10';
 const LEGAL_NOTICES_CACHE_DATE = '2026-08-07';
 
 const MANUAL_SUMMARIES = {
@@ -1231,7 +1231,13 @@ const MANUAL_SUMMARIES = {
     "The August 18, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
 
   "airport|2026-08-20|TRAA Board of Commissioners Meeting":
-    "The August 20, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet."
+    "The August 20, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
+
+  "norwood|2026-09-09|Board of Trustees Meeting":
+    "The September 9, 2026 Norwood Board of Trustees Meeting agenda hasn't been posted yet.",
+
+  "ridgway|2026-09-09|Ridgway Town Council Regular Meeting":
+    "The September 9, 2026 Ridgway Town Council Regular Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2415,30 +2421,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Unresolved affordability issues",
-    source: "Telluride Times",
-    date: "July 27, 2026",
-    firstSeen: "2026-07-27",
-    newsTopic: "housing",
-    copy: "Telluride's 244 town-owned rental units saw rent spikes after new THA policies tied rent to income percentages, prompting pushback from residents and at least one council member. The Town has made some adjustments, but no major policy changes are expected until 2027. The tension between local housing realities and HUD's standard AMI metrics — $91,800 for one person here — remains unresolved.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_68db3e0a-3cfc-4199-ac0f-d76eadf94c91.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/ea/deaeb07b-8a73-45c6-b94d-70f45d2bf483/6a651ba506980.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Region 10 Enterprise Zone expands to include all of San Miguel County",
-    source: "Telluride Times",
-    date: "July 27, 2026",
-    firstSeen: "2026-07-27",
-    newsTopic: "government",
-    copy: "All of San Miguel County — including Telluride and Mountain Village — now falls within the Region 10 Enterprise Zone after a state-approved boundary amendment, making local businesses and nonprofits eligible for Colorado income tax credits through 2035. The county qualified due to population decline between 2020 and 2024, not low income or high unemployment. Informational sessions are scheduled for August 17.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8e17fdf6-e2b4-40b4-8b6a-026044b8970a.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/d2/ad2a4eae-cc62-4ed3-a012-ce4cdef87e67/6a651c98276f9.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "State of the Town Address: The State of the Town Is Strong and Engaging",
     source: "Town of Telluride",
     date: "August 8, 2026",
@@ -2528,7 +2510,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
     source: "Town of Ridgway",
-    date: "August 9, 2026",
+    date: "August 10, 2026",
     firstSeen: "2026-08-07",
     newsTopic: "land-use",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3095,17 +3077,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tea and Tarot",
-    link: "https://koto.org/event/tea-and-tarot/2026-08-09/",
-    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    pubDate: "2026-08-09T14:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     title: "Youth Tennis & Pickleball Camp",
     link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-10/",
     description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
@@ -3588,6 +3559,39 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Sheridan Opera House, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Bilingual Balance in Motion",
+    link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
+    description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    pubDate: "2026-08-22T10:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "BURLESQUE BUFFET!",
+    link: "https://koto.org/event/burlesque-buffet/2026-08-22/",
+    description: "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.",
+    pubDate: "2026-08-22T20:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Sheridan Opera House, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Drop In Tech Time with Oliver",
+    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-23/",
+    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    pubDate: "2026-08-23T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: ""
   }
 ];
 
@@ -3644,7 +3648,20 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-197",
+    name: "Rico",
+    species: "Dog",
+    breed: "Retriever, Chocolate Labrador",
+    ageGroup: "Adult Dog",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/6375a8fa1f12fe6ea27066edf8b9b6ac/07a07ecc22d7164d6e06fc4929747578.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214266724",
+    summary: "Adult Dog • Retriever, Chocolate Labrador • Male",
+    firstSeen: "2026-08-10",
+    revealDate: "2026-08-10",
+    lastSeen: "2026-08-10"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -3694,7 +3711,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3706,7 +3723,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -3876,7 +3893,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Big Love Car Wash: Free Music, SHOW Bar Patio",
     link: "https://sheridanoperahouse.com/events/free-music-at-show-bar-big-love-car-wash/",
-    description: "",
+    description: "A free outdoor music event hosted on the SHOW Bar patio at the Sheridan Opera House, Big Love Car Wash brings live performances to one of Telluride's beloved historic venues. The patio setting offers a relaxed atmosphere for catching live music on a summer evening in August.",
     pubDate: "2026-08-05",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3887,7 +3904,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Jazz Festival",
     link: "https://sheridanoperahouse.com/events/telluride-jazz-festival/",
-    description: "",
+    description: "A jazz performance held at the historic Sheridan Opera House in Telluride, part of the Telluride Jazz Festival. The intimate venue offers an exceptional setting for live jazz in the heart of the San Juan Mountains.",
     pubDate: "2026-08-07",
     endDate: "2026-08-08",
     source: "sheridan",
@@ -3913,15 +3930,6 @@ const NUCLA_NATURITA_EVENTS = [];
 const CLUB_RED_SHOWS = [];
 const FRESH_FOOD_HUB_EVENTS = [];
 const SHERBINO_EVENTS = [
-  {
-    title: "Ridgway Rendezvous 2026 ~ Saturday Live Music Schedule",
-    href: "https://sherbino.org/event/saturday-music-lineup-ridgway-rendezvous-arts-festival-august-8-2026/",
-    date: "2026-08-08 09:30:00",
-    endDate: "2026-08-08 17:00:00",
-    location: "Ridgway, CO",
-    copy: "@ Ridgway Rendezvous Saturday Live Music Lineup Saturday, August 8, 20269:30 a.m.–5:00 p.m. Location: Hartwell ParkRidgway, Colorado Admission: Free The Sherbino is pleased to help spread the word about a full day of live music presented by our sister organization, Weehawken Creative Arts, during the 41st Annual Ridgway Rendezvous Arts & Crafts Festival. Four incredible bands. One beautiful Saturday. Join us Saturday, August 8, at Hartwell Park for a full day of FREE live music during the Ridgway Rendezvous Arts Festival. 🎶 Heather & Douglas • 9:30–11:00 a.m.🎶 Hard Pressed • 11:30 a.m.–1:00 p.m.🎶 Tom Ward's Downfall • 1:15–2:45 p.m.🎶 Donny Morales • 3:15–5:00 p.m. Pack a chair if you'd like, bring your friends, and spend the day enjoying great music, local artists, food vendors, and everything that makes Ridgway Rendezvous such a special weekend. 🌐 ridgwayrendezvous.com The music is just one part of this beloved annual celebration. …",
-    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Saturday-RR-Banner-live-music.png"
-  },
   {
     title: "Ridgway Rendezvous 2026 ~ Sunday Live Music Schedule",
     href: "https://sherbino.org/event/ridgway-rendezvous-sunday-live-music/",
@@ -3965,7 +3973,7 @@ const SHERBINO_EVENTS = [
     date: "2026-08-23 13:00:00",
     endDate: "2026-08-23 15:00:00",
     location: "The Sherbino, Ridgway",
-    copy: "@ Rocky Horror Picture Show — Live Shadowcast Edition Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. What’s a Shadowcast? A shadow cast is a troupe of live performers who act, lip-sync, and dance in front of the movie screen while the film plays. The audience joins the fun with call-backs, props, and dance numbers—creating a mash-up of film, live theater, and interactive party. Since the 1970s, shadowcasts have been the heartbeat of Rocky Horror’s midnight movie legacy, turning every performance into a raucous celebration of freedom, fun, and camp. …",
+    copy: "@ Rocky Horror Picture Show — Live Shadowcast Edition Auditions · Sunday, August 23 · 1:00 – 3:00 p.m. · The Sherbino (604 Clinton St.) The Sherbino is casting for its live shadowcast production of The Rocky Horror Picture Show! This is your chance to step into the spotlight, don a wild costume, and bring this cult classic to life on stage. If auditioning for a specific character, we suggest preparing a 1-2 minute section of the film to audition with in shadowcast as that character. We can play this section of the film for you on a background screen during your audition. If open to any character, sides will be provided and preparation is not needed. We HIGHLY encourage wearing costumes and makeup to auditions. What’s a Shadowcast? …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/RHPS-Shadow-Cast-Auditions.png"
   },
   {
@@ -3994,6 +4002,43 @@ const SHERBINO_EVENTS = [
     location: "The Sherbino, Ridgway",
     copy: "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion. @ Doors at 6:00 PM, Film at 6:30 PM followed by a panel discussion led by local specialists in women's health issues Dr. Abigail Seaver, ND; Meg Benasutti, ANP-BC, Jennifer McGeorge, ARNP, CNM, MSCP and Kim Walker, DNP, WHNP. Note: this is a different film from the one we showed back in May, which was about Perimenopause About The M Factor Film Menopause is a silent epidemic that affects the health and well‑being of millions of American women. In addition to experiencing traumatic physical symptoms, women are struggling with the related stresses of billions of dollars in lost wages, upended careers, family disruptions, and emotional chaos. This film confront this neglected crisis, challenges societal and medical shortcomings and advocates for a revolutionary approach to women's health all over the world. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/06/ChatGPT-Image-Jun-23-2026-07_58_16-PM.png"
+  },
+  {
+    title: "First Friday Opening Reception: Bonnie Bucknam's \"Unscripted: Fiber Improvisations\"",
+    href: "https://sherbino.org/event/unscripted-fiber-improvisations-bonnie-bucknam/",
+    date: "2026-09-04 17:00:00",
+    endDate: "2026-09-04 19:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ UNSCRIPTED: Fiber Improvosations ~ An Exhibition by Bonnie Bucknam On display at The Sherbino and Weehwaken's 610 Arts Collective Gallery from September 1 – 23, 2026 Artist Reception Join us during Ridgway’s First Friday on Friday, September 4, from 5–7 pm. Stop by the 610 Arts Collective, explore the exhibition, and meet artist Bonnie Bucknam. In Unscripted: Fiber Improvisations, Bucknam embraces intuition, experimentation, and the unexpected. Rather than beginning with a predetermined design, she places a pieced or solid fabric shape on her pin wall and responds to it—adding another shape, observing the result, and allowing each composition to evolve organically. “These pieces go with the flow,” Bucknam explains. Free from rigid plans, rulers, and straight edges, the work celebrates irregularity and the expressive possibilities of imperfection. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/08/bucknam-at-610.png"
+  },
+  {
+    title: "The Sherbino Presents: Donny Morales – First Friday Show",
+    href: "https://sherbino.org/event/the-sherbino-presents-donny-morales-first-friday-show/",
+    date: "2026-09-04 18:00:00",
+    endDate: "2026-09-04 20:00:00",
+    location: "The Sherbino, Ridgway",
+    copy: "@ Friday, September 4th | 6:00–8:00 pmSherbino “Living Room” Free Show | Cash Bar | Tips EncouragedCelebrate First Friday with an intimate evening of live music at the Sherbino! Join us in the Sherbino’s cozy “Living Room” near the bar for a special performance by Donny Morales. Donny brings his signature blend of \"soul-acousti-funk\", delivering an irresistible mix of soulful vocals, funky rhythms, and masterful acoustic guitar. A longtime favorite on Colorado's Western Slope, Donny's performances are equal parts heartfelt storytelling, infectious grooves, and musical spontaneity. Whether he's reimagining familiar favorites or sharing original songs, his warm stage presence and feel-good energy create an experience that's impossible not to move to. Come ready to clap, sway, sing along, and enjoy an unforgettable evening of soul, acoustic vibes, and funk. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Donny-Morales-banner-Sept-4th.png"
+  },
+  {
+    title: "The Courtyard at 610 Presents: Heather & Douglas",
+    href: "https://sherbino.org/event/the-courtyard-at-610-presents-heather-douglas-2/",
+    date: "2026-09-06 19:00:00",
+    endDate: "2026-09-06 20:30:00",
+    location: "The Courtyard at 610, Ridgway",
+    copy: "@ Gates: 6:30 || Show: 7:00pm || $15 Advance / $20 at gates || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited Bar Available || There will be a few \"agility\" tickets at the gate — which are tickets for seats that you have to climb over a railing for. We don't sell those online — but we do sell them onsite IF there is space. **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** Join us for an unforgettable evening of music under the stars in one of Ridgway’s most charming hidden venues—The Courtyard at 610, tucked behind the 610 Arts Collective and Sherbino Theater. Enter through the alleyway behind the Sherbino and 610 Gallery for a magical summer night. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/Heather-Douglas-September-6-banner.png"
+  },
+  {
+    title: "Monthly Welcome Home Alliance Veteran's Coffee at the Sherbino",
+    href: "https://sherbino.org/event/monthly-welcome-home-alliance-veterans-coffee-at-the-sherbino/2026-09-08/",
+    date: "2026-09-08 10:00:00",
+    endDate: "2026-09-08 12:00:00",
+    location: "Ridgway, CO",
+    copy: "",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2023/01/Vet-Coffee.png",
+    description: "A monthly gathering hosted by the Welcome Home Alliance brings veterans together for coffee at the Sherbino in Ridgway. The recurring event offers a casual space for veterans to connect with one another and with community support."
   }
 ];
 
@@ -5885,7 +5930,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Work Session",
     link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "",
+    description: "A work session of the Town of Norwood Board of Trustees, providing an opportunity for board members to discuss municipal matters in a less formal setting than a regular meeting. The session is open to the public as part of the town's ongoing local government proceedings.",
     pubDate: "2026-08-05T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5896,7 +5941,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5907,7 +5952,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Meeting",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Water Commission, hosted by the Town of Norwood. Members of the public are welcome to attend this local government meeting, where water-related matters for the Norwood community are discussed and addressed.",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5918,7 +5963,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "",
+    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5929,7 +5974,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5940,7 +5985,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5951,7 +5996,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5962,7 +6007,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5973,7 +6018,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5984,28 +6029,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Movies Under the Stars",
-    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
-    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
-    pubDate: "2026-08-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
-  },
-  {
-    title: "Mind Blown Telluride",
-    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
-    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
-    pubDate: "2026-08-08T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
-  },
   {
     title: "Sunday Rehab at Alloy Kitchen",
     link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
@@ -6720,18 +6743,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/44447/screenshot_2026-05-15_at_3_52_12_pm.800x533.webp"
-  },
-  {
-    title: "Music on the Mesa",
-    link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music on the Mesa is a FREE outdoor concert series presented two Saturdays a summer by Norwood Park & Rec District, …",
-    pubDate: "2026-06-13",
-    endDate: "2026-08-08",
-    source: "telluride-com",
-    sourceLabel: "Norwood Park & Recreation District",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/62177/screenshot_2026-04-09_at_2_09_57_pm.800x533.webp"
   },
   {
     title: "Sunday Rehab",
