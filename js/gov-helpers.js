@@ -305,7 +305,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "ridgway|2026-08-12|Ridgway Town Council Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet---August-12%2C-2026.pdf","zoomUrl":"https://us02web.zoom.us/j/84715599948?pwd=SykKnn9yD3R1s6uF08awGxXm8s8y6P.1","meetingId":"847 1559 9948","passcode":"194920","phone":"346 248 7799"},
+    {"sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Council-Regular-Meeting-Packet-August-12-2026_0.pdf","zoomUrl":"https://us02web.zoom.us/j/84715599948?pwd=SykKnn9yD3R1s6uF08awGxXm8s8y6P.1","meetingId":"847 1559 9948","passcode":"194920","phone":"346 248 7799"},
 
   "norwood|2026-08-11|Norwood Water Commission Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -353,7 +353,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"54967543ae106ac4"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
@@ -769,106 +769,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Community Meeting - Regarding flooding, economic impacts, and community resilience following the Gold Mountain Fire and subsequent flash flood/debris flows.",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=958",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22878"
-  },
-  {
-    title: "Flood ravages homes",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
-    img: ""
-  },
-  {
-    title: "County floats disaster relief sales tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
-    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Log Hill won’t join fire authority",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
-    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Crews near full containment on fire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
-    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "‘We were in a panic’",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "infrastructure",
-    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
-    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
-    img: ""
-  },
-  {
-    title: "Riders scrutinize Ouray’s new shuttle service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
-    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Good For You!",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
-    img: ""
-  },
-  {
-    title: "Ridgway concert series puts trash in its place",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "arts-culture",
-    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
-    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Calendar & Events",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "recreation",
-    copy: "Thursday, August 6 Ridgway Farmers Market, 10 a.m.-2 p.m. in Hartwell Park – on Thursday this week due to Ridgway Rendezvous. Youth Garden Club for ages 8-18, Other Undergrounders root vegetables, from 3:30-4:30 p.m. at the Ridgway Public Library, 320 Charles St. Ouray County Republican Central Comm",
-    href: "https://www.ouraynews.com/2026/08/05/calendar-events-20260806-0346-556192/",
-    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -3304,6 +3204,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Telluride Men's Health club Ophir Mtg.",
+    link: "https://koto.org/event/telluride-mens-health-club-ophir-mtg/",
+    description: "Telluride men's Health club presents A heart to heart conversation with Dr. Mark Rosenthal followed by a heart healthy dinner. Ophir Town Hall",
+    pubDate: "2026-08-13T17:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Ophir town hall",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/OPHIR-MTG--scaled.png"
+  },
+  {
     title: "The Creative Exchange at Telluride Arts HQ",
     link: "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-08-13/",
     description: "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories that fuel their work. Think of it as an open source model for creativity—where we learn from each other, swap ideas, and help strengthen one another’s practice. Each session is hosted by local artists and creative leaders who bring their own perspectives, techniques, and creative journeys into the room. Topics may span everything from the business of art and professional development, to creative process, storytelling, collaboration, and the philosophical underpinnings of making art. Whether you’re a full-time working artist, an educator, a student, a maker, or simply someone curious about creative expression, the Creative Exchange is open to you. …",
@@ -3546,6 +3457,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
   },
   {
+    title: "Telluride Dinner Party",
+    link: "https://koto.org/event/telluride-dinner-party/",
+    description: "You are formally invited to our Telluride Dinner Party. This year, the Telluride Historical Museum turns 60 years old and to celebrate we are hosting the event at the museum. Enjoy cocktails as you mingle with locals who were born in the building, and peruse our new and permanent exhibits. Black Salt Catering will be serving an incredible plated dinner while you hear from a panel of museum legends that helped THM become who we are. We hope to celebrate this milestone of the Telluride Historical Museum’s history with you, your friends, and our museum family.",
+    pubDate: "2026-08-20T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Historical Museum",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/TellurideDinnerParty2026Marketing-1-scaled.jpg"
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -3610,28 +3532,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
-  },
-  {
-    title: "BURLESQUE BUFFET!",
-    link: "https://koto.org/event/burlesque-buffet/2026-08-22/",
-    description: "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.",
-    pubDate: "2026-08-22T20:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Sheridan Opera House, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-23/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-23T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
   }
 ];
 
@@ -4825,6 +4725,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Laughter for All with Comedian Nazareth",
+    link: "https://events.ourayridgwayevents.com/event/laughter-for-all-with-comedian-nazareth",
+    description: "A FREE clean comedy night with Angel's guild and DryBar Comedy's Comedian of the Year: Comedian Nazareth, featuring Variey Act Michael Rayner. They have been seen on major talk shows, the Late Show with David Letterman, and have millions of views on social media. Doors open at 5:00pm. View on site | Email this event",
+    pubDate: "2026-08-16T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Christian Center (PHM Center)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53640834110324/huge/b001fbeae1bb00a51f0dbafb871dd6641a0b2657.jpg"
+  },
+  {
     title: "Teen Pride Karaoke Night",
     link: "https://events.ourayridgwayevents.com/event/teen-pride-karaoke-night",
     description: "✨Let your whole self sparkle with PRIDE!✨ Join us to connect, celebrate, and build a sense of belonging.🌈 We will have Marilla Mae of Faery & Fae joining us as well as two Drag Performers from Colorado Springs to sing karaoke with. This is an opportunity for rising 8th Graders up to Recent HS Grads from Ouray County and beyond to craft new friendships, strengthen existing ones, and find their voice so that they can fully express themselves. There will be food, games, crafting supplies, and take home bags available. TO RSVP STEP 1: Make or update an account with Voyager so we have access to important information to best serve the Teens that are attending. STEP 2: Email Kayla@voyageryouth.org with questions and to let her know if you/your teen is planning on attending if you want to help us ensure there will be enough food and supplies. …",
@@ -5487,6 +5398,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52324818447922/huge/3f4a7ad14fc7dbe59a7600bfd9c554e32680c1d7.jpg"
+  },
+  {
+    title: "Mojo Birds - Live at Floating Lotus Brewery",
+    link: "https://events.ourayridgwayevents.com/event/mojo-birds-live-at-floating-lotus-brewery",
+    description: "Mojo Birds formed their funky flock in Durango, Colorado, bringing together musicians from across the country and around the world. The result is a tight-knit, groove-first sound built for celebration—rootsy, soulful, feel-good, with a little Afro-Peruvian spice. Their self-titled debut album, Mojo Birds (released January 2026), was produced by Jano Rix (The Wood Brothers) and engineered by Brook Sutton in Nashville, Tennessee. Recorded largely live in studio, it captures the band’s raw, high-energy built for the stage. View on site | Email this event",
+    pubDate: "2026-09-07T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Floating Lotus Brewery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53659627140416/huge/f7834614852e4bda2fb40a7b3a07c324c6e1ff24.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Heather & Douglas at The Courtyard",
@@ -6860,7 +6782,7 @@ const TELLURIDE_COM_EVENTS = [
     link: "https://www.telluride.com/event/village-film-nights/",
     description: "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
     pubDate: "2026-07-05",
-    endDate: "2026-08-10",
+    endDate: "2026-08-17",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
