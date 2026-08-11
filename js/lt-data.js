@@ -135,8 +135,10 @@
   // Gov-Hub, Events, and the town hubs (Morgan 2026-07-23). Times are FLOATING
   // local (no TZID/Z) — everyone here is Mountain Time, and a floating time
   // shows at that wall-clock hour in any calendar without tz math. No time →
-  // an all-day event. `ev`: { title, date:'YYYY-MM-DD', time?, location?,
-  // description?, url? }.
+  // an all-day event. `ev`: { title, date:'YYYY-MM-DD', endDate?, time?,
+  // location?, description?, url? }. An endDate LATER than date (a festival
+  // run) always renders as a multi-day all-day block — a start/end clock time
+  // would otherwise imply the event runs continuously overnight.
   function icsFmtDate(iso) { return iso.replace(/-/g, ''); }
   function icsAddDay(iso) {
     var p = iso.split('-'); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1));
@@ -152,8 +154,9 @@
   function icsEsc(s) { return String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/[,;]/g, '\\$&').replace(/\r?\n/g, '\\n'); }
   function icsDataUri(ev) {
     if (!ev || !ev.date || !/^\d{4}-\d{2}-\d{2}$/.test(ev.date)) return '';
+    var multiDay = /^\d{4}-\d{2}-\d{2}$/.test(ev.endDate || '') && ev.endDate > ev.date;
     var times = String(ev.time || '').split(/[-–—]|to\b/i);
-    var start = parseClock(times[0]), end = times.length > 1 ? parseClock(times[1]) : null;
+    var start = multiDay ? null : parseClock(times[0]), end = times.length > 1 ? parseClock(times[1]) : null;
     var dtStart, dtEnd;
     var pad = function (n) { return String(n).padStart(2, '0'); };
     if (start) {
@@ -164,7 +167,7 @@
       dtEnd = 'DTEND:' + endDate + 'T' + pad(eh) + pad(em) + '00';
     } else {
       dtStart = 'DTSTART;VALUE=DATE:' + icsFmtDate(ev.date);
-      dtEnd = 'DTEND;VALUE=DATE:' + icsAddDay(ev.date);
+      dtEnd = 'DTEND;VALUE=DATE:' + icsAddDay(multiDay ? ev.endDate : ev.date);   // DTEND is exclusive
     }
     var uid = 'lt-' + icsFmtDate(ev.date) + '-' + Math.abs(String(ev.title || '').split('').reduce(function (a, c) { return (a * 31 + c.charCodeAt(0)) | 0; }, 7)) + '@livabletelluride.org';
     var desc = ev.description || '';

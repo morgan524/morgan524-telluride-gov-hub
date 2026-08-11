@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add to Calendar — Livable Telluride</title>
+<meta name="description" content="Add a public meeting or community event from Livable Telluride to your own calendar.">
+<meta name="robots" content="noindex,follow">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<link rel="apple-touch-icon" href="/logo/apple-touch-icon.png?v=2">
+<link rel="manifest" href="/manifest.json">
+<style>
+  .cal-wrap { max-width: 640px; margin: 0 auto; padding: 34px var(--pad-x) 60px; }
+  .cal-card { background: var(--card); border: 1px solid var(--hairline); border-radius: 12px; padding: 26px 28px; }
+  .cal-kicker { font: 800 12px/1 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--rust); }
+  .cal-card h1 { font: 600 28px/1.25 var(--serif); margin: 10px 0 0; }
+  .cal-when { font: 600 16.5px/1.5 var(--sans); color: var(--forest); margin-top: 12px; }
+  .cal-where { font: 400 15.5px/1.5 var(--sans); color: var(--body2); margin-top: 4px; }
+  .cal-src { font: 500 15.5px/1.5 var(--sans); margin-top: 12px; }
+  .cal-choices { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .cal-choices .btn { justify-content: center; text-align: center; font-size: 16px; padding: 13px 20px; }
+  .cal-note { font: 400 15.5px/1.6 var(--sans); color: var(--muted2); margin-top: 20px; }
+  .cal-back { font: 600 15.5px/1.5 var(--sans); margin-top: 26px; display: block; text-align: center; }
+  .cal-bad { font: 500 16px/1.6 var(--sans); color: var(--body2); }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<main class="cal-wrap">
+  <div class="cal-card" id="cal-card">
+    <p class="cal-bad">Loading&hellip;</p>
+  </div>
+  <a class="cal-back" href="/events.html">&larr; See everything else coming up</a>
+</main>
+
+<div id="lt-footer"></div>
+<script src="site.js?v=10"></script>
+<script src="/js/lt-data.js?v=11"></script>
+<script>
+/* add-to-calendar.html — the landing page behind every "Add to calendar" button
+   in the Week Ahead / Weekend Ahead digests.
+
+   Email clients can't run JS and won't follow a data: URI, so the digest can't
+   hand a reader an .ics directly. Instead each meeting/event card links here
+   with the event in the query string, and this page offers the three routes
+   that between them cover every mail client: an .ics download (Apple Calendar,
+   Outlook desktop, Thunderbird), a Google Calendar pre-fill, and an
+   Outlook.com pre-fill.
+
+   Params (all URI-encoded): t=title, d=start YYYY-MM-DD, e=end YYYY-MM-DD
+   (optional, multi-day runs), tm=time text ("6:00 PM - 7:30 PM"), l=location,
+   u=source URL, w=kind ("meeting" | "event").
+
+   Everything here arrives from a URL a stranger can craft, so nothing is
+   trusted: text is escaped through LTData.esc and the source link runs through
+   LTData.safeUrl (http/https only). */
+(function () {
+  var q = new URLSearchParams(location.search);
+  var p = function (k) { return (q.get(k) || '').trim(); };
+  var ev = {
+    title: p('t'), date: p('d'), endDate: p('e'), time: p('tm'),
+    location: p('l'), url: p('u'), kind: p('w') === 'meeting' ? 'meeting' : 'event'
+  };
+  var card = document.getElementById('cal-card');
+  var esc = LTData.esc;
+  var ISO = /^\d{4}-\d{2}-\d{2}$/;
+
+  if (!ev.title || !ISO.test(ev.date)) {
+    card.innerHTML = '<p class="cal-bad">This calendar link is missing its event details. '
+      + 'Head to the <a href="/events.html">events calendar</a> or the '
+      + '<a href="/gov-hub.html">Gov Hub</a> and add it from there.</p>';
+    return;
+  }
+  if (!ISO.test(ev.endDate) || ev.endDate <= ev.date) ev.endDate = '';
+
+  // ── Date/time plumbing. Times are FLOATING local everywhere (no Z, no TZID):
+  // this valley is all Mountain Time, and a floating time lands at the same
+  // wall-clock hour in any calendar. Google is the exception — it needs an
+  // explicit ctz to read a naked timestamp as local rather than UTC.
+  var pad = function (n) { return String(n).padStart(2, '0'); };
+  var compact = function (iso) { return iso.replace(/-/g, ''); };
+  var addDay = function (iso) {
+    var a = iso.split('-');
+    var d = new Date(Date.UTC(+a[0], +a[1] - 1, +a[2] + 1));
+    return d.getUTCFullYear() + '-' + pad(d.getUTCMonth() + 1) + '-' + pad(d.getUTCDate());
+  };
+  var parseClock = function (s) {
+    var m = String(s || '').match(/(\d{1,2})(?::(\d{2}))?\s*([ap]\.?m\.?)/i);
+    if (!m) return null;
+    var h = parseInt(m[1], 10) % 12; if (/p/i.test(m[3])) h += 12;
+    return { h: h, m: m[2] ? parseInt(m[2], 10) : 0 };
+  };
+  // A multi-day run is always an all-day block — a clock range across several
+  // days would read as one continuous overnight event.
+  var times = ev.endDate ? [] : String(ev.time || '').split(/[-–—]|to\b/i);
+  var start = parseClock(times[0]);
+  var end = times.length > 1 ? parseClock(times[1]) : null;
+  var endClock = start ? (end || { h: (start.h + 1) % 24, m: start.m }) : null;
+  // The timed end rolls to the next day only when a 11 PM start wraps midnight.
+  var endDay = (start && !end && start.h === 23) ? addDay(ev.date) : ev.date;
+  var allDay = !start;
+  var lastDay = ev.endDate || ev.date;          // inclusive
+  var exclusiveEnd = addDay(lastDay);           // calendars want the day AFTER
+
+  var stamp = function (iso, c) { return compact(iso) + 'T' + pad(c.h) + pad(c.m) + '00'; };
+  var isoStamp = function (iso, c) { return iso + 'T' + pad(c.h) + ':' + pad(c.m) + ':00'; };
+
+  // safeUrl()'s no-fallback answer is '#', which would render as a dead
+  // "View the agenda" link — a meeting with no posted agenda arrives here with
+  // no u= at all, by design. Test first, and carry '' when there's nothing.
+  var srcUrl = /^https?:\/\//i.test(ev.url) ? LTData.safeUrl(ev.url, '') : '';
+  var details = srcUrl ? 'Details: ' + srcUrl : '';
+
+  // ── Google Calendar. ctz pins the naked timestamps to Mountain Time.
+  var gDates = allDay
+    ? compact(ev.date) + '/' + compact(exclusiveEnd)
+    : stamp(ev.date, start) + '/' + stamp(endDay, endClock);
+  var google = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+    + '&text=' + encodeURIComponent(ev.title)
+    + '&dates=' + gDates
+    + (allDay ? '' : '&ctz=America/Denver')
+    + (ev.location ? '&location=' + encodeURIComponent(ev.location) : '')
+    + (details ? '&details=' + encodeURIComponent(details) : '');
+
+  // ── Outlook.com / Microsoft 365 web deep link.
+  var outlook = 'https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent'
+    + '&subject=' + encodeURIComponent(ev.title)
+    + '&startdt=' + encodeURIComponent(allDay ? ev.date : isoStamp(ev.date, start))
+    + '&enddt=' + encodeURIComponent(allDay ? exclusiveEnd : isoStamp(endDay, endClock))
+    + (allDay ? '&allday=true' : '')
+    + (ev.location ? '&location=' + encodeURIComponent(ev.location) : '')
+    + (details ? '&body=' + encodeURIComponent(details) : '');
+
+  // ── .ics download — the shared builder in lt-data.js, same file the Gov Hub
+  // and Events pages hand out.
+  var ics = LTData.icsDataUri({
+    title: ev.title, date: ev.date, endDate: ev.endDate, time: ev.time,
+    location: ev.location, description: '', url: srcUrl
+  });
+
+  var whenText = (function () {
+    var fmt = function (iso) {
+      return new Date(iso + 'T12:00:00').toLocaleDateString('en-US',
+        { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
+    };
+    var d = ev.endDate ? fmt(ev.date) + ' – ' + fmt(ev.endDate) : fmt(ev.date);
+    return ev.time && !ev.endDate ? d + ' · ' + ev.time : d;
+  })();
+
+  // Where the closing note sends a reader for the detail we don't have. A
+  // meeting with no posted agenda has nowhere specific to point — the Gov Hub
+  // is the honest answer, since that's where the agenda appears when it posts.
+  var where = ev.kind === 'meeting'
+    ? (srcUrl ? 'the agenda' : 'the <a href="/gov-hub.html">Gov Hub</a>')
+    : (srcUrl ? 'the event page' : 'the <a href="/events.html">events calendar</a>');
+
+  card.innerHTML =
+    '<div class="cal-kicker">' + (ev.kind === 'meeting' ? 'Public Meeting' : 'Community Event') + '</div>'
+    + '<h1>' + esc(ev.title) + '</h1>'
+    + '<div class="cal-when">&#128197; ' + esc(whenText) + '</div>'
+    + (ev.location ? '<div class="cal-where">&#128205; ' + esc(ev.location) + '</div>' : '')
+    + (srcUrl ? '<div class="cal-src"><a href="' + esc(srcUrl) + '" rel="noopener">'
+        + (ev.kind === 'meeting' ? 'View the agenda &rarr;' : 'Event details &rarr;') + '</a></div>' : '')
+    + '<div class="cal-choices">'
+    +   (ics ? '<a class="btn btn-forest" href="' + ics + '" download="'
+          + esc(LTData.icsFilename(ev.title, ev.date)) + '">Apple Calendar, Outlook &amp; others (.ics)</a>' : '')
+    +   '<a class="btn btn-outline" href="' + esc(google) + '" target="_blank" rel="noopener">Google Calendar</a>'
+    +   '<a class="btn btn-outline" href="' + esc(outlook) + '" target="_blank" rel="noopener">Outlook.com</a>'
+    + '</div>'
+    + '<p class="cal-note">' + (ev.endDate
+        ? 'This one runs several days, so it’s added as an all-day block — see ' + where + ' for the daily schedule.'
+        : allDay
+        ? 'No start time was published for this one, so it’s added as an all-day entry — see ' + where + ' for the hour.'
+        : 'Times are Mountain Time. Schedules change — confirm on ' + where + ' before you go.')
+    + '</p>';
+})();
+</script>
+</body>
+</html>

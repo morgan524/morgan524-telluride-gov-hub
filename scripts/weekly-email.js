@@ -601,7 +601,11 @@ for (const fn of MEETING_FNS) {
     // exactly like gov-hub.html's getWTMEntry(), so the same land-use / code
     // meetings get the "Why This Matters" highlight in the email.
     const wtm = getWTMEntry(name + ' | ' + sm + ' | ' + (m.description || ''));
-    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm });
+    meetings.push({ name, date, src, srcKey: m.source || '', summary: trunc(sm, 520), agenda, link: m.link || (SITE + '/gov-hub.html'), hasAgenda: !!agenda, wtm,
+      // Carried for the "Add to calendar" button only. eventTimes is the field
+      // every get*Meetings() source populates ('' when the body publishes no
+      // hour → the calendar entry lands as all-day).
+      time: m.eventTimes || '', location: m.location || '' });
   }
 }
 meetings.sort((a, b) => a.date < b.date ? -1 : a.date > b.date ? 1 : 0);
@@ -724,6 +728,31 @@ const wd = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { weekda
 const prettyDate = (d) => new Date(d + 'T12:00:00').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'America/Denver' });
 const commentMailto = (m) => { const board = boardName(m.name, m.src); const subject = `Re: the ${prettyDate(m.date)} ${board} meeting`; const body = `To the ${board},\n\nI'd like to share a comment on the ${prettyDate(m.date)} meeting:\n\n`; return `mailto:${encodeURIComponent(commentEmailFor(m.name, m.srcKey))}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`; };
 const safeUrl = (u) => /^https?:\/\//i.test(u || '') ? u : (SITE + '/events.html');
+// ── "Add to calendar" ──────────────────────────────────────────────────────
+// Every meeting and event card carries one (Morgan, 2026-08-11). Mail clients
+// run no JS and won't follow a data: URI, so the digest can't hand over an .ics
+// the way the website's cards do. The button instead links to
+// /add-to-calendar.html with the event in the query string; that page offers
+// the three routes that between them cover every client — an .ics download
+// (Apple Calendar, Outlook desktop), Google Calendar, and Outlook.com. Param
+// names must match the ones that page reads: t/d/e/tm/l/u/w.
+const CAL_PAGE = SITE + '/add-to-calendar.html';
+const calUrl = (ev) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(ev.date || '')) return '';
+  const q = [['t', ev.title], ['d', ev.date], ['e', ev.endDate], ['tm', ev.time], ['l', ev.location], ['u', ev.url], ['w', ev.kind]]
+    .filter(([, v]) => v)
+    // Cap each value: a runaway source string shouldn't push the whole URL past
+    // what a mail client will render as a link.
+    .map(([k, v]) => k + '=' + encodeURIComponent(String(v).slice(0, 220)))
+    .join('&');
+  return CAL_PAGE + '?' + q;
+};
+// Light pill, sized to match the green "Comment" button it sits beside.
+const calBtn = (ev) => {
+  const u = calUrl(ev);
+  return u ? `<a href="${esc(u)}" style="display:inline-block;background:#f1ece1;color:#a0531f;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;vertical-align:middle;">&#128197; Add to calendar</a>` : '';
+};
+const ACT_SEP = ' &nbsp;&nbsp; ';
 const mh = meetings.map((m) => {
   // No agenda → no link. The old fallback ("Meeting info →") pointed at the
   // body's agenda index, which is exactly the decoy the rule above exists to
@@ -734,7 +763,17 @@ const mh = meetings.map((m) => {
   const commentBtn = commentEmailFor(m.name, m.srcKey)
     ? `<a href="${esc(commentMailto(m))}" style="display:inline-block;background:#2f7a5f;color:#fff;text-decoration:none;font-size:10.5px;font-weight:600;padding:3px 10px;border-radius:4px;vertical-align:middle;">Comment</a>`
     : '';
-  const sep = (commentBtn && link) ? ' &nbsp;&nbsp; ' : '';
+  // Same headline the card shows — meetingDisplayName() exists precisely so the
+  // name stands alone once separated from the jurisdiction chip, which is what
+  // a calendar entry does. The URL is the VETTED agenda only (m.agenda, already
+  // emptied for pending/index/unverified links above) — never m.link. Carrying
+  // the raw link would smuggle the agenda-index decoy the rule at the top of
+  // this file exists to prevent into the calendar entry and its landing page.
+  const calendarBtn = calBtn({
+    title: meetingDisplayName(m.name, m.src),
+    date: m.date, time: m.time, location: m.location,
+    url: m.agenda, kind: 'meeting',
+  });
   // "Why This Matters" — mirror the Gov-Hub highlight: a green-bordered card
   // plus an info callout with the stakes and a Deep Dive link, for meetings
   // that touch a tracked code amendment or high-level land-use issue.
@@ -748,8 +787,9 @@ const mh = meetings.map((m) => {
   const tdStyle = m.wtm
     ? 'padding:14px 15px;border:2px solid #2d6a4f;border-radius:8px;background:#f7fbf8;'
     : 'padding:13px 0;border-top:1px solid #eef1ee;';
-  // Comment button first, then the Meeting-info / View-agenda link.
-  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${commentBtn}${sep}${link}</td></tr>`;
+  // Comment button first, then Add to calendar, then the View-agenda link.
+  const acts = [commentBtn, calendarBtn, link].filter(Boolean).join(ACT_SEP);
+  return `<tr><td style="${tdStyle}"><span style="display:inline-block;background:#21443c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:4px;white-space:nowrap;">${esc(wd(m.date)).toUpperCase()}</span><span style="font-size:12px;color:#7a8a85;margin-left:8px;">${esc(m.src)}</span><div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;">${esc(meetingDisplayName(m.name, m.src))}</div><div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${renderSummary(m.summary)}</div>${wtmBlock}${acts}</td></tr>`;
 }).join('');
 const EV_ACCENT = '#a0531f'; // rust (toned down from the redder #a8401f) — complements the forest-green meeting badge
 // Town/area label for an event card. Prefers the scraped venue string when one
@@ -787,7 +827,9 @@ const evRow = (e) => {
   const text = `${badge}${loc}`
     + `<div style="font-family:Georgia,serif;font-size:15px;font-weight:700;color:#1a2e29;margin-top:5px;"><a href="${esc(u)}" style="color:#1a2e29;text-decoration:none;">${esc(e.title)}</a></div>`
     + `<div style="font-size:15.5px;color:#5a6b64;line-height:1.55;margin:4px 0 6px;">${esc(trunc(e.summary, 200))}</div>`
-    + `<a href="${esc(u)}" style="color:${EV_ACCENT};text-decoration:underline;font-size:12.5px;font-weight:600;">Details →</a>`;
+    + [`<a href="${esc(u)}" style="color:${EV_ACCENT};text-decoration:underline;font-size:12.5px;font-weight:600;">Details →</a>`,
+        calBtn({ title: e.title, date: e.date, time: e.time, location: locText, url: e.href, kind: 'event' })]
+       .filter(Boolean).join(ACT_SEP);
   const img = (e.img && /^https?:\/\//.test(e.img))
     ? `<td class="ev-img-cell" width="78" valign="top" style="padding-right:14px;"><img src="${esc(e.img)}" width="78" height="78" alt="" style="display:block;width:78px;height:78px;border-radius:6px;border:0;object-fit:cover;background:#eef1ee;"></td>`
     : '';
@@ -936,10 +978,14 @@ const festivalsThisWeek = (G('TELLURIDE_FESTIVALS') || [])
 const festCard = (f) => {
   const link = f.ticketUrl || f.url || (SITE + '/events.html');
   const cta = f.ticketLabel || 'Festival Details';
+  // The whole run as one multi-day all-day block (festISO gives inclusive
+  // start/end; add-to-calendar.html handles the exclusive-DTEND arithmetic).
+  const r = festISO(f);
+  const calendarBtn = calBtn({ title: f.name, date: r.start, endDate: r.end, location: 'Telluride', url: link, kind: 'event' });
   const logoImg = f.logo
     ? `<img src="${esc(f.logo)}" width="64" height="64" alt="" style="display:block;width:64px;height:64px;object-fit:contain;">`
     : `<div style="font-size:38px;line-height:64px;text-align:center;">${f.icon || '🎪'}</div>`;
-  return `<tr><td class="sec-pad" style="padding:20px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#21443c;border-radius:10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="fest-logo-cell" width="96" valign="middle" style="padding:16px 0 16px 16px;vertical-align:middle;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#fff;border-radius:10px;padding:8px;width:80px;height:80px;text-align:center;vertical-align:middle;">${logoImg}</td></tr></table></td><td class="fest-body-cell" valign="middle" style="padding:16px 18px;vertical-align:middle;"><div style="font-family:Georgia,serif;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;">&#9733; Festival This Week</div><div style="font-family:Georgia,serif;font-size:19px;font-weight:700;color:#fff;margin-top:4px;line-height:1.2;"><a href="${esc(link)}" style="color:#fff;text-decoration:none;">${esc(f.name)}</a></div><div style="font-size:13px;color:#a8c4b8;margin-top:3px;">${esc(festLabel(f))}</div>${f.promo ? `<p style="margin:8px 0 11px;font-size:13px;line-height:1.55;color:#e7efe9;">${esc(f.promo)}</p>` : '<div style="height:10px;"></div>'}<a href="${esc(link)}" style="display:inline-block;background:#b58a2c;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 20px;border-radius:999px;">${esc(cta)} &rarr;</a></td></tr></table></td></tr></table></td></tr>`;
+  return `<tr><td class="sec-pad" style="padding:20px 34px 0;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td style="background:#21443c;border-radius:10px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td class="fest-logo-cell" width="96" valign="middle" style="padding:16px 0 16px 16px;vertical-align:middle;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#fff;border-radius:10px;padding:8px;width:80px;height:80px;text-align:center;vertical-align:middle;">${logoImg}</td></tr></table></td><td class="fest-body-cell" valign="middle" style="padding:16px 18px;vertical-align:middle;"><div style="font-family:Georgia,serif;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#e3c87a;">&#9733; Festival This Week</div><div style="font-family:Georgia,serif;font-size:19px;font-weight:700;color:#fff;margin-top:4px;line-height:1.2;"><a href="${esc(link)}" style="color:#fff;text-decoration:none;">${esc(f.name)}</a></div><div style="font-size:13px;color:#a8c4b8;margin-top:3px;">${esc(festLabel(f))}</div>${f.promo ? `<p style="margin:8px 0 11px;font-size:13px;line-height:1.55;color:#e7efe9;">${esc(f.promo)}</p>` : '<div style="height:10px;"></div>'}<a href="${esc(link)}" style="display:inline-block;background:#b58a2c;color:#fff;text-decoration:none;font-weight:700;font-size:13px;padding:9px 20px;border-radius:999px;">${esc(cta)} &rarr;</a>${calendarBtn ? `<span style="display:inline-block;width:12px;">&nbsp;</span>${calendarBtn}` : ''}</td></tr></table></td></tr></table></td></tr>`;
 };
 const festivalHero = festivalsThisWeek.map(festCard).join('');
 
