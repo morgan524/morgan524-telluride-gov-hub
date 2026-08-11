@@ -1,18 +1,18 @@
 {
-  "hash": "cf28fca467c05fa643eaaf23b8f9f79d3f68c8ee",
-  "lede": "The biggest thing on the civic calendar this week is Tuesday's Telluride Town Council meeting, where the Colorado Wildfire Resiliency Code goes to its third and final reading — pass it and the Land Use Code changes, reshaping what property owners can do with landscaping and trees under historic review standards. Ridgway's council is also busy Wednesday with a public hearing on the Hyde Subdivision replatting and a joint work session on its draft Housing Action Plan. Meanwhile, the Mushroom Festival rolls into town mid-week and San Miguel County's Planning Commission takes up subdivision mechanics and an energy code update Thursday.",
+  "hash": "6bf0f8ab2e8ce504f477c1377bcb53ab4dc4e002",
+  "lede": "The biggest thing on the board this week is Telluride Town Council's third and final reading of the Colorado Wildfire Resiliency Code on Tuesday — if it passes, it rewrites the Land Use Code's historic review standards and landscaping rules for every property owner in town. Ridgway's council is also holding a public hearing on the Hyde Subdivision resubdivision and a joint work session on its draft Housing Action Plan, while San Miguel County's Planning Commission takes up both a subdivision work session and an energy code update that would reshape building standards for new construction.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third reading vote could permanently change landscaping and historic review rules."
+      "stake": "Third reading — LUC historic review and landscaping rules permanently change if approved."
     },
     {
       "id": 6,
-      "stake": "Public hearing on Hyde Subdivision replatting plus housing plan review open for comment."
+      "stake": "Public hearing on Hyde Subdivision resubdivision plus housing plan vote affecting future development."
     },
     {
       "id": 8,
-      "stake": "Energy code update and subdivision standards could reshape county building and land-division rules."
+      "stake": "Energy code update and subdivision mechanics review could reshape county building and land-division standards."
     }
   ]
 }

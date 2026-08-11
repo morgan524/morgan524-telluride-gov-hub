@@ -424,6 +424,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-11",
+    title: "The schoolhouse foundation and the water tank roof",
+    body: "The county is weighing proposals to repair the foundation at the Placerville Schoolhouse and do roofing work on the Trout Lake Water Tank. Neither project has been voted on yet — this is still at the work session stage. The tension is familiar up here: historic and public infrastructure costs money, and opinions split on whether aging county assets are worth sustained investment or whether the dollars should go elsewhere. Both sides have a point.\n\nWhere do you come down on spending county resources to maintain older public structures like these?",
+    choices: ["Worth the investment", "Other priorities first", "Depends on the cost", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-10",
     title: "Lock it in — or leave room to adjust?",
     body: "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. A vested plan is a big deal: once approved, it locks in a developer's right to build under current rules, even if the Land Use Code changes later. That protects investment and gives developers certainty. But it also ties the community's hands — if neighbors or commissioners later have second thoughts, the window to adjust closes. So the question is whose interests the clock should favor.\n\nWhen a development plan gets vested, who should get the benefit of the doubt — the developer or the community?",
@@ -731,26 +739,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "arts-culture",
     copy: "Outdoor movie screening with popcorn and drinks available.",
     href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 11, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-august-2/",
     img: ""
   },
   {
@@ -3323,7 +3311,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "TMHS Orientation for 7th graders, 9th graders, and new students",
     link: "https://koto.org/event/tmhs-orientation-for-7th-graders-9th-graders-and-new-students/",
-    description: "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with their new school environment before the academic year begins.",
+    description: "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
     pubDate: "2026-08-17T00:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3367,7 +3355,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Telluride R-1 Schools First Day of School",
     link: "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    description: "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
+    description: "First Day of School",
     pubDate: "2026-08-18T08:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3544,92 +3532,92 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Musik 4 Kinders",
-    link: "https://telluridelibrary.libcal.com/event/16568424?hs=a",
-    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
-    pubDate: "2026-08-10T16:30:00.000Z",
+    title: "DMV2GO: Appointments Encouraged",
+    link: "https://telluridelibrary.libcal.com/event/15934445?hs=a",
+    description: "9:00 AM – 5:00 PM · Walk-ins are welcome, but if you&#39;d like to make an appointment, click here . Please Note, DMV2GO does not offer ANY testing services. RENEW - An existing Colorado Driver License, ID or Permit REPLACE - A lost or stolen Colorado Driver License, ID or Permit FIRST TIME - Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER - Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aqu&iacute;. Tenga en cuenta, DMV2GO no ofrece NING&Uacute;N servicio de prueba. …",
+    pubDate: "2026-08-11T15:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_16_11_54_51.jpg"
+  },
+  {
+    title: "Storytime / Hora de Cuentos",
+    link: "https://telluridelibrary.libcal.com/event/16772774?hs=a",
+    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
+    pubDate: "2026-08-11T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
   },
   {
-    title: "Piano on the Patio with Oliver Henry",
-    link: "https://telluridelibrary.libcal.com/event/16644816?hs=a",
-    description: "12:00 PM – 1:00 PM · Craving a break from the hustle and bustle of your day? Take a lunchtime escape to the library for a dose of tranquility. Settle into a comfy chair and unwind with ethereal piano melodies played live by WPL&#39;s very own, Oliver Henry, of Apr&egrave;s Nova. Unplug from your devices and bring a book, magazine, or simply enjoy a moment of peace and quiet. This program is a great way to de-stress, recharge, and refocus for the rest of your afternoon. Feel free to bring your lunch and enjoy it while listening to the music! No registration required. Join us on the second Monday of the month from 12-1pm at the Wilkinson Public Library.",
-    pubDate: "2026-08-10T18:00:00.000Z",
+    title: "Community Narcan Training",
+    link: "https://telluridelibrary.libcal.com/event/17109201?hs=a",
+    description: "12:00 PM – 1:00 PM · Community Narcan Training Be prepared to save a life. Join us for a free community training led by Lyndall Young from Western Colorado AHEC on recognizing opioid overdoses and using naloxone (Narcan), a life-saving medication that anyone can learn to administer. Whether you&#39;re a parent, friend, neighbor, or simply want to be prepared, this training is open to everyone. Free lunch will be provided. The training is free to attend , and advance registration is encouraged . We hope you&#39;ll join us in learning a skill that could make a difference in our community.",
+    pubDate: "2026-08-11T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_27_10_17_04.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_30_12_59_41.jpg"
   },
   {
-    title: "Cocina con Corazón",
-    link: "https://telluridelibrary.libcal.com/event/17202614?hs=a",
-    description: "12:00 PM – 1:30 PM · Tendremos el programa Cocina con Coraz&oacute;n cada mes asociado con Ah Haa para traer m&aacute;s programas para la comunidad de hispanohablantes. Vamos a cocinar sopes con Israel.  Este program solamente es para adultos y en espa&ntilde;ol.   &iexcl;Tenemos espacio para 12 adultos, inscr&iacute;bete con Claudia hoy!  Todos los niveles de espa&ntilde;ol son bienvenidos.",
-    pubDate: "2026-08-10T18:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Ahh Haa School of Arts",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_14_14_51_05.png"
-  },
-  {
-    title: "Savvy Seniors-Open Tech",
-    link: "https://telluridelibrary.libcal.com/event/17029822?hs=a",
-    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone.",
-    pubDate: "2026-08-10T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Meeting Room #6 - large",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_39_48.png"
-  },
-  {
-    title: "Hobby Hopping: Cyanotype Printing",
-    link: "https://telluridelibrary.libcal.com/event/17286074?hs=a",
-    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
-    pubDate: "2026-08-10T20:00:00.000Z",
+    title: "Teen Cook",
+    link: "https://telluridelibrary.libcal.com/event/16935719?hs=a",
+    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
+    pubDate: "2026-08-11T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
   },
   {
-    title: "Family Movie Matinee: Goat",
-    link: "https://telluridelibrary.libcal.com/event/15536184?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-08-10T20:00:00.000Z",
+    title: "Free Legal Clinic - Clínica Jurídica Gratuita (Zoom)",
+    link: "https://telluridelibrary.libcal.com/event/16009652?hs=a",
+    description: "4:00 PM – 5:40 PM · A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only.  BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una cl&iacute;nica de asesoramiento jur&iacute;dico GRATUITO para las personas que notienen abogado. Abogados voluntarios responder&aacute;n a preguntas, ayudar&aacute;n a llenar formularios y explicar&aacute;n el proceso y el procedimiento de cuestiones jur&iacute;dicas. Los abogados voluntarios no te representan y esta cl&iacute;nica es s&oacute;lo informativa. CON CITA PREVIA. Llame a 970-728-4519 para m&aacute;s informaci&oacute;n y para registrarse.",
+    pubDate: "2026-08-11T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Meeting Room #5 - small",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1760996664.jpg"
+  },
+  {
+    title: "Book Buzz at Telluride Brewing Company",
+    link: "https://telluridelibrary.libcal.com/event/16878595?hs=a",
+    description: "5:30 PM – 6:30 PM · Join WPL on the 2nd Tuesday 5:30-6:30pm of each month at TBC in Lawson Hill May-September. Our queen of Reader&#39;s Advisory, Tiffany Osborne, will be there to talk about our hottest new titles and Miss Melissa will be providing an interactive story time for the kids. We&#39;ll have grab-and-go activity kits for the littles as well, and plenty of books to checkout. ADDED BONUS: Enjoy a 10% discount on food as well as $5 TBC Beers when you show your library card to the TBC staff . Don&#39;t have a card? No problem! We&#39;ll make one for you on the spot!",
+    pubDate: "2026-08-11T23:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Telluride Brewing Company",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_13_09_56_40.png"
+  },
+  {
+    title: "College Student Panel",
+    link: "https://telluridelibrary.libcal.com/event/17130683?hs=a",
+    description: "5:30 PM – 7:00 PM ·   College Student Panel Tuesday August 11, 5:30 to 6:30 Hear from current students at the  University of Wisconsin, University of Michigan, University of Colorado Boulder, University of Virginia, University of Denver, Santa Clara University , and more about: How they chose their college How to maximize your high school experience in preparation for college Their college experience Students and families welcome. Q&A to follow. Sponsored by JMAC College Counseling and Karma Impact Fund",
+    pubDate: "2026-08-11T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_37.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_16_48_16.jpg"
   },
   {
-    title: "Tribal Allyship in Colorado with Ernest House",
-    link: "https://telluridelibrary.libcal.com/event/16641834?hs=a",
-    description: "5:30 PM – 7:00 PM · Join Ernest House, Jr., Senior Policy Director at the Center of Tribal & Indigenous Engagement at the Wilkinson Public Library for a conversation on August 10th at 5:30 pm. He will talk about projects like the Colorado Outdoor Strategy Tribal Framework , buffalo restoration in the San Luis Valley, and the building the nation&#39;s first t ribal embassy in Denver. Ernest House Jr. is an enrolled member of the Ute Mountain Ute Tribe in Towaoc, Colorado, and a leader in Native American affairs. He served as Executive Director of the Colorado Commission of Indian Affairs (CCIA) for 12 years, fostering communication between Colorado's tribal nations and state agencies, while maintaining government-to-government relations under Governors Owens, Ritter, and Hickenlooper. …",
-    pubDate: "2026-08-10T23:30:00.000Z",
+    title: "Eco-Series: Between Grief & Gratitude",
+    link: "https://telluridelibrary.libcal.com/event/17177322?hs=a",
+    description: "5:30 PM – 7:00 PM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
+    pubDate: "2026-08-11T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_07_13_22_59.jpg"
-  },
-  {
-    title: "Cardio Dance (Baile Cardio) with Kelsey",
-    link: "https://telluridelibrary.libcal.com/event/16548397?hs=a",
-    description: "6:00 PM – 7:00 PM · Join us for a fun evening of dancing and getting your heart rate up!  You will be having so much fun, you won&#39;t even know you are exercising!  Led by Kelsey Trottier from the Telluride Dance Collective. 2nd and 4th Monday of the month. &iexcl;&Uacute;nete a nosotros para una divertida noche de baile y ejercicio! Te divertir&aacute;s tanto que ni te dar&aacute;s cuenta de que est&aacute;s haciendo ejercicio. Dirigido por Kelsey Trottier del Telluride Dance Collective.",
-    pubDate: "2026-08-11T00:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1768253322.jpg"
+    location: "Telluride Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_00_40.jpg"
   }
 ];
 
@@ -4286,84 +4274,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-10T06:00:00.000Z",
+    pubDate: "2026-08-11T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Weehawken Dance Scholarships Deadline (Fall semester 2026)",
-    link: "https://events.ourayridgwayevents.com/event/weehawken-dance-scholarships-deadline-fall-semester-2026",
-    description: "Weehawken Dance Scholarships Our Weehawken Dance scholarships provide key opportunities for students in Montrose, Ridgway and Ouray County to access youth dance, aerial silks, and other programs. THE DEADLINE FOR FALL SCHOLARSHIP APPLICATIONS IS 5 PM ON MONDAY, AUGUST 10TH, 2026 Weehawken Dance Scholarships Overview Our scholarship fund, generously supported by donations, fluctuates each season, enabling us to offer varying levels of financial assistance. To ensure you don't miss out on these opportunities, please note the strict deadlines for each semester and adhere to them diligently. Weehawken Dance scholarships applicants may apply for scholarships covering 5-100% of tuition fees. For the Fall semester, we have limited Aerial Scholarships available exclusively for Montrose students attending classes at the FlexRec. It's essential for applicants to disclose any enrollment in classes with other programs during the same semester they plan to attend Weehawken classes on scholarship or financial assistance. …",
-    pubDate: "2026-08-10T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53483841129898/huge/85ec93c450fb49169649ce596562c77210c06150.jpg"
-  },
-  {
-    title: "Pilates Mat All Levels",
-    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
-    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
-    pubDate: "2026-08-10T14:30:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway Pilates",
-    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
-  },
-  {
-    title: "On Display - Roots and Rhythms",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
-    description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
-    pubDate: "2026-08-10T15:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Space to Create Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-10T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "Senior Lunch by Neighbor to Neighbor",
-    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
-    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
-    pubDate: "2026-08-10T18:00:00.000Z",
-    endDate: "2026-10-05",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
-  },
-  {
-    title: "Breathe Together",
-    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
-    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
-    pubDate: "2026-08-11T00:15:00.000Z",
-    endDate: "2026-09-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Bee True You Wellness and Creative Studio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "Functional Fitness - Strength & Mobility Training For Women",
@@ -4376,6 +4293,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "On Display - Roots and Rhythms",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
+    description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
+    pubDate: "2026-08-11T15:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53622400474001/huge/4d4b348dd13c551177bad3f73488afc2565fc57f.jpg"
   },
   {
     title: "Ouray Youth Summer Programs: Mountain Bike Skills",
@@ -4399,6 +4328,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/52236172073282/huge/134613035140f6c008febe657f2e7e23acc365e9.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-11T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
   },
   {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
@@ -4776,6 +4717,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629220241939/huge/16644e551a7696d45dae23224664787f1fd221ac.jpg"
   },
   {
+    title: "Pilates Mat All Levels",
+    link: "https://events.ourayridgwayevents.com/event/pilates-mat-all-levels",
+    description: "This all levels Classical Pilates Mat class will center, strengthen and legnthen your entire body. Specialty mats are provided. Contact us to learn more or purchase a pass from the link below. We are located in the Historic Bank Building at 521 Clinton Street., View on site | Email this event",
+    pubDate: "2026-08-17T14:30:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway Pilates",
+    imageUrl: "https://localist-images.azureedge.net/photos/53461881445043/huge/bea9b1b613e5c4368deec4a9cd935c81f0ae72c8.jpg"
+  },
+  {
     title: "TOP Volunteer Work Day – Monday, August 17",
     link: "https://events.ourayridgwayevents.com/event/top-volunteer-work-day-monday-august-17",
     description: "We could use a few helping hands to take care of some basic maintenance around TOP. If you have a few hours to spare, we'd love to have you join us on Monday, August 17, from 9:00 AM until noon. We'll be trimming brush, raking trails, cutting back low-hanging branches, and sprucing up the Disc Golf Course. If you're a disc golfer, this is a great opportunity to help keep the course in great shape for everyone to enjoy. If you have work gloves or yard tools like rakes, loppers, or trimmers, please bring them along. Water is always a good idea, too. Thanks in advance to everyone who comes out to help. We appreciate all of our volunteers and look forward to seeing you on the 17th! View on site | Email this event",
@@ -4787,6 +4740,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/51579851840244/huge/fa872abaa9c1160932255910671aa503548cbb47.jpg"
   },
   {
+    title: "Senior Lunch by Neighbor to Neighbor",
+    link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
+    description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
+    pubDate: "2026-08-17T18:00:00.000Z",
+    endDate: "2026-10-05",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/51631061496012/huge/ef9e5facb2d933bc015ffe261fc1ecd0508088c8.jpg"
+  },
+  {
     title: "Celebration of Life for David Leigh Houtz",
     link: "https://events.ourayridgwayevents.com/event/celebration-of-life-for-david-leigh-houtz",
     description: "August 17 @ 3:00 pm – 6:00 pm 3-6 pm || Sherbino Celebration of Life for David Leigh Houtz David Leigh Houtz was a familiar presence in Ridgway for decades. Many knew him through his jewelry shop and workshop at 147 N. Cora, where he crafted, repaired, and sold jewelry since the 1990s. Others knew him through his years of service as a firefighter, his artistic talents, his independent spirit, and his unmistakable personality. David’s daughter and family invite friends, neighbors, former customers, and all who knew him to join them in celebrating his life. Monday, August 17, 2026 Drop by anytime between 3:00–6:00 PM The Sherbino 604 Clinton Street, Ridgway The Sherbino is honored to provide the space for this gathering as family and friends come together to share stories, memories, and light refreshments while celebrating a life well lived. Join us in Ridgway’s Living Room. …",
@@ -4796,6 +4761,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53551486850468/huge/45887e0ddea874f645f524be6869c3115982f7d8.jpg"
+  },
+  {
+    title: "Breathe Together",
+    link: "https://events.ourayridgwayevents.com/event/breathe-together-9572",
+    description: "We explore and practice breath awareness and conscious breathing techniques as doorways to physical and emotional regulation and spiritual growth. Through these practices we also grow our awareness and achieve higher states of consciousness that can help us in our everyday life, relationships, general wellbeing and ultimately reconnect with our higher nature. No previous experience is required. View on site | Email this event",
+    pubDate: "2026-08-18T00:15:00.000Z",
+    endDate: "2026-09-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Bee True You Wellness and Creative Studio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53197444379202/huge/26813502ab1ba3ae9f231b0cd774d101f4f32f02.jpg"
   },
   {
     title: "Movie Mondays in Hartwell Park",
