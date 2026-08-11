@@ -82,6 +82,9 @@
         g.items.map(function (it) { return '<a href="' + esc(resolveHref(it)) + '">' + esc(it.label) + '</a>'; }).join('');
     }).join('') +
       '<div class="drawer-cta">' +
+      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'hub-bub.html') + '#signup">' +
+      '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
+      'Subscribe</a>' +
       '<button class="lt-pill-search" type="button" data-search-open aria-label="Search">' +
       '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
       'Search</button>' +
@@ -97,6 +100,13 @@
       // homepage section (footer link remains); Log In left because the only
       // login surface is Hub-Bub, which has its own. Search takes the
       // prominent slot; Español stays.
+      // Subscribe added 2026-08-11 (per Morgan). Points at the ONE signup
+      // surface — /hub-bub.html#signup, which auto-opens the signup modal on
+      // that hash. Don't add a second signup form anywhere; see the unified
+      // signup workflow (everything routes through the Worker /update-profile).
+      '<a class="lt-pill-subscribe" href="' + esc(ROOT + 'hub-bub.html') + '#signup" title="Get the weekly email">' +
+      '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>' +
+      'Subscribe</a>' +
       '<button class="lt-pill-search" type="button" data-search-open title="Search the site ( / )" aria-label="Search">' +
       '<svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>' +
       'Search</button>' +
@@ -226,6 +236,14 @@
     '.lt-pill-search{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--sans,-apple-system,sans-serif);color:#fff;background:var(--forest,#24483f);border:0;border-radius:999px;padding:13px 24px;cursor:pointer;transition:background .12s;}' +
     '.lt-pill-search:hover{background:#1c3a33;}' +
     '.lt-drawer .lt-pill-search{font:700 14px/1 var(--sans,-apple-system,sans-serif);padding:11px 18px;}' +
+    // Subscribe (2026-08-11): rust so it reads as the action, against Search's
+    // forest. Same pill geometry as Search so the cluster stays even.
+    '.lt-pill-subscribe{display:inline-flex;align-items:center;gap:8px;font:700 16px/1 var(--sans,-apple-system,sans-serif);color:#fff;background:var(--rust,#a04f24);border:0;border-radius:999px;padding:13px 24px;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .12s;}' +
+    '.lt-pill-subscribe:hover,.lt-pill-subscribe:focus{background:var(--rust-hover,#93471f);color:#fff;}' +
+    // In the drawer, lt.css's `.lt-drawer a {display:block}` outranks the base
+    // rule's inline-flex (element+class beats class), which collapses the gap
+    // between the icon and the label. Search is a <button> so it never hit this.
+    '.lt-drawer .lt-pill-subscribe{display:inline-flex;font:700 14px/1 var(--sans,-apple-system,sans-serif);padding:11px 18px;color:#fff;}' +
     '.lt-search-overlay{position:fixed;inset:0;background:rgba(26,46,41,.55);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:9vh 16px 16px;}' +
     '.lt-search-overlay.open{display:flex;}' +
     '.lt-search-box{background:#fdfbf6;border-radius:14px;width:640px;max-width:100%;box-shadow:0 18px 60px rgba(0,0,0,.35);overflow:hidden;display:flex;flex-direction:column;max-height:78vh;}' +
