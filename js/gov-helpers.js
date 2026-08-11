@@ -668,86 +668,6 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
     title: "Bulletin for August 9",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -3880,7 +3800,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Mushroom Festival: The MycoLuscious & MycoLicious MycoLogical Poetry Show with Art Goodtimes & Friends",
     link: "https://sheridanoperahouse.com/events/telluride-mushroom-festival-the-mycoluscious-mycolicious-mycological-poetry-show-with-art-goodtimes-friends/",
-    description: "A beloved tradition of the Telluride Mushroom Festival, this poetry show at the Sheridan Opera House brings together Art Goodtimes and fellow performers for an evening of mycologically inspired verse, wordplay, and celebration of all things fungal. Expect a lively, eclectic blend of spoken word and literary wit woven through the festival's signature reverence for the mushroom world.",
+    description: "",
     pubDate: "2026-08-14",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3891,7 +3811,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Mushroom Festival: Puff Ball Costume Dance Party at Telluride Mushroom Festival",
     link: "https://sheridanoperahouse.com/events/telluride-mushroom-festival-puff-ball-costume-dance-party-at-telluride-mushroom-festival/",
-    description: "A costume dance party hosted as part of the Telluride Mushroom Festival, encouraging attendees to dress as puffball mushrooms or other fungal-inspired creations for a festive evening at the Sheridan Opera House. The event blends the festival's signature celebration of all things mushroom with live music and dancing in one of Telluride's most beloved historic venues.",
+    description: "",
     pubDate: "2026-08-15",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -6017,17 +5937,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "August Intergovernmental Worksession",
-    link: "https://townofmountainvillage.com/explore/events/all-events/august-intergovernmental-worksession/",
-    description: "The Town of Telluride hosts an Intergovernmental Worksession on August 10, 2026.",
-    pubDate: "2026-08-10T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/32340/ig-worksessions-new_event.jpg"
-  },
   {
     title: "Bike & Brewery Tour",
     link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
