@@ -1,22 +1,22 @@
 {
-  "hash": "6e4329e8dfabe8cc6375239004c6c426b204d2e6",
-  "lede": "The biggest thing happening this week is Town Council's third reading of the Colorado Wildfire Resiliency Code on Tuesday — if it passes, it rewrites historic and architectural review standards and landscaping rules valley-wide, so this one's worth paying attention to. Ridgway's council is also holding a public hearing on the Hyde Subdivision resubdivision and a joint work session on its draft Housing Action Plan Wednesday night. On the county side, the Planning Commission takes up an energy code update and a subdivision work session Thursday, and SMART's board meets virtually to vote on restructuring the Gondola Advisory Committee tied to the voter-approved 3A gondola tax.",
+  "hash": "565b5b3a99df34c5c43b92fffa97368d0d5b8316",
+  "lede": "Town Council votes Tuesday on third reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code — touching historic review standards and landscaping rules — so if you own property in town, that one's worth watching. Ridgway's council also has a full plate Wednesday, with a public hearing on the Hyde Subdivision and a joint work session on a state-mandated Housing Action Plan. Mushroom Festival kicks off midweek if you need a reason to get outside.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third reading could permanently alter LUC historic review and landscaping rules."
+      "stake": "Third-reading vote on wildfire code that changes LUC historic and landscaping rules."
     },
     {
       "id": 6,
-      "stake": "Public hearing on Hyde Subdivision resubdivision; Housing Action Plan joint work session."
+      "stake": "Public hearing on Hyde Subdivision replatting and housing plan work session."
     },
     {
       "id": 8,
-      "stake": "Energy code update and subdivision mechanics review could reshape county building standards."
+      "stake": "County energy code update and subdivision mechanics could reshape new construction standards."
     },
     {
       "id": 9,
-      "stake": "Vote to restructure Gondola Advisory Committee overseeing $5.2M/year 3A gondola tax."
+      "stake": "Board votes on restructuring gondola advisory committee tied to $5.2M voter-approved tax."
     }
   ]
 }

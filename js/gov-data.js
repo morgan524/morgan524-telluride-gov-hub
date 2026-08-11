@@ -528,11 +528,10 @@ const NORWOOD_CACHED_DATA = [
     date: "August 12, 2026",
     time: null,
     title: "Board of Trustees Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.norwoodtown.com/files/191aa9c3e/08.12.2026+Board+of+Trustee+Agenda+ADA.pdf",
     packetUrl: null,
     special: false,
-    board: "bot",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    board: "bot"
   },
   {
     date: "August 17, 2026",

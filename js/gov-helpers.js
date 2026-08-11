@@ -383,7 +383,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "fire|2026-08-18|Board of Directors Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf"},
 
   "airport|2026-08-20|TRAA Board of Commissioners Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -404,7 +404,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b7c74705fcca6b2f"},
 
   "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299","zoomUrl":"https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299","zoomUrl":"https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1","sv":4},
+
+  "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300","sv":4,"ph":"f461253da821da55"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -670,89 +673,15 @@ const MEETING_PREVIEWS = {
     "Planning Commission is expected to address land use and development matters in San Miguel County. Related notices suggest ongoing activity around property foreclosure, estate administration, material hauling procurement, and a federal hazardous fuels project affecting nearby national forest lands managed by the USDA Forest Service.",
 
   "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
-    "Board will consider restructuring the Gondola Advisory Committee, assigning a professional services contract to a new law firm, and approving an amendment to the FY26 budget. Directors will also discuss FY27 budget development and receive updates on the gondola project and August operations."
+    "Board will consider restructuring the Gondola Advisory Committee, assigning a professional services contract to a new law firm, and approving an amendment to the FY26 budget. Directors will also discuss FY27 budget development and receive updates on the gondola project and August operations.",
+
+  "fire|2026-08-18|Board of Directors Meeting":
+    "Board will consider updates on Station 3, wildfire assignments, and PANO usage for July 2026. New business includes inclusion planning presented by Bo Nerlin. Reports from district leadership, including the Deputy Chief, Fire Marshal, EMS Coordinator, and District Chief, are also on the agenda.",
+
+  "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
+    "The Public Art Commission is expected to review and act on applications related to public art proposed for Town rights-of-way. No specific agenda items or project details are publicly available for this meeting at this time."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
-  {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
@@ -1245,7 +1174,7 @@ const MANUAL_SUMMARIES = {
     "The September 8, 2026 Mountain Village Merchant Meeting agenda hasn't been posted yet.",
 
   "fire|2026-08-18|Board of Directors Meeting":
-    "The August 18, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
+    "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a while now. The board will also hear a wildfire assignment update, which matters in a region that has watched fire seasons grow longer and more complicated. PANO usage figures for July come up under old business, giving the board a sense of how the panoramic wildfire-detection system is performing. New business includes an inclusion planning presentation from Bo Nerlin. The full slate of staff reports — Deputy Chief, Battalion Chief, Fire Marshal, EMS Coordinator, HR, and District Chief — rounds out the meeting, followed by bill approvals. No executive session or appeals are scheduled.",
 
   "airport|2026-08-20|TRAA Board of Commissioners Meeting":
     "The August 20, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
@@ -1266,7 +1195,10 @@ const MANUAL_SUMMARIES = {
     "The September 10, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
-    "SMART's board meets virtually on August 13th with a agenda that touches both the organization's structure and its ongoing gondola work. The board takes up Resolution 2026-15, which restructures the Gondola Advisory Committee — a body that has been central to the $5.2M/year gondola tax project since voters approved 3A. Resolution 2026-16 assigns the existing professional services contract with attorney Paul J. Taddune, P.C. to the law firm JVAM, PLLC — a transition worth noting given the legal complexity surrounding the gondola project. Resolution 2026-17 amends the current FY26 budget and capital spending plan, and the board opens a conversation on FY27 budget development. A gondola project update and standard operations report round out the substantive items. The meeting closes in executive session on personnel matters."
+    "SMART's board meets virtually on August 13th with a agenda that touches both the organization's structure and its ongoing gondola work. The board takes up Resolution 2026-15, which restructures the Gondola Advisory Committee — a body that has been central to the $5.2M/year gondola tax project since voters approved 3A. Resolution 2026-16 assigns the existing professional services contract with attorney Paul J. Taddune, P.C. to the law firm JVAM, PLLC — a transition worth noting given the legal complexity surrounding the gondola project. Resolution 2026-17 amends the current FY26 budget and capital spending plan, and the board opens a conversation on FY27 budget development. A gondola project update and standard operations report round out the substantive items. The meeting closes in executive session on personnel matters.",
+
+  "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
+    "The August 26, 2026 Public Art Commission agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1579,6 +1511,60 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A win for wildlands: San Juan National Forest expands",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "recreation",
+    copy: "San Juan National Forest quietly picked up 80 acres near Dunton Hot Springs in Dolores County, protecting Rio Grande cutthroat trout habitat and keeping the East Fall Creek Trail corridor free of private development. The land came from Dunton resort owners, with proceeds going back into the local operation — Dolores County's third-largest employer.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_8df8e813-70d6-4ec0-a559-a9ac94a2d513.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/05/705b5c72-e2d7-48e5-a1c8-f10886913b02/6a7b6ae1e18ba.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Sanctioning Russia Act matters",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "government",
+    copy: "The U.S. Senate passed SB 5025, the Sanctioning Russia Act, 86-11. The bill targets Russian oil revenue, state banks, shadow tanker fleets, and countries still buying Russian energy, with import duties up to 500%. It now awaits action in the House.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_44cfd6a5-14c3-4d0e-ade2-319d0bd472cd.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Neonila Martyniuk Montrose",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "When compliance isn't enough",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "infrastructure",
+    copy: "Residents and a local letter-writer are raising questions about whether technical code compliance is enough to approve major projects like Carhenge and Shandoka. Concerns include scale, infrastructure capacity, costs to taxpayers, and long-term fit with Telluride's character. The call is for better answers before irreversible decisions get made.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_f23f55e4-65c4-4815-9e61-04a7e5c6f07a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Madelaine Whiteman",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Green Grants appreciation",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "community",
+    copy: "A local resident received a Green Grant through EcoAction Partners and the Telluride Foundation to replace a 45-year-old window. The program helps area homeowners with energy-efficiency upgrades.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_840b3d18-4b06-4e1c-91fa-ba5b73dceb48.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "David Mallette",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
     title: "Next film night offering is \"Hadestown: The Musical\"",
     source: "Telluride Times",
     date: "August 11, 2026",
@@ -1623,7 +1609,7 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Whitelined sphinx moths — big as hummingbirds, active after dark — are a common summer sight here that's easy to take for granted. Up high, two rare butterflies are worth knowing: the federally endangered Uncompahgre fritillary, found only in our local alpine zone, and the idas blue, whose subspecies was confirmed by Vladimir Nabokov while he wandered Tomboy Road in 1951.",
     claudeSummary: true,
     href: "https://www.telluridenews.com/opinion/columnists/article_8ce396d6-23ee-4540-875b-19c18ae2b9e2.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    img: "",
     isLetter: true,
     imgHiRes: true
   },
@@ -3152,17 +3138,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-11/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-11T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   },
   {
