@@ -837,7 +837,7 @@
     "time": "1:30 PM",
     "location": "",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629793255536/huge/48ca171fe67cde30db5164cdafeb611f560ad66c.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea…",
@@ -3351,6 +3351,19 @@
     "source": "Mountain Village",
     "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
     "type": "Food & Drink"
+  },
+  {
+    "title": "OCAA Art Show: Thomas Livingstone Photography",
+    "href": "https://events.ourayridgwayevents.com/event/ocaa-art-show-thomas-livingstone-photography",
+    "date": "2026-09-10",
+    "time": "10:00 AM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and…",
+    "type": "Arts & Film"
   },
   {
     "title": "WOH Art Show: Thomas Livingstone Photography",

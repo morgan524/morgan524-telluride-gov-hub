@@ -398,7 +398,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"307e0c7b19e4ff5b"},
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"71461d3fdc27b654"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"71461d3fdc27b654"},
+
+  "county|2026-09-10|Planning Commission Meeting":
+    {"sv":4,"ph":"b7c74705fcca6b2f"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -658,7 +661,10 @@ const MEETING_PREVIEWS = {
     "Board will consider matters related to county operations, including a material hauling contract request for quote. Related legal notices include estate creditor notifications, a foreclosure sale on Telluride Mountain Village property, and a federal hazardous fuels management project affecting over 267,000 acres in nearby national forests.",
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    "Council is expected to review and discuss the Town of Telluride's budget during this dedicated budget session. The meeting will likely address municipal funding priorities, departmental allocations, and financial planning considerations for the upcoming fiscal period."
+    "Council is expected to review and discuss the Town of Telluride's budget during this dedicated budget session. The meeting will likely address municipal funding priorities, departmental allocations, and financial planning considerations for the upcoming fiscal period.",
+
+  "county|2026-09-10|Planning Commission Meeting":
+    "Planning Commission is expected to address land use and development matters in San Miguel County. Related notices suggest ongoing activity around property foreclosure, estate administration, material hauling procurement, and a federal hazardous fuels project affecting nearby national forest lands managed by the USDA Forest Service."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1248,7 +1254,10 @@ const MANUAL_SUMMARIES = {
     "The September 9, 2026 Board of County Commissioners Work Session agenda hasn't been posted yet.",
 
   "telluride|2026-09-10|Town Council Budget - Sep 10 2026":
-    "The September 10, 2026 Town Council Budget agenda hasn't been posted yet."
+    "The September 10, 2026 Town Council Budget agenda hasn't been posted yet.",
+
+  "county|2026-09-10|Planning Commission Meeting":
+    "The September 10, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1551,6 +1560,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "TASP to screen ‘Best Day Ever’",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "recreation",
+    copy: "TASP is hosting a free screening of \"Best Day Ever\" on Tuesday, Aug. 18, 6:30–8 p.m. at the Telluride Conference Center. The documentary follows adaptive mountain bikers and the building of the country's first adaptive bike park in Vermont — it won Audience Choice at Mountainfilm 2026.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_490cadde-fce8-4c01-88e6-960ee52abd07.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/72/b722ac5a-e8fd-42ba-a310-a92ea2972395/6a7792e8a8c80.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "County amends land use code for wildfire mitigation",
     source: "Telluride Times",
@@ -4568,7 +4589,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793255536/huge/48ca171fe67cde30db5164cdafeb611f560ad66c.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
   },
   {
     title: "True Grit Historic Walking Tours",
@@ -5426,6 +5447,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
+    title: "OCAA Art Show: Thomas Livingstone Photography",
+    link: "https://events.ourayridgwayevents.com/event/ocaa-art-show-thomas-livingstone-photography",
+    description: "Join the Ouray County Arts Association and the Wright Opera House for the opening reception of Historic Treasures of the San Juan Mountains, a photography exhibition by Colorado photographer Thomas Livingstone. Through striking black and white photography, Livingstone documents the historic mines, weathered structures, and forgotten places scattered throughout the San Juan Mountains. The exhibition is drawn from a seven-year photographic project that culminated in his acclaimed book, Historic Treasures of the San Juan Mountains, preserving a remarkable visual record of Colorado's mining heritage. Born in New York and raised in Colorado, Livingstone developed an early appreciation for mountain landscapes before studying at the Brooks Institute of Photography in Santa Barbara. Since opening his Colorado gallery in 2011, his work has been exhibited throughout the state and has earned recognition for its blend of fine art and historic preservation. …",
+    pubDate: "2026-09-10T16:00:37.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
   },
   {
     title: "WOH Art Show: Thomas Livingstone Photography",
