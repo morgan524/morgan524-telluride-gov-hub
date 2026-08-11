@@ -3406,11 +3406,21 @@ function firstImageFromHtml(html) {
 // The recurring digest emails (weekly "Week Ahead Outlook", "Weekend Update /
 // Outlook", and the RSS "Posts from Livable Telluride for …") should NOT appear
 // on the public blog — only manually-authored newsletters do.
+// 2026-08-05: the weekend digest was reaching the public blog. The old
+// `/\bWeekend\s+(Update|Outlook|Digest)\b/` required the noun to sit directly
+// after "Weekend", but the digest is branded "The Weekend AHEAD Outlook", and
+// the intervening word defeated the match. Its weekly sibling was caught only
+// because `\bWeek Ahead\b` happened to match. Match the Week(end)…Outlook PAIR
+// loosely instead, so the next rebrand of the middle word can't reopen this.
+// Deliberately NOT filtering on the archive filename: 2026-07-22-weekly.html is
+// a hand-written editorial newsletter that merely landed in the weekly slot, and
+// a filename rule would wrongly bury it.
 function isDigestTitle(t) {
   if (!t) return false;
   return /^Posts from Livable Telluride for /i.test(t) ||
          /Daily Digest|Weekly Digest|Daily Update|Weekly Update/i.test(t) ||
-         /\bWeek Ahead\b/i.test(t) ||
+         /\bWeek(?:end)?\b[\s\w]*\bOutlook\b/i.test(t) ||
+         /\bWeek(?:end)?\s+Ahead\b/i.test(t) ||
          /\bWeekend\s+(Update|Outlook|Digest)\b/i.test(t);
 }
 

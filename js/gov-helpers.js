@@ -2804,13 +2804,13 @@ const LOCAL_NEWS_FEATURED = [
 
 const BLOG_POSTS = [
   {
-    title: "The Weekend Ahead Outlook - August 7 - August 9, 2026",
-    date: "Aug 7, 2026",
-    href: "https://livabletelluride.org/digest/archive/2026-08-07-weekend.html",
-    image: "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png",
-    excerpt: "@media only screen and (max-width:480px){ /* Event cards: stack image on top, text below, for easier mobile reading. */ .ev-img-cell{display:block !important;width:100% !important;padding:0 0 10px 0 !important;} .ev-img-cell img{width:160px !important;height:160px !important;} .ev-text-cell{display:block !important;width:100% !important;} /* Festival hero: stack the logo above the text on phones. ",
+    title: "It’s Like Déjà VooDoo All Over Again",
+    date: "Jul 27, 2026",
+    href: "https://livabletelluride.org/digest/one-off/deja-voodoo-2026-07-27.html",
+    image: "https://livabletelluride.org/voodoo-timeline/deja-voodoo-hero.jpg",
+    excerpt: "VooDoo’s project debt offers a preview of what two much larger projects could cost if Telluride waits again to ask the right questions. When the Telluride Housing Authority approved financing for its VooDoo apartments in December 2022, the vote took less than half an hour. The building’s design had",
     category: "Newsletter",
-    source: "customerio"
+    source: "livable"
   },
   {
     title: "Speak Up by Noon Wednesday: the Carhenge Subdivision and Backman Village P&Z Meeting",
@@ -2825,8 +2825,8 @@ const BLOG_POSTS = [
     title: "When the Town Judges Its Own Projects",
     date: "Jun 30, 2026",
     href: "https://livabletelluride.org/digest/archive/2026-06-30-when-the-town-judges-its-own-projects.html",
-    image: "https://mcusercontent.com/5d9192289b9af78822f2f69bf/images/70e4c678-537d-d838-1a32-38095e444284.png",
-    excerpt: "96 When the Town Judges Its Own Projects Apparently, our little newsletter has made a ripple. Possibly even a wave! ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ",
+    image: "https://livabletelluride.org/assets/newsletters/when-the-town-judges-its-own-projects/70e4c678-537d-d838-1a32-38095e444284.png",
+    excerpt: "Apparently, our little newsletter has made a ripple. Possibly even a wave! At the June 25 Planning and Zoning meeting in Telluride , Town Attorney Kevin Geiger called out our last newsletter for “misrepresentation.” He said the recent Colorado Supreme Court decision in the “ Butcher Creek ” PUD case",
     category: "Newsletter",
     source: "mailchimp"
   },
@@ -2844,7 +2844,7 @@ const BLOG_POSTS = [
     title: "Come to the Livable Telluride Kickoff Event",
     date: "Jun 9, 2026",
     href: "https://livabletelluride.org/digest/archive/2026-06-09-livable-telluride-kickoff-event.html",
-    image: "",
+    image: "https://livabletelluride.org/assets/newsletters/livable-telluride-kickoff-event/inline-1.jpg",
     excerpt: "Livable Telluride Kickoff Event Join Us for the Livable Telluride Kickoff Event Please join us tomorrow (Wednesday, June 10) from 5&ndash;7 PM at the Elks Club for the launch of Livable Telluride , a new community resource designed to make local information easier to find, understand, and use, and to bring people together. We'll have appetizers and a cash bar available. Livable Telluride is built ",
     category: "Newsletter",
     source: "mailchimp"
@@ -2853,8 +2853,8 @@ const BLOG_POSTS = [
     title: "Welcome to the New Livable Telluride",
     date: "Jun 2, 2026",
     href: "https://livabletelluride.org/digest/archive/2026-06-02-welcome-to-the-new-livable-telluride.html",
-    image: "https://mcusercontent.com/5d9192289b9af78822f2f69bf/images/234a1ccb-fc9c-7aab-8d5f-dab36d775b79.png",
-    excerpt: "96 Welcome to the New Livable Telluride Measure 300 process revealed that even in a small, highly engaged community, it is remarkably difficult for residents to keep track of issues ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ‌ ͏ ",
+    image: "https://livabletelluride.org/assets/newsletters/welcome-to-the-new-livable-telluride/498ec74a-abaf-7ec3-a6f6-330a0bc09d3f.jpg",
+    excerpt: "(A continuación, la versión en español.) The Measure 300 process revealed something important about civic life in San Miguel County: even in a small, highly engaged community, it is remarkably difficult for ordinary citizens to keep track of what is actually happening across all the public bodies th",
     category: "Newsletter",
     source: "mailchimp"
   }

@@ -31,19 +31,25 @@
       { href: 'projects-map/index.html', label: 'Projects Map', built: true }    // re-shelled app
     ]},
     { key: 'connect', label: 'Connect', items: [
-      { href: 'events.html',       label: 'Events',        built: true },
       { href: 'local-orgs.html',   label: 'Local Orgs',    built: true },
-      { href: 'hub-bub.html',      label: 'Hub-Bub',       built: true },    // re-shelled app
       { href: 'housing.html',      label: 'Housing',       built: true }
     ]},
     { key: 'act', label: 'Act', items: [
       { href: 'gov-hub.html',      label: 'Gov-Hub',       built: true },
+      // Events moved Connect -> Act 2026-08-05 (Morgan): showing up is an act
+      // of participation, and it belongs next to the meetings calendar.
+      { href: 'events.html',       label: 'Events',        built: true },
       { href: '/v2/vote-tracker.html', label: 'Vote Tracker', built: true },   // existing app (kept)
       { href: 'legal-notices.html',label: 'Legal Notices', built: true }
     ]}
   ];
   // About left the top nav 2026-07-21 (lives on the homepage + footer now).
   // (Log In left the nav 2026-07-23 — Hub-Bub, the only login surface, has its own.)
+  // Hub-Bub left the nav 2026-08-05 (Morgan: not getting traction). The PAGE
+  // stays and is NOT orphaned — it is still the one signup surface, reached by
+  // the Subscribe pill (hub-bub.html#signup) in both the nav CTA and the mobile
+  // drawer, and it keeps its own hbShowAuth login. Do not delete the page or
+  // repoint Subscribe when tidying up.
 
   // Pages not in the nav inherit a parent's active state.
   var PROXY = {
@@ -125,7 +131,8 @@
       '<div class="lt-footer-links">' +
       '<a href="' + esc(ROOT + 'start-here.html') + '">Start Here</a>' +
       '<a href="' + esc(ROOT + 'local-news.html') + '">Learn</a>' +
-      '<a href="' + esc(ROOT + 'events.html') + '">Connect</a>' +
+      // Connect points at Local Orgs since Events moved to Act (2026-08-05).
+      '<a href="' + esc(ROOT + 'local-orgs.html') + '">Connect</a>' +
       '<a href="' + esc(ROOT + 'gov-hub.html') + '">Act</a>' +
       '<a href="' + esc(ROOT + 'about.html') + '">About</a>' +
       '<a href="' + esc(ROOT + 'donate.html') + '">Donate</a>' +
