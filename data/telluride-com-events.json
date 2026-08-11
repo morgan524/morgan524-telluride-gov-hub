@@ -384,18 +384,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63137/untitled_-_july_26-_2026_at_17_08_07_3.800x533.webp"
   },
   {
-    "title": "Telluride Jazz Festival",
-    "link": "https://www.telluride.com/event/telluride-jazz-festival/",
-    "description": "Since 1977, Telluride’s majestic perch high in the San Juan Mountains of southwestern Colorado has been the site of …",
-    "pubDate": "2026-08-07",
-    "endDate": "2026-08-09",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/28880/14407123460f9210.800x533.webp"
-  },
-  {
     "title": "Colorado Capsule on Tour",
     "link": "https://www.telluride.com/event/colorado-capsule-on-tour/",
     "description": "The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …",
@@ -749,5 +737,16 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
+  },
+  {
+    "title": "Oktoberfest",
+    "link": "https://www.telluride.com/event/oktoberfest/",
+    "description": "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center …",
+    "pubDate": "2026-10-10",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/49157/mv_oktoberfest26_std_2200x1237.800x533.webp"
   }
 ]

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-10-26",
+    "source": "KOTO Community Radio",
+    "date": "August 11, 2026",
+    "newsTopic": "community",
+    "copy": "Coming Up Next, Telluride; Eco-Grief Finds the Space Between Grief and Gratitude",
+    "href": "https://koto.org/news/newscast-8-10-26/"
+  },
+  {
     "title": "Newscast 8-6-26",
     "source": "KOTO Community Radio",
     "date": "August 7, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "arts-culture",
     "copy": "Parks &amp; Rec Keeps the Oval Green; Telluride Invests in Tourism; Chamber Music Celebrates American Brass",
     "href": "https://koto.org/news/newscast-7-29-26/"
-  },
-  {
-    "title": "Newscast 7-27-26",
-    "source": "KOTO Community Radio",
-    "date": "July 28, 2026",
-    "newsTopic": "community",
-    "copy": "Remembering Anna Brown; Telluride Looks to Calm Speed on East End",
-    "href": "https://koto.org/news/newscast-7-27-26/"
   }
 ]
