@@ -1,18 +1,22 @@
 {
-  "hash": "6bf0f8ab2e8ce504f477c1377bcb53ab4dc4e002",
-  "lede": "The biggest thing on the board this week is Telluride Town Council's third and final reading of the Colorado Wildfire Resiliency Code on Tuesday — if it passes, it rewrites the Land Use Code's historic review standards and landscaping rules for every property owner in town. Ridgway's council is also holding a public hearing on the Hyde Subdivision resubdivision and a joint work session on its draft Housing Action Plan, while San Miguel County's Planning Commission takes up both a subdivision work session and an energy code update that would reshape building standards for new construction.",
+  "hash": "6e4329e8dfabe8cc6375239004c6c426b204d2e6",
+  "lede": "The biggest thing happening this week is Town Council's third reading of the Colorado Wildfire Resiliency Code on Tuesday — if it passes, it rewrites historic and architectural review standards and landscaping rules valley-wide, so this one's worth paying attention to. Ridgway's council is also holding a public hearing on the Hyde Subdivision resubdivision and a joint work session on its draft Housing Action Plan Wednesday night. On the county side, the Planning Commission takes up an energy code update and a subdivision work session Thursday, and SMART's board meets virtually to vote on restructuring the Gondola Advisory Committee tied to the voter-approved 3A gondola tax.",
   "notable": [
     {
       "id": 0,
-      "stake": "Third reading — LUC historic review and landscaping rules permanently change if approved."
+      "stake": "Third reading could permanently alter LUC historic review and landscaping rules."
     },
     {
       "id": 6,
-      "stake": "Public hearing on Hyde Subdivision resubdivision plus housing plan vote affecting future development."
+      "stake": "Public hearing on Hyde Subdivision resubdivision; Housing Action Plan joint work session."
     },
     {
       "id": 8,
-      "stake": "Energy code update and subdivision mechanics review could reshape county building and land-division standards."
+      "stake": "Energy code update and subdivision mechanics review could reshape county building standards."
+    },
+    {
+      "id": 9,
+      "stake": "Vote to restructure Gondola Advisory Committee overseeing $5.2M/year 3A gondola tax."
     }
   ]
 }

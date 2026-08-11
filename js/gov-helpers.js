@@ -401,7 +401,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8052","sv":4,"ph":"71461d3fdc27b654"},
 
   "county|2026-09-10|Planning Commission Meeting":
-    {"sv":4,"ph":"b7c74705fcca6b2f"}
+    {"sv":4,"ph":"b7c74705fcca6b2f"},
+
+  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299","zoomUrl":"https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -664,7 +667,10 @@ const MEETING_PREVIEWS = {
     "Council is expected to review and discuss the Town of Telluride's budget during this dedicated budget session. The meeting will likely address municipal funding priorities, departmental allocations, and financial planning considerations for the upcoming fiscal period.",
 
   "county|2026-09-10|Planning Commission Meeting":
-    "Planning Commission is expected to address land use and development matters in San Miguel County. Related notices suggest ongoing activity around property foreclosure, estate administration, material hauling procurement, and a federal hazardous fuels project affecting nearby national forest lands managed by the USDA Forest Service."
+    "Planning Commission is expected to address land use and development matters in San Miguel County. Related notices suggest ongoing activity around property foreclosure, estate administration, material hauling procurement, and a federal hazardous fuels project affecting nearby national forest lands managed by the USDA Forest Service.",
+
+  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
+    "Board will consider restructuring the Gondola Advisory Committee, assigning a professional services contract to a new law firm, and approving an amendment to the FY26 budget. Directors will also discuss FY27 budget development and receive updates on the gondola project and August operations."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -915,16 +921,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "recreation",
     copy: "Please join our Annual Parish Picnic on Thursday, July 30 at 5:30 PM at Town Park. We ask families with last names from A - M to bring a side dish or salad and from N - Z to bring dessert. We'll see you at Town Park tomorrow.",
     href: "https://stpatrickstelluride.com/2026/parish-news/parish-picnic-town-park-july-30-at-530-pm/",
-    img: ""
-  },
-  {
-    title: "Invitation to Prayer/Fellowship Wednesday Morning",
-    source: "St. Patrick's Catholic Church",
-    sourceKey: "stpatricks",
-    date: "July 28, 2026",
-    newsTopic: "community",
-    copy: "This is an open invitation to all women in Telluride. Please come and join us on Wednesday, July 29th...7:30 am Rosary8:00 am Holy MassImmediately after we will go to Butcher and Baker for fellowship. Join as able....Contact Katrina with questions...",
-    href: "https://stpatrickstelluride.com/2026/parish-news/invitation-to-prayer-fellowship-wednesday-morning-3/",
     img: ""
   }
 ];  // 7 regional feeds (West End, Ouray, …)
@@ -1267,7 +1263,10 @@ const MANUAL_SUMMARIES = {
     "The September 10, 2026 Town Council Budget agenda hasn't been posted yet.",
 
   "county|2026-09-10|Planning Commission Meeting":
-    "The September 10, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet."
+    "The September 10, 2026 San Miguel County Planning Commission Meeting agenda hasn't been posted yet.",
+
+  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026":
+    "SMART's board meets virtually on August 13th with a agenda that touches both the organization's structure and its ongoing gondola work. The board takes up Resolution 2026-15, which restructures the Gondola Advisory Committee — a body that has been central to the $5.2M/year gondola tax project since voters approved 3A. Resolution 2026-16 assigns the existing professional services contract with attorney Paul J. Taddune, P.C. to the law firm JVAM, PLLC — a transition worth noting given the legal complexity surrounding the gondola project. Resolution 2026-17 amends the current FY26 budget and capital spending plan, and the board opens a conversation on FY27 budget development. A gondola project update and standard operations report round out the substantive items. The meeting closes in executive session on personnel matters."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1579,6 +1578,68 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Next film night offering is \"Hadestown: The Musical\"",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Film Festival's Village Movie Nights screens \"Hadestown: The Musical\" on Monday, Aug. 17 at the Telluride Conference Center — doors at 6 p.m., film at 7 p.m. The Broadway-captured production features five original cast members and runs 141 minutes. Admission is free; concessions available for purchase.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_3fdefe98-29ff-482d-a7fb-d850a5e73640.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/1d/01de2cb0-ceeb-4935-ab80-eb1c7e1e3f5c/6a7b6db86d1e5.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Randy Houser benefit concert raises $40K for Good Neighbor Fund",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "arts-culture",
+    copy: "A sold-out concert at the Sheridan Opera House featuring Randy Houser, Jamey Johnson, and LVDY raised $40,000 for the Telluride Foundation's Good Neighbor Fund, which provides emergency grants to residents across San Miguel, Ouray, and surrounding counties. The event was hosted by The Alpine Club, a private on-mountain club set to open in 2027.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_19eeb57c-d2a6-4a48-9c45-9d5b82996b15.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/d0/5d07f003-37ca-4e56-abed-e04356fc373c/6a7b6ccbe604f.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Telluride Foundation community grants application now open",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "community",
+    copy: "The Telluride Foundation's 2026 Community Grants applications are open through Oct. 9 at 5 p.m. Last year the foundation distributed $1.21 million to 82 organizations. A free Zoom webinar for applicants is scheduled Aug. 27 at 11 a.m.; details at telluridefoundation.org.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_a8ab82fe-4366-4a8a-87db-0c76a2a518b4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "All that flutters",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "infrastructure",
+    copy: "Whitelined sphinx moths — big as hummingbirds, active after dark — are a common summer sight here that's easy to take for granted. Up high, two rare butterflies are worth knowing: the federally endangered Uncompahgre fritillary, found only in our local alpine zone, and the idas blue, whose subspecies was confirmed by Vladimir Nabokov while he wandered Tomboy Road in 1951.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_8ce396d6-23ee-4540-875b-19c18ae2b9e2.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "When it rains, it pours",
+    source: "Telluride Times",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "infrastructure",
+    copy: "A sudden summer thunderstorm turned a routine drive Down Valley into a near-disaster when a mudslide swept a van off the highway and trapped traffic in knee-deep water. A local mom grabbed her daughter and a landscaper helped carry another child to safety before they could be swept away. It took over an hour to clear the road; a pregnant woman on the far side had to be evacuated by ATV.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_daa2aa2b-51da-4e72-9282-aba3aaef5049.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/9a/29a7ea36-4183-45e1-8b28-2fefd5369c44/6a7b684574a7c.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
   {
     title: "TASP to screen ‘Best Day Ever’",
     source: "Telluride Times",
@@ -2383,6 +2444,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
   },
   {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -2437,6 +2507,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: false,
     href: "https://coloradosun.com/2026/08/10/softrock-100-hardrock-route/",
     img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/08/PXL_20260726_200042055-1.jpg?fit=771%2C1024&amp;ssl=1"
+  },
+  {
+    title: "Town Manager's Report",
+    source: "Town of Ridgway",
+    date: "August 11, 2026",
+    firstSeen: "2026-08-11",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Town-Manager%27s-Report---August-11%2C-2026.pdf",
+    img: ""
   },
   {
     title: "Application Materials Available for 2027 Town of Ridgway Community Grant Program",
@@ -3071,17 +3152,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Mountain School Open House",
-    link: "https://koto.org/event/telluride-mountain-school-open-house-3/",
-    description: "Come Curious. Leave Inspired. Meet our new Head of School, connect with our passionate teachers and leadership team, explore our campus, and see firsthand how Telluride’s only independent school is redefining education through meaningful relationships, hands-on learning, and a love of the outdoors.",
-    pubDate: "2026-08-11T09:15:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Mountain School",
     imageUrl: ""
   },
   {
@@ -4318,17 +4388,7 @@ const TELLURIDE_FOUNDATION_EVENTS = [
 ];
 
 const OURAY_COUNTY_EVENTS = [
-  {
-    title: "Community Meeting - Flooding, Economic Impacts, and Community Resilience",
-    link: "https://ouraycountyco.gov/Calendar.aspx?EID=3775",
-    description: "Two or more Ouray County Commissioners may attend and participate in this event. https://ouraycountyco.gov/calendar.aspx?EID=3775",
-    pubDate: "2026-08-11T18:00:00.000Z",
-    source: "ouraycounty",
-    sourceLabel: "Ouray County",
-    category: "Community Event",
-    location: "Ouray Community Center - 320 6th Avenue Ouray CO 81427",
-    imageUrl: ""
-  }
+
 ];
 
 const OURAY_RIDGWAY_EVENTS = [

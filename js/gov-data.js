@@ -221,18 +221,18 @@ const TMVOA_CACHED_DATA = [
   },
   {
     date: "July 23, 2026",
-    title: "TMVOA Annual Members Meeting",
-    board: "annual",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "July 23, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
     agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
     packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "July 23, 2026",
+    title: "TMVOA Annual Members Meeting",
+    board: "annual",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -451,11 +451,10 @@ const FIRE_CACHED_DATA = [
     date: "August 18, 2026",
     time: "5:30 PM",
     title: "Board of Directors Meeting",
-    agendaUrl: null,
+    agendaUrl: "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
     packetUrl: null,
     special: false,
-    location: "131 W Columbia Ave, Telluride, CO 81435",
-    note: "Next scheduled meeting -- agenda typically posted a few days before."
+    location: "131 W Columbia Ave, Telluride, CO 81435"
   },
   {
     date: "September 15, 2026",

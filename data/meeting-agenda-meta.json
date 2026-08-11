@@ -476,5 +476,10 @@
   "county|2026-09-10|Planning Commission Meeting": {
     "sv": 4,
     "ph": "b7c74705fcca6b2f"
+  },
+  "telluride|2026-08-13|San Miguel Authority for Regional Transportation - Aug 13 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299",
+    "zoomUrl": "https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1",
+    "sv": 4
   }
 }
