@@ -3519,7 +3519,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-10-10"
   },
   {
     "title": "WCOC Rummage Sale Collection Day",
@@ -4350,6 +4351,19 @@
     "type": "Music"
   },
   {
+    "title": "Mineral Identification Workshop for Adults",
+    "href": "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-adults",
+    "date": "2026-10-10",
+    "time": "10:00 AM",
+    "location": "Ouray County Historical Society Research Center and Archive",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52278239272831/huge/3ace3fbbfa379d963003cda93eba859d285b4dcd.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Basic identification of minerals from the San Juan Mountains with Robert Stoufer View on site | Email this event",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "Oktoberfest",
     "href": "https://www.telluride.com/event/oktoberfest/",
     "date": "2026-10-10",
@@ -4361,5 +4375,18 @@
     "source": "Telluride.com",
     "desc": "Save the date: Steins up, Mountain Village! On Saturday, October 10, 2026, we're transforming Mountain Village Center …",
     "type": "Community"
+  },
+  {
+    "title": "Nature in Four Seasons: Growing Dormant",
+    "href": "https://events.ourayridgwayevents.com/event/nature-in-four-seasons-growing-dormant",
+    "date": "2026-10-10",
+    "time": "9:00 AM",
+    "location": "Ouray Visitor Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/52948888142369/huge/a751aa96f77dfb66351272d701cd748a3cc4bdbc.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for the fourth exploration hike of the Nature in Four-Season series. For…",
+    "type": "Outdoors & Sports"
   }
 ]

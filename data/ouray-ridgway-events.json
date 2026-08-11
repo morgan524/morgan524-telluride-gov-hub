@@ -1227,6 +1227,7 @@
     "link": "https://events.ourayridgwayevents.com/event/dallas-park-cemetery-tour",
     "description": "Tour of Dallas Park Cemetery Tour, led by Coleen McElroy. $20.00 Per Person. $15.00 OCHS Members. Call 970-325-4576 to RSVP/Pre Pay View on site | Email this event",
     "pubDate": "2026-09-12T16:00:00.000Z",
+    "endDate": "2026-10-10",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
@@ -1619,5 +1620,27 @@
     "category": "Community Event",
     "location": "687 N Cora Street, Ridgway, CO 81432",
     "imageUrl": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    "title": "Nature in Four Seasons: Growing Dormant",
+    "link": "https://events.ourayridgwayevents.com/event/nature-in-four-seasons-growing-dormant",
+    "description": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for the fourth exploration hike of the Nature in Four-Season series. For our fall exploration, we will investigate how, as days grow shorter, mountain species are in full gear to prepare for winter. Come witness these changes and find fun and creative ways to capture the color of the season using Naturalist Journal activities. View on site | Email this event",
+    "pubDate": "2026-10-10T15:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray Visitor Center",
+    "imageUrl": "https://localist-images.azureedge.net/photos/52948888142369/huge/a751aa96f77dfb66351272d701cd748a3cc4bdbc.jpg"
+  },
+  {
+    "title": "Mineral Identification Workshop for Adults",
+    "link": "https://events.ourayridgwayevents.com/event/mineral-identification-workshop-for-adults",
+    "description": "Basic identification of minerals from the San Juan Mountains with Robert Stoufer View on site | Email this event",
+    "pubDate": "2026-10-10T16:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray County Historical Society Research Center and Archive",
+    "imageUrl": "https://localist-images.azureedge.net/photos/52278239272831/huge/3ace3fbbfa379d963003cda93eba859d285b4dcd.jpg"
   }
 ]
