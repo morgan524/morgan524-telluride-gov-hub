@@ -65,5 +65,15 @@
     "special": false,
     "board": "pz",
     "note": "Next scheduled meeting -- agenda posted before the meeting."
+  },
+  {
+    "date": "October 13, 2026",
+    "time": null,
+    "title": "Norwood Water Commission Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "nwc",
+    "note": "Next scheduled meeting -- agenda posted before the meeting."
   }
 ]

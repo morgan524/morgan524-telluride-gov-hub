@@ -1,22 +1,18 @@
 {
-  "hash": "565b5b3a99df34c5c43b92fffa97368d0d5b8316",
-  "lede": "Town Council votes Tuesday on third reading of the Colorado Wildfire Resiliency Code, which would amend Telluride's Land Use Code — touching historic review standards and landscaping rules — so if you own property in town, that one's worth watching. Ridgway's council also has a full plate Wednesday, with a public hearing on the Hyde Subdivision and a joint work session on a state-mandated Housing Action Plan. Mushroom Festival kicks off midweek if you need a reason to get outside.",
+  "hash": "ac6caffbed133a77d00a90a59beb2c2af3b2cf0c",
+  "lede": "The most consequential meeting this week is San Miguel County's Planning Commission on August 13, where commissioners take up both a subdivision work session and a referral on an energy code update that would reshape building standards for new construction across the county. Ridgway's Town Council also has a full plate on August 12, including a public hearing on the Hyde Subdivision replatting and a joint work session on a draft Housing Action Plan required under state law. Running alongside all of it is Telluride Mushroom Festival, filling venues from the Sheridan Opera House to the Alibi through the week.",
   "notable": [
     {
-      "id": 0,
-      "stake": "Third-reading vote on wildfire code that changes LUC historic and landscaping rules."
+      "id": 2,
+      "stake": "Public hearing on Hyde Subdivision replatting and state-mandated Housing Action Plan review."
     },
     {
-      "id": 6,
-      "stake": "Public hearing on Hyde Subdivision replatting and housing plan work session."
+      "id": 4,
+      "stake": "Energy code update and subdivision mechanics referral could reshape county building and land-division standards."
     },
     {
-      "id": 8,
-      "stake": "County energy code update and subdivision mechanics could reshape new construction standards."
-    },
-    {
-      "id": 9,
-      "stake": "Board votes on restructuring gondola advisory committee tied to $5.2M voter-approved tax."
+      "id": 5,
+      "stake": "Two resolutions restructure the gondola advisory committee overseeing the voter-approved $5.2M/year tax project."
     }
   ]
 }

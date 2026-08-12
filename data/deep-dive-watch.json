@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-11T21:57:20.233Z",
+ "generated": "2026-08-12T02:20:14.695Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -58,18 +58,6 @@
     {
      "source": "telluride",
      "sourceLabel": "Town of Telluride",
-     "title": "Town Council",
-     "date": "2026-08-11",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
      "title": "Planning & Zoning Commission",
      "date": "2026-08-20",
      "time": "",
@@ -97,18 +85,6 @@
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
    "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Town Council",
-     "date": "2026-08-11",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    },
     {
      "source": "fire",
      "sourceLabel": "Fire Protection",
@@ -155,18 +131,6 @@
    "label": "Norwood Water",
    "lastUpdated": "2026-07-23",
    "upcoming": [
-    {
-     "source": "norwood",
-     "sourceLabel": "Town of Norwood",
-     "title": "NWC Amended",
-     "date": "2026-08-11",
-     "time": "",
-     "location": "1670 Naturita St, Norwood CO 81423",
-     "agendaUrl": "https://www.norwoodtown.com/files/ed8086933/08.11.2026+NWC+Agenda.pdf",
-     "link": "https://www.norwoodtown.com/files/df85b9ca3/08.11.2026+NWC++Amended+Agenda.pdf",
-     "zoomLink": "https://us02web.zoom.us/j/88274908233",
-     "livestream": ""
-    },
     {
      "source": "norwood",
      "sourceLabel": "Town of Norwood",

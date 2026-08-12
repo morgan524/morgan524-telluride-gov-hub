@@ -372,29 +372,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp"
   },
   {
-    "title": "Sandra Frias Trunk Show",
-    "link": "https://www.telluride.com/event/sandra-frias-trunk-show/",
-    "description": "Sandra Frias will be joining us in Fringe Gallery for an exclusive Telluride Trunk Show from August 5th-9th! Sandra is …",
-    "pubDate": "2026-08-05",
-    "endDate": "2026-08-10",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63137/untitled_-_july_26-_2026_at_17_08_07_3.800x533.webp"
-  },
-  {
-    "title": "Colorado Capsule on Tour",
-    "link": "https://www.telluride.com/event/colorado-capsule-on-tour/",
-    "description": "The Colorado Capsule is a statewide community time capsule project created to commemorate America’s 250th anniversary …",
-    "pubDate": "2026-08-10",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63281/screenshot_2026-08-07_at_3_21_27_pm.800x533.webp"
-  },
-  {
     "title": "Telluride Mushroom Festival",
     "link": "https://www.telluride.com/event/telluride-mushroom-festival/",
     "description": "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
@@ -439,6 +416,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp"
+  },
+  {
+    "title": "Telluride Dinner Party",
+    "link": "https://www.telluride.com/event/telluride-dinner-party/",
+    "description": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
+    "pubDate": "2026-08-20",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
   },
   {
     "title": "Blizzard Sale",
@@ -542,6 +530,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
+  },
+  {
+    "title": "An Evening With Ken Burns",
+    "link": "https://www.telluride.com/event/an-evening-with-ken-burns/",
+    "description": "Join the Telluride Museum for their annual Evening With Ken Burns, tentatively at the Palm Theatre. Tickets are $25 for …",
+    "pubDate": "2026-08-30",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp"
   },
   {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",

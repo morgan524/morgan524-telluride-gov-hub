@@ -1,25 +1,25 @@
 {
- "generated": "2026-08-11T21:57:20.235Z",
+ "generated": "2026-08-12T02:20:14.697Z",
  "pinned": false,
- "topic": "code",
- "topicLabel": "Code Changes & Accelerated Review",
- "headline": "Code Changes & Accelerated Review goes before Town Council on Tuesday, August 11",
- "blurb": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come.",
+ "topic": "wildfire",
+ "topicLabel": "Wildfire Resiliency",
+ "headline": "Wildfire Resiliency goes before Board of Directors Meeting on Tuesday, August 18",
+ "blurb": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a while now. The board will also hear a wildfire assignment update, which matters in a region that has watched fire seasons grow longer and more complicated.",
  "deepDive": {
-  "label": "Code Changes & Accelerated Review",
-  "href": "/deep-dive-code.html"
+  "label": "Wildfire Resiliency",
+  "href": "/deep-dive-wildfire.html"
  },
  "meeting": {
-  "title": "Town Council",
-  "sourceLabel": "Town of Telluride",
-  "date": "2026-08-11",
-  "humanDate": "Tuesday, August 11",
+  "title": "Board of Directors Meeting",
+  "sourceLabel": "Fire Protection",
+  "date": "2026-08-18",
+  "humanDate": "Tuesday, August 18",
   "time": "",
-  "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041",
+  "location": "131 W Columbia Ave, Telluride, CO 81435",
+  "agendaUrl": "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
   "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/442854/",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "packetUrl": "",
+  "zoomLink": "",
+  "livestream": ""
  }
 }

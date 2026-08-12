@@ -1,38 +1,5 @@
 [
   {
-    "title": "DMV2GO",
-    "link": "https://koto.org/event/dmv2go/2026-08-11/",
-    "description": "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver License, ID or Permit REPLACE – A lost or stolen Colorado Driver License, ID or Permit FIRST TIME – Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER – Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aquí. Tenga en cuenta, DMV2GO no ofrece NINGÚN servicio de prueba. …",
-    "pubDate": "2026-08-11T09:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Free Legal Clinic – Clínica Jurídica Gratuita",
-    "link": "https://koto.org/event/free-legal-clinic-clinica-juridica-gratuita/2026-08-11/",
-    "description": "A FREE legal clinic for parties who have no attorney. Sign up today because spots are limited. Volunteer attorneys will answer questions, help fill out forms, and explain the process and procedure for legalissues. The volunteer attorneys do not represent you and this clinic is information only. BY APPOINTMENT ONLY. Call 970-728-4519 for more information and to sign up. Una clínica de asesoramiento jurídico GRATUITO para las personas que notienen abogado. Abogados voluntarios responderán a preguntas, ayudarán a llenar formularios y explicarán el proceso y el procedimiento de cuestiones jurídicas. Los abogados voluntarios no te representan y esta clínica es sólo informativa. CON CITA PREVIA. Llame a 970-728-4519 para más información y para registrarse.",
-    "pubDate": "2026-08-11T16:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "",
-    "imageUrl": ""
-  },
-  {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
-    "link": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-11/",
-    "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
-    "pubDate": "2026-08-11T17:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
-  },
-  {
     "title": "Telluride Mushroom Festival",
     "link": "https://koto.org/event/telluride-mushroom-festival/",
     "description": "Telluride Mushroom Festival brings together leading mycologists, artists, foragers and enthusiasts to explore all things fungi. We focus on science, culture, and community, covering topics like psychedelic research, cultivation, decriminalization, and identification. More than just a festival, it is an annual reunion for fungi folks to gather and celebrate fungi and their impact on our world. This year’s theme is “Rewild” and will feature a raft of myco-luminaries including Mark Plotkin, world-renowned ethnobotanist best known for his work with Indigenous peoples of the Amazon and for popularizing the idea that rainforest conservation must center Indigenous knowledge. His book Tales of a Shaman’s Apprentice is still one of the most influential works in the field. …",
@@ -504,5 +471,27 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    "title": "BURLESQUE BUFFET!",
+    "link": "https://koto.org/event/burlesque-buffet/2026-08-22/",
+    "description": "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.",
+    "pubDate": "2026-08-22T20:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Sheridan Opera House, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Drop In Tech Time with Oliver",
+    "link": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-23/",
+    "description": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    "pubDate": "2026-08-23T13:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
   }
 ]
