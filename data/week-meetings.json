@@ -380,6 +380,26 @@
     "hook": ""
   },
   {
+    "source": "tmvoa",
+    "sourceLabel": "TMVOA",
+    "title": "TMVOA Board of Directors Meeting",
+    "date": "2026-08-27",
+    "time": "",
+    "location": "Mountain Village, CO (see agenda for Zoom link)",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://tmvoa.org/meetings-events/meeting-materials/",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Town Council",

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Jury selection begins in Meta youth harms trial in California federal court",
+    "source": "Telluride Times",
+    "date": "August 12, 2026",
+    "firstSeen": "2026-08-12",
+    "newsTopic": "health",
+    "copy": "Jury selection started this week in federal court in Oakland for a trial pitting 29 states against Meta over claims its platforms harm youth mental health and illegally collect children's data. The six-to-eight-week trial initially covers four states. Last week, a New Mexico court separately ordered Meta to pay $567 million over similar harms.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_d3467b66-7fe3-5102-8812-45f9c4303730.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/53/553bec25-2364-59e5-aa46-09402ea9f450/6a7ca8e352a58.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "How to make the most of parent-teacher conferences during back-to-school and beyond",
     "source": "Telluride Times",
     "date": "August 12, 2026",
@@ -861,6 +873,15 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
+    "title": "Remine Creek Trail Temporarily Closed",
+    "source": "San Miguel County",
+    "date": "August 12, 2026",
+    "newsTopic": "recreation",
+    "copy": "The northern section of the Remine Creek Trail will be closed until ~1:00 p.m. today",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=540",
+    "img": ""
   },
   {
     "title": "Black Bear Pass Now Open",

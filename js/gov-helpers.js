@@ -944,6 +944,17 @@ const REGIONAL_NEWS_ARTICLES = [
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
   {
+    title: "Remine Creek Trail Temporarily Closed",
+    source: "San Miguel County",
+    sourceLabel: "San Miguel County",
+    category: "Alert",
+    date: "2026-08-12",
+    pubDate: "2026-08-12T19:00:44.000Z",
+    copy: "The northern section of the Remine Creek Trail will be closed until ~1:00 p.m. today",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=540",
+    img: ""
+  },
+  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
@@ -1605,6 +1616,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Jury selection begins in Meta youth harms trial in California federal court",
+    source: "Telluride Times",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    newsTopic: "health",
+    copy: "Jury selection started this week in federal court in Oakland for a trial pitting 29 states against Meta over claims its platforms harm youth mental health and illegally collect children's data. The six-to-eight-week trial initially covers four states. Last week, a New Mexico court separately ordered Meta to pay $567 million over similar harms.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d3467b66-7fe3-5102-8812-45f9c4303730.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/53/553bec25-2364-59e5-aa46-09402ea9f450/6a7ca8e352a58.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "How to make the most of parent-teacher conferences during back-to-school and beyond",
     source: "Telluride Times",
@@ -2469,6 +2492,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
+    title: "Remine Creek Trail Temporarily Closed",
+    source: "San Miguel County",
+    date: "August 12, 2026",
+    newsTopic: "recreation",
+    copy: "The northern section of the Remine Creek Trail will be closed until ~1:00 p.m. today",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=540",
+    img: ""
+  },
+  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -2710,7 +2742,7 @@ const SMB_FORUM_ARTICLES = [
     img: ""
   },
   {
-    title: "Spring Creek Basin Herd at 74; PZP keeps numbers in check",
+    title: "Spring Creek Basin Herd at 74; PZP keeps numbers steady",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
     date: "August 12, 2026",
@@ -3071,16 +3103,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // wiped. The events.html collector applies a rolling 60-day window, so
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
-  {
-    title: "Seeking Elusive Quantum Advantages in Computational Chemistry",
-    date: "2026-08-11",
-    time: "6:30 PM – 7:30 PM",
-    location: "Telluride Conference Center, Telluride",
-    description: "This Town Talk will be presented by Joonhoo Lee from Harvard University.\r\nLee will explore the subtleties of realizing quantum advantages in computational chemistry. Drawing on several projects from his research group, he will offer fresh perspectives on how to think about what quantum computing can—and cannot—deliver for chemistry. He will also make the case for why chemists must learn theoretical computer science to prepare for the coming wave of fault-tolerant quantum computing.\r\nThis is the last Town Talk of the summer that  will be held oat the Telluride Conference Center in Mountain Village. The final Town Talk on August 25 will be held at the Telluride Innovation Center in Telluride.  Doors open at 6 pm and the program starts at 6:30 pm. Free and open to the public.\r\nThanks to our title sponsor Alpine Bank and Telluride Mountain Village Owner’s Association.",
-    link: "https://telluridescience.org/event/quantum-computing-chemistry/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/07/Screenshot-2026-08-06-at-4.46.13-PM.png",
-    sourceLabel: "Telluride Science"
-  },
   {
     title: "Telluride Chamber Music and Telluride Science Community Concert",
     date: "2026-08-13",
