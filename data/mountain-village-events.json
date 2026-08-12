@@ -1,16 +1,5 @@
 [
   {
-    "title": "Mountain Village Merchant Meeting",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    "description": "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
-    "pubDate": "2026-08-11T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
-  },
-  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
@@ -460,5 +449,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
+  },
+  {
+    "title": "Music on the Green Presents Danno Simpson",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-danno-simpson/",
+    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Danno Simpson at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    "pubDate": "2026-09-11T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
   }
 ]

@@ -1597,6 +1597,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "How to make the most of parent-teacher conferences during back-to-school and beyond",
+    source: "Telluride Times",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    newsTopic: "education",
+    copy: "Parent-teacher conferences are typically 15–20 minutes, leaving little time for questions. Experts suggest reaching out to teachers early, establishing a preferred communication method, and going in with realistic expectations. The goal is to treat the conference as a starting point, not a one-time check-in.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_2cc1a5f1-1cfb-58f0-9719-38d01cb30056.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/9b/a9bcba8e-2f18-59f4-8490-0143d119bac2/6a7c537376fce.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A Refresh-ing change",
     source: "Telluride Times",
     date: "August 12, 2026",
@@ -5982,17 +5994,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Board Of Trustees Work Session",
-    link: "https://www.norwoodtown.com/2026-08-05-board-of-trustees-work-session",
-    description: "",
-    pubDate: "2026-08-05T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
     description: "",
@@ -6083,17 +6084,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Mountain Village Merchant Meeting",
-    link: "https://townofmountainvillage.com/explore/events/all-events/merchant-meeting/",
-    description: "Join us for the monthly Mountain Village Merchant Meeting to be held on the second Tuesday of each month from 10 to 11 a.m. The meeting will be hybrid with",
-    pubDate: "2026-08-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/27556/merchant_event-1.png"
-  },
   {
     title: "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     link: "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
@@ -6544,6 +6534,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg"
+  },
+  {
+    title: "Music on the Green Presents Danno Simpson",
+    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-danno-simpson/",
+    description: "Beyond The Groove and TMVOA (tmvoa.org) present Danno Simpson at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    pubDate: "2026-09-11T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
   }
 ];
 
