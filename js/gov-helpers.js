@@ -404,7 +404,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8299","zoomUrl":"https://us02web.zoom.us/j/83623251474?pwd=JsZ0QipUWbrsNcS7ASKWqZcbQs4Qud.1","sv":4},
 
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300","sv":4,"ph":"f461253da821da55"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300","sv":4,"ph":"f461253da821da55"},
+
+  "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -772,6 +775,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Changes to Holy Mass Schedule on Fri/Sat",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Please note: 1. There will be No Holy Mass on this Friday, August 14. 2. There will be a Holy Mass on Saturday, August 15 at 9 am for the Solemnity of the Assumption of the Blessed Virgin Mary.",
+    href: "https://stpatrickstelluride.com/2026/parish-news/changes-to-holy-mass-schedule-on-fri-sat/",
+    img: ""
+  },
+  {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -943,17 +956,6 @@ const REGIONAL_NEWS_ARTICLES = [
   }
 ];  // 7 regional feeds (West End, Ouray, …)
 const SMC_ALERTS = [
-  {
-    title: "Remine Creek Trail Temporarily Closed",
-    source: "San Miguel County",
-    sourceLabel: "San Miguel County",
-    category: "Alert",
-    date: "2026-08-12",
-    pubDate: "2026-08-12T19:00:44.000Z",
-    copy: "The northern section of the Remine Creek Trail will be closed until ~1:00 p.m. today",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=540",
-    img: ""
-  },
   {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
@@ -1295,7 +1297,10 @@ const MANUAL_SUMMARIES = {
     "SMART's board meets virtually on August 13th with a agenda that touches both the organization's structure and its ongoing gondola work. The board takes up Resolution 2026-15, which restructures the Gondola Advisory Committee — a body that has been central to the $5.2M/year gondola tax project since voters approved 3A. Resolution 2026-16 assigns the existing professional services contract with attorney Paul J. Taddune, P.C. to the law firm JVAM, PLLC — a transition worth noting given the legal complexity surrounding the gondola project. Resolution 2026-17 amends the current FY26 budget and capital spending plan, and the board opens a conversation on FY27 budget development. A gondola project update and standard operations report round out the substantive items. The meeting closes in executive session on personnel matters.",
 
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
-    "The August 26, 2026 Public Art Commission agenda hasn't been posted yet."
+    "The August 26, 2026 Public Art Commission agenda hasn't been posted yet.",
+
+  "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
+    "The August 27, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1616,6 +1621,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Stronghouse caps perfect season with league championship",
+    source: "Telluride Times",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    newsTopic: "community",
+    copy: "Stronghouse women's softball went undefeated across 14 games this season, capping it with a 20-12 championship win over Cow Tire on July 23. The team was founded just three years ago by co-managers Aubrey Mable and Julia Fallman, who wanted to bring fresh energy to the local rec league. A double rainbow over the field at the end made for a pretty good finish.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_5d1f3864-b42c-4e3b-812e-5d5a88cf6c1b.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7a/a7ab3de6-499e-41fd-a415-2789bf0a6ac2/6a7b65ae75a84.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Jury selection begins in Meta youth harms trial in California federal court",
     source: "Telluride Times",
@@ -2492,15 +2509,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
-    title: "Remine Creek Trail Temporarily Closed",
-    source: "San Miguel County",
-    date: "August 12, 2026",
-    newsTopic: "recreation",
-    copy: "The northern section of the Remine Creek Trail will be closed until ~1:00 p.m. today",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=540",
-    img: ""
-  },
-  {
     title: "Black Bear Pass Now Open",
     source: "San Miguel County",
     date: "August 3, 2026",
@@ -3219,17 +3227,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Youth Tennis & Pickleball Camp",
-    link: "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-12/",
-    description: "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM | Pickleball 11:30 AM – 12:30 PM | Supervised BYO Lunch & Games 12:30 PM – 2:30 PM | Tennis Join us for a fun-filled program designed to build skills, confidence, and a love for the game!",
-    pubDate: "2026-08-12T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Market on the Plaza",
     link: "https://koto.org/event/market-on-the-plaza/2026-08-12/",
     description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -3239,17 +3236,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-08-12T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
     title: "Sewing 101 with Melissa",
@@ -5029,6 +5015,28 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53481231331209/huge/c0cdcb0d2847ee1b3356d6a5770d61693b5eea88.jpg"
   },
   {
+    title: "Hands on History: From Quills to Qwerty",
+    link: "https://events.ourayridgwayevents.com/event/hands-on-history-from-quills-to-qwerty",
+    description: "Come, explore, and try out the different methods used to correspond and save memories and important events over the years. Try your hand at writing with a quill, typing, and more! View on site | Email this event",
+    pubDate: "2026-08-22T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Ranch History Museum",
+    imageUrl: "https://localist-images.azureedge.net/photos/53683903201031/huge/a04791d7e4ff9bb951af1161eb22eb5beff88f12.jpg"
+  },
+  {
+    title: "Words and Paint: Ann Dettmer Art Show Fundraiser",
+    link: "https://events.ourayridgwayevents.com/event/words-and-paint-ann-dettmer-art-show-fundraiser",
+    description: "Come see the gorgeous and affordable artist books, cards and small works by local artist Ann Detter at the Ouray Library. A percentage of the proceeds will go to the library expansion project. This is a great opportunity to acquire some of Ann's beautiful artwork and raise funds for the library at the same time. This is a one-day only event! For information, contact ProgramsOurayPL@gmail.com . View on site | Email this event",
+    pubDate: "2026-08-22T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53684265529551/huge/86e1817878e5abad4e17d23a0022c4caf1ba8d6b.jpg"
+  },
+  {
     title: "WCOC 3rd Annual Chili Cook-Off",
     link: "https://events.ourayridgwayevents.com/event/wcoc-3rd-annual-chili-cook-off",
     description: "Braggin' rights are on the line for competitors to earn the title of Best Chili in Ouray County for 2026 during the 3rd Annual WCOC Chili Cook-Off! Local businesses will present an assortment of chilis to be tested by professionals and citizens. Participants could take home the prize of Best Chili, People's Choice, Best Decorated and Top Fundraiser (as additional monetary tips help the participants earn this prize). Taste alll of the chilis for $14. If they're extra good, leave them an additional tip! Baked goods made by WCOC members will also be available for purchase. This event is hosted by the Woman's Club of Ouray County, a 501(c)(3) nonprofit organization. All proceeds benefit Ouray County nonprofits with grants. We are grateful for the past, present and future support of our Community! View on site | Email this event",
@@ -5333,6 +5341,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792721969/huge/b36605ccda743f761d9a7e7ab62dfce88160e90c.jpg"
   },
   {
+    title: "Mountain Towns 2030 with Mayor John Clark",
+    link: "https://events.ourayridgwayevents.com/event/mountain-towns-2030-with-mayor-john-clark",
+    description: "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change tightening, speed is essential. Join a conversation with Mountain Towns 2030, alongside community leaders exploring how networks, partnerships, and peer learning are accelerating climate action and resilience efforts in communities of every size - including Telluride and across the surrounding region. View on site | Email this event",
+    pubDate: "2026-09-03T00:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Telluride Science Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53684126441337/huge/f633da0ba3c8a8b395d871ef617df68026d5f514.jpg"
+  },
+  {
     title: "WOH Art Show: Brittany Stadler",
     link: "https://events.ourayridgwayevents.com/event/woh-art-show-brittany-stadler",
     description: "Come see In Color, a new exhibition by regional artist Brittany Stadler in the Tavern at the Wright. Art on display through September 3. Brittany Stadler: Artist Statement My work often begins with a single form — typically an animal whose presence represents an ecosystem, region, or symbol. From that base shape, I build inward and intuitively. I draw in larger forms first, and work my way toward the smaller details. Research is an essential part of the practice. I study each plant and animal that I consider for a piece — how they move, how they relate to their environment. These rhythms inform the poses and compositions in my work, helping each subject feel alive and true. What results is part collage, part optical illusion — a work that I hope will be a process of discovery for everyone that views it. …",
@@ -5546,15 +5565,15 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53629792987218/huge/6f3a915f33285c3e3da2dbe8c54dfcf731474ba0.jpg"
   },
   {
-    title: "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner",
-    link: "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright-featuring-comedian-casey-skinner",
-    description: "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel. What begins as an unfortunate booking quickly spirals into an unforgettable adventure filled with bizarre encounters, unsettling discoveries, and laugh-out-loud storytelling. Just when you think the story is over, Casey finds himself returning for one final night, proving that sometimes the funniest stories are also the strangest. Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also producing television projects for Netflix, Discovery, and Max. …",
+    title: "Ouray Comedy Night with Casey Skinner",
+    link: "https://events.ourayridgwayevents.com/event/comedy-casey-skinner-wright",
+    description: "Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also producing television projects for Netflix, Discovery, and Max. His storytelling style has been described as \"an ADHD Nate Bargatze,\" blending sharp observations, self-deprecating humor, and expertly crafted narratives into an unforgettable live performance. View on site | Email this event",
     pubDate: "2026-09-11T00:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792641067/huge/bbdacac6fd41328414a646697eef58da7bd6ce25.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53684031205136/huge/20c6d134a7345e1acecd87d1f28155013303ac91.jpg"
   },
   {
     title: "Jolie Holland - Live at The Sherbino",
@@ -7237,6 +7256,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/61644/img_7366.800x533.webp"
   },
   {
+    title: "Trout-A-Palooza",
+    link: "https://www.telluride.com/event/troutapalooza/",
+    description: "The annual Troutapalooza live event hosted by the Gunnison Gorge Anglers Chapter of Trout Unlimited takes place on …",
+    pubDate: "2026-09-23",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/53749/unnamed-file-3-ezgif_com-webp-to-jpg-converter.800x533.webp"
+  },
+  {
     title: "Telluride Autumn Classic",
     link: "https://www.telluride.com/event/telluride-autumn-classic/",
     description: "A Colorful Car Show in the Mountains\n\nWhile still very much a celebration of cars and colors, the Autumn Classic is the …",
@@ -7317,6 +7347,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63023/summit_one_pager.800x533.webp"
+  },
+  {
+    title: "Shrek the Musical",
+    link: "https://www.telluride.com/event/shrek-the-musical/",
+    description: "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
+    pubDate: "2026-10-08",
+    endDate: "2026-10-12",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63356/screenshot_2026-08-12_at_1_37_16_pm.800x533.webp"
   },
   {
     title: "Oktoberfest",

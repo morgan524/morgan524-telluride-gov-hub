@@ -1,15 +1,15 @@
 [
   {
     "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-12/",
+    "href": "https://telluridelibrary.libcal.com/event/16767661?hs=a",
     "date": "2026-08-12",
     "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lower Terrace - outdoors",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you…",
     "type": "Community"
   },
   {
@@ -316,19 +316,6 @@
     "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
     "type": "Arts & Film",
     "endDate": "2026-08-31"
-  },
-  {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-12/",
-    "date": "2026-08-12",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Mushroom Festival",
@@ -1713,6 +1700,32 @@
     "endDate": "2026-08-23"
   },
   {
+    "title": "Hands on History: From Quills to Qwerty",
+    "href": "https://events.ourayridgwayevents.com/event/hands-on-history-from-quills-to-qwerty",
+    "date": "2026-08-22",
+    "time": "1:00 PM",
+    "location": "Ouray County Ranch History Museum",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53683903201031/huge/a04791d7e4ff9bb951af1161eb22eb5beff88f12.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come, explore, and try out the different methods used to correspond and save memories and important events over the years. Try your hand at writing with a quill, typing, and more! View on site | Email this event",
+    "type": "Community"
+  },
+  {
+    "title": "Words and Paint: Ann Dettmer Art Show Fundraiser",
+    "href": "https://events.ourayridgwayevents.com/event/words-and-paint-ann-dettmer-art-show-fundraiser",
+    "date": "2026-08-22",
+    "time": "1:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53684265529551/huge/86e1817878e5abad4e17d23a0022c4caf1ba8d6b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come see the gorgeous and affordable artist books, cards and small works by local artist Ann Detter at the Ouray Library. A percentage of the proceeds will go to the library expansion project. This is a great opportunity to acquire some of…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
     "date": "2026-08-22",
@@ -2618,6 +2631,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Mountain Towns 2030 with Mayor John Clark",
+    "href": "https://events.ourayridgwayevents.com/event/mountain-towns-2030-with-mayor-john-clark",
+    "date": "2026-09-02",
+    "time": "6:00 PM",
+    "location": "Telluride Science Center",
+    "town": "Telluride",
+    "img": "https://localist-images.azureedge.net/photos/53684126441337/huge/f633da0ba3c8a8b395d871ef617df68026d5f514.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change…",
+    "type": "Community"
+  },
+  {
     "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
     "href": "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
     "date": "2026-09-02",
@@ -3183,17 +3209,17 @@
     "type": "Music"
   },
   {
-    "title": "You Can't Hide: Comedy @ the Wright Featuring Comedian Casey Skinner",
-    "href": "https://events.ourayridgwayevents.com/event/you-cant-hide-comedy-the-wright-featuring-comedian-casey-skinner",
+    "title": "Ouray Comedy Night with Casey Skinner",
+    "href": "https://events.ourayridgwayevents.com/event/comedy-casey-skinner-wright",
     "date": "2026-09-10",
     "time": "6:00 PM",
     "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629792641067/huge/bbdacac6fd41328414a646697eef58da7bd6ce25.jpg",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53684031205136/huge/20c6d134a7345e1acecd87d1f28155013303ac91.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Part stand-up comedy. Part true crime story. You Can't Hide is comedian Casey Skinner's hilarious and unbelievable account of the time he accidentally checked into one of America's most infamous hotels: Los Angeles' legendary Cecil Hotel.…",
-    "type": "Community"
+    "desc": "Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also…",
+    "type": "Arts & Film"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -3720,6 +3746,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Trout-A-Palooza",
+    "href": "https://www.telluride.com/event/troutapalooza/",
+    "date": "2026-09-23",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/53749/unnamed-file-3-ezgif_com-webp-to-jpg-converter.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The annual Troutapalooza live event hosted by the Gunnison Gorge Anglers Chapter of Trout Unlimited takes place on …",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Autumn Classic",
     "href": "https://www.telluride.com/event/telluride-autumn-classic/",
     "date": "2026-09-24",
@@ -4140,6 +4179,20 @@
     "source": "Telluride Rotary",
     "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Shrek the Musical",
+    "href": "https://www.telluride.com/event/shrek-the-musical/",
+    "date": "2026-10-08",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63356/screenshot_2026-08-12_at_1_37_16_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "The Sheridan Arts Foundation’s 6th annual Not- So Young People’s Theater production! NYSPT presents Shrek The …",
+    "type": "Arts & Film",
+    "endDate": "2026-10-12"
   },
   {
     "title": "WOWZERS",
