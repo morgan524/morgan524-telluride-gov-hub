@@ -22,6 +22,34 @@
       "addedBy": "content-autofix",
       "addedOn": "2026-08-12",
       "expiresOn": "2026-10-11"
+    },
+    {
+      "id": "datefix-the-m-factor-shredding-the-silence-on-me-2026-09-01-ouray_ridgway_events",
+      "kind": "event-date",
+      "array": "OURAY_RIDGWAY_EVENTS",
+      "titleMatch": "The M Factor, Shredding the Silence on Menopause. Film followed by a panel discussion",
+      "wrongDate": "2026-09-02",
+      "correctDate": "2026-09-01",
+      "reason": "The Sherbino page clearly states September 1, confirming the SHERBINO_EVENTS date.",
+      "evidence": "https://sherbino.org/event/the-m-factor-shredding-the-silence-on-menopause-film-followed-by-a-panel-discussion/",
+      "quote": "The Sherbino presents The M Factor: Shredding the Silence on Menopause on September 1 at 6:30 PM, followed by a panel discussion.",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-08-12",
+      "expiresOn": "2026-10-01"
+    },
+    {
+      "id": "datefix-the-sherbino-presents-donny-morales-firs-2026-09-04-ouray_ridgway_events",
+      "kind": "event-date",
+      "array": "OURAY_RIDGWAY_EVENTS",
+      "titleMatch": "The Sherbino Presents: Donny Morales – First Friday Show",
+      "wrongDate": "2026-09-05",
+      "correctDate": "2026-09-04",
+      "reason": "The Sherbino's own page clearly states the event is on September 4, confirming the SHERBINO_EVENTS date.",
+      "evidence": "https://sherbino.org/event/the-sherbino-presents-donny-morales-first-friday-show/",
+      "quote": "Friday, September 4th | 6:00–8:00 pm",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-08-12",
+      "expiresOn": "2026-10-04"
     }
   ]
 }
