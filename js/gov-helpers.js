@@ -2478,6 +2478,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
+    title: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    source: "San Miguel County",
+    date: "July 14, 2026",
+    newsTopic: "recreation",
+    copy: "Black Bear Pass is now open. Please check with San Juan County for the current status of the pass on their side.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=534",
+    img: ""
+  },
+  {
     title: "Shandoka, Carhenge Lots Closed",
     source: "Town of Telluride",
     date: "August 8, 2026",
@@ -4596,17 +4623,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg"
   },
   {
-    title: "Edie",
-    link: "https://events.ourayridgwayevents.com/event/edie",
-    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. View on site | Email this event",
-    pubDate: "2026-08-14T19:30:42.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
-  },
-  {
     title: "True Grit Historic Walking Tours",
     link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -4639,6 +4655,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/04059243547212bbd8b1fbcbafe16b2195b8c518.jpg"
+  },
+  {
+    title: "Edie",
+    link: "https://events.ourayridgwayevents.com/event/edie",
+    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. Doors open at 7:00pm. View on site | Email this event",
+    pubDate: "2026-08-15T01:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
