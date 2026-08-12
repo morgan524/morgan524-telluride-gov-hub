@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-12T04:53:39.925Z",
+ "generated": "2026-08-12T07:42:36.342Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -70,6 +70,12 @@
    ],
    "recent": [
     {
+     "source": "telluride",
+     "date": "2026-08-11",
+     "title": "Town Council - Aug 11 2026",
+     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
+    },
+    {
      "source": "county",
      "date": "2026-08-05",
      "title": "Board of County Commissioners Meeting",
@@ -78,6 +84,7 @@
    ],
    "developments": [],
    "stale": [
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-07-19.",
     "Code Changes & Accelerated Review: county discussed it on 2026-08-05 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19."
    ]
   },
@@ -100,6 +107,12 @@
    ],
    "recent": [
     {
+     "source": "telluride",
+     "date": "2026-08-11",
+     "title": "Town Council - Aug 11 2026",
+     "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
+    },
+    {
      "source": "county",
      "date": "2026-08-05",
      "title": "Board of County Commissioners Meeting",
@@ -108,6 +121,7 @@
    ],
    "developments": [],
    "stale": [
+    "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01.",
     "Wildfire Resiliency: county discussed it on 2026-08-05 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-06-01."
    ]
   },
@@ -147,6 +161,12 @@
    "recent": [
     {
      "source": "norwood",
+     "date": "2026-08-11",
+     "title": "Norwood Water Commission Meeting",
+     "snippet": "The Norwood Water Commission meets August 11 at 6:30 p.m. at Town Hall with a Zoom option. Routine consent items cover July financials, meeting minutes, and budget-to-actuals. Board business includes…"
+    },
+    {
+     "source": "norwood",
      "date": "2026-07-29",
      "title": "NWC Possible Quorum",
      "snippet": "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood…"
@@ -154,6 +174,7 @@
    ],
    "developments": [],
    "stale": [
+    "Norwood Water: norwood discussed it on 2026-08-11 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23.",
     "Norwood Water: norwood discussed it on 2026-07-29 (\"NWC Possible Quorum\") but the deep dive was last edited 2026-07-23."
    ]
   },
