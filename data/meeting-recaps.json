@@ -2,11 +2,71 @@
   {
     "sourceKey": "telluride",
     "sourceLabel": "Town of Telluride",
+    "date": "2026-08-11",
+    "title": "Town Council — Aug 11, 2026",
+    "recap": "Council approved on third reading an ordinance amending the land use code to implement the Colorado Wildfire Resiliency Code (CWRC). The key revision removes tree-mitigation requirements for trees removed specifically under the CWRC. The vote was 6-1, with one dissenting vote.\n\nCouncil approved on first reading a mid-year budget amendment totaling approximately $5.4 million, covering carry-forward items from 2025 (road improvements, fleet, sewer lining) and new 2026 appropriations including costs tied to the ski patrol strike, sewer line relocates, and a wayfinding project. A public hearing for second reading was set for September 1.\n\nJohn Kirkindall was unanimously appointed to a regular seat on the Telluride Regional Airport Authority for a four-year term. Council also directed staff to pursue a FEMA flood-plane remapping project — the town's map dates to 1992 — with a placeholder to be included in the 2027 budget. Estimated cost is $225,000–$275,000 and the process is expected to take roughly two years.\n\nFor the two Feno deed-restricted units, council reached consensus via straw poll to convert them to EDUs (removing the price and income caps while retaining occupancy qualification requirements) and market them broadly, potentially through an MLS listing. The recently acquired Spruce House unit will go to a general lottery, timing to be determined by staff. A new hotel-and-restaurant liquor license for \"The Patio\" at 138 East Colorado Avenue was approved unanimously by the Liquor Licensing Authority.",
+    "votes": [
+      {
+        "item": "CWRC land use code amendments — 3rd reading",
+        "outcome": "Passed",
+        "tally": "6-1"
+      },
+      {
+        "item": "Mid-year 2026 budget amendment — 1st reading",
+        "outcome": "Passed",
+        "tally": "7-0"
+      },
+      {
+        "item": "Kirkindall appointment — Airport Authority",
+        "outcome": "Passed",
+        "tally": "7-0"
+      },
+      {
+        "item": "Liquor license — The Patio (FA Wining Pigs Bar 10)",
+        "outcome": "Passed",
+        "tally": "5-0"
+      },
+      {
+        "item": "Enter executive session",
+        "outcome": "Passed",
+        "tally": "7-0"
+      }
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=-3l48zNnbBU"
+  },
+  {
+    "sourceKey": "telluride",
+    "sourceLabel": "Town of Telluride",
     "date": "2026-08-10",
     "title": "Intergovernmental Meeting — Aug 10, 2026",
     "recap": "This joint session of the Town of Telluride, San Miguel County, Mountain Village, Norwood, and Ophir was devoted to work sessions — no formal votes were taken.\n\nRegional housing updates: Telluride's Canyonlands and Towerhouse projects (36 deed-restricted units) are on track for Q1–Q2 2027 completion. The county's Illium Valley five-unit workforce project is in trouble after preliminary bids came in above $1,200 per square foot — without land costs. The county's Deep Creek project remains conceptual at up to 35 units, pending water and wastewater confirmation.\n\nTelluride Regional Medical Center board chair provided a detailed update: Newmont has offered a 30-year lease extension on the current town site, opening a two-site path — a freestanding emergency department at Society Turn and a refurbished primary-care facility in town. A capital campaign (no public bonds anticipated) is the funding vehicle; architects would be engaged this fall with a construction target around 2029–2031.\n\nMountain Village's Munchkins childcare program reported 41 children on its wait list, 26 of them infants — against a regional infant capacity of 18 slots. The program costs the town roughly $650,000 in subsidy for 2026. Mountain Village signaled it may seek regional partners to help fund a roughly $1 million expansion. Telluride noted its planned Shandoka Lot redevelopment includes 2,000 square feet of childcare space.\n\nThe Forest Service reported the Telluride Ski Area environmental analysis objection period closed with no objections filed, putting a final decision weeks away. The Telluride Mountain Club trails EA received one objection, currently under review. Fire mitigation for the broader Telluride valley was flagged as a priority following the nearby Gold Mountain and Elk fires. A heritage-specialist vacancy on the Norwood Ranger District remains unfilled.",
     "votes": [],
     "videoUrl": "https://www.youtube.com/watch?v=WG-Yk5DXzLQ"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-08-06",
+    "title": "Design Review Board — Aug 6, 2026",
+    "recap": "The board approved an initial architecture and site review for a new four-unit multi-family condominium building at Lot 726-R1 on Pennington Place. The J-shaped, three-level structure will complement the existing six-unit Pennington Lodge, stepping down the hillside at well under the 48-foot height limit. A specific approval was granted for a secondary curb cut off Pennington Place, supported by both the public works director and fire marshal. A required fire-truck turnaround condition was dropped after staff confirmed the driveway falls under the 150-foot trigger length.\n\nThe board approved a final architecture review for Belvedere 3, a 19-condominium and two employee-unit multi-family building at Lot 27A on Lost Creek Lane. The vote was not unanimous; one member dissented, citing concerns about the scope of encroachments into the general easements — including a pool and spa — and unresolved lighting plan compliance. Conditions added include: stone cladding raised to 35% (with staff and chair sign-off on revised elevations), full ADA parking compliance, a lighting plan with foot-candle study reviewed by staff and one board member, and a blanket requirement that the applicant secure all necessary easements before construction.\n\nThe board voted to recommend denial to Town Council of a conditional use permit that would have allowed Telluride Ski & Golf to lease the vacant former Wells Fargo ground-floor space in the Palmyra Building as temporary office space for up to three years. Members broadly agreed the use conflicts with long-standing goals for ground-floor retail vitality on a primary pedestrian route in the village core.",
+    "votes": [
+      {
+        "item": "Initial arch/site review — 4 units, Pennington Place",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Final arch review — Belvedere 3, Lost Creek Lane",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "CUP recommendation — office space, 620 MV Blvd 1A",
+        "outcome": "Failed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/8ba62c5e-4012-4c9d-881e-7f6940944abd"
   },
   {
     "sourceKey": "mv",
@@ -52,31 +112,6 @@
       }
     ],
     "videoUrl": "https://media.avcaptureall.cloud/meeting/400b4a0e-0d7e-40d9-b64d-71fca2f808aa"
-  },
-  {
-    "sourceKey": "mv",
-    "sourceLabel": "Mountain Village",
-    "date": "2026-08-06",
-    "title": "Design Review Board — Aug 6, 2026",
-    "recap": "The board approved an initial architecture and site review for a new four-unit multi-family condominium building at Lot 726-R1 on Pennington Place. The J-shaped, three-level structure will complement the existing six-unit Pennington Lodge, stepping down the hillside at well under the 48-foot height limit. A specific approval was granted for a secondary curb cut off Pennington Place, supported by both the public works director and fire marshal. A required fire-truck turnaround condition was dropped after staff confirmed the driveway falls under the 150-foot trigger length.\n\nThe board approved a final architecture review for Belvedere 3, a 19-condominium and two employee-unit multi-family building at Lot 27A on Lost Creek Lane. The vote was not unanimous; one member dissented, citing concerns about the scope of encroachments into the general easements — including a pool and spa — and unresolved lighting plan compliance. Conditions added include: stone cladding raised to 35% (with staff and chair sign-off on revised elevations), full ADA parking compliance, a lighting plan with foot-candle study reviewed by staff and one board member, and a blanket requirement that the applicant secure all necessary easements before construction.\n\nThe board voted to recommend denial to Town Council of a conditional use permit that would have allowed Telluride Ski & Golf to lease the vacant former Wells Fargo ground-floor space in the Palmyra Building as temporary office space for up to three years. Members broadly agreed the use conflicts with long-standing goals for ground-floor retail vitality on a primary pedestrian route in the village core.",
-    "votes": [
-      {
-        "item": "Initial arch/site review — 4 units, Pennington Place",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Final arch review — Belvedere 3, Lost Creek Lane",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "CUP recommendation — office space, 620 MV Blvd 1A",
-        "outcome": "Failed",
-        "tally": ""
-      }
-    ],
-    "videoUrl": "https://media.avcaptureall.cloud/meeting/8ba62c5e-4012-4c9d-881e-7f6940944abd"
   },
   {
     "sourceKey": "telluride",
@@ -127,6 +162,56 @@
       }
     ],
     "videoUrl": "https://www.youtube.com/watch?v=INMRfOP1TEs"
+  },
+  {
+    "sourceKey": "mv",
+    "sourceLabel": "Mountain Village",
+    "date": "2026-07-21",
+    "title": "Mountain Village Town Council — Jul 21, 2026",
+    "recap": "Council appointed three new members to the VCA Residents Advisory Committee for two-year terms.\n\nThe main event was a 4-2 vote approving second reading of an ordinance rezoning and authorizing a density transfer at Lot 640A, 306 Adams Ranch Road, allowing 15 additional employee apartment units (all two-bedroom) in a new building on the northeast corner of the existing Mountain View employee housing site. The dissenting votes came from two councilmembers who wanted conditions requiring a formal use-and-maintenance agreement for the adjacent open-space field before the project could proceed. The majority chose to approve without that condition, citing the value of private workforce housing and a desire to extend goodwill toward the developer.\n\nCouncil approved second reading of an ordinance amending the Community Development Code's lighting regulations. A late amendment exempts existing wall-mounted fixtures and sconces attached to a structure from mandatory replacement, while still requiring bulb color temperature at or below 2,700 Kelvin. New construction remains fully subject to the updated rules; the five- and ten-year compliance timelines for other exterior lighting are unchanged. Staff was directed to study a potential fixture-incentive program for the 2027 budget.\n\nOther actions: Q2 2026 financials approved; a resolution correcting application types under Proposition 123 affordable-housing expedited review approved; Stage 2 fire restrictions extended; and an ADU floor-area variance for an existing structure at 500 Benchmark Drive approved.",
+    "votes": [
+      {
+        "item": "VCA Residents Advisory Committee appointments (3)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Q2 2026 financials approval",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Rezone & density transfer — 306 Adams Ranch Rd (15 units)",
+        "outcome": "Passed",
+        "tally": "4-2"
+      },
+      {
+        "item": "ADU floor-area variance — 500 Benchmark Drive",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Lighting regulations code amendment (CDC §17.5.12)",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Prop 123 resolution correction — expedited review types",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Stage 2 fire restrictions extension",
+        "outcome": "Passed",
+        "tally": ""
+      },
+      {
+        "item": "Motion to extend meeting beyond time limit",
+        "outcome": "Passed",
+        "tally": ""
+      }
+    ],
+    "videoUrl": "https://media.avcaptureall.cloud/meeting/cd3f90c7-4db2-46f9-a23e-94cd069ced43"
   },
   {
     "sourceKey": "telluride",
@@ -181,65 +266,6 @@
   {
     "sourceKey": "mv",
     "sourceLabel": "Mountain Village",
-    "date": "2026-07-21",
-    "title": "Mountain Village Town Council — Jul 21, 2026",
-    "recap": "Council appointed three new members to the VCA Residents Advisory Committee for two-year terms.\n\nThe main event was a 4-2 vote approving second reading of an ordinance rezoning and authorizing a density transfer at Lot 640A, 306 Adams Ranch Road, allowing 15 additional employee apartment units (all two-bedroom) in a new building on the northeast corner of the existing Mountain View employee housing site. The dissenting votes came from two councilmembers who wanted conditions requiring a formal use-and-maintenance agreement for the adjacent open-space field before the project could proceed. The majority chose to approve without that condition, citing the value of private workforce housing and a desire to extend goodwill toward the developer.\n\nCouncil approved second reading of an ordinance amending the Community Development Code's lighting regulations. A late amendment exempts existing wall-mounted fixtures and sconces attached to a structure from mandatory replacement, while still requiring bulb color temperature at or below 2,700 Kelvin. New construction remains fully subject to the updated rules; the five- and ten-year compliance timelines for other exterior lighting are unchanged. Staff was directed to study a potential fixture-incentive program for the 2027 budget.\n\nOther actions: Q2 2026 financials approved; a resolution correcting application types under Proposition 123 affordable-housing expedited review approved; Stage 2 fire restrictions extended; and an ADU floor-area variance for an existing structure at 500 Benchmark Drive approved.",
-    "votes": [
-      {
-        "item": "VCA Residents Advisory Committee appointments (3)",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Q2 2026 financials approval",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Rezone & density transfer — 306 Adams Ranch Rd (15 units)",
-        "outcome": "Passed",
-        "tally": "4-2"
-      },
-      {
-        "item": "ADU floor-area variance — 500 Benchmark Drive",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Lighting regulations code amendment (CDC §17.5.12)",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Prop 123 resolution correction — expedited review types",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Stage 2 fire restrictions extension",
-        "outcome": "Passed",
-        "tally": ""
-      },
-      {
-        "item": "Motion to extend meeting beyond time limit",
-        "outcome": "Passed",
-        "tally": ""
-      }
-    ],
-    "videoUrl": "https://media.avcaptureall.cloud/meeting/cd3f90c7-4db2-46f9-a23e-94cd069ced43"
-  },
-  {
-    "sourceKey": "county",
-    "sourceLabel": "San Miguel County",
-    "date": "2026-07-16",
-    "title": "Strategic Stakeholders Roundtable — Jul 16, 2026",
-    "recap": "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses.\n\nA side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent.\n\nDiscussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
-    "videoUrl": "https://www.youtube.com/watch?v=T8SXtsAOB70",
-    "votes": []
-  },
-  {
-    "sourceKey": "mv",
-    "sourceLabel": "Mountain Village",
     "date": "2026-07-16",
     "title": "Mountain Village Town Council — Jul 16, 2026",
     "recap": "Council approved the second reading of an ordinance rezoning and transferring density at Lot 640A, 306 Adams Ranch Road, allowing Telluride Ski & Golf to add 15 employee apartment units to the existing Mountain View workforce housing complex. The vote was 4-2. Conditions require completion of the Class 3 design review by the DRB and approval of a minor subdivision plat. Several councilmembers had pushed for an additional condition tying approval to a formal use-and-maintenance agreement for the adjacent open-space field; that condition was not included in the motion that passed.\n\nCouncil also approved on second reading an ordinance amending the Community Development Code's lighting regulations. A last-minute amendment exempts existing wall-mounted sconces and soffit/covered-roof/under-deck fixtures from mandatory replacement, provided bulbs are 2,700 Kelvin or below; staff was directed to explore an incentive program for the 2027 budget. The vote appeared unanimous.\n\nCouncil approved a resolution correcting application types in a previously adopted Proposition 123 affordable-housing expedited-review resolution, and approved a resolution extending the Stage 2 fire restrictions. Three members were appointed to the VCA Resident Advisory Committee for two-year terms. Q2 2026 financials were approved; the town is roughly $500,000 behind in sales tax year-to-date.",
@@ -281,6 +307,15 @@
       }
     ],
     "videoUrl": "https://media.avcaptureall.cloud/meeting/912ff751-d475-434d-ac8f-dd55087c180e"
+  },
+  {
+    "sourceKey": "county",
+    "sourceLabel": "San Miguel County",
+    "date": "2026-07-16",
+    "title": "Strategic Stakeholders Roundtable — Jul 16, 2026",
+    "recap": "San Miguel County's Strategic Stakeholders Roundtable held its sixth session focused on proposed land use code changes tied to workforce housing. The group reached informal consensus on two density questions: by-right density in both the low-density and medium-density zone districts will remain at one dwelling unit per 35 acres, with any additional density available only through affordable-housing bonuses.\n\nA side setback reduction from 12.5 to 10 feet in medium and high-density zones was approved by a show of hands with one dissent.\n\nDiscussion on high-density zones and the structure of density-bonus tiers was left unresolved; staff will develop bonus scenarios for a follow-up session scheduled for the morning of Monday, July 28. A joint planning commission and Board of County Commissioners work session is set for July 29.",
+    "videoUrl": "https://www.youtube.com/watch?v=T8SXtsAOB70",
+    "votes": []
   },
   {
     "sourceKey": "telluride",
@@ -388,21 +423,6 @@
     ]
   },
   {
-    "sourceKey": "telluride",
-    "sourceLabel": "Town of Telluride",
-    "date": "2026-06-17",
-    "title": "HARC — Jun 17, 2026",
-    "recap": "For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials.",
-    "videoUrl": "https://www.youtube.com/watch?v=3naByhxnyjE",
-    "votes": [
-      {
-        "item": "208 S Fir commercial — preliminary approval",
-        "outcome": "Passed",
-        "tally": "4-1"
-      }
-    ]
-  },
-  {
     "sourceKey": "mv",
     "sourceLabel": "Mountain Village",
     "date": "2026-06-17",
@@ -446,6 +466,21 @@
       }
     ],
     "videoUrl": "https://media.avcaptureall.cloud/meeting/978b9375-97e0-4500-82ac-b73e839a14a6"
+  },
+  {
+    "sourceKey": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "date": "2026-06-17",
+    "title": "HARC — Jun 17, 2026",
+    "recap": "For 208 South Fir, a large commercial new-construction project in the warehouse district, HARC granted preliminary approval (4-1) with conditions addressing roof material, building height and depth, wall-plane articulation along the alley, an arborist report, parking payment-in-lieu, and building materials.",
+    "videoUrl": "https://www.youtube.com/watch?v=3naByhxnyjE",
+    "votes": [
+      {
+        "item": "208 S Fir commercial — preliminary approval",
+        "outcome": "Passed",
+        "tally": "4-1"
+      }
+    ]
   },
   {
     "sourceKey": "telluride",
