@@ -2667,6 +2667,32 @@ const KOTO_FEATURED_STORIES = [
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
   {
+    title: "Van Winkle talks fire, drought and wolves",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    dateSource: "article",
+    newsTopic: "public-safety",
+    copy: "Janie VanWinkle of VanWinkle Ranch is still piecing things together after last year's Turner Gulch Fire burned 60% of their grazing permit, dropping their Uncompahgre Plateau herd from roughly 600 head to about 25% of that. They're hauling hay for winter and watching a wolf circling near Grand Mesa, with producers worried the current reintroduction pause won't hold.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/van-winkle-talks-fire-drought-and-wolves,125792",
+    img: ""
+  },
+  {
+    title: "Spring Creek Basin Herd at 74; PZP keeps numbers in check",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    dateSource: "article",
+    newsTopic: "community",
+    copy: "The Spring Creek Basin wild horse herd sits at 74, comfortably within the 50–80 appropriate management level, and no round-up has been needed in 15 years thanks to PZP contraceptive darting each spring. T.J. Holmes volunteers her time administering the program, with the BLM covering supplies. Water is just OK out there right now, with catchments and natural seeps keeping the horses going.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/spring-creek-basin-herd-at-74-pzp-keeps-numbers-in-check,125797",
+    img: "https://zeta.creativecirclecdn.com/smb/original/20260811-120658-599-F3%20-%20horse.jpg"
+  },
+  {
     title: "A day in the life at the ICP during the Gold Mountain Fire",
     source: "San Miguel Basin Forum",
     sourceKey: "smb",
@@ -4471,17 +4497,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "St. Elmo Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/53126579046378/huge/120d7418d3aa1bc413c65d9a7d9d153b96c66963.jpg"
-  },
-  {
-    title: "Dark Sky Meteor Watch at Top of the Pines",
-    link: "https://events.ourayridgwayevents.com/event/dark-sky-meteor-watch-at-top-of-the-pines",
-    description: "As a celebration of Dark Skies in Ouray County, a Perseid Meteor Watch, Stargazing with binoculars, and a Laser Guided Constellation Tour will be held at Top of the Pines a DarkSky International designated Dark Sky Park, on Tuesday August 11, 2026, starting at 9:00 p.m. (weather permitting). Please park cars at the North Parking area and meet at the Pavilion for a short orientation of the evening. This year the moon will be at its new moon phase so the sky will be dark all night with the opportunity to see perhaps a 100+ meteors per hour especially after midnight. Visitors are asked to park at the North parking area and walk to the Pavilion. A short orientation will kick off the event at 9:00pm at the Pavilion. Bring a jacket, bug repellent, lounge chair (for Meteor watching) as well as binoculars and a red flashlight. …",
-    pubDate: "2026-08-12T03:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Top of the Pines",
-    imageUrl: "https://localist-images.azureedge.net/photos/53479059131388/huge/cdee948af3d591689db27804e9cdb54fd09e359f.jpg"
   },
   {
     title: "Canceled: Aug 12, 2026: Teen Garden to Kitchen Adventure Wednesday",
