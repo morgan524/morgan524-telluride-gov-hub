@@ -1597,6 +1597,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "A Refresh-ing change",
+    source: "Telluride Times",
+    date: "August 12, 2026",
+    firstSeen: "2026-08-12",
+    newsTopic: "education",
+    copy: "Tara Barnett, a longtime Telluride resident and former Montessori teacher, has launched Refresh, a professional organizing service focused on decluttering, space planning, and creating functional systems for homes. She also offers move support, pantry organizing, and children's spaces. Mountain living and seasonal turnover are part of why she sees a need for it here.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_c072b251-d438-4281-a486-641c6fb9d85f.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/91/f91231c8-2874-4914-a13c-9b81d633d969/6a7b622c015e0.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A win for wildlands: San Juan National Forest expands",
     source: "Telluride Times",
     date: "August 11, 2026",
@@ -2479,17 +2491,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
     img: ""
-  },
-  {
-    title: "It’s not just a race, it’s a route: Running the “Softrock 100” from Silverton to Telluride and back",
-    source: "Colorado Sun",
-    date: "August 10, 2026",
-    firstSeen: "2026-08-10",
-    newsTopic: "community",
-    copy: "Taking four days to cover the 100-mile Hardrock racecourse through the San Juans is a nod to the original intent of the iconic ultramarathon",
-    claudeSummary: false,
-    href: "https://coloradosun.com/2026/08/10/softrock-100-hardrock-route/",
-    img: "https://i0.wp.com/newspack-coloradosun.s3.amazonaws.com/wp-content/uploads/2026/08/PXL_20260726_200042055-1.jpg?fit=771%2C1024&amp;ssl=1"
   },
   {
     title: "Town Manager's Report",
@@ -4694,7 +4695,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "AJ FULLERTON",
     link: "https://events.ourayridgwayevents.com/event/aj-fullerton",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-15T22:00:00.000Z",
+    pubDate: "2026-08-15T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5280,7 +5281,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "City Slickers: CO-150 Film Festival @ the Wright",
     link: "https://events.ourayridgwayevents.com/event/city-slickers-co-150-film-festival-the-wright",
-    description: "City Slickers : CO- 150 Movie Night @ the Wright We’re celebrating Colorado’s Sesquicentennial with 150 screenings throughout the Centennial State. WHEN? Wednesday, September 2nd Doors at 6:30 pm • Movie at 7:00 pm RUN TIME: 1h 52min YEAR: 1991 RATING: PG-13 ABOUT THE FILM Every year, three friends take a vacation away from their wives. This year, henpecked Phil (Daniel Stern), newly married Ed (Bruno Kirby), and Mitch (Billy Crystal) -- terrified of his midlife crisis -- decide to reignite their masculinity by taking a supervised cattle drive across the Southwest. Under the supervision of gruff cowboy Curly (Jack Palance), the men set out on a journey that turns unexpectedly dangerous. The three men bond along the way to conquering their fear of aging. Tickets $5 In-person screening at the historic Wright Opera House Concessions available. …",
+    description: "City Slickers (1991) follows three lifelong friends who leave their comfortable city lives behind to join a cattle drive across the American West in search of adventure, purpose, and perhaps themselves. Along the trail, they discover that life has a way of teaching its biggest lessons in the most unexpected places. Starring Billy Crystal, Daniel Stern, Jack Palance, and Bruno Kirby, this Academy Award-winning comedy blends heartfelt storytelling with unforgettable humor and breathtaking western landscapes. This Colorado-themed screening celebrates the spirit of the modern West and the places that continue to inspire it. While much of the film was shot in New Mexico, its themes of open spaces, ranching heritage, mountain landscapes, and personal renewal resonate deeply throughout Colorado and the San Juan Mountains. Funny, thoughtful, and surprisingly moving, City Slickers reminds us that sometimes the hardest trail to ride is the one that leads us back to ourselves. …",
     pubDate: "2026-09-02T19:00:18.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
