@@ -527,12 +527,11 @@ const NORWOOD_CACHED_DATA = [
   {
     date: "August 17, 2026",
     time: null,
-    title: "Planning and Zoning Commission Meeting",
-    agendaUrl: null,
+    title: "Planning and Zoning Commission Cancelled",
+    agendaUrl: "https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf",
     packetUrl: null,
     special: false,
-    board: "pz",
-    note: "Next scheduled meeting -- agenda posted before the meeting."
+    board: "pz"
   },
   {
     date: "September 8, 2026",

@@ -77,7 +77,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "2:00 PM – 4:00 PM",
+    "desc": "A mushroom-themed craft program hosted by Ah Haa at the Wilkinson Public Library's Upper Terrace. The event runs from 2:00 to 4:00 PM.",
     "type": "Community"
   },
   {
@@ -168,7 +168,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     "type": "Community"
   },
   {
@@ -318,19 +318,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Youth Tennis & Pickleball Camp",
-    "href": "https://koto.org/event/youth-tennis-pickleball-camp/2026-08-13/",
-    "date": "2026-08-13",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Fall Registration is NOW OPEN",
     "href": "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     "date": "2026-08-13",
@@ -435,6 +422,20 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Hotdogs and Hamburgers",
+    "href": "https://events.ourayridgwayevents.com/event/hotdogs-and-hamburgers",
+    "date": "2026-08-14",
+    "time": "11:00 AM",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53692956986805/huge/5d5d75eca5ec273abc1cf1d55acc6de1d0b6b4b0.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Enjoy fresh hamburgers and hot dogs at the Ouray County Fair food stand! Grab lunch while you’re at the fair and support local youth—all proceeds benefit Ouray County Baseball. View on site | Email this event",
+    "type": "Outdoors & Sports",
+    "endDate": "2026-08-15"
   },
   {
     "title": "Telluride Farmers' Market Music Series: Travis Fisher",
@@ -578,7 +579,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest After Party",
+    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
     "type": "Music"
   },
   {
@@ -774,8 +775,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -1013,7 +1014,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
+    "desc": "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with…",
     "type": "Community"
   },
   {
@@ -1119,8 +1120,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "First Day of School",
-    "type": "Community"
+    "desc": "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
@@ -1545,12 +1546,12 @@
   },
   {
     "title": "Highgraders Holiday & Mining History",
-    "href": "https://events.ourayridgwayevents.com/event/highgraders-holiday-mining-history",
+    "href": "https://events.ourayridgwayevents.com/event/highgraders-holiday",
     "date": "2026-08-21",
     "time": "",
     "location": "Miner's Heritage Park",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52092594380571/huge/0242f87adfd989494856026cfcdfbb5c60ca7962.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53693434559707/huge/f6d4e9925c9d72212aaa732c6f83114b2783c1de.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Watch the Hardrock mining competition and learn about the history of mining in Ouray. There will be a full bar, and food vendors. Miner’s Heritage Park is on the southwest corner of Fellin Park. Friday, Aug. 21 | Fellin Park Horseshoe…",
@@ -3445,6 +3446,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",
+    "href": "https://events.ourayridgwayevents.com/event/native-rhythms-native-jazz-r-carlos-nakai-amochip-dabney-will-clipman-at-the-montrose-pavilion",
+    "date": "2026-09-15",
+    "time": "6:30 PM",
+    "location": "Montrose Pavilion",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53693235946239/huge/0f1ea37ac1cf168d15be34057cbc7d78b1368e42.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors at 6:00 PM; show at 6:30 PM. The Sherbino and Weehawken Creative Arts present R. Carlos Nakai, AmoChip Dabney and Will Clipman at the Montrose Pavilion. The trio brings Native American flute together with jazz, world percussion and…",
+    "type": "Music"
+  },
+  {
     "title": "Ouray: Echoes in the Canyon",
     "href": "https://events.ourayridgwayevents.com/event/ouray-echoes-in-the-canyon-692",
     "date": "2026-09-16",
@@ -3797,7 +3811,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {
@@ -3866,6 +3880,19 @@
     "type": "Community"
   },
   {
+    "title": "Slap Dragon ~ Live at the Sherbino",
+    "href": "https://events.ourayridgwayevents.com/event/slap-dragon-live-at-the-sherbino",
+    "date": "2026-09-27",
+    "time": "7:30 PM",
+    "location": "The Sherbino",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53693260359887/huge/4d3201be3b01f5eb6d9920a6793bf0d6b3b4400c.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Doors at 7:00 PM; show at 7:30 PM. The Sherbino and Pickin' Productions welcome Slap Dragon, a Nashville-based band blending acoustic funk, bluegrass, R&B, disco energy, improvisation and sharp songwriting. Expect soulful vocals, acoustic…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "ETHAN PERRY",
     "href": "https://events.ourayridgwayevents.com/event/ethan-perry",
     "date": "2026-09-29",
@@ -3917,6 +3944,19 @@
     "source": "The Alibi",
     "desc": "Rooted in the soulful grit of a St. Louis upbringing and refined by the clarity ...",
     "type": "Community"
+  },
+  {
+    "title": "Containment",
+    "href": "https://events.ourayridgwayevents.com/event/containment",
+    "date": "2026-10-02",
+    "time": "5:00 PM",
+    "location": "The 610 Arts Collective",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53693053505919/huge/8a780ff6c8312fd2ff43dfb21dd65bcccea56d49.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Containment is an exhibition of mixed-media clay sculptures and assemblage by Michelle Montague of Ridgway, Colorado. Through tactile forms, layered materials, and carefully constructed scenes, Montague explores themes of vulnerability,…",
+    "type": "Arts & Film"
   },
   {
     "title": "October - Art Opening: Space Cowboy by Dundee & Lee - special reading by Poet Laureate Crisosto Apache",

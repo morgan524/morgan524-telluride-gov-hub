@@ -608,5 +608,22 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=207",
     "address": "",
     "smcBidID": "207"
+  },
+  {
+    "title": "Request for Proposal -- Fuel Island Canopy Construction",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Fuel Island Canopy Construction.",
+    "deadline": "Open until contracted",
+    "expires": "2026-11-11",
+    "dates": "8/13",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
+    "address": "",
+    "smcBidID": "208"
   }
 ]

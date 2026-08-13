@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "TEL-A-198",
+    "name": "Rooster",
+    "species": "Dog",
+    "breed": "Poodle, Standard",
+    "ageGroup": "Adult Dog",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/d027cd6d8e6bdf79acd129acafa4da52/437740ffc138d45daf25f23fd492bf12.JPG",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214290624",
+    "summary": "Adult Dog • Poodle, Standard • Male",
+    "firstSeen": "2026-08-13",
+    "revealDate": "2026-08-13",
+    "lastSeen": "2026-08-13"
+  }
+]
