@@ -22,6 +22,17 @@
       "addedBy": "content-autofix",
       "addedOn": "2026-08-12",
       "expiresOn": "2026-10-11"
+    },
+    {
+      "id": "deadlink-shabbat-2026-08-13",
+      "kind": "clear-link",
+      "array": "TJC_EVENTS",
+      "titleMatch": "Shabbat!",
+      "reason": "Link returned 404 on 3+ consecutive daily runs. Event kept, dead href cleared.",
+      "evidence": "https://www.telluridejewishcommunity.com/events/2026/8/28/shabbat",
+      "addedBy": "content-autofix",
+      "addedOn": "2026-08-13",
+      "expiresOn": "2026-10-12"
     }
   ]
 }
