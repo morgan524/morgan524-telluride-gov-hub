@@ -1,14 +1,14 @@
 {
-  "hash": "7adc7de2be6b3d7d03e71e451c27439f2cc88dba",
-  "lede": "The biggest item this week is Wednesday's SMART board meeting, where two resolutions go to a vote: one restructuring the Gondola Advisory Committee and another assigning professional responsibilities tied to the $5.2M/year gondola tax project voters approved under 3A — real structural decisions about how that money gets managed. Also worth your attention: San Miguel County Planning Commission meets Thursday to work through subdivision mechanics and take up an energy code update that would change building standards for new construction countywide. Mushroom Fest runs through the weekend, and school orientation kicks off Monday for incoming Telluride Middle-High students.",
+  "hash": "6c69449444c8a0f6364362289fea7301dcee5dd9",
+  "lede": "The most consequential meeting this week is SMART's August 13 board session, where two resolutions restructure the Gondola Advisory Committee and assign professional contracts tied to the voter-approved $5.2M/year gondola tax — real decisions on how that money gets managed. San Miguel County Planning Commission also meets August 13 on a subdivision work session and an energy code update that would reset building standards for new construction. Later in the week, HARC takes up the unpermitted Elks Lodge pergola and preliminary large-scale review of the Shandoka Lot redevelopment on Black Bear Road, with a site walk at 3:00 PM on August 19.",
   "notable": [
     {
       "id": 2,
-      "stake": "Board votes on resolutions restructuring gondola committee and $5.2M tax project oversight."
+      "stake": "Board votes on resolutions restructuring gondola tax committee and assigning contracts."
     },
     {
       "id": 1,
-      "stake": "County energy code update could change building standards for all new construction."
+      "stake": "County energy code update would change building standards for all new construction."
     },
     {
       "id": 7,
@@ -16,7 +16,7 @@
     },
     {
       "id": 8,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — major new construction in town."
+      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — multiple new buildings on Black Bear Rd."
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-13T04:57:53.821Z",
+ "generated": "2026-08-13T07:44:08.147Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -164,32 +164,18 @@
      "date": "2026-08-11",
      "title": "Norwood Water Commission Meeting",
      "snippet": "The Norwood Water Commission meets August 11 at 6:30 p.m. at Town Hall with a Zoom option. Routine consent items cover July financials, meeting minutes, and budget-to-actuals. Board business includes…"
-    },
-    {
-     "source": "norwood",
-     "date": "2026-07-29",
-     "title": "NWC Possible Quorum",
-     "snippet": "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood…"
     }
    ],
    "developments": [],
    "stale": [
-    "Norwood Water: norwood discussed it on 2026-08-11 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23.",
-    "Norwood Water: norwood discussed it on 2026-07-29 (\"NWC Possible Quorum\") but the deep dive was last edited 2026-07-23."
+    "Norwood Water: norwood discussed it on 2026-08-11 (\"Norwood Water Commission Meeting\") but the deep dive was last edited 2026-07-23."
    ]
   },
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [
-    {
-     "source": "telluride",
-     "date": "2026-07-29",
-     "title": "(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026",
-     "snippet": "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens…"
-    }
-   ],
+   "recent": [],
    "developments": [],
    "stale": []
   }
