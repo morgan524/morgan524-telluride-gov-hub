@@ -140,6 +140,26 @@
     "hook": ""
   },
   {
+    "source": "ouray",
+    "sourceLabel": "Ouray County",
+    "title": "Meeting",
+    "date": "2026-08-19",
+    "time": "",
+    "location": "Ouray County, CO",
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015",
+    "packetUrl": "",
+    "link": "https://ouraycountyco.gov/AgendaCenter",
+    "hasAgenda": true,
+    "summary": "Ouray County Planning Commission meets August 19 at the Ouray Courthouse for three public hearings. First up: a repeal of Section 16 of the county's land use regulations — a code change worth watching closely, since repealing an entire section rewrites the rules in ways that can ripple across future applications. Second, an amendment to an existing Special Use Permit for a restaurant in Colona. Third, an Exception application for Elk Meadows. Packet materials are attached to the posted agenda for anyone who wants the details before showing up.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Parks & Recreation Commission",
@@ -257,6 +277,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "info@tellurideairport.com",
+    "hook": ""
+  },
+  {
+    "source": "telluride",
+    "sourceLabel": "Town of Telluride",
+    "title": "Ethics Commission",
+    "date": "2026-08-25",
+    "time": "",
+    "location": "Rebekah Hall, 113 W Columbia Ave",
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
+    "packetUrl": "",
+    "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
+    "hasAgenda": false,
+    "summary": "The August 25, 2026 Ethics Commission agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
+    "commentEmail": "townclerk@telluride.gov",
     "hook": ""
   },
   {

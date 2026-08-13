@@ -1,5 +1,17 @@
 [
   {
+    "title": "Uncompahgre Medical Center wins four 'Best in Class' awards",
+    "source": "Telluride Times",
+    "date": "August 13, 2026",
+    "firstSeen": "2026-08-13",
+    "newsTopic": "health",
+    "copy": "Norwood's Uncompahgre Medical Center picked up four \"Best in Class\" awards from Carina Health Network, which represents Colorado's 22 Community Health Centers. UMC was recognized for managing chronic conditions, expanding wellness visits, and improving care coordination. They've served this corner of San Miguel and Montrose counties since 1979, regardless of patients' ability to pay.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/norwood_post/article_c13ca267-1da2-46a7-98bd-7764a41dbf26.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/d/c6/dc6e5744-fcc7-40c8-9b22-92c3e33e50a9/6a7ca94b2aac7.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Norwood’s Pocket Park gets a new look",
     "source": "Telluride Times",
     "date": "August 13, 2026",
@@ -856,12 +868,41 @@
     "img": ""
   },
   {
+    "title": "Numerous Highway Closures",
+    "source": "San Miguel County",
+    "date": "July 22, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road",
+    "source": "San Miguel County",
+    "date": "July 21, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    "img": ""
+  },
+  {
     "title": "Shandoka, Carhenge Lots Closed",
     "source": "Town of Telluride",
     "date": "August 8, 2026",
     "newsTopic": "community",
     "copy": "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
+    "img": ""
+  },
+  {
+    "title": "Be Bear Aware!",
+    "source": "Town of Ridgway",
+    "date": "August 13, 2026",
+    "firstSeen": "2026-08-13",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Be-Bear-Aware-Press-Release-2026-08-13.pdf",
     "img": ""
   },
   {

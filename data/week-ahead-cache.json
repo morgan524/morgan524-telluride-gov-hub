@@ -1,22 +1,26 @@
 {
-  "hash": "6c69449444c8a0f6364362289fea7301dcee5dd9",
-  "lede": "The most consequential meeting this week is SMART's August 13 board session, where two resolutions restructure the Gondola Advisory Committee and assign professional contracts tied to the voter-approved $5.2M/year gondola tax — real decisions on how that money gets managed. San Miguel County Planning Commission also meets August 13 on a subdivision work session and an energy code update that would reset building standards for new construction. Later in the week, HARC takes up the unpermitted Elks Lodge pergola and preliminary large-scale review of the Shandoka Lot redevelopment on Black Bear Road, with a site walk at 3:00 PM on August 19.",
+  "hash": "a6dabc271c39ec2fc1660ba4bdd48826581e27b3",
+  "lede": "The week's biggest item is in Ouray County, where the Planning Commission holds three public hearings on August 19 — including a full repeal of Section 16 of the county's land use regulations, a move that could rewrite the rules for future development across the county. Closer to home, SMART's board votes on two resolutions restructuring the Gondola Advisory Committee and its professional contracts, and San Miguel County's Planning Commission takes up both a subdivision work session and an energy code update that would raise building standards on new construction.",
   "notable": [
     {
       "id": 2,
-      "stake": "Board votes on resolutions restructuring gondola tax committee and assigning contracts."
+      "stake": "Board votes on two resolutions restructuring gondola committee and contracts."
     },
     {
       "id": 1,
-      "stake": "County energy code update would change building standards for all new construction."
+      "stake": "Energy code update and subdivision mechanics could reshape county development rules."
     },
     {
-      "id": 7,
-      "stake": "HARC decides whether to approve an unpermitted structure in the Historic Landmark District."
+      "id": 12,
+      "stake": "Three public hearings include repeal of an entire land-use code section."
     },
     {
       "id": 8,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — multiple new buildings on Black Bear Rd."
+      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment, four new buildings."
+    },
+    {
+      "id": 7,
+      "stake": "HARC decides whether to approve unpermitted Elks Lodge pergola after the fact."
     }
   ]
 }

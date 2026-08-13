@@ -397,12 +397,12 @@
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "sv": 4,
-    "ph": "afbb6fcf58f46cfd"
+    "ph": "1bf41babc7a37427"
   },
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
     "sv": 4,
-    "ph": "2b8857be6e12267c"
+    "ph": "470be197e8a2ab23"
   },
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066",
@@ -484,5 +484,20 @@
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-08-25|Ethics Commission - Aug 25 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
+    "sv": 4,
+    "ph": "33dc8808fda3b3c7"
+  },
+  "telluride|2026-08-19|Ecology Commission - Aug 19 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117",
+    "zoomUrl": "https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1",
+    "phone": "970-728-3071",
+    "sv": 4
+  },
+  "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)": {
+    "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015",
+    "sv": 4
   }
 }
