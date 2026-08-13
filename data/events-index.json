@@ -868,7 +868,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     "type": "Community",
-    "endDate": "2026-10-05"
+    "endDate": "2026-10-12"
   },
   {
     "title": "TES & TIS Back to School Celebrations",
@@ -1346,6 +1346,20 @@
     "desc": "Save up to 70% at Telluride’s BIGGEST and BEST sale on skis, boots, bindings, bikes, outerwear, footwear, accessories …",
     "type": "Community",
     "endDate": "2026-08-24"
+  },
+  {
+    "title": "Mountain Biking Meet-Up",
+    "href": "https://www.telluride.com/event/mountain-biking-meet-up/",
+    "date": "2026-08-20",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "As part of TMVOA’s efforts to support and grow mountain biking in Mountain Village, TMVOA is hosting Mountain Biking …",
+    "type": "Community",
+    "endDate": "2026-09-08"
   },
   {
     "title": "Pickleball Nights",

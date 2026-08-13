@@ -1,26 +1,30 @@
 {
-  "hash": "a6dabc271c39ec2fc1660ba4bdd48826581e27b3",
-  "lede": "The week's biggest item is in Ouray County, where the Planning Commission holds three public hearings on August 19 — including a full repeal of Section 16 of the county's land use regulations, a move that could rewrite the rules for future development across the county. Closer to home, SMART's board votes on two resolutions restructuring the Gondola Advisory Committee and its professional contracts, and San Miguel County's Planning Commission takes up both a subdivision work session and an energy code update that would raise building standards on new construction.",
+  "hash": "a544c53f7aa33a256530e8547a32880fd6ae0107",
+  "lede": "The biggest item this week is at Ouray County's Planning Commission on August 19, where three public hearings include a full repeal of Section 16 of the county's land use regulations — the kind of wholesale code change that rewrites the ground rules for future development. Closer to home, SMART's board votes Wednesday on two resolutions restructuring the Gondola Advisory Committee and assigning professional services tied to the $5.2M/year gondola tax project, while San Miguel County's Planning Commission takes up an energy code update and subdivision mechanics on Thursday. Mushroom Fest runs through the weekend for anyone who needs a reminder that this valley still knows how to have a good time.",
   "notable": [
     {
+      "id": 12,
+      "stake": "Full repeal of a land-use code section could reshape county development rules."
+    },
+    {
       "id": 2,
-      "stake": "Board votes on two resolutions restructuring gondola committee and contracts."
+      "stake": "Board votes on restructuring gondola advisory body and assigning $5.2M tax project services."
     },
     {
       "id": 1,
-      "stake": "Energy code update and subdivision mechanics could reshape county development rules."
-    },
-    {
-      "id": 12,
-      "stake": "Three public hearings include repeal of an entire land-use code section."
+      "stake": "Energy code update and subdivision rules referral — foundational changes to county building standards."
     },
     {
       "id": 8,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment, four new buildings."
+      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment, a multi-building new construction project."
     },
     {
       "id": 7,
-      "stake": "HARC decides whether to approve unpermitted Elks Lodge pergola after the fact."
+      "stake": "HARC decides whether to approve an unpermitted structure in the Historic Landmark District."
+    },
+    {
+      "id": 9,
+      "stake": "Proposed 2027 fee increases for Town Park Campground and showers up for commission review."
     }
   ]
 }

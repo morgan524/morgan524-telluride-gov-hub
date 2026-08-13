@@ -266,7 +266,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592"},
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"ph":"3f4e90cd76c3d7c9"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"},
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
@@ -275,7 +275,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"ph":"278bc1c1c8c6db27"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "mv|2026-08-20|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -344,7 +344,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1014","sv":4},
 
   "telluride|2026-09-01|Town Council - Sep 01 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"1bf41babc7a37427"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"470be197e8a2ab23"},
@@ -702,86 +702,6 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
     title: "‘Pinched on every front’",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -879,16 +799,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
     href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Fall Foliage Tour Contest 🍂",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 12, 2026",
-    newsTopic: "community",
-    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
-    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -1145,7 +1055,7 @@ const MANUAL_SUMMARIES = {
     "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary large-scale review — Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another — with a 3:00 PM site walk preceding the evening session. Both applications involve new construction of more than 5,000 sq ft in the Accommodations 2 zone district, with the Town of Telluride as owner and Design Workshop as applicant. The three Carhenge building clusters (A/B/C, D1/D2, and E1/E2/E3 at 700 W Pacific Ave) are continued to a September date TBD. A work session covers proposed new construction and shed work at 335 W Colorado — the County/Town Facilities project, now in its second HARC work session. Also on the public hearing list: a final large-scale application for 208 S Fir Street (5,000+ sq ft, Commercial zone), and smaller-scale items at 461 Dakota Ave and 734 Primrose Lane involving steep-slope construction.",
 
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    "The August 19, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+    "The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle sites moving from $55 to $60 and walk-in sites from $32 to $35; shower tokens would jump from $4 to $5 for five minutes, a 25% increase, partly to offset a new credit-card payment machine. Senior discount eligibility also creeps up, from age 63 toward the eventual target of 65. The campground is running at near-capacity through the summer — 97–99% occupancy on most site types in June and July — which gives the fee increases some market support. Second, the Commission holds a work session on the 5-year Capital Improvement Fund, setting priorities for 2027–2031 in advance of the August budget submittal. On the table: pool resurfacing, Oval redesign work (directed last meeting toward the alternate concept #2), Warner Field netting, river corridor improvements, and festival site upgrades. Staff flags 10% annual cost escalation as a budgeting reality. There's also a brief staff update on the River Trail re-alignment near the Public Works facility.",
 
   "county|2026-07-21|SMC Historical Commission Meeting":
     "The July 21 San Miguel County Historical Commission agenda is essentially a placeholder — minutes approval and a vague \"Items\" and \"New/Old Business\" line are all that's posted. No substantive items are described.",
@@ -1154,7 +1064,7 @@ const MANUAL_SUMMARIES = {
     "The August 19, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    "The August 20, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+    "Four public hearings on special event liquor permits fill this meeting. Palm Arts Inc. is seeking one permit for an Evening with Ken Burns — a fundraiser for the Telluride Historical Museum — at the Palm Theatre on August 30, with an anticipated 500 attendees. KOTO Radio is up next with a permit for its Live @ the Drive block party on N. Pine Street, August 27 from 2:00 to 9:30 pm. The Telluride Blues Society has two separate requests: one permit for Blisters and Brews at Elks Park on the morning of September 19, and three permits covering all three days of the Telluride Blues and Brews Festival at Town Park (September 18–20, running late into the night). Staff recommends approval on all four. The authority will also approve minutes from the July 16 meeting.",
 
   "mv|2026-08-20|Town Council Meeting":
     "The August 20, 2026 Mountain Village Town Council Meeting agenda hasn't been posted yet.",
@@ -1613,6 +1523,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Lone Cone Library expands services",
+    source: "Telluride Times",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "community",
+    copy: "Norwood's Lone Cone Library is expanding senior programming through an AARP rural pilot — one of five in Colorado — with upcoming classes on decluttering and home modifications to help older residents stay in their homes. The library also received an ALA grant to build ASL services, with a community open forum set for Aug. 20.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_365a3302-1a9b-4078-b431-539da86b0326.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/fa/efadf4f2-b21d-4058-9798-09bb56235073/6a7ca773a826b.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "CHALKBOARD Aug. 13-19",
+    source: "Telluride Times",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "arts-culture",
+    copy: "Birthdays in the Norwood area run August 13–19, with a free Chamber Music concert at The Livery on August 27. Weekly regulars include the Farmers Market Thursdays in Pocket Park, the Food Pantry Sundays at Norwood School, and Senior Meals on Mondays and Thursdays.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_ddaacafb-b5dd-44e7-8939-6b21ed96663e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f9/ff900290-4951-4b9c-b721-83ccff28ebd7/6a7ca8a3efa20.image.png",
+    imgHiRes: true
+  },
   {
     title: "Uncompahgre Medical Center wins four 'Best in Class' awards",
     source: "Telluride Times",
@@ -4696,7 +4630,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-08-17T18:00:00.000Z",
-    endDate: "2026-10-05",
+    endDate: "2026-10-12",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6977,6 +6911,18 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63174/blizzard_sale_870x435.800x533.webp"
+  },
+  {
+    title: "Mountain Biking Meet-Up",
+    link: "https://www.telluride.com/event/mountain-biking-meet-up/",
+    description: "As part of TMVOA’s efforts to support and grow mountain biking in Mountain Village, TMVOA is hosting Mountain Biking …",
+    pubDate: "2026-08-20",
+    endDate: "2026-09-08",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63362/tdp3588.800x533.webp"
   },
   {
     title: "Burlesque Buffet",
@@ -9285,10 +9231,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "August 19, 2026",
     title: "Parks & Recreation Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8081
+    civicwebId: 8081,
+    packetUrl: "https://telluride-co.civicweb.net/document/443346/"
   },
   {
     date: "August 20, 2026",

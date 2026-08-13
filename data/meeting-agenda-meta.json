@@ -260,7 +260,7 @@
   "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
     "sv": 4,
-    "ph": "3f4e90cd76c3d7c9"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
   },
   "county|2026-07-21|SMC Historical Commission Meeting": {
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926",
@@ -277,7 +277,10 @@
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291",
     "sv": 4,
-    "ph": "278bc1c1c8c6db27"
+    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
+    "meetingId": "861 6987 1704",
+    "passcode": "281002.",
+    "phone": "346-248-7799"
   },
   "mv|2026-08-20|Town Council Meeting": {
     "sv": 4,
@@ -397,7 +400,7 @@
   "telluride|2026-09-01|Town Council - Sep 01 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042",
     "sv": 4,
-    "ph": "1bf41babc7a37427"
+    "ph": "afbb6fcf58f46cfd"
   },
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118",
