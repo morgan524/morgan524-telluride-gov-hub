@@ -591,5 +591,22 @@
     "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
     "address": "800 South 3rd Street, Montrose, CO",
     "noticeKey": "montrose-memorial-hospital-bod-applications-2026"
+  },
+  {
+    "title": "Request for Proposal -- Lawson Hill Connector Trail Project",
+    "entity": "San Miguel County",
+    "entityClass": "ent-county",
+    "entityLogo": "county",
+    "icon": "🏛️",
+    "iconClass": "type-rfp",
+    "type": "Request for Proposal",
+    "filterTag": "public-entity",
+    "summary": "San Miguel County is seeking qualified respondents for: Lawson Hill Connector Trail Project.",
+    "deadline": "Open until contracted",
+    "expires": "2026-11-11",
+    "dates": "8/13",
+    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=207",
+    "address": "",
+    "smcBidID": "207"
   }
 ]

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-12-26",
+    "source": "KOTO Community Radio",
+    "date": "August 13, 2026",
+    "newsTopic": "government",
+    "copy": "Paul Reich Vies for Seat on San Miguel Board of County Commissioners; A Placerville Poetry Box",
+    "href": "https://koto.org/news/newscast-8-12-26/"
+  },
+  {
     "title": "Newscast 8-10-26",
     "source": "KOTO Community Radio",
     "date": "August 11, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "West End Roundup with the San Miguel Basin Forum; No Holds Bard with Love’s Labor’s Lost; Cat Movie Fisher with Risho Unda",
     "href": "https://koto.org/news/newscast-7-30-26/"
-  },
-  {
-    "title": "Newscast 7-29-26",
-    "source": "KOTO Community Radio",
-    "date": "July 30, 2026",
-    "newsTopic": "arts-culture",
-    "copy": "Parks &amp; Rec Keeps the Oval Green; Telluride Invests in Tourism; Chamber Music Celebrates American Brass",
-    "href": "https://koto.org/news/newscast-7-29-26/"
   }
 ]

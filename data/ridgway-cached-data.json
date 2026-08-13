@@ -16,5 +16,15 @@
     "packetUrl": null,
     "special": false,
     "board": "council"
+  },
+  {
+    "date": "October 14, 2026",
+    "time": "6:00 PM",
+    "title": "Ridgway Town Council Regular Meeting",
+    "agendaUrl": null,
+    "packetUrl": null,
+    "special": false,
+    "board": "council",
+    "note": "Next scheduled meeting -- agenda posted the week before."
   }
 ]
