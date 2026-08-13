@@ -24,7 +24,6 @@
     "agendaUrl": null,
     "packetUrl": null,
     "special": false,
-    "board": "council",
-    "note": "Next scheduled meeting -- agenda posted the week before."
+    "board": "council"
   }
 ]
