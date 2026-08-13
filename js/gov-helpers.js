@@ -1598,6 +1598,30 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Norwood’s Pocket Park gets a new look",
+    source: "Telluride Times",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "recreation",
+    copy: "Norwood's Pocket Park is getting a $420,000 makeover — funded through town money and state grants — with completion expected by early September. The redesign preserves existing trees, adds green space, EV charging, parking, and ADA access, with a small stage planned for next year. The community's beloved Happenings Kiosk is also set to return, alongside a new electronic information kiosk.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_0509f7c5-9dd0-4170-8522-071824801e5a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/f3/4f37573e-8785-42d1-918d-a8a66330ca84/6a7ca599e93fc.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "The quiet signals of bliss",
+    source: "Telluride Times",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "community",
+    copy: "Bliss, as this piece frames it, isn't about chasing pleasure — it's closer to a neurological signal pointing toward what genuinely fits a person. The science backs up what many longtime locals already know intuitively: sustained engagement beats short-term gratification. Worth sitting with.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_29f8991e-812f-4a5c-b06b-38a9b8c65885.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/1b/31bcf6da-914f-4fdf-817d-e11cffcbb696/6a7ca830461f2.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "A night of light",
     source: "Telluride Times",
     date: "August 13, 2026",
@@ -3303,7 +3327,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "TMHS Orientation for 7th graders, 9th graders, and new students",
     link: "https://koto.org/event/tmhs-orientation-for-7th-graders-9th-graders-and-new-students/",
-    description: "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
+    description: "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with their new school environment before the academic year begins.",
     pubDate: "2026-08-17T00:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3347,7 +3371,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Telluride R-1 Schools First Day of School",
     link: "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    description: "First Day of School",
+    description: "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
     pubDate: "2026-08-18T08:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3658,7 +3682,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Mushroom Craft with Ah Haa",
     link: "https://telluridelibrary.libcal.com/event/16574841?hs=a",
-    description: "2:00 PM – 4:00 PM",
+    description: "A mushroom-themed craft program hosted by Ah Haa at the Wilkinson Public Library's Upper Terrace. The event runs from 2:00 to 4:00 PM.",
     pubDate: "2026-08-13T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3733,7 +3757,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "Telluride Mushroom Fest After Party",
+    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3745,7 +3769,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
+    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -4446,6 +4470,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg"
   },
   {
+    title: "Edie",
+    link: "https://events.ourayridgwayevents.com/event/edie",
+    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. Doors open at 7:00pm. View on site | Email this event",
+    pubDate: "2026-08-14T19:30:42.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
+  },
+  {
     title: "True Grit Historic Walking Tours",
     link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -4478,17 +4513,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/04059243547212bbd8b1fbcbafe16b2195b8c518.jpg"
-  },
-  {
-    title: "Edie",
-    link: "https://events.ourayridgwayevents.com/event/edie",
-    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. Doors open at 7:00pm. View on site | Email this event",
-    pubDate: "2026-08-15T01:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
   },
   {
     title: "Steps Tavern Presents Karaoke Night",
@@ -5436,7 +5460,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53684031205136/huge/20c6d134a7345e1acecd87d1f28155013303ac91.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53689568797710/huge/f51f372eb10b5686aa14f1294d26a48f5aa02005.jpg"
   },
   {
     title: "Jolie Holland - Live at The Sherbino",
@@ -5920,7 +5944,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
+    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5931,7 +5955,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Amended",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-amended",
-    description: "",
+    description: "A government meeting hosted by the Town of Norwood, focused on amendments to the NWC. The session is open to the public and takes place in Norwood, Colorado.",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5942,7 +5966,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "",
+    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5953,7 +5977,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5964,7 +5988,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "",
+    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5975,7 +5999,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5986,7 +6010,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5997,8 +6021,19 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Town Closure",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Closed For Veterans Day",
+    link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
     category: "Town Closure",
@@ -6458,6 +6493,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-09-12T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-09-12T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
