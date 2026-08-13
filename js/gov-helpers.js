@@ -275,7 +275,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"ph":"d3bb98dee69171c8"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"ph":"278bc1c1c8c6db27"},
 
   "mv|2026-08-20|Town Council Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -347,10 +347,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8042","sv":4,"ph":"afbb6fcf58f46cfd"},
 
   "telluride|2026-09-02|Ecology Commission - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"b866d9e3dcc2a05a"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8118","sv":4,"ph":"2b8857be6e12267c"},
 
   "telluride|2026-09-02|Commission for Community Assistance, Arts & Special Events - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"4ec2365b89071bd6"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
@@ -680,10 +680,7 @@ const MEETING_PREVIEWS = {
     "Board will consider updates on Station 3, wildfire assignments, and PANO usage for July 2026. New business includes inclusion planning presented by Bo Nerlin. Reports from district leadership, including the Deputy Chief, Fire Marshal, EMS Coordinator, and District Chief, are also on the agenda.",
 
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026":
-    "The Public Art Commission is expected to review and act on applications related to public art proposed for Town rights-of-way. No specific agenda items or project details are publicly available for this meeting at this time.",
-
-  "county|2026-08-13|Planning Commission Meeting":
-    "The San Miguel County Planning Commission will consider approving minutes from June and July, hold a work session on minor and major subdivisions, and review a referral and recommendation regarding an energy code update at its August 13 meeting in Telluride."
+    "The Public Art Commission is expected to review and act on applications related to public art proposed for Town rights-of-way. No specific agenda items or project details are publicly available for this meeting at this time."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1600,6 +1597,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "A night of light",
+    source: "Telluride Times",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "health",
+    copy: "Tri-County Health Network has rebranded as Thrive Community Health Network and is hosting its first-ever fundraiser — Noche de Luz (Night of Light) — on Aug. 21 at the Telluride Innovation Center. The event supports Thrive's Multicultural Advocacy program, which has helped over 600 Spanish- and Maya Chuj-speaking residents obtain Colorado driver's licenses, among other services. Tickets include community pricing for those who need it.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_5adf4523-34d5-4057-aa6d-0c5d7f62ae74.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/99/6990e29c-8770-4761-90db-07b0d10f8427/6a77904103bc7.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Legals and Public Notices for August 13-19, 2026",
     source: "Telluride Times",
@@ -3294,7 +3303,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "TMHS Orientation for 7th graders, 9th graders, and new students",
     link: "https://koto.org/event/tmhs-orientation-for-7th-graders-9th-graders-and-new-students/",
-    description: "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with their new school environment before the academic year begins.",
+    description: "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
     pubDate: "2026-08-17T00:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3338,7 +3347,7 @@ const KOTO_COMMUNITY_EVENTS = [
   {
     title: "Telluride R-1 Schools First Day of School",
     link: "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    description: "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
+    description: "First Day of School",
     pubDate: "2026-08-18T08:00:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
@@ -3649,7 +3658,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Mushroom Craft with Ah Haa",
     link: "https://telluridelibrary.libcal.com/event/16574841?hs=a",
-    description: "A mushroom-themed craft program hosted by Ah Haa at the Wilkinson Public Library's Upper Terrace. The event runs from 2:00 to 4:00 PM.",
+    description: "2:00 PM – 4:00 PM",
     pubDate: "2026-08-13T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3724,7 +3733,7 @@ const ALIBI_EVENTS = [
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
-    description: "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations happening in Telluride.",
+    description: "Telluride Mushroom Fest After Party",
     pubDate: "2026-08-14",
     time: "9:00 PM",
     source: "alibi",
@@ -3736,7 +3745,7 @@ const ALIBI_EVENTS = [
   {
     title: "Thom LaFond + DROS",
     link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at one of Telluride's beloved local venues.",
+    description: "Telluride Mushroom Fest Puff Ball After Party",
     pubDate: "2026-08-15",
     time: "9:00 PM",
     source: "alibi",
@@ -5911,7 +5920,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Music On The Mesa The Burroughs",
     link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "Music On The Mesa presents The Burroughs in Norwood on August 8th, 2026. This community music event offers live entertainment in the scenic mesa setting outside of Telluride.",
+    description: "",
     pubDate: "2026-08-08T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Norwood Park & Recreation District",
@@ -5922,7 +5931,7 @@ const NORWOOD_EVENTS = [
   {
     title: "NWC Amended",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-amended",
-    description: "A government meeting hosted by the Town of Norwood, focused on amendments to the NWC. The session is open to the public and takes place in Norwood, Colorado.",
+    description: "",
     pubDate: "2026-08-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5933,7 +5942,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5944,7 +5953,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5955,7 +5964,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Meeting",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-meeting",
-    description: "A regularly scheduled meeting of the Norwood Planning and Zoning Commission, hosted by the Town of Norwood. The commission reviews land use applications, zoning matters, and development proposals affecting the Norwood community.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5966,7 +5975,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5977,7 +5986,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5988,7 +5997,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
