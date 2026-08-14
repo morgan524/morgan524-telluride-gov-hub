@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shandoka Resident Survey — Livable Telluride</title>
+<meta name="description" content="An anonymous survey of Shandoka residents about the proposed Shandoka / Lot L development. Results will be compiled and shared with the Telluride Town Council and the public. Encuesta anónima para residentes de Shandoka.">
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<style>
+:root{ --forest:#173d34; --sage:#dce9e2; --paper:#fffdf8; --ink:#22303c;
+       --mut:#6b7a80; --rule:#c9d6d6; --rust:#a8463c; }
+.wrap{max-width:900px;margin:0 auto;padding:0 24px 80px}
+.langbar{display:flex;justify-content:center;gap:0;margin:22px 0 0}
+.langbar button{font:700 16px var(--sans,system-ui);color:var(--forest);background:#fff;
+  border:1.5px solid var(--forest);padding:11px 30px;cursor:pointer}
+.langbar button:first-child{border-radius:99px 0 0 99px;border-right-width:0}
+.langbar button:last-child{border-radius:0 99px 99px 0}
+.langbar button[aria-pressed=true]{background:var(--forest);color:#fff}
+.head{background:var(--paper);border:1px solid var(--rule);border-radius:14px;padding:28px 32px;margin:18px 0 20px}
+.head h1{font:700 33px/1.14 var(--serif,Georgia,serif);color:var(--forest);margin:0 0 6px}
+.head .sub{font:600 17px/1.4 var(--sans,system-ui);color:var(--ink);margin:0 0 18px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px}
+.shot figcaption{font:600 12.5px/1.4 var(--sans,system-ui);color:var(--mut);
+  text-transform:uppercase;letter-spacing:.05em;margin:0 0 6px}
+.shot img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:8px}
+.facts{margin:0;padding-left:20px}
+.facts li{font-size:16.5px;line-height:1.6;color:var(--ink);margin-bottom:9px}
+.credit{font-size:14.5px;color:var(--mut);margin:0 0 14px;line-height:1.5}
+.privacy{background:var(--sage);border-radius:10px;padding:15px 18px;margin-top:18px;
+  font-size:16px;line-height:1.55;color:var(--forest)}
+.q{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:22px 26px;margin-bottom:16px}
+.q legend{font:700 18.5px/1.35 var(--sans,system-ui);color:var(--forest);padding:0;margin-bottom:4px}
+.q .hint{font-size:15px;color:var(--mut);margin:0 0 12px}
+.opt{display:flex;align-items:flex-start;gap:11px;padding:9px 10px;border-radius:8px;cursor:pointer}
+.opt:hover{background:var(--sage)}
+.opt input{margin:3px 0 0;width:18px;height:18px;flex:0 0 auto;accent-color:var(--forest);cursor:pointer}
+.opt span{font-size:16.5px;line-height:1.5;color:var(--ink)}
+.q textarea,.q input[type=text]{width:100%;box-sizing:border-box;font:400 16.5px/1.5 var(--sans,system-ui);
+  color:var(--ink);background:#fff;border:1.5px solid var(--rule);border-radius:8px;padding:11px 13px}
+.q textarea:focus,.q input[type=text]:focus{outline:none;border-color:var(--forest)}
+.q textarea{min-height:130px;resize:vertical}
+.other{display:flex;align-items:center;gap:11px;padding:4px 10px 0 10px}
+.other span{font-size:16.5px;color:var(--ink);flex:0 0 auto}
+.actions{margin-top:22px;text-align:center}
+button.send{font:700 18px var(--sans,system-ui);color:#fff;background:var(--forest);border:none;
+  border-radius:99px;padding:15px 44px;cursor:pointer}
+button.send:hover{background:#245347}
+button.send:disabled{background:var(--mut);cursor:default}
+.msg{margin-top:14px;font-size:16.5px;line-height:1.55}
+.msg.err{color:var(--rust)}
+.done{background:var(--sage);border:1px solid var(--forest);border-radius:14px;padding:34px;text-align:center}
+.done h2{font:700 27px var(--serif,Georgia,serif);color:var(--forest);margin:0 0 10px}
+.done p{font-size:17px;line-height:1.6;color:var(--ink);margin:0}
+@media(max-width:700px){.shots{grid-template-columns:1fr}.head{padding:22px}.wrap{padding:0 14px 60px}}
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+
+<main class="wrap">
+
+<div class="langbar" role="group" aria-label="Language / Idioma">
+  <button type="button" id="btnEn" aria-pressed="true">English</button>
+  <button type="button" id="btnEs" aria-pressed="false">Espa&ntilde;ol</button>
+</div>
+
+<section class="head">
+  <h1 data-en="Shandoka Resident Survey" data-es="Encuesta para Residentes de Shandoka">Shandoka Resident Survey</h1>
+  <p class="sub" data-en="The proposed Shandoka / Lot L development" data-es="El proyecto propuesto de Shandoka / Lote L">The proposed Shandoka / Lot L development</p>
+
+  <div class="shots">
+    <figure class="shot" style="margin:0">
+      <figcaption data-en="Birdseye looking south from Mahoney Bridge" data-es="Vista a&eacute;rea hacia el sur desde el puente Mahoney">Birdseye looking south from Mahoney Bridge</figcaption>
+      <img src="/assets/Shandoka/rendering-mahoney-bridge.png" alt="Rendering, birdseye view looking south from Mahoney Bridge, proposed building shown in pink">
+    </figure>
+    <figure class="shot" style="margin:0">
+      <figcaption data-en="Birdseye of transit center looking northwest from Etta Place" data-es="Vista a&eacute;rea del centro de tr&aacute;nsito hacia el noroeste desde Etta Place">Birdseye of transit center looking northwest from Etta Place</figcaption>
+      <img src="/assets/Shandoka/rendering-transit-center.png" alt="Rendering, birdseye view of the transit center looking northwest from Etta Place, proposed building shown in pink">
+    </figure>
+  </div>
+
+  <ul class="facts">
+    <li data-en="The Town of Telluride is considering a major redevelopment of the parking area in front of Shandoka. The current concept includes a parking structure with approximately 900 parking spaces and roughly 50 to 60 residential units. The parking will replace the parking at Carhenge, providing parking for all of Shandoka residents as well."
+        data-es="El Municipio de Telluride est&aacute; considerando una remodelaci&oacute;n importante del &aacute;rea de estacionamiento frente a Shandoka. El concepto actual incluye una estructura de estacionamiento con aproximadamente 900 espacios y entre 50 y 60 unidades residenciales. Ese estacionamiento reemplazar&aacute; el de Carhenge y tambi&eacute;n dar&aacute; estacionamiento a todos los residentes de Shandoka.">The Town of Telluride is considering a major redevelopment of the parking area in front of Shandoka. The current concept includes a parking structure with approximately 900 parking spaces and roughly 50 to 60 residential units. The parking will replace the parking at Carhenge, providing parking for all of Shandoka residents as well.</li>
+    <li data-en="Story poles are now being installed to help show the proposed scale and height."
+        data-es="Ya se est&aacute;n instalando los postes que muestran la escala y la altura propuestas.">Story poles are now being installed to help show the proposed scale and height.</li>
+    <li data-en="We are asking Shandoka residents what they know about the proposal and what they think about it."
+        data-es="Estamos preguntando a los residentes de Shandoka qu&eacute; saben sobre la propuesta y qu&eacute; opinan de ella.">We are asking Shandoka residents what they know about the proposal and what they think about it.</li>
+  </ul>
+
+  <p class="credit" data-en="Renderings are the Town's own, from the project materials. The proposed building is shaded pink; existing buildings are shown in white and grey."
+     data-es="Las im&aacute;genes son del propio Municipio, tomadas de los materiales del proyecto. El edificio propuesto aparece en rosa; los edificios existentes se muestran en blanco y gris.">Renderings are the Town's own, from the project materials. The proposed building is shaded pink; existing buildings are shown in white and grey.</p>
+
+  <p class="privacy" data-en="This survey is anonymous. We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public."
+     data-es="Esta encuesta es an&oacute;nima. No recopilamos ninguna informaci&oacute;n de identificaci&oacute;n, para mantener todas las respuestas completamente privadas. Recopilaremos los resultados y los compartiremos con el Concejo Municipal de Telluride y con el p&uacute;blico."><strong>This survey is anonymous.</strong> We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public.</p>
+</section>
+
+<form id="surveyForm"></form>
+
+<section class="done" id="done" hidden>
+  <h2 data-en="Thank you" data-es="Gracias">Thank you</h2>
+  <p data-en="Your response has been recorded anonymously. We will compile the results and share them with the Telluride Town Council and the public."
+     data-es="Su respuesta se ha registrado de forma an&oacute;nima. Recopilaremos los resultados y los compartiremos con el Concejo Municipal de Telluride y con el p&uacute;blico.">Your response has been recorded anonymously.</p>
+</section>
+
+</main>
+
+<div id="lt-footer"></div>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="/js/site-config.js"></script>
+<script src="/site.js?v=12"></script>
+<script>
+(function () {
+  'use strict';
+
+  // Questions live here once, in both languages. The stored VALUE is always
+  // English regardless of which language the reader used, so the compiled
+  // results are one clean dataset rather than two that have to be merged.
+  var Q = [
+    { n:'q1', type:'radio',
+      en:'1. Before seeing this survey, how familiar were you with the proposed Shandoka project?',
+      es:'1. Antes de ver esta encuesta, ¿qué tanto conocía el proyecto propuesto de Shandoka?',
+      o:[['Very familiar','Very familiar, I understood the general size and scope','Muy familiarizado(a), entendía el tamaño y alcance generales'],
+         ['Somewhat familiar','Somewhat familiar','Algo familiarizado(a)'],
+         ['Heard about it but did not know details','I had heard about it but did not know the details','Había oído hablar del proyecto, pero no conocía los detalles'],
+         ['Knew very little','I knew very little about it','Sabía muy poco sobre el proyecto'],
+         ['Had not heard about it','I had not heard about it','No había oído hablar del proyecto']] },
+    { n:'q2', type:'radio',
+      en:'2. Before the story poles went up, did you understand that portions of the proposed project could reach approximately 50 feet in height?',
+      es:'2. Antes de que se instalaran los postes que muestran la altura del proyecto, ¿sabía que algunas partes del proyecto propuesto podrían alcanzar aproximadamente 50 pies de altura?',
+      o:[['Yes','Yes','Sí'],['No','No','No'],['Not sure','Not sure','No estoy seguro(a)']] },
+    { n:'q3', type:'radio',
+      en:'3. Have the story poles changed your understanding of the size or scale of the proposed project?',
+      es:'3. ¿Los postes que muestran la altura del proyecto cambiaron su percepción del tamaño o la escala del proyecto propuesto?',
+      o:[['Yes, significantly','Yes, significantly','Sí, significativamente'],
+         ['Yes, somewhat','Yes, somewhat','Sí, en cierta medida'],
+         ['No','No','No'],
+         ['Have not seen them','I have not seen them','No los he visto'],
+         ['Not sure','Not sure','No estoy seguro(a)']] },
+    { n:'q4', type:'radio',
+      en:'4. Based on what you know now, how do you feel about the proposed project?',
+      es:'4. Según lo que sabe ahora, ¿qué opinión tiene del proyecto propuesto?',
+      o:[['Strongly support','Strongly support it','Lo apoyo firmemente'],
+         ['Somewhat support','Somewhat support it','Lo apoyo en cierta medida'],
+         ['Neutral/unsure','Neutral or unsure','Neutral / no estoy seguro(a)'],
+         ['Somewhat oppose','Somewhat oppose it','Me opongo en cierta medida'],
+         ['Strongly oppose','Strongly oppose it','Me opongo firmemente']] },
+    { n:'q5', type:'checkbox',
+      en:'5. Which parts of the proposal are most concerning to you?',
+      es:'5. ¿Qué aspectos de la propuesta le preocupan más?',
+      hintEn:'Select all that apply.', hintEs:'Seleccione todas las opciones que correspondan.',
+      o:[['Building height and overall scale','Building height and overall scale','Altura del edificio y escala general'],
+         ['Loss or relocation of surface parking','Loss or relocation of existing surface parking','Pérdida o reubicación del estacionamiento existente en superficie'],
+         ['Construction noise and disruption','Construction noise and disruption','Ruido y molestias durante la construcción'],
+         ['Traffic','Traffic','Tráfico'],
+         ['Views and sunlight','Views and sunlight','Vistas y luz solar'],
+         ['Safety and pedestrian access','Safety and pedestrian access','Seguridad y acceso peatonal'],
+         ['Effect on quality of life at Shandoka','Effect on the quality of life at Shandoka','Efecto en la calidad de vida en Shandoka'],
+         ['Cost of the project','Cost of the project','Costo del proyecto'],
+         ['Disruption and length of construction','The disruption during construction and how long construction will take','Las molestias durante la construcción y cuánto tiempo durará'],
+         ['None — I support the project as designed','None of this concerns me, and I support the project as designed','Nada de esto me preocupa y apoyo el proyecto tal como está diseñado']],
+      otherEn:'Other:', otherEs:'Otro:', phEn:'Anything else', phEs:'Algo más' },
+    { n:'q6', type:'radio',
+      en:'6. Before the Town makes a final decision, what would you prefer?',
+      es:'6. Antes de que el Municipio tome una decisión final, ¿qué preferiría?',
+      o:[['Proceed as currently proposed','Proceed as currently proposed','Proceder según la propuesta actual'],
+         ['Proceed with changes based on resident input','Proceed, but make changes based on resident input','Proceder, pero hacer cambios basados en las opiniones de los residentes'],
+         ['Consider substantially different alternatives','Consider substantially different alternatives','Considerar alternativas sustancialmente diferentes'],
+         ['Do not proceed','Do not proceed with the project','No proceder con el proyecto'],
+         ['Need more information','I need more information before deciding','Necesito más información antes de decidir']] },
+    { n:'q7', type:'radio',
+      en:'7. How do you rate the Town providing information on this project to the public before the story poles were placed?',
+      es:'7. ¿Cómo calificaría la información que el Municipio proporcionó al público sobre este proyecto antes de que se instalaran los postes que muestran su altura?',
+      o:[['Excellent','Excellent','Excelente'],['Good','Good','Buena'],['Fair','Fair','Regular'],
+         ['Poor','Poor','Mala'],['Very poor','Very poor','Muy mala'],
+         ['Not sure / was not aware','Not sure, or I was not aware of the project before the story poles were placed','No estoy seguro(a) / No conocía el proyecto antes de que se instalaran los postes']] },
+    { n:'q8', type:'text',
+      en:'8. What would you most like the Telluride Town Council to know about how this project could affect you or other residents, for good or bad?',
+      es:'8. ¿Qué es lo que más le gustaría que el Concejo Municipal de Telluride supiera sobre cómo este proyecto podría afectarle a usted o a otros residentes, para bien o para mal?',
+      phEn:'Optional. Please avoid including your name or anything that could identify you, so your response stays anonymous.',
+      phEs:'Opcional. Por favor evite incluir su nombre o cualquier dato que pueda identificarle, para que su respuesta siga siendo anónima.' }
+  ];
+
+  var UI = {
+    send:   ['Submit my answers','Enviar mis respuestas'],
+    sending:['Sending…','Enviando…'],
+    needQ1: ['Please answer question 1 before submitting.','Por favor responda la pregunta 1 antes de enviar.'],
+    failed: ['Sorry, that did not send. Please check your connection and try again. If it keeps failing, email info@livabletelluride.org and we will record your answers by hand.',
+             'Lo sentimos, no se pudo enviar. Revise su conexión e inténtelo de nuevo. Si sigue fallando, escriba a info@livabletelluride.org y registraremos sus respuestas manualmente.']
+  };
+
+  var lang = 'en';
+  var form = document.getElementById('surveyForm');
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]; }); }
+
+  function build() {
+    var i = lang === 'es' ? 1 : 0, h = '';
+    Q.forEach(function (q) {
+      h += '<fieldset class="q"><legend>' + esc(lang === 'es' ? q.es : q.en) + '</legend>';
+      if (q.hintEn) h += '<p class="hint">' + esc(lang === 'es' ? q.hintEs : q.hintEn) + '</p>';
+      if (q.type === 'text') {
+        h += '<textarea id="q8" maxlength="4000" placeholder="' + esc(lang === 'es' ? q.phEs : q.phEn) + '"></textarea>';
+      } else {
+        q.o.forEach(function (o) {
+          h += '<label class="opt"><input type="' + q.type + '" name="' + q.n + '" value="' + esc(o[0]) + '">'
+             + '<span>' + esc(o[1 + i]) + '</span></label>';
+        });
+        if (q.otherEn) {
+          h += '<div class="other"><span>' + esc(lang === 'es' ? q.otherEs : q.otherEn) + '</span>'
+             + '<input type="text" id="q5other" maxlength="200" placeholder="' + esc(lang === 'es' ? q.phEs : q.phEn) + '"></div>';
+        }
+      }
+      h += '</fieldset>';
+    });
+    h += '<div class="actions"><button type="submit" class="send" id="sendBtn">' + esc(UI.send[i])
+       + '</button><p class="msg" id="msg"></p></div>';
+    form.innerHTML = h;
+  }
+
+  function setLang(l) {
+    lang = l;
+    var i = l === 'es' ? 1 : 0;
+    document.documentElement.lang = l;
+    // Static blocks carry both languages as data attributes.
+    document.querySelectorAll('[data-en]').forEach(function (el) {
+      var t = el.getAttribute(l === 'es' ? 'data-es' : 'data-en');
+      if (!t) return;
+      // Keep the lead-in bold on the privacy note.
+      if (el.classList.contains('privacy')) {
+        var cut = t.indexOf('.') + 1;
+        el.innerHTML = '<strong>' + esc(t.slice(0, cut)) + '</strong>' + esc(t.slice(cut));
+      } else { el.textContent = t; }
+    });
+    document.getElementById('btnEn').setAttribute('aria-pressed', String(l === 'en'));
+    document.getElementById('btnEs').setAttribute('aria-pressed', String(l === 'es'));
+    // Rebuilding the form would wipe anything already answered, so snapshot
+    // the state, rebuild, then put it back. Values are language-independent,
+    // which is what makes this safe.
+    var keep = {
+      checked: Array.prototype.slice.call(form.querySelectorAll('input:checked'))
+        .map(function (el) { return el.name + '\u0000' + el.value; }),
+      other: (document.getElementById('q5other') || {}).value || '',
+      free:  (document.getElementById('q8') || {}).value || ''
+    };
+    build();
+    keep.checked.forEach(function (k) {
+      var p = k.split('\u0000');
+      var el = form.querySelector('input[name="' + p[0] + '"][value="' + p[1].replace(/"/g, '\\"') + '"]');
+      if (el) el.checked = true;
+    });
+    if (keep.other && document.getElementById('q5other')) document.getElementById('q5other').value = keep.other;
+    if (keep.free && document.getElementById('q8')) document.getElementById('q8').value = keep.free;
+    try { localStorage.setItem('shandokaSurveyLang', l); } catch (e) {}
+  }
+
+  document.getElementById('btnEn').addEventListener('click', function () { setLang('en'); });
+  document.getElementById('btnEs').addEventListener('click', function () { setLang('es'); });
+
+  var CFG = window.SITE_CONFIG || {}, _db = null;
+  function db() {
+    if (_db) return Promise.resolve(_db);
+    if (!CFG.FIREBASE) return Promise.reject(new Error('config'));
+    if (!firebase.apps.length) firebase.initializeApp(CFG.FIREBASE);
+    return firebase.auth().signInAnonymously().then(function () {
+      _db = firebase.firestore(); return _db;
+    });
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var i = lang === 'es' ? 1 : 0;
+    var btn = document.getElementById('sendBtn'), msg = document.getElementById('msg');
+    msg.className = 'msg'; msg.textContent = '';
+
+    function pick(n){ var el = form.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : ''; }
+    if (!pick('q1')) {
+      msg.className = 'msg err'; msg.textContent = UI.needQ1[i];
+      form.querySelector('.q').scrollIntoView({ behavior:'smooth', block:'center' });
+      return;
+    }
+    var concerns = Array.prototype.slice.call(form.querySelectorAll('input[name="q5"]:checked'))
+      .map(function (el) { return el.value; });
+    var other = (document.getElementById('q5other') || {}).value || '';
+    if (other.trim()) concerns.push('Other: ' + other.trim());
+
+    var doc = { q1:pick('q1'), q2:pick('q2'), q3:pick('q3'), q4:pick('q4'), q5:concerns,
+      q6:pick('q6'), q7:pick('q7'),
+      q8:((document.getElementById('q8') || {}).value || '').trim().slice(0, 4000),
+      lang: lang, submittedAt: new Date().toISOString(), survey: 'shandoka-lot-l' };
+
+    btn.disabled = true; btn.textContent = UI.sending[i];
+    db().then(function (d) { return d.collection('shandoka_survey').add(doc); }).then(function () {
+      form.hidden = true;
+      var done = document.getElementById('done');
+      done.hidden = false;
+      done.scrollIntoView({ behavior:'smooth', block:'center' });
+    }).catch(function (err) {
+      btn.disabled = false; btn.textContent = UI.send[i];
+      msg.className = 'msg err'; msg.textContent = UI.failed[i];
+      if (window.console) console.error('[shandoka-survey]', err);
+    });
+  });
+
+  // Open in Spanish for Spanish-language browsers unless the reader has chosen.
+  var saved = null;
+  try { saved = localStorage.getItem('shandokaSurveyLang'); } catch (e) {}
+  setLang(saved || (/^es/i.test(navigator.language || '') ? 'es' : 'en'));
+})();
+</script>
+</body>
+</html>

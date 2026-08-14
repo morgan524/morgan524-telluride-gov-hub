@@ -245,6 +245,25 @@ service cloud.firestore {
       allow delete: if isAdmin();
     }
 
+    // ── shandoka_survey/{id} ──────────────────────────────────────────
+    // Anonymous resident survey on the proposed Shandoka / Lot L project
+    // (shandoka-survey.html). Deliberately different from the *_submissions
+    // collections above: responses are NEVER world-readable, because the
+    // form promises anonymity and publishing raw rows would let people be
+    // identified from the free-text answer. Admin reads and compiles them;
+    // the public sees only the summary Livable Telluride publishes.
+    //
+    // Anyone signed in (anonymous sessions included, which is what the form
+    // uses) may CREATE one response. Nobody may edit or delete a response
+    // except admin, so a submitted answer cannot be altered after the fact.
+    match /shandoka_survey/{id} {
+      allow read: if isAdmin();
+      allow create: if isSignedIn()
+        && request.resource.data.q1 is string
+        && request.resource.data.size() <= 20;
+      allow update, delete: if isAdmin();
+    }
+
     // ── event_submissions/{id} ────────────────────────────────────────
     // Community event submissions from the "Submit an Event" form on
     // events.html. Anyone signed-in (incl. anonymous) may CREATE a
