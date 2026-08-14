@@ -895,17 +895,6 @@
     "img": ""
   },
   {
-    "title": "Be Bear Aware!",
-    "source": "Town of Ridgway",
-    "date": "August 13, 2026",
-    "firstSeen": "2026-08-13",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Be-Bear-Aware-Press-Release-2026-08-13.pdf",
-    "img": ""
-  },
-  {
     "title": "Town Manager's Report",
     "source": "Town of Ridgway",
     "date": "August 11, 2026",
@@ -928,6 +917,17 @@
     "img": ""
   },
   {
+    "title": "Be Bear Aware!",
+    "source": "Town of Ridgway",
+    "date": "August 13, 2026",
+    "firstSeen": "2026-08-13",
+    "newsTopic": "community",
+    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
+    "claudeSummary": false,
+    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Be-Bear-Aware-Press-Release-2026-08-13.pdf",
+    "img": ""
+  },
+  {
     "title": "Tennis and pickleball courts closed this week for resurfacing work",
     "source": "Town of Ridgway",
     "date": "August 11, 2026",
@@ -936,28 +936,6 @@
     "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
     "claudeSummary": false,
     "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Tennis-Court-Closure-Press-Release-2026-08-11.pdf",
-    "img": ""
-  },
-  {
-    "title": "Ridgway Town Council Regular Meeting Agenda",
-    "source": "Town of Ridgway",
-    "date": "August 12, 2026",
-    "firstSeen": "2026-08-07",
-    "newsTopic": "government",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-August-12-tc-agenda.pdf",
-    "img": ""
-  },
-  {
-    "title": "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
-    "source": "Town of Ridgway",
-    "date": "August 14, 2026",
-    "firstSeen": "2026-08-07",
-    "newsTopic": "land-use",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.08.19_public-hearing-notice.pdf",
     "img": ""
   }
 ]

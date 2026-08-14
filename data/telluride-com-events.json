@@ -406,6 +406,17 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp"
   },
   {
+    "title": "Community Game Night",
+    "link": "https://www.telluride.com/event/community-game-night/",
+    "description": "Join TMVOA and Telluride Brewing Company for a Community Game Night. Games & drinks provided.",
+    "pubDate": "2026-08-18",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63377/nik-korba-3wcetbluoms-unsplash.800x533.webp"
+  },
+  {
     "title": "Telluride Dinner Party",
     "link": "https://www.telluride.com/event/telluride-dinner-party/",
     "description": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
@@ -619,6 +630,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp"
+  },
+  {
+    "title": "Wine & Watercolor",
+    "link": "https://www.telluride.com/event/wine-watercolor/",
+    "description": "Join La Piazza and TMVOA for Wine and Watercolor on the patio. Beverages & painting supplies provided.",
+    "pubDate": "2026-09-15",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63374/greg-rosenke-tmxiwznctzu-unsplash.800x533.webp"
   },
   {
     "title": "TASP Bob Miller Memorial Golf Classic",

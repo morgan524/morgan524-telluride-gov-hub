@@ -39,19 +39,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
-    "date": "2026-08-14",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "Ridgway Farmer's Market",
     "href": "https://koto.org/event/ridgway-farmers-market/2026-08-14/",
     "date": "2026-08-14",
@@ -144,6 +131,19 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Rewilding Oneself: How to Forage for Fungi Safely and Sustainably",
@@ -381,6 +381,19 @@
     "category": "Community Event",
     "source": "KOTO Community Calendar",
     "desc": "Ages: 6 – 14 Flexible Sign-Up Options: Choose weekly or daily sessions. Weekly Discount: Sign up for a full week and receive 20% off! Daily Schedule (Price includes all activities below) 9:00 AM – 9:30 AM | Check-In 9:30 AM – 11:30 AM |…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-14/",
+    "date": "2026-08-14",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
@@ -900,6 +913,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Community Game Night",
+    "href": "https://www.telluride.com/event/community-game-night/",
+    "date": "2026-08-18",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63377/nik-korba-3wcetbluoms-unsplash.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join TMVOA and Telluride Brewing Company for a Community Game Night. Games & drinks provided.",
+    "type": "Community"
+  },
+  {
     "title": "\"Best Day Ever\" Free Movie Screening",
     "href": "https://koto.org/event/best-day-ever-free-movie-screening/",
     "date": "2026-08-18",
@@ -1244,6 +1270,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Telluride Farmers' Market Music Series: Donavan Daily",
     "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
     "date": "2026-08-21",
@@ -1333,6 +1372,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House.…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
+    "date": "2026-08-21",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
@@ -1649,6 +1701,19 @@
     "type": "Community"
   },
   {
+    "title": "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    "href": "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
+    "date": "2026-08-25",
+    "time": "12:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "DAVE JORDAN",
     "href": "https://events.ourayridgwayevents.com/event/dave-jordan",
     "date": "2026-08-25",
@@ -1768,19 +1833,6 @@
     "endDate": "2026-08-30"
   },
   {
-    "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
-    "date": "2026-08-26",
-    "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
-    "type": "Community"
-  },
-  {
     "title": "CO-150: Dumb and Dumber",
     "href": "https://events.ourayridgwayevents.com/event/co-150-dumb-and-dumber",
     "date": "2026-08-26",
@@ -1791,19 +1843,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Dumb and Dumber (1994) follows two well-meaning but spectacularly clueless friends, Lloyd Christmas and Harry Dunne, as they embark on a cross-country road trip that quickly spirals into one ridiculous misadventure after another. Starring…",
-    "type": "Community"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
-    "date": "2026-08-26",
-    "time": "11:00 AM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
   },
   {
@@ -1819,6 +1858,19 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-09-09"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-08-26",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -1874,19 +1926,6 @@
     "type": "Community"
   },
   {
-    "title": "Pilates for All Bodies with Laura",
-    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-27/",
-    "date": "2026-08-27",
-    "time": "12:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    "type": "Wellness"
-  },
-  {
     "title": "Chill with Chamber Music! — Norwood",
     "href": "https://telluridechambermusic.org/concert/norwood-aug",
     "date": "2026-08-27",
@@ -1939,19 +1978,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Coffee & Climate Conversations: Where Recreation meets Resilience",
-    "href": "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
-    "date": "2026-08-27",
-    "time": "8:30 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands…",
-    "type": "Family & Kids"
-  },
-  {
     "title": "RSUN \\\\ MINDSET",
     "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
     "date": "2026-08-27",
@@ -1963,19 +1989,6 @@
     "source": "The Alibi",
     "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
     "type": "Community"
-  },
-  {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-28/",
-    "date": "2026-08-28",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
   },
   {
     "title": "Telluride Farmers Market",
@@ -2589,10 +2602,10 @@
     "time": "5:00 PM",
     "location": "Decker Community Room",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53048140307438/huge/ecf8324adca38749b7b4d7aaf5963ab93afc2b0d.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53701474198982/huge/f9179e466383e9846f78d7eb788c2ec155dc6a2b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",
+    "desc": "Art as Witness. Art as Action. A traveling exhibition featuring the work of five artists exploring the urgent issues of our time. Supported by the social justice artist grant program and creative districts across Western Colorado. Five…",
     "type": "Arts & Film"
   },
   {
@@ -2803,7 +2816,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-10-13"
   },
   {
     "title": "DAVE MENSCH",
@@ -3299,6 +3313,19 @@
     "category": "Community Event",
     "source": "Beacon",
     "desc": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "type": "Food & Drink"
+  },
+  {
+    "title": "Wine & Watercolor",
+    "href": "https://www.telluride.com/event/wine-watercolor/",
+    "date": "2026-09-15",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63374/greg-rosenke-tmxiwznctzu-unsplash.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join La Piazza and TMVOA for Wine and Watercolor on the patio. Beverages & painting supplies provided.",
     "type": "Food & Drink"
   },
   {
@@ -3839,7 +3866,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story…",
     "type": "Arts & Film",
-    "endDate": "2026-10-12"
+    "endDate": "2026-10-13"
   },
   {
     "title": "Pink Talking Fish",

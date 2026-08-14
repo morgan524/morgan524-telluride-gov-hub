@@ -347,7 +347,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8066","sv":4,"ph":"3bcbff87c865ec6d"},
 
   "telluride|2026-09-02|Telluride Housing Authority Subcommittee - Sep 02 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"e51dbe8abc0cab33"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8163","sv":4,"ph":"558b2c991b258cd1"},
 
   "county|2026-09-02|Board of County Commissioners Meeting":
     {"sv":4,"ph":"a12dfd2ce826475e"},
@@ -713,6 +713,86 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
     title: "‘Pinched on every front’",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
@@ -720,6 +800,106 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "One breezy afternoon in mid-July, Mike Potter s phone started making all kinds of noise. “It goes, beep, beep, beep, beep!” shouted the Ridgway rancher, brandishing his flip phone from the pocket of his mud-stained jeans. “And boy,” he added, “I started doing this,” fingers massaging his temples and",
     href: "https://www.ouraynews.com/2026/08/12/pinched-every-front/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Flood work could begin within week",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County officials said Tuesday that flood mitigation work below the Gold Mountain Fire’s burn scar could begin as soon as next week, while warning that storms in the coming days could trigger further debris flows and accompanying property damage. County Attorney Leo Caselli said at a community ",
+    href: "https://www.ouraynews.com/2026/08/12/flood-work-begin-within-week/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Firefighter base moves to Gunnison",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "public-safety",
+    copy: "The incident command post for the Gold Mountain Fire relocated to the Gunnison County Fairgrounds Saturday as Rocky Mountain Complex Incident Management Team 2 took over for Team 1 and combined efforts to focus more on the Elk Fire near Lake City. Firefighters from across the country camped at the O",
+    href: "https://www.ouraynews.com/2026/08/12/firefighter-base-moves-gunnison/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County fair carries on",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "public-safety",
+    copy: "The night the Gold Mountain Fire started, the Cornell family anxiously watched the fire spreading toward their fenced livestock, the billowing smoke filling the canyon. They decided to load up their horses, goats and the 4-H lambs into trailers and evacuate. They took the 11 animals from their pastu",
+    href: "https://www.ouraynews.com/2026/08/12/county-fair-carries/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "We need to stand firm to preserve alpine tundra",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "recreation",
+    copy: "Dear Editor: The July 23 guest column by Sue Dreamweaver Spielman was excellent and brings up so many issues that we regular backcountry users experience. I have been recreating in this area since 1979. I’m a Jeep driver, backpacker, hiker and climber. I moved away from the area for a while. I have ",
+    href: "https://www.ouraynews.com/2026/08/12/need-stand-firm-preserve-alpine-tundra/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County clerk provided excellent service",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "community",
+    copy: "Dear Editor: I would like to acknowledge the excellent service I received from Damon Todd, Ouray County clerk and recorder. I had a question/complaint about the online vehicle license renewal system. I contacted Mr. Todd through Ouray County s website on Sunday. Later that afternoon, he responded wi",
+    href: "https://www.ouraynews.com/2026/08/12/county-clerk-provided-excellent-service/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Rather than sales tax, charge CR 361 road toll",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "infrastructure",
+    copy: "Dear Editor: I agree with the recent proposal by Ouray County to fund a rainy-day account for use in seemingly annual “emergencies” such as the rockfall last year on County Road 361, the cleanup from the recent Gold Mountain Fire and continuing damage to county roads and bridges from mudslides and w",
+    href: "https://www.ouraynews.com/2026/08/12/rather-sales-tax-charge-cr-361-road-toll/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "infrastructure",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago With progress on the Ouray side of Imogene Pass Jeep road nearing completion, plans are being made for its dedication. The date has tentatively been set for Sunday, Aug. 26, at or near ",
+    href: "https://www.ouraynews.com/2026/08/12/looking-back-20260813-0238-359314/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "County inches ahead with possible tax questions",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "government",
+    copy: "Attorney: Must get buy-in from city, town to proceed with sales, use taxes Ouray County commissioners on Tuesday took another step toward putting two tax measures on the November ballot to raise money for disaster recovery and road and bridge projects. But they encountered a new wrinkle in their pla",
+    href: "https://www.ouraynews.com/2026/08/12/county-inches-ahead-possible-tax-questions/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Visitors cited for feeding bears",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 13, 2026",
+    newsTopic: "housing",
+    copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
+    href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fall Foliage Tour Contest 🍂",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
+    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -750,96 +930,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's bulletin is attached below, but please check the parish calendar for the most up-to-date information.Please join us for praying the Holy Rosary on Sundays before 9:00 AM Holy Mass. It starts at 8:30 AM.Coffee and donuts every Sunday during ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/bulletin-for-august-9/",
-    img: ""
-  },
-  {
-    title: "Flood ravages homes",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
-    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
-    img: ""
-  },
-  {
-    title: "County floats disaster relief sales tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
-    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Log Hill won’t join fire authority",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
-    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Crews near full containment on fire",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
-    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "‘We were in a panic’",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "infrastructure",
-    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
-    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "public-safety",
-    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
-    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
-    img: ""
-  },
-  {
-    title: "Riders scrutinize Ouray’s new shuttle service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "government",
-    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
-    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Good For You!",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "community",
-    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
-    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
-    img: ""
-  },
-  {
-    title: "Ridgway concert series puts trash in its place",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 6, 2026",
-    newsTopic: "arts-culture",
-    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
-    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
     img: ""
   },
   {
@@ -2430,17 +2520,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
-    title: "Be Bear Aware!",
-    source: "Town of Ridgway",
-    date: "August 13, 2026",
-    firstSeen: "2026-08-13",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Be-Bear-Aware-Press-Release-2026-08-13.pdf",
-    img: ""
-  },
-  {
     title: "Town Manager's Report",
     source: "Town of Ridgway",
     date: "August 11, 2026",
@@ -2463,6 +2542,17 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: ""
   },
   {
+    title: "Be Bear Aware!",
+    source: "Town of Ridgway",
+    date: "August 13, 2026",
+    firstSeen: "2026-08-13",
+    newsTopic: "community",
+    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
+    claudeSummary: false,
+    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Be-Bear-Aware-Press-Release-2026-08-13.pdf",
+    img: ""
+  },
+  {
     title: "Tennis and pickleball courts closed this week for resurfacing work",
     source: "Town of Ridgway",
     date: "August 11, 2026",
@@ -2471,28 +2561,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
     claudeSummary: false,
     href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Tennis-Court-Closure-Press-Release-2026-08-11.pdf",
-    img: ""
-  },
-  {
-    title: "Ridgway Town Council Regular Meeting Agenda",
-    source: "Town of Ridgway",
-    date: "August 12, 2026",
-    firstSeen: "2026-08-07",
-    newsTopic: "government",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/00-August-12-tc-agenda.pdf",
-    img: ""
-  },
-  {
-    title: "Notice of Public Hearing Aug. 19, 2026 at 5:30pm: Deviation from Design Standards for new construction at 211 Mary Street - Aug. 7, 2026",
-    source: "Town of Ridgway",
-    date: "August 14, 2026",
-    firstSeen: "2026-08-07",
-    newsTopic: "land-use",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/2026.08.19_public-hearing-notice.pdf",
     img: ""
   }
 ];
@@ -2959,16 +3027,6 @@ const TELLURIDE_FARMERS_MARKET = (function () {
 // out-of-season entries simply don't render until they approach.
 const TELLURIDE_SCIENCE_EVENTS = [
   {
-    title: "Telluride Chamber Music and Telluride Science Community Concert",
-    date: "2026-08-13",
-    time: "6:00 PM – 7:00 PM",
-    location: "Telluride Innovation Center, Telluride",
-    description: "Join Telluride Science and Telluride Chamber Music for a free community concert with San Juan Symphony String Quartet on the scenic patio at the Innovation Center.  All are welcome—come soak in the beauty of live chamber music in an inspiring setting.",
-    link: "https://telluridescience.org/event/community-concert-august/",
-    imageUrl: "https://telluridescience.org/wp-content/uploads/2026/05/August-26_concert_1080x1080.jpg",
-    sourceLabel: "Telluride Science"
-  },
-  {
     title: "Noche de Luz (Night of Light)",
     date: "2026-08-21",
     time: "6:30 PM – 10:00 PM",
@@ -3063,15 +3121,15 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-14/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-08-14T10:00:00-06:00",
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-14/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-14T09:30:00-06:00",
     source: "koto",
     sourceLabel: "KOTO",
     category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   },
   {
     title: "Ridgway Farmer's Market",
@@ -3093,6 +3151,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-14/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-14T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   },
   {
@@ -3327,6 +3396,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/TellurideDinnerParty2026Marketing-1-scaled.jpg"
   },
   {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-21T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
     title: "Up-off Gymnastics, Dance, and Spanish",
     link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
     description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
@@ -3357,6 +3437,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-21/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-21T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   },
   {
@@ -3448,6 +3539,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
   },
   {
+    title: "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    link: "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
+    description: "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your time on court is memorable. Must be 3.5+ to sign up Space: Limited to 8 spots Dates: August 25th & 26th Time: 12pm-2pm Price: $299/person Please sign up online or directly through the pro shop.",
+    pubDate: "2026-08-25T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
     title: "Telluride R-1 School Board Regular Meeting",
     link: "https://koto.org/event/telluride-r-1-school-board-regular-meeting/",
     description: "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, August 25th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The Zoom link and meeting agenda can be found at tellurideschool.org.",
@@ -3501,61 +3603,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-08-26/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-08-26T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-08-26T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
-    title: "Coffee & Climate Conversations: Where Recreation meets Resilience",
-    link: "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
-    description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands alongside Telluride Mountain Club and Rico Trails Alliance. Learn more about what's next for trails in our region, and join us as we ask the questions: How do recreation and conservation intersect, and where do they diverge? How does recreation shape our community and values? And most importantly, how can you be a strong steward and advocate for public lands and climate across our region? Coffee and pastries kindly provided.",
-    pubDate: "2026-08-27T08:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp"
-  },
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-27/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-27T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-28/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-08-28T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
   }
 ];
 
@@ -5203,13 +5250,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "September - Art Opening: Social Justice Travel Exhibition",
     link: "https://events.ourayridgwayevents.com/event/art-opening-social-justice-travel-exhibition",
-    description: "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote wellness. This exhibition features new works by artists who recieved a Social Justice Grant from Telluride Arts to create work for this traveling exhibit. View on site | Email this event",
+    description: "Art as Witness. Art as Action. A traveling exhibition featuring the work of five artists exploring the urgent issues of our time. Supported by the social justice artist grant program and creative districts across Western Colorado. Five artists. Ten communities. One vision for a more just future. Featured Artists & Collections Aela Morgan | In Pieces Together (Telluride)Mixed-media works exploring political division, civic unrest, and the tension between fracture and connection.Christy Ferrato | Obantu (Durango Creative District)Sculptural figures that confront oppression and resist tyranny, honoring truth, dignity, and the fight for human rights.Cie Hoover | Eroded World (Ridgway FUSE Creative Main Street)A large-scale wood relief on environmental degradation and the inheritance we leave future generations.Jed Smith & Amy Cao | Los Migrantes (Mancos Creative District)Historic narratives and new works sparking conversation on immigration, borders, and who gets to call this land home.Olivia Perea | Too Bad (Durango Creative District)A collage …",
     pubDate: "2026-09-04T23:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048140307438/huge/ecf8324adca38749b7b4d7aaf5963ab93afc2b0d.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53701474198982/huge/f9179e466383e9846f78d7eb788c2ec155dc6a2b.jpg"
   },
   {
     title: "The Sherbino Presents: Donny Morales – First Friday Show",
@@ -5283,6 +5330,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
     description: "MONTHLY WELCOME HOME ALLIANCE VETERAN’S COFFEE @ THE SHERBINO Every Branch. Every Era. Every Ability. Offering coffee, donuts and camaraderie. Mike Trickey and April Heard will be there bringing information to you on topics such as: Navigating the VA, Housing, Jobs, Volunteer Opportunities, community resources, VA benefits, recreation and mental health. For more information or to offer support (products or monetary), call 970-765-2210 or visit https://www.whafv.org/ Occurs the 2nd Tuesday of Every Month || 10 am - Noon || Free to attend || Vets Only, Please View on site | Email this event",
     pubDate: "2026-09-08T16:00:00.000Z",
+    endDate: "2026-10-13",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5726,7 +5774,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-10-12",
+    endDate: "2026-10-13",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6809,6 +6857,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp"
   },
   {
+    title: "Community Game Night",
+    link: "https://www.telluride.com/event/community-game-night/",
+    description: "Join TMVOA and Telluride Brewing Company for a Community Game Night. Games & drinks provided.",
+    pubDate: "2026-08-18",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63377/nik-korba-3wcetbluoms-unsplash.800x533.webp"
+  },
+  {
     title: "Telluride Dinner Party",
     link: "https://www.telluride.com/event/telluride-dinner-party/",
     description: "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
@@ -7022,6 +7081,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/62218/balourdet.800x533.webp"
+  },
+  {
+    title: "Wine & Watercolor",
+    link: "https://www.telluride.com/event/wine-watercolor/",
+    description: "Join La Piazza and TMVOA for Wine and Watercolor on the patio. Beverages & painting supplies provided.",
+    pubDate: "2026-09-15",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63374/greg-rosenke-tmxiwznctzu-unsplash.800x533.webp"
   },
   {
     title: "TASP Bob Miller Memorial Golf Classic",
