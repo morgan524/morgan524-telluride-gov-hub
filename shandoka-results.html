@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Shandoka Survey Results — Livable Telluride</title>
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<style>
+:root{ --forest:#173d34; --sage:#dce9e2; --paper:#fffdf8; --ink:#22303c;
+       --mut:#6b7a80; --rule:#c9d6d6; --rust:#a8463c; --bar:#1d5c63; }
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px 80px}
+h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px 0 4px}
+.sub{font-size:16px;color:var(--mut);margin:0 0 20px}
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:0 0 20px}
+.tools button{font:600 15px var(--sans,system-ui);border:1.5px solid var(--forest);background:#fff;
+  color:var(--forest);border-radius:99px;padding:9px 20px;cursor:pointer}
+.tools button:hover{background:var(--sage)}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 22px}
+.stat div{background:var(--forest);color:#fff;border-radius:12px;padding:15px 18px}
+.stat .lab{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:#b9d2cb;font-weight:700}
+.stat .val{font:700 30px/1.1 var(--serif,Georgia,serif);margin-top:4px}
+.q{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:20px 24px;margin-bottom:16px}
+.q h2{font:700 18px/1.35 var(--sans,system-ui);color:var(--forest);margin:0 0 14px}
+.row{display:grid;grid-template-columns:1fr 62px 52px;gap:10px;align-items:center;margin-bottom:9px;font-size:15.5px}
+.row .lbl{color:var(--ink)}
+.track{grid-column:1/-1;height:9px;background:#e8eeeb;border-radius:5px;overflow:hidden;margin:-4px 0 10px}
+.track i{display:block;height:100%;background:var(--bar);border-radius:5px}
+.row .n{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
+.row .pc{text-align:right;font-weight:700;color:var(--forest);font-variant-numeric:tabular-nums}
+.free{background:#fff;border:1px solid var(--rule);border-radius:9px;padding:13px 16px;margin-bottom:10px;
+  font-size:15.5px;line-height:1.55;color:var(--ink);white-space:pre-wrap}
+.free .meta{font-size:12.5px;color:var(--mut);margin-top:7px}
+.login{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:26px;max-width:420px;margin:30px auto}
+.login h2{font:700 20px var(--serif,Georgia,serif);color:var(--forest);margin:0 0 8px}
+.login input{width:100%;box-sizing:border-box;font-size:16px;padding:10px 12px;margin-bottom:10px;
+  border:1.5px solid var(--rule);border-radius:8px}
+.login button{width:100%;font:700 16px var(--sans,system-ui);color:#fff;background:var(--forest);
+  border:none;border-radius:99px;padding:12px;cursor:pointer}
+.err{color:var(--rust);font-size:14.5px;margin-top:8px}
+@media(max-width:700px){.stat{grid-template-columns:1fr}.wrap{padding:0 14px 60px}}
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+<main class="wrap">
+  <h1>Shandoka Survey Results</h1>
+  <p class="sub">Admin only. Responses are anonymous, so there is nothing here that identifies a respondent.</p>
+  <div id="app"></div>
+</main>
+<div id="lt-footer"></div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="/js/site-config.js"></script>
+<script src="/site.js?v=12"></script>
+<script>
+(function () {
+  'use strict';
+  var ADMIN = 'info@livabletelluride.org';
+  var CFG = window.SITE_CONFIG || {};
+  var app = document.getElementById('app');
+  var rows = [];
+
+  // Labels mirror shandoka-survey.html. Stored values are always English, so
+  // one label set covers responses submitted in either language.
+  var Q = [
+    ['q1','1. Familiarity with the project before the survey',
+      ['Very familiar','Somewhat familiar','Heard about it but did not know details','Knew very little','Had not heard about it']],
+    ['q2','2. Knew parts could reach ~50 feet, before the story poles', ['Yes','No','Not sure']],
+    ['q3','3. Story poles changed their understanding of scale',
+      ['Yes, significantly','Yes, somewhat','No','Have not seen them','Not sure']],
+    ['q4','4. How they feel about the project now',
+      ['Strongly support','Somewhat support','Neutral/unsure','Somewhat oppose','Strongly oppose']],
+    ['q5','5. Most concerning parts (select all that apply)',
+      ['Building height and overall scale','Loss or relocation of surface parking','Construction noise and disruption',
+       'Traffic','Views and sunlight','Safety and pedestrian access','Effect on quality of life at Shandoka',
+       'Cost of the project','Disruption and length of construction','None — I support the project as designed']],
+    ['q6','6. What they would prefer before a final decision',
+      ['Proceed as currently proposed','Proceed with changes based on resident input',
+       'Consider substantially different alternatives','Do not proceed','Need more information']],
+    ['q7','7. Rating of the Town’s public information before the story poles',
+      ['Excellent','Good','Fair','Poor','Very poor','Not sure / was not aware']]
+  ];
+
+  function esc(s){ return String(s == null ? '' : s)
+    .replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function tally(key, opts) {
+    var counts = {}, answered = 0;
+    opts.forEach(function (o) { counts[o] = 0; });
+    rows.forEach(function (r) {
+      var v = r[key];
+      if (Array.isArray(v)) {
+        if (v.length) answered++;
+        v.forEach(function (x) { if (x in counts) counts[x]++; else counts[x] = (counts[x] || 0) + 1; });
+      } else if (v) {
+        answered++;
+        if (v in counts) counts[v]++; else counts[v] = 1;
+      }
+    });
+    return { counts: counts, answered: answered };
+  }
+
+  function render() {
+    if (!rows.length) {
+      app.innerHTML = '<div class="q"><h2>No responses yet</h2>'
+        + '<p style="font-size:15.5px;color:var(--mut);margin:0">Nothing has been submitted. '
+        + 'This page will fill in as people answer.</p></div>';
+      return;
+    }
+    var es = rows.filter(function (r) { return r.lang === 'es'; }).length;
+    var withText = rows.filter(function (r) { return (r.q8 || '').trim(); }).length;
+    var h = '<div class="tools">'
+      + '<button id="csv">Download CSV</button>'
+      + '<button id="reload">Refresh</button>'
+      + '<button id="out">Sign out</button></div>'
+      + '<div class="stat">'
+      + '<div><div class="lab">Responses</div><div class="val">' + rows.length + '</div></div>'
+      + '<div><div class="lab">Answered in Spanish</div><div class="val">' + es
+        + ' <span style="font-size:16px">(' + Math.round(100 * es / rows.length) + '%)</span></div></div>'
+      + '<div><div class="lab">Left a written comment</div><div class="val">' + withText + '</div></div>'
+      + '</div>';
+
+    Q.forEach(function (q) {
+      var t = tally(q[0], q[2]);
+      var keys = Object.keys(t.counts).sort(function (a, b) { return t.counts[b] - t.counts[a]; });
+      var base = t.answered || 1;
+      h += '<div class="q"><h2>' + esc(q[1]) + '</h2>';
+      keys.forEach(function (k) {
+        var n = t.counts[k], pc = Math.round(100 * n / base);
+        h += '<div class="row"><span class="lbl">' + esc(k) + '</span>'
+          + '<span class="n">' + n + '</span><span class="pc">' + pc + '%</span></div>'
+          + '<div class="track"><i style="width:' + pc + '%"></i></div>';
+      });
+      h += '<p style="font-size:13px;color:var(--mut);margin:4px 0 0">'
+        + t.answered + ' of ' + rows.length + ' answered'
+        + (q[0] === 'q5' ? '. Percentages are of those who answered, and sum above 100% because this question allows several answers.' : '.')
+        + '</p></div>';
+    });
+
+    h += '<div class="q"><h2>8. What they want the Town Council to know</h2>';
+    var texts = rows.filter(function (r) { return (r.q8 || '').trim(); });
+    if (!texts.length) h += '<p style="font-size:15.5px;color:var(--mut);margin:0">No written comments yet.</p>';
+    texts.forEach(function (r) {
+      h += '<div class="free">' + esc(r.q8)
+        + '<div class="meta">' + (r.lang === 'es' ? 'Submitted in Spanish' : 'Submitted in English')
+        + ' &middot; ' + esc((r.submittedAt || '').slice(0, 10)) + '</div></div>';
+    });
+    h += '</div>';
+    app.innerHTML = h;
+
+    document.getElementById('reload').onclick = load;
+    document.getElementById('out').onclick = function () { firebase.auth().signOut(); };
+    document.getElementById('csv').onclick = csv;
+  }
+
+  function csv() {
+    var cols = ['submittedAt','lang','q1','q2','q3','q4','q5','q6','q7','q8'];
+    var out = [cols.join(',')];
+    rows.forEach(function (r) {
+      out.push(cols.map(function (c) {
+        var v = r[c];
+        if (Array.isArray(v)) v = v.join('; ');
+        return '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      }).join(','));
+    });
+    var blob = new Blob([out.join('\n')], { type: 'text/csv;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'shandoka-survey-' + new Date().toISOString().slice(0, 10) + '.csv';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  }
+
+  function load() {
+    app.innerHTML = '<p style="font-size:16px;color:var(--mut)">Loading responses…</p>';
+    firebase.firestore().collection('shandoka_survey').get().then(function (snap) {
+      rows = [];
+      snap.forEach(function (d) { rows.push(d.data()); });
+      rows.sort(function (a, b) { return String(b.submittedAt || '').localeCompare(String(a.submittedAt || '')); });
+      render();
+    }).catch(function (err) {
+      app.innerHTML = '<div class="q"><h2>Could not load</h2><p class="err">'
+        + esc(err && err.message ? err.message : String(err))
+        + '</p><p style="font-size:15px;color:var(--mut)">If this says "Missing or insufficient permissions", '
+        + 'the Firestore rules for shandoka_survey have not deployed.</p></div>';
+    });
+  }
+
+  function loginPanel(note) {
+    app.innerHTML = '<div class="login"><h2>Sign in</h2>'
+      + '<p style="font-size:15px;color:var(--mut);margin:0 0 14px">Results are visible only to <strong>'
+      + esc(ADMIN) + '</strong>.</p>'
+      + '<input id="em" type="email" autocomplete="username" value="' + esc(ADMIN) + '">'
+      + '<input id="pw" type="password" autocomplete="current-password" placeholder="Password">'
+      + '<button id="go">Sign in</button>'
+      + (note ? '<p class="err">' + esc(note) + '</p>' : '') + '</div>';
+    document.getElementById('go').onclick = function () {
+      firebase.auth().signInWithEmailAndPassword(
+        document.getElementById('em').value.trim(),
+        document.getElementById('pw').value
+      ).catch(function (e) { loginPanel(e.message || 'Sign-in failed.'); });
+    };
+    document.getElementById('pw').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') document.getElementById('go').click();
+    });
+  }
+
+  if (!CFG.FIREBASE) {
+    app.innerHTML = '<p class="err">Firebase config missing.</p>';
+    return;
+  }
+  if (!firebase.apps.length) firebase.initializeApp(CFG.FIREBASE);
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user && user.email === ADMIN) load();
+    else if (user && user.email) loginPanel('That account is not the admin. Sign out and use ' + ADMIN + '.');
+    else loginPanel('');
+  });
+})();
+</script>
+</body>
+</html>
