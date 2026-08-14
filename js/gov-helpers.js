@@ -1625,18 +1625,6 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
-    title: "‘We’re not going to turn into a pumpkin’",
-    source: "Telluride Times",
-    date: "August 14, 2026",
-    firstSeen: "2026-08-14",
-    newsTopic: "public-safety",
-    copy: "Five local governments met August 10 for an intergovernmental work session covering infant care shortages (18 spots, 21 waitlisted), Ute Mountain Ute allyship, and wildfire updates. TRMC now plans a two-site approach — emergency room at Society Turn, primary care staying on Pacific Avenue — after Newmont unexpectedly offered a 30-year lease extension through 2061.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_b60bdf58-4398-4697-864a-cd1754ceddd4.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/64/e6431f68-6379-411c-bfb4-77d8a42f0dc0/6a7cf92badfcb.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "An 'influencer' degree? Colleges bet on content creator major as critics question its value",
     source: "Telluride Times",
     date: "August 14, 2026",
@@ -1646,6 +1634,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/state/article_149025a1-8121-5718-aca8-442898992d60.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "‘We’re not going to turn into a pumpkin’",
+    source: "Telluride Times",
+    date: "August 14, 2026",
+    firstSeen: "2026-08-14",
+    newsTopic: "public-safety",
+    copy: "Five local governments met August 10 for an intergovernmental work session covering infant care shortages (18 spots, 21 waitlisted), Ute Mountain Ute allyship, and wildfire updates. TRMC now plans a two-site approach — emergency room at Society Turn, primary care staying on Pacific Avenue — after Newmont unexpectedly offered a 30-year lease extension through 2061.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_b60bdf58-4398-4697-864a-cd1754ceddd4.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/64/e6431f68-6379-411c-bfb4-77d8a42f0dc0/6a7cf92badfcb.image.jpg",
     imgHiRes: true
   },
   {
@@ -6466,6 +6466,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
+  },
+  {
+    title: "Balourdet Quartet",
+    link: "https://townofmountainvillage.com/explore/events/all-events/balourdet-quartet/",
+    description: "A concert by the multi-award winning Balourdet String Quartet. One of the most inspiring quartets of their generation.",
+    pubDate: "2026-09-13T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/48621/balourdet.jpg"
+  },
+  {
+    title: "Sunday Rehab at Alloy Kitchen",
+    link: "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
+    description: "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
+    pubDate: "2026-09-13T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
   }
 ];
 
