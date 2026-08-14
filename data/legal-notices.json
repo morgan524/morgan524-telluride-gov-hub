@@ -129,27 +129,6 @@
     "caseNumber": "26PR30006"
   },
   {
-    "title": "Foreclosure Sale Notice -- Stonegate Drive Mountain Village (Sale No. 202603)",
-    "entity": "Federal Holding Realty / Public Trustee San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The San Miguel County Public Trustee, Brandi R. Hatfield, will conduct a public foreclosure auction on August 13, 2026 at 10:00 a.m. at 305 W. Colorado Avenue, Telluride, for a vacant lot at Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village). The original grantor is Two Stonegate LLC; the current debt holder is Federal Holding Realty, with an outstanding principal balance of $500,000.00 on a deed of trust dated February 23, 2026. The foreclosure is due to failure to make payments as provided in the Note and Deed of Trust.",
-    "deadline": "2026-08-13",
-    "expires": "2026-08-13",
-    "dates": "6/18",
-    "papers": [
-      "ttimes_0618"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    "address": "TBD (Vacant) Stonegate Drive, Mountain Village, CO 81435 (Lot 166AR2, Telluride Mountain Village, San Miguel County)",
-    "noticeKey": "foreclosure-sale-202603",
-    "caseNumber": "202603"
-  },
-  {
     "title": "Public Hearing Notice -- Land Use Code Amendment New Section 5-31 Natural Medicine Businesses",
     "entity": "San Miguel County Board of County Commissioners",
     "entityClass": "ent-county",
@@ -394,26 +373,6 @@
     "noticeKey": "vesting-project-72-telluride"
   },
   {
-    "title": "Public Hearing -- Adoption of 2024 International Building Code & Colorado Low Energy & Carbon Code",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "📋",
-    "iconClass": "type-hearing",
-    "type": "Ordinance",
-    "filterTag": "ordinance",
-    "summary": "San Miguel County Planning Commission will hold a public hearing on August 13, 2026 at 9:00 AM in Telluride to consider recommending adoption of the 2024 International Building Code and the Colorado Low Energy & Carbon Code to the Board of County Commissioners. Written comments must be received by noon on Monday, August 10, 2026. Proposed amendments are available in the meeting agenda packet at www.sanmiguelcountyco.gov.",
-    "deadline": "2026-08-10 (written comments); 2026-08-13 (hearing)",
-    "expires": "2026-08-13",
-    "dates": "7/30",
-    "papers": [
-      "ttimes_0730"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    "address": "Telluride, Colorado (San Miguel County)",
-    "noticeKey": "COL-000206-ibc-2024-hearing"
-  },
-  {
     "title": "Public Notice -- Town of Telluride 2027 Budget Preparation",
     "entity": "Town of Telluride",
     "entityClass": "ent-county",
@@ -553,26 +512,6 @@
     "noticeKey": "SUHFER-objection-2026"
   },
   {
-    "title": "Public Hearing -- San Miguel County Planning Commission Regular Meeting (August 13, 2026)",
-    "entity": "San Miguel County Planning Commission",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "The San Miguel County Planning Commission will hold its regular meeting on Thursday, August 13, 2026 at 9:00 AM at 333 West Colorado Ave., Second Floor, Telluride. The agenda includes approval of July minutes, a work session on minor and major subdivisions, and a referral and recommendation on an Energy Code Update. The meeting is also accessible via Zoom for remote public participation.",
-    "deadline": "2026-08-13",
-    "expires": "2026-08-13",
-    "dates": "8/6",
-    "papers": [
-      "ttimes_0806"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
-    "address": "333 West Colorado Ave., Second Floor Meeting Room, Telluride, CO 81435",
-    "noticeKey": "smc-planning-commission-2026-08-13"
-  },
-  {
     "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Application",
     "entity": "Montrose Memorial Hospital, Inc.",
     "entityClass": "ent-county",
@@ -625,5 +564,25 @@
     "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=208",
     "address": "",
     "smcBidID": "208"
+  },
+  {
+    "title": "Foreclosure Sale -- Condominium Unit 7, Double Diamond Condominiums (Sale No. 202605)",
+    "entity": "San Miguel County Public Trustee / Wilmington Savings Fund Society, FSB as Trustee for Residential Investment Trust",
+    "entityClass": "ent-county",
+    "entityLogo": "assessor",
+    "icon": "💰",
+    "iconClass": "type-tax",
+    "type": "Tax & Finance",
+    "filterTag": "tax-finance",
+    "summary": "Public Trustee Brandi R. Hatfield of San Miguel County has scheduled a public foreclosure auction for a deed of trust originally granted by Ryan Pfaff on a condominium at 350 S Mahoney Dr, Unit 7, Telluride. The original loan of $1,200,000 (outstanding balance ~$1,199,032) was recorded May 31, 2022, and the Notice of Election and Demand was recorded April 28, 2026, due to failure to pay principal and interest. The property will be sold to the highest cash bidder at 305 W. Colorado Avenue, Telluride on September 3, 2026 at 10:00 A.M.",
+    "deadline": "2026-09-03",
+    "expires": "2026-09-03",
+    "dates": "8/13",
+    "papers": [
+      "ttimes_0813"
+    ],
+    "url": "https://www.telluridenews.com/news/legals/article_8bae6df9-780d-416e-b576-e8515ce8b2c7.html",
+    "address": "350 S Mahoney Dr, Unit 7, Telluride, CO 81435 (Condominium Unit 7, Double Diamond Condominium, San Miguel County)",
+    "noticeKey": "foreclosure-sale-202605"
   }
 ]

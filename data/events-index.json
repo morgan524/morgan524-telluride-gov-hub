@@ -77,7 +77,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A mushroom-themed craft program hosted by Ah Haa at the Wilkinson Public Library's Upper Terrace. The event runs from 2:00 to 4:00 PM.",
+    "desc": "2:00 PM – 4:00 PM",
     "type": "Community"
   },
   {
@@ -107,19 +107,6 @@
     "type": "Community"
   },
   {
-    "title": "Telluride Men's Health club Ophir Mtg.",
-    "href": "https://koto.org/event/telluride-mens-health-club-ophir-mtg/",
-    "date": "2026-08-13",
-    "time": "5:00 PM",
-    "location": "Ophir town hall",
-    "town": "Ophir",
-    "img": "https://koto.org/wp-content/uploads/2026/08/OPHIR-MTG--scaled.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride men's Health club presents A heart to heart conversation with Dr. Mark Rosenthal followed by a heart healthy dinner. Ophir Town Hall",
-    "type": "Food & Drink"
-  },
-  {
     "title": "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
     "href": "https://telluridelibrary.libcal.com/event/17216790?hs=a",
     "date": "2026-08-13",
@@ -146,19 +133,6 @@
     "type": "Community"
   },
   {
-    "title": "The Creative Exchange at Telluride Arts HQ",
-    "href": "https://koto.org/event/the-creative-exchange-at-telluride-arts-hq-2/2026-08-13/",
-    "date": "2026-08-13",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.42.32-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Creative Exchange is a brand-new monthly series by Telluride Arts designed for the artists and creatives who call Telluride home. It’s a space where emerging and established artists gather to share the knowledge, skills, and stories…",
-    "type": "Community"
-  },
-  {
     "title": "Norwood Sanitation District Meeting",
     "href": "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
     "date": "2026-08-13",
@@ -168,7 +142,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Government Meeting",
     "source": "Town of Norwood",
-    "desc": "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -266,19 +240,6 @@
     "endDate": "2026-10-08"
   },
   {
-    "title": "DMV2GO",
-    "href": "https://koto.org/event/dmv2go/2026-08-13/",
-    "date": "2026-08-13",
-    "time": "9:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Walk-ins are welcome, but if you'd like to make an appointment, click here: https://www.signupgenius.com/go/10C0B44ACAD29A0FCC25-64804816-dmv2go#/ Please Note, DMV2GO does not offer ANY testing services. RENEW – An existing Colorado Driver…",
-    "type": "Community"
-  },
-  {
     "title": "Yin Yang Yoga with Miriah",
     "href": "https://telluridelibrary.libcal.com/event/16801144?hs=a",
     "date": "2026-08-13",
@@ -343,19 +304,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for a Drag Queen Storytime! This will be a fun, safe event. Ages; Elementary View on site | Email this event",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Edie",
-    "href": "https://events.ourayridgwayevents.com/event/edie",
-    "date": "2026-08-14",
-    "time": "1:30 PM",
-    "location": "",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea…",
-    "type": "Arts & Film"
   },
   {
     "title": "Up-off Gymnastics, Dance, and Spanish",
@@ -556,6 +504,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Edie",
+    "href": "https://events.ourayridgwayevents.com/event/edie",
+    "date": "2026-08-14",
+    "time": "7:30 PM",
+    "location": "",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Steps Tavern Presents Karaoke Night",
     "href": "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
     "date": "2026-08-14",
@@ -579,7 +540,7 @@
     "img": "https://ucarecdn.com/6ad6b1b4-5f1a-4af3-8640-17838213967a/-/crop/500x500/0,52/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "DJ Jonko X and Codestar bring their sets to The Alibi for an official Telluride Mushroom Fest after party, keeping the energy going late into the night. The show starts at 9:00 PM as part of the broader Mushroom Festival celebrations…",
+    "desc": "Telluride Mushroom Fest After Party",
     "type": "Music"
   },
   {
@@ -775,8 +736,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
-    "type": "Festivals"
+    "desc": "Telluride Mushroom Fest Puff Ball After Party",
+    "type": "Community"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -1014,7 +975,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with…",
+    "desc": "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
     "type": "Community"
   },
   {
@@ -1120,8 +1081,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
-    "type": "Talks & Classes"
+    "desc": "First Day of School",
+    "type": "Community"
   },
   {
     "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
@@ -1214,19 +1175,6 @@
     "source": "Mountain Village",
     "desc": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
     "type": "Music"
-  },
-  {
-    "title": "Wine and Wickets",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    "date": "2026-08-19",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    "type": "Food & Drink"
   },
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -1912,17 +1860,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "href": "https://telluridescience.org/event/talk-unusual-microbes/",
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "href": "https://koto.org/event/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
     "date": "2026-08-25",
-    "time": "6:30 PM – 7:30 PM",
-    "location": "Telluride Innovation Center, Telluride",
+    "time": "6:30 PM",
+    "location": "Telluride Innovation Center",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/06/TT0825_320-x-212.jpg",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps…",
-    "type": "Talks & Classes"
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right…",
+    "type": "Community"
   },
   {
     "title": "Gather and Grieve",
@@ -1965,6 +1913,19 @@
     "endDate": "2026-08-30"
   },
   {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
     "title": "CO-150: Dumb and Dumber",
     "href": "https://events.ourayridgwayevents.com/event/co-150-dumb-and-dumber",
     "date": "2026-08-26",
@@ -1975,6 +1936,19 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Dumb and Dumber (1994) follows two well-meaning but spectacularly clueless friends, Lloyd Christmas and Harry Dunne, as they embark on a cross-country road trip that quickly spirals into one ridiculous misadventure after another. Starring…",
+    "type": "Community"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "11:00 AM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
   },
   {
@@ -1990,32 +1964,6 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-09-09"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-08-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "type": "Community"
-  },
-  {
-    "title": "Wine and Wickets",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    "date": "2026-08-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    "type": "Food & Drink"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -2045,6 +1993,19 @@
     "endDate": "2026-09-24"
   },
   {
+    "title": "Telluride R-1 School District Board Retreat",
+    "href": "https://koto.org/event/telluride-r-1-school-district-board-retreat/",
+    "date": "2026-08-26",
+    "time": "9:00 AM",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
+    "type": "Community"
+  },
+  {
     "title": "THE ONLIES",
     "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
     "date": "2026-08-26",
@@ -2056,6 +2017,19 @@
     "source": "Sherbino Theater",
     "desc": "",
     "type": "Community"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-27/",
+    "date": "2026-08-27",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -2110,6 +2084,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Coffee & Climate Conversations: Where Recreation meets Resilience",
+    "href": "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
+    "date": "2026-08-27",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "RSUN \\\\ MINDSET",
     "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
     "date": "2026-08-27",
@@ -2121,6 +2108,19 @@
     "source": "The Alibi",
     "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
     "type": "Community"
+  },
+  {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-28/",
+    "date": "2026-08-28",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
   },
   {
     "title": "Telluride Farmers Market",
@@ -2514,19 +2514,6 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
-  },
-  {
-    "title": "Wine and Wickets",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    "date": "2026-09-02",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    "type": "Food & Drink"
   },
   {
     "title": "Mountain Towns 2030 with Mayor John Clark",
@@ -3053,19 +3040,6 @@
     "source": "Mountain Village",
     "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
     "type": "Community"
-  },
-  {
-    "title": "Wine and Wickets",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/wine-and-wickets/",
-    "date": "2026-09-09",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/49138/wine-and-wickets-1800x900.jpg",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Complimentary wine tasting paired with lawn games at Alloy Ranch. Drop in, pour through a few featured wines with our team, try your hand at croquet,",
-    "type": "Food & Drink"
   },
   {
     "title": "OCAA Art Show: Thomas Livingstone Photography",
@@ -3811,7 +3785,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -4221,5 +4195,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for the fourth exploration hike of the Nature in Four-Season series. For…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Hanneke Cassel Trio",
+    "href": "https://www.telluride.com/event/hanneke-cassel-trio/",
+    "date": "2026-10-13",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63340/hanneke_cassel.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Chamber music that hits a little differently! Join Telluride Chamber Music for their yearly \"Not Your Average …",
+    "type": "Music"
   }
 ]

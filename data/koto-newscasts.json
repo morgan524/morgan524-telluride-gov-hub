@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-13-26",
+    "source": "KOTO Community Radio",
+    "date": "August 14, 2026",
+    "newsTopic": "community",
+    "copy": "West End Roundup with the San Miguel Basin Forum; Cat Movie Fisher with Risho Unda",
+    "href": "https://koto.org/news/newscast-8-13-26/"
+  },
+  {
     "title": "Newscast 8-12-26",
     "source": "KOTO Community Radio",
     "date": "August 13, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "arts-culture",
     "copy": "On this week's Regional Roundup, hear about literary endeavors around the region. We hear about a new book inspired by the author's own journey from being a former east coast attorney to moving to Colorado to work on a horse ranch. Then we visit a bookstore in Nederland to hear how it is working to create a community space. After that, best selling",
     "href": "https://koto.org/news/newscast-7-31-26/"
-  },
-  {
-    "title": "Newscast 7-30-26",
-    "source": "KOTO Community Radio",
-    "date": "July 31, 2026",
-    "newsTopic": "community",
-    "copy": "West End Roundup with the San Miguel Basin Forum; No Holds Bard with Love’s Labor’s Lost; Cat Movie Fisher with Risho Unda",
-    "href": "https://koto.org/news/newscast-7-30-26/"
   }
 ]

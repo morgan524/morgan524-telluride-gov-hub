@@ -1,7 +1,4 @@
 {
-  "county|2026-07-14|Historical Commission": {
-    "sv": 4
-  },
   "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026": {
     "sv": 4,
     "zoomUrl": "https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw",
@@ -93,10 +90,6 @@
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
-  },
-  "county|2026-07-14|San Miguel Basin Fair Board": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1049/files/agenda/1892"
   },
   "county|2026-07-15|San Miguel Basin Fair Board": {
     "sv": 4,
@@ -272,7 +265,10 @@
   },
   "county|2026-08-19|Board of County Commissioners Meeting": {
     "sv": 4,
-    "ph": "a12dfd2ce826475e"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/899/files/agenda/1958",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/HQG-1W5yTEyLa2v5rWoq-g",
+    "passcode": "557341",
+    "phone": "719-359-4580"
   },
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291",
@@ -501,6 +497,14 @@
   },
   "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)": {
     "agendaUrl": "https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015",
+    "sv": 4
+  },
+  "norwood|2026-08-17|Planning and Zoning Commission Cancelled": {
+    "agendaUrl": "https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf",
+    "zoomUrl": "https://us02web.zoom.us/j/85001344971",
+    "meetingId": "850 0134 4971",
+    "passcode": "8142302",
+    "phone": "970-327-4288",
     "sv": 4
   }
 }
