@@ -1920,7 +1920,8 @@
     "price": 833586,
     "hoa_monthly": 609.86
    },
-   "construction_method_note": "Maintainer attributes cost control partly to modular construction \u2014 NOT confirmed in official pages; verify before public use [X]"
+   "construction_method_note": "MODULAR. Confirmed 2026-08-13 by Morgan Smith, who knows the builder directly. Previously flagged [X] as unconfirmed because it appears nowhere in the official project pages. Source is a personal communication, not a public record, so it is citable on Livable Telluride's own authority but would be stronger with the builder on the record. This matters: Meadowlark is the only local project we can identify as modular, and it is also the cheapest per unit.",
+   "construction_method_reliability": "B \u2014 personal communication, not documentary"
   },
   "pinion_park_norwood_for_sale": {
    "source": "pinion_park_records",
