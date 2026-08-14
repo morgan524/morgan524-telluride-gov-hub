@@ -487,7 +487,7 @@
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
     "sv": 4,
-    "ph": "33dc8808fda3b3c7"
+    "ph": "9549626318722444"
   },
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117",
@@ -506,5 +506,9 @@
     "passcode": "8142302",
     "phone": "970-327-4288",
     "sv": 4
+  },
+  "smart|2026-09-10|SMART Board of Directors": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }

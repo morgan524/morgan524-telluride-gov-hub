@@ -401,7 +401,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"33dc8808fda3b3c7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"9549626318722444"},
 
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071","sv":4},
@@ -410,7 +410,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://ouraycountyco.gov/AgendaCenter/PreviousVersions/1015","sv":4},
 
   "norwood|2026-08-17|Planning and Zoning Commission Cancelled":
-    {"agendaUrl":"https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288","sv":4}
+    {"agendaUrl":"https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288","sv":4},
+
+  "smart|2026-09-10|SMART Board of Directors":
+    {"sv":4,"ph":"b858cb282617fb09"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -792,96 +795,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Flood work could begin within week",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County officials said Tuesday that flood mitigation work below the Gold Mountain Fire’s burn scar could begin as soon as next week, while warning that storms in the coming days could trigger further debris flows and accompanying property damage. County Attorney Leo Caselli said at a community ",
-    href: "https://www.ouraynews.com/2026/08/12/flood-work-begin-within-week/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Firefighter base moves to Gunnison",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The incident command post for the Gold Mountain Fire relocated to the Gunnison County Fairgrounds Saturday as Rocky Mountain Complex Incident Management Team 2 took over for Team 1 and combined efforts to focus more on the Elk Fire near Lake City. Firefighters from across the country camped at the O",
-    href: "https://www.ouraynews.com/2026/08/12/firefighter-base-moves-gunnison/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County fair carries on",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The night the Gold Mountain Fire started, the Cornell family anxiously watched the fire spreading toward their fenced livestock, the billowing smoke filling the canyon. They decided to load up their horses, goats and the 4-H lambs into trailers and evacuate. They took the 11 animals from their pastu",
-    href: "https://www.ouraynews.com/2026/08/12/county-fair-carries/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "We need to stand firm to preserve alpine tundra",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: The July 23 guest column by Sue Dreamweaver Spielman was excellent and brings up so many issues that we regular backcountry users experience. I have been recreating in this area since 1979. I’m a Jeep driver, backpacker, hiker and climber. I moved away from the area for a while. I have ",
-    href: "https://www.ouraynews.com/2026/08/12/need-stand-firm-preserve-alpine-tundra/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County clerk provided excellent service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I would like to acknowledge the excellent service I received from Damon Todd, Ouray County clerk and recorder. I had a question/complaint about the online vehicle license renewal system. I contacted Mr. Todd through Ouray County s website on Sunday. Later that afternoon, he responded wi",
-    href: "https://www.ouraynews.com/2026/08/12/county-clerk-provided-excellent-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Rather than sales tax, charge CR 361 road toll",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Dear Editor: I agree with the recent proposal by Ouray County to fund a rainy-day account for use in seemingly annual “emergencies” such as the rockfall last year on County Road 361, the cleanup from the recent Gold Mountain Fire and continuing damage to county roads and bridges from mudslides and w",
-    href: "https://www.ouraynews.com/2026/08/12/rather-sales-tax-charge-cr-361-road-toll/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago With progress on the Ouray side of Imogene Pass Jeep road nearing completion, plans are being made for its dedication. The date has tentatively been set for Sunday, Aug. 26, at or near ",
-    href: "https://www.ouraynews.com/2026/08/12/looking-back-20260813-0238-359314/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County inches ahead with possible tax questions",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "government",
-    copy: "Attorney: Must get buy-in from city, town to proceed with sales, use taxes Ouray County commissioners on Tuesday took another step toward putting two tax measures on the November ballot to raise money for disaster recovery and road and bridge projects. But they encountered a new wrinkle in their pla",
-    href: "https://www.ouraynews.com/2026/08/12/county-inches-ahead-possible-tax-questions/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Visitors cited for feeding bears",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "housing",
-    copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
-    href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Fall Foliage Tour Contest 🍂",
     source: "Norwood Colorado",
     sourceKey: "norwood",
@@ -919,6 +832,96 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's bulletin is attached below, but please check the parish calendar for the most up-to-date information.Please join us for praying the Holy Rosary on Sundays before 9:00 AM Holy Mass. It starts at 8:30 AM.Coffee and donuts every Sunday during ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/bulletin-for-august-9/",
+    img: ""
+  },
+  {
+    title: "Flood ravages homes",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
+    img: ""
+  },
+  {
+    title: "County floats disaster relief sales tax",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
+    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Log Hill won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
+    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Crews near full containment on fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
+    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "‘We were in a panic’",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "infrastructure",
+    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
+    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
+    img: ""
+  },
+  {
+    title: "Riders scrutinize Ouray’s new shuttle service",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
+    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Good For You!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "community",
+    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
+    img: ""
+  },
+  {
+    title: "Ridgway concert series puts trash in its place",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "arts-culture",
+    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
+    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
     img: ""
   },
   {
@@ -1289,7 +1292,10 @@ const MANUAL_SUMMARIES = {
     "Ouray County Planning Commission meets August 19 at the Ouray Courthouse for three public hearings. First up: a repeal of Section 16 of the county's land use regulations — a code change worth watching closely, since repealing an entire section rewrites the rules in ways that can ripple across future applications. Second, an amendment to an existing Special Use Permit for a restaurant in Colona. Third, an Exception application for Elk Meadows. Packet materials are attached to the posted agenda for anyone who wants the details before showing up.",
 
   "norwood|2026-08-17|Planning and Zoning Commission Cancelled":
-    "The August 17, 2026 Norwood Planning and Zoning Commission meeting has been cancelled. The next regular meeting is scheduled for September 21, 2026 at 6:30 p.m."
+    "The August 17, 2026 Norwood Planning and Zoning Commission meeting has been cancelled. The next regular meeting is scheduled for September 21, 2026 at 6:30 p.m.",
+
+  "smart|2026-09-10|SMART Board of Directors":
+    "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1610,6 +1616,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "An 'influencer' degree? Colleges bet on content creator major as critics question its value",
+    source: "Telluride Times",
+    date: "August 14, 2026",
+    firstSeen: "2026-08-14",
+    newsTopic: "government",
+    copy: "Arizona State just launched a bachelor's degree in content creation through its journalism school, joining a handful of universities now offering formal programs in the field. The creator economy tops $20 billion in U.S. revenue, though analysts note most of that money doesn't reach individual creators. It's a crowded, competitive space — worth watching how these degrees translate to actual careers.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_149025a1-8121-5718-aca8-442898992d60.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
   {
     title: "Hungry for more than dinner",
     source: "Telluride Times",
@@ -3940,7 +3958,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Mushroom Festival: The MycoLuscious & MycoLicious MycoLogical Poetry Show with Art Goodtimes & Friends",
     link: "https://sheridanoperahouse.com/events/telluride-mushroom-festival-the-mycoluscious-mycolicious-mycological-poetry-show-with-art-goodtimes-friends/",
-    description: "A beloved tradition of the Telluride Mushroom Festival, this poetry show at the Sheridan Opera House brings together Art Goodtimes and fellow performers for an evening of mycologically inspired verse, wordplay, and celebration of all things fungal. Expect a lively, eclectic blend of spoken word and literary wit woven through the festival's signature reverence for the mushroom world.",
+    description: "",
     pubDate: "2026-08-14",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
@@ -3951,7 +3969,7 @@ const SHERIDAN_EVENTS = [
   {
     title: "Telluride Mushroom Festival: Puff Ball Costume Dance Party at Telluride Mushroom Festival",
     link: "https://sheridanoperahouse.com/events/telluride-mushroom-festival-puff-ball-costume-dance-party-at-telluride-mushroom-festival/",
-    description: "A costume dance party hosted as part of the Telluride Mushroom Festival, encouraging attendees to dress as puffball mushrooms or other fungal-inspired creations for a festive evening at the Sheridan Opera House. The event blends the festival's signature celebration of all things mushroom with live music and dancing in one of Telluride's most beloved historic venues.",
+    description: "",
     pubDate: "2026-08-15",
     source: "sheridan",
     sourceLabel: "Sheridan Opera House",
