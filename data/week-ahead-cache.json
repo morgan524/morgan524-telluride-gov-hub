@@ -1,34 +1,34 @@
 {
-  "hash": "9eca3b3b2e9b9b939d13491188a17502cb49c8d5",
-  "lede": "The biggest thing on the civic calendar this week is the San Miguel County BOCC sitting as the Housing Authority on August 19 — affordable housing compliance procedures are on the table at a moment when the finances are stretched thin, and there's also a public hearing on an insubstantial amendment worth watching. Alongside that, Telluride's P&Z takes its first formal look at school district employee housing on the TMHS site, HARC weighs preliminary review of the Shandoka Lot redevelopment, and Ouray County's Planning Commission holds three public hearings including a proposed repeal of an entire section of its land use code. Tuesday also marks the first day of school for Telluride R-1.",
+  "hash": "ff461926dde2c2fc9336aa27359edf6b7bc1c133",
+  "lede": "Wednesday is the heaviest day on the calendar — the BOCC sits as the Housing Authority to take up regional affordable housing compliance procedures, while Telluride's P&Z gets its first formal look at a school district employee housing proposal on the high school site, and HARC reviews the Shandoka Lot redevelopment at 860 Black Bear Rd. Ouray County's Planning Commission also holds three public hearings Wednesday, including a proposed repeal of an entire section of the county's land use code — the kind of change that tends to matter long after the meeting ends.",
   "notable": [
     {
       "id": 5,
-      "stake": "HARC decides whether to retroactively approve an unpermitted structure in the historic district."
+      "stake": "Unpermitted Elks Lodge pergola seeks retroactive HARC approval in historic district."
     },
     {
       "id": 6,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — new construction on multiple buildings."
+      "stake": "Shandoka Lot redevelopment gets preliminary large-scale HARC review — new construction in town."
     },
     {
       "id": 7,
-      "stake": "Commission recommends 2027 campground and shower fee increases, including a 25% shower rate jump."
+      "stake": "Staff recommends 2027 campground and shower fee increases of up to 25%."
     },
     {
       "id": 8,
-      "stake": "BOCC reviews housing authority compliance and holds a public hearing on a land-use amendment."
+      "stake": "BOCC reviews housing authority compliance procedures and holds a public hearing on a land-use application."
     },
     {
       "id": 10,
-      "stake": "Three public hearings: repeal of entire land use code section, SUP amendment, and exception application."
+      "stake": "Three public hearings, including full repeal of a county land-use code section."
     },
     {
       "id": 11,
-      "stake": "Public hearings on four special event liquor permits for upcoming Telluride events."
+      "stake": "Four public hearings on special event liquor permits — public may weigh in."
     },
     {
       "id": 13,
-      "stake": "First formal review of school district employee housing proposal on the TMHS campus."
+      "stake": "School district employee housing proposal gets first formal P&Z review."
     }
   ]
 }

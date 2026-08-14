@@ -401,7 +401,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"9549626318722444"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"33dc8808fda3b3c7"},
 
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071","sv":4},
@@ -438,6 +438,14 @@ const DEEP_DIVE_UPDATES = [
 //   sourceUrl, topics: [] }. Rendered by hub-bub.html from the JSON mirror
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
+  {
+    date: "2026-08-14",
+    title: "Bears, bins, and the next climate plan",
+    body: "The Ecology Commission is set to work on two things at once: planning Black Bear Safety Week and reviewing the Materials & Consumption section of the 2027 Climate Action Plan update. That's a lot on one agenda. Bear safety tends to unite people — nobody wants a conflict. Climate action plans are different. Some residents think Telluride needs stronger consumption targets to mean anything; others worry the town is already asking a lot of people who are just trying to live up here. Which piece of this meeting matters more to you?",
+    choices: ["Bear safety is the priority", "The climate plan matters more", "Both deserve equal attention", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
   {
     date: "2026-08-13",
     title: "Energy codes: raising the bar, or raising the cost?",
@@ -3631,103 +3639,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yin Yang Yoga with Miriah",
-    link: "https://telluridelibrary.libcal.com/event/16801144?hs=a",
-    description: "9:00 AM – 10:00 AM · Yin Yang yoga is a combination of Vinyasa Flow (yang) incorporating Hatha and Kundalini with Yin Restorative poses.  We&#39;ll be warming up with some movement and Vinyasa flow and settle into longer yin restorative poses. Best of both worlds. Bring your own mat if you can; the library has a limited supply. This class is free and open to the public of all skill levels. Donations to the instructor are welcome.  Miriah has been local to Telluride area for over ten years and have been teaching yoga for six years. She owns her own herbal business, makes herbal products and co-hosts a weekly podcast. She also is an avid snowboarder, photographer, sticker artist and comedian.",
-    pubDate: "2026-08-13T15:00:00.000Z",
+    title: "Yoga for ALL with Jane & Jay",
+    link: "https://telluridelibrary.libcal.com/event/15803453?hs=a",
+    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
+    pubDate: "2026-08-14T14:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_08_13_53_35.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
   },
   {
-    title: "DMV2GO: Appointments Encouraged",
-    link: "https://telluridelibrary.libcal.com/event/15934447?hs=a",
-    description: "9:00 AM – 5:00 PM · Walk-ins are welcome, but if you&#39;d like to make an appointment, click here . Please Note, DMV2GO does not offer ANY testing services. RENEW - An existing Colorado Driver License, ID or Permit REPLACE - A lost or stolen Colorado Driver License, ID or Permit FIRST TIME - Colorado Driver License, ID or Permit* OUT OF STATE TRANSFER - Trade in your existing Driver License, ID or Permit for a Colorado one! * *Please visit the DMV website for more information and a list of required documents Bienvenidos sin cita, pero si quieres hacer una cita haga clic aqu&iacute;. Tenga en cuenta, DMV2GO no ofrece NING&Uacute;N servicio de prueba. …",
-    pubDate: "2026-08-13T15:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_16_11_58_44.jpg"
-  },
-  {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772775?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-08-13T16:30:00.000Z",
+    title: "Alchemical Mushroom Sound Bath-Limited Capacity",
+    link: "https://telluridelibrary.libcal.com/event/17274356?hs=a",
+    description: "10:30 AM – 12:00 PM · Attendance limited to 30 people We will start by enjoying a potent Spagyric Mushroom Elixir crafted by Sacred Herbal Extracts and then transition into a comfortable meditative space, laying down or seated. Brian will be intuitively guiding a journey through sound with a variety of gongs, singing bowls, bells, ancient whistles, handpan, chimes, and more. As we are immersed in the cosmic ocean of sound; these vibrations massage each cell of our body and calm our nervous systems. The harmonic resonance created by the gong tones allow us to easily drop into a blissful, peaceful state of relaxation. This is a great opportunity to be present to feel and connect more deeply with your choice of a mushroom extract while recharging our systems.",
+    pubDate: "2026-08-14T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_10_48_31.jpg"
   },
   {
-    title: "Learn to Play Pickleball with your family • Aprende a jugar al pickleball con tu familia!",
-    link: "https://telluridelibrary.libcal.com/event/17021980?hs=a",
-    description: "11:30 AM – 1:00 PM · Our favorite summer series is back, and this time with a twist! Kristen Milord will be teaching families how to play pickleball at the town courts (thank you, Parks and Recreation). We will offer one class each month for instruction and practice. Space is limited. Please sign up each family member separately and in advance.  Join us for some fun and fitness this summer!  &bull;  &iexcl;Nuestra serie de verano favorita est&aacute; de regreso, y esta vez con una novedad! Kristen Milord ense&ntilde;ar&aacute; a las familias a jugar pickleball en las canchas municipales (gracias al Departamento de Parques y Recreaci&oacute;n). Ofreceremos una clase cada mes para instrucci&oacute;n y pr&aacute;ctica. El cupo es limitado. Por favor, inscr&iacute;base con antelaci&oacute;n. &iexcl;Acomp&aacute;&ntilde;enos para disfrutar de diversi&oacute;n y actividad f&iacute;sica este verano!",
-    pubDate: "2026-08-13T17:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Town Park",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_11_39_14.png"
-  },
-  {
-    title: "CANCELLED Pilates for All Bodies",
-    link: "https://telluridelibrary.libcal.com/event/16536284?hs=a",
-    description: "12:30 PM – 1:15 PM · Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-13T18:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Wilkinson Public Library",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1732228821.jpg"
-  },
-  {
-    title: "Mushroom Craft with Ah Haa",
-    link: "https://telluridelibrary.libcal.com/event/16574841?hs=a",
-    description: "2:00 PM – 4:00 PM",
-    pubDate: "2026-08-13T20:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Upper Terrace",
-    imageUrl: ""
-  },
-  {
-    title: "Littles On the Move",
-    link: "https://telluridelibrary.libcal.com/event/13960356?hs=a",
-    description: "3:30 PM – 4:30 PM · Join us at this inclusive and welcoming playgroup for children ages 0-3 and their grownups. We have tunnels, a ball pit, instruments, and sensory activities. &Uacute;nase a nosotros en este grupo de juego inclusivo y acogedor para ni&ntilde;os de 0 a 3 a&ntilde;os y sus adultos. Habr&aacute; t&uacute;neles, piscina de bolas, instrumentos y actividades sensoriales.",
-    pubDate: "2026-08-13T21:30:00.000Z",
+    title: "Rewilding Oneself: How to Forage for Fungi Safely and Sustainably",
+    link: "https://telluridelibrary.libcal.com/event/17276125?hs=a",
+    description: "11:00 AM – 12:00 PM · The basics of how and why to get started hunting mushrooms for the table. Intended for those new to mushroom hunting.  Ken Kassenbrock, MD,PhD has been an avid hunter of wild mushrooms since the late 1970s. Trained as a physician-scientist, he has worked in Cell and Molecular Biology, including post-doctoral work with the brewer's yeast, Saccharomyces cerevisiae. Although his interests in fungi were initially largely culinary, over the years they expanded (mushroomed?) to include other aspects of the biology of this fascinating kingdom including ecology, toxicology, and cultivation. Avocation and vocation eventually converged, and Ken taught Mycology (mushrooms, molds, mildews and more) in the Biology Department at Colorado State University for many years before retiring as an Emeritus Professor.",
+    pubDate: "2026-08-14T17:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714667770.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_31_01.jpg"
   },
   {
-    title: "Citizenship Support & Civic Practice/Apoyo Comunitario para la Ciudadanía",
-    link: "https://telluridelibrary.libcal.com/event/17216790?hs=a",
-    description: "5:00 PM – 6:00 PM · Join us for a free, welcoming community workshop designed to help participants prepare for the USCIS citizenship interview and civics test. Together, we will practice civics questions, build confidence, and support one another on the path toward U.S. citizenship. All levels are welcome. &Uacute;nase a este taller comunitario gratuito y acogedor dise&ntilde;ado para ayudar a las personas a prepararse para la entrevista y el examen c&iacute;vico de ciudadan&iacute;a de USCIS. Juntos practicaremos las preguntas c&iacute;vicas, fortaleceremos la confianza y nos apoyaremos mutuamente en el camino hacia la ciudadan&iacute;a estadounidense. Todos los niveles son bienvenidos",
-    pubDate: "2026-08-13T23:00:00.000Z",
+    title: "BIPOC Community Gathering: Opening Circle and Connection",
+    link: "https://telluridelibrary.libcal.com/event/17276139?hs=a",
+    description: "12:15 PM – 1:15 PM · The Telluride Mushroom Festival has long been a place where people gather to celebrate fungi, science, art, education, and community. This year, the festival is piloting a BIPOC (Black, Indigenous, and People of Color) Community Gathering Space to help foster connection, belonging, and long-term participation within the mycological community. This gathering is a BIPOC affinity space created for Black, Indigenous, and People of Color attendees seeking connection, reflection, and community with others who share similar lived experiences. While many festival events are open to everyone, this space has been intentionally created to support BIPOC participants. The purpose is to provide an opportunity for connection, conversation, and community among attendees who share experiences of navigating mycology, conservation, outdoor spaces, and environmental fields from historically underrepresented backgrounds. We also warmly welcome BIPOC members of the Telluride community and surrounding region. …",
+    pubDate: "2026-08-14T18:15:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_22_17_55_25.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_30_34.jpg"
   },
   {
-    title: "Booze and Books at 123 Tacos",
-    link: "https://telluridelibrary.libcal.com/event/16963782?hs=a",
-    description: "5:15 PM – 6:30 PM · Sip on a libation while chatting with other bibliophiles about books you have read recently. It&#39;s totally open ended and open to everyone! 5:15pm the second Thursday of every month. The library will get some apps for the table; you purchase your own beverage.   Please sign up in advance . This month will be at 123 Tacos located at 123 S Oak St.",
-    pubDate: "2026-08-13T23:15:00.000Z",
+    title: "Fungi for Fido: There&#039;s a Mushroom for That!",
+    link: "https://telluridelibrary.libcal.com/event/17276168?hs=a",
+    description: "1:30 PM – 2:30 PM · Mushroom use in our pets is relatively new, but is gaining traction among many progressive pet parents. This lively talk will explain the many ways mushrooms can benefit our pets health and happiness. Specific mushrooms that have specific benefits for our pets will be discussed, as well as how to administer and dose mushrooms or mushroom products for our pets. Dr. Rob Silver is an integrative and holistic veterinarian who has included the use of functional mushrooms in his clinical work for 20 years., along with many other holistic and conventional modalities. He has authored the book: \"There&#39;s a Mushroom for That!\" describing the use of mushrooms, cannabis, diet and herbs for pet health strategies, and over the past 5 years has been working with a mushroom company developing pet specific mushroom products, and testing them clinically. …",
+    pubDate: "2026-08-14T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "123 Tacos Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_05_09_58_03.jpg"
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_32_09.jpg"
+  },
+  {
+    title: "Cultivating Relational Intelligence, Not Artificial Intelligence",
+    link: "https://telluridelibrary.libcal.com/event/17276187?hs=a",
+    description: "4:00 PM – 5:00 PM · Expand your capacity for connection, understanding and nuance in relationship. Gain skills to re-wild your authentic self-expression, through the art of Authentic Relating. These practices mirror the profound connections of fungi in the forest, and fungal wisdom will be our guide for relating to one another in more mycelial ways. Gain skills to navigate personal experiences and connect empathetically with others, fostering understanding and reciprocity. Join us for an interactive session filled with learning, play, and engaging games – a unique opportunity to enhance your connection skills in a fun and supportive environment. Authentic Relating (AR) Games are designed to bring people closer through interactive exercises that encourage presence, vulnerability, and genuine human connection. Whether you're looking to improve communication skills, deepen your relationships, or simply enjoy a unique social experience, this event is for you! …",
+    pubDate: "2026-08-14T22:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Program Room",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_34_11.jpg"
   }
 ];
 
@@ -3761,18 +3736,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "The Copper Children & Thom LaFond- Telluride Mushroom Fest",
-    link: "https://www.alibitelluride.com/calendar#eca-event=the-copper-children-telluride-mushroom-fest",
-    description: "The Copper Children are a diverse blend of styles and influences that span from ...",
-    pubDate: "2026-08-13",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/dc85c3b0-3a00-458b-946e-3f08cb24a8bc/-/crop/500x500/0,63/-/preview/"
-  },
   {
     title: "DJ Jonko X Codestar - Telluride Mushroom Fest",
     link: "https://www.alibitelluride.com/calendar#eca-event=codestar-x-jasper-telluride-mushroom-fest",
@@ -4363,95 +4326,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-13T06:00:00.000Z",
+    pubDate: "2026-08-14T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-08-13T14:15:00.000Z",
-    endDate: "2026-10-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
-    title: "Ouray Economic Development Committee",
-    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
-    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests. View on site | Email this event",
-    pubDate: "2026-08-13T14:30:00.000Z",
-    endDate: "2026-10-08",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray Community Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-13T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-13T16:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ouray County Fair 2026",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-fair-2026",
-    description: "Come see local youth's best rabbits, sheep, chickens and other farm animals. Drool over delicious baked goods, wines, needlework, art and photos in the Open General Projects category. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is allowed on the Fairgrounds. There is no smoking within 10 feet of the fair barn. Schedule of Events: find more details HERE. Thanks to all of the sponsors! View on site | Email this event",
-    pubDate: "2026-08-13T16:00:00.000Z",
-    endDate: "2026-08-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg"
-  },
-  {
-    title: "Community Open House For the Town of Ridgway’s Housing Action Plan & Master Plan Water Supply Element",
-    link: "https://events.ourayridgwayevents.com/event/community-open-house-for-the-town-of-ridgways-housing-action-plan-master-plan-water-supply-element",
-    description: "The Town of Ridgway and our consulting partners are nearing completion of the Ridgway Housing Action Plan (HAP). Join us for a Community Open House to learn more, ask questions, and discuss your perspectives on housing in your community! Points Consulting is also assisting the Town in amending our 2019 Master Plan by adding a Water Supply Element. Come learn more! All are welcome at this in-person event! The Open House is hosted by the Town of Ridgway Staff, accompanied by Points Consulting. Questions or comments can be directed to Angela Kemp, Town of Ridgway Senior Planner: Email: akemp@town.ridgway.co.us Phone: 970-626-5308 Ext. 214 Both the Housing Action Plan and Water Supply Element follow Colorado Department of Local Affairs (DOLA) planning guidelines. The Housing Action Plan also builds on findings from Ridgway’s 2025 Housing Needs Assessment. …",
-    pubDate: "2026-08-13T22:30:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/51579968896083/huge/c4cfc0e9259666342735abc334be44580e4c7198.jpg"
-  },
-  {
-    title: "Spencer Marlyn Band - Live @ Floating Lotus Brewery",
-    link: "https://events.ourayridgwayevents.com/event/spencer-marlyn-band-live-floating-lotus-brewery",
-    description: "Spencer Marlyn Band is what happens when a looping wizard and a one-man drum circle collide. Formed in Bend, Oregon by two Midwest transplants, this high-energy duo delivers the kind of sound you’d expect from a full band—genre-hopping their way through funk, reggae, bluegrass, jam, folk, and psychedelia. Frontman Spencer Marlyn combines captivating songwriting with a looping setup and effects pedal mastery, while percussionist Scottie brings a globally influenced punch, shaped by his background in West African rhythms and a wildly diverse drum kit. The result? A danceable, feel-good explosion of sound packed with originals and crowd-favorite covers. View on site | Email this event",
-    pubDate: "2026-08-14T00:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Floating Lotus Brewery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53500612747225/huge/d592d9f9005f6dd7c1d76cbb109c68986d38d503.jpg"
   },
   {
     title: "Ouray County Pride",
@@ -4464,6 +4345,42 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Clinton Street",
     imageUrl: "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg"
+  },
+  {
+    title: "Ouray County Fair 2026",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-fair-2026",
+    description: "Come see local youth's best rabbits, sheep, chickens and other farm animals. Drool over delicious baked goods, wines, needlework, art and photos in the Open General Projects category. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is allowed on the Fairgrounds. There is no smoking within 10 feet of the fair barn. Schedule of Events: find more details HERE. Thanks to all of the sponsors! View on site | Email this event",
+    pubDate: "2026-08-14T14:00:00.000Z",
+    endDate: "2026-08-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-14T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-14T16:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Ridgway Farmers Market",
@@ -4737,6 +4654,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Hartwell Park",
     imageUrl: "https://localist-images.azureedge.net/photos/52922424426850/huge/1e180755c642fe19893a7caee0beacbf99e967d3.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-08-18T14:15:00.000Z",
+    endDate: "2026-10-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
   },
   {
     title: "JAMIE & THE DREAMERS",
@@ -5459,6 +5388,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "",
     imageUrl: "https://localist-images.azureedge.net/photos/53629792783415/huge/87e789cb56363301409b7496f25a25cdfd62ef58.jpg"
+  },
+  {
+    title: "Ouray Economic Development Committee",
+    link: "https://events.ourayridgwayevents.com/event/ouray-economic-development-committee",
+    description: "The Ouray Economic Development Committee (OEDC) works as the liaison between the City and the local business community. This includes creating and implementing an Economic Development Plan and economic development incentives to best serve the business community and to align with programs that induce private investment enterprises and commerce. The committee also explores regional economic development efforts with the Town of Ridgway and Ouray County as well as is tasked with developing a Business Expansion and Retention (BEAR) program, participating in policy discussions and revisions to community planning documents, and making recommendations to the City Council about economic incentive requests. View on site | Email this event",
+    pubDate: "2026-09-10T14:30:00.000Z",
+    endDate: "2026-10-08",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Community Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/52092297170097/huge/a4669339e18604293e5cc63dffd58e4d928eee49.jpg"
   },
   {
     title: "OCAA Art Show: Thomas Livingstone Photography",

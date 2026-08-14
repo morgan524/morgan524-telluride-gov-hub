@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 14 Aug 2026 04:54:48 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2026 07:44:32 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Fri, Aug 14] Telluride Mushroom Festival: The MycoLuscious &amp; MycoLicious MycoLogical Poetry Show with Art Goodtimes &amp; Friends</title>
@@ -44,6 +44,32 @@ Telluride Mushroom Fest After Party]]></description>
 The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday]]></description>
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Fri, Aug 14] BIPOC Community Gathering: Opening Circle and Connection</title>
+      <link>https://telluridelibrary.libcal.com/event/17276139?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/bipoc%20community%20gathering%20opening%7C2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 18:15:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_30_34.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+12:15 PM – 1:15 PM · The Telluride Mushroom Festival has long been a place where people gather to celebrate fungi, science, art, education, and community. This year, the festival is piloting a BIPOC (Black, Indigenous, and People of Color) Community Gathering Space to help foster connection, belonging, and long-term participation within the mycological community. This gathering is a BIPOC affinity space created for Black, Indigenous, and People of Color attendees seeking connection, reflection, and community with others who share similar lived experiences. While many festival events are open to everyone, this space has been intentionally created to support BIPOC participants. The purpose is to provide an opportunity for connection, conversation, and community among attendees who share experiences of navigating mycology, conservation, outdoor spaces, and environmental fields from historically underrepresented backgrounds. We also warmly welcome BIPOC members of the Telluride community and surrounding region. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_30_34.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Fri, Aug 14] Cultivating Relational Intelligence, Not Artificial Intelligence</title>
+      <link>https://telluridelibrary.libcal.com/event/17276187?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/cultivating%20relational%20intelligence%20not%7C2026-08-14</guid>
+      <pubDate>Fri, 14 Aug 2026 22:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_34_11.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+4:00 PM – 5:00 PM · Expand your capacity for connection, understanding and nuance in relationship. Gain skills to re-wild your authentic self-expression, through the art of Authentic Relating. These practices mirror the profound connections of fungi in the forest, and fungal wisdom will be our guide for relating to one another in more mycelial ways. Gain skills to navigate personal experiences and connect empathetically with others, fostering understanding and reciprocity. Join us for an interactive session filled with learning, play, and engaging games – a unique opportunity to enhance your connection skills in a fun and supportive environment. Authentic Relating (AR) Games are designed to bring people closer through interactive exercises that encourage presence, vulnerability, and genuine human connection. Whether you're looking to improve communication skills, deepen your relationships, or simply enjoy a unique social experience, this event is for you! …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_34_11.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sat, Aug 15] Telluride Mushroom Festival: Puff Ball Costume Dance Party at Telluride Mushroom Festival</title>
@@ -142,19 +168,6 @@ The August 17, 2026 Norwood Planning and Zoning Commission meeting has been canc
       <category>Town of Norwood</category>
     </item>
     <item>
-      <title>[Tue, Aug 18] &quot;Best Day Ever&quot; Free Movie Screening</title>
-      <link>https://www.telluride.com/event/best-day-ever-free-movie-screening/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/best%20day%20ever%20free%7C2026-08-18</guid>
-      <pubDate>Tue, 18 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/63200/best_day_ever.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
       <title>[Meeting] General Assembly Meeting — 2026-08-18</title>
       <link>https://livabletelluride.org/gov-hub.html</link>
       <guid isPermaLink="false">https://livabletelluride.org/meeting/ophir%7C2026-08-18%7CGeneral%20Assembly%20Meeting</guid>
@@ -196,7 +209,7 @@ The August 19, 2026 Rico Board of Trustees Regular Meeting agenda hasn't been po
 
 The August 19 HARC agenda has one item: a pergola at 472 W Pacific Ave, the Elks Lodge property. The structure was built without a permit and is currently in violation — HARC will consider whether to approve it after the fact as a minor-scale alteration within the Telluride Historic Landmark District.
 
-⚡ Why it matters: HARC decides whether to retroactively approve an unpermitted structure in the historic district.]]></description>
+⚡ Why it matters: Unpermitted Elks Lodge pergola seeks retroactive HARC approval in historic district.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -209,7 +222,7 @@ The August 19 HARC agenda has one item: a pergola at 472 W Pacific Ave, the Elks
 
 A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary large-scale review — Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another — with a 3:00 PM site walk preceding the evening session. Both applications involve new construction of more than 5,000 sq ft in the Accommodations 2 zone district, with the Town of Telluride as owner and Design Workshop as applicant. The three Carhenge building clusters (A/B/C, D1/D2, and E1/E2/E3 at 700 W Pacific Ave) are continued to a September date TBD. A work session covers proposed new construction and shed work at 335 W Colorado — the County/Town Facilities project, now in its second HARC work session. Also on the public hearing list: a final large-scale application for 208 S Fir Street (5,000+ sq ft, Commercial zone), and smaller-scale items at 461 Dakota Ave and 734 Primrose Lane involving steep-slope construction.
 
-⚡ Why it matters: Preliminary large-scale review of Shandoka Lot redevelopment — new construction on multiple buildings.]]></description>
+⚡ Why it matters: Shandoka Lot redevelopment gets preliminary large-scale HARC review — new construction in town.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -222,7 +235,7 @@ A full slate at HARC on August 19, dominated by two projects that have been in t
 
 The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle sites moving from $55 to $60 and walk-in sites from $32 to $35; shower tokens would jump from $4 to $5 for five minutes, a 25% increase, partly to offset a new credit-card payment machine. Senior discount eligibility also creeps up, from age 63 toward the eventual target of 65. The campground is running at near-capacity through the summer — 97–99% occupancy on most site types in June and July — which gives the fee increases some market support. Second, the Commission holds a work session on the 5-year Capital Improvement Fund, setting priorities for 2027–2031 in advance of the August budget submittal. On the table: pool resurfacing, Oval redesign work (directed last meeting toward the alternate concept #2), Warner Field netting, river corridor improvements, and festival site upgrades. Staff flags 10% annual cost escalation as a budgeting reality. There's also a brief staff update on the River Trail re-alignment near the Public Works facility.
 
-⚡ Why it matters: Commission recommends 2027 campground and shower fee increases, including a 25% shower rate jump.]]></description>
+⚡ Why it matters: Staff recommends 2027 campground and shower fee increases of up to 25%.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -235,7 +248,7 @@ The Commission takes up two substantive items. First, staff is recommending 2027
 
 The BOCC's August 19 meeting has two items worth tracking. First, the Board — sitting as the San Miguel County Housing Authority — will spend 45 minutes on San Miguel Regional Housing Authority compliance procedures, a discussion that lands at a moment when affordable housing finances across the region are under real strain. Second, a public hearing on an insubstantial PUD amendment to the Lawson Hill PUD would update the development plan matrix to allow fences and yards within the setback. On the administrative side, the Board will consider Resolution 2026-33, updating the employee handbook on overtime comp time and the 457b retirement benefit. A housing specialist will also provide a general affordable housing update, and the Natural Resources & Climate Resilience director will check in. Consent agenda covers the June road report, July vendor and payroll payments, and minutes from three July meetings.
 
-⚡ Why it matters: BOCC reviews housing authority compliance and holds a public hearing on a land-use amendment.]]></description>
+⚡ Why it matters: BOCC reviews housing authority compliance procedures and holds a public hearing on a land-use application.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -259,7 +272,7 @@ The Ecology Commission meets August 19 to continue work on the 2027 Climate Acti
 
 Ouray County Planning Commission meets August 19 at the Ouray Courthouse for three public hearings. First up: a repeal of Section 16 of the county's land use regulations — a code change worth watching closely, since repealing an entire section rewrites the rules in ways that can ripple across future applications. Second, an amendment to an existing Special Use Permit for a restaurant in Colona. Third, an Exception application for Elk Meadows. Packet materials are attached to the posted agenda for anyone who wants the details before showing up.
 
-⚡ Why it matters: Three public hearings: repeal of entire land use code section, SUP amendment, and exception application.]]></description>
+⚡ Why it matters: Three public hearings, including full repeal of a county land-use code section.]]></description>
       <category>Meeting</category>
       <category>ouray</category>
     </item>
@@ -272,7 +285,7 @@ Ouray County Planning Commission meets August 19 at the Ouray Courthouse for thr
 
 Four public hearings on special event liquor permits fill this meeting. Palm Arts Inc. is seeking one permit for an Evening with Ken Burns — a fundraiser for the Telluride Historical Museum — at the Palm Theatre on August 30, with an anticipated 500 attendees. KOTO Radio is up next with a permit for its Live @ the Drive block party on N. Pine Street, August 27 from 2:00 to 9:30 pm. The Telluride Blues Society has two separate requests: one permit for Blisters and Brews at Elks Park on the morning of September 19, and three permits covering all three days of the Telluride Blues and Brews Festival at Town Park (September 18–20, running late into the night). Staff recommends approval on all four. The authority will also approve minutes from the July 16 meeting.
 
-⚡ Why it matters: Public hearings on four special event liquor permits for upcoming Telluride events.]]></description>
+⚡ Why it matters: Four public hearings on special event liquor permits — public may weigh in.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -296,7 +309,7 @@ The August 20, 2026 Mountain Village Town Council Meeting agenda hasn't been pos
 
 The August 20 P&Z meeting has two work sessions and one public hearing worth following. The school district's employee housing proposal gets its first formal look — a work session on new construction at the northwest corner of the Telluride Middle-High School site at 725 W Colorado, governed by an intergovernmental agreement between the Town and Telluride School District R1. The 238 N Pine Street minor subdivision — a proposal to split a 7,500-square-foot Historic Residential parcel into two lots — comes back for a public hearing after a long string of continuances dating to February. Two additional work sessions cover a Comprehensive Plan status update and a Land Use Code revision to Section 3-505 governing tree maintenance, removal, and relocation.
 
-⚡ Why it matters: First formal review of school district employee housing proposal on the TMHS campus.]]></description>
+⚡ Why it matters: School district employee housing proposal gets first formal P&Z review.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
