@@ -22,6 +22,12 @@ smc-watch.log
 .DS_Store
 *.swp
 
+# Word/Excel lock files. Created whenever a doc is open, deleted on close, and
+# they have been committed by accident before (see the stray ~$ entries that show
+# as deleted in git status).
+~$*
+.~lock.*
+
 # Sibling project — the Valley Project Map is a separate GitHub repo
 # (morgan524/livable-telluride-valley-map) with its own GitHub Pages
 # deploy. It's cloned alongside this repo as a working directory:
@@ -61,3 +67,9 @@ scripts/editorial/triage-report.json
 scripts/editorial/draft-sample.json
 scripts/editorial/.just-published.json
 content-autofix-proposals.json
+
+# Private data — never publish. Everything under assets/ is served on the live
+# site, so anything holding personal information must live here instead. Signature
+# and petition sheets carry names, home addresses, emails and phone numbers; a file
+# in assets/ is fetchable by URL whether or not anything links to it.
+private-data/
