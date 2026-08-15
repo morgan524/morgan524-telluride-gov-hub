@@ -33,40 +33,6 @@
     "noticeKey": "property-tax-exemption-2026"
   },
   {
-    "title": "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Proposal",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Foundation Repairs at the Placerville Schoolhouse.",
-    "deadline": "Open until contracted",
-    "expires": "2026-08-14",
-    "dates": "5/16",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=188",
-    "address": "",
-    "smcBidID": "188"
-  },
-  {
-    "title": "Request for Proposal -- Trout Lake Water Tank Roofing",
-    "entity": "San Miguel County",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Request for Proposal",
-    "filterTag": "public-entity",
-    "summary": "San Miguel County is seeking qualified respondents for: Trout Lake Water Tank Roofing.",
-    "deadline": "Open until contracted",
-    "expires": "2026-08-14",
-    "dates": "5/16",
-    "url": "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=187",
-    "address": "",
-    "smcBidID": "187"
-  },
-  {
     "title": "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
     "entity": "San Miguel County Assessor",
     "entityClass": "ent-county",
@@ -292,26 +258,6 @@
     "caseNumber": "2026PR30008"
   },
   {
-    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
-    "entity": "Montrose Memorial Hospital, Inc.",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email at BODapplications@montrosehealth.com, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM; elections will be held at the Board's annual meeting in October.",
-    "deadline": "2026-08-14",
-    "expires": "2026-08-14",
-    "dates": "7/23",
-    "papers": [
-      "ttimes_0723"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    "address": "800 South 3rd Street, Montrose, Colorado",
-    "noticeKey": "montrose-memorial-hospital-bod-2026"
-  },
-  {
     "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
     "entity": "Farmers' Water Development Company",
     "entityClass": "ent-county",
@@ -391,26 +337,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     "address": "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
     "noticeKey": "COL-000208-telluride-2027-budget"
-  },
-  {
-    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
-    "entity": "Montrose Memorial Hospital, Inc.",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026; elections will be held at the Board's annual meeting in October.",
-    "deadline": "2026-08-14",
-    "expires": "2026-08-14",
-    "dates": "7/30",
-    "papers": [
-      "ttimes_0730"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    "address": "Montrose Regional Health Administration, 800 South 3rd Street, Montrose, Colorado",
-    "noticeKey": "COL-000203-mmh-board-applications"
   },
   {
     "title": "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
@@ -510,26 +436,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
     "address": "Uncompahgre Plateau, Norwood and Ouray Ranger Districts, Grand Mesa, Uncompahgre and Gunnison National Forests, Colorado",
     "noticeKey": "SUHFER-objection-2026"
-  },
-  {
-    "title": "Public Notice -- Montrose Memorial Hospital Board of Directors Application",
-    "entity": "Montrose Memorial Hospital, Inc.",
-    "entityClass": "ent-county",
-    "entityLogo": "county",
-    "icon": "🏛️",
-    "iconClass": "type-rfp",
-    "type": "Public Notice",
-    "filterTag": "public-entity",
-    "summary": "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications to fill open positions on its Board of Directors. Application packets are available online, by email, or in person at the Montrose Regional Health Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the Board's annual meeting in October.",
-    "deadline": "2026-08-14",
-    "expires": "2026-08-14",
-    "dates": "8/6",
-    "papers": [
-      "ttimes_0806"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
-    "address": "800 South 3rd Street, Montrose, CO",
-    "noticeKey": "montrose-memorial-hospital-bod-applications-2026"
   },
   {
     "title": "Request for Proposal -- Lawson Hill Connector Trail Project",

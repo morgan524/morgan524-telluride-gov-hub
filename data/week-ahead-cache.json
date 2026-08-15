@@ -1,30 +1,34 @@
 {
-  "hash": "4c12c92b7f393145ccaa2adbb193b104302f7237",
-  "lede": "The meeting to watch this week is the Ouray County Planning Commission on August 19, where three public hearings include a proposed repeal of an entire section of the county's land use regulations — the kind of code change that reshapes how future development gets reviewed. Also on Tuesday, the San Miguel County BOCC holds a public hearing on housing authority compliance procedures, Telluride's HARC takes up the unpermitted Elks Lodge pergola and the large-scale Shandoka Lot redevelopment on Black Bear Road, and the Town's P&Z gets its first formal look at the school district's employee housing proposal at the middle-high school site.",
+  "hash": "12c31ad49875a8ad471cb642829fe1ec9ff28a5e",
+  "lede": "The biggest item this week lands at Ouray County's Planning Commission on August 19, where three public hearings include a proposed repeal of an entire section of county land use regulations — the kind of code change that reshapes what's possible on the ground for years to come. Also on the 19th, the BOCC sits as the Housing Authority to dig into regional affordable housing compliance, and Telluride's P&Z takes its first formal look at a school district employee housing proposal. HARC has a full slate too, with the Shandoka Lot redevelopment on Black Bear Road coming in for preliminary large-scale review.",
   "notable": [
     {
-      "id": 5,
-      "stake": "HARC votes on after-the-fact approval of unpermitted Elks Lodge pergola."
-    },
-    {
       "id": 6,
-      "stake": "Shandoka Lot redevelopment on Black Bear Rd gets preliminary large-scale HARC review."
+      "stake": "Unpermitted pergola at Elks Lodge seeks retroactive HARC approval in historic district."
     },
     {
       "id": 7,
-      "stake": "Commission considers 2027 campground and shower fee increases of up to 25%."
+      "stake": "Shandoka Lot redevelopment on Black Bear Rd enters preliminary large-scale HARC review."
     },
     {
       "id": 8,
-      "stake": "BOCC holds public hearing on housing authority compliance amid regional affordability strain."
+      "stake": "Staff recommending 2027 campground and shower fee increases of up to 25%."
     },
     {
-      "id": 10,
-      "stake": "Three public hearings include repeal of an entire county land-use code section."
+      "id": 9,
+      "stake": "BOCC reviews housing authority compliance and holds public hearing on land-use amendment."
     },
     {
-      "id": 13,
-      "stake": "First formal review of school district employee housing proposal at middle-high school site."
+      "id": 11,
+      "stake": "Ouray County considers repealing entire land-use code section; three public hearings open."
+    },
+    {
+      "id": 12,
+      "stake": "Public hearings on multiple special event liquor permits, including 500-person Ken Burns fundraiser."
+    },
+    {
+      "id": 14,
+      "stake": "School district employee housing at TMHS site gets first formal P&Z review."
     }
   ]
 }

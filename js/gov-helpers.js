@@ -130,18 +130,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/dRjdHtmeTB6DmemBLALAFw","meetingId":"876 4109 1694","passcode":"695618.","phone":"301-715-8592","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8019"},
-
-  "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA","meetingId":"812 9136 3866","passcode":"440860.","phone":"301-715-8592","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8018"},
-
-  "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
-    {"sv":4},
-
-  "county|2026-07-15|Board of County Commissioners Meeting":
-    {"sv":4,"zoomUrl":"https://us02web.zoom.us/meeting/register/87LtYrfrQi6gpaig1FKSzA","meetingId":"891 9923 0367","passcode":"036814","phone":"719-359-4580","agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/898/files/agenda/1917"},
-
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     {"sv":2},
 
@@ -172,14 +160,8 @@ const MEETING_AGENDA_META = {
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288","zoomUrl":"https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1"},
 
-  "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
-    {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8080"},
-
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"},
-
-  "county|2026-07-15|San Miguel Basin Fair Board":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1050/files/agenda/1893"},
 
   "county|2026-07-16|San Miguel Basin Fair Board":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1046/files/agenda/1894"},
@@ -225,12 +207,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-08-11|Town Council - Aug 11 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8041","zoomUrl":"https://us06web.zoom.us/meeting/register/HhPERZh2Rey09qBDf2d5ug","meetingId":"830 1182 2138","passcode":"888369.","phone":"719) 359-4580"},
-
-  "ridgway|2026-07-15|Ridgway Planning Commission Meeting":
-    {"zoomUrl":"https://us02web.zoom.us/j/83926517027?pwd=V8wFqdDzZdJ3aYPmILDxIyVt8aQWpA.1","meetingId":"839 2651 7027","passcode":"519777","phone":"970.626.5308","sv":4,"agendaUrl":"https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Ridgway-Planning-Commission-Meeting-Packet---July-15%2C-2026.pdf"},
-
-  "rico|2026-07-15|Rico Board of Trustees Regular Meeting":
-    {"sv":4,"agendaUrl":"https://townofrico.colorado.gov/sites/townofrico/files/documents/Board%20of%20Trustees%20July%202026%20Agenda.pdf"},
 
   "county|2026-08-12|Board of County Commissioners Work Session":
     {"sv":4},
@@ -413,7 +389,13 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/39acf0aed/08.17.2026+P%26Z+BOA+Agenda+-+Cancel.pdf","zoomUrl":"https://us02web.zoom.us/j/85001344971","meetingId":"850 0134 4971","passcode":"8142302","phone":"970-327-4288","sv":4},
 
   "smart|2026-09-10|SMART Board of Directors":
-    {"sv":4,"ph":"b858cb282617fb09"}
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"1ee3d118528867aa"},
+
+  "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -709,7 +691,13 @@ const MEETING_PREVIEWS = {
     "The Planning Commission is expected to hold three public hearings: a repeal of Section 16, an amendment to a special use permit for a Colona restaurant, and an exception application for Elk Meadows.",
 
   "norwood|2026-08-17|Planning and Zoning Commission Cancelled":
-    "This meeting has been canceled. The Norwood Planning and Zoning Commission will next meet on September 21, 2026, at 6:30 p.m. at Norwood Town Hall."
+    "This meeting has been canceled. The Norwood Planning and Zoning Commission will next meet on September 21, 2026, at 6:30 p.m. at Norwood Town Hall.",
+
+  "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
+    "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance, as well as review open space elements of relevant plans and potentially formulate recommendations to Town Council on open-space-related matters.",
+
+  "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
+    "The Open Space Commission will conduct a site walk at the Boomerang Road Trailhead to review potential sign sizes and placements for the Telluride Valley Floor Open Space. The meeting will also include a public comment period."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1016,22 +1004,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-14';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-14';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-15';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-15';
 
 const MANUAL_SUMMARIES = {
-  "telluride|2026-07-15|Historic & Architectural Review Commission Chair - Jul 15 2026":
-    "Two Town-owned civic buildings come before HARC on July 15. First is Town Hall at 135 W Columbia Ave — a minor-scale alteration for accessibility improvements and renovations to the designated local landmark, with no floor area increase. Second is the Parks & Recreation office and garage at 500 E Colorado Ave — a minor-scale addition that will increase floor area by more than 25%, resulting in a building still under 1,000 square feet. Both projects are designed by Hellmuth, Obata & Kassabaum and reviewed under the 2024 Design Guidelines and Standards.",
-
-  "telluride|2026-07-15|Historic & Architectural Review Commission - Jul 15 2026":
-    "The July 15 HARC meeting is dominated by the Carhenge redevelopment project at 700 W Pacific Ave — three separate Preliminary Large-Scale public hearings covering Buildings A, B, C, D1, D2, E1, E2, and E3 on Lots 34 and 34B of Backman Village, all new construction outside the Telluride Historic Landmark District in an Accommodations 2 zone, with Design Workshop as applicant and the Town itself as owner. A work session on the Shandoka Lot redevelopment at 860 Black Bear Rd — another Town-owned Accommodations 2 parcel — follows. Also on the hearing docket is a continued amendment to a prior Certificate of Appropriateness for 239 N Aspen, inside the THLD, elevated by the HARC Chair back in May.",
-
-  "telluride|2026-07-15|Parks & Recreation Commission - Jul 15 2026":
-    "The July 15, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
-
-  "county|2026-07-15|Board of County Commissioners Meeting":
-    "Two Land Use Code amendments headline the July 15 BOCC meeting. The first updates Section 5-31 governing Natural Medicine Businesses — a category that's been working its way through county code since Colorado's 2022 legalization of psychedelic-assisted therapy. The second addresses Nonconforming Lots, the kind of code language that quietly shapes what can and can't be built on the valley's more complicated parcels. There's also a lot-line vacation at Lawson Hill PUD — specifically the county jail property, Lots 425-1 and 425-2. On the administrative side: the County Assessor presents the Board of Equalization value report, the board takes up a new Records Retention Schedule, and Natural Resources Director Starr Jamison brings three federal public lands items — letters on the Mountain Pact, the Public Lands Workforce Stability Act, and the Public Lands Integrity Act. The consent agenda includes a retaining wall agreement for County Road 58P and a liquor license public hearing covers a Rotary Foundation event at the Telluride Airport in September.",
-
   "airport|2026-07-16|TRAA Board of Commissioners Meeting":
     "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
@@ -1062,14 +1038,8 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-07-29|(RESCHEDULED) Parks & Recreation Commission - Jul 29 2026":
     "On Wednesday, July 29, at noon, Parks & Rec will take up the already-approved, but very controversial, paving of the Town Park grass oval for installing basketball/pickleball courts. Local citizens have collected over 400 signatures and letters in opposition to this project.",
 
-  "telluride|2026-07-15|(RESCHEDULED) Parks & Recreation Commission - Jul 15 2026":
-    "The July 15, 2026 (Rescheduled) Parks & Recreation Commission agenda hasn't been posted yet.",
-
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     "The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.",
-
-  "county|2026-07-15|San Miguel Basin Fair Board":
-    "The San Miguel Basin Fair Board holds a special meeting at 10pm on July 15 — a late-night debrief session following what appears to be fair day itself. The agenda is a short two items: a debrief of the day and discussion of whatever matters came to the board from it. Routine wrap-up, nothing of broad public consequence on the face of it.",
 
   "county|2026-07-16|San Miguel Basin Fair Board":
     "The San Miguel Basin Fair Board convenes a special meeting at 10pm — an end-of-day debrief and discussion of whatever came up during the fair. The agenda is deliberately open-ended, which is how these post-event sessions tend to go.",
@@ -1115,12 +1085,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-08-11|Town Council - Aug 11 2026":
     "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and landscaping/tree maintenance rules to align with state wildfire mitigation requirements. That's the kind of code change that quietly reshapes what property owners can and can't do with vegetation and building materials for years to come. The morning work sessions cover a parking program update, next steps for the Fino Units and Spruce House affordable housing properties, a potential floodplain remapping project, and a Comprehensive Plan update — four topics that touch the town's long-running tensions around housing, infrastructure, and growth management. The afternoon brings a 2027 goals-and-objectives discussion and a look at potential updates to the Telluride Energy Mitigation Program's fee calculations. A budget reappropriation ordinance gets its first reading. The manager's report includes occupancy updates on the Virginia Placer 2A housing project, mudslide cleanup and stormwater infrastructure, and a status check on the Oval Project.",
-
-  "ridgway|2026-07-15|Ridgway Planning Commission Meeting":
-    "The July 15th Ridgway Planning Commission meeting has one substantive item: a public hearing on a proposed resubdivision at 845 & 847 Hyde Street. The applicant, Zack Young, is asking to split an existing lot — currently holding a duplex, a greenhouse, storage outbuildings, and a vacant parcel — into two separate lots. Lot 2 (8,059 sq. ft.) would retain the existing duplex; Lot 1 (6,104 sq. ft.) would be vacant and available for future development. No new construction is proposed now. The property is zoned Historic Residential, and both lots meet minimum dimensional standards, though a staircase encroaching on a side setback must be removed before the plat is recorded. Outdoor storage on Lot 1 also needs to come into compliance. The Planning Commission's role here is to make a recommendation — final approval goes to Town Council. Routine minutes and staff updates round out the agenda.",
-
-  "rico|2026-07-15|Rico Board of Trustees Regular Meeting":
-    "A busy night in Rico. The Board takes up its Q2 financials, a lease with the Rico Historical Society for space at 15 S. Glasgow Avenue, and a construction contract with Lewis Excavation to replace the water service line beneath the Dolores River between Piedmont and North River Streets — that last one being the kind of infrastructure work small mountain towns have to keep doing quietly just to stay functional. Then comes a round of housekeeping on the books: six ordinances on first reading, all repeals. Out go an old misdemeanor penalty ordinance (no. 131), rules on municipal equipment loans to private individuals (no. 271), a standalone mayoral qualifications ordinance (no. 278), the Town Manager duties ordinance (no. 1999-2), dog licensing fees (no. 2001-5), and authorization for the North Rico non-profit corporation (no. 2006-1). Discussion rounds out the evening: a voluntary cleanup update, the November 2026 election, and — notably — whether to change how often the Board meets and when it starts.",
 
   "county|2026-08-12|Board of County Commissioners Work Session":
     "The August 12 Board of County Commissioners Work Session agenda hasn't been posted yet.",
@@ -1303,7 +1267,13 @@ const MANUAL_SUMMARIES = {
     "The August 17, 2026 Norwood Planning and Zoning Commission meeting has been cancelled. The next regular meeting is scheduled for September 21, 2026 at 6:30 p.m.",
 
   "smart|2026-09-10|SMART Board of Directors":
-    "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet."
+    "The September 10, 2026 SMART Board of Directors agenda hasn't been posted yet.",
+
+  "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
+    "The September 14, 2026 Open Space Commission agenda hasn't been posted yet.",
+
+  "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
+    "The Open Space Commission is stepping away from the conference table for this one — literally. Members will meet at the Boomerang Road Trailhead near the Shell Station on Highway 145 Spur and walk the Valley Floor to look at potential sign sizes and placements. The agenda is careful to note this is non-content signage review, meaning the focus is on physical scale and location, not what the signs say. A site walk like this is how decisions about the Valley Floor tend to get made well — on the ground, not on paper."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2424,42 +2394,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "From the Western Slope to Washington",
-    source: "Telluride Times",
-    date: "August 1, 2026",
-    firstSeen: "2026-08-01",
-    newsTopic: "education",
-    copy: "Three Western Slope high school seniors — from Olathe, Ridgway, and Nucla — traveled to Washington, D.C., in July as Pinhead Institute interns to participate in the Smithsonian National Youth Summit on American history. It marked the first time Pinhead expanded its internships beyond STEM subjects, through its Smithsonian Rural Initiative affiliation. The students worked with museum staff, curators, and educators to develop classroom materials on civic engagement and U.S. history.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_87498e26-e4ee-40bb-ba79-604becc0d886.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/0f/a0f80091-d57c-44b7-9b24-02d9b3eac975/6a6d2c6cbafbc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Fishing closures are becoming routine as record heat warms rivers in the US West",
-    source: "Telluride Times",
-    date: "August 1, 2026",
-    firstSeen: "2026-08-01",
-    newsTopic: "recreation",
-    copy: "Hot, dry conditions this summer have pushed river temperatures across the West to levels dangerous for trout, prompting fishing closures on over 1,200 miles of Montana rivers and 635 miles in Colorado. Yellowstone has now restricted afternoon fishing parkwide. Guides and biologists note these closures have grown routine over the past decade.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/state/article_d23962d1-8e6f-5e4d-9cdf-a6ddafb0b8f0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/15/51547524-cd0c-5f3e-aa81-27a688667c34/6a6de1a38bda1.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Parks and rec commission members vote 4-3 to keep oval green",
-    source: "Telluride Times",
-    date: "August 1, 2026",
-    firstSeen: "2026-08-01",
-    newsTopic: "recreation",
-    copy: "The Telluride Parks and Recreation Commission voted 4-3 to recommend keeping the oval green, favoring a plan that improves drainage and irrigation while enlarging the existing basketball court. Over 450 petition signatures and strong public turnout pushed back against a paving proposal from the 2020 Town Parks Master Plan. Town Council will have the final say.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_915fe3a9-de90-417a-8fd0-a647f1533622.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/a5/6a51461b-5359-4480-958f-e4b3ba7efb32/6a6d2a1851ce2.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
     source: "Town of Telluride",
     date: "August 12, 2026",
@@ -2579,6 +2513,14 @@ const TELLURIDE_TIMES_ARTICLES = [
 
 const KOTO_NEWSCASTS = [
   {
+    title: "Newscast 8-14-26",
+    source: "KOTO Community Radio",
+    date: "August 15, 2026",
+    newsTopic: "public-safety",
+    copy: "On this week's Regional Roundup, we explore the mental and emotional toll a hectic fire season can take on firefighters. We also look at how the language we use to describe wildfire can shape the way we feel about fire. Then, we turn to water and we hear a report about the impact of this year's drought on the Arkansas River and the communities that",
+    href: "https://koto.org/news/newscast-8-14-26/"
+  },
+  {
     title: "Newscast 8-13-26",
     source: "KOTO Community Radio",
     date: "August 14, 2026",
@@ -2625,14 +2567,6 @@ const KOTO_NEWSCASTS = [
     newsTopic: "arts-culture",
     copy: "Telluride Film Festival Full Steam Ahead with Nugget Rebuild; Eco-Grief Finds the Space Between Grief and Gratitude",
     href: "https://koto.org/news/newscast-8-3-26/"
-  },
-  {
-    title: "Newscast 7-31-26",
-    source: "KOTO Community Radio",
-    date: "August 1, 2026",
-    newsTopic: "arts-culture",
-    copy: "On this week's Regional Roundup, hear about literary endeavors around the region. We hear about a new book inspired by the author's own journey from being a former east coast attorney to moving to Colorado to work on a horse ranch. Then we visit a bookstore in Nederland to hear how it is working to create a community space. After that, best selling",
-    href: "https://koto.org/news/newscast-7-31-26/"
   }
 ];
 
@@ -3122,28 +3056,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-08-14/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-08-14T10:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Free Youth Tennis & Pickleball Program",
-    link: "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
-    description: "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who may not be able to participate due to financial constraints. Inclusivity: No one will be turned away based on their ability to pay. No Membership Required. Demo equipment is available at no charge for use during this clinic.",
-    pubDate: "2026-08-14T15:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Bilingual Balance in Motion",
     link: "https://koto.org/event/bilingual-balance-in-motion/2026-08-15/",
     description: "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
@@ -3571,6 +3483,50 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: ""
+  },
+  {
+    title: "Tea and Tarot",
+    link: "https://koto.org/event/tea-and-tarot/2026-08-23/",
+    description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    pubDate: "2026-08-23T14:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-24/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-24T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-24/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-24T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride R-1 School Board Work Session",
+    link: "https://koto.org/event/telluride-r-1-school-board-work-session/",
+    description: "Telluride R-1 School District Board of Education holds a work session on Monday, August 24th, at 3:30 p.m. in the Bridal Veil conference room at TMHS and via Zoom. Agenda & Zoom link can be found at tellurideschool.org.",
+    pubDate: "2026-08-24T15:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: ""
   }
 ];
 
@@ -3661,7 +3617,7 @@ const HUMANE_SOCIETY_ANIMALS = [
     summary: "Adult Dog • Poodle, Standard • Male",
     firstSeen: "2026-08-13",
     revealDate: "2026-08-13",
-    lastSeen: "2026-08-14"
+    lastSeen: "2026-08-15"
   }
 ];
 
@@ -5573,6 +5529,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53560045436493/huge/a14a8a4e7c57d0a1bef341efac6f2260bc078cfc.jpg"
   },
   {
+    title: "Talon Talk: Ridgway State Park Summer Program Series",
+    link: "https://events.ourayridgwayevents.com/event/talon-talk-ridgway-state-park-summer-program-series",
+    description: "Come experience the raw power and beauty of nature's most skilled hunters! Join us for a captivating evening as Nature's Educators brings their incredible live raptors to Ridgway State Park for an up-close encounter you won't want to miss. This Live Raptor Viewing program offers a rare, exhilarating encounter with the \"kings of the sky\" in a stunning outdoor setting. It’s more than just a viewing; it’s an educational deep-dive into the vital role these predators play in maintaining the health of our local environment. View on site | Email this event",
+    pubDate: "2026-09-19T01:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ridgway State Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53702771968357/huge/e53b021369f111f5d927b10fb43889fa856f6d5f.jpg"
+  },
+  {
     title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
     link: "https://events.ourayridgwayevents.com/event/the-courtyard-at-610-presents-alex-dunn-mimi-genheimer",
     description: "Gates: 6:00 || Show: 6:30 pm || $20 Advance / $25 day of show || Enter via the alleyway behind the Sherbino and 610 Arts Collective || Outdoor Venue || Setting: seated || Limited bar onsite **Due to the local Gold Mountain Fire – Poor air quality or rain location will be inside on The Sherbino main stage for Courtyard shows** The Courtyard at 610 is a unique little venue behind our gallery space, the 610 Arts Collective, on Clinton St. The entrance is through the alleyway between N Cora St. and N Laura St behind the gallery and The Sherbino Theater. Likely to be our last Courtyard Show of the season! Join us for an intimate evening with Alex Dunn and Mimi Genheimer! …",
@@ -5880,6 +5847,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/53426461193935/huge/60b2d5b995c4ae4774c5f6a3f12d2d813ef7162b.jpg"
+  },
+  {
+    title: "TYLER SIMMONS",
+    link: "https://events.ourayridgwayevents.com/event/tyler-simmons-4776",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-10-13T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   }
 ];
 
@@ -6927,6 +6905,17 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp"
   },
   {
+    title: "Water in the West: The Colorado River and the Future of Lake Powell",
+    link: "https://www.telluride.com/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    description: "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a …",
+    pubDate: "2026-08-26",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/63380/water_in_the_west_instagram_copy.800x533.webp"
+  },
+  {
     title: "Coffee & Climate Conversations",
     link: "https://www.telluride.com/event/coffee-climate-conversations/",
     description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on …",
@@ -7311,40 +7300,6 @@ const LEGAL_NOTICES = [
     noticeKey: "property-tax-exemption-2026"
   },
   {
-    title: "Request for Proposal -- Foundation Repairs at the Placerville Schoolhouse",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Foundation Repairs at the Placerville Schoolhouse.",
-    deadline: "Open until contracted",
-    expires: "2026-08-14",
-    dates: "5/16",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=188",
-    address: "",
-    smcBidID: "188"
-  },
-  {
-    title: "Request for Proposal -- Trout Lake Water Tank Roofing",
-    entity: "San Miguel County",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Request for Proposal",
-    filterTag: "public-entity",
-    summary: "San Miguel County is seeking qualified respondents for: Trout Lake Water Tank Roofing.",
-    deadline: "Open until contracted",
-    expires: "2026-08-14",
-    dates: "5/16",
-    url: "https://www.sanmiguelcountyco.gov/bids.aspx?bidID=187",
-    address: "",
-    smcBidID: "187"
-  },
-  {
     title: "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
     entity: "San Miguel County Assessor",
     entityClass: "ent-county",
@@ -7548,24 +7503,6 @@ const LEGAL_NOTICES = [
     caseNumber: "2026PR30008"
   },
   {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
-    entity: "Montrose Memorial Hospital, Inc.",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email at BODapplications@montrosehealth.com, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM; elections will be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14",
-    expires: "2026-08-14",
-    dates: "7/23",
-    papers: ["ttimes_0723"],
-    url: "https://www.telluridenews.com/news/legals/article_fde85bc0-ac38-4ba1-9534-66f7d114f129.html",
-    address: "800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "montrose-memorial-hospital-bod-2026"
-  },
-  {
     title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
     entity: "Farmers' Water Development Company",
     entityClass: "ent-county",
@@ -7637,24 +7574,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
     address: "Town Hall, 135 W. Columbia Ave, Telluride, CO 81435",
     noticeKey: "COL-000208-telluride-2027-budget"
-  },
-  {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Applications",
-    entity: "Montrose Memorial Hospital, Inc.",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications for open positions on its Board of Directors. Application packets are available at www.montrosehealth.com, by email, or in person at the MRH Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by 5:00 PM on Friday, August 14, 2026; elections will be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14",
-    expires: "2026-08-14",
-    dates: "7/30",
-    papers: ["ttimes_0730"],
-    url: "https://www.telluridenews.com/news/legals/article_75aea7bc-6c31-4ed5-9d5b-9e77b399632d.html",
-    address: "Montrose Regional Health Administration, 800 South 3rd Street, Montrose, Colorado",
-    noticeKey: "COL-000203-mmh-board-applications"
   },
   {
     title: "Public Notice -- Farmers' Water Development Company Replacement Share Certificate #887",
@@ -7746,24 +7665,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
     address: "Uncompahgre Plateau, Norwood and Ouray Ranger Districts, Grand Mesa, Uncompahgre and Gunnison National Forests, Colorado",
     noticeKey: "SUHFER-objection-2026"
-  },
-  {
-    title: "Public Notice -- Montrose Memorial Hospital Board of Directors Application",
-    entity: "Montrose Memorial Hospital, Inc.",
-    entityClass: "ent-county",
-    entityLogo: "county",
-    icon: "🏛️",
-    iconClass: "type-rfp",
-    type: "Public Notice",
-    filterTag: "public-entity",
-    summary: "Montrose Memorial Hospital, Inc., a Colorado community nonprofit corporation, is accepting applications to fill open positions on its Board of Directors. Application packets are available online, by email, or in person at the Montrose Regional Health Administration office at 800 South 3rd Street, Montrose, Colorado. Completed applications must be returned by Friday, August 14, 2026 at 5:00 PM, with elections to be held at the Board's annual meeting in October.",
-    deadline: "2026-08-14",
-    expires: "2026-08-14",
-    dates: "8/6",
-    papers: ["ttimes_0806"],
-    url: "https://www.telluridenews.com/news/legals/article_509a3235-e766-47bd-b880-643207e48e0f.html",
-    address: "800 South 3rd Street, Montrose, CO",
-    noticeKey: "montrose-memorial-hospital-bod-applications-2026"
   },
   {
     title: "Request for Proposal -- Lawson Hill Connector Trail Project",

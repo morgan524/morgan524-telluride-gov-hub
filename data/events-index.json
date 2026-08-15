@@ -81,19 +81,6 @@
     "endDate": "2026-10-09"
   },
   {
-    "title": "Telluride Farmer's Market",
-    "href": "https://koto.org/event/telluride-farmers-market/2026-08-14/",
-    "date": "2026-08-14",
-    "time": "10:30 AM",
-    "location": "Oak Street Plaza, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
-    "type": "Food & Drink"
-  },
-  {
     "title": "Alchemical Mushroom Sound Bath-Limited Capacity",
     "href": "https://telluridelibrary.libcal.com/event/17274356?hs=a",
     "date": "2026-08-14",
@@ -185,19 +172,6 @@
     "desc": "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen…",
     "type": "Arts & Film",
     "endDate": "2026-08-28"
-  },
-  {
-    "title": "Free Youth Tennis & Pickleball Program",
-    "href": "https://koto.org/event/free-youth-tennis-pickleball-program-2/2026-08-14/",
-    "date": "2026-08-14",
-    "time": "3:30 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Community Tennis & Pickleball Program This program is available for children ages 8 – 16 to receive free tennis instruction from trained and certified coaches at the Telluride Racquet Club. Goal: This program is designed to reach those who…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Cultivating Relational Intelligence, Not Artificial Intelligence",
@@ -1662,6 +1636,19 @@
     "type": "Community"
   },
   {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-08-23/",
+    "date": "2026-08-23",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-23",
@@ -1714,6 +1701,19 @@
     "type": "Community"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-24/",
+    "date": "2026-08-24",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-08-24",
@@ -1724,6 +1724,19 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-24/",
+    "date": "2026-08-24",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
@@ -1911,6 +1924,19 @@
     "desc": "Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and…",
     "type": "Arts & Film",
     "endDate": "2026-09-24"
+  },
+  {
+    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
+    "href": "https://www.telluride.com/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    "date": "2026-08-26",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63380/water_in_the_west_instagram_copy.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a …",
+    "type": "Community"
   },
   {
     "title": "THE ONLIES",
@@ -3499,6 +3525,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Talon Talk: Ridgway State Park Summer Program Series",
+    "href": "https://events.ourayridgwayevents.com/event/talon-talk-ridgway-state-park-summer-program-series",
+    "date": "2026-09-18",
+    "time": "7:00 PM",
+    "location": "Ridgway State Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53702771968357/huge/e53b021369f111f5d927b10fb43889fa856f6d5f.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come experience the raw power and beauty of nature's most skilled hunters! Join us for a captivating evening as Nature's Educators brings their incredible live raptors to Ridgway State Park for an up-close encounter you won't want to miss.…",
+    "type": "Talks & Classes"
+  },
+  {
     "title": "4th Annual San Juan Slam Pickleball Tournament",
     "href": "https://events.ourayridgwayevents.com/event/4th-annual-san-juan-slam-pickleball-tournament",
     "date": "2026-09-18",
@@ -4104,6 +4143,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Are you interested in connecting with the landscapes of Ouray? Do you wish for a fun and engaging exploration that you can share with your family? Join SJMA in Ouray for the fourth exploration hike of the Nature in Four-Season series. For…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "TYLER SIMMONS",
+    "href": "https://events.ourayridgwayevents.com/event/tyler-simmons-4776",
+    "date": "2026-10-13",
+    "time": "4:00 PM",
+    "location": "687 N Cora Street, Ridgway, CO 81432",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "type": "Music"
   },
   {
     "title": "Hanneke Cassel Trio",

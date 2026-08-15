@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-14-26",
+    "source": "KOTO Community Radio",
+    "date": "August 15, 2026",
+    "newsTopic": "public-safety",
+    "copy": "On this week's Regional Roundup, we explore the mental and emotional toll a hectic fire season can take on firefighters. We also look at how the language we use to describe wildfire can shape the way we feel about fire. Then, we turn to water and we hear a report about the impact of this year's drought on the Arkansas River and the communities that",
+    "href": "https://koto.org/news/newscast-8-14-26/"
+  },
+  {
     "title": "Newscast 8-13-26",
     "source": "KOTO Community Radio",
     "date": "August 14, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "arts-culture",
     "copy": "Telluride Film Festival Full Steam Ahead with Nugget Rebuild; Eco-Grief Finds the Space Between Grief and Gratitude",
     "href": "https://koto.org/news/newscast-8-3-26/"
-  },
-  {
-    "title": "Newscast 7-31-26",
-    "source": "KOTO Community Radio",
-    "date": "August 1, 2026",
-    "newsTopic": "arts-culture",
-    "copy": "On this week's Regional Roundup, hear about literary endeavors around the region. We hear about a new book inspired by the author's own journey from being a former east coast attorney to moving to Colorado to work on a horse ranch. Then we visit a bookstore in Nederland to hear how it is working to create a community space. After that, best selling",
-    "href": "https://koto.org/news/newscast-7-31-26/"
   }
 ]
