@@ -474,5 +474,13 @@
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
     "sv": 4
+  },
+  "school|2026-08-24|Telluride Board of Education Work Session": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "school|2026-08-25|Telluride Board of Education Monthly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
   }
 }
