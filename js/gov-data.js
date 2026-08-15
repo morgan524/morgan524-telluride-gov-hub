@@ -350,94 +350,218 @@ const MV_CACHED_DATA = [
 
 const SCHOOL_BOARD_URL = 'https://www.tellurideschool.org/agendasandminutes';
 
-const SCHOOL_CACHE_DATE = '2026-03-24';
+const SCHOOL_CACHE_DATE = '2026-08-15';
 
 const SCHOOL_CACHED_DATA = [
-  // ── Upcoming (no agendas yet) ──
   {
-    date: 'April 20, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Special Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/42026_boe_special_meeting.pdf',
-    packetUrl: null,
-    special: true,
-    location: 'Bridal Veil District Conference Room / Zoom',
-    note: 'Special meeting -- agenda posted closer to the date.'
-  },
-  {
-    date: 'April 27, 2026',
-    time: '3:30 PM',
-    title: 'Telluride Board of Education Work Session',
+    date: "August 24, 2026",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Bridal Veil District Conference Room / Zoom',
-    note: 'Next scheduled work session -- agenda posted closer to the date.'
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: 'April 28, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/42826_mm_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom',
-    note: 'Next scheduled monthly meeting -- agenda posted closer to the date.'
-  },
-  {
-    date: 'May 18, 2026',
-    time: '3:30 PM',
-    title: 'Telluride Board of Education Work Session',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/51826_ws_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  },
-  {
-    date: 'May 19, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/51926_mm_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  },
-  {
-    date: 'June 9, 2026',
-    time: '3:30 PM',
-    title: 'Telluride Board of Education Work Session',
+    date: "August 25, 2026",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
     agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: 'June 9, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/6926_mm_packet.pdf',
+    date: "September 22, 2026",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
-  },
-  // ── Recent (with agendas) ──
-  {
-    date: 'March 16, 2026',
-    time: '3:30 PM',
-    title: 'Telluride Board of Education Work Session',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31626_ws_packet.pdf',
-    packetUrl: null,
-    special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
   },
   {
-    date: 'March 17, 2026',
-    time: '5:15 PM',
-    title: 'Telluride Board of Education Monthly Meeting',
-    agendaUrl: 'https://files.smartsites.parentsquare.com/3403/31726_mm_packet.pdf',
+    date: "September 22, 2026",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
     packetUrl: null,
     special: false,
-    location: 'Bridal Veil District Conference Room / Zoom'
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "October 20, 2026",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "November 16, 2026",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "November 17, 2026",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "December 14, 2026",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "December 15, 2026",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "January 19, 2027",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "January 19, 2027",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "February 16, 2027",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "February 16, 2027",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "March 15, 2027",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "March 16, 2027",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "April 26, 2027",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "April 27, 2027",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "May 17, 2027",
+    time: "3:30 PM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "May 18, 2027",
+    time: "5:15 PM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "June 8, 2027",
+    time: "9:00 AM",
+    title: "Telluride Board of Education Work Session",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
+  },
+  {
+    date: "June 8, 2027",
+    time: "11:00 AM",
+    title: "Telluride Board of Education Monthly Meeting",
+    agendaUrl: null,
+    packetUrl: null,
+    special: false,
+    location: "Bridal Veil District Conference Room / Zoom",
+    note: "Scheduled meeting -- agenda posted closer to the date."
   }
 ];
 

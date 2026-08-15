@@ -240,6 +240,26 @@
     "hook": ""
   },
   {
+    "source": "school",
+    "sourceLabel": "School District R-1",
+    "title": "Telluride Board of Education Work Session",
+    "date": "2026-08-24",
+    "time": "",
+    "location": "Bridal Veil District Conference Room / Zoom",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.tellurideschool.org/agendasandminutes",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "zoomMeetingId": "",
+    "zoomPasscode": "[object Object]",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
+    "hook": ""
+  },
+  {
     "source": "telluride",
     "sourceLabel": "Town of Telluride",
     "title": "Ethics Commission",
@@ -257,6 +277,26 @@
     "zoomPhone": "",
     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
     "commentEmail": "townclerk@telluride.gov",
+    "hook": ""
+  },
+  {
+    "source": "school",
+    "sourceLabel": "School District R-1",
+    "title": "Telluride Board of Education Monthly Meeting",
+    "date": "2026-08-25",
+    "time": "",
+    "location": "Bridal Veil District Conference Room / Zoom",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.tellurideschool.org/agendasandminutes",
+    "hasAgenda": false,
+    "summary": "",
+    "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "zoomMeetingId": "",
+    "zoomPasscode": "[object Object]",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "",
     "hook": ""
   },
   {
