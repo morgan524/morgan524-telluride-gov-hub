@@ -233,7 +233,9 @@
   },
   "mv|2026-08-20|Town Council Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49681/august_20-_2026_town_council_meeting_agenda.pdf",
+    "zoomUrl": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
+    "phone": "970-369-6429"
   },
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296",

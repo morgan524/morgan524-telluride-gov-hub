@@ -1,14 +1,14 @@
 {
-  "hash": "12c31ad49875a8ad471cb642829fe1ec9ff28a5e",
-  "lede": "The biggest item this week lands at Ouray County's Planning Commission on August 19, where three public hearings include a proposed repeal of an entire section of county land use regulations — the kind of code change that reshapes what's possible on the ground for years to come. Also on the 19th, the BOCC sits as the Housing Authority to dig into regional affordable housing compliance, and Telluride's P&Z takes its first formal look at a school district employee housing proposal. HARC has a full slate too, with the Shandoka Lot redevelopment on Black Bear Road coming in for preliminary large-scale review.",
+  "hash": "d9777d82c5ed967675ee1a4a809f38724a869439",
+  "lede": "Mountain Village Council votes Thursday on a resolution that sets the appreciation cap for deed-restricted units — the fine print that decides whether affordable housing actually stays affordable or quietly drifts out of reach. The same day, Telluride's Planning and Zoning Commission holds a public hearing on school district employee housing at the middle-high school site, and Ouray County's Planning Commission takes up three public hearings including a full repeal of a land-use code section. Back in town, HARC digs into the unpermitted Elks Lodge pergola and the Shandoka Lot redevelopment on Black Bear Road.",
   "notable": [
     {
       "id": 6,
-      "stake": "Unpermitted pergola at Elks Lodge seeks retroactive HARC approval in historic district."
+      "stake": "HARC decides whether to retroactively approve an unpermitted structure in the Historic District."
     },
     {
       "id": 7,
-      "stake": "Shandoka Lot redevelopment on Black Bear Rd enters preliminary large-scale HARC review."
+      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment; new construction in historic district."
     },
     {
       "id": 8,
@@ -16,19 +16,23 @@
     },
     {
       "id": 9,
-      "stake": "BOCC reviews housing authority compliance and holds public hearing on land-use amendment."
+      "stake": "Public hearing on housing authority compliance and a land-use insubstantial amendment."
     },
     {
       "id": 11,
-      "stake": "Ouray County considers repealing entire land-use code section; three public hearings open."
+      "stake": "Three public hearings including repeal of an entire county land-use code section."
     },
     {
       "id": 12,
-      "stake": "Public hearings on multiple special event liquor permits, including 500-person Ken Burns fundraiser."
+      "stake": "Public hearings on special event liquor permits open for comment."
+    },
+    {
+      "id": 13,
+      "stake": "Council votes on appreciation cap that controls long-term affordability of deed-restricted units."
     },
     {
       "id": 14,
-      "stake": "School district employee housing at TMHS site gets first formal P&Z review."
+      "stake": "Public hearing on school district employee housing; first formal review of new construction proposal."
     }
   ]
 }
