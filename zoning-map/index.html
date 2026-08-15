@@ -1803,6 +1803,66 @@ function selectZoningFeature(feature, lngLat) {
   if (lngLat) showPopup(lngLat, html);
 }
 
+// PUD point-in-polygon fallback for the address-search popup. address.json bakes
+// a static PUD field, but it's empty for parcels the build-time tag missed (e.g.
+// 3130 Last Dollar Rd, which sits inside the Aldasoro PUD polygon), so resolve it
+// geometrically — the same way the parcel-click popup's _pudAt() does. Returns
+// the PUD name, or "" when the point is in no PUD. Kept module-scoped and
+// self-contained because _pudAt() lives inside addOverlayLayers() and isn't
+// reachable here; the PUD datasets themselves are module-scoped.
+function pudNameAt(lng, lat) {
+  const inRing = (x, y, ring) => {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const xi = ring[i][0], yi = ring[i][1], xj = ring[j][0], yj = ring[j][1];
+      if (((yi > y) !== (yj > y)) && (x < (xj - xi) * (y - yi) / (yj - yi) + xi)) inside = !inside;
+    }
+    return inside;
+  };
+  const inGeom = (x, y, g) => {
+    if (!g) return false;
+    if (g.type === "Polygon") {
+      if (!inRing(x, y, g.coordinates[0])) return false;
+      for (let k = 1; k < g.coordinates.length; k++) if (inRing(x, y, g.coordinates[k])) return false;
+      return true;
+    }
+    if (g.type === "MultiPolygon") {
+      for (const poly of g.coordinates) {
+        if (inRing(x, y, poly[0])) {
+          let hole = false;
+          for (let k = 1; k < poly.length; k++) if (inRing(x, y, poly[k])) { hole = true; break; }
+          if (!hole) return true;
+        }
+      }
+    }
+    return false;
+  };
+  const layers = [
+    ["Trout Lake PUD", troutLakePudData],
+    ["Wilson Mesa Ranches PUD", wilsonMesaRanchesPudData],
+    ["Society Turn PUD", societyTurnPudData],
+    ["Aldasoro PUD", aldasoroPudData],
+    ["Sunnyside PUD", sunnysideRanchesPudData],
+    ["Last Dollar PUD", lastDollarPudData],
+    ["Lawson Hill PUD", lawsonHillPudData],
+    ["Lawson Hill Ilium PUD", lawsonHillIliumPudData],
+    ["Two Rivers PUD", twoRiversPudData],
+    ["The Meadows at Deep Creek PUD", meadowsAtDeepCreekPudData],
+    ["Deep Creek Mesa Ranch PUD", deepCreekMesaRanchPudData],
+    ["Butcher Creek PUD", butcherCreekPudData],
+    ["Mill Creek PUD", millCreekPudData],
+    ["West Meadows PUD", westMeadowsPudData],
+    ["Skyfield PUD", skyfieldPudData]
+  ];
+  for (const [label, fc] of layers) {
+    if (!fc || !fc.features) continue;
+    for (const f of fc.features) {
+      if (f.geometry && inGeom(lng, lat, f.geometry)) return (f.properties && f.properties.name) || label;
+    }
+  }
+  return "";
+}
+
 function selectAddressFeature(feature) {
   const coords = feature.geometry.coordinates;
   map.getSource("selected-address").setData({ type:"FeatureCollection", features:[feature] });
@@ -1815,7 +1875,7 @@ function selectAddressFeature(feature) {
     ["Zoning", p.ZONING],
     ["Code", p.LUCZONE],
     ["Jurisdiction", p.ZONE_AUTH],
-    ["PUD", p.PUD],
+    ["PUD", p.PUD || pudNameAt(coords[0], coords[1])],
     ["Subdivision", p.Subdivision],
     ["PIN", p.PIN],
     ["Owner/name field", p.Owner],
