@@ -22,9 +22,25 @@ function truncate(text, maxLen = 200) {
 function localDate(str) {
   if (!str) return null;
   const s = String(str).trim();
-  // ISO format "YYYY-MM-DD..." — split on dash to avoid UTC interpretation
-  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if (iso) return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+  // ISO format "YYYY-MM-DD..." — split on dash to avoid UTC interpretation.
+  //
+  // EXCEPT when the string carries an explicit UTC offset ("...T00:30:00Z").
+  // That is an INSTANT, not a calendar day, and reading its literal date prefix
+  // silently publishes evening events one day late: the Ouray/Ridgway feed
+  // stamps a 6:30 PM Mountain show as 00:30Z the NEXT day, so a literal read
+  // showed the Sherbino's Sept 1 film on Sept 2 and its "First Friday" concert
+  // on a Saturday. Honor the offset and resolve to the Mountain calendar day.
+  const iso = s.match(/^(\d{4})-(\d{2})-(\d{2})(?:[T ]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?\s*(Z|[+-]\d{2}:?\d{2}))?/);
+  if (iso) {
+    if (iso[4]) {
+      const inst = new Date(s);
+      if (!isNaN(inst)) {
+        const mt = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Denver' }).format(inst).split('-');
+        return new Date(+mt[0], +mt[1] - 1, +mt[2]);
+      }
+    }
+    return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+  }
   // Named month format "Month Day, Year"
   const named = s.match(/^([A-Za-z]+)\s+(\d{1,2}),?\s+(\d{4})/);
   if (named) {

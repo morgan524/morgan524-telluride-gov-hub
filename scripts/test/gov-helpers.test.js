@@ -35,6 +35,41 @@ test('localDate: named-month format parses to the right day', () => {
   assert.equal(d.getDate(), 8);
 });
 
+// A timestamp carrying an explicit UTC offset is an INSTANT, not a calendar
+// day. Reading its literal date prefix published every evening event in the
+// Ouray/Ridgway feed one day late -- the Sherbino's Sept 1 film showed as
+// Sept 2, and its "First Friday" concert landed on a Saturday. Each case below
+// is anchored to something the source states independently (a weekday name or
+// the date printed on sherbino.org), so these are checkable, not circular.
+const dayKey = (d) => d && !isNaN(d)
+  ? `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+  : null;
+
+test('localDate: a UTC instant resolves to its MOUNTAIN calendar day', () => {
+  // sherbino.org: "September 1 at 6:30 PM" -> 00:30Z the next day.
+  assert.equal(dayKey(localDate('2026-09-02T00:30:00.000Z')), '2026-09-01');
+  // sherbino.org: "Friday, September 4th | 6:00-8:00 pm" -> exactly 00:00Z.
+  const donny = localDate('2026-09-05T00:00:00.000Z');
+  assert.equal(dayKey(donny), '2026-09-04');
+  assert.equal(donny.getDay(), 5, 'a "First Friday Show" must land on a Friday');
+  // Feed copy: "every Wednesday at 6 PM".
+  const openMic = localDate('2026-08-20T00:00:00.000Z');
+  assert.equal(dayKey(openMic), '2026-08-19');
+  assert.equal(openMic.getDay(), 3, 'a "every Wednesday" event must land on a Wednesday');
+});
+
+test('localDate: honoring the offset does NOT disturb the other date shapes', () => {
+  // The regression that matters: most values in the data files carry no offset
+  // at all, and must keep being read as the literal calendar day they state.
+  assert.equal(dayKey(localDate('2026-07-04')), '2026-07-04', 'date-only');
+  assert.equal(dayKey(localDate('2026-09-01 18:30:00')), '2026-09-01', 'local time, no offset');
+  assert.equal(dayKey(localDate('July 8, 2026')), '2026-07-08', 'named month');
+  assert.equal(dayKey(localDate('Tue, 22 Jul 2026 00:00:00 +0000')), '2026-07-22',
+    'RFC 2822 RSS pubDate still keeps its UTC calendar day');
+  assert.equal(dayKey(localDate('2026-08-20T12:00:00.000Z')), '2026-08-20',
+    'a midday-UTC stamp is 6am Mountain -- same day, must not shift');
+});
+
 // ── isBadSummary heuristic (overhaul risk G/F — it once suppressed good ones) ─
 test('isBadSummary: real, substantive summaries are NOT flagged as bad', () => {
   const good = [
