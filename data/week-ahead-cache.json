@@ -1,14 +1,14 @@
 {
-  "hash": "d9777d82c5ed967675ee1a4a809f38724a869439",
-  "lede": "Mountain Village Council votes Thursday on a resolution that sets the appreciation cap for deed-restricted units — the fine print that decides whether affordable housing actually stays affordable or quietly drifts out of reach. The same day, Telluride's Planning and Zoning Commission holds a public hearing on school district employee housing at the middle-high school site, and Ouray County's Planning Commission takes up three public hearings including a full repeal of a land-use code section. Back in town, HARC digs into the unpermitted Elks Lodge pergola and the Shandoka Lot redevelopment on Black Bear Road.",
+  "hash": "0b5925e4d1cf5608f5927d02d30d664dc16fdbcd",
+  "lede": "The week's most consequential meeting is Mountain Village Town Council on Thursday, August 20, where a resolution setting the sale price appreciation cap on deed-restricted units goes to a vote — that single decision shapes whether affordable housing in this valley actually stays affordable. Alongside that, Ouray County Planning Commission holds three public hearings Tuesday including a full repeal of Section 16 of its land use code, and Telluride's P&Z takes up school district employee housing and a cell tower public hearing the same evening. Tuesday also marks the first day of school for Telluride R-1.",
   "notable": [
     {
       "id": 6,
-      "stake": "HARC decides whether to retroactively approve an unpermitted structure in the Historic District."
+      "stake": "HARC votes on after-the-fact permit for unpermitted Elks Lodge pergola."
     },
     {
       "id": 7,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment; new construction in historic district."
+      "stake": "Preliminary large-scale HARC review of Shandoka Lot redevelopment, two buildings."
     },
     {
       "id": 8,
@@ -16,23 +16,23 @@
     },
     {
       "id": 9,
-      "stake": "Public hearing on housing authority compliance and a land-use insubstantial amendment."
+      "stake": "BOCC hears housing authority compliance and a public land-use hearing."
     },
     {
       "id": 11,
-      "stake": "Three public hearings including repeal of an entire county land-use code section."
+      "stake": "Three public hearings including repeal of entire Section 16 of county land use code."
     },
     {
       "id": 12,
-      "stake": "Public hearings on special event liquor permits open for comment."
+      "stake": "Four public hearings on special event liquor permits requiring board approval."
     },
     {
       "id": 13,
-      "stake": "Council votes on appreciation cap that controls long-term affordability of deed-restricted units."
+      "stake": "Council votes on appreciation cap determining whether deed-restricted units stay affordable."
     },
     {
       "id": 14,
-      "stake": "Public hearing on school district employee housing; first formal review of new construction proposal."
+      "stake": "Public hearing and first look at school district employee housing on school site."
     }
   ]
 }

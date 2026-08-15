@@ -421,6 +421,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-15",
+    title: "Vested rights: protection or workaround?",
+    body: "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. Vesting locks in the rules that apply to a development at the time of approval — meaning future code changes can't touch it. Supporters say that's basic fairness: you plan around the rules in place. Critics worry it can shield projects from improvements the community later decides matter. The tension is real, and neither side is wrong.\n\nWhere do you come down on vesting rights for development up here?",
+    choices: ["Vesting protects fair planning", "It blocks needed changes", "Depends on the project", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-14",
     title: "Bears, bins, and the next climate plan",
     body: "The Ecology Commission is set to work on two things at once: planning Black Bear Safety Week and reviewing the Materials & Consumption section of the 2027 Climate Action Plan update. That's a lot on one agenda. Bear safety tends to unite people — nobody wants a conflict. Climate action plans are different. Some residents think Telluride needs stronger consumption targets to mean anything; others worry the town is already asking a lot of people who are just trying to live up here. Which piece of this meeting matters more to you?",
@@ -804,96 +812,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Flood work could begin within week",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County officials said Tuesday that flood mitigation work below the Gold Mountain Fire’s burn scar could begin as soon as next week, while warning that storms in the coming days could trigger further debris flows and accompanying property damage. County Attorney Leo Caselli said at a community ",
-    href: "https://www.ouraynews.com/2026/08/12/flood-work-begin-within-week/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Firefighter base moves to Gunnison",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The incident command post for the Gold Mountain Fire relocated to the Gunnison County Fairgrounds Saturday as Rocky Mountain Complex Incident Management Team 2 took over for Team 1 and combined efforts to focus more on the Elk Fire near Lake City. Firefighters from across the country camped at the O",
-    href: "https://www.ouraynews.com/2026/08/12/firefighter-base-moves-gunnison/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County fair carries on",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The night the Gold Mountain Fire started, the Cornell family anxiously watched the fire spreading toward their fenced livestock, the billowing smoke filling the canyon. They decided to load up their horses, goats and the 4-H lambs into trailers and evacuate. They took the 11 animals from their pastu",
-    href: "https://www.ouraynews.com/2026/08/12/county-fair-carries/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "We need to stand firm to preserve alpine tundra",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: The July 23 guest column by Sue Dreamweaver Spielman was excellent and brings up so many issues that we regular backcountry users experience. I have been recreating in this area since 1979. I’m a Jeep driver, backpacker, hiker and climber. I moved away from the area for a while. I have ",
-    href: "https://www.ouraynews.com/2026/08/12/need-stand-firm-preserve-alpine-tundra/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County clerk provided excellent service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I would like to acknowledge the excellent service I received from Damon Todd, Ouray County clerk and recorder. I had a question/complaint about the online vehicle license renewal system. I contacted Mr. Todd through Ouray County s website on Sunday. Later that afternoon, he responded wi",
-    href: "https://www.ouraynews.com/2026/08/12/county-clerk-provided-excellent-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Rather than sales tax, charge CR 361 road toll",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Dear Editor: I agree with the recent proposal by Ouray County to fund a rainy-day account for use in seemingly annual “emergencies” such as the rockfall last year on County Road 361, the cleanup from the recent Gold Mountain Fire and continuing damage to county roads and bridges from mudslides and w",
-    href: "https://www.ouraynews.com/2026/08/12/rather-sales-tax-charge-cr-361-road-toll/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago With progress on the Ouray side of Imogene Pass Jeep road nearing completion, plans are being made for its dedication. The date has tentatively been set for Sunday, Aug. 26, at or near ",
-    href: "https://www.ouraynews.com/2026/08/12/looking-back-20260813-0238-359314/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County inches ahead with possible tax questions",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "government",
-    copy: "Attorney: Must get buy-in from city, town to proceed with sales, use taxes Ouray County commissioners on Tuesday took another step toward putting two tax measures on the November ballot to raise money for disaster recovery and road and bridge projects. But they encountered a new wrinkle in their pla",
-    href: "https://www.ouraynews.com/2026/08/12/county-inches-ahead-possible-tax-questions/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Visitors cited for feeding bears",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "housing",
-    copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
-    href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Fall Foliage Tour Contest 🍂",
     source: "Norwood Colorado",
     sourceKey: "norwood",
@@ -931,6 +849,96 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "This week's bulletin is attached below, but please check the parish calendar for the most up-to-date information.Please join us for praying the Holy Rosary on Sundays before 9:00 AM Holy Mass. It starts at 8:30 AM.Coffee and donuts every Sunday during ...",
     href: "https://stpatrickstelluride.com/2026/parish-news/bulletin-for-august-9/",
+    img: ""
+  },
+  {
+    title: "Flood ravages homes",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When the fire raged above them on the mountain, the evacuated residents of Ponderosa Village hoped for rain. They wished for anything to help the firefighters get control of the blaze so it wouldn t burn down the hill and destroy their homes. They watched the billowing, cauliflower-shaped pyrocumulu",
+    href: "https://www.ouraynews.com/2026/08/05/flood-ravages-homes/",
+    img: ""
+  },
+  {
+    title: "County floats disaster relief sales tax",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "Draft ballot language proposes half-cent tax, with revenue split between county, city, town Ouray County commissioners are in talks to put a half-penny sales tax increase question to voters this fall to shore up the county’s disaster recovery funding, as its resources continue to be strained by the ",
+    href: "https://www.ouraynews.com/2026/08/05/county-floats-disaster-relief-sales-tax/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Log Hill won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "The Log Hill Volunteer Fire Department will not join the proposed consolidated fire and emergency medical services authority in Ouray County. Board members of the Log Hill Mesa Fire Protection District voted unanimously against joining the Red Mountain Fire Rescue Authority at last month’s board mee",
+    href: "https://www.ouraynews.com/2026/08/05/log-hill-wont-join-fire-authority/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Crews near full containment on fire",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "Firefighters who are closing in on fully containing the Gold Mountain Fire have shifted their work to undoing firelines that are no longer needed to prevent erosion. “We ve moved out of the suppression mode, because everything seems to be holding, and we re moving into suppression repair,” Rocky Mou",
+    href: "https://www.ouraynews.com/2026/08/05/crews-near-full-containment-fire/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "‘We were in a panic’",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "infrastructure",
+    copy: "Hank and Betsy Nicholson were watching TV at home the night of July 26 when the skies opened up and filled Dexter Creek with rainwater, mud and debris. The creek, which serves as the Nicholsons’ only source of drinking water, bisects their 15-acre property on the west side of U.S. Highway 550. That ",
+    href: "https://www.ouraynews.com/2026/08/05/we-were-in-a-panic/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Why can rain on wildfire burn scars trigger dangerous flooding? A geologist explains",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "public-safety",
+    copy: "When heavy rain hits burned hillsides, it can set off dangerous floods and debris flows that can move with the speed of a freight train, picking up or destroying anything in their path. These debris flows, as parts of Colorado experienced in late July 2026, can move tons of sediment during a single ",
+    href: "https://www.ouraynews.com/2026/08/05/can-rain-wildfire-burn-scars-trigger-dangerous-flooding-geologist-explains/",
+    img: ""
+  },
+  {
+    title: "Riders scrutinize Ouray’s new shuttle service",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "government",
+    copy: "The launch of a free shuttle in Ouray this summer is off to an uneven start, with riders and a shuttle driver pointing out shortcomings and questioning how the city will determine whether the service is successful. The Ouray City Council approved a two-year contract in June 2025 with Ridgway-based T",
+    href: "https://www.ouraynews.com/2026/08/05/riders-scrutinize-ourays-new-shuttle-service/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Good For You!",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "community",
+    copy: "The winning team from the Ouray Public Library s Literary Trivia Night on July 24 celebrates its victory. Pictured here, from left to right, are: Khris Dunham, Christine Coyer, Erin Latta, Eric Constantineau, Janet Dunham and Maureen O Driscoll. The trivia night was a fundraiser for the library s ex",
+    href: "https://www.ouraynews.com/2026/08/05/send-us-celebrations-20260806-0346-019682/",
+    img: ""
+  },
+  {
+    title: "Ridgway concert series puts trash in its place",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 6, 2026",
+    newsTopic: "arts-culture",
+    copy: "“Hey Landfill, you malignant festering heap of methane-spewing, planet-warming garbage, Recycle and Compost just ate your leftover lunch!” This summer’s concert series was Ridgway’s first ever zero- waste event, so talking trash about trash seems appropriate here, especially because it went very wel",
+    href: "https://www.ouraynews.com/2026/08/05/ridgway-concert-series-puts-trash-place/?ta_paidstory",
     img: ""
   },
   {
@@ -3535,70 +3543,37 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Yoga for ALL with Jane & Jay",
-    link: "https://telluridelibrary.libcal.com/event/15803453?hs=a",
-    description: "8:30 AM – 9:45 AM · Join local instructors Jane del Piero and Jay Holt for a weekly class centered on deep breath work, gentle flow, and energizing chakral movement. Jane and Jay are the owners of local acupuncture, massage, and sound healing practice Luv Light. Donations are accepted. All bodies welcome.",
-    pubDate: "2026-08-14T14:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715278303.jpg"
-  },
-  {
-    title: "Alchemical Mushroom Sound Bath-Limited Capacity",
-    link: "https://telluridelibrary.libcal.com/event/17274356?hs=a",
-    description: "10:30 AM – 12:00 PM · Attendance limited to 30 people We will start by enjoying a potent Spagyric Mushroom Elixir crafted by Sacred Herbal Extracts and then transition into a comfortable meditative space, laying down or seated. Brian will be intuitively guiding a journey through sound with a variety of gongs, singing bowls, bells, ancient whistles, handpan, chimes, and more. As we are immersed in the cosmic ocean of sound; these vibrations massage each cell of our body and calm our nervous systems. The harmonic resonance created by the gong tones allow us to easily drop into a blissful, peaceful state of relaxation. This is a great opportunity to be present to feel and connect more deeply with your choice of a mushroom extract while recharging our systems.",
-    pubDate: "2026-08-14T16:30:00.000Z",
+    title: "Yoga Wild and Free with Lauren Norton",
+    link: "https://telluridelibrary.libcal.com/event/16536392?hs=a",
+    description: "9:00 AM – 10:00 AM · What does true authenticity look like? How can you share your unique gifts with the world? Restore your wild through connection to nature, your body, breath, and simple joy. Bring your mat, water, and any comforts for your practice. We may have limited mats available for those who do not have them on a first come first served basis.",
+    pubDate: "2026-08-15T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_10_48_31.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_10_39_50.jpg"
   },
   {
-    title: "Rewilding Oneself: How to Forage for Fungi Safely and Sustainably",
-    link: "https://telluridelibrary.libcal.com/event/17276125?hs=a",
-    description: "11:00 AM – 12:00 PM · The basics of how and why to get started hunting mushrooms for the table. Intended for those new to mushroom hunting.  Ken Kassenbrock, MD,PhD has been an avid hunter of wild mushrooms since the late 1970s. Trained as a physician-scientist, he has worked in Cell and Molecular Biology, including post-doctoral work with the brewer's yeast, Saccharomyces cerevisiae. Although his interests in fungi were initially largely culinary, over the years they expanded (mushroomed?) to include other aspects of the biology of this fascinating kingdom including ecology, toxicology, and cultivation. Avocation and vocation eventually converged, and Ken taught Mycology (mushrooms, molds, mildews and more) in the Biology Department at Colorado State University for many years before retiring as an Emeritus Professor.",
-    pubDate: "2026-08-14T17:00:00.000Z",
+    title: "Rewild with Movement Play-A Grown Up Recess with Gerard LaBonte",
+    link: "https://telluridelibrary.libcal.com/event/17274208?hs=a",
+    description: "12:00 PM – 1:00 PM · This workshop invites you to rediscover movement as play. Through curiosity, experimentation, and connection, folks will explore patterns their body may have forgotten and awaken the kind of joyful movement most last experienced on a playground. Expect laughter, exploration, and a little bit of challenge as participants unwind the body and nervous system through partner games, upside down movements and by tapping into a uniquely human form of play by mirroring and improvising movement patterns. No experience required, just curiosity and a willingness to play. Gerard LaBont&eacute; is an ever-evolving non-ordinary wellness coach. Gerard started his career coaching physical movement, Crossfit, rugby, wrestling coach, and personal training. His next evolution as a coach incorporated real food nutrition and hormone understanding. By combining his passions for health and delicious food with his analytical research and professional cooking experience. …",
+    pubDate: "2026-08-15T18:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_31_01.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: ""
   },
   {
-    title: "BIPOC Community Gathering: Opening Circle and Connection",
-    link: "https://telluridelibrary.libcal.com/event/17276139?hs=a",
-    description: "12:15 PM – 1:15 PM · The Telluride Mushroom Festival has long been a place where people gather to celebrate fungi, science, art, education, and community. This year, the festival is piloting a BIPOC (Black, Indigenous, and People of Color) Community Gathering Space to help foster connection, belonging, and long-term participation within the mycological community. This gathering is a BIPOC affinity space created for Black, Indigenous, and People of Color attendees seeking connection, reflection, and community with others who share similar lived experiences. While many festival events are open to everyone, this space has been intentionally created to support BIPOC participants. The purpose is to provide an opportunity for connection, conversation, and community among attendees who share experiences of navigating mycology, conservation, outdoor spaces, and environmental fields from historically underrepresented backgrounds. We also warmly welcome BIPOC members of the Telluride community and surrounding region. …",
-    pubDate: "2026-08-14T18:15:00.000Z",
+    title: "Fearless, Sleepless and Deathless with Maria Pinto",
+    link: "https://telluridelibrary.libcal.com/event/17217241?hs=a",
+    description: "2:00 PM – 3:00 PM · Maria Pinto will read from and sign her book of lyric essays, Fearless, Sleepless, Deathless: What Fungi Taught Me about Nourishment, Poison, Ecology, Hidden Histories, Zombies, and Black Survival. Pro tip: pick up a copy of her book at the Between the Covers bookshop in town and bring it for the author to sign!",
+    pubDate: "2026-08-15T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_30_34.jpg"
-  },
-  {
-    title: "Fungi for Fido: There&#039;s a Mushroom for That!",
-    link: "https://telluridelibrary.libcal.com/event/17276168?hs=a",
-    description: "1:30 PM – 2:30 PM · Mushroom use in our pets is relatively new, but is gaining traction among many progressive pet parents. This lively talk will explain the many ways mushrooms can benefit our pets health and happiness. Specific mushrooms that have specific benefits for our pets will be discussed, as well as how to administer and dose mushrooms or mushroom products for our pets. Dr. Rob Silver is an integrative and holistic veterinarian who has included the use of functional mushrooms in his clinical work for 20 years., along with many other holistic and conventional modalities. He has authored the book: \"There&#39;s a Mushroom for That!\" describing the use of mushrooms, cannabis, diet and herbs for pet health strategies, and over the past 5 years has been working with a mushroom company developing pet specific mushroom products, and testing them clinically. …",
-    pubDate: "2026-08-14T19:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_32_09.jpg"
-  },
-  {
-    title: "Cultivating Relational Intelligence, Not Artificial Intelligence",
-    link: "https://telluridelibrary.libcal.com/event/17276187?hs=a",
-    description: "4:00 PM – 5:00 PM · Expand your capacity for connection, understanding and nuance in relationship. Gain skills to re-wild your authentic self-expression, through the art of Authentic Relating. These practices mirror the profound connections of fungi in the forest, and fungal wisdom will be our guide for relating to one another in more mycelial ways. Gain skills to navigate personal experiences and connect empathetically with others, fostering understanding and reciprocity. Join us for an interactive session filled with learning, play, and engaging games – a unique opportunity to enhance your connection skills in a fun and supportive environment. Authentic Relating (AR) Games are designed to bring people closer through interactive exercises that encourage presence, vulnerability, and genuine human connection. Whether you're looking to improve communication skills, deepen your relationships, or simply enjoy a unique social experience, this event is for you! …",
-    pubDate: "2026-08-14T22:00:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_34_11.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_10_38_48.jpg"
   }
 ];
 
@@ -4222,7 +4197,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-14T06:00:00.000Z",
+    pubDate: "2026-08-15T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4234,141 +4209,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Ouray County Pride",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-pride",
     description: "Small towns. Big mountains. Bigger pride. 🏳️‍🌈 OURAY COUNTY PRIDE WEEKEND August 14–16, 2026 🏳️‍🌈🏔️ FRIDAY, AUGUST 14 7P One-woman show The Wright Opera House — Ouray Kick off Pride weekend with EDIE: a one-woman theatrical performance celebrating the life, love and legacy of Edie Windsor — the woman whose landmark Supreme Court case helped bring marriage equality nationwide. SATURDAY, AUGUST 15 Pride Ride - Meet at Hartwell Park 8 AM | Free + all ages Let’s RIDE w/ PRIDE! Supporting Queer community diversity and inclusion while adventuring outdoors. 🚲 This 9k/6m bike ride starts at Hartwell Park in Ridgway, travels gravel/paved road for a warm-up on our way to Dennis Weaver Park where we will do a little single track before returning on the Riverway Trail to the park. No bike left behind! We will stay together as a pack! 🌈 Bring water and friends! …",
-    pubDate: "2026-08-14T06:00:00.000Z",
+    pubDate: "2026-08-15T06:00:00.000Z",
     endDate: "2026-08-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Clinton Street",
     imageUrl: "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg"
-  },
-  {
-    title: "Ouray County Fair 2026",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-fair-2026",
-    description: "Come see local youth's best rabbits, sheep, chickens and other farm animals. Drool over delicious baked goods, wines, needlework, art and photos in the Open General Projects category. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is allowed on the Fairgrounds. There is no smoking within 10 feet of the fair barn. Schedule of Events: find more details HERE. Thanks to all of the sponsors! View on site | Email this event",
-    pubDate: "2026-08-14T14:00:00.000Z",
-    endDate: "2026-08-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-14T16:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-14T16:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Ridgway Farmers Market",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
-    pubDate: "2026-08-14T16:00:00.000Z",
-    endDate: "2026-10-09",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
-  },
-  {
-    title: "Hotdogs and Hamburgers",
-    link: "https://events.ourayridgwayevents.com/event/hotdogs-and-hamburgers",
-    description: "Enjoy fresh hamburgers and hot dogs at the Ouray County Fair food stand! Grab lunch while you’re at the fair and support local youth—all proceeds benefit Ouray County Baseball. View on site | Email this event",
-    pubDate: "2026-08-14T17:00:00.000Z",
-    endDate: "2026-08-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53692956986805/huge/5d5d75eca5ec273abc1cf1d55acc6de1d0b6b4b0.jpg"
-  },
-  {
-    title: "Drag Queen Storytime",
-    link: "https://events.ourayridgwayevents.com/event/drag-queen-storytime",
-    description: "Join us for a Drag Queen Storytime! This will be a fun, safe event. Ages; Elementary View on site | Email this event",
-    pubDate: "2026-08-14T19:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The San Juan Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53570183207548/huge/17ac045ed8e1b1bde9af799093a829522b615235.jpg"
-  },
-  {
-    title: "Edie",
-    link: "https://events.ourayridgwayevents.com/event/edie",
-    description: "Edie, presented by UpstART Theatre, is a special one-time-only performance starring the play's author, Jessica Toltzis. Inspired by the remarkable life of Edith Windsor and her loving, passionate, and transformative relationship with Thea Spyer, Edie tells the story of one woman's fight for dignity, equality, and the right to have her marriage recognized under the law. When Edie Windsor sued the United States government following the death of her wife, her case ultimately reached the Supreme Court, helping redefine marriage rights for millions of Americans. Along the way, she navigated decades of love, loss, discrimination, courage, and self-discovery. At once deeply personal and historically significant, Edie is a moving celebration of authenticity, resilience, and the enduring power of love. Never underestimate the power of a lesbian in love. Doors open at 7:00pm. View on site | Email this event",
-    pubDate: "2026-08-14T19:30:42.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53671338551327/huge/cf933eb35830ba9ad0d8a1d94b969ee29452d814.jpg"
-  },
-  {
-    title: "True Grit Historic Walking Tours",
-    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
-    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
-    pubDate: "2026-08-14T21:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Hartwell Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
-  },
-  {
-    title: "TYLER SIMMONS",
-    link: "https://events.ourayridgwayevents.com/event/tyler-simmons-9384",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-14T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Ridges & Reservoir: The Ridgway Landscape Art Session - Ridgway State Park Summer Program Series",
-    link: "https://events.ourayridgwayevents.com/event/ridges-reservoir-the-ridgway-landscape-art-session-ridgway-state-park-summer-program-series",
-    description: "Unleash your inner artist and let the breathtaking peaks of the San Juans and crystal-clear waters of Ridgway Reservoir be your muse! Join us for an evening of creativity where we swap the studio for the great outdoors. This program is all about slowing down and translating the stunning natural surroundings of the park into art. All art supplies and an expert instructor will be provided. View on site | Email this event",
-    pubDate: "2026-08-14T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ridgway State Park",
-    imageUrl: "https://localist-images.azureedge.net/photos/53471158193175/huge/04059243547212bbd8b1fbcbafe16b2195b8c518.jpg"
-  },
-  {
-    title: "Steps Tavern Presents Karaoke Night",
-    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
-    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
-    pubDate: "2026-08-15T02:00:00.000Z",
-    endDate: "2026-09-26",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "STEPS TAVERN",
-    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
@@ -4391,6 +4238,52 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53471176747260/huge/13058b48d3167871df0880c9045d9735fa1b9c13.jpg"
+  },
+  {
+    title: "Ouray County Fair 2026",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-fair-2026",
+    description: "Come see local youth's best rabbits, sheep, chickens and other farm animals. Drool over delicious baked goods, wines, needlework, art and photos in the Open General Projects category. If you're looking for some locally-raised beef, pork or lamb for your freezer, attend the livestock sale on Saturday, Aug. 15th at 2pm. NOTES: No alcohol is allowed on the Fairgrounds. There is no smoking within 10 feet of the fair barn. Schedule of Events: find more details HERE. Thanks to all of the sponsors! View on site | Email this event",
+    pubDate: "2026-08-15T15:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621133797704/huge/b82a36b9dabdc1f8735852fb416f6984bfc0fe44.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-15T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
+  },
+  {
+    title: "Hotdogs and Hamburgers",
+    link: "https://events.ourayridgwayevents.com/event/hotdogs-and-hamburgers",
+    description: "Enjoy fresh hamburgers and hot dogs at the Ouray County Fair food stand! Grab lunch while you’re at the fair and support local youth—all proceeds benefit Ouray County Baseball. View on site | Email this event",
+    pubDate: "2026-08-15T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds and 4H Events Center",
+    imageUrl: "https://localist-images.azureedge.net/photos/53692956986805/huge/5d5d75eca5ec273abc1cf1d55acc6de1d0b6b4b0.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-15T18:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "Ouray Country Pride After Party",
@@ -4680,6 +4573,30 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53693434559707/huge/f6d4e9925c9d72212aaa732c6f83114b2783c1de.jpg"
   },
   {
+    title: "Ridgway Farmers Market",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
+    pubDate: "2026-08-21T16:00:00.000Z",
+    endDate: "2026-10-09",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
+  },
+  {
+    title: "True Grit Historic Walking Tours",
+    link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
+    description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
+    pubDate: "2026-08-21T21:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/52285883190282/huge/99283c09e34ca5aeabd7006cca2ba5b2b28899c3.jpg"
+  },
+  {
     title: "RIDGWAY WRECKING CREW",
     link: "https://events.ourayridgwayevents.com/event/ridgway-wrecking-crew-9105",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4722,6 +4639,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "610",
     imageUrl: "https://localist-images.azureedge.net/photos/52994270870445/huge/daf9e9efd8da0f386a5f5b85b8847791c2588a2f.jpg"
+  },
+  {
+    title: "Steps Tavern Presents Karaoke Night",
+    link: "https://events.ourayridgwayevents.com/event/steps-tavern-presents-karaoke-night",
+    description: "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
+    pubDate: "2026-08-22T02:00:00.000Z",
+    endDate: "2026-09-26",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "STEPS TAVERN",
+    imageUrl: "https://localist-images.azureedge.net/photos/53142698527493/huge/db3a6ef58a79b18eea8c70a4d583bbf3d9498404.jpg"
   },
   {
     title: "Bats, Our Friends in the Dark - Ridgway State Park Summer Program Series",
