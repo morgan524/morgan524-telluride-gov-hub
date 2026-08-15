@@ -151,10 +151,10 @@
     "time": "6:00 PM",
     "location": "Sheridan Opera House • Telluride, CO",
     "town": "Telluride",
-    "img": "https://sheridanoperahouse.com/wp-content/uploads/2022/08/VendorBadge_AsSeenOnWeb.png",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "A costume dance party hosted as part of the Telluride Mushroom Festival, encouraging attendees to dress as puffball mushrooms or other fungal-inspired creations for a festive evening at the Sheridan Opera House. The event blends the…",
     "type": "Festivals"
   },
   {
@@ -258,8 +258,8 @@
     "img": "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/",
     "category": "Live Music",
     "source": "The Alibi",
-    "desc": "Telluride Mushroom Fest Puff Ball After Party",
-    "type": "Community"
+    "desc": "Thom LaFond and DROS take the stage at The Alibi for a late-night live music set tied to the Telluride Mushroom Festival's Puff Ball After Party. The show starts at 9:00 PM and brings the festival's celebratory energy into the evening at…",
+    "type": "Festivals"
   },
   {
     "title": "Celestial Secrets Star Party: A Ridgway Night Under the Stars - Ridgway State Park Summer Program Series",
@@ -551,7 +551,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
+    "desc": "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with…",
     "type": "Community"
   },
   {
@@ -683,8 +683,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "First Day of School",
-    "type": "Community"
+    "desc": "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -951,6 +951,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Free Oak Street Park SummerSHOW Series: Deltaphonic",
+    "href": "https://sheridanoperahouse.com/events/oak-street-park-summershow-series-3/",
+    "date": "2026-08-20",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Deltaphonic performs as part of the Free Oak Street Park SummerSHOW Series, brought to the Sheridan Opera House in Telluride. This free community concert series offers locals and visitors a chance to enjoy live music in one of the town's…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Motel Prophets - Live @ Floating Lotus Brewery",
     "href": "https://events.ourayridgwayevents.com/event/motel-prophets-live-floating-lotus-brewery",
     "date": "2026-08-20",
@@ -1161,6 +1174,20 @@
     "source": "Music on the Green",
     "desc": "Outdoor summer concert in Mountain Village's Music on the Green series, presented by Beyond the Groove. Live music at Reflection Plaza (next to Hotel Madeline), Fridays 5–7 PM. This week: Ray Wylie Hubbard.",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Theater: House of Shimmy Shake, Burlesque Buffet",
+    "href": "https://sheridanoperahouse.com/events/telluride-theater-house-of-shimmy-shake-burlesque-buffet/",
+    "date": "2026-08-21",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Thunder-Tix_600x375px_01.jpg",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Telluride Theater presents House of Shimmy Shake, a burlesque variety show at the historic Sheridan Opera House. The performance brings together burlesque performance and live entertainment in an evening of playful, theatrical spectacle.",
+    "type": "Arts & Film",
+    "endDate": "2026-08-22"
   },
   {
     "title": "The Flight of the Pollinators - Ridgway State Park Summer Program Series",
@@ -3562,7 +3589,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

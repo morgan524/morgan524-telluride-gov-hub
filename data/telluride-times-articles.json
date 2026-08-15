@@ -1,5 +1,17 @@
 [
   {
+    "title": "Obesity drugs show early promise against the hormonal disorder PMOS, giving a suffering family hope",
+    "source": "Telluride Times",
+    "date": "August 15, 2026",
+    "firstSeen": "2026-08-15",
+    "newsTopic": "community",
+    "copy": "A small but growing body of research shows that GLP-1 drugs often used to treat obesity may also work for the hormonal disorder known as PMOS. They are believed to help women with PMOS not only by promoting weight loss…",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news/state/article_2cbe3a3c-ee26-50a9-8075-37d3462974c3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/5/b9/5b9cb739-702f-58a4-b47f-f1c1ebb8fc30/6a80674e79317.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Telluride Mountain Run is back with new distances",
     "source": "Telluride Times",
     "date": "August 15, 2026",
@@ -853,6 +865,24 @@
     "newsTopic": "recreation",
     "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    "img": ""
+  },
+  {
+    "title": "Numerous Highway Closures",
+    "source": "San Miguel County",
+    "date": "July 22, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road",
+    "source": "San Miguel County",
+    "date": "July 21, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
     "img": ""
   },
   {
