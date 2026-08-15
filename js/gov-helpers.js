@@ -5795,17 +5795,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Music On The Mesa The Burroughs",
-    link: "https://www.norwoodparkandrec.org/music-on-the-mesa-2026",
-    description: "",
-    pubDate: "2026-08-08T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Norwood Park & Recreation District",
-    category: "Community Event",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "NWC Amended",
     link: "https://www.norwoodtown.com/2026-08-11-nwc-amended",
     description: "",
@@ -5896,17 +5885,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Music on the Green Presents Ben Musser & Walker Young",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-ben-musser-walker-young/",
-    description: "Beyond The Groove and TMVOA (tmvoa.org) present Ben Musser & Walker Young at Reflection Plaza in Mountain Village. The Friday shows are free,",
-    pubDate: "2026-08-14T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48861/ben_musser_walker_young_1800x900px.png"
-  },
   {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
@@ -6324,6 +6302,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-09-14T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
