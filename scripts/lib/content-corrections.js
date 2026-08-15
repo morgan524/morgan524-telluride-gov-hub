@@ -25,8 +25,19 @@ const FILE = 'content-corrections.json';
 // Correction kinds:
 //   event-date  — the source published the wrong date; set it to correctDate
 //   clear-link  — the link 404s; keep the event, drop the dead href
+//   set-link    — the link 404s but a working one is known; point it at newLink
 //   drop-event  — the entry is phantom/cancelled; remove it entirely
-const KINDS = new Set(['event-date', 'clear-link', 'drop-event']);
+const KINDS = new Set(['event-date', 'clear-link', 'set-link', 'drop-event']);
+
+// The semantic identity of a correction — what it does, to which record, on the
+// strength of which evidence. NOT the id: auto-written ids embed the date they
+// were minted, so id-equality says "written in the same run", never "already
+// handled". Deduping on the id let the autofixer append a byte-identical
+// clear-link row every single day (four for one dead Shabbat href before this
+// was caught), each carrying a fresh 60-day expiry so the pile never drained.
+function correctionKey(c) {
+  return [c.kind, c.array, norm(c.titleMatch), c.wrongDate || '', c.evidence || ''].join('|');
+}
 
 function correctionsPath(repoRoot) {
   return path.join(repoRoot, 'data', FILE);
@@ -121,6 +132,8 @@ function applyCorrections(arraysByName, corrections, todayISO) {
         else out.date = c.correctDate;
         return out;
       }
+      // set-link: the dead href has a known-good replacement.
+      if (c.kind === 'set-link') return { ...r, link: c.newLink || '' };
       // clear-link: keep the event, drop the dead href.
       return { ...r, link: '' };
     });
@@ -150,4 +163,5 @@ function defaultExpiry(correction, todayISO) {
 module.exports = {
   FILE, KINDS, correctionsPath, readCorrections, writeCorrections,
   applyCorrections, pruneExpired, defaultExpiry, isExpired, matches, recordDate, norm,
+  correctionKey,
 };

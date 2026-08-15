@@ -41,7 +41,7 @@ const path = require('path');
 
 const { fetchUrl, htmlToText, callClaudeJson, mtToday } = require('./lib/scrape.js');
 const {
-  readCorrections, writeCorrections, pruneExpired, defaultExpiry, norm,
+  readCorrections, writeCorrections, pruneExpired, defaultExpiry, norm, correctionKey,
 } = require('./lib/content-corrections.js');
 
 const REPO_ROOT   = process.env.GITHUB_WORKSPACE || path.resolve(__dirname, '..');
@@ -251,8 +251,17 @@ async function main() {
   if (pending > 0) console.log(`  ${pending} dead link(s) still building toward the ${DEAD_LINK_RUNS}-run threshold`);
   for (const r of deadRows) console.log(`  AUTO clear-link: "${r.titleMatch}" in ${r.array} (${r.evidence})`);
 
-  const existingIds = new Set(kept.map(c => c.id));
-  const autoRows = deadRows.filter(r => !existingIds.has(r.id));
+  // Dedup on what the row DOES, not on its id — auto ids embed the mint date,
+  // so an id check only ever catches same-run repeats and let this file grow by
+  // one identical clear-link row per day. A hand-written set-link for the same
+  // record also suppresses the auto clear-link, so a human's better fix (a real
+  // replacement URL) is never re-buried under "drop the href".
+  const handled = new Set(kept.map(correctionKey));
+  const handledLinks = new Set(kept
+    .filter(c => c.kind === 'clear-link' || c.kind === 'set-link')
+    .map(c => [c.array, norm(c.titleMatch)].join('|')));
+  const autoRows = deadRows.filter(r =>
+    !handled.has(correctionKey(r)) && !handledLinks.has([r.array, norm(r.titleMatch)].join('|')));
   const nextCorrections = [...kept, ...autoRows];
 
   // ── PROPOSE: date conflicts, verified against the organizer

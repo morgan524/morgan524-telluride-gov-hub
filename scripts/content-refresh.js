@@ -5168,7 +5168,12 @@ function assembleBoardStubs(scraped, cadence, opts, now = new Date()) {
     };
     const bd = s.board || opts.board;
     if (bd) stub.board = bd;
-    byDate.set(s.date + '|' + (bd || ''), stub);
+    if (s.note) stub.note = s.note;
+    // dedupKey lets a caller distinguish two meetings the same body holds on the
+    // SAME DAY. The school does this routinely — a 3:30 work session and a 5:15
+    // regular meeting share a date in September, January, February and June — and
+    // date+board alone silently kept only the last one parsed.
+    byDate.set(s.dedupKey || (s.date + '|' + (bd || '')), stub);
   }
   if (cadence) {
     const placeholders = opts.placeholders == null ? 2 : opts.placeholders;
@@ -5360,28 +5365,45 @@ async function rebuildFireMeetings() {
   });
 }
 
-// Rebuild SCHOOL_CACHED_DATA: scraped-only (no weekday placeholder). The Board
-// of Education's meeting dates are set by the academic calendar and land on the
-// 2nd / 3rd / last Tuesday depending on the month — there is NO reliable weekday
-// cadence to project, so we never fabricate a date. Instead we rebuild straight
-// from the posted agendas (syncSchoolAgendas already parses date + type from each
-// PDF link), so School self-heals when the fall agendas post. During the summer
-// recess gap it shows nothing upcoming — which is correct, and the source-health
-// alarm covers it.
+// Rebuild SCHOOL_CACHED_DATA from the board's TWO published surfaces, never from
+// a projected weekday. Its dates follow the academic calendar (2nd / 3rd / last
+// Tuesday depending on the month), so there is no cadence to extrapolate safely.
+//
+//   1. the posted agenda PDFs  (syncSchoolAgendas)  — authoritative, carry a URL
+//   2. the published year schedule (syncSchoolSchedule) — dated months ahead
+//
+// Agendas WIN on any date+type they both describe: a posted agenda is the board
+// actually convening, while the schedule is an intention. The schedule fills the
+// long tail the agendas cannot reach, which is the whole point — before this,
+// School was agenda-only and therefore went blank for the entire summer recess
+// (67 days with nothing upcoming), since no agendas post between June and August.
 async function rebuildSchoolMeetings() {
   console.log('\n🏫 Rebuilding Board of Education meetings...');
   const items = await syncSchoolAgendas();          // [{ date, type, url }] or null
-  if (items === null) { console.warn('  School: fetch failed — preserving existing SCHOOL_CACHED_DATA'); return null; }
+  const sched = await syncSchoolSchedule();         // [{ date, type, time }] or null
+  if (items === null && sched === null) {
+    console.warn('  School: both sources failed — preserving existing SCHOOL_CACHED_DATA');
+    return null;
+  }
   const TITLES = {
     monthly: 'Telluride Board of Education Monthly Meeting',
     work:    'Telluride Board of Education Work Session',
     special: 'Telluride Board of Education Special Meeting'
   };
-  const scraped = items.map(it => ({
+  const row = (it, agendaUrl) => ({
     date: it.date,
-    agendaUrl: it.url,
-    title: TITLES[it.type] || 'Telluride Board of Education Meeting'
-  }));
+    time: it.time || null,
+    agendaUrl: agendaUrl || null,
+    title: TITLES[it.type] || 'Telluride Board of Education Meeting',
+    dedupKey: it.date + '|' + it.type,
+    note: agendaUrl ? undefined : 'Scheduled meeting -- agenda posted closer to the date.'
+  });
+  // Schedule first, agendas second: assembleBoardStubs keys on dedupKey, so the
+  // agenda row overwrites the bare schedule row for the same meeting.
+  const scraped = [
+    ...(sched || []).map(it => row(it, null)),
+    ...(items || []).map(it => row(it, it.url)),
+  ];
   return assembleBoardStubs(scraped, null, {
     title: 'Telluride Board of Education Meeting',
     location: 'Bridal Veil District Conference Room / Zoom',
@@ -6752,6 +6774,65 @@ async function syncSchoolAgendas() {
     out.push({ date: `${SCHOOL_MONTHS[mo - 1]} ${da}, ${yr}`, type, url: href });
   }
   console.log(`  School: ${out.length} agenda link(s) parsed`);
+  return out.length ? out : null;
+}
+
+// The Board of Education publishes its whole year of meeting dates on one page,
+// months before any agenda PDF exists. Without this the School section simply
+// empties out over the summer recess (agendas are the only other source), which
+// is what left the site showing no upcoming school meetings for 67 days in 2026.
+//
+// Returns [{ date, type, time }] or null on fetch failure. Never invents a date:
+// only rows the page states outright, in its own "Month D, YYYY: <what> at <when>"
+// list, are parsed. Retreats and the CASB conference are skipped -- they are not
+// meetings where the board takes action.
+async function syncSchoolSchedule() {
+  console.log('\n🏫 Task 20d: Scraping Board of Education published schedule...');
+  const html = await fetchGovPage('https://www.tellurideschool.org/boeschedule', 'School District schedule');
+  if (!html) return null;
+  const txt = html.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ').replace(/&nbsp;|&#160;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ');
+  const rows = [];
+  const re = /\b([A-Z][a-z]+)\s+(\d{1,2}),\s*(\d{4})\s*:\s*([^:]{0,80}?)\s+at\s+(\d{1,2}:\d{2}\s*[AP]M)/gi;
+  let m;
+  while ((m = re.exec(txt)) !== null) {
+    const mo = SCHOOL_MONTHS.findIndex(n => n.toLowerCase() === m[1].toLowerCase());
+    if (mo < 0) continue;
+    const label = m[4];
+    if (/conference|retreat/i.test(label)) continue;
+    const type = /work\s*session/i.test(label) ? 'work'
+      : /regular|month/i.test(label) ? 'monthly' : null;
+    if (!type) continue;
+    const date = `${SCHOOL_MONTHS[mo]} ${+m[2]}, ${m[3]}`;
+    if (isNaN(new Date(date))) continue;
+    rows.push({ date, type, time: m[5].toUpperCase().replace(/\s+/g, ' ') });
+  }
+  const seen = new Set();
+  let out = rows.filter(r => {
+    const k = r.date + '|' + r.type;
+    if (seen.has(k)) return false;
+    seen.add(k);
+    return true;
+  });
+
+  // Sanity guard: the board always works then meets, so a work session dated
+  // AFTER its own month's regular meeting is a typo on the source page, not a
+  // schedule. (October 2026 shipped as "Oct 29 work session / Oct 20 regular"
+  // -- Oct 19 is the Monday that fits every other month's pattern.) Drop the
+  // impossible row and keep the meeting; never guess the intended date.
+  const monthly = new Map();
+  for (const r of out) if (r.type === 'monthly') monthly.set(r.date.replace(/ \d+,/, ' '), r.date);
+  out = out.filter(r => {
+    if (r.type !== 'work') return true;
+    const peer = monthly.get(r.date.replace(/ \d+,/, ' '));
+    if (peer && new Date(r.date) > new Date(peer)) {
+      console.warn(`  ⚠ School: work session ${r.date} is listed AFTER the ${peer} regular meeting — source typo, row dropped`);
+      return false;
+    }
+    return true;
+  });
+
+  console.log(`  School: ${out.length} published schedule row(s) parsed`);
   return out.length ? out : null;
 }
 

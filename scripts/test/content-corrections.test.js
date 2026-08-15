@@ -6,7 +6,7 @@
 const test = require('node:test');
 const assert = require('node:assert');
 const {
-  applyCorrections, pruneExpired, defaultExpiry, matches, recordDate,
+  applyCorrections, pruneExpired, defaultExpiry, matches, recordDate, correctionKey,
 } = require('../lib/content-corrections.js');
 
 const TODAY = '2026-08-09';
@@ -72,6 +72,34 @@ test('clear-link drops the href but KEEPS the event', () => {
   assert.equal(out.TJC_EVENTS.length, 1, 'event still present');
   assert.equal(out.TJC_EVENTS[0].link, '');
   assert.equal(out.TJC_EVENTS[0].title, 'Shabbat!');
+});
+
+test('set-link swaps the dead href for a working one', () => {
+  // A stable index page is strictly better than no link: the reader can still
+  // get to the organizer. clear-link is the fallback when nothing works.
+  const arrays = { TJC_EVENTS: [{ title: 'Shabbat!', pubDate: '2026-08-28', link: 'https://dead.example/x' }] };
+  const out = applyCorrections(arrays, [{
+    id: 'x', kind: 'set-link', array: 'TJC_EVENTS', titleMatch: 'Shabbat!',
+    newLink: 'https://live.example/events', expiresOn: '2026-12-01',
+  }], TODAY).arrays;
+  assert.equal(out.TJC_EVENTS[0].link, 'https://live.example/events');
+  assert.equal(out.TJC_EVENTS[0].title, 'Shabbat!', 'event untouched otherwise');
+});
+
+test('correctionKey ignores the id, so a re-mint dedups against yesterday', () => {
+  // The autofixer stamps today's date into every id it writes. Deduping on the
+  // id therefore never matched an earlier run, and one dead Shabbat href
+  // accumulated four byte-identical clear-link rows on four consecutive days.
+  const row = d => ({
+    id: `deadlink-shabbat-${d}`, kind: 'clear-link', array: 'TJC_EVENTS',
+    titleMatch: 'Shabbat!', evidence: 'https://dead.example/x', addedOn: d,
+  });
+  assert.notEqual(row('2026-08-11').id, row('2026-08-12').id, 'ids differ by day');
+  assert.equal(correctionKey(row('2026-08-11')), correctionKey(row('2026-08-12')),
+    'but the same fix to the same record on the same evidence is ONE correction');
+  assert.notEqual(correctionKey(row('2026-08-11')),
+    correctionKey({ ...row('2026-08-11'), array: 'KOTO_COMMUNITY_EVENTS' }),
+    'a different array is a genuinely different correction');
 });
 
 test('title matching is normalized but not fuzzy', () => {
