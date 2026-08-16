@@ -597,6 +597,11 @@ async function checkAI(ctx) {
     `- an item mislabeled, garbled, or with an obviously wrong/placeholder value\n` +
     `- a civic detail that looks internally inconsistent\n` +
     `Do NOT flag legitimately recurring or multi-day items (same title on consecutive/different days is fine). ` +
+    // Confirmed by Morgan 2026-08-16 after the reviewer called the September 22
+    // pairing an error. It is the board's standing practice, published on its
+    // own schedule page, so flagging it burns a Medium every single month.
+    `Do NOT flag a Board of Education Work Session and a Board of Education regular/monthly meeting ` +
+    `sharing a date — that board routinely holds the work session and then the meeting on the same day. ` +
     `Be conservative — no speculation. Return STRICT JSON only, an array of ` +
     `{"severity":"High|Medium|Low","category":"...","item":"<title> (<date>)","problem":"...","suggestedFix":"..."} ` +
     `(empty array [] if nothing is clearly wrong).\n\nDATA:\n` +

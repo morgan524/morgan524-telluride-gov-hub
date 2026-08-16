@@ -4048,8 +4048,20 @@ function parseWilkinsonHtml(html) {
     const titleMatch = /<tr class="s-lc-ea-ttit"[\s\S]*?<a[^>]+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i.exec(segment);
     if (!titleMatch) continue;
     const link = titleMatch[1].replace(/&amp;/g, '&');
-    const title = titleMatch[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    // Strip tags to a SPACE, not to nothing. LibCal wraps a cancellation badge
+    // in its own element inside the anchor, so deleting the tags outright
+    // welded the badge to the first word and shipped "CANCELLEDGentle Yoga with
+    // Kristen Milord" to the events feed. (The description parse below already
+    // used a space; this line was the odd one out.)
+    const title = titleMatch[2].replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
     if (!title) continue;
+    // A cancelled class is not an event residents can attend, and leaving it in
+    // the feed sends someone to the library for nothing. Drop it at the source
+    // so it cannot reappear on the next 6-hour refresh.
+    if (/^\s*cancell?ed\b/i.test(title)) {
+      console.log(`  Wilkinson: skipping cancelled event "${title}"`);
+      continue;
+    }
     // From / To
     const fromMatch = /<tr class="s-lc-ea-from"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);
     const toMatch = /<tr class="s-lc-ea-to"[\s\S]*?<td>([\s\S]*?)<\/td>\s*<\/tr>/i.exec(segment);

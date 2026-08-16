@@ -2,16 +2,15 @@
   "_comment": "Durable editorial corrections, re-applied on EVERY content refresh (content-refresh.js Task 21d, via scripts/lib/content-corrections.js). They exist because the arrays they fix are re-scraped from scratch every 6 hours, so editing js/gov-helpers.js directly fixes nothing. Rows are written by scripts/content-autofix.js -- deterministic ones automatically, judgment ones via a pull request -- and can be hand-edited or deleted at any time. kind: event-date | clear-link | drop-event. A row matches on array + normalized title + the date the SOURCE currently publishes (wrongDate), so it goes inert the moment the source corrects itself. EVERY ROW EXPIRES: expiresOn is required and pruned automatically, because a permanent override silently distorts data long after the source fixed its own mistake.",
   "corrections": [
     {
-      "id": "setlink-tjc-shabbat-2026-08-15",
-      "kind": "set-link",
+      "id": "drop-tjc-shabbat-2026-08-16",
+      "kind": "drop-event",
       "array": "TJC_EVENTS",
       "titleMatch": "Shabbat!",
-      "newLink": "https://www.telluridejewishcommunity.com/events",
-      "reason": "Per-event Squarespace URLs 404 once the event passes. The events index is stable and lists the current Shabbat. Replaces four duplicate auto clear-link rows.",
+      "reason": "Morgan 2026-08-16: remove the event rather than relink it. The per-event Squarespace URL 404s and the remaining entries are past. Deliberately NOT date-scoped, because TJC_EVENTS stores pubDate as a Date object which wrongDate cannot match; a short expiry is the safety valve instead, so a genuinely new Shabbat is not suppressed for long.",
       "evidence": "https://www.telluridejewishcommunity.com/events/2026/8/28/shabbat",
       "addedBy": "morgan",
-      "addedOn": "2026-08-15",
-      "expiresOn": "2026-12-31"
+      "addedOn": "2026-08-16",
+      "expiresOn": "2026-09-20"
     }
   ]
 }

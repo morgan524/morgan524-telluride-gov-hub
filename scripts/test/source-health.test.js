@@ -74,3 +74,35 @@ test('detectStaleData: flags a *_CACHED_DATA list with 0 upcoming, not one with 
   assert.ok(!empty.some(f => f.name === 'COUNTY_CACHED_DATA'),
     'a list that renders upcoming via a future summary must not be flagged');
 });
+
+test('orphan summaries: a _BOARD_MEETINGS row counts as a list row', () => {
+  // Telluride's boards do not live in a *_CACHED_DATA array — Town Council is
+  // in TELLURIDE_BOARD_MEETINGS. Only scanning _CACHED_DATA reported the Sept 1
+  // Town Council summary as an orphan while the meeting was listed and
+  // rendering, i.e. a false positive on the busiest body on the site.
+  // Mirrors the REAL localDate in js/gov-helpers.js: a bare "YYYY-MM-DD" is
+  // split on the dashes rather than handed to new Date(), which would read it
+  // as UTC midnight and land on the previous day in Mountain time. Summary keys
+  // are ISO and meeting rows are "Month D, YYYY", so a naive stub makes the two
+  // sides disagree by a day and the test lies about what the checker does.
+  const localDate = v => {
+    const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(String(v));
+    if (iso) return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+    const d = new Date(v);
+    return isNaN(d) ? null : new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  };
+  const captured = {
+    MANUAL_SUMMARIES: {
+      'telluride|2026-09-01|Town Council - Sep 01 2026': 'real summary',
+      'telluride|2026-09-14|Open Space Commission - Sep 14 2026': 'real summary',
+    },
+    TELLURIDE_CACHED_DATA: [{ date: 'September 16, 2026', title: 'HARC Meeting' }],
+    TELLURIDE_BOARD_MEETINGS: [{ date: 'September 1, 2026', title: 'Town Council' }],
+  };
+  const f = sh.detectStaleData(captured, localDate, '2026-08-16')
+    .filter(x => x.name === 'MANUAL_SUMMARIES');
+  assert.equal(f.length, 1, 'still reports the genuine orphan');
+  assert.ok(/2026-09-14/.test(f[0].message), 'Sept 14 has no row anywhere — real orphan');
+  assert.ok(!/2026-09-01/.test(f[0].message),
+    'Sept 1 IS listed in TELLURIDE_BOARD_MEETINGS and must not be called an orphan');
+});

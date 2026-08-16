@@ -181,9 +181,15 @@ function detectStaleData(captured, localDate, today) {
   //    per-body check belongs to the list+summary unification (overhaul Phase 2).
   const ms = captured.MANUAL_SUMMARIES;
   if (ms && typeof ms === 'object' && !Array.isArray(ms)) {
+    // Meeting lists do NOT all end in _CACHED_DATA. Telluride's boards live in
+    // TELLURIDE_BOARD_MEETINGS, and ignoring it made this check report the
+    // Sept 1 Town Council summary as an orphan when the meeting was listed and
+    // rendering fine — a false positive on the busiest body on the site, which
+    // is exactly the kind of noise that trains a reader to skip the report.
+    const MEETING_LISTS = /(_CACHED_DATA|_BOARD_MEETINGS)$/;
     const listDays = new Set();
     for (const [k, v] of Object.entries(captured)) {
-      if (!/_CACHED_DATA$/.test(k) || !Array.isArray(v)) continue;
+      if (!MEETING_LISTS.test(k) || !Array.isArray(v)) continue;
       for (const row of v) { const d = calDay(localDate, row && (row.date || row.eventDate)); if (d) listDays.add(d); }
     }
     if (listDays.size) {
