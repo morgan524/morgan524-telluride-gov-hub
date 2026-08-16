@@ -1,38 +1,34 @@
 {
-  "hash": "f94dbc42633533a5de0226bcf61a8c538e7551a7",
-  "lede": "The week's heaviest lift is Wednesday, when the BOCC sits as the Housing Authority to dig into regional affordable housing compliance at a moment when those finances are genuinely stressed, Ouray County holds three public hearings including a full repeal of a land-use code section, and Mountain Village Council considers a resolution that sets the appreciation cap on deed-restricted units — the fine print that decides whether affordable housing actually stays affordable. HARC tackles the Shandoka Lot redevelopment on Black Bear Road across two preliminary hearings, P&Z gets its first look at school district employee housing on the TMHS site, and Tuesday marks the first day of school for Telluride R-1.",
+  "hash": "5fd3f2899d1f2abe5a224be605d6f7daa5f73666",
+  "lede": "Mountain Village Council meets Thursday to vote on a resolution setting the appreciation cap for deed-restricted affordable units — the fine print that determines whether those homes stay affordable for the next buyer, not just the first one. That same day, Telluride's P&Z holds a public hearing on new employee housing at the middle-high school site, and the BOCC sits Wednesday as the Housing Authority to work through regional affordable housing compliance. Ouray County's Planning Commission also holds three public hearings Wednesday, including a full repeal of Section 16 of its land use code — a significant rewrite worth paying attention to even from across the county line.",
   "notable": [
     {
-      "id": 6,
-      "stake": "Unpermitted Elks Lodge pergola seeks retroactive approval in historic district."
-    },
-    {
-      "id": 7,
-      "stake": "Shandoka Lot redevelopment — four new buildings — gets preliminary HARC review."
-    },
-    {
-      "id": 8,
-      "stake": "Staff proposes 2027 campground and shower fee increases up to 25%."
-    },
-    {
-      "id": 9,
-      "stake": "BOCC reviews housing authority compliance and holds public hearing on land-use amendment."
-    },
-    {
-      "id": 11,
-      "stake": "Ouray County considers repealing an entire land-use code section — three public hearings."
-    },
-    {
-      "id": 12,
-      "stake": "Public hearings on special event liquor permits for upcoming community events."
-    },
-    {
       "id": 13,
-      "stake": "Mountain Village sets deed-restriction appreciation cap — determines long-term affordability."
+      "stake": "Vote sets appreciation cap controlling long-term affordability of deed-restricted MV units."
     },
     {
       "id": 14,
-      "stake": "School district employee housing proposal gets first formal public review."
+      "stake": "Public hearing on new school-district employee housing at the TMHS site."
+    },
+    {
+      "id": 9,
+      "stake": "BOCC reviews regional housing authority compliance and holds a public land-use hearing."
+    },
+    {
+      "id": 11,
+      "stake": "Three public hearings including repeal of an entire county land-use code section."
+    },
+    {
+      "id": 7,
+      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment, multi-building new construction."
+    },
+    {
+      "id": 6,
+      "stake": "HARC decides whether to approve an unpermitted structure in the Historic Landmark District."
+    },
+    {
+      "id": 8,
+      "stake": "Staff recommending 2027 campground and shower fee increases up to 25%."
     }
   ]
 }

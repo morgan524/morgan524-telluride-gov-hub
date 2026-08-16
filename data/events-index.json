@@ -93,6 +93,19 @@
     "type": "Music"
   },
   {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-08-15",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
+  },
+  {
     "title": "Mind Blown Telluride",
     "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
     "date": "2026-08-15",
@@ -104,19 +117,6 @@
     "source": "Mountain Village",
     "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
     "type": "Community"
-  },
-  {
-    "title": "Studio TAB: Summer Fever",
-    "href": "https://koto.org/event/studio-tab-summer-fever/",
-    "date": "2026-08-15",
-    "time": "6:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Step into the glamour of Studio TAB: Summer Fever and dance the night away in your best Studio 54-inspired sequins, sparkle, and disco flair! Join Telluride AIDS Benefit on Saturday, August 15th, from 6-9 p.m. for an unforgettable evening…",
-    "type": "Music"
   },
   {
     "title": "Telluride Mushroom Festival: Puff Ball Costume Dance Party at Telluride Mushroom Festival",
@@ -158,17 +158,17 @@
     "type": "Community"
   },
   {
-    "title": "Movies Under the Stars",
-    "href": "https://koto.org/event/movies-under-the-stars/2026-08-15/",
+    "title": "Studio TAB: Summer Fever",
+    "href": "https://www.telluride.com/event/studio-tab-summer-fever/",
     "date": "2026-08-15",
-    "time": "6:30 PM",
-    "location": "Conference Center Plaza Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://koto.org/wp-content/uploads/2026/06/MuS_Pstr11x17_2026-1-pdf-1.jpg",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63131/tab_studio_tab_sig_2027.800x533.webp",
     "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Telluride Mountain Village Owner's Association (TMVOA) presents Movies Under the Stars – FREE family-friendly outdoor movies screenings – every Saturday this summer at Conference Center Plaza! New this summer: Family Happy Hour from…",
-    "type": "Arts & Film"
+    "source": "Telluride.com",
+    "desc": "Join the Telluride AIDS Benefit for a new Summer event! Located at a private home in Aldasoro, overlooking Wilson Peak, …",
+    "type": "Community"
   },
   {
     "title": "Mt. Sneffels Half Marathon-10K-Kids Fun Run",
