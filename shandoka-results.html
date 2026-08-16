@@ -197,12 +197,28 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
       + '<input id="em" type="email" autocomplete="username" value="' + esc(ADMIN) + '">'
       + '<input id="pw" type="password" autocomplete="current-password" placeholder="Password">'
       + '<button id="go">Sign in</button>'
+      // Without this the only admin is locked out permanently the first time
+      // the password is forgotten -- the credential is a Firebase Auth user,
+      // not the Google account, so there is nowhere else on the site to reset it.
+      + '<p style="margin:12px 0 0"><a href="#" id="forgot" style="font-size:15.5px;color:var(--forest)">'
+      + 'Forgot password?</a></p>'
       + (note ? '<p class="err">' + esc(note) + '</p>' : '') + '</div>';
     document.getElementById('go').onclick = function () {
       firebase.auth().signInWithEmailAndPassword(
         document.getElementById('em').value.trim(),
         document.getElementById('pw').value
       ).catch(function (e) { loginPanel(e.message || 'Sign-in failed.'); });
+    };
+    document.getElementById('forgot').onclick = function (ev) {
+      ev.preventDefault();
+      var addr = document.getElementById('em').value.trim();
+      if (!addr) { loginPanel('Enter the email address first.'); return; }
+      firebase.auth().sendPasswordResetEmail(addr).then(function () {
+        loginPanel('Reset link sent to ' + addr + '. Check the inbox (and spam), '
+          + 'set a new password, then sign in here.');
+      }).catch(function (e) {
+        loginPanel(e.message || 'Could not send the reset email.');
+      });
     };
     document.getElementById('pw').addEventListener('keydown', function (e) {
       if (e.key === 'Enter') document.getElementById('go').click();
