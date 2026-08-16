@@ -31,7 +31,9 @@ const STATIC_PAGES = [
   { t: 'Gov-Hub — public meetings', s: 'Every public meeting for the next month: agendas, summaries, Zoom links, how to comment.', u: '/gov-hub.html', k: 'page' },
   { t: 'Past meetings & recaps', s: 'What happened at recent meetings — plain-English recaps.', u: '/gov-hub-past.html', k: 'page' },
   { t: 'Housing', s: 'Affordable & deed-restricted listings, housing data and resources.', u: '/housing.html', k: 'page' },
-  { t: 'Hub-Bub community board', s: 'Ask a question, share a document, join the conversation. Question of the Day.', u: '/hub-bub.html', k: 'page' },
+  // Hub-Bub's community side is paused (2026-08-16) and the page is noindex.
+  // It stays live only as the signup surface, which nobody searches for by
+  // name, so it is out of site search until the board comes back.
   { t: 'Local Orgs directory', s: 'The organizations, nonprofits, and groups that make up the community.', u: '/local-orgs.html', k: 'page' },
   { t: 'Zoning Map', s: 'Interactive San Miguel County zoning + parcel map.', u: '/zoning-map/index.html', k: 'page' },
   { t: 'Projects Map', s: 'Development projects across the region, mapped.', u: '/projects-map/index.html', k: 'page' },

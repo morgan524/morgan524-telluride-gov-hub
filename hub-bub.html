@@ -4,8 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="/js/site-config.js"></script>
-  <title>Hub-Bub — Livable Telluride</title>
-  <meta name="description" content="Hub-Bub — the community forum for residents of the Telluride, Colorado region to discuss local government, housing, land use, and events.">
+  <title>Subscribe — Livable Telluride</title>
+  <meta name="description" content="Sign up for the Livable Telluride weekly email: what local governments in the Telluride region are deciding, and when you can weigh in.">
+  <!-- ══ HUB-BUB COMMUNITY PAUSED 2026-08-16 (Morgan) ══
+       The discussion board is hidden while it is being reworked, but this PAGE
+       must stay live: the Subscribe pill in the shared nav points at
+       hub-bub.html#signup and the signup modal lives here, outside .hb-shell.
+       Taking the page down breaks signups site-wide.
+
+       TO BRING HUB-BUB BACK: delete the <style> block below, restore the
+       title/description above, drop the .hb-paused-only blocks in the masthead
+       and after it, and re-add the page to STATIC_PAGES in site.js + sitemap.xml.
+       Nothing else was removed. -->
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    .hb-shell { display: none !important; }        /* composer, feed, topic bars, Question of the Day */
+    .hb-community-only { display: none !important; }
+    /* The modal + its overlay are OUTSIDE .hb-shell, so #signup still works. */
+  </style>
 
   <!-- Hub-Bub forum styles (legacy overrides in css/hub-bub.css still load for hub-bub.js compat) -->
   <link rel="stylesheet" href="lt.css?v=8">
@@ -1161,11 +1177,30 @@
     <img class="masthead-art" src="uploads/wilson-peak.png" alt="" aria-hidden="true">
     <div class="masthead-fade"></div>
     <div class="masthead-inner">
-      <div class="crumb">Connect <span class="sep">&rsaquo;</span> Hub-Bub</div>
-      <h1>Hub-Bub</h1>
-      <p class="sub">Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+      <div class="crumb hb-community-only">Connect <span class="sep">&rsaquo;</span> Hub-Bub</div>
+      <div class="crumb hb-paused-only">Connect <span class="sep">&rsaquo;</span> Subscribe</div>
+      <h1 class="hb-community-only">Hub-Bub</h1>
+      <p class="sub hb-community-only">Hub-Bub is organized around the way people actually look for civic information: by topic, meeting, source, question, and next step.</p>
+      <h1 class="hb-paused-only">Subscribe</h1>
+      <p class="sub hb-paused-only">Get the weekly email: what your local governments are deciding, and when you can weigh in.</p>
     </div>
   </header>
+
+  <!-- Shown only while the community side is paused. The page stays live because
+       the Subscribe pill in the shared nav points at hub-bub.html#signup and the
+       signup modal lives on this page (outside .hb-shell), so taking the page
+       down would break signups site-wide. -->
+  <div class="hb-paused-only" style="max-width:760px;margin:34px auto 0;padding:0 24px;">
+    <div style="background:#eef3ef;border-left:5px solid var(--forest);border-radius:10px;padding:22px 26px;">
+      <p style="margin:0 0 14px;font-size:17px;line-height:1.6;color:#22303c;">
+        Hub-Bub, our community discussion board, is <strong>temporarily offline</strong> while we make some improvements. It will be back.
+      </p>
+      <p style="margin:0 0 18px;font-size:17px;line-height:1.6;color:#22303c;">
+        In the meantime, the weekly email is the best way to keep up with what local government is deciding.
+      </p>
+      <button class="topnav-cta" type="button" onclick="hbShowAuth('signup')" style="font-size:16px;padding:12px 22px;">Sign up for the weekly email</button>
+    </div>
+  </div>
 
   <!-- ══════════════════ HIDDEN LEGACY ELEMENTS (hub-bub.js targets these IDs) ══════════════════ -->
   <div class="hb-wrap" style="display:none;" aria-hidden="true">
@@ -1561,7 +1596,7 @@
       <!-- ── SIGNUP panel ── -->
       <div id="hbSignupPanel">
         <h2 id="hbModalTitle">Create your free account</h2>
-        <p class="hb-modal-sub">Join the Livable Telluride community. Your account lets you post, comment, and choose how you stay informed.</p>
+        <p class="hb-modal-sub">Get the weekly email and choose what you hear about. Your account also lets you update your preferences any time.</p>
 
         <div class="hb-modal-row">
           <div class="hb-modal-field">
@@ -1655,7 +1690,7 @@
           🔒 A free account lets you post and comment on Hub-Bub.
         </div>
 
-        <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Create account &amp; join Hub-Bub</button>
+        <button class="hb-modal-submit" id="hbSignupSubmit" type="button">Sign me up</button>
         <div class="hb-modal-switch">Already have an account? <a id="hbSwitchToLogin">Log in instead</a></div>
         <div class="hb-modal-msg" id="hbSignupMsg"></div>
       </div>
