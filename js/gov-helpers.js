@@ -1620,6 +1620,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "‘We want to find projects that push people’",
+    source: "Telluride Times",
+    date: "August 16, 2026",
+    firstSeen: "2026-08-16",
+    newsTopic: "arts-culture",
+    copy: "Augment Music Series, a Telluride Arts partner, has awarded three grants for 2026 — supporting a vinyl release for local band Atari Safari, equipment for pianist Travis Fisher, and a two-day choral workshop with conductor Paul Smith and flutist Daniela Mars. Since 2023, Augment has funded 22 local musicians and bands. The group also sponsors live performances at venues like Elks Park and the Farmers Market.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/arts_and_entertainment/article_798c043c-6c3b-4ace-bbc1-b6691ae8ab9c.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/ce/9ce22c91-95a6-42b6-a678-f21d4d7a9c91/6a7eba6d3fa8e.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Bandana-rama",
     source: "Telluride Times",
     date: "August 15, 2026",
@@ -2456,6 +2468,15 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
     href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
+  },
+  {
+    title: "Waste Tire Collection Event",
+    source: "San Miguel County",
+    date: "August 11, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
+    img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
     title: "Black Bear Pass Now Open",
@@ -3666,18 +3687,6 @@ const HUMANE_SOCIETY_ANIMALS = [
  * Seeded 2026-05-29 with 3 events so the Events tab shows content
  * on Day 1; bot overwrites on first run. */
 const ALIBI_EVENTS = [
-  {
-    title: "Thom LaFond + DROS",
-    link: "https://www.alibitelluride.com/calendar#eca-event=thom-la-fonde-dros-alexander-karvelas",
-    description: "Telluride Mushroom Fest Puff Ball After Party",
-    pubDate: "2026-08-15",
-    time: "9:00 PM",
-    source: "alibi",
-    sourceLabel: "The Alibi",
-    category: "Live Music",
-    location: "The Alibi • Telluride, CO",
-    imageUrl: "https://ucarecdn.com/7bf79fb4-a715-4cee-b43a-bf4637aec172/-/crop/500x500/0,66/-/preview/"
-  },
   {
     title: "Velvet Daydream",
     link: "https://www.alibitelluride.com/calendar#eca-event=velvet-daydream",
