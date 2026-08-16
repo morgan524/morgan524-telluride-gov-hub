@@ -13,46 +13,6 @@
     "url": "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    "title": "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
-    "entity": "San Miguel County Assessor",
-    "entityClass": "ent-county",
-    "entityLogo": "state",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County Assessor announces property tax exemption applications for qualifying senior citizens (65+), veterans with 100% service-connected disability, gold star veteran spouses, and qualified senior primary residential classification. Applications must be submitted by July 15, with late applications accepted until August 15.",
-    "deadline": "July 15, 2026",
-    "expires": "2026-08-15",
-    "dates": "4/30",
-    "papers": [
-      "ttimes_0430"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    "address": "San Miguel County",
-    "noticeKey": "property-tax-exemption-2026"
-  },
-  {
-    "title": "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
-    "entity": "San Miguel County Assessor",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County Assessor is informing residents about property tax exemptions available for qualifying senior citizens (65+), veterans with disabilities, and gold star veteran spouses. The exemption covers 50% of the first $200,000 in actual value of primary residences, with applications due by July 15 (late applications accepted until August 15).",
-    "deadline": "July 15, 2026 (late applications until August 15, 2026)",
-    "expires": "2026-08-15",
-    "dates": "5/28",
-    "papers": [
-      "ttimes_0528"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
-    "address": "San Miguel County",
-    "noticeKey": "tax-exemption-2026"
-  },
-  {
     "title": "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
     "entity": "Colorado District Court, Water Division No. 4",
     "entityClass": "ent-county",
@@ -135,26 +95,6 @@
     "noticeKey": "creditors-kiball-COL-000175"
   },
   {
-    "title": "Property Tax Exemption -- Senior Citizens, Disabled Veterans & Gold Star Spouses",
-    "entity": "San Miguel County Assessor's Office",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "San Miguel County is notifying qualifying senior citizens, veterans with a 100% service-connected disability rating (or individual unemployability status starting tax year 2025), and gold star veteran spouses that they may be eligible for a property tax exemption exempting 50% of the first $200,000 in actual value of their primary residence. Qualifying seniors must be at least 65, have owned and occupied the property as their primary residence for at least 10 consecutive years prior to January 1 of the application year. Applications must be submitted to the San Miguel County Assessor's office by July 15, with late applications accepted until August 15; contact the assessor at 970-728-3174.",
-    "deadline": "2026-07-15",
-    "expires": "2026-08-15",
-    "dates": "6/25",
-    "papers": [
-      "ttimes_0625"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
-    "address": "San Miguel County, Colorado",
-    "noticeKey": "property-tax-exemption-senior-veteran-2026"
-  },
-  {
     "title": "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     "entity": "Estate of Gerald D. Wilson",
     "entityClass": "ent-county",
@@ -215,26 +155,6 @@
     "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     "address": "PO Box 10, Norwood, CO 81423",
     "noticeKey": "fwdc-share-cert-887"
-  },
-  {
-    "title": "Property Tax Exemption Notice -- Senior Citizens, Veterans with Disability, Gold Star Veteran Spouses (COL-000182)",
-    "entity": "San Miguel County Assessor",
-    "entityClass": "ent-county",
-    "entityLogo": "assessor",
-    "icon": "💰",
-    "iconClass": "type-tax",
-    "type": "Tax & Finance",
-    "filterTag": "tax-finance",
-    "summary": "The Colorado Assessor's office is notifying qualifying senior citizens, veterans with a disability, and gold star veteran spouses that they may be eligible for a property tax exemption under the Colorado Constitution, which exempts 50% of the first $200,000 in actual value of a primary residence from property taxes, with the State of Colorado paying the exempted amount. Qualifying seniors must generally be at least 65 years old, have owned and occupied the property as their primary residence for at least 10 consecutive years, and submit an application to the assessor by July 15, with late applications accepted until August 15. Applications and informational brochures are available by contacting the San Miguel County Assessor's office.",
-    "deadline": "2026-07-15",
-    "expires": "2026-08-15",
-    "dates": "7/9",
-    "papers": [
-      "ttimes_0709"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    "address": "San Miguel County, Colorado",
-    "noticeKey": "tax-exemption-senior-veteran-2026"
   },
   {
     "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",

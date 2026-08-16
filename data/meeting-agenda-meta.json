@@ -1,15 +1,4 @@
 {
-  "airport|2026-07-16|TRAA Board of Commissioners Meeting": {
-    "sv": 2
-  },
-  "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026": {
-    "sv": 4,
-    "zoomUrl": "https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1",
-    "meetingId": "861 6987 1704",
-    "passcode": "281002.",
-    "phone": "346-248-7799",
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8143"
-  },
   "fire|2026-07-21|Board of Directors Meeting": {
     "sv": 2
   },
@@ -60,10 +49,6 @@
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
   },
-  "county|2026-07-16|San Miguel Basin Fair Board": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1046/files/agenda/1894"
-  },
   "county|2026-07-17|San Miguel Basin Fair Board": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1047/files/agenda/1895"
@@ -110,13 +95,6 @@
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"
-  },
-  "county|2026-07-16|Housing Code Update SSR": {
-    "zoomUrl": "https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1",
-    "meetingId": "845 0294 6677",
-    "passcode": "519464",
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1051/files/agenda/1898"
   },
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026": {
     "sv": 4,
@@ -480,6 +458,14 @@
     "ph": "b858cb282617fb09"
   },
   "school|2026-08-25|Telluride Board of Education Monthly Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "fire|2026-09-15|Board of Directors Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "ophir|2026-09-15|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
   }

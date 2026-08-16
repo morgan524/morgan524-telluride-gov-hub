@@ -777,7 +777,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn…",
     "type": "Arts & Film",
-    "endDate": "2026-10-07"
+    "endDate": "2026-10-14"
   },
   {
     "title": "Sunset Concert Series",
@@ -804,7 +804,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers,…",
     "type": "Music",
-    "endDate": "2026-10-08"
+    "endDate": "2026-10-15"
   },
   {
     "title": "Yoga in the Park- Wednesday evenings",
@@ -1583,6 +1583,32 @@
     "type": "Community"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-25/",
+    "date": "2026-08-25",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    "href": "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
+    "date": "2026-08-25",
+    "time": "12:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "DAVE JORDAN",
     "href": "https://events.ourayridgwayevents.com/event/dave-jordan",
     "date": "2026-08-25",
@@ -1594,6 +1620,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    "href": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-25/",
+    "date": "2026-08-25",
+    "time": "5:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Tourism Advisory Committee",
@@ -1649,6 +1688,19 @@
     "type": "Talks & Classes"
   },
   {
+    "title": "Gather and Grieve",
+    "href": "https://koto.org/event/gather-and-grieve/2026-08-25/1/",
+    "date": "2026-08-25",
+    "time": "8:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of…",
+    "type": "Community"
+  },
+  {
     "title": "The Last Wild Buffalo w/ Hunter Archer",
     "href": "https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer",
     "date": "2026-08-25",
@@ -1660,6 +1712,19 @@
     "source": "The Alibi",
     "desc": "The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho...",
     "type": "Music"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-25/",
+    "date": "2026-08-25",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "San Juan Chamber MusicFest",

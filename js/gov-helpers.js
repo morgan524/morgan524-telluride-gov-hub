@@ -146,12 +146,6 @@ function resolveEventImage(e, opts) {
 // stays current automatically; the static config is the fallback for
 // sources without a PDF agenda.
 const MEETING_AGENDA_META = {
-  "airport|2026-07-16|TRAA Board of Commissioners Meeting":
-    {"sv":2},
-
-  "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    {"sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799","agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8143"},
-
   "fire|2026-07-21|Board of Directors Meeting":
     {"sv":2},
 
@@ -179,9 +173,6 @@ const MEETING_AGENDA_META = {
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"},
 
-  "county|2026-07-16|San Miguel Basin Fair Board":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1046/files/agenda/1894"},
-
   "county|2026-07-17|San Miguel Basin Fair Board":
     {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1047/files/agenda/1895"},
 
@@ -205,9 +196,6 @@ const MEETING_AGENDA_META = {
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"},
-
-  "county|2026-07-16|Housing Code Update SSR":
-    {"zoomUrl":"https://us06web.zoom.us/j/84502946677?pwd=cKG6VanJpoiIt8Kl8GR5bYs2hXb3ce.1","meetingId":"845 0294 6677","passcode":"519464","sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1051/files/agenda/1898"},
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
     {"sv":4,"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8050","zoomUrl":"https://us06web.zoom.us/meeting/register/8596sfn-QZC7tbYJiXF4YA","meetingId":"845 3020 1574","passcode":"082987.","phone":"719) 359-4580"},
@@ -417,6 +405,12 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "fire|2026-09-15|Board of Directors Meeting":
+    {"sv":4,"ph":"b858cb282617fb09"},
+
+  "ophir|2026-09-15|General Assembly Meeting":
     {"sv":4,"ph":"b858cb282617fb09"}
 };
 
@@ -830,7 +824,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 13, 2026",
     newsTopic: "community",
     copy: "One breezy afternoon in mid-July, Mike Potter s phone started making all kinds of noise. “It goes, beep, beep, beep, beep!” shouted the Ridgway rancher, brandishing his flip phone from the pocket of his mud-stained jeans. “And boy,” he added, “I started doing this,” fingers massaging his temples and",
-    href: "https://www.ouraynews.com/2026/08/12/pinched-every-front/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/12/pinched-every-front/",
     img: ""
   },
   {
@@ -1027,16 +1021,10 @@ const ENGAGE_MEETINGS = [
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
   }
 ];         // Engage Telluride project key dates
-const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-15';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-15';
+const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-16';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-16';
 
 const MANUAL_SUMMARIES = {
-  "airport|2026-07-16|TRAA Board of Commissioners Meeting":
-    "The July 16, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
-
-  "telluride|2026-07-16|Liquor Licensing Authority - Jul 16 2026":
-    "A routine liquor licensing session. On the consent calendar: draft minutes from the July 1 meeting and ratification of a state-issued license transfer for The Catorce Group Ltd., doing business as Cuatro Cinco Seis at 219 W. Pacific Ave. The one public hearing covers a request by Telluride Science for a single special event permit for Town Talk at 300 S. Townsend St. on August 25, 2026, from 5:00 to 9:00 pm. The July 1 draft minutes reflect fourteen special event permits approved at that session — covering summer and fall events including Bluegrass, Jazz Festival, Film Festival, Telluride Mountain Run, Noche de Luz, and several Telluride Table fundraisers — all granted without public comment.",
-
   "fire|2026-07-21|Board of Directors Meeting":
     "The July 21, 2026 Fire Board of Directors Meeting agenda hasn't been posted yet.",
 
@@ -1064,9 +1052,6 @@ const MANUAL_SUMMARIES = {
   "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026":
     "The Telluride Housing Authority meets Tuesday at Rebekah Hall for a short but substantive session. First up is routine officer certification for the Authority and its subcommittee. The real work is a proposed policy statement on primary residency for dependents of multiple custodial parents — a question that comes up whenever a household doesn't fit the standard definitions written into deed-restricted housing rules, and the 40 minutes allotted suggests it's not a simple fix. The board will also take up waitlist policies more broadly, a perennial pressure point as demand for deed-restricted units continues to outpace supply.",
 
-  "county|2026-07-16|San Miguel Basin Fair Board":
-    "The San Miguel Basin Fair Board convenes a special meeting at 10pm — an end-of-day debrief and discussion of whatever came up during the fair. The agenda is deliberately open-ended, which is how these post-event sessions tend to go.",
-
   "county|2026-07-17|San Miguel Basin Fair Board":
     "The San Miguel Basin Fair Board holds a special meeting at 10pm — late by design, after a full day at the fair. The agenda is a debrief: how the day went and whatever issues made their way up to the board during it. Routine end-of-day business, but these conversations are often where the real operational picture emerges.",
 
@@ -1090,9 +1075,6 @@ const MANUAL_SUMMARIES = {
 
   "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026":
     "The Block 23 Housing Corporation holds what amounts to a housekeeping session — approving minutes from November 2025 and certifying its officer elections, CEO retention, and authorized signers via consent resolution. Nothing substantive is on the agenda beyond keeping the corporation's paperwork in order.",
-
-  "county|2026-07-16|Housing Code Update SSR":
-    "San Miguel County's sixth working session in its ongoing Land Use Code rewrite aimed at making affordable and workforce housing easier to build. The three-hour session will work through zoning and density adjustments, additional workforce housing types, and regulatory incentives for affordable housing — then synthesize feedback into final redline recommendations for the code. This is the kind of upstream work that determines what actually gets built in the valley for years to come.",
 
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026":
     "The August 6 retreat is a single three-hour work session in which Council will set the Town's goals and objectives for 2027. No votes, no land-use items — just the annual exercise of deciding what this Council wants to prioritize in the year ahead. Those priorities, once set, tend to shape budget decisions and staff direction for the whole cycle, so the conversation matters even if nothing is formally adopted.",
@@ -1302,7 +1284,13 @@ const MANUAL_SUMMARIES = {
     "The August 24, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    "The August 25, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet."
+    "The August 25, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+
+  "fire|2026-09-15|Board of Directors Meeting":
+    "The September 15, 2026 fire Board of Directors Meeting agenda hasn't been posted yet.",
+
+  "ophir|2026-09-15|General Assembly Meeting":
+    "The September 15, 2026 Ophir General Assembly Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -2435,30 +2423,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "For divorced parents, Telluride lowers threshold for town-owned or deed-restricted units",
-    source: "Telluride Times",
-    date: "August 2, 2026",
-    firstSeen: "2026-08-02",
-    newsTopic: "housing",
-    copy: "Telluride's Housing Authority voted July 21 to lower the shared-custody threshold for town-owned and deed-restricted units from 50% to 20%, allowing a parent with at least 20% custody to qualify for a bedroom for their child. The change applies to both rentals and for-purchase units.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_0c847016-c186-40f7-ac1a-fa807ebdef23.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/aa/8aa472db-aa78-4f24-a4c1-327b35f88eec/6a6d2ba52e3c8.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "A perfect time for the Perseids",
-    source: "Telluride Times",
-    date: "August 2, 2026",
-    firstSeen: "2026-08-02",
-    newsTopic: "community",
-    copy: "The Perseids meteor shower peaks the nights of Aug. 11–12 and 12–13, with no moonlight interference this year making for ideal dark skies. No equipment needed — just find a dark spot; locally, Top of the Pines near Ridgway, Lizard Head Pass, or Hastings Mesa all work. After midnight you may see up to 100 meteors per hour.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_cdaa6533-92f7-42ca-bc46-8a6258c06670.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/b/77/b77102fd-a6c1-49ed-8002-357712082116/6a6ba339ca365.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
     source: "Town of Telluride",
     date: "August 12, 2026",
@@ -3570,6 +3534,83 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Telluride Middle/High School, TELLURIDE",
     imageUrl: ""
+  },
+  {
+    title: "Gather and Grieve",
+    link: "https://koto.org/event/gather-and-grieve/2026-08-25/1/",
+    description: "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of healing modalities, including art therapy, grief-informed yoga/movement, writing, and acupuncture. We ask that participants be at least six months into their grief, as this group is intended to support individuals who are outside of the more acute phase and able to engage in a reflective, group-based process. There is no maximum time frame for grief, so individuals at any point beyond six months are welcome to attend. There is limited space, so please reach out to Hunter or Maggie at h.emmonscounseling@gmail.com or mmcnally@telluridelibrary.org to register.",
+    pubDate: "2026-08-25T08:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-25/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-25T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-25/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-25T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    link: "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-25/",
+    description: "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your time on court is memorable. Must be 3.5+ to sign up Space: Limited to 8 spots Dates: August 25th & 26th Time: 12pm-2pm Price: $299/person Please sign up online or directly through the pro shop.",
+    pubDate: "2026-08-25T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Telluride R-1 School Board Regular Meeting",
+    link: "https://koto.org/event/telluride-r-1-school-board-regular-meeting/",
+    description: "Telluride R-1 School District Board of Education holds a regular meeting on Tuesday, August 25th, at 5:15 p.m. in the Bridal Veil conference room at TMHS and via Zoom. The Zoom link and meeting agenda can be found at tellurideschool.org.",
+    pubDate: "2026-08-25T17:15:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Middle/High School, TELLURIDE",
+    imageUrl: ""
+  },
+  {
+    title: "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
+    link: "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-25/",
+    description: "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects. August 4 8:30 a.m.- 10:00 a.m. Telluride Room August 11 5:30 p.m. – 7 p.m. Telluride Room August 18 8:30 a.m.- 10:00 a.m. Program Room August 25 5:30 p.m. – 7 p.m. Program Room",
+    pubDate: "2026-08-25T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp"
+  },
+  {
+    title: "Gather and Grieve",
+    link: "https://koto.org/event/gather-and-grieve/2026-08-25/2/",
+    description: "The Telluride Gather and Grieve support group is scheduled to begin August 25th and will run for eight weeks on Tuesday evenings. The group will meet at the Wilkinson Public Library, is free of charge, and will incorporate a variety of healing modalities, including art therapy, grief-informed yoga/movement, writing, and acupuncture. We ask that participants be at least six months into their grief, as this group is intended to support individuals who are outside of the more acute phase and able to engage in a reflective, group-based process. There is no maximum time frame for grief, so individuals at any point beyond six months are welcome to attend. There is limited space, so please reach out to Hunter or Maggie at h.emmonscounseling@gmail.com or mmcnally@telluridelibrary.org to register.",
+    pubDate: "2026-08-25T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
   }
 ];
 
@@ -4526,7 +4567,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/zumba-fitness-with-tamra",
     description: "Zumba is a high-energy, Latin-inspired dance fitness program designed as a fun, accessible workout for all skill levels. It combines fast and slow rhythms with aerobic, interval-training moves to improve cardiovascular health, burn calories, and tone muscles. Classes are often described as a \"fitness party\" that reduces stress. All levels of fitness and dance experience are welcome. Classes are $12 to drop in. Class packs are available for purchase (5 classes for $50, 10 classes for $95). For more information, check out the instructor's website: https://zumba.com/p/zumbafitnesswithTamra or email Tamra at tamra.nichols@icloud.com . For updated class information, including last-minute changes or cancellations, follow the instructor's Zumba Facebook page at https://www.facebook.com/ZumbaFitnesswithTamra . View on site | Email this event",
     pubDate: "2026-08-19T23:30:00.000Z",
-    endDate: "2026-10-07",
+    endDate: "2026-10-14",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -4538,7 +4579,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/open-mic-jam-night-w-host-dj-strong",
     description: "Join us every Wednesday at 6 PM for Open Mic Night with DJ Strong at Floating Lotus Brewery. Bring an original song, play a favorite cover, meet other local musicians, or jump into one of our full-band jam sessions. Solo performers, groups, and musicians looking to collaborate are all welcome. Open Mic is also where we discover artists for Floating Lotus Mainstage. Standout performers may be invited back to play a full featured set, creating a path from Open Mic to the Mainstage. Come perform, connect, experiment, or simply enjoy an evening of live local music. Every Wednesday at 6 PM Floating Lotus Brewery View on site | Email this event",
     pubDate: "2026-08-20T00:00:00.000Z",
-    endDate: "2026-10-08",
+    endDate: "2026-10-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -7222,42 +7263,6 @@ const LEGAL_NOTICES = [
     url: "https://townofridgway.colorado.gov/resources/requests-for-proposals/bids"
   },
   {
-    title: "Property Tax Exemption -- Senior Citizens and Veterans with Disability",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-county",
-    entityLogo: "state",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Assessor announces property tax exemption applications for qualifying senior citizens (65+), veterans with 100% service-connected disability, gold star veteran spouses, and qualified senior primary residential classification. Applications must be submitted by July 15, with late applications accepted until August 15.",
-    deadline: "July 15, 2026",
-    expires: "2026-08-15",
-    dates: "4/30",
-    papers: ["ttimes_0430"],
-    url: "https://www.telluridenews.com/news/legals/article_3718afea-4523-4a88-a728-754e3336d2f8.html",
-    address: "San Miguel County",
-    noticeKey: "property-tax-exemption-2026"
-  },
-  {
-    title: "Property Tax Exemption -- Senior Citizens, Veterans, and Gold Star Spouses",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County Assessor is informing residents about property tax exemptions available for qualifying senior citizens (65+), veterans with disabilities, and gold star veteran spouses. The exemption covers 50% of the first $200,000 in actual value of primary residences, with applications due by July 15 (late applications accepted until August 15).",
-    deadline: "July 15, 2026 (late applications until August 15, 2026)",
-    expires: "2026-08-15",
-    dates: "5/28",
-    papers: ["ttimes_0528"],
-    url: "https://www.telluridenews.com/news/legals/article_0adc5789-cb68-4509-b7a8-1e8bf62a4c8e.html",
-    address: "San Miguel County",
-    noticeKey: "tax-exemption-2026"
-  },
-  {
     title: "Water Court Application -- Trout Lake Reservoir Storage Rights (Case No. 26CW3028)",
     entity: "Colorado District Court, Water Division No. 4",
     entityClass: "ent-county",
@@ -7332,24 +7337,6 @@ const LEGAL_NOTICES = [
     noticeKey: "creditors-kiball-COL-000175"
   },
   {
-    title: "Property Tax Exemption -- Senior Citizens, Disabled Veterans & Gold Star Spouses",
-    entity: "San Miguel County Assessor's Office",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "San Miguel County is notifying qualifying senior citizens, veterans with a 100% service-connected disability rating (or individual unemployability status starting tax year 2025), and gold star veteran spouses that they may be eligible for a property tax exemption exempting 50% of the first $200,000 in actual value of their primary residence. Qualifying seniors must be at least 65, have owned and occupied the property as their primary residence for at least 10 consecutive years prior to January 1 of the application year. Applications must be submitted to the San Miguel County Assessor's office by July 15, with late applications accepted until August 15; contact the assessor at 970-728-3174.",
-    deadline: "2026-07-15",
-    expires: "2026-08-15",
-    dates: "6/25",
-    papers: ["ttimes_0625"],
-    url: "https://www.telluridenews.com/news/legals/article_efb0ca71-953d-4278-b75b-d81bd2f09fe9.html",
-    address: "San Miguel County, Colorado",
-    noticeKey: "property-tax-exemption-senior-veteran-2026"
-  },
-  {
     title: "Public Notice to Creditors -- Estate of Gerald D. Wilson (26PR30005)",
     entity: "Estate of Gerald D. Wilson",
     entityClass: "ent-county",
@@ -7404,24 +7391,6 @@ const LEGAL_NOTICES = [
     url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
     address: "PO Box 10, Norwood, CO 81423",
     noticeKey: "fwdc-share-cert-887"
-  },
-  {
-    title: "Property Tax Exemption Notice -- Senior Citizens, Veterans with Disability, Gold Star Veteran Spouses (COL-000182)",
-    entity: "San Miguel County Assessor",
-    entityClass: "ent-county",
-    entityLogo: "assessor",
-    icon: "💰",
-    iconClass: "type-tax",
-    type: "Tax & Finance",
-    filterTag: "tax-finance",
-    summary: "The Colorado Assessor's office is notifying qualifying senior citizens, veterans with a disability, and gold star veteran spouses that they may be eligible for a property tax exemption under the Colorado Constitution, which exempts 50% of the first $200,000 in actual value of a primary residence from property taxes, with the State of Colorado paying the exempted amount. Qualifying seniors must generally be at least 65 years old, have owned and occupied the property as their primary residence for at least 10 consecutive years, and submit an application to the assessor by July 15, with late applications accepted until August 15. Applications and informational brochures are available by contacting the San Miguel County Assessor's office.",
-    deadline: "2026-07-15",
-    expires: "2026-08-15",
-    dates: "7/9",
-    papers: ["ttimes_0709"],
-    url: "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    address: "San Miguel County, Colorado",
-    noticeKey: "tax-exemption-senior-veteran-2026"
   },
   {
     title: "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
