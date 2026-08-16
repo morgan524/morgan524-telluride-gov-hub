@@ -816,6 +816,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Parish Bulletin for August 16",
+    source: "St. Patrick's Catholic Church",
+    sourceKey: "stpatricks",
+    date: "August 16, 2026",
+    newsTopic: "community",
+    copy: "This week's bulletin--Check it out for all Parish Events and read about Reverend Chad Ripperger, who will lead our Anniversary Parish Mission on September 25-27. There is no cost to attend, but we kindly ask you to sign up and get more infor...",
+    href: "https://stpatrickstelluride.com/2026/parish-news/parish-bulletin-for-august-16/",
+    img: ""
+  },
+  {
     title: "Fall Tuesday Virtual Information",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -2485,6 +2495,24 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "recreation",
     copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
     img: ""
   },
   {
@@ -4399,7 +4427,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
     description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
     pubDate: "2026-08-18T14:15:00.000Z",
-    endDate: "2026-10-13",
+    endDate: "2026-10-15",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
