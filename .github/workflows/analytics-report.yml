@@ -1,0 +1,97 @@
+name: Analytics Report
+
+# Reads Cloudflare Web Analytics for livabletelluride.org and prints the
+# summary to the run's job summary. Read-only: no commits, no pushes.
+#
+# Runs here rather than locally because api.cloudflare.com is not reachable
+# from the Claude Code sandbox (org egress policy), and because this keeps
+# the API token in GitHub secrets instead of anyone's shell history.
+#
+# Requires repo secret: CF_ANALYTICS_TOKEN
+#   Cloudflare → My Profile → API Tokens → Create Token → Custom token
+#   Permissions:       Account · Account Analytics · Read
+#   Account resources: Morgan@brieflink.ai's Account
+# That permission is read-only and cannot change any Cloudflare setting.
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Days back to report (ignored if "since" is set)'
+        required: false
+        default: '28'
+      since:
+        description: 'Start date YYYY-MM-DD (tracking began 2026-06-14)'
+        required: false
+      until:
+        description: 'End date YYYY-MM-DD (default: today)'
+        required: false
+      mode:
+        description: 'What to run'
+        required: false
+        type: choice
+        default: report
+        options: [report, sites, introspect]
+
+permissions:
+  contents: read
+
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Run analytics report
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_ANALYTICS_TOKEN }}
+          MODE:  ${{ inputs.mode }}
+          DAYS:  ${{ inputs.days }}
+          SINCE: ${{ inputs.since }}
+          UNTIL: ${{ inputs.until }}
+        run: |
+          set -o pipefail
+          if [ -z "$CF_API_TOKEN" ]; then
+            echo "::error::Secret CF_ANALYTICS_TOKEN is not set on this repo."
+            echo "Add it under Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+
+          ARGS=""
+          case "$MODE" in
+            sites)      ARGS="--sites" ;;
+            introspect) ARGS="--introspect" ;;
+            *)
+              [ -n "$SINCE" ] && ARGS="$ARGS --since=$SINCE"
+              [ -n "$UNTIL" ] && ARGS="$ARGS --until=$UNTIL"
+              [ -z "$SINCE" ] && [ -n "$DAYS" ] && ARGS="$ARGS --days=$DAYS"
+              ;;
+          esac
+
+          node scripts/analytics-report.js $ARGS 2>&1 | tee /tmp/analytics-report.log
+
+      - name: Publish to job summary
+        if: always()
+        run: |
+          {
+            echo '## Cloudflare Web Analytics — livabletelluride.org'
+            echo
+            echo '```'
+            cat /tmp/analytics-report.log 2>/dev/null || echo '(no output — the run failed before producing any)'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: analytics-report-${{ github.run_id }}
+          path: '/tmp/*.log'
+          retention-days: 14
+          if-no-files-found: ignore

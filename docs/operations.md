@@ -91,6 +91,45 @@ does.
   Don't confuse the brieflink-* workers with this project — they belong to
   a separate product (BriefLink legal-citation tooling).
 
+## Site traffic / usage stats
+
+**Cloudflare Web Analytics** is the only record of who visits the site — the
+site is on GitHub Pages, so there are no server logs. The beacon (site tag
+`6500d02421bc4da1bebfad6099e6027c`) reaches every page two ways: `site.js`
+(~line 150) injects it on the 29 pages that load `site.js`, and a hardcoded
+`<script>` tag covers the older standalone pages (privacy-policy, terms-of-use,
+profile, data-deletion, community-guidelines, source-document, and the 14
+`Blog Posts/*/index.html`).
+
+Read it either way:
+
+- **Dashboard** — Cloudflare → Analytics & Logs → Web Analytics.
+- **`scripts/analytics-report.js`** — prints visits, pageviews, top pages,
+  referrers, countries, devices, and a weekly trend. Run it through the
+  **Analytics Report** workflow (Actions → Analytics Report → Run workflow),
+  which needs repo secret `CF_ANALYTICS_TOKEN` (Cloudflare token scoped
+  Account → Account Analytics → **Read**). Numbers land in the run's job
+  summary. `--sites` verifies the token and lists site tags; `--introspect`
+  dumps the live GraphQL schema.
+
+Note: `api.cloudflare.com` is **blocked by the Claude Code sandbox's egress
+policy**, so this cannot be run from a Claude session — use the workflow (or a
+local shell with `CF_API_TOKEN` set).
+
+Two things to know before interpreting any of it:
+
+1. **Tracking began 2026-06-14** (commit `895acac`). Nothing exists before it.
+2. **The redesign cutover (2026-07-22, commit `0e7e033`) deleted 18 legacy
+   pages.** Per-path figures spanning that date show old URLs dying and new
+   ones starting at zero — an inventory change, not a traffic change. Totals
+   compare cleanly across it; paths do not.
+
+The beacon is client-side JS, so it misses RSS/feed readers, digest email opens
+(that's Mailchimp — see `docs/mailchimp.md`), and JS-blocked visitors. It also
+largely excludes bots, which server logs would include. Treat it as a **floor on
+human reach**. Still uninstrumented: `voodoo-timeline/index.html` and the two
+`assets/Housing Study/` calculators.
+
 ## Email addresses on the project
 
 The `livabletelluride.org` domain has three role addresses, each with a
