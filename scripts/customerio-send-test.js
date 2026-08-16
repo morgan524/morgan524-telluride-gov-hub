@@ -27,6 +27,11 @@ if (!TO || !TO.includes('@')) { console.error('Missing/invalid CIO_TEST_TO'); pr
 let html = fs.readFileSync(HTML_FILE, 'utf8');
 html = html.replace(/\*\|UNSUB\|\*/g, '#').replace(/\*\|[A-Z0-9_]+\|\*/g, '')
            .replace(/\{\{\s*unsubscribe_url\s*\}\}/g, '#')
+           // The TAG form is what every hand-authored broadcast now uses
+           // ({% unsubscribe_url %}, not the {{ }} variable). Transactional
+           // sends don't evaluate it, so without this the test email shows the
+           // literal tag text where the unsubscribe link belongs.
+           .replace(/\{%\s*unsubscribe_url\s*%\}/g, '#')
            .replace(/\{\{\s*customer\.[^}]*\}\}/g, '');
 
 (async () => {

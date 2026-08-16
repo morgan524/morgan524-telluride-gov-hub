@@ -1,0 +1,49 @@
+name: Customer.io — Send One Broadcast File as a Test
+
+# Manual-only. Sends a COMMITTED HTML file to ONE address you control, via the
+# Customer.io App API (Transactional), so a hand-authored broadcast can be
+# proofed in a real inbox before it goes near the list.
+#
+# Deliberately NOT a list send: the transactional endpoint takes a single
+# recipient, so this workflow cannot mail subscribers even by mistake. The real
+# send still happens in the Customer.io broadcast UI.
+#
+# Note the unsubscribe link is neutralised to "#" in a transactional send --
+# {% unsubscribe_url %} only resolves inside an actual broadcast. Everything
+# else (layout, images, links, fonts) renders exactly as the list will see it.
+on:
+  workflow_dispatch:
+    inputs:
+      to:
+        description: Recipient email (one address you control)
+        required: true
+        default: info@livabletelluride.org
+      html_path:
+        description: Path to the committed HTML file to send
+        required: true
+        default: Claude Files/Newsletters/shandoka-story-poles-2026-08-15.html
+      subject:
+        description: Subject line for the test
+        required: true
+        default: "[TEST] It's Story Time at Shandoka"
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+      - name: Confirm the file exists
+        run: |
+          test -f "${{ github.event.inputs.html_path }}" \
+            || { echo "::error::No such file: ${{ github.event.inputs.html_path }}"; exit 1; }
+          echo "Sending $(wc -c < "${{ github.event.inputs.html_path }}") bytes to ${{ github.event.inputs.to }}"
+      - name: Send via Customer.io
+        env:
+          CUSTOMERIO_APP_API_KEY: ${{ secrets.CUSTOMERIO_APP_API_KEY }}
+          CIO_TEST_TO: ${{ github.event.inputs.to }}
+          CIO_HTML: ${{ github.event.inputs.html_path }}
+          CIO_SUBJECT: ${{ github.event.inputs.subject }}
+        run: node scripts/customerio-send-test.js
