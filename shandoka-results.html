@@ -214,8 +214,14 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
       var addr = document.getElementById('em').value.trim();
       if (!addr) { loginPanel('Enter the email address first.'); return; }
       firebase.auth().sendPasswordResetEmail(addr).then(function () {
-        loginPanel('Reset link sent to ' + addr + '. Check the inbox (and spam), '
-          + 'set a new password, then sign in here.');
+        // Deliberately hedged. Firebase's email-enumeration protection makes
+        // this resolve successfully even when NO account exists for the
+        // address, sending nothing — so a flat "Reset link sent" is a claim
+        // this code cannot actually make, and it sent me chasing a mail
+        // delivery problem when the real answer was "there is no account".
+        loginPanel('If an account exists for ' + addr + ', a reset link is on its way — '
+          + 'check the inbox and spam. Nothing arriving within a few minutes almost '
+          + 'always means no account has been created for this address yet.');
       }).catch(function (e) {
         loginPanel(e.message || 'Could not send the reset email.');
       });
