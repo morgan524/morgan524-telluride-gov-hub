@@ -736,86 +736,6 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
-    title: "2026 Chamber Meeting, December",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
-    img: ""
-  },
-  {
-    title: "Noel Night",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 4, 2026",
-    newsTopic: "community",
-    copy: "Community shopping event and celebration.",
-    href: "https://norwoodcolorado.com/event/noel-night-3/",
-    img: ""
-  },
-  {
-    title: "West End Parade of Lights & Elfin Eve",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "December 3, 2026",
-    newsTopic: "arts-culture",
-    copy: "Holiday parade and festival.",
-    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, November",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "November 10, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, October",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "October 13, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
-    img: ""
-  },
-  {
-    title: "Pioneer Day",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 26, 2026",
-    newsTopic: "community",
-    copy: "Celebration of local history and pioneers.",
-    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
-    img: ""
-  },
-  {
-    title: "2026 Chamber Meeting, September",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "September 8, 2026",
-    newsTopic: "community",
-    copy: "Monthly Chamber of Commerce meeting open to all.",
-    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
-    img: ""
-  },
-  {
-    title: "Fourth Friday Films, August",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 21, 2026",
-    newsTopic: "arts-culture",
-    copy: "Outdoor movie screening with popcorn and drinks available.",
-    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
-    img: ""
-  },
-  {
     title: "Parish Bulletin for August 16",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -933,16 +853,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
     href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Fall Foliage Tour Contest 🍂",
-    source: "Norwood Colorado",
-    sourceKey: "norwood",
-    date: "August 12, 2026",
-    newsTopic: "community",
-    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
-    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -1629,6 +1539,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Alpine Wellness lawsuit against Town of Telluride dismissed",
+    source: "Telluride Times",
+    date: "August 16, 2026",
+    firstSeen: "2026-08-16",
+    newsTopic: "community",
+    copy: "Alpine Wellness, a Telluride marijuana retailer for 15 years, lost its lawsuit against the Town after San Miguel County District Court dismissed the case with prejudice on Aug. 10. The dispute centered on the Town's local licensing demands for IRS records before granting renewal — something Alpine Wellness said went beyond state licensing requirements.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6d3ac139-0b59-4378-abf9-e66540448099.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/27/227ffc82-82e1-416c-9d28-b7230f39a041/6a80ecb0e4c63.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘We want to find projects that push people’",
     source: "Telluride Times",
@@ -3115,17 +3037,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Drop In Tech Time with Oliver",
-    link: "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
-    description: "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
-    pubDate: "2026-08-16T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Tea and Tarot",
     link: "https://koto.org/event/tea-and-tarot/2026-08-16/",
     description: "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
@@ -4563,6 +4474,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg"
   },
   {
+    title: "Horsin' Around- Storytime with a Mini Horse",
+    link: "https://events.ourayridgwayevents.com/event/horsin-around-storytime-with-a-mini-horse",
+    description: "Join us at the Ouray Library for a Mini Horse Dragon-Themed Storytime! This will start at 11:00 am and go till around 11:45 am. Ages: Elementary View on site | Email this event",
+    pubDate: "2026-08-21T17:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53692409030601/huge/d4393446b79aa70e307aa9a1dbe54b3cd5832a05.jpg"
+  },
+  {
     title: "True Grit Historic Walking Tours",
     link: "https://events.ourayridgwayevents.com/event/true-grit-tours",
     description: "Walk in the footsteps of John Wayne and Kim Darby as you explore downtown Ridgway with a trained guide to discover the fascinating behind-the-scenes story of the filming of the original True Grit movie in 1968. Many of the buildings seen in the movie are still in place. John Wayne won his only Oscar for his portrail of Marshal Rooster Cogburn. Offered every Friday at 3 pm in June, July and August. Additional tours are offered at 10am Mondays and 3 pm Wednesdays in July. Meet at the Hartwell Park gazebo 15 minutes before tours begin. FREE. Tours last about an hour. In 2022, this tour was recognized nationally when it was named the reader's choice for best historic town tour by True West magazine. For more information see the website: TrueGritTours.org or on facebook: True Grit Tours. …",
@@ -4696,6 +4618,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Fellin Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53623729143081/huge/45546bcb32f8d150e1f7b0a0d240e5499f23a374.jpg"
+  },
+  {
+    title: "Camp Vibrant",
+    link: "https://events.ourayridgwayevents.com/event/camp-vibrant",
+    description: "An overnight campout in Rotary Park with live music and dance beats all night! Everything's local, and there's stuff for everyone: kids and adults and grands, day birds and night owls, acoustic aficionados and ragged ravers. Kids under 12 are free and kids 13-17 are half off! Tons of musicians and DJs take the stage starting at 4pm playing funk and folk and rock and blues and house and bass and more, M&M Mountain Bounce deploys free bounce houses, free crafts make their way into the Big Tent, food vendors sling ice cream and hotdogs and donuts and more, the folks at from Mountain Air Music Series serve beer, margs, spirits, and non-alcoholic libations (smoothies are new from Mountain Air for Vibrant!), flow artists dance with light-up stuff, lasers make the cliffs and trees glow different colors, the Mountain Creature sound system thumps like nothing you've heard before until we …",
+    pubDate: "2026-08-22T21:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Rotary Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53686544349034/huge/b1b631e3abbc1c5e76162fdcabc374e016001fb3.jpg"
   },
   {
     title: "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
@@ -4909,6 +4842,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The Sherbino",
     imageUrl: "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg"
+  },
+  {
+    title: "August Culinary Club: Creamy Taco Soup",
+    link: "https://events.ourayridgwayevents.com/event/august-culinary-club-creamy-taco-soup",
+    description: "Join the Ouray Library to create a delicious soup in the Massard Room in the Ouray Community Center on Monday, August 31st, starting at 5:30 p.m.! Sign up is required at programsouraypl@gmail.com Ages: Adults View on site | Email this event",
+    pubDate: "2026-08-31T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The Massard Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53693195881547/huge/75d70dc5cdd5fba693c00e1d3a5370a40e5fc232.jpg"
   },
   {
     title: "On Display - UNSCRIPTED: Fiber Improvisations by Bonnie Bucknam",

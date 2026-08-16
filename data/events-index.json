@@ -1,15 +1,15 @@
 [
   {
-    "title": "Drop In Tech Time with Oliver",
-    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-16/",
+    "title": "Drop-In Tech Time with Oliver",
+    "href": "https://telluridelibrary.libcal.com/event/15970387?hs=a",
     "date": "2026-08-16",
     "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "2nd Floor Desk",
     "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as…",
     "type": "Community"
   },
   {
@@ -914,6 +914,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Horsin' Around- Storytime with a Mini Horse",
+    "href": "https://events.ourayridgwayevents.com/event/horsin-around-storytime-with-a-mini-horse",
+    "date": "2026-08-21",
+    "time": "11:00 AM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53692409030601/huge/d4393446b79aa70e307aa9a1dbe54b3cd5832a05.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us at the Ouray Library for a Mini Horse Dragon-Themed Storytime! This will start at 11:00 am and go till around 11:45 am. Ages: Elementary View on site | Email this event",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Telluride Farmers' Market Music Series: Donavan Daily",
     "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
     "date": "2026-08-21",
@@ -1150,6 +1163,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Braggin' rights are on the line for competitors to earn the title of Best Chili in Ouray County for 2026 during the 3rd Annual WCOC Chili Cook-Off! Local businesses will present an assortment of chilis to be tested by professionals and…",
     "type": "Community"
+  },
+  {
+    "title": "Camp Vibrant",
+    "href": "https://events.ourayridgwayevents.com/event/camp-vibrant",
+    "date": "2026-08-22",
+    "time": "3:30 PM",
+    "location": "Ouray Rotary Park",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53686544349034/huge/b1b631e3abbc1c5e76162fdcabc374e016001fb3.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "An overnight campout in Rotary Park with live music and dance beats all night! Everything's local, and there's stuff for everyone: kids and adults and grands, day birds and night owls, acoustic aficionados and ragged ravers. Kids under 12…",
+    "type": "Family & Kids"
   },
   {
     "title": "Movies Under the Stars",
@@ -1988,6 +2014,19 @@
     "source": "The Alibi",
     "desc": "Hailing from Pittsburgh, PA, Big Blitz combines dance, jazz, rock, and electroni...",
     "type": "Music"
+  },
+  {
+    "title": "August Culinary Club: Creamy Taco Soup",
+    "href": "https://events.ourayridgwayevents.com/event/august-culinary-club-creamy-taco-soup",
+    "date": "2026-08-31",
+    "time": "5:30 PM",
+    "location": "The Massard Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53693195881547/huge/75d70dc5cdd5fba693c00e1d3a5370a40e5fc232.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join the Ouray Library to create a delicious soup in the Massard Room in the Ouray Community Center on Monday, August 31st, starting at 5:30 p.m.! Sign up is required at programsouraypl@gmail.com Ages: Adults View on site | Email this event",
+    "type": "Food & Drink"
   },
   {
     "title": "Bike & Brewery Tour",
