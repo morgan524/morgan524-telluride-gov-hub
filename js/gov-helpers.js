@@ -852,6 +852,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
   },
   {
+    title: "Bear killed after entering Ridgway home, killing chickens",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 17, 2026",
+    newsTopic: "recreation",
+    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home on Saturday after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins se",
+    href: "https://www.ouraynews.com/2026/08/17/bear-killed-entering-ridgway-home-killing-chickens/",
+    img: ""
+  },
+  {
     title: "Parish Bulletin for August 16",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -962,16 +972,6 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Visitors cited for feeding bears",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "housing",
-    copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
-    href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
-    img: ""
-  },
-  {
     title: "Fall Foliage Tour Contest 🍂",
     source: "Norwood Colorado",
     sourceKey: "norwood",
@@ -1073,6 +1073,14 @@ const ENGAGE_MEETINGS = [
     date: "2026-08-19",
     board: "harc",
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
+  },
+  {
+    projectName: "Facilities Master Plan",
+    projectUrl: "https://engagetelluride.org/facilities-master-plan",
+    title: "HARC Work Session | 335 W Colorado - County/Town Facilities Work Session 2",
+    date: "2026-08-19",
+    board: "harc",
+    dateUrl: "https://engagetelluride.org/facilities-master-plan/widgets/99345/key_dates#41671"
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-17';
@@ -1677,6 +1685,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Suspect arrested for over $22,000 of Telluride bike thefts",
+    source: "Telluride Times",
+    date: "August 17, 2026",
+    firstSeen: "2026-08-17",
+    newsTopic: "government",
+    copy: "A Telluride man, Dustin Friday, 38, was arrested July 31 after the Marshal's Department used license plate reader cameras to link him to over $22,000 in mountain bike thefts. The cameras tracked his vehicle entering and leaving town near the times of reported thefts, and stolen bikes turned up on his social media. The case has also reignited a local debate about ALPR surveillance, with Town Council set to hold a work session on the cameras.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_855ba2c6-46a1-4a2b-807a-7f07c9d71c28.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/ed/8edf495d-5504-4c9a-b1fa-2fc29282bc05/6a8367e3c6f73.image.png",
+    imgHiRes: true
+  },
   {
     title: "Uplifting souls since 1896",
     source: "Telluride Times",
@@ -3197,17 +3217,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "TES & TIS Back to School Celebrations",
-    link: "https://koto.org/event/tes-tis-back-to-school-celebrations/",
-    description: "Back to School Celebration for TES and TIS to Meet your Teacher and Drop off Supplies 2:00-3:30 pm",
-    pubDate: "2026-08-17T14:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
     link: "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-17/",
     description: "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on identification for her bird walk the following morning. The bird walk will take place at 8:30 am on August 18th. Meet outside the Telluride Patagonia store. Bring binoculars if you have them. If you don't, they will be provided. The walk is limited to 12 participants. Sign up at Telluride Patagonia or with a QR code provided on local flyers.",
@@ -3327,17 +3336,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
-  },
-  {
-    title: "Telluride Rotary Club Meeting",
-    link: "https://koto.org/event/telluride-rotary-club-meeting-10/",
-    description: "Telluride Rotary Club meets Wednesday, August 19, at 6:00 p.m. at the MountainFilm location, 122 S Oak Street, Telluride. Meetings feature guest speakers and discussion of club projects. Anyone with an interest in networking and service is welcome to drop in as a guest. Email telluriderotary@gmail.com for info or to rsvp.",
-    pubDate: "2026-08-19T18:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
   },
   {
     title: "Tennis Clinic 3.0-4.0",
@@ -3678,6 +3676,17 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
+    imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-26T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   }
 ];

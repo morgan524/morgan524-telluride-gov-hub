@@ -54,19 +54,6 @@
     "endDate": "2026-10-12"
   },
   {
-    "title": "TES & TIS Back to School Celebrations",
-    "href": "https://koto.org/event/tes-tis-back-to-school-celebrations/",
-    "date": "2026-08-17",
-    "time": "2:00 PM",
-    "location": "",
-    "town": "",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/festival.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Back to School Celebration for TES and TIS to Meet your Teacher and Drop off Supplies 2:00-3:30 pm",
-    "type": "Festivals"
-  },
-  {
     "title": "Hobby Hopping: Bullet Journaling",
     "href": "https://telluridelibrary.libcal.com/event/17286075?hs=a",
     "date": "2026-08-17",
@@ -1623,6 +1610,19 @@
     "source": "KOTO Community Calendar",
     "desc": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",

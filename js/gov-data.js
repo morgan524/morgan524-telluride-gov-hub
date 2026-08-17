@@ -213,18 +213,18 @@ const TMVOA_CACHED_DATA = [
   },
   {
     date: "July 23, 2026",
-    title: "TMVOA Annual Members Meeting",
-    board: "annual",
-    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
-    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
-    location: "Mountain Village, CO (see agenda for Zoom link)"
-  },
-  {
-    date: "July 23, 2026",
     title: "TMVOA Board of Directors Meeting",
     board: "board",
     agendaUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_agenda_7_23-1.pdf",
     packetUrl: "https://tmvoa.org/site/assets/files/4822/tmvoa_board_meeting_packet_7_23-1.pdf",
+    location: "Mountain Village, CO (see agenda for Zoom link)"
+  },
+  {
+    date: "July 23, 2026",
+    title: "TMVOA Annual Members Meeting",
+    board: "annual",
+    agendaUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_agenda_7_23_26.pdf",
+    packetUrl: "https://tmvoa.org/site/assets/files/4727/tmvoa_annual_members_meeting_packet_7_23_26.pdf",
     location: "Mountain Village, CO (see agenda for Zoom link)"
   },
   {
@@ -298,7 +298,7 @@ const MV_CACHED_DATA = [
     title: "Town Council Meeting",
     board: "tc",
     agendaUrl: "https://townofmountainvillage.com/site/assets/files/49681/august_20-_2026_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49682/august_20-_2026_town_council_meeting_packet.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/49682/august_20-_2026_town_council_meeting_packet-1.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },
