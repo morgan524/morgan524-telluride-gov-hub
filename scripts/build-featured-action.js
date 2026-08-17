@@ -119,9 +119,14 @@ function run(repoRoot) {
       // Pin-only, and gated on pinActive for the same reason the copy is: an
       // expired pin must stop supplying a picture, or the card would staple a
       // stale rendering onto whatever meeting got auto-selected next.
-      image: (pinActive && pin.image) || '',
-      imageAlt: (pinActive && pin.imageAlt) || '',
-      imageCredit: (pinActive && pin.imageCredit) || '',
+      // `images` is the current shape (one agenda can cover two projects, as
+      // Aug 19 HARC does with Shandoka and 335 W Colorado). The older single
+      // `image` is still honored so an existing pin keeps working.
+      images: (pinActive && Array.isArray(pin.images) && pin.images.length
+        ? pin.images
+        : (pinActive && pin.image
+            ? [{ src: pin.image, alt: pin.imageAlt || '', caption: pin.imageCredit || '' }]
+            : [])),
       deepDive: { label: choice.label, href: topicHref(choice.topic) },
       meeting: {
         title: m.title || wk.title || '',

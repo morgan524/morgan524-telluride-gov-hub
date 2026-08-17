@@ -262,7 +262,17 @@
     .fa-card h3 { font: 600 24px/1.25 var(--serif); color: var(--forest); margin: 0 0 8px; }
     .fa-meta { font: 500 14px/1.5 var(--sans); color: var(--body2); margin-bottom: 10px; }
     .fa-blurb { font: 400 15px/1.6 var(--sans); color: var(--body); margin: 0 0 14px; max-width: 72ch; }
-    .fa-figure { margin: 0 0 14px; }
+    .fa-gallery { margin: 0 0 14px; display: grid; gap: 16px; }
+    .fa-gallery-multi { grid-template-columns: 1fr 1fr; align-items: start; }
+    /* Two images from different sources rarely share an aspect ratio (the
+       Shandoka board is wide, the Fruen rendering nearly square), which left
+       one column running far below the other. A fixed box with contain keeps
+       both fully visible -- cropping would cut the height annotations that are
+       the whole point of the Shandoka image. */
+    .fa-gallery-multi .fa-figure img { height: 300px; object-fit: contain; object-position: center top; }
+    @media (max-width: 700px) { .fa-gallery-multi .fa-figure img { height: auto; } }
+    @media (max-width: 700px) { .fa-gallery-multi { grid-template-columns: 1fr; } }
+    .fa-figure { margin: 0; }
     .fa-figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line, #d8d3c6); }
     .fa-figure figcaption { font: 400 15.5px/1.45 var(--sans); color: var(--muted, #6b7a80); margin-top: 6px; }
 
@@ -277,10 +287,7 @@
     <div class="fa-eyebrow">&#9733; Featured Action</div>
     <h3 id="fa-headline"></h3>
     <div class="fa-meta" id="fa-meta"></div>
-    <figure class="fa-figure" id="fa-figure" hidden>
-      <img id="fa-image" alt="">
-      <figcaption id="fa-credit"></figcaption>
-    </figure>
+    <div class="fa-gallery" id="fa-gallery" hidden></div>
     <p class="fa-blurb" id="fa-blurb"></p>
     <div class="fa-acts" id="fa-acts"></div>
   </div>
@@ -397,19 +404,29 @@
     document.getElementById('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location].filter(Boolean).join(' · ');
     // Same proper-noun/address bolding as the Gov-Hub summaries + digest
     // (LTData.emphasizeNames escapes internally — safe as HTML).
-    // Optional pinned image. Hidden unless the pin supplies one, so the card
-    // keeps its current look on every automatic pick.
+    // Optional pinned images. Hidden unless the pin supplies at least one, so
+    // the card keeps its current look on every automatic pick. Two images sit
+    // side by side on desktop and stack on a phone.
     (function () {
-      var fig = document.getElementById('fa-figure');
-      var img = document.getElementById('fa-image');
-      var cred = document.getElementById('fa-credit');
-      if (fa.image) {
-        img.src = fa.image;
-        img.alt = fa.imageAlt || '';
-        cred.textContent = fa.imageCredit || '';
-        cred.hidden = !fa.imageCredit;
-        fig.hidden = false;
-      } else { fig.hidden = true; }
+      var wrap = document.getElementById('fa-gallery');
+      var imgs = Array.isArray(fa.images) ? fa.images.filter(function (x) { return x && x.src; }) : [];
+      if (!imgs.length) { wrap.hidden = true; wrap.innerHTML = ''; return; }
+      wrap.className = 'fa-gallery' + (imgs.length > 1 ? ' fa-gallery-multi' : '');
+      wrap.innerHTML = imgs.map(function (im) {
+        // LTData.esc directly: the local esc alias is declared further down this
+        // function, so it is still undefined here. NOT LTData.safeUrl -- that
+        // one is for outbound links and rejects anything that is not
+        // http(s)://, which turns our own /assets/... paths into '#'. Same-origin
+        // paths get their own check instead, so a bad value in the pin still
+        // cannot smuggle in a javascript: URL.
+        var src = /^\/[^/]/.test(im.src) || /^https:\/\//i.test(im.src) ? im.src : '';
+        if (!src) return '';
+        return '<figure class="fa-figure">'
+          + '<img src="' + LTData.esc(src) + '" alt="' + LTData.esc(im.alt || '') + '" loading="lazy">'
+          + (im.caption ? '<figcaption>' + LTData.esc(im.caption) + '</figcaption>' : '')
+          + '</figure>';
+      }).join('');
+      wrap.hidden = false;
     })();
     document.getElementById('fa-blurb').innerHTML = LTData.emphasizeNames(fa.blurb || '');
     var esc = LTData.esc, safe = LTData.safeUrl, acts = '';
