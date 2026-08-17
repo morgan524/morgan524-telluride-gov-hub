@@ -190,8 +190,13 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
   // English UI and still write in Spanish, and the endpoint echoes English back
   // unchanged.
   var OTHER_PREFIX = 'Other: ';
-  var TRANS = {};        // source text -> English translation
-  var TRANS_BATCH = 25;  // must not exceed the Worker's per-request cap
+  var TRANS = Object.create(null); // source text -> English (null proto: survey
+                                   // text is used as a key, and a response of
+                                   // "constructor" must not match Object's own)
+  var TRANS_BATCH = 5;             // matches the Worker's per-call chunk, so one
+                                   // HTTP request == one Anthropic call
+  var TRANS_PARALLEL = 3;          // in-flight requests
+  var TRANS_TIMEOUT_MS = 90000;    // a wedged request must not hang the export
 
   function freeTextOf(r) {
     var out = [];
@@ -207,44 +212,72 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
     return out;
   }
 
-  function translatePending() {
-    var seen = {}, pending = [];
+  function postBatch(base, batch) {
+    // AbortController bounds each request. Without it a stalled connection
+    // leaves the whole export waiting forever with the button mid-flight.
+    var ctl = window.AbortController ? new AbortController() : null;
+    var timer = ctl && setTimeout(function () { ctl.abort(); }, TRANS_TIMEOUT_MS);
+    var opts = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ texts: batch })
+    };
+    if (ctl) opts.signal = ctl.signal;
+    return fetch(base + '/translate-survey', opts)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (!data || !data.ok || !Array.isArray(data.translations)) {
+          throw new Error((data && data.msg) || 'translation request failed');
+        }
+        return data.translations;
+      })
+      .then(function (list) { if (timer) clearTimeout(timer); return list; },
+            function (err) { if (timer) clearTimeout(timer); throw err; });
+  }
+
+  // Resolves with {failed, error} — never rejects, so the caller can always
+  // fall through to writing the CSV.
+  function translatePending(onProgress) {
+    var seen = Object.create(null), pending = [];
     rows.forEach(function (r) {
       freeTextOf(r).forEach(function (t) {
         if (!(t in TRANS) && !seen[t]) { seen[t] = 1; pending.push(t); }
       });
     });
-    if (!pending.length) return Promise.resolve({ failed: 0 });
+    if (!pending.length) return Promise.resolve({ failed: 0, error: null });
 
     var base = CFG.RSS_PROXY_BASE;
-    if (!base) return Promise.reject(new Error('Worker base URL is not configured.'));
+    if (!base) return Promise.resolve({ failed: pending.length, error: new Error('Worker base URL is not configured.') });
 
-    var failed = 0;
-    // Sequential batches: a survey has few free-text answers, and serial calls
-    // keep this well clear of the Worker's subrequest limits.
-    function runBatch(start) {
-      if (start >= pending.length) return Promise.resolve({ failed: failed });
+    var next = 0, done = 0, failed = 0, firstError = null;
+    onProgress(0, pending.length);
+
+    function worker() {
+      if (next >= pending.length) return Promise.resolve();
+      var start = next; next += TRANS_BATCH;
       var batch = pending.slice(start, start + TRANS_BATCH);
-      return fetch(base + '/translate-survey', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ texts: batch })
-      }).then(function (res) { return res.json(); }).then(function (data) {
-        if (!data || !data.ok || !Array.isArray(data.translations)) {
-          failed += batch.length;
-          return;
-        }
+      return postBatch(base, batch).then(function (list) {
         batch.forEach(function (src, k) {
-          var en = data.translations[k];
-          // Cache even an empty result so a second download doesn't retry it.
+          var en = list[k];
+          // Cache even a blank so a second download doesn't retry it.
           TRANS[src] = typeof en === 'string' ? en : '';
           if (!TRANS[src]) failed++;
         });
-      }).catch(function () {
+      }, function (err) {
         failed += batch.length;
-      }).then(function () { return runBatch(start + TRANS_BATCH); });
+        if (!firstError) firstError = err;
+      }).then(function () {
+        done += batch.length;
+        onProgress(Math.min(done, pending.length), pending.length);
+        return worker();
+      });
     }
-    return runBatch(0);
+
+    var pool = [];
+    for (var i = 0; i < TRANS_PARALLEL; i++) pool.push(worker());
+    return Promise.all(pool).then(function () {
+      return { failed: failed, error: firstError };
+    });
   }
 
   // Blank when the text was already English (the endpoint echoes it back
@@ -291,24 +324,31 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
 
   function csv() {
     var btn = document.getElementById('csv');
-    var label = btn.textContent;
-    btn.disabled = true; btn.textContent = 'Translating…';
-    // A translation failure still produces the CSV — the column is just blank
-    // for the rows that didn't come back. Losing the export entirely because a
-    // translation call timed out would be the worse outcome.
-    translatePending().catch(function (err) {
-      return { failed: -1, err: err };
+    var restore = function () { btn.disabled = false; btn.textContent = 'Download CSV'; };
+    btn.disabled = true; btn.textContent = 'Translating\u2026';
+
+    // Every path below must re-enable the button. Doing the restore inside the
+    // same handler that calls buildCsv() -- and calling it BEFORE anything that
+    // can throw -- is what keeps a failure from leaving the button stuck on
+    // "Translating...", which is exactly how the first version broke.
+    // translatePending() resolves rather than rejects; the second handler is
+    // belt-and-braces for a bug inside it.
+    translatePending(function (done, total) {
+      btn.textContent = 'Translating\u2026 ' + done + '/' + total;
+    }).then(null, function (err) {
+      return { failed: -1, error: err };
     }).then(function (res) {
-      buildCsv();
-      if (res.failed) {
-        alert(res.failed > 0
-          ? res.failed + ' response(s) could not be translated. The CSV downloaded '
-            + 'with those cells left blank — try again to retry them.'
-          : 'Translation is unavailable (' + (res.err && res.err.message || 'request failed')
-            + '). The CSV downloaded without translations.');
+      restore();
+      var buildErr = null;
+      try { buildCsv(); } catch (e) { buildErr = e; }
+      if (buildErr) {
+        alert('Could not build the CSV: ' + (buildErr.message || buildErr));
+      } else if (res.failed) {
+        alert((res.failed < 0 ? 'Translation' : res.failed + ' response(s)')
+          + ' could not be translated'
+          + (res.error ? ' (' + res.error.message + ')' : '')
+          + '. The CSV downloaded with those cells blank \u2014 click again to retry them.');
       }
-    }).then(function () {
-      btn.disabled = false; btn.textContent = label;
     });
   }
 
