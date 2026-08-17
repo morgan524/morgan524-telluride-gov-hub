@@ -1,14 +1,14 @@
 {
   "carhenge": {
-    "lastUpdated": "2026-07-19",
+    "lastUpdated": "2026-08-17",
     "label": "Carhenge / Shandoka",
     "heroImage": "https://ehq-production-us-california.imgix.net/6b1af98643c2eb1d96ea48d001eba309fb722ec3/original/1773791842/3923590257fa65a36b9b6893f6d1adc5_Carhenge-Lot-Header.png?auto=compress%2Cformat&w=1200",
     "heroAlt": "Carhenge Lot Redevelopment site plan showing building layout, green spaces, and pedestrian connections",
     "heroCredit": "Image: Town of Telluride / Engage Telluride",
     "intro": "Two of the most significant in-town redevelopment projects are advancing simultaneously: Carhenge (700 W Pacific) and Shandoka (Lot L). Both propose replacing surface parking with mixed-use neighborhoods combining housing, community space, and structured parking through the PUD and subdivision process.",
-    "statusTitle": "Carhenge is deep in formal land use review — story poles are down, HARC has held its hearings, and P&Z takes up the subdivision and PUD on July 23.",
-    "statusCopy": "After a March P&Z work session and a May 20 HARC work session, story poles stood on the 700 W Pacific lot July 6–17 so the community could see the proposed heights and massing. On July 15 HARC held Preliminary Large-Scale public hearings on the eight proposed buildings (A through E) on Lots 34 and 34B. Next is the July 23 Planning & Zoning hearing on the subdivision that would consolidate the two lots and the Conceptual PUD for the new construction. Shandoka (Lot L) is moving on a parallel track. The key public questions remain density, design, actual affordability, neighborhood fit, parking, traffic, and flood/groundwater — the grounds the Chair 7 Community Coalition is contesting.",
-    "nextStep": "Carhenge Planning & Zoning hearing: July 23, 2026 at Rebekah Hall (113 W Columbia Ave) and on Zoom — a Preliminary Large Scale Subdivision to consolidate Lots 34 and 34B plus a Conceptual PUD for the new construction (carried over from May). The next regular P&Z is August 27.",
+    "statusTitle": "Shandoka is the main item this week: HARC takes up Preliminary Large Scale hearings on all four buildings on August 19, with a 3:00 PM site walk on the lot beforehand. Carhenge has been continued to September.",
+    "statusCopy": "The two projects have swapped places. Shandoka has moved from a July 15 work session to formal Preliminary Large Scale review, split across two hearings: Buildings 1 and 2, then Buildings 3 and 4, on Town-owned Lot L at 860 Black Bear Rd, in the Accommodations 2 zone, with Design Workshop as applicant. Carhenge is not being heard: its Preliminary Large-Scale hearing on Buildings A, B and C, already continued from July 15, is continued again to a date in September still to be set. Story poles stood on the Shandoka lot in mid-August, and the drawings in the August 19 packet are substantially updated from what the public saw earlier. The open questions are unchanged: density, height and massing, what the units will actually cost, parking, traffic, and flood and groundwater.",
+    "nextStep": "HARC, Wednesday August 19: a site walk at 3:00 PM at 860 Black Bear Rd (the Shandoka Lot), then the hearing at 5:30 PM at Rebekah Hall, 113 W Columbia Ave, and on Zoom. Both are open to everyone. HARC reviews design: height, mass, scale, materials and context. Those are exactly the things still movable at this stage. We encourage you to share your thoughts on this parking garage and housing project with the Town Council as well, since Council makes the final call.",
     "metrics": [
       {
         "label": "What to follow",
@@ -57,9 +57,21 @@
         "title": "P&Z takes up the subdivision and Conceptual PUD",
         "copy": "Planning & Zoning hears the Carhenge Preliminary Large Scale Subdivision — consolidating Lots 34 and 34B into a single parcel of just over 15,000 sq ft — and a Conceptual PUD for the new construction, carried over from May. Formal PUD, Subdivision, and Large Scale Activity hearings, then Town Council, still lie ahead.",
         "future": true
+      },
+      {
+        "date": "Aug 19, 2026",
+        "title": "HARC hears Shandoka's four buildings; Carhenge slips to September",
+        "copy": "The Historic & Architectural Review Commission takes up Preliminary Large Scale applications for Shandoka Buildings 1 and 2 and Buildings 3 and 4 on Town-owned Lot L, preceded by a 3:00 PM site walk on the lot itself. The Carhenge Preliminary Large-Scale hearing on Buildings A, B and C, continued from July 15, is continued again to a date in September to be determined.",
+        "future": true
       }
     ],
     "docs": [
+      {
+        "title": "HARC Agenda Packet: Shandoka Preliminary Large Scale (Aug 19, 2026)",
+        "copy": "The full packet for the August 19 hearing, including the substantially updated Shandoka drawings for Buildings 1 and 2 and Buildings 3 and 4. This is the current design of record. The earlier Alternative 2 concept below is what it replaced.",
+        "tag": "Shandoka",
+        "href": "https://telluride-co.civicweb.net/document/443013/"
+      },
       {
         "title": "Carhenge Lot Ground Study (June 2026)",
         "copy": "The Town-commissioned geotechnical and groundwater study of the 700 W Pacific site — directly relevant to the flood-zone and shallow-groundwater questions raised about the proposed below-grade parking.",
@@ -141,17 +153,26 @@
     ],
     "meetings": [
       {
-        "date": "Jul 23, 2026",
+        "date": "Aug 19, 2026",
+        "time": "3:00 PM",
+        "title": "Site Walk: Shandoka Lot, open to the public",
+        "source": "Town of Telluride",
+        "location": "860 Black Bear Rd (the Shandoka Lot)",
+        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
+        "zoom": ""
+      },
+      {
+        "date": "Aug 19, 2026",
         "time": "5:30 PM",
-        "title": "P&Z Hearing — Carhenge Subdivision & Conceptual PUD",
+        "title": "HARC: Shandoka Preliminary Large Scale, Buildings 1-4",
         "source": "Town of Telluride",
         "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
-        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100",
+        "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
         "zoom": ""
       },
       {
         "date": "Aug 27, 2026",
-        "title": "Planning & Zoning Commission — next regular meeting",
+        "title": "Planning & Zoning Commission, next regular meeting",
         "source": "Town of Telluride",
         "location": "Hybrid / Rebekah Hall, 113 W Columbia Ave",
         "href": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
