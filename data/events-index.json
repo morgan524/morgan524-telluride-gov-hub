@@ -82,15 +82,15 @@
   },
   {
     "title": "Tea and Tarot",
-    "href": "https://koto.org/event/tea-and-tarot/2026-08-16/",
+    "href": "https://telluridelibrary.libcal.com/event/17029768?hs=a",
     "date": "2026-08-16",
     "time": "2:30 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Telluride Room",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "img": "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance. Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in…",
     "type": "Community"
   },
   {
@@ -342,7 +342,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
+    "desc": "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with…",
     "type": "Community"
   },
   {
@@ -474,8 +474,8 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
     "category": "Community Event",
     "source": "KOTO Community Calendar",
-    "desc": "First Day of School",
-    "type": "Community"
+    "desc": "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
+    "type": "Talks & Classes"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -751,8 +751,8 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/dsc01583lr-1-.733x412.webp",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
-    "type": "Community"
+    "desc": "Deltaphonic performs as part of the Free Oak Street Park SummerSHOW Series, brought to the Sheridan Opera House in Telluride. This free community concert series offers locals and visitors a chance to enjoy live music in one of the town's…",
+    "type": "Arts & Film"
   },
   {
     "title": "Motel Prophets - Live @ Floating Lotus Brewery",
@@ -989,7 +989,7 @@
     "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/06/Thunder-Tix_600x375px_01.jpg",
     "category": "Concert / Performance",
     "source": "Sheridan Opera House",
-    "desc": "",
+    "desc": "Telluride Theater presents House of Shimmy Shake, a burlesque variety show at the historic Sheridan Opera House. The performance brings together burlesque performance and live entertainment in an evening of playful, theatrical spectacle.",
     "type": "Arts & Film",
     "endDate": "2026-08-22"
   },
@@ -1518,17 +1518,17 @@
     "type": "Food & Drink"
   },
   {
-    "title": "Earth's Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
-    "href": "https://telluridescience.org/event/talk-unusual-microbes/",
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "href": "https://koto.org/event/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
     "date": "2026-08-25",
-    "time": "6:30 PM – 7:30 PM",
-    "location": "Telluride Innovation Center, Telluride",
+    "time": "6:30 PM",
+    "location": "Telluride Innovation Center",
     "town": "Telluride",
-    "img": "https://telluridescience.org/wp-content/uploads/2026/06/TT0825_320-x-212.jpg",
-    "category": "",
-    "source": "Telluride Science",
-    "desc": "This special town talk, presented by Braden Tierney, cofounder and executive director of the Two Frontiers Project extends the season and will be held in town at the Telluride Innovation Center. From hydrothermal vents and volcanic seeps…",
-    "type": "Talks & Classes"
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right…",
+    "type": "Community"
   },
   {
     "title": "Gather and Grieve",
@@ -1597,6 +1597,19 @@
     "type": "Community"
   },
   {
+    "title": "Market on the Plaza",
+    "href": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "11:00 AM",
+    "location": "Heritage Plaza, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
+    "type": "Community"
+  },
+  {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     "href": "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     "date": "2026-08-26",
@@ -1609,19 +1622,6 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-09-09"
-  },
-  {
-    "title": "Market on the Plaza",
-    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "date": "2026-08-26",
-    "time": "6:00 AM",
-    "location": "Mountain Village, CO",
-    "town": "Mountain Village",
-    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
-    "category": "Community Event",
-    "source": "Mountain Village",
-    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "type": "Community"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -1664,17 +1664,30 @@
     "type": "Community"
   },
   {
-    "title": "THE ONLIES",
-    "href": "https://sherbino.org/event/the-onlies-sherbino-ridgway-august-26/",
+    "title": "Telluride R-1 School District Board Retreat",
+    "href": "https://koto.org/event/telluride-r-1-school-district-board-retreat/",
     "date": "2026-08-26",
-    "time": "",
-    "location": "The Sherbino, Ridgway",
-    "town": "Ridgway",
-    "img": "https://sherbino.org/wp-content/uploads/2026/04/2026-sherb-event-banners-10.jpg",
-    "category": "",
-    "source": "Sherbino Theater",
-    "desc": "",
+    "time": "9:00 AM",
+    "location": "",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -1688,6 +1701,20 @@
     "source": "Telluride Chamber Music",
     "desc": "An hour of gorgeous music. The perfect way to unwind after your day.",
     "type": "Music"
+  },
+  {
+    "title": "Camp Alderwild Telluride Festival",
+    "href": "https://sheridanoperahouse.com/events/camp-alderwild-telluride-festival/",
+    "date": "2026-08-27",
+    "time": "6:00 PM",
+    "location": "Sheridan Opera House • Telluride, CO",
+    "town": "Telluride",
+    "img": "https://sheridanoperahouse.com/wp-content/uploads/2026/03/camp_alderwild_20250822_221747.webp",
+    "category": "Concert / Performance",
+    "source": "Sheridan Opera House",
+    "desc": "Camp Alderwild Telluride Festival is a music festival event taking place at the Sheridan Opera House in Telluride. The historic venue will host performances as part of this festival gathering in late August 2026.",
+    "type": "Festivals",
+    "endDate": "2026-08-29"
   },
   {
     "title": "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
@@ -2793,6 +2820,19 @@
     "type": "Music"
   },
   {
+    "title": "Jolie Holland",
+    "href": "https://sherbino.org/event/jolie-holland/",
+    "date": "2026-09-10",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-45.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-09-11",
@@ -3002,6 +3042,19 @@
     "type": "Community"
   },
   {
+    "title": "Young & Dead",
+    "href": "https://sherbino.org/event/young-and-dead-sherbino-ridgway-september-12-2026/",
+    "date": "2026-09-12",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
+    "town": "Ridgway",
+    "img": "https://sherbino.org/wp-content/uploads/2026/06/2026-sherb-event-banners-43.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
+    "type": "Community"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-09-13",
@@ -3120,15 +3173,15 @@
   },
   {
     "title": "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",
-    "href": "https://events.ourayridgwayevents.com/event/native-rhythms-native-jazz-r-carlos-nakai-amochip-dabney-will-clipman-at-the-montrose-pavilion",
+    "href": "https://sherbino.org/event/native-rhythms-native-jazz-r-carlos-nakai-at-the-montrose-pavilion/",
     "date": "2026-09-15",
-    "time": "6:30 PM",
-    "location": "Montrose Pavilion",
+    "time": "",
+    "location": "montrose pavilion, Montrose",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53693235946239/huge/0f1ea37ac1cf168d15be34057cbc7d78b1368e42.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Doors at 6:00 PM; show at 6:30 PM. The Sherbino and Weehawken Creative Arts present R. Carlos Nakai, AmoChip Dabney and Will Clipman at the Montrose Pavilion. The trio brings Native American flute together with jazz, world percussion and…",
+    "img": "https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Music"
   },
   {
@@ -3497,7 +3550,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

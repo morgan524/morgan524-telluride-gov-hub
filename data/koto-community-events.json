@@ -1,19 +1,8 @@
 [
   {
-    "title": "Tea and Tarot",
-    "link": "https://koto.org/event/tea-and-tarot/2026-08-16/",
-    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
-    "pubDate": "2026-08-16T14:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
-  },
-  {
     "title": "TMHS Orientation for 7th graders, 9th graders, and new students",
     "link": "https://koto.org/event/tmhs-orientation-for-7th-graders-9th-graders-and-new-students/",
-    "description": "TMHS Orientation for 7 th graders, 9 th graders, and new students –",
+    "description": "Telluride Middle/High School will hold orientation for incoming 7th graders, 9th graders, and students who are new to the school. The event takes place at the TMHS campus and provides an opportunity for students to get acquainted with their new school environment before the academic year begins.",
     "pubDate": "2026-08-17T00:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -79,7 +68,7 @@
   {
     "title": "Telluride R-1 Schools First Day of School",
     "link": "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    "description": "First Day of School",
+    "description": "The first day of the 2026–2027 school year for Telluride R-1 Schools, welcoming students back to class on August 18th. Families and staff across the district mark the start of a new academic year.",
     "pubDate": "2026-08-18T08:00:00-06:00",
     "source": "koto",
     "sourceLabel": "KOTO",
@@ -493,5 +482,49 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Gather-and-Grieve-updated.jpg"
+  },
+  {
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "link": "https://koto.org/event/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
+    "description": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project, takes us into Earth’s strangest ecosystems. Hydrothermal vents, volcanic seeps, alpine soils, mine drainage right here in Telluride — these unusual environments harbor microscopic life with extraordinary abilities. Tierney will share stories from the field and the lab, where his team at the Two Frontiers Project searches the planet’s microbial diversity for “microbial superpowers” that could help fight pollution, support agriculture, protect ecosystems, and improve human health. This is a co-sponsored event with Telluride Science. This is a free event but please register at https://earth-life.eventbrite.com Thank you to our sponsor, Alpine Bank.",
+    "pubDate": "2026-08-25T18:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Innovation Center",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride R-1 School District Board Retreat",
+    "link": "https://koto.org/event/telluride-r-1-school-district-board-retreat/",
+    "description": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
+    "pubDate": "2026-08-26T09:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-08-26T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Market on the Plaza",
+    "link": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
+    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
+    "pubDate": "2026-08-26T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Heritage Plaza, Mountain Village",
+    "imageUrl": ""
   }
 ]

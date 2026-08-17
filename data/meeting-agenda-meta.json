@@ -49,10 +49,6 @@
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
   },
-  "county|2026-07-17|San Miguel Basin Fair Board": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1047/files/agenda/1895"
-  },
   "county|2026-07-18|San Miguel Basin Fair Board": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1045/files/agenda/1896"
@@ -468,5 +464,24 @@
   "ophir|2026-09-15|General Assembly Meeting": {
     "sv": 4,
     "ph": "b858cb282617fb09"
+  },
+  "rico|2026-09-16|Rico Board of Trustees Regular Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-16|Historic & Architectural Review Commission Chair - Sep 16 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023",
+    "sv": 4,
+    "ph": "96078cc700b16039"
+  },
+  "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022",
+    "sv": 4,
+    "ph": "27f7e2806c89fc76"
+  },
+  "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082",
+    "sv": 4,
+    "ph": "6fb96e40a5040f91"
   }
 }
