@@ -178,12 +178,104 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
     return s.replace(/\r\n?/g, '\n').replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '');
   }
 
-  function csv() {
-    var cols = ['submittedAt','lang','q1','q2','q3','q4','q5','q6','q7','q8'];
+  // Free-text answers are the only place a Spanish response can appear: q8 (the
+  // open comment) and the "Other:" write-in that gets pushed onto the q5 array.
+  // Every multiple-choice value is stored in English regardless of the language
+  // the person took the survey in, so those need no translation.
+  //
+  // Translations come from the Worker's /translate-survey endpoint at export
+  // time and are cached per source string for the life of the page, so
+  // re-downloading the CSV doesn't re-run (or re-bill) the same text. Every
+  // free-text answer is sent, not just lang==='es' rows — someone can pick the
+  // English UI and still write in Spanish, and the endpoint echoes English back
+  // unchanged.
+  var OTHER_PREFIX = 'Other: ';
+  var TRANS = {};        // source text -> English translation
+  var TRANS_BATCH = 25;  // must not exceed the Worker's per-request cap
+
+  function freeTextOf(r) {
+    var out = [];
+    if ((r.q8 || '').trim()) out.push(r.q8);
+    if (Array.isArray(r.q5)) {
+      r.q5.forEach(function (v) {
+        if (typeof v === 'string' && v.indexOf(OTHER_PREFIX) === 0) {
+          var t = v.slice(OTHER_PREFIX.length).trim();
+          if (t) out.push(t);
+        }
+      });
+    }
+    return out;
+  }
+
+  function translatePending() {
+    var seen = {}, pending = [];
+    rows.forEach(function (r) {
+      freeTextOf(r).forEach(function (t) {
+        if (!(t in TRANS) && !seen[t]) { seen[t] = 1; pending.push(t); }
+      });
+    });
+    if (!pending.length) return Promise.resolve({ failed: 0 });
+
+    var base = CFG.RSS_PROXY_BASE;
+    if (!base) return Promise.reject(new Error('Worker base URL is not configured.'));
+
+    var failed = 0;
+    // Sequential batches: a survey has few free-text answers, and serial calls
+    // keep this well clear of the Worker's subrequest limits.
+    function runBatch(start) {
+      if (start >= pending.length) return Promise.resolve({ failed: failed });
+      var batch = pending.slice(start, start + TRANS_BATCH);
+      return fetch(base + '/translate-survey', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ texts: batch })
+      }).then(function (res) { return res.json(); }).then(function (data) {
+        if (!data || !data.ok || !Array.isArray(data.translations)) {
+          failed += batch.length;
+          return;
+        }
+        batch.forEach(function (src, k) {
+          var en = data.translations[k];
+          // Cache even an empty result so a second download doesn't retry it.
+          TRANS[src] = typeof en === 'string' ? en : '';
+          if (!TRANS[src]) failed++;
+        });
+      }).catch(function () {
+        failed += batch.length;
+      }).then(function () { return runBatch(start + TRANS_BATCH); });
+    }
+    return runBatch(0);
+  }
+
+  // Blank when the text was already English (the endpoint echoes it back
+  // unchanged), so the column fills only where a translation actually happened.
+  function englishOf(src) {
+    var en = TRANS[src];
+    if (!en) return '';
+    return en.trim() === String(src).trim() ? '' : en;
+  }
+
+  // q5 keeps its own write-in beside the original rather than borrowing the
+  // q8 translation column — each cell stays aligned with its own question.
+  function renderQ5(v) {
+    if (!Array.isArray(v)) return v;
+    return v.map(function (item) {
+      if (typeof item !== 'string' || item.indexOf(OTHER_PREFIX) !== 0) return item;
+      var src = item.slice(OTHER_PREFIX.length).trim();
+      var en = englishOf(src);
+      return en ? item + ' (EN: ' + en + ')' : item;
+    }).join('; ');
+  }
+
+  function buildCsv() {
+    var cols = ['submittedAt','lang','q1','q2','q3','q4','q5','q6','q7','q8','q8_english'];
     var out = [cols.join(',')];
     rows.forEach(function (r) {
       out.push(cols.map(function (c) {
-        var v = r[c];
+        var v;
+        if (c === 'q8_english') v = englishOf(r.q8 || '');
+        else if (c === 'q5') v = renderQ5(r.q5);
+        else v = r[c];
         if (Array.isArray(v)) v = v.join('; ');
         return '"' + cleanCell(v).replace(/"/g, '""') + '"';
       }).join(','));
@@ -195,6 +287,29 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
     a.download = 'shandoka-survey-' + new Date().toISOString().slice(0, 10) + '.csv';
     document.body.appendChild(a); a.click(); document.body.removeChild(a);
     URL.revokeObjectURL(a.href);
+  }
+
+  function csv() {
+    var btn = document.getElementById('csv');
+    var label = btn.textContent;
+    btn.disabled = true; btn.textContent = 'Translating…';
+    // A translation failure still produces the CSV — the column is just blank
+    // for the rows that didn't come back. Losing the export entirely because a
+    // translation call timed out would be the worse outcome.
+    translatePending().catch(function (err) {
+      return { failed: -1, err: err };
+    }).then(function (res) {
+      buildCsv();
+      if (res.failed) {
+        alert(res.failed > 0
+          ? res.failed + ' response(s) could not be translated. The CSV downloaded '
+            + 'with those cells left blank — try again to retry them.'
+          : 'Translation is unavailable (' + (res.err && res.err.message || 'request failed')
+            + '). The CSV downloaded without translations.');
+      }
+    }).then(function () {
+      btn.disabled = false; btn.textContent = label;
+    });
   }
 
   function load() {

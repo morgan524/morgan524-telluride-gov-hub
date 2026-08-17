@@ -538,6 +538,130 @@ async function handleSummarizeFlyer(request, env, ctx) {
   return json({ ok: true, summary });
 }
 
+// POST /translate-survey { texts: [string, ...] } → { ok, translations: [string, ...] }
+// Translates Shandoka survey free-text answers into English for the CSV export
+// on shandoka-results.html. Only q8 (the open comment) and the "Other:" text in
+// q5 are free-form — every multiple-choice value is stored in English already,
+// so this is the whole translation surface for the survey.
+//
+// Translations are returned aligned to the input array by index; an entry the
+// model couldn't translate comes back as an empty string rather than shifting
+// every later row. English input is echoed back unchanged (the prompt says so),
+// which keeps the caller from having to language-detect before sending.
+const TRANSLATE_SYS =
+  "You translate short public-comment survey responses from Spanish into English for a "
+  + "town government record. Translate faithfully and plainly: keep the writer's meaning, "
+  + "tone, and strength of feeling, including profanity or criticism. Do not soften, "
+  + "summarize, expand, or add commentary. Preserve proper nouns (Shandoka, Telluride, "
+  + "Lot L) as written. If an item is already in English, return it unchanged. If an item "
+  + "is empty or untranslatable, return an empty string for it. Return exactly one "
+  + "translation per input item, in the same order.";
+
+const TRANSLATE_MODEL = "claude-opus-5";
+const TRANSLATE_MAX_TEXTS = 25;   // per request from the browser
+const TRANSLATE_MAX_CHARS = 4000; // matches the survey's own q8 cap
+const TRANSLATE_CHUNK = 5;        // items per Anthropic call
+
+const TRANSLATE_SCHEMA = {
+  type: "object",
+  properties: {
+    translations: { type: "array", items: { type: "string" } },
+  },
+  required: ["translations"],
+  additionalProperties: false,
+};
+
+// One Anthropic call for up to TRANSLATE_CHUNK items. Returns an array the same
+// length as `chunk` (padded/truncated), or null if the call failed — the caller
+// decides whether a failed chunk is fatal or just blanks those rows.
+async function translateChunk(chunk, env, ctx) {
+  const numbered = chunk
+    .map((t, i) => "<item index=\"" + i + "\">\n" + t + "\n</item>")
+    .join("\n");
+
+  let resp;
+  try {
+    resp = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": env.ANTHROPIC_API_KEY,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({
+        model: TRANSLATE_MODEL,
+        max_tokens: 12000,
+        system: TRANSLATE_SYS,
+        // Effort low: this is mechanical translation, not analysis. Thinking is
+        // on by default on Opus 5 and max_tokens caps thinking + output
+        // together, hence the generous ceiling above.
+        output_config: {
+          effort: "low",
+          format: { type: "json_schema", schema: TRANSLATE_SCHEMA },
+        },
+        messages: [{
+          role: "user",
+          content: "Translate each item into English.\n\n" + numbered,
+        }],
+      }),
+    });
+  } catch (e) {
+    return null;
+  }
+  if (!resp.ok) return null;
+
+  const out = await resp.json().catch(() => null);
+  if (!out) return null;
+  if (ctx) ctx.waitUntil(recordAiUsage(env, "translate-survey", TRANSLATE_MODEL, out));
+
+  const text = (out.content || [])
+    .filter(b => b && b.type === "text").map(b => b.text).join("").trim();
+  let parsed;
+  try { parsed = JSON.parse(text); } catch (e) { return null; }
+  const list = parsed && Array.isArray(parsed.translations) ? parsed.translations : null;
+  if (!list) return null;
+
+  // Structured outputs guarantees the shape, not the count — normalize length
+  // so index alignment holds no matter what came back.
+  return chunk.map((_, i) => (typeof list[i] === "string" ? list[i] : ""));
+}
+
+async function handleTranslateSurvey(request, env, ctx) {
+  const cors = profileCorsHeaders(request.headers.get("Origin") || "");
+  const json = (obj, status) => new Response(JSON.stringify(obj), { status: status || 200, headers: cors });
+  if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: cors });
+  if (request.method !== "POST") return json({ ok: false, msg: "POST only" }, 405);
+  if (!env.ANTHROPIC_API_KEY) return json({ ok: false, msg: "Translation isn't configured (missing ANTHROPIC_API_KEY)." }, 500);
+
+  let data;
+  try { data = await request.json(); } catch { return json({ ok: false, msg: "Bad request." }, 400); }
+  if (!Array.isArray(data.texts)) return json({ ok: false, msg: "texts must be an array." }, 400);
+  if (data.texts.length > TRANSLATE_MAX_TEXTS) {
+    return json({ ok: false, msg: "At most " + TRANSLATE_MAX_TEXTS + " texts per request." }, 400);
+  }
+
+  const texts = data.texts.map(t => String(t == null ? "" : t).slice(0, TRANSLATE_MAX_CHARS));
+  const translations = new Array(texts.length).fill("");
+
+  // Indices with actual content — blanks never reach the model.
+  const todo = [];
+  texts.forEach((t, i) => { if (t.trim()) todo.push(i); });
+  if (!todo.length) return json({ ok: true, translations });
+
+  let failed = 0;
+  for (let i = 0; i < todo.length; i += TRANSLATE_CHUNK) {
+    const idx = todo.slice(i, i + TRANSLATE_CHUNK);
+    const got = await translateChunk(idx.map(j => texts[j]), env, ctx);
+    if (!got) { failed += idx.length; continue; }
+    idx.forEach((j, k) => { translations[j] = got[k]; });
+  }
+
+  if (failed === todo.length) {
+    return json({ ok: false, msg: "Translation failed - please try again." }, 502);
+  }
+  return json({ ok: true, translations, failed });
+}
+
 // POST /review-letter { text?, docUrl?, title?, name? } → { ok, cleanedText,
 // wordCount, notes, needsManual }. Runs a copyedit pass over a submitted
 // Letter to the Editor: fixes spelling/grammar/completeness WITHOUT changing
@@ -838,6 +962,9 @@ export default {
     }
     if (url.pathname === "/summarize-flyer") {
       return handleSummarizeFlyer(request, env, ctx);
+    }
+    if (url.pathname === "/translate-survey") {
+      return handleTranslateSurvey(request, env, ctx);
     }
     if (url.pathname === "/review-letter") {
       return handleReviewLetter(request, env, ctx);
