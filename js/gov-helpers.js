@@ -243,7 +243,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926","sv":4,"zoomUrl":"https://us02web.zoom.us/j/85010485711","meetingId":"850 1048 5711","passcode":"333002","phone":"970-728-3844"},
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/899/files/agenda/1958","zoomUrl":"https://us02web.zoom.us/meeting/register/HQG-1W5yTEyLa2v5rWoq-g","passcode":"557341","phone":"719-359-4580"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/899/files/agenda/1960","zoomUrl":"https://us02web.zoom.us/meeting/register/HQG-1W5yTEyLa2v5rWoq-g","passcode":"557341","phone":"719-359-4580"},
 
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
@@ -762,6 +762,96 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
+    title: "News Release: Road and Bridge Superintendent Placed on Paid Admin Leave",
+    source: "Ouray County",
+    sourceKey: "ouray-county",
+    date: "August 17, 2026",
+    newsTopic: "infrastructure",
+    copy: "Ouray County has placed Road and Bridge Superintendent Ty Barger on paid administrative leave",
+    href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=959",
+    img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
+  },
+  {
     title: "Parish Bulletin for August 16",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -879,6 +969,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "housing",
     copy: "Wildlife officials killed a bear last weekend after it entered a home on North Oak Street and broke out a car window in Ouray, seeking food. The same week, Colorado Parks and Wildlife District Manager Kelly Crane cited occupants of a vacation rental on North Oak Street for intentionally feeding brui",
     href: "https://www.ouraynews.com/2026/08/12/visitors-cited-feeding-bears/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fall Foliage Tour Contest 🍂",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
+    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -3097,39 +3197,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: ""
   },
   {
-    title: "Book Buzz – Free Coffee!",
-    link: "https://koto.org/event/book-buzz-free-coffee/",
-    description: "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
-    pubDate: "2026-08-17T09:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-17/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-17T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-17/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-17T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "TES & TIS Back to School Celebrations",
     link: "https://koto.org/event/tes-tis-back-to-school-celebrations/",
     description: "Back to School Celebration for TES and TIS to Meet your Teacher and Drop off Supplies 2:00-3:30 pm",
@@ -3339,6 +3406,17 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/TellurideDinnerParty2026Marketing-1-scaled.jpg"
   },
   {
+    title: "KOTO Guest DJ Day!",
+    link: "https://koto.org/event/koto-guest-dj-day/",
+    description: "This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep this station and community Stayin' Alive! Tune in all day to hear from your favorite local voices, and feel free to bring a little disco energy with you.",
+    pubDate: "2026-08-21T00:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg"
+  },
+  {
     title: "Tennis Clinic 3.0-4.0",
     link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
     description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -3425,6 +3503,17 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Wilkinson Public Library, Telluride",
     imageUrl: "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    title: "People's March",
+    link: "https://koto.org/event/peoples-march/",
+    description: "The next People's March is Saturday, August 22nd, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers will be Franny Patricio and Chris Myers. Bring a friend and bring your signs!",
+    pubDate: "2026-08-22T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "San Miguel County Courthouse, TELLURIDE",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/IMG_4441.jpeg"
   },
   {
     title: "BURLESQUE BUFFET!",
@@ -3589,28 +3678,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-26T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Market on the Plaza",
-    link: "https://koto.org/event/market-on-the-plaza/2026-08-26/",
-    description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    pubDate: "2026-08-26T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
   }
 ];
@@ -3996,6 +4063,15 @@ const SHERBINO_EVENTS = [
     location: "montrose pavilion, Montrose",
     copy: "@ BUY TICKETS Doors: 6:00 PM ||  Show: 6:30 PM – This show is at the Montrose Pavilion, brought to you in partnership by The Sherbino and Weehawken Creative Arts Native Rhythms, Native Jazz: The Genre-Bending Journey of R. Carlos Nakai, AmoChip Dabney, and Will Clipman $25 in advance General Admission (GA) Seats || $30 in advance for reserved section seats (no longer available day-of-show) || $32 GA day of show || (you will select the actual seat in the diagram below to purchase reserved section seats. If you want GA seats, just scroll below the map to buy GA seats) Where Tradition Meets Innovation, and Boundaries Dissolve in Sound Amidst the vast tapestry of American music, few collaborations illustrate the spirit of genre-bending innovation as vividly as that of R. Carlos Nakai, AmoChip Dabney, and Will Clipman. …",
     imageUrl: "https://sherbino.org/wp-content/uploads/2026/04/R-Carlos-Native-Rythms-Native-Jazz-banner.png"
+  },
+  {
+    title: "The Sherbino Presents: \"Out There, a National Park Story\" film celebrating the National Park Service's 110th birthday",
+    href: "https://sherbino.org/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday/",
+    date: "2026-09-16 18:30:00",
+    endDate: "2026-09-16 20:30:00",
+    location: "The Sherbino, Ridgway",
+    copy: "Celebrate America's public lands with Out There: A National Parks Story. Join us at the Sherbino Theatre on Wednesday, September 16, 2026, for this award-winning documentary. Doors open at 6:00 p.m., the 75-minute film begins at 6:30 p.m. Tickets are $10. @ Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the doorSetting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S. National Park Service, a young filmmaker and his childhood friend set off on a 10,000-mile journey through America’s national parks, leaving home with little more than a camera and a desire to understand what connects people to these wild places. What begins as a summer road trip becomes a seven-year odyssey, capturing untold stories of those who protect, visit, and find healing in the parks. …",
+    imageUrl: "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-46.png"
   }
 ];
 
@@ -4510,7 +4586,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
     description: "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and the shared belief that a strong community begins with supporting the people who live and work here. View on site | Email this event",
     pubDate: "2026-08-21T16:00:00.000Z",
-    endDate: "2026-10-09",
+    endDate: "2026-10-16",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",

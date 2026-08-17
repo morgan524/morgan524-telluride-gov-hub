@@ -40,19 +40,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-17/",
-    "date": "2026-08-17",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Senior Lunch by Neighbor to Neighbor",
     "href": "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     "date": "2026-08-17",
@@ -173,19 +160,6 @@
     "type": "Arts & Film"
   },
   {
-    "title": "Book Buzz – Free Coffee!",
-    "href": "https://koto.org/event/book-buzz-free-coffee/",
-    "date": "2026-08-17",
-    "time": "9:00 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-7.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip,…",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Book Buzz with the Pour Over Pedaler",
     "href": "https://telluridelibrary.libcal.com/event/16687361?hs=a",
     "date": "2026-08-17",
@@ -224,19 +198,6 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "We could use a few helping hands to take care of some basic maintenance around TOP. If you have a few hours to spare, we'd love to have you join us on Monday, August 17, from 9:00 AM until noon. We'll be trimming brush, raking trails,…",
     "type": "Community"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-17/",
-    "date": "2026-08-17",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "TMHS Orientation for 7th graders, 9th graders, and new students",
@@ -819,7 +780,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
     "type": "Food & Drink",
-    "endDate": "2026-10-09"
+    "endDate": "2026-10-16"
   },
   {
     "title": "Telluride Farmer's Market",
@@ -1020,6 +981,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "KOTO Guest DJ Day!",
+    "href": "https://koto.org/event/koto-guest-dj-day/",
+    "date": "2026-08-21",
+    "time": "",
+    "location": "",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep…",
+    "type": "Music"
+  },
+  {
     "title": "The Courtyard at 610 Presents: Flagship Romance + The Rough & Tumble",
     "href": "https://sherbino.org/event/flagship-romance-rough-and-tumble-courtyard-610-august-21/",
     "date": "2026-08-21",
@@ -1084,6 +1058,19 @@
     "source": "KOTO Community Calendar",
     "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
     "type": "Wellness"
+  },
+  {
+    "title": "People's March",
+    "href": "https://koto.org/event/peoples-march/",
+    "date": "2026-08-22",
+    "time": "12:00 PM",
+    "location": "San Miguel County Courthouse, TELLURIDE",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/IMG_4441.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The next People's March is Saturday, August 22nd, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers will be Franny Patricio and Chris Myers. Bring a friend and bring your signs!",
+    "type": "Community"
   },
   {
     "title": "Ouray Day",
@@ -1558,19 +1545,6 @@
     "type": "Community"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
-    "date": "2026-08-26",
-    "time": "11:00 AM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
-    "type": "Community"
-  },
-  {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     "href": "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     "date": "2026-08-26",
@@ -1583,6 +1557,19 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-09-09"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-08-26",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -1636,19 +1623,6 @@
     "source": "KOTO Community Calendar",
     "desc": "The Telluride R-1 School District School Board Retreat will be Wednesday, August 26th, from 9 a.m. to 3 p.m. at Wilkinson Public Library.",
     "type": "Community"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
-    "date": "2026-08-26",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Chill with Chamber Music! — Norwood",
@@ -3185,16 +3159,16 @@
     "type": "Family & Kids"
   },
   {
-    "title": "The Sherbino Presents: “Out There, a National Park Story” film celebrating the National Park Service’s 110th birthday",
-    "href": "https://events.ourayridgwayevents.com/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday-6700",
+    "title": "The Sherbino Presents: \"Out There, a National Park Story\" film celebrating the National Park Service's 110th birthday",
+    "href": "https://sherbino.org/event/the-sherbino-presents-out-there-a-national-park-story-film-celebrating-the-national-park-services-110th-birthday/",
     "date": "2026-09-16",
-    "time": "6:30 PM",
-    "location": "The Sherbino",
+    "time": "",
+    "location": "The Sherbino, Ridgway",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53551593926247/huge/02f3a13038681c325dd89c895e1675f9a2442f8f.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "September 16 @ 6:30 pm – 8:30 pm Doors: 6:00 PM || Film: 6:30 PM || Tickets: $10 in advance || $12 at the door Setting: Seated at The Sherbino What does real, large-scale ecosystem restoration look like? In the centennial year of the U.S.…",
+    "img": "https://sherbino.org/wp-content/uploads/2026/07/2026-sherb-event-banners-46.png",
+    "category": "",
+    "source": "Sherbino Theater",
+    "desc": "",
     "type": "Arts & Film"
   },
   {

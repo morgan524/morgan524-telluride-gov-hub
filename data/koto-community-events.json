@@ -11,39 +11,6 @@
     "imageUrl": ""
   },
   {
-    "title": "Book Buzz – Free Coffee!",
-    "link": "https://koto.org/event/book-buzz-free-coffee/",
-    "description": "Get the scoop on the hottest new titles at the library during Book Buzz! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler. Come sip, socialize, and leave with your next great read!",
-    "pubDate": "2026-08-17T09:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Wilkinson Public Library, Telluride",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-17/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-17T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "link": "https://koto.org/event/tennis-clinic-4-0/2026-08-17/",
-    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-17T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
     "title": "TES & TIS Back to School Celebrations",
     "link": "https://koto.org/event/tes-tis-back-to-school-celebrations/",
     "description": "Back to School Celebration for TES and TIS to Meet your Teacher and Drop off Supplies 2:00-3:30 pm",
@@ -253,6 +220,17 @@
     "imageUrl": "https://koto.org/wp-content/uploads/2026/08/TellurideDinnerParty2026Marketing-1-scaled.jpg"
   },
   {
+    "title": "KOTO Guest DJ Day!",
+    "link": "https://koto.org/event/koto-guest-dj-day/",
+    "description": "This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep this station and community Stayin' Alive! Tune in all day to hear from your favorite local voices, and feel free to bring a little disco energy with you.",
+    "pubDate": "2026-08-21T00:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg"
+  },
+  {
     "title": "Tennis Clinic 3.0-4.0",
     "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
     "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
@@ -339,6 +317,17 @@
     "category": "Community Event",
     "location": "Wilkinson Public Library, Telluride",
     "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    "title": "People's March",
+    "link": "https://koto.org/event/peoples-march/",
+    "description": "The next People's March is Saturday, August 22nd, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers will be Franny Patricio and Chris Myers. Bring a friend and bring your signs!",
+    "pubDate": "2026-08-22T12:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "San Miguel County Courthouse, TELLURIDE",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/IMG_4441.jpeg"
   },
   {
     "title": "BURLESQUE BUFFET!",
@@ -503,28 +492,6 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "",
-    "imageUrl": ""
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-26/",
-    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    "pubDate": "2026-08-26T09:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Market on the Plaza",
-    "link": "https://koto.org/event/market-on-the-plaza/2026-08-26/",
-    "description": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
-    "pubDate": "2026-08-26T11:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Heritage Plaza, Mountain Village",
     "imageUrl": ""
   }
 ]
