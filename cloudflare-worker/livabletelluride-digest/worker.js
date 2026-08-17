@@ -372,12 +372,18 @@ async function uploadImage(body, env) {
   if (!dataB64 || dataB64.length < 100) return { error: "No image data received." };
   if (dataB64.length > 4_200_000) return { error: "Image too large after resize (max ~3 MB) — try a smaller photo." };
   if (!/^[A-Za-z0-9+/=]+$/.test(dataB64)) return { error: "Bad image encoding." };
-  // JPEG magic bytes (/9j/) — the Desk always converts to JPEG before upload.
-  if (!dataB64.startsWith("/9j/")) return { error: "Only JPEG uploads are accepted (the Desk converts automatically — is the file an image?)." };
+  // Magic bytes: JPEG (/9j/) or PNG (iVBORw0KGgo). The Digest Desk always sends
+  // JPEG; the Newsletter Desk may send PNG for line art (elevation drawings,
+  // charts), where JPEG artefacts blur hairlines and small type.
+  const isJpeg = dataB64.startsWith("/9j/");
+  const isPng  = dataB64.startsWith("iVBORw0KGgo");
+  if (!isJpeg && !isPng) return { error: "Only JPEG or PNG uploads are accepted (is the file an image?)." };
   const slug = String(body.name || "photo").toLowerCase()
     .replace(/\.[a-z0-9]+$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "photo";
   const ym = new Date().toISOString().slice(0, 7);
-  const path = "assets/digest/uploads/" + ym + "/" + slug + "-" + Date.now() + ".jpg";
+  const ext = isPng ? ".png" : ".jpg";
+  const dir = body.folder === "newsletter" ? "assets/newsletters/uploads/" : "assets/digest/uploads/";
+  const path = dir + ym + "/" + slug + "-" + Date.now() + ext;
   await ghPutB64(env, path, dataB64, "Digest: photo upload " + slug + " (Review Desk)");
   return { ok: true, url: "https://livabletelluride.org/" + path };
 }

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Newsletter Desk — Livable Telluride</title>
+<style>
+  :root{ --green:#21443c; --gold:#b58a2c; --line:#dfe4df; --bg:#eef1ee; }
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:#1c1c1c;height:100vh;overflow:hidden}
+
+  /* auth gate */
+  #gate{position:fixed;inset:0;background:var(--green);display:flex;align-items:center;justify-content:center;z-index:50}
+  #gate .box{background:#fff;padding:28px 30px;border-radius:12px;width:340px}
+  #gate h2{margin:0 0 6px;font:700 20px Georgia,serif}
+  #gate p{margin:0 0 14px;color:#6b6b6b}
+  #gate input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;font-size:15px}
+  #gate button{margin-top:10px;width:100%;padding:11px;background:var(--green);color:#fff;border:0;border-radius:6px;font-size:15px;font-weight:700;cursor:pointer}
+  #gateerr{color:#b3261e;min-height:18px;font-size:13px;margin-top:8px}
+
+  /* layout */
+  #app{display:none;grid-template-columns:minmax(420px,1fr) minmax(620px,1fr);grid-template-rows:auto 1fr;height:100vh}
+  header{grid-column:1/-1;background:var(--green);color:#fff;padding:9px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  header b{font:700 16px Georgia,serif}
+  header .meta{display:flex;gap:8px;flex:1;flex-wrap:wrap}
+  header input{padding:6px 9px;border:0;border-radius:5px;font-size:13px}
+  header input.subj{flex:1;min-width:220px}
+  header input.small{width:150px}
+  .pill{font-size:11px;padding:3px 9px;border-radius:99px;background:rgba(255,255,255,.18)}
+
+  .pane{display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--line);background:#fff}
+  .pane:last-child{border-right:0}
+  .toolbar{display:flex;gap:5px;padding:7px 9px;border-bottom:1px solid var(--line);flex-wrap:wrap;background:#f7f9f7}
+  .toolbar button{padding:5px 10px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;font-size:13px}
+  .toolbar button:hover{background:#eef4ee;border-color:var(--green)}
+  .toolbar .sep{width:1px;background:var(--line);margin:2px 3px}
+  #md{flex:1;border:0;padding:14px 16px;font:14px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace;resize:none;outline:none;min-height:0}
+
+  #chat{border-top:1px solid var(--line);display:flex;flex-direction:column;height:36%;min-height:170px}
+  #chatlog{flex:1;overflow:auto;padding:10px 14px;background:#fbfcfb;min-height:0}
+  .msg{margin:0 0 9px;padding:8px 11px;border-radius:8px;max-width:88%;white-space:pre-wrap;font-size:13px}
+  .msg.user{background:var(--green);color:#fff;margin-left:auto}
+  .msg.ai{background:#fff;border:1px solid var(--line)}
+  .msg.sys{background:transparent;color:#7a7a7a;font-style:italic;font-size:12px;padding:2px 4px}
+  #chatbar{display:flex;gap:7px;padding:9px;border-top:1px solid var(--line)}
+  #chatin{flex:1;padding:9px;border:1px solid var(--line);border-radius:6px;font-size:13px;font-family:inherit;resize:none;height:40px}
+  #chatsend{padding:0 16px;background:var(--green);color:#fff;border:0;border-radius:6px;cursor:pointer;font-weight:700}
+
+  .previewbar{display:flex;gap:7px;align-items:center;padding:7px 9px;border-bottom:1px solid var(--line);background:#f7f9f7;flex-wrap:wrap}
+  .previewbar button{padding:5px 11px;border:1px solid var(--line);background:#fff;border-radius:5px;cursor:pointer;font-size:13px}
+  .previewbar button.primary{background:var(--green);color:#fff;border-color:var(--green);font-weight:700}
+  .previewbar .grow{flex:1}
+  #frame{flex:1;border:0;width:100%;background:var(--bg);min-height:0}
+  #frame.mobile{max-width:400px;margin:0 auto;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+
+  #checks{border-top:1px solid var(--line);padding:9px 13px;background:#fbfcfb;max-height:190px;overflow:auto;font-size:13px}
+  #checks h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#6b6b6b}
+  .chk{padding:3px 0;display:flex;gap:7px;align-items:flex-start}
+  .chk .ic{flex:0 0 16px}
+  .ok{color:#1e7a3c}.warn{color:#9a6b00}.bad{color:#b3261e}
+  #status{padding:6px 13px;font-size:12px;color:#6b6b6b;border-top:1px solid var(--line);min-height:26px}
+  .spin{display:inline-block;width:11px;height:11px;border:2px solid rgba(0,0,0,.2);border-top-color:var(--gold);border-radius:50%;animation:s .7s linear infinite;vertical-align:-1px}
+  @keyframes s{to{transform:rotate(360deg)}}
+  input[type=file]{display:none}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <h2>Newsletter Desk</h2>
+    <p>Same passphrase as the Digest Review Desk.</p>
+    <input id="gatekey" type="password" placeholder="Passphrase" autocomplete="current-password">
+    <button id="gatebtn">Unlock</button>
+    <div id="gateerr"></div>
+  </div>
+</div>
+
+<div id="app">
+  <header>
+    <b>Newsletter Desk</b>
+    <span class="pill" id="hpill">checking…</span>
+    <div class="meta">
+      <input class="subj" id="subject" placeholder="Email subject line">
+      <input class="small" id="kicker" placeholder="Kicker (e.g. Shandoka Watch)">
+      <input class="small" id="byline" placeholder="By Morgan Smith">
+    </div>
+  </header>
+
+  <!-- LEFT: editor + chat -->
+  <div class="pane">
+    <div class="toolbar">
+      <button data-wrap="**" title="Bold (⌘B)"><b>B</b></button>
+      <button data-wrap="*" title="Italic (⌘I)"><i>I</i></button>
+      <button id="btnlink" title="Link (⌘K)">🔗 Link</button>
+      <span class="sep"></span>
+      <button data-block="## " title="Section heading">H</button>
+      <button data-block="> " title="Pull quote">❝ Quote</button>
+      <button id="btnbtn" title="Green CTA button">▭ Button</button>
+      <button id="btnattend" title="Attend callout box">📅 Attend box</button>
+      <span class="sep"></span>
+      <button id="btnimg" title="Upload a photo — returns a hosted URL">🖼 Upload photo</button>
+      <input type="file" id="file" accept="image/*">
+    </div>
+    <textarea id="md" spellcheck="true" placeholder="Paste your newsletter text here.
+
+Plain paragraphs just work. Then:
+
+## A section heading
+**bold**, *italic*, [a link](https://example.com)
+
+> A pull quote in the gold box.
+> — Attribution line
+
+[Take the survey](https://livabletelluride.org/shandoka-survey){.btn}
+
+::: attend
+**Attend · Wednesday, August 19**
+**3:00 p.m. — Site Walk**
+860 Black Bear Rd. All are welcome.
+:::
+
+Click Upload photo to insert an image — it uploads and inserts a live URL."></textarea>
+
+    <div id="chat">
+      <div id="chatlog"><div class="msg sys">Ask for changes in plain language — Claude edits the markdown, so it can't break the email layout.</div></div>
+      <div id="chatbar">
+        <textarea id="chatin" placeholder="e.g. tighten the third paragraph, or add a sentence about the water table"></textarea>
+        <button id="chatsend">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: preview + checks -->
+  <div class="pane">
+    <div class="previewbar">
+      <button id="btndesktop" class="primary">Desktop</button>
+      <button id="btnmobile">Mobile</button>
+      <span class="grow"></span>
+      <button id="btncopy">Copy HTML</button>
+      <button id="btndl">Download .html</button>
+      <button id="btntest" class="primary">Send test →</button>
+    </div>
+    <iframe id="frame" title="Email preview"></iframe>
+    <div id="checks"><h4>Pre-flight</h4><div id="chklist"></div></div>
+    <div id="status"></div>
+  </div>
+</div>
+
+<script>
+const WORKER = "https://livabletelluride-digest.morgan-8f0.workers.dev";
+const LOGO   = "https://livabletelluride.org/logo/Livable%20Telluride%20Logo.png";
+let KEY = sessionStorage.getItem("digestKey") || "";
+let history_ = [];
+const $ = id => document.getElementById(id);
+
+/* ---------------- auth ---------------- */
+function showGate(m){ $("gate").style.display="flex"; $("gateerr").textContent=m||""; $("gatekey").focus(); }
+$("gatebtn").onclick = () => {
+  const v = $("gatekey").value.trim();
+  if(!v) return showGate("Enter the passphrase.");
+  KEY = v; sessionStorage.setItem("digestKey", v); boot();
+};
+$("gatekey").addEventListener("keydown", e => { if(e.key==="Enter") $("gatebtn").click(); });
+
+async function api(path, payload){
+  const ctrl = new AbortController();
+  const timer = setTimeout(()=>ctrl.abort(), 90000);
+  let r;
+  try{
+    r = await fetch(WORKER+path, { method:"POST", headers:{ "Content-Type":"application/json", "x-digest-key":KEY }, body:JSON.stringify(payload), signal:ctrl.signal });
+  } catch(e){
+    if(e.name==="AbortError") throw new Error("timed out — try again, or make a smaller change.");
+    throw e;
+  } finally { clearTimeout(timer); }
+  if(r.status===401){ sessionStorage.removeItem("digestKey"); KEY=""; showGate("Wrong passphrase — try again."); throw new Error("unauthorized"); }
+  return r.json();
+}
+
+async function boot(){
+  try{
+    const h = await fetch(WORKER+"/health").then(r=>r.json()).catch(()=>({ok:false}));
+    $("hpill").textContent = h && h.ok ? "worker ok" : "worker unreachable";
+    // Probe auth with a cheap authenticated call so a wrong passphrase fails now, not at send time.
+    $("gate").style.display="none";
+    $("app").style.display="grid";
+    restore(); render();
+  }catch(e){ if(e.message!=="unauthorized") showGate("Couldn't load — "+e.message); }
+}
+
+/* ---------------- draft persistence ---------------- */
+const LS="ltNewsletterDraft";
+function persist(){
+  localStorage.setItem(LS, JSON.stringify({ md:$("md").value, subject:$("subject").value, kicker:$("kicker").value, byline:$("byline").value }));
+}
+function restore(){
+  try{
+    const d = JSON.parse(localStorage.getItem(LS)||"{}");
+    if(d.md) $("md").value=d.md;
+    $("subject").value = d.subject || "";
+    $("kicker").value  = d.kicker  || "Shandoka Watch";
+    $("byline").value  = d.byline  || "By Morgan Smith";
+  }catch(e){}
+}
+
+/* ---------------- markdown → LT email HTML ---------------- */
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+function inline(s){
+  s = esc(s);
+  s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2" target="_blank" style="color:#21443c;text-decoration:underline;">$1</a>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>");
+  s = s.replace(/—/g,"&mdash;").replace(/'/g,"&rsquo;");
+  return s;
+}
+const TD_BODY = 'padding:10px 34px 8px;font-family:Georgia,serif;font-size:18px;line-height:1.7;color:#2b2b2b;';
+const row = inner => '<tr><td style="'+TD_BODY+'">'+inner+'</td></tr>';
+
+function mdToEmail(md, meta){
+  const lines = md.replace(/\r/g,"").split("\n");
+  const out = []; let para = []; let i = 0;
+  let heroDone = false;
+
+  const flush = () => {
+    if(!para.length) return;
+    out.push(row('<p style="margin:0 0 16px;">'+inline(para.join(" "))+'</p>'));
+    para = [];
+  };
+
+  while(i < lines.length){
+    const L = lines[i];
+
+    // ::: attend  ...  :::
+    if(/^:::\s*attend\s*$/i.test(L.trim())){
+      flush(); i++;
+      const buf=[];
+      while(i<lines.length && !/^:::\s*$/.test(lines[i].trim())){ buf.push(lines[i]); i++; }
+      i++;
+      const body = buf.filter(x=>x.trim()!=="").map(x=>inline(x.trim())).join("<br>");
+      out.push('<tr><td style="padding:14px 34px 20px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f2f6f2;border-left:4px solid #21443c;border-radius:6px;"><tr><td style="padding:16px 20px;font-family:Georgia,serif;font-size:18px;line-height:1.6;color:#1c1c1c;">'+body+'</td></tr></table></td></tr>');
+      continue;
+    }
+
+    // image  ![alt](url)  or  ![alt](url){.hero}
+    const im = L.trim().match(/^!\[([^\]]*)\]\(([^)\s]+)\)(\{\.hero\})?$/);
+    if(im){
+      flush(); i++;
+      const hero = !!im[3] || (!heroDone && out.length===0);
+      if(hero) heroDone = true;
+      const w = hero ? 600 : 532;
+      const pad = hero ? "padding:0;" : "padding:12px 34px;";
+      out.push('<tr><td style="'+pad+'"><img src="'+im[2]+'" alt="'+esc(im[1])+'" width="'+w+'" style="width:100%;max-width:'+w+'px;height:auto;display:block;border:0;'+(hero?"":"border-radius:8px;")+'"></td></tr>');
+      continue;
+    }
+
+    // button  [label](url){.btn}
+    const bt = L.trim().match(/^\[([^\]]+)\]\(([^)\s]+)\)\{\.btn\}$/);
+    if(bt){
+      flush(); i++;
+      out.push('<tr><td align="center" style="padding:10px 34px 20px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr><td style="background:#21443c;border-radius:6px;"><a href="'+bt[2]+'" target="_blank" style="display:inline-block;padding:13px 30px;font-family:Georgia,serif;font-size:19px;font-weight:700;color:#ffffff;text-decoration:none;">'+esc(bt[1])+'</a></td></tr></table></td></tr>');
+      continue;
+    }
+
+    // blockquote (consecutive > lines)
+    if(/^>\s?/.test(L)){
+      flush();
+      const buf=[];
+      while(i<lines.length && /^>\s?/.test(lines[i])){ buf.push(lines[i].replace(/^>\s?/,"")); i++; }
+      let attrib="";
+      if(buf.length && /^\s*(—|--)\s*/.test(buf[buf.length-1])) attrib = buf.pop().replace(/^\s*(—|--)\s*/,"");
+      out.push('<tr><td style="padding:6px 34px 8px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f2f6f2;border-left:4px solid #b58a2c;border-radius:6px;"><tr><td style="padding:14px 20px;font-family:Georgia,serif;font-size:18px;line-height:1.55;color:#1c1c1c;font-style:italic;">&ldquo;'+inline(buf.join(" "))+'&rdquo;'+(attrib?'<div style="font-style:normal;font-size:16px;color:#6b6b6b;padding-top:8px;">&mdash; '+inline(attrib)+'</div>':'')+'</td></tr></table></td></tr>');
+      continue;
+    }
+
+    // section heading
+    if(/^##\s+/.test(L)){
+      flush(); i++;
+      out.push('<tr><td style="padding:16px 34px 2px;font-family:Georgia,serif;"><div style="font-size:21px;font-weight:700;color:#1c1c1c;">'+inline(L.replace(/^##\s+/,""))+'</div></td></tr>');
+      continue;
+    }
+
+    if(L.trim()===""){ flush(); i++; continue; }
+    para.push(L.trim()); i++;
+  }
+  flush();
+
+  return '<!DOCTYPE html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>'+esc(meta.subject||"Livable Telluride")+'</title>\n<style>\n  @media only screen and (max-width:480px){ h1{font-size:25px !important;line-height:1.22 !important} }\n</style>\n</head>\n<body style="margin:0;padding:0;background:#eef1ee;-webkit-text-size-adjust:100%;">\n'
+  + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef1ee;"><tr><td align="center" style="padding:20px 12px;">'
+  + '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;">'
+  + '<tr><td style="background:#21443c;padding:18px 28px;"><table role="presentation" cellpadding="0" cellspacing="0"><tr>'
+  + '<td style="background:#ffffff;border-radius:10px;padding:6px;width:56px;"><a href="https://livabletelluride.org" target="_blank"><img src="'+LOGO+'" width="52" height="52" alt="Livable Telluride" style="display:block;width:52px;height:52px;border:0;"></a></td>'
+  + '<td style="padding-left:14px;font-family:Georgia,serif;color:#ffffff;font-size:22px;font-weight:700;letter-spacing:.02em;">Livable Telluride</td>'
+  + '</tr></table></td></tr>'
+  + out.join("")
+  + '<tr><td style="padding:26px 34px 30px;border-top:1px solid #e4e8e4;">'
+  + '<div style="font-family:Georgia,serif;font-size:17px;color:#21443c;font-weight:700;">Livable Telluride</div>'
+  + '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.6;color:#8a8a8a;margin-top:6px;">You are receiving this because you subscribed at <a href="https://livabletelluride.org" style="color:#8a8a8a;text-decoration:underline;">livabletelluride.org</a>.<br>[Your mailing address here] &middot; <a href="{% unsubscribe_url %}" style="color:#8a8a8a;">Unsubscribe</a></div>'
+  + '</td></tr></table></td></tr></table>\n</body>\n</html>';
+}
+
+function headerRows(){
+  const k = $("kicker").value.trim(), h = ($("subject").value.trim()||"Untitled"), b = $("byline").value.trim();
+  return '<tr><td style="padding:26px 34px 6px;">'
+    + (k?'<div style="font-family:Georgia,serif;font-size:15px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#b58a2c;">'+esc(k)+'</div>':'')
+    + '<h1 style="margin:8px 0 6px;font-family:Georgia,serif;font-size:30px;line-height:1.25;color:#1c1c1c;font-weight:700;">'+esc(h)+'</h1>'
+    + (b?'<div style="font-family:Georgia,serif;font-style:italic;font-size:18px;color:#6b6b6b;">'+esc(b)+'</div>':'')
+    + '</td></tr>';
+}
+
+function buildHtml(){
+  const md = $("md").value;
+  let html = mdToEmail(md, { subject:$("subject").value });
+  // headline block goes after the hero image if one leads, else right after the masthead
+  const heroMatch = html.match(/<tr><td style="padding:0;"><img[^>]*><\/td><\/tr>/);
+  if(heroMatch) html = html.replace(heroMatch[0], heroMatch[0] + headerRows());
+  else html = html.replace(/(<\/tr>)(?=<tr><td style="padding:1[0-6]px 34px)/, "$1"+headerRows());
+  if(html.indexOf("<h1")===-1) html = html.replace('</table></td></tr>'+"", '</table></td></tr>'); // no-op safety
+  return html;
+}
+
+/* ---------------- preview + checks ---------------- */
+let lastHtml = "";
+function render(){
+  lastHtml = buildHtml();
+  const doc = $("frame").contentDocument;
+  doc.open(); doc.write(lastHtml); doc.close();
+  runChecks();
+  persist();
+}
+const debounce = (fn,ms)=>{ let t; return (...a)=>{ clearTimeout(t); t=setTimeout(()=>fn(...a),ms); }; };
+const renderSoon = debounce(render, 250);
+
+function chk(cls, ic, text){ return '<div class="chk"><span class="ic '+cls+'">'+ic+'</span><span>'+text+'</span></div>'; }
+function runChecks(){
+  const items = [];
+  const md = $("md").value;
+
+  // 1. Liquid collision — the {{SURVEY_URL}} failure
+  const liquid = (lastHtml.match(/\{\{[^}]*\}\}/g)||[]).filter(x=>!/unsubscribe_url/.test(x));
+  items.push(liquid.length
+    ? chk("bad","✕","<b>Customer.io will reject this.</b> Found "+liquid.length+" <code>{{ }}</code> token"+(liquid.length>1?"s":"")+": "+esc(liquid.slice(0,3).join(", "))+". Liquid parses these as variables.")
+    : chk("ok","✓","No stray <code>{{ }}</code> tokens."));
+
+  // 2. Subject
+  items.push($("subject").value.trim() ? chk("ok","✓","Subject line set.") : chk("bad","✕","No subject line."));
+
+  // 3. Placeholders
+  const ph = md.match(/REPLACE|TODO|LOREM|XXX|\[link\]|\(url\)/gi);
+  items.push(ph ? chk("warn","!","Placeholder text still present: "+esc([...new Set(ph)].join(", ")))
+                : chk("ok","✓","No leftover placeholders."));
+
+  // 4. Links resolve to something plausible
+  const hrefs = [...lastHtml.matchAll(/href="([^"]+)"/g)].map(m=>m[1]).filter(h=>!/^\{%|^#|^mailto:/.test(h));
+  const badHref = hrefs.filter(h=>!/^https?:\/\//.test(h));
+  items.push(badHref.length ? chk("bad","✕","Link(s) not absolute URLs: "+esc(badHref.slice(0,2).join(", ")))
+                            : chk("ok","✓",hrefs.length+" link"+(hrefs.length===1?"":"s")+", all absolute."));
+
+  // 5. Images actually load (the 404-then-cached-failure trap)
+  const srcs = [...lastHtml.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m=>m[1]);
+  const holder = document.createElement("div"); holder.innerHTML = items.join("");
+  const imgLine = document.createElement("div");
+  imgLine.innerHTML = chk("warn","…", "Checking "+srcs.length+" image"+(srcs.length===1?"":"s")+"…");
+  $("chklist").innerHTML = ""; $("chklist").appendChild(holder); $("chklist").appendChild(imgLine);
+  if(!srcs.length){ imgLine.innerHTML = chk("warn","!","No images in this newsletter."); return; }
+  let done=0, bad=[];
+  srcs.forEach(s=>{
+    const im = new Image();
+    im.onload  = ()=>{ if(++done===srcs.length) finish(); };
+    im.onerror = ()=>{ bad.push(s); if(++done===srcs.length) finish(); };
+    im.src = s;
+  });
+  function finish(){
+    imgLine.innerHTML = bad.length
+      ? chk("bad","✕","<b>"+bad.length+" image"+(bad.length>1?"s":"")+" won't load.</b> Do not send — proxies cache the 404. "+esc(bad[0].slice(0,70)))
+      : chk("ok","✓","All "+srcs.length+" images load.");
+  }
+}
+
+/* ---------------- toolbar ---------------- */
+function surround(before, after){
+  const ta=$("md"), s=ta.selectionStart, e=ta.selectionEnd, v=ta.value;
+  const sel=v.slice(s,e) || "text";
+  ta.value = v.slice(0,s)+before+sel+after+v.slice(e);
+  ta.focus(); ta.setSelectionRange(s+before.length, s+before.length+sel.length);
+  renderSoon();
+}
+function prefixLine(p){
+  const ta=$("md"), s=ta.selectionStart, v=ta.value;
+  const ls = v.lastIndexOf("\n", s-1)+1;
+  ta.value = v.slice(0,ls)+p+v.slice(ls);
+  ta.focus(); ta.setSelectionRange(s+p.length, s+p.length);
+  renderSoon();
+}
+function insertBlock(txt){
+  const ta=$("md"), s=ta.selectionStart, v=ta.value;
+  const pad = (s>0 && v[s-1]!=="\n") ? "\n\n" : "";
+  ta.value = v.slice(0,s)+pad+txt+"\n\n"+v.slice(s);
+  ta.focus(); ta.setSelectionRange(s+pad.length+txt.length, s+pad.length+txt.length);
+  renderSoon();
+}
+document.querySelectorAll("[data-wrap]").forEach(b=>b.onclick=()=>surround(b.dataset.wrap,b.dataset.wrap));
+document.querySelectorAll("[data-block]").forEach(b=>b.onclick=()=>prefixLine(b.dataset.block));
+$("btnlink").onclick = ()=>{
+  const url = prompt("Link URL:","https://"); if(!url) return;
+  const ta=$("md"), s=ta.selectionStart, e=ta.selectionEnd;
+  const sel = ta.value.slice(s,e) || "link text";
+  ta.value = ta.value.slice(0,s)+"["+sel+"]("+url+")"+ta.value.slice(e);
+  ta.focus(); renderSoon();
+};
+$("btnbtn").onclick = ()=>{
+  const url = prompt("Button URL:","https://livabletelluride.org/"); if(!url) return;
+  const label = prompt("Button label:","Take the survey →") || "Read more";
+  insertBlock("["+label+"]("+url+"){.btn}");
+};
+$("btnattend").onclick = ()=> insertBlock("::: attend\n**Attend · Wednesday, August 19**\n\n**3:00 p.m. — Site Walk**\n860 Black Bear Rd. (Shandoka Lot). All are welcome.\n\n**5:30 p.m. — HARC Meeting**\nHybrid — Rebekah Hall, 113 W. Columbia Ave.\n[Register for Zoom](https://us06web.zoom.us/)\n:::");
+
+$("md").addEventListener("input", renderSoon);
+["subject","kicker","byline"].forEach(id=>$(id).addEventListener("input", renderSoon));
+$("md").addEventListener("keydown", e=>{
+  if(!(e.metaKey||e.ctrlKey)) return;
+  if(e.key==="b"){ e.preventDefault(); surround("**","**"); }
+  if(e.key==="i"){ e.preventDefault(); surround("*","*"); }
+  if(e.key==="k"){ e.preventDefault(); $("btnlink").click(); }
+});
+
+/* ---------------- image upload ---------------- */
+// PNG in → PNG out (line art: elevations, charts, anything with hairlines or
+// small type, where JPEG ringing is visible). Everything else → JPEG.
+function resizeImage(file){
+  const keepPng = /image\/png/i.test(file.type);
+  return new Promise((resolve,reject)=>{
+    const url=URL.createObjectURL(file), im=new Image();
+    im.onload=()=>{
+      URL.revokeObjectURL(url);
+      let w=im.naturalWidth,h=im.naturalHeight;
+      if(!w||!h) return reject(new Error("Couldn't read that image."));
+      const scale=Math.min(1, 1200/w, 1600/h);
+      w=Math.round(w*scale); h=Math.round(h*scale);
+      const c=document.createElement("canvas"); c.width=w; c.height=h;
+      const ctx=c.getContext("2d");
+      if(!keepPng){ ctx.fillStyle="#fff"; ctx.fillRect(0,0,w,h); }  // flatten only for JPEG
+      ctx.drawImage(im,0,0,w,h);
+      const dataUrl = keepPng ? c.toDataURL("image/png") : c.toDataURL("image/jpeg",0.85);
+      resolve({ b64:dataUrl.split(",")[1], w, h, png:keepPng });
+    };
+    im.onerror=()=>{ URL.revokeObjectURL(url); reject(new Error("That file doesn't look like an image.")); };
+    im.src=url;
+  });
+}
+$("btnimg").onclick = ()=> $("file").click();
+$("file").addEventListener("change", async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  $("file").value="";
+  setStatus('<span class="spin"></span> Resizing &amp; uploading '+esc(f.name)+'…');
+  try{
+    const r = await resizeImage(f);
+    const res = await api("/upload-image", { name:f.name, dataBase64:r.b64, folder:"newsletter" });
+    if(!res.ok || !res.url) return setStatus("⚠ "+(res.error||"upload failed"));
+    const alt = prompt("Alt text (describe the image for screen readers):", f.name.replace(/\.[a-z0-9]+$/i,"")) || "";
+    insertBlock("!["+alt.replace(/[\[\]]/g,"")+"]("+res.url+")");
+    setStatus("✓ Uploaded "+r.w+"×"+r.h+" "+(r.png?"PNG":"JPEG")+" — hosted URL inserted. It publishes within ~2 minutes; the pre-flight image check will go green once it's live.");
+  }catch(err){ if(err.message!=="unauthorized") setStatus("⚠ "+err.message); }
+});
+function setStatus(h){ $("status").innerHTML=h; }
+
+/* ---------------- Claude chat (edits the markdown) ---------------- */
+function addMsg(cls, text){
+  const d=document.createElement("div"); d.className="msg "+cls; d.textContent=text;
+  $("chatlog").appendChild(d); $("chatlog").scrollTop=$("chatlog").scrollHeight; return d;
+}
+async function sendChat(){
+  const text=$("chatin").value.trim(); if(!text) return;
+  $("chatin").value=""; addMsg("user",text);
+  history_.push({role:"user",text});
+  const thinking=addMsg("ai","…"); $("chatsend").disabled=true;
+  try{
+    const res = await api("/chat", {
+      // /chat applies find/replace to whatever text it's given, so markdown works.
+      emailHtml: "The document below is MARKDOWN source for a Livable Telluride email, not HTML. "
+               + "Return find/replace edits against this markdown. Preserve the markdown conventions: "
+               + "**bold**, *italic*, [text](url), '> ' pull quotes, '## ' headings, "
+               + "[label](url){.btn} buttons, ![alt](url) images, and ::: attend ... ::: blocks.\n\n"
+               + "-----BEGIN MARKDOWN-----\n" + $("md").value + "\n-----END MARKDOWN-----",
+      subject: $("subject").value,
+      message: text,
+      history: history_.filter(m=>m.role!=="sys").slice(0,-1)
+    });
+    thinking.remove();
+    if(res.error){ addMsg("ai","⚠ "+res.error); return; }
+    if(res.changed && res.html){
+      const m = res.html.match(/-----BEGIN MARKDOWN-----\n([\s\S]*?)\n-----END MARKDOWN-----/);
+      if(m){ $("md").value = m[1]; render(); addMsg("sys","✎ draft updated"); }
+      else  { addMsg("sys","⚠ couldn't locate the markdown block in the reply — draft left unchanged"); }
+      if(res.subject) $("subject").value = res.subject;
+    } else {
+      addMsg("sys","no change applied");
+    }
+    addMsg("ai", res.reply || "(done)");
+    history_.push({role:"assistant",text:res.reply||"(done)"});
+  }catch(e){ thinking.remove(); if(e.message!=="unauthorized") addMsg("ai","⚠ "+e.message); }
+  finally{ $("chatsend").disabled=false; }
+}
+$("chatsend").onclick = sendChat;
+$("chatin").addEventListener("keydown", e=>{ if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); sendChat(); } });
+
+/* ---------------- output ---------------- */
+$("btndesktop").onclick = ()=>{ $("frame").classList.remove("mobile"); $("btndesktop").classList.add("primary"); $("btnmobile").classList.remove("primary"); };
+$("btnmobile").onclick  = ()=>{ $("frame").classList.add("mobile");    $("btnmobile").classList.add("primary");  $("btndesktop").classList.remove("primary"); };
+$("btncopy").onclick = async ()=>{ await navigator.clipboard.writeText(lastHtml); setStatus("✓ HTML copied to the clipboard."); };
+$("btndl").onclick = ()=>{
+  const slug = ($("subject").value.trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"newsletter").slice(0,50);
+  const d = new Date().toISOString().slice(0,10);
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([lastHtml],{type:"text/html"}));
+  a.download = slug+"-"+d+".html"; a.click();
+  setStatus("✓ Downloaded. Commit it to <code>digest/one-off/"+slug+"-"+d+".html</code> to publish the web version.");
+};
+$("btntest").onclick = async ()=>{
+  if(!$("subject").value.trim()) return setStatus("⚠ Add a subject line first.");
+  const to = prompt("Send a test to:", "info@livabletelluride.org"); if(!to) return;
+  setStatus('<span class="spin"></span> Sending test to '+esc(to)+'…');
+  try{
+    const res = await api("/send", { emailHtml:lastHtml, subject:$("subject").value, test:true, to });
+    setStatus(res.ok ? "✓ Test sent to "+esc(to)+"." : "⚠ "+(res.error||"send failed")+(res.detail?" — "+esc(String(res.detail).slice(0,180)):""));
+  }catch(e){ if(e.message!=="unauthorized") setStatus("⚠ "+e.message); }
+};
+
+if(KEY) boot(); else showGate();
+</script>
+</body>
+</html>
