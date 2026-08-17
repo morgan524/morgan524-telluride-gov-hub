@@ -62,6 +62,20 @@
   .spin{display:inline-block;width:11px;height:11px;border:2px solid rgba(0,0,0,.2);border-top-color:var(--gold);border-radius:50%;animation:s .7s linear infinite;vertical-align:-1px}
   @keyframes s{to{transform:rotate(360deg)}}
   input[type=file]{display:none}
+
+  /* Below the two-column minimum (420+620) the grid can't shrink, and
+     body{overflow:hidden} clipped the excess with no scrollbar — Send test
+     became unreachable. Stack instead, and let the page scroll. */
+  @media (max-width:1040px){
+    body{overflow:auto;height:auto}
+    #app{grid-template-columns:1fr;height:auto}
+    .pane{border-right:0;border-bottom:1px solid var(--line)}
+    #md{min-height:280px}
+    #chat{height:auto}
+    #chatlog{min-height:120px}
+    #frame{min-height:70vh}
+    .previewbar,.toolbar{position:sticky;top:0;z-index:2}
+  }
 </style>
 </head>
 <body>
