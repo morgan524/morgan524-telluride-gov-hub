@@ -2,43 +2,7 @@
   {
     "title": "Weekly Young Adult Gathering",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
-    "date": "2026-08-11",
-    "time": "6:00 PM",
-    "source": "beacon",
-    "sourceLabel": "Beacon",
-    "category": "Community Event",
-    "location": "The Well, 122 S Aspen",
-    "imageUrl": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    "title": "Pickleball Nights",
-    "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
-    "date": "2026-08-13",
-    "time": "7:00-9:00 PM",
-    "source": "beacon",
-    "sourceLabel": "Beacon",
-    "category": "Community Event",
-    "location": "Telluride Racket Club",
-    "imageUrl": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    "title": "Friday Feast",
-    "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A twice a month free home cooked dinner for lifties and all other seasonal workers, provided by The Alpine Chapel.",
-    "date": "2026-08-14",
-    "time": "6:00 PM",
-    "source": "beacon",
-    "sourceLabel": "Beacon",
-    "category": "Community Event",
-    "location": "The Well Coffee Shop",
-    "imageUrl": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
-  },
-  {
-    "title": "Weekly Young Adult Gathering",
-    "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "date": "2026-08-18",
     "time": "6:00 PM",
     "source": "beacon",
@@ -50,7 +14,7 @@
   {
     "title": "Pickleball Nights",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "date": "2026-08-20",
     "time": "7:00-9:00 PM",
     "source": "beacon",
@@ -62,7 +26,7 @@
   {
     "title": "Weekly Young Adult Gathering",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "date": "2026-08-25",
     "time": "6:00 PM",
     "source": "beacon",
@@ -74,7 +38,7 @@
   {
     "title": "Pickleball Nights",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "date": "2026-08-27",
     "time": "7:00-9:00 PM",
     "source": "beacon",
@@ -86,7 +50,7 @@
   {
     "title": "Weekly Young Adult Gathering",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "date": "2026-09-01",
     "time": "6:00 PM",
     "source": "beacon",
@@ -98,7 +62,7 @@
   {
     "title": "Pickleball Nights",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "date": "2026-09-03",
     "time": "7:00-9:00 PM",
     "source": "beacon",
@@ -110,7 +74,7 @@
   {
     "title": "Weekly Young Adult Gathering",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "date": "2026-09-08",
     "time": "6:00 PM",
     "source": "beacon",
@@ -122,7 +86,7 @@
   {
     "title": "Pickleball Nights",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "date": "2026-09-10",
     "time": "7:00-9:00 PM",
     "source": "beacon",
@@ -134,7 +98,7 @@
   {
     "title": "Weekly Young Adult Gathering",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "A weekly gathering for food, conversation and bible study downstairs at The Well.",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
     "date": "2026-09-15",
     "time": "6:00 PM",
     "source": "beacon",
@@ -146,8 +110,32 @@
   {
     "title": "Pickleball Nights",
     "link": "https://www.beacontelluride.com/upcoming-events",
-    "description": "Thursday night Pickleball, no experience necessary. All supplies provided.",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
     "date": "2026-09-17",
+    "time": "7:00-9:00 PM",
+    "source": "beacon",
+    "sourceLabel": "Beacon",
+    "category": "Community Event",
+    "location": "Telluride Racket Club",
+    "imageUrl": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    "title": "Weekly Young Adult Gathering",
+    "link": "https://www.beacontelluride.com/upcoming-events",
+    "description": "Every Tuesday night downstairs at The Well, gathering for food, conversation, and bible study.",
+    "date": "2026-09-22",
+    "time": "6:00 PM",
+    "source": "beacon",
+    "sourceLabel": "Beacon",
+    "category": "Community Event",
+    "location": "The Well, 122 S Aspen",
+    "imageUrl": "https://livabletelluride.org/logo/Telluride%20-%20Beacon.webp"
+  },
+  {
+    "title": "Pickleball Nights",
+    "link": "https://www.beacontelluride.com/upcoming-events",
+    "description": "Thursday night pickleball with no experience necessary. All supplies provided.",
+    "date": "2026-09-24",
     "time": "7:00-9:00 PM",
     "source": "beacon",
     "sourceLabel": "Beacon",

@@ -1,17 +1,5 @@
 [
   {
-    "title": "Telluride Community Concert — August",
-    "link": "https://telluridechambermusic.org/concert/community-aug",
-    "description": "An hour of chamber music on the deck — the perfect way to unwind.",
-    "date": "2026-08-13",
-    "time": "6:00 PM",
-    "source": "chamber-music",
-    "sourceLabel": "Telluride Chamber Music",
-    "category": "Concert",
-    "location": "Telluride Science and Innovation Center",
-    "imageUrl": "https://telluridechambermusic.org/concerts/community-aug.webp"
-  },
-  {
     "title": "Chill with Chamber Music! — Norwood",
     "link": "https://telluridechambermusic.org/concert/norwood-aug",
     "description": "An hour of gorgeous music. The perfect way to unwind after your day.",
@@ -46,5 +34,17 @@
     "category": "Concert",
     "location": "Sheridan Opera House, Telluride, CO",
     "imageUrl": "https://telluridechambermusic.org/concerts/balourdet.webp"
+  },
+  {
+    "title": "Hanneke Cassel Trio",
+    "link": "https://telluridechambermusic.org/concert/hanneke-cassel-trio",
+    "description": "Our \"Not Your Average Classical\" series is back!",
+    "date": "2026-10-13",
+    "time": "7:00 PM",
+    "source": "chamber-music",
+    "sourceLabel": "Telluride Chamber Music",
+    "category": "Concert",
+    "location": "The Alibi",
+    "imageUrl": "https://telluridechambermusic.org/concerts/hanneke-cassel-trio.webp"
   }
 ]

@@ -2,17 +2,6 @@
   "_comment": "Specific per-occurrence acts for recurring series whose generic title hides the real act/movie (e.g. 'Movie Mondays' -> the actual film, 'Augment Summer Music Series' -> the band). scripts/build-events-index.js folds these into data/events-index.json, which events.html renders; on a date where a specific act exists the GENERIC series entry is suppressed there (a reader who can see the film does not also need 'Movie Mondays in Hartwell Park'). Maintained weekly by scripts/recurring-acts-refresh.js via .github/workflows/partner-events-refresh.yml -- NOT by a local scheduled task; the old task pointed at a retired workspace and silently did nothing from 2026-06-26 to 2026-08-09. Movie series always leave image blank: content-refresh.js Task 23 fills the poster from TMDB. Dates beyond the events page's 60-day window simply do not render yet. Fields: series, date (YYYY-MM-DD), title, time, location, description, link, image(optional), source.",
   "series": [
     {
-      "series": "Telluride Farmers' Market Music Series",
-      "date": "2026-08-14",
-      "title": "Telluride Farmers' Market Music Series: Travis Fisher",
-      "time": "11am - 3pm",
-      "location": "Telluride",
-      "description": "Augment Music Project sponsors local music with weekly performances at the Telluride Farmers' Market.",
-      "link": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
-      "image": "",
-      "source": "Telluride.com"
-    },
-    {
       "series": "Movie Mondays",
       "date": "2026-08-17",
       "title": "Movie Mondays: Top Gun",
