@@ -446,6 +446,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-17",
+    title: "Foreclosure on Stonegate — what does it signal?",
+    body: "A vacant lot on Stonegate Drive and a Double Diamond condominium unit are both headed to foreclosure sale, according to notices tied to the upcoming CWAB meeting. Up here, distressed properties don't stay quiet — they tend to surface bigger questions. Some neighbors see foreclosures as a market correction that could open doors for locals. Others worry that the buyers who show up at these sales make affordability harder, not easier.\n\nWhen a property in Telluride or Mountain Village goes to foreclosure, who actually benefits?",
+    choices: ["Opens doors for locals", "Usually helps outside buyers", "Depends on the property", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-16",
     title: "Natural medicine businesses: should the code make room?",
     body: "Telluride's Planning & Zoning Commission may take up a proposed Land Use Code amendment that would establish regulations for Natural Medicine Businesses. Nothing is final — this is a commission-level discussion, not a done deal.\n\nThe tension is real. Some residents will see regulated natural medicine businesses as a reasonable next step, consistent with how the town has handled other evolving industries. Others will wonder whether the existing code needs a new category at all, or whether this sets a precedent worth thinking hard about before it's written in.\n\nWhere do you land?",
@@ -1650,6 +1658,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "States take Meta to trial in California in the biggest fight yet over social media harms to children",
+    source: "Telluride Times",
+    date: "August 17, 2026",
+    firstSeen: "2026-08-17",
+    newsTopic: "community",
+    copy: "A multi-state trial opened this week in California federal court, with 29 states accusing Meta of deliberately designing Facebook and Instagram to addict children and collecting data on under-13 users without parental consent. States are seeking damages that could theoretically reach $1.4 trillion, though legal experts say anything near that figure is highly unlikely.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_c27b1d4e-62bc-53e6-97e1-64bb4744b118.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/fc/8fc9d1ff-d627-596d-9fbb-16ddcacdebf2/6a7ca8e503b25.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Lake Powell hits record low, threatening key water and electricity supply for millions",
     source: "Telluride Times",
@@ -3666,59 +3686,48 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Mushroom Fest: BIPOC Community Closing Event",
-    link: "https://telluridelibrary.libcal.com/event/16898049?hs=a",
-    description: "9:00 AM – 10:00 AM · The Telluride Mushroom Festival has long been a place where people gather to celebrate fungi, science, art, education, and community. This year, the festival is piloting a BIPOC (Black, Indigenous, and People of Color) Community Gathering Space to help foster connection, belonging, and long-term participation within the mycological community. This gathering is a BIPOC affinity space created for Black, Indigenous, and People of Color attendees seeking connection, reflection, and community with others who share similar lived experiences. While many festival events are open to everyone, this space has been intentionally created to support BIPOC participants. The purpose is to provide an opportunity for connection, conversation, and community among attendees who share experiences of navigating mycology, conservation, outdoor spaces, and environmental fields from historically underrepresented backgrounds. We also warmly welcome BIPOC members of the Telluride community and surrounding region. …",
-    pubDate: "2026-08-16T15:00:00.000Z",
+    title: "Book Buzz with the Pour Over Pedaler",
+    link: "https://telluridelibrary.libcal.com/event/16687361?hs=a",
+    description: "9:00 AM – 10:00 AM · Get the scoop on the hottest new titles at the library during Book Buzz ! Discover upcoming releases, hidden gems, and staff favorites while enjoying a complimentary handcrafted coffee from Luke of The Pour Over Pedaler . Come sip, socialize, and leave with your next great read!",
+    pubDate: "2026-08-17T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_12_35_12.jpg"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_28_11_37_26.png"
   },
   {
-    title: "Caminata de Recolección en Español-Spanish Speaker Foray",
-    link: "https://telluridelibrary.libcal.com/event/17276215?hs=a",
-    description: "9:00 AM – 12:00 PM · Juntemenos enfrente del Wilkinson&#39;s Library para una caminata de recolecci&oacute;n &uacute;nico, todo en Espa&ntilde;ol, para identificar los hongos locales. Es un evento inclusivo en colaboracion con El Wilkinson Public Library. Meet in front of the Wilkinson&#39;s Library for a unique foray offering, all in Spanish to identify local mushrooms. This is an inclusive event in collaboration with the Wilkinson Public Library. Domi Bruneau is a mountain lover from Chile. She has a background in Architecture and Landscape Architecture, which has led her to work on projects in urban planning, rural development, productive landscape design, and mapping design projects for the Geographical Society of Andean Documentation. Domi fell in love with Telluride back in 2008, and since 2016, she has been part of the community, actively involved with various local organizations striving for justice, diversity, equity, and inclusion. …",
-    pubDate: "2026-08-16T15:00:00.000Z",
+    title: "Musik 4 Kinders",
+    link: "https://telluridelibrary.libcal.com/event/16568425?hs=a",
+    description: "10:30 AM – 11:30 AM · Music, Movement, and Joyful Learning for Kids! This program will be in the program room. &iexcl;M&uacute;sica, Movimiento, y Aprendizaje Alegre para ni&ntilde;os! Este programa ser&aacute; en la sala de programas.",
+    pubDate: "2026-08-17T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Lobby",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_06_14_02_37.png"
+    location: "Lower Terrace - outdoors",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755632545.png"
   },
   {
-    title: "CANCELLEDGentle Yoga with Kristen Milord",
-    link: "https://telluridelibrary.libcal.com/event/16536444?hs=a",
-    description: "11:00 AM – 12:30 PM · Breathe, stretch, and reset with gentle yoga taught by Kristen Milord, Sundays from 11:00 am to 12:00 pm. This free, accessible class is open to all levels—no prior experience needed. Feel free to bring your own mat, or the library also has mats, bolsters, blocks and blankets available to use. This class if free, but donations to support the instructor are welcome.",
-    pubDate: "2026-08-16T17:00:00.000Z",
+    title: "Savvy Seniors-Podcasts & Zen Doodles",
+    link: "https://telluridelibrary.libcal.com/event/17029823?hs=a",
+    description: "1:30 PM – 2:30 PM · Join us every Monday for \"Savvy Seniors,\" an exciting and interactive class designed for senior citizens who are curious about the world around them! This unique program goes beyond basic tech lessons to explore a wide range of engaging topics, including science, technology, environmental awareness, art, and music. Each session features a guest expert who will guide participants through fun, hands-on activities—from planting your own herbs to creating art, experimenting with science, and even exploring the therapeutic power of music. Whether you're looking to enhance your tech skills, discover new hobbies, or simply enjoy stimulating conversations with peers, this class has something for everyone. We will be listening to a fun Podcast and trying our hand at Zen-Doodling.",
+    pubDate: "2026-08-17T19:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_03_14_50_39.jpg"
+    location: "Meeting Room #6 - large",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_23_14_40_25.png"
   },
   {
-    title: "Drop-In Tech Time with Oliver",
-    link: "https://telluridelibrary.libcal.com/event/15970387?hs=a",
-    description: "1:00 PM – 3:00 PM · Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more! P&aacute;sate por el 2&ordm; piso para Tech Time con Oliver (habla espa&ntilde;ol) todos los domingos de 1 a 3pm. Traiga sus preguntas sobre tecnolog&iacute;a (tel&eacute;fonos, tabletas, computadoras port&aacute;tiles, correo electr&oacute;nico, etc.) o conozca las colecciones especiales que ofrece la biblioteca, como los Kindles, iPads y computadoras port&aacute;tiles que nuestros usuarios pueden rentar, as&iacute; como las aplicaciones de la biblioteca que puede descargar en sus dispositivos para acceder a libros electr&oacute;nicos, audiolibros, pel&iacute;culas, m&uacute;sica, revistas y m&aacute;s.",
-    pubDate: "2026-08-16T19:00:00.000Z",
+    title: "Hobby Hopping: Bullet Journaling",
+    link: "https://telluridelibrary.libcal.com/event/17286075?hs=a",
+    description: "2:00 PM – 3:00 PM · Learn a new hobby every Monday afternoon in the summer! August 3: Pickle Ball August 10: Cyanotype Printing August 17: Bullet Journaling August 31: Music Production: DJ TJ Highland",
+    pubDate: "2026-08-17T20:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
-    location: "2nd Floor Desk",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1714410099.jpg"
-  },
-  {
-    title: "Tea and Tarot",
-    link: "https://telluridelibrary.libcal.com/event/17029768?hs=a",
-    description: "2:30 PM – 4:30 PM · Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective Seating is limited; please sign up here in advance.   Tea Ceremony is a perfect elemental art. Silently, we drink tea from ancient trees grown in reverence. In this special space we give the water, fire and tea leaves a chance to communicate with us in their subtle and silent tongue. Old growth trees have been taking in sunlight, rainwater and starlight for hundreds of years. Drinking tea from their leaves in a ceremonial space allows us access parts of our heart which we usually cannot reach.",
-    pubDate: "2026-08-16T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Telluride Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1746566095.png"
+    location: "Teen Area",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_21_05.png"
   }
 ];
 
@@ -4325,71 +4334,13 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-16T06:00:00.000Z",
+    pubDate: "2026-08-17T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Weehawken Dance & Aerial!",
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
-  },
-  {
-    title: "Ouray County Pride",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-pride",
-    description: "Small towns. Big mountains. Bigger pride. 🏳️‍🌈 OURAY COUNTY PRIDE WEEKEND August 14–16, 2026 🏳️‍🌈🏔️ FRIDAY, AUGUST 14 7P One-woman show The Wright Opera House — Ouray Kick off Pride weekend with EDIE: a one-woman theatrical performance celebrating the life, love and legacy of Edie Windsor — the woman whose landmark Supreme Court case helped bring marriage equality nationwide. SATURDAY, AUGUST 15 Pride Ride - Meet at Hartwell Park 8 AM | Free + all ages Let’s RIDE w/ PRIDE! Supporting Queer community diversity and inclusion while adventuring outdoors. 🚲 This 9k/6m bike ride starts at Hartwell Park in Ridgway, travels gravel/paved road for a warm-up on our way to Dennis Weaver Park where we will do a little single track before returning on the Riverway Trail to the park. No bike left behind! We will stay together as a pack! 🌈 Bring water and friends! …",
-    pubDate: "2026-08-16T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Clinton Street",
-    imageUrl: "https://localist-images.azureedge.net/photos/52188308416890/huge/8355bb396a0268d9b10a4c50319341fdfcdec3c1.jpg"
-  },
-  {
-    title: "Ouray Open Air Market",
-    link: "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
-    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM. View on site | Email this event",
-    pubDate: "2026-08-16T16:00:00.000Z",
-    endDate: "2026-09-06",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Billy Goats Gruff Patio",
-    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
-  },
-  {
-    title: "On Display: PAWS for Art Gallery Asian-themed show",
-    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
-    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-16T18:00:00.000Z",
-    endDate: "2026-08-31",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Second Chance PAWS for Art Gallery",
-    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
-  },
-  {
-    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
-    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
-    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-16T18:00:00.000Z",
-    endDate: "2026-08-28",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "The 610 Arts Collective",
-    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "Sold Out: Aug 16, 2026: Ouray County Pride Drag Brunch 2026",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-pride-drag-brunch-2026",
-    description: "Be fabulous! Celebrate Ouray County Pride with us on the Rooftop at White Buffalo Restaurant + Bar! Join hostess, Maxine LaQueene, with Aria Pettyone, Hysteria Brooks, MixTrix, and Simone, for Sunday Brunch, cocktails and drag to close out Pride weekend in Ridgway. August 16, 2026, 12:00 - 2:00 pm. Event is currently sold out, call the property to inquire about current availability/wait list; reservations required. 970-626-3737 Must be 21 or older. The Rooftop at White Buffalo is located at Chipeta Lodge Resort + Spa at 304 S. Lena St., Ridgway. View on site | Email this event",
-    pubDate: "2026-08-16T18:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "White Buffalo Restaurant + Bar",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629220241939/huge/16644e551a7696d45dae23224664787f1fd221ac.jpg"
   },
   {
     title: "Pilates Mat All Levels",
@@ -4425,6 +4376,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Top of the Pines",
     imageUrl: "https://localist-images.azureedge.net/photos/51579851840244/huge/fa872abaa9c1160932255910671aa503548cbb47.jpg"
+  },
+  {
+    title: "On Display: PAWS for Art Gallery Asian-themed show",
+    link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
+    description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
+    pubDate: "2026-08-17T16:00:00.000Z",
+    endDate: "2026-08-31",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Second Chance PAWS for Art Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
   },
   {
     title: "Senior Lunch by Neighbor to Neighbor",
@@ -4483,6 +4446,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Weehawken Ridgway (Old Schoolhouse)",
     imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
+    link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
+    description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
+    pubDate: "2026-08-18T18:00:00.000Z",
+    endDate: "2026-08-28",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "The 610 Arts Collective",
+    imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
   },
   {
     title: "JAMIE & THE DREAMERS",
@@ -4790,6 +4765,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Divide Ranch and Club Clubhouse",
     imageUrl: "https://localist-images.azureedge.net/photos/52250073410263/huge/0c5c647e572d5a4c1c7a05677aec7057f5312338.jpg"
+  },
+  {
+    title: "Ouray Open Air Market",
+    link: "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
+    description: "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering honest, transparent relationships between vendors and the community. This is an entirely fresh platform in town designed to showcase your artisanal goods and services, helping neighbors and visitors know exactly who made the products they love. When and Where? Location: The market will take place in a beautiful open-air setting at Billy Goat Gruff's Patio (located at 4th Ave. + Main Street, Ouray, CO).Schedule: We will operate every Sunday from June 21, 2026, through September 6, 2026.Hours: Market hours are 10:00 AM to 2:00 PM. View on site | Email this event",
+    pubDate: "2026-08-23T16:00:00.000Z",
+    endDate: "2026-09-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goats Gruff Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg"
   },
   {
     title: "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
