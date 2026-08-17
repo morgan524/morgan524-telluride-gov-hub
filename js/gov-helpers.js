@@ -420,7 +420,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"27f7e2806c89fc76"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
+
+  "county|2026-09-16|Board of County Commissioners Meeting":
+    {"sv":4,"ph":"49e704e3c3bab858"}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -752,7 +755,10 @@ const MEETING_PREVIEWS = {
     "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed construction, renovation, alteration, or demolition of structures within Telluride. The commission may also address historic designation recommendations, preservation policies, or updates to inventories of historically and architecturally significant propertie",
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    "The Parks & Recreation Commission is expected to meet on September 16, 2026, to address community recreation and parks services matters. Specific agenda items were not detailed in the available text, but the commission typically interprets community needs regarding parks and recreation programming and services."
+    "The Parks & Recreation Commission is expected to meet on September 16, 2026, to address community recreation and parks services matters. Specific agenda items were not detailed in the available text, but the commission typically interprets community needs regarding parks and recreation programming and services.",
+
+  "county|2026-09-16|Board of County Commissioners Meeting":
+    "Board will consider procurement matters including material hauling, a trail connector project, and fuel island canopy construction. Related legal notices involve estate creditor claims, a foreclosure sale in Telluride Mountain Village, and a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1337,7 +1343,10 @@ const MANUAL_SUMMARIES = {
     "The September 16, 2026 HARC agenda hasn't been posted yet.",
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
-    "The September 16, 2026 Parks & Recreation Commission agenda hasn't been posted yet."
+    "The September 16, 2026 Parks & Recreation Commission agenda hasn't been posted yet.",
+
+  "county|2026-09-16|Board of County Commissioners Meeting":
+    "The September 16, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1658,6 +1667,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Uplifting souls since 1896",
+    source: "Telluride Times",
+    date: "August 17, 2026",
+    firstSeen: "2026-08-17",
+    newsTopic: "community",
+    copy: "St. Patrick's Catholic Church on North Spruce Street is marking 130 years in Telluride — built in 1896 for around $4,800, it's the town's only historic church still standing in its original form. The parish has seen steady growth in recent years, with daily Mass now led by a full-time resident priest. Anniversary events run through December.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_22d748bb-fcbd-42d9-91ed-62b182125d81.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/e/71/e71fefe0-9e87-4e65-8d4e-0845b72110f9/6a80f120087f3.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "States take Meta to trial in California in the biggest fight yet over social media harms to children",
     source: "Telluride Times",
@@ -4458,6 +4479,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
+  },
+  {
+    title: "BRITLEY & MATT",
+    link: "https://events.ourayridgwayevents.com/event/britley-matt",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    pubDate: "2026-08-18T22:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "687 N Cora Street, Ridgway, CO 81432",
+    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
     title: "JAMIE & THE DREAMERS",
