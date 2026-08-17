@@ -217,10 +217,57 @@
     return html + esc(raw.slice(last));
   }
 
+  // ---- Featured Action card --------------------------------------------
+  // Shared by index.html and gov-hub.html. It lived inline on BOTH pages under
+  // a "keep in sync" comment, and of course they drifted: the homepage gained
+  // an image gallery and Gov-Hub silently kept rendering the older card. One
+  // implementation is the only version of "in sync" that holds.
+  //
+  // `card` is the .fa-card element; it stays hidden unless the data is usable.
+  // Expects children #fa-headline #fa-meta #fa-gallery #fa-blurb #fa-acts —
+  // a page may omit #fa-gallery and simply gets no images.
+  function renderFeaturedAction(card, fa) {
+    if (!card || !fa) return false;
+    const m = fa.meeting;
+    if (!fa.headline || !m || !m.date || m.date < todayMT()) return false;   // stale or empty
+    const byId = (id) => card.querySelector('#' + id) || document.getElementById(id);
+    byId('fa-headline').textContent = fa.headline;
+    byId('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location]
+      .filter(Boolean).join(' · ');
+    byId('fa-blurb').innerHTML = emphasizeNames(fa.blurb || '');
+
+    const wrap = byId('fa-gallery');
+    if (wrap) {
+      // Accepts the images[] shape and the older single `image`.
+      let imgs = Array.isArray(fa.images) ? fa.images.slice() : [];
+      if (!imgs.length && fa.image) imgs = [{ src: fa.image, alt: fa.imageAlt || '', caption: fa.imageCredit || '' }];
+      // NOT safeUrl here — that is for outbound links and rejects anything not
+      // http(s)://, which would turn our own /assets/... paths into '#'.
+      const okSrc = (u) => /^\/[^/]/.test(u || '') || /^https:\/\//i.test(u || '');
+      const html = imgs.filter(im => im && okSrc(im.src)).map(im =>
+        '<figure class="fa-figure"><img src="' + esc(im.src) + '" alt="' + esc(im.alt || '') + '" loading="lazy">'
+        + (im.caption ? '<figcaption>' + esc(im.caption) + '</figcaption>' : '')
+        + '</figure>').join('');
+      wrap.innerHTML = html;
+      wrap.className = 'fa-gallery' + (imgs.length > 1 ? ' fa-gallery-multi' : '');
+      wrap.hidden = !html;
+    }
+
+    let acts = '';
+    if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
+    if (m.agendaUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>';
+    if (m.packetUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.packetUrl)) + '" target="_blank" rel="noopener">Agenda Packet</a>';
+    if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
+    byId('fa-acts').innerHTML = acts;
+    card.style.display = 'block';
+    return true;
+  }
+
   const api = { load: load, loadOne: loadOne, showError: showError,
     todayMT: todayMT, mtDateKey: mtDateKey, parseDateKey: parseDateKey,
     fmtDate: fmtDate, esc: esc, safeUrl: safeUrl, emphasizeNames: emphasizeNames,
     icsDataUri: icsDataUri, icsFilename: icsFilename,
+    renderFeaturedAction: renderFeaturedAction,
     ENTITY_LOGOS: ENTITY_LOGOS, entityLogo: entityLogo, _bucket: bucket };
 
   root.LTData = api;

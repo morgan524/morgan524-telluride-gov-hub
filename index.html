@@ -387,7 +387,7 @@
 
 <div id="lt-footer"></div>
 <script src="site.js?v=12"></script>
-<script src="/js/lt-data.js?v=11"></script>
+<script src="/js/lt-data.js?v=12"></script>
 <script src="/js/lt-weather.js?v=1" defer></script>
 <script>
 /* Featured Action of the Week — data/featured-action.json (see the section
@@ -397,45 +397,9 @@
   var card = document.getElementById('featured-action');
   if (!window.LTData || !card) return;
   LTData.load(['featured-action']).then(function (data) {
-    var fa = data['featured-action'] || {};
-    var m = fa.meeting;
-    if (!fa.headline || !m || !m.date || m.date < LTData.todayMT()) return;   // stale or empty → stay hidden
-    document.getElementById('fa-headline').textContent = fa.headline;
-    document.getElementById('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location].filter(Boolean).join(' · ');
-    // Same proper-noun/address bolding as the Gov-Hub summaries + digest
-    // (LTData.emphasizeNames escapes internally — safe as HTML).
-    // Optional pinned images. Hidden unless the pin supplies at least one, so
-    // the card keeps its current look on every automatic pick. Two images sit
-    // side by side on desktop and stack on a phone.
-    (function () {
-      var wrap = document.getElementById('fa-gallery');
-      var imgs = Array.isArray(fa.images) ? fa.images.filter(function (x) { return x && x.src; }) : [];
-      if (!imgs.length) { wrap.hidden = true; wrap.innerHTML = ''; return; }
-      wrap.className = 'fa-gallery' + (imgs.length > 1 ? ' fa-gallery-multi' : '');
-      wrap.innerHTML = imgs.map(function (im) {
-        // LTData.esc directly: the local esc alias is declared further down this
-        // function, so it is still undefined here. NOT LTData.safeUrl -- that
-        // one is for outbound links and rejects anything that is not
-        // http(s)://, which turns our own /assets/... paths into '#'. Same-origin
-        // paths get their own check instead, so a bad value in the pin still
-        // cannot smuggle in a javascript: URL.
-        var src = /^\/[^/]/.test(im.src) || /^https:\/\//i.test(im.src) ? im.src : '';
-        if (!src) return '';
-        return '<figure class="fa-figure">'
-          + '<img src="' + LTData.esc(src) + '" alt="' + LTData.esc(im.alt || '') + '" loading="lazy">'
-          + (im.caption ? '<figcaption>' + LTData.esc(im.caption) + '</figcaption>' : '')
-          + '</figure>';
-      }).join('');
-      wrap.hidden = false;
-    })();
-    document.getElementById('fa-blurb').innerHTML = LTData.emphasizeNames(fa.blurb || '');
-    var esc = LTData.esc, safe = LTData.safeUrl, acts = '';
-    if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
-    if (m.agendaUrl) acts += '<a class="fa-plain" href="' + esc(safe(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>';
-    if (m.packetUrl) acts += '<a class="fa-plain" href="' + esc(safe(m.packetUrl)) + '" target="_blank" rel="noopener">Agenda Packet</a>';
-    if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safe(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
-    document.getElementById('fa-acts').innerHTML = acts;
-    card.style.display = 'block';
+    // renderFeaturedAction does the stale/empty check itself and leaves the
+    // card hidden when the data is unusable.
+    LTData.renderFeaturedAction(card, data['featured-action']);
   }).catch(function () { /* stays hidden */ });
 })();
 
