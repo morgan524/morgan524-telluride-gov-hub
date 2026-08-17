@@ -21,6 +21,7 @@
 .head h1{font:700 33px/1.14 var(--serif,Georgia,serif);color:var(--forest);margin:0 0 6px}
 .head .sub{font:600 17px/1.4 var(--sans,system-ui);color:var(--ink);margin:0 0 18px}
 .shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 18px}
+.shot-wide img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:8px}
 .shot figcaption{font:600 12.5px/1.4 var(--sans,system-ui);color:var(--mut);
   text-transform:uppercase;letter-spacing:.05em;margin:0 0 6px}
 .shot img{width:100%;height:auto;display:block;border:1px solid var(--rule);border-radius:8px}
@@ -105,16 +106,19 @@ button.send:disabled{background:var(--mut);cursor:default}
     </div>
   </aside>
 
-  <div class="shots">
-    <figure class="shot" style="margin:0">
-      <figcaption data-en="Birdseye looking south from Mahoney Bridge" data-es="Vista a&eacute;rea hacia el sur desde el puente Mahoney">Birdseye looking south from Mahoney Bridge</figcaption>
-      <img src="/assets/Shandoka/rendering-mahoney-bridge.png" alt="Rendering, birdseye view looking south from Mahoney Bridge, proposed building shown in pink">
-    </figure>
-    <figure class="shot" style="margin:0">
-      <figcaption data-en="Birdseye of transit center looking northwest from Etta Place" data-es="Vista a&eacute;rea del centro de tr&aacute;nsito hacia el noroeste desde Etta Place">Birdseye of transit center looking northwest from Etta Place</figcaption>
-      <img src="/assets/Shandoka/rendering-transit-center.png" alt="Rendering, birdseye view of the transit center looking northwest from Etta Place, proposed building shown in pink">
-    </figure>
-  </div>
+  <!-- Single full-width figure (2026-08-17): the two pink massing renderings
+       were replaced by the scale comparison, which is the thing residents are
+       actually being asked about. .shots is a 2-col grid, so this sits outside
+       it. -->
+  <figure class="shot shot-wide" style="margin:0 0 18px">
+    <figcaption data-en="How tall the proposal actually is, seen from the ground"
+                data-es="Qu&eacute; tan alto es realmente el proyecto, visto desde el suelo">How tall the proposal actually is, seen from the ground</figcaption>
+    <img src="/assets/Shandoka/shandoka-sightline-scale.jpg"
+         alt="Two views of the proposed Shandoka Lot redevelopment. Above, the application's birds-eye view from a high elevation. Below, a street-level view from Black Bear Road showing the buildings at approximately 50 feet, or five stories, as a person standing on the ground would see them.">
+    <p class="credit" style="margin:6px 0 0"
+       data-en="Top: the birds-eye view from the Town's application. Bottom: a street-level view from Black Bear Road, drawn from about 5.5 feet above the ground, which is roughly eye level."
+       data-es="Arriba: la vista a&eacute;rea de la solicitud del Municipio. Abajo: una vista a nivel de calle desde Black Bear Road, dibujada desde unos 1.7 metros de altura, aproximadamente al nivel de los ojos.">Top: the birds-eye view from the Town's application. Bottom: a street-level view from Black Bear Road, drawn from about 5.5 feet above the ground, which is roughly eye level.</p>
+  </figure>
 
   <ul class="facts">
     <li data-en="The Town of Telluride is considering a major redevelopment of the parking area in front of Shandoka. The current concept includes a parking structure with approximately 900 parking spaces and roughly 50 to 60 residential units. The parking will replace the parking at Carhenge, providing parking for all of Shandoka residents as well."
@@ -125,8 +129,8 @@ button.send:disabled{background:var(--mut);cursor:default}
         data-es="Estamos preguntando a los residentes de Shandoka qu&eacute; saben sobre la propuesta y qu&eacute; opinan de ella.">We are asking Shandoka residents what they know about the proposal and what they think about it.</li>
   </ul>
 
-  <p class="credit" data-en="Renderings are the Town's own, from the project materials. The proposed building is shaded pink; existing buildings are shown in white and grey."
-     data-es="Las im&aacute;genes son del propio Municipio, tomadas de los materiales del proyecto. El edificio propuesto aparece en rosa; los edificios existentes se muestran en blanco y gris.">Renderings are the Town's own, from the project materials. The proposed building is shaded pink; existing buildings are shown in white and grey.</p>
+  <p class="credit" data-en="The birds-eye view is the Town's own, from the project materials. The street-level view was drawn by Livable Telluride to show the same buildings at eye level."
+     data-es="La vista a&eacute;rea es del propio Municipio, tomada de los materiales del proyecto. La vista a nivel de calle fue elaborada por Livable Telluride para mostrar los mismos edificios al nivel de los ojos.">The birds-eye view is the Town's own, from the project materials. The street-level view was drawn by Livable Telluride to show the same buildings at eye level.</p>
 
   <p class="privacy" data-en="This survey is anonymous. We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public."
      data-es="Esta encuesta es an&oacute;nima. No recopilamos ninguna informaci&oacute;n de identificaci&oacute;n, para mantener todas las respuestas completamente privadas. Recopilaremos los resultados y los compartiremos con el Concejo Municipal de Telluride y con el p&uacute;blico."><strong>This survey is anonymous.</strong> We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public.</p>

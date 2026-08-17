@@ -262,6 +262,10 @@
     .fa-card h3 { font: 600 24px/1.25 var(--serif); color: var(--forest); margin: 0 0 8px; }
     .fa-meta { font: 500 14px/1.5 var(--sans); color: var(--body2); margin-bottom: 10px; }
     .fa-blurb { font: 400 15px/1.6 var(--sans); color: var(--body); margin: 0 0 14px; max-width: 72ch; }
+    .fa-figure { margin: 0 0 14px; }
+    .fa-figure img { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line, #d8d3c6); }
+    .fa-figure figcaption { font: 400 15.5px/1.45 var(--sans); color: var(--muted, #6b7a80); margin-top: 6px; }
+
     .fa-acts { display: flex; flex-wrap: wrap; gap: 10px; }
     .fa-acts a { font: 600 14px/1 var(--sans); padding: 10px 16px; border-radius: 8px; text-decoration: none; }
     .fa-acts .fa-dive { background: var(--forest); color: #fff; }
@@ -273,6 +277,10 @@
     <div class="fa-eyebrow">&#9733; Featured Action</div>
     <h3 id="fa-headline"></h3>
     <div class="fa-meta" id="fa-meta"></div>
+    <figure class="fa-figure" id="fa-figure" hidden>
+      <img id="fa-image" alt="">
+      <figcaption id="fa-credit"></figcaption>
+    </figure>
     <p class="fa-blurb" id="fa-blurb"></p>
     <div class="fa-acts" id="fa-acts"></div>
   </div>
@@ -389,6 +397,20 @@
     document.getElementById('fa-meta').textContent = [m.sourceLabel, m.humanDate, m.time, m.location].filter(Boolean).join(' · ');
     // Same proper-noun/address bolding as the Gov-Hub summaries + digest
     // (LTData.emphasizeNames escapes internally — safe as HTML).
+    // Optional pinned image. Hidden unless the pin supplies one, so the card
+    // keeps its current look on every automatic pick.
+    (function () {
+      var fig = document.getElementById('fa-figure');
+      var img = document.getElementById('fa-image');
+      var cred = document.getElementById('fa-credit');
+      if (fa.image) {
+        img.src = fa.image;
+        img.alt = fa.imageAlt || '';
+        cred.textContent = fa.imageCredit || '';
+        cred.hidden = !fa.imageCredit;
+        fig.hidden = false;
+      } else { fig.hidden = true; }
+    })();
     document.getElementById('fa-blurb').innerHTML = LTData.emphasizeNames(fa.blurb || '');
     var esc = LTData.esc, safe = LTData.safeUrl, acts = '';
     if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';

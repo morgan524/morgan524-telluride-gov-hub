@@ -1,25 +1,28 @@
 {
- "generated": "2026-08-17T12:55:39.813Z",
- "pinned": false,
- "topic": "wildfire",
- "topicLabel": "Wildfire Resiliency",
- "headline": "Wildfire Resiliency goes before Board of Directors Meeting on Tuesday, August 18",
- "blurb": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a while now. The board will also hear a wildfire assignment update, which matters in a region that has watched fire seasons grow longer and more complicated.",
+ "generated": "2026-08-17T14:47:18.672Z",
+ "pinned": true,
+ "topic": "carhenge",
+ "topicLabel": "Carhenge / Shandoka",
+ "headline": "HARC takes up the Shandoka Lot redevelopment Wednesday, with a 3:00 PM site walk",
+ "blurb": "The Historic & Architectural Review Commission hears preliminary large-scale applications for all four Shandoka buildings at 860 Black Bear Rd: Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another. A site walk on the lot at 3:00 PM comes first, then the evening session at 5:30 PM. Both are open to everyone. HARC reviews height, mass, scale, materials and context, which is exactly what is still movable at this stage. Share your thoughts with the Town Council as well; Council makes the final call.",
+ "image": "/assets/Shandoka/shandoka-sightline-scale.jpg",
+ "imageAlt": "Two views of the proposed Shandoka Lot redevelopment. Above, the application's birds-eye view from a high elevation. Below, a street-level view from Black Bear Road showing the buildings at approximately 50 feet, or five stories, as a person standing on the ground would see them.",
+ "imageCredit": "Top: Town of Telluride application. Bottom: Livable Telluride rendered sightline view from about 5.5 feet above grade.",
  "deepDive": {
-  "label": "Wildfire Resiliency",
-  "href": "/deep-dive-wildfire.html"
+  "label": "Carhenge / Shandoka",
+  "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "Board of Directors Meeting",
-  "sourceLabel": "Fire Protection",
-  "date": "2026-08-18",
-  "humanDate": "Tuesday, August 18",
+  "title": "HARC Meeting",
+  "sourceLabel": "Town of Telluride",
+  "date": "2026-08-19",
+  "humanDate": "Wednesday, August 19",
   "time": "",
-  "location": "131 W Columbia Ave, Telluride, CO 81435",
-  "agendaUrl": "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
+  "location": "Rebekah Hall, 113 W Columbia Ave",
+  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
   "hasAgenda": true,
-  "packetUrl": "",
-  "zoomLink": "",
-  "livestream": ""
+  "packetUrl": "https://telluride-co.civicweb.net/document/443013/",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
  }
 }

@@ -5291,7 +5291,8 @@ async function rebuildTellurideHarcMeetings(existing, now = new Date()) {
       date,
       title: 'HARC Meeting',
       board: 'harc',
-      location: 'Rebekah Hall, 201 N. Pine Street, Telluride',
+      // Per the Town's own HARC agendas (and 47 other rows in this data set).
+      location: 'Rebekah Hall, 113 W Columbia Ave',
     };
     if (id) row.civicWebId = Number(id);
     // A packet URL already patched in, and any hand-written note, outlive the

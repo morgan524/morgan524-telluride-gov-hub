@@ -116,6 +116,12 @@ function run(repoRoot) {
       topicLabel: choice.label,
       headline: (pinActive && pin.headline) || (choice.label + ' goes before ' + (m.title || 'the board') + ' on ' + humanDate(m.date)),
       blurb: (pinActive && pin.blurb) || truncSentence(wk.summary || '', 480),
+      // Pin-only, and gated on pinActive for the same reason the copy is: an
+      // expired pin must stop supplying a picture, or the card would staple a
+      // stale rendering onto whatever meeting got auto-selected next.
+      image: (pinActive && pin.image) || '',
+      imageAlt: (pinActive && pin.imageAlt) || '',
+      imageCredit: (pinActive && pin.imageCredit) || '',
       deepDive: { label: choice.label, href: topicHref(choice.topic) },
       meeting: {
         title: m.title || wk.title || '',
