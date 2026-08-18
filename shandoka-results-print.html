@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Shandoka Survey — Printable Results</title>
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<style>
+:root{ --forest:#173d34; --sage:#dce9e2; --paper:#fffdf8; --ink:#22303c;
+       --mut:#6b7a80; --rule:#c9d6d6; --rust:#a8463c; --bar:#1d5c63; }
+
+.wrap{max-width:860px;margin:0 auto;padding:0 24px 80px}
+
+/* ── Controls (screen only) ─────────────────────────────────────────── */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:18px 0 22px}
+.tools button{font:600 15px var(--sans,system-ui);border:1.5px solid var(--forest);background:#fff;
+  color:var(--forest);border-radius:99px;padding:9px 20px;cursor:pointer}
+.tools button:hover{background:var(--sage)}
+.tools button.primary{background:var(--forest);color:#fff}
+.opt{display:flex;align-items:center;gap:8px;font-size:15.5px;color:var(--ink)}
+.opt input{width:17px;height:17px}
+.caution{background:#fdf6ee;border:1px solid #e4cfae;border-left:4px solid var(--rust);
+  border-radius:8px;padding:12px 15px;font-size:15px;line-height:1.5;color:var(--ink);margin:0 0 20px}
+
+/* ── Report ─────────────────────────────────────────────────────────── */
+.cover{border-bottom:3px solid var(--forest);padding-bottom:16px;margin-bottom:22px}
+.cover .kicker{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--rust);margin:0 0 6px}
+.cover h1{font:700 34px/1.14 var(--serif,Georgia,serif);color:var(--forest);margin:0 0 8px}
+.cover .dek{font-size:16.5px;line-height:1.5;color:var(--mut);margin:0}
+
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 24px}
+.stat div{background:var(--forest);color:#fff;border-radius:10px;padding:14px 16px}
+.stat .lab{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#b9d2cb;font-weight:700}
+.stat .val{font:700 27px/1.1 var(--serif,Georgia,serif);margin-top:3px}
+
+.q{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:18px 22px;margin-bottom:14px}
+.q h2{font:700 17px/1.35 var(--sans,system-ui);color:var(--forest);margin:0 0 13px}
+.row{display:grid;grid-template-columns:1fr 54px 48px;gap:10px;align-items:center;margin-bottom:8px;font-size:15px}
+.row .lbl{color:var(--ink)}
+.row .n{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
+.row .pc{text-align:right;font-weight:700;color:var(--forest);font-variant-numeric:tabular-nums}
+.track{grid-column:1/-1;height:9px;background:#e8eeeb;border-radius:5px;overflow:hidden;margin:-3px 0 9px}
+.track i{display:block;height:100%;background:var(--bar);border-radius:5px}
+.note{font-size:12.5px;line-height:1.45;color:var(--mut);margin:6px 0 0}
+
+.free{background:#fff;border:1px solid var(--rule);border-radius:8px;padding:12px 15px;margin-bottom:9px;
+  font-size:14.5px;line-height:1.55;color:var(--ink);white-space:pre-wrap}
+.free .meta{font-size:12px;color:var(--mut);margin-top:6px}
+
+.method{border-top:1px solid var(--rule);margin-top:26px;padding-top:14px;
+  font-size:12.5px;line-height:1.6;color:var(--mut)}
+.method strong{color:var(--ink)}
+
+.login{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:26px;max-width:420px;margin:30px auto}
+.login h2{font:700 20px var(--serif,Georgia,serif);color:var(--forest);margin:0 0 8px}
+.login input{width:100%;box-sizing:border-box;font-size:16px;padding:10px 12px;margin-bottom:10px;
+  border:1.5px solid var(--rule);border-radius:8px}
+.login button{width:100%;font:700 16px var(--sans,system-ui);color:#fff;background:var(--forest);
+  border:none;border-radius:99px;padding:12px;cursor:pointer}
+.err{color:var(--rust);font-size:14.5px;margin-top:8px}
+
+@media(max-width:700px){.stat{grid-template-columns:1fr}.wrap{padding:0 14px 60px}}
+
+/* ── Print ──────────────────────────────────────────────────────────── */
+@page{ size:letter; margin:0.55in 0.6in; }
+
+@media print{
+  /* Backgrounds carry meaning here (the bars ARE the chart), so they must
+     survive the browser's default "don't waste ink" behavior. */
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  html,body{ background:#fff; }
+  .noprint, #lt-header, #lt-footer{ display:none !important; }
+  .wrap{ max-width:none; padding:0; margin:0; }
+
+  /* A chart split across a page break is unreadable — the bars land on one
+     page and their labels on the next. */
+  .q, .stat, .cover{ break-inside:avoid; page-break-inside:avoid; }
+  .free{ break-inside:avoid; page-break-inside:avoid; }
+  .q h2{ break-after:avoid; page-break-after:avoid; }
+  .appendix{ break-before:page; page-break-before:always; }
+
+  .cover h1{ font-size:26px; }
+  .stat .val{ font-size:22px; }
+  .q{ margin-bottom:11px; padding:14px 17px; border-color:#b9c7c7; }
+  .q h2{ font-size:14.5px; }
+  .row{ font-size:12.5px; margin-bottom:6px; }
+  .track{ height:8px; margin:-2px 0 7px; }
+  .note{ font-size:10.5px; }
+  .free{ font-size:11.5px; padding:9px 12px; }
+  .method{ font-size:10.5px; }
+  a{ text-decoration:none; color:inherit; }
+}
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+<main class="wrap">
+  <div id="app"></div>
+</main>
+<div id="lt-footer"></div>
+
+<script src="/js/site-config.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script>
+(function () {
+  'use strict';
+  var ADMIN = 'info@livabletelluride.org';
+  var CFG = window.SITE_CONFIG || {};
+  var app = document.getElementById('app');
+  var rows = [];
+
+  // Labels mirror shandoka-survey.html. Stored values are always English, so
+  // one label set covers responses submitted in either language.
+  //
+  // Option order here is the SURVEY's order, and for the scale questions that
+  // order is the scale itself (strongly support -> strongly oppose). The live
+  // results page sorts every question by count, which is fine for scanning but
+  // wrong for a published chart: it scrambles an ordinal axis and a reader can
+  // no longer see the shape of the distribution. Only q5 is a nominal
+  // multi-select, so only q5 is sorted by count here.
+  var Q = [
+    ['q1','1. Familiarity with the project before the survey',
+      ['Very familiar','Somewhat familiar','Heard about it but did not know details','Knew very little','Had not heard about it']],
+    ['q2','2. Knew parts could reach ~50 feet, before the story poles', ['Yes','No','Not sure']],
+    ['q3','3. Story poles changed their understanding of scale',
+      ['Yes, significantly','Yes, somewhat','No','Have not seen them','Not sure']],
+    ['q4','4. How they feel about the project now',
+      ['Strongly support','Somewhat support','Neutral/unsure','Somewhat oppose','Strongly oppose']],
+    ['q5','5. Most concerning parts (select all that apply)',
+      ['Building height and overall scale','Loss or relocation of surface parking','Construction noise and disruption',
+       'Traffic','Views and sunlight','Safety and pedestrian access','Effect on quality of life at Shandoka',
+       'Cost of the project','Disruption and length of construction','None — I support the project as designed']],
+    ['q6','6. What they would prefer before a final decision',
+      ['Proceed as currently proposed','Proceed with changes based on resident input',
+       'Consider substantially different alternatives','Do not proceed','Need more information']],
+    ['q7','7. Rating of the Town’s public information before the story poles',
+      ['Excellent','Good','Fair','Poor','Very poor','Not sure / was not aware']]
+  ];
+
+  var SORT_BY_COUNT = { q5: true };
+
+  function esc(s){ return String(s == null ? '' : s)
+    .replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  function tally(key, opts) {
+    var counts = {}, answered = 0;
+    opts.forEach(function (o) { counts[o] = 0; });
+    rows.forEach(function (r) {
+      var v = r[key];
+      if (Array.isArray(v)) {
+        if (v.length) answered++;
+        v.forEach(function (x) { if (x in counts) counts[x]++; else counts[x] = (counts[x] || 0) + 1; });
+      } else if (v) {
+        answered++;
+        if (v in counts) counts[v]++; else counts[v] = 1;
+      }
+    });
+    return { counts: counts, answered: answered };
+  }
+
+  // "Other: <free text>" write-ins are one-off answers, not chart categories --
+  // 40 bars of n=1 would bury the real distribution. They're counted in an
+  // "Other (written in)" row and listed in the appendix when comments are on.
+  function isOther(k){ return k.indexOf('Other: ') === 0; }
+
+  var MONTHS = ['January','February','March','April','May','June','July',
+                'August','September','October','November','December'];
+
+  // submittedAt is a UTC instant (the survey form stores new Date().toISOString()),
+  // and this report is written for, and read in, Telluride. Slicing the ISO
+  // string would report a 6 PM Mountain response as the following day -- which
+  // is exactly how the footer first printed tomorrow's date. Calendar dates are
+  // therefore resolved in America/Denver.
+  function mtYMD(iso) {
+    if (!iso) return '';
+    var s = String(iso);
+    // A date-only value carries no instant to convert; take it at face value.
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+    var d = new Date(s);
+    if (isNaN(d.getTime())) return '';
+    try {
+      var p = {};
+      new Intl.DateTimeFormat('en-US', { timeZone: 'America/Denver',
+        year: 'numeric', month: '2-digit', day: '2-digit' })
+        .formatToParts(d).forEach(function (x) { p[x.type] = x.value; });
+      return p.year && p.month && p.day ? p.year + '-' + p.month + '-' + p.day : s.slice(0, 10);
+    } catch (e) {
+      return s.slice(0, 10);
+    }
+  }
+
+  function fmtDate(iso) {
+    var p = mtYMD(iso).split('-');
+    if (p.length !== 3) return '';
+    return MONTHS[parseInt(p[1], 10) - 1] + ' ' + parseInt(p[2], 10) + ', ' + p[0];
+  }
+
+  function dateRange() {
+    var ds = rows.map(function (r) { return mtYMD(r.submittedAt); })
+                 .filter(Boolean).sort();
+    if (!ds.length) return '';
+    return ds[0] === ds[ds.length - 1]
+      ? fmtDate(ds[0])
+      : fmtDate(ds[0]) + ' – ' + fmtDate(ds[ds.length - 1]);
+  }
+
+  function chart(q) {
+    var t = tally(q[0], q[2]);
+    var base = t.answered || 1;
+    var keys = Object.keys(t.counts);
+    var otherTotal = 0;
+    keys = keys.filter(function (k) {
+      if (isOther(k)) { otherTotal += t.counts[k]; return false; }
+      return true;
+    });
+    if (SORT_BY_COUNT[q[0]]) keys.sort(function (a, b) { return t.counts[b] - t.counts[a]; });
+
+    var h = '<div class="q"><h2>' + esc(q[1]) + '</h2>';
+    keys.forEach(function (k) {
+      var n = t.counts[k], pc = Math.round(100 * n / base);
+      h += '<div class="row"><span class="lbl">' + esc(k) + '</span>'
+        + '<span class="n">' + n + '</span><span class="pc">' + pc + '%</span></div>'
+        + '<div class="track"><i style="width:' + pc + '%"></i></div>';
+    });
+    if (otherTotal) {
+      var opc = Math.round(100 * otherTotal / base);
+      h += '<div class="row"><span class="lbl">Other (written in)</span>'
+        + '<span class="n">' + otherTotal + '</span><span class="pc">' + opc + '%</span></div>'
+        + '<div class="track"><i style="width:' + opc + '%"></i></div>';
+    }
+    h += '<p class="note">' + t.answered + ' of ' + rows.length + ' respondents answered'
+      + (q[0] === 'q5'
+          ? '. Percentages are of those answering; they total more than 100% because this question allowed several answers.'
+          : '. Percentages are of those answering.')
+      + '</p></div>';
+    return h;
+  }
+
+  function render() {
+    if (!rows.length) {
+      app.innerHTML = '<div class="q"><h2>No responses yet</h2>'
+        + '<p class="note">Nothing has been submitted, so there is nothing to print.</p></div>';
+      return;
+    }
+
+    var withComments = document.getElementById('inc') ? document.getElementById('inc').checked : false;
+    var es = rows.filter(function (r) { return r.lang === 'es'; }).length;
+    var texts = rows.filter(function (r) { return (r.q8 || '').trim(); });
+
+    var h = '<div class="tools noprint">'
+      + '<button id="print" class="primary">Save as PDF</button>'
+      + '<button id="reload">Refresh data</button>'
+      + '<label class="opt"><input type="checkbox" id="inc"' + (withComments ? ' checked' : '') + '>'
+      + 'Include written comments</label>'
+      + '</div>'
+      + '<div class="caution noprint"><strong>Written comments are off by default.</strong> '
+      + 'The survey promised anonymity, and a free-text answer can identify the person who wrote it — '
+      + 'which is why the Firestore rules keep raw responses admin-only. The charts below are safe to '
+      + 'publish. Turn comments on only for a copy that stays internal, or after you have read them '
+      + 'through for anything identifying.</div>';
+
+    h += '<div class="cover">'
+      + '<p class="kicker">Livable Telluride &middot; Resident Survey</p>'
+      + '<h1>The Shandoka / Lot L Proposal</h1>'
+      + '<p class="dek">What ' + rows.length + ' residents said after the story poles went up. '
+      + 'Responses collected ' + esc(dateRange()) + '.</p></div>';
+
+    h += '<div class="stat">'
+      + '<div><div class="lab">Responses</div><div class="val">' + rows.length + '</div></div>'
+      + '<div><div class="lab">Answered in Spanish</div><div class="val">' + es
+        + ' <span style="font-size:15px">(' + Math.round(100 * es / rows.length) + '%)</span></div></div>'
+      + '<div><div class="lab">Left a written comment</div><div class="val">' + texts.length + '</div></div>'
+      + '</div>';
+
+    Q.forEach(function (q) { h += chart(q); });
+
+    if (withComments && texts.length) {
+      h += '<div class="appendix"><div class="q"><h2>Appendix: what respondents want the Town Council to know</h2>'
+        + '<p class="note" style="margin:0 0 12px">' + texts.length + ' of ' + rows.length
+        + ' respondents wrote a comment. Reproduced verbatim, including original spelling.</p>';
+      texts.forEach(function (r) {
+        h += '<div class="free">' + esc(r.q8)
+          + '<div class="meta">' + (r.lang === 'es' ? 'Submitted in Spanish' : 'Submitted in English')
+          + ' &middot; ' + esc(fmtDate(r.submittedAt)) + '</div></div>';
+      });
+      h += '</div></div>';
+    }
+
+    h += '<div class="method"><strong>About this survey.</strong> '
+      + rows.length + ' responses collected ' + esc(dateRange())
+      + ' through an open online survey promoted by Livable Telluride — '
+      + (rows.length - es) + ' in English, ' + es + ' in Spanish. '
+      + 'Respondents were self-selected rather than randomly sampled, so these results describe the '
+      + 'views of engaged residents and are not a representative sample of Telluride. Percentages are '
+      + 'of those answering each question. The question about concerns allowed more than one choice, '
+      + 'so its percentages total more than 100%. Figures cited by respondents about costs, offers and '
+      + 'project dimensions are their own and are not verified here.'
+      + '<br><br>Compiled ' + fmtDate(new Date().toISOString()) + ' &middot; livabletelluride.org</div>';
+
+    app.innerHTML = h;
+
+    document.getElementById('print').onclick = function () { window.print(); };
+    document.getElementById('reload').onclick = load;
+    document.getElementById('inc').onchange = render;
+  }
+
+  function load() {
+    app.innerHTML = '<p class="note">Loading responses…</p>';
+    firebase.firestore().collection('shandoka_survey').get().then(function (snap) {
+      rows = [];
+      snap.forEach(function (d) { rows.push(d.data()); });
+      rows.sort(function (a, b) { return String(a.submittedAt || '').localeCompare(String(b.submittedAt || '')); });
+      render();
+    }).catch(function (err) {
+      app.innerHTML = '<div class="q"><h2>Could not load</h2><p class="err">'
+        + esc(err && err.message ? err.message : String(err)) + '</p></div>';
+    });
+  }
+
+  function loginPanel(note) {
+    app.innerHTML = '<div class="login"><h2>Sign in</h2>'
+      + '<p style="font-size:15px;color:var(--mut);margin:0 0 14px">Results are visible only to <strong>'
+      + esc(ADMIN) + '</strong>.</p>'
+      + '<input id="em" type="email" autocomplete="username" value="' + esc(ADMIN) + '">'
+      + '<input id="pw" type="password" autocomplete="current-password" placeholder="Password">'
+      + '<button id="go">Sign in</button>'
+      + (note ? '<p class="err">' + esc(note) + '</p>' : '') + '</div>';
+    document.getElementById('go').onclick = function () {
+      firebase.auth().signInWithEmailAndPassword(
+        document.getElementById('em').value.trim(),
+        document.getElementById('pw').value
+      ).catch(function (e) { loginPanel(e.message || 'Sign-in failed.'); });
+    };
+    document.getElementById('pw').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') document.getElementById('go').click();
+    });
+  }
+
+  if (!CFG.FIREBASE) {
+    app.innerHTML = '<p class="err">Firebase config missing.</p>';
+    return;
+  }
+  if (!firebase.apps.length) firebase.initializeApp(CFG.FIREBASE);
+  firebase.auth().onAuthStateChanged(function (user) {
+    if (user && user.email === ADMIN) load();
+    else if (user && user.email) loginPanel('That account is not the admin. Sign out and use ' + ADMIN + '.');
+    else loginPanel('');
+  });
+})();
+</script>
+</body>
+</html>
