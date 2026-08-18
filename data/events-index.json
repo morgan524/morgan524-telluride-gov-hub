@@ -77,7 +77,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/art.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "2:30 PM – 3:30 PM",
+    "desc": "A weather backup session of the Back to School I Heart Art program at Wilkinson Public Library's Program Room, running from 2:30 to 3:30 PM. This library event offers a creative arts activity for kids heading back to school.",
     "type": "Arts & Film"
   },
   {
@@ -90,7 +90,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_59.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "2:30 PM – 3:30 PM",
+    "desc": "A back-to-school art program hosted by Wilkinson Public Library, held outdoors on the Lower Terrace. The event runs from 2:30 to 3:30 PM and offers a creative arts experience for the community as summer winds down.",
     "type": "Arts & Film"
   },
   {
@@ -237,19 +237,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the…",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Telluride R-1 Schools First Day of School",
-    "href": "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    "date": "2026-08-18",
-    "time": "8:00 AM",
-    "location": "",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "First Day of School",
-    "type": "Community"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
@@ -1190,6 +1177,19 @@
     "endDate": "2026-10-12"
   },
   {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-08-24-senior-lunch",
+    "date": "2026-08-24",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    "type": "Community"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-08-24",
@@ -1678,6 +1678,20 @@
     "type": "Community"
   },
   {
+    "title": "Dinner & Magic Show",
+    "href": "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    "date": "2026-08-28",
+    "time": "6:00 AM",
+    "location": "Yankee Girl Cafe",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course…",
+    "type": "Food & Drink",
+    "endDate": "2026-08-29"
+  },
+  {
     "title": "Music on the Green Presents Cristina Vane",
     "href": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
     "date": "2026-08-28",
@@ -1898,6 +1912,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Join the Ouray Library to create a delicious soup in the Massard Room in the Ouray Community Center on Monday, August 31st, starting at 5:30 p.m.! Sign up is required at programsouraypl@gmail.com Ages: Adults View on site | Email this event",
     "type": "Food & Drink"
+  },
+  {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-08-31-senior-lunch",
+    "date": "2026-08-31",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "type": "Community"
   },
   {
     "title": "Bike & Brewery Tour",
@@ -2414,6 +2441,19 @@
     "type": "Community"
   },
   {
+    "title": "Ouray County Labor Day Rodeo",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
+    "date": "2026-09-07",
+    "time": "12:00 PM",
+    "location": "Ouray County Fairgrounds",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53737685960448/huge/7ed716278e1f9bfa37323fc141bb6dffb17d87f8.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that…",
+    "type": "Community"
+  },
+  {
     "title": "Monthly Karate in Ouray County",
     "href": "https://events.ourayridgwayevents.com/event/monthly-karate-in-ouray-county",
     "date": "2026-09-07",
@@ -2450,8 +2490,8 @@
     "img": "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
-    "type": "Community"
+    "desc": "Feel the adrenaline rush with daring performances, electrifying action, and non-stop excitement that will keep you on the edge of your seat. Gates open at 11am. Performance starts at noon. Tickets $15. Kids 5 and under are free. Military…",
+    "type": "Family & Kids"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
@@ -2938,6 +2978,19 @@
     "type": "Arts & Film"
   },
   {
+    "title": "Senior Lunch",
+    "href": "https://www.norwoodtown.com/2026-09-14-senior-lunch",
+    "date": "2026-09-14",
+    "time": "6:00 AM",
+    "location": "Norwood, CO",
+    "town": "Norwood",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
+    "category": "Community Event",
+    "source": "Town of Norwood",
+    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "type": "Community"
+  },
+  {
     "title": "Bike & Brewery Tour",
     "href": "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
     "date": "2026-09-14",
@@ -3411,6 +3464,19 @@
     "type": "Music"
   },
   {
+    "title": "National Public Lands Day Campsite Cleanup - Ironton",
+    "href": "https://events.ourayridgwayevents.com/event/national-public-lands-day-campsite-cleanup-ironton",
+    "date": "2026-09-26",
+    "time": "10:00 AM",
+    "location": "Ironton Park \"Staging Area\"",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53737767968998/huge/e72d7dc21b85f92782e5ed31ef6a68173f7066be.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "This National Public Lands Day, join San Juan Moutains Association for our Ironton Valley Campsite Cleanup! We’ll have some friendly competition to see who can collect the most litter, artistically naturalize a fire ring, find the most…",
+    "type": "Community"
+  },
+  {
     "title": "Telluride Farmers' Market Music Series: Danny D'Alessandro",
     "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
     "date": "2026-09-26",
@@ -3459,7 +3525,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "",
+    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
     "type": "Community"
   },
   {

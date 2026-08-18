@@ -297,8 +297,8 @@ const MV_CACHED_DATA = [
     time: "2:00 PM - 8:00 PM",
     title: "Town Council Meeting",
     board: "tc",
-    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49681/august_20-_2026_town_council_meeting_agenda.pdf",
-    packetUrl: "https://townofmountainvillage.com/site/assets/files/49682/august_20-_2026_town_council_meeting_packet-1.pdf",
+    agendaUrl: "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
+    packetUrl: "https://townofmountainvillage.com/site/assets/files/49696/august_20-_2026_town_council_meeting_packet.pdf",
     special: false,
     location: "Town Hall, 455 Mountain Village Blvd, Suite A"
   },

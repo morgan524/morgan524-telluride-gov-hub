@@ -1,18 +1,14 @@
 {
-  "hash": "d7af8e37332de35e99560577554c364305bdee5c",
-  "lede": "Mountain Village Council meets Thursday to vote on a resolution setting an appreciation cap for deed-restricted units — the kind of fine print that determines whether affordable housing actually stays affordable — and that alone makes this a week worth paying attention to. Telluride's HARC is also busy Tuesday with the Shandoka Lot redevelopment at 860 Black Bear Rd coming in for preliminary large-scale review, while P&Z gets its first formal look at the school district's employee housing proposal on the middle-high school site. It's also the first week of school for Telluride R-1 kids, and the free Oak Street Park SummerSHOW series brings Deltaphonic to the park Thursday evening.",
+  "hash": "0d6d1a48ca51f19b52619d8a0ec5b3dfc9abe425",
+  "lede": "Mountain Village Council meets Thursday with a resolution to set the sale price appreciation cap on deed-restricted units — the kind of decision that determines whether affordable housing actually stays affordable or quietly slips away. The same night, Telluride's Planning and Zoning Commission gets its first look at a school district employee housing proposal on the high school campus. Squeeze in the BOCC's housing authority compliance discussion Wednesday, three public hearings at Ouray County Planning Commission, and a busy week at HARC, and there's a lot on the table before the free Deltaphonic show at Oak Street Park Thursday evening.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Station 3 project update and wildfire assignment briefing for a fire-prone region."
-    },
-    {
       "id": 3,
-      "stake": "HARC decides whether to approve an unpermitted structure at the historic Elks Lodge."
+      "stake": "HARC votes on after-the-fact permit for unpermitted Elks Lodge pergola."
     },
     {
       "id": 4,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — new construction, four buildings."
+      "stake": "Shandoka Lot redevelopment gets preliminary large-scale HARC review; four new buildings."
     },
     {
       "id": 5,
@@ -20,23 +16,19 @@
     },
     {
       "id": 6,
-      "stake": "Public hearing on housing authority compliance and a land-use insubstantial amendment."
+      "stake": "BOCC hears housing authority compliance procedures and a public hearing on land use."
     },
     {
       "id": 8,
-      "stake": "Repeal of an entire county land-use code section could reshape future development rules."
-    },
-    {
-      "id": 9,
-      "stake": "Public hearings on four special event liquor permits, including a 500-person Museum fundraiser."
+      "stake": "Three public hearings including repeal of an entire county land-use code section."
     },
     {
       "id": 10,
-      "stake": "Vote on appreciation cap for deed-restricted units determines long-term affordable housing integrity."
+      "stake": "Mountain Village sets appreciation cap controlling whether deed-restricted homes stay affordable."
     },
     {
       "id": 11,
-      "stake": "First formal review of school district employee housing and a public hearing on new construction."
+      "stake": "School district employee housing and a public hearing on new development come before P&Z."
     }
   ]
 }

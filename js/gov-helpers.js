@@ -297,7 +297,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4},
 
   "med|2026-08-27|Regular Board Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://www.tellmed.org/files/2218817c5/THD+Reg+BOD+Mtg+8.27.26+Agenda.pdf","zoomUrl":"https://us02web.zoom.us/j/89509331558","meetingId":"895 0933 1558"},
 
   "norwood|2026-07-29|NWC Possible Quorum":
     {"agendaUrl":"https://www.norwoodtown.com/files/1c026ffd5/07+2026+QUORUM+NOTICE.pdf","sv":4},
@@ -772,7 +772,10 @@ const MEETING_PREVIEWS = {
     "Board will consider procurement matters including material hauling, a trail connector project, and fuel island canopy construction. Related legal notices involve estate creditor claims, a foreclosure sale in Telluride Mountain Village, and a federal environmental assessment for a hazardous fuels management project in the Uncompahgre and Gunnison National Forests.",
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended."
+    "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended.",
+
+  "med|2026-08-27|Regular Board Meeting":
+    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1252,7 +1255,7 @@ const MANUAL_SUMMARIES = {
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
 
   "med|2026-08-27|Regular Board Meeting":
-    "The August 27, 2026 Mountain Village Metropolitan District Regular Board Meeting agenda hasn't been posted yet.",
+    "The Telluride Hospital District board meets July 23 with a heavy agenda centered on the new facility project. Two items stand out: an update on the RFQ for architect selection, and a discussion and possible action on a Two Site Model — a direction that would shape what gets built, where, and at what scale. The board will also take up a Letter of Intent with CommonSpirit Health, a large Catholic health system, which could define the partnership framework for whatever comes next. Routine finance and administrative updates round out the morning, along with an executive session for CEO review.",
 
   "norwood|2026-07-29|NWC Possible Quorum":
     "The Norwood Water Commission may have a quorum present at a July 29 meeting with engineering firm SGM to discuss the redundant waterline design. The gathering is set for 11:00 a.m. at the Norwood Community Center. The quorum notice suggests this could function as an official commission meeting rather than a simple staff-level consultation.",
@@ -1705,6 +1708,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "‘That level of care truly makes a difference’",
+    source: "Telluride Times",
+    date: "August 18, 2026",
+    firstSeen: "2026-08-18",
+    newsTopic: "health",
+    copy: "Dr. Heather Linder opened Telluride Whole Health in 2020, offering direct primary care and functional medicine on a monthly membership model. She practiced at Telluride Regional Medical Center for seven years before shifting to this root-cause, relationship-focused approach.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/business/article_e4fb716f-3a65-4fc3-8ab1-2c961e18e6d3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/ad/aad3ec6d-aa0e-4359-a47a-56df95565f69/6a7e59a83d1cf.image.png",
+    imgHiRes: true
+  },
   {
     title: "After Lawson Hill break-ins, residents urged to be bear aware",
     source: "Telluride Times",
@@ -2582,7 +2597,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
-    date: "August 11, 2026",
+    date: "August 18, 2026",
     newsTopic: "community",
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
@@ -3237,17 +3252,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride R-1 Schools First Day of School",
-    link: "https://koto.org/event/telluride-r-1-schools-first-day-of-school/",
-    description: "First Day of School",
-    pubDate: "2026-08-18T08:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "",
-    imageUrl: ""
-  },
-  {
     title: "\"Best Day Ever\" Free Movie Screening",
     link: "https://koto.org/event/best-day-ever-free-movie-screening/",
     description: "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice Award winner at the 2026 Mountainfilm Festival. Directed by Telluride local Ben Knight, the film is a powerful story about what can happen when a community comes together to build outdoor spaces that welcome everyone. Set in the Green Mountains of Vermont, Best Day Ever follows Greg Durso and Allie Bianchi as they work alongside friends, trail builders, and advocates to create the world’s first fully adaptive mountain bike trail network. Along the way, the film explores how thoughtful trail design, collaboration, and a shared vision can transform not only access to the outdoors, but the experience for every rider. …",
@@ -3715,7 +3719,7 @@ const WILKINSON_EVENTS = [
   {
     title: "[WEATHER BACKUP] Back to School I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16788235?hs=a",
-    description: "2:30 PM – 3:30 PM",
+    description: "A weather backup session of the Back to School I Heart Art program at Wilkinson Public Library's Program Room, running from 2:30 to 3:30 PM. This library event offers a creative arts activity for kids heading back to school.",
     pubDate: "2026-08-18T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3726,7 +3730,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Back to School I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16574867?hs=a",
-    description: "2:30 PM – 3:30 PM",
+    description: "A back-to-school art program hosted by Wilkinson Public Library, held outdoors on the Lower Terrace. The event runs from 2:30 to 3:30 PM and offers a creative arts experience for the community as summer winds down.",
     pubDate: "2026-08-18T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4896,6 +4900,18 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53604234896494/huge/7d3a3f2cb3d8a141dbf964c56c072834ed01eb67.jpg"
   },
   {
+    title: "Dinner & Magic Show",
+    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
+    pubDate: "2026-08-28T12:00:00.000Z",
+    endDate: "2026-08-29",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Yankee Girl Cafe",
+    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
+  },
+  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -5223,13 +5239,24 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray County Rodeo",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-rodeo",
-    description: "Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
+    description: "Feel the adrenaline rush with daring performances, electrifying action, and non-stop excitement that will keep you on the edge of your seat. Gates open at 11am. Performance starts at noon. Tickets $15. Kids 5 and under are free. Military with ID free. Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
     pubDate: "2026-09-07T06:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Ouray County Fairgrounds and 4H Events Center",
     imageUrl: "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg"
+  },
+  {
+    title: "Ouray County Labor Day Rodeo",
+    link: "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
+    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Featured events include: Mutton Bustin - Ages 3-10 Wild Cow Milking Rescue Race Stick Horse Races Gates open at 11 a.m. Performance begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. The Rodeo Association's goals are to keep our Western Heritage alive and healthy, support our community and give back to our youth. View on site | Email this event",
+    pubDate: "2026-09-07T18:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray County Fairgrounds",
+    imageUrl: "https://localist-images.azureedge.net/photos/53737685960448/huge/7ed716278e1f9bfa37323fc141bb6dffb17d87f8.jpg"
   },
   {
     title: "Monthly Karate in Ouray County",
@@ -5611,6 +5638,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53623018208189/huge/fa73fbfb09ce8f09a2e637984cbe313d209e0bfb.jpg"
   },
   {
+    title: "National Public Lands Day Campsite Cleanup - Ironton",
+    link: "https://events.ourayridgwayevents.com/event/national-public-lands-day-campsite-cleanup-ironton",
+    description: "This National Public Lands Day, join San Juan Moutains Association for our Ironton Valley Campsite Cleanup! We’ll have some friendly competition to see who can collect the most litter, artistically naturalize a fire ring, find the most interesting piece of trash, etc. No experience is necessary and kids are welcome. Help keep America’s Public Lands beautiful and healthy. View on site | Email this event",
+    pubDate: "2026-09-26T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ironton Park \"Staging Area\"",
+    imageUrl: "https://localist-images.azureedge.net/photos/53737767968998/huge/e72d7dc21b85f92782e5ed31ef6a68173f7066be.jpg"
+  },
+  {
     title: "Exceptional Women of Ouray County",
     link: "https://events.ourayridgwayevents.com/event/exceptional-women-of-ouray-county",
     description: "The Fortuna Tierra Club has created the Exceptional Women awards to recognize outstanding women who demonstrate leadership, commitment and service to the nonprofit organizations operating in Ouray County. The immeasurable contributions of these extraordinary women enrich our lives and help make our community a better place to live. The Exceptional Women program celebrates their accomplishments and dedication and the hard work they do on our behalf. The awards now include Exceptional Educators from Ouray and Ridgway school districts and an Exceptional Healthcare Professional. View on site | Email this event",
@@ -5870,7 +5908,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "",
+    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5881,7 +5919,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
+    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5892,7 +5930,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "",
+    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5901,9 +5939,31 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Senior Lunch",
+    link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
+    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    pubDate: "2026-08-24T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
+    title: "Senior Lunch",
+    link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    pubDate: "2026-08-31T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5912,9 +5972,20 @@ const NORWOOD_EVENTS = [
     imageUrl: ""
   },
   {
+    title: "Senior Lunch",
+    link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
+    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    pubDate: "2026-09-14T12:00:00.000Z",
+    source: "norwood",
+    sourceLabel: "Town of Norwood",
+    category: "Community Event",
+    location: "Norwood, CO",
+    imageUrl: ""
+  },
+  {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "",
+    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5925,7 +5996,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5936,7 +6007,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "",
+    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",

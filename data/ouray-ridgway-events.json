@@ -540,6 +540,18 @@
     "imageUrl": "https://localist-images.azureedge.net/photos/53604234896494/huge/7d3a3f2cb3d8a141dbf964c56c072834ed01eb67.jpg"
   },
   {
+    "title": "Dinner & Magic Show",
+    "link": "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    "description": "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
+    "pubDate": "2026-08-28T12:00:00.000Z",
+    "endDate": "2026-08-29",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Yankee Girl Cafe",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
+  },
+  {
     "title": "OLD MAN POLLY",
     "link": "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     "description": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -867,13 +879,24 @@
   {
     "title": "Ouray County Rodeo",
     "link": "https://events.ourayridgwayevents.com/event/ouray-county-rodeo",
-    "description": "Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
+    "description": "Feel the adrenaline rush with daring performances, electrifying action, and non-stop excitement that will keep you on the edge of your seat. Gates open at 11am. Performance starts at noon. Tickets $15. Kids 5 and under are free. Military with ID free. Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
     "pubDate": "2026-09-07T06:00:00.000Z",
     "source": "oray",
     "sourceLabel": "Ouray Ridgway Calendar",
     "category": "Community Event",
     "location": "Ouray County Fairgrounds and 4H Events Center",
     "imageUrl": "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg"
+  },
+  {
+    "title": "Ouray County Labor Day Rodeo",
+    "link": "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
+    "description": "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Featured events include: Mutton Bustin - Ages 3-10 Wild Cow Milking Rescue Race Stick Horse Races Gates open at 11 a.m. Performance begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. The Rodeo Association's goals are to keep our Western Heritage alive and healthy, support our community and give back to our youth. View on site | Email this event",
+    "pubDate": "2026-09-07T18:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ouray County Fairgrounds",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53737685960448/huge/7ed716278e1f9bfa37323fc141bb6dffb17d87f8.jpg"
   },
   {
     "title": "Monthly Karate in Ouray County",
@@ -1253,6 +1276,17 @@
     "category": "Community Event",
     "location": "Ouray Visitor Center",
     "imageUrl": "https://localist-images.azureedge.net/photos/53623018208189/huge/fa73fbfb09ce8f09a2e637984cbe313d209e0bfb.jpg"
+  },
+  {
+    "title": "National Public Lands Day Campsite Cleanup - Ironton",
+    "link": "https://events.ourayridgwayevents.com/event/national-public-lands-day-campsite-cleanup-ironton",
+    "description": "This National Public Lands Day, join San Juan Moutains Association for our Ironton Valley Campsite Cleanup! We’ll have some friendly competition to see who can collect the most litter, artistically naturalize a fire ring, find the most interesting piece of trash, etc. No experience is necessary and kids are welcome. Help keep America’s Public Lands beautiful and healthy. View on site | Email this event",
+    "pubDate": "2026-09-26T16:00:00.000Z",
+    "source": "oray",
+    "sourceLabel": "Ouray Ridgway Calendar",
+    "category": "Community Event",
+    "location": "Ironton Park \"Staging Area\"",
+    "imageUrl": "https://localist-images.azureedge.net/photos/53737767968998/huge/e72d7dc21b85f92782e5ed31ef6a68173f7066be.jpg"
   },
   {
     "title": "Exceptional Women of Ouray County",
