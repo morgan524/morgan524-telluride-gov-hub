@@ -14,6 +14,20 @@
     "endDate": "2026-08-31"
   },
   {
+    "title": "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    "href": "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    "date": "2026-08-18",
+    "time": "10:00 AM",
+    "location": "Decker Community Room",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-25"
+  },
+  {
     "title": "Storytime / Hora de Cuentos",
     "href": "https://telluridelibrary.libcal.com/event/16772776?hs=a",
     "date": "2026-08-18",
@@ -25,19 +39,6 @@
     "source": "Wilkinson Public Library",
     "desc": "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi n en ingl s para ni os de todas las edades y sus padres o cuidadores.",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-18/",
-    "date": "2026-08-18",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
@@ -290,19 +291,6 @@
     "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
     "type": "Arts & Film",
     "endDate": "2026-08-31"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-18/",
-    "date": "2026-08-18",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -914,19 +902,6 @@
     "type": "Community"
   },
   {
-    "title": "Words and Paint: Ann Dettmer Art Show Fundraiser",
-    "href": "https://events.ourayridgwayevents.com/event/words-and-paint-ann-dettmer-art-show-fundraiser",
-    "date": "2026-08-22",
-    "time": "1:00 PM",
-    "location": "Ouray Public Library",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53699881061332/huge/420932249089b03da80639f2474aa16005665644.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Come see the gorgeous and affordable artist books, cards and small works by local artist Ann Detter at the Ouray Library. A percentage of the proceeds will go to the library expansion project. This is a great opportunity to acquire some of…",
-    "type": "Arts & Film"
-  },
-  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
     "date": "2026-08-22",
@@ -1121,20 +1096,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Long time Telluride resident, Lynne Beck, passed away on January 2, 2026. A memorial meeting will be held at the Elks in Telluride next Sunday August 23rd at 1-4 pm. Please come to celebrate Lynne and share stories with family and friends.",
     "type": "Family & Kids"
-  },
-  {
-    "title": "Ouray Open Air Market",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
-    "date": "2026-08-23",
-    "time": "10:00 AM",
-    "location": "Billy Goats Gruff Patio",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53054893063268/huge/ed5f6f42c1d6a9db337d04171355a33509b6e1d1.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "The Ouray Open-Air Market is a brand-new cooperative, organized marketplace designed to provide a dedicated home for small-scale creators & producers. Our core mission is to promote local agriculture and artisan goods while fostering…",
-    "type": "Arts & Film",
-    "endDate": "2026-09-06"
   },
   {
     "title": "Tea and Tarot",
@@ -1462,7 +1423,7 @@
     "img": "https://localist-images.azureedge.net/photos/53249632392911/huge/75dcb70d103e562fc3b68267bd405813886a92df.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "August 25 - August 30 at multiple venues in Ridwway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of…",
+    "desc": "August 25 - August 30 at multiple venues in Ridway and Ouray, Colorado. The annual San Juan Chamber MusicFest, OCPAG’s flagship event, features a group of chamber musicians of international acclaim, under the artistic direction of renowned…",
     "type": "Music",
     "endDate": "2026-08-30"
   },
@@ -2478,6 +2439,19 @@
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Ouray County Rodeo",
+    "href": "https://events.ourayridgwayevents.com/event/ouray-county-rodeo",
+    "date": "2026-09-07",
+    "time": "",
+    "location": "Ouray County Fairgrounds and 4H Events Center",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
+    "type": "Community"
   },
   {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
