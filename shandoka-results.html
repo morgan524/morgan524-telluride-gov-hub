@@ -185,10 +185,14 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
   //
   // Translations come from the Worker's /translate-survey endpoint at export
   // time and are cached per source string for the life of the page, so
-  // re-downloading the CSV doesn't re-run (or re-bill) the same text. Every
-  // free-text answer is sent, not just lang==='es' rows — someone can pick the
-  // English UI and still write in Spanish, and the endpoint echoes English back
-  // unchanged.
+  // re-downloading the CSV doesn't re-run (or re-bill) the same text.
+  //
+  // ONLY lang==='es' rows are sent. Passing English through the translator to
+  // be "echoed back unchanged" doesn't hold up: the model often returns a
+  // lightly reworded version, which no longer matches the source and lands in
+  // the column as English-translated-into-English. It also billed a request for
+  // every English answer. A Spanish row written in English is still handled --
+  // englishOf() blanks a translation identical to its source.
   var OTHER_PREFIX = 'Other: ';
   var TRANS = Object.create(null); // source text -> English (null proto: survey
                                    // text is used as a key, and a response of
@@ -240,6 +244,7 @@ h1{font:700 32px/1.15 var(--serif,Georgia,serif);color:var(--forest);margin:26px
   function translatePending(onProgress) {
     var seen = Object.create(null), pending = [];
     rows.forEach(function (r) {
+      if (String(r.lang || '').trim().toLowerCase() !== 'es') return;
       freeTextOf(r).forEach(function (t) {
         if (!(t in TRANS) && !seen[t]) { seen[t] = 1; pending.push(t); }
       });
