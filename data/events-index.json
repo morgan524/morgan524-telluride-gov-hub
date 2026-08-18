@@ -133,6 +133,19 @@
     "endDate": "2026-09-15"
   },
   {
+    "title": "Taco Tuesday Live Music: Ponderosa (Telluride Mushroom Fest Feature)",
+    "href": "https://events.ourayridgwayevents.com/event/taco-tuesday-live-music-ponderosa-telluride-mushroom-fest-feature",
+    "date": "2026-08-18",
+    "time": "5:00 PM",
+    "location": "Adobe Inn",
+    "town": "Telluride",
+    "img": "https://localist-images.azureedge.net/photos/53734141247963/huge/b074b0eef51fc9113d29a2c8409e785926abd25a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "If you’ve been looking for an excuse to come hang out with us at The Adobe Inn, we are throwing another one of our casual community pop-ups this week! It’s the perfect chance to skip cooking, soak in those gorgeous, classic Ridgway views,…",
+    "type": "Music"
+  },
+  {
     "title": "Talking Gourds Presents: Stories and Poems - Art Goodtimes & Scott A. Nicolay",
     "href": "https://telluridelibrary.libcal.com/event/15798226?hs=a",
     "date": "2026-08-18",
@@ -250,32 +263,6 @@
     "desc": "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups…",
     "type": "Talks & Classes",
     "endDate": "2026-10-15"
-  },
-  {
-    "title": "Birding with Katie Triest at Patagonia Telluride , August 17 and 18",
-    "href": "https://koto.org/event/birding-with-katie-triest-at-patagonia-telluride-august-17-and-18/2026-08-18/",
-    "date": "2026-08-18",
-    "time": "8:30 AM",
-    "location": "Patagonia Telluride, Telluride Retail",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join us at the Telluride Patagonia store for a bird talk with Local Master Birder, Katie Triest on August 17th at 5 pm. The event is free and open to all ages. Katie will discuss local birds of Telluride and give participants tips on…",
-    "type": "Talks & Classes"
-  },
-  {
-    "title": "Eco-Grief Workshops: Between Grief & Gratitude, love and loss in a changing world",
-    "href": "https://koto.org/event/eco-grief-workshops-between-grief-gratitude-love-and-loss-in-a-changing-world/2026-08-18/",
-    "date": "2026-08-18",
-    "time": "8:30 AM",
-    "location": "Wilkinson Public Library, Telluride",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/08/Between-Grief-Gratitude-Updated.webp",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated…",
-    "type": "Talks & Classes"
   },
   {
     "title": "Eco Series: Between Grief & Gratitude",
@@ -1123,6 +1110,19 @@
     "type": "Community"
   },
   {
+    "title": "Lynne Beck Memorial Meeting",
+    "href": "https://koto.org/event/lynne-beck-memorial-meeting/",
+    "date": "2026-08-23",
+    "time": "1:00 PM",
+    "location": "The Spur (Colorado Ave) near Mill Creek Road",
+    "town": "",
+    "img": "https://koto.org/wp-content/uploads/2026/08/FullSizeRender.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Long time Telluride resident, Lynne Beck, passed away on January 2, 2026. A memorial meeting will be held at the Elks in Telluride next Sunday August 23rd at 1-4 pm. Please come to celebrate Lynne and share stories with family and friends.",
+    "type": "Family & Kids"
+  },
+  {
     "title": "Ouray Open Air Market",
     "href": "https://events.ourayridgwayevents.com/event/ouray-open-air-market-7809",
     "date": "2026-08-23",
@@ -1491,19 +1491,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-26/",
-    "date": "2026-08-26",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
