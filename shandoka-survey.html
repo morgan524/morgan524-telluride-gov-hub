@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shandoka Resident Survey — Livable Telluride</title>
+<title>Shandoka Resident Survey is now closed — Livable Telluride</title>
 <meta name="description" content="An anonymous survey of Shandoka residents about the proposed Shandoka / Lot L development. Results will be compiled and shared with the Telluride Town Council and the public. Encuesta anónima para residentes de Shandoka.">
 <link rel="stylesheet" href="lt.css?v=8">
 <link rel="icon" href="/logo/icon-192.png?v=2">
@@ -70,7 +70,33 @@ button.send:disabled{background:var(--mut);cursor:default}
 .done{background:var(--sage);border:1px solid var(--forest);border-radius:14px;padding:34px;text-align:center}
 .done h2{font:700 27px var(--serif,Georgia,serif);color:var(--forest);margin:0 0 10px}
 .done p{font-size:17px;line-height:1.6;color:var(--ink);margin:0}
-@media(max-width:700px){.shots{grid-template-columns:1fr}.head{padding:22px}.wrap{padding:0 14px 60px}}
+/* Closed notice + call to action. The survey is done; the live thing a reader
+   can still act on is the HARC hearing, so it gets the loudest treatment. */
+.closed{background:var(--forest);color:#fff;border-radius:12px;padding:20px 24px;margin:0 0 20px}
+.closed h2{font:700 21px/1.3 var(--serif,Georgia,serif);color:#fff;margin:0 0 7px}
+.closed p{font-size:16.5px;line-height:1.6;color:#e4efe9;margin:0}
+.act{background:#fff;border:2px solid var(--forest);border-radius:12px;padding:22px 24px;margin:0 0 20px}
+.act h2{font:700 21px/1.3 var(--serif,Georgia,serif);color:var(--forest);margin:0 0 8px}
+.act p{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0 0 14px}
+a.cta{display:inline-block;font:700 17.5px var(--sans,system-ui);color:#fff;background:var(--forest);
+  border-radius:99px;padding:14px 30px;text-decoration:none}
+a.cta:hover{background:#245347}
+.act .fine{font-size:14.5px;line-height:1.5;color:var(--mut);margin:12px 0 0}
+/* Results charts */
+.statband{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 18px}
+.statband>div{background:var(--forest);color:#fff;border-radius:10px;padding:14px 16px}
+.statband .lab{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#b9d2cb;font-weight:700}
+.statband .val{font:700 28px/1.1 var(--serif,Georgia,serif);margin-top:3px}
+.res h2{font:700 18px/1.35 var(--sans,system-ui);color:var(--forest);margin:0 0 14px}
+.bar{display:grid;grid-template-columns:1fr 46px 46px;gap:10px;align-items:baseline;font-size:16px;margin-bottom:7px}
+.bar .lbl{color:var(--ink);line-height:1.4}
+.bar .n{text-align:right;color:var(--mut);font-variant-numeric:tabular-nums}
+.bar .pc{text-align:right;font-weight:700;color:var(--forest);font-variant-numeric:tabular-nums}
+.track{height:10px;background:#e8eeeb;border-radius:5px;overflow:hidden;margin:0 0 12px}
+.track i{display:block;height:100%;background:#1d5c63;border-radius:5px}
+.res .note{font-size:14px;line-height:1.5;color:var(--mut);margin:8px 0 0}
+@media(max-width:700px){.shots{grid-template-columns:1fr}.head{padding:22px}.wrap{padding:0 14px 60px}
+  .statband{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -84,8 +110,24 @@ button.send:disabled{background:var(--mut);cursor:default}
 </div>
 
 <section class="head">
-  <h1 data-en="Shandoka Resident Survey" data-es="Encuesta para Residentes de Shandoka">Shandoka Resident Survey</h1>
+  <h1 data-en="Shandoka Resident Survey is now closed" data-es="La Encuesta para Residentes de Shandoka ya est&aacute; cerrada">Shandoka Resident Survey is now closed</h1>
   <p class="sub" data-en="The proposed Shandoka / Lot L development" data-es="El proyecto propuesto de Shandoka / Lote L">The proposed Shandoka / Lot L development</p>
+
+  <div class="closed">
+    <h2 data-en="Thank you &mdash; the survey has closed" data-es="Gracias: la encuesta ya cerr&oacute;">Thank you &mdash; the survey has closed</h2>
+    <p data-en="We are no longer accepting responses. The results are published below, and we are sharing them with the Telluride Town Council."
+       data-es="Ya no estamos aceptando respuestas. Los resultados est&aacute;n publicados m&aacute;s abajo y los estamos compartiendo con el Concejo Municipal de Telluride.">We are no longer accepting responses. The results are published below, and we are sharing them with the Telluride Town Council.</p>
+  </div>
+
+  <div class="act">
+    <h2 data-en="You can still comment &mdash; directly to HARC" data-es="Todav&iacute;a puede comentar: directamente a HARC">You can still comment &mdash; directly to HARC</h2>
+    <p data-en="If you did not get a chance to have your say in the survey, send your comments straight to the Town for the HARC hearing on Wednesday, August 19 at 5:30 PM. Written comments become part of the public record for that meeting."
+       data-es="Si no alcanz&oacute; a dar su opini&oacute;n en la encuesta, env&iacute;e sus comentarios directamente al Municipio para la audiencia de HARC del mi&eacute;rcoles 19 de agosto a las 5:30 PM. Los comentarios escritos pasan a formar parte del registro p&uacute;blico de esa reuni&oacute;n.">If you did not get a chance to have your say in the survey, send your comments straight to the Town for the HARC hearing on Wednesday, August 19 at 5:30 PM. Written comments become part of the public record for that meeting.</p>
+    <a class="cta" href="mailto:townclerk@telluride.gov?subject=Public%20comment%3A%20Shandoka%20%2F%20Lot%20L%20%E2%80%94%20August%2019%20HARC%20hearing"
+       data-en="&#9993; Email your comment to the Town" data-es="&#9993; Env&iacute;e su comentario al Municipio">&#9993; Email your comment to the Town</a>
+    <p class="fine" data-en="Write it in your own words. A few specific sentences about how this affects you carries far more weight with a board than a form letter."
+       data-es="Escr&iacute;balo con sus propias palabras. Unas pocas frases concretas sobre c&oacute;mo esto le afecta tienen mucho m&aacute;s peso ante una comisi&oacute;n que una carta modelo.">Write it in your own words. A few specific sentences about how this affects you carries far more weight with a board than a form letter.</p>
+  </div>
 
   <!-- Every line is its own node on purpose: setLang() swaps text with
        textContent, so markup inside a single data-en value would be escaped. -->
@@ -132,33 +174,116 @@ button.send:disabled{background:var(--mut);cursor:default}
   <p class="credit" data-en="The birds-eye view is the Town's own, from the project materials. The street-level view was drawn by Livable Telluride to show the same buildings at eye level."
      data-es="La vista a&eacute;rea es del propio Municipio, tomada de los materiales del proyecto. La vista a nivel de calle fue elaborada por Livable Telluride para mostrar los mismos edificios al nivel de los ojos.">The birds-eye view is the Town's own, from the project materials. The street-level view was drawn by Livable Telluride to show the same buildings at eye level.</p>
 
-  <p class="privacy" data-en="This survey is anonymous. We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public."
-     data-es="Esta encuesta es an&oacute;nima. No recopilamos ninguna informaci&oacute;n de identificaci&oacute;n, para mantener todas las respuestas completamente privadas. Recopilaremos los resultados y los compartiremos con el Concejo Municipal de Telluride y con el p&uacute;blico."><strong>This survey is anonymous.</strong> We are not collecting any identifying information, so all responses stay entirely private. We will compile the results and share them with the Telluride Town Council and the public.</p>
+  <p class="privacy" data-en="This survey was anonymous. No identifying information was collected. What we publish below is the summary; individual written comments are not posted, because a person can be recognised from what they wrote. The full results, comments included, go to the Telluride Town Council." data-es="Esta encuesta fue an&oacute;nima. No se recopil&oacute; ninguna informaci&oacute;n que identifique a nadie. Lo que publicamos a continuaci&oacute;n es el resumen; los comentarios escritos individuales no se publican, porque una persona puede ser reconocida por lo que escribi&oacute;. Los resultados completos, incluidos los comentarios, se entregan al Concejo Municipal de Telluride.">This survey was anonymous. No identifying information was collected. What we publish below is the summary; individual written comments are not posted, because a person can be recognised from what they wrote. The full results, comments included, go to the Telluride Town Council.</p>
 </section>
 
-<form id="surveyForm"></form>
-
-<section class="done" id="done" hidden>
-  <h2 data-en="Thank you" data-es="Gracias">Thank you</h2>
-  <p data-en="Your response has been recorded anonymously. We will compile the results and share them with the Telluride Town Council and the public."
-     data-es="Su respuesta se ha registrado de forma an&oacute;nima. Recopilaremos los resultados y los compartiremos con el Concejo Municipal de Telluride y con el p&uacute;blico.">Your response has been recorded anonymously.</p>
-</section>
+<section class="res" id="results"></section>
 
 </main>
 
 <div id="lt-footer"></div>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 <script src="/js/site-config.js"></script>
 <script src="/site.js?v=12"></script>
 <script>
 (function () {
   'use strict';
 
-  // Questions live here once, in both languages. The stored VALUE is always
-  // English regardless of which language the reader used, so the compiled
-  // results are one clean dataset rather than two that have to be merged.
+  // The survey is closed. This page now publishes the compiled results.
+  //
+  // The numbers are baked in rather than read from Firestore on purpose:
+  // firestore.rules keeps shandoka_survey admin-read-only, because the form
+  // promised anonymity and raw rows can identify a respondent. A public page
+  // literally cannot read them, and shouldn't -- the rule's own wording is
+  // that "the public sees only the summary Livable Telluride publishes".
+  // So this is that summary: aggregate counts, no rows, no free text.
+  //
+  // To refresh after late responses, re-export from shandoka-results.html and
+  // replace the RESULTS object below.
+  var RESULTS = {
+    "n": 140,
+    "es": 6,
+    "comments": 98,
+    "from": "2026-08-15",
+    "to": "2026-08-17",
+    "q": {
+      "q1": {
+        "answered": 140,
+        "counts": {
+          "Somewhat familiar": 46,
+          "Very familiar": 42,
+          "Knew very little": 21,
+          "Heard about it but did not know details": 28,
+          "Had not heard about it": 3
+        }
+      },
+      "q2": {
+        "answered": 140,
+        "counts": {
+          "No": 96,
+          "Yes": 37,
+          "Not sure": 7
+        }
+      },
+      "q3": {
+        "answered": 140,
+        "counts": {
+          "Yes, significantly": 86,
+          "No": 23,
+          "Yes, somewhat": 18,
+          "Have not seen them": 10,
+          "Not sure": 3
+        }
+      },
+      "q4": {
+        "answered": 140,
+        "counts": {
+          "Strongly oppose": 105,
+          "Somewhat oppose": 15,
+          "Strongly support": 9,
+          "Neutral/unsure": 6,
+          "Somewhat support": 5
+        }
+      },
+      "q6": {
+        "answered": 139,
+        "counts": {
+          "Do not proceed": 78,
+          "Proceed with changes based on resident input": 10,
+          "Consider substantially different alternatives": 39,
+          "Proceed as currently proposed": 7,
+          "Need more information": 5
+        }
+      },
+      "q7": {
+        "answered": 139,
+        "counts": {
+          "Poor": 45,
+          "Very poor": 50,
+          "Excellent": 6,
+          "Fair": 23,
+          "Good": 9,
+          "Not sure / was not aware": 6
+        }
+      },
+      "q5": {
+        "answered": 140,
+        "counts": {
+          "Building height and overall scale": 112,
+          "Construction noise and disruption": 72,
+          "Traffic": 94,
+          "Views and sunlight": 91,
+          "Effect on quality of life at Shandoka": 87,
+          "Cost of the project": 99,
+          "Disruption and length of construction": 76,
+          "Loss or relocation of surface parking": 72,
+          "Safety and pedestrian access": 51,
+          "None — I support the project as designed": 7
+        },
+        "other": 34
+      }
+    }
+  };
+
   var Q = [
     { n:'q1', type:'radio',
       en:'1. Before seeing this survey, how familiar were you with the proposed Shandoka project?',
@@ -224,129 +349,100 @@ button.send:disabled{background:var(--mut);cursor:default}
       phEs:'Opcional. Por favor evite incluir su nombre o cualquier dato que pueda identificarle, para que su respuesta siga siendo anónima.' }
   ];
 
-  var UI = {
-    send:   ['Submit my answers','Enviar mis respuestas'],
-    sending:['Sending…','Enviando…'],
-    needQ1: ['Please answer question 1 before submitting.','Por favor responda la pregunta 1 antes de enviar.'],
-    failed: ['Sorry, that did not send. Please check your connection and try again. If it keeps failing, email info@livabletelluride.org and we will record your answers by hand.',
-             'Lo sentimos, no se pudo enviar. Revise su conexión e inténtelo de nuevo. Si sigue fallando, escriba a info@livabletelluride.org y registraremos sus respuestas manualmente.']
+  var LBL = {
+    en: { responses:'Responses', spanish:'Answered in Spanish', comments:'Left a written comment',
+          answered:'of {n} respondents answered', multi:'Percentages are of those answering. They total more than 100% because this question allowed several answers.',
+          single:'Percentages are of those answering.', other:'Other (written in)',
+          heading:'What {n} residents said', collected:'Responses collected {from} to {to}.',
+          method:'An open online survey promoted by Livable Telluride. Respondents chose to take part rather than being randomly sampled, so these results describe the residents who answered and are not a representative sample of Telluride.' },
+    es: { responses:'Respuestas', spanish:'Respondieron en espa\u00f1ol', comments:'Dejaron un comentario escrito',
+          answered:'de {n} personas respondieron', multi:'Los porcentajes son sobre quienes respondieron. Suman m\u00e1s de 100% porque esta pregunta permit\u00eda varias respuestas.',
+          single:'Los porcentajes son sobre quienes respondieron.', other:'Otro (escrito)',
+          heading:'Lo que dijeron {n} residentes', collected:'Respuestas recopiladas del {from} al {to}.',
+          method:'Una encuesta abierta en l\u00ednea difundida por Livable Telluride. Quienes respondieron decidieron participar en lugar de ser seleccionados al azar, por lo que estos resultados describen a los residentes que respondieron y no son una muestra representativa de Telluride.' }
   };
 
-  var lang = 'en';
-  var form = document.getElementById('surveyForm');
+  var MONTHS = {
+    en:['January','February','March','April','May','June','July','August','September','October','November','December'],
+    es:['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre']
+  };
 
-  function esc(s){ return String(s).replace(/[&<>"]/g, function(c){
-    return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;' }[c]; }); }
+  function esc(x){ return String(x == null ? '' : x)
+    .replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
 
-  function build() {
-    var i = lang === 'es' ? 1 : 0, h = '';
+  // RESULTS dates are already Mountain Time calendar days, computed when the
+  // summary was exported -- not UTC instants to be re-sliced here.
+  function niceDate(ymd, l) {
+    var p = String(ymd).split('-');
+    if (p.length !== 3) return ymd;
+    var m = MONTHS[l][parseInt(p[1], 10) - 1], d = parseInt(p[2], 10);
+    return l === 'es' ? (d + ' de ' + m) : (m + ' ' + d);
+  }
+
+  function renderResults(l) {
+    var t = LBL[l], R = RESULTS;
+    var h = '<h2 style="font:700 27px/1.2 var(--serif,Georgia,serif);color:var(--forest);margin:0 0 4px">'
+      + esc(t.heading.replace('{n}', R.n)) + '</h2>'
+      + '<p style="font-size:16px;color:var(--mut);margin:0 0 16px">'
+      + esc(t.collected.replace('{from}', niceDate(R.from, l)).replace('{to}', niceDate(R.to, l))) + '</p>';
+
+    h += '<div class="statband">'
+      + '<div><div class="lab">' + esc(t.responses) + '</div><div class="val">' + R.n + '</div></div>'
+      + '<div><div class="lab">' + esc(t.spanish) + '</div><div class="val">' + R.es + '</div></div>'
+      + '<div><div class="lab">' + esc(t.comments) + '</div><div class="val">' + R.comments + '</div></div>'
+      + '</div>';
+
     Q.forEach(function (q) {
-      h += '<fieldset class="q"><legend>' + esc(lang === 'es' ? q.es : q.en) + '</legend>';
-      if (q.hintEn) h += '<p class="hint">' + esc(lang === 'es' ? q.hintEs : q.hintEn) + '</p>';
-      if (q.type === 'text') {
-        h += '<textarea id="q8" maxlength="4000" placeholder="' + esc(lang === 'es' ? q.phEs : q.phEn) + '"></textarea>';
-      } else {
-        q.o.forEach(function (o) {
-          h += '<label class="opt"><input type="' + q.type + '" name="' + q.n + '" value="' + esc(o[0]) + '">'
-             + '<span>' + esc(o[1 + i]) + '</span></label>';
-        });
-        if (q.otherEn) {
-          h += '<div class="other"><span>' + esc(lang === 'es' ? q.otherEs : q.otherEn) + '</span>'
-             + '<input type="text" id="q5other" maxlength="200" placeholder="' + esc(lang === 'es' ? q.phEs : q.phEn) + '"></div>';
-        }
+      var data = R.q[q.n];
+      if (!data) return;                      // q8 is free text; nothing to chart
+      var base = data.answered || 1;
+
+      // Option order is the questionnaire's own order, which for these scales
+      // IS the scale (strongly support -> strongly oppose). Sorting by count
+      // would scramble the axis and hide the shape of the distribution. Only
+      // q5, a nominal multi-select, is sorted by size.
+      var items = q.o.map(function (o) {
+        return { label: l === 'es' ? o[2] : o[1], n: data.counts[o[0]] || 0 };
+      });
+      if (q.n === 'q5') {
+        items.sort(function (a, b) { return b.n - a.n; });
+        if (data.other) items.push({ label: t.other, n: data.other });
       }
-      h += '</fieldset>';
+
+      h += '<div class="q"><h2>' + esc(l === 'es' ? q.es : q.en) + '</h2>';
+      items.forEach(function (it) {
+        var pc = Math.round(100 * it.n / base);
+        h += '<div class="bar"><span class="lbl">' + esc(it.label) + '</span>'
+          + '<span class="n">' + it.n + '</span><span class="pc">' + pc + '%</span></div>'
+          + '<div class="track"><i style="width:' + pc + '%"></i></div>';
+      });
+      h += '<p class="note">' + data.answered + ' ' + esc(t.answered.replace('{n}', R.n)) + '. '
+        + esc(q.n === 'q5' ? t.multi : t.single) + '</p></div>';
     });
-    h += '<div class="actions"><button type="submit" class="send" id="sendBtn">' + esc(UI.send[i])
-       + '</button><p class="msg" id="msg"></p></div>';
-    form.innerHTML = h;
+
+    h += '<p class="note" style="margin-top:14px">' + esc(t.method) + '</p>';
+    document.getElementById('results').innerHTML = h;
   }
 
   function setLang(l) {
-    lang = l;
-    var i = l === 'es' ? 1 : 0;
     document.documentElement.lang = l;
-    // Static blocks carry both languages as data attributes.
     document.querySelectorAll('[data-en]').forEach(function (el) {
-      var t = el.getAttribute(l === 'es' ? 'data-es' : 'data-en');
-      if (!t) return;
-      // Keep the lead-in bold on the privacy note.
+      var text = el.getAttribute(l === 'es' ? 'data-es' : 'data-en');
+      if (!text) return;
       if (el.classList.contains('privacy')) {
-        var cut = t.indexOf('.') + 1;
-        el.innerHTML = '<strong>' + esc(t.slice(0, cut)) + '</strong>' + esc(t.slice(cut));
-      } else { el.textContent = t; }
+        var cut = text.indexOf('.') + 1;
+        el.innerHTML = '<strong>' + esc(text.slice(0, cut)) + '</strong>' + esc(text.slice(cut));
+      } else { el.textContent = text; }
     });
     document.getElementById('btnEn').setAttribute('aria-pressed', String(l === 'en'));
     document.getElementById('btnEs').setAttribute('aria-pressed', String(l === 'es'));
-    // Rebuilding the form would wipe anything already answered, so snapshot
-    // the state, rebuild, then put it back. Values are language-independent,
-    // which is what makes this safe.
-    var keep = {
-      checked: Array.prototype.slice.call(form.querySelectorAll('input:checked'))
-        .map(function (el) { return el.name + '\u0000' + el.value; }),
-      other: (document.getElementById('q5other') || {}).value || '',
-      free:  (document.getElementById('q8') || {}).value || ''
-    };
-    build();
-    keep.checked.forEach(function (k) {
-      var p = k.split('\u0000');
-      var el = form.querySelector('input[name="' + p[0] + '"][value="' + p[1].replace(/"/g, '\\"') + '"]');
-      if (el) el.checked = true;
-    });
-    if (keep.other && document.getElementById('q5other')) document.getElementById('q5other').value = keep.other;
-    if (keep.free && document.getElementById('q8')) document.getElementById('q8').value = keep.free;
+    renderResults(l);
     try { localStorage.setItem('shandokaSurveyLang', l); } catch (e) {}
   }
 
   document.getElementById('btnEn').addEventListener('click', function () { setLang('en'); });
   document.getElementById('btnEs').addEventListener('click', function () { setLang('es'); });
 
-  var CFG = window.SITE_CONFIG || {}, _db = null;
-  function db() {
-    if (_db) return Promise.resolve(_db);
-    if (!CFG.FIREBASE) return Promise.reject(new Error('config'));
-    if (!firebase.apps.length) firebase.initializeApp(CFG.FIREBASE);
-    return firebase.auth().signInAnonymously().then(function () {
-      _db = firebase.firestore(); return _db;
-    });
-  }
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var i = lang === 'es' ? 1 : 0;
-    var btn = document.getElementById('sendBtn'), msg = document.getElementById('msg');
-    msg.className = 'msg'; msg.textContent = '';
-
-    function pick(n){ var el = form.querySelector('input[name="' + n + '"]:checked'); return el ? el.value : ''; }
-    if (!pick('q1')) {
-      msg.className = 'msg err'; msg.textContent = UI.needQ1[i];
-      form.querySelector('.q').scrollIntoView({ behavior:'smooth', block:'center' });
-      return;
-    }
-    var concerns = Array.prototype.slice.call(form.querySelectorAll('input[name="q5"]:checked'))
-      .map(function (el) { return el.value; });
-    var other = (document.getElementById('q5other') || {}).value || '';
-    if (other.trim()) concerns.push('Other: ' + other.trim());
-
-    var doc = { q1:pick('q1'), q2:pick('q2'), q3:pick('q3'), q4:pick('q4'), q5:concerns,
-      q6:pick('q6'), q7:pick('q7'),
-      q8:((document.getElementById('q8') || {}).value || '').trim().slice(0, 4000),
-      lang: lang, submittedAt: new Date().toISOString(), survey: 'shandoka-lot-l' };
-
-    btn.disabled = true; btn.textContent = UI.sending[i];
-    db().then(function (d) { return d.collection('shandoka_survey').add(doc); }).then(function () {
-      form.hidden = true;
-      var done = document.getElementById('done');
-      done.hidden = false;
-      done.scrollIntoView({ behavior:'smooth', block:'center' });
-    }).catch(function (err) {
-      btn.disabled = false; btn.textContent = UI.send[i];
-      msg.className = 'msg err'; msg.textContent = UI.failed[i];
-      if (window.console) console.error('[shandoka-survey]', err);
-    });
-  });
-
-  // Open in Spanish for Spanish-language browsers unless the reader has chosen.
   var saved = null;
   try { saved = localStorage.getItem('shandokaSurveyLang'); } catch (e) {}
   setLang(saved || (/^es/i.test(navigator.language || '') ? 'es' : 'en'));
