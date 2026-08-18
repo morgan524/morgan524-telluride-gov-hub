@@ -49,10 +49,6 @@
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
   },
-  "county|2026-07-18|San Miguel Basin Fair Board": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1045/files/agenda/1896"
-  },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130",
@@ -285,7 +281,7 @@
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
     "sv": 4,
-    "ph": "5bee59f208152c68"
+    "ph": "57346ecfcc513e53"
   },
   "norwood|2026-07-29|Board of Trustees Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
@@ -487,5 +483,18 @@
   "county|2026-09-16|Board of County Commissioners Meeting": {
     "sv": 4,
     "ph": "49e704e3c3bab858"
+  },
+  "mv|2026-09-17|Town Council Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "airport|2026-09-17|TRAA Board of Commissioners Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
+    "sv": 4,
+    "ph": "5e169e6aed7b742f"
   }
 }
