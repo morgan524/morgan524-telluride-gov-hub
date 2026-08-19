@@ -479,33 +479,6 @@
     "type": "Music"
   },
   {
-    "title": "Ridgway Farmers Market",
-    "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
-    "date": "2026-08-21",
-    "time": "10:00 AM",
-    "location": "Hartwell Park",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
-    "type": "Food & Drink",
-    "endDate": "2026-10-16"
-  },
-  {
-    "title": "Telluride Farmer's Market",
-    "href": "https://koto.org/event/telluride-farmers-market/2026-08-21/",
-    "date": "2026-08-21",
-    "time": "10:30 AM",
-    "location": "Oak Street Plaza, Telluride",
-    "town": "Telluride",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods…",
-    "type": "Food & Drink"
-  },
-  {
     "title": "Telluride Farmers Market",
     "href": "https://www.thetelluridefarmersmarket.com/",
     "date": "2026-08-21",
@@ -1756,19 +1729,6 @@
     "endDate": "2026-08-31"
   },
   {
-    "title": "DARRELL SCOTT - Live at The Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
-    "date": "2026-08-29",
-    "time": "7:30 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52994385870281/huge/7231300fd573b444d8ac4e1e1c8f4890c0f0feab.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Darrell Scott Darrell…",
-    "type": "Community"
-  },
-  {
     "title": "DARRELL SCOTT",
     "href": "https://sherbino.org/event/darrell-scott-sherbino-ridgway-august-29/",
     "date": "2026-08-29",
@@ -2571,19 +2531,6 @@
     "type": "Talks & Classes"
   },
   {
-    "title": "Jolie Holland - Live at The Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/jolie-holland-live-at-the-sherbino",
-    "date": "2026-09-10",
-    "time": "7:00 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53306519672947/huge/94dbb34c3a7f806ee827594137fa43bd0c00bfb2.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "THURSDAY || Doors: 6:30 PM || Show: 7:00 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Jolie Holand Jolie…",
-    "type": "Community"
-  },
-  {
     "title": "Pickleball Nights",
     "href": "https://www.beacontelluride.com/upcoming-events",
     "date": "2026-09-10",
@@ -2831,19 +2778,6 @@
     "source": "Telluride.com",
     "desc": "Created by La Familia Music Group, this day of youth workshops culminates in a community concert, showcasing student …",
     "type": "Arts & Film"
-  },
-  {
-    "title": "Young & Dead - Live at The Sherbino",
-    "href": "https://events.ourayridgwayevents.com/event/young-dead-live-at-the-sherbino",
-    "date": "2026-09-12",
-    "time": "7:30 PM",
-    "location": "The Sherbino",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53180328283019/huge/ac1aa0240d78b51097ebe512629240264b0a77b2.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Doors at 7 pm || Show at 7:30 pm || Dancehall-style show with limited seating || Tickets: $25 advance / $28 day of show || A limited number of reserved tables are available. GA Tickets can be found under the venue diagram. Reserved tables…",
-    "type": "Community"
   },
   {
     "title": "Young & Dead",

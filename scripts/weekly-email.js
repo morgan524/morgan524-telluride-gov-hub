@@ -248,6 +248,15 @@ const tkey = (t) => {
     // cross-source title variant (e.g. KOTO vs telluride.com both list the Randy
     // Houser concert). Drop the tail so the two collapse to one card.
     .replace(/\bwith special guests?\b.*/i, '')
+    // Aggregators append the venue to a title the venue itself lists bare:
+    // "DARRELL SCOTT - Live at The Sherbino" (Ouray Ridgway) vs "DARRELL SCOTT"
+    // (Sherbino Theater).
+    .replace(/\blive at\b.*/i, '')
+    // Apostrophes are deleted, not tokenised across. The token pass keeps words
+    // of 4+ letters, so "Farmer's" produced "farmer" plus a discarded "s" and
+    // never matched "Farmers" — which is how the Ridgway and Telluride farmers
+    // markets each went out twice. Same fix as build-events-index.js normTitle.
+    .replace(/['\u2018\u2019\u02bc`]/g, '')
     .toLowerCase();
   const tokens = (cleaned.match(/[a-z]+/g) || [])
     .filter(w => w.length >= 4 && !TKEY_STOPWORDS.has(w));

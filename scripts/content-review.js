@@ -190,9 +190,17 @@ function buildRecords(arrays) {
 
 // ── text helpers ──
 function normTitle(t) {
+  // Kept in step with build-events-index.js normTitle. Apostrophes are removed
+  // rather than blanked, so "Farmer's Market" and "Farmers Market" compare
+  // equal -- when both normalizers turned an apostrophe into a space, the index
+  // published the pair AND this reviewer failed to flag it.
   return String(t || '')
     .toLowerCase()
-    .replace(/&[a-z]+;|&#\d+;/g, ' ')   // strip html entities
+    .replace(/&#0?39;|&apos;|&rsquo;|&lsquo;/g, "'")   // entity apostrophes first
+    .replace(/&amp;/g, '&')
+    .replace(/&[a-z]+;|&#\d+;/g, ' ')                 // any other html entity
+    .replace(/['\u2018\u2019\u02bc`]/g, '')           // apostrophes vanish
+    .replace(/&/g, ' and ')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }

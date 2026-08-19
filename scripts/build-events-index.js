@@ -238,7 +238,33 @@ function timeOf(e) {
   }
   return '';
 }
-const normTitle = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+// Comparison key for titles. The order of these passes matters:
+//
+//  1. Entity apostrophes become real ones. Sources emit "Nature&#039;s", and
+//     without this the generic entity strip turns it into "nature 039 s".
+//  2. Apostrophes are DELETED, not turned into a space. Replacing them with a
+//     space was the bug behind "Ridgway Farmer's Market" (KOTO) publishing
+//     alongside "Ridgway Farmers Market" (Ouray Ridgway): the two keys came out
+//     "ridgway farmer s market" and "ridgway farmers market", so dedup never
+//     saw a match. Everything else still becomes a space, so word boundaries
+//     survive and "Cara Van" never collides with "Caravan".
+//  3. "&" becomes "and" so "Rock & Roll" and "Rock and Roll" agree.
+const normTitle = (t) => String(t || '')
+  .toLowerCase()
+  .replace(/&#0?39;|&apos;|&rsquo;|&lsquo;/g, "'")
+  .replace(/&amp;/g, '&')
+  .replace(/&[a-z]+;|&#\d+;/g, ' ')
+  .replace(/['\u2018\u2019\u02bc`]/g, '')
+  .replace(/&/g, ' and ')
+  .replace(/[^a-z0-9]+/g, ' ')
+  .trim();
+
+// Applied ONLY to the cross-source dedup key, never to act suppression: an
+// aggregator appends the venue to a title the venue itself lists bare, e.g.
+// "DARRELL SCOTT - Live at The Sherbino" (Ouray Ridgway) vs "DARRELL SCOTT"
+// (Sherbino Theater). Deliberately narrow -- a general "strip trailing at X"
+// would wrongly merge "Yoga at Hartwell Park" into a plain "Yoga" the same day.
+const dedupTitle = (t) => normTitle(t).replace(/\s+live at\s+.*$/, '').trim();
 
 // Read recurring-acts.json (repo root, { _comment, series: [...] }). Missing or
 // malformed is non-fatal — the rest of the index is worth building.
@@ -320,7 +346,7 @@ function buildEventsIndex(repoRoot) {
       if (!date || date < todayKey || date > horizonKey) continue;
       // A generic series entry loses to the specific act on the same day.
       if (file !== ACTS_FILE && isActSuppressed(suppressed, title, date)) continue;
-      const key = normTitle(title).slice(0, 60) + '|' + date;
+      const key = dedupTitle(title).slice(0, 60) + '|' + date;
       if (seen.has(key)) continue;
       const href = e.link || e.href || '';
       const rawImg = e.imageUrl || e.img || '';
@@ -381,4 +407,4 @@ function run(repoRoot) {
 }
 
 if (require.main === module) run();
-module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dateKeyOf };
+module.exports = { buildEventsIndex, run, actSuppressionIndex, isActSuppressed, normTitle, dedupTitle, dateKeyOf };
