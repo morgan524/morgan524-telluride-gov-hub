@@ -1,15 +1,15 @@
 [
   {
     "title": "Mahjongg for Independent Players",
-    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-19/",
+    "href": "https://telluridelibrary.libcal.com/event/16767662?hs=a",
     "date": "2026-08-19",
     "time": "1:00 PM",
-    "location": "Wilkinson Public Library, Telluride",
+    "location": "Lower Terrace - outdoors",
     "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg",
+    "category": "Library Event",
+    "source": "Wilkinson Public Library",
+    "desc": "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you…",
     "type": "Community"
   },
   {
@@ -65,19 +65,6 @@
     "source": "KOTO Community Calendar",
     "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
     "type": "Community"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-19/",
-    "date": "2026-08-19",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Radio Biblioteca",
@@ -238,19 +225,6 @@
     "desc": "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and…",
     "type": "Arts & Film",
     "endDate": "2026-08-31"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-19/",
-    "date": "2026-08-19",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Fall Registration is NOW OPEN",
@@ -717,6 +691,19 @@
     "type": "Community"
   },
   {
+    "title": "Words and Paint: Ann Dettmer Art Show Fundraiser",
+    "href": "https://events.ourayridgwayevents.com/event/words-and-paint-ann-dettmer-art-show-fundraiser",
+    "date": "2026-08-22",
+    "time": "1:00 PM",
+    "location": "Ouray Public Library",
+    "town": "Ouray",
+    "img": "https://localist-images.azureedge.net/photos/53744045497525/huge/4de3e9a5e7a0bdd0aff767487d1890b1dd71a4e7.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Come see the gorgeous and affordable artist books, cards and small works by local artist Ann Detter at the Ouray Library. A percentage of the proceeds will go to the library expansion project. This is a great opportunity to acquire some of…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Bilingual Balance in Motion",
     "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-22/",
     "date": "2026-08-22",
@@ -814,11 +801,12 @@
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/55221/screenshot_2026-08-19_at_9_30_53_am.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
     "desc": "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-08-24"
   },
   {
     "title": "Lunar-tics Unite! Discovering the Moon - Ridgway State Park Summer Program Series",
@@ -911,6 +899,20 @@
     "source": "KOTO Community Calendar",
     "desc": "Long time Telluride resident, Lynne Beck, passed away on January 2, 2026. A memorial meeting will be held at the Elks in Telluride next Sunday August 23rd at 1-4 pm. Please come to celebrate Lynne and share stories with family and friends.",
     "type": "Family & Kids"
+  },
+  {
+    "title": "Open Air Market",
+    "href": "https://events.ourayridgwayevents.com/event/open-air-market",
+    "date": "2026-08-23",
+    "time": "10:00 AM",
+    "location": "Billy Goat Gruff's Patio Patio",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating…",
+    "type": "Arts & Film",
+    "endDate": "2026-09-06"
   },
   {
     "title": "Tea and Tarot",
@@ -1571,20 +1573,6 @@
     "type": "Community"
   },
   {
-    "title": "Dinner & Magic Show",
-    "href": "https://events.ourayridgwayevents.com/event/dinner-magic-show",
-    "date": "2026-08-28",
-    "time": "6:00 AM",
-    "location": "Yankee Girl Cafe",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course…",
-    "type": "Food & Drink",
-    "endDate": "2026-08-29"
-  },
-  {
     "title": "Music on the Green Presents Cristina Vane",
     "href": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-cristina-vane/",
     "date": "2026-08-28",
@@ -1622,6 +1610,20 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway-based Alpine Jam plays an eclectic, high-energy mix of real rock and roll, down-home blues, and upbeat country. Their dynamic vocals, wailing saxophone and guitar leads, and instrumental jams are sure to get you up and moving. View…",
     "type": "Community"
+  },
+  {
+    "title": "Dinner & Magic Show",
+    "href": "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    "date": "2026-08-28",
+    "time": "6:00 PM",
+    "location": "Yankee Girl Cafe",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course…",
+    "type": "Food & Drink",
+    "endDate": "2026-08-30"
   },
   {
     "title": "Roots & Wings: The Pollinator Connection - Ridgway State Park Summer Program Series",
@@ -2321,6 +2323,19 @@
     "type": "Community"
   },
   {
+    "title": "Labor Day Parade in Ridgway",
+    "href": "https://events.ourayridgwayevents.com/event/labor-day-parade-in-ridgway",
+    "date": "2026-09-07",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53745054025330/huge/907904d9f77c544312a94c550a4205ddddb5d06a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Find your spot along Sherman Street in Ridgway to watch the Labor Day Parade. It'll start at 10am. You'll see things like horseback riders, cowboys, classic vehicles, and more. Stay on the sidewalk if you want to get soaked by the…",
+    "type": "Festivals"
+  },
+  {
     "title": "Ouray County Labor Day Rodeo",
     "href": "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
     "date": "2026-09-07",
@@ -2516,6 +2531,19 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Casey Skinner is an Los Angeles-based comedian whose credits include appearances on Netflix, HBO Max, BRAVO, E!, and the Netflix Is A Joke Festival. He has performed at iconic venues including The Comedy Store and The Improv, while also…",
     "type": "Arts & Film"
+  },
+  {
+    "title": "Telluride Dinner Party",
+    "href": "https://www.telluride.com/event/telluride-dinner-party/",
+    "date": "2026-09-10",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
+    "type": "Food & Drink"
   },
   {
     "title": "Telluride Chamber Music and Telluride Science Community Concert",
@@ -3183,6 +3211,19 @@
     "desc": "The 4th Annual San Juan Slam, a Western Slope regional pickleball tournament hosted by the Ridgway Pickleball Club (RPC) with Presenting/Title Sponsor Citizen's State Bank. The San Juan Slam, a family friendly event and free for…",
     "type": "Outdoors & Sports",
     "endDate": "2026-09-20"
+  },
+  {
+    "title": "Colona Community Church’s Annual Harvest Dinner",
+    "href": "https://events.ourayridgwayevents.com/event/colona-community-churchs-annual-harvest-dinner-6308",
+    "date": "2026-09-19",
+    "time": "3:00 PM",
+    "location": "Colona Stockyard across from the church",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53722349858154/huge/934ef243440a192b17a6d756428b9bac45537d94.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Live Music. Come join us for Fun, Food, & Fellowship. Celebrating 114 years! Free to All. 😀 View on site | Email this event",
+    "type": "Food & Drink"
   },
   {
     "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",

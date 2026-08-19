@@ -367,18 +367,7 @@
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/63377/nik-korba-3wcetbluoms-unsplash.800x533.webp"
-  },
-  {
-    "title": "Telluride Dinner Party",
-    "link": "https://www.telluride.com/event/telluride-dinner-party/",
-    "description": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
-    "pubDate": "2026-08-20",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
+    "imageUrl": "https://www.telluride.com/site/assets/files/63377/tbc_game_night.800x533.webp"
   },
   {
     "title": "Blizzard Sale",
@@ -432,11 +421,12 @@
     "link": "https://www.telluride.com/event/telluride-mountain-run/",
     "description": "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
     "pubDate": "2026-08-22",
+    "endDate": "2026-08-24",
     "source": "telluride-com",
     "sourceLabel": "Telluride.com",
     "category": "Community Event",
     "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp"
+    "imageUrl": "https://www.telluride.com/site/assets/files/55221/screenshot_2026-08-19_at_9_30_53_am.800x533.webp"
   },
   {
     "title": "Wax Monkey",
@@ -550,6 +540,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
+  },
+  {
+    "title": "Telluride Dinner Party",
+    "link": "https://www.telluride.com/event/telluride-dinner-party/",
+    "description": "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
+    "pubDate": "2026-09-10",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
   },
   {
     "title": "The Meditations",

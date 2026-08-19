@@ -390,7 +390,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"1ee3d118528867aa"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"e2d918e8f8800b3e"},
 
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302","sv":4},
@@ -769,6 +769,86 @@ const MEETING_PREVIEWS = {
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
+  {
     title: "News Release: Road and Bridge Superintendent Placed on Paid Admin Leave",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -909,6 +989,16 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Fall Foliage Tour Contest 🍂",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
+    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
+    img: ""
+  },
+  {
     title: "Changes to Holy Mass Schedule on Fri/Sat",
     source: "St. Patrick's Catholic Church",
     sourceKey: "stpatricks",
@@ -978,15 +1068,7 @@ const ENGAGE_MEETINGS = [
   {
     projectName: "Shandoka Lot Redevelopment Project",
     projectUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project",
-    title: "HARC Site Walk",
-    date: "2026-08-19",
-    board: "harc",
-    dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
-  },
-  {
-    projectName: "Shandoka Lot Redevelopment Project",
-    projectUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project",
-    title: "HARC Meeting",
+    title: "HARC Site Walk & Public Hearing | Shandoka Lot Redevelopment Project",
     date: "2026-08-19",
     board: "harc",
     dateUrl: "https://engagetelluride.org/shandoka-lot-redevelopment-project/widgets/113081/key_dates#41231"
@@ -1609,6 +1691,121 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Harriers eyeing great strides early",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "community",
+    copy: "Telluride's cross-country teams open the 2026 season Friday, Aug. 21, at the Cheyenne Mountain Stampede in Colorado Springs — a course that doubles as the state championship venue. Junior Liv Speck, a two-time state qualifier, leads returning runners on both sides. Coach Tanner Small also welcomes new assistant Rachael Christiansen, a veteran coach who relocated to Telluride last year.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_a884bd24-c71e-4a82-8843-a12c195d2fb3.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/38/138c628b-13ad-42a1-869a-b2c99484db52/6a85698e7d16a.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Dylan Brooks for county commissioner",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "government",
+    copy: "A former Telluride High School teacher endorses Dylan Brooks for San Miguel County Commissioner, citing his deep local roots and collaborative approach. Brooks, Telluride-born, also served on the Telluride School Board alongside fellow candidate Paul Reich.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_3a73c1a2-8ddb-40c6-9ab1-c3c2d4cb2298.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "David Lavender",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "From a concerned citizen",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "housing",
+    copy: "San Miguel County is weighing land use code changes that would reduce lot sizes, increase by-right density, and shift some projects away from public hearings. A local resident is asking whether the trade-off — permanent development entitlements in exchange for eligibility to compete for state housing funds — has been fully analyzed or publicly debated.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/letters_to_editor/article_ee6dbabc-ed64-474b-a994-fad3dce0e566.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    letterAuthor: "Michael Saftler",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Days that sizzled",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "community",
+    copy: "Telluride and the surrounding region saw weeks of extreme heat this summer — mid-80s in town, 90-plus days in Ridgway, warm nights, little rain. Mountain homes weren't built for this, and altitude adds its own demands on the body. Staying hydrated, cooling down early, and checking on vulnerable neighbors matters more than usual right now.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_0cbeca23-a628-47de-ba33-b446925b7abe.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1e/c1e4a9bc-073f-4c03-8aef-3d9e324e5e20/6a860845d06b2.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "The boat house",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "community",
+    copy: "A family in the area has added a 1983 Boston Whaler to their driveway — a fixer-upper that's already drawing some neighbor attention. The husband plans to restore it over winter, part of a longer pattern of collecting old boats, trucks, and vans. Water travel, it seems, runs deep in some families.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_8edb9cbc-2d21-4562-b90b-271c23d6f888.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f6/2f6118d7-d149-4f37-828c-6faad318f17c/6a86078d234dc.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Music on the Green features Brooke Lee",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "arts-culture",
+    copy: "",
+    claudeSummary: false,
+    href: "https://www.telluridenews.com/news_release/article_fbc80970-0b1a-4db7-b804-148a864dca00.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/cd/6cd69292-5688-4b79-888d-36c8ef900074/6a86042590d28.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Hunting earth's mightiest microbes",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "health",
+    copy: "Microbiologist Braden Tierney speaks Tuesday, Aug. 25 at 6:30 p.m. at the Telluride Innovation Center — free and open to the public. His nonprofit hunts extreme-environment microbes for solutions to pollution, carbon capture, and human health. He'll also share findings from Colorado fieldwork.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/opinion/columnists/article_aa8d37df-6579-4e8a-9538-6f3bec0e4319.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/43/84374eea-f021-43d0-8476-24897c4cd512/6a8604f488aaa.image.jpg",
+    isLetter: true,
+    imgHiRes: true
+  },
+  {
+    title: "Mountain Village Housing Authority to hold tiered lottery for 2 Meadowlark units",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "housing",
+    copy: "MVHA is running a tiered lottery for two deed-restricted Meadowlark units — a 3BR/2.5BA at $832,733 and a 2BR/1BA at $547,274, both with a 4% appreciation cap. Applications are due Aug. 31 at noon; an open house is Aug. 27, 4–6 p.m. Essential workers and Mountain Village employees get first lottery priority.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news_release/article_caf15be7-3cc7-4597-ae9c-abc810f1a531.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Former Meta engineer says Instagram took a 'don't ask, don't tell' approach on kids under 13",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "health",
+    copy: "A former Meta engineering director testified in a multistate federal trial that Instagram knowingly allowed kids under 13 on its platform while prioritizing engagement metrics over user safety. He said safety was treated as an \"afterthought\" in employee reviews and product design. Four states are suing Meta over alleged harms to youth mental health.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_01333251-b449-5ee1-b35d-91f45ba6400e.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/3b/13b823a7-fadb-59de-b191-f9ccc1ef8e1c/6a84ec6c72f8f.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Justin Chandler steps down from TSSC",
     source: "Telluride Times",
     date: "August 19, 2026",
@@ -1774,18 +1971,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/sports/article_114e2fe3-1114-42c1-8031-dc6efedaef2c.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7a/a7a4bf2e-1633-4a92-8299-46a389d4eb96/6a7f3e18272ff.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Museum events bring history to life",
-    source: "Telluride Times",
-    date: "August 14, 2026",
-    firstSeen: "2026-08-14",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
     imgHiRes: true
   },
   {
@@ -2118,6 +2303,18 @@ const TELLURIDE_TIMES_ARTICLES = [
     claudeSummary: true,
     href: "https://www.telluridenews.com/news/article_13654f4f-aa9e-4a0e-a981-0570501111a8.html",
     img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b2/4b2bd3ef-c563-45b9-a633-a6c265e7c33a/6a7784421a0bd.image.png",
+    imgHiRes: true
+  },
+  {
+    title: "Museum events bring history to life",
+    source: "Telluride Times",
+    date: "August 14, 2026",
+    firstSeen: "2026-08-14",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
     imgHiRes: true
   },
   {
@@ -2504,23 +2701,39 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
+  },
+  {
     title: "Shandoka, Carhenge Lots Closed",
     source: "Town of Telluride",
     date: "August 8, 2026",
     newsTopic: "community",
     copy: "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
     href: "https://www.telluride.gov/AlertCenter.aspx?AID=71",
-    img: ""
-  },
-  {
-    title: "",
-    source: "Town of Ridgway",
-    date: "August 19, 2026",
-    firstSeen: "2026-08-18",
-    newsTopic: "community",
-    copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
-    claudeSummary: false,
-    href: "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Idling-Fact-Sheet-Aug-18-2026.pdf",
     img: ""
   },
   {
@@ -2692,6 +2905,19 @@ const KOTO_FEATURED_STORIES = [
 // page over the coming weeks, the bot will add them with firstSeen=today
 // and the array will naturally shed the sentinels via the same logic.
 const SMB_FORUM_ARTICLES = [
+  {
+    title: "Bray talks drought, hay; calls for better relationships in navigating tough issues",
+    source: "San Miguel Basin Forum",
+    sourceKey: "smb",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    dateSource: "article",
+    newsTopic: "community",
+    copy: "Zandon Bray of Bray Ranches says the drought is the worst he's seen — their longtime hayfields of grass and alfalfa are essentially gone, and they may haul hay from 700 miles away this winter. High cattle prices help, but that money goes straight to feed costs. He says working across differences matters more than politics when everyone's facing the same dry reality.",
+    claudeSummary: true,
+    href: "https://www.sanmiguelbasinforum.com/stories/bray-talks-drought-hay-calls-for-better-relationships-in-navigating-tough-issues,126716",
+    img: ""
+  },
   {
     title: "Van Winkle talks fire, drought and wolves",
     source: "San Miguel Basin Forum",
@@ -3125,17 +3351,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-19/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-19T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
     title: "Market on the Plaza",
     link: "https://koto.org/event/market-on-the-plaza/2026-08-19/",
     description: "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan creations, kid-friendly goods and more.",
@@ -3145,28 +3360,6 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-19/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-19T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Mahjongg for Independent Players",
-    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-19/",
-    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
-    pubDate: "2026-08-19T13:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
   },
   {
     title: "Tennis Clinic 3.0-4.0",
@@ -4566,6 +4759,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53683903201031/huge/a04791d7e4ff9bb951af1161eb22eb5beff88f12.jpg"
   },
   {
+    title: "Words and Paint: Ann Dettmer Art Show Fundraiser",
+    link: "https://events.ourayridgwayevents.com/event/words-and-paint-ann-dettmer-art-show-fundraiser",
+    description: "Come see the gorgeous and affordable artist books, cards and small works by local artist Ann Detter at the Ouray Library. A percentage of the proceeds will go to the library expansion project. This is a great opportunity to acquire some of Ann's beautiful artwork and raise funds for the library at the same time. This pop-up show is one day only! For information, contact ProgramsOurayPL@gmail.com . View on site | Email this event",
+    pubDate: "2026-08-22T19:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Ouray Public Library",
+    imageUrl: "https://localist-images.azureedge.net/photos/53744045497525/huge/4de3e9a5e7a0bdd0aff767487d1890b1dd71a4e7.jpg"
+  },
+  {
     title: "WCOC 3rd Annual Chili Cook-Off",
     link: "https://events.ourayridgwayevents.com/event/wcoc-3rd-annual-chili-cook-off",
     description: "Braggin' rights are on the line for competitors to earn the title of Best Chili in Ouray County for 2026 during the 3rd Annual WCOC Chili Cook-Off! Local businesses will present an assortment of chilis to be tested by professionals and citizens. Participants could take home the prize of Best Chili, People's Choice, Best Decorated and Top Fundraiser (as additional monetary tips help the participants earn this prize). Taste alll of the chilis for $14. If they're extra good, leave them an additional tip! Baked goods made by WCOC members will also be available for purchase. This event is hosted by the Woman's Club of Ouray County, a 501(c)(3) nonprofit organization. All proceeds benefit Ouray County nonprofits with grants. We are grateful for the past, present and future support of our Community! View on site | Email this event",
@@ -4608,6 +4812,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Divide Ranch and Club Clubhouse",
     imageUrl: "https://localist-images.azureedge.net/photos/52250073410263/huge/0c5c647e572d5a4c1c7a05677aec7057f5312338.jpg"
+  },
+  {
+    title: "Open Air Market",
+    link: "https://events.ourayridgwayevents.com/event/open-air-market",
+    description: "Fresh Air & Local Flair The Ouray Open-Air Market is launching this 2026 season at Billy Goat Gruff's Patio (located at 408 Main Street, Ouray, CO). The market will run every Sunday from June 21, 2026, through September 6, 2026, operating from 10:00 AM to 2:00 PM. View on site | Email this event",
+    pubDate: "2026-08-23T16:00:00.000Z",
+    endDate: "2026-09-06",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Billy Goat Gruff's Patio Patio",
+    imageUrl: "https://localist-images.azureedge.net/photos/53744791155044/huge/7870fdaa876bce23bf9db7e6664d294f7d856b0b.jpg"
   },
   {
     title: "Auditions: Rocky Horror Picture Show Live Shadow Cast Edition (Show in Oct.)",
@@ -4760,18 +4976,6 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53604234896494/huge/7d3a3f2cb3d8a141dbf964c56c072834ed01eb67.jpg"
   },
   {
-    title: "Dinner & Magic Show",
-    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
-    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
-    pubDate: "2026-08-28T12:00:00.000Z",
-    endDate: "2026-08-29",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Yankee Girl Cafe",
-    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
-  },
-  {
     title: "OLD MAN POLLY",
     link: "https://events.ourayridgwayevents.com/event/old-man-polly-4070",
     description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
@@ -4803,6 +5007,18 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Floating Lotus Brewery",
     imageUrl: "https://localist-images.azureedge.net/photos/53604246650500/huge/18e210b78b98c467d364bab798eb9b5e4c95c24d.jpg"
+  },
+  {
+    title: "Dinner & Magic Show",
+    link: "https://events.ourayridgwayevents.com/event/dinner-magic-show",
+    description: "Join us in Ouray for an evening of wow with magician Mason Michael! You will be treated to a gourmet dinner followed by a close-up magic show. A night you won't want to miss! Click the link to buy tickets now! Enjoy a one of a kind course meal at the Yankee Girl Cafe, followed by a 45 minute Close-Up show of \"Freakishly Good Magic\" presented by local magician Mason Michael. Mason has performed all over the country for everyone from random people on the street, to theaters full of 600 people. He’s toured with renowned magician Ty Gallenbeck, sold out his own one-man show, and has regular performances all around Colorado. He has promised to never pull a bunny out of a hat, because nobody wants to see that. General Admission pricing is for the magic show AND dinner, this ticket includes both. …",
+    pubDate: "2026-08-29T00:00:00.000Z",
+    endDate: "2026-08-30",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Yankee Girl Cafe",
+    imageUrl: "https://localist-images.azureedge.net/photos/53737486688667/huge/ac13f67b069695c3e8a1a4ab698a497f3d80d55a.jpg"
   },
   {
     title: "Roots & Wings: The Pollinator Connection - Ridgway State Park Summer Program Series",
@@ -5097,9 +5313,20 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg"
   },
   {
+    title: "Labor Day Parade in Ridgway",
+    link: "https://events.ourayridgwayevents.com/event/labor-day-parade-in-ridgway",
+    description: "Find your spot along Sherman Street in Ridgway to watch the Labor Day Parade. It'll start at 10am. You'll see things like horseback riders, cowboys, classic vehicles, and more. Stay on the sidewalk if you want to get soaked by the Firetrucks; otherwise, stand further back from the street. View on site | Email this event",
+    pubDate: "2026-09-07T16:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Hartwell Park",
+    imageUrl: "https://localist-images.azureedge.net/photos/53745054025330/huge/907904d9f77c544312a94c550a4205ddddb5d06a.jpg"
+  },
+  {
     title: "Ouray County Labor Day Rodeo",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
-    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Featured events include: Mutton Bustin - Ages 3-10 Wild Cow Milking Rescue Race Stick Horse Races Gates open at 11 a.m. Performance begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. The Rodeo Association's goals are to keep our Western Heritage alive and healthy, support our community and give back to our youth. View on site | Email this event",
+    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Featured events include: Parade in Ridgway at 10am Mutton Bustin - Ages 3-10 Wild Cow Milking Rescue Race Stick Horse Races Gates open at 11 a.m. Performance begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. The Rodeo Association's goals are to keep our Western Heritage alive and healthy, support our community and give back to our youth. …",
     pubDate: "2026-09-07T18:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -5430,6 +5657,17 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "Ridgway State Park",
     imageUrl: "https://localist-images.azureedge.net/photos/53702771968357/huge/e53b021369f111f5d927b10fb43889fa856f6d5f.jpg"
+  },
+  {
+    title: "Colona Community Church’s Annual Harvest Dinner",
+    link: "https://events.ourayridgwayevents.com/event/colona-community-churchs-annual-harvest-dinner-6308",
+    description: "Live Music. Come join us for Fun, Food, & Fellowship. Celebrating 114 years! Free to All. 😀 View on site | Email this event",
+    pubDate: "2026-09-19T21:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Colona Stockyard across from the church",
+    imageUrl: "https://localist-images.azureedge.net/photos/53722349858154/huge/934ef243440a192b17a6d756428b9bac45537d94.jpg"
   },
   {
     title: "The Courtyard at 610 Presents: Alex Dunn & Mimi Genheimer at The Courtyard",
@@ -6656,18 +6894,7 @@ const TELLURIDE_COM_EVENTS = [
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/63377/nik-korba-3wcetbluoms-unsplash.800x533.webp"
-  },
-  {
-    title: "Telluride Dinner Party",
-    link: "https://www.telluride.com/event/telluride-dinner-party/",
-    description: "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
-    pubDate: "2026-08-20",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/63377/tbc_game_night.800x533.webp"
   },
   {
     title: "Blizzard Sale",
@@ -6721,11 +6948,12 @@ const TELLURIDE_COM_EVENTS = [
     link: "https://www.telluride.com/event/telluride-mountain-run/",
     description: "The Telluride Mountain Run is a challenging and technical mountain race in the San Juan Mountains above the beautiful …",
     pubDate: "2026-08-22",
+    endDate: "2026-08-24",
     source: "telluride-com",
     sourceLabel: "Telluride.com",
     category: "Community Event",
     location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/55221/screenshot_2024-08-27_at_2_39_13_pm.800x533.webp"
+    imageUrl: "https://www.telluride.com/site/assets/files/55221/screenshot_2026-08-19_at_9_30_53_am.800x533.webp"
   },
   {
     title: "Wax Monkey",
@@ -6839,6 +7067,17 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/28877/144071284720c1c00935.800x533.webp"
+  },
+  {
+    title: "Telluride Dinner Party",
+    link: "https://www.telluride.com/event/telluride-dinner-party/",
+    description: "Join the Telluride Historical Museum for dinner for their premier fundraising event! Enjoy an excellent catered meal, …",
+    pubDate: "2026-09-10",
+    source: "telluride-com",
+    sourceLabel: "Telluride.com",
+    category: "Community Event",
+    location: "Telluride, CO",
+    imageUrl: "https://www.telluride.com/site/assets/files/48558/screenshot_2026-08-11_at_4_32_53_pm.800x533.webp"
   },
   {
     title: "The Meditations",

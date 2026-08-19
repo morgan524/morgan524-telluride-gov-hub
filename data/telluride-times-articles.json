@@ -1,5 +1,120 @@
 [
   {
+    "title": "Harriers eyeing great strides early",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "community",
+    "copy": "Telluride's cross-country teams open the 2026 season Friday, Aug. 21, at the Cheyenne Mountain Stampede in Colorado Springs — a course that doubles as the state championship venue. Junior Liv Speck, a two-time state qualifier, leads returning runners on both sides. Coach Tanner Small also welcomes new assistant Rachael Christiansen, a veteran coach who relocated to Telluride last year.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/sports/article_a884bd24-c71e-4a82-8843-a12c195d2fb3.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/38/138c628b-13ad-42a1-869a-b2c99484db52/6a85698e7d16a.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Dylan Brooks for county commissioner",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "government",
+    "copy": "A former Telluride High School teacher endorses Dylan Brooks for San Miguel County Commissioner, citing his deep local roots and collaborative approach. Brooks, Telluride-born, also served on the Telluride School Board alongside fellow candidate Paul Reich.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_3a73c1a2-8ddb-40c6-9ab1-c3c2d4cb2298.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "David Lavender",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "From a concerned citizen",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "housing",
+    "copy": "San Miguel County is weighing land use code changes that would reduce lot sizes, increase by-right density, and shift some projects away from public hearings. A local resident is asking whether the trade-off — permanent development entitlements in exchange for eligibility to compete for state housing funds — has been fully analyzed or publicly debated.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/letters_to_editor/article_ee6dbabc-ed64-474b-a994-fad3dce0e566.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "letterAuthor": "Michael Saftler",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "Days that sizzled",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "community",
+    "copy": "Telluride and the surrounding region saw weeks of extreme heat this summer — mid-80s in town, 90-plus days in Ridgway, warm nights, little rain. Mountain homes weren't built for this, and altitude adds its own demands on the body. Staying hydrated, cooling down early, and checking on vulnerable neighbors matters more than usual right now.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_0cbeca23-a628-47de-ba33-b446925b7abe.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/1e/c1e4a9bc-073f-4c03-8aef-3d9e324e5e20/6a860845d06b2.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "The boat house",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "community",
+    "copy": "A family in the area has added a 1983 Boston Whaler to their driveway — a fixer-upper that's already drawing some neighbor attention. The husband plans to restore it over winter, part of a longer pattern of collecting old boats, trucks, and vans. Water travel, it seems, runs deep in some families.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_8edb9cbc-2d21-4562-b90b-271c23d6f888.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/2/f6/2f6118d7-d149-4f37-828c-6faad318f17c/6a86078d234dc.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "Music on the Green features Brooke Lee",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "arts-culture",
+    "copy": "",
+    "claudeSummary": false,
+    "href": "https://www.telluridenews.com/news_release/article_fbc80970-0b1a-4db7-b804-148a864dca00.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/6/cd/6cd69292-5688-4b79-888d-36c8ef900074/6a86042590d28.image.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Hunting earth's mightiest microbes",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "health",
+    "copy": "Microbiologist Braden Tierney speaks Tuesday, Aug. 25 at 6:30 p.m. at the Telluride Innovation Center — free and open to the public. His nonprofit hunts extreme-environment microbes for solutions to pollution, carbon capture, and human health. He'll also share findings from Colorado fieldwork.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/opinion/columnists/article_aa8d37df-6579-4e8a-9538-6f3bec0e4319.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/8/43/84374eea-f021-43d0-8476-24897c4cd512/6a8604f488aaa.image.jpg",
+    "isLetter": true,
+    "imgHiRes": true
+  },
+  {
+    "title": "Mountain Village Housing Authority to hold tiered lottery for 2 Meadowlark units",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "housing",
+    "copy": "MVHA is running a tiered lottery for two deed-restricted Meadowlark units — a 3BR/2.5BA at $832,733 and a 2BR/1BA at $547,274, both with a 4% appreciation cap. Applications are due Aug. 31 at noon; an open house is Aug. 27, 4–6 p.m. Essential workers and Mountain Village employees get first lottery priority.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news_release/article_caf15be7-3cc7-4597-ae9c-abc810f1a531.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
+    "title": "Former Meta engineer says Instagram took a 'don't ask, don't tell' approach on kids under 13",
+    "source": "Telluride Times",
+    "date": "August 19, 2026",
+    "firstSeen": "2026-08-19",
+    "newsTopic": "health",
+    "copy": "A former Meta engineering director testified in a multistate federal trial that Instagram knowingly allowed kids under 13 on its platform while prioritizing engagement metrics over user safety. He said safety was treated as an \"afterthought\" in employee reviews and product design. Four states are suing Meta over alleged harms to youth mental health.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_01333251-b449-5ee1-b35d-91f45ba6400e.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/3b/13b823a7-fadb-59de-b191-f9ccc1ef8e1c/6a84ec6c72f8f.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Justin Chandler steps down from TSSC",
     "source": "Telluride Times",
     "date": "August 19, 2026",
@@ -165,18 +280,6 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/sports/article_114e2fe3-1114-42c1-8031-dc6efedaef2c.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/7a/a7a4bf2e-1633-4a92-8299-46a389d4eb96/6a7f3e18272ff.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Museum events bring history to life",
-    "source": "Telluride Times",
-    "date": "August 14, 2026",
-    "firstSeen": "2026-08-14",
-    "newsTopic": "arts-culture",
-    "copy": "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
     "imgHiRes": true
   },
   {
@@ -509,6 +612,18 @@
     "claudeSummary": true,
     "href": "https://www.telluridenews.com/news/article_13654f4f-aa9e-4a0e-a981-0570501111a8.html",
     "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/4/b2/4b2bd3ef-c563-45b9-a633-a6c265e7c33a/6a7784421a0bd.image.png",
+    "imgHiRes": true
+  },
+  {
+    "title": "Museum events bring history to life",
+    "source": "Telluride Times",
+    "date": "August 14, 2026",
+    "firstSeen": "2026-08-14",
+    "newsTopic": "arts-culture",
+    "copy": "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
     "imgHiRes": true
   },
   {
@@ -895,23 +1010,39 @@
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
   },
   {
+    "title": "Black Bear Pass Now Open",
+    "source": "San Miguel County",
+    "date": "August 3, 2026",
+    "newsTopic": "recreation",
+    "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    "img": ""
+  },
+  {
+    "title": "Numerous Highway Closures",
+    "source": "San Miguel County",
+    "date": "July 22, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    "img": ""
+  },
+  {
+    "title": "Tomboy Road",
+    "source": "San Miguel County",
+    "date": "July 21, 2026",
+    "newsTopic": "infrastructure",
+    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    "img": ""
+  },
+  {
     "title": "Shandoka, Carhenge Lots Closed",
     "source": "Town of Telluride",
     "date": "August 8, 2026",
     "newsTopic": "community",
     "copy": "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
     "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
-    "img": ""
-  },
-  {
-    "title": "",
-    "source": "Town of Ridgway",
-    "date": "August 19, 2026",
-    "firstSeen": "2026-08-18",
-    "newsTopic": "community",
-    "copy": "Press release from the Town of Ridgway. Click to view the full PDF.",
-    "claudeSummary": false,
-    "href": "https://townofridgway.colorado.gov/sites/g/files/lrnvjt1246/files/documents/Idling-Fact-Sheet-Aug-18-2026.pdf",
     "img": ""
   },
   {
