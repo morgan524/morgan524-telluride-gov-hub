@@ -246,7 +246,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8291","sv":4,"zoomUrl":"https://us06web.zoom.us/j/86169871704?pwd=oK56hZLiXIbBia4HLKYI9XqWcVl8Uz.1","meetingId":"861 6987 1704","passcode":"281002.","phone":"346-248-7799"},
 
   "mv|2026-08-20|Town Council Meeting":
-    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49681/august_20-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w","phone":"970-369-6429"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w","phone":"970-369-6429"},
 
   "telluride|2026-07-23|San Miguel Authority for Regional Transportation - Jul 23 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8296","zoomUrl":"https://us02web.zoom.us/j/89367662245?pwd=2HUCttMjcQln5Ic8lxRyUKGWLMD0q1.1","sv":4},
@@ -414,7 +414,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"96078cc700b16039"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"0ad7bcf1da61020b"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
@@ -690,18 +690,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-20|Liquor Licensing Authority - Aug 20 2026":
     "The Telluride Liquor Licensing Authority is expected to review liquor license applications or changes requiring local approval. As the local licensing authority, the hearing officer will consider matters brought before the board, with new licenses and appeals handled separately by Town Council.",
 
-  "telluride|2026-08-19|Historic & Architectural Review Commission Chair - Aug 19 2026":
-    "The Historic & Architectural Review Commission is expected to convene for its regular August 2026 session. No specific agenda items are detailed in the available materials, but as a standing body, the Commission typically reviews proposed construction, renovation, or development projects for compliance with Telluride's historic preservation and architectural standards.",
-
-  "telluride|2026-08-19|Historic & Architectural Review Commission - Aug 19 2026":
-    "The Historic and Architectural Review Commission is expected to review applications for Certificates of Appropriateness related to proposed changes to structures or signs within Telluride. The commission may also address matters concerning historic designations, preservation standards, or updates to inventories of architecturally and historically significant properties.",
-
-  "telluride|2026-08-19|Parks & Recreation Commission - Aug 19 2026":
-    "The Parks & Recreation Commission is expected to meet to discuss community parks and recreation needs and services for the Town of Telluride. Specific agenda items have not been published, but the commission regularly interprets community desires to guide parks and recreation programming and planning.",
-
-  "county|2026-08-19|Board of County Commissioners Meeting":
-    "Board will consider proposals for foundation repairs at the Placerville Schoolhouse and roofing work on the Trout Lake Water Tank. Related legal notices include property tax exemption information for seniors, disabled veterans, and gold star spouses, along with foreclosure and probate matters in the county.",
-
   "telluride|2026-08-20|Planning & Zoning Commission - Aug 20 2026":
     "The Telluride Planning & Zoning Commission is expected to consider a site-specific development plan vesting notice for a local project. Commissioners may also review related land use matters. The meeting will be live streamed on YouTube.",
 
@@ -747,12 +735,6 @@ const MEETING_PREVIEWS = {
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
     "The Ethics Commission is expected to meet in its regular session, with authority to issue advisory opinions, interpret the ethics code, investigate potential violations, and recommend sanctions or enforcement actions to Town Council. No specific agenda items or cases are publicly detailed for this session.",
 
-  "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
-    "The Ecology Commission is expected to discuss Black Bear Safety Week planning, review and provide input on the 2027 Town of Telluride Climate Action Plan update, and focus specifically on the Materials & Consumption area of that plan. The commission will also approve minutes from its July 8 meeting.",
-
-  "ouray|2026-08-19|, 1-4:00 PM (@ OURAY COURTHOUSE!) - The PC will hold 3 public hearings; Repeal of Sec.16, Colona Restaurant SUP Amend., and an Exception application for Elk Meadows (Packet materials are attached to the agenda)":
-    "The Planning Commission is expected to hold three public hearings: a repeal of Section 16, an amendment to a special use permit for a Colona restaurant, and an exception application for Elk Meadows.",
-
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
     "The Open Space Commission is expected to discuss priorities and criteria related to open space acquisition, management, and maintenance, as well as review open space elements of relevant plans and potentially formulate recommendations to Town Council on open-space-related matters.",
 
@@ -775,7 +757,10 @@ const MEETING_PREVIEWS = {
     "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended.",
 
   "med|2026-08-27|Regular Board Meeting":
-    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt."
+    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt.",
+
+  "county|2026-08-19|Board of County Commissioners Meeting":
+    "Board will consider routine county business at its regular meeting on August 19, 2026, in Telluride. Related legal notices indicate active foreclosure proceedings on properties in Telluride and Mountain Village, ongoing estate matters, and a federal environmental review for a regional hazardous fuels management project affecting San Miguel County lands."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1101,7 +1086,7 @@ const ENGAGE_MEETINGS = [
   }
 ];         // Engage Telluride project key dates
 const MANUAL_SUMMARIES_CACHE_DATE = '2026-08-18';
-const LEGAL_NOTICES_CACHE_DATE = '2026-08-16';
+const LEGAL_NOTICES_CACHE_DATE = '2026-08-19';
 
 const MANUAL_SUMMARIES = {
   "fire|2026-07-21|Board of Directors Meeting":
@@ -1708,6 +1693,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "In Meta's trial, families of social media victims see a pivotal moment for online safety",
+    source: "Telluride Times",
+    date: "August 18, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "community",
+    copy: "A federal trial opened in Oakland this week with attorneys general from California, Colorado, Kentucky, and New Jersey seeking billions in damages from Meta over harms its platforms caused to children. The case centers on broad design decisions behind Instagram and Facebook, with states alleging Meta knew the risks and misled the public. Families of children who died from related harms gathered outside the courthouse, calling it a long-awaited moment of accountability.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_0541f8da-c99b-5e55-9536-4e3554416970.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/1/3b/13b823a7-fadb-59de-b191-f9ccc1ef8e1c/6a84ec6c72f8f.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "‘That level of care truly makes a difference’",
     source: "Telluride Times",
@@ -2544,30 +2541,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Fore for a cause",
-    source: "Telluride Times",
-    date: "August 5, 2026",
-    firstSeen: "2026-08-05",
-    newsTopic: "community",
-    copy: "The Bob Miller Memorial Golf Tournament — now in its 28th year — raises money for the Telluride Adaptive Sports Program, with this year's event set for Sept. 17 at Telluride Golf Club. Bob Miller helped found TASP in 1996 and passed away two years later; his wife and family will attend this year for the first time in many years. Register at tellurideadaptivesports.org.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/sports/article_4b36b0e7-0dd6-48a9-bc75-c774c184e0a1.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/1d/91dcdd42-9d1f-4294-bb28-a08ce66b8073/6a727d8fcd3dc.image.jpg",
-    imgHiRes: true
-  },
-  {
-    title: "Patrick Rondinelli: Telluride’s seasoned new deputy town manager",
-    source: "Telluride Times",
-    date: "August 5, 2026",
-    firstSeen: "2026-08-05",
-    newsTopic: "community",
-    copy: "Telluride hired Patrick Rondinelli as deputy town manager this summer. He brings 13 years as Ouray's city administrator and nine years with the Colorado Dept. of Local Affairs, supporting southwest Colorado communities. He's based in Ouray and knows the region well.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_8d6c8f96-d0b4-4aa9-a0d0-ab18b912ba98.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/a3/ca310ef2-5edb-4142-8419-2326101a6801/6a739ceb85cb5.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
     source: "Town of Telluride",
     date: "August 12, 2026",
@@ -2642,7 +2615,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "",
     source: "Town of Ridgway",
-    date: "August 18, 2026",
+    date: "August 19, 2026",
     firstSeen: "2026-08-18",
     newsTopic: "community",
     copy: "Press release from the Town of Ridgway. Click to view the full PDF.",
@@ -3679,6 +3652,72 @@ const KOTO_COMMUNITY_EVENTS = [
     category: "Community Event",
     location: "Heritage Plaza, Mountain Village",
     imageUrl: ""
+  },
+  {
+    title: "Tennis Clinic 4.0+",
+    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-26/",
+    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-26T11:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    link: "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-26/",
+    description: "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your time on court is memorable. Must be 3.5+ to sign up Space: Limited to 8 spots Dates: August 25th & 26th Time: 12pm-2pm Price: $299/person Please sign up online or directly through the pro shop.",
+    pubDate: "2026-08-26T12:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
+    description: "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-26T13:00:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    title: "Water in the West: The Colorado River and the Future of Lake Powell",
+    link: "https://koto.org/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    description: "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak Podmore. Zak is the author of Life After Deadpool, and will discuss the state of the Colorado River and the future of Lake Powell. Snacks and drinks will be provided! Join us at the Patagonia store at 200 W Colorado Ave.",
+    pubDate: "2026-08-26T17:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Patagonia Telluride, Telluride Retail",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/Water-in-the-West-Instagram.png"
+  },
+  {
+    title: "Coffee & Climate Conversations: Where Recreation meets Resilience",
+    link: "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
+    description: "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands alongside Telluride Mountain Club and Rico Trails Alliance. Learn more about what's next for trails in our region, and join us as we ask the questions: How do recreation and conservation intersect, and where do they diverge? How does recreation shape our community and values? And most importantly, how can you be a strong steward and advocate for public lands and climate across our region? Coffee and pastries kindly provided.",
+    pubDate: "2026-08-27T08:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Wilkinson Public Library, Telluride",
+    imageUrl: "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp"
+  },
+  {
+    title: "Tennis Clinic 3.0-4.0",
+    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-27/",
+    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    pubDate: "2026-08-27T09:30:00-06:00",
+    source: "koto",
+    sourceLabel: "KOTO",
+    category: "Community Event",
+    location: "Telluride Racquet Club, Mountain Village",
+    imageUrl: ""
   }
 ];
 
@@ -3719,7 +3758,7 @@ const WILKINSON_EVENTS = [
   {
     title: "[WEATHER BACKUP] Back to School I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16788235?hs=a",
-    description: "A weather backup session of the Back to School I Heart Art program at Wilkinson Public Library's Program Room, running from 2:30 to 3:30 PM. This library event offers a creative arts activity for kids heading back to school.",
+    description: "2:30 PM – 3:30 PM",
     pubDate: "2026-08-18T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -3730,7 +3769,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Back to School I Heart Art",
     link: "https://telluridelibrary.libcal.com/event/16574867?hs=a",
-    description: "A back-to-school art program hosted by Wilkinson Public Library, held outdoors on the Lower Terrace. The event runs from 2:30 to 3:30 PM and offers a creative arts experience for the community as summer winds down.",
+    description: "2:30 PM – 3:30 PM",
     pubDate: "2026-08-18T20:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -4434,18 +4473,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "BRITLEY & MATT",
     link: "https://events.ourayridgwayevents.com/event/britley-matt",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    pubDate: "2026-08-18T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "JAMIE & THE DREAMERS",
-    link: "https://events.ourayridgwayevents.com/event/jamie-the-dreamers",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    description: "Live Music\\ https://coloradoboydepot.com/calendar/ Show starts at 6PM View on site | Email this event",
     pubDate: "2026-08-18T22:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4879,14 +4907,14 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Creative Space: Artist Salon Series",
     link: "https://events.ourayridgwayevents.com/event/creative-space-artist-salon-series",
-    description: "Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited. We welcome your ideas for future events! Snacks provided! To learn more, ask questions, submit ideas, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484 View on site | Email this event",
+    description: "AUGUST EDITION: MAKING YOUR MARK WITH JULIA REID (re)discover your own creativity with this hands-on artist talk and demonstration. Mark making without expectation or ego frees the latent artist in all of us. Join us in welcoming Julia Reid, local artist and creator of Chicago's celebrated\"Around the Coyote\" art festival. Materials provided. Free. Snacks! Please bring food or drinks to share! Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and creatives of all kinds are invited to give talks and demonstrations. We welcome your ideas for future events! To learn more or suggest a topic, reach out to the Decker Room Coordinator, Arielle. decker@ridgwayfuse.org 872-772-9484 View on site | Email this event",
     pubDate: "2026-08-27T00:00:00.000Z",
     endDate: "2026-09-24",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53738040069217/huge/449549e29368908fd534c31a53bcd1a1adc7b887.jpg"
   },
   {
     title: "The Fabulous Blues Tones - Live @ Floating Lotus Brewery",
@@ -5235,17 +5263,6 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "610",
     imageUrl: "https://localist-images.azureedge.net/photos/53551561816356/huge/5397f983bd33ef7292511908911ca22097960ab5.jpg"
-  },
-  {
-    title: "Ouray County Rodeo",
-    link: "https://events.ourayridgwayevents.com/event/ouray-county-rodeo",
-    description: "Feel the adrenaline rush with daring performances, electrifying action, and non-stop excitement that will keep you on the edge of your seat. Gates open at 11am. Performance starts at noon. Tickets $15. Kids 5 and under are free. Military with ID free. Ouray County Rodeo Association provides scholarships through fundraising activities including the Labor Day Rodeo, Gymkhanas & Annual Fundraiser! View on site | Email this event",
-    pubDate: "2026-09-07T06:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Ouray County Fairgrounds and 4H Events Center",
-    imageUrl: "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg"
   },
   {
     title: "Ouray County Labor Day Rodeo",
@@ -5908,7 +5925,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Board Of Trustees Meeting",
     link: "https://www.norwoodtown.com/2026-08-12-board-of-trustees-meeting",
-    description: "A scheduled meeting of the Town of Norwood Board of Trustees, held as part of the town's regular governance process. Members of the public are welcome to attend and observe local municipal business.",
+    description: "",
     pubDate: "2026-08-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5919,7 +5936,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Sanitation District Meeting",
     link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "A regular meeting of the Norwood Sanitation District, hosted by the Town of Norwood. Community members are welcome to attend this local government meeting to stay informed on sanitation district matters.",
+    description: "",
     pubDate: "2026-08-13T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5930,7 +5947,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5941,7 +5958,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    description: "",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5952,7 +5969,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5963,7 +5980,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5974,7 +5991,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5985,7 +6002,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5996,7 +6013,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6007,7 +6024,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -6018,17 +6035,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Bike & Brewery Tour",
-    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
-    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
-    pubDate: "2026-08-17T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
-  },
   {
     title: "\"Best Day Ever\" Free Movie Screening",
     link: "https://townofmountainvillage.com/explore/events/all-events/best-day-ever-free-movie-screening/",
@@ -6704,18 +6710,6 @@ const TELLURIDE_COM_EVENTS = [
     imageUrl: "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
   },
   {
-    title: "Village Film Nights",
-    link: "https://www.telluride.com/event/village-film-nights/",
-    description: "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
-    pubDate: "2026-07-05",
-    endDate: "2026-08-17",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/58512/vfn-hadestown-banner1800x900_1740x870.800x533.webp"
-  },
-  {
     title: "Alpine Chapel Outdoor Service",
     link: "https://www.telluride.com/event/alpine-chapel-outdoor-service/",
     description: "The Alpine Chapel will host an outdoor worship service at the Sunset Plaza Stage in Mountain Village at 9:30 a.m.",
@@ -6786,18 +6780,6 @@ const TELLURIDE_COM_EVENTS = [
     category: "Community Event",
     location: "Telluride, CO",
     imageUrl: "https://www.telluride.com/site/assets/files/63241/between_grief_gratitude_web_16_x_9_in.800x533.webp"
-  },
-  {
-    title: "Telluride Mushroom Festival",
-    link: "https://www.telluride.com/event/telluride-mushroom-festival/",
-    description: "Since 1981, the Telluride Mushroom Festival has been celebrating all things mycological, from the newest advancements …",
-    pubDate: "2026-08-12",
-    endDate: "2026-08-17",
-    source: "telluride-com",
-    sourceLabel: "Telluride.com",
-    category: "Community Event",
-    location: "Telluride, CO",
-    imageUrl: "https://www.telluride.com/site/assets/files/45066/2-2-26-4to3-full-color-poster.800x533.webp"
   },
   {
     title: "Community Concert",
@@ -7338,24 +7320,6 @@ const LEGAL_NOTICES = [
     address: "District Court of San Miguel County, Colorado",
     noticeKey: "26PR30006",
     caseNumber: "26PR30006"
-  },
-  {
-    title: "Public Hearing Notice -- Land Use Code Amendment New Section 5-31 Natural Medicine Businesses",
-    entity: "San Miguel County Board of County Commissioners",
-    entityClass: "ent-county",
-    entityLogo: "telluride",
-    icon: "📋",
-    iconClass: "type-hearing",
-    type: "Ordinance",
-    filterTag: "ordinance",
-    summary: "The San Miguel County Board of County Commissioners is being asked to consider a Land Use Code amendment adding a new Section 5-31 governing Natural Medicine Businesses, along with related amendments to Article 7 (Definitions). The amendment requires review and recommendation by the County Planning Commission (CPC) and action by the Board of County Commissioners pursuant to LUC Section 3-601 D. This notice indicates this is the second step of a two-step public hearing process; full hearing details were not fully captured in the published text.",
-    deadline: "",
-    expires: "2026-08-18",
-    dates: "6/18",
-    papers: ["ttimes_0618"],
-    url: "https://www.telluridenews.com/news/legals/article_5efd4701-ba7f-46ef-a7bd-74a242fdff7a.html",
-    address: "San Miguel County, Colorado (countywide land use code)",
-    noticeKey: "luc-amendment-5-31-natural-medicine"
   },
   {
     title: "Notice to Creditors -- Estate of Michael Kiball (COL-000175)",
@@ -9190,6 +9154,15 @@ const TELLURIDE_BOARD_MEETINGS = [
     location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
     time: "",
     civicwebId: 8054
+  },
+  {
+    date: "November 17, 2026",
+    title: "Town Council",
+    agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8046",
+    hasAgenda: false,
+    location: "Hybrid/Rebekah Hall, 113 W Columbia Ave",
+    time: "",
+    civicwebId: 8046
   }
 ];
 

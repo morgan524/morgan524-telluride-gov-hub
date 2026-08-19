@@ -427,5 +427,71 @@
     "category": "Community Event",
     "location": "Heritage Plaza, Mountain Village",
     "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-08-26/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-08-26T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    "link": "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-26/",
+    "description": "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your time on court is memorable. Must be 3.5+ to sign up Space: Limited to 8 spots Dates: August 25th & 26th Time: 12pm-2pm Price: $299/person Please sign up online or directly through the pro shop.",
+    "pubDate": "2026-08-26T12:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Mahjongg for Independent Players",
+    "link": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
+    "description": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have tables, cloths, chairs, and sets. NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance at telluridelibrary.org if you'd like to join so we can make sure we have enough tables set up for everyone!",
+    "pubDate": "2026-08-26T13:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg"
+  },
+  {
+    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
+    "link": "https://koto.org/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak Podmore. Zak is the author of Life After Deadpool, and will discuss the state of the Colorado River and the future of Lake Powell. Snacks and drinks will be provided! Join us at the Patagonia store at 200 W Colorado Ave.",
+    "pubDate": "2026-08-26T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/Water-in-the-West-Instagram.png"
+  },
+  {
+    "title": "Coffee & Climate Conversations: Where Recreation meets Resilience",
+    "link": "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
+    "description": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands alongside Telluride Mountain Club and Rico Trails Alliance. Learn more about what's next for trails in our region, and join us as we ask the questions: How do recreation and conservation intersect, and where do they diverge? How does recreation shape our community and values? And most importantly, how can you be a strong steward and advocate for public lands and climate across our region? Coffee and pastries kindly provided.",
+    "pubDate": "2026-08-27T08:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-27/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-08-27T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
   }
 ]

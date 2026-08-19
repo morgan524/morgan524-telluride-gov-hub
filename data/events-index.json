@@ -77,7 +77,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/art.jpg",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A weather backup session of the Back to School I Heart Art program at Wilkinson Public Library's Program Room, running from 2:30 to 3:30 PM. This library event offers a creative arts activity for kids heading back to school.",
+    "desc": "2:30 PM – 3:30 PM",
     "type": "Arts & Film"
   },
   {
@@ -90,7 +90,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_59.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A back-to-school art program hosted by Wilkinson Public Library, held outdoors on the Lower Terrace. The event runs from 2:30 to 3:30 PM and offers a creative arts experience for the community as summer winds down.",
+    "desc": "2:30 PM – 3:30 PM",
     "type": "Arts & Film"
   },
   {
@@ -103,20 +103,7 @@
     "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
-    "type": "Music"
-  },
-  {
-    "title": "JAMIE & THE DREAMERS",
-    "href": "https://events.ourayridgwayevents.com/event/jamie-the-dreamers",
-    "date": "2026-08-18",
-    "time": "4:00 PM",
-    "location": "687 N Cora Street, Ridgway, CO 81432",
-    "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
+    "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ Show starts at 6PM View on site | Email this event",
     "type": "Music"
   },
   {
@@ -1186,7 +1173,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1428,6 +1415,19 @@
     "endDate": "2026-08-30"
   },
   {
+    "title": "Mahjongg for Independent Players",
+    "href": "https://koto.org/event/mahjongg-for-independent-players-4/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/05/mahj.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don’t! We’ll have…",
+    "type": "Community"
+  },
+  {
     "title": "CO-150: Dumb and Dumber",
     "href": "https://events.ourayridgwayevents.com/event/co-150-dumb-and-dumber",
     "date": "2026-08-26",
@@ -1454,6 +1454,32 @@
     "type": "Community"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "TRC Tennis Clinics w/ Eric Fey & Eric Alexon",
+    "href": "https://koto.org/event/trc-tennis-clinics-w-eric-fey-eric-alexon/2026-08-26/",
+    "date": "2026-08-26",
+    "time": "12:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Eric & Eric for a special tennis camp at the end of August! Eric Alexon is one of the top teaching professionals in the industry. He is known for his high-energy coaching style, creative drills, and excellent tips that make sure your…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "NEW With Weehawken: Beat & Step: West African Dance, Drum & Body Percussion ~ with performances in The Nutcracker Remixed!",
     "href": "https://events.ourayridgwayevents.com/event/new-with-weehawken-beat-step-west-african-dance-drum-body-percussion-with-performances-in-the-nutcracker-remixed",
     "date": "2026-08-26",
@@ -1466,6 +1492,19 @@
     "desc": "Beat & Step: West African Dance, Drum & Body Percussion is an energetic and interactive class that combines traditional West African dance, drumming, and body percussion into one exciting experience. Students will learn dance combinations,…",
     "type": "Music",
     "endDate": "2026-09-09"
+  },
+  {
+    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
+    "href": "https://koto.org/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    "date": "2026-08-26",
+    "time": "5:30 PM",
+    "location": "Patagonia Telluride, Telluride Retail",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/Water-in-the-West-Instagram.png",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak Podmore. Zak is the author of Life After Deadpool, and will discuss the state of…",
+    "type": "Talks & Classes"
   },
   {
     "title": "Gaiascope Opening Night",
@@ -1487,25 +1526,12 @@
     "time": "6:00 PM",
     "location": "Decker Community Room",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53233124549377/huge/48f5037f05c4138c97f3f592d4b11a0581b38eab.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53738040069217/huge/449549e29368908fd534c31a53bcd1a1adc7b887.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
-    "desc": "Inspired by our vibrant creative community, these monthly events are intended to build creative community across disciplines! With a different focus each time, we will keep things interesting and engaging! Anyone is welcome to attend, and…",
+    "desc": "AUGUST EDITION: MAKING YOUR MARK WITH JULIA REID (re)discover your own creativity with this hands-on artist talk and demonstration. Mark making without expectation or ego frees the latent artist in all of us. Join us in welcoming Julia…",
     "type": "Arts & Film",
     "endDate": "2026-09-24"
-  },
-  {
-    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
-    "href": "https://www.telluride.com/event/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
-    "date": "2026-08-26",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63380/water_in_the_west_instagram_copy.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a …",
-    "type": "Community"
   },
   {
     "title": "Telluride R-1 School District Board Retreat",
@@ -1600,6 +1626,19 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Coffee & Climate Conversations: Where Recreation meets Resilience",
+    "href": "https://koto.org/event/coffee-climate-conversations-where-recreation-meets-resilience/",
+    "date": "2026-08-27",
+    "time": "8:30 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/August-Coffee-Chat-8.5x11.webp",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "From big adventures to spending time with family and friends, recreation is often at the heart of our experiences on public lands. Join Sheep Mountain Alliance and EcoAction Partners for a discussion about recreation on our public lands…",
+    "type": "Family & Kids"
+  },
+  {
     "title": "RSUN \\\\ MINDSET",
     "href": "https://www.alibitelluride.com/calendar#eca-event=rsun-mindset",
     "date": "2026-08-27",
@@ -1611,6 +1650,19 @@
     "source": "The Alibi",
     "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-27/",
+    "date": "2026-08-27",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "Telluride Farmers Market",
@@ -1923,7 +1975,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2481,19 +2533,6 @@
     "type": "Outdoors & Sports"
   },
   {
-    "title": "Ouray County Rodeo",
-    "href": "https://events.ourayridgwayevents.com/event/ouray-county-rodeo",
-    "date": "2026-09-07",
-    "time": "",
-    "location": "Ouray County Fairgrounds and 4H Events Center",
-    "town": "Ouray",
-    "img": "https://localist-images.azureedge.net/photos/53322211732952/huge/667914e9ae95da62a69d4f8c005a523e98fd0d21.jpg",
-    "category": "Community Event",
-    "source": "Ouray Ridgway Calendar",
-    "desc": "Feel the adrenaline rush with daring performances, electrifying action, and non-stop excitement that will keep you on the edge of your seat. Gates open at 11am. Performance starts at noon. Tickets $15. Kids 5 and under are free. Military…",
-    "type": "Family & Kids"
-  },
-  {
     "title": "Monthly Welcome Home Alliance Veteran's Coffee @ The Sherbino",
     "href": "https://events.ourayridgwayevents.com/event/monthly-welcome-home-alliance-veterans-coffee-the-sherbino",
     "date": "2026-09-08",
@@ -2987,7 +3026,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3525,7 +3564,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {

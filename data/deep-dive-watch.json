@@ -1,23 +1,10 @@
 {
- "generated": "2026-08-18T21:32:04.584Z",
+ "generated": "2026-08-19T01:30:10.389Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "HARC Meeting",
-     "date": "2026-08-19",
-     "time": "",
-     "location": "Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [
     {
@@ -89,20 +76,7 @@
   "wildfire": {
    "label": "Wildfire Resiliency",
    "lastUpdated": "2026-06-01",
-   "upcoming": [
-    {
-     "source": "fire",
-     "sourceLabel": "Fire Protection",
-     "title": "Board of Directors Meeting",
-     "date": "2026-08-18",
-     "time": "",
-     "location": "131 W Columbia Ave, Telluride, CO 81435",
-     "agendaUrl": "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
-     "link": "https://www.telluridefire.com/files/5257dafba/Agenda+-August+18th%2C+2026.pdf",
-     "zoomLink": "",
-     "livestream": ""
-    }
-   ],
+   "upcoming": [],
    "recent": [
     {
      "source": "telluride",

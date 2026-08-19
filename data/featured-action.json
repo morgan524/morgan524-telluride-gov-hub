@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-18T21:32:04.586Z",
+ "generated": "2026-08-19T01:30:10.391Z",
  "pinned": true,
  "topic": "carhenge",
  "topicLabel": "Carhenge / Shandoka",
@@ -22,16 +22,16 @@
   "href": "/deep-dive-carhenge.html"
  },
  "meeting": {
-  "title": "HARC Meeting",
-  "sourceLabel": "Town of Telluride",
+  "title": "",
+  "sourceLabel": "",
   "date": "2026-08-19",
   "humanDate": "Wednesday, August 19",
   "time": "",
-  "location": "Rebekah Hall, 113 W Columbia Ave",
-  "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8020",
-  "hasAgenda": true,
-  "packetUrl": "https://telluride-co.civicweb.net/document/443013/",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
+  "location": "",
+  "agendaUrl": "",
+  "hasAgenda": false,
+  "packetUrl": "",
+  "zoomLink": "",
+  "livestream": ""
  }
 }
