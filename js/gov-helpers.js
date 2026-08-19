@@ -765,10 +765,7 @@ const MEETING_PREVIEWS = {
     "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended.",
 
   "med|2026-08-27|Regular Board Meeting":
-    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt.",
-
-  "county|2026-08-19|Board of County Commissioners Meeting":
-    "Board will consider routine county business at its regular meeting on August 19, 2026, in Telluride. Related legal notices indicate active foreclosure proceedings on two Telluride-area properties and ongoing estate matters in San Miguel County, though specific agenda items beyond standard administrative procedures were not detailed in available materials."
+    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1701,6 +1698,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Justin Chandler steps down from TSSC",
+    source: "Telluride Times",
+    date: "August 19, 2026",
+    firstSeen: "2026-08-19",
+    newsTopic: "recreation",
+    copy: "Justin Chandler stepped down in late July as executive director of the Telluride Ski and Snowboard Club after 27 years with the organization, including 23 as its top leader. The club grew from around 100 kids to nearly 470 on his watch, and never turned away a child who couldn't afford to join.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6cae457e-185e-4ed9-bbc1-9e4da84f0a99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/f5/cf59d7bf-15bd-4e78-a0aa-985f25e3905d/6a85651dcc57d.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "In Meta's trial, families of social media victims see a pivotal moment for online safety",
     source: "Telluride Times",
