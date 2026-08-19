@@ -436,10 +436,15 @@ async function uploadPdf(body, env) {
 
   await ghPutB64(env, path, dataB64, "Newsletter: upload document " + slug + " (Newsletter Desk)");
   const url = "https://livabletelluride.org/" + path;
+  // The path is already reduced to [a-z0-9-] segments plus "/" and ".pdf", so it
+  // needs no escaping — and encodeURIComponent() would percent-encode the
+  // slashes, producing read.html?doc=newsletter%2Ffoo%2Fbar.pdf. That works, but
+  // it is what a reader sees when they hover the link in a newsletter, and some
+  // mail clients mangle long percent-encoded query strings.
   return {
     ok: true,
     url,
-    readerUrl: "https://livabletelluride.org/read.html?doc=" + encodeURIComponent(path),
+    readerUrl: "https://livabletelluride.org/read.html?doc=" + path,
     path,
   };
 }

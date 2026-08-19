@@ -59,6 +59,8 @@
   .chk .ic{flex:0 0 16px}
   .ok{color:#1e7a3c}.warn{color:#9a6b00}.bad{color:#b3261e}
   #status{padding:6px 13px;font-size:12px;color:#6b6b6b;border-top:1px solid var(--line);min-height:26px}
+  /* Inline action inside the status line — reads as a link, not a toolbar button. */
+  .linkish{background:none;border:0;padding:0;font:inherit;color:var(--green);text-decoration:underline;cursor:pointer}
   .spin{display:inline-block;width:11px;height:11px;border:2px solid rgba(0,0,0,.2);border-top-color:var(--gold);border-radius:50%;animation:s .7s linear infinite;vertical-align:-1px}
   @keyframes s{to{transform:rotate(360deg)}}
   input[type=file]{display:none}
@@ -500,6 +502,29 @@ function suggestTopic(){
   return k.slice(0,40) || "documents";
 }
 $("btnpdf").onclick = ()=> $("pdffile").click();
+
+// Poll the published file until it actually answers. GitHub Pages needs a
+// build plus a CDN propagation after the Worker's commit, so the URL is dead
+// for a minute or two -- and a link inserted during that window is a link the
+// Desk has never verified. Nothing goes into the text until this returns true.
+// Same-origin (the Desk is served from livabletelluride.org), so a plain fetch
+// is fine; the cache-buster stops a negative response being reused.
+async function waitUntilLive(url, onTick){
+  const LIMIT_MS = 240000, STEP_MS = 3000, started = Date.now();
+  for(;;){
+    try{
+      const r = await fetch(url+"?cb="+Date.now(), { method:"HEAD", cache:"no-store" });
+      // A missing file on Pages is a 404 whose body is the HTML 404 page, so
+      // the status alone settles it; the content-type check catches a stray
+      // 200 that isn't the document.
+      if(r.ok && /pdf/i.test(r.headers.get("content-type")||"")) return true;
+    }catch(e){ /* offline or transient — keep trying until the deadline */ }
+    if(Date.now()-started > LIMIT_MS) return false;
+    onTick(Math.round((Date.now()-started)/1000));
+    await new Promise(r=>setTimeout(r, STEP_MS));
+  }
+}
+
 $("pdffile").addEventListener("change", async e=>{
   const f=e.target.files[0]; if(!f) return;
   $("pdffile").value="";
@@ -519,11 +544,31 @@ $("pdffile").addEventListener("change", async e=>{
       res = await api("/upload-pdf", { name:f.name, dataBase64:b64, topic, overwrite:true });
     }
     if(!res || !res.ok || !res.readerUrl) return setStatus("⚠ "+((res&&res.error)||"upload failed"));
-    insertBlock("["+String(label).replace(/[\[\]]/g,"")+"]("+res.readerUrl+")");
-    setStatus("✓ Uploaded to "+esc(res.path)+" — reader link inserted. It publishes within ~2 minutes. "
-      + "Direct file: <a href=\""+esc(res.url)+"\" target=\"_blank\" rel=\"noopener\">"+esc(res.url)+"</a>");
+
+    const link = "["+String(label).replace(/[\[\]]/g,"")+"]("+res.readerUrl+")";
+    setStatus('<span class="spin"></span> Committed to '+esc(res.path)+'. Waiting for it to publish before inserting the link…');
+    const live = await waitUntilLive(res.url, secs=>{
+      setStatus('<span class="spin"></span> Committed to '+esc(res.path)+'. Waiting for it to publish ('+secs+'s)… '
+        + 'nothing is inserted until the link is confirmed.');
+    });
+
+    if(!live){
+      // Deliberately does NOT insert. An unverified citation in a sent
+      // newsletter is worse than no link, so the choice is handed back.
+      pendingPdfLink = link;
+      setStatus('⚠ Uploaded to '+esc(res.path)+', but it still isn\'t answering on the site after 4 minutes, '
+        + 'so nothing was inserted. It may just be a slow publish — '
+        + '<a href="'+esc(res.url)+'" target="_blank" rel="noopener">check the file</a>, then '
+        + '<button id="pdfanyway" class="linkish">insert the link anyway</button>.');
+      const b=$("pdfanyway"); if(b) b.onclick=()=>{ insertBlock(pendingPdfLink); setStatus("Link inserted — verify it before sending."); };
+      return;
+    }
+
+    insertBlock(link);
+    setStatus("✓ Live and verified at <a href=\""+esc(res.readerUrl)+"\" target=\"_blank\" rel=\"noopener\">"+esc(res.readerUrl)+"</a> — link inserted.");
   }catch(err){ if(err.message!=="unauthorized") setStatus("⚠ "+err.message); }
 });
+let pendingPdfLink = "";
 
 function setStatus(h){ $("status").innerHTML=h; }
 
