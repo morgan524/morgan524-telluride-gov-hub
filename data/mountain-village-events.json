@@ -1,16 +1,5 @@
 [
   {
-    "title": "\"Best Day Ever\" Free Movie Screening",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/best-day-ever-free-movie-screening/",
-    "description": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice Award winner at the 2026 Mountainfilm",
-    "pubDate": "2026-08-18T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49592/best_day_ever.jpg"
-  },
-  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "link": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "description": "Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-",
@@ -405,5 +394,16 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49087/screenshot_2026-06-05_132605.png"
+  },
+  {
+    "title": "Music on the Green Presents Leon Timbo",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-leon-timbo/",
+    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Leon Timbo at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
+    "pubDate": "2026-09-18T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48871/leon_timbo_1800x900px_1.png"
   }
 ]
