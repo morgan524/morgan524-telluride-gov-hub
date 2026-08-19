@@ -388,6 +388,62 @@ async function uploadImage(body, env) {
   return { ok: true, url: "https://livabletelluride.org/" + path };
 }
 
+// Does this path already exist on main? ghPutB64 fetches the blob sha and
+// includes it, so a PUT to an occupied path OVERWRITES silently. That is fine
+// for timestamped photo uploads; it is not fine for a source document whose
+// descriptive filename is already linked from a sent newsletter.
+async function ghExists(env, path) {
+  const repo = (env.GITHUB_REPO || "morgan524/morgan524-telluride-gov-hub").trim();
+  const r = await fetch("https://api.github.com/repos/" + repo + "/contents/" + path + "?ref=main", {
+    headers: {
+      "Authorization": "Bearer " + env.GITHUB_TOKEN,
+      "Accept": "application/vnd.github+json",
+      "User-Agent": "livabletelluride-digest-worker",
+    },
+  });
+  return r.ok;
+}
+
+// ── /upload-pdf — host a Desk-uploaded source document ──
+// Newsletters cite plats, letters, memos and staff reports. This commits the
+// file under newsletter/<topic>/ — the same tree the /newsletter-pdf skill
+// publishes to, so hand-published and Desk-published documents stay together —
+// and returns the raw URL plus a /read.html viewer URL for the hyperlink.
+async function uploadPdf(body, env) {
+  if (!env.GITHUB_TOKEN) return { error: "Uploads aren't configured — the Worker needs its GITHUB_TOKEN secret." };
+  const dataB64 = String(body.dataBase64 || "");
+  if (!dataB64 || dataB64.length < 100) return { error: "No PDF data received." };
+  // ~8 MB of file. GitHub would take far more, but the Worker holds the whole
+  // body in memory and the Desk gets used on hotel wifi as often as not.
+  if (dataB64.length > 11_000_000) return { error: "PDF too large (max about 8 MB). Compress it, or split it into parts." };
+  if (!/^[A-Za-z0-9+/=]+$/.test(dataB64)) return { error: "Bad PDF encoding." };
+  // Magic bytes: base64 of "%PDF-". Catches a renamed .doc or an image.
+  if (!dataB64.startsWith("JVBERi0")) return { error: "That file isn't a PDF — it has to start with %PDF-." };
+
+  const clean = (v, fallback) => String(v || "").toLowerCase()
+    .replace(/\.pdf$/, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || fallback;
+  const topic = clean(body.topic, "documents");
+  const slug = clean(body.name, "document");
+  const path = "newsletter/" + topic + "/" + slug + ".pdf";
+
+  if (!body.overwrite && await ghExists(env, path)) {
+    return {
+      error: "A document already exists at " + path + ". Rename this one, or re-run with overwrite to replace it — "
+        + "replacing it changes what every already-sent newsletter linking that URL shows.",
+      exists: true, path,
+    };
+  }
+
+  await ghPutB64(env, path, dataB64, "Newsletter: upload document " + slug + " (Newsletter Desk)");
+  const url = "https://livabletelluride.org/" + path;
+  return {
+    ok: true,
+    url,
+    readerUrl: "https://livabletelluride.org/read.html?doc=" + encodeURIComponent(path),
+    path,
+  };
+}
+
 async function saveDigest(body, env) {
   if (!env.GITHUB_TOKEN) return { error: "Locking isn't configured yet — add a fine-scoped GitHub token (contents:write) as the Worker's GITHUB_TOKEN secret." };
   // Preflight. /save writes TWO files (the digest, then the lock marker); a
@@ -439,6 +495,7 @@ export default {
       if (url.pathname === "/send") return json(await send(body, env), 200, origin);
       if (url.pathname === "/save") return json(await saveDigest(body, env), 200, origin);
       if (url.pathname === "/upload-image") return json(await uploadImage(body, env), 200, origin);
+      if (url.pathname === "/upload-pdf") return json(await uploadPdf(body, env), 200, origin);
       return json({ error: "not found" }, 404, origin);
     } catch (e) {
       return json({ error: String((e && e.message) || e) }, 500, origin);

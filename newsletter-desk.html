@@ -115,6 +115,8 @@
       <span class="sep"></span>
       <button id="btnimg" title="Upload a photo — returns a hosted URL">🖼 Upload photo</button>
       <input type="file" id="file" accept="image/*">
+      <button id="btnpdf" title="Upload a PDF — inserts a link that opens in an online reader">📄 Upload PDF</button>
+      <input type="file" id="pdffile" accept="application/pdf,.pdf">
     </div>
     <textarea id="md" spellcheck="true" placeholder="Paste your newsletter text here.
 
@@ -477,6 +479,52 @@ $("file").addEventListener("change", async e=>{
     setStatus("✓ Uploaded "+r.w+"×"+r.h+" "+(r.png?"PNG":"JPEG")+" — hosted URL inserted. It publishes within ~2 minutes; the pre-flight image check will go green once it's live.");
   }catch(err){ if(err.message!=="unauthorized") setStatus("⚠ "+err.message); }
 });
+
+/* ---------------- PDF upload ---------------- */
+// Source documents (plats, letters, memos) are committed to
+// newsletter/<topic>/ and linked through /read.html, which shows them in a
+// reader on the site rather than firing off a bare download. The raw file URL
+// still works for anyone who wants it, and is shown in the status line.
+function readAsBase64(file){
+  return new Promise((resolve,reject)=>{
+    const fr=new FileReader();
+    fr.onload=()=>{ const s=String(fr.result||""); const i=s.indexOf(","); resolve(i<0?"":s.slice(i+1)); };
+    fr.onerror=()=>reject(new Error("Couldn't read that file."));
+    fr.readAsDataURL(file);
+  });
+}
+// Suggest a folder from the newsletter's kicker so a run of documents for one
+// story lands together, e.g. "Lift 7" -> newsletter/lift-7/.
+function suggestTopic(){
+  const k = ($("kicker").value||"").toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+  return k.slice(0,40) || "documents";
+}
+$("btnpdf").onclick = ()=> $("pdffile").click();
+$("pdffile").addEventListener("change", async e=>{
+  const f=e.target.files[0]; if(!f) return;
+  $("pdffile").value="";
+  if(f.size > 8*1024*1024) return setStatus("⚠ That PDF is "+(f.size/1048576).toFixed(1)+" MB. The limit is about 8 MB — compress it or split it.");
+  const topic = prompt("Folder for this document (groups it in the archive):", suggestTopic());
+  if(topic===null) return;
+  const label = prompt("Link text to show in the newsletter:", f.name.replace(/\.pdf$/i,"").replace(/[-_]+/g," "));
+  if(label===null) return;
+  setStatus('<span class="spin"></span> Uploading '+esc(f.name)+'…');
+  try{
+    const b64 = await readAsBase64(f);
+    let res = await api("/upload-pdf", { name:f.name, dataBase64:b64, topic });
+    if(res && res.exists){
+      // Overwriting replaces what already-sent newsletters linking that URL show,
+      // so it is never silent — the Desk asks, naming the path.
+      if(!confirm(res.error+"\n\nReplace the existing file?")) return setStatus("Upload cancelled — nothing changed.");
+      res = await api("/upload-pdf", { name:f.name, dataBase64:b64, topic, overwrite:true });
+    }
+    if(!res || !res.ok || !res.readerUrl) return setStatus("⚠ "+((res&&res.error)||"upload failed"));
+    insertBlock("["+String(label).replace(/[\[\]]/g,"")+"]("+res.readerUrl+")");
+    setStatus("✓ Uploaded to "+esc(res.path)+" — reader link inserted. It publishes within ~2 minutes. "
+      + "Direct file: <a href=\""+esc(res.url)+"\" target=\"_blank\" rel=\"noopener\">"+esc(res.url)+"</a>");
+  }catch(err){ if(err.message!=="unauthorized") setStatus("⚠ "+err.message); }
+});
+
 function setStatus(h){ $("status").innerHTML=h; }
 
 /* ---------------- Claude chat (edits the markdown) ---------------- */

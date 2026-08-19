@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document — Livable Telluride</title>
+<link rel="stylesheet" href="lt.css?v=8">
+<link rel="icon" href="/logo/icon-192.png?v=2">
+<style>
+:root{ --forest:#173d34; --sage:#dce9e2; --paper:#fffdf8; --ink:#22303c;
+       --mut:#6b7a80; --rule:#c9d6d6; --rust:#a8463c; }
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px 50px}
+.docbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;
+  margin:18px 0 12px}
+.docbar h1{font:700 25px/1.25 var(--serif,Georgia,serif);color:var(--forest);margin:0;flex:1 1 320px;
+  overflow-wrap:anywhere}
+.docbar .acts{display:flex;gap:9px;flex-wrap:wrap}
+.docbar a.btn{font:700 15.5px var(--sans,system-ui);text-decoration:none;border-radius:99px;
+  padding:10px 20px;border:1.5px solid var(--forest);color:var(--forest);background:#fff;white-space:nowrap}
+.docbar a.btn:hover{background:var(--sage)}
+.docbar a.btn.solid{background:var(--forest);color:#fff}
+.docbar a.btn.solid:hover{background:#245347}
+/* 80vh keeps the browser's own PDF controls on screen without the page itself
+   scrolling behind them. */
+.frame{border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:#f4f2ec;height:80vh;min-height:460px}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:12px;padding:26px 28px;
+  max-width:620px;margin:8px auto 0;text-align:center}
+.card h2{font:700 21px var(--serif,Georgia,serif);color:var(--forest);margin:0 0 10px}
+.card p{font-size:16.5px;line-height:1.6;color:var(--ink);margin:0 0 18px}
+.card a.btn{display:inline-block;font:700 17px var(--sans,system-ui);color:#fff;background:var(--forest);
+  border-radius:99px;padding:14px 30px;text-decoration:none}
+.note{font-size:14.5px;line-height:1.55;color:var(--mut);margin:12px 0 0}
+.err{color:var(--rust)}
+@media(max-width:700px){ .wrap{padding:0 14px 40px} .docbar h1{font-size:21px} }
+</style>
+</head>
+<body>
+<div id="lt-header"></div>
+<main class="wrap"><div id="app"></div></main>
+<div id="lt-footer"></div>
+
+<script src="/js/site-config.js"></script>
+<script src="/site.js?v=12"></script>
+<script>
+(function () {
+  'use strict';
+  var app = document.getElementById('app');
+
+  function esc(s){ return String(s == null ? '' : s)
+    .replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  // ?doc= is attacker-controllable, and this page renders it inside an iframe on
+  // our own origin. So it is validated as a SAME-ORIGIN RELATIVE PATH, not a
+  // URL: an allow-listed directory, a conservative character set, a .pdf
+  // extension, and no traversal. This rejects "https://evil.example/x.pdf",
+  // "//evil.example/x.pdf" and "newsletter/../../etc/passwd" alike. Anything
+  // that fails renders an error instead of being fetched.
+  // Case-insensitive extension: Desk uploads are always lowercase, but a
+  // hand-published file may be Foo.PDF and should still open.
+  var DOC_RE = /^(?:newsletter|assets)\/[A-Za-z0-9][A-Za-z0-9._\/-]*\.pdf$/i;
+
+  function docParam() {
+    var raw = '';
+    try { raw = new URLSearchParams(location.search).get('doc') || ''; } catch (e) { return ''; }
+    raw = raw.replace(/^\/+/, '');            // tolerate a leading slash
+    if (raw.indexOf('..') !== -1) return '';  // no traversal, before anything else
+    if (!DOC_RE.test(raw)) return '';
+    return raw;
+  }
+
+  function titleFrom(path) {
+    var file = path.split('/').pop().replace(/\.pdf$/i, '');
+    // "2008-lot-y-backman-memorandum" -> "2008 Lot Y Backman Memorandum"
+    return file.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim()
+      .replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function renderError() {
+    document.title = 'Document not found — Livable Telluride';
+    app.innerHTML = '<div class="card"><h2>That document link isn\'t valid</h2>'
+      + '<p class="err">This page only opens PDFs published on livabletelluride.org. '
+      + 'The link may have been truncated by an email client, or copied incompletely.</p>'
+      + '<a class="btn" href="/">Back to Livable Telluride</a></div>';
+  }
+
+  var doc = docParam();
+  if (!doc) { renderError(); return; }
+
+  var href = '/' + doc;
+  var title = titleFrom(doc);
+  document.title = title + ' — Livable Telluride';
+
+  // Phones are the split here, not screen width alone: iOS Safari renders only
+  // the first page of an iframed PDF and gives no way to scroll it, so an
+  // embed there is worse than useless. Handing the file to the OS viewer
+  // instead is the better reader on mobile, so that is what we offer.
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '')
+    || (window.matchMedia && window.matchMedia('(max-width: 760px)').matches);
+
+  var bar = '<div class="docbar"><h1>' + esc(title) + '</h1><div class="acts">'
+    + '<a class="btn solid" href="' + esc(href) + '" target="_blank" rel="noopener">Open full screen</a>'
+    + '<a class="btn" href="' + esc(href) + '" download>Download</a>'
+    + '</div></div>';
+
+  if (isMobile) {
+    app.innerHTML = bar
+      + '<div class="card"><h2>Read the document</h2>'
+      + '<p>This opens the PDF in your phone\'s own reader, where you can zoom and scroll properly.</p>'
+      + '<a class="btn" href="' + esc(href) + '" target="_blank" rel="noopener">Read the document</a>'
+      + '<p class="note">Published by Livable Telluride at livabletelluride.org</p></div>';
+  } else {
+    app.innerHTML = bar
+      + '<div class="frame"><iframe src="' + esc(href) + '#view=FitH" title="' + esc(title) + '"></iframe></div>'
+      + '<p class="note">If the document doesn\'t appear, your browser may be blocking embedded PDFs — '
+      + 'use <strong>Open full screen</strong> above.</p>';
+  }
+})();
+</script>
+</body>
+</html>
