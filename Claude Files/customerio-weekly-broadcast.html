@@ -33,7 +33,7 @@
     (meetings + one-event-per-day), so no one gets an empty email.
   - Chose one or more topics → meetings ONLY if they picked Government
     Meetings, plus a section per event topic they picked.
-  - {{ unsubscribe_url }} is Customer.io's built-in unsubscribe link.
+  - {% unsubscribe_url %} is Customer.io's built-in unsubscribe link.
 
   AFTER PASTING — verify ONCE:
   - The *_html blocks must render as HTML, NOT escaped text. Customer.io
@@ -104,6 +104,6 @@
   <tr><td class="sec-pad" style="padding:24px 34px 30px;border-top:1px solid #ddd6c8;">
     <div style="font-family:Georgia,serif;font-size:13px;font-weight:700;color:#21443c;">Livable Telluride</div>
     <div style="font-size:12px;color:#7a8a85;line-height:1.6;margin-top:4px;">Community information for Telluride, Mountain Village &amp; San Miguel County.<br>
-    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;&middot;&nbsp; <a href="https://livabletelluride.org/profile.html" style="color:#7a8a85;">Update your topics</a> &nbsp;&middot;&nbsp; <a href="{{ unsubscribe_url }}" style="color:#7a8a85;">Unsubscribe</a></div></td></tr>
+    <a href="https://livabletelluride.org" style="color:#7a8a85;">livabletelluride.org</a> &nbsp;&middot;&nbsp; <a href="https://livabletelluride.org/profile.html" style="color:#7a8a85;">Update your topics</a> &nbsp;&middot;&nbsp; <a href="{% unsubscribe_url %}" style="color:#7a8a85;">Unsubscribe</a></div></td></tr>
 
 </table></td></tr></table></body></html>

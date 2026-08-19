@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8322", "--bind", "127.0.0.1"],
       "port": 8322
+    },
+    {
+      "name": "brieflink-vite",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-lc", "cd '/Volumes/External/Dropbox (Personal)/Claude/Projects/Hyper2' && npx vite --port 5173 --strictPort"],
+      "port": 5173
     }
   ]
 }

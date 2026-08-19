@@ -77,19 +77,41 @@ phrase the same event:
 6. Append the ISO date so events with the same title on different
    days don't collapse.
 
-**Implementation** is `eventSourcePriority()` and `eventDedupKey()`
-inside the events-collect function in `js/gov-helpers.js`. The merged
-array is sorted by `(date asc, priority asc)` BEFORE the
-first-seen-wins filter, so the highest-priority source for each
-duplicate set is the one that survives.
+**Implementation** (rewritten 2026-08-18 — the previous version of this
+section described `eventSourcePriority()` / `eventDedupKey()` in
+`js/gov-helpers.js`, which no longer exist anywhere; events moved to a
+precomputed index and the doc was never updated):
 
-If you add a new event source in the future:
+Dedup now happens once, at build time, in `scripts/build-events-index.js`.
+`events.html` just renders `data/events-index.json` and does no merging of
+its own, so the builder is the only place to change this.
 
-- Pick its priority slot in `eventSourcePriority()` (0 = canonical
-  origin, 4 = re-listing aggregator).
-- If its titles include venue suffixes that other sources don't
-  mention, extend `eventDedupKey()`'s suffix-strip regex so the
-  cross-source match still works.
+- **Priority is the key order of the `SOURCES` object** — first entry wins.
+  There is no separate priority table: a venue's own feed is listed above the
+  aggregators that re-list it (`sherbino-events` above `ouray-ridgway-events`,
+  `telluride-farmers-market` above `koto-community-events`).
+- **The key** is `dedupTitle(title).slice(0, 60) + '|' + date`.
+- `normTitle()` decodes entity apostrophes, **deletes** apostrophes, turns
+  `&` into `and`, and maps every other punctuation run to a space.
+  Deleting rather than blanking the apostrophe is load-bearing: while it
+  became a space, `Ridgway Farmer's Market` keyed as `ridgway farmer s
+  market` and published alongside `Ridgway Farmers Market`.
+- `dedupTitle()` adds one narrow rule used *only* for the key: strip a
+  trailing `live at <venue>`, so `DARRELL SCOTT - Live at The Sherbino`
+  matches `DARRELL SCOTT`. It is deliberately not a general "strip trailing
+  at X" — that would merge `Yoga at Hartwell Park` into a plain `Yoga`.
+
+Two other title normalizers must stay in step with `normTitle()`, and both
+missed the farmers-market duplicate until 2026-08-18:
+`normTitle()` in `scripts/content-review.js` (the daily duplicate check) and
+`tkey()` in `scripts/weekly-email.js` (the digest's cross-day dedup).
+
+If you add a new event source:
+
+- Insert it in `SOURCES` at the right precedence — above aggregators if it is
+  the origin, below them if it re-lists other people's events.
+- Check for new title-suffix habits; extend `dedupTitle()` only if the suffix
+  is unambiguous, and add a counter-example to the tests in your head first.
 
 ## Per-group logos on Gov-Hub recurring meetings
 
