@@ -174,6 +174,19 @@
     "endDate": "2026-09-15"
   },
   {
+    "title": "\"Best Day Ever\" Free Movie Screening",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/best-day-ever-free-movie-screening/",
+    "date": "2026-08-18",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49592/best_day_ever.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the Audience Choice Award winner at the 2026 Mountainfilm",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
     "href": "https://townofmountainvillage.com/explore/events/all-events/eco-grief-workshop-between-grief-gratitude-where-love-loss-meet-in-a-changing-world/",
     "date": "2026-08-18",
@@ -211,19 +224,6 @@
     "source": "Telluride.com",
     "desc": "Join TMVOA and Telluride Brewing Company for a Community Game Night. Games & drinks provided.",
     "type": "Community"
-  },
-  {
-    "title": "\"Best Day Ever\" Free Movie Screening",
-    "href": "https://koto.org/event/best-day-ever-free-movie-screening/",
-    "date": "2026-08-18",
-    "time": "6:30 PM",
-    "location": "Telluride Conference Center, Mountain Village",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2026/07/BEST-DAY-EVER.webp",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Best Day Ever: A Free Community Film Screening Tuesday, August 18, 2026 6:30 PM Telluride Conference Center Free and Open to the Public Join Telluride Adaptive Sports Program (TASP) for a free community screening of Best Day Ever, the…",
-    "type": "Arts & Film"
   },
   {
     "title": "Functional Fitness - Strength & Mobility Training For Women",
