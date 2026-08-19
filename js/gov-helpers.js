@@ -455,6 +455,14 @@ const DEEP_DIVE_UPDATES = [
 // (data/daily-questions.json); votes live in Firestore daily_questions/{date}.
 const DAILY_QUESTIONS = [
   {
+    date: "2026-08-19",
+    title: "A cap on how much your home can appreciate",
+    body: "Town Council is expected to set a sale price appreciation cap under municipal code. The idea behind a cap like this is straightforward — limit runaway resale prices and keep homes within reach of working residents. But the tension is real. Property owners reasonably ask whether the town should be able to limit what they can earn on an asset they bought and maintain. Others will argue that without some constraint, the market keeps doing what it's been doing up here. Neither side is wrong, exactly.\n\nWhere do you land on the town putting a ceiling on home price appreciation?",
+    choices: ["Good tool for affordability", "Government shouldn't cap gains", "Depends on the details", "It's complicated"],
+    sourceUrl: "/gov-hub.html",
+    topics: ["meeting"]
+  },
+  {
     date: "2026-08-18",
     title: "Vesting a plan: locked in, or just getting started?",
     body: "The Planning & Zoning Commission is set to consider a site-specific development plan vesting notice for a local project. A vesting notice, when approved, can lock in the rules that apply to a development — protecting the applicant from code changes down the road. That's the point for developers: predictability. The tension for neighbors is that it can also limit the community's ability to adjust course if circumstances change. Nothing's decided yet — this is a commission review, not a final vote. So: does locking in a development plan protect good projects, or tie the community's hands?",
@@ -760,9 +768,89 @@ const MEETING_PREVIEWS = {
     "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt.",
 
   "county|2026-08-19|Board of County Commissioners Meeting":
-    "Board will consider routine county business at its regular meeting on August 19, 2026, in Telluride. Related legal notices indicate active foreclosure proceedings on properties in Mountain Village and Telluride, ongoing estate matters, and a federal environmental review of a large hazardous fuels project in the region."
+    "Board will consider routine county business at its regular meeting on August 19, 2026, in Telluride. Related legal notices indicate active foreclosure proceedings on two Telluride-area properties and ongoing estate matters in San Miguel County, though specific agenda items beyond standard administrative procedures were not detailed in available materials."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
+  {
+    title: "2026 Chamber Meeting, December",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-december/",
+    img: ""
+  },
+  {
+    title: "Noel Night",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 4, 2026",
+    newsTopic: "community",
+    copy: "Community shopping event and celebration.",
+    href: "https://norwoodcolorado.com/event/noel-night-3/",
+    img: ""
+  },
+  {
+    title: "West End Parade of Lights & Elfin Eve",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "December 3, 2026",
+    newsTopic: "arts-culture",
+    copy: "Holiday parade and festival.",
+    href: "https://norwoodcolorado.com/event/west-end-parade-of-lights-elfin-eve-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, November",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "November 10, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-november/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, October",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "October 13, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-october/",
+    img: ""
+  },
+  {
+    title: "Pioneer Day",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 26, 2026",
+    newsTopic: "community",
+    copy: "Celebration of local history and pioneers.",
+    href: "https://norwoodcolorado.com/event/pioneer-day-2/",
+    img: ""
+  },
+  {
+    title: "2026 Chamber Meeting, September",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "September 8, 2026",
+    newsTopic: "community",
+    copy: "Monthly Chamber of Commerce meeting open to all.",
+    href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Fourth Friday Films, August",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 21, 2026",
+    newsTopic: "arts-culture",
+    copy: "Outdoor movie screening with popcorn and drinks available.",
+    href: "https://norwoodcolorado.com/event/fourth-friday-films-august-2/",
+    img: ""
+  },
   {
     title: "News Release: Road and Bridge Superintendent Placed on Paid Admin Leave",
     source: "Ouray County",
@@ -901,6 +989,16 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "infrastructure",
     copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago With progress on the Ouray side of Imogene Pass Jeep road nearing completion, plans are being made for its dedication. The date has tentatively been set for Sunday, Aug. 26, at or near ",
     href: "https://www.ouraynews.com/2026/08/12/looking-back-20260813-0238-359314/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Fall Foliage Tour Contest 🍂",
+    source: "Norwood Colorado",
+    sourceKey: "norwood",
+    date: "August 12, 2026",
+    newsTopic: "community",
+    copy: "Norwood s putting on its best autumn colors — time to grab your camera and go see them all. Here s the deal: Hit all 9 spots around town, snap 2 photos [ ]",
+    href: "https://norwoodcolorado.com/event/fall-foliage-tour-contest-%f0%9f%8d%82/",
     img: ""
   },
   {
@@ -3622,81 +3720,70 @@ const KOTO_COMMUNITY_EVENTS = [
 
 const WILKINSON_EVENTS = [
   {
-    title: "Eco Series: Between Grief & Gratitude",
-    link: "https://telluridelibrary.libcal.com/event/17177327?hs=a",
-    description: "8:30 AM – 10:00 AM · Between Grief & Gratitude Where Love and Loss Meet in a Changing World Join Lauren Norton of Through the Woods Doula, Mollie Theis of EcoAction Partners and the Wilkinson Public Library for a four-part series on navigating climate anxiety and eco-grief. The first two sessions will consist of a facilitated community conversation connecting our love of these landscapes with the challenge of the climate crisis at our doorsteps. After exploring our shared relationship with the current reality, the second two sessions will provide opportunities to express pain, grief, love and hope through various mediums including local poetry and group art projects.",
-    pubDate: "2026-08-18T14:30:00.000Z",
+    title: "Beans & Books",
+    link: "https://telluridelibrary.libcal.com/event/16249442?hs=a",
+    description: "8:30 AM – 9:30 AM · What better way to start out your day than by sipping on a hot cup of coffee while chatting with other bibliophiles about books? It&#39;s a chance to talk about whatever you have been reading (or listening to) and hear about what other folks have been reading (or listening to). Drop in anytime at the beautiful Coffee Cowboy General Store on the corner of Pacific and Willow the third Wednesday of every month!",
+    pubDate: "2026-08-19T14:30:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "Coffee Cowboy General Store",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1762980178.jpg"
+  },
+  {
+    title: "Baby Bop",
+    link: "https://telluridelibrary.libcal.com/event/16610081?hs=a",
+    description: "9:00 AM – 10:00 AM · Baby Bop is a fun, upbeat babywearing dance class designed for caregivers and little ones to move together through easy-to-follow routines. Expect feel-good music, simple choreography, and a supportive atmosphere focused on bonding, movement, and joy — no dance experience required! Baby Bop es una clase de baile divertida y animada, dise&ntilde;ada para que cuidadores y peque&ntilde;os se muevan juntos mediante rutinas f&aacute;ciles de seguir. Te espera m&uacute;sica alegre, coreograf&iacute;as sencillas y un ambiente de apoyo centrado en el v&iacute;nculo, el movimiento y la alegr&iacute;a; &iexcl;no se requiere experiencia previa en baile!",
+    pubDate: "2026-08-19T15:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Program Room",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_30_12_01_02.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_26_16_45_45.png"
   },
   {
-    title: "Storytime / Hora de Cuentos",
-    link: "https://telluridelibrary.libcal.com/event/16772776?hs=a",
-    description: "10:30 AM – 11:30 AM · English stories, songs, rhymes and fun for children of all ages and their parents or caregivers. Cuentos, canciones, rimas y diversi&oacute;n en ingl&eacute;s para ni&ntilde;os de todas las edades y sus padres o cuidadores.",
-    pubDate: "2026-08-18T16:30:00.000Z",
+    title: "Radio Biblioteca",
+    link: "https://telluridelibrary.libcal.com/event/17021877?hs=a",
+    description: "12:00 PM – 1:00 PM · Escucha a KOTO Miercoles por Medio y conoce las noticias y eventos que tendremos en nuestra comunidad &bull; Tune in to Koto 91.7 FM every other Wednesday and learn about the news and events we will have in our community",
+    pubDate: "2026-08-19T18:00:00.000Z",
+    source: "wilkinson",
+    sourceLabel: "Wilkinson Public Library",
+    category: "Library Event",
+    location: "KOTO Radio Station",
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_06_05_16_47_42.png"
+  },
+  {
+    title: "Mahjongg for Independent Players",
+    link: "https://telluridelibrary.libcal.com/event/16767662?hs=a",
+    description: "1:00 PM – 3:00 PM · Looking to enjoy an afternoon of friendly games of mah-jongg for independent players? Join us at the Library every Wednesday from 1-3pm. Bring your 2026 card if you have one, although we have plenty of loaners if you don't! We'll have tables, cloths, chairs, and sets.   NOTE: This is not a mah-jongg lesson. A general knowledge of the game is necessary to join. Please register in advance if you&#39;d like to join so we can make sure we have enough tables set up for everyone!",
+    pubDate: "2026-08-19T19:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1755887187.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_04_21_13_46_33.jpg"
   },
   {
-    title: "Teen Cook",
-    link: "https://telluridelibrary.libcal.com/event/16935720?hs=a",
-    description: "2:00 PM – 3:00 PM · Join us every Tuesday this summer for Teen Cook, where we prepare a variety of delicious foods and get to try out something new.",
-    pubDate: "2026-08-18T20:00:00.000Z",
+    title: "Teen Movie and Ice Cream Club",
+    link: "https://telluridelibrary.libcal.com/event/16935740?hs=a",
+    description: "3:00 PM – 5:00 PM · Join us every Wednesday this summer for Teen Movie and Ice Cream Club. We will watch a movie on the teen TV with free ice cream available!",
+    pubDate: "2026-08-19T21:00:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Teen Area",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_20_18_51_32.png"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_22_12_40_26.jpg"
   },
   {
-    title: "[WEATHER BACKUP] Back to School I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16788235?hs=a",
-    description: "2:30 PM – 3:30 PM",
-    pubDate: "2026-08-18T20:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Program Room",
-    imageUrl: ""
-  },
-  {
-    title: "Back to School I Heart Art",
-    link: "https://telluridelibrary.libcal.com/event/16574867?hs=a",
-    description: "2:30 PM – 3:30 PM",
-    pubDate: "2026-08-18T20:30:00.000Z",
+    title: "Plant Party-Props for Props",
+    link: "https://telluridelibrary.libcal.com/event/16593993?hs=a",
+    description: "5:30 PM – 7:00 PM · Props for Props and craft Making the most of your plant propagating process. Learn what plants can be propagated and how.  Craft: a macrame plant hanger",
+    pubDate: "2026-08-19T23:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
     category: "Library Event",
     location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_14_13_49_59.png"
-  },
-  {
-    title: "Talking Gourds Presents: Stories and Poems - Art Goodtimes & Scott A. Nicolay",
-    link: "https://telluridelibrary.libcal.com/event/15798226?hs=a",
-    description: "5:15 PM – 7:00 PM · The Telluride Institute's Talking Gourds Poetry Program is hosting a live Stories & Poems series at the Wilkinson Public Library magazine room on the third Tuesday of every month at 5:15 pm. Following the featured poet&#39;s or story teller&#39;s reading we will hold a Talking Gourds sharing circle going around the room to let everyone speak. Attendees are encouraged to bring their own work or someone else's that they like to share. For more information, visit the Telluride Institute Talking Gourds website: tellurideinstitute.org/talking-gourds Jan. 20 / Tanya Ishikawa of Montrose Feb. 17 / Karen Bellerose of Lawson Mar. 17 / Mary Hearding of Rico Apr 21 / Joan Shapiro of Ridgway May 19 / Danny Rosen of Fruita June 16 / Paulo Munguia of Montrose July 21 / Peter Waldor of Trout Lake Aug. …",
-    pubDate: "2026-08-18T23:15:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "Lower Terrace - outdoors",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_05_04_15_58_44.jpg"
-  },
-  {
-    title: "Spanish Happy Hour",
-    link: "https://telluridelibrary.libcal.com/event/16008002?hs=a",
-    description: "5:30 PM – 6:30 PM · Practice your Spanish skills with other Spanish speakers at La Cocina. The Library will provide appetizers, and the bar will be available for you to purchase a beverage of your choice. Registration is not required, but it helps us have an idea of how many people will be in attendance, and therefore how much food to order.  All levels welcome!",
-    pubDate: "2026-08-18T23:30:00.000Z",
-    source: "wilkinson",
-    sourceLabel: "Wilkinson Public Library",
-    category: "Library Event",
-    location: "La Cocina de Luz Restaurant",
-    imageUrl: "https://d68g328n4ug0e.cloudfront.net/data/feat_img/6460/19928/1715701794.jpg"
+    imageUrl: "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_15_14_04_17.png"
   }
 ];
 
@@ -4301,7 +4388,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "Fall Registration is NOW OPEN",
     link: "https://events.ourayridgwayevents.com/event/fall-registration-is-now-open-at-weehawken-creative-arts",
     description: "Whether your child dreams of dancing across the stage, flying through the air on silks, mastering hip hop, ballet, jazz, tap, acro, or finding a place where they truly belong—we have a class for them. **Celebrating 19 Years of Weehawken Dance!** Join hundreds of students from across the region in a program that builds confidence, friendships, creativity, community and lifelong memories. Weehawken offers Dance (ballet, tap, jazz, lyrical, west african & more!) Aerial (silks & lyra) Acro Performance Opportunities -- all youth students will perform in THE NUTCRACKER in December in Montrose! Ages 3 through Adult Montrose • Ridgway • Ouray Don't wait—many classes fill quickly! **Registration is now open! **dance.weehawkenarts.org** View on site | Email this event",
-    pubDate: "2026-08-18T06:00:00.000Z",
+    pubDate: "2026-08-19T06:00:00.000Z",
     endDate: "2026-08-23",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4310,22 +4397,10 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53483716128682/huge/d746bb45a4863fae593b7f212e308bf06efa29c5.jpg"
   },
   {
-    title: "Functional Fitness - Strength & Mobility Training For Women",
-    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
-    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
-    pubDate: "2026-08-18T14:15:00.000Z",
-    endDate: "2026-10-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Weehawken Ridgway (Old Schoolhouse)",
-    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
-  },
-  {
     title: "On Display - Roots and Rhythms",
     link: "https://events.ourayridgwayevents.com/event/ongoing-roots-and-rhythms",
     description: "Roots & Rhythms features mixed media paintings by Julia Reid and bentwood sculptures by Ethan Wortis. Through layered textures, organic forms, and expressive movement, the exhibition explores the connection between memory and transformation—rooted in what came before, flowing toward what is possible. The exhibition remains on view until August 31st, with gallery hours Monday–Wednesday and Friday, 9 a.m.–4 p.m.st View on site | Email this event",
-    pubDate: "2026-08-18T15:00:00.000Z",
+    pubDate: "2026-08-19T15:00:00.000Z",
     endDate: "2026-08-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4337,7 +4412,7 @@ const OURAY_RIDGWAY_EVENTS = [
     title: "On Display: PAWS for Art Gallery Asian-themed show",
     link: "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
     description: "Our gallery across the parking lot from the Second Chance Thriftshop is featuring an Asian-themed art show through August. Stop by to see the variety and quality of our offerings! View on site | Email this event",
-    pubDate: "2026-08-18T16:00:00.000Z",
+    pubDate: "2026-08-19T16:00:00.000Z",
     endDate: "2026-08-31",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4346,74 +4421,16 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/53621678601741/huge/19c8fd1126bf67093819de3139e06e71a7d0cf8d.jpg"
   },
   {
-    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
-    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
-    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
-    pubDate: "2026-08-18T16:00:00.000Z",
-    endDate: "2026-09-25",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
-  },
-  {
     title: "On Display: The 610 Arts Annual Photography Invitational ~ featuring works by Gary Slane & Eric Phillips",
     link: "https://events.ourayridgwayevents.com/event/Ongoing-610-arts-annual-photography-invitational-featuring-works-by-gary-slane-eric-phillips",
     description: "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational, featuring the work of Gary Slane of Montrose and Eric Phillips of Colorado’s Gunnison Valley. This special exhibition showcases two accomplished photographers whose distinct artistic perspectives celebrate the beauty, power, and wonder of the natural world. Join us for an Artist Reception on Friday, July 10, from 5:00–7:00 PM, where guests will have the opportunity to meet the artists, learn about their creative processes, and enjoy an evening surrounded by extraordinary imagery from across the American West and beyond. Gary Slane Montrose photographer Gary Slane has devoted years to capturing breathtaking landscapes, wildlife, and night skies throughout North America. …",
-    pubDate: "2026-08-18T18:00:00.000Z",
+    pubDate: "2026-08-19T16:00:00.000Z",
     endDate: "2026-08-28",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "The 610 Arts Collective",
     imageUrl: "https://localist-images.azureedge.net/photos/53311891403836/huge/5ed79c16e243d3edcc6923539da943575df4cc1b.jpg"
-  },
-  {
-    title: "BRITLEY & MATT",
-    link: "https://events.ourayridgwayevents.com/event/britley-matt",
-    description: "Live Music\\ https://coloradoboydepot.com/calendar/ Show starts at 6PM View on site | Email this event",
-    pubDate: "2026-08-18T22:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "687 N Cora Street, Ridgway, CO 81432",
-    imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
-  },
-  {
-    title: "Decker Room New Volunteer Orientation",
-    link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
-    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP. View on site | Email this event",
-    pubDate: "2026-08-18T22:30:00.000Z",
-    endDate: "2026-09-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
-  },
-  {
-    title: "Taco Tuesday Live Music: Ponderosa (Telluride Mushroom Fest Feature)",
-    link: "https://events.ourayridgwayevents.com/event/taco-tuesday-live-music-ponderosa-telluride-mushroom-fest-feature",
-    description: "If you’ve been looking for an excuse to come hang out with us at The Adobe Inn, we are throwing another one of our casual community pop-ups this week! It’s the perfect chance to skip cooking, soak in those gorgeous, classic Ridgway views, and enjoy the cozy, homey vibe at one of Ridgway's longest standing venues. Stop by this Tuesday evening for a great plate of food, cold drinks, and a live acoustic string set by Ponderosa—the talented young group visiting the area following their recent showcase performance at the historic Sheridan Opera House during the Telluride Mushroom Festival. They bring a really unique acoustic roots sound, layering flute, acoustic guitar, banjo, and bass. Show will be from 6 until 8pm! On our Menu: Fish Tacos (Crispy or Grilled)Chicken TingaStreet Style CornFrom our Bar: Cold beerCraft cocktailsFlowing frozen margs! …",
-    pubDate: "2026-08-18T23:00:00.000Z",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Adobe Inn",
-    imageUrl: "https://localist-images.azureedge.net/photos/53734141247963/huge/b074b0eef51fc9113d29a2c8409e785926abd25a.jpg"
-  },
-  {
-    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
-    link: "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
-    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions. View on site | Email this event",
-    pubDate: "2026-08-18T23:30:00.000Z",
-    endDate: "2026-09-15",
-    source: "oray",
-    sourceLabel: "Ouray Ridgway Calendar",
-    category: "Community Event",
-    location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg"
   },
   {
     title: "CO-150: A League of Their Own",
@@ -4472,6 +4489,30 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "St. Elmo Tavern",
     imageUrl: "https://localist-images.azureedge.net/photos/53126599615246/huge/97aedc5531194289457c49a360d9af1390f0938d.jpg"
+  },
+  {
+    title: "Functional Fitness - Strength & Mobility Training For Women",
+    link: "https://events.ourayridgwayevents.com/event/functional-fitness-strength-mobility-training-for-women",
+    description: "Welcome to Ridgway's strength and mobility training for women! Functional means we focus on movements that mimic everyday activities and improve overall mobility, strength and fitness. Exercises often work multiple muscle groups simultaneously, improving coordination and stability. I love the female group setting because we get a chance to really connect and not only get stronger physically, but also build support and community. Come for a drop in and get a taste or commit long term to transformation, vitality and longevity. All levels are welcome. Let's do hard things together! Instructor: Jenn Turner “Jenn may be a highly certified instructor, but her greatest strength lies in creating a welcoming space for women to meet, gather, and sweat. The workouts are always fun, and the next-day burn is guaranteed.” — E.C. …",
+    pubDate: "2026-08-20T14:15:00.000Z",
+    endDate: "2026-10-15",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Weehawken Ridgway (Old Schoolhouse)",
+    imageUrl: "https://localist-images.azureedge.net/photos/53312790468311/huge/860fbc87ce3cc92e25c09e723732d04292df18ba.jpg"
+  },
+  {
+    title: "Ongoing Exhibition: BIG BOX-Big New Work By T-Bone",
+    link: "https://events.ourayridgwayevents.com/event/ongoing-exhibition-big-box-big-new-work-by-t-bone",
+    description: "The Big Box Show! Bigger, better and more. This groundbreaking local art won't last long! Ridgway's own T-Bone and his quintessential colorful cardboard paintings take on new life and meaning in the Decker where they have room to stretch out and really TALK to you! Come and be delighted by the playful T-Bone experience. Stay to cool off, craft, co-work, hang out. or plan your own future exhibition or event in the space! The Decker is a unique community rental-art gallery hybrid, incubated and managed by the Town of Ridgway, in cooperation with our sister ARTSpace gallery next door. View on site | Email this event",
+    pubDate: "2026-08-20T16:00:00.000Z",
+    endDate: "2026-09-25",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/53736310463128/huge/ce8867efeba0934913913ee401aff4479a074ba5.jpg"
   },
   {
     title: "Motel Prophets - Live @ Floating Lotus Brewery",
@@ -5386,6 +5427,28 @@ const OURAY_RIDGWAY_EVENTS = [
     category: "Community Event",
     location: "687 N Cora Street, Ridgway, CO 81432",
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
+  },
+  {
+    title: "Decker Room New Volunteer Orientation",
+    link: "https://events.ourayridgwayevents.com/event/decker-room-new-volunteer-orientation",
+    description: "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the events and programs that take place here. Volunteers should be able to commit to consistent volunteer hours each month! Email decker@ridgwayfuse.org for info and to RSVP. View on site | Email this event",
+    pubDate: "2026-09-15T22:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52568082541214/huge/49b7c4c5e83ca4147b872fdb5be7fe87b78551c5.jpg"
+  },
+  {
+    title: "Ridgway FUSE Creative Main Street - Committee Meeting",
+    link: "https://events.ourayridgwayevents.com/event/ridgway-fuse-creative-main-street-committee-meeting",
+    description: "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents may apply to serve on the FUSE committee here. Email Tera Wick at twick@town.ridgway.co.us or call 970-626-5308 x 215 with questions. View on site | Email this event",
+    pubDate: "2026-09-15T23:30:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Decker Community Room",
+    imageUrl: "https://localist-images.azureedge.net/photos/52305506266326/huge/6e40de5340fac46ca9bf9f33e9c31ed9ab5985ce.jpg"
   },
   {
     title: "Native Rhythms, Native Jazz: R. Carlos Nakai, AmoChip Dabney, & Will Clipman – at the Montrose Pavilion",

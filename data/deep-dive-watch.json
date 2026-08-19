@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-19T03:54:26.127Z",
+ "generated": "2026-08-19T06:57:16.632Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -79,6 +79,12 @@
    "upcoming": [],
    "recent": [
     {
+     "source": "fire",
+     "date": "2026-08-18",
+     "title": "Board of Directors Meeting",
+     "snippet": "The Telluride Fire Protection District board meets August 18th at 5:30 p.m. at 131 W. Columbia Ave. Station 3 gets another update — that project has been moving through the district's planning for a…"
+    },
+    {
      "source": "telluride",
      "date": "2026-08-11",
      "title": "Town Council - Aug 11 2026",
@@ -93,6 +99,7 @@
    ],
    "developments": [],
    "stale": [
+    "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01.",
     "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01.",
     "Wildfire Resiliency: county discussed it on 2026-08-05 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-06-01."
    ]
