@@ -1,5 +1,17 @@
 [
   {
+    "title": "Democrats narrow their list of 2028 presidential convention sites to Boston, Denver and Philadelphia",
+    "source": "Telluride Times",
+    "date": "August 20, 2026",
+    "firstSeen": "2026-08-20",
+    "newsTopic": "community",
+    "copy": "Democrats have narrowed their 2028 convention host cities to Boston, Denver, and Philadelphia, with a final decision expected later this year. Denver last hosted in 2008, Philadelphia in 2016, and Boston in 2004. Republicans have already locked in Houston for their 2028 convention.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_d68fb444-12cc-584f-936d-be221cb40cc9.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/cb/3cb9fc3d-4f1b-5910-a4fe-3624d3ce77dd/6a86d287ccb9a.image.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "The business behind the celebration",
     "source": "Telluride Times",
     "date": "August 20, 2026",
@@ -793,33 +805,6 @@
     "copy": "",
     "href": "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
     "img": "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
-  },
-  {
-    "title": "Black Bear Pass Now Open",
-    "source": "San Miguel County",
-    "date": "August 3, 2026",
-    "newsTopic": "recreation",
-    "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
-    "img": ""
-  },
-  {
-    "title": "Numerous Highway Closures",
-    "source": "San Miguel County",
-    "date": "July 22, 2026",
-    "newsTopic": "infrastructure",
-    "copy": "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
-    "img": ""
-  },
-  {
-    "title": "Tomboy Road",
-    "source": "San Miguel County",
-    "date": "July 21, 2026",
-    "newsTopic": "infrastructure",
-    "copy": "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
-    "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    "img": ""
   },
   {
     "title": "Shandoka, Carhenge Lots Closed",

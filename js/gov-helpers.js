@@ -845,7 +845,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
     img: ""
   },
   {
@@ -855,7 +855,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
     img: ""
   },
   {
@@ -865,7 +865,77 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax moves closer to ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "government",
+    copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    img: ""
+  },
+  {
+    title: "County road superintendent arrested on suspicion of DUI",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "infrastructure",
+    copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
+    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/",
+    img: ""
+  },
+  {
+    title: "Ouray won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
+    img: ""
+  },
+  {
+    title: "Chamber music fest returns to San Juans",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
+    img: ""
+  },
+  {
+    title: "Ouray County Fair 2026",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    img: ""
+  },
+  {
+    title: "County OKs flood construction contract",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
+    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
     img: ""
   },
   {
@@ -877,26 +947,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Ouray County has placed Road and Bridge Superintendent Ty Barger on paid administrative leave",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=959",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
-  },
-  {
-    title: "Ridgway town council asks county for 15% of proposed disaster recovery sales tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 17, 2026",
-    newsTopic: "government",
-    copy: "The Ridgway Town Council asked Ouray County to consider a slightly higher distribution of funds from a proposed disaster recovery sales tax fund, while requesting more clarification on a possible construction materials use tax at a regular meeting Wednesday night. Councilors were more open to the di",
-    href: "https://www.ouraynews.com/2026/08/17/ridgway-town-council-asks-county-15-proposed-disaster-recovery-sales-tax/",
-    img: ""
-  },
-  {
-    title: "Bear killed after entering Ridgway home, killing chickens",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 17, 2026",
-    newsTopic: "recreation",
-    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home on Saturday after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins se",
-    href: "https://www.ouraynews.com/2026/08/17/bear-killed-entering-ridgway-home-killing-chickens/",
-    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -926,56 +976,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We are glad that you will be joining our Fall Virtual Study. Here are the details so that you can get the information on your calendar and order your book. Please make note from below that we have a NEW ZOOM LINK. Contact us with quest...",
     href: "https://stpatrickstelluride.com/2026/parish-news/fall-tuesday-virtual-information/",
-    img: ""
-  },
-  {
-    title: "‘Pinched on every front’",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "community",
-    copy: "One breezy afternoon in mid-July, Mike Potter s phone started making all kinds of noise. “It goes, beep, beep, beep, beep!” shouted the Ridgway rancher, brandishing his flip phone from the pocket of his mud-stained jeans. “And boy,” he added, “I started doing this,” fingers massaging his temples and",
-    href: "https://www.ouraynews.com/2026/08/12/pinched-every-front/",
-    img: ""
-  },
-  {
-    title: "Flood work could begin within week",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County officials said Tuesday that flood mitigation work below the Gold Mountain Fire’s burn scar could begin as soon as next week, while warning that storms in the coming days could trigger further debris flows and accompanying property damage. County Attorney Leo Caselli said at a community ",
-    href: "https://www.ouraynews.com/2026/08/12/flood-work-begin-within-week/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Firefighter base moves to Gunnison",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The incident command post for the Gold Mountain Fire relocated to the Gunnison County Fairgrounds Saturday as Rocky Mountain Complex Incident Management Team 2 took over for Team 1 and combined efforts to focus more on the Elk Fire near Lake City. Firefighters from across the country camped at the O",
-    href: "https://www.ouraynews.com/2026/08/12/firefighter-base-moves-gunnison/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County fair carries on",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The night the Gold Mountain Fire started, the Cornell family anxiously watched the fire spreading toward their fenced livestock, the billowing smoke filling the canyon. They decided to load up their horses, goats and the 4-H lambs into trailers and evacuate. They took the 11 animals from their pastu",
-    href: "https://www.ouraynews.com/2026/08/12/county-fair-carries/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "We need to stand firm to preserve alpine tundra",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: The July 23 guest column by Sue Dreamweaver Spielman was excellent and brings up so many issues that we regular backcountry users experience. I have been recreating in this area since 1979. I’m a Jeep driver, backpacker, hiker and climber. I moved away from the area for a while. I have ",
-    href: "https://www.ouraynews.com/2026/08/12/need-stand-firm-preserve-alpine-tundra/?ta_paidstory",
     img: ""
   },
   {
@@ -1662,6 +1662,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Democrats narrow their list of 2028 presidential convention sites to Boston, Denver and Philadelphia",
+    source: "Telluride Times",
+    date: "August 20, 2026",
+    firstSeen: "2026-08-20",
+    newsTopic: "community",
+    copy: "Democrats have narrowed their 2028 convention host cities to Boston, Denver, and Philadelphia, with a final decision expected later this year. Denver last hosted in 2008, Philadelphia in 2016, and Boston in 2004. Republicans have already locked in Houston for their 2028 convention.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_d68fb444-12cc-584f-936d-be221cb40cc9.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/cb/3cb9fc3d-4f1b-5910-a4fe-3624d3ce77dd/6a86d287ccb9a.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "The business behind the celebration",
     source: "Telluride Times",
@@ -2456,33 +2468,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
-  },
-  {
-    title: "Black Bear Pass Now Open",
-    source: "San Miguel County",
-    date: "August 3, 2026",
-    newsTopic: "recreation",
-    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
-    img: ""
-  },
-  {
-    title: "Numerous Highway Closures",
-    source: "San Miguel County",
-    date: "July 22, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
-    img: ""
-  },
-  {
-    title: "Tomboy Road",
-    source: "San Miguel County",
-    date: "July 21, 2026",
-    newsTopic: "infrastructure",
-    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
-    img: ""
   },
   {
     title: "Shandoka, Carhenge Lots Closed",
@@ -5819,17 +5804,6 @@ const OURAY_RIDGWAY_EVENTS = [
 
 const NORWOOD_EVENTS = [
   {
-    title: "Norwood Sanitation District Meeting",
-    link: "https://www.norwoodtown.com/2026-08-13-norwood-sanitation-district-meeting-meeting",
-    description: "",
-    pubDate: "2026-08-13T12:00:00.000Z",
-    source: "norwood",
-    sourceLabel: "Town of Norwood",
-    category: "Government Meeting",
-    location: "Norwood, CO",
-    imageUrl: ""
-  },
-  {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
     description: "",
@@ -5920,17 +5894,6 @@ const NORWOOD_EVENTS = [
 ];
 
 const MOUNTAIN_VILLAGE_EVENTS = [
-  {
-    title: "Sunset Concert Series",
-    link: "https://townofmountainvillage.com/explore/events/all-events/sunset-concert-series/",
-    description: "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
-    pubDate: "2026-08-19T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/41147/scs_event_thumbnail.png"
-  },
   {
     title: "Market on the Plaza",
     link: "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
@@ -6315,6 +6278,28 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/48871/leon_timbo_1800x900px_1.png"
+  },
+  {
+    title: "Movies Under the Stars",
+    link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    pubDate: "2026-09-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png"
+  },
+  {
+    title: "Mind Blown Telluride",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    description: "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    pubDate: "2026-09-19T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg"
   }
 ];
 
