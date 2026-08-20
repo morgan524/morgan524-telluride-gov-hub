@@ -1184,9 +1184,20 @@ const DEEP_DIVE_PAGES = [
 //   { "topic": "carhenge", "date": "2026-07-23",
 //     "headline": "…optional…", "blurb": "…optional…" }
 // The pin is ignored once its date has passed (falls back to automatic).
+//
+// ALWAYS give a pin its remote ways in: "zoomLink" (the meeting's join /
+// registration URL, from MEETING_AGENDA_META in js/gov-helpers.js) and
+// "livestream" (the body's YouTube channel). The card renders them as "Join
+// Zoom" and "Watch on YouTube" — a featured meeting no one can join from home
+// is only half an action. Optional "source" (an ENTITY_REMOTE key, e.g.
+// "telluride") lets the builder fall back to that body's channel when
+// "livestream" is omitted.
 const FEATURED_ACTION_PIN = {
   "topic": "carhenge",
   "date": "2026-08-19",
+  "source": "telluride",
+  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
+  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
   "headline": "HARC takes up the Shandoka Lot redevelopment Wednesday, with a 3:00 PM site walk",
   "blurb": "The Historic & Architectural Review Commission hears preliminary large-scale applications for all four Shandoka buildings at 860 Black Bear Rd: Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another. A site walk on the lot at 3:00 PM comes first, then the evening session at 5:30 PM. Both are open to everyone. The same agenda carries a work session on the County and Town facilities at 335 W Colorado, the Fruen Building. HARC reviews height, mass, scale, materials and context, which is exactly what is still movable at this stage. Share your thoughts with the Town Council as well; Council makes the final call.",
   "images": [

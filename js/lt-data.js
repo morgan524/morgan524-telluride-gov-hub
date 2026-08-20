@@ -257,7 +257,17 @@
     if (fa.deepDive && fa.deepDive.href) acts += '<a class="fa-dive" href="' + esc(fa.deepDive.href) + '">Read the ' + esc(fa.deepDive.label) + ' deep dive &rarr;</a>';
     if (m.agendaUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.agendaUrl)) + '" target="_blank" rel="noopener">View Agenda</a>';
     if (m.packetUrl) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.packetUrl)) + '" target="_blank" rel="noopener">Agenda Packet</a>';
+    // Both remote ways in ride along whenever the meeting carries them: Zoom to
+    // take part, the livestream to watch (Morgan, 2026-08-19 — "we always need
+    // to include the Zoom link and the YouTube link to join in"). A pin with no
+    // week-meetings row still gets them: build-featured-action.js honours
+    // pin.zoomLink / pin.livestream and falls back to the entity's channel.
     if (m.zoomLink) acts += '<a class="fa-plain" href="' + esc(safeUrl(m.zoomLink)) + '" target="_blank" rel="noopener">Join Zoom</a>';
+    if (m.livestream) {
+      const liveLabel = m.livestreamLabel
+        || (/youtube\.com|youtu\.be/i.test(m.livestream) ? 'Watch on YouTube' : 'Watch the Livestream');
+      acts += '<a class="fa-plain" href="' + esc(safeUrl(m.livestream)) + '" target="_blank" rel="noopener">' + esc(liveLabel) + '</a>';
+    }
     byId('fa-acts').innerHTML = acts;
     card.style.display = 'block';
     return true;
