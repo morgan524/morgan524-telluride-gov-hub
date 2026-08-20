@@ -54,19 +54,6 @@
     "endDate": "2026-08-28"
   },
   {
-    "title": "Market on the Plaza",
-    "href": "https://koto.org/event/market-on-the-plaza/2026-08-19/",
-    "date": "2026-08-19",
-    "time": "11:00 AM",
-    "location": "Heritage Plaza, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/mountainvillage.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Market on the Plaza is held each Wednesday, June 10 – September 9, 2026, from 11 a.m. to 4 p.m. in Heritage Plaza, the center of Mountain Village. Heritage Plaza is steps from the free gondola. Come enjoy local produce, original artisan…",
-    "type": "Community"
-  },
-  {
     "title": "Radio Biblioteca",
     "href": "https://telluridelibrary.libcal.com/event/17021877?hs=a",
     "date": "2026-08-19",
@@ -131,6 +118,19 @@
     "source": "Mountain Village",
     "desc": "Set against the stunning alpine backdrop of Mountain Village, TMVOA's Sunset Concert Series returns for its 25th year—bringing free,",
     "type": "Music"
+  },
+  {
+    "title": "Market on the Plaza",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
+    "date": "2026-08-19",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
+    "type": "Community"
   },
   {
     "title": "OPEN MIC / JAM NIGHT w/ host DJ Strong",
@@ -1403,6 +1403,45 @@
     "type": "Outdoors & Sports"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-27/",
+    "date": "2026-08-27",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Pilates for All Bodies with Laura",
+    "href": "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-27/",
+    "date": "2026-08-27",
+    "time": "12:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/wellness.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
+    "type": "Wellness"
+  },
+  {
+    "title": "TRC Men's Tennis Singles",
+    "href": "https://koto.org/event/trc-mens-tennis-singles/2026-08-27/",
+    "date": "2026-08-27",
+    "time": "4:00 PM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Chill with Chamber Music! — Norwood",
     "href": "https://telluridechambermusic.org/concert/norwood-aug",
     "date": "2026-08-27",
@@ -1506,6 +1545,32 @@
     "source": "KOTO Community Calendar",
     "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Up-off Gymnastics, Dance, and Spanish",
+    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-28/",
+    "date": "2026-08-28",
+    "time": "10:00 AM",
+    "location": "Lone Cone Library Norwood",
+    "town": "Norwood",
+    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
+    "type": "Music"
+  },
+  {
+    "title": "Ridgway Farmer's Market",
+    "href": "https://koto.org/event/ridgway-farmers-market/2026-08-28/",
+    "date": "2026-08-28",
+    "time": "10:00 AM",
+    "location": "Hartwell Park Ridgway",
+    "town": "Ridgway",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
+    "type": "Music"
   },
   {
     "title": "Telluride Farmers Market",
@@ -1663,6 +1728,19 @@
     "source": "The Alibi",
     "desc": "Camp Alderwild After Party. These Shows are sold out, tickets are available on Fan Exchange",
     "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-28/",
+    "date": "2026-08-28",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
+    "type": "Outdoors & Sports"
   },
   {
     "title": "San Juan Chamber MusicFest Festival Concert",

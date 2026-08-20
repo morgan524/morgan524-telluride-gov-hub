@@ -1,34 +1,18 @@
 {
-  "hash": "0b942ab974148918676417178fe3a54bd4b519c7",
-  "lede": "Mountain Village Council meets Wednesday to vote on a sale price appreciation cap that will determine whether deed-restricted units actually stay affordable long-term — that one's worth showing up for. Across town, HARC takes a hard look at the Shandoka Lot redevelopment on Black Bear Road, Ouray County holds three public hearings including a full repeal of a land-use code section, and the BOCC sits as the Housing Authority to work through affordable housing compliance at a moment when regional finances are under strain.",
+  "hash": "717e8a1206ff88c5967cb2fc89f456d84552fbfd",
+  "lede": "Mountain Village Council meets Thursday with something worth tracking: a resolution to set a sale price appreciation cap on deed-restricted units — the fine print that determines whether affordable housing actually stays affordable or quietly drifts out of reach. Telluride's Planning and Zoning Commission also meets Thursday, with a public hearing on the school district's employee housing proposal for the middle-high school site at 725 W Colorado. On the lighter side, the week is stacked with live music, the Telluride Mountain Run, and farmers markets on both ends of the valley.",
   "notable": [
     {
       "id": 1,
-      "stake": "HARC votes on after-the-fact permit for unpermitted Elks Lodge pergola."
+      "stake": "Appreciation cap vote decides if deed-restricted units stay truly affordable long-term."
     },
     {
       "id": 2,
-      "stake": "Preliminary large-scale review of Shandoka Lot redevelopment — four new buildings."
+      "stake": "Public hearing on school district employee housing construction at 725 W Colorado."
     },
     {
-      "id": 3,
-      "stake": "Staff recommending 2027 campground and shower fee increases of up to 25%."
-    },
-    {
-      "id": 4,
-      "stake": "BOCC reviews housing authority compliance and holds a public hearing on land use."
-    },
-    {
-      "id": 6,
-      "stake": "Three public hearings including full repeal of an Ouray County land-use code section."
-    },
-    {
-      "id": 8,
-      "stake": "Mountain Village Council votes on deed-restriction appreciation cap affecting affordability."
-    },
-    {
-      "id": 9,
-      "stake": "First formal review of school district employee housing proposal at 725 W Colorado."
+      "id": 0,
+      "stake": "Four public liquor permit hearings; residents may comment on large public events."
     }
   ]
 }

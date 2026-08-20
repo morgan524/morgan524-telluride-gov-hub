@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-19T21:44:52.227Z",
+ "generated": "2026-08-20T01:30:49.009Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -166,20 +166,7 @@
   "fieldpaving": {
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Parks & Recreation Commission",
-     "date": "2026-08-19",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": []
