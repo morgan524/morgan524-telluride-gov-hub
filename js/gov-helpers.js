@@ -324,7 +324,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"a12dfd2ce826475e"},
 
   "mv|2026-09-03|Design Review Board":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://townofmountainvillage.com/site/assets/files/49733/september_3-_2026_design_review_board_meeting_agenda.pdf","zoomUrl":"https://us06web.zoom.us/j/83949014976?pwd=oze6zDkOSb0a8fjpvluaHR1zcyO0XN.1","meetingId":"839 4901 4976"},
 
   "county|2026-08-27|CWAB":
     {"sv":4,"ph":"23152d2f933fa82e"},
@@ -761,7 +761,10 @@ const MEETING_PREVIEWS = {
     "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt.",
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
-    "The Resident Advisory Committee will hold its inaugural meeting, covering member introductions, officer elections, and a review of meeting procedures, mission, and purpose. Members will also receive updates from the Town, including a review of Telluride's Employee Rental Housing Policies, and will determine the date of their next meeting."
+    "The Resident Advisory Committee will hold its inaugural meeting, covering member introductions, officer elections, and a review of meeting procedures, mission, and purpose. Members will also receive updates from the Town, including a review of Telluride's Employee Rental Housing Policies, and will determine the date of their next meeting.",
+
+  "mv|2026-09-03|Design Review Board":
+    "Board will consider a conditional use permit for a temporary tent and food truck at 332 Adams Ranch Rd. Also on the agenda is a continuation request for final architecture review of a 15-unit employee apartment building at 306 Adams Ranch Rd, deferred to October."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -851,7 +854,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "community",
     copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/?ta_paidstory",
     img: ""
   },
   {
@@ -891,7 +894,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "infrastructure",
     copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
-    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/",
+    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/?ta_paidstory",
     img: ""
   },
   {
@@ -901,7 +904,17 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/?ta_paidstory",
     img: ""
   },
   {
@@ -915,33 +928,23 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Ouray County Fair 2026",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "Top: Annie Perkovich poses for a portrait with her miniature Hereford steer, Hudson, who weighed 954 pounds. She won reserve champion market steer this year, and her brother, Mikey, won grand champion. Middle: Maverick Scott clouds the air in the fair barn with shine spray while grooming his market ",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/?ta_paidstory",
+    img: ""
+  },
+  {
     title: "County OKs flood construction contract",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
-    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
-    img: ""
-  },
-  {
-    title: "Ridgway student proposes ‘free box’ for donations",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "education",
-    copy: "A presentation about an idea for a “free box” by a Ridgway National Honor Society student at the Ridgway Town Council meeting Aug. 12 led to lengthy discussion and a $750 contribution to the project, with conditions. Ariel Hessler, a junior at Ridgway Secondary School, proposed the idea of the free ",
-    href: "https://www.ouraynews.com/2026/08/19/ridgway-student-proposes-free-box-donations/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Debra Lynn Todd",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
-    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
+    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/?ta_paidstory",
     img: ""
   },
   {
@@ -1245,7 +1248,7 @@ const MANUAL_SUMMARIES = {
     "The September 2, 2026 Board of County Commissioners Meeting agenda hasn't been posted yet.",
 
   "mv|2026-09-03|Design Review Board":
-    "The September 3, 2026 Mountain Village Design Review Board agenda hasn't been posted yet.",
+    "One item worth noting on this September 3rd Design Review Board agenda: a conditional-use permit review for a temporary tent and food truck at 332 Adams Ranch Rd (Lots OSP-35-B & OSP-35-C), which goes to the DRB for a recommendation to Town Council. There's also a general easement encroachment review at 140 Cortina Dr and an informational session on Pond Plaza with staff and Design Workshop. The 15-unit employee apartment building at 306 Adams Ranch Rd — the one item of broader housing consequence — is being continued to the October 1st meeting. The remainder of the agenda is single-family and detached condominium architecture reviews.",
 
   "county|2026-08-27|CWAB":
     "The August 27 CWAB meeting agenda hasn't been posted yet.",
@@ -1671,6 +1674,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Telluride volleyball starting ’26 away",
+    source: "Telluride Times",
+    date: "August 20, 2026",
+    firstSeen: "2026-08-20",
+    newsTopic: "education",
+    copy: "THS volleyball opens the 2025-26 season with a string of away matches — starting with the Rangely Invitational Aug. 21-22 — before the home opener Sept. 1. Coach Lorrie Mahoney says six returning varsity players, including three new seniors, give the Lady Miners a strong foundation despite last year's graduation losses.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_32eb44dd-cccf-41ca-934c-8cb8a8b01564.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/3/73/37312e90-4072-46f2-bdb4-b547121debc0/6a856c93a11a8.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Mesa Rose closes to blossom anew",
     source: "Telluride Times",
@@ -3132,17 +3147,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Pilates for All Bodies with Laura",
-    link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-20/",
-    description: "Join Laura Colbert for Pilates for All Bodies every Thursday from 12:30-1:15pm. This program is free and open to the public. All bodies and experience levels are welcome. The library has a few mats, but bring your own if you can.",
-    pubDate: "2026-08-20T12:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Wilkinson Public Library, Telluride",
-    imageUrl: ""
-  },
   {
     title: "TRC Men's Tennis Singles",
     link: "https://koto.org/event/trc-mens-tennis-singles/2026-08-20/",
@@ -4844,7 +4848,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/39f020be09948c428ebce6f72c1b5cb7e2a7cb06.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg"
   },
   {
     title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
@@ -5119,7 +5123,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Labor Day Parade in Ridgway",
     link: "https://events.ourayridgwayevents.com/event/labor-day-parade-in-ridgway",
-    description: "Find your spot along Sherman Street in Ridgway to watch the Labor Day Parade. It'll start at 10am. You'll see things like horseback riders, cowboys, classic vehicles, and more. Stay on the sidewalk if you want to get soaked by the Firetrucks; otherwise, stand further back from the street. View on site | Email this event",
+    description: "Find your spot along Sherman Street in Ridgway to watch the Labor Day Parade. It'll start at 10am. You'll see things like horseback riders, cowboys, classic vehicles, and more. Stay on the sidewalk if you want to get soaked by the Firetrucks; otherwise, stand further back from the street. The parade kicks off the Ouray County Rodeo at the Ouray County Fairgrounds beginning at noon! View on site | Email this event",
     pubDate: "2026-09-07T16:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
