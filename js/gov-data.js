@@ -1192,27 +1192,7 @@ const DEEP_DIVE_PAGES = [
 // is only half an action. Optional "source" (an ENTITY_REMOTE key, e.g.
 // "telluride") lets the builder fall back to that body's channel when
 // "livestream" is omitted.
-const FEATURED_ACTION_PIN = {
-  "topic": "carhenge",
-  "date": "2026-08-19",
-  "source": "telluride",
-  "zoomLink": "https://us06web.zoom.us/meeting/register/KKzcuKFdTuyXzpw65k2aAA",
-  "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams",
-  "headline": "HARC takes up the Shandoka Lot redevelopment Wednesday, with a 3:00 PM site walk",
-  "blurb": "The Historic & Architectural Review Commission hears preliminary large-scale applications for all four Shandoka buildings at 860 Black Bear Rd: Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another. A site walk on the lot at 3:00 PM comes first, then the evening session at 5:30 PM. Both are open to everyone. The same agenda carries a work session on the County and Town facilities at 335 W Colorado, the Fruen Building. HARC reviews height, mass, scale, materials and context, which is exactly what is still movable at this stage. Share your thoughts with the Town Council as well; Council makes the final call.",
-  "images": [
-    {
-      "src": "/assets/Shandoka/shandoka-sightline-scale.jpg",
-      "alt": "Two views of the proposed Shandoka Lot redevelopment. Above, the application's birds-eye view from a high elevation. Below, a street-level view from Black Bear Road showing the buildings at approximately 50 feet, or five stories, as a person standing on the ground would see them.",
-      "caption": "Shandoka Lot: the application's birds-eye view, and the same buildings seen from the street at eye level."
-    },
-    {
-      "src": "/assets/Fruen/fruen-building-rendering.jpg",
-      "alt": "Rendering of the proposed County and Town facilities at 335 W Colorado Avenue, a two-storey brick building on the corner with ground-floor storefronts and a wood-clad section behind.",
-      "caption": "335 W Colorado, the Fruen Building: County and Town facilities, back for a second work session."
-    }
-  ]
-};
+const FEATURED_ACTION_PIN = {};
 
 const ENTITY_LOGOS = {
   telluride: '<img src="/logo/Telluride%20Town.png" alt="Town of Telluride" style="width:100%;height:100%;object-fit:contain;">',
