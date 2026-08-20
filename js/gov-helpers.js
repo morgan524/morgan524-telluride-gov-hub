@@ -855,7 +855,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
     img: ""
   },
   {
@@ -865,7 +865,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
     img: ""
   },
   {
@@ -875,7 +875,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "government",
     copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
     img: ""
   },
   {
@@ -899,33 +899,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "arts-culture",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
-    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
-    img: ""
-  },
-  {
     title: "Chamber music fest returns to San Juans",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "arts-culture",
-    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
-    img: ""
-  },
-  {
-    title: "Ouray County Fair 2026",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    copy: "World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to return to perform in one of their favorite venues. Though they travel aro",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
     img: ""
   },
   {
@@ -936,6 +916,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
     href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
+    img: ""
+  },
+  {
+    title: "Ridgway student proposes ‘free box’ for donations",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "education",
+    copy: "A presentation about an idea for a “free box” by a Ridgway National Honor Society student at the Ridgway Town Council meeting Aug. 12 led to lengthy discussion and a $750 contribution to the project, with conditions. Ariel Hessler, a junior at Ridgway Secondary School, proposed the idea of the free ",
+    href: "https://www.ouraynews.com/2026/08/19/ridgway-student-proposes-free-box-donations/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Debra Lynn Todd",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
+    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
     img: ""
   },
   {
@@ -2468,6 +2468,33 @@ const TELLURIDE_TIMES_ARTICLES = [
     copy: "",
     href: "https://www.sanmiguelcountyco.gov/CivicAlerts.aspx?aid=1404",
     img: "https://www.sanmiguelcountyco.gov/ImageRepository/Document?documentID=14705"
+  },
+  {
+    title: "Black Bear Pass Now Open",
+    source: "San Miguel County",
+    date: "August 3, 2026",
+    newsTopic: "recreation",
+    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
+    img: ""
+  },
+  {
+    title: "Numerous Highway Closures",
+    source: "San Miguel County",
+    date: "July 22, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to heavy rains, highways 145 and 62 are experiencing mudslides in various locations. Several sections are impassable, with no expected reopening time yet. CDOT is en route. More information will be shared as it becomes available.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=537",
+    img: ""
+  },
+  {
+    title: "Tomboy Road",
+    source: "San Miguel County",
+    date: "July 21, 2026",
+    newsTopic: "infrastructure",
+    copy: "Due to hazardous conditions, lower Tomboy Road is currently closed to all pedestrian and vehicle traffic. The road is closed below Smuggler Mine, above Telluride and below Tomboy. The road is scheduled to be reopened Wednesday 7/22 at 8:00 a.m.",
+    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=536",
+    img: ""
   },
   {
     title: "Shandoka, Carhenge Lots Closed",
@@ -5104,7 +5131,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "Ouray County Labor Day Rodeo",
     link: "https://events.ourayridgwayevents.com/event/ouray-county-labor-day-rodeo-4239",
-    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Featured events include: Parade in Ridgway at 10am Mutton Bustin - Ages 3-10 Wild Cow Milking Rescue Race Stick Horse Races Gates open at 11 a.m. Performance begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. The Rodeo Association's goals are to keep our Western Heritage alive and healthy, support our community and give back to our youth. …",
+    description: "The Ouray County Labor Day Rodeo has been running continuously since 1917, making it a historic tradition spanning over a century. Feel the adrenaline rush with daring performances, electrifying action, and nonstop rodeo excitement that will keep you on the edge of your seat! Gates open at 11 a.m. The Rodeo begins at noon. Tickets $15 online or at the gate, Kids 5 & Under Free, Military Free with ID Featured events include: Parade in Ridgway at 10am Bareback riding Mutton Bustin - Ages 3-10 Saddle Bronc Riding Wild Cow Milking Bull Riding Rescue Race Barrel Racing Team Roping Stick Horse Races Steer Wresting, and more! No dogs, please. It is hosted annually by the Ouray County Rodeo Association (a 501c3 Non-Profit Organization) at the Ouray County Fairgrounds in Ridgway, Colorado. Presenting sponsors: RRL Ranch and True Grit Ranch. …",
     pubDate: "2026-09-07T18:00:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
