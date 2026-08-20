@@ -831,6 +831,106 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Best feathers forward",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
+    img: ""
+  },
+  {
+    title: "Bear activity ramping up",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "recreation",
+    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    img: ""
+  },
+  {
+    title: "Police admin assistant resigns, blasts city",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax moves closer to ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "government",
+    copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    img: ""
+  },
+  {
+    title: "County road superintendent arrested on suspicion of DUI",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "infrastructure",
+    copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
+    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/",
+    img: ""
+  },
+  {
+    title: "Ouray won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
+    img: ""
+  },
+  {
+    title: "Chamber music fest returns to San Juans",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
+    img: ""
+  },
+  {
+    title: "Ouray County Fair 2026",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    img: ""
+  },
+  {
+    title: "County OKs flood construction contract",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
+    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
+    img: ""
+  },
+  {
     title: "News Release: Road and Bridge Superintendent Placed on Paid Admin Leave",
     source: "Ouray County",
     sourceKey: "ouray-county",
@@ -839,26 +939,6 @@ const REGIONAL_NEWS_ARTICLES = [
     copy: "Ouray County has placed Road and Bridge Superintendent Ty Barger on paid administrative leave",
     href: "https://ouraycountyco.gov/CivicAlerts.aspx?aid=959",
     img: "https://ouraycountyco.gov/ImageRepository/Document?documentID=22895"
-  },
-  {
-    title: "Ridgway town council asks county for 15% of proposed disaster recovery sales tax",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 17, 2026",
-    newsTopic: "government",
-    copy: "The Ridgway Town Council asked Ouray County to consider a slightly higher distribution of funds from a proposed disaster recovery sales tax fund, while requesting more clarification on a possible construction materials use tax at a regular meeting Wednesday night. Councilors were more open to the di",
-    href: "https://www.ouraynews.com/2026/08/17/ridgway-town-council-asks-county-15-proposed-disaster-recovery-sales-tax/",
-    img: ""
-  },
-  {
-    title: "Bear killed after entering Ridgway home, killing chickens",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 17, 2026",
-    newsTopic: "recreation",
-    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home on Saturday after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins se",
-    href: "https://www.ouraynews.com/2026/08/17/bear-killed-entering-ridgway-home-killing-chickens/",
-    img: ""
   },
   {
     title: "Invitation to Prayer/Fellowship Wednesday Morning",
@@ -888,86 +968,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "We are glad that you will be joining our Fall Virtual Study. Here are the details so that you can get the information on your calendar and order your book. Please make note from below that we have a NEW ZOOM LINK. Contact us with quest...",
     href: "https://stpatrickstelluride.com/2026/parish-news/fall-tuesday-virtual-information/",
-    img: ""
-  },
-  {
-    title: "‘Pinched on every front’",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "community",
-    copy: "One breezy afternoon in mid-July, Mike Potter s phone started making all kinds of noise. “It goes, beep, beep, beep, beep!” shouted the Ridgway rancher, brandishing his flip phone from the pocket of his mud-stained jeans. “And boy,” he added, “I started doing this,” fingers massaging his temples and",
-    href: "https://www.ouraynews.com/2026/08/12/pinched-every-front/",
-    img: ""
-  },
-  {
-    title: "Flood work could begin within week",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "Ouray County officials said Tuesday that flood mitigation work below the Gold Mountain Fire’s burn scar could begin as soon as next week, while warning that storms in the coming days could trigger further debris flows and accompanying property damage. County Attorney Leo Caselli said at a community ",
-    href: "https://www.ouraynews.com/2026/08/12/flood-work-begin-within-week/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Firefighter base moves to Gunnison",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The incident command post for the Gold Mountain Fire relocated to the Gunnison County Fairgrounds Saturday as Rocky Mountain Complex Incident Management Team 2 took over for Team 1 and combined efforts to focus more on the Elk Fire near Lake City. Firefighters from across the country camped at the O",
-    href: "https://www.ouraynews.com/2026/08/12/firefighter-base-moves-gunnison/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County fair carries on",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "public-safety",
-    copy: "The night the Gold Mountain Fire started, the Cornell family anxiously watched the fire spreading toward their fenced livestock, the billowing smoke filling the canyon. They decided to load up their horses, goats and the 4-H lambs into trailers and evacuate. They took the 11 animals from their pastu",
-    href: "https://www.ouraynews.com/2026/08/12/county-fair-carries/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "We need to stand firm to preserve alpine tundra",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "recreation",
-    copy: "Dear Editor: The July 23 guest column by Sue Dreamweaver Spielman was excellent and brings up so many issues that we regular backcountry users experience. I have been recreating in this area since 1979. I’m a Jeep driver, backpacker, hiker and climber. I moved away from the area for a while. I have ",
-    href: "https://www.ouraynews.com/2026/08/12/need-stand-firm-preserve-alpine-tundra/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "County clerk provided excellent service",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "community",
-    copy: "Dear Editor: I would like to acknowledge the excellent service I received from Damon Todd, Ouray County clerk and recorder. I had a question/complaint about the online vehicle license renewal system. I contacted Mr. Todd through Ouray County s website on Sunday. Later that afternoon, he responded wi",
-    href: "https://www.ouraynews.com/2026/08/12/county-clerk-provided-excellent-service/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Rather than sales tax, charge CR 361 road toll",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Dear Editor: I agree with the recent proposal by Ouray County to fund a rainy-day account for use in seemingly annual “emergencies” such as the rockfall last year on County Road 361, the cleanup from the recent Gold Mountain Fire and continuing damage to county roads and bridges from mudslides and w",
-    href: "https://www.ouraynews.com/2026/08/12/rather-sales-tax-charge-cr-361-road-toll/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 13, 2026",
-    newsTopic: "infrastructure",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago With progress on the Ouray side of Imogene Pass Jeep road nearing completion, plans are being made for its dedication. The date has tentatively been set for Sunday, Aug. 26, at or near ",
-    href: "https://www.ouraynews.com/2026/08/12/looking-back-20260813-0238-359314/?ta_paidstory",
     img: ""
   },
   {
