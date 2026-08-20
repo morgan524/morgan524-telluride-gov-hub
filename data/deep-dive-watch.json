@@ -1,11 +1,18 @@
 {
- "generated": "2026-08-20T03:53:19.399Z",
+ "generated": "2026-08-20T06:57:10.409Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-08-19",
+     "title": "Historic & Architectural Review Commission - Aug 19 2026",
+     "snippet": "A full slate at HARC on August 19, dominated by two projects that have been in the room before and will be again. The Shandoka Lot Redevelopment at 860 Black Bear Rd comes in for preliminary…"
+    }
+   ],
    "developments": [
     {
      "topic": "carhenge",
@@ -18,7 +25,10 @@
      "addedDate": "2026-08-08"
     }
    ],
-   "stale": []
+   "stale": [
+    "Carhenge / Shandoka: telluride discussed it on 2026-08-19 (\"Historic & Architectural Review Commission - Aug 19 2026\") but the deep dive was last edited 2026-08-17.",
+    "Carhenge / Shandoka: timeline entry \"HARC hears Shandoka's four buildings; Carhenge slips to…\" (Aug 19, 2026) is still marked upcoming but the date has passed."
+   ]
   },
   "skigate": {
    "label": "Ski-Gate: Telski v. Former Officials",
@@ -59,18 +69,11 @@
      "date": "2026-08-11",
      "title": "Town Council - Aug 11 2026",
      "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
-    },
-    {
-     "source": "county",
-     "date": "2026-08-05",
-     "title": "Board of County Commissioners Meeting",
-     "snippet": "Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related…"
     }
    ],
    "developments": [],
    "stale": [
-    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-07-19.",
-    "Code Changes & Accelerated Review: county discussed it on 2026-08-05 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-07-19."
+    "Code Changes & Accelerated Review: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-07-19."
    ]
   },
   "wildfire": {
@@ -89,19 +92,12 @@
      "date": "2026-08-11",
      "title": "Town Council - Aug 11 2026",
      "snippet": "The most consequential item on this agenda is third reading of the Colorado Wildfire Resiliency Code — if approved, it amends the Land Use Code's historic and architectural review standards and…"
-    },
-    {
-     "source": "county",
-     "date": "2026-08-05",
-     "title": "Board of County Commissioners Meeting",
-     "snippet": "Three Land Use Code amendments are the main event on August 5. The BOCC will hold public hearings on all three: a change to the definition of 'Qualified Owner' in Section 5-1305B (with related…"
     }
    ],
    "developments": [],
    "stale": [
     "Wildfire Resiliency: fire discussed it on 2026-08-18 (\"Board of Directors Meeting\") but the deep dive was last edited 2026-06-01.",
-    "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01.",
-    "Wildfire Resiliency: county discussed it on 2026-08-05 (\"Board of County Commissioners Meeting\") but the deep dive was last edited 2026-06-01."
+    "Wildfire Resiliency: telluride discussed it on 2026-08-11 (\"Town Council - Aug 11 2026\") but the deep dive was last edited 2026-06-01."
    ]
   },
   "diamond": {
@@ -167,7 +163,14 @@
    "label": "Field Paving at Town Park",
    "lastUpdated": "",
    "upcoming": [],
-   "recent": [],
+   "recent": [
+    {
+     "source": "telluride",
+     "date": "2026-08-19",
+     "title": "Parks & Recreation Commission - Aug 19 2026",
+     "snippet": "The Commission takes up two substantive items. First, staff is recommending 2027 fee increases for the Town Park Campground and showers — nightly rates would rise roughly 8%, with premium vehicle…"
+    }
+   ],
    "developments": [],
    "stale": []
   }
