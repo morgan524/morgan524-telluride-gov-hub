@@ -176,6 +176,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    "title": "Design Review Board Meeting September 2026",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/september-design-review-board-meeting/",
+    "description": "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    "pubDate": "2026-09-03T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/31725/drb-event-new.png"
+  },
+  {
     "title": "Music on the Green Presents Daniel Rodriguez",
     "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-daniel-rodriguez-4/",
     "description": "Beyond The Groove and TMVOA (tmvoa.org) present Daniel Rodriguez at Reflection Plaza in Mountain Village. The Friday shows are free,",
@@ -275,17 +286,6 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    "title": "Music on the Green Presents Danno Simpson",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-danno-simpson/",
-    "description": "Beyond The Groove and TMVOA (tmvoa.org) present Danno Simpson at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    "pubDate": "2026-09-11T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -328,6 +328,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    "title": "Mountain Village Matters radio show",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters-radio-show/",
+    "description": "The Town of Mountain Village presents Mountain Village Matters on KOTO Community Radio. Tune in to hear Communications Manager Kathrine Warren chatting with",
+    "pubDate": "2026-09-14T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49725/koto_show.png"
   },
   {
     "title": "Bike & Brewery Tour",

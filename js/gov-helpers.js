@@ -426,7 +426,10 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
+
+  "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -755,7 +758,10 @@ const MEETING_PREVIEWS = {
     "The Telluride Liquor Licensing Authority is expected to review and act on liquor license applications or modifications submitted to the town. Both local approval and Colorado Department of Revenue consent are required for any license to be issued or amended.",
 
   "med|2026-08-27|Regular Board Meeting":
-    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt."
+    "The Telluride Hospital District Board is expected to hold its regular monthly meeting, including public comment, agenda review, and conflict of interest disclosures. The full agenda was not provided, so specific action items or decisions to be considered remain unclear from the available excerpt.",
+
+  "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
+    "The Resident Advisory Committee will hold its inaugural meeting, covering member introductions, officer elections, and a review of meeting procedures, mission, and purpose. Members will also receive updates from the Town, including a review of Telluride's Employee Rental Housing Policies, and will determine the date of their next meeting."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1341,7 +1347,10 @@ const MANUAL_SUMMARIES = {
     "The September 17, 2026 TRAA Board of Commissioners Meeting agenda hasn't been posted yet.",
 
   "telluride|2026-09-17|Liquor Licensing Authority - Sep 17 2026":
-    "The September 17, 2026 Liquor Licensing Authority agenda hasn't been posted yet."
+    "The September 17, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
+
+  "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
+    "The Resident Advisory Committee holds its inaugural meeting — a body created to give Town of Telluride employee-housing tenants a structured voice on rental policies and conditions. The hour is organized around the fundamentals: introductions, electing a chair and secretary, aligning on the RAC's mission and limitations, and walking through meeting procedures including confidentiality rules and public notice practices. Town Representatives and a Telluride Housing Authority board rep will share updates on a tenant survey, a resident informational session scheduled for September 23 at Wilkinson Library, and an ongoing review of rental housing policies. Members will also take public comment from tenants and set the next meeting date, with a target cadence of at least four meetings per year."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1662,6 +1671,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Mesa Rose closes to blossom anew",
+    source: "Telluride Times",
+    date: "August 20, 2026",
+    firstSeen: "2026-08-20",
+    newsTopic: "community",
+    copy: "Mesa Rose Kitchen and Grocery in Norwood is moving across the intersection — closing its current northeast corner spot on Aug. 21 and reopening in early October in the old Black Bear Trading building, next to the Lone Cone Saloon. The new space brings a patio, expanded hours, brunch, and eventual liquor license.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_3375ad57-29d8-49a5-ad7e-41e4d3fe5a20.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/c/ab/cabbeb1d-bd97-4eea-b303-49057c69f8d6/6a873c0a9a2af.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "Democrats narrow their list of 2028 presidential convention sites to Boston, Denver and Philadelphia",
     source: "Telluride Times",
@@ -3111,28 +3132,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-20/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-20T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-20/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-20T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
   {
     title: "Pilates for All Bodies with Laura",
     link: "https://koto.org/event/pilates-for-all-bodies-with-laura-2/2026-08-20/",
@@ -4644,7 +4643,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/senior-lunch-by-neighbor-to-neighbor",
     description: "Senior Lunch Every Monday Seniors meet to share a wonderful lunch, have a chance to socialize and enjoy an entertaining program. Transportation is provided. Neighbor to Neighbor, 970-325-4586. View on site | Email this event",
     pubDate: "2026-08-24T18:00:00.000Z",
-    endDate: "2026-10-12",
+    endDate: "2026-10-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5416,7 +5415,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629792427039/huge/1430b7a25dd4d66785cd4b7dae7ceff018f8679d.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53753907771679/huge/e4c0dbfe2459d8771509f5662a4b2ce6c853cfe2.jpg"
   },
   {
     title: "4th Annual San Juan Slam Pickleball Tournament",
@@ -5666,7 +5665,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-10-15",
+    endDate: "2026-10-19",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -6098,6 +6097,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
+    title: "Design Review Board Meeting September 2026",
+    link: "https://townofmountainvillage.com/explore/events/all-events/september-design-review-board-meeting/",
+    description: "The Mountain Village Design Review Board meets for its monthly meeting. Meeting material is typically posted on the Friday before a scheduled meeting.",
+    pubDate: "2026-09-03T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/31725/drb-event-new.png"
+  },
+  {
     title: "Music on the Green Presents Daniel Rodriguez",
     link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-daniel-rodriguez-4/",
     description: "Beyond The Groove and TMVOA (tmvoa.org) present Daniel Rodriguez at Reflection Plaza in Mountain Village. The Friday shows are free,",
@@ -6197,17 +6207,6 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     imageUrl: "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
   },
   {
-    title: "Music on the Green Presents Danno Simpson",
-    link: "https://townofmountainvillage.com/explore/events/all-events/music-on-the-green-presents-danno-simpson/",
-    description: "Beyond The Groove and TMVOA (tmvoa.org) present Danno Simpson at Reflection Plaza in Mountain Village. The Friday shows are free, all ages and family friendly.",
-    pubDate: "2026-09-11T12:00:00.000Z",
-    source: "mv",
-    sourceLabel: "Mountain Village",
-    category: "Community Event",
-    location: "Mountain Village, CO",
-    imageUrl: "https://townofmountainvillage.com/site/assets/files/48869/danno_simpson_1800x900px_1.png"
-  },
-  {
     title: "Movies Under the Stars",
     link: "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     description: "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -6250,6 +6249,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Mountain Village Matters radio show",
+    link: "https://townofmountainvillage.com/explore/events/all-events/mountain-village-matters-radio-show/",
+    description: "The Town of Mountain Village presents Mountain Village Matters on KOTO Community Radio. Tune in to hear Communications Manager Kathrine Warren chatting with",
+    pubDate: "2026-09-14T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49725/koto_show.png"
   },
   {
     title: "Bike & Brewery Tour",

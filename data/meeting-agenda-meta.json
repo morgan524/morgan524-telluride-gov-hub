@@ -492,5 +492,13 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145",
     "sv": 4,
     "ph": "5e169e6aed7b742f"
+  },
+  "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026": {
+    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304",
+    "zoomUrl": "https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1",
+    "meetingId": "835 1572 1292",
+    "passcode": "983442",
+    "phone": "970-728-2496",
+    "sv": 4
   }
 }
