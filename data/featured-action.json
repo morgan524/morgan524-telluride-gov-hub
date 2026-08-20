@@ -1,37 +1,26 @@
 {
- "generated": "2026-08-20T03:53:19.401Z",
- "pinned": true,
- "topic": "carhenge",
- "topicLabel": "Carhenge / Shandoka",
- "headline": "HARC takes up the Shandoka Lot redevelopment Wednesday, with a 3:00 PM site walk",
- "blurb": "The Historic & Architectural Review Commission hears preliminary large-scale applications for all four Shandoka buildings at 860 Black Bear Rd: Buildings 1 and 2 as one hearing, Buildings 3 and 4 as another. A site walk on the lot at 3:00 PM comes first, then the evening session at 5:30 PM. Both are open to everyone. The same agenda carries a work session on the County and Town facilities at 335 W Colorado, the Fruen Building. HARC reviews height, mass, scale, materials and context, which is exactly what is still movable at this stage. Share your thoughts with the Town Council as well; Council makes the final call.",
- "images": [
-  {
-   "src": "/assets/Shandoka/shandoka-sightline-scale.jpg",
-   "alt": "Two views of the proposed Shandoka Lot redevelopment. Above, the application's birds-eye view from a high elevation. Below, a street-level view from Black Bear Road showing the buildings at approximately 50 feet, or five stories, as a person standing on the ground would see them.",
-   "caption": "Shandoka Lot: the application's birds-eye view, and the same buildings seen from the street at eye level."
-  },
-  {
-   "src": "/assets/Fruen/fruen-building-rendering.jpg",
-   "alt": "Rendering of the proposed County and Town facilities at 335 W Colorado Avenue, a two-storey brick building on the corner with ground-floor storefronts and a wood-clad section behind.",
-   "caption": "335 W Colorado, the Fruen Building: County and Town facilities, back for a second work session."
-  }
- ],
+ "generated": "2026-08-20T06:57:10.411Z",
+ "pinned": false,
+ "topic": "gondola",
+ "topicLabel": "Gondola 3A",
+ "headline": "Gondola 3A goes before Town Council Meeting on Thursday, August 20",
+ "blurb": "A full agenda for Mountain Village this Thursday. The most consequential action item is a resolution setting a sale price appreciation cap under Municipal Code Section 16.02.070 — the kind of deed-restriction mechanics that determine whether affordable units actually stay affordable over time. Council also takes up a 2026 budget appropriation amendment and a conditional use permit for temporary office space on Lot 68R.",
+ "images": [],
  "deepDive": {
-  "label": "Carhenge / Shandoka",
-  "href": "/deep-dive-carhenge.html"
+  "label": "Gondola 3A",
+  "href": "/deep-dive-gondola.html"
  },
  "meeting": {
-  "title": "",
-  "sourceLabel": "",
-  "date": "2026-08-19",
-  "humanDate": "Wednesday, August 19",
+  "title": "Town Council Meeting",
+  "sourceLabel": "Mountain Village",
+  "date": "2026-08-20",
+  "humanDate": "Thursday, August 20",
   "time": "",
-  "location": "",
-  "agendaUrl": "",
-  "hasAgenda": false,
-  "packetUrl": "",
-  "zoomLink": "",
-  "livestream": ""
+  "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
+  "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
+  "hasAgenda": true,
+  "packetUrl": "https://townofmountainvillage.com/site/assets/files/49696/august_20-_2026_town_council_meeting_packet.pdf",
+  "zoomLink": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
+  "livestream": "https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06"
  }
 }
