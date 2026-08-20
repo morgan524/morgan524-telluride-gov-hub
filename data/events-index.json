@@ -3252,6 +3252,32 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Movies Under the Stars",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
+    "date": "2026-09-19",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/35410/mus_social_1200x628_2026.png",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
+    "type": "Community"
+  },
+  {
+    "title": "Mind Blown Telluride",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mind-blown-telluride-7/",
+    "date": "2026-09-19",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49016/mountain_village_website.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "Magician Ty Gallenbeck presents Mind Blown Telluride. Since 2016 this highly acclaimed show has become a favorite of locals, tourist and celebrities.",
+    "type": "Community"
+  },
+  {
     "title": "Crystal Festival - A Rock, Mineral, Gem, & Crystal Show",
     "href": "https://www.telluride.com/event/crystal-festival-a-rock-mineral-gem-crystal-show-1/",
     "date": "2026-09-19",
