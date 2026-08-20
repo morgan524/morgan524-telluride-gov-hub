@@ -1,18 +1,18 @@
 {
-  "hash": "335923723ab127d4dfb93bfbe98a973e4cc27de0",
-  "lede": "The biggest item this week is Mountain Village Town Council taking up a resolution to set the sale price appreciation cap on deed-restricted units — the fine print that decides whether affordable housing actually stays affordable for the next buyer, not just the first one. Council also considers a 2026 budget appropriation amendment. Meanwhile, Telluride's Planning and Zoning Commission holds a public hearing and a first look at the school district's employee housing proposal for the middle-high school site on West Colorado.",
+  "hash": "5991006b3913486b4aebda23f9e61ff8d8455977",
+  "lede": "The most consequential meeting this week is Mountain Village Town Council on Thursday, August 20, where a resolution setting the sale price appreciation cap for deed-restricted affordable units is up for a vote — the fine print that determines whether workforce housing actually stays affordable long-term. The same evening, Telluride's Planning and Zoning Commission holds a public hearing and takes a first formal look at the school district's employee housing proposal for the middle-high school site on W. Colorado. Meanwhile, the Town of Telluride's brand-new Resident Advisory Committee holds its inaugural meeting, giving employee-housing tenants a structured voice on rental policies for the first time.",
   "notable": [
     {
       "id": 1,
-      "stake": "Vote on appreciation cap determines if deed-restricted units stay genuinely affordable long-term."
+      "stake": "Vote sets appreciation cap controlling whether affordable units stay affordable."
     },
     {
       "id": 2,
-      "stake": "Public hearing plus first review of school district employee housing on West Colorado site."
+      "stake": "Public hearing plus first review of school district employee housing construction proposal."
     },
     {
-      "id": 0,
-      "stake": "Four public liquor permit hearings, including 500-person Ken Burns fundraiser at the Palm Theatre."
+      "id": 12,
+      "stake": "Inaugural tenant advisory body; residents elect leadership and shape rental policy role."
     }
   ]
 }
