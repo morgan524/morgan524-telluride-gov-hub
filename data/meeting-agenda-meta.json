@@ -421,7 +421,7 @@
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
     "sv": 4,
-    "ph": "e2d918e8f8800b3e"
+    "ph": "1ee3d118528867aa"
   },
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
@@ -429,11 +429,18 @@
   },
   "school|2026-08-24|Telluride Board of Education Work Session": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668"
   },
   "school|2026-08-25|Telluride Board of Education Monthly Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
+    "zoomUrl": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+    "meetingId": "865 8512 4120",
+    "passcode": "468668",
+    "phone": "970-728-6617"
   },
   "fire|2026-09-15|Board of Directors Meeting": {
     "sv": 4,
@@ -485,6 +492,10 @@
     "meetingId": "835 1572 1292",
     "passcode": "983442",
     "phone": "970-728-2496",
+    "sv": 4
+  },
+  "school|2026-08-26|Telluride Board of Education Monthly Meeting": {
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
     "sv": 4
   }
 }

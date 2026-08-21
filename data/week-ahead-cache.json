@@ -1,22 +1,26 @@
 {
-  "hash": "d28b7b6e2f2b500f631e3f161a542ca9c9c0677e",
-  "lede": "The Ethics Commission meets Tuesday to draft a formal Code of Conduct recommendation for Town Council — a direct follow-up to its May finding, and the kind of structural accountability question that tends to get decided quietly if nobody's paying attention. Alongside that, the County is digging into child care assistance funding and its budget implications on Wednesday, the Hospital District board takes up the two-site model for the new facility on Thursday, and TMVOA moves to stand up a Workforce Housing Committee. Busy week on the governance side.",
+  "hash": "b1579ce38200e7eab107f3576623fd525a1c2a01",
+  "lede": "The School Board votes Tuesday on a flood-related budget appropriation for FY 2026-27 — real dollars tied to real damage at TIS, TMHS, and the Palm Theatre complex — and that's the item to watch this week. The Ethics Commission also meets Tuesday to work up a formal Code of Conduct recommendation for Town Council, a follow-on to the Commission's May finding that carries some weight. Rounding out the week, TMVOA takes up a Workforce Housing Committee and grant action on the TMV Ice Pad, and the County has a CCAP childcare funding discussion with budget implications worth understanding.",
   "notable": [
     {
+      "id": 2,
+      "stake": "Board votes on flood-damage budget appropriation affecting district spending this year."
+    },
+    {
       "id": 1,
-      "stake": "Commission drafts Code of Conduct for town officials — shapes future accountability rules."
+      "stake": "Commission develops Code of Conduct recommendation for Town Council officials."
     },
     {
       "id": 3,
-      "stake": "County examines CCAP budget impact; child care funding cuts could affect working families."
-    },
-    {
-      "id": 7,
-      "stake": "Hospital board may act on two-site facility model, shaping the new medical center's scope and location."
+      "stake": "County discusses CCAP childcare funding and its budget implications for San Miguel."
     },
     {
       "id": 9,
-      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated policies."
+      "stake": "TMVOA votes on Workforce Housing Committee formation and TMV Ice Pad grant."
+    },
+    {
+      "id": 7,
+      "stake": "Hospital District may act on Two Site Model, shaping what gets built and where."
     }
   ]
 }

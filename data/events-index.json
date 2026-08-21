@@ -1,18 +1,5 @@
 [
   {
-    "title": "Ridgway Farmer's Market",
-    "href": "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
-    "date": "2026-08-21",
-    "time": "10:00 AM",
-    "location": "Hartwell Park Ridgway",
-    "town": "Ridgway",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-4.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every…",
-    "type": "Music"
-  },
-  {
     "title": "On Display: PAWS for Art Gallery Asian-themed show",
     "href": "https://events.ourayridgwayevents.com/event/paws-for-art-gallery-asian-themed-show",
     "date": "2026-08-21",
@@ -39,6 +26,20 @@
     "desc": "Photography Invitational featuring Gary Slane and Eric Phillips On display July 1 – August 28, 2026 Artist Reception: Friday, July 10 | 5:00–7:00 PM | Free! The 610 Arts Collective is pleased to present the Photography Invitational,…",
     "type": "Arts & Film",
     "endDate": "2026-08-28"
+  },
+  {
+    "title": "Ridgway Farmers Market",
+    "href": "https://events.ourayridgwayevents.com/event/ridgway-farmers-market",
+    "date": "2026-08-21",
+    "time": "10:00 AM",
+    "location": "Hartwell Park",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/52487561553294/huge/09a2d632a840b6a4d0303261c242753cb58a993a.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Ridgway Farmers Market WHERE LOCAL GROWS... in the soil, in our economy, and in the connections we share as a community Local farmers, ranchers, bakers, and artisans bring the best of Ridgway to town: fresh produce, handcrafted goods, and…",
+    "type": "Food & Drink",
+    "endDate": "2026-10-16"
   },
   {
     "title": "Pooh Storytime / Hora de Cuentos de Winnie Pooh",
@@ -1435,7 +1436,7 @@
     "time": "1:30 PM",
     "location": "",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53763633777595/huge/f0db83a6fd50288b1f61d1973f86e8eb366be160.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for…",
@@ -1900,6 +1901,19 @@
     "type": "Music"
   },
   {
+    "title": "Electric Badlands: First Friday Opening Night",
+    "href": "https://events.ourayridgwayevents.com/event/electric-badlands-first-friday-opening-night",
+    "date": "2026-09-04",
+    "time": "5:00 PM",
+    "location": "Space to Create Gallery",
+    "town": "Ridgway",
+    "img": "https://localist-images.azureedge.net/photos/53764195995930/huge/26a45ab073a35cce3a87bf6cbea54303787871f9.jpg",
+    "category": "Community Event",
+    "source": "Ouray Ridgway Calendar",
+    "desc": "Where old country grit meets neon-lit dissent. Space to Create Gallery proudly presents Electric Badlands, a solo exhibition by Spencer Fuller. Stepping away from sepia-toned nostalgia, Fuller reimagines the mythology of the American West…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "First Friday Art Walk",
     "href": "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     "date": "2026-09-04",
@@ -1934,7 +1948,7 @@
     "time": "5:00 PM",
     "location": "Decker Community Room",
     "town": "Ridgway",
-    "img": "https://localist-images.azureedge.net/photos/53048149260541/huge/415b9339ce946074e5105384e5293b0f6acdedee.jpg",
+    "img": "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg",
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join us for the opening of this special traveling exhibition! Telluride Arts merges creativity and activism through grassroots grants, immersive community exhibitions, and local partnerships that tackle systemic issues and promote…",

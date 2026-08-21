@@ -372,16 +372,16 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"e2d918e8f8800b3e"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"1ee3d118528867aa"},
 
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302","sv":4},
 
   "school|2026-08-24|Telluride Board of Education Work Session":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
 
   "fire|2026-09-15|Board of Directors Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -414,7 +414,10 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8145","sv":4,"ph":"5e169e6aed7b742f"},
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4}
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8304","zoomUrl":"https://us06web.zoom.us/j/83515721292?pwd=UWdbpZwQcmiOOtH3Ktbdarl9CZyHjm.1","meetingId":"835 1572 1292","passcode":"983442","phone":"970-728-2496","sv":4},
+
+  "school|2026-08-26|Telluride Board of Education Monthly Meeting":
+    {"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf","sv":4}
 };
 
 // Deep-dive auto-updates written by scripts/deep-dive-refresh.js (Haiku
@@ -752,7 +755,16 @@ const MEETING_PREVIEWS = {
     "Board will consider a conditional use permit for a temporary tent and food truck at 332 Adams Ranch Rd. Also on the agenda is a continuation request for final architecture review of a 15-unit employee apartment building at 306 Adams Ranch Rd, deferred to October.",
 
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
-    "Board will consider forming a Workforce Housing Committee, adopting updated policies, and acting on a grant request for the TMV Ice Pad. Members will also receive updates on a Pond Improvement Plan and background on 161CR Public Benefits, along with information on dissolving the FAB."
+    "Board will consider forming a Workforce Housing Committee, adopting updated policies, and acting on a grant request for the TMV Ice Pad. Members will also receive updates on a Pond Improvement Plan and background on 161CR Public Benefits, along with information on dissolving the FAB.",
+
+  "school|2026-08-24|Telluride Board of Education Work Session":
+    "Board will discuss school opening highlights, summer renovation projects and flood mitigation updates across district facilities, a housing project update, and developments regarding Rico School. Members will also tour recent construction work. The session precedes a monthly meeting and board retreat scheduled for the following two days.",
+
+  "school|2026-08-25|Telluride Board of Education Monthly Meeting":
+    "Board will consider personnel matters, contract awards, and financial reports including cash summaries and a quarterly report. Members will also review Policy Governance Monitoring Reports and receive operational, administrative, and student updates during the August 25 meeting.",
+
+  "school|2026-08-26|Telluride Board of Education Monthly Meeting":
+    "Board members will gather for an all-day retreat to review Policy Governance principles, reaffirm the district's mission and student success goals, examine community engagement and school climate data, discuss strategic financial planning, and address board and leadership continuity for the coming year."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -842,7 +854,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
     img: ""
   },
   {
@@ -852,7 +864,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
     img: ""
   },
   {
@@ -862,7 +874,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "government",
     copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
     img: ""
   },
   {
@@ -886,33 +898,13 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
-    title: "Looking Back",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "arts-culture",
-    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
-    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
-    img: ""
-  },
-  {
     title: "Chamber music fest returns to San Juans",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "arts-culture",
-    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
-    img: ""
-  },
-  {
-    title: "Ouray County Fair 2026",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "",
-    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    copy: "World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to return to perform in one of their favorite venues. Though they travel aro",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
     img: ""
   },
   {
@@ -923,6 +915,26 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
     href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
+    img: ""
+  },
+  {
+    title: "Ridgway student proposes ‘free box’ for donations",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "education",
+    copy: "A presentation about an idea for a “free box” by a Ridgway National Honor Society student at the Ridgway Town Council meeting Aug. 12 led to lengthy discussion and a $750 contribution to the project, with conditions. Ariel Hessler, a junior at Ridgway Secondary School, proposed the idea of the free ",
+    href: "https://www.ouraynews.com/2026/08/19/ridgway-student-proposes-free-box-donations/?ta_paidstory",
+    img: ""
+  },
+  {
+    title: "Debra Lynn Todd",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
+    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
     img: ""
   },
   {
@@ -1269,10 +1281,10 @@ const MANUAL_SUMMARIES = {
     "The Open Space Commission is stepping away from the conference table for this one — literally. Members will meet at the Boomerang Road Trailhead near the Shell Station on Highway 145 Spur and walk the Valley Floor to look at potential sign sizes and placements. The agenda is careful to note this is non-content signage review, meaning the focus is on physical scale and location, not what the signs say. A site walk like this is how decisions about the Valley Floor tend to get made well — on the ground, not on paper.",
 
   "school|2026-08-24|Telluride Board of Education Work Session":
-    "The August 24, 2026 Telluride Board of Education Work Session agenda hasn't been posted yet.",
+    "The Board meets in work session to hear updates on four fronts. First, school opening highlights as the year gets underway. Second — and most substantial — a detailed flood damage and mitigation report: this past summer's flooding hit the TIS 5th grade pod, TMHS's cafeteria and ground-floor spaces, and the Palm Theatre complex hard, stripping flooring, sheetrock, and the stage itself. Air quality tests cleared most spaces by mid-August; the Palm Theatre main house is still pending. Third, the employee housing initiative gets a full review: the adopted program targets 24 homes now (20 at Ilium, 4 at the High School site), with 4 more shovel-ready, at a gross district draw of roughly $9.2M — net ~$6.9M after the San Miguel Basin Hospital District purchases four Ilium duplexes for ~$2.32M. Rico has been dropped from the program due to mobilization costs. Finally, a Rico School update is on the agenda.",
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    "The August 25, 2026 Telluride Board of Education Monthly Meeting agenda hasn't been posted yet.",
+    "The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting the district's spending plan to account for flood damage, a reminder that the canyon's geography extracts its own costs. Also on the action list: approving a custodial contract, an IGA for a school housing site (a recurring pressure point for any institution trying to keep staff in this valley), and revised MLO ballot language — the mill levy override question that the district has been building toward. Policy updates get a first reading, including EL-11 and JKA. The board's annual self-assessment is on the 'Other' docket, and a full-day retreat follows the next morning at Wilkinson Public Library.",
 
   "fire|2026-09-15|Board of Directors Meeting":
     "The September 15, 2026 fire Board of Directors Meeting agenda hasn't been posted yet.",
@@ -1305,7 +1317,10 @@ const MANUAL_SUMMARIES = {
     "The September 17, 2026 Liquor Licensing Authority agenda hasn't been posted yet.",
 
   "telluride|2026-08-26|Resident Advisory Committee - Aug 26 2026":
-    "The Resident Advisory Committee holds its inaugural meeting — a body created to give Town of Telluride employee-housing tenants a structured voice on rental policies and conditions. The hour is organized around the fundamentals: introductions, electing a chair and secretary, aligning on the RAC's mission and limitations, and walking through meeting procedures including confidentiality rules and public notice practices. Town Representatives and a Telluride Housing Authority board rep will share updates on a tenant survey, a resident informational session scheduled for September 23 at Wilkinson Library, and an ongoing review of rental housing policies. Members will also take public comment from tenants and set the next meeting date, with a target cadence of at least four meetings per year."
+    "The Resident Advisory Committee holds its inaugural meeting — a body created to give Town of Telluride employee-housing tenants a structured voice on rental policies and conditions. The hour is organized around the fundamentals: introductions, electing a chair and secretary, aligning on the RAC's mission and limitations, and walking through meeting procedures including confidentiality rules and public notice practices. Town Representatives and a Telluride Housing Authority board rep will share updates on a tenant survey, a resident informational session scheduled for September 23 at Wilkinson Library, and an ongoing review of rental housing policies. Members will also take public comment from tenants and set the next meeting date, with a target cadence of at least four meetings per year.",
+
+  "school|2026-08-26|Telluride Board of Education Monthly Meeting":
+    "The Board is spending a full day at a retreat — held at the Wilkinson Public Library rather than the usual meeting room — focused almost entirely on how the Board itself governs, rather than on any specific district program or decision. The morning centers on Policy Governance, the structured framework that defines the Board's role as setting ends (outcomes) while leaving means to the Superintendent. The Board will review survey results showing directors want simpler metrics and clearer accountability evidence. A significant part of the day is devoted to reformatting how the Superintendent's monitoring reports are presented — shifting from narrative summaries to explicit compliance determinations tied to measurable standards. The afternoon covers community engagement, inclusive school systems, strategic financial planning, and board continuity and succession. No action items are on the agenda; this is a working session meant to sharpen how the Board does its job."
 };
 
 /* ── Post-meeting "Rick" recaps ───────────────────────────────────────
@@ -1644,6 +1659,30 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Billy Ball and Sobernauts take home the trophies",
+    source: "Telluride Times",
+    date: "August 21, 2026",
+    firstSeen: "2026-08-21",
+    newsTopic: "recreation",
+    copy: "Billy Ball won the A league title over the Nuggets 29-25 in a back-and-forth championship game, while the Sobernauts took the B league crown — both teams celebrating together at the Buck afterward. The men's rec softball season runs May through mid-July, with 14 teams total this year. Anyone interested can sign up as a free agent through Telluride Parks and Recreation.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/sports/article_1cd66cf6-c571-4a6b-8b47-a9afb988cc4d.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/0/0f/00ffb706-b490-4479-a981-7ee2269899c1/6a856f3a825af.image.jpg",
+    imgHiRes: true
+  },
+  {
+    title: "Norwood fire chief announces resignation",
+    source: "Telluride Times",
+    date: "August 21, 2026",
+    firstSeen: "2026-08-21",
+    newsTopic: "public-safety",
+    copy: "Norwood Fire Chief John Bockrath has resigned effective Sept. 30, citing a rapidly spreading lung disease that requires him to relocate to a humid climate. He also relinquished his paramedic license after breaking protocol on a narcotics call; a state investigation was subsequently closed. The board now faces the challenge of finding a replacement for a chief who spent nearly a decade earning deep respect from the Norwood community.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/norwood_post/article_8eec0fa9-0a50-480d-90c7-fbf8ea56bd8a.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/5c/a5cb78ca-a562-47c4-a054-670e40e6a929/6a889cf5715b0.image.webp",
+    imgHiRes: true
+  },
   {
     title: "Move over bears. Fat Marmot Week puts a spotlight on the alpine rodents",
     source: "Telluride Times",
@@ -3105,28 +3144,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg"
   },
   {
-    title: "Ridgway Farmer's Market",
-    link: "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
-    description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
-    pubDate: "2026-08-21T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Hartwell Park Ridgway",
-    imageUrl: ""
-  },
-  {
-    title: "Telluride Farmer's Market",
-    link: "https://koto.org/event/telluride-farmers-market/2026-08-21/",
-    description: "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
-    pubDate: "2026-08-21T10:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
     title: "Noche de Luz (Night of Light)",
     link: "https://koto.org/event/noche-de-luz-night-of-light/",
     description: "NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom Join us Friday, August 21st at 6:30pm at the Telluride Innovation Center to celebrate our \"Community in Bloom!\" The event will feature tastings from local immigrant owned restaurants, cocktails and mocktails, artist demonstrations and live music from Denver-based Chicano funk band Los Mocochetes! Tickets and Sponsorships include; – Enjoy appetizers, dinner and desert with tastings from local, immigrant-owned restaurants and catering businesses – 1 drink ticket for the bar serving signature cocktails and mocktails, beer and wine (additional drinks available for purchase) – Live Artist Demonstrations and Traditional Artisan Displays – Live Music! Performances from local DJs and a live 5-piece latin funk band to close out the night – Silent Auction &#8230;.. and more! …",
@@ -3566,34 +3583,7 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-  {
-    id: "TEL-A-200",
-    name: "Poppy",
-    species: "Dog",
-    breed: "Shepherd, Australian / Collie, Border",
-    ageGroup: "Young Dog",
-    sex: "Female",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/ac37667664400e6b8447a121864d0830/441d41cab8c41d99d9a6c21ee2734fff.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214332972",
-    summary: "Young Dog • Shepherd, Australian / Collie, Border • Female",
-    firstSeen: "2026-08-21",
-    revealDate: "2026-08-21",
-    lastSeen: "2026-08-21"
-  },
-  {
-    id: "TEL-A-201",
-    name: "Poncho",
-    species: "Dog",
-    breed: "Shepherd, Australian",
-    ageGroup: "Young Dog",
-    sex: "Male",
-    photo: "https://new-s3.shelterluv.com/profile-pictures/4c0984a45bfe8e2d865967e628bcd873/2963eceafe7f5f155bea7d55b5ac46d1.jpg",
-    profileUrl: "https://www.shelterluv.com/embed/animal/214332992",
-    summary: "Young Dog • Shepherd, Australian • Male",
-    firstSeen: "2026-08-21",
-    revealDate: "2026-08-23",
-    lastSeen: "2026-08-21"
-  }
+
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.
@@ -4705,13 +4695,13 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "San Juan Chamber MusicFest Festival Concert",
     link: "https://events.ourayridgwayevents.com/event/san-juan-chamber-musicfest-festival-concert",
-    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. Tickets available through the Ouray County Performing Arts Guild. Meet the SJCMF musicians >> View on site | Email this event",
+    description: "The Ouray County Performing Arts Guild proudly presents the 43rd Annual San Juan Chamber MusicFest Festival Concert at the historic Wright Opera House. Acclaimed pianist Max Levinson joins the internationally celebrated Ulysses Quartet for an unforgettable evening of chamber music, showcasing masterworks performed by some of today's most accomplished classical musicians. Following the concert, guests are invited to continue the evening with a reception in the Wright Tavern, offering an opportunity to meet fellow music lovers and celebrate another remarkable season of Chamber MusicFest in the San Juans. Tickets available through the Ouray County Performing Arts Guild. Meet the SJCMF musicians >> See the complete festival lineup>> View on site | Email this event",
     pubDate: "2026-08-29T19:30:16.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53629793138788/huge/5bbae7e3ec0d15b3e428cf9f3487751fe52758ee.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53763633777595/huge/f0db83a6fd50288b1f61d1973f86e8eb366be160.jpg"
   },
   {
     title: "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
@@ -4727,7 +4717,7 @@ const OURAY_RIDGWAY_EVENTS = [
   {
     title: "DARRELL SCOTT - Live at The Sherbino",
     link: "https://events.ourayridgwayevents.com/event/darrell-scott-live-at-the-sherbino",
-    description: "SATURDAY || Doors: 7:00 PM || Show: 7:30 PM || Tickets: $30 in advance / $35 Day of Show || Solo Show || Some Reserved Section Seats Available Presented in partnership by The Sherbino with Pickin’ Productions About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. …",
+    description: "About Darrell Scott Darrell Scott is an acclaimed singer, songwriter, and multi-instrumentalist widely regarded as one of the most respected voices in contemporary American roots music. A masterful storyteller with deep roots in country, bluegrass, folk, and Americana, Scott delivers powerful performances where his expressive voice, heartfelt songwriting, and exceptional musicianship takes center stage. Scott’s debut album, Aloha from Nashville, introduced enduring songs that became modern standards, including “You’ll Never Leave Harlan Alive” and “It’s A Great Day To Be Alive.” Across albums including Family Tree, The Invisible Man, Modern Hymns, A Crooked Road, and Long Ride Home, Scott’s songwriting and instrumental artistry have continued to resonate with audiences and fellow musicians alike. Scott has built a career defined by authenticity, instrumental versatility, and lyrical depth. His voice and instrumental work appear on hundreds of studio sessions recorded from Nashville and Los Angeles to Toronto and London. …",
     pubDate: "2026-08-30T01:30:00.000Z",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
@@ -4871,6 +4861,17 @@ const OURAY_RIDGWAY_EVENTS = [
     imageUrl: "https://localist-images.azureedge.net/photos/52577810192311/huge/0773d8a866e30d9392f3bfb00a66acb1613d8a4b.jpg"
   },
   {
+    title: "Electric Badlands: First Friday Opening Night",
+    link: "https://events.ourayridgwayevents.com/event/electric-badlands-first-friday-opening-night",
+    description: "Where old country grit meets neon-lit dissent. Space to Create Gallery proudly presents Electric Badlands, a solo exhibition by Spencer Fuller. Stepping away from sepia-toned nostalgia, Fuller reimagines the mythology of the American West through high-voltage neon pigments, dripping brushstrokes, and traditional frontier iconography. Blending a sharp political critique with the raw, rebellious pulse of classic country and rock, these works challenge how we look at history, power, and contemporary identity. Join us for the opening reception during the Ridgway First Friday Art Walk to meet the artist, explore the works, and enjoy refreshments. The exhibition runs through September 28. View on site | Email this event",
+    pubDate: "2026-09-04T23:00:00.000Z",
+    source: "oray",
+    sourceLabel: "Ouray Ridgway Calendar",
+    category: "Community Event",
+    location: "Space to Create Gallery",
+    imageUrl: "https://localist-images.azureedge.net/photos/53764195995930/huge/26a45ab073a35cce3a87bf6cbea54303787871f9.jpg"
+  },
+  {
     title: "First Friday Art Walk",
     link: "https://events.ourayridgwayevents.com/event/first-friday-art-walk",
     description: "Discover new work, celebrate openings, and connect with artists at the First Friday Art Walk in downtown Ridgway. Each month, galleries, studios and retail spaces throw open their doors for receptions, pop-up exhibits, live music and special programming — perfect for art lovers and casual browsers alike. NEW! 🎨🛍️ Shop local. Win local. Celebrate local. 🎶🍷 New this summer, your First Friday stroll through Ridgway could score you a $100 gift card to your favorite local business. 👀 Follow the link for more details. First Friday Map & Offer Details View on site | Email this event",
@@ -4915,7 +4916,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "Decker Community Room",
-    imageUrl: "https://localist-images.azureedge.net/photos/53048149260541/huge/415b9339ce946074e5105384e5293b0f6acdedee.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53764349683288/huge/471bb8c36dc067ddd9b229c9e31032260184eb5e.jpg"
   },
   {
     title: "September - Art Opening: Social Justice Travel Exhibition",
