@@ -1,18 +1,22 @@
 {
-  "hash": "0f17e852654c7a42f1ea43566a12a7f67119e678",
-  "lede": "The Telluride Hospital District board meets August 27 with a major decision on the table: possible action on a Two Site Model for the new medical facility, plus movement on architect selection and a Letter of Intent — choices that will shape the future of healthcare in this valley for decades. Also worth watching that same day, the TMVOA board votes to stand up a Workforce Housing Committee and act on updated policies, while the Town's brand-new Resident Advisory Committee holds its inaugural meeting to begin giving employee-housing tenants a real seat at the table on rental policy.",
+  "hash": "d28b7b6e2f2b500f631e3f161a542ca9c9c0677e",
+  "lede": "The Ethics Commission meets Tuesday to draft a formal Code of Conduct recommendation for Town Council — a direct follow-up to its May finding, and the kind of structural accountability question that tends to get decided quietly if nobody's paying attention. Alongside that, the County is digging into child care assistance funding and its budget implications on Wednesday, the Hospital District board takes up the two-site model for the new facility on Thursday, and TMVOA moves to stand up a Workforce Housing Committee. Busy week on the governance side.",
   "notable": [
     {
-      "id": 6,
-      "stake": "Board may vote on Two Site Model and architect selection for new hospital facility."
+      "id": 1,
+      "stake": "Commission drafts Code of Conduct for town officials — shapes future accountability rules."
     },
     {
-      "id": 8,
-      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated association policies."
+      "id": 3,
+      "stake": "County examines CCAP budget impact; child care funding cuts could affect working families."
     },
     {
-      "id": 5,
-      "stake": "New tenant advisory body holds first meeting; chair election and policy scope set here."
+      "id": 7,
+      "stake": "Hospital board may act on two-site facility model, shaping the new medical center's scope and location."
+    },
+    {
+      "id": 9,
+      "stake": "TMVOA votes to form Workforce Housing Committee and adopt updated policies."
     }
   ]
 }
