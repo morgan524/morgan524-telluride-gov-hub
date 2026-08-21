@@ -1627,6 +1627,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Camp Alderwild bids adieu to Telluride with farewell event",
+    source: "Telluride Times",
+    date: "August 21, 2026",
+    firstSeen: "2026-08-21",
+    newsTopic: "arts-culture",
+    copy: "Camp Alderwild, the EDM festival that drew around 5,000 attendees its first year and is on pace for 7,000 this year, will not return to Telluride in 2026. Organizers cite a packed summer calendar and a lodging cost cliff that cuts ticket sales once camping fills up. A new Colorado location is planned for next year, with details coming after this weekend's farewell event wraps.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_82c22ae0-75f9-4ac9-9ab6-512c8cb63e99.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/65/76587782-1163-4ede-8d96-d61d8fee6c8e/6a86c15501873.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Telluride volleyball starting ’26 away",
     source: "Telluride Times",
     date: "August 20, 2026",
@@ -3505,7 +3517,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Pooh Storytime / Hora de Cuentos de Winnie Pooh",
     link: "https://telluridelibrary.libcal.com/event/17285962?hs=a",
-    description: "A bilingual storytime program at Wilkinson Public Library celebrating Winnie the Pooh, held outdoors on the Lower Terrace. The event welcomes both English and Spanish speakers for an hour of Pooh-themed stories and activities.",
+    description: "10:30 AM – 11:30 AM",
     pubDate: "2026-08-21T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -5236,7 +5248,7 @@ const OURAY_RIDGWAY_EVENTS = [
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
     location: "",
-    imageUrl: "https://localist-images.azureedge.net/photos/53753907771679/huge/e4c0dbfe2459d8771509f5662a4b2ce6c853cfe2.jpg"
+    imageUrl: "https://localist-images.azureedge.net/photos/53759764782802/huge/dc7e273f56ef01d450bc75d4e9c24bb9c5c68230.jpg"
   },
   {
     title: "4th Annual San Juan Slam Pickleball Tournament",
@@ -5653,7 +5665,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5664,7 +5676,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    description: "",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5675,7 +5687,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5686,7 +5698,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5697,7 +5709,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5708,7 +5720,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5719,7 +5731,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5730,7 +5742,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
