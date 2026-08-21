@@ -354,7 +354,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300","sv":4,"ph":"f461253da821da55"},
 
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
-    {"sv":4,"ph":"b858cb282617fb09"},
+    {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/N4y5Yn2FSqCtz42k2HzXYg","meetingId":"822 1299 4362","passcode":"097542","phone":"970) 728-1904"},
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"33dc8808fda3b3c7"},
@@ -749,7 +749,10 @@ const MEETING_PREVIEWS = {
     "The Resident Advisory Committee will hold its inaugural meeting, covering member introductions, officer elections, and a review of meeting procedures, mission, and purpose. Members will also receive updates from the Town, including a review of Telluride's Employee Rental Housing Policies, and will determine the date of their next meeting.",
 
   "mv|2026-09-03|Design Review Board":
-    "Board will consider a conditional use permit for a temporary tent and food truck at 332 Adams Ranch Rd. Also on the agenda is a continuation request for final architecture review of a 15-unit employee apartment building at 306 Adams Ranch Rd, deferred to October."
+    "Board will consider a conditional use permit for a temporary tent and food truck at 332 Adams Ranch Rd. Also on the agenda is a continuation request for final architecture review of a 15-unit employee apartment building at 306 Adams Ranch Rd, deferred to October.",
+
+  "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
+    "Board will consider forming a Workforce Housing Committee, adopting updated policies, and acting on a grant request for the TMV Ice Pad. Members will also receive updates on a Pond Improvement Plan and background on 161CR Public Benefits, along with information on dissolving the FAB."
 };        // pre-meeting agenda previews (Claude)
 const REGIONAL_NEWS_ARTICLES = [
   {
@@ -1252,7 +1255,7 @@ const MANUAL_SUMMARIES = {
     "The August 26, 2026 Public Art Commission agenda hasn't been posted yet.",
 
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting":
-    "The August 27, 2026 TMVOA Board of Directors Meeting agenda hasn't been posted yet.",
+    "The TMVOA Board meets August 27 with several consequential items on a fairly packed agenda. The headline action is forming a Workforce Housing Committee — a signal that Mountain Village's affordable housing pressures are pushing the association toward a more structured response. The board will also vote to adopt updated policies and act on a grant request for the TMV Ice Pad. On the informational side: the dissolving of the FAB (Finance Advisory Board), a background briefing on 161CR public benefits, and an update on the Pond Improvement Plan. The 161CR item is worth watching — public benefits discussions tied to major development agreements tend to carry long tails in this valley.",
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
     "The August 25, 2026 Ethics Commission agenda hasn't been posted yet.",
@@ -3023,17 +3026,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 
 const KOTO_COMMUNITY_EVENTS = [
   {
-    title: "Telluride Dinner Party",
-    link: "https://koto.org/event/telluride-dinner-party/",
-    description: "You are formally invited to our Telluride Dinner Party. This year, the Telluride Historical Museum turns 60 years old and to celebrate we are hosting the event at the museum. Enjoy cocktails as you mingle with locals who were born in the building, and peruse our new and permanent exhibits. Black Salt Catering will be serving an incredible plated dinner while you hear from a panel of museum legends that helped THM become who we are. We hope to celebrate this milestone of the Telluride Historical Museum’s history with you, your friends, and our museum family.",
-    pubDate: "2026-08-20T17:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Historical Museum",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/TellurideDinnerParty2026Marketing-1-scaled.jpg"
-  },
-  {
     title: "KOTO Guest DJ Day!",
     link: "https://koto.org/event/koto-guest-dj-day/",
     description: "This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep this station and community Stayin' Alive! Tune in all day to hear from your favorite local voices, and feel free to bring a little disco energy with you.",
@@ -3605,7 +3597,34 @@ const WILKINSON_EVENTS = [
 // none of which are advertised as adoptable. The sync filters those out, so
 // this repopulates automatically when THS posts genuinely-available pets.
 const HUMANE_SOCIETY_ANIMALS = [
-
+  {
+    id: "TEL-A-200",
+    name: "Poppy",
+    species: "Dog",
+    breed: "Shepherd, Australian / Collie, Border",
+    ageGroup: "Young Dog",
+    sex: "Female",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/ac37667664400e6b8447a121864d0830/441d41cab8c41d99d9a6c21ee2734fff.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214332972",
+    summary: "Young Dog • Shepherd, Australian / Collie, Border • Female",
+    firstSeen: "2026-08-21",
+    revealDate: "2026-08-21",
+    lastSeen: "2026-08-21"
+  },
+  {
+    id: "TEL-A-201",
+    name: "Poncho",
+    species: "Dog",
+    breed: "Shepherd, Australian",
+    ageGroup: "Young Dog",
+    sex: "Male",
+    photo: "https://new-s3.shelterluv.com/profile-pictures/4c0984a45bfe8e2d865967e628bcd873/2963eceafe7f5f155bea7d55b5ac46d1.jpg",
+    profileUrl: "https://www.shelterluv.com/embed/animal/214332992",
+    summary: "Young Dog • Shepherd, Australian • Male",
+    firstSeen: "2026-08-21",
+    revealDate: "2026-08-23",
+    lastSeen: "2026-08-21"
+  }
 ];
 
 /* The Alibi events — refreshed by syncAlibiEvents() every 6 hours.

@@ -378,7 +378,11 @@
   },
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting": {
     "sv": 4,
-    "ph": "b858cb282617fb09"
+    "agendaUrl": "https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/N4y5Yn2FSqCtz42k2HzXYg",
+    "meetingId": "822 1299 4362",
+    "passcode": "097542",
+    "phone": "970) 728-1904"
   },
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",

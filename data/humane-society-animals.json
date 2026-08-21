@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "TEL-A-200",
+    "name": "Poppy",
+    "species": "Dog",
+    "breed": "Shepherd, Australian / Collie, Border",
+    "ageGroup": "Young Dog",
+    "sex": "Female",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/ac37667664400e6b8447a121864d0830/441d41cab8c41d99d9a6c21ee2734fff.jpg",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214332972",
+    "summary": "Young Dog • Shepherd, Australian / Collie, Border • Female",
+    "firstSeen": "2026-08-21",
+    "revealDate": "2026-08-21",
+    "lastSeen": "2026-08-21"
+  },
+  {
+    "id": "TEL-A-201",
+    "name": "Poncho",
+    "species": "Dog",
+    "breed": "Shepherd, Australian",
+    "ageGroup": "Young Dog",
+    "sex": "Male",
+    "photo": "https://new-s3.shelterluv.com/profile-pictures/4c0984a45bfe8e2d865967e628bcd873/2963eceafe7f5f155bea7d55b5ac46d1.jpg",
+    "profileUrl": "https://www.shelterluv.com/embed/animal/214332992",
+    "summary": "Young Dog • Shepherd, Australian • Male",
+    "firstSeen": "2026-08-21",
+    "revealDate": "2026-08-23",
+    "lastSeen": "2026-08-21"
+  }
+]
