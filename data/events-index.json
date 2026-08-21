@@ -1,18 +1,5 @@
 [
   {
-    "title": "Up-off Gymnastics, Dance, and Spanish",
-    "href": "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
-    "date": "2026-08-21",
-    "time": "10:00 AM",
-    "location": "Lone Cone Library Norwood",
-    "town": "Norwood",
-    "img": "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance,…",
-    "type": "Music"
-  },
-  {
     "title": "Ridgway Farmer's Market",
     "href": "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
     "date": "2026-08-21",
@@ -63,7 +50,7 @@
     "img": "https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_07_29_11_13_00.png",
     "category": "Library Event",
     "source": "Wilkinson Public Library",
-    "desc": "A bilingual storytime program at Wilkinson Public Library celebrating Winnie the Pooh, held outdoors on the Lower Terrace. The event welcomes both English and Spanish speakers for an hour of Pooh-themed stories and activities.",
+    "desc": "10:30 AM – 11:30 AM",
     "type": "Family & Kids"
   },
   {
@@ -78,19 +65,6 @@
     "source": "Telluride Farmers Market",
     "desc": "The Telluride Farmers Market is open every Friday through the season on South Oak Street in downtown Telluride, 10:30 AM–3:30 PM. Locally produced organic produce, animal products, prepared food, and artisan goods — everything sourced…",
     "type": "Food & Drink"
-  },
-  {
-    "title": "Tennis Clinic 4.0+",
-    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-21/",
-    "date": "2026-08-21",
-    "time": "11:00 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "Horsin' Around- Storytime with a Mini Horse",
@@ -237,19 +211,6 @@
     "desc": "Step's Tavern Presents Karaoke Night. Doors Open at 8:00 PM Every Friday Night View on site | Email this event",
     "type": "Community",
     "endDate": "2026-09-26"
-  },
-  {
-    "title": "Tennis Clinic 3.0-4.0",
-    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
-    "date": "2026-08-21",
-    "time": "9:30 AM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
-    "type": "Outdoors & Sports"
   },
   {
     "title": "KOTO Guest DJ Day!",
@@ -658,7 +619,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -1633,7 +1594,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -2684,7 +2645,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3339,7 +3300,7 @@
     "img": "https://livabletelluride.org/assets/digest/fallbacks/community-5.jpg",
     "category": "Community Event",
     "source": "Town of Norwood",
-    "desc": "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado,…",
+    "desc": "",
     "type": "Community"
   },
   {
@@ -3511,7 +3472,7 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story…",
     "type": "Arts & Film",
-    "endDate": "2026-10-19"
+    "endDate": "2026-10-20"
   },
   {
     "title": "Pink Talking Fish",

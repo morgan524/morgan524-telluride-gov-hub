@@ -273,7 +273,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    {"sv":4,"ph":"57346ecfcc513e53"},
+    {"sv":4,"agendaUrl":"https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1965","zoomUrl":"https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw","meetingId":"858 7914 5422","passcode":"509931","phone":"719-359-4580"},
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     {"agendaUrl":"https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf","zoomUrl":"https://us02web.zoom.us/j/84191917434","meetingId":"841 9191 7434","passcode":"905972","phone":"970-327-4288","sv":4},
@@ -357,7 +357,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://tmvoa.org/site/assets/files/4851/tmvoa_board_meeting_agenda_8_27_26.pdf","zoomUrl":"https://us02web.zoom.us/meeting/register/N4y5Yn2FSqCtz42k2HzXYg","meetingId":"822 1299 4362","passcode":"097542","phone":"970) 728-1904"},
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"ph":"33dc8808fda3b3c7"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301","sv":4,"zoomUrl":"https://us06web.zoom.us/meeting/register/qlFJ6Tx-TZ6zLK8GdTvb4Q","meetingId":"813 8122 0495","passcode":"909304","phone":"719) 359-4580"},
 
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117","zoomUrl":"https://us06web.zoom.us/j/84372531870?pwd=Dzpb3SzCKOLJejMu5DGalEWqJghGlM.1","phone":"970-728-3071","sv":4},
@@ -372,7 +372,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"ph":"b858cb282617fb09"},
 
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"1ee3d118528867aa"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131","sv":4,"ph":"e2d918e8f8800b3e"},
 
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302","sv":4},
@@ -842,7 +842,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "recreation",
     copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
-    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
     img: ""
   },
   {
@@ -852,7 +852,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "public-safety",
     copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
-    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
     img: ""
   },
   {
@@ -862,7 +862,7 @@ const REGIONAL_NEWS_ARTICLES = [
     date: "August 20, 2026",
     newsTopic: "government",
     copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
-    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/?ta_paidstory",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
     img: ""
   },
   {
@@ -886,13 +886,33 @@ const REGIONAL_NEWS_ARTICLES = [
     img: ""
   },
   {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
+    img: ""
+  },
+  {
     title: "Chamber music fest returns to San Juans",
     source: "Ouray County Plaindealer",
     sourceKey: "ouray-plaindealer",
     date: "August 20, 2026",
     newsTopic: "arts-culture",
-    copy: "World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to return to perform in one of their favorite venues. Though they travel aro",
-    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/?ta_paidstory",
+    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
+    img: ""
+  },
+  {
+    title: "Ouray County Fair 2026",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
     img: ""
   },
   {
@@ -903,26 +923,6 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "public-safety",
     copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
     href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
-    img: ""
-  },
-  {
-    title: "Ridgway student proposes ‘free box’ for donations",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "education",
-    copy: "A presentation about an idea for a “free box” by a Ridgway National Honor Society student at the Ridgway Town Council meeting Aug. 12 led to lengthy discussion and a $750 contribution to the project, with conditions. Ariel Hessler, a junior at Ridgway Secondary School, proposed the idea of the free ",
-    href: "https://www.ouraynews.com/2026/08/19/ridgway-student-proposes-free-box-donations/?ta_paidstory",
-    img: ""
-  },
-  {
-    title: "Debra Lynn Todd",
-    source: "Ouray County Plaindealer",
-    sourceKey: "ouray-plaindealer",
-    date: "August 20, 2026",
-    newsTopic: "community",
-    copy: "November 5, 1953 – August 15, 2026 Debra Lynn Todd, 72, of Ouray, Colorado, passed away on August 15, 2026. She was born November 5, 1953, in Hutchinson, Kansas. She was the daughter of Chester and Kathleen Todd, who preceded her in death. Survivors include a sister, Jennene Kay Todd Mashburn, niece",
-    href: "https://www.ouraynews.com/2026/08/19/debra-lynn-todd/",
     img: ""
   },
   {
@@ -1012,8 +1012,8 @@ const SMC_ALERTS = [
     source: "San Miguel County",
     sourceLabel: "San Miguel County",
     category: "Alert",
-    date: "2026-08-20",
-    pubDate: "2026-08-20T23:10:38.000Z",
+    date: "2026-08-21",
+    pubDate: "2026-08-21T17:53:01.000Z",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
     img: ""
@@ -1164,7 +1164,7 @@ const MANUAL_SUMMARIES = {
     "The August 20, 2026 TMVOA Investment Committee Meeting agenda hasn't been posted yet.",
 
   "county|2026-08-26|Board of County Commissioners Work Session":
-    "The agenda for the August 26 Board of County Commissioners Work Session hasn't been posted yet.",
+    "A Special Meeting with a mix of routine approvals and one item worth watching closely: a 40-minute discussion on Colorado Child Care Assistance Program (CCAP) funding and what its budget implications mean for the county. Human Services Director Linnea Edwards will also present the Core Services Plan for FY 2026-2027. On the administrative side, the Board takes up a fee adjustment for the Green Grants program — bumped from $10,000 to $15,000, or 10% of total grant funding — plus authorization for the Black Bear Pass in Reverse event on September 12, and interviews two applicants for the Telluride Regional Airport Authority Board. Consent items include a board reappointment and the 2026 Abstract of Assessment.",
 
   "norwood|2026-07-29|Board of Trustees Work Session":
     "A single item is on the table for this Norwood work session: where to place a Happenings Kiosk in town. Work sessions don't produce formal action — this is the conversation before any decision.",
@@ -1248,7 +1248,7 @@ const MANUAL_SUMMARIES = {
     "The TMVOA Board meets August 27 with several consequential items on a fairly packed agenda. The headline action is forming a Workforce Housing Committee — a signal that Mountain Village's affordable housing pressures are pushing the association toward a more structured response. The board will also vote to adopt updated policies and act on a grant request for the TMV Ice Pad. On the informational side: the dissolving of the FAB (Finance Advisory Board), a background briefing on 161CR public benefits, and an update on the Pond Improvement Plan. The 161CR item is worth watching — public benefits discussions tied to major development agreements tend to carry long tails in this valley.",
 
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026":
-    "The August 25, 2026 Ethics Commission agenda hasn't been posted yet.",
+    "The Ethics Commission meets August 25 to handle two items of real consequence. First, the routine: electing a new chair and vice-chair. Second, and more substantive: developing a recommendation to Town Council on whether — and how — to establish a formal Code of Conduct for Telluride officials. That recommendation traces directly to the Commission's May 18 finding in the Julia Fallman complaint against Councilperson Kristen Permakoff. The Commission found no ethics violation, but only because the current code's 'above reproach' standard lacks the behavioral specificity to support one. Staff has laid out two main paths: integrate explicit conduct language into the existing Ethics Code (Chapter 2, Article 4), where the Ethics Commission already has enforcement authority, or strengthen the Council's own Rules of Conduct, which currently has no formal penalty mechanism. The Commission can also draft its own hybrid approach. Whatever they recommend goes to Town Council for action.",
 
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026":
     "The Ecology Commission meets August 19 to continue work on the 2027 Climate Action Plan update — two work sessions are on the docket, one covering the update broadly and one focused specifically on the Materials & Consumption focus area. The commission will also plan Black Bear Safety Week. Minutes from the July 8 meeting are up for approval; that session covered transportation, land use, and materials focus areas of the CAP, and appointed Ruthie Boyd and Kristen Rosenbaum to the Green Grants selection subcommittee.",
@@ -2490,7 +2490,7 @@ const TELLURIDE_TIMES_ARTICLES = [
   {
     title: "All County Offices Closed Thursday 8/27!",
     source: "San Miguel County",
-    date: "August 20, 2026",
+    date: "August 21, 2026",
     newsTopic: "community",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
@@ -3105,28 +3105,6 @@ const KOTO_COMMUNITY_EVENTS = [
     imageUrl: "https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg"
   },
   {
-    title: "Tennis Clinic 3.0-4.0",
-    link: "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-21/",
-    description: "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-21T09:30:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
-    imageUrl: ""
-  },
-  {
-    title: "Up-off Gymnastics, Dance, and Spanish",
-    link: "https://koto.org/event/up-off-gymnastics-dance-and-spanish/2026-08-21/",
-    description: "We are a MOBILE family business offering non-competitive Gymnastics, Preschool Spanish, & Dance classes to the San Miguel County area. Tia Uphoff was a competitive gymnast and an instructor for 20+ years, helping children develop balance, flexibility, strength and proper tumbling techniques while using positive reinforcement and encouragement for success. Infant to Age 5 — Padres & Pequenos Class – $10.00 per class This class invites adults & kids to participate in Educational songs, in English & Spanish, with intro to gymnastics. Sign up at any time and get started weekly. Fridays — 11:15-11:40 am @ Lone Cone Library Norwood K to 3rd Grade week Session 8 Week Winter Session $150 for the 8 sessions. Thursdays – 430-530 pm @ Lone Cone Library Norwood For more information and to register: Contact Tia @ liv2danz247@gmail.com or find us on Facebook!",
-    pubDate: "2026-08-21T10:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Lone Cone Library Norwood",
-    imageUrl: "https://koto.org/wp-content/uploads/2025/06/Messenger_creation_3FA37E27-C0AC-4E9D-ABF5-592710E68D81.jpeg"
-  },
-  {
     title: "Ridgway Farmer's Market",
     link: "https://koto.org/event/ridgway-farmers-market/2026-08-21/",
     description: "The Ridgway Farmer's Market takes place every Friday from May 22nd through October 16th! * The August 7th Market will be held onthe 6th* 10 a.m. to 2 p.m. at Hartwell Park in Downtown Ridgway Local Produce | Artisans | Live Music every Last Friday",
@@ -3146,17 +3124,6 @@ const KOTO_COMMUNITY_EVENTS = [
     sourceLabel: "KOTO",
     category: "Community Event",
     location: "Oak Street Plaza, Telluride",
-    imageUrl: ""
-  },
-  {
-    title: "Tennis Clinic 4.0+",
-    link: "https://koto.org/event/tennis-clinic-4-0/2026-08-21/",
-    description: "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
-    pubDate: "2026-08-21T11:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "Telluride Racquet Club, Mountain Village",
     imageUrl: ""
   },
   {
@@ -3583,7 +3550,7 @@ const WILKINSON_EVENTS = [
   {
     title: "Pooh Storytime / Hora de Cuentos de Winnie Pooh",
     link: "https://telluridelibrary.libcal.com/event/17285962?hs=a",
-    description: "A bilingual storytime program at Wilkinson Public Library celebrating Winnie the Pooh, held outdoors on the Lower Terrace. The event welcomes both English and Spanish speakers for an hour of Pooh-themed stories and activities.",
+    description: "10:30 AM – 11:30 AM",
     pubDate: "2026-08-21T16:30:00.000Z",
     source: "wilkinson",
     sourceLabel: "Wilkinson Public Library",
@@ -5565,7 +5532,7 @@ const OURAY_RIDGWAY_EVENTS = [
     link: "https://events.ourayridgwayevents.com/event/copy-of-art-opening-space-cowboy-by-dundee-lee",
     description: "Come see Space Cowboy durings its stop in Ridgway! Space Cowboy is a large-scale traveling exhibition that creates a high-engagement public experience wherever it lands — drawing community members in through fiber art, live story collection, and programming that connects Colorado's frontier identity to its aerospace future. It doesn't just show up. It listens. Community voices are archived through , and woven into the exhibition itself — creating a living record that grows with every stop. Over four years, Space Cowboy is estimated to reach 37,000 Coloradans across every economic region, scenic corridor, and creative district in the state. Space Cowboy launches at the Annual Summit in Trinidad, June 3, 2026 — at the heart of the Santa Fe Trail corridor in Southeast Colorado, the first stop on a four-year statewide journey. View on site | Email this event",
     pubDate: "2026-10-02T23:00:00.000Z",
-    endDate: "2026-10-19",
+    endDate: "2026-10-20",
     source: "oray",
     sourceLabel: "Ouray Ridgway Calendar",
     category: "Community Event",
@@ -5732,7 +5699,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Planning And Zoning Commission Cancelled",
     link: "https://www.norwoodtown.com/2026-08-17-planning-and-zoning-commission-cancelled",
-    description: "The Town of Norwood's Planning and Zoning Commission meeting scheduled for this date has been cancelled. No session will be held.",
+    description: "",
     pubDate: "2026-08-17T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5743,7 +5710,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-24-senior-lunch",
-    description: "A community lunch gathering for seniors, hosted by the Town of Norwood. It takes place at midday and offers older residents an opportunity to share a meal and connect with one another.",
+    description: "",
     pubDate: "2026-08-24T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5754,7 +5721,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-08-31-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-08-31T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5765,7 +5732,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Labor Day",
     link: "https://www.norwoodtown.com/2026-09-07-closed-for-labor-day",
-    description: "The Town of Norwood will be closed in observance of Labor Day. Municipal offices and services will be unavailable during the holiday closure.",
+    description: "",
     pubDate: "2026-09-07T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5776,7 +5743,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Senior Lunch",
     link: "https://www.norwoodtown.com/2026-09-14-senior-lunch",
-    description: "A midday lunch gathering for seniors, hosted by the Town of Norwood. It offers older community members a chance to share a meal and connect with neighbors.",
+    description: "",
     pubDate: "2026-09-14T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5787,7 +5754,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Norwood Pioneer Days And Car Show",
     link: "https://www.norwoodtown.com/2026-09-26-norwood-pioneer-days-and-car-show",
-    description: "Norwood Pioneer Days and Car Show is an annual community celebration hosted by the Town of Norwood, honoring the area's heritage with a car show and festive activities. The event brings together locals and visitors in Norwood, Colorado, for a day of community gathering and regional pride.",
+    description: "",
     pubDate: "2026-09-26T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5798,7 +5765,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Columbus Day",
     link: "https://www.norwoodtown.com/2026-10-12-closed-for-columbus-day",
-    description: "The Town of Norwood will be closed in observance of Columbus Day. Residents should plan accordingly for any town services or business they may need to conduct.",
+    description: "",
     pubDate: "2026-10-12T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -5809,7 +5776,7 @@ const NORWOOD_EVENTS = [
   {
     title: "Closed For Veterans Day",
     link: "https://www.norwoodtown.com/2026-11-11-closed-for-veterans-day",
-    description: "The Town of Norwood will be closed in observance of Veterans Day. Municipal offices and services will be unavailable on this federal holiday honoring those who have served in the United States armed forces.",
+    description: "",
     pubDate: "2026-11-11T12:00:00.000Z",
     source: "norwood",
     sourceLabel: "Town of Norwood",
@@ -8887,10 +8854,11 @@ const TELLURIDE_BOARD_MEETINGS = [
     date: "August 25, 2026",
     title: "Ethics Commission",
     agendaUrl: "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
-    hasAgenda: false,
+    hasAgenda: true,
     location: "Rebekah Hall, 113 W Columbia Ave",
     time: "",
-    civicwebId: 8301
+    civicwebId: 8301,
+    packetUrl: "https://telluride-co.civicweb.net/document/443653/"
   },
   {
     date: "September 1, 2026",

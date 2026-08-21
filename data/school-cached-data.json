@@ -1,23 +1,30 @@
 [
   {
     "date": "August 24, 2026",
-    "time": "3:30 PM",
+    "time": null,
     "title": "Telluride Board of Education Work Session",
-    "agendaUrl": null,
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf",
     "packetUrl": null,
     "special": false,
-    "location": "Bridal Veil District Conference Room / Zoom",
-    "note": "Scheduled meeting -- agenda posted closer to the date."
+    "location": "Bridal Veil District Conference Room / Zoom"
   },
   {
     "date": "August 25, 2026",
-    "time": "5:15 PM",
+    "time": null,
     "title": "Telluride Board of Education Monthly Meeting",
-    "agendaUrl": null,
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
     "packetUrl": null,
     "special": false,
-    "location": "Bridal Veil District Conference Room / Zoom",
-    "note": "Scheduled meeting -- agenda posted closer to the date."
+    "location": "Bridal Veil District Conference Room / Zoom"
+  },
+  {
+    "date": "August 26, 2026",
+    "time": null,
+    "title": "Telluride Board of Education Monthly Meeting",
+    "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
+    "packetUrl": null,
+    "special": false,
+    "location": "Bridal Veil District Conference Room / Zoom"
   },
   {
     "date": "September 22, 2026",

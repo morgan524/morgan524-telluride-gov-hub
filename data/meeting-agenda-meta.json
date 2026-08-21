@@ -248,7 +248,11 @@
   },
   "county|2026-08-26|Board of County Commissioners Work Session": {
     "sv": 4,
-    "ph": "57346ecfcc513e53"
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/869/files/agenda/1965",
+    "zoomUrl": "https://us02web.zoom.us/meeting/register/9OtfsijQQWSJMrVmAUrDCw",
+    "meetingId": "858 7914 5422",
+    "passcode": "509931",
+    "phone": "719-359-4580"
   },
   "norwood|2026-07-29|Board of Trustees Work Session": {
     "agendaUrl": "https://www.norwoodtown.com/files/62b999f7f/07.29.2026+Work+Session+Board+of+Trustee+Agenda+ADA.pdf",
@@ -387,7 +391,10 @@
   "telluride|2026-08-25|Ethics Commission - Aug 25 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8301",
     "sv": 4,
-    "ph": "33dc8808fda3b3c7"
+    "zoomUrl": "https://us06web.zoom.us/meeting/register/qlFJ6Tx-TZ6zLK8GdTvb4Q",
+    "meetingId": "813 8122 0495",
+    "passcode": "909304",
+    "phone": "719) 359-4580"
   },
   "telluride|2026-08-19|Ecology Commission - Aug 19 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8117",
@@ -414,7 +421,7 @@
   "telluride|2026-09-14|Open Space Commission - Sep 14 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8131",
     "sv": 4,
-    "ph": "1ee3d118528867aa"
+    "ph": "e2d918e8f8800b3e"
   },
   "telluride|2026-08-17|Open Space Commission Site Walk - Aug 17 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8302",
