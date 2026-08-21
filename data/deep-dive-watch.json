@@ -1,10 +1,23 @@
 {
- "generated": "2026-08-21T18:45:26.930Z",
+ "generated": "2026-08-21T21:33:30.278Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
    "lastUpdated": "2026-08-17",
-   "upcoming": [],
+   "upcoming": [
+    {
+     "source": "school",
+     "sourceLabel": "School District R-1",
+     "title": "Telluride Board of Education Monthly Meeting",
+     "date": "2026-08-25",
+     "time": "",
+     "location": "Bridal Veil District Conference Room / Zoom",
+     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
+     "link": "https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf",
+     "zoomLink": "https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09",
+     "livestream": ""
+    }
+   ],
    "recent": [
     {
      "source": "telluride",
