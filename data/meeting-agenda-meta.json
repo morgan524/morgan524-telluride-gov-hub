@@ -1,15 +1,4 @@
 {
-  "fire|2026-07-21|Board of Directors Meeting": {
-    "sv": 2
-  },
-  "telluride|2026-07-21|Town Council - Jul 21 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8040",
-    "zoomUrl": "https://us06web.zoom.us/meeting/register/hL-sJDF8Q8ej2lG69VjXKg",
-    "meetingId": "834 6167 7173",
-    "passcode": "555594.",
-    "phone": "719) 359-4580"
-  },
   "county|2026-07-22|Board of County Commissioners Special Meeting": {
     "sv": 4,
     "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1924",
@@ -45,10 +34,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8288",
     "zoomUrl": "https://us06web.zoom.us/j/84856441443?pwd=rmlX3jEAgnuYU0lkGGCJWN2aaQ5lyr.1"
   },
-  "telluride|2026-07-21|Telluride Housing Authority - Jul 21 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8289"
-  },
   "telluride|2026-08-03|Open Space Commission - Aug 03 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8130",
@@ -83,10 +68,6 @@
     "meetingId": "838 9184 9311",
     "passcode": "530688",
     "phone": "719-359-4580"
-  },
-  "telluride|2026-07-21|Block 23 Housing Corporation - Jul 21 2026": {
-    "sv": 4,
-    "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8290"
   },
   "telluride|2026-08-06|Town Council Retreat - Aug 06 2026": {
     "sv": 4,
@@ -171,14 +152,6 @@
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8081",
     "sv": 4,
     "zoomUrl": "https://us06web.zoom.us/meeting/register/tZIufu6srzwsH9X0sfxgA_In-LUt0azBIi8Z"
-  },
-  "county|2026-07-21|SMC Historical Commission Meeting": {
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1053/files/agenda/1926",
-    "sv": 4,
-    "zoomUrl": "https://us02web.zoom.us/j/85010485711",
-    "meetingId": "850 1048 5711",
-    "passcode": "333002",
-    "phone": "970-728-3844"
   },
   "county|2026-08-19|Board of County Commissioners Meeting": {
     "sv": 4,

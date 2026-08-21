@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-20T21:35:23.988Z",
+ "generated": "2026-08-21T01:40:18.022Z",
  "topics": {
   "carhenge": {
    "label": "Carhenge / Shandoka",
@@ -49,20 +49,7 @@
   "code": {
    "label": "Code Changes & Accelerated Review",
    "lastUpdated": "2026-07-19",
-   "upcoming": [
-    {
-     "source": "telluride",
-     "sourceLabel": "Town of Telluride",
-     "title": "Planning & Zoning Commission",
-     "date": "2026-08-20",
-     "time": "",
-     "location": "Hybrid/Rebekah Hall, 113 W Columbia Ave",
-     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
-     "link": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8102",
-     "zoomLink": "https://us06web.zoom.us/meeting/register/tZ0qd-GsrDwuGtGVXN_cveUy9V0AT2ZawXEW",
-     "livestream": "https://www.youtube.com/@townoftelluridecolorado8739/streams"
-    }
-   ],
+   "upcoming": [],
    "recent": [
     {
      "source": "telluride",
@@ -111,20 +98,7 @@
   "gondola": {
    "label": "Gondola 3A",
    "lastUpdated": "2026-07-20",
-   "upcoming": [
-    {
-     "source": "mv",
-     "sourceLabel": "Mountain Village",
-     "title": "Town Council Meeting",
-     "date": "2026-08-20",
-     "time": "",
-     "location": "Town Hall, 455 Mountain Village Blvd, Suite A",
-     "agendaUrl": "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
-     "link": "https://townofmountainvillage.com/site/assets/files/49695/august_20-_2026_town_council_meeting_agenda.pdf",
-     "zoomLink": "https://us06web.zoom.us/webinar/register/WN_ndaN3Xr5TWe9uANpXwY42w",
-     "livestream": "https://media.avcaptureall.cloud/?customerGuid=f6f590a7-5acc-4d32-9928-ad9ae0d02e06"
-    }
-   ],
+   "upcoming": [],
    "recent": [],
    "developments": [],
    "stale": []

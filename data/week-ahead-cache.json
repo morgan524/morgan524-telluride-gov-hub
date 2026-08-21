@@ -1,18 +1,14 @@
 {
-  "hash": "5991006b3913486b4aebda23f9e61ff8d8455977",
-  "lede": "The most consequential meeting this week is Mountain Village Town Council on Thursday, August 20, where a resolution setting the sale price appreciation cap for deed-restricted affordable units is up for a vote — the fine print that determines whether workforce housing actually stays affordable long-term. The same evening, Telluride's Planning and Zoning Commission holds a public hearing and takes a first formal look at the school district's employee housing proposal for the middle-high school site on W. Colorado. Meanwhile, the Town of Telluride's brand-new Resident Advisory Committee holds its inaugural meeting, giving employee-housing tenants a structured voice on rental policies for the first time.",
+  "hash": "d18d23beeacea0881e1734d969c9d8171edbec49",
+  "lede": "The Telluride Hospital District board meets Thursday with real decisions on the table — including a possible vote on a Two Site Model for the new facility and action on a Letter of Intent, choices that will shape what kind of medical infrastructure this valley has for decades. Also this week, the Town's newly created Resident Advisory Committee holds its very first meeting, organizing a tenant voice for employee-housing renters. Agendas for most other government meetings haven't been posted yet.",
   "notable": [
     {
-      "id": 1,
-      "stake": "Vote sets appreciation cap controlling whether affordable units stay affordable."
+      "id": 6,
+      "stake": "Board may vote on Two Site Model and Letter of Intent shaping the new hospital."
     },
     {
-      "id": 2,
-      "stake": "Public hearing plus first review of school district employee housing construction proposal."
-    },
-    {
-      "id": 12,
-      "stake": "Inaugural tenant advisory body; residents elect leadership and shape rental policy role."
+      "id": 5,
+      "stake": "Inaugural tenant body elects leadership and sets scope for housing-policy input."
     }
   ]
 }

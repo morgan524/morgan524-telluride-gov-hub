@@ -1,16 +1,5 @@
 [
   {
-    "title": "Market on the Plaza",
-    "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
-    "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
-    "pubDate": "2026-08-19T12:00:00.000Z",
-    "source": "mv",
-    "sourceLabel": "Mountain Village",
-    "category": "Community Event",
-    "location": "Mountain Village, CO",
-    "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
-  },
-  {
     "title": "Movies Under the Stars",
     "link": "https://townofmountainvillage.com/explore/events/all-events/movies-under-the-stars/",
     "description": "Movies Under the Stars returns to the Conference Center Plaza this summer, running every Saturday at dusk from June 13 through August 15. New this year,",
@@ -66,6 +55,17 @@
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49601/between_grief_gratitude_web_16_x_9_in.png"
   },
   {
+    "title": "Earth’s Most Resilient Life, Our Greatest Hope: Exploring Unusual Microbes to Solve Humanity’s Biggest Challenges",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/earths-most-resilient-life-our-greatest-hope-exploring-unusual-microbes-to-solve-humanitys-biggest-challenges/",
+    "description": "Join us at the Telluride Innovation Center as Braden Tierney, cofounder and executive director of the Two Frontiers Project,",
+    "pubDate": "2026-08-25T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49629/microbes_tomv.png"
+  },
+  {
     "title": "Market on the Plaza",
     "link": "https://townofmountainvillage.com/explore/events/all-events/market-on-the-plaza/",
     "description": "Mountain Village’s pedestrian-friendly Heritage Plaza comes alive with tents each Wednesday, June 10-September 9, 2026 with vendors selling farm-",
@@ -86,6 +86,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/49529/akb_1557-1.jpeg"
+  },
+  {
+    "title": "Water in the West: The Colorado River and the Future of Lake Powell",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/water-in-the-west-the-colorado-river-and-the-future-of-lake-powell/",
+    "description": "Join Sheep Mountain Alliance, San Juan Citizens Alliance, Patagonia Telluride and Wilkinson Public Library for a conversation with author and journalist Zak",
+    "pubDate": "2026-08-26T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49683/water_in_the_west_instagram_copy.jpg"
   },
   {
     "title": "Music on the Green Presents Cristina Vane",
@@ -174,6 +185,17 @@
     "category": "Community Event",
     "location": "Mountain Village, CO",
     "imageUrl": "https://townofmountainvillage.com/site/assets/files/30820/motp26_web_market_1800x9006.png"
+  },
+  {
+    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
+    "link": "https://townofmountainvillage.com/explore/events/all-events/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
+    "description": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another,",
+    "pubDate": "2026-09-02T12:00:00.000Z",
+    "source": "mv",
+    "sourceLabel": "Mountain Village",
+    "category": "Community Event",
+    "location": "Mountain Village, CO",
+    "imageUrl": "https://townofmountainvillage.com/site/assets/files/49605/tomv.jpg"
   },
   {
     "title": "Design Review Board Meeting September 2026",
