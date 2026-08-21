@@ -117,26 +117,6 @@
     "caseNumber": "202604"
   },
   {
-    "title": "Lost Share Certificate Replacement -- Farmers' Water Development Company Share Certificate #887 (COL-000188)",
-    "entity": "Farmers' Water Development Company (FWDC)",
-    "entityClass": "ent-county",
-    "entityLogo": "telluride",
-    "icon": "💧",
-    "iconClass": "type-hearing",
-    "type": "Utilities",
-    "filterTag": "utilities",
-    "summary": "The Farmers' Water Development Company (FWDC) has received a written request to replace lost, destroyed, or wrongfully taken share certificate #887, currently issued in the name of A.F. Newans M.D., C.P. Any person wishing to object to the issuance of a replacement certificate must file written notice with FWDC at PO Box 10, Norwood, CO 81423 within 30 days of the last publication date in the Norwood Post. If no objection is received, a replacement certificate will be issued and the original will be permanently cancelled.",
-    "deadline": "2026-08-20",
-    "expires": "2026-08-20",
-    "dates": "7/9",
-    "papers": [
-      "ttimes_0709"
-    ],
-    "url": "https://www.telluridenews.com/news/legals/article_c7bd6279-4a8b-494b-ac96-ee9c16f0bcd1.html",
-    "address": "PO Box 10, Norwood, CO 81423",
-    "noticeKey": "fwdc-share-cert-887"
-  },
-  {
     "title": "Notice to Creditors -- Estate of Lawrence de Bivort (Case No. 2026PR30008)",
     "entity": "Estate of Lawrence de Bivort",
     "entityClass": "ent-county",

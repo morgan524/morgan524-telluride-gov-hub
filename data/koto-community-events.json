@@ -1,27 +1,5 @@
 [
   {
-    "title": "TRC Men's Tennis Singles",
-    "link": "https://koto.org/event/trc-mens-tennis-singles/2026-08-20/",
-    "description": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    "pubDate": "2026-08-20T16:00:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "imageUrl": ""
-  },
-  {
-    "title": "Salon Night at Telluride Arts HQ",
-    "link": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-08-20/",
-    "description": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it here in Telluride. These are evenings for conversation and connection, not lectures or formal programming. They are casual, open, and intentionally unstructured, designed to create the atmosphere where ideas can collide, new friendships form, and creativity sparks. Imagine an evening where musicians talk with writers, painters meet photographers, filmmakers share stories with ceramicists—and the unexpected happens!",
-    "pubDate": "2026-08-20T17:30:00-06:00",
-    "source": "koto",
-    "sourceLabel": "KOTO",
-    "category": "Community Event",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "imageUrl": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png"
-  },
-  {
     "title": "Telluride Dinner Party",
     "link": "https://koto.org/event/telluride-dinner-party/",
     "description": "You are formally invited to our Telluride Dinner Party. This year, the Telluride Historical Museum turns 60 years old and to celebrate we are hosting the event at the museum. Enjoy cocktails as you mingle with locals who were born in the building, and peruse our new and permanent exhibits. Black Salt Catering will be serving an incredible plated dinner while you hear from a panel of museum legends that helped THM become who we are. We hope to celebrate this milestone of the Telluride Historical Museum’s history with you, your friends, and our museum family.",
@@ -470,6 +448,50 @@
     "sourceLabel": "KOTO",
     "category": "Community Event",
     "location": "Hartwell Park Ridgway",
+    "imageUrl": ""
+  },
+  {
+    "title": "Telluride Farmer's Market",
+    "link": "https://koto.org/event/telluride-farmers-market/2026-08-28/",
+    "description": "We are an organic market in the heart of beautiful downtown Telluride, CO. Our 2026 Market is every Friday from May 29 – October 9th! We provide the highest quality produce, animal products, prepared food, and artisans. All of our goods are produced within 100 miles of Telluride, so you can feel good about shopping local. From late May through early October, you can find us on South Oak Street in downtown Telluride selling the best of Southwest Colorado from 10:30am to 3:30pm.",
+    "pubDate": "2026-08-28T10:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Oak Street Plaza, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 4.0+",
+    "link": "https://koto.org/event/tennis-clinic-4-0/2026-08-28/",
+    "description": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under high-stress conditions. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-08-28T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
+  },
+  {
+    "title": "Bilingual Balance in Motion",
+    "link": "https://koto.org/event/bilingual-balance-in-motion/2026-08-29/",
+    "description": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and breathwork, this session will leave you feeling strong, balanced, and revitalized. Open to all levels, this fun and fast-paced class welcomes everyone looking to build strength, flexibility, and mindfulness in a supportive community space. This class is free, but donations for the instructor are welcome.",
+    "pubDate": "2026-08-29T10:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg"
+  },
+  {
+    "title": "Full Circle Fashion Fundraiser",
+    "link": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-29/",
+    "description": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
+    "pubDate": "2026-08-29T11:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Ah Haa School for the Arts, Telluride",
     "imageUrl": ""
   }
 ]

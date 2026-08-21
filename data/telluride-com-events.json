@@ -228,18 +228,6 @@
     "imageUrl": "https://www.telluride.com/site/assets/files/62830/the_national_wine.800x533.webp"
   },
   {
-    "title": "Sunset Concert Series",
-    "link": "https://www.telluride.com/event/sunset-music-concert-series/",
-    "description": "The Telluride Mountain Village Owners Association (TMVOA) has announced the return of the Sunset Concert Series for the …",
-    "pubDate": "2026-06-24",
-    "endDate": "2026-08-19",
-    "source": "telluride-com",
-    "sourceLabel": "Telluride.com",
-    "category": "Community Event",
-    "location": "Telluride, CO",
-    "imageUrl": "https://www.telluride.com/site/assets/files/44886/sunsetconcert.800x533.webp"
-  },
-  {
     "title": "Oak Street Park SummerSHOW Series",
     "link": "https://www.telluride.com/event/oak-street-park-summershow-series/",
     "description": "The Sheridan Opera House’s SHOW Bar has proudly hosted free summer patio shows to keep the arts accessible to all. …",
@@ -262,6 +250,18 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/36321/couch_1600x900.800x533.webp"
+  },
+  {
+    "title": "Village Film Nights",
+    "link": "https://www.telluride.com/event/village-film-nights/",
+    "description": "The Telluride Film Festival, in collaboration with the Town of Mountain Village, the Telluride Conference Center, and …",
+    "pubDate": "2026-07-05",
+    "endDate": "2026-08-23",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/58512/vfn-tony-banner1800x900-v2-9900000000079e3c.800x533.jpg"
   },
   {
     "title": "Alpine Chapel Outdoor Service",
@@ -473,6 +473,17 @@
     "category": "Community Event",
     "location": "Telluride, CO",
     "imageUrl": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp"
+  },
+  {
+    "title": "Piercing Pop-Up",
+    "link": "https://www.telluride.com/event/piercing-pop-up-at-fringe-gallery/",
+    "description": "Join Fringe Gallery for a Piercing Pop Up! Sign up for an appointment with Gemstone Piercing's Kirsten Foster. Come …",
+    "pubDate": "2026-08-29",
+    "source": "telluride-com",
+    "sourceLabel": "Telluride.com",
+    "category": "Community Event",
+    "location": "Telluride, CO",
+    "imageUrl": "https://www.telluride.com/site/assets/files/63408/untitled_-_august_13-_2026_at_11_55_17_1.800x533.webp"
   },
   {
     "title": "An Evening With Ken Burns",

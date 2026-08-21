@@ -107,19 +107,6 @@
     "type": "Family & Kids"
   },
   {
-    "title": "TRC Men's Tennis Singles",
-    "href": "https://koto.org/event/trc-mens-tennis-singles/2026-08-20/",
-    "date": "2026-08-20",
-    "time": "4:00 PM",
-    "location": "Telluride Racquet Club, Mountain Village",
-    "town": "Mountain Village",
-    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "The 1st TRC Men's Singles League! Sign up on a week-to-week basis. No long-term commitment.",
-    "type": "Outdoors & Sports"
-  },
-  {
     "title": "Cancer Support Group",
     "href": "https://telluridelibrary.libcal.com/event/16067713?hs=a",
     "date": "2026-08-20",
@@ -130,19 +117,6 @@
     "category": "Library Event",
     "source": "Wilkinson Public Library",
     "desc": "5:00 PM – 6:00 PM · Join us for a supportive and compassionate space at our Cancer Support Group held every 3rd Thursday of the month from 5:00 PM to 6:00 PM . This group is designed for individuals currently experiencing cancer and for…",
-    "type": "Community"
-  },
-  {
-    "title": "Salon Night at Telluride Arts HQ",
-    "href": "https://koto.org/event/salon-night-at-telluride-arts-hq/2026-08-20/",
-    "date": "2026-08-20",
-    "time": "5:30 PM",
-    "location": "Telluride Arts HQ, TELLURIDE",
-    "town": "Telluride",
-    "img": "https://koto.org/wp-content/uploads/2025/12/Screenshot-2025-12-17-at-4.37.19-PM.png",
-    "category": "Community Event",
-    "source": "KOTO Community Calendar",
-    "desc": "Salon Nights are inspired by the legendary Parisian salons—those lively gatherings where artists, thinkers, and dreamers came together to meet up, debate, collaborate, and inspire. We’re bringing that spirit into the present and rooting it…",
     "type": "Community"
   },
   {
@@ -1495,6 +1469,19 @@
     "type": "Food & Drink"
   },
   {
+    "title": "Tennis Clinic 4.0+",
+    "href": "https://koto.org/event/tennis-clinic-4-0/2026-08-28/",
+    "date": "2026-08-28",
+    "time": "11:00 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Players must have a USTA rating above 4.0 (intermediate/advanced) Strong shot anticipation and ball control are essential. Consistent second serves are required. Must have a solid and established strategy. Comfortable competing under…",
+    "type": "Outdoors & Sports"
+  },
+  {
     "title": "Telluride Farmers' Market Music Series: Claybrook & Tom",
     "href": "https://www.telluride.com/event/telluride-farmers-market-music-series/",
     "date": "2026-08-28",
@@ -1665,6 +1652,32 @@
     "type": "Festivals"
   },
   {
+    "title": "Bilingual Balance in Motion",
+    "href": "https://koto.org/event/bilingual-balance-in-motion/2026-08-29/",
+    "date": "2026-08-29",
+    "time": "10:00 AM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norton, designed to uplift your body and mind! Blending the strength and flow of Pilates, the rhythm and energy of dance, and the grounding presence of yoga and…",
+    "type": "Wellness"
+  },
+  {
+    "title": "Full Circle Fashion Fundraiser",
+    "href": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-29/",
+    "date": "2026-08-29",
+    "time": "11:00 AM",
+    "location": "Ah Haa School for the Arts, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop…",
+    "type": "Community"
+  },
+  {
     "title": "A Blue Birdie’s Tale - Ridgway State Park Summer Program Series",
     "href": "https://events.ourayridgwayevents.com/event/a-blue-birdies-tale-ridgway-state-park-summer-program-series",
     "date": "2026-08-29",
@@ -1704,18 +1717,17 @@
     "type": "Community"
   },
   {
-    "title": "Full Circle Fashion Fundraiser",
-    "href": "https://www.telluride.com/event/full-circle-fashion-fundraiser/",
+    "title": "Piercing Pop-Up",
+    "href": "https://www.telluride.com/event/piercing-pop-up-at-fringe-gallery/",
     "date": "2026-08-29",
     "time": "6:00 PM",
     "location": "Telluride, CO",
     "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63239/fcf_web.800x533.webp",
+    "img": "https://www.telluride.com/site/assets/files/63408/untitled_-_august_13-_2026_at_11_55_17_1.800x533.webp",
     "category": "Community Event",
     "source": "Telluride.com",
-    "desc": "EcoAction Partners and The Ah Haa School for the Arts are hosting a Full Circle Fashion Fundraiser Saturday August 29th …",
-    "type": "Community",
-    "endDate": "2026-08-31"
+    "desc": "Join Fringe Gallery for a Piercing Pop Up! Sign up for an appointment with Gemstone Piercing's Kirsten Foster. Come …",
+    "type": "Arts & Film"
   },
   {
     "title": "DARRELL SCOTT",
@@ -1915,6 +1927,19 @@
     "type": "Community"
   },
   {
+    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
+    "href": "https://townofmountainvillage.com/explore/events/all-events/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
+    "date": "2026-09-02",
+    "time": "6:00 AM",
+    "location": "Mountain Village, CO",
+    "town": "Mountain Village",
+    "img": "https://townofmountainvillage.com/site/assets/files/49605/tomv.jpg",
+    "category": "Community Event",
+    "source": "Mountain Village",
+    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another,",
+    "type": "Community"
+  },
+  {
     "title": "Mountain Towns 2030 with Mayor John Clark",
     "href": "https://events.ourayridgwayevents.com/event/mountain-towns-2030-with-mayor-john-clark",
     "date": "2026-09-02",
@@ -1925,19 +1950,6 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders come together, learn from one another, and take action collectively. And with the window to help solve climate change…",
-    "type": "Community"
-  },
-  {
-    "title": "Mountain Towns 2030: Leveraging A Network of Community Leaders to Accelerate Climate Action",
-    "href": "https://www.telluride.com/event/mountain-towns-2030-leveraging-a-network-of-community-leaders-to-accelerate-climate-action/",
-    "date": "2026-09-02",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/63253/telluride_com.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "As climate challenges grow, no community can solve them alone. The most effective solutions often emerge when leaders …",
     "type": "Community"
   },
   {

@@ -1,5 +1,13 @@
 [
   {
+    "title": "Newscast 8-20-26",
+    "source": "KOTO Community Radio",
+    "date": "August 21, 2026",
+    "newsTopic": "public-safety",
+    "copy": "West End Food Banks Close Indefinitely; Gold Mountain Fire Leaves Some Trees Behind; Palm Theatre Cleanup Nears Completion",
+    "href": "https://koto.org/news/newscast-8-20-26/"
+  },
+  {
     "title": "Newscast 8-19-26",
     "source": "KOTO Community Radio",
     "date": "August 20, 2026",
@@ -46,13 +54,5 @@
     "newsTopic": "community",
     "copy": "Coming Up Next, Telluride; Eco-Grief Finds the Space Between Grief and Gratitude",
     "href": "https://koto.org/news/newscast-8-10-26/"
-  },
-  {
-    "title": "Newscast 8-6-26",
-    "source": "KOTO Community Radio",
-    "date": "August 7, 2026",
-    "newsTopic": "arts-culture",
-    "copy": "Ranching in Drought; West End Roundup with the San Miguel Basin Forum; Music on the Mesa Brings the Burroughs",
-    "href": "https://koto.org/news/newscast-8-6-26/"
   }
 ]
