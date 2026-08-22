@@ -6,46 +6,8 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 21 Aug 2026 21:33:39 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 01:29:27 GMT</lastBuildDate>
     <ttl>360</ttl>
-    <item>
-      <title>[Fri, Aug 21] Telluride Theater: House of Shimmy Shake, Burlesque Buffet</title>
-      <link>https://sheridanoperahouse.com/events/telluride-theater-house-of-shimmy-shake-burlesque-buffet/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/telluride%20theater%20house%20of%7C2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://sheridanoperahouse.com/wp-content/uploads/2026/06/Thunder-Tix_600x375px_01.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Sheridan Opera House
-📍 Sheridan Opera House • Telluride, CO
-
-Telluride Theater presents House of Shimmy Shake, a burlesque variety show at the historic Sheridan Opera House. The performance brings together burlesque performance and live entertainment in an evening of playful, theatrical spectacle.]]></description>
-      <media:content url="https://sheridanoperahouse.com/wp-content/uploads/2026/06/Thunder-Tix_600x375px_01.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>Sheridan Opera House</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 21] Burlesque Buffet</title>
-      <link>https://www.telluride.com/event/burlesque-buffet/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/burlesque%20buffet%7C2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/62743/buffet_visit_telluride_image.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
-📍 Telluride, CO
-
-Presented by Telluride Theatre's Professional Burlesque Troupe: THE HOUSE OF SHIMMY SHAKE! HOSS returns for a …]]></description>
-      <media:content url="https://www.telluride.com/site/assets/files/62743/buffet_visit_telluride_image.800x533.webp" medium="image" />
-      <category>Community Event</category>
-      <category>Telluride.com</category>
-    </item>
-    <item>
-      <title>[Fri, Aug 21] KOTO Guest DJ Day!</title>
-      <link>https://koto.org/event/koto-guest-dj-day/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/koto%20guest%20dj%20day%7C2026-08-21</guid>
-      <pubDate>Fri, 21 Aug 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-
-This Friday, August 21st, KOTO once again opens our turntables & microphones to the community for Guest DJ Day! Celebrity DJs from around the region are stepping up to the mic, spinning the tracks they love and helping raise funds to keep this station and community Stayin' Alive! Tune in all day to hear from your favorite local voices, and feel free to bring a little disco energy with you.]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/08/KOTO-s26-Guest-DJ-insta-1080x1350-1.jpg" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
     <item>
       <title>[Sat, Aug 22] Wax Monkey</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=wax-monkey</link>
@@ -159,6 +121,17 @@ The Board meets in work session to hear updates on four fronts. First, school op
       <category>Telluride School District</category>
     </item>
     <item>
+      <title>[Meeting] Open Space Commission Meeting — 2026-08-24</title>
+      <link>https://livabletelluride.org/gov-hub.html</link>
+      <guid isPermaLink="false">https://livabletelluride.org/meeting/county%7C2026-08-24%7COpen%20Space%20Commission%20Meeting</guid>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[San Miguel County • 2026-08-24
+
+The Open Space Commission meets August 24 for a broad status check across several ongoing projects. Staff will give updates on Mill Creek Park (recently grass-seeded), the East End Connector Trail at Idarado, Galloping Goose Park, the Placerville Schoolhouse masonry and painting work, and a position posting for a Parks + Open Space Manager. The one item with sharper public interest is new: citizen concerns about water flow diversion and the Bridal Veil conservation easement connected to Black Swift habitat. The commission also notes the 25th anniversary of Down Valley Park — and a retirement party for Rich — on September 12.]]></description>
+      <category>Meeting</category>
+      <category>San Miguel County</category>
+    </item>
+    <item>
       <title>[Tue, Aug 25] The Last Wild Buffalo w/ Hunter Archer</title>
       <link>https://www.alibitelluride.com/calendar#eca-event=the-last-wild-buffalo-w-hunter-archer</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/the%20last%20wild%20buffalo%7C2026-08-25</guid>
@@ -181,7 +154,7 @@ The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho
 
 The Ethics Commission meets August 25 to handle two items of real consequence. First, the routine: electing a new chair and vice-chair. Second, and more substantive: developing a recommendation to Town Council on whether — and how — to establish a formal Code of Conduct for Telluride officials. That recommendation traces directly to the Commission's May 18 finding in the Julia Fallman complaint against Councilperson Kristen Permakoff. The Commission found no ethics violation, but only because the current code's 'above reproach' standard lacks the behavioral specificity to support one. Staff has laid out two main paths: integrate explicit conduct language into the existing Ethics Code (Chapter 2, Article 4), where the Ethics Commission already has enforcement authority, or strengthen the Council's own Rules of Conduct, which currently has no formal penalty mechanism. The Commission can also draft its own hybrid approach. Whatever they recommend goes to Town Council for action.
 
-⚡ Why it matters: Commission develops Code of Conduct recommendation for Town Council officials.]]></description>
+⚡ Why it matters: Commission recommends whether Town adopts a formal Code of Conduct for officials.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -194,9 +167,22 @@ The Ethics Commission meets August 25 to handle two items of real consequence. F
 
 The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting the district's spending plan to account for flood damage, a reminder that the canyon's geography extracts its own costs. Also on the action list: approving a custodial contract, an IGA for a school housing site (a recurring pressure point for any institution trying to keep staff in this valley), and revised MLO ballot language — the mill levy override question that the district has been building toward. Policy updates get a first reading, including EL-11 and JKA. The board's annual self-assessment is on the 'Other' docket, and a full-day retreat follows the next morning at Wilkinson Public Library.
 
-⚡ Why it matters: Board votes on flood-damage budget appropriation affecting district spending this year.]]></description>
+⚡ Why it matters: Board votes to adjust district budget to cover flood damage costs.]]></description>
       <category>Meeting</category>
       <category>Telluride School District</category>
+    </item>
+    <item>
+      <title>[Wed, Aug 26] Gaiascope Opening Night</title>
+      <link>https://www.telluride.com/event/gaiascope-opening-night/</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/gaiascope%20opening%20night%7C2026-08-26</guid>
+      <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Telluride.com
+📍 Telluride, CO
+
+Celebrate the opening of Gaiascope with artist Brooke Einbender during a special golden hour gathering in the Heritage …]]></description>
+      <media:content url="https://www.telluride.com/site/assets/files/63278/akb_1557-1_870x435.800x533.webp" medium="image" />
+      <category>Community Event</category>
+      <category>Telluride.com</category>
     </item>
     <item>
       <title>⚡ [Meeting] Board of County Commissioners Work Session — 2026-08-26</title>
@@ -207,7 +193,7 @@ The August 25 Board of Education meeting carries real weight. The most consequen
 
 A Special Meeting with a mix of routine approvals and one item worth watching closely: a 40-minute discussion on Colorado Child Care Assistance Program (CCAP) funding and what its budget implications mean for the county. Human Services Director Linnea Edwards will also present the Core Services Plan for FY 2026-2027. On the administrative side, the Board takes up a fee adjustment for the Green Grants program — bumped from $10,000 to $15,000, or 10% of total grant funding — plus authorization for the Black Bear Pass in Reverse event on September 12, and interviews two applicants for the Telluride Regional Airport Authority Board. Consent items include a board reappointment and the 2026 Abstract of Assessment.
 
-⚡ Why it matters: County discusses CCAP childcare funding and its budget implications for San Miguel.]]></description>
+⚡ Why it matters: County weighs CCAP childcare funding cuts and their budget implications.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -218,7 +204,7 @@ A Special Meeting with a mix of routine approvals and one item worth watching cl
       <pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate>
       <description><![CDATA[Town of Telluride • 2026-08-26
 
-The August 26, 2026 Public Art Commission agenda hasn't been posted yet.]]></description>
+The Public Art Commission holds what appears to be an early organizational meeting — electing a chairperson, reviewing existing policy and guidelines, and setting a meeting schedule. The substantive work session centers on public art installations, with Town Council Objective I.D.5 directing the commission to explore integrating art into Town infrastructure, starting with a coordinated installation at the Silver Jack Stair.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -253,7 +239,7 @@ The Board is spending a full day at a retreat — held at the Wilkinson Public L
 
 The Telluride Hospital District board meets July 23 with a heavy agenda centered on the new facility project. Two items stand out: an update on the RFQ for architect selection, and a discussion and possible action on a Two Site Model — a direction that would shape what gets built, where, and at what scale. The board will also take up a Letter of Intent with CommonSpirit Health, a large Catholic health system, which could define the partnership framework for whatever comes next. Routine finance and administrative updates round out the morning, along with an executive session for CEO review.
 
-⚡ Why it matters: Hospital District may act on Two Site Model, shaping what gets built and where.]]></description>
+⚡ Why it matters: Hospital board may act on Two Site Model shaping new facility scale and location.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
@@ -277,7 +263,7 @@ The August 27 CWAB meeting agenda hasn't been posted yet.]]></description>
 
 The TMVOA Board meets August 27 with several consequential items on a fairly packed agenda. The headline action is forming a Workforce Housing Committee — a signal that Mountain Village's affordable housing pressures are pushing the association toward a more structured response. The board will also vote to adopt updated policies and act on a grant request for the TMV Ice Pad. On the informational side: the dissolving of the FAB (Finance Advisory Board), a background briefing on 161CR public benefits, and an update on the Pond Improvement Plan. The 161CR item is worth watching — public benefits discussions tied to major development agreements tend to carry long tails in this valley.
 
-⚡ Why it matters: TMVOA votes on Workforce Housing Committee formation and TMV Ice Pad grant.]]></description>
+⚡ Why it matters: TMVOA votes to form Workforce Housing Committee and adopt updated policies.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>

@@ -1,5 +1,17 @@
 [
   {
+    "title": "Federal officials announce water cuts as Colorado River supplies continue to plunge",
+    "source": "Telluride Times",
+    "date": "August 22, 2026",
+    "firstSeen": "2026-08-22",
+    "newsTopic": "community",
+    "copy": "Federal officials announced Colorado River water cuts of 1.25 million acre-feet annually for California, Nevada, and Arizona through 2028, with Arizona absorbing the largest share. Upstream states including Colorado face no cuts for now. Lake Mead and Lake Powell have both hit historic lows, and the current rules governing river use expire in October with no long-term agreement yet in place.",
+    "claudeSummary": true,
+    "href": "https://www.telluridenews.com/news/state/article_fe86e7b5-5fb5-52f4-85c1-d8ef2ec9b189.html",
+    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/custom/image/2313c0ad-ec4f-49ac-a039-903e08c87a91.jpg",
+    "imgHiRes": true
+  },
+  {
     "title": "Billy Ball and Sobernauts take home the trophies",
     "source": "Telluride Times",
     "date": "August 21, 2026",
@@ -783,54 +795,6 @@
     "imgHiRes": true
   },
   {
-    "title": "‘Beacon of light’",
-    "source": "Telluride Times",
-    "date": "August 8, 2026",
-    "firstSeen": "2026-08-08",
-    "newsTopic": "arts-culture",
-    "copy": "The Telluride Film Festival is targeting the 2027 festival as the reopening date for the Nugget Theatre, which has sat as a shell since its careful deconstruction. The renovated building will add employee housing, artist residencies, ADA access, and a rooftop pavilion alongside the restored cinema. Every original stone goes back where it came from — historic rules apply on a building that's been standing since 1891.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/article_b26981fe-ff14-46e1-b485-2e73f90fc503.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/7/ec/7ece84f4-72a8-418d-99fd-200450278296/6a777bcf1ad22.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Lake Mead hits historic low water level as Colorado River struggles",
-    "source": "Telluride Times",
-    "date": "August 8, 2026",
-    "firstSeen": "2026-08-08",
-    "newsTopic": "community",
-    "copy": "Lake Mead just hit its lowest level since it was first filled 90 years ago — 1,040.4 feet — following the worst snowpack season on record in the Colorado River Basin. Seven states, tribal nations, and Mexico all draw from this system, and they still haven't agreed on long-term cuts. Federal officials are now stepping in with a short-term proposal.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/news/state/article_a501cbd5-1f24-5dc6-8eb4-185a050bfe86.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/08/90873eb8-4fb2-5487-88d5-497bc1ca6803/6a77389e33416.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "Drawing together, through art",
-    "source": "Telluride Times",
-    "date": "August 8, 2026",
-    "firstSeen": "2026-08-08",
-    "newsTopic": "arts-culture",
-    "copy": "Telluride Arts has named seven 2026 Artist Grant recipients whose work spans photography, music, poetry, fashion, film, and craft — all with a community focus. Projects include an immersive \"apothecary\" installation pairing poetry and original music, free retro-style ski passes, and a novel-in-verse set in Settlement-Age Iceland.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_93585163-2ed8-429d-817b-bb780dd0ebcf.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/6a/f6a8fbfa-d772-45cc-99f4-0cd2f528bead/6a769364cf3e0.image.jpg",
-    "imgHiRes": true
-  },
-  {
-    "title": "August at The Alibi",
-    "source": "Telluride Times",
-    "date": "August 8, 2026",
-    "firstSeen": "2026-08-08",
-    "newsTopic": "arts-culture",
-    "copy": "The Alibi has 29 nights of programming lined up for August, starting with four nights of Mushroom Festival after-parties Aug. 12–15, including Banshee Tree, Copper Children, and DJ sets. The month continues with acts ranging from classic rock to Americana to bluegrass-adjacent, with Aug. 27–29 already sold out for Camp Alderwild after-parties.",
-    "claudeSummary": true,
-    "href": "https://www.telluridenews.com/arts_and_entertainment/article_26713cbc-a035-4151-be69-3ef3f427977b.html",
-    "img": "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/9/a3/9a3af767-c0f5-4abe-8123-431795651f3c/6a769447ea970.image.jpg",
-    "imgHiRes": true
-  },
-  {
     "title": "Marya Stark and Charles Dalton Sworn In to Telluride Town Council",
     "source": "Town of Telluride",
     "date": "August 12, 2026",
@@ -882,15 +846,6 @@
     "newsTopic": "recreation",
     "copy": "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
     "href": "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
-    "img": ""
-  },
-  {
-    "title": "Shandoka, Carhenge Lots Closed",
-    "source": "Town of Telluride",
-    "date": "August 8, 2026",
-    "newsTopic": "community",
-    "copy": "Temporary Commuter Parking Changes | August 11-21 Both the Shandoka and Carhenge parking lots will be closed to commuters from Tuesday, August 11 through Friday, August 21.",
-    "href": "https://www.telluride.gov/AlertCenter.aspx?AID=71",
     "img": ""
   },
   {

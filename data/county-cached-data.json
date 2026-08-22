@@ -18,6 +18,15 @@
     "note": null
   },
   {
+    "date": "August 24, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1056,
+    "note": null
+  },
+  {
     "date": "August 26, 2026",
     "time": "9:30 AM",
     "title": "Board of County Commissioners Work Session",
@@ -81,6 +90,15 @@
     "note": null
   },
   {
+    "date": "September 28, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1057,
+    "note": null
+  },
+  {
     "date": "October 7, 2026",
     "time": "10:00 AM",
     "title": "Board of County Commissioners Meeting",
@@ -114,6 +132,15 @@
     "type": "bocc",
     "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
     "civicClerkId": 901,
+    "note": null
+  },
+  {
+    "date": "October 26, 2026",
+    "time": "4:00 PM",
+    "title": "Open Space Commission Meeting",
+    "type": "other",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "civicClerkId": 1058,
     "note": null
   },
   {

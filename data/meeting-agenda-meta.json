@@ -1,12 +1,4 @@
 {
-  "county|2026-07-22|Board of County Commissioners Special Meeting": {
-    "sv": 4,
-    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/868/files/agenda/1924",
-    "zoomUrl": "https://us02web.zoom.us/meeting/register/o_8OplehSy6kph_vj5KITw",
-    "meetingId": "836 0680 9358",
-    "passcode": "535472",
-    "phone": "719-359-4580"
-  },
   "telluride|2026-07-23|Planning & Zoning Commission - Jul 23 2026": {
     "sv": 4,
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8100",
@@ -378,7 +370,10 @@
   "telluride|2026-08-26|Public Art Commission - Aug 26 2026": {
     "agendaUrl": "https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8300",
     "sv": 4,
-    "ph": "f461253da821da55"
+    "zoomUrl": "https://us06web.zoom.us/j/84265567776?pwd=P1j50JyBNUh3Yh0s6i573T4slkNZR9.1",
+    "meetingId": "842 6556 7776",
+    "passcode": "392496.",
+    "phone": "301-715-8592"
   },
   "tmvoa|2026-08-27|TMVOA Board of Directors Meeting": {
     "sv": 4,
@@ -496,6 +491,14 @@
   },
   "school|2026-08-26|Telluride Board of Education Monthly Meeting": {
     "agendaUrl": "https://files.smartsites.parentsquare.com/3403/82626_board_retreat_packet.pdf",
+    "sv": 4
+  },
+  "norwood|2026-09-21|Planning and Zoning Commission Meeting": {
+    "sv": 4,
+    "ph": "b858cb282617fb09"
+  },
+  "county|2026-08-24|Open Space Commission Meeting": {
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1056/files/agenda/1967",
     "sv": 4
   }
 }
