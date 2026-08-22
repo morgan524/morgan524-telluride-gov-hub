@@ -2506,15 +2506,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
-    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
-    source: "Town of Telluride",
-    date: "August 8, 2026",
-    newsTopic: "government",
-    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
-  },
-  {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
     date: "August 18, 2026",
@@ -2530,15 +2521,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass Now Open",
-    source: "San Miguel County",
-    date: "August 3, 2026",
-    newsTopic: "recreation",
-    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
