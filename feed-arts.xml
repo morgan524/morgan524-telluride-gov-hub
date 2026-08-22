@@ -6,7 +6,7 @@
     <atom:link href="https://livabletelluride.org/feed-arts.xml" rel="self" type="application/rss+xml" />
     <description>Concerts, film, theater, gallery openings, and festivals — plus upcoming government meetings and comment deadlines.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 03:48:31 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 22 Aug 2026 06:50:02 GMT</lastBuildDate>
     <ttl>360</ttl>
     <item>
       <title>[Sat, Aug 22] Wax Monkey</title>
@@ -23,31 +23,6 @@ Wax Monkey is a 5-piece jam band composed of childhood friends hailing from Birm
       <category>The Alibi</category>
     </item>
     <item>
-      <title>[Sat, Aug 22] Noche de Luz (Night of Light)</title>
-      <link>https://koto.org/event/noche-de-luz-night-of-light/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/noche%20de%20luz%20night%7C2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 00:30:00 GMT</pubDate>
-      <description><![CDATA[<img src="https://koto.org/wp-content/uploads/2026/06/NDLBanner.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 KOTO
-📍 Telluride Science &#038; Innovation Center, TELLURIDE
-
-NOCHE DE LUZ: Comunidad en Flor A Vibrant Celebration of Connection, Culture and a Community in Bloom Join us Friday, August 21st at 6:30pm at the Telluride Innovation Center to celebrate our "Community in Bloom!" The event will feature tastings from local immigrant owned restaurants, cocktails and mocktails, artist demonstrations and live music from Denver-based Chicano funk band Los Mocochetes! Tickets and Sponsorships include; – Enjoy appetizers, dinner and desert with tastings from local, immigrant-owned restaurants and catering businesses – 1 drink ticket for the bar serving signature cocktails and mocktails, beer and wine (additional drinks available for purchase) – Live Artist Demonstrations and Traditional Artisan Displays – Live Music! Performances from local DJs and a live 5-piece latin funk band to close out the night – Silent Auction &#8230;.. and more! …]]></description>
-      <media:content url="https://koto.org/wp-content/uploads/2026/06/NDLBanner.png" medium="image" />
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
-      <title>[Sat, Aug 22] BURLESQUE BUFFET!</title>
-      <link>https://koto.org/event/burlesque-buffet/2026-08-21/</link>
-      <guid isPermaLink="false">https://livabletelluride.org/event/burlesque%20buffet%7C2026-08-22</guid>
-      <pubDate>Sat, 22 Aug 2026 02:00:00 GMT</pubDate>
-      <description><![CDATA[🎫 KOTO
-📍 Sheridan Opera House, Telluride
-
-Telluride Theatre's HOUSE OF SHIMMY SHAKE returns for a mid-summer twist on BURLESQUE WEEK, with a delicious AND nutritious night of food-themed theatrics. Join us for live music, comedy, and beautiful locals at the Sheridan Opera House. VIP Table Seats enjoy a delicious Sampler Tasting Menu, prepared by local chef Graeme Charles (Telluride Sleighs & Wagons), to accompany the performance. Don't miss out on this off-the-walls celebration of femininity, the weird, and the wild.]]></description>
-      <category>Community Event</category>
-      <category>KOTO</category>
-    </item>
-    <item>
       <title>[Sat, Aug 22] Bilingual Balance in Motion</title>
       <link>https://koto.org/event/bilingual-balance-in-motion/2026-08-22/</link>
       <guid isPermaLink="false">https://livabletelluride.org/event/bilingual%20balance%20in%20motion%7C2026-08-22</guid>
@@ -59,6 +34,32 @@ Move, breathe, and energize in this dynamic bilingual class, led by Lauren Norto
       <media:content url="https://koto.org/wp-content/uploads/2025/04/BALANCE.jpg" medium="image" />
       <category>Community Event</category>
       <category>KOTO</category>
+    </item>
+    <item>
+      <title>[Sat, Aug 22] Zumba with Marlen</title>
+      <link>https://telluridelibrary.libcal.com/event/17469953?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/zumba%20with%20marlen%7C2026-08-22</guid>
+      <pubDate>Sat, 22 Aug 2026 18:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_17_14.jpg" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+12:00 PM – 1:00 PM · Ditch the workout and join the party! Zumba&reg; is a high-energy dance fitness class that mixes low-intensity and high-intensity moves for an interval-style, calorie-burning workout. Driven by Latin and international rhythms like salsa, merengue, reggaeton, and cumbia, you will tone your body and boost your endurance without even realizing how hard you are working. It is exercise in disguise! No dance experience is required—just bring your energy, a water bottle, and a smile. This class is free and open to the public, but donations for the instructor are always welcome. &iexcl;Olvida el entrenamiento y &uacute;nete a la fiesta! Zumba&reg; es una clase de fitness de baile de alta energ&iacute;a que mezcla movimientos de baja y alta intensidad para un entrenamiento de estilo de intervalos que quema calor&iacute;as. …]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_08_20_11_17_14.jpg" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
+    </item>
+    <item>
+      <title>[Sat, Aug 22] 90s Movie Matinee: The Mighty Ducks</title>
+      <link>https://telluridelibrary.libcal.com/event/15536192?hs=a</link>
+      <guid isPermaLink="false">https://livabletelluride.org/event/90s%20movie%20matinee%20the%7C2026-08-22</guid>
+      <pubDate>Sat, 22 Aug 2026 20:00:00 GMT</pubDate>
+      <description><![CDATA[<img src="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_57.png" alt="" width="600" style="max-width:600px;width:100%;height:auto;display:block;margin-bottom:8px;" />🎫 Wilkinson Public Library
+📍 Program Room
+
+A library screening of the beloved 1992 hockey film *The Mighty Ducks*, part of a 90s Movie Matinee series at Wilkinson Public Library. The event takes place in the Program Room from 2:00 to 4:00 PM.]]></description>
+      <media:content url="https://d68g328n4ug0e.cloudfront.net/misc/6460/events/19928/2026_03_13_17_32_57.png" medium="image" />
+      <category>Community Event</category>
+      <category>Wilkinson Public Library</category>
     </item>
     <item>
       <title>[Sun, Aug 23] Ethan Perry</title>
@@ -154,7 +155,7 @@ The Last Wild Buffalo is a soulful Americana band from Utah, blending the raw ho
 
 The Ethics Commission meets August 25 to handle two items of real consequence. First, the routine: electing a new chair and vice-chair. Second, and more substantive: developing a recommendation to Town Council on whether — and how — to establish a formal Code of Conduct for Telluride officials. That recommendation traces directly to the Commission's May 18 finding in the Julia Fallman complaint against Councilperson Kristen Permakoff. The Commission found no ethics violation, but only because the current code's 'above reproach' standard lacks the behavioral specificity to support one. Staff has laid out two main paths: integrate explicit conduct language into the existing Ethics Code (Chapter 2, Article 4), where the Ethics Commission already has enforcement authority, or strengthen the Council's own Rules of Conduct, which currently has no formal penalty mechanism. The Commission can also draft its own hybrid approach. Whatever they recommend goes to Town Council for action.
 
-⚡ Why it matters: Commission recommends whether Town adopts a formal Code of Conduct for officials.]]></description>
+⚡ Why it matters: Commission recommends whether to establish a formal Code of Conduct for town officials.]]></description>
       <category>Meeting</category>
       <category>Town of Telluride</category>
     </item>
@@ -167,7 +168,7 @@ The Ethics Commission meets August 25 to handle two items of real consequence. F
 
 The August 25 Board of Education meeting carries real weight. The most consequential item is a flood-related budget appropriation for FY 2026-27 — the board will discuss and then vote on adjusting the district's spending plan to account for flood damage, a reminder that the canyon's geography extracts its own costs. Also on the action list: approving a custodial contract, an IGA for a school housing site (a recurring pressure point for any institution trying to keep staff in this valley), and revised MLO ballot language — the mill levy override question that the district has been building toward. Policy updates get a first reading, including EL-11 and JKA. The board's annual self-assessment is on the 'Other' docket, and a full-day retreat follows the next morning at Wilkinson Public Library.
 
-⚡ Why it matters: Board votes to adjust district budget to cover flood damage costs.]]></description>
+⚡ Why it matters: Board votes on flood-related budget appropriation for FY 2026-27.]]></description>
       <category>Meeting</category>
       <category>Telluride School District</category>
     </item>
@@ -193,7 +194,7 @@ Celebrate the opening of Gaiascope with artist Brooke Einbender during a special
 
 A Special Meeting with a mix of routine approvals and one item worth watching closely: a 40-minute discussion on Colorado Child Care Assistance Program (CCAP) funding and what its budget implications mean for the county. Human Services Director Linnea Edwards will also present the Core Services Plan for FY 2026-2027. On the administrative side, the Board takes up a fee adjustment for the Green Grants program — bumped from $10,000 to $15,000, or 10% of total grant funding — plus authorization for the Black Bear Pass in Reverse event on September 12, and interviews two applicants for the Telluride Regional Airport Authority Board. Consent items include a board reappointment and the 2026 Abstract of Assessment.
 
-⚡ Why it matters: County weighs CCAP childcare funding cuts and their budget implications.]]></description>
+⚡ Why it matters: County weighs CCAP funding cuts and their budget impact on child care access.]]></description>
       <category>Meeting</category>
       <category>San Miguel County</category>
     </item>
@@ -239,7 +240,7 @@ The Board is spending a full day at a retreat — held at the Wilkinson Public L
 
 The Telluride Hospital District board meets July 23 with a heavy agenda centered on the new facility project. Two items stand out: an update on the RFQ for architect selection, and a discussion and possible action on a Two Site Model — a direction that would shape what gets built, where, and at what scale. The board will also take up a Letter of Intent with CommonSpirit Health, a large Catholic health system, which could define the partnership framework for whatever comes next. Routine finance and administrative updates round out the morning, along with an executive session for CEO review.
 
-⚡ Why it matters: Hospital board may act on Two Site Model shaping new facility scale and location.]]></description>
+⚡ Why it matters: Board may act on Two Site Model shaping what gets built and where.]]></description>
       <category>Meeting</category>
       <category>Telluride Medical Center</category>
     </item>
@@ -263,7 +264,7 @@ The August 27 CWAB meeting agenda hasn't been posted yet.]]></description>
 
 The TMVOA Board meets August 27 with several consequential items on a fairly packed agenda. The headline action is forming a Workforce Housing Committee — a signal that Mountain Village's affordable housing pressures are pushing the association toward a more structured response. The board will also vote to adopt updated policies and act on a grant request for the TMV Ice Pad. On the informational side: the dissolving of the FAB (Finance Advisory Board), a background briefing on 161CR public benefits, and an update on the Pond Improvement Plan. The 161CR item is worth watching — public benefits discussions tied to major development agreements tend to carry long tails in this valley.
 
-⚡ Why it matters: TMVOA votes to form Workforce Housing Committee and adopt updated policies.]]></description>
+⚡ Why it matters: Board votes on workforce housing committee formation and updated association policies.]]></description>
       <category>Meeting</category>
       <category>tmvoa</category>
     </item>
