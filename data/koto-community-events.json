@@ -427,5 +427,71 @@
     "category": "Community Event",
     "location": "Ah Haa School for the Arts, Telluride",
     "imageUrl": ""
+  },
+  {
+    "title": "Full Circle Fashion Fundraiser",
+    "link": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-30/",
+    "description": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop the sale on Saturday, August 29th and Sunday August 30th. Shop the sale Saturday August 29th 11am-7pm and Sunday August 30th 10am-2pm Location: AhHaa Sky Deck Collaborators: EcoAction Partners and AhHaa School for the arts Tags: Community Swap, Fundraiser, Sustainability, Arts Event webpage: https://www. ecoactionpartners.org/ fullcirclefashion",
+    "pubDate": "2026-08-30T10:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Ah Haa School for the Arts, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Drop In Tech Time with Oliver",
+    "link": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-30/",
+    "description": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads, and laptops our patrons can check out as well as the library apps you can download to your devices to access free ebooks, audiobooks, movies, music, magazines and more!",
+    "pubDate": "2026-08-30T13:00:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tea and Tarot",
+    "link": "https://koto.org/event/tea-and-tarot/2026-08-30/",
+    "description": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "pubDate": "2026-08-30T14:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Wilkinson Public Library, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg"
+  },
+  {
+    "title": "An Evening With Ken Burns",
+    "link": "https://koto.org/event/an-evening-with-ken-burns/",
+    "description": "Join us for an Evening with Ken Burns tentatively at The Palm Theatre. We will be screening episode 5 of Vietnam, \"This is What We Do.\" There will be a Q&A and book signing to follow. Tickets are $20.00 for members, and $25.00 for non-members. Doors open at 5:30 and the film will begin at 6:00.",
+    "pubDate": "2026-08-30T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Michael D. Palm Theater, Telluride",
+    "imageUrl": "https://koto.org/wp-content/uploads/2026/08/KenBurns2026Poster-03-1-scaled.jpg"
+  },
+  {
+    "title": "An Evening with Ken Burns & Telluride Historical Museum",
+    "link": "https://koto.org/event/an-evening-with-ken-burns-telluride-historical-museum/",
+    "description": "Join Telluride Historical Museum on Sunday August 30th for their annual Evening With Ken Burns. This year watch a screening of Episode 5 of Vietnam, This is What We Do. The event will be tentatively held at the Palm Theatre, if the venue changes the museum will update ticketholders. There will be a Q&A and book signing to follow.",
+    "pubDate": "2026-08-30T17:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Michael D. Palm Theater, Telluride",
+    "imageUrl": ""
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "link": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/",
+    "description": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced 4.0+ clinic. A minimum of 2 players is required for this class to run.",
+    "pubDate": "2026-08-31T09:30:00-06:00",
+    "source": "koto",
+    "sourceLabel": "KOTO",
+    "category": "Community Event",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "imageUrl": ""
   }
 ]

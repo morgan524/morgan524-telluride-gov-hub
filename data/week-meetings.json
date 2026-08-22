@@ -1,5 +1,25 @@
 [
   {
+    "source": "county",
+    "sourceLabel": "San Miguel County",
+    "title": "Open Space Commission Meeting",
+    "date": "2026-08-24",
+    "time": "",
+    "location": "333 West Colorado Ave, 2nd floor, Telluride, CO 81435",
+    "agendaUrl": "https://sanmiguelcoco.portal.civicclerk.com/event/1056/files",
+    "packetUrl": "",
+    "link": "https://sanmiguelcoco.portal.civicclerk.com/event/1056/files",
+    "hasAgenda": true,
+    "summary": "The Open Space Commission meets August 24 for a broad status check across several ongoing projects. Staff will give updates on Mill Creek Park (recently grass-seeded), the East End Connector Trail at Idarado, Galloping Goose Park, the Placerville Schoolhouse masonry and painting work, and a position posting for a Parks + Open Space Manager. The one item with sharper public interest is new: citizen concerns about water flow diversion and the Bridal Veil conservation easement connected to Black Swift habitat. The commission also notes the 25th anniversary of Down Valley Park — and a retirement party for Rich — on September 12.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "https://www.youtube.com/@sanmiguelcountyco/streams",
+    "commentEmail": "bocc@sanmiguelcountyco.gov",
+    "hook": ""
+  },
+  {
     "source": "school",
     "sourceLabel": "School District R-1",
     "title": "Telluride Board of Education Work Session",
@@ -557,6 +577,26 @@
     "zoomPhone": "",
     "livestream": "",
     "commentEmail": "info@tellurideairport.com",
+    "hook": ""
+  },
+  {
+    "source": "norwood",
+    "sourceLabel": "Town of Norwood",
+    "title": "Planning and Zoning Commission Meeting",
+    "date": "2026-09-21",
+    "time": "",
+    "location": "1670 Naturita St, Norwood CO 81423",
+    "agendaUrl": "",
+    "packetUrl": "",
+    "link": "https://www.norwoodtown.com/planning-and-zoning-commission-meetings",
+    "hasAgenda": false,
+    "summary": "The September 21, 2026 Norwood Planning and Zoning Commission Meeting agenda hasn't been posted yet.",
+    "zoomLink": "",
+    "zoomMeetingId": "",
+    "zoomPasscode": "",
+    "zoomPhone": "",
+    "livestream": "",
+    "commentEmail": "cross@norwoodtown.com",
     "hook": ""
   }
 ]

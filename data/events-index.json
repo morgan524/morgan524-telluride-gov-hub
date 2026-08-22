@@ -1534,6 +1534,71 @@
     "type": "Community"
   },
   {
+    "title": "Drop In Tech Time with Oliver",
+    "href": "https://koto.org/event/drop-in-tech-time-with-oliver-2/2026-08-30/",
+    "date": "2026-08-30",
+    "time": "1:00 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-3.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Drop by the 2nd floor desk for Tech Time with Oliver every Sunday from 1-3pm. Bring your questions about technology (phones, tablets, laptops, email, etc.) or learn about special collections the library offers, such as the Kindles, iPads,…",
+    "type": "Community"
+  },
+  {
+    "title": "Full Circle Fashion Fundraiser",
+    "href": "https://koto.org/event/full-circle-fashion-fundraiser/2026-08-30/",
+    "date": "2026-08-30",
+    "time": "10:00 AM",
+    "location": "Ah Haa School for the Arts, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-10.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "EcoAction Partners and The AhHaa School for the Arts are hosting a Full Circle Fashion Fundraiser! You can donate or consign your clothes leading up to this event and help support sustainability and the arts in your community! Come shop…",
+    "type": "Community"
+  },
+  {
+    "title": "Tea and Tarot",
+    "href": "https://koto.org/event/tea-and-tarot/2026-08-30/",
+    "date": "2026-08-30",
+    "time": "2:30 PM",
+    "location": "Wilkinson Public Library, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2025/04/tea-1.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Tea and Tarot Sessions with Jade Rose and others from Sanctuary Collective in the Telluride Room. Seating is limited; please sign up at telluridelibrary.org in advance.",
+    "type": "Community"
+  },
+  {
+    "title": "An Evening With Ken Burns",
+    "href": "https://koto.org/event/an-evening-with-ken-burns/",
+    "date": "2026-08-30",
+    "time": "5:30 PM",
+    "location": "Michael D. Palm Theater, Telluride",
+    "town": "Telluride",
+    "img": "https://koto.org/wp-content/uploads/2026/08/KenBurns2026Poster-03-1-scaled.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join us for an Evening with Ken Burns tentatively at The Palm Theatre. We will be screening episode 5 of Vietnam, \"This is What We Do.\" There will be a Q&A and book signing to follow. Tickets are $20.00 for members, and $25.00 for…",
+    "type": "Arts & Film"
+  },
+  {
+    "title": "An Evening with Ken Burns & Telluride Historical Museum",
+    "href": "https://koto.org/event/an-evening-with-ken-burns-telluride-historical-museum/",
+    "date": "2026-08-30",
+    "time": "5:30 PM",
+    "location": "Michael D. Palm Theater, Telluride",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-6.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "Join Telluride Historical Museum on Sunday August 30th for their annual Evening With Ken Burns. This year watch a screening of Episode 5 of Vietnam, This is What We Do. The event will be tentatively held at the Palm Theatre, if the venue…",
+    "type": "Arts & Film"
+  },
+  {
     "title": "Sunday Rehab at Alloy Kitchen",
     "href": "https://townofmountainvillage.com/explore/events/all-events/sunday-rehab-at-alloy-kitchen/",
     "date": "2026-08-30",
@@ -1545,19 +1610,6 @@
     "source": "Mountain Village",
     "desc": "Sundays are for recovery, Mountain Village style. Sunday Rehab at Mountain Lodge's Alloy Kitchen runs each Sunday through October 11, 2026,",
     "type": "Community"
-  },
-  {
-    "title": "An Evening With Ken Burns",
-    "href": "https://www.telluride.com/event/an-evening-with-ken-burns/",
-    "date": "2026-08-30",
-    "time": "6:00 PM",
-    "location": "Telluride, CO",
-    "town": "Telluride",
-    "img": "https://www.telluride.com/site/assets/files/53487/kenburns_620x370_0.800x533.webp",
-    "category": "Community Event",
-    "source": "Telluride.com",
-    "desc": "Join the Telluride Museum for their annual Evening With Ken Burns, tentatively at the Palm Theatre. Tickets are $25 for …",
-    "type": "Arts & Film"
   },
   {
     "title": "Big Blitz",
@@ -1609,6 +1661,32 @@
     "category": "Community Event",
     "source": "Mountain Village",
     "desc": "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    "type": "Outdoors & Sports"
+  },
+  {
+    "title": "Emergency Preparedness for People, Pets and Our Communities",
+    "href": "https://www.telluride.com/event/emergency-preparedness-for-people-pets-and-our-communities/",
+    "date": "2026-08-31",
+    "time": "6:00 PM",
+    "location": "Telluride, CO",
+    "town": "Telluride",
+    "img": "https://www.telluride.com/site/assets/files/63418/emergency_preparedness_flyer-_jabor.800x533.webp",
+    "category": "Community Event",
+    "source": "Telluride.com",
+    "desc": "ARE YOU READY? Wildfires, floods and other emergencies can happen quickly. Join Patagonia, San Miguel County Emergency …",
+    "type": "Community"
+  },
+  {
+    "title": "Tennis Clinic 3.0-4.0",
+    "href": "https://koto.org/event/tennis-clinic-3-0-4-0/2026-08-31/",
+    "date": "2026-08-31",
+    "time": "9:30 AM",
+    "location": "Telluride Racquet Club, Mountain Village",
+    "town": "Mountain Village",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/tennis-2.jpg",
+    "category": "Community Event",
+    "source": "KOTO Community Calendar",
+    "desc": "This is the TRC flagship Tennis Clinic. Courts will be divided based on level and experience. For players rated below 3.0, please sign up for a private lesson or join the 2.0 – 3.0 clinic. For more advanced players, we offer an advanced…",
     "type": "Outdoors & Sports"
   },
   {
@@ -3763,5 +3841,18 @@
     "source": "Ouray Ridgway Calendar",
     "desc": "Live Music\\ https://coloradoboydepot.com/calendar/ View on site | Email this event",
     "type": "Music"
+  },
+  {
+    "title": "Telluride Rotary Club Meeting",
+    "href": "https://portal.clubrunner.ca/3291",
+    "date": "2026-10-21",
+    "time": "6:00 PM (social at 5:30)",
+    "location": "Announced Telluride location",
+    "town": "Telluride",
+    "img": "https://livabletelluride.org/assets/digest/fallbacks/community-9.jpg",
+    "category": "",
+    "source": "Telluride Rotary",
+    "desc": "Telluride Rotary Club meets the 1st & 3rd Wednesdays at 6:00 PM (gathering at 5:30) — 1st Wednesday at Mountain Lodge in Mountain Village, 3rd Wednesday at an announced Telluride location. A service club supporting scholarships, Youth…",
+    "type": "Family & Kids"
   }
 ]
