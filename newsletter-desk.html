@@ -233,7 +233,7 @@ function inline(s){
   s = s.replace(/—/g,"&mdash;").replace(/'/g,"&rsquo;");
   return s;
 }
-const TD_BODY = 'padding:3px 34px 3px;font-family:Georgia,serif;font-size:18px;line-height:1.55;color:#2b2b2b;';
+const TD_BODY = 'padding:5px 34px 5px;font-family:Georgia,serif;font-size:18px;line-height:1.55;color:#2b2b2b;';
 const row = inner => '<tr><td style="'+TD_BODY+'">'+inner+'</td></tr>';
 
 function mdToEmail(md, meta){
