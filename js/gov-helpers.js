@@ -378,7 +378,7 @@ const MEETING_AGENDA_META = {
     {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82426_ws_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668"},
 
   "school|2026-08-25|Telluride Board of Education Monthly Meeting":
-    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
+    {"sv":4,"agendaUrl":"https://files.smartsites.parentsquare.com/3403/82526_mm_packet_1.pdf","zoomUrl":"https://telluridek12.zoom.us/j/86585124120?pwd=TGd6c3A3WFMvRTI2blBnUStwdVI5Zz09","meetingId":"865 8512 4120","passcode":"468668","phone":"970-728-6617"},
 
   "fire|2026-09-15|Board of Directors Meeting":
     {"sv":4,"ph":"b858cb282617fb09"},
@@ -1678,6 +1678,18 @@ const MEETING_RECAPS = [
 
 const TELLURIDE_TIMES_ARTICLES = [
   {
+    title: "Museum events bring history to life",
+    source: "Telluride Times",
+    date: "August 14, 2026",
+    firstSeen: "2026-08-14",
+    newsTopic: "arts-culture",
+    copy: "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
+    imgHiRes: true
+  },
+  {
     title: "Inside Trump's remake of the White House Rose Garden. First a stone patio, then statues",
     source: "Telluride Times",
     date: "August 22, 2026",
@@ -2473,18 +2485,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     imgHiRes: true
   },
   {
-    title: "Museum events bring history to life",
-    source: "Telluride Times",
-    date: "August 14, 2026",
-    firstSeen: "2026-08-14",
-    newsTopic: "arts-culture",
-    copy: "The Telluride Historical Museum marks its 60th anniversary this summer with two events: a dinner party Aug. 20 inside the museum building — originally an 1896 hospital — and a Ken Burns screening Aug. 30 at the Palm Theatre. A new exhibit, \"Moments That Made Us: San Miguel Stories,\" runs through April 2027.",
-    claudeSummary: true,
-    href: "https://www.telluridenews.com/news/article_6aaa2989-5168-4f5c-813a-d3eaf0ed3ca0.html",
-    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/a/2a/a2a66974-708c-4ae8-93f0-c3129561bfee/6a7b882ed21ef.image.jpg",
-    imgHiRes: true
-  },
-  {
     title: "Shroom-tastic",
     source: "Telluride Times",
     date: "August 9, 2026",
@@ -3127,17 +3127,6 @@ const TELLURIDE_ROTARY_MEETINGS = (function () {
 })();
 
 const KOTO_COMMUNITY_EVENTS = [
-  {
-    title: "People's March",
-    link: "https://koto.org/event/peoples-march/",
-    description: "The next People's March is Saturday, August 22nd, at 12 p.m. (noon) at the San Miguel County Courthouse. Speakers will be Franny Patricio and Chris Myers. Bring a friend and bring your signs!",
-    pubDate: "2026-08-22T12:00:00-06:00",
-    source: "koto",
-    sourceLabel: "KOTO",
-    category: "Community Event",
-    location: "San Miguel County Courthouse, TELLURIDE",
-    imageUrl: "https://koto.org/wp-content/uploads/2026/08/IMG_4441.jpeg"
-  },
   {
     title: "BURLESQUE BUFFET!",
     link: "https://koto.org/event/burlesque-buffet/2026-08-22/",
