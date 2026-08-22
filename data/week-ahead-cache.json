@@ -1,10 +1,10 @@
 {
-  "hash": "746a77272c17148043f8dc86bad56e2fdfdcba24",
-  "lede": "The school board votes Monday on a flood-damage budget appropriation for FY 2026-27 — real money being shifted to cover what the San Miguel River did to TIS, TMHS, and the Palm Theatre complex this summer. Alongside that, the Ethics Commission takes up a formal Code of Conduct recommendation for Town officials on Tuesday, and the Telluride Hospital District board considers possible action on a Two Site Model that would define what gets built and where for the new medical facility.",
+  "hash": "864154d24fded26adfb0add1d5cde9c302b1790a",
+  "lede": "The school board votes Monday on a flood-related budget appropriation for FY 2026-27 — real money moving because the canyon flooded the TIS 5th grade pod, the high school cafeteria, and the Palm Theatre complex this summer. While that's the sharpest item on the calendar, the Ethics Commission takes up a formal Code of Conduct recommendation for Town officials on Tuesday, and the Hospital District board weighs a possible Two Site Model decision for the new medical facility on Wednesday.",
   "notable": [
     {
       "id": 3,
-      "stake": "Board votes to adjust district budget to cover summer flood damage costs."
+      "stake": "Board votes on flood-damage budget appropriation for FY 2026-27."
     },
     {
       "id": 2,
@@ -12,15 +12,15 @@
     },
     {
       "id": 8,
-      "stake": "Board may act on Two Site Model shaping the new hospital's scope and location."
+      "stake": "Board may act on Two Site Model, shaping what and where new hospital gets built."
     },
     {
       "id": 4,
-      "stake": "CCAP childcare funding shortfall could affect county Human Services budget."
+      "stake": "County weighs CCAP childcare funding and its budget implications for residents."
     },
     {
       "id": 10,
-      "stake": "TMVOA votes on workforce housing committee and updated association policies."
+      "stake": "TMVOA votes on workforce housing committee formation and updated policies."
     }
   ]
 }
