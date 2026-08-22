@@ -393,7 +393,7 @@ const MEETING_AGENDA_META = {
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8023","sv":4,"ph":"96078cc700b16039"},
 
   "telluride|2026-09-16|Historic & Architectural Review Commission - Sep 16 2026":
-    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"dc059514bc1f2944"},
+    {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8022","sv":4,"ph":"e63371133d9cef98"},
 
   "telluride|2026-09-16|Parks & Recreation Commission - Sep 16 2026":
     {"agendaUrl":"https://telluride-co.civicweb.net/Portal/MeetingInformation.aspx?Id=8082","sv":4,"ph":"6fb96e40a5040f91"},
@@ -841,6 +841,106 @@ const REGIONAL_NEWS_ARTICLES = [
     newsTopic: "community",
     copy: "Monthly Chamber of Commerce meeting open to all.",
     href: "https://norwoodcolorado.com/event/2026-chamber-meeting-september/",
+    img: ""
+  },
+  {
+    title: "Best feathers forward",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/best-feathers-forward/",
+    img: ""
+  },
+  {
+    title: "Bear activity ramping up",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "recreation",
+    copy: "State wildlife officials killed a young, female bear that entered a Ridgway home last weekend after days of conflicts and at least one incident with the bear killing chickens. Colorado Parks and Wildlife District Manager Kelly Crane warned bear activity has ramped up significantly, with the bruins s",
+    href: "https://www.ouraynews.com/2026/08/19/bear-activity-ramping/",
+    img: ""
+  },
+  {
+    title: "Police admin assistant resigns, blasts city",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "The Ouray Police Department s administrative assistant has resigned, leaving the office with one remaining employee assigned to desk duty. The resignation comes just after the city s response to a civil lawsuit from Sgt. Matt Troxell, who still reports to work and is suing the city for damages. Frid",
+    href: "https://www.ouraynews.com/2026/08/19/police-admin-assistant-resigns-blasts-city/",
+    img: ""
+  },
+  {
+    title: "Disaster relief tax moves closer to ballot",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "government",
+    copy: "A proposed countywide sales tax to address fires, floods and other natural disasters appears to have a clear path to the November ballot, while a potential use tax on construction materials to raise more money for Ouray County roads and bridges is off the table for now. That’s the takeaway after Cou",
+    href: "https://www.ouraynews.com/2026/08/19/disaster-relief-tax-moves-closer-ballot/",
+    img: ""
+  },
+  {
+    title: "County road superintendent arrested on suspicion of DUI",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "infrastructure",
+    copy: "Ouray County Road and Bridge Superintendent Ty Barger was placed on paid administrative leave Monday following a driving under the influence arrest in Montrose Aug. 14. Crew Chief Don Castle has been designated interim superintendent while the county conducts its own investigation into the report of",
+    href: "https://www.ouraynews.com/2026/08/19/county-road-superintendent-arrested-suspicion-dui/",
+    img: ""
+  },
+  {
+    title: "Ouray won’t join fire authority",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Council cites unanswered questions, concerns about consolidation A proposal to consolidate all of Ouray County’s fire departments and its emergency medical services into one organization absorbed another blow this week when the city of Ouray declined to join the group. The Ouray City Council was sch",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-wont-join-fire-authority/",
+    img: ""
+  },
+  {
+    title: "Looking Back",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "Compiled from the files of The Ouray County Herald, The Ridgway Sun, and The Ouray County Plaindealer 60 Years Ago August 18, 1966 In the background is the sound of classical Chinese music, gaily lighted lanterns strewn overhead dance in the slight breeze, the aroma of charcoal, sesame oil and a ble",
+    href: "https://www.ouraynews.com/2026/08/19/looking-back-20260820-0147-500205/",
+    img: ""
+  },
+  {
+    title: "Chamber music fest returns to San Juans",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "arts-culture",
+    copy: "43rd annual weeklong event features familiar favorites, new violist World-renowned concert pianist Max Levinson and the Ulysses String Quartet return to Ouray County next week for the Ouray County Performing Arts Guild s 43rd annual San Juan Chamber Music Festival. The musicians are excited to retur",
+    href: "https://www.ouraynews.com/2026/08/19/chamber-music-fest-returns-san-juans-20260820-0148-009847/",
+    img: ""
+  },
+  {
+    title: "Ouray County Fair 2026",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "community",
+    copy: "",
+    href: "https://www.ouraynews.com/2026/08/19/ouray-county-fair-2026/",
+    img: ""
+  },
+  {
+    title: "County OKs flood construction contract",
+    source: "Ouray County Plaindealer",
+    sourceKey: "ouray-plaindealer",
+    date: "August 20, 2026",
+    newsTopic: "public-safety",
+    copy: "Ouray County commissioners awarded Haynes Excavation Inc. the contract for the Emergency Watershed Protection project at a special meeting Monday for certain areas below the Gold Mountain Fire burn scar at risk of debris flows. The county received three responses from seven requests for qualificatio",
+    href: "https://www.ouraynews.com/2026/08/19/county-oks-flood-construction-contract/",
     img: ""
   },
   {
@@ -1568,6 +1668,18 @@ const MEETING_RECAPS = [
 ];
 
 const TELLURIDE_TIMES_ARTICLES = [
+  {
+    title: "Inside Trump's remake of the White House Rose Garden. First a stone patio, then statues",
+    source: "Telluride Times",
+    date: "August 22, 2026",
+    firstSeen: "2026-08-22",
+    newsTopic: "community",
+    copy: "The White House Rose Garden has been reworked — lawn replaced with white stone patio, now featuring bronze statues of Washington, Hamilton, Franklin, Jefferson, and a Revolutionary War piece. The Jefferson sculpture came from Loveland, CO sculptor George Lundeen, gifted ahead of the nation's 250th.",
+    claudeSummary: true,
+    href: "https://www.telluridenews.com/news/state/article_b939f5aa-5091-5a89-9ce0-179dbddeb3d8.html",
+    img: "https://bloximages.chicago2.vip.townnews.com/telluridenews.com/content/tncms/assets/v3/editorial/f/f0/ff06f8bc-5244-5f68-8c06-4403371344a2/6a899165603b6.image.jpg",
+    imgHiRes: true
+  },
   {
     title: "A promise made — and kept",
     source: "Telluride Times",
@@ -2394,15 +2506,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     img: "https://www.telluride.gov/ImageRepository/Document?documentID=15642"
   },
   {
-    title: "State of the Town Address: The State of the Town Is Strong and Engaging",
-    source: "Town of Telluride",
-    date: "August 8, 2026",
-    newsTopic: "government",
-    copy: "The Mayor's biannual State of the Town Address was delivered on Tuesday, July 21 during the regular meeting of Telluride Town Council, here's what Mayor Teddy Errico had to say.",
-    href: "https://www.telluride.gov/CivicAlerts.aspx?aid=400",
-    img: "https://www.telluride.gov/ImageRepository/Document?documentID=15641"
-  },
-  {
     title: "Waste Tire Collection Event",
     source: "San Miguel County",
     date: "August 18, 2026",
@@ -2418,15 +2521,6 @@ const TELLURIDE_TIMES_ARTICLES = [
     newsTopic: "community",
     copy: "All County offices will be closed on Thursday, August 27, 2026, for an Employee Appreciation Picnic. We apologize for any inconvenience.",
     href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=541",
-    img: ""
-  },
-  {
-    title: "Black Bear Pass Now Open",
-    source: "San Miguel County",
-    date: "August 3, 2026",
-    newsTopic: "recreation",
-    copy: "County crews finished work this afternoon, Black Bear Pass is now open from Red Mountain Pass to Telluride.",
-    href: "https://www.sanmiguelcountyco.gov/AlertCenter.aspx?AID=539",
     img: ""
   },
   {
@@ -6112,6 +6206,17 @@ const MOUNTAIN_VILLAGE_EVENTS = [
     category: "Community Event",
     location: "Mountain Village, CO",
     imageUrl: "https://townofmountainvillage.com/site/assets/files/49380/sundays-at-alloy-1800x900.jpg"
+  },
+  {
+    title: "Bike & Brewery Tour",
+    link: "https://townofmountainvillage.com/explore/events/all-events/bike-brewery-tour/",
+    description: "A guided two-brewery ride from the Mountain Lodge down to town. Route: Jurassic Trail to Meadows Trail to Telluride Brewing Co. for a complimentary beer,",
+    pubDate: "2026-09-21T12:00:00.000Z",
+    source: "mv",
+    sourceLabel: "Mountain Village",
+    category: "Community Event",
+    location: "Mountain Village, CO",
+    imageUrl: "https://townofmountainvillage.com/site/assets/files/49136/bike-and-brewery-tour-1800x900.jpg"
   }
 ];
 
