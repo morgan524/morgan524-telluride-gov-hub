@@ -2803,7 +2803,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Join our wonderful volunteer team at the Decker! If you would like to help with Gallery Sitting during open hours, events, and more, please attend a New Volunteer Orientation to get started! You'll learn about the Decker Room and the…",
-    "type": "Arts & Film"
+    "type": "Arts & Film",
+    "endDate": "2026-10-20"
   },
   {
     "title": "Augment Summer Music Series: Charlie and the Leatherheads",
@@ -2829,7 +2830,8 @@
     "category": "Community Event",
     "source": "Ouray Ridgway Calendar",
     "desc": "Ridgway FUSE, a Creative District & Main Street Program, nurtures the cultural and economic vitality of Ridgway, Colorado All Ridgway FUSE Committee Meetings are open to the public. Click here for agendas and notes. Interested residents…",
-    "type": "Community"
+    "type": "Community",
+    "endDate": "2026-10-20"
   },
   {
     "title": "Eco- Grief Workshop: Between Grief & Gratitude, where Love & Loss meet in a Changing World",
