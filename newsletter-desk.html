@@ -154,6 +154,7 @@ Click Upload photo to insert an image — it uploads and inserts a live URL."></
     <div class="previewbar">
       <button id="btndesktop" class="primary">Desktop</button>
       <button id="btnmobile">Mobile</button>
+      <button id="btnback" title="Re-render the preview (use this if a link navigated it away)">&larr; Back to preview</button>
       <span class="grow"></span>
       <button id="btncopy">Copy HTML</button>
       <button id="btndl">Download .html</button>
@@ -344,6 +345,11 @@ function render(){
   window.lastHtml = lastHtml;
   const doc = $("frame").contentDocument;
   doc.open(); doc.write(lastHtml); doc.close();
+  // Preview-only: a link with no target (the footer unsubscribe tag) would
+  // navigate the iframe away, and render() only re-fires on input -- so the
+  // preview became unrecoverable. Mutates the iframe DOM, never lastHtml,
+  // so the copied/downloaded/sent HTML is unchanged.
+  doc.querySelectorAll("a[href]").forEach(a => a.setAttribute("target", "_blank"));
   runChecks();
   persist();
 }
@@ -615,6 +621,7 @@ $("chatin").addEventListener("keydown", e=>{ if(e.key==="Enter" && !e.shiftKey){
 /* ---------------- output ---------------- */
 $("btndesktop").onclick = ()=>{ $("frame").classList.remove("mobile"); $("btndesktop").classList.add("primary"); $("btnmobile").classList.remove("primary"); };
 $("btnmobile").onclick  = ()=>{ $("frame").classList.add("mobile");    $("btnmobile").classList.add("primary");  $("btndesktop").classList.remove("primary"); };
+$("btnback").onclick = ()=>{ render(); setStatus("\u2713 Preview re-rendered."); };
 $("btncopy").onclick = async ()=>{ await navigator.clipboard.writeText(lastHtml); setStatus("✓ HTML copied to the clipboard."); };
 $("btndl").onclick = ()=>{
   const slug = ($("subject").value.trim().toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")||"newsletter").slice(0,50);
